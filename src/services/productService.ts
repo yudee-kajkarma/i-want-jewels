@@ -1,0 +1,556 @@
+import type {
+  AdminVariantName,
+  AdminProductCreatePayload,
+  AdminProductEditPayload,
+  AdminProductUpdatePayload,
+  ProductAllFilters,
+  Product,
+  ProductDetail,
+  ProductImage,
+  ProductReview,
+  ProductReviewsPagination,
+  ProductReviewsResult,
+  ProductVariant,
+  ProductsApiResult,
+  ProductsPagination,
+  ReviewPayload,
+} from '../types/product'
+import apiClient, { authApiClient } from './apiClient'
+
+type ProductImageApiResponse = {
+  _id: string
+  src: string
+  position: number
+}
+
+type ProductVariantApiResponse = {
+  id?: string
+  _id?: string
+  title: string
+  variant_name?: string
+  sku?: string
+  stock?: number
+  price: number
+  available?: boolean
+  position: number
+  thumbnail: string
+  previewImage?: string
+  images?: ProductImageApiResponse[]
+}
+
+type ProductOptionApiResponse = {
+  name: string
+  values: string[]
+}
+
+type ProductApiResponse = {
+  id: string
+  slug?: string
+  title: string
+  vendor: string
+  rating: number
+  reviews_count: number
+  tags: string[]
+  availability: boolean
+  variants: ProductVariantApiResponse[]
+  minPrice: number
+  options: ProductOptionApiResponse[]
+}
+
+type ProductDetailApiResponse = {
+  id: string
+  slug?: string
+  createdAt: string
+  updatedAt: string
+  title: string
+  description: string
+  tags: string[]
+  vendor: string
+  rating: number
+  reviews_count: number
+  is_featured: boolean
+  category: string
+  stoneType: string
+  color: string
+  shape: string
+  carat: number
+  origin: string
+  treatment: string
+  availability: boolean
+  certificate: string
+  measurement: string
+  details: string
+  videoUrls: string[]
+  certificateUrls: string[]
+  diamondPcs: number
+  variants: ProductVariantApiResponse[]
+  options: ProductOptionApiResponse[]
+}
+
+type ProductsApiResponse = {
+  success: boolean
+  code: string
+  message: string
+  data: ProductApiResponse[]
+  pagination: ProductsPagination
+  filters: {
+    applied: string[]
+  }
+}
+
+type ProductDetailResponse = {
+  success: boolean
+  code: string
+  message: string
+  data: ProductDetailApiResponse
+  recommendedProducts?: ProductApiResponse[]
+}
+
+type ProductReviewApiResponse = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  productId: string
+  userId: string
+  username: string
+  userEmail: string
+  rating: number
+  comment: string
+  reviewerName: string
+  reviewerEmail: string
+  helpfulCount: number
+  isEditable: boolean
+}
+
+type ProductReviewsResponse = {
+  success: boolean
+  code: string
+  message: string
+  data: {
+    reviews: ProductReviewApiResponse[]
+    pagination: ProductReviewsPagination
+  }
+}
+
+type AllProductFiltersResponse = {
+  success: boolean
+  code: string
+  message: string
+  data: ProductAllFilters
+}
+
+export type GetProductsParams = {
+  page?: number
+  limit?: number
+  search?: string
+  category?: string
+  stoneType?: string
+  color?: string
+  shape?: string
+  origin?: string
+  treatment?: string
+  certificate?: string
+  measurement?: string
+  vendor?: string
+  tags?: string | string[]
+  metal?: string | string[]
+  priceMin?: string | number
+  priceMax?: string | number
+  carat?: string | number
+  availability?: string | boolean
+}
+
+export type AdminProductsResult = {
+  products: Product[]
+  pagination: ProductsPagination
+}
+
+export type BulkCreateVariantPayload = {
+  title: string
+  variant_name: AdminVariantName
+  sku: string
+  price: number
+  stock: number
+}
+
+export type BulkCreateProductPayload = {
+  title: string
+  description: string
+  vendor: string
+  category: string
+  stoneType: string
+  color: string
+  shape: string
+  carat: number
+  origin: string
+  treatment: string
+  certificate: string
+  measurement: string
+  details: string
+  variants: BulkCreateVariantPayload[]
+}
+
+const categoryTags = ['Bracelets', 'Earrings', 'Necklaces', 'Rings', 'Gift Cards']
+
+function normalizeImages(images?: ProductImageApiResponse[]): ProductImage[] {
+  return (images ?? []).map((image) => ({
+    id: image._id,
+    src: image.src,
+    position: image.position,
+  }))
+}
+
+function normalizeNumber(value: unknown): number {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return value
+  }
+
+  if (typeof value === 'string') {
+    const parsedValue = Number(value)
+
+    if (Number.isFinite(parsedValue)) {
+      return parsedValue
+    }
+  }
+
+  return 0
+}
+
+function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
+  return {
+    id: variant.id ?? variant._id ?? '',
+    variantName: variant.variant_name,
+    title: variant.title,
+    sku: variant.sku,
+    stock: variant.stock,
+    price: variant.price,
+    available: variant.available ?? true,
+    position: variant.position,
+    thumbnail: variant.thumbnail,
+    previewImage: variant.previewImage,
+    images: normalizeImages(variant.images),
+  }
+}
+
+function getCategory(tags: string[]): string {
+  return tags.find((tag) => categoryTags.includes(tag)) ?? 'Jewellery'
+}
+
+function getMetals(variants: ProductVariant[]): string[] {
+  const metals = variants
+    .map((variant) => {
+      const metal = variant.title.split('/')[0]?.trim() ?? ''
+
+      return metal === 'Default Title' ? '' : metal
+    })
+    .filter(Boolean)
+
+  return Array.from(new Set(metals))
+}
+
+function normalizeProduct(product: ProductApiResponse): Product {
+  const variants = product.variants.map(normalizeVariant)
+  const primaryVariant = variants.find((variant) => variant.available) ?? variants[0]
+
+  return {
+    id: product.id,
+    slug: product.slug ?? '',
+    title: product.title,
+    vendor: product.vendor.trim(),
+    rating: normalizeNumber(product.rating),
+    reviewsCount: Math.max(0, Math.floor(normalizeNumber(product.reviews_count))),
+    tags: product.tags,
+    availability: product.availability,
+    variants,
+    minPrice: product.minPrice,
+    options: product.options,
+    category: getCategory(product.tags),
+    metals: getMetals(variants),
+    primaryImage: primaryVariant?.thumbnail ?? '',
+  }
+}
+
+function normalizeProductDetail(
+  product: ProductDetailApiResponse,
+  recommendedProducts: ProductApiResponse[] = [],
+): ProductDetail {
+  const variants = product.variants.map(normalizeVariant)
+  const primaryVariant = variants.find((variant) => variant.available) ?? variants[0]
+  const minPrice = variants.length > 0 ? Math.min(...variants.map((variant) => variant.price)) : 0
+
+  return {
+    id: product.id,
+    slug: product.slug ?? '',
+    createdAt: product.createdAt,
+    updatedAt: product.updatedAt,
+    title: product.title,
+    description: product.description.trim(),
+    vendor: product.vendor.trim(),
+    rating: normalizeNumber(product.rating),
+    reviewsCount: Math.max(0, Math.floor(normalizeNumber(product.reviews_count))),
+    tags: product.tags,
+    availability: product.availability,
+    variants,
+    minPrice,
+    options: product.options,
+    category: product.category || getCategory(product.tags),
+    metals: getMetals(variants),
+    primaryImage: primaryVariant?.thumbnail ?? '',
+    isFeatured: product.is_featured,
+    stoneType: product.stoneType.trim(),
+    color: product.color.trim(),
+    shape: product.shape.trim(),
+    carat: product.carat,
+    origin: product.origin.trim(),
+    treatment: product.treatment.trim(),
+    certificate: product.certificate.trim(),
+    measurement: product.measurement.trim(),
+    details: product.details.trim(),
+    videoUrls: product.videoUrls,
+    certificateUrls: product.certificateUrls,
+    diamondPcs: product.diamondPcs,
+    recommendedProducts: recommendedProducts.map(normalizeProduct),
+  }
+}
+
+function normalizeProductReview(review: ProductReviewApiResponse): ProductReview {
+  return {
+    id: review.id,
+    createdAt: review.createdAt,
+    updatedAt: review.updatedAt,
+    productId: review.productId,
+    userId: review.userId,
+    username: review.username,
+    userEmail: review.userEmail,
+    rating: review.rating,
+    comment: review.comment,
+    reviewerName: review.reviewerName,
+    reviewerEmail: review.reviewerEmail,
+    helpfulCount: review.helpfulCount,
+    isEditable: review.isEditable,
+  }
+}
+
+export async function getProducts(params: GetProductsParams = {}): Promise<ProductsApiResult> {
+  const requestParams: Record<string, number | string> = {
+    page: params.page ?? 1,
+    limit: params.limit ?? 12,
+  }
+
+  if (params.category) {
+    requestParams.category = params.category
+  }
+
+  if (params.search) {
+    requestParams.search = params.search
+  }
+
+  if (params.stoneType) {
+    requestParams.stoneType = params.stoneType
+  }
+
+  if (params.color) {
+    requestParams.color = params.color
+  }
+
+  if (params.shape) {
+    requestParams.shape = params.shape
+  }
+
+  if (params.origin) {
+    requestParams.origin = params.origin
+  }
+
+  if (params.treatment) {
+    requestParams.treatment = params.treatment
+  }
+
+  if (params.certificate) {
+    requestParams.certificate = params.certificate
+  }
+
+  if (params.measurement) {
+    requestParams.measurement = params.measurement
+  }
+
+  if (params.vendor) {
+    requestParams.vendor = params.vendor
+  }
+
+  if (params.tags) {
+    requestParams.tags = Array.isArray(params.tags) ? params.tags.join(',') : params.tags
+  }
+
+  if (params.metal) {
+    requestParams.metal = Array.isArray(params.metal) ? params.metal.join(',') : params.metal
+  }
+
+  if (params.priceMin !== undefined && params.priceMin !== '') {
+    requestParams.price_min = params.priceMin
+  }
+
+  if (params.priceMax !== undefined && params.priceMax !== '') {
+    requestParams.price_max = params.priceMax
+  }
+
+  if (params.carat !== undefined && params.carat !== '') {
+    requestParams.carat = params.carat
+  }
+
+  if (params.availability !== undefined && params.availability !== '') {
+    requestParams.availability = String(params.availability)
+  }
+
+  const response = await apiClient.get<ProductsApiResponse>('/products', {
+    params: requestParams,
+  })
+
+  return {
+    products: response.data.data.map(normalizeProduct),
+    pagination: response.data.pagination,
+    appliedFilters: response.data.filters.applied,
+  }
+}
+
+export async function getProductById(productId: string): Promise<ProductDetail> {
+  const response = await apiClient.get<ProductDetailResponse>(`/products/${productId}`)
+
+  return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
+}
+
+export async function getProductBySlug(slug: string): Promise<ProductDetail> {
+  try {
+    const response = await apiClient.get<ProductDetailResponse>(`/products/slug/${slug}`)
+
+    return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
+  } catch {
+    const fallbackResponse = await apiClient.get<ProductDetailResponse>(`/products/${slug}`)
+
+    return normalizeProductDetail(fallbackResponse.data.data, fallbackResponse.data.recommendedProducts)
+  }
+}
+
+export async function getProductReviews(productId: string): Promise<ProductReviewsResult> {
+  const response = await apiClient.get<ProductReviewsResponse>(`/reviews/${productId}`)
+
+  return {
+    reviews: response.data.data.reviews.map(normalizeProductReview),
+    pagination: response.data.data.pagination,
+  }
+}
+
+export async function createProductReview(productId: string, payload: ReviewPayload): Promise<void> {
+  await authApiClient.post(`/reviews/${productId}`, payload)
+}
+
+export async function updateProductReview(reviewId: string, payload: ReviewPayload): Promise<void> {
+  await authApiClient.put(`/reviews/${reviewId}`, payload)
+}
+
+export async function deleteProductReview(reviewId: string): Promise<void> {
+  await authApiClient.delete(`/reviews/${reviewId}`)
+}
+
+export async function getAllProductFilters(): Promise<ProductAllFilters> {
+  const response = await apiClient.get<AllProductFiltersResponse>('/products/all-filters')
+
+  return response.data.data
+}
+
+export async function getAllProductsForAdmin(params: GetProductsParams = {}): Promise<AdminProductsResult> {
+  const response = await getProducts({
+    ...params,
+    page: params.page ?? 1,
+    limit: params.limit ?? 10,
+  })
+
+  return {
+    products: response.products,
+    pagination: response.pagination,
+  }
+}
+
+function buildProductFormData(payload: AdminProductCreatePayload | AdminProductEditPayload): FormData {
+  const formData = new FormData()
+
+  formData.append('title', payload.title)
+  formData.append('description', payload.description)
+  formData.append('tags', payload.tags.join(','))
+  formData.append('vendor', payload.vendor)
+  formData.append('is_featured', String(payload.isFeatured))
+  formData.append('category', payload.category)
+  formData.append('stoneType', payload.stoneType)
+  formData.append('color', payload.color)
+  formData.append('shape', payload.shape)
+  formData.append('carat', String(payload.carat))
+  formData.append('origin', payload.origin)
+  formData.append('treatment', payload.treatment)
+  formData.append('availability', String(payload.availability))
+  formData.append('certificate', payload.certificate)
+  formData.append('measurement', payload.measurement)
+  formData.append('details', payload.details)
+  formData.append('videoUrls', payload.videoUrls.join(','))
+  formData.append('certificateUrls', payload.certificateUrls.join(','))
+  formData.append('diamondPcs', String(payload.diamondPcs))
+  formData.append(
+    'variants',
+    JSON.stringify(
+      payload.variants.map((variant) => ({
+        ...(variant.id ? { id: variant.id } : {}),
+        title: variant.title,
+        variant_name: variant.variantName,
+        sku: variant.sku,
+        stock: variant.stock,
+        price: variant.price,
+        position: variant.position,
+      })),
+    ),
+  )
+  formData.append('imageMapping', JSON.stringify(payload.imageMapping))
+
+  if ('existingImages' in payload) {
+    formData.append(
+      'existingImages',
+      JSON.stringify(
+        payload.existingImages.map((image) => ({
+          ...(image.id ? { id: image.id } : {}),
+          src: image.src,
+          position: image.position,
+        })),
+      ),
+    )
+
+    formData.append('delImgMapping', JSON.stringify(payload.delImgMapping))
+  }
+
+  payload.images.forEach((imageFile) => {
+    formData.append('images', imageFile)
+  })
+
+  return formData
+}
+
+export async function createProduct(payload: AdminProductCreatePayload): Promise<void> {
+  const formData = buildProductFormData(payload)
+
+  await authApiClient.post('/products', formData)
+}
+
+export async function updateProduct(productId: string, payload: AdminProductEditPayload | AdminProductUpdatePayload): Promise<void> {
+  if ('variants' in payload && 'imageMapping' in payload && 'images' in payload) {
+    const formData = buildProductFormData(payload)
+
+    await authApiClient.put(`/products/${productId}`, formData)
+    return
+  }
+
+  await authApiClient.put(`/products/${productId}`, payload)
+}
+
+export async function deleteProduct(productId: string): Promise<void> {
+  await authApiClient.delete(`/products/${productId}`)
+}
+
+export async function bulkCreateProducts(payload: { products: BulkCreateProductPayload[] }): Promise<void> {
+  await authApiClient.post('/products/bulk-create', payload)
+}
