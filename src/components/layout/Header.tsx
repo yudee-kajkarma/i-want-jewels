@@ -14,6 +14,7 @@ import necklaceImage from '../../assets/image/nackwear.jpeg'
 import necklaceModelImage from '../../assets/image/nackwear1.jpeg'
 import ringImage from '../../assets/image/ring.jpeg'
 import ringModelImage from '../../assets/image/ring1.jpeg'
+import brandLogo from '../../assets/logo.svg'
 
 const navLinks = [
   { label: 'Shop', to: '/products' },
@@ -605,11 +606,8 @@ export default function Header() {
               {activeNavLinks.slice(0, isSlice).map((link) => renderDesktopNavLink(link))}
             </nav>
 
-            <Link
-              to={brandLink}
-              className="whitespace-nowrap text-center  font-semibold lowercase leading-none tracking-[-0.06em] !text-pink-500 sm:text-3xl lg:text-[2rem] pb-2"
-            >
-              i want jewels
+            <Link to={brandLink} className="flex items-center justify-center">
+              <img src={brandLogo.src} alt="I Want Jewels" className="h-10 w-auto sm:h-9 lg:h-[60px]" />
             </Link>
 
             <nav className="hidden items-center gap-8 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex ">

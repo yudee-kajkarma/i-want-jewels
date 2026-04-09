@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { Gem, Gift, ShieldCheck, Sparkles, Star, Truck } from 'lucide-react'
+import { Gem, Gift, Link2, Phone, ShieldCheck, Sparkles, Star, Truck } from 'lucide-react'
 import { Link } from '@/lib/router'
 import { getAllProductFilters, getProducts } from '../../services/productService'
 import type { Product } from '../../types/product'
@@ -12,7 +12,8 @@ import earringProductImage from '../../assets/image/earing1.jpeg'
 import necklaceImage from '../../assets/image/nackwear.jpeg'
 import necklaceModelImage from '../../assets/image/nackwear1.jpeg'
 import ringImage from '../../assets/image/ring.jpeg'
-import ringModelImage from '../../assets/image/ring1.jpeg'
+import ringModelImage from '../../assets/image/ring.jpeg'
+import brandLogo from '../../assets/logo.svg'
 import ProductCard from './ProductCard'
 import InstagramGallerySection from './InstagramGallerySection'
 import NewsletterSection from './NewsletterSection'
@@ -398,36 +399,97 @@ export default function HomeBody() {
       </section>
 
       <section className="mx-auto max-w-[1600px] px-4 py-14">
-        <div className="overflow-hidden rounded-[40px] bg-[linear-gradient(115deg,#f2a8c3_0%,#ffd8e8_40%,#f9cadc_100%)] px-8 py-10 shadow-[0_30px_80px_rgba(180,90,130,0.2)] md:px-12 lg:px-16 lg:py-14">
-          <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.9fr_0.7fr]">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#24407c]">I Want Jewel</p>
-              <h2 className="mt-5 text-5xl font-semibold leading-[0.9] tracking-[-0.06em] text-[#24407c] sm:text-6xl lg:text-7xl">
-                Best Jewellery Collection
-              </h2>
-              <p className="mt-5 max-w-md text-base leading-7 text-[#6a4763]">
-                Statement pieces, soft pink glamour, and timeless rings styled for festive gifting and everyday elegance.
-              </p>
+        <div className="relative overflow-hidden rounded-[40px] border border-[#f3d2de] bg-[radial-gradient(circle_at_top,#fff6fb_0%,#ffdbe8_34%,#f4b6cb_68%,#eca2bf_100%)] px-6 py-8 shadow-[0_30px_80px_rgba(180,90,130,0.2)] md:px-10 lg:px-16 lg:py-12">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_30%,rgba(255,255,255,0.65),transparent_28%),radial-gradient(circle_at_68%_20%,rgba(255,255,255,0.45),transparent_22%),radial-gradient(circle_at_50%_78%,rgba(255,255,255,0.35),transparent_22%)]" />
+          <div className="pointer-events-none absolute -left-16 top-12 h-64 w-64 rounded-full border-[22px] border-[#b56f8f]/25 blur-[1px]" />
+          <div className="pointer-events-none absolute -right-20 top-8 h-72 w-72 rounded-full border-[22px] border-[#b56f8f]/20 blur-[1px]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.3),transparent_72%)]" />
+
+          <div className="relative flex flex-col gap-8">
+            <div className="flex items-start justify-between gap-4">
+              {/* <div>
+                <img src={brandLogo.src} alt="I Want Jewels" className="h-10 w-auto sm:h-12" />
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#24407c]">I Want Jewels</p>
+              </div> */}
+
+              <div className="flex items-center gap-2 self-start">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#24407c] text-white shadow-[0_12px_28px_rgba(36,64,124,0.24)]">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-none stroke-current" strokeWidth="1.8" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                </span>
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#24407c] text-white shadow-[0_12px_28px_rgba(36,64,124,0.24)]">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                    <path d="M13.5 21v-7h2.3l.4-3h-2.7V9.1c0-.9.3-1.6 1.7-1.6h1.2V4.8c-.2 0-.9-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.5V11H9v3h2.4v7h2.1Z" />
+                  </svg>
+                </span>
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#24407c] text-white shadow-[0_12px_28px_rgba(36,64,124,0.24)]">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                    <path d="M18.9 7.2c.8-.1 1.5-.4 2.1-.8-.3.8-.9 1.4-1.5 1.8.7 0 1.3-.3 1.9-.5-.5.7-1 1.3-1.7 1.8v.5c0 5.4-4.1 11.7-11.7 11.7-2.3 0-4.5-.7-6.3-1.9.3 0 .7.1 1 .1 1.9 0 3.6-.6 5-1.8-1.8 0-3.2-1.2-3.7-2.8.3.1.5.1.8.1.4 0 .7 0 1-.1-1.8-.4-3.1-2-3.1-3.9v-.1c.5.3 1.1.5 1.8.5-1.1-.7-1.8-1.9-1.8-3.3 0-.7.2-1.4.5-2 .9 1.2 2.3 2.3 3.9 3 1.6.7 3.2 1.1 4.9 1.2-.1-.3-.1-.6-.1-.9 0-2.2 1.8-4 4-4 1.2 0 2.3.5 3 1.3Z" />
+                  </svg>
+                </span>
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#24407c] text-white shadow-[0_12px_28px_rgba(36,64,124,0.24)]">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                    <path d="M20.5 11.8c0-4.6-3.8-8.3-8.5-8.3s-8.5 3.7-8.5 8.3c0 1.5.4 3 1.2 4.2L3.5 20.5l4.7-1.2c1.2.7 2.5 1 3.8 1 4.7 0 8.5-3.7 8.5-8.5Zm-8.5 7.1c-1.1 0-2.3-.3-3.2-.9l-.2-.1-2.8.7.8-2.7-.2-.3c-.7-1.1-1-2.4-1-3.7 0-3.9 3.1-7 6.9-7s6.9 3.1 6.9 7-3.1 7-7 7Zm3.8-5.2c-.2-.1-1.3-.6-1.5-.7-.2-.1-.3-.1-.4.1-.1.2-.6.7-.7.8-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1.1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1 0-.3 0-.4s-.4-1-.6-1.4c-.2-.4-.3-.3-.4-.3h-.4c-.1 0-.3 0-.5.2-.2.2-.7.7-.7 1.6s.7 1.9.8 2c.1.1 1.4 2.1 3.4 2.9.5.2.8.3 1.1.4.5.1.9.1 1.2.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1 0-.2-.1-.4-.2Z" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr_0.8fr]">
+              <div className="max-w-[460px]">
+                <p className="text-4xl font-medium leading-none text-[#b36c82] sm:text-5xl" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
+                  Best
+                </p>
+                <h2 className="mt-1 text-[4.4rem] leading-[0.82] tracking-[-0.08em] text-[#24407c] sm:text-[5.5rem] lg:text-[7rem]" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
+                  Jewelry
+                </h2>
+                <p className="text-[3.4rem] leading-[0.85] tracking-[-0.07em] text-[#b36c82] sm:text-[4.2rem] lg:text-[5.3rem]" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
+                  Collection
+                </p>
+              </div>
+
+              <div className="relative flex justify-center">
+                <div className="absolute bottom-3 h-16 w-48 rounded-full bg-[#8f5f79]/20 blur-2xl" />
+                <img
+                  src={ringModelImage.src}
+                  alt="Rose gold ring collection"
+                  className="relative z-10 h-[260px] w-full max-w-[360px] object-contain drop-shadow-[0_28px_40px_rgba(126,71,94,0.28)] sm:h-[320px] lg:h-[380px]"
+                />
+              </div>
+
+              <div className="flex justify-center lg:justify-end">
+                <div className="flex h-48 w-48 rotate-[-7deg] flex-col items-center justify-center rounded-[44%] bg-[#24407c] text-center text-white shadow-[0_24px_50px_rgba(36,64,124,0.28)] sm:h-56 sm:w-56">
+                  <p className="text-3xl font-semibold leading-none sm:text-4xl" style={{ fontFamily: 'Georgia, Times New Roman, serif' }}>
+                    Discount
+                  </p>
+                  <p className="mt-2 text-6xl font-bold leading-none sm:text-7xl">25%</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-between gap-6 pt-2 lg:flex-row lg:items-end">
+              <div className="flex items-center gap-3 self-start text-[#24407c]">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/65 shadow-[0_12px_24px_rgba(36,64,124,0.12)]">
+                  <Link2 className="h-5 w-5" strokeWidth={2.2} />
+                </span>
+                <span className="text-xl font-medium uppercase tracking-[0.04em] sm:text-2xl">www.website.com</span>
+              </div>
+
               <Link
                 to="/products"
-                className="mt-8 inline-flex rounded-[18px] bg-[#24407c] px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[#1a2f5d]"
+                className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#24407c] px-10 py-4 text-lg font-bold uppercase tracking-[0.18em] text-white shadow-[0_16px_30px_rgba(36,64,124,0.24)] transition hover:bg-[#1a2f5d]"
               >
                 Buy Now
               </Link>
-            </div>
 
-            <div className="flex justify-center">
-              <img
-                src={ringImage.src}
-                alt="Rose gold ring collection"
-                className="h-[340px] w-full max-w-[420px] rounded-[24px] bg-white object-contain p-4 drop-shadow-[0_24px_40px_rgba(110,47,77,0.25)]"
-              />
-            </div>
-
-            <div className="flex justify-center lg:justify-end">
-              <div className="flex h-52 w-52 flex-col items-center justify-center rounded-full bg-[#24407c] text-center text-white shadow-[0_22px_50px_rgba(36,64,124,0.28)]">
-                <p className="text-3xl font-semibold">Discount</p>
-                <p className="mt-1 text-7xl font-bold leading-none">25%</p>
+              <div className="flex items-center gap-3 self-end text-[#24407c] lg:self-auto">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/65 shadow-[0_12px_24px_rgba(36,64,124,0.12)]">
+                  <Phone className="h-5 w-5" strokeWidth={2.2} />
+                </span>
+                <span className="text-xl font-medium tracking-[0.03em] sm:text-2xl">+000123456789</span>
               </div>
             </div>
           </div>
