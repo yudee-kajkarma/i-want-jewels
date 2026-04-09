@@ -422,19 +422,20 @@ export default function Header() {
 
   useEffect(() => {
     function updateShopMenuLayout() {
-      const headerInner = headerInnerRef.current
       const shopTrigger = shopMenuRef.current
 
-      if (!headerInner || !shopTrigger) {
+      if (!shopTrigger || typeof window === 'undefined') {
         return
       }
 
-      const headerRect = headerInner.getBoundingClientRect()
       const triggerRect = shopTrigger.getBoundingClientRect()
+      const viewportWidth = window.innerWidth
+      const panelWidth = Math.min(Math.max(viewportWidth - 40, 0), 1480)
+      const centeredLeft = viewportWidth / 2 - triggerRect.left - panelWidth / 2
 
       setShopMenuLayout({
-        left: headerRect.left - triggerRect.left,
-        width: headerRect.width,
+        left: centeredLeft,
+        width: panelWidth,
       })
     }
 
@@ -504,8 +505,8 @@ export default function Header() {
           className={`shop-mega-menu ${isShopMenuOpen ? 'shop-mega-menu--open' : ''}`}
           style={shopMenuLayout.width > 0 ? { left: `${shopMenuLayout.left}px`, width: `${shopMenuLayout.width}px` } : undefined}
         >
-          <div className="space-y-8">
-            <div className="grid grid-cols-5 gap-5">
+          <div className="mx-auto w-full max-w-[1040px] space-y-6">
+            <div className="grid grid-cols-5 gap-6">
               {shopMenuTiles.map((tile) => (
                 <Link
                   key={tile.label}
@@ -513,14 +514,14 @@ export default function Header() {
                   onClick={() => setIsShopMenuOpen(false)}
                   className="group"
                 >
-                  <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+                  <div className="overflow-hidden rounded-[10px] bg-white">
                     <img
                       src={tile.image}
                       alt={tile.label}
-                      className="h-60 w-full object-cover transition duration-300 group-hover:scale-105"
+                      className="h-44 w-full rounded-[10px] object-cover transition duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <p className="mt-3 text-center text-sm font-medium tracking-[-0.02em] text-zinc-800">{tile.label}</p>
+                  <p className="mt-2 text-center text-[13px] font-normal tracking-[-0.02em] text-zinc-700">{tile.label}</p>
                 </Link>
               ))}
             </div>
