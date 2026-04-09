@@ -1,17 +1,17 @@
 'use client'
 
+import { Eye, Heart, ShoppingBag } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from '@/lib/router'
 import { useAuth } from '../../context/AuthContext'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { addToCart } from '../../store/cartSlice'
 import { addToWishlist, removeWishlistItem } from '../../store/wishlistSlice'
+import { setSingleCheckoutDraft } from '../../utils/checkoutStorage'
 import type { Product } from '../../types/product'
 import {
-  formatReviewCount,
   formatIndianRupee,
   getMetalToneClass,
-  getProductCaption,
   getVariantGallery,
   getVariantImage,
 } from '../../utils/productUtils'
@@ -35,14 +35,19 @@ export default function ProductCard({ item }: ProductCardProps) {
   const primaryImage = selectedVariant ? getVariantImage(selectedVariant) : ''
   const variantGallery = selectedVariant ? getVariantGallery(selectedVariant) : []
   const hoverImage =
-    selectedVariant?.previewImage && selectedVariant.previewImage !== primaryImage
-      ? selectedVariant.previewImage
-      : variantGallery.find((image) => image.src && image.src !== primaryImage)?.src ?? null
+    (selectedVariant?.previewImage && selectedVariant.previewImage !== primaryImage ? selectedVariant.previewImage : null) ??
+    variantGallery.find((image) => image.src && image.src !== primaryImage)?.src ??
+    item.variants.find((variant) => variant.previewImage && variant.previewImage !== primaryImage)?.previewImage ??
+    item.variants
+      .flatMap((variant) => getVariantGallery(variant))
+      .find((image) => image.src && image.src !== primaryImage)?.src ??
+    null
   const basePrice = selectedVariant?.price ?? item.minPrice
-  const comparePrice = Math.round(basePrice * 1.1)
+  const comparePrice = Math.round(basePrice / 0.8)
   const hasDiscount = comparePrice > basePrice
   const discountPercent = hasDiscount ? Math.round(((comparePrice - basePrice) / comparePrice) * 100) : 0
   const productDetailUrl = `/products/slug/${item.slug || item.id}`
+  const isNewArrival = item.tags.some((tag) => tag.toLowerCase().includes('new')) || hasDiscount
 
   useEffect(() => {
     setSelectedVariantId(item.variants[0]?.id ?? '')
@@ -119,43 +124,93 @@ export default function ProductCard({ item }: ProductCardProps) {
     }
   }
 
+  function handleBuyNow(event: React.MouseEvent<HTMLButtonElement>) {
+    event.preventDefault()
+    event.stopPropagation()
+
+    const variant = selectedVariant ?? item.variants[0]
+
+    if (!variant) {
+      return
+    }
+
+    if (!isAuthenticated) {
+      navigate('/login', { state: { from: location.pathname } })
+      return
+    }
+
+    const draft = {
+      item: {
+        id: `${item.id}-${variant.id}`,
+        productId: item.id,
+        variantId: variant.id,
+        title: item.title,
+        variantTitle: variant.title,
+        thumbnail: getVariantImage(variant),
+        price: variant.price,
+        quantity: 1,
+      },
+      returnPath: location.pathname,
+    }
+
+    setSingleCheckoutDraft(draft)
+    navigate('/checkout?source=single', {
+      state: {
+        source: 'single',
+        draft,
+      },
+    })
+  }
+
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-[#eadfd4] bg-white shadow-[0_18px_45px_rgba(92,63,37,0.08)] transition-transform duration-300 hover:-translate-y-1">
-      <div className="relative overflow-hidden bg-[linear-gradient(180deg,#fffaf5_0%,#ffffff_100%)] p-5">
-        {hasDiscount ? (
-          <span className="absolute left-4 top-4 z-10 rounded-full bg-[#e557b0] px-2.5 py-1 text-[10px] font-bold tracking-[0.12em] text-white">
+    <article className="group flex h-full flex-col bg-transparent transition-transform duration-300 hover:-translate-y-1">
+      <div className="relative overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)] pt-0">
+        {isNewArrival ? (
+          <span className="absolute left-4 top-4 z-20 rounded-full bg-[#f23ea9] px-3 py-1 text-[10px] font-bold leading-none text-white shadow-[0_10px_20px_rgba(242,62,169,0.22)] ">
             NEW
           </span>
         ) : null}
 
-        <button
-          type="button"
-          onClick={(event) => void handleWishlistClick(event)}
-          disabled={isUpdatingWishlist}
-          aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
-          className={`absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full border bg-white/95 text-sm shadow-sm backdrop-blur-sm transition-all duration-300 ${
-            wishlistItem
-              ? 'translate-x-0 border-pink-200 text-pink-500 opacity-100'
-              : 'translate-x-4 border-[#eadfd4] text-zinc-500 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 hover:border-pink-200 hover:text-pink-500'
-          } disabled:opacity-60`}
-        >
-          <span className={isWishlistWaveActive ? 'wishlist-wave' : ''}>{wishlistItem ? '♥' : '♡'}</span>
-        </button>
+        <div className="absolute right-4 top-4 z-20 flex translate-x-4 flex-col gap-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+          <button
+            type="button"
+            onClick={(event) => void handleWishlistClick(event)}
+            disabled={isUpdatingWishlist}
+            aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
+            className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9] ${
+              wishlistItem ? 'text-[#f23ea9]' : ''
+            } disabled:opacity-60`}
+          >
+            <span className={isWishlistWaveActive ? 'wishlist-wave' : ''}>
+              <Heart className={`h-4 w-4 ${wishlistItem ? 'fill-current' : ''}`} aria-hidden="true" />
+            </span>
+          </button>
 
-        <Link
-          to={productDetailUrl}
-          className="absolute right-4 top-[3.35rem] z-10 flex h-9 w-9 translate-x-4 items-center justify-center rounded-full border border-[#eadfd4] bg-white/95 text-sm text-zinc-500 opacity-0 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
-          aria-label="Quick view"
-        >
-          ◌
-        </Link>
+          <button
+            type="button"
+            onClick={(event) => void handleAddToCart(event)}
+            disabled={isAdding}
+            aria-label="Add to cart"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9] disabled:opacity-60"
+          >
+            <ShoppingBag className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+          </button>
+
+          <Link
+            to={productDetailUrl}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9]"
+            aria-label="Quick view"
+          >
+            <Eye className="h-4 w-4" strokeWidth={1.8} aria-hidden="true" />
+          </Link>
+        </div>
 
         <Link to={productDetailUrl} className="block">
-          <div className="relative h-72 w-full">
+          <div className="relative h-[20rem] w-full overflow-hidden">
             <img
               src={primaryImage}
               alt={item.title}
-              className={`absolute inset-0 h-full w-full object-contain transition duration-500 ${
+              className={`absolute inset-0 h-full w-full object-cover transition duration-500 ${
                 hoverImage ? 'opacity-100 group-hover:opacity-0' : 'opacity-100 group-hover:scale-[1.03]'
               }`}
             />
@@ -163,49 +218,41 @@ export default function ProductCard({ item }: ProductCardProps) {
               <img
                 src={hoverImage}
                 alt={`${item.title} alternate view`}
-                className="absolute inset-0 h-full w-full object-contain opacity-0 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
               />
             ) : null}
           </div>
         </Link>
 
-        <div className="pointer-events-none absolute inset-x-4 bottom-4 z-10 translate-y-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-          <div className="rounded-2xl bg-black/20 p-2 backdrop-blur-[2px]">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.12em] text-white">{item.title}</p>
-            <div className="mt-2 grid grid-cols-2 gap-2 pointer-events-auto">
-              <Link
-                to={productDetailUrl}
-                className="inline-flex h-8 items-center justify-center rounded-full bg-white px-3 text-[10px] font-bold tracking-[0.08em] text-zinc-900"
-              >
-                QUICK VIEW
-              </Link>
-              <button
-                type="button"
-                onClick={(event) => void handleAddToCart(event)}
-                disabled={isAdding}
-                className="inline-flex h-8 items-center justify-center rounded-full bg-white px-3 text-[10px] font-bold tracking-[0.08em] text-zinc-900 disabled:opacity-60"
-              >
-                {isAdding ? 'ADDING...' : 'QUICK SHOP'}
-              </button>
-            </div>
+        <div className="pointer-events-none absolute inset-x-4 bottom-4 z-20 translate-y-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+          <div className="grid grid-cols-2 gap-2 pointer-events-auto">
+            <button
+              type="button"
+              onClick={(event) => void handleAddToCart(event)}
+              disabled={isAdding}
+              className="inline-flex h-11 items-center justify-center rounded-full bg-white px-4 text-[12px] font-semibold text-[#22201d] shadow-[0_10px_30px_rgba(0,0,0,0.14)] transition hover:bg-[#f4f1ee] disabled:opacity-60"
+            >
+              {isAdding ? 'ADDING...' : 'ADD CART'}
+            </button>
+            <button
+              type="button"
+              onClick={handleBuyNow}
+              className="inline-flex h-11 items-center justify-center rounded-full bg-[#151515] px-4 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition hover:bg-black"
+            >
+              BUY NOW
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-3 px-5 pb-5 pt-4">
-        <div className="flex items-center gap-2 text-[11px] font-semibold text-zinc-700">
-          <span className="inline-flex items-center gap-1 rounded-full bg-[#f6efe8] px-2 py-1 text-[#1f1a17]">
-            <span aria-hidden="true">★</span>
-            {item.rating.toFixed(1)}
-          </span>
-          <span className="rounded-full border border-[#e6ddd4] px-2 py-1 text-zinc-500">{formatReviewCount(item.reviewsCount)}</span>
-        </div>
+      <div className="flex flex-1 flex-col gap-3 px-2 pb-2 pt-4">
+        <Link to={productDetailUrl} className="block">
+          <h3 className="text-[0.9rem] font-medium leading-none tracking-[-0.03em] text-[#26221f] transition hover:text-[#f23ea9]">
+            {item.title}
+          </h3>
+        </Link>
 
-        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-zinc-500">{getProductCaption(item)}</p>
-        {/* <Link to={productDetailUrl} className="block">
-          <h3 className="text-2xl font-medium leading-8 text-[#17110d] transition hover:text-pink-500">{item.title}</h3>
-        </Link> */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-2.5 transition-all duration-300 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
           {item.variants.map((variant) => {
             const metalLabel = variant.title.split('/')[0]?.trim() || variant.title
             const isActive = variant.id === selectedVariant?.id
@@ -216,44 +263,22 @@ export default function ProductCard({ item }: ProductCardProps) {
                 type="button"
                 title={variant.title}
                 onClick={() => setSelectedVariantId(variant.id)}
-                className={`h-4 w-4 rounded-full border shadow-sm transition ${getMetalToneClass(metalLabel)} ${
-                  isActive ? 'ring-2 ring-zinc-900 ring-offset-1' : 'ring-0'
+                className={`h-5 w-5 rounded-full border-2 border-white shadow-sm transition ${getMetalToneClass(metalLabel)} ${
+                  isActive ? 'ring-1 ring-[#3b342f] ring-offset-2' : 'ring-0'
                 }`}
               />
             )
           })}
         </div>
-        {/* <div className="flex items-start justify-between gap-3">
-          <Link to={productDetailUrl} className="block">
-            <h3 className="text-lg font-semibold text-[#17110d]">{item.title}</h3>
-            <p className="mt-1 text-sm text-zinc-500">{item.category}</p>
-          </Link>
 
-          <div className="flex items-center gap-1.5 pt-1">
-            {item.metals.slice(0, 3).map((metal) => (
-              <span
-                key={metal}
-                title={metal}
-                className={`h-3.5 w-3.5 rounded-full border border-white shadow-sm ${getMetalToneClass(metal)}`}
-              />
-            ))}
-          </div>
-        </div> */}
-
-        <div className="mt-auto flex items-end justify-between gap-3 pt-2">
-          <div className="space-y-1">
-            <p className="text-xl font-bold text-[#17110d]">{formatIndianRupee(basePrice)}</p>
-            {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> : null}
-          </div>
-
-          {/* <button
-            type="button"
-            onClick={(event) => void handleAddToCart(event)}
-            disabled={isAdding}
-            className="rounded-full border border-[#dbc8b8] px-4 py-2 text-xs font-semibold tracking-[0.1em] text-[#3c2b20] transition hover:border-[#111111] hover:bg-[#111111] hover:text-white disabled:opacity-60"
-          >
-            {isAdding ? 'ADDING...' : 'ADD TO CART'}
-          </button> */}
+        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 text-[#26221f]">
+          <p className="text-[1.5rem] font-semibold leading-none tracking-[-0.04em]">{formatIndianRupee(basePrice)}</p>
+          {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> : null}
+          {hasDiscount ? (
+            <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
+              -{discountPercent}%
+            </span>
+          ) : null}
         </div>
       </div>
     </article>
