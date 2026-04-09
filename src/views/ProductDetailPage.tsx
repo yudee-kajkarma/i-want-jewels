@@ -6,6 +6,7 @@ import {
   Clock3,
   CreditCard,
   Eye,
+  Heart,
   Headset,
   Package,
   PencilLine,
@@ -13,6 +14,7 @@ import {
   ShieldCheck,
   Trash2,
   Truck,
+  X,
 } from 'lucide-react'
 import { Link, useLocation, useNavigate, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
@@ -81,6 +83,47 @@ const productFeatureItems = [
   },
 ]
 
+const aboutProductBullets = [
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  'Nulla luctus libero quis mauris vestibulum dapibus.',
+  'Maecenas ullamcorper erat mi, vel consequat enim suscipit at.',
+  'Quisque consectetur nibh ac urna molestie scelerisque.',
+  'Mauris in nisl scelerisque massa consectetur pretium sed et mauris.',
+]
+
+const sizeGuideRows = [
+  { size: 'XS', bust: '32', waist: '24-25', lowHip: '33-34' },
+  { size: 'S', bust: '34-35', waist: '26-27', lowHip: '35-36' },
+  { size: 'M', bust: '36-37', waist: '28-29', lowHip: '38-40' },
+  { size: 'L', bust: '38-39', waist: '30-31', lowHip: '42-44' },
+  { size: 'XL', bust: '40-41', waist: '32-33', lowHip: '45-47' },
+  { size: '2XL', bust: '42-43', waist: '34-35', lowHip: '48-50' },
+]
+
+function getSuggestedSize(height: number, weight: number): string {
+  if (height <= 155 || weight <= 45) {
+    return 'XS'
+  }
+
+  if (height <= 165 || weight <= 55) {
+    return 'S'
+  }
+
+  if (height <= 175 || weight <= 65) {
+    return 'M'
+  }
+
+  if (height <= 185 || weight <= 75) {
+    return 'L'
+  }
+
+  if (height <= 195 || weight <= 85) {
+    return 'XL'
+  }
+
+  return '2XL'
+}
+
 function StarRating({ rating }: { rating: number }) {
   const filledStars = Math.round(rating)
 
@@ -96,15 +139,25 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 function ProductFeatureGrid() {
+  const featureIcons = [Truck, Package, ShieldCheck, Headset]
+
   return (
-    <div className="mt-10 grid gap-5 border-t border-[#e7e7e7] pt-8 sm:grid-cols-2 lg:grid-cols-4">
-      {productFeatureItems.map((item) => (
-        <article key={item.title} className="rounded-2xl border border-[#ececec] bg-white p-5">
-          <p className="text-base">*</p>
-          <h4 className="mt-3 text-sm font-semibold text-[#191919]">{item.title}</h4>
-          <p className="mt-2 text-xs leading-5 text-[#6a6a6a]">{item.description}</p>
-        </article>
-      ))}
+    <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {productFeatureItems.map((item, index) => {
+        const FeatureIcon = featureIcons[index] ?? ShieldCheck
+
+        return (
+          <article key={item.title} className="space-y-3">
+            <span className="inline-flex h-10 w-10 items-center justify-center text-[#2a2a2a]">
+              <FeatureIcon strokeWidth={1.7} className="h-6 w-6" />
+            </span>
+            <h4 className="text-[1.65rem] font-semibold tracking-[-0.04em] text-[#191919] sm:text-[1.35rem]">
+              {item.title}
+            </h4>
+            <p className="max-w-[18rem] text-sm leading-7 text-[#6a6a6a]">{item.description}</p>
+          </article>
+        )
+      })}
     </div>
   )
 }
@@ -215,6 +268,9 @@ export default function ProductDetailPage({
   const [reviewForm, setReviewForm] = useState<ReviewPayload>(initialReviewForm)
   const [isReviewFormOpen, setIsReviewFormOpen] = useState(false)
   const [activeInfoTab, setActiveInfoTab] = useState<'description' | 'specifications'>('description')
+  const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false)
+  const [sizeGuideHeight, setSizeGuideHeight] = useState(200)
+  const [sizeGuideWeight, setSizeGuideWeight] = useState(90)
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false)
   const [isSubmittingReview, setIsSubmittingReview] = useState(false)
@@ -286,6 +342,28 @@ export default function ProductDetailPage({
     }
   }, [initialProduct?.id, initialProduct?.slug, productIdentifier, slugParam])
 
+  useEffect(() => {
+    if (!isSizeGuideOpen) {
+      return
+    }
+
+    const previousOverflow = document.body.style.overflow
+
+    function handleEscapeKey(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsSizeGuideOpen(false)
+      }
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleEscapeKey)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', handleEscapeKey)
+    }
+  }, [isSizeGuideOpen])
+
   const selectedVariant = useMemo<ProductVariant | undefined>(() => {
     if (!product) {
       return undefined
@@ -322,6 +400,10 @@ export default function ProductDetailPage({
   const totalReviewCount = reviewsPagination?.totalReviews ?? product?.reviewsCount ?? 0
   const averageReviewRating =
     reviews.length > 0 ? reviews.reduce((total, review) => total + review.rating, 0) / reviews.length : (product?.rating ?? 0)
+  const suggestedSize = getSuggestedSize(sizeGuideHeight, sizeGuideWeight)
+  const basePrice = selectedVariant?.price ?? 0
+  const comparePrice = Math.round(basePrice / 0.625)
+  const discountPercent = Math.max(1, Math.round(((comparePrice - basePrice) / comparePrice) * 100))
 
   const reviewBreakdown = [5, 4, 3, 2, 1].map((star) => {
     const count = reviews.filter((review) => Math.round(review.rating) === star).length
@@ -566,14 +648,14 @@ export default function ProductDetailPage({
 
               </div>
 
-              <div className="space-y-6 border border-[#e6e6e6] bg-white p-6 sm:p-8">
+              <div className="space-y-6 bg-white p-2 sm:p-4">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">{product.vendor}</p>
-                    <h1 className="mt-1 text-3xl font-bold tracking-[-0.03em] text-[#151515]">{product.title}</h1>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">FASHION</p>
+                    <h1 className="mt-1 text-[2.15rem] font-semibold tracking-[-0.05em] text-[#151515]">{product.title}</h1>
                     <div className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
                       <StarRating rating={averageReviewRating} />
-                      <span>({formatReviewCount(totalReviewCount)})</span>
+                      <span>({formatReviewCount(totalReviewCount)} reviews)</span>
                     </div>
                   </div>
 
@@ -581,21 +663,34 @@ export default function ProductDetailPage({
                     type="button"
                     onClick={() => void handleWishlistAction()}
                     disabled={isUpdatingWishlist}
-                    className="h-7 w-7 rounded-sm border border-[#d9d9d9] text-xs text-zinc-600 transition hover:border-zinc-900 hover:text-zinc-900 disabled:opacity-60"
-                    aria-label="Toggle wishlist"
+                    className={`flex h-8 w-8 items-center justify-center rounded-md border transition disabled:opacity-60 ${
+                      wishlistItem
+                        ? 'border-[#111111] bg-[#111111] text-white'
+                        : 'border-[#d9d9d9] text-zinc-600 hover:border-zinc-900 hover:text-zinc-900'
+                    }`}
+                    aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
                   >
-                    {wishlistItem ? 'X' : '+'}
+                    <Heart
+                      className={`h-4 w-4 ${wishlistItem ? 'fill-current' : ''}`}
+                      strokeWidth={1.9}
+                    />
                   </button>
                 </div>
 
                 <div>
-                  <p className="text-3xl font-extrabold text-[#151515]">{formatIndianRupee(selectedVariant.price)}</p>
-                  <p className="mt-2 text-xs leading-6 text-zinc-500">{product.description}</p>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <p className="text-[2rem] font-semibold text-[#151515]">{formatIndianRupee(basePrice)}</p>
+                    {/* <p className="text-base text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> */}
+                    {/* <span className="rounded-full bg-[#ff48b2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
+                      -{discountPercent}%
+                    </span> */}
+                  </div>
+                  <p className="mt-4 max-w-[36rem] text-sm leading-7 text-zinc-500">{product.description}</p>
                 </div>
 
                 <div className="border-y border-[#ebebeb] py-4 text-sm text-zinc-700">
-                  <p>
-                    Color: <span className="font-medium text-zinc-900">{selectedVariant.title}</span>
+                  <p className="font-medium text-zinc-900">
+                    Colors:
                   </p>
                   <div className="mt-3 flex items-center gap-3">
                     {product.variants.map((variant) => (
@@ -613,30 +708,47 @@ export default function ProductDetailPage({
                     ))}
                   </div>
 
-                  <div className="mt-3 flex items-center justify-between text-sm">
-                    <p>Size: <span className="font-medium text-zinc-900">Free Size</span></p>
-                    <button type="button" className="text-[11px] font-semibold text-[#9c3f2e] underline underline-offset-2">Size Guide</button>
+                  <div className="mt-6 flex items-center justify-between text-sm">
+                    <p className="font-medium text-zinc-900">Size:</p>
+                    <button
+                      type="button"
+                      onClick={() => setIsSizeGuideOpen(true)}
+                      className="text-[11px] font-medium text-[#c26b5d] underline underline-offset-2"
+                    >
+                      Size Guide
+                    </button>
                   </div>
 
                   <div className="mt-4">
-                    <p className="mb-2 text-sm">Quantity:</p>
-                    <div className="inline-flex items-center border border-[#d9d9d9]">
+                    <p className="mb-2 text-sm font-medium text-zinc-900">Quantity:</p>
+                    <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:items-center">
+                      <div className="inline-flex items-center rounded-md border border-[#d9d9d9]">
+                        <button
+                          type="button"
+                          onClick={() => setQuantity((value) => Math.max(1, value - 1))}
+                          className="flex h-9 w-9 items-center justify-center text-base text-zinc-700"
+                        >
+                          -
+                        </button>
+                        <span className="flex h-9 min-w-12 items-center justify-center border-x border-[#d9d9d9] px-3 text-sm font-medium">
+                          {quantity}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setQuantity((value) => value + 1)}
+                          className="flex h-9 w-9 items-center justify-center text-base text-zinc-700"
+                        >
+                          +
+                        </button>
+                      </div>
+
                       <button
                         type="button"
-                        onClick={() => setQuantity((value) => Math.max(1, value - 1))}
-                        className="flex h-9 w-9 items-center justify-center text-base text-zinc-700"
+                        onClick={() => void handleAddToCart()}
+                        disabled={isAddingToCart}
+                        className="w-full rounded-xl border border-[#1a1a1a] px-4 py-3 text-xs font-bold tracking-[0.12em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
                       >
-                        -
-                      </button>
-                      <span className="flex h-9 min-w-10 items-center justify-center border-x border-[#d9d9d9] px-3 text-sm font-medium">
-                        {quantity}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => setQuantity((value) => value + 1)}
-                        className="flex h-9 w-9 items-center justify-center text-base text-zinc-700"
-                      >
-                        +
+                        {isAddingToCart ? 'ADDING...' : 'ADD TO CART'}
                       </button>
                     </div>
                   </div>
@@ -645,16 +757,8 @@ export default function ProductDetailPage({
                 <div className="grid gap-3">
                   <button
                     type="button"
-                    onClick={() => void handleAddToCart()}
-                    disabled={isAddingToCart}
-                    className="w-full border border-[#1a1a1a] px-4 py-3 text-xs font-bold tracking-[0.14em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
-                  >
-                    {isAddingToCart ? 'ADDING...' : 'ADD TO CART'}
-                  </button>
-                  <button
-                    type="button"
                     onClick={handleBuyNow}
-                    className="w-full bg-[#1a1a1a] px-4 py-3 text-xs font-bold tracking-[0.14em] text-white transition hover:bg-[#303030] disabled:opacity-60"
+                    className="w-full rounded-xl bg-[#1a1a1a] px-4 py-3 text-xs font-bold tracking-[0.12em] text-white transition hover:bg-[#303030] disabled:opacity-60"
                   >
                     BUY IT NOW
                   </button>
@@ -663,7 +767,7 @@ export default function ProductDetailPage({
                 {cartFeedback ? <p className="text-xs text-zinc-600">{cartFeedback}</p> : null}
                 {wishlistFeedback ? <p className="text-xs text-zinc-600">{wishlistFeedback}</p> : null}
 
-                <div className="space-y-2 border-t border-[#ebebeb] pt-4 text-[13px] leading-6 text-zinc-700">
+                <div className="space-y-2 pt-1 text-[13px] leading-6 text-zinc-700">
                   <div className="flex flex-wrap items-center gap-5">
                     <p className="inline-flex items-center gap-2 font-semibold text-zinc-900">
                       <RotateCcw strokeWidth={2.4} className="h-3.5 w-3.5" />
@@ -678,13 +782,13 @@ export default function ProductDetailPage({
                   <p className="inline-flex items-center gap-2">
                     <Clock3 strokeWidth={2.4} className="h-3.5 w-3.5" />
                     <span className="font-semibold text-zinc-900">Estimated Delivery:</span>
-                    <span className="text-zinc-500">14 January - 19 January</span>
+                    <span className="text-zinc-500">14 January - 18 January</span>
                   </p>
                   </div>
                   <div>
                   <p className="inline-flex items-center gap-2">
                     <Eye strokeWidth={2.4} className="h-3.5 w-3.5" />
-                    <span className="font-semibold text-zinc-900">50</span>
+                    <span className="font-semibold text-zinc-900">38</span>
                     <span>people viewing this product right now</span>
                   </p>
                   </div>
@@ -693,16 +797,15 @@ export default function ProductDetailPage({
                   <p><span className="font-semibold text-zinc-900">Tag:</span> <span className="text-zinc-500">{product.tags[0] ?? 'new'}</span></p>
                 </div>
 
-                <div>
-                  <p className="text-center text-sm font-semibold text-zinc-900">Guaranteed Safe Checkout</p>
-                  <div className="mt-3 grid grid-cols-6 gap-2">
+                <div className="rounded-2xl border border-[#e9e5df] p-4">
+                  <p className="text-center text-sm font-semibold text-zinc-900">Guranteed Safe Checkout</p>
+                  <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-6">
                     {['Visa', 'Master', 'RuPay', 'Amex', 'UPI', 'Card'].map((label) => (
                       <span
                         key={label}
-                        className="flex h-10 items-center justify-center gap-1 border border-[#ececec] bg-[#f7f7f7] px-1 text-[10px] text-zinc-600"
+                        className="flex h-9 items-center justify-center rounded-sm bg-[#d9d9d9] px-1 text-[9px] text-zinc-500"
                       >
-                        {label === 'UPI' ? <ShieldCheck className="h-3 w-3" /> : <CreditCard className="h-3 w-3" />}
-                        <span>{label}</span>
+                        {label}
                       </span>
                     ))}
                   </div>
@@ -734,12 +837,12 @@ export default function ProductDetailPage({
               </div>
             </section>
 
-            <section className="mt-12 border-t border-[#e7e7e7] pt-7">
-              <div className="flex items-center gap-8 border-b border-[#e7e7e7]">
+            <section className="mx-auto mt-16 max-w-[1150px] border-t border-[#e7e7e7] pt-10">
+              <div className="flex items-center justify-center gap-12 border-b border-[#e7e7e7]">
                 <button
                   type="button"
                   onClick={() => setActiveInfoTab('description')}
-                  className={`pb-3 text-sm font-semibold transition ${
+                  className={`pb-3 text-[1.15rem] font-semibold transition ${
                     activeInfoTab === 'description' ? 'border-b-2 border-[#1a1a1a] text-[#1a1a1a]' : 'text-zinc-500'
                   }`}
                 >
@@ -748,7 +851,7 @@ export default function ProductDetailPage({
                 <button
                   type="button"
                   onClick={() => setActiveInfoTab('specifications')}
-                  className={`pb-3 text-sm font-semibold transition ${
+                  className={`pb-3 text-[1.15rem] font-semibold transition ${
                     activeInfoTab === 'specifications' ? 'border-b-2 border-[#1a1a1a] text-[#1a1a1a]' : 'text-zinc-500'
                   }`}
                 >
@@ -757,33 +860,44 @@ export default function ProductDetailPage({
               </div>
 
               {activeInfoTab === 'description' ? (
-                <div className="grid gap-8 py-6 md:grid-cols-2">
+                <div className="grid gap-14 py-10 md:grid-cols-2">
                   <div>
-                    <h3 className="text-sm font-semibold text-[#1a1a1a]">Description</h3>
-                    <p className="mt-3 text-sm leading-7 text-zinc-600">{product.description}</p>
+                    <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">Description</h3>
+                    <p className="mt-3 text-base leading-8 text-zinc-600">{product.details || product.description}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-[#1a1a1a]">About This Product</h3>
-                    <p className="mt-3 text-sm leading-7 text-zinc-600">{product.details}</p>
+                    <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">About This Products</h3>
+                    <ul className="mt-3 space-y-2 text-base leading-8 text-zinc-600">
+                      {aboutProductBullets.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <span className="mt-3 block h-1 w-1 rounded-full bg-zinc-400" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ) : (
-                <div className="grid gap-4 py-6 sm:grid-cols-2 lg:grid-cols-4">
-                  <div className="rounded-xl border border-[#ededed] p-4 text-xs text-zinc-600">
-                    <p className="font-semibold text-zinc-900">Stone Type</p>
-                    <p className="mt-2">{product.stoneType}</p>
-                  </div>
-                  <div className="rounded-xl border border-[#ededed] p-4 text-xs text-zinc-600">
-                    <p className="font-semibold text-zinc-900">Diamond Pcs</p>
-                    <p className="mt-2">{product.diamondPcs}</p>
-                  </div>
-                  <div className="rounded-xl border border-[#ededed] p-4 text-xs text-zinc-600">
-                    <p className="font-semibold text-zinc-900">Carat</p>
-                    <p className="mt-2">{product.carat}</p>
-                  </div>
-                  <div className="rounded-xl border border-[#ededed] p-4 text-xs text-zinc-600">
-                    <p className="font-semibold text-zinc-900">Certificate</p>
-                    <p className="mt-2">{product.certificate}</p>
+                <div className="mx-auto max-w-[620px] py-10">
+                  <div className="overflow-hidden">
+                    {[
+                      ['Rating', `★★★★★ (${formatReviewCount(totalReviewCount)})`],
+                      ['Outer Shell', product.stoneType || '100% polyester'],
+                      ['Lining', product.certificate || '100% polyurethane'],
+                      ['Size', 'S, M, L, XL'],
+                      ['Colors', product.metals?.join(', ') || selectedVariant.title],
+                      ['Care', '⊘  ⌫  ⌗'],
+                    ].map(([label, value], index) => (
+                      <div
+                        key={label}
+                        className={`grid grid-cols-[145px_minmax(0,1fr)] gap-4 px-8 py-4 text-sm ${
+                          index < 5 ? 'mb-3 bg-[#f5f5f5]' : ''
+                        }`}
+                      >
+                        <span className="font-medium text-[#1a1a1a]">{label}</span>
+                        <span className={label === 'Rating' ? 'text-[#d29c1f]' : 'text-zinc-700'}>{value}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
@@ -954,6 +1068,133 @@ export default function ProductDetailPage({
           </div>
         ) : null}
       </main>
+      {isSizeGuideOpen ? (
+        <div
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-[#000000]/55 px-4 py-6"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="size-guide-title"
+          onClick={() => setIsSizeGuideOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-[1020px] rounded-[28px] bg-white px-8 py-7 shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:px-10 sm:py-9 lg:px-8"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsSizeGuideOpen(false)}
+              className="absolute right-4 top-4 inline-flex h-7 w-7 items-center justify-center rounded-full text-[#9a9a9a] transition hover:bg-zinc-100 hover:text-zinc-700"
+              aria-label="Close size guide"
+            >
+              <X className="h-3.5 w-3.5" strokeWidth={2.2} />
+            </button>
+
+            <h2 id="size-guide-title" className="text-[2.05rem] font-semibold tracking-[-0.04em] text-[#222222] sm:text-[2.2rem]">
+              Size Guide
+            </h2>
+
+            <div className="mt-8 space-y-4 sm:space-y-5">
+              <div className="grid gap-3 sm:grid-cols-[62px_74px_minmax(0,1fr)] sm:items-center sm:gap-6">
+                <label htmlFor="size-guide-height" className="text-[1.02rem] font-normal text-[#3c3c3c]">
+                  Height
+                </label>
+                <div className="flex h-9 items-center justify-center rounded-[8px] border border-[#e6e6e6] bg-white px-2 text-[0.95rem] text-[#666666] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
+                  {sizeGuideHeight} Cm
+                </div>
+                <input
+                  id="size-guide-height"
+                  type="range"
+                  min={140}
+                  max={200}
+                  value={sizeGuideHeight}
+                  onChange={(event) => setSizeGuideHeight(Number(event.target.value))}
+                  className="size-guide-slider h-2 w-full cursor-pointer appearance-none rounded-full bg-[#242424] accent-[#242424]"
+                />
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-[62px_74px_minmax(0,1fr)] sm:items-center sm:gap-6">
+                <label htmlFor="size-guide-weight" className="text-[1.02rem] font-normal text-[#3c3c3c]">
+                  Weight
+                </label>
+                <div className="flex h-9 items-center justify-center rounded-[8px] border border-[#e6e6e6] bg-white px-2 text-[0.95rem] text-[#666666] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
+                  {sizeGuideWeight} Kg
+                </div>
+                <input
+                  id="size-guide-weight"
+                  type="range"
+                  min={40}
+                  max={90}
+                  value={sizeGuideWeight}
+                  onChange={(event) => setSizeGuideWeight(Number(event.target.value))}
+                  className="size-guide-slider h-2 w-full cursor-pointer appearance-none rounded-full bg-[#242424] accent-[#242424]"
+                />
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <p className="text-[1.05rem] font-semibold text-[#262626]">Suggests For You:</p>
+              <div className="mt-4 flex flex-wrap gap-2.5">
+                {sizeGuideRows.map((row) => (
+                  <button
+                    key={row.size}
+                    type="button"
+                    className={`inline-flex h-10 min-w-10 items-center justify-center rounded-full border px-3 text-[0.98rem] transition ${
+                      suggestedSize === row.size
+                        ? 'border-[#1f1f1f] text-[#1f1f1f] ring-1 ring-[#1f1f1f]/10'
+                        : 'border-[#e1e1e1] text-[#303030] hover:border-[#b7b7b7]'
+                    }`}
+                  >
+                    {row.size}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 overflow-x-auto border border-[#d8d8d8]">
+              <table className="min-w-full border-collapse text-center text-[0.98rem] text-[#424242]">
+                <thead>
+                  <tr className="bg-white font-semibold text-[#2b2b2b]">
+                    <th className="border-b border-r border-[#d8d8d8] px-4 py-3.5">Size</th>
+                    <th className="border-b border-r border-[#d8d8d8] px-4 py-3.5">Bust</th>
+                    <th className="border-b border-r border-[#d8d8d8] px-4 py-3.5">Waist</th>
+                    <th className="border-b border-[#d8d8d8] px-4 py-3.5">Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sizeGuideRows.map((row, index) => (
+                    <tr key={row.size} className={index % 2 === 0 ? 'bg-[#f1f1f1]' : 'bg-white'}>
+                      <td className="border-r border-t border-[#d8d8d8] px-4 py-3.5">{row.size}</td>
+                      <td className="border-r border-t border-[#d8d8d8] px-4 py-3.5">{row.bust}</td>
+                      <td className="border-r border-t border-[#d8d8d8] px-4 py-3.5">{row.waist}</td>
+                      <td className="border-t border-[#d8d8d8] px-4 py-3.5">{row.lowHip}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <style jsx>{`
+              .size-guide-slider::-webkit-slider-thumb {
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                border-radius: 9999px;
+                background: #242424;
+                cursor: pointer;
+              }
+
+              .size-guide-slider::-moz-range-thumb {
+                width: 16px;
+                height: 16px;
+                border: 0;
+                border-radius: 9999px;
+                background: #242424;
+                cursor: pointer;
+              }
+            `}</style>
+          </div>
+        </div>
+      ) : null}
       <Footer />
     </div>
   )
