@@ -316,7 +316,7 @@ export default function ProductsPage({
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
       <Header />
       <main className="pb-16">
-        <section className="bg-[linear-gradient(180deg,_#f6f1e8,_#fff_80%)] px-4 py-14 text-center md:py-20">
+        <section className="bg-[#f6f1e8] px-4 py-14 text-center md:py-20">
           <div className="mx-auto max-w-[1560px]">
             <h1 className="text-3xl font-semibold md:text-4xl">Shop</h1>
             <p className="mt-3 text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">Homepage / Shop</p>
@@ -356,7 +356,7 @@ export default function ProductsPage({
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)] xl:grid-cols-[280px_minmax(0,1fr)]">
-            <div className={`${isMobileFiltersOpen ? 'block' : 'hidden'} lg:block`}>
+            <div className={`${isMobileFiltersOpen ? 'block' : 'hidden'} lg:sticky lg:top-24 lg:block lg:max-h-[calc(100vh-7rem)] lg:self-start lg:overflow-y-auto`}>
               <ProductsFilters
                 filterOptions={initialFilterOptions}
                 filters={filters}
@@ -369,7 +369,7 @@ export default function ProductsPage({
             </div>
 
             <div>
-              <div className="mb-6 flex flex-col gap-4  bg-white px-5 py-4 shadow-[0_12px_35px_rgba(92,63,37,0.04)] xl:flex-row xl:items-start xl:justify-between">
+              <div className="mb-6 flex flex-col gap-4  bg-white px-5 py-4 xl:flex-row xl:items-start xl:justify-between">
                 <div className="flex flex-wrap items-center gap-3">
                   <div className="inline-flex rounded-xl border border-[#e6dbd1] bg-[#fbf8f4] p-1">
                     <button

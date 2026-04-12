@@ -177,18 +177,18 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
   if (layout === 'list') {
     return (
       <article className="group grid items-center gap-6 border-b border-[#efe7de] py-8 lg:grid-cols-[300px_minmax(0,1fr)_180px] lg:gap-8">
-        <Link to={productDetailUrl} className="relative block overflow-hidden rounded-[22px] bg-[linear-gradient(180deg,#fffdf8_0%,#f8f1e9_100%)]">
+        <Link to={productDetailUrl} className="relative block overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)]">
           {isNewArrival ? (
             <span className="absolute left-4 top-4 z-20 rounded-full bg-[#f23ea9] px-3 py-1 text-[10px] font-bold leading-none text-white shadow-[0_10px_20px_rgba(242,62,169,0.22)]">
               NEW
             </span>
           ) : null}
 
-          <div className="relative flex h-[260px] w-full items-center justify-center overflow-hidden px-5 py-5">
+          <div className="relative h-[20rem] w-full overflow-hidden">
             <img
               src={primaryImage}
               alt={item.title}
-              className={`absolute inset-0 h-full w-full object-contain p-5 transition duration-500 ${
+              className={`absolute inset-0 h-full w-full object-cover transition duration-500 ${
                 hoverImage ? 'opacity-100 group-hover:opacity-0' : 'opacity-100 group-hover:scale-[1.03]'
               }`}
             />
@@ -196,7 +196,7 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
               <img
                 src={hoverImage}
                 alt={`${item.title} alternate view`}
-                className="absolute inset-0 h-full w-full object-contain p-5 opacity-0 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
               />
             ) : null}
           </div>

@@ -397,7 +397,7 @@ export default function HomeBody() {
           </div>
         </div>
       </section>
-
+{/* 
       <section className="mx-auto max-w-[1600px] px-4 py-14">
         <div className="relative overflow-hidden rounded-[40px] border border-[#f3d2de] bg-[radial-gradient(circle_at_top,#fff6fb_0%,#ffdbe8_34%,#f4b6cb_68%,#eca2bf_100%)] px-6 py-8 shadow-[0_30px_80px_rgba(180,90,130,0.2)] md:px-10 lg:px-16 lg:py-12">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_30%,rgba(255,255,255,0.65),transparent_28%),radial-gradient(circle_at_68%_20%,rgba(255,255,255,0.45),transparent_22%),radial-gradient(circle_at_50%_78%,rgba(255,255,255,0.35),transparent_22%)]" />
@@ -407,10 +407,10 @@ export default function HomeBody() {
 
           <div className="relative flex flex-col gap-8">
             <div className="flex items-start justify-between gap-4">
-              {/* <div>
+              <div>
                 <img src={brandLogo.src} alt="I Want Jewels" className="h-10 w-auto sm:h-12" />
                 <p className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#24407c]">I Want Jewels</p>
-              </div> */}
+              </div>
 
               <div className="flex items-center gap-2 self-start">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#24407c] text-white shadow-[0_12px_28px_rgba(36,64,124,0.24)]">
@@ -494,7 +494,7 @@ export default function HomeBody() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="mx-auto max-w-7xl px-4 py-12">
         <div className="text-center">
