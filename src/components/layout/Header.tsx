@@ -17,8 +17,8 @@ import ringModelImage from '../../assets/image/ring1.jpeg'
 import brandLogo from '../../assets/logo.svg'
 
 const navLinks = [
-  { label: 'Shop', to: '/products' },
   { label: 'Home', to: '/' },
+  { label: 'Shop', to: '/products' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ]
