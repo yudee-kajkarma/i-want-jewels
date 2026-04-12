@@ -389,7 +389,7 @@ export default function Header() {
     const [desktopSearchTerm, setDesktopSearchTerm] = useState("");
     const [mobileSearchTerm, setMobileSearchTerm] = useState("");
     const [shopCategories, setShopCategories] = useState<string[]>([]);
-    const [shopMenuLayout, setShopMenuLayout] = useState({ left: 0, width: 0 });
+    const [shopMenuTop, setShopMenuTop] = useState(0);
     const shopMenuCloseTimeoutRef = useRef<ReturnType<
         typeof setTimeout
     > | null>(null);
@@ -529,7 +529,7 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-        function updateShopMenuLayout() {
+        function updateShopMenuTop() {
             const shopTrigger = shopMenuRef.current;
 
             if (!shopTrigger || typeof window === "undefined") {
@@ -537,20 +537,17 @@ export default function Header() {
             }
 
             const triggerRect = shopTrigger.getBoundingClientRect();
-            const viewportWidth = window.innerWidth;
-
-            setShopMenuLayout({
-                left: -triggerRect.left,
-                width: viewportWidth,
-            });
+            setShopMenuTop(triggerRect.bottom + 20);
         }
 
-        updateShopMenuLayout();
+        updateShopMenuTop();
 
-        window.addEventListener("resize", updateShopMenuLayout);
+        window.addEventListener("resize", updateShopMenuTop);
+        window.addEventListener("scroll", updateShopMenuTop);
 
         return () => {
-            window.removeEventListener("resize", updateShopMenuLayout);
+            window.removeEventListener("resize", updateShopMenuTop);
+            window.removeEventListener("scroll", updateShopMenuTop);
         };
     }, [isShopMenuOpen]);
 
@@ -621,11 +618,8 @@ export default function Header() {
                 <div
                     className={`shop-mega-menu ${isShopMenuOpen ? "shop-mega-menu--open" : ""}`}
                     style={
-                        shopMenuLayout.width > 0
-                            ? {
-                                  left: `${shopMenuLayout.left}px`,
-                                  width: `${shopMenuLayout.width}px`,
-                              }
+                        shopMenuTop > 0
+                            ? { top: `${shopMenuTop}px` }
                             : undefined
                     }
                 >
