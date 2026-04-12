@@ -1,4 +1,5 @@
 import { Link } from '@/lib/router'
+import logofooter from '@/assets/logofooter.avif'
 
 const informationLinks = [
   { label: 'Contact us', to: '/contact' },
@@ -90,7 +91,7 @@ export default function Footer() {
       <div className="mx-auto  px-4 py-10 lg:px-10 lg:py-12">
         <div className="grid gap-8 lg:grid-cols-[1.15fr_0.78fr_0.78fr_0.9fr_1.15fr] lg:gap-10">
           <div>
-            <h3 className="text-3xl font-semibold tracking-[-0.04em] text-zinc-900 lg:text-[3rem]">I Want Jewel</h3>
+            <img src={logofooter.src} alt="I Want Jewel" className="h-auto w-[100px] lg:w-[100px]" />
             <div className="mt-6 space-y-4 text-zinc-800">
               <p className="flex text-base lg:text-lg">
                 <span className=" font-semibold">Mail:</span>

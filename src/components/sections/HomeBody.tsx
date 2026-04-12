@@ -151,7 +151,7 @@ function getCollectionCardMedia(category: string) {
   if (normalizedCategory.includes('ring')) {
     return {
       image: ringImage.src,
-      imageClassName: 'h-full w-full object-contain object-center p-4 transition duration-500 group-hover:scale-105',
+      imageClassName: 'h-full w-full object-cover object-center transition duration-500 group-hover:scale-105',
     }
   }
 

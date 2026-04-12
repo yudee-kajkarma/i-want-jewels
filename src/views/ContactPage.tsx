@@ -5,9 +5,9 @@ import Header from '../components/layout/Header'
 
 const contactDetails = [
   'I Want Jewels Boutique',
-  '12 Diamond Street, Antwerp 2000',
-  'Phone: +32 466 88 88 88',
-  'Email: hi@example@gmail.com',
+  // '12 Diamond Street, Antwerp 2000',
+  // 'Phone: +32 466 88 88 88',
+  'Email: info@iwantjewels.com',
 ]
 
 const openHours = [
