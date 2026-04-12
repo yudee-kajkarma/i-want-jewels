@@ -620,7 +620,7 @@ export default function ProductDetailPage({
             </nav>
 
             <section className="grid gap-10 xl:grid-cols-[1.08fr_0.92fr]">
-              <div className="space-y-6">
+              <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
                 <div className="grid gap-6 lg:grid-cols-[160px_minmax(0,1fr)]">
                   <div className="order-2 flex gap-4 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
                     {galleryImages.map((image) => {
