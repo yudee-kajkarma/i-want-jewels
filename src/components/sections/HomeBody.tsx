@@ -148,16 +148,16 @@ function getCollectionCardMedia(category: string) {
     }
   }
 
-  if (normalizedCategory.includes('ring')) {
+  if (normalizedCategory.includes('earring') || normalizedCategory.includes('ear')) {
     return {
-      image: ringImage.src,
+      image: earringProductImage.src,
       imageClassName: 'h-full w-full object-cover object-center transition duration-500 group-hover:scale-105',
     }
   }
 
-  if (normalizedCategory.includes('earring') || normalizedCategory.includes('ear')) {
+  if (normalizedCategory.includes('ring')) {
     return {
-      image: earringImage.src,
+      image: ringImage.src,
       imageClassName: 'h-full w-full object-cover object-center transition duration-500 group-hover:scale-105',
     }
   }
