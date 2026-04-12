@@ -31,19 +31,19 @@ const fallbackCategoryLabels = ['All', 'Necklace', 'Bracelet', 'Ring', 'Earrings
 
 const budgetCollections = [
   {
-    title: 'Under Rs 200',
+    title: 'Under €200',
     eyebrow: 'Gift Picks',
     image: earringProductImage.src,
     href: '/products?price_max=200',
   },
   {
-    title: 'Under Rs 300',
+    title: 'Under €300',
     eyebrow: 'For Stacks',
     image: ringImage.src,
     href: '/products?price_max=300',
   },
   {
-    title: 'Under Rs 400',
+    title: 'Under €400',
     eyebrow: 'Best Value',
     image: necklaceImage.src,
     href: '/products?price_max=400',
@@ -546,7 +546,7 @@ export default function HomeBody() {
               Give the gift of choice. Last-minute pick? This jewellery gift card still feels considered, premium, and personal.
             </p>
             <div className="mt-6 space-y-3 text-sm text-zinc-700">
-              <p>Flexible denominations from Rs 500 to Rs 4000</p>
+              <p>Flexible denominations from €500 to €4000</p>
               <p>Instant digital delivery</p>
               <p>Redeem on any jewellery collection</p>
             </div>

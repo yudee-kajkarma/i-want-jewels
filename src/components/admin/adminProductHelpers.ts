@@ -138,9 +138,9 @@ export function parseCommaSeparatedValues(value: string): string[] {
 }
 
 export function formatPrice(value: number): string {
-  return new Intl.NumberFormat('en-IN', {
+  return new Intl.NumberFormat('en-IE', {
     style: 'currency',
-    currency: 'INR',
+    currency: 'EUR',
     maximumFractionDigits: 0,
   }).format(value)
 }

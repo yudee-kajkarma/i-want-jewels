@@ -11,7 +11,7 @@ import { addCartItem, clearCartItems } from '../services/cartService'
 import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import type { CheckoutSource, PaymentMethod, ShippingAddress, SingleCheckoutDraft } from '../types/order'
-import { formatIndianRupee } from '../utils/productUtils'
+import { formatEuro } from '../utils/productUtils'
 import {
   clearSingleCheckoutDraft,
   clearCartRestoreSnapshot,
@@ -264,7 +264,7 @@ export default function CheckoutPage() {
                           <p className="mt-1 text-sm text-zinc-500">{item.variantTitle || 'Default variant'}</p>
                           <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
                         </div>
-                        <p className="text-lg font-bold text-[#17110d]">{formatIndianRupee(item.price * item.quantity)}</p>
+                        <p className="text-lg font-bold text-[#17110d]">{formatEuro(item.price * item.quantity)}</p>
                       </article>
                     ))}
                   </div>
@@ -357,7 +357,7 @@ export default function CheckoutPage() {
               </div>
               <div className="flex items-center justify-between">
                 <span>Subtotal</span>
-                <span className="font-semibold text-[#17110d]">{formatIndianRupee(subtotal)}</span>
+                <span className="font-semibold text-[#17110d]">{formatEuro(subtotal)}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Shipping</span>
@@ -379,7 +379,7 @@ export default function CheckoutPage() {
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
               <div className="flex items-center justify-between text-lg font-bold text-[#17110d]">
                 <span>Total</span>
-                <span>{formatIndianRupee(subtotal)}</span>
+                <span>{formatEuro(subtotal)}</span>
               </div>
               <button
                 type="button"

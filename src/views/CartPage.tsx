@@ -6,7 +6,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { changeCartItemQuantity, clearCart, removeCartItem } from '../store/cartSlice'
-import { formatIndianRupee } from '../utils/productUtils'
+import { formatEuro } from '../utils/productUtils'
 import { clearSingleCheckoutDraft } from '../utils/checkoutStorage'
 
 const fallbackCartThumbnail =
@@ -75,7 +75,7 @@ export default function CartPage() {
                     <div>
                       <h2 className="text-xl font-bold text-[#17110d]">{item.title}</h2>
                       <p className="mt-1 text-sm text-zinc-500">{item.variantTitle || 'Default variant'}</p>
-                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatIndianRupee(item.price)}</p>
+                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatEuro(item.price)}</p>
                     </div>
 
                     <div className="flex flex-col items-start gap-4 sm:items-end">
@@ -130,7 +130,7 @@ export default function CartPage() {
               </div>
               <div className="flex items-center justify-between">
                 <span>Subtotal</span>
-                <span className="font-semibold text-[#17110d]">{formatIndianRupee(subtotal)}</span>
+                <span className="font-semibold text-[#17110d]">{formatEuro(subtotal)}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Shipping</span>
@@ -140,7 +140,7 @@ export default function CartPage() {
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
               <div className="flex items-center justify-between text-lg font-bold text-[#17110d]">
                 <span>Total</span>
-                <span>{formatIndianRupee(subtotal)}</span>
+                <span>{formatEuro(subtotal)}</span>
               </div>
               <button
                 type="button"

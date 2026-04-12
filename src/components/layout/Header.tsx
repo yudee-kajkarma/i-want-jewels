@@ -558,7 +558,7 @@ export default function Header() {
           <div className="flex items-center gap-6 text-zinc-800">
             <div className="flex items-center gap-5">
               <UtilitySelect label="English" />
-              <UtilitySelect label="INR" />
+              <UtilitySelect label="EUR" />
             </div>
             <div className="flex items-center gap-5 text-zinc-900">
               {socialLinks.map((name) => (
@@ -907,7 +907,7 @@ export default function Header() {
                 </div>
                 <div className="flex items-center gap-3">
                   <UtilitySelect label="English" />
-                  <UtilitySelect label="INR" />
+                  <UtilitySelect label="EUR" />
                 </div>
               </div>
             </div>

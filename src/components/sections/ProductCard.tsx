@@ -10,7 +10,7 @@ import { addToWishlist, removeWishlistItem } from '../../store/wishlistSlice'
 import { setSingleCheckoutDraft } from '../../utils/checkoutStorage'
 import type { Product } from '../../types/product'
 import {
-  formatIndianRupee,
+  formatEuro,
   getMetalToneClass,
   getVariantGallery,
   getVariantImage,
@@ -272,8 +272,8 @@ export default function ProductCard({ item }: ProductCardProps) {
         </div>
 
         <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 text-[#26221f]">
-          <p className="text-[1.5rem] font-semibold leading-none tracking-[-0.04em]">{formatIndianRupee(basePrice)}</p>
-          {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> : null}
+          <p className="text-[1.5rem] font-semibold leading-none tracking-[-0.04em]">{formatEuro(basePrice)}</p>
+          {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatEuro(comparePrice)}</p> : null}
           {hasDiscount ? (
             <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
               -{discountPercent}%

@@ -6,7 +6,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { clearWishlist, removeWishlistItem } from '../store/wishlistSlice'
-import { formatIndianRupee } from '../utils/productUtils'
+import { formatEuro } from '../utils/productUtils'
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -89,7 +89,7 @@ export default function WishlistPage() {
                         <span>{item.rating.toFixed(1)} / 5</span>
                         <span>{item.reviewsCount} reviews</span>
                       </div>
-                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatIndianRupee(item.price)}</p>
+                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatEuro(item.price)}</p>
                     </div>
 
                     <div className="flex flex-col items-start gap-3 sm:items-end">

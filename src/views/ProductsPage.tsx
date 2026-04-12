@@ -9,7 +9,7 @@ import ProductCard from '../components/sections/ProductCard'
 import ProductsFilters from '../components/sections/ProductsFilters'
 import { getProducts } from '../services/productService'
 import type { ProductAllFilters, ProductsApiResult, ProductsFilterState } from '../types/product'
-import { formatIndianRupee } from '../utils/productUtils'
+import { formatEuro } from '../utils/productUtils'
 
 const productsPerPage = 10
 
@@ -365,12 +365,12 @@ export default function ProductsPage({
                 <div>
                   <p className="text-sm uppercase tracking-[0.14em] text-zinc-400">Current price window</p>
                   <p className="mt-1 text-lg font-semibold text-[#24160f]">
-                    {formatIndianRupee(Number(filters.priceMin || initialFilterOptions?.priceRange.min || 0))} to{' '}
-                    {formatIndianRupee(Number(filters.priceMax || initialFilterOptions?.priceRange.max || 0))}
+                    {formatEuro(Number(filters.priceMin || initialFilterOptions?.priceRange.min || 0))} to{' '}
+                    {formatEuro(Number(filters.priceMax || initialFilterOptions?.priceRange.max || 0))}
                   </p>
                 </div>
                 <div className="text-right text-sm text-zinc-500">
-                  <p>All product pricing is displayed in INR.</p>
+                  <p>All product pricing is displayed in EUR.</p>
                   {appliedFilterKeys.length > 0 ? <p className="mt-1">Applied filters: {appliedFilterKeys.join(', ')}</p> : null}
                 </div>
               </div>

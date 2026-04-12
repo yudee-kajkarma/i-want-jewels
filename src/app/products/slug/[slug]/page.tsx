@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { cache } from 'react'
 import { getProductBySlug, getProductReviews } from '../../../../services/productService'
 import ProductDetailPage from '../../../../views/ProductDetailPage'
-import { formatIndianRupee } from '../../../../utils/productUtils'
+import { formatEuro } from '../../../../utils/productUtils'
 
 export const dynamic = 'force-dynamic'
 
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       alternates: {
         canonical: `/products/slug/${product.slug || product.id}`,
       },
-      keywords: [product.category, ...product.metals, product.vendor, formatIndianRupee(product.minPrice)],
+      keywords: [product.category, ...product.metals, product.vendor, formatEuro(product.minPrice)],
     }
   } catch {
     return {

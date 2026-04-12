@@ -1,8 +1,8 @@
 import type { Product, ProductImage, ProductVariant } from '../types/product'
 
-const indianRupeeFormatter = new Intl.NumberFormat('en-IN', {
+const euroFormatter = new Intl.NumberFormat('en-IE', {
   style: 'currency',
-  currency: 'INR',
+  currency: 'EUR',
   maximumFractionDigits: 0,
 })
 
@@ -14,8 +14,8 @@ const metalClasses: Record<string, string> = {
   Silver: 'bg-[#d6d1d1]',
 }
 
-export function formatIndianRupee(value: number): string {
-  return indianRupeeFormatter.format(value)
+export function formatEuro(value: number): string {
+  return euroFormatter.format(value)
 }
 
 export function getPrimaryVariant(product: Product): ProductVariant | undefined {

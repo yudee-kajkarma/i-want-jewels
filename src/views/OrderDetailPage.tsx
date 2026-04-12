@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { cancelOrder, getOrderById, regenerateOrderPayment } from '../services/orderService'
 import type { Order } from '../types/order'
-import { formatIndianRupee } from '../utils/productUtils'
+import { formatEuro } from '../utils/productUtils'
 
 function formatOrderDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -250,7 +250,7 @@ export default function OrderDetailPage() {
                       <p className="mt-1 text-sm text-zinc-500">SKU: {item.sku || 'N/A'}</p>
                       <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
                     </div>
-                    <p className="text-lg font-bold text-[#17110d]">{formatIndianRupee(item.price * item.quantity)}</p>
+                    <p className="text-lg font-bold text-[#17110d]">{formatEuro(item.price * item.quantity)}</p>
                   </article>
                 ))}
               </div>
@@ -266,7 +266,7 @@ export default function OrderDetailPage() {
                   <div className="mt-4 space-y-2 text-sm text-zinc-600">
                     <p>Method: <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span></p>
                     <p>Status: <span className="font-semibold text-[#17110d]">{order.paymentStatus}</span></p>
-                    <p>Total: <span className="font-semibold text-[#17110d]">{formatIndianRupee(order.totalAmount)}</span></p>
+                    <p>Total: <span className="font-semibold text-[#17110d]">{formatEuro(order.totalAmount)}</span></p>
                   </div>
                 </div>
 

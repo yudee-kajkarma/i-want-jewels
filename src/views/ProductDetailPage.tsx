@@ -41,7 +41,7 @@ import type {
   ReviewPayload,
 } from '../types/product'
 import {
-  formatIndianRupee,
+  formatEuro,
   formatReviewCount,
   getMetalToneClass,
   getVariantGallery,
@@ -679,8 +679,8 @@ export default function ProductDetailPage({
 
                 <div>
                   <div className="flex flex-wrap items-center gap-4">
-                    <p className="text-[2rem] font-semibold text-[#151515]">{formatIndianRupee(basePrice)}</p>
-                    {/* <p className="text-base text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> */}
+                    <p className="text-[2rem] font-semibold text-[#151515]">{formatEuro(basePrice)}</p>
+                    {/* <p className="text-base text-zinc-400 line-through">{formatEuro(comparePrice)}</p> */}
                     {/* <span className="rounded-full bg-[#ff48b2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
                       -{discountPercent}%
                     </span> */}

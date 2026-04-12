@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { getPaymentHistory } from '../services/orderService'
 import type { OrdersPagination, PaymentHistoryItem } from '../types/order'
-import { formatIndianRupee } from '../utils/productUtils'
+import { formatEuro } from '../utils/productUtils'
 
 function formatPaymentDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -146,7 +146,7 @@ export default function PaymentHistoryPage() {
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Amount {formatIndianRupee(payment.amount)}</span>
+                    <span>Amount {formatEuro(payment.amount)}</span>
                     <div className="flex items-center gap-4">
                       <span>Updated {formatPaymentDate(payment.updatedAt)}</span>
                       <Link to={`/orders/${payment.orderId}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
