@@ -8,7 +8,7 @@ import { verifyOtp } from '../services/authService'
 
 export default function VerifyOtpPage() {
   const navigate = useNavigate()
-  const { clearOtpEmail, pendingOtpEmail, saveSession } = useAuth()
+  const { clearOtpEmail, pendingOtpEmail } = useAuth()
   const [email, setEmail] = useState(pendingOtpEmail)
   const [otp, setOtp] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -24,10 +24,9 @@ export default function VerifyOtpPage() {
     setError('')
 
     try {
-      const session = await verifyOtp({ email, otp })
-      saveSession(session)
+      await verifyOtp({ email, otp })
       clearOtpEmail()
-      navigate('/', { replace: true })
+      navigate('/login', { replace: true })
     } catch {
       setError('OTP verification failed. Check the email and OTP, then try again.')
     } finally {
@@ -41,7 +40,7 @@ export default function VerifyOtpPage() {
       description="Confirm your account using the OTP"
       eyebrow="Verification"
       asideTitle="One final step before your account is ready."
-      asideBody="Use the OTP sent for your registration email. Once verification succeeds, the authenticated account is saved in local storage and becomes available in the header."
+      asideBody="Use the OTP sent for your registration email. After verification succeeds, continue by signing in with your email and password."
     >
       <form className="space-y-5" onSubmit={handleSubmit}>
         <label className="block">
