@@ -18,9 +18,20 @@ import {
 
 type ProductCardProps = {
   item: Product
+  layout?: 'grid' | 'list'
 }
 
-export default function ProductCard({ item }: ProductCardProps) {
+function buildListSummary(item: Product): string {
+  const categoryLabel = item.category ? item.category.toLowerCase() : 'jewellery'
+
+  if (item.vendor) {
+    return `Keep your look refined with this ${categoryLabel} design from ${item.vendor}, made for effortless everyday styling.`
+  }
+
+  return `Keep your look refined with this ${categoryLabel} design, made for effortless everyday styling.`
+}
+
+export default function ProductCard({ item, layout = 'grid' }: ProductCardProps) {
   const navigate = useNavigate()
   const location = useLocation()
   const dispatch = useAppDispatch()
@@ -48,6 +59,7 @@ export default function ProductCard({ item }: ProductCardProps) {
   const discountPercent = hasDiscount ? Math.round(((comparePrice - basePrice) / comparePrice) * 100) : 0
   const productDetailUrl = `/products/slug/${item.slug || item.id}`
   const isNewArrival = item.tags.some((tag) => tag.toLowerCase().includes('new')) || hasDiscount
+  const listSummary = buildListSummary(item)
 
   useEffect(() => {
     setSelectedVariantId(item.variants[0]?.id ?? '')
@@ -160,6 +172,112 @@ export default function ProductCard({ item }: ProductCardProps) {
         draft,
       },
     })
+  }
+
+  if (layout === 'list') {
+    return (
+      <article className="group grid items-center gap-6 border-b border-[#efe7de] py-8 lg:grid-cols-[300px_minmax(0,1fr)_180px] lg:gap-8">
+        <Link to={productDetailUrl} className="relative block overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)]">
+          {isNewArrival ? (
+            <span className="absolute left-4 top-4 z-20 rounded-full bg-[#f23ea9] px-3 py-1 text-[10px] font-bold leading-none text-white shadow-[0_10px_20px_rgba(242,62,169,0.22)]">
+              NEW
+            </span>
+          ) : null}
+
+          <div className="relative h-[20rem] w-full overflow-hidden">
+            <img
+              src={primaryImage}
+              alt={item.title}
+              className={`absolute inset-0 h-full w-full object-cover transition duration-500 ${
+                hoverImage ? 'opacity-100 group-hover:opacity-0' : 'opacity-100 group-hover:scale-[1.03]'
+              }`}
+            />
+            {hoverImage ? (
+              <img
+                src={hoverImage}
+                alt={`${item.title} alternate view`}
+                className="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+              />
+            ) : null}
+          </div>
+        </Link>
+
+        <div className="min-w-0">
+          <Link to={productDetailUrl} className="block">
+            <h3 className="text-[0.9rem] font-semibold tracking-[-0.04em] text-[#201915] transition hover:text-[#f23ea9]">
+              {item.title}
+            </h3>
+          </Link>
+
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[#26221f]">
+            <p className="text-[1.9rem] font-semibold leading-none tracking-[-0.04em]">{formatIndianRupee(basePrice)}</p>
+            {hasDiscount ? <p className="text-lg text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> : null}
+            {hasDiscount ? (
+              <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
+                -{discountPercent}%
+              </span>
+            ) : null}
+          </div>
+
+          <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-500">{listSummary}</p>
+
+          <div className="mt-5 flex items-center gap-2.5">
+            {item.variants.map((variant) => {
+              const metalLabel = variant.title.split('/')[0]?.trim() || variant.title
+              const isActive = variant.id === selectedVariant?.id
+
+              return (
+                <button
+                  key={variant.id}
+                  type="button"
+                  title={variant.title}
+                  onClick={() => setSelectedVariantId(variant.id)}
+                  className={`h-5 w-5 rounded-full border-2 border-white shadow-sm transition ${getMetalToneClass(metalLabel)} ${
+                    isActive ? 'ring-1 ring-[#3b342f] ring-offset-2' : 'ring-0'
+                  }`}
+                />
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-start gap-5 lg:items-end">
+          <button
+            type="button"
+            onClick={handleBuyNow}
+            className="inline-flex h-12 min-w-[152px] items-center justify-center rounded-full border border-[#2c2622] px-6 text-sm font-semibold text-[#161311] transition hover:bg-[#161311] hover:text-white"
+          >
+            QUICK SHOP
+          </button>
+
+          <div className="flex items-center gap-5 text-[#2b2724]">
+            <button
+              type="button"
+              onClick={(event) => void handleWishlistClick(event)}
+              disabled={isUpdatingWishlist}
+              aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
+              className={`transition hover:text-[#f23ea9] ${wishlistItem ? 'text-[#f23ea9]' : ''} disabled:opacity-60`}
+            >
+              <Heart className={`h-5 w-5 ${wishlistItem ? 'fill-current' : ''}`} aria-hidden="true" />
+            </button>
+
+            <button
+              type="button"
+              onClick={(event) => void handleAddToCart(event)}
+              disabled={isAdding}
+              aria-label="Add to cart"
+              className="transition hover:text-[#f23ea9] disabled:opacity-60"
+            >
+              <ShoppingBag className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
+            </button>
+
+            <Link to={productDetailUrl} className="transition hover:text-[#f23ea9]" aria-label="Quick view">
+              <Eye className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </article>
+    )
   }
 
   return (

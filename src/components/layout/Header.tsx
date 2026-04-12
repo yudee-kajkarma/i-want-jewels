@@ -132,7 +132,7 @@ function MenuLink({
 
 function SearchIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.7">
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.1">
       <circle cx="11" cy="11" r="6.5" />
       <path d="M16 16l4.5 4.5" strokeLinecap="round" />
     </svg>
@@ -141,7 +141,7 @@ function SearchIcon() {
 
 function ChevronIcon() {
   return (
-    <svg viewBox="0 0 20 20" aria-hidden="true" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.7">
+    <svg viewBox="0 0 20 20" aria-hidden="true" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="m5 7 5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
@@ -149,7 +149,7 @@ function ChevronIcon() {
 
 function MenuIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.2">
       <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
     </svg>
   )
@@ -157,7 +157,7 @@ function MenuIcon() {
 
 function CloseIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.2">
       <path d="m6 6 12 12M18 6 6 18" strokeLinecap="round" />
     </svg>
   )
@@ -165,7 +165,7 @@ function CloseIcon() {
 
 function UserIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[25px] w-[25px]" fill="none" stroke="currentColor" strokeWidth="2.2">
       <circle cx="12" cy="8" r="3.5" />
       <path d="M5 19.5c1.7-3.3 4-4.9 7-4.9s5.3 1.6 7 4.9" strokeLinecap="round" />
     </svg>
@@ -174,7 +174,7 @@ function UserIcon() {
 
 function HeartIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[25px] w-[25px]" fill="none" stroke="currentColor" strokeWidth="2.2">
       <path
         d="M12 20.5 4.9 13.8a4.7 4.7 0 0 1 6.6-6.7L12 7.6l.5-.5a4.7 4.7 0 0 1 6.6 6.7L12 20.5Z"
         strokeLinecap="round"
@@ -186,7 +186,7 @@ function HeartIcon() {
 
 function BagIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[25px] w-[25px]" fill="none" stroke="currentColor" strokeWidth="2.2">
       <path d="M5 9.5h14l-1.2 10H6.2L5 9.5Z" strokeLinejoin="round" />
       <path d="M9 9.5V8a3 3 0 1 1 6 0v1.5" strokeLinecap="round" />
     </svg>
@@ -249,7 +249,7 @@ function HeaderAction({
     <>
       {children}
       {typeof count === 'number' ? (
-        <span className="absolute right-0 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-zinc-900 px-1 text-[10px] font-bold leading-none text-white">
+        <span className="absolute right-0 top-0 flex h-[14px] min-w-[14px] items-center justify-center rounded-full bg-zinc-900 px-1 text-[9px] font-bold leading-none text-white">
           {count}
         </span>
       ) : null}
@@ -261,7 +261,7 @@ function HeaderAction({
       <Link
         to={to}
         aria-label={label}
-        className="relative flex h-10 w-10 items-center justify-center text-zinc-900 transition hover:text-pink-500"
+        className="relative flex h-8 w-8 items-center justify-center text-zinc-900 transition hover:text-pink-500"
       >
         {content}
       </Link>
@@ -273,7 +273,7 @@ function HeaderAction({
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="relative flex h-10 w-10 items-center justify-center text-zinc-900 transition hover:text-pink-500"
+      className="relative flex h-8 w-8 items-center justify-center text-zinc-900 transition hover:text-pink-500"
     >
       {content}
     </button>
@@ -571,61 +571,65 @@ export default function Header() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white/95 backdrop-blur">
-        <div ref={headerInnerRef} className="mx-auto flex max-w-[1480px] items-center justify-between gap-3 px-4 py-4 md:gap-4 md:py-5 lg:px-8">
+      <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white">
+        <div ref={headerInnerRef} className="mx-auto flex max-w-[1480px] items-center justify-between gap-3 px-4 py-1.5 md:gap-4 md:py-2 lg:px-8">
           <button
             type="button"
             aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((currentValue) => !currentValue)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-900 transition hover:bg-zinc-50 lg:hidden"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 text-zinc-900 transition hover:bg-zinc-50 lg:hidden"
           >
             {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
 
           <form
-            className="hidden md:block md:w-[235px] lg:w-[270px]"
+            className="hidden md:block md:w-[235px] lg:w-[258px]"
             onSubmit={(event) => {
               event.preventDefault()
               handleGlobalSearchSubmit(desktopSearchTerm)
             }}
           >
-            <label className="flex h-11 items-center gap-3 rounded-xl border border-zinc-200 bg-white px-4 text-sm text-zinc-400 shadow-[0_1px_0_rgba(17,24,39,0.03)]">
+            <label className="flex h-[42px] items-center gap-3 rounded-[14px] border border-zinc-200 bg-white px-4 text-sm text-zinc-400 shadow-[0_1px_0_rgba(17,24,39,0.03)]">
               <SearchIcon />
               <input
                 type="search"
                 placeholder="What are you looking for?"
                 value={desktopSearchTerm}
                 onChange={(event) => setDesktopSearchTerm(event.target.value)}
-                className="w-full border-0 bg-transparent text-sm text-zinc-700 outline-none placeholder:text-zinc-400"
+                className="w-full border-0 bg-transparent text-[15px] text-zinc-700 outline-none placeholder:text-zinc-400"
               />
             </label>
           </form>
 
-          <div className="flex flex-1 items-center justify-center gap-8 lg:gap-12">
-            <nav className="hidden items-center gap-8 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex">
+          <div className="flex flex-1 items-center justify-center gap-5 lg:gap-7">
+            <nav className="hidden items-center gap-5 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex xl:gap-7">
               {activeNavLinks.slice(0, isSlice).map((link) => renderDesktopNavLink(link))}
             </nav>
 
             <Link to={brandLink} className="flex items-center justify-center">
-              <img src={brandLogo.src} alt="I Want Jewels" className="h-10 w-auto sm:h-9 lg:h-[60px]" />
+              <img
+                src={brandLogo.src}
+                alt="I Want Jewels"
+                className="h-auto w-[200px]  mix-blend-multiply"
+              />
             </Link>
 
-            <nav className="hidden items-center gap-8 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex ">
+            <nav className="hidden items-center gap-5 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex xl:gap-7">
               {activeNavLinks.slice(isSlice).map((link) => (
                 <MenuLink key={link.label} label={link.label} to={link.to} className={desktopNavLinkClass} />
               ))}
             </nav>
           </div>
 
-          <div className="flex items-center gap-0.5 sm:gap-2 md:min-w-[235px] md:justify-end lg:min-w-[270px]">
+          <div className="flex items-center gap-0.5 sm:gap-1 md:min-w-[235px] md:justify-end lg:min-w-[258px]">
             <div ref={accountMenuRef} className="relative">
               <button
                 type="button"
                 aria-label={accountLabel}
                 aria-expanded={isAccountMenuOpen}
                 onClick={() => setIsAccountMenuOpen((currentValue) => !currentValue)}
-                className="relative flex h-10 w-10 items-center justify-center text-zinc-900 transition hover:text-pink-500"
+                className="relative flex h-8 w-8 items-center justify-center text-zinc-900 transition hover:text-pink-500"
               >
                 <UserIcon />
               </button>

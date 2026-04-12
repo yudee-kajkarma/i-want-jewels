@@ -92,18 +92,18 @@ export default function Footer() {
           <div>
             <h3 className="text-3xl font-semibold tracking-[-0.04em] text-zinc-900 lg:text-[3rem]">I Want Jewel</h3>
             <div className="mt-6 space-y-4 text-zinc-800">
-              <p className="flex gap-3 text-base lg:text-lg">
-                <span className="min-w-20 font-semibold">Mail:</span>
-                <span>hi.abc@gmail.com</span>
+              <p className="flex text-base lg:text-lg">
+                <span className=" font-semibold">Mail:</span>
+                <span>info@iwantjewels.com</span>
               </p>
-              <p className="flex gap-3 text-base lg:text-lg">
+              {/* <p className="flex gap-3 text-base lg:text-lg">
                 <span className="min-w-20 font-semibold">Phone:</span>
                 <span>1-333-345-6868</span>
               </p>
               <p className="flex gap-3 text-base lg:text-lg">
                 <span className="min-w-20 font-semibold">Address:</span>
                 <span>xyz</span>
-              </p>
+              </p> */}
             </div>
           </div>
 
