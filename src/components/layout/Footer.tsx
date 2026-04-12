@@ -11,7 +11,11 @@ const informationLinks = [
 
 const quickShopLinks = ['Necklace', 'Bracelet', 'Rings', 'Earrings', 'Blog']
 const customerServiceLinks = ['FAQs', 'Shipping', 'Privacy Policy', 'Return & Refund']
-const socialLinks = ['Facebook', 'Instagram', 'Twitter', 'YouTube', 'Pinterest']
+const socialLinks = [
+  { name: 'Instagram', href: 'https://www.instagram.com/iwantjewels/' },
+  { name: 'Facebook', href: 'https://www.facebook.com/iwjewels/' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@iwantjewelsofficial' },
+]
 // const paymentCards = ['150 x 86', '150 x 86', '150 x 86', '150 x 86', '150 x 86']
 
 function FooterLink({ label, to }: { label: string; to?: string }) {
@@ -62,16 +66,10 @@ function SocialIcon({ name }: { name: string }) {
           <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
         </svg>
       )
-    case 'Twitter':
+    case 'TikTok':
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
-          <path d="M17.9 5H21l-6.8 6.9L22 19h-6.1l-4.7-4.5L6.8 19H3.7l7.3-7.4L3.4 5h6.2l4.2 4.1L17.9 5Zm-1.1 12.1h1.7L8.6 6.8H6.8l10 10.3Z" />
-        </svg>
-      )
-    case 'YouTube':
-      return (
-        <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
-          <path d="M19.6 7.2c-.3-1-1.1-1.8-2.1-2.1C15.9 4.7 12 4.7 12 4.7s-3.9 0-5.5.4c-1 .3-1.8 1.1-2.1 2.1C4 8.8 4 12 4 12s0 3.2.4 4.8c.3 1 1.1 1.8 2.1 2.1 1.6.4 5.5.4 5.5.4s3.9 0 5.5-.4c1-.3 1.8-1.1 2.1-2.1.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10.4 15.3V8.7l5.3 3.3-5.3 3.3Z" />
+          <path d="M14.7 3.8c.6 1.4 1.5 2.5 2.7 3.3 1 .7 2.2 1.1 3.5 1.2v2.7a8.6 8.6 0 0 1-3.8-.9v5.2a5.9 5.9 0 1 1-5-5.8v2.8a3.1 3.1 0 1 0 2.2 3v-11.5h2.4Z" />
         </svg>
       )
     default:
@@ -153,9 +151,16 @@ export default function Footer() {
             </form>
 
             <div className="mt-6 flex items-center gap-7 text-zinc-900">
-              {socialLinks.map((name) => (
-                <a key={name} href="#" aria-label={name} className="transition hover:text-pink-500">
-                  <SocialIcon name={name} />
+              {socialLinks.map((socialLink) => (
+                <a
+                  key={socialLink.name}
+                  href={socialLink.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={socialLink.name}
+                  className="transition hover:text-pink-500"
+                >
+                  <SocialIcon name={socialLink.name} />
                 </a>
               ))}
             </div>

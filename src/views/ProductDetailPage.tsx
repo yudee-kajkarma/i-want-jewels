@@ -637,7 +637,7 @@ export default function ProductDetailPage({
                     ))}
                   </div>
 
-                  <div className="order-1 overflow-hidden rounded-[34px] bg-[linear-gradient(180deg,#f9f1e9_0%,#ffffff_100%)] p-6 shadow-[0_24px_70px_rgba(55,31,10,0.08)] lg:order-2">
+                  <div className="order-1 overflow-hidden rounded-[34px] p-6 object-cover lg:order-2">
                     <img
                       src={selectedImage?.src ?? getVariantImage(selectedVariant)}
                       alt={product.title}
