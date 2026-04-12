@@ -210,8 +210,8 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
           </Link>
 
           <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[#26221f]">
-            <p className="text-[1.9rem] font-semibold leading-none tracking-[-0.04em]">{formatIndianRupee(basePrice)}</p>
-            {hasDiscount ? <p className="text-lg text-zinc-400 line-through">{formatIndianRupee(comparePrice)}</p> : null}
+            <p className="text-[1.9rem] font-semibold leading-none tracking-[-0.04em]">{formatEuro(basePrice)}</p>
+            {hasDiscount ? <p className="text-lg text-zinc-400 line-through">{formatEuro(comparePrice)}</p> : null}
             {hasDiscount ? (
               <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
                 -{discountPercent}%
