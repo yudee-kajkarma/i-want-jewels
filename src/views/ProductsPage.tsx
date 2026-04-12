@@ -13,10 +13,33 @@ import { formatIndianRupee } from '../utils/productUtils'
 
 const productsPerPage = 10
 
+type ViewMode = 'grid' | 'list'
+type SortOption = 'featured' | 'title-asc' | 'price-asc' | 'price-desc'
+
 function FilterIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
       <path d="M4 6h16M7 12h10M10 18h4" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function GridViewIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4" fill="currentColor">
+      <rect x="3" y="4" width="5" height="16" rx="1.5" />
+      <rect x="10" y="4" width="5" height="16" rx="1.5" />
+      <rect x="17" y="4" width="4" height="16" rx="1.5" />
+    </svg>
+  )
+}
+
+function ListViewIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4" fill="currentColor">
+      <rect x="4" y="5" width="16" height="3" rx="1.5" />
+      <rect x="4" y="10.5" width="16" height="3" rx="1.5" />
+      <rect x="4" y="16" width="16" height="3" rx="1.5" />
     </svg>
   )
 }
@@ -135,6 +158,8 @@ export default function ProductsPage({
   const pathname = usePathname()
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [viewMode, setViewMode] = useState<ViewMode>('list')
+  const [sortOption, setSortOption] = useState<SortOption>('featured')
   const defaultFilterState = useMemo(() => buildDefaultFilterState(initialFilterOptions), [initialFilterOptions])
   const [filters, setFilters] = useState<ProductsFilterState>(initialFilterState ?? defaultFilterState)
   const [productsData, setProductsData] = useState<ProductsApiResult | null>(initialProductsData)
@@ -146,6 +171,20 @@ export default function ProductsPage({
   const products = productsData?.products ?? []
   const pagination = productsData?.pagination ?? null
   const appliedFilterKeys = productsData?.appliedFilters ?? []
+  const sortedProducts = useMemo(() => {
+    const sortableProducts = [...products]
+
+    switch (sortOption) {
+      case 'title-asc':
+        return sortableProducts.sort((leftProduct, rightProduct) => leftProduct.title.localeCompare(rightProduct.title))
+      case 'price-asc':
+        return sortableProducts.sort((leftProduct, rightProduct) => leftProduct.minPrice - rightProduct.minPrice)
+      case 'price-desc':
+        return sortableProducts.sort((leftProduct, rightProduct) => rightProduct.minPrice - leftProduct.minPrice)
+      default:
+        return sortableProducts
+    }
+  }, [products, sortOption])
 
   useEffect(() => {
     setFilters(initialFilterState ?? defaultFilterState)
@@ -224,27 +263,14 @@ export default function ProductsPage({
     }
   }
 
-  function applyFilters() {
-    const nextFilters = {
-      ...filters,
+  function applyFilters(nextFilters: ProductsFilterState = filters) {
+    const normalizedFilters = {
+      ...nextFilters,
       page: 1,
     }
 
-    setFilters(nextFilters)
-    void fetchProducts(nextFilters)
-  }
-
-  function handleSearchSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-
-    const nextFilters = {
-      ...filters,
-      page: 1,
-      search: filters.search.trim(),
-    }
-
-    setFilters(nextFilters)
-    void fetchProducts(nextFilters)
+    setFilters(normalizedFilters)
+    void fetchProducts(normalizedFilters)
   }
 
   function changePage(pageNumber: number) {
@@ -310,26 +336,7 @@ export default function ProductsPage({
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1560px] px-4 py-8 lg:px-8">
-          <form onSubmit={handleSearchSubmit} className="mb-5 rounded-[20px] border border-[#eadfd4] bg-white p-3 shadow-[0_8px_24px_rgba(92,63,37,0.05)] sm:p-4">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <input
-                type="search"
-                value={filters.search}
-                onChange={(event) => setFilters((currentValue) => ({ ...currentValue, search: event.target.value }))}
-                placeholder="Search products (e.g. halo)"
-                className="h-11 w-full rounded-xl border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
-              />
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="h-11 rounded-xl bg-[#111111] px-5 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
-              >
-                {isLoading ? 'SEARCHING...' : 'SEARCH'}
-              </button>
-            </div>
-          </form>
-
+        <section className="mx-auto max-w-[1560px] px-4 py-8 lg:px-8 bg-white">
           <div className="mb-6 flex items-center justify-between gap-4">
             <button
               type="button"
@@ -343,7 +350,7 @@ export default function ProductsPage({
             <div className="ml-auto text-right">
               <p className="text-sm text-zinc-500">Showing</p>
               <p className="text-base font-semibold text-[#24160f]">
-                {productsData ? `${products.length} of ${pagination?.totalRecords ?? products.length} products` : 'Unable to load products'}
+                {productsData ? `${sortedProducts.length} of ${pagination?.totalRecords ?? sortedProducts.length} products` : 'Unable to load products'}
               </p>
             </div>
           </div>
@@ -357,11 +364,85 @@ export default function ProductsPage({
                 isLoading={isLoading}
                 onApplyFilters={applyFilters}
                 onResetFilters={resetFilters}
+                products={sortedProducts}
               />
             </div>
 
             <div>
-              <div className="mb-5 flex flex-col gap-2 rounded-[28px] border border-[#eadfd4] bg-white px-5 py-4 shadow-[0_12px_35px_rgba(92,63,37,0.04)] sm:flex-row sm:items-center sm:justify-between">
+              <div className="mb-6 flex flex-col gap-4  bg-white px-5 py-4 shadow-[0_12px_35px_rgba(92,63,37,0.04)] xl:flex-row xl:items-start xl:justify-between">
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="inline-flex rounded-xl border border-[#e6dbd1] bg-[#fbf8f4] p-1">
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('grid')}
+                      aria-label="Grid view"
+                      className={`flex h-9 w-9 items-center justify-center rounded-lg transition ${
+                        viewMode === 'grid' ? 'bg-[#1f1b18] text-white' : 'text-zinc-400 hover:bg-white hover:text-[#1f1b18]'
+                      }`}
+                    >
+                      <GridViewIcon />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setViewMode('list')}
+                      aria-label="List view"
+                      className={`flex h-9 w-9 items-center justify-center rounded-lg transition ${
+                        viewMode === 'list' ? 'bg-[#1f1b18] text-white' : 'text-zinc-400 hover:bg-white hover:text-[#1f1b18]'
+                      }`}
+                    >
+                      <ListViewIcon />
+                    </button>
+                  </div>
+
+                  <label className="inline-flex items-center gap-2 text-sm text-zinc-500">
+                    <input
+                      type="checkbox"
+                      checked={filters.tags.includes('sale')}
+                      onChange={(event) =>
+                        setFilters((currentValue) => ({
+                          ...currentValue,
+                          tags: event.target.checked
+                            ? Array.from(new Set([...currentValue.tags, 'sale']))
+                            : currentValue.tags.filter((tag) => tag !== 'sale'),
+                        }))
+                      }
+                      className="h-4 w-4 rounded border-[#d8c8bb] text-[#111111] focus:ring-[#b88a65]"
+                    />
+                    Show only products on sale
+                  </label>
+
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-zinc-500">
+                    <span className="font-medium text-[#24160f]">{sortedProducts.length} Products Found</span>
+                    {appliedFilterKeys.length > 0 ? (
+                      <button
+                        type="button"
+                        onClick={resetFilters}
+                        className="rounded-full border border-[#ff8c83] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#ff5b50] transition hover:bg-[#fff2f1]"
+                      >
+                        Clear All
+                      </button>
+                    ) : null}
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <label className="flex items-center gap-3 text-sm text-[#24160f]">
+                    <span>Sort By</span>
+                    <select
+                      value={sortOption}
+                      onChange={(event) => setSortOption(event.target.value as SortOption)}
+                      className="h-11 min-w-[180px] rounded-xl border border-[#dfd0c3] bg-white px-4 text-sm text-zinc-700 outline-none transition focus:border-[#b88a65]"
+                    >
+                      <option value="featured">Featured</option>
+                      <option value="title-asc">Title A-Z</option>
+                      <option value="price-asc">Price Low to High</option>
+                      <option value="price-desc">Price High to Low</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+              {/* <div className="mb-5 flex flex-col gap-2 rounded-[28px] border border-[#eadfd4] bg-white px-5 py-4 shadow-[0_12px_35px_rgba(92,63,37,0.04)] sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-sm uppercase tracking-[0.14em] text-zinc-400">Current price window</p>
                   <p className="mt-1 text-lg font-semibold text-[#24160f]">
@@ -373,7 +454,7 @@ export default function ProductsPage({
                   <p>All product pricing is displayed in INR.</p>
                   {appliedFilterKeys.length > 0 ? <p className="mt-1">Applied filters: {appliedFilterKeys.join(', ')}</p> : null}
                 </div>
-              </div>
+              </div> */}
 
               {!productsData ? <p className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700">Unable to load products right now.</p> : null}
 
@@ -389,9 +470,9 @@ export default function ProductsPage({
                 </div>
               ) : null}
 
-              <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-                {products.map((product) => (
-                  <ProductCard key={product.id} item={product} />
+              <div className={viewMode === 'grid' ? 'grid gap-5 sm:grid-cols-2 xl:grid-cols-3' : 'space-y-1'}>
+                {sortedProducts.map((product) => (
+                  <ProductCard key={product.id} item={product} layout={viewMode} />
                 ))}
               </div>
 

@@ -1,15 +1,32 @@
 'use client'
 
+import { useMemo } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
-import type { ProductAllFilters, ProductsFilterState } from '../../types/product'
+import type { Product, ProductAllFilters, ProductsFilterState } from '../../types/product'
 
 type ProductsFiltersProps = {
   filterOptions: ProductAllFilters | null
   filters: ProductsFilterState
   setFilters: Dispatch<SetStateAction<ProductsFilterState>>
   isLoading: boolean
-  onApplyFilters: () => void
+  onApplyFilters: (nextFilters?: ProductsFilterState) => void
   onResetFilters: () => void
+  products?: Product[]
+}
+
+const colorSwatchMap: Record<string, string> = {
+  gold: '#ddb018',
+  'yellow gold': '#ddb018',
+  'rose gold': '#cd8b93',
+  silver: '#d6d1d1',
+  'white gold': '#d6d1d1',
+  pink: '#f4c9c3',
+  red: '#e54848',
+  green: '#f23ea9',
+  yellow: '#f3b312',
+  purple: '#8a84dd',
+  black: '#1f1f22',
+  white: '#f3ecdd',
 }
 
 function formatFilterLabel(value: string): string {
@@ -105,6 +122,7 @@ export default function ProductsFilters({
   isLoading,
   onApplyFilters,
   onResetFilters,
+  products = [],
 }: ProductsFiltersProps) {
   const showExtendedSections = {
     stoneTypes: (filterOptions?.stoneTypes.length ?? 0) > 1,
@@ -123,186 +141,157 @@ export default function ProductsFilters({
       : [...currentValues, value]
   }
 
+  const categoryCounts = useMemo(() => {
+    return products.reduce<Record<string, number>>((counts, product) => {
+      const key = product.category.toLowerCase()
+      counts[key] = (counts[key] ?? 0) + 1
+      return counts
+    }, {})
+  }, [products])
+
+  const availableCategories = filterOptions?.categories ?? []
+  const availableColors = (filterOptions?.metals?.length ?? 0) > 0 ? filterOptions?.metals ?? [] : filterOptions?.colors ?? []
+  const minimumPrice = filterOptions?.priceRange.min ?? 0
+  const maximumPrice = filterOptions?.priceRange.max ?? 0
+  const selectedMinimumPrice = Number(filters.priceMin || minimumPrice)
+  const selectedMaximumPrice = Number(filters.priceMax || maximumPrice)
+
+  const clampedMinimumPrice = Math.min(selectedMinimumPrice, selectedMaximumPrice)
+  const clampedMaximumPrice = Math.max(selectedMinimumPrice, selectedMaximumPrice)
+  const priceRangeSpan = Math.max(maximumPrice - minimumPrice, 1)
+  const minimumOffset = ((clampedMinimumPrice - minimumPrice) / priceRangeSpan) * 100
+  const maximumOffset = ((clampedMaximumPrice - minimumPrice) / priceRangeSpan) * 100
+
+  function updatePrimaryFilter(nextFilters: ProductsFilterState) {
+    setFilters(nextFilters)
+    onApplyFilters(nextFilters)
+  }
+
+  function updatePriceFilter(nextMinimumPrice: number, nextMaximumPrice: number) {
+    const normalizedMinimumPrice = Math.max(minimumPrice, Math.min(nextMinimumPrice, nextMaximumPrice))
+    const normalizedMaximumPrice = Math.min(maximumPrice, Math.max(nextMaximumPrice, normalizedMinimumPrice))
+
+    setFilters((currentValue) => ({
+      ...currentValue,
+      priceMin: String(normalizedMinimumPrice),
+      priceMax: String(normalizedMaximumPrice),
+    }))
+  }
+
+  function applyCurrentPriceRange() {
+    onApplyFilters({
+      ...filters,
+      priceMin: String(clampedMinimumPrice),
+      priceMax: String(clampedMaximumPrice),
+    })
+  }
+
   return (
-    <aside className="rounded-[28px] border border-[#eadfd4] bg-white p-5 shadow-[0_12px_35px_rgba(92,63,37,0.06)]">
-      <div className="flex items-center justify-between border-b border-[#efe4da] pb-4">
-        <h2 className="text-sm font-bold uppercase tracking-[0.14em] text-[#24160f]">Filter</h2>
-        <button type="button" onClick={onResetFilters} className="text-sm font-semibold text-[#8b5f43] transition hover:text-[#24160f]">
-          Reset
-        </button>
-      </div>
+    <aside className="bg-white px-3 py-2 lg:px-4">
+      <section className="border-b border-[#e9e1d8] pb-8">
+        <h2 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">Products Type</h2>
 
-      <div className="space-y-6 pt-6">
-        <SingleSelectDropdown
-          title="Category"
-          options={filterOptions?.categories ?? []}
-          selectedValue={filters.category}
-          onChange={(value) => setFilters((currentValue) => ({ ...currentValue, category: value }))}
-        />
+        <div className="mt-7 space-y-4">
+          {availableCategories.map((category) => {
+            const isSelected = filters.category.toLowerCase() === category.toLowerCase()
+            const categoryCount = categoryCounts[category.toLowerCase()] ?? 0
+            const nextFilters = {
+              ...filters,
+              category: isSelected ? '' : category,
+            }
 
-        <MultiSelectDropdown
-          title="Tags"
-          options={filterOptions?.tags ?? []}
-          selectedValues={filters.tags}
-          onToggle={(value) =>
-            setFilters((currentValue) => ({
-              ...currentValue,
-              tags: toggleValue(currentValue.tags, value),
-            }))
-          }
-        />
+            return (
+              <button
+                key={category}
+                type="button"
+                onClick={() => updatePrimaryFilter(nextFilters)}
+                className="flex w-full items-center justify-between text-left text-[1.05rem] text-zinc-500 transition hover:text-[#161311]"
+              >
+                <span className={isSelected ? 'font-medium text-[#161311] underline underline-offset-4' : ''}>{formatFilterLabel(category)}</span>
+                <span className="text-zinc-400">{categoryCount}</span>
+              </button>
+            )
+          })}
+        </div>
+      </section>
 
-        <MultiSelectDropdown
-          title="Metal"
-          options={filterOptions?.metals ?? []}
-          selectedValues={filters.metal}
-          onToggle={(value) =>
-            setFilters((currentValue) => ({
-              ...currentValue,
-              metal: toggleValue(currentValue.metal, value),
-            }))
-          }
-        />
+      <section className="border-b border-[#e9e1d8] py-8">
+        <h3 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">Price Range</h3>
 
-        <section>
-          <h3 className="text-sm font-semibold text-[#24160f]">Carat</h3>
-          <div className="mt-4">
+        <div className="mt-7">
+          <div className="relative h-7">
+            <div className="absolute left-0 right-0 top-1/2 h-[4px] -translate-y-1/2 rounded-full bg-[#1f1f22]" />
+            <div
+              className="absolute top-1/2 h-[4px] -translate-y-1/2 rounded-full bg-[#1f1f22]"
+              style={{ left: `${minimumOffset}%`, right: `${100 - maximumOffset}%` }}
+            />
             <input
-              type="number"
-              min={filterOptions?.caratRange.min ?? 0}
-              max={filterOptions?.caratRange.max ?? 0}
-              step="0.01"
-              value={filters.carat}
-              onChange={(event) =>
-                setFilters((currentValue) => ({
-                  ...currentValue,
-                  carat: event.target.value,
-                }))
-              }
-              className="h-11 w-full rounded-xl border border-[#dfd0c3] px-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
+              type="range"
+              min={minimumPrice}
+              max={maximumPrice}
+              value={clampedMinimumPrice}
+              onChange={(event) => updatePriceFilter(Number(event.target.value), clampedMaximumPrice)}
+              onMouseUp={applyCurrentPriceRange}
+              onTouchEnd={applyCurrentPriceRange}
+              onKeyUp={applyCurrentPriceRange}
+              className="absolute left-0 top-1/2 h-7 w-full -translate-y-1/2 appearance-none bg-transparent accent-[#1f1f22]"
+            />
+            <input
+              type="range"
+              min={minimumPrice}
+              max={maximumPrice}
+              value={clampedMaximumPrice}
+              onChange={(event) => updatePriceFilter(clampedMinimumPrice, Number(event.target.value))}
+              onMouseUp={applyCurrentPriceRange}
+              onTouchEnd={applyCurrentPriceRange}
+              onKeyUp={applyCurrentPriceRange}
+              className="absolute left-0 top-1/2 h-7 w-full -translate-y-1/2 appearance-none bg-transparent accent-[#1f1f22]"
             />
           </div>
-        </section>
 
-        {showExtendedSections.measurements ? (
-          <SingleSelectDropdown
-            title="Measurement"
-            options={filterOptions?.measurements ?? []}
-            selectedValue={filters.measurement}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, measurement: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.stoneTypes ? (
-          <SingleSelectDropdown
-            title="Stone Type"
-            options={filterOptions?.stoneTypes ?? []}
-            selectedValue={filters.stoneType}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, stoneType: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.colors ? (
-          <SingleSelectDropdown
-            title="Color"
-            options={filterOptions?.colors ?? []}
-            selectedValue={filters.color}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, color: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.shapes ? (
-          <SingleSelectDropdown
-            title="Shape"
-            options={filterOptions?.shapes ?? []}
-            selectedValue={filters.shape}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, shape: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.origins ? (
-          <SingleSelectDropdown
-            title="Origin"
-            options={filterOptions?.origins ?? []}
-            selectedValue={filters.origin}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, origin: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.treatments ? (
-          <SingleSelectDropdown
-            title="Treatment"
-            options={filterOptions?.treatments ?? []}
-            selectedValue={filters.treatment}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, treatment: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.certificates ? (
-          <SingleSelectDropdown
-            title="Certificate"
-            options={filterOptions?.certificates ?? []}
-            selectedValue={filters.certificate}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, certificate: value }))}
-          />
-        ) : null}
-
-        {showExtendedSections.vendors ? (
-          <SingleSelectDropdown
-            title="Vendor"
-            options={filterOptions?.vendors ?? []}
-            selectedValue={filters.vendor}
-            onChange={(value) => setFilters((currentValue) => ({ ...currentValue, vendor: value }))}
-          />
-        ) : null}
-
-        <section>
-          <h3 className="text-sm font-semibold text-[#24160f]">Price</h3>
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            <label className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">
-              From
-              <input
-                type="number"
-                min={filterOptions?.priceRange.min ?? 0}
-                max={filterOptions?.priceRange.max ?? 0}
-                value={filters.priceMin}
-                onChange={(event) =>
-                  setFilters((currentValue) => ({
-                    ...currentValue,
-                    priceMin: event.target.value,
-                  }))
-                }
-                className="mt-2 h-11 w-full rounded-xl border border-[#dfd0c3] px-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
-              />
-            </label>
-            <label className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">
-              To
-              <input
-                type="number"
-                min={filterOptions?.priceRange.min ?? 0}
-                max={filterOptions?.priceRange.max ?? 0}
-                value={filters.priceMax}
-                onChange={(event) =>
-                  setFilters((currentValue) => ({
-                    ...currentValue,
-                    priceMax: event.target.value,
-                  }))
-                }
-                className="mt-2 h-11 w-full rounded-xl border border-[#dfd0c3] px-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
-              />
-            </label>
+          <div className="mt-4 flex items-center justify-between text-[1.05rem] text-[#161311]">
+            <p>Min price: ${clampedMinimumPrice}</p>
+            <p>Max price: ${clampedMaximumPrice}</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <button
-          type="button"
-          onClick={onApplyFilters}
-          disabled={isLoading}
-          className="w-full rounded-full bg-[#111111] px-5 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
-        >
-          {isLoading ? 'APPLYING...' : 'APPLY FILTERS'}
-        </button>
-      </div>
+      <section className="border-b border-[#e9e1d8] py-8">
+        <h3 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">Colors</h3>
+
+        <div className="mt-7 flex flex-wrap gap-3">
+          {availableColors.map((colorValue) => {
+            const useMetalFilter = (filterOptions?.metals?.length ?? 0) > 0
+            const isSelected = useMetalFilter
+              ? filters.metal.some((metalValue) => metalValue.toLowerCase() === colorValue.toLowerCase())
+              : filters.color.toLowerCase() === colorValue.toLowerCase()
+            const nextFilters = {
+              ...filters,
+              color: useMetalFilter ? filters.color : isSelected ? '' : colorValue,
+              metal: useMetalFilter ? (isSelected ? [] : [colorValue]) : filters.metal,
+            }
+
+            return (
+              <button
+                key={colorValue}
+                type="button"
+                onClick={() => updatePrimaryFilter(nextFilters)}
+                className={`inline-flex items-center gap-3 rounded-full border px-4 py-2 text-[1.05rem] transition ${
+                  isSelected ? 'border-[#161311] text-[#161311]' : 'border-[#e3dad0] text-[#161311] hover:border-[#cfc1b4]'
+                }`}
+              >
+                <span
+                  className="h-6 w-6 rounded-full"
+                  style={{ backgroundColor: colorSwatchMap[colorValue.toLowerCase()] ?? '#d4d4d8' }}
+                />
+                <span>{formatFilterLabel(colorValue)}</span>
+              </button>
+            )
+          })}
+        </div>
+      </section>
+
+
     </aside>
   )
 }
