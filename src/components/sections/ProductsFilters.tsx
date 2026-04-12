@@ -194,7 +194,7 @@ export default function ProductsFilters({
         <div className="mt-7 space-y-4">
           {availableCategories.map((category) => {
             const isSelected = filters.category.toLowerCase() === category.toLowerCase()
-            const categoryCount = categoryCounts[category.toLowerCase()] ?? 0
+            const categoryCount = filterOptions?.categoryCounts?.[category.toLowerCase()] ?? categoryCounts[category.toLowerCase()] ?? 0
             const nextFilters = {
               ...filters,
               category: isSelected ? '' : category,

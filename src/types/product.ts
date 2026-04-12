@@ -174,6 +174,7 @@ export type ProductNumericRange = {
 
 export type ProductAllFilters = {
   categories: string[]
+  categoryCounts?: Record<string, number>
   stoneTypes: string[]
   colors: string[]
   shapes: string[]

@@ -623,18 +623,22 @@ export default function ProductDetailPage({
               <div className="space-y-6">
                 <div className="grid gap-6 lg:grid-cols-[160px_minmax(0,1fr)]">
                   <div className="order-2 flex gap-4 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                    {galleryImages.map((image) => (
-                      <button
-                        key={image.id}
-                        type="button"
-                        onClick={() => setSelectedImageId(image.id)}
-                        className={`min-w-[132px] overflow-hidden rounded-[24px] border bg-white p-2 shadow-sm transition lg:min-w-0 ${
-                          selectedImage?.id === image.id ? 'border-[#111111]' : 'border-[#eadfd4] hover:border-[#8f6b52]'
-                        }`}
-                      >
-                        <img src={image.src} alt={product.title} className="h-28 w-full object-cover" />
-                      </button>
-                    ))}
+                    {galleryImages.map((image) => {
+                      const isSelectedImage = selectedImage?.id === image.id
+
+                      return (
+                        <button
+                          key={image.id}
+                          type="button"
+                          onClick={() => setSelectedImageId(image.id)}
+                          className={`min-w-[132px] overflow-hidden rounded-[24px] border bg-white p-2 shadow-sm transition lg:min-w-0 ${
+                            isSelectedImage ? 'border-[#111111]' : 'border-[#eadfd4] hover:border-[#8f6b52]'
+                          }`}
+                        >
+                          <img src={image.src} alt={product.title} className="h-28 w-full object-cover" />
+                        </button>
+                      )
+                    })}
                   </div>
 
                   <div className="order-1 overflow-hidden rounded-[34px] p-6 object-cover lg:order-2">

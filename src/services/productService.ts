@@ -136,7 +136,9 @@ type AllProductFiltersResponse = {
   success: boolean
   code: string
   message: string
-  data: ProductAllFilters
+  data: Omit<ProductAllFilters, 'categories' | 'categoryCounts'> & {
+    categories: Array<string | { name: string; count: number }>
+  }
 }
 
 export type GetProductsParams = {
@@ -454,7 +456,25 @@ export async function deleteProductReview(reviewId: string): Promise<void> {
 export async function getAllProductFilters(): Promise<ProductAllFilters> {
   const response = await apiClient.get<AllProductFiltersResponse>('/products/all-filters')
 
-  return response.data.data
+  const categoryEntries = response.data.data.categories ?? []
+  const normalizedCategories = categoryEntries.map((categoryEntry) =>
+    typeof categoryEntry === 'string' ? categoryEntry : categoryEntry.name,
+  )
+  const categoryCounts = categoryEntries.reduce<Record<string, number>>((counts, categoryEntry) => {
+    if (typeof categoryEntry === 'string') {
+      counts[categoryEntry.toLowerCase()] = counts[categoryEntry.toLowerCase()] ?? 0
+      return counts
+    }
+
+    counts[categoryEntry.name.toLowerCase()] = categoryEntry.count
+    return counts
+  }, {})
+
+  return {
+    ...response.data.data,
+    categories: normalizedCategories,
+    categoryCounts,
+  }
 }
 
 export async function getAllProductsForAdmin(params: GetProductsParams = {}): Promise<AdminProductsResult> {
