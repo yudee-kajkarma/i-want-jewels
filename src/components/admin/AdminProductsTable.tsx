@@ -2,8 +2,9 @@
 
 import { Eye, Pencil, Plus, SlidersHorizontal, Trash2 } from 'lucide-react'
 import { Link } from '@/lib/router'
+import { useCurrency } from '../../context/CurrencyContext'
 import type { Product, ProductsPagination } from '../../types/product'
-import { formatPrice } from './adminProductHelpers'
+import { formatPrice } from '../../utils/price'
 
 type AdminProductsTableProps = {
   isLoading: boolean
@@ -30,6 +31,7 @@ export default function AdminProductsTable({
   onEdit,
   onDelete,
 }: AdminProductsTableProps) {
+  const { currency } = useCurrency()
   const currentPage = pagination?.currentPage ?? 1
   const totalPages = pagination?.totalPages ?? 1
 
@@ -159,7 +161,7 @@ export default function AdminProductsTable({
                   </td>
                   <td className="px-4 py-4 text-zinc-700">{product.vendor || 'N/A'}</td>
                   <td className="px-4 py-4 text-zinc-700">{product.category || 'N/A'}</td>
-                  <td className="px-4 py-4 font-medium text-[#6c2e53]">{formatPrice(product.minPrice)}</td>
+                  <td className="px-4 py-4 font-medium text-[#6c2e53]">{formatPrice(product.minPrice, currency)}</td>
                   <td className="px-4 py-4">
                     <span
                       className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${

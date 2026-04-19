@@ -7,9 +7,10 @@ import Header from '../components/layout/Header'
 import Pagination from '../components/sections/Pagination'
 import ProductCard from '../components/sections/ProductCard'
 import ProductsFilters from '../components/sections/ProductsFilters'
+import { useCurrency } from '../context/CurrencyContext'
 import { getProducts } from '../services/productService'
 import type { ProductAllFilters, ProductsApiResult, ProductsFilterState } from '../types/product'
-import { formatEuro } from '../utils/productUtils'
+import { getPriceAmount } from '../utils/price'
 
 const productsPerPage = 10
 
@@ -156,6 +157,7 @@ export default function ProductsPage({
   initialFilterState = null,
 }: ProductsPageProps) {
   const pathname = usePathname()
+  const { currency } = useCurrency()
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [viewMode, setViewMode] = useState<ViewMode>('list')
@@ -178,13 +180,19 @@ export default function ProductsPage({
       case 'title-asc':
         return sortableProducts.sort((leftProduct, rightProduct) => leftProduct.title.localeCompare(rightProduct.title))
       case 'price-asc':
-        return sortableProducts.sort((leftProduct, rightProduct) => leftProduct.minPrice - rightProduct.minPrice)
+        return sortableProducts.sort(
+          (leftProduct, rightProduct) =>
+            getPriceAmount(leftProduct.minPrice, currency) - getPriceAmount(rightProduct.minPrice, currency),
+        )
       case 'price-desc':
-        return sortableProducts.sort((leftProduct, rightProduct) => rightProduct.minPrice - leftProduct.minPrice)
+        return sortableProducts.sort(
+          (leftProduct, rightProduct) =>
+            getPriceAmount(rightProduct.minPrice, currency) - getPriceAmount(leftProduct.minPrice, currency),
+        )
       default:
         return sortableProducts
     }
-  }, [products, sortOption])
+  }, [products, sortOption, currency])
 
   useEffect(() => {
     setFilters(initialFilterState ?? defaultFilterState)

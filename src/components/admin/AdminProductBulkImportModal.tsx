@@ -387,7 +387,7 @@ function parseRows(rows: Record<string, unknown>[]): ParsedRowResult {
             title: variant.title,
             variant_name: variant.variant_name as AdminVariantName,
             sku: variant.sku,
-            price: Number(variant.price),
+            price: { dol: Number(variant.price), eur: Number(variant.price), pou: Number(variant.price) },
             stock: Number(variant.stock),
           })),
         })
@@ -400,7 +400,7 @@ function parseRows(rows: Record<string, unknown>[]): ParsedRowResult {
           title: variant.title,
           variant_name: variant.variant_name as AdminVariantName,
           sku: variant.sku,
-          price: Number(variant.price),
+          price: { dol: Number(variant.price), eur: Number(variant.price), pou: Number(variant.price) },
           stock: Number(variant.stock),
         }))
         .filter((variant) => {

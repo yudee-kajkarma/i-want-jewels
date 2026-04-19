@@ -62,10 +62,6 @@ export function getVariantGallery(variant: ProductVariant): ProductImage[] {
   ]
 }
 
-export function getProductComparePrice(product: Product): number {
-  return Math.round(product.minPrice * 1.1)
-}
-
 export function getMetalToneClass(metal: string): string {
   return metalClasses[metal] ?? 'bg-[#d6d1d1]'
 }

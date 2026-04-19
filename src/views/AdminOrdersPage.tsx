@@ -11,8 +11,9 @@ import {
   updateOrderStatusForAdmin,
   verifyOrderDeliveryForAdmin,
 } from '../services/orderService'
+import { useCurrency } from '../context/CurrencyContext'
 import type { Order, OrdersPagination } from '../types/order'
-import { formatEuro } from '../utils/productUtils'
+import { formatPrice } from '../utils/price'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'verify'
 
@@ -91,6 +92,7 @@ function getActionDescription(type: PendingActionType) {
 }
 
 export default function AdminOrdersPage() {
+  const { currency } = useCurrency()
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
@@ -456,7 +458,7 @@ export default function AdminOrdersPage() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
                       <h2 className="mt-2 text-xl font-bold text-[#361128]">
-                        {order.totalItems} item{order.totalItems === 1 ? '' : 's'} · {formatEuro(order.totalAmount)}
+                        {order.totalItems} item{order.totalItems === 1 ? '' : 's'} · {formatPrice(order.totalAmount, currency)}
                       </h2>
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
@@ -510,7 +512,7 @@ export default function AdminOrdersPage() {
                   </div>
 
                   <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#f0dbe8] pt-4">
-                    <div className="text-sm text-zinc-500">Customer total: {formatEuro(order.totalAmount)}</div>
+                    <div className="text-sm text-zinc-500">Customer total: {formatPrice(order.totalAmount, currency)}</div>
                     {renderOrderActions(order)}
                   </div>
                 </article>
@@ -542,7 +544,7 @@ export default function AdminOrdersPage() {
                         </td>
                         <td className="px-4 py-4 text-zinc-600">{formatOrderDate(order.createdAt)}</td>
                         <td className="px-4 py-4 text-zinc-600">{order.totalItems}</td>
-                        <td className="px-4 py-4 font-semibold text-[#5c1f45]">{formatEuro(order.totalAmount)}</td>
+                        <td className="px-4 py-4 font-semibold text-[#5c1f45]">{formatPrice(order.totalAmount, currency)}</td>
                         <td className="px-4 py-4">
                           <span
                             className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}

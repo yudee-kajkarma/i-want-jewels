@@ -5,9 +5,10 @@ import { Clock3, Package, ReceiptText } from 'lucide-react'
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import { useCurrency } from '../context/CurrencyContext'
 import { getOrders } from '../services/orderService'
 import type { Order, OrdersPagination } from '../types/order'
-import { formatEuro } from '../utils/productUtils'
+import { formatPrice } from '../utils/price'
 
 function formatOrderDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -43,6 +44,7 @@ function getPaymentStatusClass(status: string) {
 }
 
 export default function OrdersPage() {
+  const { currency } = useCurrency()
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -147,7 +149,7 @@ export default function OrdersPage() {
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Total {formatEuro(order.totalAmount)}</span>
+                    <span>Total {formatPrice(order.totalAmount, currency)}</span>
                     <Link to={`/orders/${order.id}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
                       VIEW DETAILS
                     </Link>

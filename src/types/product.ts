@@ -1,10 +1,12 @@
+import type { Price } from '../utils/price'
+
 export type ProductVariant = {
   id: string
   variantName?: string
   title: string
   sku?: string
   stock?: number
-  price: number
+  price: Price
   available: boolean
   position: number
   thumbnail: string
@@ -33,7 +35,7 @@ export type Product = {
   tags: string[]
   availability: boolean
   variants: ProductVariant[]
-  minPrice: number
+  minPrice: Price
   options: ProductOption[]
   category: string
   metals: string[]
@@ -85,7 +87,7 @@ export type AdminProductVariantPayload = {
   variantName: AdminVariantName
   sku: string
   stock: number
-  price: number
+  price: Price
   position: number
 }
 

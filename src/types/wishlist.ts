@@ -1,3 +1,5 @@
+import type { Price } from '../utils/price'
+
 export type WishlistItem = {
   id: string
   productId: string
@@ -5,7 +7,7 @@ export type WishlistItem = {
   title: string
   category: string
   thumbnail: string
-  price: number
+  price: Price
   rating: number
   reviewsCount: number
 }
@@ -51,7 +53,7 @@ export type AdminWishlistUserDetails = {
 export type AdminWishlistItem = {
   productId: string
   title: string
-  price: number
+  price: Price
   thumbnail: string
   addedAt: string
 }

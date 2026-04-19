@@ -4,6 +4,8 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { CreditCard, LogIn, LogOut, PackageSearch, Ticket } from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import { useAuth } from "../../context/AuthContext";
+import { useCurrency } from "../../context/CurrencyContext";
+import { CURRENCY_OPTIONS, type CurrencyCode } from "../../utils/price";
 import { getCategories } from "../../services/categoryService";
 import { useAppSelector } from "../../store/hooks";
 import braceletImage from "../../assets/image/bracelet.jpeg";
@@ -395,6 +397,7 @@ export default function Header() {
     > | null>(null);
     const navigate = useNavigate();
     const { isAuthenticated, logout, session } = useAuth();
+    const { currency, setCurrency } = useCurrency();
     const itemCount = useAppSelector(
         (state) =>
             state.cart.cart?.items.reduce(
@@ -684,10 +687,23 @@ export default function Header() {
                     </div>
 
                     <div className="flex items-center gap-6 text-zinc-800">
-                        {/* <div className="flex items-center gap-5">
-                            <UtilitySelect label="English" />
-                            <UtilitySelect label="EUR" />
-                        </div> */}
+                        <label className="flex items-center gap-2 text-sm text-zinc-700">
+                            <span className="sr-only">Currency</span>
+                            <select
+                                value={currency}
+                                onChange={(event) =>
+                                    setCurrency(event.target.value as CurrencyCode)
+                                }
+                                className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-semibold text-zinc-800 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
+                                aria-label="Select currency"
+                            >
+                                {CURRENCY_OPTIONS.map((option) => (
+                                    <option key={option.code} value={option.code}>
+                                        {option.symbol} {option.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
                         <div className="flex items-center gap-5 text-zinc-900">
                             {socialLinks.map((socialLink) => (
                                 <a

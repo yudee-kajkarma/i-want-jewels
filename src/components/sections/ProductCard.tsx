@@ -4,17 +4,18 @@ import { Eye, Heart, ShoppingBag } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from '@/lib/router'
 import { useAuth } from '../../context/AuthContext'
+import { useCurrency } from '../../context/CurrencyContext'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
 import { addToCart } from '../../store/cartSlice'
 import { addToWishlist, removeWishlistItem } from '../../store/wishlistSlice'
 import { setSingleCheckoutDraft } from '../../utils/checkoutStorage'
 import type { Product } from '../../types/product'
 import {
-  formatEuro,
   getMetalToneClass,
   getVariantGallery,
   getVariantImage,
 } from '../../utils/productUtils'
+import { formatPrice, getPriceAmount } from '../../utils/price'
 
 type ProductCardProps = {
   item: Product
@@ -36,6 +37,7 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
   const location = useLocation()
   const dispatch = useAppDispatch()
   const { isAuthenticated } = useAuth()
+  const { currency } = useCurrency()
   const wishlistItem = useAppSelector((state) => state.wishlist.wishlist?.items.find((wishlistEntry) => wishlistEntry.productId === item.id))
   const [selectedVariantId, setSelectedVariantId] = useState(() => item.variants[0]?.id ?? '')
   const [isAdding, setIsAdding] = useState(false)
@@ -54,9 +56,12 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
       .find((image) => image.src && image.src !== primaryImage)?.src ??
     null
   const basePrice = selectedVariant?.price ?? item.minPrice
-  const comparePrice = Math.round(basePrice / 0.8)
-  const hasDiscount = comparePrice > basePrice
-  const discountPercent = hasDiscount ? Math.round(((comparePrice - basePrice) / comparePrice) * 100) : 0
+  const basePriceAmount = getPriceAmount(basePrice, currency)
+  const comparePriceAmount = Math.round(basePriceAmount / 0.8)
+  const hasDiscount = comparePriceAmount > basePriceAmount
+  const discountPercent = hasDiscount
+    ? Math.round(((comparePriceAmount - basePriceAmount) / comparePriceAmount) * 100)
+    : 0
   const productDetailUrl = `/products/slug/${item.slug || item.id}`
   const isNewArrival = item.tags.some((tag) => tag.toLowerCase().includes('new')) || hasDiscount
   const listSummary = buildListSummary(item)
@@ -210,8 +215,8 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
           </Link>
 
           <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[#26221f]">
-            <p className="text-[1.9rem] font-semibold leading-none tracking-[-0.04em]">{formatEuro(basePrice)}</p>
-            {hasDiscount ? <p className="text-lg text-zinc-400 line-through">{formatEuro(comparePrice)}</p> : null}
+            <p className="text-[1.9rem] font-semibold leading-none tracking-[-0.04em]">{formatPrice(basePrice, currency)}</p>
+            {hasDiscount ? <p className="text-lg text-zinc-400 line-through">{formatPrice(comparePriceAmount, currency)}</p> : null}
             {hasDiscount ? (
               <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
                 -{discountPercent}%
@@ -390,8 +395,8 @@ export default function ProductCard({ item, layout = 'grid' }: ProductCardProps)
         </div>
 
         <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 text-[#26221f]">
-          <p className="text-[1.5rem] font-semibold leading-none tracking-[-0.04em]">{formatEuro(basePrice)}</p>
-          {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatEuro(comparePrice)}</p> : null}
+          <p className="text-[1.5rem] font-semibold leading-none tracking-[-0.04em]">{formatPrice(basePrice, currency)}</p>
+          {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatPrice(comparePriceAmount, currency)}</p> : null}
           {hasDiscount ? (
             <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
               -{discountPercent}%

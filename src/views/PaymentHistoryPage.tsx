@@ -5,9 +5,10 @@ import { Clock3, CreditCard, ReceiptText } from 'lucide-react'
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import { useCurrency } from '../context/CurrencyContext'
 import { getPaymentHistory } from '../services/orderService'
 import type { OrdersPagination, PaymentHistoryItem } from '../types/order'
-import { formatEuro } from '../utils/productUtils'
+import { formatPrice } from '../utils/price'
 
 function formatPaymentDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -43,6 +44,7 @@ function getOrderStatusClass(status: string) {
 }
 
 export default function PaymentHistoryPage() {
+  const { currency } = useCurrency()
   const [payments, setPayments] = useState<PaymentHistoryItem[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -146,7 +148,7 @@ export default function PaymentHistoryPage() {
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Amount {formatEuro(payment.amount)}</span>
+                    <span>Amount {formatPrice(payment.amount, currency)}</span>
                     <div className="flex items-center gap-4">
                       <span>Updated {formatPaymentDate(payment.updatedAt)}</span>
                       <Link to={`/orders/${payment.orderId}`} className="font-bold text-[#17110d] transition hover:text-pink-500">

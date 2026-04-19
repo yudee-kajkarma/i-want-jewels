@@ -11,6 +11,7 @@ import type {
   PaymentHistoryResult,
   ShippingAddress,
 } from '../types/order'
+import { toPrice, type Price } from '../utils/price'
 import { adminApiClient, authApiClient } from './apiClient'
 
 type OrderItemApiResponse = Record<string, unknown>
@@ -105,6 +106,20 @@ function getNumberValue(record: Record<string, unknown>, key: string): number {
   return typeof value === 'number' ? value : 0
 }
 
+function getPriceValue(record: Record<string, unknown>, key: string): Price {
+  const value = record[key]
+
+  if (typeof value === 'number') {
+    return toPrice(value)
+  }
+
+  if (value && typeof value === 'object') {
+    return toPrice(value as Price)
+  }
+
+  return toPrice(0)
+}
+
 function getBooleanValue(record: Record<string, unknown>, key: string): boolean {
   return record[key] === true
 }
@@ -131,7 +146,7 @@ function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
     variantName: getStringValue(item, 'variant_name') || getStringValue(item, 'variantName'),
     sku: getStringValue(item, 'sku'),
     title: getStringValue(item, 'title'),
-    price: getNumberValue(item, 'price'),
+    price: getPriceValue(item, 'price'),
     quantity: getNumberValue(item, 'quantity') || 1,
     thumbnail: getStringValue(item, 'thumbnail'),
   }

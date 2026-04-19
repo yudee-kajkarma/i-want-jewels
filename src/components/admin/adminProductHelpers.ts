@@ -1,6 +1,7 @@
 'use client'
 
 import type { AdminProductUpdatePayload, AdminVariantName, ProductDetail } from '../../types/product'
+import { toPrice, type Price } from '../../utils/price'
 
 export type ProductImageFormItem = {
   id: string
@@ -18,7 +19,7 @@ export type CreateVariantForm = {
   variantName: AdminVariantName
   sku: string
   stock: number
-  price: number
+  price: Price
   imageIndexes: number[]
 }
 
@@ -91,7 +92,7 @@ export function createEmptyVariant(variantName: AdminVariantName = 'gold'): Crea
     variantName,
     sku: '',
     stock: 0,
-    price: 0,
+    price: { dol: 0, eur: 0, pou: 0 },
     imageIndexes: [],
   }
 }
@@ -137,13 +138,6 @@ export function parseCommaSeparatedValues(value: string): string[] {
     .filter(Boolean)
 }
 
-export function formatPrice(value: number): string {
-  return new Intl.NumberFormat('en-IE', {
-    style: 'currency',
-    currency: 'EUR',
-    maximumFractionDigits: 0,
-  }).format(value)
-}
 
 export function buildForm(product: ProductDetail): EditableProductForm {
   const images: ProductImageFormItem[] = []
@@ -183,7 +177,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
                 : 'gold',
             sku: variant.sku ?? '',
             stock: variant.stock ?? 0,
-            price: variant.price,
+            price: toPrice(variant.price),
             imageIndexes: (variant.images ?? []).map((image) => {
               const imageKey = image.id || image.src
               const existingImageIndex = imageIndexByKey.get(imageKey)

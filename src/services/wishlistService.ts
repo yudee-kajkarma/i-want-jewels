@@ -8,6 +8,7 @@ import type {
   WishlistItem,
   WishlistUsersPagination,
 } from '../types/wishlist'
+import { toPrice, type Price } from '../utils/price'
 import { adminApiClient, authApiClient } from './apiClient'
 
 type WishlistItemApiResponse = Record<string, unknown>
@@ -58,7 +59,7 @@ type AdminUserWishlistApiResponse = {
     items?: Array<{
       productId?: string
       title?: string
-      price?: number
+      price?: Price | number
       thumbnail?: string
       addedAt?: string
     }>
@@ -83,6 +84,20 @@ function getNumberValue(record: Record<string, unknown>, key: string): number {
   const value = record[key]
 
   return typeof value === 'number' ? value : 0
+}
+
+function getPriceValue(record: Record<string, unknown>, key: string): Price | null {
+  const value = record[key]
+
+  if (typeof value === 'number') {
+    return toPrice(value)
+  }
+
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    return toPrice(value as Price)
+  }
+
+  return null
 }
 
 function getObjectValue(record: Record<string, unknown>, key: string): Record<string, unknown> | null {
@@ -136,9 +151,10 @@ function normalizeWishlistItem(item: WishlistItemApiResponse): WishlistItem {
     getStringValue(variantImages[0] ?? {}, 'url') ||
     getStringValue(variantImages[0] ?? {}, 'src')
   const price =
-    getNumberValue(item, 'price') ||
-    getNumberValue(product ?? {}, 'minPrice') ||
-    getNumberValue(firstVariant ?? {}, 'price')
+    getPriceValue(item, 'price') ??
+    getPriceValue(product ?? {}, 'minPrice') ??
+    getPriceValue(firstVariant ?? {}, 'price') ??
+    toPrice(0)
   const rating = getNumberValue(item, 'rating') || getNumberValue(product ?? {}, 'averageRating') || getNumberValue(product ?? {}, 'rating')
   const reviewsCount =
     getNumberValue(item, 'reviewsCount') ||
@@ -202,7 +218,7 @@ function normalizeAdminWishlistItem(item: AdminUserWishlistItemApiResponse): Adm
   return {
     productId: item?.productId ?? '',
     title: item?.title ?? '',
-    price: typeof item?.price === 'number' ? item.price : 0,
+    price: toPrice(item?.price ?? 0),
     thumbnail: item?.thumbnail ?? '',
     addedAt: item?.addedAt ?? '',
   }

@@ -484,7 +484,7 @@ export default function AdminProductsPage() {
             variantName: variant.variantName,
             sku: variant.sku.trim(),
             stock: Number(variant.stock) || 0,
-            price: Number(variant.price) || 0,
+            price: variant.price,
             position: index + 1,
           })),
           existingImages: form.images
@@ -534,11 +534,17 @@ export default function AdminProductsPage() {
         }
 
         const hasInvalidVariant = form.variants.some(
-          (variant) => !variant.title.trim() || !variant.sku.trim() || variant.price <= 0 || variant.stock < 0,
+          (variant) =>
+            !variant.title.trim() ||
+            !variant.sku.trim() ||
+            variant.price.dol <= 0 ||
+            variant.price.eur <= 0 ||
+            variant.price.pou <= 0 ||
+            variant.stock < 0,
         )
 
         if (hasInvalidVariant) {
-          showOperationError('Complete each variant with a title, SKU, non-negative stock, and a price greater than zero.')
+          showOperationError('Complete each variant with a title, SKU, non-negative stock, and prices greater than zero for all currencies.')
           return
         }
 
@@ -574,7 +580,7 @@ export default function AdminProductsPage() {
             variantName: variant.variantName,
             sku: variant.sku.trim(),
             stock: Number(variant.stock) || 0,
-            price: Number(variant.price) || 0,
+            price: variant.price,
             position: index + 1,
           })),
           images: form.images.map((image) => image.file).filter(Boolean) as File[],

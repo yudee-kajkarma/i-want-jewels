@@ -6,8 +6,10 @@ import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import Pagination from '../components/sections/Pagination'
+import { useCurrency } from '../context/CurrencyContext'
 import { getAdminUserWishlist, getAdminWishlistUsers } from '../services/wishlistService'
 import type { AdminUserWishlist, AdminWishlistUser, WishlistUsersPagination } from '../types/wishlist'
+import { formatPrice } from '../utils/price'
 
 function formatDate(value: string): string {
   if (!value) {
@@ -23,15 +25,8 @@ function formatDate(value: string): string {
   }).format(new Date(value))
 }
 
-function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('en-IE', {
-    style: 'currency',
-    currency: 'EUR',
-    maximumFractionDigits: 0,
-  }).format(value)
-}
-
 export default function AdminWishlistPage() {
+  const { currency } = useCurrency()
   const [users, setUsers] = useState<AdminWishlistUser[]>([])
   const [pagination, setPagination] = useState<WishlistUsersPagination | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
@@ -187,7 +182,7 @@ export default function AdminWishlistPage() {
             </div>
             <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Combined Value</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{formatCurrency(summary.totalValue)}</p>
+              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{formatPrice(summary.totalValue, currency)}</p>
             </div>
           </div>
 
@@ -233,7 +228,7 @@ export default function AdminWishlistPage() {
                           {user.itemCount} items
                         </span>
                         <span className="rounded-full border border-[#f0d3e5] bg-[#fff9fd] px-3 py-1 font-semibold text-[#7c4564]">
-                          {formatCurrency(user.totalValue)}
+                          {formatPrice(user.totalValue, currency)}
                         </span>
                       </div>
                       <p className="mt-2 text-[11px] text-zinc-500">Updated: {formatDate(user.lastUpdated)}</p>
@@ -311,7 +306,7 @@ export default function AdminWishlistPage() {
                             <p className="mt-1 text-xs text-zinc-500">Added: {formatDate(item.addedAt)}</p>
                           </div>
 
-                          <p className="text-sm font-bold text-[#7a2f5c]">{formatCurrency(item.price)}</p>
+                          <p className="text-sm font-bold text-[#7a2f5c]">{formatPrice(item.price, currency)}</p>
                         </article>
                       ))}
                     </div>

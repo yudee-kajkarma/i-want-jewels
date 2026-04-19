@@ -6,8 +6,10 @@ import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import Pagination from '../components/sections/Pagination'
+import { useCurrency } from '../context/CurrencyContext'
 import { getAdminCartUsers, getAdminUserCart } from '../services/cartService'
 import type { AdminCartUser, AdminUserCart, CartUsersPagination } from '../types/cart'
+import { formatPrice, getPriceAmount } from '../utils/price'
 
 function formatDate(value: string): string {
   if (!value) {
@@ -23,15 +25,8 @@ function formatDate(value: string): string {
   }).format(new Date(value))
 }
 
-function formatCurrency(value: number): string {
-  return new Intl.NumberFormat('en-IE', {
-    style: 'currency',
-    currency: 'EUR',
-    maximumFractionDigits: 0,
-  }).format(value)
-}
-
 export default function AdminCartPage() {
+  const { currency } = useCurrency()
   const [users, setUsers] = useState<AdminCartUser[]>([])
   const [pagination, setPagination] = useState<CartUsersPagination | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
@@ -183,7 +178,7 @@ export default function AdminCartPage() {
             </div>
             <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Combined Total</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{formatCurrency(summary.totalAmount)}</p>
+              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{formatPrice(summary.totalAmount, currency)}</p>
             </div>
           </div>
 
@@ -229,7 +224,7 @@ export default function AdminCartPage() {
                           {user.itemCount} items
                         </span>
                         <span className="rounded-full border border-[#f0d3e5] bg-[#fff9fd] px-3 py-1 font-semibold text-[#7c4564]">
-                          {formatCurrency(user.totalAmount)}
+                          {formatPrice(user.totalAmount, currency)}
                         </span>
                       </div>
                       <p className="mt-2 text-[11px] text-zinc-500">Updated: {formatDate(user.lastUpdated)}</p>
@@ -307,7 +302,7 @@ export default function AdminCartPage() {
 
                           <div className="text-right">
                             <p className="text-xs font-medium text-zinc-500">Qty: {item.quantity}</p>
-                            <p className="mt-1 text-sm font-bold text-[#7a2f5c]">{formatCurrency(item.price)}</p>
+                            <p className="mt-1 text-sm font-bold text-[#7a2f5c]">{formatPrice(item.price, currency)}</p>
                           </div>
                         </article>
                       ))}
@@ -317,7 +312,7 @@ export default function AdminCartPage() {
                   <div className="mt-4 rounded-[20px] border border-[#edd3e2] bg-[#fff8fc] p-4">
                     <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Cart Total</p>
                     <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">
-                      {formatCurrency(selectedCart.items.reduce((total, item) => total + item.price * item.quantity, 0))}
+                      {formatPrice(selectedCart.items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0), currency)}
                     </p>
                   </div>
                 </>

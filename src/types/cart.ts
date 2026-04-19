@@ -1,3 +1,5 @@
+import type { Price } from '../utils/price'
+
 export type CartItem = {
   id: string
   productId: string
@@ -5,7 +7,7 @@ export type CartItem = {
   title: string
   variantTitle: string
   thumbnail: string
-  price: number
+  price: Price
   quantity: number
 }
 
@@ -53,7 +55,7 @@ export type AdminCartItem = {
   variantName: string
   sku: string
   title: string
-  price: number
+  price: Price
   quantity: number
   thumbnail: string
   addedAt: string

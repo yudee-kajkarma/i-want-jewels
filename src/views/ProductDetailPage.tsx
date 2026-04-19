@@ -21,6 +21,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import ProductCard from '../components/sections/ProductCard'
 import { useAuth } from '../context/AuthContext'
+import { useCurrency } from '../context/CurrencyContext'
 import {
   createProductReview,
   deleteProductReview,
@@ -41,12 +42,12 @@ import type {
   ReviewPayload,
 } from '../types/product'
 import {
-  formatEuro,
   formatReviewCount,
   getMetalToneClass,
   getVariantGallery,
   getVariantImage,
 } from '../utils/productUtils'
+import { formatPrice, getPriceAmount } from '../utils/price'
 import { setSingleCheckoutDraft } from '../utils/checkoutStorage'
 
 const todayBenefits = [
@@ -244,6 +245,7 @@ export default function ProductDetailPage({
   const legacyProductIdParam = typeof params.productId === 'string' ? params.productId : ''
   const productIdentifier = slugParam || legacyProductIdParam
   const { isAuthenticated, session } = useAuth()
+  const { currency } = useCurrency()
   const dispatch = useAppDispatch()
   const [product, setProduct] = useState<ProductDetail | null>(initialProduct)
   const resolvedProductId = product?.id ?? initialProduct?.id ?? ''
@@ -401,9 +403,13 @@ export default function ProductDetailPage({
   const averageReviewRating =
     reviews.length > 0 ? reviews.reduce((total, review) => total + review.rating, 0) / reviews.length : (product?.rating ?? 0)
   const suggestedSize = getSuggestedSize(sizeGuideHeight, sizeGuideWeight)
-  const basePrice = selectedVariant?.price ?? 0
-  const comparePrice = Math.round(basePrice / 0.625)
-  const discountPercent = Math.max(1, Math.round(((comparePrice - basePrice) / comparePrice) * 100))
+  const basePrice = selectedVariant?.price
+  const basePriceAmount = getPriceAmount(basePrice, currency)
+  const comparePriceAmount = Math.round(basePriceAmount / 0.625)
+  const discountPercent = Math.max(
+    1,
+    Math.round(((comparePriceAmount - basePriceAmount) / Math.max(comparePriceAmount, 1)) * 100),
+  )
 
   const reviewBreakdown = [5, 4, 3, 2, 1].map((star) => {
     const count = reviews.filter((review) => Math.round(review.rating) === star).length
@@ -683,8 +689,8 @@ export default function ProductDetailPage({
 
                 <div>
                   <div className="flex flex-wrap items-center gap-4">
-                    <p className="text-[2rem] font-semibold text-[#151515]">{formatEuro(basePrice)}</p>
-                    {/* <p className="text-base text-zinc-400 line-through">{formatEuro(comparePrice)}</p> */}
+                    <p className="text-[2rem] font-semibold text-[#151515]">{formatPrice(basePrice, currency)}</p>
+                    {/* <p className="text-base text-zinc-400 line-through">{formatPrice(comparePriceAmount, currency)}</p> */}
                     {/* <span className="rounded-full bg-[#ff48b2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
                       -{discountPercent}%
                     </span> */}

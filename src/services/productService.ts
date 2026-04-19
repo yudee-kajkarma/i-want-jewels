@@ -15,6 +15,7 @@ import type {
   ProductsPagination,
   ReviewPayload,
 } from '../types/product'
+import { minPriceOf, toPrice, type Price } from '../utils/price'
 import apiClient, { authApiClient } from './apiClient'
 
 type ProductImageApiResponse = {
@@ -30,7 +31,7 @@ type ProductVariantApiResponse = {
   variant_name?: string
   sku?: string
   stock?: number
-  price: number
+  price: Price | number
   available?: boolean
   position: number
   thumbnail: string
@@ -53,7 +54,7 @@ type ProductApiResponse = {
   tags: string[]
   availability: boolean
   variants: ProductVariantApiResponse[]
-  minPrice: number
+  minPrice: Price | number
   options: ProductOptionApiResponse[]
 }
 
@@ -171,7 +172,7 @@ export type BulkCreateVariantPayload = {
   title: string
   variant_name: AdminVariantName
   sku: string
-  price: number
+  price: Price
   stock: number
 }
 
@@ -225,7 +226,7 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
     title: variant.title,
     sku: variant.sku,
     stock: variant.stock,
-    price: variant.price,
+    price: toPrice(variant.price),
     available: variant.available ?? true,
     position: variant.position,
     thumbnail: variant.thumbnail,
@@ -264,7 +265,7 @@ function normalizeProduct(product: ProductApiResponse): Product {
     tags: product.tags,
     availability: product.availability,
     variants,
-    minPrice: product.minPrice,
+    minPrice: minPriceOf(variants.map((variant) => variant.price)),
     options: product.options,
     category: getCategory(product.tags),
     metals: getMetals(variants),
@@ -278,7 +279,7 @@ function normalizeProductDetail(
 ): ProductDetail {
   const variants = product.variants.map(normalizeVariant)
   const primaryVariant = variants.find((variant) => variant.available) ?? variants[0]
-  const minPrice = variants.length > 0 ? Math.min(...variants.map((variant) => variant.price)) : 0
+  const minPrice = minPriceOf(variants.map((variant) => variant.price))
 
   return {
     id: product.id,

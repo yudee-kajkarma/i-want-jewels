@@ -8,6 +8,7 @@ import type {
   CartItem,
   CartUsersPagination,
 } from '../types/cart'
+import { toPrice, type Price } from '../utils/price'
 import { adminApiClient, authApiClient } from './apiClient'
 
 type CartItemApiResponse = Record<string, unknown>
@@ -61,7 +62,7 @@ type AdminUserCartApiResponse = {
       variant_name?: string
       sku?: string
       title?: string
-      price?: number
+      price?: Price | number
       quantity?: number
       thumbnail?: string
       addedAt?: string
@@ -87,6 +88,20 @@ function getNumberValue(record: Record<string, unknown>, key: string): number {
   const value = record[key]
 
   return typeof value === 'number' ? value : 0
+}
+
+function getPriceValue(record: Record<string, unknown>, key: string): Price | null {
+  const value = record[key]
+
+  if (typeof value === 'number') {
+    return toPrice(value)
+  }
+
+  if (value && typeof value === 'object' && !Array.isArray(value)) {
+    return toPrice(value as Price)
+  }
+
+  return null
 }
 
 function getObjectValue(record: Record<string, unknown>, key: string): Record<string, unknown> | null {
@@ -130,9 +145,10 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
     getStringValue(product ?? {}, 'primaryImage') ||
     fallbackCartThumbnail
   const price =
-    getNumberValue(item, 'price') ||
-    getNumberValue(variant ?? {}, 'price') ||
-    getNumberValue(product ?? {}, 'minPrice')
+    getPriceValue(item, 'price') ??
+    getPriceValue(variant ?? {}, 'price') ??
+    getPriceValue(product ?? {}, 'minPrice') ??
+    toPrice(0)
   const quantity = getNumberValue(item, 'quantity') || 1
 
   return {
@@ -198,7 +214,7 @@ function normalizeAdminCartItem(item: AdminUserCartItemApiResponse): AdminCartIt
     variantName: item?.variant_name ?? '',
     sku: item?.sku ?? '',
     title: item?.title ?? '',
-    price: typeof item?.price === 'number' ? item.price : 0,
+    price: toPrice(item?.price ?? 0),
     quantity: typeof item?.quantity === 'number' ? item.quantity : 1,
     thumbnail: item?.thumbnail || fallbackCartThumbnail,
     addedAt: item?.addedAt ?? '',

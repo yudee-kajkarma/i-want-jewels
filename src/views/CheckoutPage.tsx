@@ -6,12 +6,13 @@ import { Link, useLocation, useNavigate } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useAuth } from '../context/AuthContext'
+import { useCurrency } from '../context/CurrencyContext'
 import { createOrder } from '../services/orderService'
 import { addCartItem, clearCartItems } from '../services/cartService'
 import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import type { CheckoutSource, PaymentMethod, ShippingAddress, SingleCheckoutDraft } from '../types/order'
-import { formatEuro } from '../utils/productUtils'
+import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
 import {
   clearSingleCheckoutDraft,
   clearCartRestoreSnapshot,
@@ -84,6 +85,7 @@ export default function CheckoutPage() {
   const location = useLocation()
   const dispatch = useAppDispatch()
   const { session } = useAuth()
+  const { currency } = useCurrency()
   const cart = useAppSelector((state) => state.cart.cart)
   const cartStatus = useAppSelector((state) => state.cart.status)
   const cartMutationStatus = useAppSelector((state) => state.cart.mutationStatus)
@@ -105,7 +107,7 @@ export default function CheckoutPage() {
   const singleDraft = checkoutSource === 'single' ? (locationState?.draft ?? persistedDraft) : null
   const items = checkoutSource === 'single' ? (singleDraft ? [singleDraft.item] : []) : (cart?.items ?? [])
   const totalItems = items.reduce((total, item) => total + item.quantity, 0)
-  const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0)
+  const subtotal = items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0)
   const shippingAddress = getSessionAddress(session?.raw)
   const isCartLoading = cartStatus === 'loading' || cartMutationStatus === 'loading'
 
@@ -161,6 +163,7 @@ export default function CheckoutPage() {
 
       const result = await createOrder({
         paymentMethod,
+        currency: getCurrencyIsoCode(currency),
         successUrl: paymentMethod === 'ONLINE' ? buildReturnUrl('success', checkoutSource) : undefined,
         cancelUrl: paymentMethod === 'ONLINE' ? buildReturnUrl('cancel', checkoutSource) : undefined,
       })
@@ -264,7 +267,7 @@ export default function CheckoutPage() {
                           <p className="mt-1 text-sm text-zinc-500">{item.variantTitle || 'Default variant'}</p>
                           <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
                         </div>
-                        <p className="text-lg font-bold text-[#17110d]">{formatEuro(item.price * item.quantity)}</p>
+                        <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
                       </article>
                     ))}
                   </div>
@@ -357,7 +360,7 @@ export default function CheckoutPage() {
               </div>
               <div className="flex items-center justify-between">
                 <span>Subtotal</span>
-                <span className="font-semibold text-[#17110d]">{formatEuro(subtotal)}</span>
+                <span className="font-semibold text-[#17110d]">{formatPrice(subtotal, currency)}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Shipping</span>
@@ -379,7 +382,7 @@ export default function CheckoutPage() {
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
               <div className="flex items-center justify-between text-lg font-bold text-[#17110d]">
                 <span>Total</span>
-                <span>{formatEuro(subtotal)}</span>
+                <span>{formatPrice(subtotal, currency)}</span>
               </div>
               <button
                 type="button"

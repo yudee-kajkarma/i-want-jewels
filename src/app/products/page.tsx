@@ -92,8 +92,8 @@ function applyLocalFilters(products: Product[], filters: ProductsFilterState): P
       filters.metal.length === 0 ||
       filters.metal.some((selectedMetal) => normalizedMetals.includes(selectedMetal.toLowerCase()))
     const matchesPrice =
-      (!Number.isFinite(minimumPrice) || product.minPrice >= minimumPrice) &&
-      (!Number.isFinite(maximumPrice) || product.minPrice <= maximumPrice)
+      (!Number.isFinite(minimumPrice) || product.minPrice.eur >= minimumPrice) &&
+      (!Number.isFinite(maximumPrice) || product.minPrice.eur <= maximumPrice)
     const normalizedSearch = filters.search.trim().toLowerCase()
     const matchesSearch =
       !normalizedSearch ||

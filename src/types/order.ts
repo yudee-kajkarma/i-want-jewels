@@ -1,3 +1,4 @@
+import type { Price } from '../utils/price'
 import type { CartItem } from './cart'
 
 export type PaymentMethod = 'COD' | 'ONLINE'
@@ -19,7 +20,7 @@ export type OrderItem = {
   variantName: string
   sku: string
   title: string
-  price: number
+  price: Price
   quantity: number
   thumbnail: string
 }
@@ -77,6 +78,7 @@ export type CheckoutSession = {
 
 export type CreateOrderPayload = {
   paymentMethod: PaymentMethod
+  currency: string
   successUrl?: string
   cancelUrl?: string
 }
