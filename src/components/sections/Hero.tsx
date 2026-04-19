@@ -85,9 +85,9 @@ export default function Hero() {
             <div className="pointer-events-none absolute inset-0 " />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.85),_transparent_38%)]" />
 
-            <div className="absolute inset-x-0 top-0 z-20">
+            {/* <div className="absolute inset-x-0 top-0 z-20">
                 <MarqueeRow items={topMarqueeItems} />
-            </div>
+            </div> */}
 
             <div className="relative z-10 mx-auto min-h-[78vh] max-w-7xl px-4 pb-20 pt-24 md:px-6 lg:px-8 lg:pb-24 lg:pt-28">
                 {heroSlides.map((slide, index) => (
@@ -100,20 +100,20 @@ export default function Hero() {
                         } ${index === activeImageIndex ? "opacity-100" : "opacity-0"}`}
                         aria-hidden={index !== activeImageIndex}
                     >
-                        <Link
+                        {/* <Link
                             href="/products"
                             tabIndex={index === activeImageIndex ? 0 : -1}
                             className="pointer-events-auto rounded-xl bg-zinc-900 px-6 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-pink-500"
                         >
                             {slide.ctaLabel}
-                        </Link>
+                        </Link> */}
                     </div>
                 ))}
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 z-20">
+            {/* <div className="absolute inset-x-0 bottom-0 z-20">
                 <MarqueeRow items={bottomMarqueeItems} />
-            </div>
+            </div> */}
         </section>
     );
 }

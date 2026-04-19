@@ -39,8 +39,8 @@ const adminNavLinks = [
 const utilityLinks = [
     { label: "About", to: "/about" },
     { label: "Contact", to: "/contact" },
-    { label: "Store Location" },
-    { label: "Help" },
+    // { label: "Store Location" },
+    { label: "Help", to: "/help" },
 ];
 
 const socialLinks = [
@@ -692,13 +692,18 @@ export default function Header() {
                             <select
                                 value={currency}
                                 onChange={(event) =>
-                                    setCurrency(event.target.value as CurrencyCode)
+                                    setCurrency(
+                                        event.target.value as CurrencyCode,
+                                    )
                                 }
                                 className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-semibold text-zinc-800 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
                                 aria-label="Select currency"
                             >
                                 {CURRENCY_OPTIONS.map((option) => (
-                                    <option key={option.code} value={option.code}>
+                                    <option
+                                        key={option.code}
+                                        value={option.code}
+                                    >
                                         {option.symbol} {option.label}
                                     </option>
                                 ))}
