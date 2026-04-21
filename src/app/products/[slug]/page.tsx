@@ -6,8 +6,8 @@ import { formatPrice } from '../../../utils/price'
 
 export const dynamic = 'force-dynamic'
 
-const getInitialProductData = cache(async (productId: string) => {
-  const product = await getProductBySlug(productId)
+const getInitialProductData = cache(async (slug: string) => {
+  const product = await getProductBySlug(slug)
   const reviewsData = await getProductReviews(product.id)
 
   return { product, reviewsData }
@@ -15,15 +15,15 @@ const getInitialProductData = cache(async (productId: string) => {
 
 type ProductPageProps = {
   params: Promise<{
-    productId: string
+    slug: string
   }>
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const { productId } = await params
+  const { slug } = await params
 
   try {
-    const { product } = await getInitialProductData(productId)
+    const { product } = await getInitialProductData(slug)
     const image = product.primaryImage || product.variants[0]?.thumbnail
     const description = `${product.description.slice(0, 140)}${product.description.length > 140 ? '...' : ''}`
 
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         images: image ? [image] : undefined,
       },
       alternates: {
-        canonical: `/products/slug/${product.slug || product.id}`,
+        canonical: `/products/${product.slug || product.id}`,
       },
       keywords: [product.category, ...product.metals, product.vendor, formatPrice(product.minPrice, 'eur')],
     }
@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 }
 
 export default async function Page({ params }: ProductPageProps) {
-  const { productId } = await params
-  const initialData = await getInitialProductData(productId).catch(() => null)
+  const { slug } = await params
+  const initialData = await getInitialProductData(slug).catch(() => null)
 
   return (
     <ProductDetailPage

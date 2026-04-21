@@ -9,9 +9,11 @@ import { useAuth } from '../context/AuthContext'
 import { useCurrency } from '../context/CurrencyContext'
 import { createOrder } from '../services/orderService'
 import { addCartItem, clearCartItems } from '../services/cartService'
+import { createUserAddress, getUserAddresses, updateUserAddress } from '../services/userService'
 import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
-import type { CheckoutSource, PaymentMethod, ShippingAddress, SingleCheckoutDraft } from '../types/order'
+import type { CheckoutSource, PaymentMethod, SingleCheckoutDraft } from '../types/order'
+import type { UserAddress, UserProfileAddressPayload } from '../types/profile'
 import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
 import {
   clearSingleCheckoutDraft,
@@ -29,46 +31,14 @@ type CheckoutLocationState = {
   draft?: SingleCheckoutDraft
 }
 
-function getStringValue(record: Record<string, unknown>, key: string): string {
-  const value = record[key]
-
-  return typeof value === 'string' ? value : ''
-}
-
-function getBooleanValue(record: Record<string, unknown>, key: string): boolean {
-  return record[key] === true
-}
-
-function getRecordValue(record: Record<string, unknown>, key: string): Record<string, unknown> | null {
-  const value = record[key]
-
-  if (value && typeof value === 'object' && !Array.isArray(value)) {
-    return value as Record<string, unknown>
-  }
-
-  return null
-}
-
-function getSessionAddress(raw: Record<string, unknown> | undefined): ShippingAddress | null {
-  if (!raw) {
-    return null
-  }
-
-  const userRecord = getRecordValue(raw, 'user') ?? getRecordValue(raw, 'data') ?? raw
-  const address = getRecordValue(userRecord, 'address') ?? getRecordValue(raw, 'address')
-
-  if (!address) {
-    return null
-  }
-
-  return {
-    street: getStringValue(address, 'street'),
-    city: getStringValue(address, 'city'),
-    state: getStringValue(address, 'state'),
-    postalCode: getStringValue(address, 'postalCode'),
-    country: getStringValue(address, 'country'),
-    isDefault: getBooleanValue(address, 'isDefault'),
-  }
+const EMPTY_ADDRESS_FORM: UserProfileAddressPayload = {
+  street: '',
+  city: '',
+  state: '',
+  postalCode: '',
+  country: 'India',
+  isDefault: false,
+  addressType: 'home',
 }
 
 function buildReturnUrl(result: 'success' | 'cancel', source: CheckoutSource): string {
@@ -93,6 +63,14 @@ export default function CheckoutPage() {
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('ONLINE')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [addresses, setAddresses] = useState<UserAddress[]>([])
+  const [selectedAddressId, setSelectedAddressId] = useState('')
+  const [isAddressLoading, setIsAddressLoading] = useState(true)
+  const [isAddressSaving, setIsAddressSaving] = useState(false)
+  const [addressError, setAddressError] = useState('')
+  const [isAddressFormOpen, setIsAddressFormOpen] = useState(false)
+  const [editingAddressId, setEditingAddressId] = useState<string | null>(null)
+  const [addressForm, setAddressForm] = useState<UserProfileAddressPayload>(EMPTY_ADDRESS_FORM)
 
   useEffect(() => {
     if (locationState?.source === 'single' && locationState.draft) {
@@ -108,7 +86,6 @@ export default function CheckoutPage() {
   const items = checkoutSource === 'single' ? (singleDraft ? [singleDraft.item] : []) : (cart?.items ?? [])
   const totalItems = items.reduce((total, item) => total + item.quantity, 0)
   const subtotal = items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0)
-  const shippingAddress = getSessionAddress(session?.raw)
   const isCartLoading = cartStatus === 'loading' || cartMutationStatus === 'loading'
 
   useEffect(() => {
@@ -122,6 +99,124 @@ export default function CheckoutPage() {
       clearSingleCheckoutDraft()
     }
   }, [checkoutSource])
+
+  useEffect(() => {
+    let isMounted = true
+
+    async function loadAddresses() {
+      setIsAddressLoading(true)
+      setAddressError('')
+
+      try {
+        const nextAddresses = await getUserAddresses()
+
+        if (!isMounted) {
+          return
+        }
+
+        setAddresses(nextAddresses)
+
+        const preferredAddress = nextAddresses.find((address) => address.isDefault) ?? nextAddresses[0]
+        setSelectedAddressId((currentAddressId) => currentAddressId || preferredAddress?.id || '')
+      } catch {
+        if (!isMounted) {
+          return
+        }
+
+        setAddressError('Unable to load your addresses. Please refresh and try again.')
+      } finally {
+        if (isMounted) {
+          setIsAddressLoading(false)
+        }
+      }
+    }
+
+    void loadAddresses()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const selectedAddress = useMemo(
+    () => addresses.find((address) => address.id === selectedAddressId) ?? null,
+    [addresses, selectedAddressId],
+  )
+
+  function openAddAddressForm() {
+    setAddressError('')
+    setEditingAddressId(null)
+    setAddressForm(EMPTY_ADDRESS_FORM)
+    setIsAddressFormOpen(true)
+  }
+
+  function openEditAddressForm(address: UserAddress) {
+    setAddressError('')
+    setEditingAddressId(address.id)
+    setAddressForm({
+      street: address.street,
+      city: address.city,
+      state: address.state,
+      postalCode: address.postalCode,
+      country: address.country,
+      isDefault: address.isDefault,
+      addressType: address.addressType,
+    })
+    setIsAddressFormOpen(true)
+  }
+
+  async function refreshAddresses(preferredAddressId?: string) {
+    const nextAddresses = await getUserAddresses()
+    setAddresses(nextAddresses)
+
+    const preferredAddress =
+      nextAddresses.find((address) => address.id === preferredAddressId) ??
+      nextAddresses.find((address) => address.isDefault) ??
+      nextAddresses[0] ??
+      null
+
+    setSelectedAddressId(preferredAddress?.id ?? '')
+  }
+
+  async function handleSaveAddress() {
+    if (isAddressSaving) {
+      return
+    }
+
+    const trimmedPayload: UserProfileAddressPayload = {
+      street: addressForm.street.trim(),
+      city: addressForm.city.trim(),
+      state: addressForm.state.trim(),
+      postalCode: addressForm.postalCode.trim(),
+      country: addressForm.country.trim() || 'India',
+      isDefault: addressForm.isDefault,
+      addressType: addressForm.addressType.trim() || 'home',
+    }
+
+    if (!trimmedPayload.street || !trimmedPayload.city || !trimmedPayload.state || !trimmedPayload.postalCode || !trimmedPayload.country) {
+      setAddressError('Please complete all address fields before saving.')
+      return
+    }
+
+    setIsAddressSaving(true)
+    setAddressError('')
+
+    try {
+      if (editingAddressId) {
+        await updateUserAddress(editingAddressId, trimmedPayload)
+        await refreshAddresses(editingAddressId)
+      } else {
+        const createdAddress = await createUserAddress(trimmedPayload)
+        await refreshAddresses(createdAddress.id)
+      }
+
+      setIsAddressFormOpen(false)
+    } catch {
+      setAddressError('Unable to save this address right now. Please try again.')
+    } finally {
+      setIsAddressSaving(false)
+    }
+  }
 
   async function restoreSingleCheckoutSnapshot() {
     const snapshot = getCartRestoreSnapshot()
@@ -144,6 +239,11 @@ export default function CheckoutPage() {
       return
     }
 
+    if (!selectedAddressId) {
+      setError('Please select a shipping address before placing your order.')
+      return
+    }
+
     setIsSubmitting(true)
     setError('')
     clearPendingOrderStatus()
@@ -162,6 +262,7 @@ export default function CheckoutPage() {
       }
 
       const result = await createOrder({
+        addressId: selectedAddressId,
         paymentMethod,
         currency: getCurrencyIsoCode(currency),
         successUrl: paymentMethod === 'ONLINE' ? buildReturnUrl('success', checkoutSource) : undefined,
@@ -280,21 +381,141 @@ export default function CheckoutPage() {
                       <h2 className="text-xl font-bold">Shipping address</h2>
                     </div>
 
-                    {shippingAddress ? (
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      <button
+                        type="button"
+                        onClick={openAddAddressForm}
+                        className="rounded-full border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                      >
+                        ADD ADDRESS
+                      </button>
+                    </div>
+
+                    {isAddressLoading ? <p className="mt-4 text-sm text-zinc-500">Loading your addresses...</p> : null}
+
+                    {!isAddressLoading && addresses.length > 0 ? (
+                      <div className="mt-4 space-y-3">
+                        {addresses.map((address) => {
+                          const isSelected = selectedAddressId === address.id
+
+                          return (
+                            <label
+                              key={address.id}
+                              className={`flex cursor-pointer items-start gap-4 rounded-[22px] border px-4 py-4 transition ${
+                                isSelected ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'
+                              }`}
+                            >
+                              <input
+                                type="radio"
+                                name="shippingAddress"
+                                value={address.id}
+                                checked={isSelected}
+                                onChange={() => setSelectedAddressId(address.id)}
+                                className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
+                              />
+
+                              <div className="flex-1 text-sm leading-7 text-zinc-600">
+                                <p className="font-semibold text-[#17110d]">{session?.firstName || session?.username}</p>
+                                <p>{address.street}</p>
+                                <p>
+                                  {address.city}, {address.state} {address.postalCode}
+                                </p>
+                                <p>{address.country}</p>
+                                <div className="mt-2 flex flex-wrap items-center gap-3">
+                                  {address.isDefault ? (
+                                    <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">Default address</span>
+                                  ) : null}
+                                  <button
+                                    type="button"
+                                    onClick={(event) => {
+                                      event.preventDefault()
+                                      openEditAddressForm(address)
+                                    }}
+                                    className="rounded-full border border-[#e2d1c3] px-3 py-1 text-[11px] font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                                  >
+                                    EDIT
+                                  </button>
+                                </div>
+                              </div>
+                            </label>
+                          )
+                        })}
+                      </div>
+                    ) : null}
+
+                    {!isAddressLoading && addresses.length === 0 ? (
                       <div className="mt-5 rounded-[22px] border border-[#eadfd4] bg-white p-4 text-sm leading-7 text-zinc-600">
-                        <p className="font-semibold text-[#17110d]">{session?.firstName || session?.username}</p>
-                        <p>{shippingAddress.street}</p>
-                        <p>
-                          {shippingAddress.city}, {shippingAddress.state} {shippingAddress.postalCode}
-                        </p>
-                        <p>{shippingAddress.country}</p>
-                        {shippingAddress.isDefault ? <p className="mt-2 text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">Default address</p> : null}
+                        No addresses found. Add a shipping address to place your order.
                       </div>
-                    ) : (
-                      <div className="mt-5 rounded-[22px] border border-dashed border-[#dbc8b8] bg-white px-4 py-5 text-sm leading-7 text-zinc-500">
-                        No saved address was found in this session. The backend will use your default account address if one exists.
+                    ) : null}
+
+                    {isAddressFormOpen ? (
+                      <div className="mt-5 rounded-[22px] border border-[#eadfd4] bg-white p-4">
+                        <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">{editingAddressId ? 'Edit address' : 'Add address'}</h3>
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                          <input
+                            value={addressForm.street}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, street: event.target.value }))}
+                            placeholder="Street"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.city}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
+                            placeholder="City"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.state}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, state: event.target.value }))}
+                            placeholder="State"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.postalCode}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))}
+                            placeholder="Postal code"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.country}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, country: event.target.value }))}
+                            placeholder="Country"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.addressType}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}
+                            placeholder="Address type (home/work)"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                        </div>
+
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <button
+                            type="button"
+                            onClick={() => void handleSaveAddress()}
+                            disabled={isAddressSaving}
+                            className="rounded-full bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+                          >
+                            {isAddressSaving ? 'SAVING...' : 'SAVE ADDRESS'}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setIsAddressFormOpen(false)}
+                            className="rounded-full border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                          >
+                            CANCEL
+                          </button>
+                        </div>
                       </div>
-                    )}
+                    ) : null}
+
+                    {addressError ? <p className="mt-4 text-sm text-rose-600">{addressError}</p> : null}
+
+                    {!selectedAddress && !isAddressLoading ? (
+                      <p className="mt-4 text-sm text-zinc-500">Select an address to continue checkout.</p>
+                    ) : null}
                   </div>
 
                   <div className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">

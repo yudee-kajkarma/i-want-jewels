@@ -91,7 +91,7 @@ export default function ProductCard({
                   100,
           )
         : 0;
-    const productDetailUrl = `/products/slug/${item.slug || item.id}`;
+    const productDetailUrl = `/products/${item.slug || item.id}`;
     const isNewArrival =
         item.tags.some((tag) => tag.toLowerCase().includes("new")) ||
         hasDiscount;

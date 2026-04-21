@@ -174,7 +174,7 @@ export default function AdminProductsTable({
                   <td className="px-4 py-4">
                     <div className="flex justify-end gap-2">
                       <Link
-                        to={`/products/slug/${product.slug || product.id}`}
+                        to={`/products/${product.slug || product.id}`}
                         className="inline-flex items-center gap-2 rounded-full border border-[#e8c5db] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
                         aria-label={`Open ${product.title}`}
                       >

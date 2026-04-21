@@ -77,6 +77,7 @@ export type CheckoutSession = {
 }
 
 export type CreateOrderPayload = {
+  addressId: string
   paymentMethod: PaymentMethod
   currency: string
   successUrl?: string

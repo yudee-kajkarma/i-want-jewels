@@ -77,13 +77,13 @@ export default function WishlistPage() {
                 {wishlist.items.map((item) => (
                   
                   <article key={item.id} className="grid gap-5 rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-4 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:items-center">
-                    <Link to={`/products/slug/${item.slug || item.productId}`} className="overflow-hidden rounded-[20px] bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-3">
+                    <Link to={`/products/${item.slug || item.productId}`} className="overflow-hidden rounded-[20px] bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-3">
                       <img src={item.thumbnail} alt={item.title} className="h-28 w-full object-contain" />
                     </Link>
 
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.1em] text-zinc-500">{item.category || 'Jewellery'}</p>
-                      <Link to={`/products/slug/${item.slug || item.productId}`} className="mt-1 block text-xl font-bold text-[#17110d] transition hover:text-pink-500">
+                      <Link to={`/products/${item.slug || item.productId}`} className="mt-1 block text-xl font-bold text-[#17110d] transition hover:text-pink-500">
                         {item.title}
                       </Link>
                       <div className="mt-3 flex items-center gap-3 text-sm text-zinc-500">
@@ -96,7 +96,7 @@ export default function WishlistPage() {
 
                     <div className="flex flex-col items-start gap-3 sm:items-end">
                       <Link
-                        to={`/products/slug/${item.slug || item.productId}`}
+                        to={`/products/${item.slug || item.productId}`}
                         className="rounded-full border border-[#dbc8b8] px-5 py-3 text-xs font-bold tracking-[0.1em] text-[#3c2b20] transition hover:bg-[#111111] hover:!text-white"
                       >
                         VIEW PRODUCT
