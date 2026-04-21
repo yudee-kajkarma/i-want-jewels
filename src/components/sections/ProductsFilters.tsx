@@ -2,7 +2,9 @@
 
 import { useMemo } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
+import { useCurrency } from '../../context/CurrencyContext'
 import type { Product, ProductAllFilters, ProductsFilterState } from '../../types/product'
+import { formatPrice } from '../../utils/price'
 
 type ProductsFiltersProps = {
   filterOptions: ProductAllFilters | null
@@ -151,8 +153,9 @@ export default function ProductsFilters({
 
   const availableCategories = filterOptions?.categories ?? []
   const availableColors = (filterOptions?.metals?.length ?? 0) > 0 ? filterOptions?.metals ?? [] : filterOptions?.colors ?? []
-  const minimumPrice = filterOptions?.priceRange.min ?? 0
-  const maximumPrice = filterOptions?.priceRange.max ?? 0
+  const { currency } = useCurrency()
+  const minimumPrice = filterOptions?.priceRange.min?.[currency] ?? 0
+  const maximumPrice = filterOptions?.priceRange.max?.[currency] ?? 0
   const selectedMinimumPrice = Number(filters.priceMin || minimumPrice)
   const selectedMaximumPrice = Number(filters.priceMax || maximumPrice)
 
@@ -250,8 +253,8 @@ export default function ProductsFilters({
           </div>
 
           <div className="mt-4 flex items-center justify-between text-[1.05rem] text-[#161311]">
-            <p>Min price: ${clampedMinimumPrice}</p>
-            <p>Max price: ${clampedMaximumPrice}</p>
+            <p>Min price: {formatPrice(clampedMinimumPrice, currency)}</p>
+            <p>Max price: {formatPrice(clampedMaximumPrice, currency)}</p>
           </div>
         </div>
       </section>

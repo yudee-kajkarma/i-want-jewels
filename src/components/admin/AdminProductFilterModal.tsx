@@ -1,6 +1,8 @@
 'use client'
 
+import { useCurrency } from '../../context/CurrencyContext'
 import type { ProductAllFilters } from '../../types/product'
+import { getCurrencySymbol } from '../../utils/price'
 import type { AdminFilters } from './adminProductHelpers'
 
 type FilterChangeHandler = <Key extends keyof AdminFilters>(key: Key, value: AdminFilters[Key]) => void
@@ -24,6 +26,11 @@ export default function AdminProductFilterModal({
   onReset,
   onApply,
 }: AdminProductFilterModalProps) {
+  const { currency } = useCurrency()
+  const currencySymbol = getCurrencySymbol(currency)
+  const priceRangeMin = filterOptions?.priceRange.min?.[currency] ?? 0
+  const priceRangeMax = filterOptions?.priceRange.max?.[currency] ?? 0
+
   if (!isOpen) {
     return null
   }
@@ -237,25 +244,25 @@ export default function AdminProductFilterModal({
             </label>
 
             <label className="block">
-              <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Price Min</span>
+              <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Price Min ({currencySymbol})</span>
               <input
                 type="number"
-                min={filterOptions?.priceRange.min ?? 0}
+                min={priceRangeMin}
                 value={filters.priceMin}
                 onChange={(event) => onFilterChange('priceMin', event.target.value)}
-                placeholder={String(filterOptions?.priceRange.min ?? '')}
+                placeholder={String(priceRangeMin)}
                 className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
               />
             </label>
 
             <label className="block">
-              <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Price Max</span>
+              <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Price Max ({currencySymbol})</span>
               <input
                 type="number"
-                min={filterOptions?.priceRange.min ?? 0}
+                min={priceRangeMin}
                 value={filters.priceMax}
                 onChange={(event) => onFilterChange('priceMax', event.target.value)}
-                placeholder={String(filterOptions?.priceRange.max ?? '')}
+                placeholder={String(priceRangeMax)}
                 className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
               />
             </label>

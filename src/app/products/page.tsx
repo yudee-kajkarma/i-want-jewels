@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getAllProductFilters, getProducts } from '../../services/productService'
 import type { Product, ProductAllFilters, ProductsApiResult, ProductsFilterState, ProductsPagination } from '../../types/product'
+import { DEFAULT_CURRENCY } from '../../utils/price'
 import ProductsPage from '../../views/ProductsPage'
 
 export const dynamic = 'force-dynamic'
@@ -69,9 +70,13 @@ function buildFilterState(searchParams: Record<string, string | string[] | undef
     tags: readListValue(searchParams.tags),
     metal: readListValue(searchParams.metal).length > 0 ? readListValue(searchParams.metal) : readListValue(searchParams.metals),
     priceMin:
-      readSingleValue(searchParams.price_min) || readSingleValue(searchParams.minPrice) || String(filterOptions.priceRange.min),
+      readSingleValue(searchParams.price_min) ||
+      readSingleValue(searchParams.minPrice) ||
+      String(filterOptions.priceRange.min?.[DEFAULT_CURRENCY] ?? 0),
     priceMax:
-      readSingleValue(searchParams.price_max) || readSingleValue(searchParams.maxPrice) || String(filterOptions.priceRange.max),
+      readSingleValue(searchParams.price_max) ||
+      readSingleValue(searchParams.maxPrice) ||
+      String(filterOptions.priceRange.max?.[DEFAULT_CURRENCY] ?? 0),
     carat: readSingleValue(searchParams.carat),
   }
 }
@@ -157,8 +162,8 @@ export default async function Page({ searchParams }: PageProps) {
       ...(productsResponse?.appliedFilters ?? []),
       ...(filterState.tags.length > 0 ? ['tags'] : []),
       ...(filterState.metal.length > 0 ? ['metal'] : []),
-      ...(filterState.priceMin !== String(filterOptions.priceRange.min) ||
-      filterState.priceMax !== String(filterOptions.priceRange.max)
+      ...(filterState.priceMin !== String(filterOptions.priceRange.min?.[DEFAULT_CURRENCY] ?? 0) ||
+      filterState.priceMax !== String(filterOptions.priceRange.max?.[DEFAULT_CURRENCY] ?? 0)
         ? ['price']
         : []),
       ...(filterState.carat ? ['carat'] : []),
