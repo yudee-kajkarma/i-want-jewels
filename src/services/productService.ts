@@ -137,8 +137,12 @@ type AllProductFiltersResponse = {
   success: boolean
   code: string
   message: string
-  data: Omit<ProductAllFilters, 'categories' | 'categoryCounts'> & {
+  data: Omit<ProductAllFilters, 'categories' | 'categoryCounts' | 'priceRange'> & {
     categories: Array<string | { name: string; count: number }>
+    priceRange: {
+      min: Price | number
+      max: Price | number
+    }
   }
 }
 
@@ -161,6 +165,7 @@ export type GetProductsParams = {
   priceMax?: string | number
   carat?: string | number
   availability?: string | boolean
+  currency?: string
 }
 
 export type AdminProductsResult = {
@@ -404,6 +409,10 @@ export async function getProducts(params: GetProductsParams = {}): Promise<Produ
     requestParams.availability = String(params.availability)
   }
 
+  if (params.currency) {
+    requestParams.currency = params.currency
+  }
+
   const response = await apiClient.get<ProductsApiResponse>('/products', {
     params: requestParams,
   })
@@ -475,6 +484,10 @@ export async function getAllProductFilters(): Promise<ProductAllFilters> {
     ...response.data.data,
     categories: normalizedCategories,
     categoryCounts,
+    priceRange: {
+      min: toPrice(response.data.data.priceRange?.min),
+      max: toPrice(response.data.data.priceRange?.max),
+    },
   }
 }
 

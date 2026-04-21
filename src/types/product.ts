@@ -174,6 +174,11 @@ export type ProductNumericRange = {
   max: number
 }
 
+export type ProductPriceRange = {
+  min: Price
+  max: Price
+}
+
 export type ProductAllFilters = {
   categories: string[]
   categoryCounts?: Record<string, number>
@@ -187,7 +192,7 @@ export type ProductAllFilters = {
   vendors: string[]
   tags: string[]
   metals: string[]
-  priceRange: ProductNumericRange
+  priceRange: ProductPriceRange
   ratingRange: ProductNumericRange
   caratRange: ProductNumericRange
 }

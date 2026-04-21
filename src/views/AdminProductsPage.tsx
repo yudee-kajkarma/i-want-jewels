@@ -23,6 +23,8 @@ import {
 } from '../components/admin/adminProductHelpers'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import { useCurrency } from '../context/CurrencyContext'
+import { getCurrencyIsoCode } from '../utils/price'
 import {
   createProduct,
   deleteProduct,
@@ -42,6 +44,7 @@ import type {
 
 export default function AdminProductsPage() {
   const navigate = useNavigate()
+  const { currency } = useCurrency()
   const [products, setProducts] = useState<Product[]>([])
   const [pagination, setPagination] = useState<ProductsPagination | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
@@ -139,6 +142,7 @@ export default function AdminProductsPage() {
       priceMax: currentFilters.priceMax || undefined,
       carat: currentFilters.carat || undefined,
       availability: currentFilters.availability === 'all' ? undefined : currentFilters.availability,
+      currency: getCurrencyIsoCode(currency),
     }
   }
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -10,7 +10,8 @@ import ProductsFilters from '../components/sections/ProductsFilters'
 import { useCurrency } from '../context/CurrencyContext'
 import { getProducts } from '../services/productService'
 import type { ProductAllFilters, ProductsApiResult, ProductsFilterState } from '../types/product'
-import { getPriceAmount } from '../utils/price'
+import { getCurrencyIsoCode, getPriceAmount } from '../utils/price'
+import type { CurrencyCode } from '../utils/price'
 
 const productsPerPage = 10
 
@@ -52,7 +53,7 @@ function formatFilterLabel(value: string): string {
     .join(' ')
 }
 
-function buildDefaultFilterState(filterOptions: ProductAllFilters | null): ProductsFilterState {
+function buildDefaultFilterState(filterOptions: ProductAllFilters | null, currency: CurrencyCode): ProductsFilterState {
   return {
     page: 1,
     search: '',
@@ -67,16 +68,16 @@ function buildDefaultFilterState(filterOptions: ProductAllFilters | null): Produ
     vendor: '',
     tags: [],
     metal: [],
-    priceMin: String(filterOptions?.priceRange.min ?? 0),
-    priceMax: String(filterOptions?.priceRange.max ?? 0),
+    priceMin: String(filterOptions?.priceRange.min?.[currency] ?? 0),
+    priceMax: String(filterOptions?.priceRange.max?.[currency] ?? 0),
     carat: '',
   }
 }
 
-function buildFilterSearchParams(filters: ProductsFilterState, filterOptions: ProductAllFilters | null): string {
+function buildFilterSearchParams(filters: ProductsFilterState, filterOptions: ProductAllFilters | null, currency: CurrencyCode): string {
   const searchParams = new URLSearchParams()
-  const defaultMinimumPrice = String(filterOptions?.priceRange.min ?? 0)
-  const defaultMaximumPrice = String(filterOptions?.priceRange.max ?? 0)
+  const defaultMinimumPrice = String(filterOptions?.priceRange.min?.[currency] ?? 0)
+  const defaultMaximumPrice = String(filterOptions?.priceRange.max?.[currency] ?? 0)
 
   if (filters.page > 1) {
     searchParams.set('page', String(filters.page))
@@ -162,7 +163,7 @@ export default function ProductsPage({
   const [isLoading, setIsLoading] = useState(false)
   const [viewMode, setViewMode] = useState<ViewMode>('list')
   const [sortOption, setSortOption] = useState<SortOption>('featured')
-  const defaultFilterState = useMemo(() => buildDefaultFilterState(initialFilterOptions), [initialFilterOptions])
+  const defaultFilterState = useMemo(() => buildDefaultFilterState(initialFilterOptions, currency), [initialFilterOptions, currency])
   const [filters, setFilters] = useState<ProductsFilterState>(initialFilterState ?? defaultFilterState)
   const [productsData, setProductsData] = useState<ProductsApiResult | null>(initialProductsData)
   const topCategories = useMemo(
@@ -199,9 +200,30 @@ export default function ProductsPage({
     setProductsData(initialProductsData)
   }, [defaultFilterState, initialFilterState])
 
+  const previousCurrencyRef = useRef(currency)
+
+  useEffect(() => {
+    if (previousCurrencyRef.current === currency) {
+      return
+    }
+
+    previousCurrencyRef.current = currency
+
+    const resyncedFilters: ProductsFilterState = {
+      ...filters,
+      priceMin: String(initialFilterOptions?.priceRange.min?.[currency] ?? 0),
+      priceMax: String(initialFilterOptions?.priceRange.max?.[currency] ?? 0),
+      page: 1,
+    }
+
+    setFilters(resyncedFilters)
+    void fetchProducts(resyncedFilters)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currency])
+
   function buildAppliedFilters(nextFilters: ProductsFilterState): string[] {
-    const defaultMinimumPrice = String(initialFilterOptions?.priceRange.min ?? 0)
-    const defaultMaximumPrice = String(initialFilterOptions?.priceRange.max ?? 0)
+    const defaultMinimumPrice = String(initialFilterOptions?.priceRange.min?.[currency] ?? 0)
+    const defaultMaximumPrice = String(initialFilterOptions?.priceRange.max?.[currency] ?? 0)
 
     return [
       ...(nextFilters.search.trim() ? ['search'] : []),
@@ -243,6 +265,7 @@ export default function ProductsPage({
         priceMin: nextFilters.priceMin || undefined,
         priceMax: nextFilters.priceMax || undefined,
         carat: nextFilters.carat || undefined,
+        currency: getCurrencyIsoCode(currency),
       })
 
       setProductsData({
@@ -265,7 +288,7 @@ export default function ProductsPage({
     } finally {
       setIsLoading(false)
       if (typeof window !== 'undefined') {
-        const search = buildFilterSearchParams(nextFilters, initialFilterOptions)
+        const search = buildFilterSearchParams(nextFilters, initialFilterOptions, currency)
         window.history.replaceState(null, '', search ? `${pathname}?${search}` : pathname)
       }
     }
