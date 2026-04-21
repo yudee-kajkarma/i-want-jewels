@@ -260,6 +260,7 @@ export default function CheckoutPage() {
       } else {
         clearCartRestoreSnapshot()
       }
+      
 
       const result = await createOrder({
         addressId: selectedAddressId,
