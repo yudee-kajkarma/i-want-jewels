@@ -139,6 +139,76 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
+function PaymentIcon({ type }: { type: 'visa' | 'mastercard' | 'rupay' | 'amex' | 'upi' | 'card' }) {
+  if (type === 'visa') {
+    return (
+      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="Visa">
+        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
+        <text x="36" y="26" textAnchor="middle" fill="#1a4ec7" fontSize="16" fontWeight="700" fontStyle="italic">
+          VISA
+        </text>
+      </svg>
+    )
+  }
+
+  if (type === 'mastercard') {
+    return (
+      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="MasterCard">
+        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
+        <circle cx="30" cy="20" r="10" fill="#eb001b" />
+        <circle cx="42" cy="20" r="10" fill="#f79e1b" fillOpacity="0.95" />
+      </svg>
+    )
+  }
+
+  if (type === 'rupay') {
+    return (
+      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="RuPay">
+        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
+        <polygon points="12,28 42,28 50,22 20,22" fill="#128b3d" />
+        <polygon points="18,22 48,22 56,16 26,16" fill="#f08c23" />
+        <text x="48" y="28" textAnchor="middle" fill="#1746a2" fontSize="10" fontWeight="700">
+          RuPay
+        </text>
+      </svg>
+    )
+  }
+
+  if (type === 'amex') {
+    return (
+      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="Amex">
+        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
+        <rect x="10" y="9" width="52" height="22" rx="4" fill="#1f7acb" />
+        <text x="36" y="24" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="700">
+          AMEX
+        </text>
+      </svg>
+    )
+  }
+
+  if (type === 'upi') {
+    return (
+      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="UPI">
+        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
+        <text x="28" y="25" textAnchor="middle" fill="#222222" fontSize="14" fontWeight="700">
+          UPI
+        </text>
+        <polygon points="44,13 56,20 44,27" fill="#f08c23" />
+        <polygon points="49,13 61,20 49,27" fill="#21a453" fillOpacity="0.95" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="Card">
+      <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
+      <rect x="1" y="11" width="70" height="8" fill="#2d2d2d" />
+      <rect x="10" y="24" width="14" height="7" rx="2" fill="#f0b45b" />
+      <rect x="29" y="24" width="26" height="4" rx="2" fill="#8b8b8b" />
+    </svg>
+  )
+}
+
 function ProductFeatureGrid() {
   const featureIcons = [Truck, Package, ShieldCheck, Headset]
 
@@ -718,7 +788,7 @@ export default function ProductDetailPage({
                     ))}
                   </div>
 
-                  <div className="mt-6 flex items-center justify-between text-sm">
+                  {/* <div className="mt-6 flex items-center justify-between text-sm">
                     <p className="font-medium text-zinc-900">Size:</p>
                     <button
                       type="button"
@@ -727,7 +797,7 @@ export default function ProductDetailPage({
                     >
                       Size Guide
                     </button>
-                  </div>
+                  </div> */}
 
                   <div className="mt-4">
                     <p className="mb-2 text-sm font-medium text-zinc-900">Quantity:</p>
@@ -796,31 +866,29 @@ export default function ProductDetailPage({
                   </p>
                   </div>
                   <div>
-                  <p className="inline-flex items-center gap-2">
+                  {/* <p className="inline-flex items-center gap-2">
                     <Eye strokeWidth={2.4} className="h-3.5 w-3.5" />
                     <span className="font-semibold text-zinc-900">38</span>
                     <span>people viewing this product right now</span>
-                  </p>
+                  </p> */}
                   </div>
                   <p><span className="font-semibold text-zinc-900">SKU:</span> <span className="text-zinc-500">{selectedVariant.sku ?? 'N/A'}</span></p>
-                  <p><span className="font-semibold text-zinc-900">Categories:</span> <span className="text-zinc-500">{product.category}, {product.vendor}</span></p>
-                  <p><span className="font-semibold text-zinc-900">Tag:</span> <span className="text-zinc-500">{product.tags[0] ?? 'new'}</span></p>
+                  {/* <p><span className="font-semibold text-zinc-900">Categories:</span> <span className="text-zinc-500">{product.category}, {product.vendor}</span></p>
+                  <p><span className="font-semibold text-zinc-900">Tag:</span> <span className="text-zinc-500">{product.tags[0] ?? 'new'}</span></p> */}
                 </div>
 
                 <div className="rounded-2xl border border-[#e9e5df] p-4">
-                  <p className="text-center text-sm font-semibold text-zinc-900">Guranteed Safe Checkout</p>
+                  <p className="text-center text-sm font-semibold text-zinc-900">Guaranteed Safe Checkout</p>
                   <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-6">
-                    {['Visa', 'Master', 'RuPay', 'Amex', 'UPI', 'Card'].map((label) => (
-                      <span
-                        key={label}
-                        className="flex h-9 items-center justify-center rounded-sm bg-[#d9d9d9] px-1 text-[9px] text-zinc-500"
-                      >
-                        {label}
-                      </span>
-                    ))}
+                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="visa" /></span>
+                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="mastercard" /></span>
+                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="rupay" /></span>
+                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="amex" /></span>
+                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="upi" /></span>
+                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="card" /></span>
                   </div>
                 </div>
-                <div className="border-t border-[#ebebeb] pt-4">
+                {/* <div className="border-t border-[#ebebeb] pt-4">
                   <h3 className="text-sm font-semibold leading-none tracking-[-0.03em] text-[#111111]">Get It Today</h3>
                   <div className="mt-5 space-y-4">
                     {todayBenefits.map((item) => {
@@ -843,7 +911,7 @@ export default function ProductDetailPage({
                       )
                     })}
                   </div>
-                </div>
+                </div> */}
               </div>
             </section>
 
