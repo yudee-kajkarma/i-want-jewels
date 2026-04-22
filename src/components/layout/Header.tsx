@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { CreditCard, LogIn, LogOut, PackageSearch, Ticket } from "lucide-react";
+import { CreditCard, LogIn, LogOut, MapPinHouse, PackageSearch, Ticket } from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import { useAuth } from "../../context/AuthContext";
 import { useCurrency } from "../../context/CurrencyContext";
@@ -831,7 +831,22 @@ export default function Header() {
                                                     {session?.role}
                                                 </p>
                                             </div>
-                                            {isAdmin ? null : (
+                                            {isAdmin ? (
+                                                <>
+                                                    <Link
+                                                        to="/admin/address"
+                                                        onClick={() =>
+                                                            setIsAccountMenuOpen(
+                                                                false,
+                                                            )
+                                                        }
+                                                        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                    >
+                                                        <MapPinHouse className="h-4 w-4" />
+                                                        ADMIN ADDRESS
+                                                    </Link>
+                                                </>
+                                            ) : (
                                                 <>
                                                     <Link
                                                         to="/profile"
@@ -1137,6 +1152,18 @@ export default function Header() {
                                     )}
                                     {isAdmin ? (
                                         <>
+                                            <Link
+                                                to="/admin/address"
+                                                className="transition hover:text-pink-500"
+                                                onClick={() =>
+                                                    setIsMobileMenuOpen(false)
+                                                }
+                                            >
+                                                <span className="inline-flex items-center gap-1">
+                                                    <MapPinHouse className="h-4 w-4" />
+                                                    Admin Address
+                                                </span>
+                                            </Link>
                                             <Link
                                                 to="/admin/wishlist"
                                                 className="transition hover:text-pink-500"

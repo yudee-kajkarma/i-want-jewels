@@ -35,7 +35,7 @@ export type Order = {
   paymentMethod: PaymentMethod
   paymentStatus: string
   orderStatus: OrderStatus
-  totalAmount: number
+  totalAmount: Price
   totalItems: number
 }
 
@@ -107,4 +107,42 @@ export type PendingOrderStatus = {
 
 export type CartRestoreSnapshot = {
   items: CartItem[]
+}
+
+export type ShippingCarrier = 'FEDEX' | 'DHL'
+
+export type AdminShippingQuote = {
+  orderNumber: string
+  destination: {
+    country: string
+    postalCode: string
+  }
+  shippingCost: {
+    dol: number
+    eur: number
+    pou: number
+  }
+  carrier: string
+  serviceType: string
+  estimatedDays: string
+}
+
+export type AdminOrderCustomer = {
+  userId: string
+  username: string
+  email: string
+  firstName: string
+  lastName: string
+  phoneNumber: string
+}
+
+export type AdminOrderDetail = Order & {
+  userId: string
+  customer: AdminOrderCustomer | null
+  refundStatus: string
+  shippingCarrier: string | null
+  shippingCost: number | null
+  trackingNumber: string | null
+  trackingUrl: string | null
+  isActive: boolean
 }

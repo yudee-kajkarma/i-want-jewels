@@ -3,16 +3,18 @@
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { Clock3, Truck, BadgeCheck, LayoutGrid, List } from 'lucide-react'
+import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import {
+  getAdminShippingQuoteForOrder,
   getAllOrdersForAdmin,
   shipOrderForAdmin,
   updateOrderStatusForAdmin,
   verifyOrderDeliveryForAdmin,
 } from '../services/orderService'
 import { useCurrency } from '../context/CurrencyContext'
-import type { Order, OrdersPagination } from '../types/order'
+import type { AdminShippingQuote, Order, OrdersPagination, ShippingCarrier } from '../types/order'
 import { formatPrice } from '../utils/price'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'verify'
@@ -101,10 +103,57 @@ export default function AdminOrdersPage() {
   const [error, setError] = useState('')
   const [pendingAction, setPendingAction] = useState<PendingAction | null>(null)
   const [isSubmittingAction, setIsSubmittingAction] = useState(false)
+  const [shippingQuote, setShippingQuote] = useState<AdminShippingQuote | null>(null)
+  const [shippingQuoteError, setShippingQuoteError] = useState('')
+  const [isLoadingShippingQuote, setIsLoadingShippingQuote] = useState(false)
+  const [selectedCarrier, setSelectedCarrier] = useState<ShippingCarrier>('FEDEX')
 
   useEffect(() => {
     void loadOrders(true, 1)
   }, [])
+
+  useEffect(() => {
+    let isMounted = true
+
+    async function loadShippingQuote(orderId: string) {
+      setIsLoadingShippingQuote(true)
+      setShippingQuoteError('')
+      setShippingQuote(null)
+      setSelectedCarrier('FEDEX')
+
+      try {
+        const quote = await getAdminShippingQuoteForOrder(orderId)
+
+        if (!isMounted) {
+          return
+        }
+
+        setShippingQuote(quote)
+
+        if (quote?.carrier === 'DHL' || quote?.carrier === 'FEDEX') {
+          setSelectedCarrier(quote.carrier)
+        }
+      } catch {
+        if (!isMounted) {
+          return
+        }
+
+        setShippingQuoteError('Unable to load shipping estimate right now.')
+      } finally {
+        if (isMounted) {
+          setIsLoadingShippingQuote(false)
+        }
+      }
+    }
+
+    if (pendingAction?.type === 'ship') {
+      void loadShippingQuote(pendingAction.order.id)
+    }
+
+    return () => {
+      isMounted = false
+    }
+  }, [pendingAction])
 
   const orderCountLabel = useMemo(() => {
     const total = pagination?.totalRecords ?? orders.length
@@ -180,6 +229,10 @@ export default function AdminOrdersPage() {
     }
 
     setPendingAction(null)
+    setShippingQuote(null)
+    setShippingQuoteError('')
+    setIsLoadingShippingQuote(false)
+    setSelectedCarrier('FEDEX')
   }
 
   async function handleActionConfirm() {
@@ -201,7 +254,7 @@ export default function AdminOrdersPage() {
       }
 
       if (pendingAction.type === 'ship') {
-        await shipOrderForAdmin(pendingAction.order.id)
+        await shipOrderForAdmin(pendingAction.order.id, selectedCarrier)
         toast.success(`Order ${pendingAction.order.orderNumber} marked as shipped.`)
       }
 
@@ -456,7 +509,9 @@ export default function AdminOrdersPage() {
                 <article key={order.id} className="rounded-[24px] border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
                   <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
+                      <Link to={`/admin/orders/${order.id}`} className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400 transition hover:text-[#8f2a60]">
+                        {order.orderNumber}
+                      </Link>
                       <h2 className="mt-2 text-xl font-bold text-[#361128]">
                         {order.totalItems} item{order.totalItems === 1 ? '' : 's'} · {formatPrice(order.totalAmount, currency)}
                       </h2>
@@ -539,7 +594,9 @@ export default function AdminOrdersPage() {
                     {orders.map((order) => (
                       <tr key={`table-${order.id}`} className="hover:bg-[#fff9fd]">
                         <td className="px-4 py-4">
-                          <p className="font-semibold text-[#351626]">{order.orderNumber}</p>
+                          <Link to={`/admin/orders/${order.id}`} className="font-semibold text-[#351626] transition hover:text-[#8f2a60]">
+                            {order.orderNumber}
+                          </Link>
                           <p className="mt-1 text-xs text-zinc-500">{order.paymentMethod}</p>
                         </td>
                         <td className="px-4 py-4 text-zinc-600">{formatOrderDate(order.createdAt)}</td>
@@ -589,6 +646,43 @@ export default function AdminOrdersPage() {
             <p className="mt-3 rounded-lg bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
               Order: {pendingAction.order.orderNumber}
             </p>
+
+            {pendingAction.type === 'ship' ? (
+              <div className="mt-4 space-y-3 rounded-xl border border-[#efcfe1] bg-[#fff8fd] p-3">
+                {isLoadingShippingQuote ? <p className="text-sm text-[#694d5f]">Loading shipping cost...</p> : null}
+
+                {!isLoadingShippingQuote && shippingQuote ? (
+                  <>
+                    <p className="text-sm font-semibold text-[#4f2040]">
+                      Shipping cost: {formatPrice(shippingQuote.shippingCost, currency)}
+                    </p>
+                    <p className="text-xs text-[#7f5d70]">
+                      Destination: {shippingQuote.destination.country} {shippingQuote.destination.postalCode}
+                    </p>
+                    <p className="text-xs text-[#7f5d70]">
+                      Service: {shippingQuote.serviceType} • {shippingQuote.estimatedDays}
+                    </p>
+                    {shippingQuote.carrier ? (
+                      <p className="text-xs text-[#7f5d70]">Quote carrier: {shippingQuote.carrier}</p>
+                    ) : null}
+                  </>
+                ) : null}
+
+                {shippingQuoteError ? <p className="text-xs text-rose-600">{shippingQuoteError}</p> : null}
+
+                <label className="block space-y-1 text-sm">
+                  <span className="font-semibold text-[#4f2040]">Shipping Carrier</span>
+                  <select
+                    value={selectedCarrier}
+                    onChange={(event) => setSelectedCarrier(event.target.value as ShippingCarrier)}
+                    className="w-full rounded-lg border border-[#e5bfd8] bg-white px-3 py-2 text-sm text-[#4f2040] outline-none focus:border-[#d24a90]"
+                  >
+                    <option value="FEDEX">FEDEX</option>
+                    <option value="DHL">DHL</option>
+                  </select>
+                </label>
+              </div>
+            ) : null}
 
             <div className="mt-5 flex items-center justify-end gap-2">
               <button

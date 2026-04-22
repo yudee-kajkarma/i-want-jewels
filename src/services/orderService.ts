@@ -1,14 +1,18 @@
 import type {
+  AdminOrderCustomer,
+  AdminOrderDetail,
   CheckoutSession,
   CreateOrderPayload,
   CreateOrderResult,
   Order,
   OrderItem,
+  AdminShippingQuote,
   OrderStatus,
   OrdersPagination,
   OrdersResult,
   PaymentHistoryItem,
   PaymentHistoryResult,
+  ShippingCarrier,
   ShippingAddress,
 } from '../types/order'
 import { toPrice, type Price } from '../utils/price'
@@ -21,13 +25,21 @@ type OrderApiResponse = {
   createdAt: string
   updatedAt: string
   orderNumber: string
+  userId?: string
+  customer?: Record<string, unknown>
   items: OrderItemApiResponse[]
   shippingAddress?: Record<string, unknown>
   paymentMethod: 'COD' | 'ONLINE'
   paymentStatus: string
   orderStatus: string
-  totalAmount: number
+  totalAmount: number | Price
   totalItems: number
+  refundStatus?: string
+  shippingCarrier?: string | null
+  shippingCost?: number | null
+  trackingNumber?: string | null
+  trackingUrl?: string | null
+  isActive?: boolean
 }
 
 type CreateOrderApiResponse = {
@@ -92,6 +104,32 @@ type AdminOrderUpdateApiResponse = {
   code: string
   message: string
   data?: OrderApiResponse
+}
+
+type AdminOrderDetailApiResponse = {
+  success: boolean
+  code: string
+  message: string
+  data: OrderApiResponse
+}
+
+type AdminShippingQuoteApiResponse = {
+  success: boolean
+  data?: {
+    orderNumber?: string
+    destination?: {
+      country?: string
+      postalCode?: string
+    }
+    shippingCost?: {
+      dol?: number
+      eur?: number
+      pou?: number
+    }
+    carrier?: string
+    serviceType?: string
+    estimatedDays?: string
+  }
 }
 
 function getStringValue(record: Record<string, unknown>, key: string): string {
@@ -187,8 +225,41 @@ function normalizeOrder(order: OrderApiResponse): Order {
     paymentMethod: order.paymentMethod,
     paymentStatus: order.paymentStatus,
     orderStatus: normalizeOrderStatus(order.orderStatus),
-    totalAmount: order.totalAmount,
+    totalAmount: toPrice(order.totalAmount),
     totalItems: order.totalItems,
+  }
+}
+
+function normalizeAdminOrderCustomer(value: unknown): AdminOrderCustomer | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null
+  }
+
+  const record = value as Record<string, unknown>
+
+  return {
+    userId: getStringValue(record, 'userId'),
+    username: getStringValue(record, 'username'),
+    email: getStringValue(record, 'email'),
+    firstName: getStringValue(record, 'firstName'),
+    lastName: getStringValue(record, 'lastName'),
+    phoneNumber: getStringValue(record, 'phoneNumber'),
+  }
+}
+
+function normalizeAdminOrderDetail(order: OrderApiResponse): AdminOrderDetail {
+  const normalizedOrder = normalizeOrder(order)
+
+  return {
+    ...normalizedOrder,
+    userId: typeof order.userId === 'string' ? order.userId : '',
+    customer: normalizeAdminOrderCustomer(order.customer),
+    refundStatus: typeof order.refundStatus === 'string' ? order.refundStatus : 'NONE',
+    shippingCarrier: typeof order.shippingCarrier === 'string' ? order.shippingCarrier : null,
+    shippingCost: typeof order.shippingCost === 'number' ? order.shippingCost : null,
+    trackingNumber: typeof order.trackingNumber === 'string' ? order.trackingNumber : null,
+    trackingUrl: typeof order.trackingUrl === 'string' ? order.trackingUrl : null,
+    isActive: order.isActive !== false,
   }
 }
 
@@ -204,6 +275,28 @@ function normalizePaymentHistoryItem(item: Record<string, unknown>): PaymentHist
     paymentMethod: (getStringValue(item, 'paymentMethod') || 'ONLINE') as 'COD' | 'ONLINE',
     createdAt: getStringValue(item, 'createdAt'),
     updatedAt: getStringValue(item, 'updatedAt'),
+  }
+}
+
+function normalizeAdminShippingQuote(data?: AdminShippingQuoteApiResponse['data']): AdminShippingQuote | null {
+  if (!data) {
+    return null
+  }
+
+  return {
+    orderNumber: data.orderNumber ?? '',
+    destination: {
+      country: data.destination?.country ?? '',
+      postalCode: data.destination?.postalCode ?? '',
+    },
+    shippingCost: {
+      dol: typeof data.shippingCost?.dol === 'number' ? data.shippingCost.dol : 0,
+      eur: typeof data.shippingCost?.eur === 'number' ? data.shippingCost.eur : 0,
+      pou: typeof data.shippingCost?.pou === 'number' ? data.shippingCost.pou : 0,
+    },
+    carrier: data.carrier ?? '',
+    serviceType: data.serviceType ?? '',
+    estimatedDays: data.estimatedDays ?? '',
   }
 }
 
@@ -296,8 +389,16 @@ export async function updateOrderStatusForAdmin(orderId: string, status: OrderSt
   return response.data.data ? normalizeOrder(response.data.data) : null
 }
 
-export async function shipOrderForAdmin(orderId: string): Promise<Order | null> {
-  const response = await adminApiClient.put<AdminOrderUpdateApiResponse>(`/orders/admin/${orderId}/ship`)
+export async function getAdminShippingQuoteForOrder(orderId: string): Promise<AdminShippingQuote | null> {
+  const response = await adminApiClient.get<AdminShippingQuoteApiResponse>(`/orders/admin/${orderId}/shipping-cost`)
+
+  return normalizeAdminShippingQuote(response.data.data)
+}
+
+export async function shipOrderForAdmin(orderId: string, carrier: ShippingCarrier): Promise<Order | null> {
+  const response = await adminApiClient.put<AdminOrderUpdateApiResponse>(`/orders/admin/${orderId}/ship`, {
+    carrier,
+  })
 
   return response.data.data ? normalizeOrder(response.data.data) : null
 }
@@ -306,4 +407,10 @@ export async function verifyOrderDeliveryForAdmin(orderId: string): Promise<Orde
   const response = await adminApiClient.post<AdminOrderUpdateApiResponse>(`/orders/${orderId}/verify-delivery`)
 
   return response.data.data ? normalizeOrder(response.data.data) : null
+}
+
+export async function getAdminOrderById(orderId: string): Promise<AdminOrderDetail> {
+  const response = await adminApiClient.get<AdminOrderDetailApiResponse>(`/orders/admin/${orderId}`)
+
+  return normalizeAdminOrderDetail(response.data.data)
 }

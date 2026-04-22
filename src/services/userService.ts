@@ -1,5 +1,6 @@
 import { authApiClient } from './apiClient'
 import type { UpdateProfileFormPayload, UpdateProfileRequestPayload, UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
+import type { AdminAddress, UpdateAdminAddressPayload } from '../types/address'
 
 type ApiEnvelope<T> = {
   success: boolean
@@ -47,6 +48,26 @@ function normalizeUserAddress(value: unknown): UserAddress | null {
   return {
     id: getStringValue(record, '_id'),
     ...normalized,
+  }
+}
+
+function normalizeAdminAddress(value: unknown): AdminAddress | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null
+  }
+
+  const record = value as Record<string, unknown>
+
+  return {
+    id: getStringValue(record, '_id'),
+    street: getStringValue(record, 'street'),
+    houseNumber: getStringValue(record, 'houseNumber'),
+    city: getStringValue(record, 'city'),
+    state: getStringValue(record, 'state'),
+    postalCode: getStringValue(record, 'postalCode'),
+    country: getStringValue(record, 'country') || 'India',
+    isDefault: typeof record.isDefault === 'boolean' ? record.isDefault : false,
+    addressType: getStringValue(record, 'addressType') || 'work',
   }
 }
 
@@ -148,4 +169,17 @@ export async function deleteUserAddress(addressId: string): Promise<void> {
 
 export async function setDefaultUserAddress(addressId: string): Promise<void> {
   await authApiClient.patch(`/addresses/${addressId}/set-default`)
+}
+
+export async function getAdminAddress(): Promise<AdminAddress | null> {
+  const response = await authApiClient.get<ApiEnvelope<unknown>>('/addresses/admin/me')
+  const dataRecord = response.data.data && typeof response.data.data === 'object' && !Array.isArray(response.data.data)
+    ? (response.data.data as Record<string, unknown>)
+    : {}
+
+  return normalizeAdminAddress(dataRecord.address)
+}
+
+export async function updateAdminAddress(payload: UpdateAdminAddressPayload): Promise<void> {
+  await authApiClient.put('/addresses/admin/me', payload)
 }
