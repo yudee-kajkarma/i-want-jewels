@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import banner1 from "@/assets/banner/Banner-1.jpg.jpeg";
 import banner2 from "@/assets/banner/Banner-2.jpg.jpeg";
 import banner3 from "@/assets/banner/Banner-3.jpg.jpeg";
@@ -24,29 +24,102 @@ function getWrappedIndex(index: number) {
     return (index + heroSlides.length) % heroSlides.length;
 }
 
-const transitionDurationMs = 700;
+const autoplayDelayMs = 4000;
+const transitionDurationMs = 1000;
+
+function getSliderConfig(containerWidth: number) {
+    if (containerWidth >= 1024) {
+        return {
+            slidesPerView: 1.2,
+            spaceBetween: 30,
+        };
+    }
+
+    if (containerWidth >= 768) {
+        return {
+            slidesPerView: 1,
+            spaceBetween: 15,
+        };
+    }
+
+    return {
+        slidesPerView: 1,
+        spaceBetween: 15,
+    };
+}
 
 export default function Hero() {
+    const containerRef = useRef<HTMLDivElement | null>(null);
     const [trackIndex, setTrackIndex] = useState(1);
     const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
-    const [committedSlideIndex, setCommittedSlideIndex] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
+    const [containerWidth, setContainerWidth] = useState(0);
 
     const logicalSlideIndex = getWrappedIndex(trackIndex - 1);
-    const previousSlide = heroSlides[getWrappedIndex(committedSlideIndex - 1)];
-    const nextSlide = heroSlides[getWrappedIndex(committedSlideIndex + 1)];
     const sliderTrack = [
         heroSlides[heroSlides.length - 1],
         ...heroSlides,
         heroSlides[0],
     ];
+    const sliderConfig = useMemo(
+        () => getSliderConfig(containerWidth),
+        [containerWidth],
+    );
+    const slideWidth =
+        containerWidth > 0
+            ? (containerWidth -
+                  sliderConfig.spaceBetween *
+                      (sliderConfig.slidesPerView - 1)) /
+              sliderConfig.slidesPerView
+            : 0;
+    const centerOffset =
+        containerWidth > 0 ? (containerWidth - slideWidth) / 2 : 0;
+    const translateX =
+        containerWidth > 0
+            ? -(
+                  trackIndex * (slideWidth + sliderConfig.spaceBetween) -
+                  centerOffset
+              )
+            : 0;
+
+    useEffect(() => {
+        const containerElement = containerRef.current;
+
+        if (!containerElement) {
+            return;
+        }
+
+        const resizeObserver = new ResizeObserver((entries) => {
+            const entry = entries[0];
+
+            if (!entry) {
+                return;
+            }
+
+            setContainerWidth(entry.contentRect.width);
+        });
+
+        resizeObserver.observe(containerElement);
+        setContainerWidth(containerElement.getBoundingClientRect().width);
+
+        return () => {
+            resizeObserver.disconnect();
+        };
+    }, []);
+
+    function goToNextSlide() {
+        setIsTransitionEnabled(true);
+        setTrackIndex((currentIndex) => currentIndex + 1);
+    }
+
+    function goToPreviousSlide() {
+        setIsTransitionEnabled(true);
+        setTrackIndex((currentIndex) => currentIndex - 1);
+    }
 
     useEffect(() => {
         const timer = window.setInterval(() => {
-            setIsTransitionEnabled(true);
-            setIsAnimating(true);
-            setTrackIndex((currentIndex) => currentIndex + 1);
-        }, 4000);
+            goToNextSlide();
+        }, autoplayDelayMs);
 
         return () => {
             window.clearInterval(timer);
@@ -82,7 +155,6 @@ export default function Hero() {
     useEffect(() => {
         if (!isTransitionEnabled) {
             const rafId = window.requestAnimationFrame(() => {
-                setCommittedSlideIndex(getWrappedIndex(trackIndex - 1));
                 setIsTransitionEnabled(true);
             });
 
@@ -94,57 +166,54 @@ export default function Hero() {
         return;
     }, [isTransitionEnabled]);
 
-    function handleTrackTransitionEnd() {
-        setCommittedSlideIndex(getWrappedIndex(trackIndex - 1));
-        setIsAnimating(false);
-    }
-
     return (
         <section className="overflow-hidden bg-white py-4 md:py-5 lg:py-6">
-            <div className="mx-auto max-w-[1920px] px-0">
-                <div className="relative flex items-center justify-center gap-6 overflow-hidden">
+            <div className="mx-auto max-w-[1920px] px-1 sm:px-2 lg:px-4">
+                <div ref={containerRef} className="relative overflow-hidden">
                     <div
-                        className={`hidden w-[8.5vw] min-w-[95px] max-w-[180px] overflow-hidden rounded-r-[16px] md:block lg:min-w-[120px] lg:max-w-[200px] ${isAnimating ? "-translate-x-3" : "translate-x-0"} transition-transform duration-700 ease-out`}
+                        className={`flex will-change-transform ${isTransitionEnabled ? "transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]" : ""}`}
+                        style={{
+                            gap: `${sliderConfig.spaceBetween}px`,
+                            transform: `translate3d(${translateX}px, 0, 0)`,
+                        }}
                     >
-                        <img
-                            src={previousSlide.src}
-                            alt={previousSlide.alt}
-                            className={`h-[280px] w-full object-cover md:h-[300px] lg:h-[380px] xl:h-[520px] transition-all duration-700 ease-out ${isAnimating ? "scale-[0.98] opacity-80" : "scale-100 opacity-100"}`}
-                        />
+                        {sliderTrack.map((slide, index) => (
+                            <div
+                                key={`${slide.src}-${index}`}
+                                className="shrink-0 overflow-hidden rounded-[10px]"
+                                style={{
+                                    width:
+                                        slideWidth > 0
+                                            ? `${slideWidth}px`
+                                            : "100%",
+                                }}
+                            >
+                                <img
+                                    src={slide.src}
+                                    alt={slide.alt}
+                                    className={`h-[240px] w-full object-cover transition-all duration-1000 md:h-[340px] lg:h-[560px] ${index === trackIndex ? "scale-100 opacity-100" : "scale-[0.97] opacity-85"}`}
+                                />
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="relative w-full max-w-[1580px] overflow-hidden rounded-[18px]">
-                        <div
-                            className={`flex ${isTransitionEnabled ? "transition-transform duration-700 ease-out" : ""}`}
-                            style={{
-                                transform: `translateX(-${trackIndex * 100}%)`,
-                            }}
-                            onTransitionEnd={handleTrackTransitionEnd}
-                        >
-                            {sliderTrack.map((slide, index) => (
-                                <div
-                                    key={`${slide.src}-${index}`}
-                                    className="w-full shrink-0"
-                                >
-                                    <img
-                                        src={slide.src}
-                                        alt={slide.alt}
-                                        className="aspect-[16/6] min-h-[260px] w-full object-cover sm:min-h-[340px] lg:min-h-[560px]"
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div
-                        className={`hidden w-[8.5vw] min-w-[95px] max-w-[180px] overflow-hidden rounded-l-[16px] md:block lg:min-w-[120px] lg:max-w-[200px] ${isAnimating ? "-translate-x-4" : "translate-x-0"} transition-transform duration-700 ease-out`}
+                    {/* <button
+                        type="button"
+                        aria-label="Previous slide"
+                        onClick={goToPreviousSlide}
+                        className="absolute left-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-zinc-700 shadow-sm transition hover:bg-white md:flex"
                     >
-                        <img
-                            src={nextSlide.src}
-                            alt={nextSlide.alt}
-                            className={`h-[280px] w-full object-cover md:h-[300px] lg:h-[380px] xl:h-[520px] transition-all duration-700 ease-out ${isAnimating ? "scale-[1.03] opacity-95" : "scale-100 opacity-100"}`}
-                        />
-                    </div>
+                        <span aria-hidden="true">‹</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        aria-label="Next slide"
+                        onClick={goToNextSlide}
+                        className="absolute right-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-zinc-700 shadow-sm transition hover:bg-white md:flex"
+                    >
+                        <span aria-hidden="true">›</span>
+                    </button> */}
                 </div>
 
                 <div className="mt-5 flex items-center justify-center gap-4">
@@ -156,14 +225,12 @@ export default function Hero() {
                             aria-pressed={index === logicalSlideIndex}
                             onClick={() => {
                                 setIsTransitionEnabled(true);
-                                setIsAnimating(true);
                                 setTrackIndex(index + 1);
-                                setCommittedSlideIndex(index);
                             }}
-                            className={`h-3 w-3 rotate-45 border transition-all duration-300 ${
+                            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
                                 index === logicalSlideIndex
-                                    ? "border-pink-500 bg-pink-500"
-                                    : "border-[#cfcfcf] bg-[#d9d9d9]"
+                                    ? "bg-[#7d3434]"
+                                    : "bg-[#c9c9c9]"
                             }`}
                         />
                     ))}
