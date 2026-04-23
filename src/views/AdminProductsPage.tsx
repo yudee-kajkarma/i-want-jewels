@@ -541,7 +541,6 @@ export default function AdminProductsPage() {
           (variant) =>
             !variant.title.trim() ||
             !variant.sku.trim() ||
-            variant.price.dol <= 0 ||
             variant.price.eur <= 0 ||
             variant.price.pou <= 0 ||
             variant.stock < 0,

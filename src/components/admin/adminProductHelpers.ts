@@ -92,7 +92,7 @@ export function createEmptyVariant(variantName: AdminVariantName = 'gold'): Crea
     variantName,
     sku: '',
     stock: 0,
-    price: { dol: 0, eur: 0, pou: 0 },
+    price: {  eur: 0, pou: 0 },
     imageIndexes: [],
   }
 }
