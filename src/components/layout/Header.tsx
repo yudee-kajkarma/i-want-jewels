@@ -23,6 +23,9 @@ const navLinks = [
     { label: "Shop", to: "/products" },
     { label: "About", to: "/about" },
     { label: "Contact", to: "/contact" },
+    { label: "Blog", to: "/about" },
+    { label: "Resources", to: "/help" },
+{ label: "Help", to: "/help" }
 ];
 
 const adminNavLinks = [
@@ -48,6 +51,29 @@ const socialLinks = [
     { name: "Facebook", href: "https://www.facebook.com/iwjewels/" },
     { name: "TikTok", href: "https://www.tiktok.com/@iwantjewelsofficial" },
 ];
+
+const storefrontNavLinks = [
+    { label: "Home", to: "/", icon: "home" },
+    { label: "All Products", to: "/products", icon: "all" },
+    { label: "Earrings", to: buildCategoryHref("Earrings"), icon: "earrings" },
+    { label: "Rings", to: buildCategoryHref("Rings"), icon: "rings" },
+    {
+        label: "Necklaces",
+        to: buildCategoryHref("Necklace"),
+        icon: "necklaces",
+    },
+    {
+        label: "Bracelets",
+        to: buildCategoryHref("Bracelets"),
+        icon: "bracelets",
+    },
+    { label: "About", to: "/about", icon: "about" },
+    { label: "Contact", to: "/contact", icon: "contact" },
+    // { label: "Gift Card", to: "/products", icon: "gift" },
+    { label: "Blog", to: "/about", icon: "blog" },
+    { label: "Resources", to: "/help", icon: "resources" },
+    { label: "Help", to: "/help", icon: "resources" }
+] as const;
 
 const desktopNavLinkClass =
     "relative inline-flex pb-1 transition after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-200 hover:text-zinc-900 hover:after:scale-x-100";
@@ -154,6 +180,133 @@ function SearchIcon() {
             <path d="M16 16l4.5 4.5" strokeLinecap="round" />
         </svg>
     );
+}
+
+function MicIcon() {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            className="h-[18px] w-[18px]"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+        >
+            <rect
+                x="9"
+                y="3"
+                width="6"
+                height="11"
+                rx="3"
+                strokeLinecap="round"
+            />
+            <path d="M6.5 11a5.5 5.5 0 1 0 11 0" strokeLinecap="round" />
+            <path d="M12 17v4" strokeLinecap="round" />
+            <path d="M9.5 21h5" strokeLinecap="round" />
+        </svg>
+    );
+}
+
+type StorefrontNavIcon =
+    | "home"
+    | "all"
+    | "earrings"
+    | "rings"
+    | "necklaces"
+    | "bracelets"
+    | "about"
+    | "contact"
+    | "gift"
+    | "blog"
+    | "resources";
+
+function NavGlyph({ type }: { type: StorefrontNavIcon }) {
+    const className = "h-[13px] w-[13px]";
+
+    switch (type) {
+        case "home":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="m4 11.5 8-7 8 7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6.5 10.5V20h11v-9.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            );
+        case "all":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="12" cy="12" r="8" />
+                    <path d="M12 8v8M8 12h8" strokeLinecap="round" />
+                </svg>
+            );
+        case "earrings":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="9" cy="8" r="2.2" />
+                    <circle cx="15" cy="16" r="2.2" />
+                    <path d="M10.6 9.6 13.4 14.4" strokeLinecap="round" />
+                </svg>
+            );
+        case "rings":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="12" cy="14" r="5" />
+                    <path d="M9.5 9.5 12 6l2.5 3.5Z" strokeLinejoin="round" />
+                </svg>
+            );
+        case "necklaces":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M7 7a5 5 0 0 1 10 0v2a5 5 0 0 1-10 0Z" />
+                    <circle cx="12" cy="16" r="2" />
+                </svg>
+            );
+        case "bracelets":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="17" cy="12" r="1" fill="currentColor" stroke="none" />
+                </svg>
+            );
+        case "blog":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M6 5h12v14H6Z" strokeLinejoin="round" />
+                    <path d="M9 9h6M9 13h6" strokeLinecap="round" />
+                </svg>
+            );
+        case "gift":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M4 9h16v11H4Z" strokeLinejoin="round" />
+                    <path d="M12 9v11M4 13.5h16" />
+                    <path d="M12 9c-1.5 0-3-1-3-2.3 0-1.1.8-1.9 1.9-1.9 1.4 0 2.3 1.3 2.7 4.2.4-2.9 1.3-4.2 2.7-4.2 1.1 0 1.9.8 1.9 1.9C18 8 16.5 9 15 9Z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            );
+        case "resources":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M4 6h7v12H4Z" strokeLinejoin="round" />
+                    <path d="M13 6h7v12h-7Z" strokeLinejoin="round" />
+                </svg>
+            );
+        case "about":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="12" cy="12" r="8" />
+                    <circle cx="12" cy="8.2" r="1" fill="currentColor" stroke="none" />
+                    <path d="M12 11v5" strokeLinecap="round" />
+                </svg>
+            );
+        case "contact":
+            return (
+                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M4 7.5h16v9H4Z" strokeLinejoin="round" />
+                    <path d="m5 8 7 5 7-5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            );
+        default:
+            return null;
+    }
 }
 
 function ChevronIcon() {
@@ -326,12 +479,14 @@ function HeaderAction({
     label,
     to,
     onClick,
+    className,
 }: {
     children: ReactNode;
     count?: number;
     label: string;
     to?: string;
     onClick?: () => void;
+    className?: string;
 }) {
     const content = (
         <>
@@ -349,7 +504,7 @@ function HeaderAction({
             <Link
                 to={to}
                 aria-label={label}
-                className="relative flex h-8 w-8 items-center justify-center text-zinc-900 transition hover:text-pink-500"
+                className={`relative flex h-8 w-8 items-center justify-center transition hover:text-pink-500 ${className ?? "text-zinc-900"}`}
             >
                 {content}
             </Link>
@@ -361,7 +516,7 @@ function HeaderAction({
             type="button"
             aria-label={label}
             onClick={onClick}
-            className="relative flex h-8 w-8 items-center justify-center text-zinc-900 transition hover:text-pink-500"
+            className={`relative flex h-8 w-8 items-center justify-center transition hover:text-pink-500 ${className ?? "text-zinc-900"}`}
         >
             {content}
         </button>
@@ -390,6 +545,7 @@ export default function Header() {
     const [isMobileShopMenuOpen, setIsMobileShopMenuOpen] = useState(false);
     const [desktopSearchTerm, setDesktopSearchTerm] = useState("");
     const [mobileSearchTerm, setMobileSearchTerm] = useState("");
+    const [isVoiceListening, setIsVoiceListening] = useState(false);
     const [shopCategories, setShopCategories] = useState<string[]>([]);
     const [shopMenuTop, setShopMenuTop] = useState(0);
     const shopMenuCloseTimeoutRef = useRef<ReturnType<
@@ -671,9 +827,86 @@ export default function Header() {
         }
     }
 
+    function handleVoiceSearch(target: "desktop" | "mobile") {
+        if (typeof window === "undefined") {
+            return;
+        }
+
+        const SpeechRecognitionCtor = (
+            window as typeof window & {
+                SpeechRecognition?: new () => {
+                    lang: string;
+                    interimResults: boolean;
+                    maxAlternatives: number;
+                    onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null;
+                    onerror: ((event: unknown) => void) | null;
+                    onend: (() => void) | null;
+                    start: () => void;
+                };
+                webkitSpeechRecognition?: new () => {
+                    lang: string;
+                    interimResults: boolean;
+                    maxAlternatives: number;
+                    onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null;
+                    onerror: ((event: unknown) => void) | null;
+                    onend: (() => void) | null;
+                    start: () => void;
+                };
+            }
+        ).SpeechRecognition ||
+            (
+                window as typeof window & {
+                    webkitSpeechRecognition?: new () => {
+                        lang: string;
+                        interimResults: boolean;
+                        maxAlternatives: number;
+                        onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null;
+                        onerror: ((event: unknown) => void) | null;
+                        onend: (() => void) | null;
+                        start: () => void;
+                    };
+                }
+            ).webkitSpeechRecognition;
+
+        if (!SpeechRecognitionCtor) {
+            return;
+        }
+
+        const recognition = new SpeechRecognitionCtor();
+        recognition.lang = "en-US";
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+        setIsVoiceListening(true);
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0]?.[0]?.transcript?.trim() ?? "";
+
+            if (!transcript) {
+                return;
+            }
+
+            if (target === "desktop") {
+                setDesktopSearchTerm(transcript);
+            } else {
+                setMobileSearchTerm(transcript);
+            }
+        };
+
+        recognition.onerror = () => {
+            setIsVoiceListening(false);
+        };
+
+        recognition.onend = () => {
+            setIsVoiceListening(false);
+        };
+
+        recognition.start();
+    }
+
     return (
         <>
-            <div className="border-b border-zinc-200 bg-white">
+            {isAdmin ? (
+                <div className="border-b border-zinc-200 bg-white">
                 <div className="mx-auto hidden max-w-[1480px] items-center justify-between px-4 py-4 text-sm lg:flex lg:px-8">
                     <div className="flex items-center gap-8 text-zinc-800">
                         {utilityLinks.map((link) => (
@@ -725,7 +958,8 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            ) : null}
 
             <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white">
                 <div
@@ -746,28 +980,63 @@ export default function Header() {
                         {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                     </button>
 
-                    <form
-                        className="hidden md:block md:w-[235px] lg:w-[258px]"
-                        onSubmit={(event) => {
-                            event.preventDefault();
-                            handleGlobalSearchSubmit(desktopSearchTerm);
-                        }}
-                    >
-                        <label className="flex h-[42px] items-center gap-3 rounded-[14px] border border-zinc-200 bg-white px-4 text-sm text-zinc-400 shadow-[0_1px_0_rgba(17,24,39,0.03)]">
-                            <SearchIcon />
-                            <input
-                                type="search"
-                                placeholder="What are you looking for?"
-                                value={desktopSearchTerm}
-                                onChange={(event) =>
-                                    setDesktopSearchTerm(event.target.value)
-                                }
-                                className="w-full border-0 bg-transparent text-[15px] text-zinc-700 outline-none placeholder:text-zinc-400"
-                            />
-                        </label>
-                    </form>
+                    {!isAdmin ? (
+                        <>
+                            <Link
+                                to={brandLink}
+                                className="hidden w-[220px] items-center justify-start md:flex"
+                            >
+                                <img
+                                    src={brandLogo.src}
+                                    alt="I Want Jewels"
+                                    className="h-auto w-[170px] mix-blend-multiply"
+                                />
+                            </Link>
 
-                    <div className="flex flex-1 items-center justify-center gap-5 lg:gap-7">
+                            <div className="hidden flex-1 justify-center md:flex">
+                                <form
+                                    className="w-full"
+                                    onSubmit={(event) => {
+                                        event.preventDefault();
+                                        handleGlobalSearchSubmit(
+                                            desktopSearchTerm,
+                                        );
+                                    }}
+                                >
+                                    <label className="mx-auto flex h-[46px] w-full max-w-[620px] items-center gap-3 rounded-full border border-[#d5d1ce] bg-white px-4 text-sm text-zinc-400">
+                                        <SearchIcon />
+                                        <input
+                                            type="search"
+                                            placeholder="Search for diamond jewellery"
+                                            value={desktopSearchTerm}
+                                            onChange={(event) =>
+                                                setDesktopSearchTerm(
+                                                    event.target.value,
+                                                )
+                                            }
+                                            className="w-full border-0 bg-transparent text-[15px] text-zinc-700 outline-none placeholder:text-zinc-400"
+                                        />
+                                        <button
+                                            type="button"
+                                            aria-label="Voice search"
+                                            onClick={() =>
+                                                handleVoiceSearch("desktop")
+                                            }
+                                            className={`text-pink-500 transition ${isVoiceListening ? "scale-110 text-pink-600" : "hover:text-pink-600"}`}
+                                        >
+                                            <MicIcon />
+                                        </button>
+                                    </label>
+                                </form>
+                            </div>
+                        </>
+                    ) : null}
+
+                    <div
+                        className={`${isAdmin ? "flex flex-1 items-center justify-center gap-5 lg:gap-7" : "flex flex-1 items-center justify-center md:hidden"}`}
+                    >
+                        {isAdmin ? (
+                            <>
                         <nav className="hidden items-center gap-5 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex xl:gap-7">
                             {activeNavLinks
                                 .slice(0, isSlice)
@@ -795,9 +1064,49 @@ export default function Header() {
                                 />
                             ))}
                         </nav>
+                            </>
+                        ) : (
+                            <Link
+                                to={brandLink}
+                                className="flex items-center justify-center md:hidden"
+                            >
+                                <img
+                                    src={brandLogo.src}
+                                    alt="I Want Jewels"
+                                    className="h-auto w-[150px] mix-blend-multiply"
+                                />
+                            </Link>
+                        )}
                     </div>
 
-                    <div className="flex items-center gap-0.5 sm:gap-1 md:min-w-[235px] md:justify-end lg:min-w-[258px]">
+                    <div
+                        className={`flex items-center gap-0.5 sm:gap-1 ${isAdmin ? "md:min-w-[235px] md:justify-end lg:min-w-[258px]" : "text-pink-500 md:w-[220px] md:justify-end"}`}
+                    >
+                        {!isAdmin ? (
+                            <label className="hidden items-center pr-1 md:flex">
+                                <span className="sr-only">Select currency</span>
+                                <select
+                                    value={currency}
+                                    onChange={(event) =>
+                                        setCurrency(
+                                            event.target.value as CurrencyCode,
+                                        )
+                                    }
+                                    className="cursor-pointer rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
+                                    aria-label="Select currency"
+                                >
+                                    {CURRENCY_OPTIONS.map((option) => (
+                                        <option
+                                            key={option.code}
+                                            value={option.code}
+                                        >
+                                            {option.symbol} {option.code}
+                                        </option>
+                                    ))}
+                                </select>
+                            </label>
+                        ) : null}
+
                         <div ref={accountMenuRef} className="relative">
                             <button
                                 type="button"
@@ -808,7 +1117,7 @@ export default function Header() {
                                         (currentValue) => !currentValue,
                                     )
                                 }
-                                className="relative flex h-8 w-8 items-center justify-center text-zinc-900 transition hover:text-pink-500"
+                                className={`relative flex h-8 w-8 items-center justify-center transition hover:text-pink-500 ${isAdmin ? "text-zinc-900" : "text-pink-500"}`}
                             >
                                 <UserIcon />
                             </button>
@@ -984,6 +1293,7 @@ export default function Header() {
                                     label="Wishlist"
                                     count={wishlistCount}
                                     to="/wishlist"
+                                    className="text-pink-500"
                                 >
                                     <HeartIcon />
                                 </HeaderAction>
@@ -991,6 +1301,7 @@ export default function Header() {
                                     label="Cart"
                                     count={itemCount}
                                     to="/cart"
+                                    className="text-pink-500"
                                 >
                                     <BagIcon />
                                 </HeaderAction>
@@ -999,8 +1310,27 @@ export default function Header() {
                     </div>
                 </div>
 
+                {!isAdmin ? (
+                    <div className="hidden border-y border-zinc-200 lg:block">
+                        <nav className="mx-auto flex max-w-[1480px] items-center justify-center gap-7 px-4 py-3 text-[0.96rem] text-zinc-700 lg:px-8">
+                            {storefrontNavLinks.map((item) => (
+                                <Link
+                                    key={item.label}
+                                    to={item.to}
+                                    className="group relative inline-flex items-center gap-1.5 py-0.5 text-[0.96rem] font-medium text-zinc-700 transition duration-200 hover:text-pink-500 after:absolute after:-bottom-[13px] after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-pink-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
+                                >
+                                    <span className="transition duration-200 group-hover:scale-105">
+                                        <NavGlyph type={item.icon} />
+                                    </span>
+                                    <span>{item.label}</span>
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
+                ) : null}
+
                 {isMobileMenuOpen ? (
-                    <div className="border-t border-zinc-100 px-4 py-4 lg:hidden">
+                    <div className="max-h-[calc(100vh-68px)] overflow-y-auto border-t border-zinc-100 px-4 py-4 lg:hidden">
                         <div className="mx-auto max-w-7xl space-y-4">
                             <form
                                 onSubmit={(event) => {
@@ -1023,8 +1353,46 @@ export default function Header() {
                                         }
                                         className="w-full border-0 bg-transparent text-sm text-zinc-700 outline-none placeholder:text-zinc-400"
                                     />
+                                    <button
+                                        type="button"
+                                        aria-label="Voice search"
+                                        onClick={() =>
+                                            handleVoiceSearch("mobile")
+                                        }
+                                        className={`text-pink-500 transition ${isVoiceListening ? "scale-110 text-pink-600" : "hover:text-pink-600"}`}
+                                    >
+                                        <MicIcon />
+                                    </button>
                                 </label>
                             </form>
+
+                            {!isAdmin ? (
+                                <div className="rounded-xl border border-zinc-200 bg-white px-4 py-3">
+                                    <label className="flex items-center justify-between gap-3 text-sm text-zinc-700">
+                                        <span>Currency</span>
+                                        <select
+                                            value={currency}
+                                            onChange={(event) =>
+                                                setCurrency(
+                                                    event.target
+                                                        .value as CurrencyCode,
+                                                )
+                                            }
+                                            className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-medium text-zinc-700 focus:border-zinc-500 focus:outline-none"
+                                            aria-label="Select currency"
+                                        >
+                                            {CURRENCY_OPTIONS.map((option) => (
+                                                <option
+                                                    key={option.code}
+                                                    value={option.code}
+                                                >
+                                                    {option.symbol} {option.label}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </label>
+                                </div>
+                            ) : null}
 
                             <nav className="grid gap-1 rounded-2xl border border-zinc-200 bg-white p-2">
                                 {activeNavLinks.map((link) => {
@@ -1107,166 +1475,170 @@ export default function Header() {
                                 })}
                             </nav>
 
-                            <div className="flex items-center justify-between rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-700 sm:hidden">
-                                <div className="flex items-center gap-4">
-                                    {isAuthenticated ? (
-                                        <span className="font-medium text-zinc-900">
+                            <div className="rounded-2xl border border-zinc-200 bg-white p-3 text-sm text-zinc-700 sm:hidden">
+                                {isAuthenticated ? (
+                                    <>
+                                        <p className="px-2 pb-2 text-base font-medium text-zinc-900">
                                             {accountName}
-                                        </span>
-                                    ) : (
-                                        <>
-                                            <Link
-                                                to="/tickets"
-                                                className="transition hover:text-pink-500"
-                                                onClick={() =>
-                                                    setIsMobileMenuOpen(false)
-                                                }
-                                            >
-                                                <span className="inline-flex items-center gap-1">
-                                                    <Ticket className="h-4 w-4" />
-                                                    Tickets
-                                                </span>
-                                            </Link>
-                                            <Link
-                                                to="/login"
-                                                className="transition hover:text-pink-500"
-                                                onClick={() =>
-                                                    setIsMobileMenuOpen(false)
-                                                }
-                                            >
-                                                <span className="inline-flex items-center gap-1">
-                                                    <LogIn className="h-4 w-4" />
-                                                    Login
-                                                </span>
-                                            </Link>
-                                            <Link
-                                                to="/register"
-                                                className="transition hover:text-pink-500"
-                                                onClick={() =>
-                                                    setIsMobileMenuOpen(false)
-                                                }
-                                            >
-                                                Register
-                                            </Link>
-                                        </>
-                                    )}
-                                    {isAdmin ? (
-                                        <>
-                                            <Link
-                                                to="/admin/address"
-                                                className="transition hover:text-pink-500"
-                                                onClick={() =>
-                                                    setIsMobileMenuOpen(false)
-                                                }
-                                            >
-                                                <span className="inline-flex items-center gap-1">
-                                                    <MapPinHouse className="h-4 w-4" />
-                                                    Admin Address
-                                                </span>
-                                            </Link>
-                                            <Link
-                                                to="/admin/wishlist"
-                                                className="transition hover:text-pink-500"
-                                                onClick={() =>
-                                                    setIsMobileMenuOpen(false)
-                                                }
-                                            >
-                                                Wishlists
-                                            </Link>
-                                            <Link
-                                                to="/admin/cart"
-                                                className="transition hover:text-pink-500"
-                                                onClick={() =>
-                                                    setIsMobileMenuOpen(false)
-                                                }
-                                            >
-                                                Carts
-                                            </Link>
-                                        </>
-                                    ) : (
-                                        <Link
-                                            to="/wishlist"
-                                            className="transition hover:text-pink-500"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            Wishlist
-                                        </Link>
-                                    )}
-                                    {isAuthenticated && !isAdmin ? (
-                                        <Link
-                                            to="/profile"
-                                            className="transition hover:text-pink-500"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            Profile
-                                        </Link>
-                                    ) : null}
-                                    {isAuthenticated && !isAdmin ? (
-                                        <Link
-                                            to="/payments/history"
-                                            className="transition hover:text-pink-500"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            <span className="inline-flex items-center gap-1">
-                                                <CreditCard className="h-4 w-4" />
-                                                Payment History
-                                            </span>
-                                        </Link>
-                                    ) : null}
-                                    {isAuthenticated && !isAdmin ? (
-                                        <Link
-                                            to="/orders"
-                                            className="transition hover:text-pink-500"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            <span className="inline-flex items-center gap-1">
-                                                <PackageSearch className="h-4 w-4" />
-                                                My Orders
-                                            </span>
-                                        </Link>
-                                    ) : null}
-                                    {isAuthenticated && !isAdmin ? (
+                                        </p>
+
+                                        {isAdmin ? (
+                                            <div className="grid grid-cols-2 gap-2">
+                                                <Link
+                                                    to="/admin/address"
+                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                    onClick={() =>
+                                                        setIsMobileMenuOpen(false)
+                                                    }
+                                                >
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <MapPinHouse className="h-4 w-4" />
+                                                        Address
+                                                    </span>
+                                                </Link>
+                                                <Link
+                                                    to="/admin/wishlist"
+                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                    onClick={() =>
+                                                        setIsMobileMenuOpen(false)
+                                                    }
+                                                >
+                                                    Wishlists
+                                                </Link>
+                                                <Link
+                                                    to="/admin/cart"
+                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                    onClick={() =>
+                                                        setIsMobileMenuOpen(false)
+                                                    }
+                                                >
+                                                    Carts
+                                                </Link>
+                                                <button
+                                                    type="button"
+                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                    onClick={() => {
+                                                        logout();
+                                                        setIsMobileMenuOpen(false);
+                                                    }}
+                                                >
+                                                    <span className="inline-flex items-center gap-1">
+                                                        <LogOut className="h-4 w-4" />
+                                                        Logout
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div className="grid grid-cols-2 gap-2">
+                                                    <Link
+                                                        to="/wishlist"
+                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                        onClick={() =>
+                                                            setIsMobileMenuOpen(false)
+                                                        }
+                                                    >
+                                                        Wishlist
+                                                    </Link>
+                                                    <Link
+                                                        to="/profile"
+                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                        onClick={() =>
+                                                            setIsMobileMenuOpen(false)
+                                                        }
+                                                    >
+                                                        Profile
+                                                    </Link>
+                                                    <Link
+                                                        to="/payments/history"
+                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                        onClick={() =>
+                                                            setIsMobileMenuOpen(false)
+                                                        }
+                                                    >
+                                                        <span className="inline-flex items-center gap-1">
+                                                            <CreditCard className="h-4 w-4" />
+                                                            Payments
+                                                        </span>
+                                                    </Link>
+                                                    <Link
+                                                        to="/orders"
+                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                        onClick={() =>
+                                                            setIsMobileMenuOpen(false)
+                                                        }
+                                                    >
+                                                        <span className="inline-flex items-center gap-1">
+                                                            <PackageSearch className="h-4 w-4" />
+                                                            Orders
+                                                        </span>
+                                                    </Link>
+                                                    <Link
+                                                        to="/tickets"
+                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                        onClick={() =>
+                                                            setIsMobileMenuOpen(false)
+                                                        }
+                                                    >
+                                                        <span className="inline-flex items-center gap-1">
+                                                            <Ticket className="h-4 w-4" />
+                                                            Tickets
+                                                        </span>
+                                                    </Link>
+                                                    <button
+                                                        type="button"
+                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                                        onClick={() => {
+                                                            logout();
+                                                            setIsMobileMenuOpen(false);
+                                                        }}
+                                                    >
+                                                        <span className="inline-flex items-center gap-1">
+                                                            <LogOut className="h-4 w-4" />
+                                                            Logout
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </>
+                                        )}
+                                    </>
+                                ) : (
+                                    <div className="grid grid-cols-3 gap-2">
                                         <Link
                                             to="/tickets"
-                                            className="transition hover:text-pink-500"
+                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
                                             onClick={() =>
                                                 setIsMobileMenuOpen(false)
                                             }
                                         >
                                             <span className="inline-flex items-center gap-1">
                                                 <Ticket className="h-4 w-4" />
-                                                My Tickets
+                                                Tickets
                                             </span>
                                         </Link>
-                                    ) : null}
-                                    {isAuthenticated ? (
-                                        <button
-                                            type="button"
-                                            className="transition hover:text-pink-500"
-                                            onClick={() => {
-                                                logout();
-                                                setIsMobileMenuOpen(false);
-                                            }}
+                                        <Link
+                                            to="/login"
+                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                            onClick={() =>
+                                                setIsMobileMenuOpen(false)
+                                            }
                                         >
                                             <span className="inline-flex items-center gap-1">
-                                                <LogOut className="h-4 w-4" />
-                                                Logout
+                                                <LogIn className="h-4 w-4" />
+                                                Login
                                             </span>
-                                        </button>
-                                    ) : null}
-                                </div>
-                                {/* <div className="flex items-center gap-3">
-                  <UtilitySelect label="English" />
-                  <UtilitySelect label="EUR" />
-                </div>*/}
+                                        </Link>
+                                        <Link
+                                            to="/register"
+                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
+                                            onClick={() =>
+                                                setIsMobileMenuOpen(false)
+                                            }
+                                        >
+                                            Register
+                                        </Link>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -54,11 +54,58 @@ function parsePositiveNumber(value: string, fallbackValue: number): number {
   return parsedValue
 }
 
+function normalizeCategoryToken(value: string): string {
+  const normalizedValue = value.trim().toLowerCase().replace(/[-_]+/g, ' ').replace(/\s+/g, ' ')
+
+  if (!normalizedValue) {
+    return ''
+  }
+
+  if (normalizedValue.endsWith('ies')) {
+    return normalizedValue.slice(0, -3) + 'y'
+  }
+
+  if (normalizedValue.endsWith('es')) {
+    return normalizedValue.slice(0, -2)
+  }
+
+  if (normalizedValue.endsWith('s')) {
+    return normalizedValue.slice(0, -1)
+  }
+
+  return normalizedValue
+}
+
+function resolveCategoryValue(categoryValue: string, filterOptions: ProductAllFilters): string {
+  const rawCategory = categoryValue.trim()
+
+  if (!rawCategory) {
+    return ''
+  }
+
+  const exactMatch = filterOptions.categories.find(
+    (categoryOption) => categoryOption.toLowerCase() === rawCategory.toLowerCase(),
+  )
+
+  if (exactMatch) {
+    return exactMatch
+  }
+
+  const normalizedTarget = normalizeCategoryToken(rawCategory)
+  const normalizedMatch = filterOptions.categories.find(
+    (categoryOption) => normalizeCategoryToken(categoryOption) === normalizedTarget,
+  )
+
+  return normalizedMatch ?? rawCategory
+}
+
 function buildFilterState(searchParams: Record<string, string | string[] | undefined>, filterOptions: ProductAllFilters): ProductsFilterState {
+  const rawCategory = readSingleValue(searchParams.category)
+
   return {
     page: parsePositiveNumber(readSingleValue(searchParams.page), 1),
     search: readSingleValue(searchParams.search),
-    category: readSingleValue(searchParams.category),
+    category: resolveCategoryValue(rawCategory, filterOptions),
     stoneType: readSingleValue(searchParams.stoneType),
     color: readSingleValue(searchParams.color),
     shape: readSingleValue(searchParams.shape),
