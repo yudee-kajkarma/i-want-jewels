@@ -84,14 +84,6 @@ const productFeatureItems = [
   },
 ]
 
-const aboutProductBullets = [
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  'Nulla luctus libero quis mauris vestibulum dapibus.',
-  'Maecenas ullamcorper erat mi, vel consequat enim suscipit at.',
-  'Quisque consectetur nibh ac urna molestie scelerisque.',
-  'Mauris in nisl scelerisque massa consectetur pretium sed et mauris.',
-]
-
 const sizeGuideRows = [
   { size: 'XS', bust: '32', waist: '24-25', lowHip: '33-34' },
   { size: 'S', bust: '34-35', waist: '26-27', lowHip: '35-36' },
@@ -339,13 +331,13 @@ export default function ProductDetailPage({
   const [reviewFeedback, setReviewFeedback] = useState('')
   const [reviewForm, setReviewForm] = useState<ReviewPayload>(initialReviewForm)
   const [isReviewFormOpen, setIsReviewFormOpen] = useState(false)
-  const [activeInfoTab, setActiveInfoTab] = useState<'description' | 'specifications'>('description')
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false)
   const [sizeGuideHeight, setSizeGuideHeight] = useState(200)
   const [sizeGuideWeight, setSizeGuideWeight] = useState(90)
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false)
   const [isSubmittingReview, setIsSubmittingReview] = useState(false)
+  const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0, 1])
 
   async function loadReviews(targetProductId: string) {
     const reviewsResponse = await getProductReviews(targetProductId)
@@ -385,7 +377,6 @@ export default function ProductDetailPage({
         setSelectedImageId(firstImage?.id ?? '')
         setQuantity(1)
         setReviewForm(initialReviewForm)
-        setActiveInfoTab('description')
         setReviewFeedback('')
         setIsReviewFormOpen(false)
         setError('')
@@ -435,6 +426,14 @@ export default function ProductDetailPage({
       window.removeEventListener('keydown', handleEscapeKey)
     }
   }, [isSizeGuideOpen])
+
+  useEffect(() => {
+    if (!product) {
+      return
+    }
+
+    setOpenFaqIndexes([0, 1].filter((index) => index < product.faqs.length))
+  }, [product])
 
   const selectedVariant = useMemo<ProductVariant | undefined>(() => {
     if (!product) {
@@ -487,6 +486,14 @@ export default function ProductDetailPage({
 
     return { star, count, width }
   })
+
+  function toggleFaq(index: number) {
+    setOpenFaqIndexes((currentIndexes) =>
+      currentIndexes.includes(index)
+        ? currentIndexes.filter((currentIndex) => currentIndex !== index)
+        : [...currentIndexes, index],
+    )
+  }
 
   function handleVariantChange(variant: ProductVariant) {
     const nextGallery = getVariantGallery(variant)
@@ -717,7 +724,23 @@ export default function ProductDetailPage({
                     })}
                   </div>
 
-                  <div className="order-1 overflow-hidden rounded-[34px] p-6 object-cover lg:order-2">
+                  <div className="order-1 relative overflow-hidden rounded-[34px] p-6 object-cover lg:order-2">
+                    <button
+                      type="button"
+                      onClick={() => void handleWishlistAction()}
+                      disabled={isUpdatingWishlist}
+                      className={`absolute right-8 top-8 z-10 flex h-9 w-9 items-center justify-center rounded-md border bg-white/90 shadow-sm backdrop-blur transition disabled:opacity-60 ${
+                        wishlistItem
+                          ? 'border-[#f3c8df] text-[#e83fa9]'
+                          : 'border-[#d9d9d9] text-zinc-600 hover:border-[#e83fa9] hover:text-[#e83fa9]'
+                      }`}
+                      aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
+                    >
+                      <Heart
+                        className={`h-4 w-4 ${wishlistItem ? 'fill-current' : ''}`}
+                        strokeWidth={1.9}
+                      />
+                    </button>
                     <img
                       src={selectedImage?.src ?? getVariantImage(selectedVariant)}
                       alt={product.title}
@@ -729,32 +752,14 @@ export default function ProductDetailPage({
               </div>
 
               <div className="space-y-6 bg-white p-2 sm:p-4">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">FASHION</p>
-                    <h1 className="mt-1 text-[2.15rem] font-semibold tracking-[-0.05em] text-[#151515]">{product.title}</h1>
-                    <div className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
-                      <StarRating rating={averageReviewRating} />
-                      <span>({formatReviewCount(totalReviewCount)} reviews)</span>
-                    </div>
+                <div>
+                  {/* <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">FASHION</p> */}
+                  <h1 className="mt-1 text-[2.15rem] font-semibold tracking-[-0.05em] text-[#151515]">{product.title}</h1>
+                  {product.h2 ? <h2 className="mt-2 text-sm font-medium text-zinc-600">{product.h2}</h2> : null}
+                  <div className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
+                    <StarRating rating={averageReviewRating} />
+                    <span>({formatReviewCount(totalReviewCount)} reviews)</span>
                   </div>
-
-                  <button
-                    type="button"
-                    onClick={() => void handleWishlistAction()}
-                    disabled={isUpdatingWishlist}
-                    className={`flex h-8 w-8 items-center justify-center rounded-md border transition disabled:opacity-60 ${
-                      wishlistItem
-                        ? 'border-[#111111] bg-[#111111] text-white'
-                        : 'border-[#d9d9d9] text-zinc-600 hover:border-zinc-900 hover:text-zinc-900'
-                    }`}
-                    aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
-                  >
-                    <Heart
-                      className={`h-4 w-4 ${wishlistItem ? 'fill-current' : ''}`}
-                      strokeWidth={1.9}
-                    />
-                  </button>
                 </div>
 
                 <div>
@@ -766,6 +771,10 @@ export default function ProductDetailPage({
                     </span> */}
                   </div>
                   <p className="mt-4 max-w-[36rem] text-sm leading-7 text-zinc-500">{product.description}</p>
+                  <p className="mt-2 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">SKU:</span> {selectedVariant.sku ?? 'N/A'}</p>
+                  {product.style ? <p className="mt-1 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">Style:</span> {product.style}</p> : null}
+                  {product.metal ? <p className="mt-1 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">Metal:</span> {product.metal}</p> : null}
+                  {product.finish ? <p className="mt-1 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">Finish:</span> {product.finish}</p> : null}
                 </div>
 
                 <div className="border-y border-[#ebebeb] py-4 text-sm text-zinc-700">
@@ -847,7 +856,7 @@ export default function ProductDetailPage({
                 {cartFeedback ? <p className="text-xs text-zinc-600">{cartFeedback}</p> : null}
                 {wishlistFeedback ? <p className="text-xs text-zinc-600">{wishlistFeedback}</p> : null}
 
-                <div className="space-y-2 pt-1 text-[13px] leading-6 text-zinc-700">
+                {/* <div className="space-y-2 pt-1 text-[13px] leading-6 text-zinc-700">
                   <div className="flex flex-wrap items-center gap-5">
                     <p className="inline-flex items-center gap-2 font-semibold text-zinc-900">
                       <RotateCcw strokeWidth={2.4} className="h-3.5 w-3.5" />
@@ -866,16 +875,15 @@ export default function ProductDetailPage({
                   </p>
                   </div>
                   <div>
-                  {/* <p className="inline-flex items-center gap-2">
+                  <p className="inline-flex items-center gap-2">
                     <Eye strokeWidth={2.4} className="h-3.5 w-3.5" />
                     <span className="font-semibold text-zinc-900">38</span>
                     <span>people viewing this product right now</span>
-                  </p> */}
+                  </p>
                   </div>
-                  <p><span className="font-semibold text-zinc-900">SKU:</span> <span className="text-zinc-500">{selectedVariant.sku ?? 'N/A'}</span></p>
-                  {/* <p><span className="font-semibold text-zinc-900">Categories:</span> <span className="text-zinc-500">{product.category}, {product.vendor}</span></p>
-                  <p><span className="font-semibold text-zinc-900">Tag:</span> <span className="text-zinc-500">{product.tags[0] ?? 'new'}</span></p> */}
-                </div>
+                  <p><span className="font-semibold text-zinc-900">Categories:</span> <span className="text-zinc-500">{product.category}, {product.vendor}</span></p>
+                  <p><span className="font-semibold text-zinc-900">Tag:</span> <span className="text-zinc-500">{product.tags[0] ?? 'new'}</span></p>
+                </div> */}
 
                 <div className="rounded-2xl border border-[#e9e5df] p-4">
                   <p className="text-center text-sm font-semibold text-zinc-900">Guaranteed Safe Checkout</p>
@@ -916,71 +924,77 @@ export default function ProductDetailPage({
             </section>
 
             <section className="mx-auto mt-16 max-w-[1150px] border-t border-[#e7e7e7] pt-10">
-              <div className="flex items-center justify-center gap-12 border-b border-[#e7e7e7]">
-                <button
-                  type="button"
-                  onClick={() => setActiveInfoTab('description')}
-                  className={`pb-3 text-[1.15rem] font-semibold transition ${
-                    activeInfoTab === 'description' ? 'border-b-2 border-[#1a1a1a] text-[#1a1a1a]' : 'text-zinc-500'
-                  }`}
-                >
-                  Description
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveInfoTab('specifications')}
-                  className={`pb-3 text-[1.15rem] font-semibold transition ${
-                    activeInfoTab === 'specifications' ? 'border-b-2 border-[#1a1a1a] text-[#1a1a1a]' : 'text-zinc-500'
-                  }`}
-                >
-                  Specifications
-                </button>
-              </div>
+              {/* <div className="border-b border-[#e7e7e7] pb-3 text-center">
+                <p className="text-[1.15rem] font-semibold text-[#1a1a1a]">Description</p>
+              </div> */}
 
-              {activeInfoTab === 'description' ? (
-                <div className="grid gap-14 py-10 md:grid-cols-2">
-                  <div>
-                    <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">Description</h3>
-                    <p className="mt-3 text-base leading-8 text-zinc-600">{product.details || product.description}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">About This Products</h3>
+              <div className="grid gap-14 py-10 md:grid-cols-2">
+                <div>
+                  <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">Description</h3>
+                  <p className="mt-3 whitespace-pre-line text-base leading-8 text-zinc-600">
+                    {product.additionalSeoContent || product.details || product.description}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">About This Products</h3>
+                  {product.bulletPoints.length > 0 ? (
                     <ul className="mt-3 space-y-2 text-base leading-8 text-zinc-600">
-                      {aboutProductBullets.map((item) => (
+                      {product.bulletPoints.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <span className="mt-3 block h-1 w-1 rounded-full bg-zinc-400" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  ) : (
+                    <p className="mt-3 text-base leading-8 text-zinc-600">No product highlights available.</p>
+                  )}
                 </div>
-              ) : (
-                <div className="mx-auto max-w-[620px] py-10">
-                  <div className="overflow-hidden">
-                    {[
-                      ['Rating', `★★★★★ (${formatReviewCount(totalReviewCount)})`],
-                      ['Outer Shell', product.stoneType || '100% polyester'],
-                      ['Lining', product.certificate || '100% polyurethane'],
-                      ['Size', 'S, M, L, XL'],
-                      ['Colors', product.metals?.join(', ') || selectedVariant.title],
-                      ['Care', '⊘  ⌫  ⌗'],
-                    ].map(([label, value], index) => (
-                      <div
-                        key={label}
-                        className={`grid grid-cols-[145px_minmax(0,1fr)] gap-4 px-8 py-4 text-sm ${
-                          index < 5 ? 'mb-3 bg-[#f5f5f5]' : ''
-                        }`}
-                      >
-                        <span className="font-medium text-[#1a1a1a]">{label}</span>
-                        <span className={label === 'Rating' ? 'text-[#d29c1f]' : 'text-zinc-700'}>{value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              </div>
 
               <ProductFeatureGrid />
+
+              {product.faqs.length > 0 ? (
+                <div className="mt-14 rounded-[26px] border border-[#e7dfd9] bg-[linear-gradient(180deg,#fffcfa_0%,#ffffff_100%)] p-5 sm:p-7">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#f4ece6] text-[#2f2218]">
+                      <CircleHelp className="h-4 w-4" strokeWidth={2.1} />
+                    </span>
+                    <div>
+                      <h3 className="text-[1.2rem] font-semibold tracking-[-0.03em] text-[#17110d]">Frequently Asked Questions</h3>
+                      {/* <p className="text-xs text-zinc-500">Showing {product.faqs.length} question{product.faqs.length > 1 ? 's' : ''} from product details API.</p> */}
+                    </div>
+                  </div>
+
+                  <div className="mt-5 space-y-3">
+                    {product.faqs.map((faq, index) => {
+                      const isOpen = openFaqIndexes.includes(index)
+
+                      return (
+                        <article key={`${faq.question}-${index}`} className="overflow-hidden rounded-2xl border border-[#eadfd4] bg-white">
+                          <button
+                            type="button"
+                            onClick={() => toggleFaq(index)}
+                            className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition hover:bg-[#fff9f4]"
+                            aria-expanded={isOpen}
+                          >
+                            <span className="text-sm font-semibold text-[#1e1713]">{faq.question}</span>
+                            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-[#dacdbf] text-sm text-[#5d4738]">
+                              {isOpen ? '-' : '+'}
+                            </span>
+                          </button>
+
+                          {isOpen ? (
+                            <div className="border-t border-[#f0e6de] px-4 py-3">
+                              <p className="text-sm leading-7 text-zinc-600">{faq.answer}</p>
+                            </div>
+                          ) : null}
+                        </article>
+                      )
+                    })}
+                  </div>
+                </div>
+              ) : null}
             </section>
 
             <section className="mt-16 border border-[#e7e7e7] bg-white px-6 py-8 sm:px-10">

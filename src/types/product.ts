@@ -25,6 +25,11 @@ export type ProductOption = {
   values: string[]
 }
 
+export type ProductFaq = {
+  question: string
+  answer: string
+}
+
 export type Product = {
   id: string
   slug: string
@@ -46,6 +51,13 @@ export type ProductDetail = Product & {
   createdAt: string
   updatedAt: string
   description: string
+  h2: string
+  additionalSeoContent: string
+  bulletPoints: string[]
+  faqs: ProductFaq[]
+  style: string
+  metal: string
+  finish: string
   isFeatured: boolean
   stoneType: string
   color: string

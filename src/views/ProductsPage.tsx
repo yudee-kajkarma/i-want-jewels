@@ -347,12 +347,12 @@ export default function ProductsPage({
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
       <Header />
       <main className="pb-16">
-        <section className="bg-[#f6f1e8] px-4 py-14 text-center md:py-20">
+        <section className="bg-[#f6f1e8] px-4 py-10 text-center md:py-14">
           <div className="mx-auto max-w-[1560px]">
             <h1 className="text-3xl font-semibold md:text-4xl">Shop</h1>
-            <p className="mt-3 text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">Homepage / Shop</p>
+            <p className="mt-1 text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">Homepage / Shop</p>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-x-10">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-x-10">
               {topCategories.map((categoryLabel) => (
                 <button
                   key={categoryLabel}
@@ -367,7 +367,7 @@ export default function ProductsPage({
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1560px] px-4 py-8 lg:px-8 bg-white">
+        <section className="mx-auto max-w-[1560px] px-4 py-5 lg:px-5 bg-white">
           <div className="mb-6 flex items-center justify-between gap-4">
             <button
               type="button"

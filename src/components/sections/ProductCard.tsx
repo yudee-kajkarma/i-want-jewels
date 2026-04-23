@@ -214,7 +214,7 @@ export default function ProductCard({
 
     if (layout === "list") {
         return (
-            <article className="group grid items-center gap-6 border-b border-[#efe7de] py-8 lg:grid-cols-[300px_minmax(0,1fr)_180px] lg:gap-8">
+            <article className="group grid items-start gap-6 border-b border-[#efe7de] py-5 lg:grid-cols-[300px_minmax(0,1fr)_180px] lg:gap-8">
                 <Link
                     to={productDetailUrl}
                     className="relative block overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)]"

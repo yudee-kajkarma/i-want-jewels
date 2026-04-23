@@ -65,6 +65,16 @@ type ProductDetailApiResponse = {
   updatedAt: string
   title: string
   description: string
+  h2?: string
+  additionalSeoContent?: string
+  bulletPoints?: string[]
+  style?: string
+  metal?: string
+  finish?: string
+  faqs?: Array<{
+    question?: string
+    answer?: string
+  }>
   tags: string[]
   vendor: string
   rating: number
@@ -293,6 +303,22 @@ function normalizeProductDetail(
     updatedAt: product.updatedAt,
     title: product.title,
     description: product.description.trim(),
+    h2: (product.h2 ?? '').trim(),
+    additionalSeoContent: (product.additionalSeoContent ?? '').trim(),
+    bulletPoints: Array.isArray(product.bulletPoints)
+      ? product.bulletPoints.map((point) => point.trim()).filter(Boolean)
+      : [],
+    style: (product.style ?? '').trim(),
+    metal: (product.metal ?? '').trim(),
+    finish: (product.finish ?? '').trim(),
+    faqs: Array.isArray(product.faqs)
+      ? product.faqs
+          .map((faq) => ({
+            question: (faq.question ?? '').trim(),
+            answer: (faq.answer ?? '').trim(),
+          }))
+          .filter((faq) => faq.question && faq.answer)
+      : [],
     vendor: product.vendor.trim(),
     rating: normalizeNumber(product.rating),
     reviewsCount: Math.max(0, Math.floor(normalizeNumber(product.reviews_count))),
