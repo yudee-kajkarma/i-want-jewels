@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { Building2, MapPinHouse, Save } from 'lucide-react'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { getAdminAddress, updateAdminAddress } from '../services/userService'
 import type { UpdateAdminAddressPayload } from '../types/address'
+import { getCountryOptions, getStateOptions } from '../utils/location'
 
 const initialForm: UpdateAdminAddressPayload = {
   street: '',
@@ -14,7 +15,7 @@ const initialForm: UpdateAdminAddressPayload = {
   city: '',
   state: '',
   postalCode: '',
-  country: '',
+  country: 'IN',
   addressType: 'billing',
 }
 
@@ -23,6 +24,8 @@ export default function AdminAddressPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
   const [error, setError] = useState('')
+  const countryOptions = useMemo(() => getCountryOptions(), [])
+  const stateOptions = useMemo(() => getStateOptions(form.country), [form.country])
 
   useEffect(() => {
     let mounted = true
@@ -166,12 +169,18 @@ export default function AdminAddressPage() {
 
                 <label className="space-y-2 text-sm">
                   <span className="font-semibold text-[#17110d]">State</span>
-                  <input
+                  <select
                     value={form.state}
                     onChange={(event) => updateField('state', event.target.value)}
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="State"
-                  />
+                  >
+                    <option value="">Select state</option>
+                    {stateOptions.map((state) => (
+                      <option key={state.code} value={state.code}>
+                        {state.name}
+                      </option>
+                    ))}
+                  </select>
                 </label>
 
                 <label className="space-y-2 text-sm">
@@ -186,12 +195,21 @@ export default function AdminAddressPage() {
 
                 <label className="space-y-2 text-sm">
                   <span className="font-semibold text-[#17110d]">Country</span>
-                  <input
+                  <select
                     value={form.country}
-                    onChange={(event) => updateField('country', event.target.value)}
+                    onChange={(event) => {
+                      updateField('country', event.target.value)
+                      updateField('state', '')
+                    }}
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="Country"
-                  />
+                  >
+                    <option value="">Select country</option>
+                    {countryOptions.map((country) => (
+                      <option key={country.code} value={country.code}>
+                        {country.name}
+                      </option>
+                    ))}
+                  </select>
                 </label>
               </div>
 

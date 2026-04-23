@@ -1,6 +1,7 @@
 import { authApiClient } from './apiClient'
 import type { UpdateProfileFormPayload, UpdateProfileRequestPayload, UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
 import type { AdminAddress, UpdateAdminAddressPayload } from '../types/address'
+import { normalizeCountryCode, normalizeStateCode } from '../utils/location'
 
 type ApiEnvelope<T> = {
   success: boolean
@@ -21,13 +22,15 @@ function normalizeProfileAddress(value: unknown): UserProfileAddressPayload | nu
   }
 
   const record = value as Record<string, unknown>
+  const countryCode = normalizeCountryCode(getStringValue(record, 'country') || 'IN')
+  const stateCode = normalizeStateCode(countryCode, getStringValue(record, 'state'))
 
   return {
     street: getStringValue(record, 'street'),
     city: getStringValue(record, 'city'),
-    state: getStringValue(record, 'state'),
+    state: stateCode,
     postalCode: getStringValue(record, 'postalCode'),
-    country: getStringValue(record, 'country') || 'India',
+    country: countryCode || 'IN',
     isDefault: typeof record.isDefault === 'boolean' ? record.isDefault : false,
     addressType: getStringValue(record, 'addressType') || 'home',
   }
@@ -57,15 +60,17 @@ function normalizeAdminAddress(value: unknown): AdminAddress | null {
   }
 
   const record = value as Record<string, unknown>
+  const countryCode = normalizeCountryCode(getStringValue(record, 'country') || 'IN')
+  const stateCode = normalizeStateCode(countryCode, getStringValue(record, 'state'))
 
   return {
     id: getStringValue(record, '_id'),
     street: getStringValue(record, 'street'),
     houseNumber: getStringValue(record, 'houseNumber'),
     city: getStringValue(record, 'city'),
-    state: getStringValue(record, 'state'),
+    state: stateCode,
     postalCode: getStringValue(record, 'postalCode'),
-    country: getStringValue(record, 'country') || 'India',
+    country: countryCode || 'IN',
     isDefault: typeof record.isDefault === 'boolean' ? record.isDefault : false,
     addressType: getStringValue(record, 'addressType') || 'work',
   }
@@ -90,7 +95,7 @@ function normalizeUserProfile(data: unknown): UserProfile {
           city: '',
           state: '',
           postalCode: '',
-          country: 'India',
+          country: 'IN',
           isDefault: true,
           addressType: 'home',
         },

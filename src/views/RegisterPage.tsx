@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react'
 import { Link, useNavigate } from '@/lib/router'
 import AuthShell from '../components/auth/AuthShell'
 import { useAuth } from '../context/AuthContext'
 import { registerUser } from '../services/authService'
 import type { RegisterPayload } from '../types/auth'
+import { getCountryOptions, getStateOptions } from '../utils/location'
 
 const initialForm: RegisterPayload = {
   username: '',
@@ -22,7 +23,7 @@ const initialForm: RegisterPayload = {
     city: '',
     state: '',
     postalCode: '',
-    country: 'India',
+    country: 'IN',
     isDefault: true,
     addressType: 'home',
   },
@@ -36,6 +37,8 @@ export default function RegisterPage() {
   const [error, setError] = useState('')
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
+  const countryOptions = useMemo(() => getCountryOptions(), [])
+  const stateOptions = useMemo(() => getStateOptions(form.address.country), [form.address.country])
 
   function updateField<Key extends keyof RegisterPayload>(key: Key, value: RegisterPayload[Key]) {
     setForm((currentValue) => ({
@@ -213,13 +216,19 @@ export default function RegisterPage() {
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">State</span>
-              <input
-                type="text"
+              <select
                 required
                 value={form.address.state}
                 onChange={(event) => updateAddressField('state', event.target.value)}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-              />
+              >
+                <option value="">Select state</option>
+                {stateOptions.map((state) => (
+                  <option key={state.code} value={state.code}>
+                    {state.name}
+                  </option>
+                ))}
+              </select>
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">Postal Code</span>
@@ -233,13 +242,23 @@ export default function RegisterPage() {
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">Country</span>
-              <input
-                type="text"
+              <select
                 required
                 value={form.address.country}
-                onChange={(event) => updateAddressField('country', event.target.value)}
+                onChange={(event) => {
+                  const countryCode = event.target.value
+                  updateAddressField('country', countryCode)
+                  updateAddressField('state', '')
+                }}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-              />
+              >
+                <option value="">Select country</option>
+                {countryOptions.map((country) => (
+                  <option key={country.code} value={country.code}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
             </label>
           </div>
         </div>

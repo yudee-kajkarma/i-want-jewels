@@ -15,6 +15,7 @@ import {
   updateUserProfile,
 } from '../services/userService'
 import type { UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
+import { getCountryOptions, getStateOptions } from '../utils/location'
 
 type AddressFormItem = UserProfileAddressPayload & {
   id: string
@@ -29,7 +30,7 @@ function createAddress(defaults?: Partial<UserProfileAddressPayload>, apiId: str
     city: defaults?.city ?? '',
     state: defaults?.state ?? '',
     postalCode: defaults?.postalCode ?? '',
-    country: defaults?.country ?? 'India',
+    country: defaults?.country ?? 'IN',
     isDefault: defaults?.isDefault ?? false,
     addressType: defaults?.addressType ?? 'home',
   }
@@ -59,6 +60,7 @@ export default function ProfilePage() {
   const [oldPassword, setOldPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
+  const countryOptions = useMemo(() => getCountryOptions(), [])
 
   const canRemoveAddress = useMemo(() => addresses.length > 1, [addresses.length])
 
@@ -77,7 +79,7 @@ export default function ProfilePage() {
     const hasDefault = nextAddresses.some((address) => address.isDefault)
 
     if (nextAddresses.length === 0) {
-      setAddresses([createAddress({ isDefault: true, country: 'India', addressType: 'home' })])
+      setAddresses([createAddress({ isDefault: true, country: 'IN', addressType: 'home' })])
     } else {
       setAddresses(
         nextAddresses.map((address, index) =>
@@ -475,13 +477,19 @@ export default function ProfilePage() {
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         State
-                        <input
-                          type="text"
+                        <select
                           value={address.state}
                           onChange={(event) => handleAddressChange(address.id, 'state', event.target.value)}
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
-                        />
+                        >
+                          <option value="">Select state</option>
+                          {getStateOptions(address.country).map((state) => (
+                            <option key={state.code} value={state.code}>
+                              {state.name}
+                            </option>
+                          ))}
+                        </select>
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Postal Code
@@ -495,13 +503,22 @@ export default function ProfilePage() {
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Country
-                        <input
-                          type="text"
+                        <select
                           value={address.country}
-                          onChange={(event) => handleAddressChange(address.id, 'country', event.target.value)}
+                          onChange={(event) => {
+                            handleAddressChange(address.id, 'country', event.target.value)
+                            handleAddressChange(address.id, 'state', '')
+                          }}
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
-                        />
+                        >
+                          <option value="">Select country</option>
+                          {countryOptions.map((country) => (
+                            <option key={country.code} value={country.code}>
+                              {country.name}
+                            </option>
+                          ))}
+                        </select>
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Address Type

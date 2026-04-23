@@ -14,6 +14,7 @@ import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import type { CheckoutSource, PaymentMethod, SingleCheckoutDraft } from '../types/order'
 import type { UserAddress, UserProfileAddressPayload } from '../types/profile'
+import { getCountryName, getCountryOptions, getStateName, getStateOptions } from '../utils/location'
 import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
 import {
   clearSingleCheckoutDraft,
@@ -36,7 +37,7 @@ const EMPTY_ADDRESS_FORM: UserProfileAddressPayload = {
   city: '',
   state: '',
   postalCode: '',
-  country: 'India',
+  country: 'IN',
   isDefault: false,
   addressType: 'home',
 }
@@ -79,6 +80,8 @@ export default function CheckoutPage() {
   }, [locationState])
 
   const persistedDraft = useMemo(() => getSingleCheckoutDraft(), [location.key])
+  const countryOptions = useMemo(() => getCountryOptions(), [])
+  const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
   const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search])
   const isSingleFromQuery = searchParams.get('source') === 'single'
   const checkoutSource: CheckoutSource = locationState?.source === 'single' || isSingleFromQuery ? 'single' : 'cart'
@@ -188,7 +191,7 @@ export default function CheckoutPage() {
       city: addressForm.city.trim(),
       state: addressForm.state.trim(),
       postalCode: addressForm.postalCode.trim(),
-      country: addressForm.country.trim() || 'India',
+      country: addressForm.country.trim() || 'IN',
       isDefault: addressForm.isDefault,
       addressType: addressForm.addressType.trim() || 'home',
     }
@@ -419,9 +422,9 @@ export default function CheckoutPage() {
                                 <p className="font-semibold text-[#17110d]">{session?.firstName || session?.username}</p>
                                 <p>{address.street}</p>
                                 <p>
-                                  {address.city}, {address.state} {address.postalCode}
+                                  {address.city}, {getStateName(address.country, address.state)} {address.postalCode}
                                 </p>
-                                <p>{address.country}</p>
+                                <p>{getCountryName(address.country)}</p>
                                 <div className="mt-2 flex flex-wrap items-center gap-3">
                                   {address.isDefault ? (
                                     <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">Default address</span>
@@ -466,24 +469,40 @@ export default function CheckoutPage() {
                             placeholder="City"
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
-                          <input
+                          <select
                             value={addressForm.state}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, state: event.target.value }))}
-                            placeholder="State"
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
+                          >
+                            <option value="">Select state</option>
+                            {stateOptions.map((state) => (
+                              <option key={state.code} value={state.code}>
+                                {state.name}
+                              </option>
+                            ))}
+                          </select>
                           <input
                             value={addressForm.postalCode}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))}
                             placeholder="Postal code"
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
-                          <input
+                          <select
                             value={addressForm.country}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, country: event.target.value }))}
-                            placeholder="Country"
+                            onChange={(event) => setAddressForm((currentValue) => ({
+                              ...currentValue,
+                              country: event.target.value,
+                              state: '',
+                            }))}
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
+                          >
+                            <option value="">Select country</option>
+                            {countryOptions.map((country) => (
+                              <option key={country.code} value={country.code}>
+                                {country.name}
+                              </option>
+                            ))}
+                          </select>
                           <input
                             value={addressForm.addressType}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}
