@@ -187,10 +187,10 @@ function MicIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[18px] w-[18px]"
+            className="h-[20px] w-[20px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.7"
         >
             <rect
                 x="9"
@@ -363,10 +363,10 @@ function UserIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[25px] w-[25px]"
+            className="h-[27px] w-[27px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.2"
+            strokeWidth="1.8"
         >
             <circle cx="12" cy="8" r="3.5" />
             <path
@@ -382,10 +382,10 @@ function HeartIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[25px] w-[25px]"
+            className="h-[27px] w-[27px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.2"
+            strokeWidth="1.8"
         >
             <path
                 d="M12 20.5 4.9 13.8a4.7 4.7 0 0 1 6.6-6.7L12 7.6l.5-.5a4.7 4.7 0 0 1 6.6 6.7L12 20.5Z"
@@ -401,10 +401,10 @@ function BagIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[25px] w-[25px]"
+            className="h-[27px] w-[27px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.2"
+            strokeWidth="1.8"
         >
             <path d="M5 9.5h14l-1.2 10H6.2L5 9.5Z" strokeLinejoin="round" />
             <path d="M9 9.5V8a3 3 0 1 1 6 0v1.5" strokeLinecap="round" />
@@ -929,7 +929,7 @@ export default function Header() {
                                         event.target.value as CurrencyCode,
                                     )
                                 }
-                                className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-semibold text-zinc-800 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
+                                className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-normal text-zinc-800 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
                                 aria-label="Select currency"
                             >
                                 {CURRENCY_OPTIONS.map((option) => (
@@ -1092,7 +1092,7 @@ export default function Header() {
                                             event.target.value as CurrencyCode,
                                         )
                                     }
-                                    className="cursor-pointer rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-semibold text-zinc-700 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
+                                    className="cursor-pointer rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-normal text-zinc-700 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
                                     aria-label="Select currency"
                                 >
                                     {CURRENCY_OPTIONS.map((option) => (
