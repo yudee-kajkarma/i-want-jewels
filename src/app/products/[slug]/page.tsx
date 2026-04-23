@@ -25,13 +25,15 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   try {
     const { product } = await getInitialProductData(slug)
     const image = product.primaryImage || product.variants[0]?.thumbnail
-    const description = `${product.description.slice(0, 140)}${product.description.length > 140 ? '...' : ''}`
+    const fallbackDescription = `${product.description.slice(0, 140)}${product.description.length > 140 ? '...' : ''}`
+    const title = product.metaTitle || `${product.title} | I Want Jewels`
+    const description = product.metaDescription || fallbackDescription
 
     return {
-      title: `${product.title} | I Want Jewels`,
+      title,
       description,
       openGraph: {
-        title: `${product.title} | I Want Jewels`,
+        title,
         description,
         type: 'website',
         images: image ? [image] : undefined,

@@ -51,6 +51,8 @@ export type ProductDetail = Product & {
   createdAt: string
   updatedAt: string
   description: string
+  metaTitle: string
+  metaDescription: string
   h2: string
   additionalSeoContent: string
   bulletPoints: string[]

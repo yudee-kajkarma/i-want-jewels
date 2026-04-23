@@ -65,6 +65,8 @@ type ProductDetailApiResponse = {
   updatedAt: string
   title: string
   description: string
+  metaTitle?: string
+  metaDescription?: string
   h2?: string
   additionalSeoContent?: string
   bulletPoints?: string[]
@@ -303,6 +305,8 @@ function normalizeProductDetail(
     updatedAt: product.updatedAt,
     title: product.title,
     description: product.description.trim(),
+    metaTitle: (product.metaTitle ?? '').trim(),
+    metaDescription: (product.metaDescription ?? '').trim(),
     h2: (product.h2 ?? '').trim(),
     additionalSeoContent: (product.additionalSeoContent ?? '').trim(),
     bulletPoints: Array.isArray(product.bulletPoints)
