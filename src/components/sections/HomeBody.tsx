@@ -495,7 +495,7 @@ export default function HomeBody() {
           </div>
         </div>
       </section> */}
-{/* 
+
       <section className="mx-auto max-w-7xl px-4 py-12">
         <div className="text-center">
           <h2 className="text-3xl font-semibold tracking-[-0.03em] text-[#1b140f]">Shop Jewellery By Metal Type</h2>
@@ -531,7 +531,7 @@ export default function HomeBody() {
             View All New Pieces
           </Link>
         </div>
-      </section> */}
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12">
         <div className="grid gap-10 rounded-[34px] border border-[#f2e2d8] bg-[linear-gradient(180deg,#fffaf7_0%,#ffffff_100%)] p-8 shadow-[0_24px_60px_rgba(92,63,37,0.08)] lg:grid-cols-[1fr_0.9fr_1fr]">
