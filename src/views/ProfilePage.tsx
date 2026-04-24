@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import axios from 'axios'
 import { toast } from 'react-hot-toast'
 import { useAuth } from '../context/AuthContext'
 import Footer from '../components/layout/Footer'
@@ -15,7 +16,7 @@ import {
   updateUserProfile,
 } from '../services/userService'
 import type { UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
-import { getCountryOptions, getStateOptions } from '../utils/location'
+import { getCountryOptions, getStateOptions, normalizeCountryCode, normalizeStateCode } from '../utils/location'
 
 type AddressFormItem = UserProfileAddressPayload & {
   id: string
@@ -49,9 +50,8 @@ export default function ProfilePage() {
   const [draftCountryCode, setDraftCountryCode] = useState('+91')
   const [addresses, setAddresses] = useState<AddressFormItem[]>([createAddress({ isDefault: true })])
   const [initialAddressesById, setInitialAddressesById] = useState<Record<string, UserProfileAddressPayload>>({})
-  const [removedAddressIds, setRemovedAddressIds] = useState<string[]>([])
   const [isProfileLoading, setIsProfileLoading] = useState(true)
-  const [isSaving, setIsSaving] = useState(false)
+  const [savingAddressId, setSavingAddressId] = useState<string | null>(null)
   const [isSavingProfileDetails, setIsSavingProfileDetails] = useState(false)
   const [isChangingPassword, setIsChangingPassword] = useState(false)
   const [isEditProfileOpen, setIsEditProfileOpen] = useState(false)
@@ -64,6 +64,36 @@ export default function ProfilePage() {
   const countryOptions = useMemo(() => getCountryOptions(), [])
 
   const canRemoveAddress = useMemo(() => addresses.length > 1, [addresses.length])
+
+  function getApiErrorMessage(error: unknown, fallbackMessage: string): string {
+    if (!axios.isAxiosError(error)) {
+      return fallbackMessage
+    }
+
+    const responseData = error.response?.data
+
+    if (!responseData || typeof responseData !== 'object' || Array.isArray(responseData)) {
+      return fallbackMessage
+    }
+
+    const errorRecord = 'error' in responseData ? (responseData as Record<string, unknown>).error : null
+
+    if (errorRecord && typeof errorRecord === 'object' && !Array.isArray(errorRecord)) {
+      const backendMessage = (errorRecord as Record<string, unknown>).message
+
+      if (typeof backendMessage === 'string' && backendMessage.trim()) {
+        return backendMessage
+      }
+    }
+
+    const message = (responseData as Record<string, unknown>).message
+
+    if (typeof message === 'string' && message.trim()) {
+      return message
+    }
+
+    return fallbackMessage
+  }
 
   function applyProfile(profile: UserProfile) {
     setFirstName(profile.firstName)
@@ -101,7 +131,6 @@ export default function ProfilePage() {
       )
     }
 
-    setRemovedAddressIds([])
     setInitialAddressesById(
       nextAddresses.reduce<Record<string, UserProfileAddressPayload>>((result, address) => {
         result[address.id] = {
@@ -173,12 +202,24 @@ export default function ProfilePage() {
   }
 
   function setDefaultAddress(id: string) {
-    setAddresses((currentAddresses) =>
-      currentAddresses.map((address) => ({
+    setAddresses((currentAddresses) => {
+      const nextAddresses = currentAddresses.map((address) => ({
         ...address,
         isDefault: address.id === id,
-      })),
-    )
+      }))
+
+      const selectedAddress = nextAddresses.find((address) => address.id === id)
+
+      if (selectedAddress?.apiId) {
+        void setDefaultUserAddress(selectedAddress.apiId).catch((error) => {
+          const message = getApiErrorMessage(error, 'Unable to set default address right now.')
+          setErrorMessage(message)
+          toast.error(message)
+        })
+      }
+
+      return nextAddresses
+    })
   }
 
   function addAddress() {
@@ -186,17 +227,47 @@ export default function ProfilePage() {
   }
 
   function removeAddress(id: string) {
+    const removedAddress = addresses.find((address) => address.id === id)
+
+    if (!removedAddress) {
+      return
+    }
+
+    if (removedAddress.apiId) {
+      void (async () => {
+        try {
+          await deleteUserAddress(removedAddress.apiId as string)
+          setSuccessMessage('Address removed successfully.')
+          toast.success('Address removed successfully.')
+        } catch (error) {
+          const message = getApiErrorMessage(error, 'Unable to remove this address right now.')
+          setErrorMessage(message)
+          toast.error(message)
+          return
+        }
+
+        setAddresses((currentAddresses) => {
+          const nextAddresses = currentAddresses.filter((address) => address.id !== id)
+
+          if (nextAddresses.length === 0) {
+            return [createAddress({ isDefault: true })]
+          }
+
+          if (!nextAddresses.some((address) => address.isDefault)) {
+            return nextAddresses.map((address, index) => ({
+              ...address,
+              isDefault: index === 0,
+            }))
+          }
+
+          return nextAddresses
+        })
+      })()
+
+      return
+    }
+
     setAddresses((currentAddresses) => {
-      const removedAddress = currentAddresses.find((address) => address.id === id)
-
-      if (removedAddress?.apiId) {
-        setRemovedAddressIds((currentRemovedAddresses) =>
-          currentRemovedAddresses.includes(removedAddress.apiId as string)
-            ? currentRemovedAddresses
-            : [...currentRemovedAddresses, removedAddress.apiId as string],
-        )
-      }
-
       const nextAddresses = currentAddresses.filter((address) => address.id !== id)
 
       if (nextAddresses.length === 0) {
@@ -212,6 +283,102 @@ export default function ProfilePage() {
 
       return nextAddresses
     })
+  }
+
+  function buildAddressPayload(address: AddressFormItem): UserProfileAddressPayload {
+    const normalizedCountry = normalizeCountryCode(address.country).trim().toUpperCase()
+    const normalizedState = normalizeStateCode(normalizedCountry, address.state)
+
+    return {
+      houseNumber: (address.houseNumber ?? '').trim(),
+      street: address.street.trim(),
+      city: address.city.trim(),
+      state: normalizedState,
+      postalCode: address.postalCode.trim(),
+      country: normalizedCountry,
+      isDefault: address.isDefault,
+      addressType: address.addressType.trim() || 'home',
+    }
+  }
+
+  async function saveAddress(addressId: string) {
+    const address = addresses.find((item) => item.id === addressId)
+
+    if (!address || savingAddressId) {
+      return
+    }
+
+    const payload = buildAddressPayload(address)
+
+    if (!payload.street || !payload.city || !payload.state || !payload.postalCode || !payload.country) {
+      setErrorMessage('Please complete all required address fields before saving.')
+      toast.error('Please complete all required address fields before saving.')
+      return
+    }
+
+    setSavingAddressId(addressId)
+    setErrorMessage('')
+    setSuccessMessage('')
+
+    try {
+      if (!address.apiId) {
+        const createdAddress = await createUserAddress(payload)
+
+        setAddresses((currentAddresses) =>
+          currentAddresses.map((item) => (item.id === addressId ? { ...item, apiId: createdAddress.id } : item)),
+        )
+
+        setInitialAddressesById((currentValue) => ({
+          ...currentValue,
+          [createdAddress.id]: payload,
+        }))
+
+        if (payload.isDefault) {
+          await setDefaultUserAddress(createdAddress.id)
+        }
+
+        setSuccessMessage('Address added successfully.')
+        toast.success('Address added successfully.')
+        return
+      }
+
+      const initialAddress = initialAddressesById[address.apiId]
+
+      if (!initialAddress) {
+        await updateUserAddress(address.apiId, payload)
+      } else {
+        const changedFields: Partial<UserProfileAddressPayload> = {}
+
+        if (initialAddress.street !== payload.street) changedFields.street = payload.street
+        if (initialAddress.houseNumber !== payload.houseNumber) changedFields.houseNumber = payload.houseNumber
+        if (initialAddress.city !== payload.city) changedFields.city = payload.city
+        if (initialAddress.state !== payload.state) changedFields.state = payload.state
+        if (initialAddress.postalCode !== payload.postalCode) changedFields.postalCode = payload.postalCode
+        if (initialAddress.country !== payload.country) changedFields.country = payload.country
+        if (initialAddress.addressType !== payload.addressType) changedFields.addressType = payload.addressType
+
+        if (Object.keys(changedFields).length > 0) {
+          await updateUserAddress(address.apiId, changedFields)
+        }
+      }
+
+      if (payload.isDefault) {
+        await setDefaultUserAddress(address.apiId)
+      }
+
+      setInitialAddressesById((currentValue) => ({
+        ...currentValue,
+        [address.apiId as string]: payload,
+      }))
+      setSuccessMessage('Address updated successfully.')
+      toast.success('Address updated successfully.')
+    } catch (error) {
+      const message = getApiErrorMessage(error, 'Unable to save this address right now. Please try again.')
+      setErrorMessage(message)
+      toast.error(message)
+    } finally {
+      setSavingAddressId(null)
+    }
   }
 
   function buildBaseProfilePayload() {
@@ -273,80 +440,6 @@ export default function ProfilePage() {
       toast.error('Unable to update profile details right now.')
     } finally {
       setIsSavingProfileDetails(false)
-    }
-  }
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setIsSaving(true)
-    setSuccessMessage('')
-    setErrorMessage('')
-
-    try {
-      if (removedAddressIds.length > 0) {
-        await Promise.all(removedAddressIds.map((addressId) => deleteUserAddress(addressId)))
-      }
-
-      for (const address of addresses) {
-        const payload: UserProfileAddressPayload = {
-          houseNumber: address.houseNumber,
-          street: address.street,
-          city: address.city,
-          state: address.state,
-          postalCode: address.postalCode,
-          country: address.country,
-          isDefault: address.isDefault,
-          addressType: address.addressType,
-        }
-
-        if (!address.apiId) {
-          const createdAddress = await createUserAddress(payload)
-          address.apiId = createdAddress.id
-          continue
-        }
-
-        const initialAddress = initialAddressesById[address.apiId]
-
-        if (!initialAddress) {
-          await updateUserAddress(address.apiId, payload)
-          continue
-        }
-
-        const changedFields: Partial<UserProfileAddressPayload> = {}
-
-        if (initialAddress.street !== payload.street) changedFields.street = payload.street
-        if (initialAddress.houseNumber !== payload.houseNumber) changedFields.houseNumber = payload.houseNumber
-        if (initialAddress.city !== payload.city) changedFields.city = payload.city
-        if (initialAddress.state !== payload.state) changedFields.state = payload.state
-        if (initialAddress.postalCode !== payload.postalCode) changedFields.postalCode = payload.postalCode
-        if (initialAddress.country !== payload.country) changedFields.country = payload.country
-        if (initialAddress.addressType !== payload.addressType) changedFields.addressType = payload.addressType
-        if (Object.keys(changedFields).length > 0) {
-          await updateUserAddress(address.apiId, changedFields)
-        }
-      }
-
-      const selectedDefaultAddress = addresses.find((address) => address.isDefault)
-
-      if (selectedDefaultAddress?.apiId) {
-        await setDefaultUserAddress(selectedDefaultAddress.apiId)
-      }
-
-      setSuccessMessage('Addresses updated successfully.')
-      toast.success('Addresses updated successfully.')
-
-      try {
-        const [refreshedProfile, refreshedAddresses] = await Promise.all([getUserProfile(), getUserAddresses()])
-        applyProfile(refreshedProfile)
-        applyAddresses(refreshedAddresses)
-      } catch {
-        // Keep form state when refresh fails.
-      }
-    } catch {
-      setErrorMessage('Unable to update profile right now. Please try again.')
-      toast.error('Unable to update profile right now. Please try again.')
-    } finally {
-      setIsSaving(false)
     }
   }
 
@@ -420,7 +513,7 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          <form className="mt-7 space-y-7" onSubmit={handleSubmit}>
+          <div className="mt-7 space-y-7">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold text-[#17110d]">Addresses</h2>
@@ -547,6 +640,19 @@ export default function ProfilePage() {
                         </select>
                       </label>
                     </div>
+
+                    <div className="mt-4 flex justify-end">
+                      <button
+                        type="button"
+                        onClick={() => void saveAddress(address.id)}
+                        disabled={savingAddressId !== null}
+                        className="rounded-full bg-[#111111] px-5 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
+                      >
+                        {savingAddressId === address.id
+                          ? (address.apiId ? 'UPDATING...' : 'ADDING...')
+                          : (address.apiId ? 'UPDATE ADDRESS' : 'ADD ADDRESS')}
+                      </button>
+                    </div>
                   </article>
                 ))}
               </div>
@@ -555,16 +661,7 @@ export default function ProfilePage() {
             {successMessage ? <p className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">{successMessage}</p> : null}
             {errorMessage ? <p className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">{errorMessage}</p> : null}
 
-            <div className="flex justify-end">
-              <button
-                type="submit"
-                disabled={isSaving}
-                className="rounded-full bg-[#111111] px-7 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {isSaving ? 'SAVING...' : 'SAVE ADDRESSES'}
-              </button>
-            </div>
-          </form>
+          </div>
         </section>
 
         {isEditProfileOpen ? (
