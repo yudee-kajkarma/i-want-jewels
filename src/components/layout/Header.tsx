@@ -32,9 +32,9 @@ const adminNavLinks = [
     { label: "Dashboard", to: "/admin" },
     { label: "Orders", to: "/admin/orders" },
     { label: "Carts", to: "/admin/cart" },
-    { label: "Tickets", to: "/admin/tickets" },
     { label: "Wishlists", to: "/admin/wishlist" },
-    { label: "Products", to: "/products" },
+    { label: "Tickets", to: "/admin/tickets" },
+    // { label: "Products", to: "/products" },
     // { label: 'Storefront', to: '/' },
     // { label: 'Contact', to: '/contact' },
 ];
@@ -97,6 +97,14 @@ const shopPromoCards = [
         image: necklaceImage.src,
     },
 ];
+
+const animatedSearchTexts = [
+    "Searching for the perfect jewel...",
+    // "Search gifts for your dearest...",
+    "Find rings, earrings, necklaces...",
+    "Discover timeless sparkle...",
+];
+const animatedCursor = "|";
 
 function normalizeCategoryLabel(value: string): string {
     return value.trim().replace(/ies$/i, "y").replace(/s$/i, "");
@@ -187,10 +195,10 @@ function MicIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[20px] w-[20px]"
+            className="h-[25px] w-[25px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.7"
+            strokeWidth="1.2"
         >
             <rect
                 x="9"
@@ -363,10 +371,10 @@ function UserIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[27px] w-[27px]"
+            className="h-[29px] w-[29px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.8"
+            strokeWidth="1.2"
         >
             <circle cx="12" cy="8" r="3.5" />
             <path
@@ -382,10 +390,10 @@ function HeartIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[27px] w-[27px]"
+            className="h-[29px] w-[29px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.8"
+            strokeWidth="1.2"
         >
             <path
                 d="M12 20.5 4.9 13.8a4.7 4.7 0 0 1 6.6-6.7L12 7.6l.5-.5a4.7 4.7 0 0 1 6.6 6.7L12 20.5Z"
@@ -401,10 +409,10 @@ function BagIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[27px] w-[27px]"
+            className="h-[29px] w-[29px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.8"
+            strokeWidth="1.2"
         >
             <path d="M5 9.5h14l-1.2 10H6.2L5 9.5Z" strokeLinejoin="round" />
             <path d="M9 9.5V8a3 3 0 1 1 6 0v1.5" strokeLinecap="round" />
@@ -545,6 +553,9 @@ export default function Header() {
     const [isMobileShopMenuOpen, setIsMobileShopMenuOpen] = useState(false);
     const [desktopSearchTerm, setDesktopSearchTerm] = useState("");
     const [mobileSearchTerm, setMobileSearchTerm] = useState("");
+    const [animatedPlaceholder, setAnimatedPlaceholder] = useState(
+        `${animatedCursor}`,
+    );
     const [isVoiceListening, setIsVoiceListening] = useState(false);
     const [shopCategories, setShopCategories] = useState<string[]>([]);
     const [shopMenuTop, setShopMenuTop] = useState(0);
@@ -621,6 +632,55 @@ export default function Header() {
             },
         ];
     }, [visibleShopCategories]);
+
+    useEffect(() => {
+        let textIndex = 0;
+        let characterIndex = 0;
+        let isDeleting = false;
+        let pauseTicks = 0;
+
+        const intervalId = window.setInterval(() => {
+            const currentText = animatedSearchTexts[textIndex] ?? "";
+
+            if (pauseTicks > 0) {
+                pauseTicks -= 1;
+                return;
+            }
+
+            if (!isDeleting) {
+                characterIndex = Math.min(
+                    characterIndex + 1,
+                    currentText.length,
+                );
+
+                setAnimatedPlaceholder(
+                    `${currentText.slice(0, characterIndex)}${animatedCursor}`,
+                );
+
+                if (characterIndex === currentText.length) {
+                    isDeleting = true;
+                    pauseTicks = 10;
+                }
+
+                return;
+            }
+
+            characterIndex = Math.max(characterIndex - 1, 0);
+            setAnimatedPlaceholder(
+                `${currentText.slice(0, characterIndex)}${animatedCursor}`,
+            );
+
+            if (characterIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % animatedSearchTexts.length;
+                pauseTicks = 4;
+            }
+        }, 90);
+
+        return () => {
+            window.clearInterval(intervalId);
+        };
+    }, []);
 
     useEffect(() => {
         let isMounted = true;
@@ -905,62 +965,6 @@ export default function Header() {
 
     return (
         <>
-            {isAdmin ? (
-                <div className="border-b border-zinc-200 bg-white">
-                <div className="mx-auto hidden max-w-[1480px] items-center justify-between px-4 py-4 text-sm lg:flex lg:px-8">
-                    <div className="flex items-center gap-8 text-zinc-800">
-                        {utilityLinks.map((link) => (
-                            <MenuLink
-                                key={link.label}
-                                label={link.label}
-                                to={link.to}
-                                className="transition hover:text-pink-500"
-                            />
-                        ))}
-                    </div>
-
-                    <div className="flex items-center gap-6 text-zinc-800">
-                        <label className="flex items-center gap-2 text-sm text-zinc-700">
-                            <span className="sr-only">Currency</span>
-                            <select
-                                value={currency}
-                                onChange={(event) =>
-                                    setCurrency(
-                                        event.target.value as CurrencyCode,
-                                    )
-                                }
-                                className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-normal text-zinc-800 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
-                                aria-label="Select currency"
-                            >
-                                {CURRENCY_OPTIONS.map((option) => (
-                                    <option
-                                        key={option.code}
-                                        value={option.code}
-                                    >
-                                        {option.symbol} {option.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <div className="flex items-center gap-5 text-zinc-900">
-                            {socialLinks.map((socialLink) => (
-                                <a
-                                    key={socialLink.name}
-                                    href={socialLink.href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    aria-label={socialLink.name}
-                                    className="transition hover:text-pink-500"
-                                >
-                                    <SocialIcon name={socialLink.name} />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                </div>
-            ) : null}
-
             <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white">
                 <div
                     ref={headerInnerRef}
@@ -980,132 +984,96 @@ export default function Header() {
                         {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
                     </button>
 
-                    {!isAdmin ? (
-                        <>
-                            <Link
-                                to={brandLink}
-                                className="hidden w-[220px] items-center justify-start md:flex"
-                            >
-                                <img
-                                    src={brandLogo.src}
-                                    alt="I Want Jewels"
-                                    className="h-auto w-[170px] mix-blend-multiply"
-                                />
-                            </Link>
-
-                            <div className="hidden flex-1 justify-center md:flex">
-                                <form
-                                    className="w-full"
-                                    onSubmit={(event) => {
-                                        event.preventDefault();
-                                        handleGlobalSearchSubmit(
-                                            desktopSearchTerm,
-                                        );
-                                    }}
-                                >
-                                    <label className="mx-auto flex h-[46px] w-full max-w-[620px] items-center gap-3 rounded-full border border-[#d5d1ce] bg-white px-4 text-sm text-zinc-400">
-                                        <SearchIcon />
-                                        <input
-                                            type="search"
-                                            placeholder="Search for diamond jewellery"
-                                            value={desktopSearchTerm}
-                                            onChange={(event) =>
-                                                setDesktopSearchTerm(
-                                                    event.target.value,
-                                                )
-                                            }
-                                            className="w-full border-0 bg-transparent text-[15px] text-zinc-700 outline-none placeholder:text-zinc-400"
-                                        />
-                                        <button
-                                            type="button"
-                                            aria-label="Voice search"
-                                            onClick={() =>
-                                                handleVoiceSearch("desktop")
-                                            }
-                                            className={`text-pink-500 transition ${isVoiceListening ? "scale-110 text-pink-600" : "hover:text-pink-600"}`}
-                                        >
-                                            <MicIcon />
-                                        </button>
-                                    </label>
-                                </form>
-                            </div>
-                        </>
-                    ) : null}
-
-                    <div
-                        className={`${isAdmin ? "flex flex-1 items-center justify-center gap-5 lg:gap-7" : "flex flex-1 items-center justify-center md:hidden"}`}
-                    >
-                        {isAdmin ? (
-                            <>
-                        <nav className="hidden items-center gap-5 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex xl:gap-7">
-                            {activeNavLinks
-                                .slice(0, isSlice)
-                                .map((link) => renderDesktopNavLink(link))}
-                        </nav>
-
+                    <>
                         <Link
                             to={brandLink}
-                            className="flex items-center justify-center"
+                            className="hidden w-[220px] items-center justify-start md:flex"
                         >
                             <img
                                 src={brandLogo.src}
                                 alt="I Want Jewels"
-                                className="h-auto w-[200px]  mix-blend-multiply"
+                                className="h-auto w-[170px] mix-blend-multiply"
                             />
                         </Link>
 
-                        <nav className="hidden items-center gap-5 text-[0.95rem] font-semibold uppercase tracking-[0.01em] text-zinc-900 lg:flex xl:gap-7">
-                            {activeNavLinks.slice(isSlice).map((link) => (
-                                <MenuLink
-                                    key={link.label}
-                                    label={link.label}
-                                    to={link.to}
-                                    className={desktopNavLinkClass}
-                                />
-                            ))}
-                        </nav>
-                            </>
-                        ) : (
-                            <Link
-                                to={brandLink}
-                                className="flex items-center justify-center md:hidden"
+                        <div className="hidden flex-1 justify-center md:flex">
+                            <form
+                                className="w-full"
+                                onSubmit={(event) => {
+                                    event.preventDefault();
+                                    handleGlobalSearchSubmit(
+                                        desktopSearchTerm,
+                                    );
+                                }}
                             >
-                                <img
-                                    src={brandLogo.src}
-                                    alt="I Want Jewels"
-                                    className="h-auto w-[150px] mix-blend-multiply"
-                                />
-                            </Link>
-                        )}
+                                <label className="mx-auto flex h-[46px] w-full max-w-[620px] items-center gap-3 rounded-full border border-[#d5d1ce] bg-white px-4 text-sm text-zinc-400">
+                                    <SearchIcon />
+                                    <input
+                                        type="search"
+                                        placeholder={animatedPlaceholder}
+                                        value={desktopSearchTerm}
+                                        onChange={(event) =>
+                                            setDesktopSearchTerm(
+                                                event.target.value,
+                                            )
+                                        }
+                                        className="w-full border-0 bg-transparent text-[15px] text-zinc-700 outline-none placeholder:text-zinc-400"
+                                    />
+                                    <button
+                                        type="button"
+                                        aria-label="Voice search"
+                                        onClick={() =>
+                                            handleVoiceSearch("desktop")
+                                        }
+                                        className={`text-pink-400 transition ${isVoiceListening ? "scale-110 text-pink-500" : "hover:text-pink-500"}`}
+                                    >
+                                        <MicIcon />
+                                    </button>
+                                </label>
+                            </form>
+                        </div>
+                    </>
+
+                    <div
+                        className="flex flex-1 items-center justify-center md:hidden"
+                    >
+                        <Link
+                            to={brandLink}
+                            className="flex items-center justify-center md:hidden"
+                        >
+                            <img
+                                src={brandLogo.src}
+                                alt="I Want Jewels"
+                                className="h-auto w-[150px] mix-blend-multiply"
+                            />
+                        </Link>
                     </div>
 
                     <div
-                        className={`flex items-center gap-0.5 sm:gap-1 ${isAdmin ? "md:min-w-[235px] md:justify-end lg:min-w-[258px]" : "text-pink-500 md:w-[220px] md:justify-end"}`}
+                        className="flex items-center gap-0.5 text-pink-400 sm:gap-1 md:w-[220px] md:justify-end"
                     >
-                        {!isAdmin ? (
-                            <label className="hidden items-center pr-1 md:flex">
-                                <span className="sr-only">Select currency</span>
-                                <select
-                                    value={currency}
-                                    onChange={(event) =>
-                                        setCurrency(
-                                            event.target.value as CurrencyCode,
-                                        )
-                                    }
-                                    className="cursor-pointer rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-normal text-zinc-700 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
-                                    aria-label="Select currency"
-                                >
-                                    {CURRENCY_OPTIONS.map((option) => (
-                                        <option
-                                            key={option.code}
-                                            value={option.code}
-                                        >
-                                            {option.symbol} {option.code}
-                                        </option>
-                                    ))}
-                                </select>
-                            </label>
-                        ) : null}
+                        <label className="hidden items-center pr-1 md:flex">
+                            <span className="sr-only">Select currency</span>
+                            <select
+                                value={currency}
+                                onChange={(event) =>
+                                    setCurrency(
+                                        event.target.value as CurrencyCode,
+                                    )
+                                }
+                                className="cursor-pointer rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-normal text-zinc-700 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
+                                aria-label="Select currency"
+                            >
+                                {CURRENCY_OPTIONS.map((option) => (
+                                    <option
+                                        key={option.code}
+                                        value={option.code}
+                                    >
+                                        {option.symbol} {option.code}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
 
                         <div ref={accountMenuRef} className="relative">
                             <button
@@ -1117,7 +1085,7 @@ export default function Header() {
                                         (currentValue) => !currentValue,
                                     )
                                 }
-                                className={`relative flex h-8 w-8 items-center justify-center transition hover:text-pink-500 ${isAdmin ? "text-zinc-900" : "text-pink-500"}`}
+                                className="relative flex h-8 w-8 items-center justify-center text-pink-400 transition hover:text-pink-500"
                             >
                                 <UserIcon />
                             </button>
@@ -1277,12 +1245,14 @@ export default function Header() {
                                 <HeaderAction
                                     label="Admin Wishlist"
                                     to="/admin/wishlist"
+                                    className="text-pink-400"
                                 >
                                     <HeartIcon />
                                 </HeaderAction>
                                 <HeaderAction
                                     label="Admin Cart"
                                     to="/admin/cart"
+                                    className="text-pink-400"
                                 >
                                     <BagIcon />
                                 </HeaderAction>
@@ -1293,7 +1263,7 @@ export default function Header() {
                                     label="Wishlist"
                                     count={wishlistCount}
                                     to="/wishlist"
-                                    className="text-pink-500"
+                                    className="text-pink-400"
                                 >
                                     <HeartIcon />
                                 </HeaderAction>
@@ -1301,7 +1271,7 @@ export default function Header() {
                                     label="Cart"
                                     count={itemCount}
                                     to="/cart"
-                                    className="text-pink-500"
+                                    className="text-pink-400"
                                 >
                                     <BagIcon />
                                 </HeaderAction>
@@ -1310,24 +1280,31 @@ export default function Header() {
                     </div>
                 </div>
 
-                {!isAdmin ? (
-                    <div className="hidden border-y border-zinc-200 lg:block">
-                        <nav className="mx-auto flex max-w-[1480px] items-center justify-center gap-7 px-4 py-3 text-[0.96rem] text-zinc-700 lg:px-8">
-                            {storefrontNavLinks.map((item) => (
-                                <Link
-                                    key={item.label}
-                                    to={item.to}
-                                    className="group relative inline-flex items-center gap-1.5 py-0.5 text-[0.96rem] font-medium text-zinc-700 transition duration-200 hover:text-pink-500 after:absolute after:-bottom-[13px] after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-pink-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
-                                >
-                                    <span className="transition duration-200 group-hover:scale-105">
-                                        <NavGlyph type={item.icon} />
-                                    </span>
-                                    <span>{item.label}</span>
-                                </Link>
-                            ))}
-                        </nav>
-                    </div>
-                ) : null}
+                <div className="hidden border-y border-zinc-200 lg:block">
+                    <nav className="mx-auto flex max-w-[1480px] items-center justify-center gap-7 px-4 py-3 text-[0.96rem] text-zinc-700 lg:px-8">
+                        {isAdmin
+                            ? adminNavLinks.map((item) => (
+                                  <MenuLink
+                                      key={item.label}
+                                      label={item.label}
+                                      to={item.to}
+                                                                            className="group relative inline-flex items-center gap-1.5 py-0.5 text-[0.96rem] font-normal text-zinc-700 transition duration-200 hover:text-pink-500 after:absolute after:-bottom-[13px] after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-pink-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
+                                  />
+                              ))
+                            : storefrontNavLinks.map((item) => (
+                                  <Link
+                                      key={item.label}
+                                      to={item.to}
+                                      className="group relative inline-flex items-center gap-1.5 py-0.5 text-[0.96rem] font-normal text-zinc-700 transition duration-200 hover:text-pink-500 after:absolute after:-bottom-[13px] after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-pink-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
+                                  >
+                                      <span className="transition duration-200 group-hover:scale-105">
+                                          <NavGlyph type={item.icon} />
+                                      </span>
+                                      <span>{item.label}</span>
+                                  </Link>
+                              ))}
+                    </nav>
+                </div>
 
                 {isMobileMenuOpen ? (
                     <div className="max-h-[calc(100vh-68px)] overflow-y-auto border-t border-zinc-100 px-4 py-4 lg:hidden">
@@ -1344,7 +1321,7 @@ export default function Header() {
                                     <SearchIcon />
                                     <input
                                         type="search"
-                                        placeholder="What are you looking for?"
+                                        placeholder={animatedPlaceholder}
                                         value={mobileSearchTerm}
                                         onChange={(event) =>
                                             setMobileSearchTerm(
@@ -1359,7 +1336,7 @@ export default function Header() {
                                         onClick={() =>
                                             handleVoiceSearch("mobile")
                                         }
-                                        className={`text-pink-500 transition ${isVoiceListening ? "scale-110 text-pink-600" : "hover:text-pink-600"}`}
+                                        className={`text-pink-400 transition ${isVoiceListening ? "scale-110 text-pink-500" : "hover:text-pink-500"}`}
                                     >
                                         <MicIcon />
                                     </button>
