@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import axios from 'axios'
 import { Eye, EyeOff } from 'lucide-react'
 import { Link, useNavigate } from '@/lib/router'
 import AuthShell from '../components/auth/AuthShell'
@@ -40,6 +41,34 @@ export default function RegisterPage() {
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(form.address.country), [form.address.country])
 
+  function getRegisterErrorMessage(error: unknown): string {
+    if (!axios.isAxiosError(error)) {
+      return 'Registration failed. Check the details and try again.'
+    }
+
+    const responseData = error.response?.data
+
+    if (responseData && typeof responseData === 'object' && !Array.isArray(responseData)) {
+      const errorRecord = 'error' in responseData ? (responseData as Record<string, unknown>).error : null
+
+      if (errorRecord && typeof errorRecord === 'object' && !Array.isArray(errorRecord)) {
+        const backendMessage = (errorRecord as Record<string, unknown>).message
+
+        if (typeof backendMessage === 'string' && backendMessage.trim()) {
+          return backendMessage
+        }
+      }
+
+      const message = (responseData as Record<string, unknown>).message
+
+      if (typeof message === 'string' && message.trim()) {
+        return message
+      }
+    }
+
+    return 'Registration failed. Check the details and try again.'
+  }
+
   function updateField<Key extends keyof RegisterPayload>(key: Key, value: RegisterPayload[Key]) {
     setForm((currentValue) => ({
       ...currentValue,
@@ -72,8 +101,8 @@ export default function RegisterPage() {
       const response = await registerUser(form)
       setOtpEmail(response.email)
       navigate('/verify-otp', { replace: true })
-    } catch {
-      setError('Registration failed. Check the details and try again.')
+    } catch (error) {
+      setError(getRegisterErrorMessage(error))
     } finally {
       setIsSubmitting(false)
     }
@@ -194,6 +223,42 @@ export default function RegisterPage() {
         <div className="rounded-[28px] border border-[#eadfd4] bg-[#fffdfa] p-5">
           <h3 className="text-lg font-bold text-[#17110d]">Address</h3>
           <div className="mt-4 grid gap-5 sm:grid-cols-2">
+            <label className="block">
+              <span className="mb-2 block text-sm font-semibold text-[#17110d]">Country</span>
+              <select
+                required
+                value={form.address.country}
+                onChange={(event) => {
+                  const countryCode = event.target.value
+                  updateAddressField('country', countryCode)
+                  updateAddressField('state', '')
+                }}
+                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              >
+                <option value="">Select country</option>
+                {countryOptions.map((country) => (
+                  <option key={country.code} value={country.code}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="block">
+              <span className="mb-2 block text-sm font-semibold text-[#17110d]">State</span>
+              <select
+                required
+                value={form.address.state}
+                onChange={(event) => updateAddressField('state', event.target.value)}
+                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              >
+                <option value="">Select state</option>
+                {stateOptions.map((state) => (
+                  <option key={state.code} value={state.code}>
+                    {state.name}
+                  </option>
+                ))}
+              </select>
+            </label>
             <label className="block sm:col-span-2">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">Street</span>
               <input
@@ -215,22 +280,6 @@ export default function RegisterPage() {
               />
             </label>
             <label className="block">
-              <span className="mb-2 block text-sm font-semibold text-[#17110d]">State</span>
-              <select
-                required
-                value={form.address.state}
-                onChange={(event) => updateAddressField('state', event.target.value)}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-              >
-                <option value="">Select state</option>
-                {stateOptions.map((state) => (
-                  <option key={state.code} value={state.code}>
-                    {state.name}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">Postal Code</span>
               <input
                 type="text"
@@ -239,26 +288,6 @@ export default function RegisterPage() {
                 onChange={(event) => updateAddressField('postalCode', event.target.value)}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               />
-            </label>
-            <label className="block">
-              <span className="mb-2 block text-sm font-semibold text-[#17110d]">Country</span>
-              <select
-                required
-                value={form.address.country}
-                onChange={(event) => {
-                  const countryCode = event.target.value
-                  updateAddressField('country', countryCode)
-                  updateAddressField('state', '')
-                }}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-              >
-                <option value="">Select country</option>
-                {countryOptions.map((country) => (
-                  <option key={country.code} value={country.code}>
-                    {country.name}
-                  </option>
-                ))}
-              </select>
             </label>
           </div>
         </div>

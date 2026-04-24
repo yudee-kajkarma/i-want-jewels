@@ -138,33 +138,22 @@ export default function AdminAddressPage() {
             <form onSubmit={(event) => void handleSave(event)} className="space-y-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">Street</span>
-                  <input
-                    value={form.street}
-                    onChange={(event) => updateField('street', event.target.value)}
+                  <span className="font-semibold text-[#17110d]">Country</span>
+                  <select
+                    value={form.country}
+                    onChange={(event) => {
+                      updateField('country', event.target.value)
+                      updateField('state', '')
+                    }}
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="Street"
-                  />
-                </label>
-
-                <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">House Number</span>
-                  <input
-                    value={form.houseNumber}
-                    onChange={(event) => updateField('houseNumber', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="House Number"
-                  />
-                </label>
-
-                <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">City</span>
-                  <input
-                    value={form.city}
-                    onChange={(event) => updateField('city', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="City"
-                  />
+                  >
+                    <option value="">Select country</option>
+                    {countryOptions.map((country) => (
+                      <option key={country.code} value={country.code}>
+                        {country.name}
+                      </option>
+                    ))}
+                  </select>
                 </label>
 
                 <label className="space-y-2 text-sm">
@@ -184,6 +173,36 @@ export default function AdminAddressPage() {
                 </label>
 
                 <label className="space-y-2 text-sm">
+                  <span className="font-semibold text-[#17110d]">City</span>
+                  <input
+                    value={form.city}
+                    onChange={(event) => updateField('city', event.target.value)}
+                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    placeholder="City"
+                  />
+                </label>
+
+                <label className="space-y-2 text-sm">
+                  <span className="font-semibold text-[#17110d]">House Number</span>
+                  <input
+                    value={form.houseNumber}
+                    onChange={(event) => updateField('houseNumber', event.target.value)}
+                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    placeholder="House Number"
+                  />
+                </label>
+
+                <label className="space-y-2 text-sm">
+                  <span className="font-semibold text-[#17110d]">Street</span>
+                  <input
+                    value={form.street}
+                    onChange={(event) => updateField('street', event.target.value)}
+                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    placeholder="Street"
+                  />
+                </label>
+
+                <label className="space-y-2 text-sm">
                   <span className="font-semibold text-[#17110d]">Postal Code</span>
                   <input
                     value={form.postalCode}
@@ -191,25 +210,6 @@ export default function AdminAddressPage() {
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                     placeholder="Postal Code"
                   />
-                </label>
-
-                <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">Country</span>
-                  <select
-                    value={form.country}
-                    onChange={(event) => {
-                      updateField('country', event.target.value)
-                      updateField('state', '')
-                    }}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                  >
-                    <option value="">Select country</option>
-                    {countryOptions.map((country) => (
-                      <option key={country.code} value={country.code}>
-                        {country.name}
-                      </option>
-                    ))}
-                  </select>
                 </label>
               </div>
 

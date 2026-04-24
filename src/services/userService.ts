@@ -26,6 +26,7 @@ function normalizeProfileAddress(value: unknown): UserProfileAddressPayload | nu
   const stateCode = normalizeStateCode(countryCode, getStringValue(record, 'state'))
 
   return {
+    houseNumber: getStringValue(record, 'houseNumber'),
     street: getStringValue(record, 'street'),
     city: getStringValue(record, 'city'),
     state: stateCode,
@@ -91,6 +92,7 @@ function normalizeUserProfile(data: unknown): UserProfile {
       }))
     : [
         {
+          houseNumber: '',
           street: '',
           city: '',
           state: '',

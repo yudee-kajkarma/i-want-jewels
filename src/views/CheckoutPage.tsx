@@ -33,6 +33,7 @@ type CheckoutLocationState = {
 }
 
 const EMPTY_ADDRESS_FORM: UserProfileAddressPayload = {
+  houseNumber: '',
   street: '',
   city: '',
   state: '',
@@ -157,6 +158,7 @@ export default function CheckoutPage() {
     setAddressError('')
     setEditingAddressId(address.id)
     setAddressForm({
+      houseNumber: address.houseNumber,
       street: address.street,
       city: address.city,
       state: address.state,
@@ -187,6 +189,7 @@ export default function CheckoutPage() {
     }
 
     const trimmedPayload: UserProfileAddressPayload = {
+      houseNumber: addressForm.houseNumber?.trim() || '',
       street: addressForm.street.trim(),
       city: addressForm.city.trim(),
       state: addressForm.state.trim(),
@@ -420,7 +423,7 @@ export default function CheckoutPage() {
 
                               <div className="flex-1 text-sm leading-7 text-zinc-600">
                                 <p className="font-semibold text-[#17110d]">{session?.firstName || session?.username}</p>
-                                <p>{address.street}</p>
+                                <p>{[address.houseNumber, address.street].filter(Boolean).join(' ') || address.street}</p>
                                 <p>
                                   {address.city}, {getStateName(address.country, address.state)} {address.postalCode}
                                 </p>
@@ -457,36 +460,6 @@ export default function CheckoutPage() {
                       <div className="mt-5 rounded-[22px] border border-[#eadfd4] bg-white p-4">
                         <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">{editingAddressId ? 'Edit address' : 'Add address'}</h3>
                         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                          <input
-                            value={addressForm.street}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, street: event.target.value }))}
-                            placeholder="Street"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
-                          <input
-                            value={addressForm.city}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
-                            placeholder="City"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
-                          <select
-                            value={addressForm.state}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, state: event.target.value }))}
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          >
-                            <option value="">Select state</option>
-                            {stateOptions.map((state) => (
-                              <option key={state.code} value={state.code}>
-                                {state.name}
-                              </option>
-                            ))}
-                          </select>
-                          <input
-                            value={addressForm.postalCode}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))}
-                            placeholder="Postal code"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
                           <select
                             value={addressForm.country}
                             onChange={(event) => setAddressForm((currentValue) => ({
@@ -503,6 +476,42 @@ export default function CheckoutPage() {
                               </option>
                             ))}
                           </select>
+                          <select
+                            value={addressForm.state}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, state: event.target.value }))}
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          >
+                            <option value="">Select state</option>
+                            {stateOptions.map((state) => (
+                              <option key={state.code} value={state.code}>
+                                {state.name}
+                              </option>
+                            ))}
+                          </select>
+                          <input
+                            value={addressForm.city}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
+                            placeholder="City"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.houseNumber ?? ''}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}
+                            placeholder="House number"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.street}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, street: event.target.value }))}
+                            placeholder="Street"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
+                          <input
+                            value={addressForm.postalCode}
+                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))}
+                            placeholder="Postal code"
+                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                          />
                           <input
                             value={addressForm.addressType}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}

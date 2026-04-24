@@ -1,4 +1,5 @@
 export type UserProfileAddressPayload = {
+  houseNumber?: string
   street: string
   city: string
   state: string

@@ -26,6 +26,7 @@ function createAddress(defaults?: Partial<UserProfileAddressPayload>, apiId: str
   return {
     id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
     apiId,
+    houseNumber: defaults?.houseNumber ?? '',
     street: defaults?.street ?? '',
     city: defaults?.city ?? '',
     state: defaults?.state ?? '',
@@ -85,6 +86,7 @@ export default function ProfilePage() {
         nextAddresses.map((address, index) =>
           createAddress(
             {
+              houseNumber: address.houseNumber,
               street: address.street,
               city: address.city,
               state: address.state,
@@ -103,6 +105,7 @@ export default function ProfilePage() {
     setInitialAddressesById(
       nextAddresses.reduce<Record<string, UserProfileAddressPayload>>((result, address) => {
         result[address.id] = {
+          houseNumber: address.houseNumber,
           street: address.street,
           city: address.city,
           state: address.state,
@@ -286,6 +289,7 @@ export default function ProfilePage() {
 
       for (const address of addresses) {
         const payload: UserProfileAddressPayload = {
+          houseNumber: address.houseNumber,
           street: address.street,
           city: address.city,
           state: address.state,
@@ -311,6 +315,7 @@ export default function ProfilePage() {
         const changedFields: Partial<UserProfileAddressPayload> = {}
 
         if (initialAddress.street !== payload.street) changedFields.street = payload.street
+        if (initialAddress.houseNumber !== payload.houseNumber) changedFields.houseNumber = payload.houseNumber
         if (initialAddress.city !== payload.city) changedFields.city = payload.city
         if (initialAddress.state !== payload.state) changedFields.state = payload.state
         if (initialAddress.postalCode !== payload.postalCode) changedFields.postalCode = payload.postalCode
@@ -456,24 +461,23 @@ export default function ProfilePage() {
 
                     <div className="grid gap-4 md:grid-cols-2">
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
-                        Street
-                        <input
-                          type="text"
-                          value={address.street}
-                          onChange={(event) => handleAddressChange(address.id, 'street', event.target.value)}
+                        Country
+                        <select
+                          value={address.country}
+                          onChange={(event) => {
+                            handleAddressChange(address.id, 'country', event.target.value)
+                            handleAddressChange(address.id, 'state', '')
+                          }}
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
-                        />
-                      </label>
-                      <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
-                        City
-                        <input
-                          type="text"
-                          value={address.city}
-                          onChange={(event) => handleAddressChange(address.id, 'city', event.target.value)}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
-                          required
-                        />
+                        >
+                          <option value="">Select country</option>
+                          {countryOptions.map((country) => (
+                            <option key={country.code} value={country.code}>
+                              {country.name}
+                            </option>
+                          ))}
+                        </select>
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         State
@@ -492,6 +496,35 @@ export default function ProfilePage() {
                         </select>
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
+                        City
+                        <input
+                          type="text"
+                          value={address.city}
+                          onChange={(event) => handleAddressChange(address.id, 'city', event.target.value)}
+                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          required
+                        />
+                      </label>
+                      <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
+                        House Number
+                        <input
+                          type="text"
+                          value={address.houseNumber ?? ''}
+                          onChange={(event) => handleAddressChange(address.id, 'houseNumber', event.target.value)}
+                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                        />
+                      </label>
+                      <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
+                        Street
+                        <input
+                          type="text"
+                          value={address.street}
+                          onChange={(event) => handleAddressChange(address.id, 'street', event.target.value)}
+                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          required
+                        />
+                      </label>
+                      <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Postal Code
                         <input
                           type="text"
@@ -500,25 +533,6 @@ export default function ProfilePage() {
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         />
-                      </label>
-                      <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
-                        Country
-                        <select
-                          value={address.country}
-                          onChange={(event) => {
-                            handleAddressChange(address.id, 'country', event.target.value)
-                            handleAddressChange(address.id, 'state', '')
-                          }}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
-                          required
-                        >
-                          <option value="">Select country</option>
-                          {countryOptions.map((country) => (
-                            <option key={country.code} value={country.code}>
-                              {country.name}
-                            </option>
-                          ))}
-                        </select>
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Address Type
