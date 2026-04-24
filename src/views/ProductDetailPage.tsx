@@ -337,7 +337,7 @@ export default function ProductDetailPage({
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false)
   const [isSubmittingReview, setIsSubmittingReview] = useState(false)
-  const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0, 1])
+  const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0])
 
   async function loadReviews(targetProductId: string) {
     const reviewsResponse = await getProductReviews(targetProductId)
@@ -432,7 +432,7 @@ export default function ProductDetailPage({
       return
     }
 
-    setOpenFaqIndexes([0, 1].filter((index) => index < product.faqs.length))
+    setOpenFaqIndexes([0].filter((index) => index < product.faqs.length))
   }, [product])
 
   const selectedVariant = useMemo<ProductVariant | undefined>(() => {
@@ -955,45 +955,37 @@ export default function ProductDetailPage({
               <ProductFeatureGrid />
 
               {product.faqs.length > 0 ? (
-                <div className="mt-14 rounded-[26px] border border-[#e7dfd9] bg-[linear-gradient(180deg,#fffcfa_0%,#ffffff_100%)] p-5 sm:p-7">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#f4ece6] text-[#2f2218]">
-                      <CircleHelp className="h-4 w-4" strokeWidth={2.1} />
-                    </span>
-                    <div>
-                      <h3 className="text-[1.2rem] font-semibold tracking-[-0.03em] text-[#17110d]">Frequently Asked Questions</h3>
-                      {/* <p className="text-xs text-zinc-500">Showing {product.faqs.length} question{product.faqs.length > 1 ? 's' : ''} from product details API.</p> */}
-                    </div>
-                  </div>
+                <section className="mt-16">
+                  <h3 className="text-center text-[2rem] font-semibold tracking-[-0.03em] text-[#111111] sm:text-[2.2rem]">FAQ</h3>
 
-                  <div className="mt-5 space-y-3">
+                  <div className="mx-auto mt-8 max-w-[980px] border-y border-[#e7e7e7]">
                     {product.faqs.map((faq, index) => {
                       const isOpen = openFaqIndexes.includes(index)
 
                       return (
-                        <article key={`${faq.question}-${index}`} className="overflow-hidden rounded-2xl border border-[#eadfd4] bg-white">
+                        <article key={`${faq.question}-${index}`} className="border-b border-[#e7e7e7] last:border-b-0">
                           <button
                             type="button"
                             onClick={() => toggleFaq(index)}
-                            className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition hover:bg-[#fff9f4]"
+                            className="flex w-full items-center justify-between gap-4 py-5 text-left"
                             aria-expanded={isOpen}
                           >
-                            <span className="text-sm font-semibold text-[#1e1713]">{faq.question}</span>
-                            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-[#dacdbf] text-sm text-[#5d4738]">
-                              {isOpen ? '-' : '+'}
+                            <span className="pr-3 text-[1.04rem] font-semibold leading-7 text-[#191919]">
+                              {index + 1}. {faq.question}
                             </span>
+                            <span className="text-2xl font-light leading-none text-[#2b2b2b]">{isOpen ? '-' : '+'}</span>
                           </button>
 
                           {isOpen ? (
-                            <div className="border-t border-[#f0e6de] px-4 py-3">
-                              <p className="text-sm leading-7 text-zinc-600">{faq.answer}</p>
+                            <div className="pb-5 pr-8">
+                              <p className="max-w-[860px] text-[1.02rem] leading-8 text-zinc-600">{faq.answer}</p>
                             </div>
                           ) : null}
                         </article>
                       )
                     })}
                   </div>
-                </div>
+                </section>
               ) : null}
             </section>
 
