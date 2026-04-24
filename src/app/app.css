@@ -341,3 +341,57 @@
   animation: wishlist-wave 0.52s ease;
   transform-origin: center;
 }
+
+@keyframes blog-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-fade-up {
+  opacity: 0;
+  animation: blog-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.blog-fade-up-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.blog-fade-up-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.blog-fade-up-delay-3 {
+  animation-delay: 0.34s;
+}
+
+.blog-rich-content h2,
+.blog-rich-content h3,
+.blog-rich-content h4 {
+  scroll-margin-top: 120px;
+}
+
+.blog-rich-content p {
+  color: #344256;
+}
+
+.blog-rich-content a {
+  text-decoration: underline;
+  text-decoration-color: rgba(187, 146, 58, 0.6);
+  text-underline-offset: 3px;
+}
+
+.blog-rich-content a:hover {
+  color: #8b6622;
+}
+
+.blog-rich-content ul li::marker,
+.blog-rich-content ol li::marker {
+  color: #bb923a;
+}

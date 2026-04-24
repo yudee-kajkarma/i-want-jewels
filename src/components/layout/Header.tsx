@@ -25,7 +25,7 @@ const navLinks = [
     { label: "Shop", to: "/products" },
     { label: "About", to: "/about" },
     { label: "Contact", to: "/contact" },
-    { label: "Blog", to: "/about" },
+    { label: "Blog", to: "/blog" },
     { label: "Resources", to: "/help" },
 { label: "Help", to: "/help" }
 ];
@@ -72,7 +72,7 @@ const storefrontNavLinks = [
     { label: "About", to: "/about", icon: "about" },
     { label: "Contact", to: "/contact", icon: "contact" },
     // { label: "Gift Card", to: "/products", icon: "gift" },
-    { label: "Blog", to: "/about", icon: "blog" },
+    { label: "Blog", to: "/blog", icon: "blog" },
     { label: "Resources", to: "/help", icon: "resources" },
     { label: "Help", to: "/help", icon: "resources" }
 ] as const;
