@@ -4,10 +4,10 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import InstagramGallerySection from "../components/sections/InstagramGallerySection";
 import NewsletterSection from "../components/sections/NewsletterSection";
-import braceletCloseupImage from "../assets/image/bracelet.jpeg";
-import earringProductImage from "../assets/image/earing1.jpeg";
-import necklaceModelImage from "../assets/image/nackwear1.jpeg";
-import ringModelImage from "../assets/image/ring.jpeg";
+import braceletCloseupImage from "../assets/image/bracelet.jpg";
+import earringProductImage from "../assets/image/earing1.jpg";
+import necklaceModelImage from "../assets/image/nackwear.jpg";
+import ringModelImage from "../assets/image/ring1.jpg";
 
 const aboutPoints = [
     "Brilliant lab-grown diamond jewellery",
