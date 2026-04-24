@@ -1,5 +1,15 @@
-import type { BlogDetail, BlogListItem, BlogPagination, BlogsResult } from '../types/blog'
-import apiClient from './apiClient'
+import type {
+  AdminBlogListItem,
+  AdminBlogsResult,
+  BlogCreatePayload,
+  BlogDetail,
+  BlogListItem,
+  BlogPagination,
+  BlogStatus,
+  BlogUpdatePayload,
+  BlogsResult,
+} from '../types/blog'
+import apiClient, { adminApiClient } from './apiClient'
 
 type BlogListApiItem = {
   _id?: string
@@ -11,6 +21,18 @@ type BlogListApiItem = {
   tags?: string[]
   publishedAt?: string
   views?: number
+}
+
+type AdminBlogListApiItem = {
+  id?: string
+  _id?: string
+  title?: string
+  slug?: string
+  status?: string
+  views?: number
+  author?: string
+  publishedAt?: string
+  updatedAt?: string
 }
 
 type BlogsListResponse = {
@@ -55,9 +77,41 @@ type BlogDetailResponse = {
   }
 }
 
+type AdminBlogsListResponse = {
+  success: boolean
+  data: AdminBlogListApiItem[]
+  pagination: BlogPagination
+}
+
+type BlogWriteResponse = {
+  success: boolean
+  data?: {
+    id?: string
+    _id?: string
+    status?: string
+  }
+}
+
+type BlogImageUploadResponse = {
+  success: boolean
+  data?:
+    | {
+        url?: string
+        imageUrl?: string
+        location?: string
+      }
+    | string
+}
+
 export type GetBlogsParams = {
   page?: number
   limit?: number
+}
+
+export type GetAdminBlogsParams = {
+  page?: number
+  limit?: number
+  status?: 'draft' | 'published'
 }
 
 function normalizeBlogListItem(item: BlogListApiItem): BlogListItem {
@@ -70,6 +124,23 @@ function normalizeBlogListItem(item: BlogListApiItem): BlogListItem {
     tags: item.tags ?? [],
     publishedAt: item.publishedAt ?? '',
     views: item.views ?? 0,
+  }
+}
+
+function normalizeBlogStatus(status: string | undefined): BlogStatus {
+  return status?.trim().toLowerCase() === 'published' ? 'published' : 'draft'
+}
+
+function normalizeAdminBlogListItem(item: AdminBlogListApiItem): AdminBlogListItem {
+  return {
+    id: item.id ?? item._id ?? '',
+    title: item.title ?? '',
+    slug: item.slug ?? '',
+    status: normalizeBlogStatus(item.status),
+    views: item.views ?? 0,
+    author: item.author ?? '--',
+    publishedAt: item.publishedAt ?? '',
+    updatedAt: item.updatedAt ?? '',
   }
 }
 
@@ -89,7 +160,17 @@ export async function getBlogs(params: GetBlogsParams = {}): Promise<BlogsResult
 
 export async function getBlogBySlug(slug: string): Promise<BlogDetail> {
   const response = await apiClient.get<BlogDetailResponse>(`/blogs/${slug}`)
-  const blog = response.data.data
+
+  return normalizeBlogDetail(response.data.data)
+}
+
+export async function getAdminBlogBySlug(slug: string): Promise<BlogDetail> {
+  const response = await adminApiClient.get<BlogDetailResponse>(`/blogs/${slug}`)
+
+  return normalizeBlogDetail(response.data.data)
+}
+
+function normalizeBlogDetail(blog: BlogDetailResponse['data']): BlogDetail {
 
   return {
     id: blog.id ?? blog._id ?? '',
@@ -120,6 +201,66 @@ export async function getBlogBySlug(slug: string): Promise<BlogDetail> {
       : undefined,
     createdAt: blog.createdAt,
     updatedAt: blog.updatedAt,
-    status: blog.status,
+    status: normalizeBlogStatus(blog.status),
   }
+}
+
+export async function getAdminBlogs(params: GetAdminBlogsParams = {}): Promise<AdminBlogsResult> {
+  const response = await adminApiClient.get<AdminBlogsListResponse>('/blogs/admin/all', {
+    params: {
+      page: params.page ?? 1,
+      limit: params.limit ?? 10,
+      status: params.status,
+    },
+  })
+
+  return {
+    blogs: (response.data.data ?? []).map(normalizeAdminBlogListItem),
+    pagination: response.data.pagination,
+  }
+}
+
+export async function uploadBlogImage(file: File): Promise<string> {
+  const formData = new FormData()
+  formData.append('image', file)
+
+  const response = await adminApiClient.post<BlogImageUploadResponse>('/blogs/upload-image', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  })
+
+  const payload = response.data.data
+
+  if (typeof payload === 'string' && payload.trim()) {
+    return payload
+  }
+
+  if (payload && typeof payload === 'object') {
+    const possibleUrl = payload.url ?? payload.imageUrl ?? payload.location
+
+    if (possibleUrl) {
+      return possibleUrl
+    }
+  }
+
+  throw new Error('Invalid image upload response')
+}
+
+export async function createAdminBlog(payload: BlogCreatePayload): Promise<void> {
+  await adminApiClient.post<BlogWriteResponse>('/blogs', payload)
+}
+
+export async function updateAdminBlog(blogId: string, payload: BlogUpdatePayload): Promise<void> {
+  await adminApiClient.put<BlogWriteResponse>(`/blogs/${blogId}`, payload)
+}
+
+export async function toggleAdminBlogStatus(blogId: string): Promise<BlogStatus> {
+  const response = await adminApiClient.patch<BlogWriteResponse>(`/blogs/${blogId}/toggle-status`)
+
+  return normalizeBlogStatus(response.data.data?.status)
+}
+
+export async function deleteAdminBlog(blogId: string): Promise<void> {
+  await adminApiClient.delete(`/blogs/${blogId}`)
 }

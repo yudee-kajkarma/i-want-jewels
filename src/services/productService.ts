@@ -534,6 +534,41 @@ export async function getAllProductsForAdmin(params: GetProductsParams = {}): Pr
   }
 }
 
+export async function getAllProducts(limitPerPage = 100): Promise<Product[]> {
+  const firstPageResponse = await getProducts({ page: 1, limit: limitPerPage })
+  const aggregatedProducts = [...firstPageResponse.products]
+  const totalPages = firstPageResponse.pagination.totalPages
+
+  if (totalPages <= 1) {
+    return aggregatedProducts
+  }
+
+  const remainingResponses = await Promise.allSettled(
+    Array.from({ length: totalPages - 1 }, (_, index) =>
+      getProducts({
+        page: index + 2,
+        limit: limitPerPage,
+      }),
+    ),
+  )
+
+  for (const response of remainingResponses) {
+    if (response.status === 'fulfilled') {
+      aggregatedProducts.push(...response.value.products)
+    }
+  }
+
+  const uniqueProductsById = new Map<string, Product>()
+
+  for (const product of aggregatedProducts) {
+    if (!uniqueProductsById.has(product.id)) {
+      uniqueProductsById.set(product.id, product)
+    }
+  }
+
+  return Array.from(uniqueProductsById.values())
+}
+
 function buildProductFormData(payload: AdminProductCreatePayload | AdminProductEditPayload): FormData {
   const formData = new FormData()
 

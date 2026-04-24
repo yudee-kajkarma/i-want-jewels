@@ -7,6 +7,8 @@ export type BlogPagination = {
   hasPrevPage: boolean
 }
 
+export type BlogStatus = 'draft' | 'published'
+
 export type BlogListItem = {
   id: string
   title: string
@@ -51,10 +53,40 @@ export type BlogDetail = {
   author?: BlogAuthor
   createdAt?: string
   updatedAt?: string
-  status?: string
+  status?: BlogStatus
 }
 
 export type BlogsResult = {
   blogs: BlogListItem[]
   pagination: BlogPagination
 }
+
+export type AdminBlogListItem = {
+  id: string
+  title: string
+  slug: string
+  status: BlogStatus
+  views: number
+  author: string
+  publishedAt: string
+  updatedAt: string
+}
+
+export type AdminBlogsResult = {
+  blogs: AdminBlogListItem[]
+  pagination: BlogPagination
+}
+
+export type BlogCreatePayload = {
+  title: string
+  content: string
+  excerpt: string
+  coverImage: string
+  tags: string[]
+  relatedProducts: string[]
+  status: BlogStatus
+  metaTitle: string
+  metaDescription: string
+}
+
+export type BlogUpdatePayload = Partial<BlogCreatePayload>

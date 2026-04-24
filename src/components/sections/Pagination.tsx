@@ -1,6 +1,13 @@
 'use client'
 
-import type { ProductsPagination } from '../../types/product'
+type PaginationModel = {
+  currentPage: number
+  totalPages: number
+  totalRecords: number
+  recordsPerPage: number
+  hasNextPage: boolean
+  hasPrevPage: boolean
+}
 
 function ChevronIcon({ direction }: { direction: 'left' | 'right' }) {
   return (
@@ -31,7 +38,7 @@ function getVisiblePages(currentPage: number, totalPages: number): Array<number 
 }
 
 type PaginationProps = {
-  pagination: ProductsPagination
+  pagination: PaginationModel
   currentItemCount?: number
   disabled?: boolean
   onPageChange: (pageNumber: number) => void

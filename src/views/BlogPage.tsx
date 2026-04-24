@@ -1,9 +1,10 @@
 "use client";
 
-import { Link } from "@/lib/router";
+import { useNavigate } from "@/lib/router";
 import BlogCard from "../components/blog/BlogCard";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
+import Pagination from "../components/sections/Pagination";
 import type { BlogListItem, BlogPagination } from "../types/blog";
 
 type BlogPageProps = {
@@ -11,19 +12,12 @@ type BlogPageProps = {
     pagination: BlogPagination;
 };
 
-function buildPageHref(page: number): string {
-    return `/blog?page=${page}`;
-}
-
 export default function BlogPage({ blogs, pagination }: BlogPageProps) {
+    const navigate = useNavigate();
     const totalPosts = pagination.totalRecords;
     const viewedCount = Math.min(
         pagination.currentPage * pagination.recordsPerPage,
         totalPosts,
-    );
-    const pageNumbers = Array.from(
-        { length: pagination.totalPages },
-        (_, index) => index + 1,
     );
 
     return (
@@ -56,8 +50,8 @@ export default function BlogPage({ blogs, pagination }: BlogPageProps) {
                         </div>
                     ) : null}
 
-                    <div className="mt-12 border-t border-zinc-200 pt-6">
-                        <p className="text-center text-sm text-zinc-600">
+                    <div className="mt-12 border-zinc-200 pt-6">
+                        {/* <p className="text-center text-sm text-zinc-600">
                             You've viewed <span className="font-semibold text-zinc-900">{viewedCount}</span> of{" "}
                             <span className="font-semibold text-zinc-900">{totalPosts}</span> posts
                         </p>
@@ -67,48 +61,15 @@ export default function BlogPage({ blogs, pagination }: BlogPageProps) {
                                 className="h-full bg-zinc-900 transition-all duration-300"
                                 style={{ width: `${(viewedCount / Math.max(totalPosts, 1)) * 100}%` }}
                             />
-                        </div>
+                        </div> */}
 
-                        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-                            <Link
-                                to={buildPageHref(Math.max(1, pagination.currentPage - 1))}
-                                aria-disabled={!pagination.hasPrevPage}
-                                className="rounded border border-zinc-300 px-3 py-2 text-xs font-semibold tracking-[0.08em] text-zinc-700 transition hover:bg-zinc-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
-                            >
-                                PREV
-                            </Link>
-
-                            {pageNumbers.map((pageNumber) => {
-                                const isActive = pageNumber === pagination.currentPage;
-
-                                return (
-                                    <Link
-                                        key={pageNumber}
-                                        to={buildPageHref(pageNumber)}
-                                        className={`h-9 min-w-9 rounded border px-3 text-sm transition ${
-                                            isActive
-                                                ? "border-zinc-900 bg-zinc-900 text-white"
-                                                : "border-zinc-300 text-zinc-700 hover:border-zinc-900 hover:text-zinc-900"
-                                        }`}
-                                    >
-                                        {pageNumber}
-                                    </Link>
-                                );
-                            })}
-
-                            <Link
-                                to={buildPageHref(
-                                    Math.min(
-                                        pagination.totalPages,
-                                        pagination.currentPage + 1,
-                                    ),
-                                )}
-                                aria-disabled={!pagination.hasNextPage}
-                                className="rounded border border-zinc-300 px-3 py-2 text-xs font-semibold tracking-[0.08em] text-zinc-700 transition hover:bg-zinc-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
-                            >
-                                NEXT
-                            </Link>
-                        </div>
+                        <Pagination
+                            pagination={pagination}
+                            currentItemCount={blogs.length}
+                            onPageChange={(pageNumber) => {
+                                navigate(`/blog?page=${pageNumber}`);
+                            }}
+                        />
                     </div>
                 </section>
             </main>
