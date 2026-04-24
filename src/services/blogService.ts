@@ -94,6 +94,9 @@ type BlogWriteResponse = {
 
 type BlogImageUploadResponse = {
   success: boolean
+  url?: string
+  imageUrl?: string
+  location?: string
   data?:
     | {
         url?: string
@@ -229,6 +232,12 @@ export async function uploadBlogImage(file: File): Promise<string> {
       'Content-Type': 'multipart/form-data',
     },
   })
+
+  const rootLevelUrl = response.data.url ?? response.data.imageUrl ?? response.data.location
+
+  if (rootLevelUrl) {
+    return rootLevelUrl
+  }
 
   const payload = response.data.data
 
