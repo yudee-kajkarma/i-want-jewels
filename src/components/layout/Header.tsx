@@ -5,9 +5,11 @@ import { CreditCard, LogIn, LogOut, MapPinHouse, PackageSearch, Ticket } from "l
 import { Link, useNavigate } from "@/lib/router";
 import { useAuth } from "../../context/AuthContext";
 import { useCurrency } from "../../context/CurrencyContext";
-import { CURRENCY_OPTIONS, type CurrencyCode } from "../../utils/price";
+import { CURRENCY_OPTIONS, formatPrice, type CurrencyCode } from "../../utils/price";
 import { getCategories } from "../../services/categoryService";
+import { getProducts } from "../../services/productService";
 import { useAppSelector } from "../../store/hooks";
+import type { Product } from "../../types/product";
 import braceletImage from "../../assets/image/bracelet.jpeg";
 import braceletCloseupImage from "../../assets/image/bracelet1.jpeg";
 import earringImage from "../../assets/image/earing1.jpeg";
@@ -105,6 +107,51 @@ const animatedSearchTexts = [
     "Discover timeless sparkle...",
 ];
 const animatedCursor = "|";
+const predictiveSearchLimit = 4;
+const predictiveSearchDebounceMs = 350;
+
+function buildProductDetailHref(product: Product): string {
+    return `/products/${encodeURIComponent(product.slug || product.id)}`;
+}
+
+function buildPredictiveQuerySuggestions(
+    query: string,
+    products: Product[],
+): string[] {
+    const normalizedQuery = query.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+        return [];
+    }
+
+    const normalizedSuggestions = new Set<string>();
+
+    for (const product of products) {
+        const words = product.title
+            .split(/\s+/)
+            .map((word) => word.replace(/[^a-z0-9-]/gi, "").trim())
+            .filter(Boolean);
+
+        for (const word of words) {
+            if (
+                word.toLowerCase().includes(normalizedQuery) &&
+                word.toLowerCase() !== normalizedQuery
+            ) {
+                normalizedSuggestions.add(word);
+            }
+
+            if (normalizedSuggestions.size >= 5) {
+                break;
+            }
+        }
+
+        if (normalizedSuggestions.size >= 5) {
+            break;
+        }
+    }
+
+    return Array.from(normalizedSuggestions);
+}
 
 function normalizeCategoryLabel(value: string): string {
     return value.trim().replace(/ies$/i, "y").replace(/s$/i, "");
@@ -547,12 +594,24 @@ export default function Header() {
     const headerInnerRef = useRef<HTMLDivElement | null>(null);
     const accountMenuRef = useRef<HTMLDivElement | null>(null);
     const shopMenuRef = useRef<HTMLDivElement | null>(null);
+    const desktopSearchRef = useRef<HTMLDivElement | null>(null);
+    const mobileSearchRef = useRef<HTMLFormElement | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
     const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
     const [isMobileShopMenuOpen, setIsMobileShopMenuOpen] = useState(false);
     const [desktopSearchTerm, setDesktopSearchTerm] = useState("");
     const [mobileSearchTerm, setMobileSearchTerm] = useState("");
+    const [desktopPredictiveProducts, setDesktopPredictiveProducts] = useState<
+        Product[]
+    >([]);
+    const [mobilePredictiveProducts, setMobilePredictiveProducts] = useState<
+        Product[]
+    >([]);
+    const [isDesktopSearchLoading, setIsDesktopSearchLoading] = useState(false);
+    const [isMobileSearchLoading, setIsMobileSearchLoading] = useState(false);
+    const [isDesktopSearchOpen, setIsDesktopSearchOpen] = useState(false);
+    const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
     const [animatedPlaceholder, setAnimatedPlaceholder] = useState(
         `${animatedCursor}`,
     );
@@ -632,6 +691,22 @@ export default function Header() {
             },
         ];
     }, [visibleShopCategories]);
+    const desktopQuerySuggestions = useMemo(
+        () =>
+            buildPredictiveQuerySuggestions(
+                desktopSearchTerm,
+                desktopPredictiveProducts,
+            ),
+        [desktopPredictiveProducts, desktopSearchTerm],
+    );
+    const mobileQuerySuggestions = useMemo(
+        () =>
+            buildPredictiveQuerySuggestions(
+                mobileSearchTerm,
+                mobilePredictiveProducts,
+            ),
+        [mobilePredictiveProducts, mobileSearchTerm],
+    );
 
     useEffect(() => {
         let textIndex = 0;
@@ -713,6 +788,100 @@ export default function Header() {
     }, [isAdmin]);
 
     useEffect(() => {
+        const normalizedTerm = desktopSearchTerm.trim();
+
+        if (normalizedTerm.length < 2) {
+            setDesktopPredictiveProducts([]);
+            setIsDesktopSearchLoading(false);
+            return;
+        }
+
+        let isActive = true;
+        setIsDesktopSearchLoading(true);
+
+        const timeoutId = window.setTimeout(async () => {
+            try {
+                const result = await getProducts({
+                    search: normalizedTerm,
+                    page: 1,
+                    limit: predictiveSearchLimit,
+                    currency,
+                });
+
+                if (!isActive) {
+                    return;
+                }
+
+                setDesktopPredictiveProducts(
+                    result.products.slice(0, predictiveSearchLimit),
+                );
+            } catch {
+                if (!isActive) {
+                    return;
+                }
+
+                setDesktopPredictiveProducts([]);
+            } finally {
+                if (isActive) {
+                    setIsDesktopSearchLoading(false);
+                }
+            }
+        }, predictiveSearchDebounceMs);
+
+        return () => {
+            isActive = false;
+            window.clearTimeout(timeoutId);
+        };
+    }, [currency, desktopSearchTerm]);
+
+    useEffect(() => {
+        const normalizedTerm = mobileSearchTerm.trim();
+
+        if (normalizedTerm.length < 2) {
+            setMobilePredictiveProducts([]);
+            setIsMobileSearchLoading(false);
+            return;
+        }
+
+        let isActive = true;
+        setIsMobileSearchLoading(true);
+
+        const timeoutId = window.setTimeout(async () => {
+            try {
+                const result = await getProducts({
+                    search: normalizedTerm,
+                    page: 1,
+                    limit: predictiveSearchLimit,
+                    currency,
+                });
+
+                if (!isActive) {
+                    return;
+                }
+
+                setMobilePredictiveProducts(
+                    result.products.slice(0, predictiveSearchLimit),
+                );
+            } catch {
+                if (!isActive) {
+                    return;
+                }
+
+                setMobilePredictiveProducts([]);
+            } finally {
+                if (isActive) {
+                    setIsMobileSearchLoading(false);
+                }
+            }
+        }, predictiveSearchDebounceMs);
+
+        return () => {
+            isActive = false;
+            window.clearTimeout(timeoutId);
+        };
+    }, [currency, mobileSearchTerm]);
+
+    useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (!accountMenuRef.current?.contains(event.target as Node)) {
                 setIsAccountMenuOpen(false);
@@ -721,12 +890,22 @@ export default function Header() {
             if (!shopMenuRef.current?.contains(event.target as Node)) {
                 setIsShopMenuOpen(false);
             }
+
+            if (!desktopSearchRef.current?.contains(event.target as Node)) {
+                setIsDesktopSearchOpen(false);
+            }
+
+            if (!mobileSearchRef.current?.contains(event.target as Node)) {
+                setIsMobileSearchOpen(false);
+            }
         }
 
         function handleEscape(event: KeyboardEvent) {
             if (event.key === "Escape") {
                 setIsAccountMenuOpen(false);
                 setIsShopMenuOpen(false);
+                setIsDesktopSearchOpen(false);
+                setIsMobileSearchOpen(false);
             }
         }
 
@@ -774,6 +953,7 @@ export default function Header() {
         setIsMobileMenuOpen(false);
         setIsMobileShopMenuOpen(false);
         setIsShopMenuOpen(false);
+        setIsMobileSearchOpen(false);
     }
 
     function openShopMenu() {
@@ -875,6 +1055,9 @@ export default function Header() {
         options?: { closeMobileMenu?: boolean },
     ) {
         const normalizedTerm = searchTerm.trim();
+
+        setIsDesktopSearchOpen(false);
+        setIsMobileSearchOpen(false);
 
         if (!normalizedTerm) {
             navigate("/products");
@@ -996,9 +1179,12 @@ export default function Header() {
                             />
                         </Link>
 
-                        <div className="hidden flex-1 justify-center md:flex">
+                        <div
+                            ref={desktopSearchRef}
+                            className="hidden flex-1 justify-center md:flex"
+                        >
                             <form
-                                className="w-full"
+                                className="relative w-full"
                                 onSubmit={(event) => {
                                     event.preventDefault();
                                     handleGlobalSearchSubmit(
@@ -1012,6 +1198,9 @@ export default function Header() {
                                         type="search"
                                         placeholder={animatedPlaceholder}
                                         value={desktopSearchTerm}
+                                        onFocus={() =>
+                                            setIsDesktopSearchOpen(true)
+                                        }
                                         onChange={(event) =>
                                             setDesktopSearchTerm(
                                                 event.target.value,
@@ -1030,6 +1219,115 @@ export default function Header() {
                                         <MicIcon />
                                     </button>
                                 </label>
+
+                                {isDesktopSearchOpen &&
+                                desktopSearchTerm.trim().length > 0 ? (
+                                    <div className="absolute left-1/2 top-[calc(100%+10px)] z-40 w-full max-w-[620px] -translate-x-1/2 rounded-2xl border border-[#eadfd4] bg-white p-4 shadow-[0_24px_60px_rgba(55,31,10,0.14)]">
+                                        <p className="text-[16px] font-medium text-zinc-900">
+                                            Search for "
+                                            <span className="text-pink-500">
+                                                {desktopSearchTerm.trim()}
+                                            </span>
+                                            "
+                                        </p>
+
+                                        {desktopQuerySuggestions.length > 0 ? (
+                                            <div className="mt-3">
+                                                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">
+                                                    Suggestions
+                                                </p>
+                                                <div className="mt-2 flex flex-wrap gap-2">
+                                                    {desktopQuerySuggestions.map(
+                                                        (suggestion) => (
+                                                            <button
+                                                                key={suggestion}
+                                                                type="button"
+                                                                onClick={() => {
+                                                                    setDesktopSearchTerm(
+                                                                        suggestion,
+                                                                    );
+                                                                    handleGlobalSearchSubmit(
+                                                                        suggestion,
+                                                                    );
+                                                                }}
+                                                                className="rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700 transition hover:border-pink-300 hover:text-pink-500"
+                                                            >
+                                                                {suggestion}
+                                                            </button>
+                                                        ),
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ) : null}
+
+                                        <div className="mt-4 space-y-2">
+                                            {isDesktopSearchLoading ? (
+                                                <p className="text-sm text-zinc-500">
+                                                    Searching products...
+                                                </p>
+                                            ) : desktopPredictiveProducts
+                                                  .length > 0 ? (
+                                                desktopPredictiveProducts.map(
+                                                    (product) => (
+                                                        <Link
+                                                            key={product.id}
+                                                            to={buildProductDetailHref(
+                                                                product,
+                                                            )}
+                                                            onClick={() =>
+                                                                setIsDesktopSearchOpen(
+                                                                    false,
+                                                                )
+                                                            }
+                                                            className="flex items-center gap-3 rounded-xl px-2 py-2 transition hover:bg-[#fff7fb]"
+                                                        >
+                                                            <img
+                                                                src={
+                                                                    product.primaryImage
+                                                                }
+                                                                alt={
+                                                                    product.title
+                                                                }
+                                                                className="h-12 w-12 rounded-lg object-cover"
+                                                            />
+                                                            <div className="min-w-0 flex-1">
+                                                                <p className="truncate text-sm font-medium text-zinc-900">
+                                                                    {
+                                                                        product.title
+                                                                    }
+                                                                </p>
+                                                                <p className="text-xs text-zinc-500">
+                                                                    {formatPrice(
+                                                                        product.minPrice,
+                                                                        currency,
+                                                                    )}
+                                                                </p>
+                                                            </div>
+                                                        </Link>
+                                                    ),
+                                                )
+                                            ) : (
+                                                <p className="text-sm text-zinc-500">
+                                                    No related products found.
+                                                </p>
+                                            )}
+                                        </div>
+
+                                        <div className="mt-4">
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    handleGlobalSearchSubmit(
+                                                        desktopSearchTerm,
+                                                    )
+                                                }
+                                                className="w-full rounded-full border border-[#e5d7cc] px-4 py-2 text-sm font-semibold tracking-[0.04em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                                            >
+                                                View all results
+                                            </button>
+                                        </div>
+                                    </div>
+                                ) : null}
                             </form>
                         </div>
                     </>
@@ -1310,6 +1608,8 @@ export default function Header() {
                     <div className="max-h-[calc(100vh-68px)] overflow-y-auto border-t border-zinc-100 px-4 py-4 lg:hidden">
                         <div className="mx-auto max-w-7xl space-y-4">
                             <form
+                                ref={mobileSearchRef}
+                                className="relative"
                                 onSubmit={(event) => {
                                     event.preventDefault();
                                     handleGlobalSearchSubmit(mobileSearchTerm, {
@@ -1323,6 +1623,9 @@ export default function Header() {
                                         type="search"
                                         placeholder={animatedPlaceholder}
                                         value={mobileSearchTerm}
+                                        onFocus={() =>
+                                            setIsMobileSearchOpen(true)
+                                        }
                                         onChange={(event) =>
                                             setMobileSearchTerm(
                                                 event.target.value,
@@ -1341,6 +1644,111 @@ export default function Header() {
                                         <MicIcon />
                                     </button>
                                 </label>
+
+                                {isMobileSearchOpen &&
+                                mobileSearchTerm.trim().length > 0 ? (
+                                    <div className="mt-2 rounded-xl border border-[#eadfd4] bg-white p-3 shadow-[0_16px_40px_rgba(55,31,10,0.12)]">
+                                        <p className="text-sm font-medium text-zinc-900">
+                                            Search for "
+                                            <span className="text-pink-500">
+                                                {mobileSearchTerm.trim()}
+                                            </span>
+                                            "
+                                        </p>
+
+                                        {mobileQuerySuggestions.length > 0 ? (
+                                            <div className="mt-2 flex flex-wrap gap-2">
+                                                {mobileQuerySuggestions.map(
+                                                    (suggestion) => (
+                                                        <button
+                                                            key={suggestion}
+                                                            type="button"
+                                                            onClick={() => {
+                                                                setMobileSearchTerm(
+                                                                    suggestion,
+                                                                );
+                                                                handleGlobalSearchSubmit(
+                                                                    suggestion,
+                                                                    {
+                                                                        closeMobileMenu:
+                                                                            true,
+                                                                    },
+                                                                );
+                                                            }}
+                                                            className="rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700"
+                                                        >
+                                                            {suggestion}
+                                                        </button>
+                                                    ),
+                                                )}
+                                            </div>
+                                        ) : null}
+
+                                        <div className="mt-3 space-y-2">
+                                            {isMobileSearchLoading ? (
+                                                <p className="text-sm text-zinc-500">
+                                                    Searching products...
+                                                </p>
+                                            ) : mobilePredictiveProducts.length >
+                                              0 ? (
+                                                mobilePredictiveProducts.map(
+                                                    (product) => (
+                                                        <Link
+                                                            key={product.id}
+                                                            to={buildProductDetailHref(
+                                                                product,
+                                                            )}
+                                                            onClick={closeMenus}
+                                                            className="flex items-center gap-3 rounded-lg px-2 py-2 transition hover:bg-[#fff7fb]"
+                                                        >
+                                                            <img
+                                                                src={
+                                                                    product.primaryImage
+                                                                }
+                                                                alt={
+                                                                    product.title
+                                                                }
+                                                                className="h-10 w-10 rounded-md object-cover"
+                                                            />
+                                                            <div className="min-w-0 flex-1">
+                                                                <p className="truncate text-sm text-zinc-900">
+                                                                    {
+                                                                        product.title
+                                                                    }
+                                                                </p>
+                                                                <p className="text-xs text-zinc-500">
+                                                                    {formatPrice(
+                                                                        product.minPrice,
+                                                                        currency,
+                                                                    )}
+                                                                </p>
+                                                            </div>
+                                                        </Link>
+                                                    ),
+                                                )
+                                            ) : (
+                                                <p className="text-sm text-zinc-500">
+                                                    No related products found.
+                                                </p>
+                                            )}
+                                        </div>
+
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                handleGlobalSearchSubmit(
+                                                    mobileSearchTerm,
+                                                    {
+                                                        closeMobileMenu: true,
+                                                    },
+                                                )
+                                            }
+                                            className="mt-3 w-full rounded-lg border border-[#e5d7cc] px-3 py-2 text-sm font-semibold text-[#3c2b20]"
+                                        >
+                                            View all results
+                                        </button>
+                                    </div>
+                                ) : null}
                             </form>
 
                             {!isAdmin ? (
