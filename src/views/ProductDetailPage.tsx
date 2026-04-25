@@ -808,39 +808,52 @@ export default function ProductDetailPage({
                     </button>
                   </div> */}
 
-                  <div className="mt-4">
-                    <p className="mb-2 text-sm font-medium text-zinc-900">Quantity:</p>
-                    <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:items-center">
-                      <div className="inline-flex items-center rounded-md border border-[#d9d9d9]">
-                        <button
-                          type="button"
-                          onClick={() => setQuantity((value) => Math.max(1, value - 1))}
-                          className="flex h-9 w-9 items-center justify-center text-base text-zinc-700"
-                        >
-                          -
-                        </button>
-                        <span className="flex h-9 min-w-12 items-center justify-center border-x border-[#d9d9d9] px-3 text-sm font-medium">
-                          {quantity}
-                        </span>
-                        <button
-                          type="button"
-                          onClick={() => setQuantity((value) => value + 1)}
-                          className="flex h-9 w-9 items-center justify-center text-base text-zinc-700"
-                        >
-                          +
-                        </button>
-                      </div>
+<div className="mt-4">
+  <p className="mb-2 text-sm font-medium text-zinc-900">
+    Quantity:
+  </p>
 
-                      <button
-                        type="button"
-                        onClick={() => void handleAddToCart()}
-                        disabled={isAddingToCart}
-                        className="w-full rounded-xl border border-[#1a1a1a] px-4 py-3 text-xs font-bold tracking-[0.12em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
-                      >
-                        {isAddingToCart ? 'ADDING...' : 'ADD TO CART'}
-                      </button>
-                    </div>
-                  </div>
+  {/* One Line Mobile + Desktop */}
+  <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-2 items-center">
+    
+    {/* Quantity Box */}
+    <div className="flex h-[44px] items-center overflow-hidden rounded-md border border-[#d9d9d9]">
+      <button
+        type="button"
+        onClick={() =>
+          setQuantity((value) => Math.max(1, value - 1))
+        }
+        className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
+      >
+        -
+      </button>
+
+      <span className="flex h-full w-1/2 items-center justify-center border-x border-[#d9d9d9] text-sm font-medium">
+        {quantity}
+      </span>
+
+      <button
+        type="button"
+        onClick={() =>
+          setQuantity((value) => value + 1)
+        }
+        className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
+      >
+        +
+      </button>
+    </div>
+
+    {/* Add To Cart */}
+    <button
+      type="button"
+      onClick={() => void handleAddToCart()}
+      disabled={isAddingToCart}
+      className="h-[44px] w-full rounded-xl border border-[#1a1a1a] px-4 text-[10px] sm:text-xs font-bold tracking-[0.12em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
+    >
+      {isAddingToCart ? "ADDING..." : "ADD TO CART"}
+    </button>
+  </div>
+</div>
                 </div>
 
                 <div className="grid gap-3">
