@@ -7,240 +7,224 @@ import banner3 from "@/assets/banner/Banner-3.jpg.jpeg";
 import banner4 from "@/assets/banner/Banner-4.jpg.jpeg";
 
 const heroSlides = [
-    {
-        src: banner2.src,
-        alt: "Jewellery banner one",
-    },
-    {
-        src: banner1.src,
-        alt: "Jewellery banner two",
-    },
-    {
-        src: banner3.src,
-        alt: "Jewellery banner three",
-    },
-    {
-        src: banner4.src,
-        alt: "Jewellery banner four",
-    }
+  { src: banner2.src, alt: "Jewellery banner one" },
+  { src: banner1.src, alt: "Jewellery banner two" },
+  { src: banner3.src, alt: "Jewellery banner three" },
+  { src: banner4.src, alt: "Jewellery banner four" },
 ];
-
-function getWrappedIndex(index: number) {
-    return (index + heroSlides.length) % heroSlides.length;
-}
 
 const autoplayDelayMs = 4000;
 const transitionDurationMs = 1000;
 
-function getSliderConfig(containerWidth: number) {
-    if (containerWidth >= 1024) {
-        return {
-            slidesPerView: 1.2,
-            spaceBetween: 30,
-        };
-    }
+function getWrappedIndex(index: number) {
+  return (index + heroSlides.length) % heroSlides.length;
+}
 
-    if (containerWidth >= 768) {
-        return {
-            slidesPerView: 1,
-            spaceBetween: 15,
-        };
-    }
-
+function getSliderConfig(width: number) {
+  // Desktop compare width
+  if (width >= 1024) {
     return {
-        slidesPerView: 1,
-        spaceBetween: 15,
+      slidesPerView: 1.2,
+      spaceBetween: 24,
     };
+  }
+
+  // Tablet
+  if (width >= 768) {
+    return {
+      slidesPerView: 1,
+      spaceBetween: 12,
+    };
+  }
+
+  // Mobile Full Width
+  return {
+    slidesPerView: 1,
+    spaceBetween: 0,
+  };
 }
 
 export default function Hero() {
-    const containerRef = useRef<HTMLDivElement | null>(null);
-    const [trackIndex, setTrackIndex] = useState(1);
-    const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
-    const [containerWidth, setContainerWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-    const logicalSlideIndex = getWrappedIndex(trackIndex - 1);
-    const sliderTrack = [
-        heroSlides[heroSlides.length - 1],
-        ...heroSlides,
-        heroSlides[0],
-    ];
-    const sliderConfig = useMemo(
-        () => getSliderConfig(containerWidth),
-        [containerWidth],
+  const [trackIndex, setTrackIndex] = useState(1);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [isTransitionEnabled, setIsTransitionEnabled] =
+    useState(true);
+
+  const logicalSlideIndex = getWrappedIndex(trackIndex - 1);
+
+  const sliderTrack = [
+    heroSlides[heroSlides.length - 1],
+    ...heroSlides,
+    heroSlides[0],
+  ];
+
+  const sliderConfig = useMemo(
+    () => getSliderConfig(containerWidth),
+    [containerWidth]
+  );
+
+  const slideWidth =
+    containerWidth > 0
+      ? (containerWidth -
+          sliderConfig.spaceBetween *
+            (sliderConfig.slidesPerView - 1)) /
+        sliderConfig.slidesPerView
+      : 0;
+
+  const centerOffset =
+    containerWidth > 0
+      ? (containerWidth - slideWidth) / 2
+      : 0;
+
+  const translateX =
+    containerWidth > 0
+      ? -(
+          trackIndex *
+            (slideWidth + sliderConfig.spaceBetween) -
+          centerOffset
+        )
+      : 0;
+
+  useEffect(() => {
+    const element = containerRef.current;
+
+    if (!element) return;
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+
+      setContainerWidth(entry.contentRect.width);
+    });
+
+    resizeObserver.observe(element);
+
+    setContainerWidth(
+      element.getBoundingClientRect().width
     );
-    const slideWidth =
-        containerWidth > 0
-            ? (containerWidth -
-                  sliderConfig.spaceBetween *
-                      (sliderConfig.slidesPerView - 1)) /
-              sliderConfig.slidesPerView
-            : 0;
-    const centerOffset =
-        containerWidth > 0 ? (containerWidth - slideWidth) / 2 : 0;
-    const translateX =
-        containerWidth > 0
-            ? -(
-                  trackIndex * (slideWidth + sliderConfig.spaceBetween) -
-                  centerOffset
-              )
-            : 0;
 
-    useEffect(() => {
-        const containerElement = containerRef.current;
+    return () => resizeObserver.disconnect();
+  }, []);
 
-        if (!containerElement) {
-            return;
-        }
+  function nextSlide() {
+    setIsTransitionEnabled(true);
+    setTrackIndex((prev) => prev + 1);
+  }
 
-        const resizeObserver = new ResizeObserver((entries) => {
-            const entry = entries[0];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, autoplayDelayMs);
 
-            if (!entry) {
-                return;
-            }
+    return () => clearInterval(timer);
+  }, []);
 
-            setContainerWidth(entry.contentRect.width);
-        });
+  useEffect(() => {
+    if (trackIndex === sliderTrack.length - 1) {
+      const timer = setTimeout(() => {
+        setIsTransitionEnabled(false);
+        setTrackIndex(1);
+      }, transitionDurationMs + 20);
 
-        resizeObserver.observe(containerElement);
-        setContainerWidth(containerElement.getBoundingClientRect().width);
-
-        return () => {
-            resizeObserver.disconnect();
-        };
-    }, []);
-
-    function goToNextSlide() {
-        setIsTransitionEnabled(true);
-        setTrackIndex((currentIndex) => currentIndex + 1);
+      return () => clearTimeout(timer);
     }
 
-    function goToPreviousSlide() {
-        setIsTransitionEnabled(true);
-        setTrackIndex((currentIndex) => currentIndex - 1);
+    if (trackIndex === 0) {
+      const timer = setTimeout(() => {
+        setIsTransitionEnabled(false);
+        setTrackIndex(heroSlides.length);
+      }, transitionDurationMs + 20);
+
+      return () => clearTimeout(timer);
     }
+  }, [trackIndex, sliderTrack.length]);
 
-    useEffect(() => {
-        const timer = window.setInterval(() => {
-            goToNextSlide();
-        }, autoplayDelayMs);
+  useEffect(() => {
+    if (!isTransitionEnabled) {
+      const raf = requestAnimationFrame(() => {
+        setIsTransitionEnabled(true);
+      });
 
-        return () => {
-            window.clearInterval(timer);
-        };
-    }, []);
+      return () => cancelAnimationFrame(raf);
+    }
+  }, [isTransitionEnabled]);
 
-    useEffect(() => {
-        if (trackIndex === sliderTrack.length - 1) {
-            const resetTimer = window.setTimeout(() => {
-                setIsTransitionEnabled(false);
-                setTrackIndex(1);
-            }, transitionDurationMs + 20);
+  return (
+    <section className="overflow-hidden bg-white py-0">
+      <div className="mx-auto w-full max-w-[1920px] px-0">
+        <div
+          ref={containerRef}
+          className="relative overflow-hidden"
+        >
+          {/* Slider Track */}
+          <div
+            className={`flex will-change-transform ${
+              isTransitionEnabled
+                ? "transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                : ""
+            }`}
+            style={{
+              gap: `${sliderConfig.spaceBetween}px`,
+              transform: `translate3d(${translateX}px,0,0)`,
+            }}
+          >
+            {sliderTrack.map((slide, index) => (
+              <div
+                key={`${slide.src}-${index}`}
+                className="shrink-0 overflow-hidden"
+                style={{
+                  width:
+                    slideWidth > 0
+                      ? `${slideWidth}px`
+                      : "100%",
+                }}
+              >
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={`
+                    w-full
 
-            return () => {
-                window.clearTimeout(resetTimer);
-            };
-        }
+                    h-auto
+                    md:h-[660px]
 
-        if (trackIndex === 0) {
-            const resetTimer = window.setTimeout(() => {
-                setIsTransitionEnabled(false);
-                setTrackIndex(heroSlides.length);
-            }, transitionDurationMs + 20);
+                    object-contain
+                    md:object-cover
 
-            return () => {
-                window.clearTimeout(resetTimer);
-            };
-        }
+                    transition-all duration-1000
 
-        return;
-    }, [trackIndex, sliderTrack.length]);
+                    ${
+                      index === trackIndex
+                        ? "scale-100 opacity-100"
+                        : "scale-[0.97] opacity-90"
+                    }
+                  `}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
-    useEffect(() => {
-        if (!isTransitionEnabled) {
-            const rafId = window.requestAnimationFrame(() => {
+        {/* Dots */}
+        <div className="mt-3 flex items-center justify-center gap-3">
+          {heroSlides.map((slide, index) => (
+            <button
+              key={slide.src}
+              onClick={() => {
+                setTrackIndex(index + 1);
                 setIsTransitionEnabled(true);
-            });
-
-            return () => {
-                window.cancelAnimationFrame(rafId);
-            };
-        }
-
-        return;
-    }, [isTransitionEnabled]);
-
-    return (
-        <section className="overflow-hidden bg-white py-2 md:py-2 lg:py-2">
-            <div className="mx-auto max-w-[1920px] px-1 sm:px-2 lg:px-4">
-                <div ref={containerRef} className="relative overflow-hidden">
-                    <div
-                        className={`flex will-change-transform ${isTransitionEnabled ? "transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]" : ""}`}
-                        style={{
-                            gap: `${sliderConfig.spaceBetween}px`,
-                            transform: `translate3d(${translateX}px, 0, 0)`,
-                        }}
-                    >
-                        {sliderTrack.map((slide, index) => (
-                            <div
-                                key={`${slide.src}-${index}`}
-                                className="shrink-0 overflow-hidden rounded-[10px]"
-                                style={{
-                                    width:
-                                        slideWidth > 0
-                                            ? `${slideWidth}px`
-                                            : "100%",
-                                }}
-                            >
-                                <img
-                                    src={slide.src}
-                                    alt={slide.alt}
-                                    className={`h-[660px] w-full object-cover transition-all duration-1000 md:h-[660px] lg:h-[660px] ${index === trackIndex ? "scale-100 opacity-100" : "scale-[0.97] opacity-85"}`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* <button
-                        type="button"
-                        aria-label="Previous slide"
-                        onClick={goToPreviousSlide}
-                        className="absolute left-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-zinc-700 shadow-sm transition hover:bg-white md:flex"
-                    >
-                        <span aria-hidden="true">‹</span>
-                    </button>
-
-                    <button
-                        type="button"
-                        aria-label="Next slide"
-                        onClick={goToNextSlide}
-                        className="absolute right-2 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-zinc-700 shadow-sm transition hover:bg-white md:flex"
-                    >
-                        <span aria-hidden="true">›</span>
-                    </button> */}
-                </div>
-
-                <div className="mt-2 flex items-center justify-center gap-4">
-                    {heroSlides.map((slide, index) => (
-                        <button
-                            key={slide.src}
-                            type="button"
-                            aria-label={`Go to slide ${index + 1}`}
-                            aria-pressed={index === logicalSlideIndex}
-                            onClick={() => {
-                                setIsTransitionEnabled(true);
-                                setTrackIndex(index + 1);
-                            }}
-                            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-                                index === logicalSlideIndex
-                                    ? "bg-[#7d3434]"
-                                    : "bg-[#c9c9c9]"
-                            }`}
-                        />
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+              }}
+              className={`h-2.5 w-2.5 rounded-full transition-all ${
+                logicalSlideIndex === index
+                  ? "bg-[#7d3434]"
+                  : "bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

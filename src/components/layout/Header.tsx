@@ -5,7 +5,8 @@ import { CreditCard, LogIn, LogOut, MapPinHouse, PackageSearch, Ticket } from "l
 import { Link, useNavigate } from "@/lib/router";
 import { useAuth } from "../../context/AuthContext";
 import { useCurrency } from "../../context/CurrencyContext";
-import { CURRENCY_OPTIONS, formatPrice, type CurrencyCode } from "../../utils/price";
+import { formatPrice } from "../../utils/price";
+import CurrencySelectorRow from "./CurrencySelectorRow";
 import { getCategories } from "../../services/categoryService";
 import { getProducts } from "../../services/productService";
 import { useAppSelector } from "../../store/hooks";
@@ -1351,28 +1352,13 @@ export default function Header() {
                     <div
                         className="flex items-center gap-0.5 text-pink-400 sm:gap-1 md:w-[220px] md:justify-end"
                     >
-                        <label className="hidden items-center pr-1 md:flex">
-                            <span className="sr-only">Select currency</span>
-                            <select
-                                value={currency}
-                                onChange={(event) =>
-                                    setCurrency(
-                                        event.target.value as CurrencyCode,
-                                    )
-                                }
-                                className="cursor-pointer rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-normal text-zinc-700 transition hover:border-zinc-400 focus:border-zinc-500 focus:outline-none"
-                                aria-label="Select currency"
-                            >
-                                {CURRENCY_OPTIONS.map((option) => (
-                                    <option
-                                        key={option.code}
-                                        value={option.code}
-                                    >
-                                        {option.symbol} {option.code}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
+                        <div className="hidden items-center pr-1 md:flex">
+                            <CurrencySelectorRow
+                                currency={currency}
+                                setCurrency={setCurrency}
+                                variant="desktop"
+                            />
+                        </div>
 
                         <div ref={accountMenuRef} className="relative">
                             <button
@@ -1754,29 +1740,10 @@ export default function Header() {
 
                             {!isAdmin ? (
                                 <div className="rounded-xl border border-zinc-200 bg-white px-4 py-3">
-                                    <label className="flex items-center justify-between gap-3 text-sm text-zinc-700">
-                                        <span>Currency</span>
-                                        <select
-                                            value={currency}
-                                            onChange={(event) =>
-                                                setCurrency(
-                                                    event.target
-                                                        .value as CurrencyCode,
-                                                )
-                                            }
-                                            className="cursor-pointer rounded-md border border-zinc-200 bg-white px-2 py-1 text-sm font-medium text-zinc-700 focus:border-zinc-500 focus:outline-none"
-                                            aria-label="Select currency"
-                                        >
-                                            {CURRENCY_OPTIONS.map((option) => (
-                                                <option
-                                                    key={option.code}
-                                                    value={option.code}
-                                                >
-                                                    {option.symbol} {option.label}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </label>
+                                    <CurrencySelectorRow
+                                        currency={currency}
+                                        setCurrency={setCurrency}
+                                    />
                                 </div>
                             ) : null}
 
