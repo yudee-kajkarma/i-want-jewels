@@ -1153,7 +1153,7 @@ export default function Header() {
             <header className="sticky top-0 z-30 border-b border-zinc-100 bg-white">
                 <div
                     ref={headerInnerRef}
-                    className="mx-auto flex max-w-[1480px] items-center justify-between gap-3 px-4 py-1.5 md:gap-4 md:py-2 lg:px-8"
+                    className="mx-auto flex max-w-[1480px] items-center justify-between gap-3 px-4 py-1.5 lg:gap-4 lg:py-2 lg:px-8"
                 >
                     <button
                         type="button"
@@ -1172,7 +1172,7 @@ export default function Header() {
                     <>
                         <Link
                             to={brandLink}
-                            className="hidden w-[220px] items-center justify-start md:flex"
+                            className="hidden w-[220px] items-center justify-start lg:flex"
                         >
                             <img
                                 src={brandLogo.src}
@@ -1183,7 +1183,7 @@ export default function Header() {
 
                         <div
                             ref={desktopSearchRef}
-                            className="hidden flex-1 justify-center md:flex"
+                            className="hidden flex-1 justify-center lg:flex"
                         >
                             <form
                                 className="relative w-full"
@@ -1335,11 +1335,11 @@ export default function Header() {
                     </>
 
                     <div
-                        className="flex flex-1 items-center justify-center md:hidden"
+                        className="flex flex-1 items-center justify-center lg:hidden"
                     >
                         <Link
                             to={brandLink}
-                            className="flex items-center justify-center md:hidden"
+                            className="flex items-center justify-center lg:hidden"
                         >
                             <img
                                 src={brandLogo.src}
@@ -1350,9 +1350,9 @@ export default function Header() {
                     </div>
 
                     <div
-                        className="flex items-center gap-0.5 text-pink-400 sm:gap-1 md:w-[220px] md:justify-end"
+                        className="flex items-center gap-0.5 text-pink-400 sm:gap-1 lg:w-[250px] lg:justify-end"
                     >
-                        <div className="hidden items-center pr-1 md:flex">
+                        <div className="hidden items-center pr-1 lg:flex">
                             <CurrencySelectorRow
                                 currency={currency}
                                 setCurrency={setCurrency}

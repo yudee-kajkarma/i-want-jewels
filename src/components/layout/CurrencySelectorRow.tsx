@@ -65,7 +65,7 @@ export default function CurrencySelectorRow({
 
     const buttonClassName =
         variant === "desktop"
-            ? "inline-flex min-w-[220px] items-center justify-between gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs text-zinc-700 hover:border-zinc-400"
+            ? "inline-flex w-[200px] max-w-[220px] items-center justify-between gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs text-zinc-700 hover:border-zinc-400"
             : "inline-flex min-w-[230px] items-center justify-between gap-2 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-700 hover:border-zinc-400";
 
     const dropdownClassName =

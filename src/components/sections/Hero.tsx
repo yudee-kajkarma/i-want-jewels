@@ -21,7 +21,6 @@ function getWrappedIndex(index: number) {
 }
 
 function getSliderConfig(width: number) {
-  // Desktop compare width
   if (width >= 1024) {
     return {
       slidesPerView: 1.2,
@@ -29,7 +28,6 @@ function getSliderConfig(width: number) {
     };
   }
 
-  // Tablet
   if (width >= 768) {
     return {
       slidesPerView: 1,
@@ -37,7 +35,6 @@ function getSliderConfig(width: number) {
     };
   }
 
-  // Mobile Full Width
   return {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -154,65 +151,65 @@ export default function Hero() {
   return (
     <section className="overflow-hidden bg-white py-0">
       <div className="mx-auto w-full max-w-[1920px] px-0">
-{/* Main Slider */}
-<div
-  ref={containerRef}
-  className="relative overflow-hidden"
->
-  {/* Slider Track */}
-  <div
-    className={`flex will-change-transform ${
-      isTransitionEnabled
-        ? "transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
-        : ""
-    }`}
-    style={{
-      gap: `${sliderConfig.spaceBetween}px`,
-      transform: `translate3d(${translateX}px,0,0)`,
-    }}
-  >
-    {sliderTrack.map((slide, index) => (
-      <div
-        key={`${slide.src}-${index}`}
-        className="shrink-0 overflow-hidden"
-        style={{
-          width:
-            slideWidth > 0
-              ? `${slideWidth}px`
-              : "100%",
-        }}
-      >
-        <img
-          src={slide.src}
-          alt={slide.alt}
-          className={`w-full h-auto md:h-[680px] object-contain transition-all duration-1000 ${
-            index === trackIndex
-              ? "scale-100 opacity-100"
-              : "scale-[0.97] opacity-90"
-          }`}
-        />
-      </div>
-    ))}
-  </div>
+        {/* Main Slider */}
+        <div
+          ref={containerRef}
+          className="relative overflow-hidden w-full"
+        >
+          {/* Slider Track */}
+          <div
+            className={`flex will-change-transform ${
+              isTransitionEnabled
+                ? "transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                : ""
+            }`}
+            style={{
+              gap: `${sliderConfig.spaceBetween}px`,
+              transform: `translate3d(${translateX}px,0,0)`,
+            }}
+          >
+            {sliderTrack.map((slide, index) => (
+              <div
+                key={`${slide.src}-${index}`}
+                className="shrink-0 overflow-hidden"
+                style={{
+                  width:
+                    slideWidth > 0
+                      ? `${slideWidth}px`
+                      : "100%",
+                }}
+              >
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  className={`w-full h-auto sm:h-[260px] md:h-[500px] lg:h-[680px] md:object-contain transition-all duration-1000 ${
+                    index === trackIndex
+                      ? "scale-100 opacity-100"
+                      : "scale-[0.97] opacity-90"
+                  }`}
+                />
+              </div>
+            ))}
+          </div>
 
-  {/* FIXED MOBILE DOT POSITION */}
-  <div className="absolute bottom-4 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 md:bottom-6">
-    {heroSlides.map((slide, index) => (
-      <button
-        key={slide.src}
-        onClick={() => {
-          setTrackIndex(index + 1);
-          setIsTransitionEnabled(true);
-        }}
-        className={`h-2.5 rounded-full transition-all duration-300 ${
-          logicalSlideIndex === index
-            ? "w-6 bg-pink-500"
-            : "w-2.5 bg-white"
-        }`}
-      />
-    ))}
-  </div>
-</div>
+          {/* Responsive Fixed Dots */}
+          <div className="absolute bottom-2 sm:bottom-3 md:bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1.5 sm:gap-2 md:gap-3">
+            {heroSlides.map((slide, index) => (
+              <button
+                key={slide.src}
+                onClick={() => {
+                  setTrackIndex(index + 1);
+                  setIsTransitionEnabled(true);
+                }}
+                className={`rounded-full transition-all duration-300 ${
+                  logicalSlideIndex === index
+                    ? "bg-pink-500 w-5 h-2 sm:w-6 md:w-7"
+                    : "bg-gray-200 w-2 h-2 sm:w-2.5 sm:h-2.5"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
