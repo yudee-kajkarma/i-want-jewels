@@ -179,7 +179,7 @@ export default function Hero() {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className={`w-full h-auto sm:h-[260px] md:h-[570px] lg:h-[570px] lg:object-fill md:object-fill rounded-xl  sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
+                  className={`w-full h-auto sm:h-[260px] md:h-[500px] lg:h-[680px] lg:object-fill md:object-fill rounded-xl sm:object-contain sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
                     index === trackIndex
                       ? "scale-100 opacity-100"
                       : "scale-[0.97] opacity-90"
@@ -190,7 +190,7 @@ export default function Hero() {
           </div>
 
           {/* Dots */}
-          <div className="   flex justify-center items-center gap-1.5 sm:gap-2 md:gap-3 mt-4">
+          <div className="absolute bottom-2 sm:bottom-3 md:bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1.5 sm:gap-2 md:gap-3">
             {heroSlides.map((slide, index) => (
               <button
                 key={slide.src}
