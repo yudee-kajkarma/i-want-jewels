@@ -188,10 +188,10 @@ export default function Hero() {
                     w-full
 
                     h-auto
-                    md:h-[660px]
+                    // md:h-[680px]
 
                     object-contain
-                    md:object-cover
+                    md:object-contain
 
                     transition-all duration-1000
 
@@ -208,22 +208,23 @@ export default function Hero() {
         </div>
 
         {/* Dots */}
-        <div className="mt-3 flex items-center justify-center gap-3">
-          {heroSlides.map((slide, index) => (
-            <button
-              key={slide.src}
-              onClick={() => {
-                setTrackIndex(index + 1);
-                setIsTransitionEnabled(true);
-              }}
-              className={`h-2.5 w-2.5 rounded-full transition-all ${
-                logicalSlideIndex === index
-                  ? "bg-[#7d3434]"
-                  : "bg-gray-300"
-              }`}
-            />
-          ))}
-        </div>
+                  {/* Dots Bottom Center On Image */}
+          <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center gap-3 rounded-full mb-2 px-4 py-2 ">
+            {heroSlides.map((slide, index) => (
+              <button
+                key={slide.src}
+                onClick={() => {
+                  setTrackIndex(index + 1);
+                  setIsTransitionEnabled(true);
+                }}
+                className={`h-2.5 w-2.5 rounded-full  ${
+                  logicalSlideIndex === index
+                    ? "bg-pink-500 w-6"
+                    : "bg-white"
+                }`}
+              />
+            ))}
+          </div>
       </div>
     </section>
   );

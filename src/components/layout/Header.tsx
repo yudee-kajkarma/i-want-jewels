@@ -1150,7 +1150,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white">
+            <header className="sticky top-0 z-30 border-b border-zinc-100 bg-white">
                 <div
                     ref={headerInnerRef}
                     className="mx-auto flex max-w-[1480px] items-center justify-between gap-3 px-4 py-1.5 md:gap-4 md:py-2 lg:px-8"
