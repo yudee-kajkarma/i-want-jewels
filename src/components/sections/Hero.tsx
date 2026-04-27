@@ -86,7 +86,6 @@ export default function Hero() {
 
   useEffect(() => {
     const element = containerRef.current;
-
     if (!element) return;
 
     const resizeObserver = new ResizeObserver((entries) => {
@@ -97,7 +96,6 @@ export default function Hero() {
     });
 
     resizeObserver.observe(element);
-
     setContainerWidth(
       element.getBoundingClientRect().width
     );
@@ -150,8 +148,7 @@ export default function Hero() {
 
   return (
     <section className="overflow-hidden bg-white py-0">
-      <div className="mx-auto w-full max-w-[1920px] px-0">
-        {/* Main Slider */}
+      <div className="mx-auto w-full max-w-full px-0">
         <div
           ref={containerRef}
           className="relative overflow-hidden w-full"
@@ -171,7 +168,7 @@ export default function Hero() {
             {sliderTrack.map((slide, index) => (
               <div
                 key={`${slide.src}-${index}`}
-                className="shrink-0 overflow-hidden"
+                className="shrink-0 overflow-hidden px-1 sm:px-2 md:px-3"
                 style={{
                   width:
                     slideWidth > 0
@@ -182,7 +179,7 @@ export default function Hero() {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className={`w-full h-auto sm:h-[260px] md:h-[500px] lg:h-[680px] md:object-contain transition-all duration-1000 ${
+                  className={`w-full h-auto sm:h-[260px] md:h-[500px] lg:h-[680px] lg:object-fill md:object-contain rounded-xl sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
                     index === trackIndex
                       ? "scale-100 opacity-100"
                       : "scale-[0.97] opacity-90"
@@ -192,7 +189,7 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Responsive Fixed Dots */}
+          {/* Dots */}
           <div className="absolute bottom-2 sm:bottom-3 md:bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1.5 sm:gap-2 md:gap-3">
             {heroSlides.map((slide, index) => (
               <button
@@ -204,7 +201,7 @@ export default function Hero() {
                 className={`rounded-full transition-all duration-300 ${
                   logicalSlideIndex === index
                     ? "bg-pink-500 w-5 h-2 sm:w-6 md:w-7"
-                    : "bg-gray-200 w-2 h-2 sm:w-2.5 sm:h-2.5"
+                    : "bg-gray-300 w-2 h-2 sm:w-2.5 sm:h-2.5"
                 }`}
               />
             ))}
