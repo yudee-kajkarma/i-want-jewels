@@ -6,7 +6,7 @@ const informationLinks = [
     // { label: 'Career' },
     { label: "My Account", to: "/profile" },
     { label: "Order & Returns", to: "/orders" },
-    // { label: 'FAQs' },
+    { label: 'FAQs' ,to : "/faq"},
 ];
 
 const quickShopLinks = [

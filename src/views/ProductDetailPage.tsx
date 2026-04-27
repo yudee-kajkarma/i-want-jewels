@@ -20,6 +20,7 @@ import { Link, useLocation, useNavigate, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import ProductCard from '../components/sections/ProductCard'
+import ringSizeGuideImage from '../assets/image/ringsize.jpeg'
 import { useAuth } from '../context/AuthContext'
 import { useCurrency } from '../context/CurrencyContext'
 import {
@@ -83,39 +84,6 @@ const productFeatureItems = [
     description: 'Use on walls, furniture, doors and many more surfaces. The possibilities are endless.',
   },
 ]
-
-const sizeGuideRows = [
-  { size: 'XS', bust: '32', waist: '24-25', lowHip: '33-34' },
-  { size: 'S', bust: '34-35', waist: '26-27', lowHip: '35-36' },
-  { size: 'M', bust: '36-37', waist: '28-29', lowHip: '38-40' },
-  { size: 'L', bust: '38-39', waist: '30-31', lowHip: '42-44' },
-  { size: 'XL', bust: '40-41', waist: '32-33', lowHip: '45-47' },
-  { size: '2XL', bust: '42-43', waist: '34-35', lowHip: '48-50' },
-]
-
-function getSuggestedSize(height: number, weight: number): string {
-  if (height <= 155 || weight <= 45) {
-    return 'XS'
-  }
-
-  if (height <= 165 || weight <= 55) {
-    return 'S'
-  }
-
-  if (height <= 175 || weight <= 65) {
-    return 'M'
-  }
-
-  if (height <= 185 || weight <= 75) {
-    return 'L'
-  }
-
-  if (height <= 195 || weight <= 85) {
-    return 'XL'
-  }
-
-  return '2XL'
-}
 
 function StarRating({ rating }: { rating: number }) {
   const filledStars = Math.round(rating)
@@ -332,8 +300,6 @@ export default function ProductDetailPage({
   const [reviewForm, setReviewForm] = useState<ReviewPayload>(initialReviewForm)
   const [isReviewFormOpen, setIsReviewFormOpen] = useState(false)
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false)
-  const [sizeGuideHeight, setSizeGuideHeight] = useState(200)
-  const [sizeGuideWeight, setSizeGuideWeight] = useState(90)
   const [isAddingToCart, setIsAddingToCart] = useState(false)
   const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false)
   const [isSubmittingReview, setIsSubmittingReview] = useState(false)
@@ -471,7 +437,8 @@ export default function ProductDetailPage({
   const totalReviewCount = reviewsPagination?.totalReviews ?? product?.reviewsCount ?? 0
   const averageReviewRating =
     reviews.length > 0 ? reviews.reduce((total, review) => total + review.rating, 0) / reviews.length : (product?.rating ?? 0)
-  const suggestedSize = getSuggestedSize(sizeGuideHeight, sizeGuideWeight)
+  const normalizedCategory = (product?.category ?? '').trim().toLowerCase()
+  const isRingCategory = normalizedCategory === 'ring' || normalizedCategory === 'rings'
   const basePrice = selectedVariant?.price
   const basePriceAmount = getPriceAmount(basePrice, currency)
   const comparePriceAmount = Math.round(basePriceAmount / 0.625)
@@ -714,9 +681,8 @@ export default function ProductDetailPage({
                           key={image.id}
                           type="button"
                           onClick={() => setSelectedImageId(image.id)}
-                          className={`min-w-[132px] overflow-hidden rounded-[24px] border bg-white p-2 shadow-sm transition lg:min-w-0 ${
-                            isSelectedImage ? 'border-[#111111]' : 'border-[#eadfd4] hover:border-[#8f6b52]'
-                          }`}
+                          className={`min-w-[132px] overflow-hidden rounded-[24px] border bg-white p-2 shadow-sm transition lg:min-w-0 ${isSelectedImage ? 'border-[#111111]' : 'border-[#eadfd4] hover:border-[#8f6b52]'
+                            }`}
                         >
                           <img src={image.src} alt={product.title} className="h-28 w-full object-cover" />
                         </button>
@@ -729,11 +695,10 @@ export default function ProductDetailPage({
                       type="button"
                       onClick={() => void handleWishlistAction()}
                       disabled={isUpdatingWishlist}
-                      className={`absolute right-8 top-8 z-10 flex h-9 w-9 items-center justify-center rounded-md border bg-white/90 shadow-sm backdrop-blur transition disabled:opacity-60 ${
-                        wishlistItem
+                      className={`absolute right-8 top-8 z-10 flex h-9 w-9 items-center justify-center rounded-md border bg-white/90 shadow-sm backdrop-blur transition disabled:opacity-60 ${wishlistItem
                           ? 'border-[#f3c8df] text-[#e83fa9]'
                           : 'border-[#d9d9d9] text-zinc-600 hover:border-[#e83fa9] hover:text-[#e83fa9]'
-                      }`}
+                        }`}
                       aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
                     >
                       <Heart
@@ -788,72 +753,73 @@ export default function ProductDetailPage({
                         type="button"
                         onClick={() => handleVariantChange(variant)}
                         title={variant.title}
-                        className={`h-6 w-6 rounded-full border transition ${
-                          selectedVariant.id === variant.id ? 'border-[#171717]' : 'border-transparent'
-                        }`}
+                        className={`h-6 w-6 rounded-full border transition ${selectedVariant.id === variant.id ? 'border-[#171717]' : 'border-transparent'
+                          }`}
                       >
                         <span className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`} />
                       </button>
                     ))}
                   </div>
 
-                  {/* <div className="mt-6 flex items-center justify-between text-sm">
-                    <p className="font-medium text-zinc-900">Size:</p>
-                    <button
-                      type="button"
-                      onClick={() => setIsSizeGuideOpen(true)}
-                      className="text-[11px] font-medium text-[#c26b5d] underline underline-offset-2"
-                    >
-                      Size Guide
-                    </button>
-                  </div> */}
+                  {isRingCategory ? (
+                    <div className="mt-4 flex items-center  text-sm">
+                      {/* <p className="font-medium text-zinc-900">Ring Size:</p> */}
+                      <button
+                        type="button"
+                        onClick={() => setIsSizeGuideOpen(true)}
+                        className="text-[15px] font-medium text-pink-500 underline underline-offset-2 "
+                      >
+                        View Size Guide
+                      </button>
+                    </div>
+                  ) : null}
 
-<div className="mt-4">
-  <p className="mb-2 text-sm font-medium text-zinc-900">
-    Quantity:
-  </p>
+                  <div className="mt-4">
+                    <p className="mb-2 text-sm font-medium text-zinc-900">
+                      Quantity:
+                    </p>
 
-  {/* One Line Mobile + Desktop */}
-  <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-2 items-center">
-    
-    {/* Quantity Box */}
-    <div className="flex h-[44px] items-center overflow-hidden rounded-md border border-[#d9d9d9]">
-      <button
-        type="button"
-        onClick={() =>
-          setQuantity((value) => Math.max(1, value - 1))
-        }
-        className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
-      >
-        -
-      </button>
+                    {/* One Line Mobile + Desktop */}
+                    <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-2 items-center">
 
-      <span className="flex h-full w-1/2 items-center justify-center border-x border-[#d9d9d9] text-sm font-medium">
-        {quantity}
-      </span>
+                      {/* Quantity Box */}
+                      <div className="flex h-[44px] items-center overflow-hidden rounded-md border border-[#d9d9d9]">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setQuantity((value) => Math.max(1, value - 1))
+                          }
+                          className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
+                        >
+                          -
+                        </button>
 
-      <button
-        type="button"
-        onClick={() =>
-          setQuantity((value) => value + 1)
-        }
-        className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
-      >
-        +
-      </button>
-    </div>
+                        <span className="flex h-full w-1/2 items-center justify-center border-x border-[#d9d9d9] text-sm font-medium">
+                          {quantity}
+                        </span>
 
-    {/* Add To Cart */}
-    <button
-      type="button"
-      onClick={() => void handleAddToCart()}
-      disabled={isAddingToCart}
-      className="h-[44px] w-full rounded-xl border border-[#1a1a1a] px-4 text-[10px] sm:text-xs font-bold tracking-[0.12em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
-    >
-      {isAddingToCart ? "ADDING..." : "ADD TO CART"}
-    </button>
-  </div>
-</div>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setQuantity((value) => value + 1)
+                          }
+                          className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      {/* Add To Cart */}
+                      <button
+                        type="button"
+                        onClick={() => void handleAddToCart()}
+                        disabled={isAddingToCart}
+                        className="h-[44px] w-full rounded-xl border border-[#1a1a1a] px-4 text-[10px] sm:text-xs font-bold tracking-[0.12em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
+                      >
+                        {isAddingToCart ? "ADDING..." : "ADD TO CART"}
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="grid gap-3">
@@ -1186,109 +1152,17 @@ export default function ProductDetailPage({
               <X className="h-3.5 w-3.5" strokeWidth={2.2} />
             </button>
 
-            <h2 id="size-guide-title" className="text-[2.05rem] font-semibold tracking-[-0.04em] text-[#222222] sm:text-[2.2rem]">
+            <h2 id="size-guide-title" className="text-[1.7rem] font-semibold tracking-[-0.04em] text-[#222222] sm:text-[2rem]">
               Size Guide
             </h2>
 
-            <div className="mt-8 space-y-4 sm:space-y-5">
-              <div className="grid gap-3 sm:grid-cols-[62px_74px_minmax(0,1fr)] sm:items-center sm:gap-6">
-                <label htmlFor="size-guide-height" className="text-[1.02rem] font-normal text-[#3c3c3c]">
-                  Height
-                </label>
-                <div className="flex h-9 items-center justify-center rounded-[8px] border border-[#e6e6e6] bg-white px-2 text-[0.95rem] text-[#666666] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
-                  {sizeGuideHeight} Cm
-                </div>
-                <input
-                  id="size-guide-height"
-                  type="range"
-                  min={140}
-                  max={200}
-                  value={sizeGuideHeight}
-                  onChange={(event) => setSizeGuideHeight(Number(event.target.value))}
-                  className="size-guide-slider h-2 w-full cursor-pointer appearance-none rounded-full bg-[#242424] accent-[#242424]"
-                />
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-[62px_74px_minmax(0,1fr)] sm:items-center sm:gap-6">
-                <label htmlFor="size-guide-weight" className="text-[1.02rem] font-normal text-[#3c3c3c]">
-                  Weight
-                </label>
-                <div className="flex h-9 items-center justify-center rounded-[8px] border border-[#e6e6e6] bg-white px-2 text-[0.95rem] text-[#666666] shadow-[0_2px_4px_rgba(0,0,0,0.03)]">
-                  {sizeGuideWeight} Kg
-                </div>
-                <input
-                  id="size-guide-weight"
-                  type="range"
-                  min={40}
-                  max={90}
-                  value={sizeGuideWeight}
-                  onChange={(event) => setSizeGuideWeight(Number(event.target.value))}
-                  className="size-guide-slider h-2 w-full cursor-pointer appearance-none rounded-full bg-[#242424] accent-[#242424]"
-                />
-              </div>
+            <div className="mt-6 overflow-hidden rounded-2xl border border-[#e5e5e5] bg-white">
+              <img
+                src={ringSizeGuideImage.src}
+                alt="Ring size guide"
+                className="mx-auto h-auto max-h-[78vh] w-full object-contain"
+              />
             </div>
-
-            <div className="mt-8">
-              <p className="text-[1.05rem] font-semibold text-[#262626]">Suggests For You:</p>
-              <div className="mt-4 flex flex-wrap gap-2.5">
-                {sizeGuideRows.map((row) => (
-                  <button
-                    key={row.size}
-                    type="button"
-                    className={`inline-flex h-10 min-w-10 items-center justify-center rounded-full border px-3 text-[0.98rem] transition ${
-                      suggestedSize === row.size
-                        ? 'border-[#1f1f1f] text-[#1f1f1f] ring-1 ring-[#1f1f1f]/10'
-                        : 'border-[#e1e1e1] text-[#303030] hover:border-[#b7b7b7]'
-                    }`}
-                  >
-                    {row.size}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-4 overflow-x-auto border border-[#d8d8d8]">
-              <table className="min-w-full border-collapse text-center text-[0.98rem] text-[#424242]">
-                <thead>
-                  <tr className="bg-white font-semibold text-[#2b2b2b]">
-                    <th className="border-b border-r border-[#d8d8d8] px-4 py-3.5">Size</th>
-                    <th className="border-b border-r border-[#d8d8d8] px-4 py-3.5">Bust</th>
-                    <th className="border-b border-r border-[#d8d8d8] px-4 py-3.5">Waist</th>
-                    <th className="border-b border-[#d8d8d8] px-4 py-3.5">Low Hip</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {sizeGuideRows.map((row, index) => (
-                    <tr key={row.size} className={index % 2 === 0 ? 'bg-[#f1f1f1]' : 'bg-white'}>
-                      <td className="border-r border-t border-[#d8d8d8] px-4 py-3.5">{row.size}</td>
-                      <td className="border-r border-t border-[#d8d8d8] px-4 py-3.5">{row.bust}</td>
-                      <td className="border-r border-t border-[#d8d8d8] px-4 py-3.5">{row.waist}</td>
-                      <td className="border-t border-[#d8d8d8] px-4 py-3.5">{row.lowHip}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <style jsx>{`
-              .size-guide-slider::-webkit-slider-thumb {
-                appearance: none;
-                width: 16px;
-                height: 16px;
-                border-radius: 9999px;
-                background: #242424;
-                cursor: pointer;
-              }
-
-              .size-guide-slider::-moz-range-thumb {
-                width: 16px;
-                height: 16px;
-                border: 0;
-                border-radius: 9999px;
-                background: #242424;
-                cursor: pointer;
-              }
-            `}</style>
           </div>
         </div>
       ) : null}
