@@ -696,8 +696,8 @@ export default function ProductDetailPage({
                       onClick={() => void handleWishlistAction()}
                       disabled={isUpdatingWishlist}
                       className={`absolute right-8 top-8 z-10 flex h-9 w-9 items-center justify-center rounded-md border bg-white/90 shadow-sm backdrop-blur transition disabled:opacity-60 ${wishlistItem
-                          ? 'border-[#f3c8df] text-[#e83fa9]'
-                          : 'border-[#d9d9d9] text-zinc-600 hover:border-[#e83fa9] hover:text-[#e83fa9]'
+                        ? 'border-[#f3c8df] text-[#e83fa9]'
+                        : 'border-[#d9d9d9] text-zinc-600 hover:border-[#e83fa9] hover:text-[#e83fa9]'
                         }`}
                       aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
                     >
@@ -1133,36 +1133,53 @@ export default function ProductDetailPage({
       </main>
       {isSizeGuideOpen ? (
         <div
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-[#000000]/55 px-4 py-6"
+          className="fixed inset-0 z-[80] bg-black/80 flex items-center justify-center p-2 sm:p-4"
           role="dialog"
           aria-modal="true"
           aria-labelledby="size-guide-title"
           onClick={() => setIsSizeGuideOpen(false)}
         >
           <div
-            className="relative w-full max-w-[1020px] rounded-[28px] bg-white px-8 py-7 shadow-[0_24px_80px_rgba(0,0,0,0.18)] sm:px-10 sm:py-9 lg:px-8"
+            className="relative w-auto max-w-full max-h-full flex items-center justify-center"
             onClick={(event) => event.stopPropagation()}
           >
+            {/* Responsive Image */}
+            <img
+              src={ringSizeGuideImage.src}
+              alt="Ring size guide"
+              className="
+          w-auto
+          max-w-[96vw]
+          sm:max-w-[92vw]
+          lg:max-w-[88vw]
+          h-auto
+          max-h-[92vh]
+          object-contain
+          rounded-lg sm:rounded-xl
+        "
+            />
+
+            {/* Responsive Close Button */}
             <button
               type="button"
               onClick={() => setIsSizeGuideOpen(false)}
-              className="absolute right-4 top-4 inline-flex h-7 w-7 items-center justify-center rounded-full text-[#9a9a9a] transition hover:bg-zinc-100 hover:text-zinc-700"
+              className="
+          absolute
+          top-2 right-2
+          sm:top-3 sm:right-3
+          z-20
+          flex items-center justify-center
+          h-9 w-9
+          sm:h-10 sm:w-10
+          rounded-full
+          bg-white text-black
+          shadow-lg
+          transition hover:scale-105
+        "
               aria-label="Close size guide"
             >
-              <X className="h-3.5 w-3.5" strokeWidth={2.2} />
+              <X className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={2.5} />
             </button>
-
-            <h2 id="size-guide-title" className="text-[1.7rem] font-semibold tracking-[-0.04em] text-[#222222] sm:text-[2rem]">
-              Size Guide
-            </h2>
-
-            <div className="mt-6 overflow-hidden rounded-2xl border border-[#e5e5e5] bg-white">
-              <img
-                src={ringSizeGuideImage.src}
-                alt="Ring size guide"
-                className="mx-auto h-auto max-h-[78vh] w-full object-contain"
-              />
-            </div>
           </div>
         </div>
       ) : null}
