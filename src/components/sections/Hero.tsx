@@ -147,7 +147,7 @@ export default function Hero() {
   }, [isTransitionEnabled]);
 
   return (
-    <section className="overflow-hidden bg-white py-4 sm:py-6 md:py-6 lg:py-8">
+    <section className="overflow-hidden bg-white py-3 sm:py-2 md:py-3 lg:py-4">
       <div className="mx-auto w-full max-w-full px-0">
         <div
           ref={containerRef}
