@@ -1,89 +1,158 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import type { StaticImageData } from 'next/image'
-import braceletImage from '../../assets/image/bracelet.jpeg'
-import braceletCloseupImage from '../../assets/image/bracelet1.jpeg'
-import earringImage from '../../assets/image/earing.jpeg'
-import earringProductImage from '../../assets/image/earing1.jpeg'
-import necklaceImage from '../../assets/image/nackwear.jpeg'
-import necklaceModelImage from '../../assets/image/nackwear1.jpeg'
-import ringImage from '../../assets/image/ring.jpeg'
-import ringModelImage from '../../assets/image/ring1.jpeg'
-
-type InstagramImage = string | StaticImageData
-
-const defaultImages = [
-  braceletImage,
-  braceletCloseupImage,
-  ringImage,
-  ringModelImage,
-  earringImage,
-  earringProductImage,
-  necklaceImage,
-  necklaceModelImage,
-]
+import { getReels, type Reel } from '../../services/reelsService'
 
 type InstagramGallerySectionProps = {
   title?: string
   subtitle?: string
-  images?: InstagramImage[]
-}
-
-function visibleInstagramImages(sourceImages: InstagramImage[], startIndex: number) {
-  return Array.from({ length: 6 }, (_, index) => sourceImages[(startIndex + index) % sourceImages.length])
-}
-
-function imageSrc(image: InstagramImage) {
-  return typeof image === 'string' ? image : image.src
 }
 
 export default function InstagramGallerySection({
   title = 'I Want Jewel On Instagram',
   subtitle = '#Atvoguetheme',
-  images = defaultImages,
 }: InstagramGallerySectionProps) {
-  const [activeImageIndex, setActiveImageIndex] = useState(0)
+  const [videos, setVideos] = useState<Reel[]>([])
+  const [loading, setLoading] = useState(true)
+  const [slideIndex, setSlideIndex] = useState(0)
+  const [videoLoaded, setVideoLoaded] = useState(false)
+
+  const visibleCount = 6
+  const instaLink = 'https://www.instagram.com/iwantjewels/'
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveImageIndex((currentIndex) => (currentIndex + 1) % images.length)
-    }, 2400)
-
-    return () => {
-      window.clearInterval(timer)
+    async function loadVideos() {
+      try {
+        const response = await getReels()
+        setVideos(response)
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setLoading(false)
+      }
     }
-  }, [images])
 
-  const rotatingImages = visibleInstagramImages(images, activeImageIndex)
-  const mobileImage = rotatingImages[0]
+    loadVideos()
+  }, [])
+
+  // smooth auto slider
+  useEffect(() => {
+    if (videos.length <= visibleCount) return
+
+    const maxIndex = videos.length - visibleCount
+
+    const timer = setInterval(() => {
+      setSlideIndex((prev) => {
+        if (prev >= maxIndex) return 0
+        return prev + 1
+      })
+
+      setVideoLoaded(false)
+    }, 2500)
+
+    return () => clearInterval(timer)
+  }, [videos])
+
+  const openInstagram = () => {
+    window.open(instaLink, '_blank')
+  }
 
   return (
-    <section className="px-4 py-16">
-      <div className="mx-auto max-w-6xl text-center">
+    <section className="overflow-hidden px-0 py-0">
+      {/* Heading */}
+      <div className="mx-auto max-w-6xl px-4 py-10 text-center">
         <h2 className="text-3xl font-semibold md:text-4xl">{title}</h2>
         <p className="mt-3 text-sm text-zinc-500 md:text-base">{subtitle}</p>
       </div>
 
-      <div className="mx-auto mt-10 overflow-hidden bg-zinc-100 sm:hidden">
-        <img
-          src={imageSrc(mobileImage)}
-          alt="Instagram jewellery inspiration"
-          className="h-[320px] w-full object-cover transition duration-700"
-        />
-      </div>
-
-      <div className="mx-auto mt-10 hidden max-w-[1860px] gap-0 sm:grid sm:grid-cols-2 lg:grid-cols-6">
-        {rotatingImages.map((image, index) => (
-          <div key={`${activeImageIndex}-${index}-${imageSrc(image)}`} className="overflow-hidden bg-zinc-100">
-            <img
-              src={imageSrc(image)}
-              alt={`Instagram jewellery inspiration ${index + 1}`}
-              className="h-[260px] w-full object-cover transition duration-700 hover:scale-105 md:h-[320px] lg:h-[435px]"
+      {/* Loading */}
+      {loading && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div
+              key={index}
+              className="h-screen animate-pulse bg-gradient-to-r from-zinc-200 via-zinc-100 to-zinc-200"
             />
+          ))}
+        </div>
+      )}
+
+      {/* Mobile */}
+      {!loading && videos.length > 0 && (
+        <div className="sm:hidden">
+          <button
+            onClick={openInstagram}
+            className="relative block h-screen w-full overflow-hidden"
+          >
+            {!videoLoaded && (
+              <div className="absolute inset-0 z-10 animate-pulse bg-gradient-to-r from-zinc-300 via-zinc-100 to-zinc-300" />
+            )}
+
+            <video
+              src={videos[slideIndex].url}
+              muted
+              autoPlay
+              loop
+              playsInline
+              preload="auto"
+              onLoadedData={() => setVideoLoaded(true)}
+              className={`h-screen w-full object-cover transition-opacity duration-700 ${
+                videoLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl shadow-xl">
+                ▶
+              </div>
+            </div>
+          </button>
+        </div>
+      )}
+
+      {/* Desktop */}
+      {!loading && videos.length > 0 && (
+        <div className="hidden h-[70vh] overflow-hidden sm:block py-4">
+          <div
+            className="flex h-[70vh] transition-transform duration-700 ease-in-out"
+            style={{
+              transform: `translateX(-${slideIndex * (100 / visibleCount)}%)`,
+              width: `${(videos.length / visibleCount) * 100}%`,
+            }}
+          >
+            {videos.map((video, index) => (
+              <button
+                key={index}
+                onClick={openInstagram}
+                className="relative h-[70vh] w-1/6 flex-shrink-0 overflow-hidden"
+              >
+                {!videoLoaded && (
+                  <div className="absolute inset-0 z-10 animate-pulse bg-gradient-to-r from-zinc-300 via-zinc-100 to-zinc-300" />
+                )}
+
+                <video
+                  src={video.url}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  preload="auto"
+                  onLoadedData={() => setVideoLoaded(true)}
+                  className={`h-[70vh] w-full object-fill transition duration-500 hover:scale-105 ${
+                    videoLoaded ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition hover:opacity-100">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl shadow-xl">
+                    ▶
+                  </div>
+                </div>
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -130,9 +130,11 @@ export default function AdminOrdersPage() {
 
         setShippingQuote(quote)
 
-        if (quote?.carrier === 'DHL' || quote?.carrier === 'FEDEX') {
-          setSelectedCarrier(quote.carrier)
-        }
+        // console.log('Shipping quote:', quote)
+
+        // if (quote?.rates?.DHL || quote?.rates?.FEDEX) {
+        //   setSelectedCarrier(quote.rates.DHL ? 'DHL' : 'FEDEX')
+        // }
       } catch {
         if (!isMounted) {
           return
@@ -647,42 +649,96 @@ export default function AdminOrdersPage() {
               Order: {pendingAction.order.orderNumber}
             </p>
 
-            {pendingAction.type === 'ship' ? (
-              <div className="mt-4 space-y-3 rounded-xl border border-[#efcfe1] bg-[#fff8fd] p-3">
-                {isLoadingShippingQuote ? <p className="text-sm text-[#694d5f]">Loading shipping cost...</p> : null}
+{pendingAction.type === "ship" ? (
+  <div className="mt-4 space-y-3 rounded-xl border border-[#efcfe1] bg-[#fff8fd] p-3">
+    {isLoadingShippingQuote ? (
+      <p className="text-sm text-[#694d5f]">Loading shipping cost...</p>
+    ) : null}
 
-                {!isLoadingShippingQuote && shippingQuote ? (
-                  <>
-                    <p className="text-sm font-semibold text-[#4f2040]">
-                      Shipping cost: {formatPrice(shippingQuote.shippingCost, currency)}
-                    </p>
-                    <p className="text-xs text-[#7f5d70]">
-                      Destination: {shippingQuote.destination.country} {shippingQuote.destination.postalCode}
-                    </p>
-                    <p className="text-xs text-[#7f5d70]">
-                      Service: {shippingQuote.serviceType} • {shippingQuote.estimatedDays}
-                    </p>
-                    {shippingQuote.carrier ? (
-                      <p className="text-xs text-[#7f5d70]">Quote carrier: {shippingQuote.carrier}</p>
-                    ) : null}
-                  </>
-                ) : null}
+    {!isLoadingShippingQuote && shippingQuote ? (
+      <>
+        <p className="text-sm font-semibold text-[#4f2040]">
+          Available Shipping Rates
+        </p>
 
-                {shippingQuoteError ? <p className="text-xs text-rose-600">{shippingQuoteError}</p> : null}
+        {/* FEDEX */}
+        {shippingQuote.rates?.FEDEX ? (
+          <div className="rounded-lg border border-[#f1d9e7] bg-white p-3 space-y-1">
+            <p className="text-sm font-semibold text-[#4f2040]">FEDEX</p>
+            <p className="text-sm text-[#694d5f]">
+              Cost:{" "}
+              {formatPrice(
+                shippingQuote.rates.FEDEX.shippingCost,
+                currency
+              )}
+            </p>
+            <p className="text-xs text-[#7f5d70]">
+              Service: {shippingQuote.rates.FEDEX.serviceType}
+            </p>
+            <p className="text-xs text-[#7f5d70]">
+              Delivery: {shippingQuote.rates.FEDEX.estimatedDays}
+            </p>
+          </div>
+        ) : null}
 
-                <label className="block space-y-1 text-sm">
-                  <span className="font-semibold text-[#4f2040]">Shipping Carrier</span>
-                  <select
-                    value={selectedCarrier}
-                    onChange={(event) => setSelectedCarrier(event.target.value as ShippingCarrier)}
-                    className="w-full rounded-lg border border-[#e5bfd8] bg-white px-3 py-2 text-sm text-[#4f2040] outline-none focus:border-[#d24a90]"
-                  >
-                    <option value="FEDEX">FEDEX</option>
-                    <option value="DHL">DHL</option>
-                  </select>
-                </label>
-              </div>
-            ) : null}
+        {/* DHL */}
+        {shippingQuote.rates?.DHL ? (
+          <div className="rounded-lg border border-[#f1d9e7] bg-white p-3 space-y-1">
+            <p className="text-sm font-semibold text-[#4f2040]">DHL</p>
+            <p className="text-sm text-[#694d5f]">
+              Cost:{" "}
+              {formatPrice(
+                shippingQuote.rates.DHL.shippingCost,
+                currency
+              )}
+            </p>
+            <p className="text-xs text-[#7f5d70]">
+              Service: {shippingQuote.rates.DHL.serviceType}
+            </p>
+            <p className="text-xs text-[#7f5d70]">
+              Delivery: {shippingQuote.rates.DHL.estimatedDays}
+            </p>
+          </div>
+        ) : null}
+
+        {/* Destination */}
+        <p className="text-xs text-[#7f5d70]">
+          Destination: {shippingQuote.destination.country}{" "}
+          {shippingQuote.destination.postalCode}
+        </p>
+      </>
+    ) : null}
+
+    {shippingQuoteError ? (
+      <p className="text-xs text-rose-600">{shippingQuoteError}</p>
+    ) : null}
+
+    {/* Carrier Select */}
+    <label className="block space-y-1 text-sm">
+      <span className="font-semibold text-[#4f2040]">
+        Shipping Carrier
+      </span>
+
+      <select
+        value={selectedCarrier}
+        onChange={(event) =>
+          setSelectedCarrier(
+            event.target.value as ShippingCarrier
+          )
+        }
+        className="w-full rounded-lg border border-[#e5bfd8] bg-white px-3 py-2 text-sm text-[#4f2040] outline-none focus:border-[#d24a90]"
+      >
+        {/* {shippingQuote?.rates?.FEDEX ? ( */}
+          <option value="FEDEX">FEDEX</option>
+      
+
+        {/* {shippingQuote?.rates?.DHL ? ( */}
+          <option value="DHL">DHL</option>
+        {/* ) : null} */}
+      </select>
+    </label>
+  </div>
+) : null}
 
             <div className="mt-5 flex items-center justify-end gap-2">
               <button

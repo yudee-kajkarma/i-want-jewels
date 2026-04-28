@@ -116,21 +116,32 @@ type AdminOrderDetailApiResponse = {
 type AdminShippingQuoteApiResponse = {
   success: boolean
   data?: {
-    orderNumber?: string
-    destination?: {
-      country?: string
-      postalCode?: string
-    }
-    shippingCost?: {
-      dol?: number
-      eur?: number
-      pou?: number
-    }
-    carrier?: string
-    serviceType?: string
-    estimatedDays?: string
+    orderNumber: string
+  destination: {
+    country: string
+    postalCode: string
   }
-}
+  rates: {
+    FEDEX: {
+      shippingCost: {
+        dol: number
+        eur: number
+        pou: number
+      }
+      serviceType: string
+      estimatedDays: string
+    }
+    DHL: {
+      shippingCost: {
+        dol: number
+        eur: number
+        pou: number
+      }
+      serviceType: string
+      estimatedDays: string
+    }
+  }
+  }}
 
 function getStringValue(record: Record<string, unknown>, key: string): string {
   const value = record[key]
@@ -278,26 +289,45 @@ function normalizePaymentHistoryItem(item: Record<string, unknown>): PaymentHist
   }
 }
 
-function normalizeAdminShippingQuote(data?: AdminShippingQuoteApiResponse['data']): AdminShippingQuote | null {
-  if (!data) {
-    return null
+function normalizeAdminShippingQuote(
+  data?: AdminShippingQuoteApiResponse["data"]
+): AdminShippingQuote | null {
+  if (!data) return null
+
+  const result: AdminShippingQuote = {
+    orderNumber: data.orderNumber ?? "",
+    destination: {
+      country: data.destination?.country ?? "",
+      postalCode: data.destination?.postalCode ?? "",
+    },
+    rates: {},
   }
 
-  return {
-    orderNumber: data.orderNumber ?? '',
-    destination: {
-      country: data.destination?.country ?? '',
-      postalCode: data.destination?.postalCode ?? '',
-    },
-    shippingCost: {
-      dol: typeof data.shippingCost?.dol === 'number' ? data.shippingCost.dol : 0,
-      eur: typeof data.shippingCost?.eur === 'number' ? data.shippingCost.eur : 0,
-      pou: typeof data.shippingCost?.pou === 'number' ? data.shippingCost.pou : 0,
-    },
-    carrier: data.carrier ?? '',
-    serviceType: data.serviceType ?? '',
-    estimatedDays: data.estimatedDays ?? '',
+  if (data.rates?.FEDEX) {
+    result.rates.FEDEX = {
+      shippingCost: {
+        dol: data.rates.FEDEX.shippingCost?.dol ?? 0,
+        eur: data.rates.FEDEX.shippingCost?.eur ?? 0,
+        pou: data.rates.FEDEX.shippingCost?.pou ?? 0,
+      },
+      serviceType: data.rates.FEDEX.serviceType ?? "",
+      estimatedDays: data.rates.FEDEX.estimatedDays ?? "",
+    }
   }
+
+  if (data.rates?.DHL) {
+    result.rates.DHL = {
+      shippingCost: {
+        dol: data.rates.DHL.shippingCost?.dol ?? 0,
+        eur: data.rates.DHL.shippingCost?.eur ?? 0,
+        pou: data.rates.DHL.shippingCost?.pou ?? 0,
+      },
+      serviceType: data.rates.DHL.serviceType ?? "",
+      estimatedDays: data.rates.DHL.estimatedDays ?? "",
+    }
+  }
+
+  return result
 }
 
 export async function createOrder(payload: CreateOrderPayload): Promise<CreateOrderResult> {

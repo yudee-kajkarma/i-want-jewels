@@ -117,14 +117,26 @@ export type AdminShippingQuote = {
     country: string
     postalCode: string
   }
-  shippingCost: {
-    dol: number
-    eur: number
-    pou: number
+  rates: {
+    FEDEX?: {
+      shippingCost: {
+        dol: number
+        eur: number
+        pou: number
+      }
+      serviceType: string
+      estimatedDays: string
+    }
+    DHL?: {
+      shippingCost: {
+        dol: number
+        eur: number
+        pou: number
+      }
+      serviceType: string
+      estimatedDays: string
+    }
   }
-  carrier: string
-  serviceType: string
-  estimatedDays: string
 }
 
 export type AdminOrderCustomer = {
