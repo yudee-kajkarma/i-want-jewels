@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import banner1 from "@/assets/banner/Banner-1.jpg.jpeg";
-import banner2 from "@/assets/banner/Banner-2.jpg.jpeg";
-import banner3 from "@/assets/banner/Banner-3.jpg.jpeg";
-import banner4 from "@/assets/banner/Banner-4.jpg.jpeg";
+import banner1 from "@/assets/banner/Banner-1.jpg";
+import banner2 from "@/assets/banner/Banner-2.jpg";
+import banner3 from "@/assets/banner/Banner-3.jpg";
+import banner4 from "@/assets/banner/Banner-4.jpg";
 
 const heroSlides = [
   { src: banner2.src, alt: "Jewellery banner one" },
@@ -147,7 +147,7 @@ export default function Hero() {
   }, [isTransitionEnabled]);
 
   return (
-    <section className="overflow-hidden bg-white py-0">
+    <section className="overflow-hidden bg-white py-4 sm:py-6 md:py-6 lg:py-8">
       <div className="mx-auto w-full max-w-full px-0">
         <div
           ref={containerRef}
@@ -179,9 +179,9 @@ export default function Hero() {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className={`w-full h-auto sm:h-[260px] md:h-[500px] lg:h-[680px] lg:object-fill md:object-fill rounded-xl sm:object-contain sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
+                  className={`w-full h-auto sm:h-[320px] md:h-[570px] lg:h-[570px] lg:object-fill md:object-fill rounded-xl sm:object-contain sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
                     index === trackIndex
-                      ? "scale-100 opacity-100"
+                      ? "scale-[0.97] opacity-90"
                       : "scale-[0.97] opacity-90"
                   }`}
                 />
@@ -190,7 +190,7 @@ export default function Hero() {
           </div>
 
           {/* Dots */}
-          <div className="absolute bottom-2 sm:bottom-3 md:bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1.5 sm:gap-2 md:gap-3">
+          <div className="flex justify-center items-center gap-1.5 sm:gap-2 md:gap-3 mt-4">
             {heroSlides.map((slide, index) => (
               <button
                 key={slide.src}
