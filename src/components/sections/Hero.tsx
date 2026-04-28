@@ -179,7 +179,7 @@ export default function Hero() {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className={`w-full h-auto sm:h-[320px] md:h-[570px] lg:h-[570px] lg:object-fill md:object-fill rounded-xl sm:object-contain sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
+                  className={`w-full h-auto h-full lg:object-fill md:object-fill rounded-xl sm:object-contain sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
                     index === trackIndex
                       ? "scale-[0.97] opacity-90"
                       : "scale-[0.97] opacity-90"
