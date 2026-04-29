@@ -79,10 +79,10 @@ export default function InstagramGallerySection({
 
       {/* Mobile */}
       {!loading && videos.length > 0 && (
-        <div className="sm:hidden">
+        <div className="sm:hidden px-2">
           <button
             onClick={openInstagram}
-            className="relative block h-screen w-full overflow-hidden"
+            className="relative block h-screen w-full overflow-hidden "
           >
             {!videoLoaded && (
               <div className="absolute inset-0 z-10 animate-pulse bg-gradient-to-r from-zinc-300 via-zinc-100 to-zinc-300" />
@@ -96,7 +96,7 @@ export default function InstagramGallerySection({
               playsInline
               preload="auto"
               onLoadedData={() => setVideoLoaded(true)}
-              className={`h-screen w-full object-cover transition-opacity duration-700 ${
+              className={`h-screen w-full  object-fill transition-opacity duration-700  ${
                 videoLoaded ? 'opacity-100' : 'opacity-0'
               }`}
             />
@@ -138,7 +138,7 @@ export default function InstagramGallerySection({
                   playsInline
                   preload="auto"
                   onLoadedData={() => setVideoLoaded(true)}
-                  className={`h-[70vh] w-full object-fill transition duration-500 hover:scale-105 ${
+                  className={`h-[75vh] w-full object-fill transition duration-500 hover:scale-105 ${
                     videoLoaded ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
