@@ -613,80 +613,145 @@ export default function AdminOrdersPage() {
             </div>
           </div>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
-            <button
-              type="button"
-              onClick={() => handleStatusFilterClick('ALL')}
-              className={`rounded-2xl border p-4 text-left transition ${
-                selectedStatusFilter === 'ALL'
-                  ? 'border-[#d24a90] bg-[#fff0f9]'
-                  : 'border-[#f0d3e5] bg-[#fff7fc] hover:border-[#e7b7d4]'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">All</p>
-              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{allOrdersTotalCount}</p> */}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleStatusFilterClick('PENDING')}
-              className={`rounded-2xl border p-4 text-left transition ${
-                selectedStatusFilter === 'PENDING'
-                  ? 'border-[#d24a90] bg-[#fff0f9]'
-                  : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Pending</p>
-              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.pending}</p> */}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleStatusFilterClick('CONFIRMED')}
-              className={`rounded-2xl border p-4 text-left transition ${
-                selectedStatusFilter === 'CONFIRMED'
-                  ? 'border-[#d24a90] bg-[#fff0f9]'
-                  : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Confirmed</p>
-              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.confirmed}</p> */}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleStatusFilterClick('SHIPPED')}
-              className={`rounded-2xl border p-4 text-left transition ${
-                selectedStatusFilter === 'SHIPPED'
-                  ? 'border-[#d24a90] bg-[#fff0f9]'
-                  : 'border-[#f0d3e5] bg-[#fff8fc] hover:border-[#e7b7d4]'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Shipped</p>
-              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.shipped}</p> */}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleStatusFilterClick('DELIVERED')}
-              className={`rounded-2xl border p-4 text-left transition ${
-                selectedStatusFilter === 'DELIVERED'
-                  ? 'border-[#d24a90] bg-[#fff0f9]'
-                  : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Delivered</p>
-              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.delivered}</p> */}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleStatusFilterClick('CANCELLED')}
-              className={`rounded-2xl border p-4 text-left transition ${
-                selectedStatusFilter === 'CANCELLED'
-                  ? 'border-[#d24a90] bg-[#fff0f9]'
-                  : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
-              }`}
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Cancelled</p>
-              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.cancelled}</p> */}
-            </button>
-          </div>
+<div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+  {/* ALL */}
+  <button
+    type="button"
+    onClick={() => handleStatusFilterClick('ALL')}
+    className={`rounded-2xl border px-4 py-3 text-left transition ${
+      selectedStatusFilter === 'ALL'
+        ? 'border-[#d24a90] bg-[#fff0f9]'
+        : 'border-[#f0d3e5] bg-[#fff7fc] hover:border-[#e7b7d4]'
+    }`}
+  >
+    <div className="flex items-center justify-between gap-2">
+      <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
+        All
+      </p>
+
+      {selectedStatusFilter === 'ALL' && (
+        <p className="text-xl font-extrabold text-[#4f2040]">
+          {allOrdersTotalCount}
+        </p>
+      )}
+    </div>
+  </button>
+
+  {/* PENDING */}
+  <button
+    type="button"
+    onClick={() => handleStatusFilterClick('PENDING')}
+    className={`rounded-2xl border px-4 py-3 text-left transition ${
+      selectedStatusFilter === 'PENDING'
+        ? 'border-[#d24a90] bg-[#fff0f9]'
+        : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
+    }`}
+  >
+    <div className="flex items-center justify-between gap-2">
+      <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
+        Pending
+      </p>
+
+      {selectedStatusFilter === 'PENDING' && (
+        <p className="text-xl font-extrabold text-[#4f2040]">
+          {orderSummary.pending}
+        </p>
+      )}
+    </div>
+  </button>
+
+  {/* CONFIRMED */}
+  <button
+    type="button"
+    onClick={() => handleStatusFilterClick('CONFIRMED')}
+    className={`rounded-2xl border px-4 py-3 text-left transition ${
+      selectedStatusFilter === 'CONFIRMED'
+        ? 'border-[#d24a90] bg-[#fff0f9]'
+        : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
+    }`}
+  >
+    <div className="flex items-center justify-between gap-2">
+      <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
+        Confirmed
+      </p>
+
+      {selectedStatusFilter === 'CONFIRMED' && (
+        <p className="text-xl font-extrabold text-[#4f2040]">
+          {orderSummary.confirmed}
+        </p>
+      )}
+    </div>
+  </button>
+
+  {/* SHIPPED */}
+  <button
+    type="button"
+    onClick={() => handleStatusFilterClick('SHIPPED')}
+    className={`rounded-2xl border px-4 py-3 text-left transition ${
+      selectedStatusFilter === 'SHIPPED'
+        ? 'border-[#d24a90] bg-[#fff0f9]'
+        : 'border-[#f0d3e5] bg-[#fff8fc] hover:border-[#e7b7d4]'
+    }`}
+  >
+    <div className="flex items-center justify-between gap-2">
+      <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
+        Shipped
+      </p>
+
+      {selectedStatusFilter === 'SHIPPED' && (
+        <p className="text-xl font-extrabold text-[#4f2040]">
+          {orderSummary.shipped}
+        </p>
+      )}
+    </div>
+  </button>
+
+  {/* DELIVERED */}
+  <button
+    type="button"
+    onClick={() => handleStatusFilterClick('DELIVERED')}
+    className={`rounded-2xl border px-4 py-3 text-left transition ${
+      selectedStatusFilter === 'DELIVERED'
+        ? 'border-[#d24a90] bg-[#fff0f9]'
+        : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
+    }`}
+  >
+    <div className="flex items-center justify-between gap-2">
+      <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
+        Delivered
+      </p>
+
+      {selectedStatusFilter === 'DELIVERED' && (
+        <p className="text-xl font-extrabold text-[#4f2040]">
+          {orderSummary.delivered}
+        </p>
+      )}
+    </div>
+  </button>
+
+  {/* CANCELLED */}
+  <button
+    type="button"
+    onClick={() => handleStatusFilterClick('CANCELLED')}
+    className={`rounded-2xl border px-4 py-3 text-left transition ${
+      selectedStatusFilter === 'CANCELLED'
+        ? 'border-[#d24a90] bg-[#fff0f9]'
+        : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
+    }`}
+  >
+    <div className="flex items-center justify-between gap-2">
+      <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
+        Cancelled
+      </p>
+
+      {selectedStatusFilter === 'CANCELLED' && (
+        <p className="text-xl font-extrabold text-[#4f2040]">
+          {orderSummary.cancelled}
+        </p>
+      )}
+    </div>
+  </button>
+</div>
 
           {isLoading ? <div className="mt-6 space-y-4">{Array.from({ length: 3 }, (_, index) => renderShimmerCard(index))}</div> : null}
           {!isLoading && error ? <div className="mt-6 rounded-[24px] border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
