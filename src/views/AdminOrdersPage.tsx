@@ -10,7 +10,7 @@ import {
   cancelShipmentForAdmin,
   getAdminOrderLabelUrl,
   getAdminShippingQuoteForOrder,
-  getAllOrdersForAdmin,
+  getAllOrdersForAdminByStatus,
   shipOrderForAdmin,
   updateOrderStatusForAdmin,
   verifyOrderDeliveryForAdmin,
@@ -119,6 +119,8 @@ export default function AdminOrdersPage() {
   const [selectedCarrier, setSelectedCarrier] = useState<ShippingCarrier>('FEDEX')
   const [selectedServiceCode, setSelectedServiceCode] = useState('')
   const [downloadingLabelOrderId, setDownloadingLabelOrderId] = useState('')
+  const [selectedStatusFilter, setSelectedStatusFilter] = useState<Order['orderStatus'] | 'ALL'>('ALL')
+  const [allOrdersTotalCount, setAllOrdersTotalCount] = useState(0)
 
   useEffect(() => {
     void loadOrders(true, 1)
@@ -215,16 +217,21 @@ export default function AdminOrdersPage() {
     )
   }, [orders])
 
-  async function loadOrders(showLoader: boolean, page: number) {
+  async function loadOrders(showLoader: boolean, page: number, status: Order['orderStatus'] | 'ALL' = selectedStatusFilter) {
     if (showLoader) {
       setIsLoading(true)
     }
 
     try {
-      const response = await getAllOrdersForAdmin(page, 10)
+      const response = await getAllOrdersForAdminByStatus(page, 10, status === 'ALL' ? undefined : status)
       setOrders(response.orders)
       setPagination(response.pagination)
       setCurrentPage(page)
+
+      if (status === 'ALL') {
+        setAllOrdersTotalCount(response.pagination?.totalRecords ?? response.orders.length)
+      }
+
       setError('')
     } catch {
       const message = 'Unable to load all orders right now.'
@@ -237,6 +244,11 @@ export default function AdminOrdersPage() {
         setIsLoading(false)
       }
     }
+  }
+
+  function handleStatusFilterClick(status: Order['orderStatus'] | 'ALL') {
+    setSelectedStatusFilter(status)
+    void loadOrders(true, 1, status)
   }
 
   function openActionModal(type: PendingActionType, order: Order) {
@@ -601,27 +613,79 @@ export default function AdminOrdersPage() {
             </div>
           </div>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
+            <button
+              type="button"
+              onClick={() => handleStatusFilterClick('ALL')}
+              className={`rounded-2xl border p-4 text-left transition ${
+                selectedStatusFilter === 'ALL'
+                  ? 'border-[#d24a90] bg-[#fff0f9]'
+                  : 'border-[#f0d3e5] bg-[#fff7fc] hover:border-[#e7b7d4]'
+              }`}
+            >
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">All</p>
+              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{allOrdersTotalCount}</p> */}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStatusFilterClick('PENDING')}
+              className={`rounded-2xl border p-4 text-left transition ${
+                selectedStatusFilter === 'PENDING'
+                  ? 'border-[#d24a90] bg-[#fff0f9]'
+                  : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
+              }`}
+            >
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Pending</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.pending}</p>
-            </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff9fd] p-4">
+              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.pending}</p> */}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStatusFilterClick('CONFIRMED')}
+              className={`rounded-2xl border p-4 text-left transition ${
+                selectedStatusFilter === 'CONFIRMED'
+                  ? 'border-[#d24a90] bg-[#fff0f9]'
+                  : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
+              }`}
+            >
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Confirmed</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.confirmed}</p>
-            </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff8fc] p-4">
+              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.confirmed}</p> */}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStatusFilterClick('SHIPPED')}
+              className={`rounded-2xl border p-4 text-left transition ${
+                selectedStatusFilter === 'SHIPPED'
+                  ? 'border-[#d24a90] bg-[#fff0f9]'
+                  : 'border-[#f0d3e5] bg-[#fff8fc] hover:border-[#e7b7d4]'
+              }`}
+            >
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Shipped</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.shipped}</p>
-            </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff9fd] p-4">
+              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.shipped}</p> */}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStatusFilterClick('DELIVERED')}
+              className={`rounded-2xl border p-4 text-left transition ${
+                selectedStatusFilter === 'DELIVERED'
+                  ? 'border-[#d24a90] bg-[#fff0f9]'
+                  : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
+              }`}
+            >
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Delivered</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.delivered}</p>
-            </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
+              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.delivered}</p> */}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleStatusFilterClick('CANCELLED')}
+              className={`rounded-2xl border p-4 text-left transition ${
+                selectedStatusFilter === 'CANCELLED'
+                  ? 'border-[#d24a90] bg-[#fff0f9]'
+                  : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
+              }`}
+            >
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Cancelled</p>
-              <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.cancelled}</p>
-            </div>
+              {/* <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{orderSummary.cancelled}</p> */}
+            </button>
           </div>
 
           {isLoading ? <div className="mt-6 space-y-4">{Array.from({ length: 3 }, (_, index) => renderShimmerCard(index))}</div> : null}

@@ -417,6 +417,7 @@ export async function getAllOrdersForAdmin(page = 1, limit = 20): Promise<Orders
     params: {
       page,
       limit,
+      status: undefined,
     },
   })
 
@@ -450,6 +451,15 @@ export async function shipOrderForAdmin(
   return response.data.data ? normalizeOrder(response.data.data) : null
 }
 
+export async function updateOrderShippingAddressForAdmin(
+  orderId: string,
+  payload: { street: string; city: string; state: string; postalCode: string; country: string },
+): Promise<Order | null> {
+  const response = await adminApiClient.patch<AdminOrderUpdateApiResponse>(`/orders/admin/${orderId}/shipping-address`, payload)
+
+  return response.data.data ? normalizeOrder(response.data.data) : null
+}
+
 export async function cancelShipmentForAdmin(orderId: string): Promise<string> {
   const response = await adminApiClient.delete<AdminCancelShipmentApiResponse>(`/orders/admin/${orderId}/shipment`)
 
@@ -473,4 +483,23 @@ export async function getAdminOrderLabelUrl(orderId: string): Promise<string | n
   const presignedUrl = response.data.data?.presignedUrl
 
   return typeof presignedUrl === 'string' && presignedUrl.trim() ? presignedUrl : null
+}
+
+export async function getAllOrdersForAdminByStatus(
+  page = 1,
+  limit = 20,
+  status?: OrderStatus,
+): Promise<OrdersResult> {
+  const response = await adminApiClient.get<AdminOrdersListApiResponse>('/orders/admin/all', {
+    params: {
+      page,
+      limit,
+      status,
+    },
+  })
+
+  return {
+    orders: (response.data.data ?? []).map(normalizeOrder),
+    pagination: response.data.pagination ?? null,
+  }
 }

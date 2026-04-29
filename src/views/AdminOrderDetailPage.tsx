@@ -1,14 +1,32 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { toast } from 'react-hot-toast'
 import { BadgeCheck, Clock3, MapPinHouse, Package, User } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
-import { getAdminOrderById } from '../services/orderService'
+import { getAdminOrderById, updateOrderShippingAddressForAdmin } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
+import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice } from '../utils/price'
+
+type AdminShippingAddressForm = {
+    street: string
+    city: string
+    state: string
+    postalCode: string
+    country: string
+}
+
+const EMPTY_SHIPPING_ADDRESS_FORM: AdminShippingAddressForm = {
+    street: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    country: 'IN',
+}
 
 function formatOrderDate(value: string) {
     return new Intl.DateTimeFormat('en-IN', {
@@ -53,6 +71,15 @@ export default function AdminOrderDetailPage() {
     const [order, setOrder] = useState<AdminOrderDetail | null>(null)
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState('')
+    const [isEditAddressOpen, setIsEditAddressOpen] = useState(false)
+    const [isSavingAddress, setIsSavingAddress] = useState(false)
+    const [addressForm, setAddressForm] = useState<AdminShippingAddressForm>(EMPTY_SHIPPING_ADDRESS_FORM)
+    const [addressError, setAddressError] = useState('')
+    const [postalCodeError, setPostalCodeError] = useState('')
+    const countryOptions = useMemo(() => getCountryOptions(), [])
+    const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
+    const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
+    const canEditShippingAddress = order?.orderStatus === 'PENDING' || order?.orderStatus === 'CONFIRMED'
 
     useEffect(() => {
         let mounted = true
@@ -68,6 +95,17 @@ export default function AdminOrderDetailPage() {
                 }
 
                 setOrder(response)
+                if (response.shippingAddress) {
+                    setAddressForm({
+                        street: response.shippingAddress.street,
+                        city: response.shippingAddress.city,
+                        state: response.shippingAddress.state,
+                        postalCode: response.shippingAddress.postalCode,
+                        country: response.shippingAddress.country,
+                    })
+                } else {
+                    setAddressForm(EMPTY_SHIPPING_ADDRESS_FORM)
+                }
                 setError('')
             } catch {
                 if (!mounted) {
@@ -91,6 +129,77 @@ export default function AdminOrderDetailPage() {
             mounted = false
         }
     }, [orderId])
+
+    function openEditShippingAddress() {
+        if (!order) {
+            return
+        }
+
+        const currentAddress = order.shippingAddress
+
+        setAddressError('')
+        setPostalCodeError('')
+        setAddressForm({
+            street: currentAddress?.street ?? '',
+            city: currentAddress?.city ?? '',
+            state: currentAddress?.state ?? '',
+            postalCode: currentAddress?.postalCode ?? '',
+            country: currentAddress?.country ?? 'IN',
+        })
+        setIsEditAddressOpen(true)
+    }
+
+    function closeEditShippingAddress() {
+        if (isSavingAddress) {
+            return
+        }
+
+        setIsEditAddressOpen(false)
+        setAddressError('')
+        setPostalCodeError('')
+    }
+
+    async function handleUpdateShippingAddress() {
+        if (!order || isSavingAddress) {
+            return
+        }
+
+        const payload = {
+            street: addressForm.street.trim(),
+            city: addressForm.city.trim(),
+            state: addressForm.state.trim(),
+            postalCode: addressForm.postalCode.trim(),
+            country: addressForm.country.trim(),
+        }
+
+        setAddressError('')
+        setPostalCodeError('')
+
+        if (!payload.street || !payload.city || !payload.state || !payload.postalCode || !payload.country) {
+            setAddressError('Please complete all shipping address fields.')
+            return
+        }
+
+        if (!isValidPostalCode(payload.postalCode, payload.country)) {
+            setPostalCodeError('Please enter a valid postal code.')
+            return
+        }
+
+        setIsSavingAddress(true)
+
+        try {
+            await updateOrderShippingAddressForAdmin(order.id, payload)
+            const refreshedOrder = await getAdminOrderById(order.id)
+            setOrder(refreshedOrder)
+            setIsEditAddressOpen(false)
+            toast.success('Shipping address updated successfully.')
+        } catch {
+            setAddressError('Unable to update shipping address right now. Please try again.')
+            toast.error('Unable to update shipping address right now.')
+        } finally {
+            setIsSavingAddress(false)
+        }
+    }
 
     return (
         <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
@@ -144,12 +253,23 @@ export default function AdminOrderDetailPage() {
                             </div>
 
                             <div className="rounded-[20px] border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
-                                <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><MapPinHouse className="h-4 w-4" />Shipping Address</p>
+                                <div className="flex flex-wrap items-center justify-between gap-2">
+                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><MapPinHouse className="h-4 w-4" />Shipping Address</p>
+                                    {canEditShippingAddress ? (
+                                        <button
+                                            type="button"
+                                            onClick={openEditShippingAddress}
+                                            className="rounded-full border border-[#e5d7cc] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                                        >
+                                            Change Address
+                                        </button>
+                                    ) : null}
+                                </div>
                                 {order.shippingAddress ? (
                                     <>
                                         <p>{order.shippingAddress.street}</p>
-                                        <p>{order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.postalCode}</p>
-                                        <p>{order.shippingAddress.country}</p>
+                                        <p>{order.shippingAddress.city}, {getStateName(order.shippingAddress.country, order.shippingAddress.state)} {order.shippingAddress.postalCode}</p>
+                                        <p>{getCountryName(order.shippingAddress.country)}</p>
                                     </>
                                 ) : (
                                     <p>No shipping address available.</p>
@@ -167,6 +287,137 @@ export default function AdminOrderDetailPage() {
   </a>
 ) : null}
                             </div>
+
+                            {isEditAddressOpen ? (
+                                <div className="rounded-[20px] border border-[#efe1d5] bg-white p-4 text-sm">
+                                    <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">Edit Shipping Address</h3>
+                                    <p className="mt-1 text-xs text-zinc-500">Allowed before shipment only.</p>
+
+                                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                                        <label className="space-y-1">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">Country</span>
+                                            <select
+                                                value={addressForm.country}
+                                                onChange={(event) =>
+                                                    setAddressForm((currentValue) => ({
+                                                        ...currentValue,
+                                                        country: event.target.value,
+                                                        state: '',
+                                                        city: '',
+                                                    }))
+                                                }
+                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                            >
+                                                <option value="">Select country</option>
+                                                {countryOptions.map((country) => (
+                                                    <option key={country.code} value={country.code}>
+                                                        {country.name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </label>
+
+                                        <label className="space-y-1">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">State</span>
+                                            <select
+                                                value={addressForm.state}
+                                                onChange={(event) =>
+                                                    setAddressForm((currentValue) => ({
+                                                        ...currentValue,
+                                                        state: event.target.value,
+                                                        city: '',
+                                                    }))
+                                                }
+                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                            >
+                                                <option value="">Select state</option>
+                                                {stateOptions.map((state) => (
+                                                    <option key={state.code} value={state.code}>
+                                                        {state.name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </label>
+
+                                        <label className="space-y-1">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">City</span>
+                                            <select
+                                                value={addressForm.city}
+                                                onChange={(event) =>
+                                                    setAddressForm((currentValue) => ({
+                                                        ...currentValue,
+                                                        city: event.target.value,
+                                                    }))
+                                                }
+                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                            >
+                                                <option value="">Select city</option>
+                                                {cityOptions.map((city) => (
+                                                    <option key={city.name} value={city.name}>
+                                                        {city.name}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </label>
+
+                                        <label className="space-y-1">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">Postal Code</span>
+                                            <input
+                                                value={addressForm.postalCode}
+                                                onChange={(event) => {
+                                                    if (postalCodeError) {
+                                                        setPostalCodeError('')
+                                                    }
+
+                                                    setAddressForm((currentValue) => ({
+                                                        ...currentValue,
+                                                        postalCode: event.target.value,
+                                                    }))
+                                                }}
+                                                placeholder="Postal Code"
+                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                            />
+                                            {postalCodeError ? <p className="text-xs text-rose-700">{postalCodeError}</p> : null}
+                                        </label>
+
+                                        <label className="space-y-1 sm:col-span-2">
+                                            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">Street</span>
+                                            <input
+                                                value={addressForm.street}
+                                                onChange={(event) =>
+                                                    setAddressForm((currentValue) => ({
+                                                        ...currentValue,
+                                                        street: event.target.value,
+                                                    }))
+                                                }
+                                                placeholder="Street"
+                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                            />
+                                        </label>
+                                    </div>
+
+                                    {addressError ? <p className="mt-3 rounded-lg bg-rose-50 px-3 py-2 text-xs text-rose-700">{addressError}</p> : null}
+
+                                    <div className="mt-4 flex flex-wrap justify-end gap-2">
+                                        <button
+                                            type="button"
+                                            onClick={closeEditShippingAddress}
+                                            disabled={isSavingAddress}
+                                            className="rounded-full border border-[#e5d7cc] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white disabled:cursor-not-allowed disabled:opacity-70"
+                                        >
+                                            Cancel
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => void handleUpdateShippingAddress()}
+                                            disabled={isSavingAddress}
+                                            className="rounded-full bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
+                                        >
+                                            {isSavingAddress ? 'Updating...' : 'Update Address'}
+                                        </button>
+                                    </div>
+                                </div>
+                            ) : null}
 
                             <div className="rounded-[20px] border border-[#efe1d5] bg-[#fffdfa] p-4">
                                 <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Package className="h-4 w-4" />Items</p>
