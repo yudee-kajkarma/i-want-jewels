@@ -761,14 +761,14 @@ export default function AdminOrdersPage() {
             </p>
 
 {pendingAction.type === "ship" ? (
-  <div className="mt-4 space-y-3 rounded-xl border border-[#efcfe1] bg-[#fff8fd] p-3">
+  <div className="mt-4 space-y-2 rounded-xl border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
     {isLoadingShippingQuote ? (
       <p className="text-sm text-[#694d5f]">Loading shipping cost...</p>
     ) : null}
 
     {!isLoadingShippingQuote && shippingQuote ? (
       <>
-        <p className="text-sm font-semibold text-[#4f2040]">
+        <p className="flex justify-center text-sm font-semibold text-[#4f2040] ">
           Available Shipping Rates
         </p>
 
