@@ -106,6 +106,15 @@ type AdminOrderUpdateApiResponse = {
   data?: OrderApiResponse
 }
 
+type AdminCancelShipmentApiResponse = {
+  success: boolean
+  message: string
+  data?: {
+    orderId?: string
+    orderStatus?: string
+  }
+}
+
 type AdminOrderDetailApiResponse = {
   success: boolean
   code: string
@@ -439,6 +448,12 @@ export async function shipOrderForAdmin(
   })
 
   return response.data.data ? normalizeOrder(response.data.data) : null
+}
+
+export async function cancelShipmentForAdmin(orderId: string): Promise<string> {
+  const response = await adminApiClient.delete<AdminCancelShipmentApiResponse>(`/orders/admin/${orderId}/shipment`)
+
+  return response.data.message || 'Shipment cancelled successfully.'
 }
 
 export async function verifyOrderDeliveryForAdmin(orderId: string): Promise<Order | null> {

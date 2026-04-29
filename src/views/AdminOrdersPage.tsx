@@ -7,6 +7,7 @@ import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import {
+  cancelShipmentForAdmin,
   getAdminOrderLabelUrl,
   getAdminShippingQuoteForOrder,
   getAllOrdersForAdmin,
@@ -18,7 +19,7 @@ import { useCurrency } from '../context/CurrencyContext'
 import type { AdminShippingQuote, AdminShippingRateOption, Order, OrdersPagination, ShippingCarrier } from '../types/order'
 import { formatPrice } from '../utils/price'
 
-type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'verify'
+type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'verify' | 'cancelShipment'
 
 type PendingAction = {
   type: PendingActionType
@@ -75,6 +76,10 @@ function getActionLabel(type: PendingActionType) {
     return 'Ship Order'
   }
 
+  if (type === 'cancelShipment') {
+    return 'Cancel Shipment'
+  }
+
   return 'Verify Delivery'
 }
 
@@ -89,6 +94,10 @@ function getActionDescription(type: PendingActionType) {
 
   if (type === 'ship') {
     return 'This will move the order status to SHIPPED.'
+  }
+
+  if (type === 'cancelShipment') {
+    return 'This will cancel shipment and revert the order status to CONFIRMED.'
   }
 
   return 'This will complete delivery and move the order status to DELIVERED.'
@@ -292,6 +301,11 @@ export default function AdminOrdersPage() {
         toast.success(`Delivery verified for order ${pendingAction.order.orderNumber}.`)
       }
 
+      if (pendingAction.type === 'cancelShipment') {
+        const message = await cancelShipmentForAdmin(pendingAction.order.id)
+        toast.success(message)
+      }
+
       setPendingAction(null)
       await loadOrders(false, currentPage)
     } catch {
@@ -449,6 +463,13 @@ export default function AdminOrdersPage() {
             >
               <FileDown className="h-3.5 w-3.5" />
               {downloadingLabelOrderId === order.id ? 'Downloading...' : 'Download Label'}
+            </button>
+            <button
+              type="button"
+              onClick={() => openActionModal('cancelShipment', order)}
+              className="rounded-full border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
+            >
+              Cancel Shipment
             </button>
             <button
               type="button"
