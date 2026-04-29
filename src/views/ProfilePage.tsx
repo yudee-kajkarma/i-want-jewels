@@ -16,7 +16,7 @@ import {
   updateUserProfile,
 } from '../services/userService'
 import type { UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
-import { getCountryOptions, getStateOptions, normalizeCountryCode, normalizeStateCode } from '../utils/location'
+import { getCityOptions, getCountryOptions, getStateOptions, isValidPostalCode, normalizeCountryCode, normalizeStateCode } from '../utils/location'
 
 type AddressFormItem = UserProfileAddressPayload & {
   id: string
@@ -58,6 +58,7 @@ export default function ProfilePage() {
   const [isChangePasswordOpen, setIsChangePasswordOpen] = useState(false)
   const [successMessage, setSuccessMessage] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
+  const [postalCodeErrorsByAddressId, setPostalCodeErrorsByAddressId] = useState<Record<string, string>>({})
   const [oldPassword, setOldPassword] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -187,6 +188,17 @@ export default function ProfilePage() {
   }, [])
 
   function handleAddressChange(id: string, field: keyof UserProfileAddressPayload, value: string | boolean) {
+    if (field === 'postalCode') {
+      setPostalCodeErrorsByAddressId((currentValue) => {
+        if (!currentValue[id]) {
+          return currentValue
+        }
+
+        const { [id]: _removed, ...remaining } = currentValue
+        return remaining
+      })
+    }
+
     setAddresses((currentAddresses) =>
       currentAddresses.map((address) => {
         if (address.id !== id) {
@@ -310,9 +322,26 @@ export default function ProfilePage() {
 
     const payload = buildAddressPayload(address)
 
+    setPostalCodeErrorsByAddressId((currentValue) => {
+      if (!currentValue[addressId]) {
+        return currentValue
+      }
+
+      const { [addressId]: _removed, ...remaining } = currentValue
+      return remaining
+    })
+
     if (!payload.street || !payload.city || !payload.state || !payload.postalCode || !payload.country) {
       setErrorMessage('Please complete all required address fields before saving.')
       toast.error('Please complete all required address fields before saving.')
+      return
+    }
+
+    if (!isValidPostalCode(payload.postalCode, payload.country)) {
+      setPostalCodeErrorsByAddressId((currentValue) => ({
+        ...currentValue,
+        [addressId]: 'Please enter a valid postal code.',
+      }))
       return
     }
 
@@ -560,6 +589,7 @@ export default function ProfilePage() {
                           onChange={(event) => {
                             handleAddressChange(address.id, 'country', event.target.value)
                             handleAddressChange(address.id, 'state', '')
+                            handleAddressChange(address.id, 'city', '')
                           }}
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
@@ -576,7 +606,10 @@ export default function ProfilePage() {
                         State
                         <select
                           value={address.state}
-                          onChange={(event) => handleAddressChange(address.id, 'state', event.target.value)}
+                          onChange={(event) => {
+                            handleAddressChange(address.id, 'state', event.target.value)
+                            handleAddressChange(address.id, 'city', '')
+                          }}
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         >
@@ -590,13 +623,19 @@ export default function ProfilePage() {
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         City
-                        <input
-                          type="text"
+                        <select
                           value={address.city}
                           onChange={(event) => handleAddressChange(address.id, 'city', event.target.value)}
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
-                        />
+                        >
+                          <option value="">Select city</option>
+                          {getCityOptions(address.country, address.state).map((city) => (
+                            <option key={city.name} value={city.name}>
+                              {city.name}
+                            </option>
+                          ))}
+                        </select>
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         House Number
@@ -626,6 +665,9 @@ export default function ProfilePage() {
                           className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         />
+                        {postalCodeErrorsByAddressId[address.id] ? (
+                          <p className="text-xs font-medium text-rose-700">{postalCodeErrorsByAddressId[address.id]}</p>
+                        ) : null}
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Address Type

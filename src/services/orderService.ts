@@ -113,35 +113,67 @@ type AdminOrderDetailApiResponse = {
   data: OrderApiResponse
 }
 
+type AdminLabelUrlApiResponse = {
+  success: boolean
+  code: string
+  data?: {
+    orderId?: string
+    orderNumber?: string
+    presignedUrl?: string
+    expiresIn?: number
+  }
+}
+
 type AdminShippingQuoteApiResponse = {
   success: boolean
   data?: {
-    orderNumber: string
-  destination: {
-    country: string
-    postalCode: string
+    FEDEX?:
+      | Array<{
+          serviceName?: string
+          serviceCode?: string
+          price?: number
+          deliveryDays?: number
+          tag?: string
+        }>
+      | Record<string, unknown>
+    DHL?:
+      | Array<{
+          serviceName?: string
+          serviceCode?: string
+          price?: number
+          deliveryDays?: number
+          tag?: string
+        }>
+      | Record<string, unknown>
   }
-  rates: {
-    FEDEX: {
-      shippingCost: {
-        dol: number
-        eur: number
-        pou: number
-      }
-      serviceType: string
-      estimatedDays: string
-    }
-    DHL: {
-      shippingCost: {
-        dol: number
-        eur: number
-        pou: number
-      }
-      serviceType: string
-      estimatedDays: string
-    }
+}
+
+function normalizeShippingRateOptions(
+  rates:
+    | Array<{
+        serviceName?: string
+        serviceCode?: string
+        price?: number
+        deliveryDays?: number
+        tag?: string
+      }>
+    | Record<string, unknown>
+    | undefined,
+) {
+  if (!Array.isArray(rates)) {
+    return []
   }
-  }}
+
+  return rates
+    .map((rate) => ({
+      serviceName: rate.serviceName ?? '',
+      serviceCode: rate.serviceCode ?? '',
+      price: typeof rate.price === 'number' ? rate.price : 0,
+      deliveryDays: typeof rate.deliveryDays === 'number' ? rate.deliveryDays : 0,
+      tag: rate.tag,
+    }))
+    .filter((rate) => rate.serviceCode)
+}
 
 function getStringValue(record: Record<string, unknown>, key: string): string {
   const value = record[key]
@@ -294,40 +326,12 @@ function normalizeAdminShippingQuote(
 ): AdminShippingQuote | null {
   if (!data) return null
 
-  const result: AdminShippingQuote = {
-    orderNumber: data.orderNumber ?? "",
-    destination: {
-      country: data.destination?.country ?? "",
-      postalCode: data.destination?.postalCode ?? "",
+  return {
+    rates: {
+      FEDEX: normalizeShippingRateOptions(data.FEDEX),
+      DHL: normalizeShippingRateOptions(data.DHL),
     },
-    rates: {},
   }
-
-  if (data.rates?.FEDEX) {
-    result.rates.FEDEX = {
-      shippingCost: {
-        dol: data.rates.FEDEX.shippingCost?.dol ?? 0,
-        eur: data.rates.FEDEX.shippingCost?.eur ?? 0,
-        pou: data.rates.FEDEX.shippingCost?.pou ?? 0,
-      },
-      serviceType: data.rates.FEDEX.serviceType ?? "",
-      estimatedDays: data.rates.FEDEX.estimatedDays ?? "",
-    }
-  }
-
-  if (data.rates?.DHL) {
-    result.rates.DHL = {
-      shippingCost: {
-        dol: data.rates.DHL.shippingCost?.dol ?? 0,
-        eur: data.rates.DHL.shippingCost?.eur ?? 0,
-        pou: data.rates.DHL.shippingCost?.pou ?? 0,
-      },
-      serviceType: data.rates.DHL.serviceType ?? "",
-      estimatedDays: data.rates.DHL.estimatedDays ?? "",
-    }
-  }
-
-  return result
 }
 
 export async function createOrder(payload: CreateOrderPayload): Promise<CreateOrderResult> {
@@ -425,9 +429,13 @@ export async function getAdminShippingQuoteForOrder(orderId: string): Promise<Ad
   return normalizeAdminShippingQuote(response.data.data)
 }
 
-export async function shipOrderForAdmin(orderId: string, carrier: ShippingCarrier): Promise<Order | null> {
+export async function shipOrderForAdmin(
+  orderId: string,
+  payload: { carrier: ShippingCarrier; serviceCode: string },
+): Promise<Order | null> {
   const response = await adminApiClient.put<AdminOrderUpdateApiResponse>(`/orders/admin/${orderId}/ship`, {
-    carrier,
+    carrier: payload.carrier,
+    serviceCode: payload.serviceCode,
   })
 
   return response.data.data ? normalizeOrder(response.data.data) : null
@@ -443,4 +451,11 @@ export async function getAdminOrderById(orderId: string): Promise<AdminOrderDeta
   const response = await adminApiClient.get<AdminOrderDetailApiResponse>(`/orders/admin/${orderId}`)
 
   return normalizeAdminOrderDetail(response.data.data)
+}
+
+export async function getAdminOrderLabelUrl(orderId: string): Promise<string | null> {
+  const response = await adminApiClient.get<AdminLabelUrlApiResponse>(`/orders/admin/${orderId}/label-url`)
+  const presignedUrl = response.data.data?.presignedUrl
+
+  return typeof presignedUrl === 'string' && presignedUrl.trim() ? presignedUrl : null
 }

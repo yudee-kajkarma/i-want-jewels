@@ -111,31 +111,18 @@ export type CartRestoreSnapshot = {
 
 export type ShippingCarrier = 'FEDEX' | 'DHL'
 
+export type AdminShippingRateOption = {
+  serviceName: string
+  serviceCode: string
+  price: number
+  deliveryDays: number
+  tag?: string
+}
+
 export type AdminShippingQuote = {
-  orderNumber: string
-  destination: {
-    country: string
-    postalCode: string
-  }
   rates: {
-    FEDEX?: {
-      shippingCost: {
-        dol: number
-        eur: number
-        pou: number
-      }
-      serviceType: string
-      estimatedDays: string
-    }
-    DHL?: {
-      shippingCost: {
-        dol: number
-        eur: number
-        pou: number
-      }
-      serviceType: string
-      estimatedDays: string
-    }
+    FEDEX: AdminShippingRateOption[]
+    DHL: AdminShippingRateOption[]
   }
 }
 

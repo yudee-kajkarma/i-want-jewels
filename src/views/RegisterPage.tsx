@@ -8,7 +8,7 @@ import AuthShell from '../components/auth/AuthShell'
 import { useAuth } from '../context/AuthContext'
 import { registerUser } from '../services/authService'
 import type { RegisterPayload } from '../types/auth'
-import { getCountryOptions, getStateOptions } from '../utils/location'
+import { getCityOptions, getCountryOptions, getStateOptions, isValidEmailAddress, isValidPostalCode } from '../utils/location'
 
 const initialForm: RegisterPayload = {
   username: '',
@@ -36,10 +36,85 @@ export default function RegisterPage() {
   const [form, setForm] = useState<RegisterPayload>(initialForm)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [postalCodeError, setPostalCodeError] = useState('')
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
   const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(form.address.country), [form.address.country])
+  const cityOptions = useMemo(() => getCityOptions(form.address.country, form.address.state), [form.address.country, form.address.state])
+  const isRegisterFormValid = useMemo(() => {
+    const hasRequiredFields =
+      form.username.trim() !== '' &&
+      form.email.trim() !== '' &&
+      form.password.trim() !== '' &&
+      form.confirmPassword.trim() !== '' &&
+      form.firstName.trim() !== '' &&
+      form.lastName.trim() !== '' &&
+      form.phoneNumber.trim() !== '' &&
+      form.countryCode.trim() !== '' &&
+      form.address.country.trim() !== '' &&
+      form.address.state.trim() !== '' &&
+      form.address.city.trim() !== '' &&
+      form.address.street.trim() !== '' &&
+      form.address.postalCode.trim() !== ''
+
+    if (!hasRequiredFields) {
+      return false
+    }
+
+    if (!isValidEmailAddress(form.email)) {
+      return false
+    }
+
+    if (!isValidPostalCode(form.address.postalCode, form.address.country)) {
+      return false
+    }
+
+    return form.password === form.confirmPassword
+  }, [form])
+  const emailErrorMessage = useMemo(() => {
+    if (!form.email.trim()) {
+      return ''
+    }
+
+    return isValidEmailAddress(form.email) ? '' : 'Please write a valid email address.'
+  }, [form.email])
+  const postalCodeLiveErrorMessage = useMemo(() => {
+    if (!form.address.postalCode.trim()) {
+      return ''
+    }
+
+    return isValidPostalCode(form.address.postalCode, form.address.country) ? '' : 'Please write a valid postal code.'
+  }, [form.address.country, form.address.postalCode])
+  const passwordMismatchMessage = useMemo(() => {
+    if (!form.confirmPassword.trim()) {
+      return ''
+    }
+
+    return form.password === form.confirmPassword ? '' : 'Password and confirm password must match.'
+  }, [form.confirmPassword, form.password])
+  const requiredFieldsMessage = useMemo(() => {
+    const hasAnyInput =
+      form.username.trim() ||
+      form.email.trim() ||
+      form.password.trim() ||
+      form.confirmPassword.trim() ||
+      form.firstName.trim() ||
+      form.lastName.trim() ||
+      form.phoneNumber.trim() ||
+      form.countryCode.trim() ||
+      form.address.country.trim() ||
+      form.address.state.trim() ||
+      form.address.city.trim() ||
+      form.address.street.trim() ||
+      form.address.postalCode.trim()
+
+    if (!hasAnyInput || isRegisterFormValid) {
+      return ''
+    }
+
+    return 'Please fill all required fields.'
+  }, [form, isRegisterFormValid])
 
   function getRegisterErrorMessage(error: unknown): string {
     if (!axios.isAxiosError(error)) {
@@ -88,6 +163,17 @@ export default function RegisterPage() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    setPostalCodeError('')
+
+    if (!isValidEmailAddress(form.email)) {
+      setError('Please write a valid email address.')
+      return
+    }
+
+    if (!isValidPostalCode(form.address.postalCode, form.address.country)) {
+      setPostalCodeError('Please write a valid postal code.')
+      return
+    }
 
     if (form.password !== form.confirmPassword) {
       setError('Password and confirm password must match.')
@@ -137,6 +223,7 @@ export default function RegisterPage() {
               onChange={(event) => updateField('email', event.target.value)}
               className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
+            {emailErrorMessage ? <p className="mt-2 text-xs text-rose-700">{emailErrorMessage}</p> : null}
           </label>
           <label className="block">
             <span className="mb-2 block text-sm font-semibold text-[#17110d]">First Name</span>
@@ -197,6 +284,7 @@ export default function RegisterPage() {
                 {isConfirmPasswordVisible ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
               </button>
             </div>
+            {passwordMismatchMessage ? <p className="mt-2 text-xs text-rose-700">{passwordMismatchMessage}</p> : null}
           </label>
           <label className="block">
             <span className="mb-2 block text-sm font-semibold text-[#17110d]">Country Code</span>
@@ -232,6 +320,7 @@ export default function RegisterPage() {
                   const countryCode = event.target.value
                   updateAddressField('country', countryCode)
                   updateAddressField('state', '')
+                  updateAddressField('city', '')
                 }}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
@@ -248,7 +337,10 @@ export default function RegisterPage() {
               <select
                 required
                 value={form.address.state}
-                onChange={(event) => updateAddressField('state', event.target.value)}
+                onChange={(event) => {
+                  updateAddressField('state', event.target.value)
+                  updateAddressField('city', '')
+                }}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
                 <option value="">Select state</option>
@@ -271,13 +363,19 @@ export default function RegisterPage() {
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">City</span>
-              <input
-                type="text"
+              <select
                 required
                 value={form.address.city}
                 onChange={(event) => updateAddressField('city', event.target.value)}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-              />
+              >
+                <option value="">Select city</option>
+                {cityOptions.map((city) => (
+                  <option key={city.name} value={city.name}>
+                    {city.name}
+                  </option>
+                ))}
+              </select>
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">Postal Code</span>
@@ -285,18 +383,28 @@ export default function RegisterPage() {
                 type="text"
                 required
                 value={form.address.postalCode}
-                onChange={(event) => updateAddressField('postalCode', event.target.value)}
+                onChange={(event) => {
+                  if (postalCodeError) {
+                    setPostalCodeError('')
+                  }
+
+                  updateAddressField('postalCode', event.target.value)
+                }}
                 className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               />
+              {postalCodeError || postalCodeLiveErrorMessage ? (
+                <p className="mt-2 text-xs text-rose-700">{postalCodeError || postalCodeLiveErrorMessage}</p>
+              ) : null}
             </label>
           </div>
         </div>
 
         {error ? <p className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
+        {!error && requiredFieldsMessage ? <p className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-700">{requiredFieldsMessage}</p> : null}
 
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !isRegisterFormValid}
           className="w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
         >
           {isSubmitting ? 'CREATING ACCOUNT...' : 'REGISTER'}

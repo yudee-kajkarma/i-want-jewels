@@ -2,11 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
-import { Clock3, Truck, BadgeCheck, LayoutGrid, List } from 'lucide-react'
+import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown } from 'lucide-react'
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import {
+  getAdminOrderLabelUrl,
   getAdminShippingQuoteForOrder,
   getAllOrdersForAdmin,
   shipOrderForAdmin,
@@ -14,7 +15,7 @@ import {
   verifyOrderDeliveryForAdmin,
 } from '../services/orderService'
 import { useCurrency } from '../context/CurrencyContext'
-import type { AdminShippingQuote, Order, OrdersPagination, ShippingCarrier } from '../types/order'
+import type { AdminShippingQuote, AdminShippingRateOption, Order, OrdersPagination, ShippingCarrier } from '../types/order'
 import { formatPrice } from '../utils/price'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'verify'
@@ -107,6 +108,8 @@ export default function AdminOrdersPage() {
   const [shippingQuoteError, setShippingQuoteError] = useState('')
   const [isLoadingShippingQuote, setIsLoadingShippingQuote] = useState(false)
   const [selectedCarrier, setSelectedCarrier] = useState<ShippingCarrier>('FEDEX')
+  const [selectedServiceCode, setSelectedServiceCode] = useState('')
+  const [downloadingLabelOrderId, setDownloadingLabelOrderId] = useState('')
 
   useEffect(() => {
     void loadOrders(true, 1)
@@ -120,6 +123,7 @@ export default function AdminOrdersPage() {
       setShippingQuoteError('')
       setShippingQuote(null)
       setSelectedCarrier('FEDEX')
+      setSelectedServiceCode('')
 
       try {
         const quote = await getAdminShippingQuoteForOrder(orderId)
@@ -130,11 +134,16 @@ export default function AdminOrdersPage() {
 
         setShippingQuote(quote)
 
-        // console.log('Shipping quote:', quote)
+        const defaultFedexService = quote?.rates.FEDEX[0]
+        const defaultDhlService = quote?.rates.DHL[0]
 
-        // if (quote?.rates?.DHL || quote?.rates?.FEDEX) {
-        //   setSelectedCarrier(quote.rates.DHL ? 'DHL' : 'FEDEX')
-        // }
+        if (defaultFedexService) {
+          setSelectedCarrier('FEDEX')
+          setSelectedServiceCode(defaultFedexService.serviceCode)
+        } else if (defaultDhlService) {
+          setSelectedCarrier('DHL')
+          setSelectedServiceCode(defaultDhlService.serviceCode)
+        }
       } catch {
         if (!isMounted) {
           return
@@ -235,7 +244,17 @@ export default function AdminOrdersPage() {
     setShippingQuoteError('')
     setIsLoadingShippingQuote(false)
     setSelectedCarrier('FEDEX')
+    setSelectedServiceCode('')
   }
+
+  const selectedShippingRate = useMemo(() => {
+    if (!shippingQuote || !selectedServiceCode) {
+      return null
+    }
+
+    const ratesForCarrier = selectedCarrier === 'FEDEX' ? shippingQuote.rates.FEDEX : shippingQuote.rates.DHL
+    return ratesForCarrier.find((rate) => rate.serviceCode === selectedServiceCode) ?? null
+  }, [selectedCarrier, selectedServiceCode, shippingQuote])
 
   async function handleActionConfirm() {
     if (!pendingAction) {
@@ -256,7 +275,15 @@ export default function AdminOrdersPage() {
       }
 
       if (pendingAction.type === 'ship') {
-        await shipOrderForAdmin(pendingAction.order.id, selectedCarrier)
+        if (!selectedServiceCode) {
+          toast.error('Please select a shipping service.')
+          return
+        }
+
+        await shipOrderForAdmin(pendingAction.order.id, {
+          carrier: selectedCarrier,
+          serviceCode: selectedServiceCode,
+        })
         toast.success(`Order ${pendingAction.order.orderNumber} marked as shipped.`)
       }
 
@@ -280,6 +307,25 @@ export default function AdminOrdersPage() {
     }
 
     await loadOrders(true, nextPage)
+  }
+
+  async function handleDownloadLabel(order: Order) {
+    try {
+      setDownloadingLabelOrderId(order.id)
+      const presignedUrl = await getAdminOrderLabelUrl(order.id)
+
+      if (!presignedUrl) {
+        toast.error('Unable to generate label URL right now.')
+        return
+      }
+
+      window.open(presignedUrl, '_blank', 'noopener,noreferrer')
+      toast.success(`Label ready for ${order.orderNumber}.`)
+    } catch {
+      toast.error('Unable to download label right now.')
+    } finally {
+      setDownloadingLabelOrderId('')
+    }
   }
 
   function getPageWindow() {
@@ -394,13 +440,24 @@ export default function AdminOrdersPage() {
         ) : null}
 
         {order.orderStatus === 'SHIPPED' ? (
-          <button
-            type="button"
-            onClick={() => openActionModal('verify', order)}
-            className="rounded-full border border-[#ca4f8b] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#9b336d] transition hover:bg-[#ffe6f5]"
-          >
-            Verify Delivery
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={() => void handleDownloadLabel(order)}
+              disabled={downloadingLabelOrderId === order.id}
+              className="inline-flex items-center gap-1 rounded-full border border-[#b56a22] bg-[#fff6e7] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#8f5119] transition hover:bg-[#ffebc8] disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              <FileDown className="h-3.5 w-3.5" />
+              {downloadingLabelOrderId === order.id ? 'Downloading...' : 'Download Label'}
+            </button>
+            <button
+              type="button"
+              onClick={() => openActionModal('verify', order)}
+              className="rounded-full border border-[#ca4f8b] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#9b336d] transition hover:bg-[#ffe6f5]"
+            >
+              Verify Delivery
+            </button>
+          </>
         ) : null}
       </div>
     )
@@ -427,6 +484,56 @@ export default function AdminOrdersPage() {
           <div className="mt-4 h-10 rounded-xl bg-[#f5ddea]" />
         </div>
       </article>
+    )
+  }
+
+  function renderShippingRateTable(carrier: ShippingCarrier, rates: AdminShippingRateOption[]) {
+    if (rates.length === 0) {
+      return (
+        <div className="rounded-lg border border-dashed border-[#f1d9e7] bg-white p-3 text-xs text-[#7f5d70]">
+          No {carrier} rates available.
+        </div>
+      )
+    }
+
+    return (
+      <div className="overflow-x-auto rounded-lg border border-[#f1d9e7] bg-white">
+        <table className="w-full table-fixed text-left text-xs">
+          <thead className="bg-[#fff2fb] text-[#7a3a61]">
+            <tr>
+              <th className="px-3 py-2 font-semibold">Service</th>
+              <th className="hidden px-3 py-2 font-semibold md:table-cell">Code</th>
+              <th className="px-3 py-2 font-semibold">Price</th>
+              <th className="px-3 py-2 font-semibold">Days</th>
+              <th className="hidden px-3 py-2 font-semibold md:table-cell">Tag</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rates.map((rate) => {
+              const isSelected = selectedCarrier === carrier && selectedServiceCode === rate.serviceCode
+
+              return (
+                <tr
+                  key={`${carrier}-${rate.serviceCode}`}
+                  onClick={() => {
+                    setSelectedCarrier(carrier)
+                    setSelectedServiceCode(rate.serviceCode)
+                  }}
+                  className={`cursor-pointer border-t border-[#f6e4ef] transition ${
+                    isSelected ? 'bg-[#ffe8f5]' : 'hover:bg-[#fff6fb]'
+                  }`}
+                >
+                  <td className="px-3 py-2 font-medium text-[#4f2040] break-words">{rate.serviceName}</td>
+                  <td className="hidden px-3 py-2 text-[#6e4d60] break-all md:table-cell">{rate.serviceCode}</td>
+                  <td className="px-3 py-2 text-[#6e4d60]">{formatPrice(rate.price, currency)}</td>
+                  <td className="px-3 py-2 text-[#6e4d60]">{rate.deliveryDays}</td>
+                  <td className="hidden px-3 py-2 text-[#6e4d60] md:table-cell">{rate.tag ?? '-'}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
     )
   }
 
@@ -641,8 +748,12 @@ export default function AdminOrdersPage() {
       </main>
 
       {pendingAction ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#1f0718]/45 px-4" role="dialog" aria-modal="true">
-          <div className="w-full max-w-md rounded-[24px] border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)]">
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-[#1f0718]/45 px-4 py-4 sm:items-center sm:py-8" role="dialog" aria-modal="true">
+          <div
+            className={`w-full rounded-[24px] border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto ${
+              pendingAction.type === 'ship' ? 'max-w-6xl' : 'max-w-md'
+            }`}
+          >
             <h3 className="text-xl font-bold text-[#3d1530]">{getActionLabel(pendingAction.type)}</h3>
             <p className="mt-3 text-sm leading-6 text-[#694d5f]">{getActionDescription(pendingAction.type)}</p>
             <p className="mt-3 rounded-lg bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
@@ -661,82 +772,30 @@ export default function AdminOrdersPage() {
           Available Shipping Rates
         </p>
 
-        {/* FEDEX */}
-        {shippingQuote.rates?.FEDEX ? (
-          <div className="rounded-lg border border-[#f1d9e7] bg-white p-3 space-y-1">
-            <p className="text-sm font-semibold text-[#4f2040]">FEDEX</p>
-            <p className="text-sm text-[#694d5f]">
-              Cost:{" "}
-              {formatPrice(
-                shippingQuote.rates.FEDEX.shippingCost,
-                currency
-              )}
-            </p>
-            <p className="text-xs text-[#7f5d70]">
-              Service: {shippingQuote.rates.FEDEX.serviceType}
-            </p>
-            <p className="text-xs text-[#7f5d70]">
-              Delivery: {shippingQuote.rates.FEDEX.estimatedDays}
-            </p>
+        <div className="grid gap-3 xl:grid-cols-2">
+          <div className="space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">FEDEX</p>
+            {renderShippingRateTable('FEDEX', shippingQuote.rates.FEDEX)}
+          </div>
+
+          <div className="space-y-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">DHL</p>
+            {renderShippingRateTable('DHL', shippingQuote.rates.DHL)}
+          </div>
+        </div>
+
+        {selectedShippingRate ? (
+          <div className="rounded-lg border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
+            Selected: <span className="font-semibold text-[#4f2040]">{selectedCarrier}</span> /{' '}
+            <span className="font-semibold text-[#4f2040]">{selectedShippingRate.serviceCode}</span>
           </div>
         ) : null}
-
-        {/* DHL */}
-        {shippingQuote.rates?.DHL ? (
-          <div className="rounded-lg border border-[#f1d9e7] bg-white p-3 space-y-1">
-            <p className="text-sm font-semibold text-[#4f2040]">DHL</p>
-            <p className="text-sm text-[#694d5f]">
-              Cost:{" "}
-              {formatPrice(
-                shippingQuote.rates.DHL.shippingCost,
-                currency
-              )}
-            </p>
-            <p className="text-xs text-[#7f5d70]">
-              Service: {shippingQuote.rates.DHL.serviceType}
-            </p>
-            <p className="text-xs text-[#7f5d70]">
-              Delivery: {shippingQuote.rates.DHL.estimatedDays}
-            </p>
-          </div>
-        ) : null}
-
-        {/* Destination */}
-        <p className="text-xs text-[#7f5d70]">
-          Destination: {shippingQuote.destination.country}{" "}
-          {shippingQuote.destination.postalCode}
-        </p>
       </>
     ) : null}
 
     {shippingQuoteError ? (
       <p className="text-xs text-rose-600">{shippingQuoteError}</p>
     ) : null}
-
-    {/* Carrier Select */}
-    <label className="block space-y-1 text-sm">
-      <span className="font-semibold text-[#4f2040]">
-        Shipping Carrier
-      </span>
-
-      <select
-        value={selectedCarrier}
-        onChange={(event) =>
-          setSelectedCarrier(
-            event.target.value as ShippingCarrier
-          )
-        }
-        className="w-full rounded-lg border border-[#e5bfd8] bg-white px-3 py-2 text-sm text-[#4f2040] outline-none focus:border-[#d24a90]"
-      >
-        {/* {shippingQuote?.rates?.FEDEX ? ( */}
-          <option value="FEDEX">FEDEX</option>
-      
-
-        {/* {shippingQuote?.rates?.DHL ? ( */}
-          <option value="DHL">DHL</option>
-        {/* ) : null} */}
-      </select>
-    </label>
   </div>
 ) : null}
 
@@ -752,7 +811,10 @@ export default function AdminOrdersPage() {
               <button
                 type="button"
                 onClick={() => void handleActionConfirm()}
-                disabled={isSubmittingAction}
+                disabled={
+                  isSubmittingAction ||
+                  (pendingAction.type === 'ship' && (!selectedServiceCode || Boolean(shippingQuoteError)))
+                }
                 className="rounded-full border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSubmittingAction ? 'Please wait...' : 'Confirm'}

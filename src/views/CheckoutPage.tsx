@@ -14,7 +14,7 @@ import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import type { CheckoutSource, PaymentMethod, SingleCheckoutDraft } from '../types/order'
 import type { UserAddress, UserProfileAddressPayload } from '../types/profile'
-import { getCountryName, getCountryOptions, getStateName, getStateOptions } from '../utils/location'
+import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
 import {
   clearSingleCheckoutDraft,
@@ -70,6 +70,7 @@ export default function CheckoutPage() {
   const [isAddressLoading, setIsAddressLoading] = useState(true)
   const [isAddressSaving, setIsAddressSaving] = useState(false)
   const [addressError, setAddressError] = useState('')
+  const [postalCodeError, setPostalCodeError] = useState('')
   const [isAddressFormOpen, setIsAddressFormOpen] = useState(false)
   const [editingAddressId, setEditingAddressId] = useState<string | null>(null)
   const [addressForm, setAddressForm] = useState<UserProfileAddressPayload>(EMPTY_ADDRESS_FORM)
@@ -83,6 +84,7 @@ export default function CheckoutPage() {
   const persistedDraft = useMemo(() => getSingleCheckoutDraft(), [location.key])
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
+  const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
   const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search])
   const isSingleFromQuery = searchParams.get('source') === 'single'
   const checkoutSource: CheckoutSource = locationState?.source === 'single' || isSingleFromQuery ? 'single' : 'cart'
@@ -149,6 +151,7 @@ export default function CheckoutPage() {
 
   function openAddAddressForm() {
     setAddressError('')
+    setPostalCodeError('')
     setEditingAddressId(null)
     setAddressForm(EMPTY_ADDRESS_FORM)
     setIsAddressFormOpen(true)
@@ -156,6 +159,7 @@ export default function CheckoutPage() {
 
   function openEditAddressForm(address: UserAddress) {
     setAddressError('')
+    setPostalCodeError('')
     setEditingAddressId(address.id)
     setAddressForm({
       houseNumber: address.houseNumber,
@@ -199,8 +203,15 @@ export default function CheckoutPage() {
       addressType: addressForm.addressType.trim() || 'home',
     }
 
+    setPostalCodeError('')
+
     if (!trimmedPayload.street || !trimmedPayload.city || !trimmedPayload.state || !trimmedPayload.postalCode || !trimmedPayload.country) {
       setAddressError('Please complete all address fields before saving.')
+      return
+    }
+
+    if (!isValidPostalCode(trimmedPayload.postalCode, trimmedPayload.country)) {
+      setPostalCodeError('Please enter a valid postal code.')
       return
     }
 
@@ -466,6 +477,7 @@ export default function CheckoutPage() {
                               ...currentValue,
                               country: event.target.value,
                               state: '',
+                              city: '',
                             }))}
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
@@ -478,7 +490,13 @@ export default function CheckoutPage() {
                           </select>
                           <select
                             value={addressForm.state}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, state: event.target.value }))}
+                            onChange={(event) =>
+                              setAddressForm((currentValue) => ({
+                                ...currentValue,
+                                state: event.target.value,
+                                city: '',
+                              }))
+                            }
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
                             <option value="">Select state</option>
@@ -488,12 +506,18 @@ export default function CheckoutPage() {
                               </option>
                             ))}
                           </select>
-                          <input
+                          <select
                             value={addressForm.city}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
-                            placeholder="City"
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
+                          >
+                            <option value="">Select city</option>
+                            {cityOptions.map((city) => (
+                              <option key={city.name} value={city.name}>
+                                {city.name}
+                              </option>
+                            ))}
+                          </select>
                           <input
                             value={addressForm.houseNumber ?? ''}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}
@@ -506,12 +530,21 @@ export default function CheckoutPage() {
                             placeholder="Street"
                             className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
-                          <input
-                            value={addressForm.postalCode}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))}
-                            placeholder="Postal code"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          />
+                          <div>
+                            <input
+                              value={addressForm.postalCode}
+                              onChange={(event) => {
+                                if (postalCodeError) {
+                                  setPostalCodeError('')
+                                }
+
+                                setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))
+                              }}
+                              placeholder="Postal code"
+                              className="w-full rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            />
+                            {postalCodeError ? <p className="mt-2 text-xs text-rose-700">{postalCodeError}</p> : null}
+                          </div>
                           <input
                             value={addressForm.addressType}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}

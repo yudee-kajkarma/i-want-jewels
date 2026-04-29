@@ -48,6 +48,7 @@ export default function CartPage() {
             {isLoading ? <p className="text-sm text-zinc-500">Loading cart...</p> : null}
 
             {!isLoading && (!cart || cart.items.length === 0) ? (
+              // <div className="flex justify-center">
               <div className="rounded-[28px] border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
                 <h2 className="text-2xl font-bold text-[#17110d]">Your cart is empty</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-500">Add a product from the product details page and it will appear here.</p>
@@ -58,6 +59,7 @@ export default function CartPage() {
                   CONTINUE SHOPPING
                 </Link>
               </div>
+              // </div>
             ) : null}
 
             {!isLoading && cart && cart.items.length > 0 ? (
@@ -124,12 +126,13 @@ export default function CartPage() {
             ) : null}
           </section>
 
-          <aside className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Summary</p>
-            <div className="mt-6 space-y-4 text-sm text-zinc-600">
-              <div className="flex items-center justify-between">
-                <span>Total items</span>
-                <span className="font-semibold text-[#17110d]">{itemCount}</span>
+          { (!isLoading && cart && cart.items.length > 0) && (
+            <aside className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Summary</p>
+              <div className="mt-6 space-y-4 text-sm text-zinc-600">
+                <div className="flex items-center justify-between">
+                  <span>Total items</span>
+                  <span className="font-semibold text-[#17110d]">{itemCount}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Subtotal</span>
@@ -156,7 +159,7 @@ export default function CartPage() {
                 PROCEED TO CHECKOUT
               </button>
             </div>
-          </aside>
+          </aside>)}
         </div>
       </main>
       <Footer />

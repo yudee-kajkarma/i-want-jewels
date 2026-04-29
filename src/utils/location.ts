@@ -1,4 +1,6 @@
-import { Country, State } from 'country-state-city'
+import { City, Country, State } from 'country-state-city'
+import isEmail from 'validator/lib/isEmail'
+import isPostalCode from 'validator/lib/isPostalCode'
 
 export type CountryOption = {
   code: string
@@ -7,6 +9,10 @@ export type CountryOption = {
 
 export type StateOption = {
   code: string
+  name: string
+}
+
+export type CityOption = {
   name: string
 }
 
@@ -26,6 +32,55 @@ export function getStateOptions(countryCode: string): StateOption[] {
     code: state.isoCode,
     name: state.name,
   }))
+}
+
+export function getCityOptions(countryCode: string, stateCode: string): CityOption[] {
+  if (!countryCode || !stateCode) {
+    return []
+  }
+
+  return City.getCitiesOfState(countryCode, stateCode).map((city) => ({
+    name: city.name,
+  }))
+}
+
+export function isValidEmailAddress(value: string): boolean {
+  return isEmail(value.trim())
+}
+
+function normalizePostalCountryCode(countryCode: string): string {
+  const normalizedCode = countryCode.trim().toUpperCase()
+
+  if (normalizedCode === 'UK') {
+    return 'GB'
+  }
+
+  return normalizedCode
+}
+
+export function validatePostalCode(value: string, countryCode: string): boolean {
+  const normalizedValue = value.trim()
+  const normalizedCountryCode = normalizePostalCountryCode(countryCode)
+
+  if (!normalizedValue || !normalizedCountryCode) {
+    return false
+  }
+
+  return isPostalCode(normalizedValue, normalizedCountryCode as Parameters<typeof isPostalCode>[1])
+}
+
+export function isValidPostalCode(value: string, countryCode?: string): boolean {
+  if (countryCode && countryCode.trim()) {
+    return validatePostalCode(value, countryCode)
+  }
+
+  const normalizedValue = value.trim()
+
+  if (!normalizedValue) {
+    return false
+  }
+
+  return isPostalCode(normalizedValue, 'any')
 }
 
 export function normalizeCountryCode(value: string): string {

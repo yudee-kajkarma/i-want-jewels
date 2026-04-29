@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { getAdminAddress, updateAdminAddress } from '../services/userService'
 import type { UpdateAdminAddressPayload } from '../types/address'
-import { getCountryOptions, getStateOptions } from '../utils/location'
+import { getCityOptions, getCountryOptions, getStateOptions, isValidPostalCode } from '../utils/location'
 
 const initialForm: UpdateAdminAddressPayload = {
   street: '',
@@ -24,8 +24,10 @@ export default function AdminAddressPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
   const [error, setError] = useState('')
+  const [postalCodeError, setPostalCodeError] = useState('')
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(form.country), [form.country])
+  const cityOptions = useMemo(() => getCityOptions(form.country, form.state), [form.country, form.state])
 
   useEffect(() => {
     let mounted = true
@@ -77,6 +79,7 @@ export default function AdminAddressPage() {
 
   async function handleSave(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    setPostalCodeError('')
 
     if (isSaving) {
       return
@@ -84,6 +87,11 @@ export default function AdminAddressPage() {
 
     if (!form.street.trim() || !form.city.trim() || !form.state.trim() || !form.postalCode.trim() || !form.country.trim() || !form.addressType.trim()) {
       setError('Please fill all required address fields before saving.')
+      return
+    }
+
+    if (!isValidPostalCode(form.postalCode, form.country)) {
+      setPostalCodeError('Please enter a valid postal code.')
       return
     }
 
@@ -111,6 +119,10 @@ export default function AdminAddressPage() {
   }
 
   function updateField<K extends keyof UpdateAdminAddressPayload>(key: K, value: UpdateAdminAddressPayload[K]) {
+    if (key === 'postalCode' && postalCodeError) {
+      setPostalCodeError('')
+    }
+
     setForm((currentValue) => ({
       ...currentValue,
       [key]: value,
@@ -144,6 +156,7 @@ export default function AdminAddressPage() {
                     onChange={(event) => {
                       updateField('country', event.target.value)
                       updateField('state', '')
+                      updateField('city', '')
                     }}
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
@@ -160,7 +173,10 @@ export default function AdminAddressPage() {
                   <span className="font-semibold text-[#17110d]">State</span>
                   <select
                     value={form.state}
-                    onChange={(event) => updateField('state', event.target.value)}
+                    onChange={(event) => {
+                      updateField('state', event.target.value)
+                      updateField('city', '')
+                    }}
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
                     <option value="">Select state</option>
@@ -174,12 +190,18 @@ export default function AdminAddressPage() {
 
                 <label className="space-y-2 text-sm">
                   <span className="font-semibold text-[#17110d]">City</span>
-                  <input
+                  <select
                     value={form.city}
                     onChange={(event) => updateField('city', event.target.value)}
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="City"
-                  />
+                  >
+                    <option value="">Select city</option>
+                    {cityOptions.map((city) => (
+                      <option key={city.name} value={city.name}>
+                        {city.name}
+                      </option>
+                    ))}
+                  </select>
                 </label>
 
                 <label className="space-y-2 text-sm">
@@ -210,6 +232,7 @@ export default function AdminAddressPage() {
                     className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                     placeholder="Postal Code"
                   />
+                  {postalCodeError ? <p className="text-xs text-rose-700">{postalCodeError}</p> : null}
                 </label>
               </div>
 
