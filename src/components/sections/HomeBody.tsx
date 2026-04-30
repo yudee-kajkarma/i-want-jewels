@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Gem, Gift, Link2, Phone, ShieldCheck, Sparkles, Star, Truck } from 'lucide-react'
 import { Link } from '@/lib/router'
 import { getAllProductFilters, getProducts } from '../../services/productService'
@@ -111,16 +111,27 @@ function buildDynamicCategories(rawCategories: string[]): string[] {
   return Array.from(uniqueCategoryMap.values())
 }
 
-function matchesCategoryFilter(item: Product, activeCategory: string): boolean {
-  if (activeCategory === 'All') {
-    return true
+function buildCategoryQueryCandidates(category: string): string[] {
+  const trimmedCategory = category.trim()
+
+  if (!trimmedCategory || trimmedCategory === 'All') {
+    return []
   }
 
-  const normalizedActiveCategory = normalizeCategoryValue(activeCategory)
-  const normalizedCategory = normalizeCategoryValue(item.category)
-  const normalizedTags = item.tags.map((tag) => normalizeCategoryValue(tag))
+  const normalizedCategory = normalizeCategoryValue(trimmedCategory)
+  const singularTitle = toTitleCase(normalizedCategory)
+  const pluralTitle = singularTitle.endsWith('s') ? singularTitle : `${singularTitle}s`
 
-  return normalizedCategory === normalizedActiveCategory || normalizedTags.includes(normalizedActiveCategory)
+  return Array.from(
+    new Set([
+      trimmedCategory,
+      toTitleCase(trimmedCategory),
+      singularTitle,
+      pluralTitle,
+      normalizedCategory,
+      `${normalizedCategory}s`,
+    ].filter(Boolean)),
+  )
 }
 
 function buildProductsFilterHref(category: string): string {
@@ -203,9 +214,60 @@ export default function HomeBody() {
       }
     }
 
-    async function loadProducts() {
+    void loadCategories()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  useEffect(() => {
+    let isMounted = true
+
+    async function loadProductsByCategory() {
+      setIsLoadingProducts(true)
+
       try {
-        const response = await getProducts({ page: 1, limit: 8 })
+        let response = await getProducts({ page: 1, limit: 12 })
+
+        if (activeCategory !== 'All') {
+          const categoryCandidates = buildCategoryQueryCandidates(activeCategory)
+          let matchedResponse = null as Awaited<ReturnType<typeof getProducts>> | null
+
+          for (const categoryCandidate of categoryCandidates) {
+            const categoryResponse = await getProducts({
+              page: 1,
+              limit: 12,
+              category: categoryCandidate,
+            })
+
+            if (categoryResponse.products.length > 0) {
+              matchedResponse = categoryResponse
+              break
+            }
+          }
+
+          if (!matchedResponse) {
+            for (const tagCandidate of categoryCandidates) {
+              const tagResponse = await getProducts({
+                page: 1,
+                limit: 12,
+                tags: tagCandidate,
+              })
+
+              if (tagResponse.products.length > 0) {
+                matchedResponse = tagResponse
+                break
+              }
+            }
+          }
+
+          if (matchedResponse) {
+            response = matchedResponse
+          } else {
+            response = { ...response, products: [] }
+          }
+        }
 
         if (!isMounted) {
           return
@@ -227,24 +289,19 @@ export default function HomeBody() {
       }
     }
 
-    void loadCategories()
-    void loadProducts()
+    void loadProductsByCategory()
 
     return () => {
       isMounted = false
     }
-  }, [])
+  }, [activeCategory])
 
   const categoryTabs = categories.length > 0 ? ['All', ...categories.slice(0, 4)] : fallbackCategoryLabels
   const collectionCards = (categories.length > 0 ? categories.slice(0, 4) : fallbackCategoryLabels.slice(1)).map((label) => ({
     label,
     ...getCollectionCardMedia(label),
   }))
-  const filteredLatestProducts = useMemo(
-    () => featuredProducts.filter((item) => matchesCategoryFilter(item, activeCategory)),
-    [activeCategory, featuredProducts],
-  )
-  const latestProducts = filteredLatestProducts.slice(0, 5)
+  const latestProducts = featuredProducts.slice(0, 5)
   const metalProducts = featuredProducts.filter((item) => item.metals.some((metal) => metal.toLowerCase().includes(activeMetal.toLowerCase())))
   const visibleMetalProducts = (metalProducts.length > 0 ? metalProducts : featuredProducts).slice(0, 5)
   const newlyLaunched = featuredProducts.slice(0, 2)
