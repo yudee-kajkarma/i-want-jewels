@@ -1205,7 +1205,7 @@ export default function Header() {
             >
                 <div className="flex items-center justify-between border-b border-zinc-100 px-6 py-5">
                     <span className="font-parsi text-[20px] font-bold uppercase tracking-[-0.01em] ">
-                        EXPLORE
+                        EXPLORE MORE
                     </span>
                     <button
                         type="button"

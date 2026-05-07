@@ -103,7 +103,7 @@ export default function InstagramGallerySection({
     };
 
     return (
-        <section className="overflow-hidden">
+        <section className="overflow-hidden font-parsi">
             {/* Heading */}
             <div className="mx-auto max-w-6xl px-4 py-10 text-center">
                 <h2 className="text-3xl font-semibold md:text-4xl">{title}</h2>
