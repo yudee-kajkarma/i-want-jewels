@@ -16,10 +16,12 @@ import {
     getVariantImage,
 } from "../../utils/productUtils";
 import { formatPrice, getPriceAmount } from "../../utils/price";
+import { cn } from "@/lib/utils";
 
 type ProductCardProps = {
     item: Product;
     layout?: "grid" | "list";
+    className?: string;
 };
 
 function buildListSummary(item: Product): string {
@@ -37,6 +39,7 @@ function buildListSummary(item: Product): string {
 export default function ProductCard({
     item,
     layout = "grid",
+    className,
 }: ProductCardProps) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -419,7 +422,12 @@ export default function ProductCard({
                 </div>
 
                 <Link to={productDetailUrl} className="block">
-                    <div className="relative h-[20rem] w-full overflow-hidden">
+                    <div
+                        className={cn(
+                            "relative h-[20rem] w-full overflow-hidden",
+                            className,
+                        )}
+                    >
                         <img
                             src={primaryImage}
                             alt={item.title}
@@ -462,7 +470,7 @@ export default function ProductCard({
 
             <div className="flex flex-1 flex-col gap-3 px-2 pb-2 pt-4">
                 <Link to={productDetailUrl} className="block">
-                    <h3 className="text-[0.9rem] font-medium leading-none tracking-[-0.03em] text-[#26221f] transition hover:text-[#f23ea9]">
+                    <h3 className="text-[1rem] font-medium leading-none tracking-[-0.03em] text-[#26221f] transition hover:text-[#f23ea9]">
                         {item.title}
                     </h3>
                 </Link>
