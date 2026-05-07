@@ -357,10 +357,10 @@ export default function ProductCard({
     }
 
     return (
-        <article className="group flex h-full flex-col bg-transparent transition-transform duration-300 hover:-translate-y-1">
-            <div className="relative overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)] pt-0">
+        <article className="group flex h-full flex-col bg-transparent transition-transform duration-300 hover:-translate-y-1 group">
+            <div className="relative overflow-hidden  bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)] pt-0">
                 {isNewArrival ? (
-                    <span className="absolute left-4 top-4 z-20 rounded-full bg-[#f23ea9] px-3 py-1 text-[10px] font-bold leading-none text-white shadow-[0_10px_20px_rgba(242,62,169,0.22)] ">
+                    <span className="absolute left-4 top-4 z-20   px-3 py-1 text-[10px] font-bold leading-none group-hover:text-white text-black/70  ">
                         NEW
                     </span>
                 ) : null}
@@ -375,7 +375,7 @@ export default function ProductCard({
                                 ? "Remove from wishlist"
                                 : "Add to wishlist"
                         }
-                        className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9] ${
+                        className={`flex h-10 w-10 items-center justify-center rounded-full  text-[#ffffff]  transition hover:text-[#2d2926] ${
                             wishlistItem ? "text-[#f23ea9]" : ""
                         } disabled:opacity-60`}
                     >
@@ -396,7 +396,7 @@ export default function ProductCard({
                         onClick={(event) => void handleAddToCart(event)}
                         disabled={isAdding}
                         aria-label="Add to cart"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9] disabled:opacity-60"
+                        className="flex h-10 w-10 items-center justify-center rounded-full  text-[#fff]  transition hover:text-[#2d2926] disabled:opacity-60"
                     >
                         <ShoppingBag
                             className="h-4 w-4"
@@ -405,9 +405,9 @@ export default function ProductCard({
                         />
                     </button>
 
-                    <Link
+                    {/* <Link
                         to={productDetailUrl}
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9]"
+                        className="flex h-10 w-10 items-center justify-center rounded-full  text-[#2d2926] shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition hover:text-[#f23ea9]"
                         aria-label="Quick view"
                     >
                         <Eye
@@ -415,7 +415,7 @@ export default function ProductCard({
                             strokeWidth={1.8}
                             aria-hidden="true"
                         />
-                    </Link>
+                    </Link> */}
                 </div>
 
                 <Link to={productDetailUrl} className="block">
@@ -445,14 +445,14 @@ export default function ProductCard({
                             type="button"
                             onClick={(event) => void handleAddToCart(event)}
                             disabled={isAdding}
-                            className="inline-flex h-11 items-center justify-center rounded-full bg-white px-4 text-[12px] font-semibold text-[#22201d] shadow-[0_10px_30px_rgba(0,0,0,0.14)] transition hover:bg-[#f4f1ee] disabled:opacity-60"
+                            className="inline-flex h-8 items-center justify-center  bg-white px-1 text-[12px] font-semibold text-[#22201d] shadow-[0_10px_30px_rgba(0,0,0,0.14)] transition hover:bg-[#f4f1ee] disabled:opacity-60"
                         >
                             {isAdding ? "ADDING..." : "ADD CART"}
                         </button>
                         <button
                             type="button"
                             onClick={handleBuyNow}
-                            className="inline-flex h-11 items-center justify-center rounded-full bg-[#151515] px-4 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition hover:bg-black"
+                            className="inline-flex h-8 items-center justify-center  bg-[#151515] px-1 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition hover:bg-black"
                         >
                             BUY NOW
                         </button>

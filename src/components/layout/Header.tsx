@@ -802,7 +802,7 @@ export default function Header() {
         "relative inline-flex items-center text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-700 transition hover:text-zinc-950 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-zinc-950 after:transition-transform after:duration-200 hover:after:scale-x-100";
 
     return (
-        <header className="sticky top-0 z-30 border-b border-zinc-100 bg-white font-parsi">
+        <header className="sticky top-0 z-30  bg-white font-parsi">
             <div ref={desktopSearchRef} className="relative">
                 <div className="mx-auto flex h-[68px] max-w-[1480px] items-center justify-between gap-4 px-4 lg:h-[76px] lg:px-10">
                     {/* Left cluster */}

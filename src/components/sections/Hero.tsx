@@ -1,213 +1,25 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import banner1 from "@/assets/banner/Banner-1.jpg";
-import banner2 from "@/assets/banner/Banner-2.jpg";
-import banner3 from "@/assets/banner/Banner-3.jpg";
-import banner4 from "@/assets/banner/Banner-4.jpg";
-
-const heroSlides = [
-  { src: banner2.src, alt: "Jewellery banner one" },
-  { src: banner1.src, alt: "Jewellery banner two" },
-  { src: banner3.src, alt: "Jewellery banner three" },
-  { src: banner4.src, alt: "Jewellery banner four" },
-];
-
-const autoplayDelayMs = 4000;
-const transitionDurationMs = 1000;
-
-function getWrappedIndex(index: number) {
-  return (index + heroSlides.length) % heroSlides.length;
-}
-
-function getSliderConfig(width: number) {
-  if (width >= 1024) {
-    return {
-      slidesPerView: 1.2,
-      spaceBetween: 24,
-    };
-  }
-
-  if (width >= 768) {
-    return {
-      slidesPerView: 1,
-      spaceBetween: 12,
-    };
-  }
-
-  return {
-    slidesPerView: 1,
-    spaceBetween: 0,
-  };
-}
+import { Link } from "@/lib/router";
+import bannerHero from "@/assets/banner/Banner-Hero.jpg";
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+    return (
+        <section className="relative w-full overflow-hidden bg-white px-20">
+            <img
+                src={bannerHero.src}
+                alt="Fresh Style for the Season"
+                className="iwj-hero-image block h-auto w-full"
+            />
 
-  const [trackIndex, setTrackIndex] = useState(1);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const [isTransitionEnabled, setIsTransitionEnabled] =
-    useState(true);
-
-  const logicalSlideIndex = getWrappedIndex(trackIndex - 1);
-
-  const sliderTrack = [
-    heroSlides[heroSlides.length - 1],
-    ...heroSlides,
-    heroSlides[0],
-  ];
-
-  const sliderConfig = useMemo(
-    () => getSliderConfig(containerWidth),
-    [containerWidth]
-  );
-
-  const slideWidth =
-    containerWidth > 0
-      ? (containerWidth -
-          sliderConfig.spaceBetween *
-            (sliderConfig.slidesPerView - 1)) /
-        sliderConfig.slidesPerView
-      : 0;
-
-  const centerOffset =
-    containerWidth > 0
-      ? (containerWidth - slideWidth) / 2
-      : 0;
-
-  const translateX =
-    containerWidth > 0
-      ? -(
-          trackIndex *
-            (slideWidth + sliderConfig.spaceBetween) -
-          centerOffset
-        )
-      : 0;
-
-  useEffect(() => {
-    const element = containerRef.current;
-    if (!element) return;
-
-    const resizeObserver = new ResizeObserver((entries) => {
-      const entry = entries[0];
-      if (!entry) return;
-
-      setContainerWidth(entry.contentRect.width);
-    });
-
-    resizeObserver.observe(element);
-    setContainerWidth(
-      element.getBoundingClientRect().width
+            <div className="pointer-events-none absolute inset-x-0 top-[85%] flex justify-center px-4">
+                <Link
+                    to="/products"
+                    className="iwj-hero-cta pointer-events-auto inline-block border border-zinc-200 bg-white px-6 py-2.5 font-parsi text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:px-8 sm:py-3 sm:text-[12px] md:text-[13px] lg:px-10 lg:py-3.5 lg:text-[14px]"
+                >
+                    Explore Collection
+                </Link>
+            </div>
+        </section>
     );
-
-    return () => resizeObserver.disconnect();
-  }, []);
-
-  function nextSlide() {
-    setIsTransitionEnabled(true);
-    setTrackIndex((prev) => prev + 1);
-  }
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, autoplayDelayMs);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    if (trackIndex === sliderTrack.length - 1) {
-      const timer = setTimeout(() => {
-        setIsTransitionEnabled(false);
-        setTrackIndex(1);
-      }, transitionDurationMs + 20);
-
-      return () => clearTimeout(timer);
-    }
-
-    if (trackIndex === 0) {
-      const timer = setTimeout(() => {
-        setIsTransitionEnabled(false);
-        setTrackIndex(heroSlides.length);
-      }, transitionDurationMs + 20);
-
-      return () => clearTimeout(timer);
-    }
-  }, [trackIndex, sliderTrack.length]);
-
-  useEffect(() => {
-    if (!isTransitionEnabled) {
-      const raf = requestAnimationFrame(() => {
-        setIsTransitionEnabled(true);
-      });
-
-      return () => cancelAnimationFrame(raf);
-    }
-  }, [isTransitionEnabled]);
-
-  return (
-    <section className="overflow-hidden bg-white py-3 sm:py-2 md:py-3 lg:py-4">
-      <div className="mx-auto w-full max-w-full px-0">
-        <div
-          ref={containerRef}
-          className="relative overflow-hidden w-full"
-        >
-          {/* Slider Track */}
-          <div
-            className={`flex will-change-transform ${
-              isTransitionEnabled
-                ? "transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]"
-                : ""
-            }`}
-            style={{
-              gap: `${sliderConfig.spaceBetween}px`,
-              transform: `translate3d(${translateX}px,0,0)`,
-            }}
-          >
-            {sliderTrack.map((slide, index) => (
-              <div
-                key={`${slide.src}-${index}`}
-                className="shrink-0 overflow-hidden px-1 sm:px-2 md:px-3"
-                style={{
-                  width:
-                    slideWidth > 0
-                      ? `${slideWidth}px`
-                      : "100%",
-                }}
-              >
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  className={`w-full h-auto h-full lg:object-fill md:object-fill rounded-xl sm:object-contain sm:rounded-xl md:rounded-xl border border-gray-200 transition-all duration-1000 ${
-                    index === trackIndex
-                      ? "scale-[0.97] opacity-90"
-                      : "scale-[0.97] opacity-90"
-                  }`}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center items-center gap-1.5 sm:gap-2 md:gap-3 mt-4">
-            {heroSlides.map((slide, index) => (
-              <button
-                key={slide.src}
-                onClick={() => {
-                  setTrackIndex(index + 1);
-                  setIsTransitionEnabled(true);
-                }}
-                className={`rounded-full transition-all duration-300 ${
-                  logicalSlideIndex === index
-                    ? "bg-pink-500 w-5 h-2 sm:w-6 md:w-7"
-                    : "bg-gray-300 w-2 h-2 sm:w-2.5 sm:h-2.5"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 }
