@@ -1,35 +1,23 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { CreditCard, LogIn, LogOut, MapPinHouse, PackageSearch, Ticket } from "lucide-react";
+import {
+    CreditCard,
+    LogIn,
+    LogOut,
+    MapPinHouse,
+    PackageSearch,
+    Ticket,
+} from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import { useAuth } from "../../context/AuthContext";
 import { useCurrency } from "../../context/CurrencyContext";
-import { formatPrice } from "../../utils/price";
-import CurrencySelectorRow from "./CurrencySelectorRow";
+import { formatPrice, type CurrencyCode } from "../../utils/price";
 import { getCategories } from "../../services/categoryService";
 import { getProducts } from "../../services/productService";
 import { useAppSelector } from "../../store/hooks";
 import type { Product } from "../../types/product";
-import braceletImage from "../../assets/image/bracelet.jpeg";
-import braceletCloseupImage from "../../assets/image/bracelet1.jpeg";
-import earringImage from "../../assets/image/earing1.jpeg";
-import earringProductImage from "../../assets/image/earing1.jpeg";
-import necklaceImage from "../../assets/image/nackwear.jpeg";
-import necklaceModelImage from "../../assets/image/nackwear1.jpeg";
-import ringImage from "../../assets/image/ring.jpeg";
-import ringModelImage from "../../assets/image/ring1.jpeg";
 import brandLogo from "../../assets/logo.svg";
-
-const navLinks = [
-    { label: "Home", to: "/" },
-    { label: "Shop", to: "/products" },
-    { label: "About", to: "/about" },
-    { label: "Contact", to: "/contact" },
-    { label: "Blog", to: "/blog" },
-    { label: "Resources", to: "/help" },
-{ label: "Help", to: "/help" }
-];
 
 const adminNavLinks = [
     { label: "Dashboard", to: "/admin" },
@@ -38,16 +26,6 @@ const adminNavLinks = [
     { label: "Carts", to: "/admin/cart" },
     { label: "Wishlists", to: "/admin/wishlist" },
     { label: "Tickets", to: "/admin/tickets" },
-    // { label: "Products", to: "/products" },
-    // { label: 'Storefront', to: '/' },
-    // { label: 'Contact', to: '/contact' },
-];
-
-const utilityLinks = [
-    { label: "About", to: "/about" },
-    { label: "Contact", to: "/contact" },
-    // { label: "Store Location" },
-    { label: "Help", to: "/help" },
 ];
 
 const socialLinks = [
@@ -56,61 +34,34 @@ const socialLinks = [
     { name: "TikTok", href: "https://www.tiktok.com/@iwantjewelsofficial" },
 ];
 
-const storefrontNavLinks = [
-    { label: "Home", to: "/", icon: "home" },
-    { label: "All Products", to: "/products", icon: "all" },
-    { label: "Earrings", to: buildCategoryHref("Earrings"), icon: "earrings" },
-    { label: "Rings", to: buildCategoryHref("Rings"), icon: "rings" },
-    {
-        label: "Necklaces",
-        to: buildCategoryHref("Necklace"),
-        icon: "necklaces",
-    },
-    {
-        label: "Bracelets",
-        to: buildCategoryHref("Bracelets"),
-        icon: "bracelets",
-    },
-    { label: "About", to: "/about", icon: "about" },
-    { label: "Contact", to: "/contact", icon: "contact" },
-    // { label: "Gift Card", to: "/products", icon: "gift" },
-    { label: "Blog", to: "/blog", icon: "blog" },
-    { label: "Resources", to: "/help", icon: "resources" },
-    { label: "Help", to: "/help", icon: "resources" }
-] as const;
-
-const desktopNavLinkClass =
-    "relative inline-flex pb-1 transition after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-200 hover:text-zinc-900 hover:after:scale-x-100";
-
-const defaultShopPreviewImage = braceletCloseupImage.src;
-
-const shopPromoCards = [
-    {
-        title: "15 Products",
-        subtitle: "Under $200",
-        image: earringProductImage.src,
-    },
-    {
-        title: "15 Products",
-        subtitle: "Under $900",
-        image: ringModelImage.src,
-    },
-    {
-        title: "15 Products",
-        subtitle: "Under $1000",
-        image: necklaceImage.src,
-    },
-];
-
 const animatedSearchTexts = [
     "Searching for the perfect jewel...",
-    // "Search gifts for your dearest...",
     "Find rings, earrings, necklaces...",
     "Discover timeless sparkle...",
 ];
 const animatedCursor = "|";
 const predictiveSearchLimit = 4;
 const predictiveSearchDebounceMs = 350;
+
+const CURRENCY_OPTIONS: Array<{
+    code: CurrencyCode;
+    flag: string;
+    label: string;
+    short: string;
+}> = [
+    {
+        code: "eur",
+        flag: "https://flagcdn.com/w40/eu.png",
+        label: "European Union (EUR €)",
+        short: "EUR €",
+    },
+    {
+        code: "pou",
+        flag: "https://flagcdn.com/w40/gb.png",
+        label: "United Kingdom (GBP £)",
+        short: "GBP £",
+    },
+];
 
 function buildProductDetailHref(product: Product): string {
     return `/products/${encodeURIComponent(product.slug || product.id)}`;
@@ -163,64 +114,8 @@ function buildCategoryHref(category: string): string {
     return `/products?category=${encodeURIComponent(category)}`;
 }
 
-function getCategoryImage(label: string): string {
-    const normalizedLabel = normalizeCategoryLabel(label).toLowerCase();
-
-    if (normalizedLabel === "all product" || normalizedLabel === "all") {
-        return necklaceModelImage.src;
-    }
-
-    if (
-        normalizedLabel.includes("necklace") ||
-        normalizedLabel.includes("jewellery") ||
-        normalizedLabel.includes("jewelry")
-    ) {
-        return necklaceImage.src;
-    }
-
-    if (normalizedLabel.includes("bracelet")) {
-        return braceletImage.src;
-    }
-
-    if (normalizedLabel.includes("earring")) {
-        return earringImage.src;
-    }
-
-    if (normalizedLabel.includes("ring")) {
-        return ringImage.src;
-    }
-
-    return defaultShopPreviewImage;
-}
-
 function getShopCategoriesFallback() {
     return ["Bracelets", "Earrings", "Jewellery", "Necklaces"];
-}
-
-function MenuLink({
-    label,
-    to,
-    className,
-    onClick,
-}: {
-    label: string;
-    to?: string;
-    className: string;
-    onClick?: () => void;
-}) {
-    if (to) {
-        return (
-            <Link to={to} className={className} onClick={onClick}>
-                {label}
-            </Link>
-        );
-    }
-
-    return (
-        <a href="#" className={className} onClick={onClick}>
-            {label}
-        </a>
-    );
 }
 
 function SearchIcon() {
@@ -231,7 +126,7 @@ function SearchIcon() {
             className="h-[18px] w-[18px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.1"
+            strokeWidth="1.8"
         >
             <circle cx="11" cy="11" r="6.5" />
             <path d="M16 16l4.5 4.5" strokeLinecap="round" />
@@ -244,10 +139,10 @@ function MicIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[25px] w-[25px]"
+            className="h-[22px] w-[22px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.2"
+            strokeWidth="1.4"
         >
             <rect
                 x="9"
@@ -264,114 +159,12 @@ function MicIcon() {
     );
 }
 
-type StorefrontNavIcon =
-    | "home"
-    | "all"
-    | "earrings"
-    | "rings"
-    | "necklaces"
-    | "bracelets"
-    | "about"
-    | "contact"
-    | "gift"
-    | "blog"
-    | "resources";
-
-function NavGlyph({ type }: { type: StorefrontNavIcon }) {
-    const className = "h-[13px] w-[13px]";
-
-    switch (type) {
-        case "home":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="m4 11.5 8-7 8 7" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M6.5 10.5V20h11v-9.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            );
-        case "all":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <circle cx="12" cy="12" r="8" />
-                    <path d="M12 8v8M8 12h8" strokeLinecap="round" />
-                </svg>
-            );
-        case "earrings":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <circle cx="9" cy="8" r="2.2" />
-                    <circle cx="15" cy="16" r="2.2" />
-                    <path d="M10.6 9.6 13.4 14.4" strokeLinecap="round" />
-                </svg>
-            );
-        case "rings":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <circle cx="12" cy="14" r="5" />
-                    <path d="M9.5 9.5 12 6l2.5 3.5Z" strokeLinejoin="round" />
-                </svg>
-            );
-        case "necklaces":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M7 7a5 5 0 0 1 10 0v2a5 5 0 0 1-10 0Z" />
-                    <circle cx="12" cy="16" r="2" />
-                </svg>
-            );
-        case "bracelets":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <circle cx="12" cy="12" r="5" />
-                    <circle cx="17" cy="12" r="1" fill="currentColor" stroke="none" />
-                </svg>
-            );
-        case "blog":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M6 5h12v14H6Z" strokeLinejoin="round" />
-                    <path d="M9 9h6M9 13h6" strokeLinecap="round" />
-                </svg>
-            );
-        case "gift":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M4 9h16v11H4Z" strokeLinejoin="round" />
-                    <path d="M12 9v11M4 13.5h16" />
-                    <path d="M12 9c-1.5 0-3-1-3-2.3 0-1.1.8-1.9 1.9-1.9 1.4 0 2.3 1.3 2.7 4.2.4-2.9 1.3-4.2 2.7-4.2 1.1 0 1.9.8 1.9 1.9C18 8 16.5 9 15 9Z" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            );
-        case "resources":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M4 6h7v12H4Z" strokeLinejoin="round" />
-                    <path d="M13 6h7v12h-7Z" strokeLinejoin="round" />
-                </svg>
-            );
-        case "about":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <circle cx="12" cy="12" r="8" />
-                    <circle cx="12" cy="8.2" r="1" fill="currentColor" stroke="none" />
-                    <path d="M12 11v5" strokeLinecap="round" />
-                </svg>
-            );
-        case "contact":
-            return (
-                <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M4 7.5h16v9H4Z" strokeLinejoin="round" />
-                    <path d="m5 8 7 5 7-5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            );
-        default:
-            return null;
-    }
-}
-
-function ChevronIcon() {
+function ChevronIcon({ className = "h-3 w-3" }: { className?: string }) {
     return (
         <svg
             viewBox="0 0 20 20"
             aria-hidden="true"
-            className="h-3 w-3"
+            className={className}
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -390,10 +183,10 @@ function MenuIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-6 w-6"
+            className="h-5 w-5"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.2"
+            strokeWidth="1.8"
         >
             <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
         </svg>
@@ -405,10 +198,10 @@ function CloseIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-6 w-6"
+            className="h-5 w-5"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.2"
+            strokeWidth="1.8"
         >
             <path d="m6 6 12 12M18 6 6 18" strokeLinecap="round" />
         </svg>
@@ -420,10 +213,10 @@ function UserIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[29px] w-[29px]"
+            className="h-[20px] w-[20px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.2"
+            strokeWidth="1.5"
         >
             <circle cx="12" cy="8" r="3.5" />
             <path
@@ -439,10 +232,10 @@ function HeartIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[29px] w-[29px]"
+            className="h-[20px] w-[20px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.2"
+            strokeWidth="1.5"
         >
             <path
                 d="M12 20.5 4.9 13.8a4.7 4.7 0 0 1 6.6-6.7L12 7.6l.5-.5a4.7 4.7 0 0 1 6.6 6.7L12 20.5Z"
@@ -458,10 +251,10 @@ function BagIcon() {
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="h-[29px] w-[29px]"
+            className="h-[20px] w-[20px]"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.2"
+            strokeWidth="1.5"
         >
             <path d="M5 9.5h14l-1.2 10H6.2L5 9.5Z" strokeLinejoin="round" />
             <path d="M9 9.5V8a3 3 0 1 1 6 0v1.5" strokeLinecap="round" />
@@ -492,7 +285,7 @@ function SocialIcon({ name }: { name: string }) {
                     className={className}
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.8"
+                    strokeWidth="1.6"
                 >
                     <rect x="4" y="4" width="16" height="16" rx="4" />
                     <circle cx="12" cy="12" r="3.5" />
@@ -517,39 +310,125 @@ function SocialIcon({ name }: { name: string }) {
                 </svg>
             );
         default:
-            return (
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className={className}
-                    fill="currentColor"
-                >
-                    <path d="M12.4 4C8.1 4 5.8 6.9 5.8 10c0 1.9.7 3.6 2.3 4.2.3.1.5 0 .5-.3.1-.2.3-1 .3-1.2 0-.2 0-.3-.2-.5-.5-.6-.8-1.4-.8-2.4 0-3 2.2-5.6 5.8-5.6 3.2 0 4.9 1.9 4.9 4.5 0 3.4-1.5 6.2-3.8 6.2-1.2 0-2.1-1-1.8-2.2.3-1.5.9-3.1.9-4.1 0-.9-.5-1.7-1.5-1.7-1.2 0-2.2 1.3-2.2 3 0 1.1.4 1.8.4 1.8L9.2 18c-.4 1.6 0 3.6 0 3.8 0 .1.1.2.2.1.1-.1 1.5-1.8 1.9-3.4l.5-1.8c.5 1 1.8 1.8 3.2 1.8 4.2 0 7-3.8 7-8.8C22 7.2 18.4 4 12.4 4Z" />
-                </svg>
-            );
+            return null;
     }
 }
 
-function HeaderAction({
+function MiniCurrencySelector({
+    currency,
+    setCurrency,
+}: {
+    currency: CurrencyCode;
+    setCurrency: (c: CurrencyCode) => void;
+}) {
+    const [isOpen, setIsOpen] = useState(false);
+    const ref = useRef<HTMLDivElement | null>(null);
+
+    const selected = useMemo(
+        () =>
+            CURRENCY_OPTIONS.find((c) => c.code === currency) ??
+            CURRENCY_OPTIONS[0],
+        [currency],
+    );
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (!ref.current?.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        }
+
+        function handleEscape(event: KeyboardEvent) {
+            if (event.key === "Escape") setIsOpen(false);
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("keydown", handleEscape);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, []);
+
+    return (
+        <div ref={ref} className="relative">
+            <button
+                type="button"
+                aria-label="Select currency"
+                aria-haspopup="listbox"
+                aria-expanded={isOpen}
+                onClick={() => setIsOpen((v) => !v)}
+                className="flex h-8 items-center gap-1 rounded-full px-1 text-zinc-700 transition hover:text-zinc-900"
+            >
+                <img
+                    src={selected.flag}
+                    alt={selected.label}
+                    className="h-[18px] w-[18px] rounded-full object-cover ring-1 ring-zinc-200"
+                />
+                <ChevronIcon className="h-3 w-3 text-zinc-500" />
+            </button>
+
+            {isOpen ? (
+                <div
+                    role="listbox"
+                    aria-label="Currency options"
+                    className="absolute right-0 top-[calc(100%+10px)] z-50 min-w-[180px] overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-[0_18px_40px_rgba(17,24,39,0.12)]"
+                >
+                    {CURRENCY_OPTIONS.map((opt) => (
+                        <button
+                            key={opt.code}
+                            type="button"
+                            onClick={() => {
+                                setCurrency(opt.code);
+                                setIsOpen(false);
+                            }}
+                            className={`flex w-full items-center gap-2 px-3 py-2.5 text-left text-[13px] tracking-[0.02em] ${
+                                opt.code === currency
+                                    ? "bg-zinc-100 text-zinc-900"
+                                    : "text-zinc-700 hover:bg-zinc-50"
+                            }`}
+                        >
+                            <img
+                                src={opt.flag}
+                                alt=""
+                                className="h-4 w-4 rounded-full object-cover"
+                            />
+                            <span className="font-medium">{opt.short}</span>
+                            <span className="ml-auto text-[11px] text-zinc-400">
+                                {opt.code.toUpperCase()}
+                            </span>
+                        </button>
+                    ))}
+                </div>
+            ) : null}
+        </div>
+    );
+}
+
+function HeaderIconButton({
     children,
     count,
     label,
     to,
     onClick,
-    className,
+    ariaExpanded,
 }: {
     children: ReactNode;
     count?: number;
     label: string;
     to?: string;
     onClick?: () => void;
-    className?: string;
+    ariaExpanded?: boolean;
 }) {
+    const baseClass =
+        "relative flex h-9 w-9 items-center justify-center text-zinc-700 transition hover:text-zinc-950";
+
     const content = (
         <>
             {children}
-            {typeof count === "number" ? (
-                <span className="absolute right-0 top-0 flex h-[14px] min-w-[14px] items-center justify-center rounded-full bg-zinc-900 px-1 text-[9px] font-bold leading-none text-white">
+            {typeof count === "number" && count > 0 ? (
+                <span className="absolute -right-1 -top-1 flex h-[16px] min-w-[16px] items-center justify-center rounded-full bg-zinc-900 px-1 text-[9px] font-bold leading-none text-white">
                     {count}
                 </span>
             ) : null}
@@ -558,11 +437,7 @@ function HeaderAction({
 
     if (to) {
         return (
-            <Link
-                to={to}
-                aria-label={label}
-                className={`relative flex h-8 w-8 items-center justify-center transition hover:text-pink-500 ${className ?? "text-zinc-900"}`}
-            >
+            <Link to={to} aria-label={label} className={baseClass}>
                 {content}
             </Link>
         );
@@ -572,57 +447,32 @@ function HeaderAction({
         <button
             type="button"
             aria-label={label}
+            aria-expanded={ariaExpanded}
             onClick={onClick}
-            className={`relative flex h-8 w-8 items-center justify-center transition hover:text-pink-500 ${className ?? "text-zinc-900"}`}
+            className={baseClass}
         >
             {content}
         </button>
     );
 }
 
-function UtilitySelect({ label }: { label: string }) {
-    return (
-        <button
-            type="button"
-            className="flex items-center gap-1 text-sm text-zinc-700 transition hover:text-pink-500"
-        >
-            <span>{label}</span>
-            <ChevronIcon />
-        </button>
-    );
-}
-
 export default function Header() {
-    const headerInnerRef = useRef<HTMLDivElement | null>(null);
     const accountMenuRef = useRef<HTMLDivElement | null>(null);
-    const shopMenuRef = useRef<HTMLDivElement | null>(null);
     const desktopSearchRef = useRef<HTMLDivElement | null>(null);
-    const mobileSearchRef = useRef<HTMLFormElement | null>(null);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const drawerRef = useRef<HTMLDivElement | null>(null);
+    const searchInputRef = useRef<HTMLInputElement | null>(null);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
-    const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
-    const [isMobileShopMenuOpen, setIsMobileShopMenuOpen] = useState(false);
-    const [desktopSearchTerm, setDesktopSearchTerm] = useState("");
-    const [mobileSearchTerm, setMobileSearchTerm] = useState("");
-    const [desktopPredictiveProducts, setDesktopPredictiveProducts] = useState<
-        Product[]
-    >([]);
-    const [mobilePredictiveProducts, setMobilePredictiveProducts] = useState<
-        Product[]
-    >([]);
-    const [isDesktopSearchLoading, setIsDesktopSearchLoading] = useState(false);
-    const [isMobileSearchLoading, setIsMobileSearchLoading] = useState(false);
-    const [isDesktopSearchOpen, setIsDesktopSearchOpen] = useState(false);
-    const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [predictiveProducts, setPredictiveProducts] = useState<Product[]>([]);
+    const [isSearchLoading, setIsSearchLoading] = useState(false);
     const [animatedPlaceholder, setAnimatedPlaceholder] = useState(
         `${animatedCursor}`,
     );
     const [isVoiceListening, setIsVoiceListening] = useState(false);
     const [shopCategories, setShopCategories] = useState<string[]>([]);
-    const [shopMenuTop, setShopMenuTop] = useState(0);
-    const shopMenuCloseTimeoutRef = useRef<ReturnType<
-        typeof setTimeout
-    > | null>(null);
+
     const navigate = useNavigate();
     const { isAuthenticated, logout, session } = useAuth();
     const { currency, setCurrency } = useCurrency();
@@ -636,6 +486,7 @@ export default function Header() {
     const wishlistCount = useAppSelector(
         (state) => state.wishlist.wishlist?.items.length ?? 0,
     );
+
     const accountLabel = isAuthenticated
         ? session?.firstName || session?.username || "Account"
         : "Account";
@@ -644,9 +495,8 @@ export default function Header() {
             ? `${session.firstName} ${session.lastName}`.trim()
             : session?.firstName || session?.username || "Account";
     const isAdmin = session?.role === "ADMIN";
-    const activeNavLinks = isAdmin ? adminNavLinks : navLinks;
-    const isSlice = isAdmin ? 3 : 2;
     const brandLink = isAdmin ? "/admin" : "/";
+
     const visibleShopCategories = useMemo(
         () =>
             shopCategories.length > 0
@@ -654,60 +504,28 @@ export default function Header() {
                 : getShopCategoriesFallback(),
         [shopCategories],
     );
-    const shopMenuTiles = useMemo(() => {
-        const normalizedCategoryMap = new Map(
-            visibleShopCategories.map((category) => [
-                normalizeCategoryLabel(category).toLowerCase(),
-                category,
-            ]),
-        );
 
-        const resolveCategory = (label: string) =>
-            normalizedCategoryMap.get(label.toLowerCase()) ?? label;
+    const drawerLinks = useMemo(() => {
+        if (isAdmin) return adminNavLinks;
+
+        const categoryLinks = visibleShopCategories.map((category) => ({
+            label: normalizeCategoryLabel(category),
+            to: buildCategoryHref(category),
+        }));
 
         return [
-            {
-                label: "All Product",
-                to: "/products",
-                image: getCategoryImage("All Product"),
-            },
-            {
-                label: "Necklace",
-                to: buildCategoryHref(resolveCategory("Necklace")),
-                image: getCategoryImage("Necklace"),
-            },
-            {
-                label: "Bracelet",
-                to: buildCategoryHref(resolveCategory("Bracelet")),
-                image: getCategoryImage("Bracelet"),
-            },
-            {
-                label: "Ring",
-                to: buildCategoryHref(resolveCategory("Ring")),
-                image: getCategoryImage("Ring"),
-            },
-            {
-                label: "Earrings",
-                to: buildCategoryHref(resolveCategory("Earring")),
-                image: getCategoryImage("Earrings"),
-            },
+            { label: "Home", to: "/" },
+            { label: "All Products", to: "/products" },
+            ...categoryLinks,
+            { label: "Blog", to: "/blog" },
+            { label: "Resources", to: "/help" },
+            { label: "Help", to: "/help" },
         ];
-    }, [visibleShopCategories]);
-    const desktopQuerySuggestions = useMemo(
-        () =>
-            buildPredictiveQuerySuggestions(
-                desktopSearchTerm,
-                desktopPredictiveProducts,
-            ),
-        [desktopPredictiveProducts, desktopSearchTerm],
-    );
-    const mobileQuerySuggestions = useMemo(
-        () =>
-            buildPredictiveQuerySuggestions(
-                mobileSearchTerm,
-                mobilePredictiveProducts,
-            ),
-        [mobilePredictiveProducts, mobileSearchTerm],
+    }, [isAdmin, visibleShopCategories]);
+
+    const querySuggestions = useMemo(
+        () => buildPredictiveQuerySuggestions(searchTerm, predictiveProducts),
+        [predictiveProducts, searchTerm],
     );
 
     useEffect(() => {
@@ -729,7 +547,6 @@ export default function Header() {
                     characterIndex + 1,
                     currentText.length,
                 );
-
                 setAnimatedPlaceholder(
                     `${currentText.slice(0, characterIndex)}${animatedCursor}`,
                 );
@@ -766,15 +583,11 @@ export default function Header() {
             try {
                 const categoryData = await getCategories();
 
-                if (!isMounted) {
-                    return;
-                }
+                if (!isMounted) return;
 
                 setShopCategories(categoryData);
             } catch {
-                if (!isMounted) {
-                    return;
-                }
+                if (!isMounted) return;
 
                 setShopCategories(getShopCategoriesFallback());
             }
@@ -790,16 +603,16 @@ export default function Header() {
     }, [isAdmin]);
 
     useEffect(() => {
-        const normalizedTerm = desktopSearchTerm.trim();
+        const normalizedTerm = searchTerm.trim();
 
         if (normalizedTerm.length < 2) {
-            setDesktopPredictiveProducts([]);
-            setIsDesktopSearchLoading(false);
+            setPredictiveProducts([]);
+            setIsSearchLoading(false);
             return;
         }
 
         let isActive = true;
-        setIsDesktopSearchLoading(true);
+        setIsSearchLoading(true);
 
         const timeoutId = window.setTimeout(async () => {
             try {
@@ -810,22 +623,18 @@ export default function Header() {
                     currency,
                 });
 
-                if (!isActive) {
-                    return;
-                }
+                if (!isActive) return;
 
-                setDesktopPredictiveProducts(
+                setPredictiveProducts(
                     result.products.slice(0, predictiveSearchLimit),
                 );
             } catch {
-                if (!isActive) {
-                    return;
-                }
+                if (!isActive) return;
 
-                setDesktopPredictiveProducts([]);
+                setPredictiveProducts([]);
             } finally {
                 if (isActive) {
-                    setIsDesktopSearchLoading(false);
+                    setIsSearchLoading(false);
                 }
             }
         }, predictiveSearchDebounceMs);
@@ -834,54 +643,22 @@ export default function Header() {
             isActive = false;
             window.clearTimeout(timeoutId);
         };
-    }, [currency, desktopSearchTerm]);
+    }, [currency, searchTerm]);
 
     useEffect(() => {
-        const normalizedTerm = mobileSearchTerm.trim();
-
-        if (normalizedTerm.length < 2) {
-            setMobilePredictiveProducts([]);
-            setIsMobileSearchLoading(false);
+        if (!isSearchOpen) {
+            setSearchTerm("");
             return;
         }
 
-        let isActive = true;
-        setIsMobileSearchLoading(true);
-
-        const timeoutId = window.setTimeout(async () => {
-            try {
-                const result = await getProducts({
-                    search: normalizedTerm,
-                    page: 1,
-                    limit: predictiveSearchLimit,
-                    currency,
-                });
-
-                if (!isActive) {
-                    return;
-                }
-
-                setMobilePredictiveProducts(
-                    result.products.slice(0, predictiveSearchLimit),
-                );
-            } catch {
-                if (!isActive) {
-                    return;
-                }
-
-                setMobilePredictiveProducts([]);
-            } finally {
-                if (isActive) {
-                    setIsMobileSearchLoading(false);
-                }
-            }
-        }, predictiveSearchDebounceMs);
+        const focusTimeoutId = window.setTimeout(() => {
+            searchInputRef.current?.focus();
+        }, 60);
 
         return () => {
-            isActive = false;
-            window.clearTimeout(timeoutId);
+            window.clearTimeout(focusTimeoutId);
         };
-    }, [currency, mobileSearchTerm]);
+    }, [isSearchOpen]);
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -889,25 +666,16 @@ export default function Header() {
                 setIsAccountMenuOpen(false);
             }
 
-            if (!shopMenuRef.current?.contains(event.target as Node)) {
-                setIsShopMenuOpen(false);
-            }
-
             if (!desktopSearchRef.current?.contains(event.target as Node)) {
-                setIsDesktopSearchOpen(false);
-            }
-
-            if (!mobileSearchRef.current?.contains(event.target as Node)) {
-                setIsMobileSearchOpen(false);
+                setIsSearchOpen(false);
             }
         }
 
         function handleEscape(event: KeyboardEvent) {
             if (event.key === "Escape") {
                 setIsAccountMenuOpen(false);
-                setIsShopMenuOpen(false);
-                setIsDesktopSearchOpen(false);
-                setIsMobileSearchOpen(false);
+                setIsSearchOpen(false);
+                setIsDrawerOpen(false);
             }
         }
 
@@ -921,191 +689,82 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-        return () => {
-            if (shopMenuCloseTimeoutRef.current) {
-                clearTimeout(shopMenuCloseTimeoutRef.current);
-            }
-        };
-    }, []);
+        if (typeof document === "undefined") return;
 
-    useEffect(() => {
-        function updateShopMenuTop() {
-            const shopTrigger = shopMenuRef.current;
-
-            if (!shopTrigger || typeof window === "undefined") {
-                return;
-            }
-
-            const triggerRect = shopTrigger.getBoundingClientRect();
-            setShopMenuTop(triggerRect.bottom + 20);
+        const original = document.body.style.overflow;
+        if (isDrawerOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = original;
         }
-
-        updateShopMenuTop();
-
-        window.addEventListener("resize", updateShopMenuTop);
-        window.addEventListener("scroll", updateShopMenuTop);
 
         return () => {
-            window.removeEventListener("resize", updateShopMenuTop);
-            window.removeEventListener("scroll", updateShopMenuTop);
+            document.body.style.overflow = original;
         };
-    }, [isShopMenuOpen]);
+    }, [isDrawerOpen]);
 
-    function closeMenus() {
-        setIsMobileMenuOpen(false);
-        setIsMobileShopMenuOpen(false);
-        setIsShopMenuOpen(false);
-        setIsMobileSearchOpen(false);
-    }
-
-    function openShopMenu() {
-        if (shopMenuCloseTimeoutRef.current) {
-            clearTimeout(shopMenuCloseTimeoutRef.current);
-            shopMenuCloseTimeoutRef.current = null;
-        }
-
-        setIsShopMenuOpen(true);
-    }
-
-    function scheduleCloseShopMenu() {
-        if (shopMenuCloseTimeoutRef.current) {
-            clearTimeout(shopMenuCloseTimeoutRef.current);
-        }
-
-        shopMenuCloseTimeoutRef.current = setTimeout(() => {
-            setIsShopMenuOpen(false);
-            shopMenuCloseTimeoutRef.current = null;
-        }, 180);
-    }
-
-    function renderDesktopNavLink(link: (typeof activeNavLinks)[number]) {
-        if (link.label !== "Shop" || isAdmin) {
-            return (
-                <MenuLink
-                    key={link.label}
-                    label={link.label}
-                    to={link.to}
-                    className={desktopNavLinkClass}
-                />
-            );
-        }
-
-        return (
-            <div
-                key={link.label}
-                ref={shopMenuRef}
-                className="relative"
-                onMouseEnter={openShopMenu}
-                onMouseLeave={scheduleCloseShopMenu}
-                onFocus={openShopMenu}
-                onBlur={(event) => {
-                    if (
-                        !event.currentTarget.contains(
-                            event.relatedTarget as Node | null,
-                        )
-                    ) {
-                        scheduleCloseShopMenu();
-                    }
-                }}
-            >
-                <button
-                    type="button"
-                    aria-expanded={isShopMenuOpen}
-                    className={`${desktopNavLinkClass} inline-flex items-center gap-2 uppercase`}
-                >
-                    <span>{link.label}</span>
-                </button>
-
-                <div
-                    className={`shop-mega-menu ${isShopMenuOpen ? "shop-mega-menu--open" : ""}`}
-                    style={
-                        shopMenuTop > 0
-                            ? { top: `${shopMenuTop}px` }
-                            : undefined
-                    }
-                >
-                    <div className="mx-auto w-full max-w-[1040px] space-y-6">
-                        <div className="grid grid-cols-5 gap-6">
-                            {shopMenuTiles.map((tile) => (
-                                <Link
-                                    key={tile.label}
-                                    to={tile.to}
-                                    onClick={() => setIsShopMenuOpen(false)}
-                                    className="group"
-                                >
-                                    <div className="overflow-hidden rounded-[10px] bg-white">
-                                        <img
-                                            src={tile.image}
-                                            alt={tile.label}
-                                            className="h-44 w-full rounded-[10px] object-cover transition duration-300 group-hover:scale-105"
-                                        />
-                                    </div>
-                                    <p className="mt-2 text-center text-[13px] font-normal tracking-[-0.02em] text-zinc-700">
-                                        {tile.label}
-                                    </p>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
-    function handleGlobalSearchSubmit(
-        searchTerm: string,
-        options?: { closeMobileMenu?: boolean },
-    ) {
-        const normalizedTerm = searchTerm.trim();
-
-        setIsDesktopSearchOpen(false);
-        setIsMobileSearchOpen(false);
+    function handleGlobalSearchSubmit(value: string) {
+        const normalizedTerm = value.trim();
+        setIsSearchOpen(false);
 
         if (!normalizedTerm) {
             navigate("/products");
         } else {
             navigate(`/products?search=${encodeURIComponent(normalizedTerm)}`);
         }
-
-        if (options?.closeMobileMenu) {
-            closeMenus();
-        }
     }
 
-    function handleVoiceSearch(target: "desktop" | "mobile") {
-        if (typeof window === "undefined") {
-            return;
-        }
+    function handleVoiceSearch() {
+        if (typeof window === "undefined") return;
 
-        const SpeechRecognitionCtor = (
-            window as typeof window & {
-                SpeechRecognition?: new () => {
-                    lang: string;
-                    interimResults: boolean;
-                    maxAlternatives: number;
-                    onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null;
-                    onerror: ((event: unknown) => void) | null;
-                    onend: (() => void) | null;
-                    start: () => void;
-                };
-                webkitSpeechRecognition?: new () => {
-                    lang: string;
-                    interimResults: boolean;
-                    maxAlternatives: number;
-                    onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null;
-                    onerror: ((event: unknown) => void) | null;
-                    onend: (() => void) | null;
-                    start: () => void;
-                };
-            }
-        ).SpeechRecognition ||
+        const SpeechRecognitionCtor =
+            (
+                window as typeof window & {
+                    SpeechRecognition?: new () => {
+                        lang: string;
+                        interimResults: boolean;
+                        maxAlternatives: number;
+                        onresult:
+                            | ((event: {
+                                  results: ArrayLike<
+                                      ArrayLike<{ transcript?: string }>
+                                  >;
+                              }) => void)
+                            | null;
+                        onerror: ((event: unknown) => void) | null;
+                        onend: (() => void) | null;
+                        start: () => void;
+                    };
+                    webkitSpeechRecognition?: new () => {
+                        lang: string;
+                        interimResults: boolean;
+                        maxAlternatives: number;
+                        onresult:
+                            | ((event: {
+                                  results: ArrayLike<
+                                      ArrayLike<{ transcript?: string }>
+                                  >;
+                              }) => void)
+                            | null;
+                        onerror: ((event: unknown) => void) | null;
+                        onend: (() => void) | null;
+                        start: () => void;
+                    };
+                }
+            ).SpeechRecognition ||
             (
                 window as typeof window & {
                     webkitSpeechRecognition?: new () => {
                         lang: string;
                         interimResults: boolean;
                         maxAlternatives: number;
-                        onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null;
+                        onresult:
+                            | ((event: {
+                                  results: ArrayLike<
+                                      ArrayLike<{ transcript?: string }>
+                                  >;
+                              }) => void)
+                            | null;
                         onerror: ((event: unknown) => void) | null;
                         onend: (() => void) | null;
                         start: () => void;
@@ -1113,9 +772,7 @@ export default function Header() {
                 }
             ).webkitSpeechRecognition;
 
-        if (!SpeechRecognitionCtor) {
-            return;
-        }
+        if (!SpeechRecognitionCtor) return;
 
         const recognition = new SpeechRecognitionCtor();
         recognition.lang = "en-US";
@@ -1125,16 +782,9 @@ export default function Header() {
 
         recognition.onresult = (event) => {
             const transcript = event.results[0]?.[0]?.transcript?.trim() ?? "";
-
-            if (!transcript) {
-                return;
-            }
-
-            if (target === "desktop") {
-                setDesktopSearchTerm(transcript);
-            } else {
-                setMobileSearchTerm(transcript);
-            }
+            if (!transcript) return;
+            setSearchTerm(transcript);
+            setIsSearchOpen(true);
         };
 
         recognition.onerror = () => {
@@ -1148,242 +798,65 @@ export default function Header() {
         recognition.start();
     }
 
+    const topNavLinkClass =
+        "relative inline-flex items-center text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-700 transition hover:text-zinc-950 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-zinc-950 after:transition-transform after:duration-200 hover:after:scale-x-100";
+
     return (
-        <>
-            <header className="sticky top-0 z-30 border-b border-zinc-100 bg-white">
-                <div
-                    ref={headerInnerRef}
-                    className="mx-auto flex max-w-[1480px] items-center justify-between gap-3 px-4 py-1.5 lg:gap-4 lg:py-2 lg:px-8"
-                >
-                    <button
-                        type="button"
-                        aria-label={
-                            isMobileMenuOpen ? "Close menu" : "Open menu"
-                        }
-                        aria-expanded={isMobileMenuOpen}
-                        onClick={() =>
-                            setIsMobileMenuOpen((currentValue) => !currentValue)
-                        }
-                        className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 text-zinc-900 transition hover:bg-zinc-50 lg:hidden"
-                    >
-                        {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
-                    </button>
-
-                    <>
-                        <Link
-                            to={brandLink}
-                            className="hidden w-[220px] items-center justify-start lg:flex"
+        <header className="sticky top-0 z-30 border-b border-zinc-100 bg-white font-parsi">
+            <div ref={desktopSearchRef} className="relative">
+                <div className="mx-auto flex h-[68px] max-w-[1480px] items-center justify-between gap-4 px-4 lg:h-[76px] lg:px-10">
+                    {/* Left cluster */}
+                    <div className="flex flex-1 items-center justify-start gap-3 sm:gap-5 lg:gap-8">
+                        <HeaderIconButton
+                            label={isDrawerOpen ? "Close menu" : "Open menu"}
+                            ariaExpanded={isDrawerOpen}
+                            onClick={() => setIsDrawerOpen((v) => !v)}
                         >
-                            <img
-                                src={brandLogo.src}
-                                alt="I Want Jewels"
-                                className="h-auto w-[170px] mix-blend-multiply"
-                            />
-                        </Link>
-
-                        <div
-                            ref={desktopSearchRef}
-                            className="hidden flex-1 justify-center lg:flex"
-                        >
-                            <form
-                                className="relative w-full"
-                                onSubmit={(event) => {
-                                    event.preventDefault();
-                                    handleGlobalSearchSubmit(
-                                        desktopSearchTerm,
-                                    );
-                                }}
-                            >
-                                <label className="mx-auto flex h-[46px] w-full max-w-[620px] items-center gap-3 rounded-full border border-[#d5d1ce] bg-white px-4 text-sm text-zinc-400">
-                                    <SearchIcon />
-                                    <input
-                                        type="search"
-                                        placeholder={animatedPlaceholder}
-                                        value={desktopSearchTerm}
-                                        onFocus={() =>
-                                            setIsDesktopSearchOpen(true)
-                                        }
-                                        onChange={(event) =>
-                                            setDesktopSearchTerm(
-                                                event.target.value,
-                                            )
-                                        }
-                                        className="w-full border-0 bg-transparent text-[15px] text-zinc-700 outline-none placeholder:text-zinc-400"
-                                    />
-                                    <button
-                                        type="button"
-                                        aria-label="Voice search"
-                                        onClick={() =>
-                                            handleVoiceSearch("desktop")
-                                        }
-                                        className={`text-pink-400 transition ${isVoiceListening ? "scale-110 text-pink-500" : "hover:text-pink-500"}`}
-                                    >
-                                        <MicIcon />
-                                    </button>
-                                </label>
-
-                                {isDesktopSearchOpen &&
-                                desktopSearchTerm.trim().length > 0 ? (
-                                    <div className="absolute left-1/2 top-[calc(100%+10px)] z-40 w-full max-w-[620px] -translate-x-1/2 rounded-2xl border border-[#eadfd4] bg-white p-4 shadow-[0_24px_60px_rgba(55,31,10,0.14)]">
-                                        <p className="text-[16px] font-medium text-zinc-900">
-                                            Search for "
-                                            <span className="text-pink-500">
-                                                {desktopSearchTerm.trim()}
-                                            </span>
-                                            "
-                                        </p>
-
-                                        {desktopQuerySuggestions.length > 0 ? (
-                                            <div className="mt-3">
-                                                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">
-                                                    Suggestions
-                                                </p>
-                                                <div className="mt-2 flex flex-wrap gap-2">
-                                                    {desktopQuerySuggestions.map(
-                                                        (suggestion) => (
-                                                            <button
-                                                                key={suggestion}
-                                                                type="button"
-                                                                onClick={() => {
-                                                                    setDesktopSearchTerm(
-                                                                        suggestion,
-                                                                    );
-                                                                    handleGlobalSearchSubmit(
-                                                                        suggestion,
-                                                                    );
-                                                                }}
-                                                                className="rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700 transition hover:border-pink-300 hover:text-pink-500"
-                                                            >
-                                                                {suggestion}
-                                                            </button>
-                                                        ),
-                                                    )}
-                                                </div>
-                                            </div>
-                                        ) : null}
-
-                                        <div className="mt-4 space-y-2">
-                                            {isDesktopSearchLoading ? (
-                                                <p className="text-sm text-zinc-500">
-                                                    Searching products...
-                                                </p>
-                                            ) : desktopPredictiveProducts
-                                                  .length > 0 ? (
-                                                desktopPredictiveProducts.map(
-                                                    (product) => (
-                                                        <Link
-                                                            key={product.id}
-                                                            to={buildProductDetailHref(
-                                                                product,
-                                                            )}
-                                                            onClick={() =>
-                                                                setIsDesktopSearchOpen(
-                                                                    false,
-                                                                )
-                                                            }
-                                                            className="flex items-center gap-3 rounded-xl px-2 py-2 transition hover:bg-[#fff7fb]"
-                                                        >
-                                                            <img
-                                                                src={
-                                                                    product.primaryImage
-                                                                }
-                                                                alt={
-                                                                    product.title
-                                                                }
-                                                                className="h-12 w-12 rounded-lg object-cover"
-                                                            />
-                                                            <div className="min-w-0 flex-1">
-                                                                <p className="truncate text-sm font-medium text-zinc-900">
-                                                                    {
-                                                                        product.title
-                                                                    }
-                                                                </p>
-                                                                <p className="text-xs text-zinc-500">
-                                                                    {formatPrice(
-                                                                        product.minPrice,
-                                                                        currency,
-                                                                    )}
-                                                                </p>
-                                                            </div>
-                                                        </Link>
-                                                    ),
-                                                )
-                                            ) : (
-                                                <p className="text-sm text-zinc-500">
-                                                    No related products found.
-                                                </p>
-                                            )}
-                                        </div>
-
-                                        <div className="mt-4">
-                                            <button
-                                                type="button"
-                                                onClick={() =>
-                                                    handleGlobalSearchSubmit(
-                                                        desktopSearchTerm,
-                                                    )
-                                                }
-                                                className="w-full rounded-full border border-[#e5d7cc] px-4 py-2 text-sm font-semibold tracking-[0.04em] text-[#3c2b20] transition hover:bg-black hover:text-white"
-                                            >
-                                                View all results
-                                            </button>
-                                        </div>
-                                    </div>
-                                ) : null}
-                            </form>
-                        </div>
-                    </>
-
-                    <div
-                        className="flex flex-1 items-center justify-center lg:hidden"
-                    >
-                        <Link
-                            to={brandLink}
-                            className="flex items-center justify-center lg:hidden"
-                        >
-                            <img
-                                src={brandLogo.src}
-                                alt="I Want Jewels"
-                                className="h-auto w-[150px] mix-blend-multiply"
-                            />
-                        </Link>
+                            <MenuIcon />
+                        </HeaderIconButton>
+                        <nav className="hidden items-center gap-9 lg:flex">
+                            <Link to="/products" className={topNavLinkClass}>
+                                SHOP
+                            </Link>
+                            <Link to="/about" className={topNavLinkClass}>
+                                ABOUT
+                            </Link>
+                            <Link to="/contact" className={topNavLinkClass}>
+                                CONTACT
+                            </Link>
+                        </nav>
                     </div>
 
-                    <div
-                        className="flex items-center gap-0.5 text-pink-400 sm:gap-1 lg:w-[250px] lg:justify-end"
+                    {/* Center brand wordmark */}
+                    <Link
+                        to={brandLink}
+                        className="flex flex-shrink-0 items-center justify-center"
+                        aria-label="I Want Jewels"
                     >
-                        <div className="hidden items-center pr-1 lg:flex">
-                            <CurrencySelectorRow
-                                currency={currency}
-                                setCurrency={setCurrency}
-                                variant="desktop"
-                            />
-                        </div>
+                        <img
+                            src={brandLogo.src}
+                            alt="I Want Jewels"
+                            className="h-auto w-[180px] mix-blend-multiply"
+                        />
+                    </Link>
 
+                    {/* Right cluster */}
+                    <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-5">
                         <div ref={accountMenuRef} className="relative">
-                            <button
-                                type="button"
-                                aria-label={accountLabel}
-                                aria-expanded={isAccountMenuOpen}
-                                onClick={() =>
-                                    setIsAccountMenuOpen(
-                                        (currentValue) => !currentValue,
-                                    )
-                                }
-                                className="relative flex h-8 w-8 items-center justify-center text-pink-400 transition hover:text-pink-500"
+                            <HeaderIconButton
+                                label={accountLabel}
+                                ariaExpanded={isAccountMenuOpen}
+                                onClick={() => setIsAccountMenuOpen((v) => !v)}
                             >
                                 <UserIcon />
-                            </button>
+                            </HeaderIconButton>
 
                             {isAccountMenuOpen ? (
-                                <div className="absolute right-0 top-[calc(100%+12px)] z-40 w-72 overflow-hidden rounded-[24px] border border-[#eadfd4] bg-white p-3 shadow-[0_24px_60px_rgba(55,31,10,0.14)]">
+                                <div className="absolute right-0 top-[calc(100%+18px)] z-40 w-72 overflow-hidden rounded-[24px] border border-[#eadfd4] bg-white p-3 shadow-[0_24px_60px_rgba(55,31,10,0.14)]">
                                     {isAuthenticated ? (
                                         <>
                                             <div className="rounded-[18px] bg-[#fff7fb] px-4 py-4">
-                                                <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">
-                                                    Signed in
-                                                </p>
-                                                <p className="mt-2 text-base font-bold text-[#17110d]">
+                                                <p className="text-base font-bold text-[#17110d]">
                                                     {accountName}
                                                 </p>
                                                 <p className="mt-1 text-sm text-zinc-500">
@@ -1394,20 +867,18 @@ export default function Header() {
                                                 </p>
                                             </div>
                                             {isAdmin ? (
-                                                <>
-                                                    <Link
-                                                        to="/admin/address"
-                                                        onClick={() =>
-                                                            setIsAccountMenuOpen(
-                                                                false,
-                                                            )
-                                                        }
-                                                        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
-                                                    >
-                                                        <MapPinHouse className="h-4 w-4" />
-                                                        ADMIN ADDRESS
-                                                    </Link>
-                                                </>
+                                                <Link
+                                                    to="/admin/address"
+                                                    onClick={() =>
+                                                        setIsAccountMenuOpen(
+                                                            false,
+                                                        )
+                                                    }
+                                                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                >
+                                                    <MapPinHouse className="h-4 w-4" />
+                                                    ADMIN ADDRESS
+                                                </Link>
                                             ) : (
                                                 <>
                                                     <Link
@@ -1487,13 +958,6 @@ export default function Header() {
                                                 </p>
                                             </div>
                                             <div className="mt-3 grid gap-2">
-                                                {/* <Link
-                          to="/tickets"
-                          onClick={() => setIsAccountMenuOpen(false)}
-                          className="flex w-full items-center justify-center rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
-                        >
-                          TICKETS
-                        </Link> */}
                                                 <Link
                                                     to="/login"
                                                     onClick={() =>
@@ -1525,478 +989,371 @@ export default function Header() {
                             ) : null}
                         </div>
 
+                        <HeaderIconButton
+                            label="Search"
+                            ariaExpanded={isSearchOpen}
+                            onClick={() => setIsSearchOpen((v) => !v)}
+                        >
+                            <SearchIcon />
+                        </HeaderIconButton>
+
+                        <MiniCurrencySelector
+                            currency={currency}
+                            setCurrency={setCurrency}
+                        />
+
                         {isAdmin ? (
                             <>
-                                <HeaderAction
+                                <HeaderIconButton
                                     label="Admin Wishlist"
                                     to="/admin/wishlist"
-                                    className="text-pink-400"
                                 >
                                     <HeartIcon />
-                                </HeaderAction>
-                                <HeaderAction
+                                </HeaderIconButton>
+                                <HeaderIconButton
                                     label="Admin Cart"
                                     to="/admin/cart"
-                                    className="text-pink-400"
                                 >
                                     <BagIcon />
-                                </HeaderAction>
+                                </HeaderIconButton>
                             </>
                         ) : (
                             <>
-                                <HeaderAction
+                                <HeaderIconButton
                                     label="Wishlist"
                                     count={wishlistCount}
                                     to="/wishlist"
-                                    className="text-pink-400"
                                 >
                                     <HeartIcon />
-                                </HeaderAction>
-                                <HeaderAction
+                                </HeaderIconButton>
+                                <HeaderIconButton
                                     label="Cart"
                                     count={itemCount}
                                     to="/cart"
-                                    className="text-pink-400"
                                 >
                                     <BagIcon />
-                                </HeaderAction>
+                                </HeaderIconButton>
                             </>
                         )}
                     </div>
                 </div>
 
-                <div className="hidden border-y border-zinc-200 lg:block">
-                    <nav className="mx-auto flex max-w-[1480px] items-center justify-center gap-7 px-4 py-3 text-[0.96rem] text-zinc-700 lg:px-8">
-                        {isAdmin
-                            ? adminNavLinks.map((item) => (
-                                  <MenuLink
-                                      key={item.label}
-                                      label={item.label}
-                                      to={item.to}
-                                                                            className="group relative inline-flex items-center gap-1.5 py-0.5 text-[0.96rem] font-normal text-zinc-700 transition duration-200 hover:text-pink-500 after:absolute after:-bottom-[13px] after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-pink-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
-                                  />
-                              ))
-                            : storefrontNavLinks.map((item) => (
-                                  <Link
-                                      key={item.label}
-                                      to={item.to}
-                                      className="group relative inline-flex items-center gap-1.5 py-0.5 text-[0.96rem] font-normal text-zinc-700 transition duration-200 hover:text-pink-500 after:absolute after:-bottom-[13px] after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-pink-400 after:transition-transform after:duration-200 hover:after:scale-x-100"
-                                  >
-                                      <span className="transition duration-200 group-hover:scale-105">
-                                          <NavGlyph type={item.icon} />
-                                      </span>
-                                      <span>{item.label}</span>
-                                  </Link>
-                              ))}
-                    </nav>
-                </div>
+                {/* Backdrop overlay for search modal */}
+                <div
+                    aria-hidden={!isSearchOpen}
+                    onClick={() => setIsSearchOpen(false)}
+                    className={`fixed inset-x-0 bottom-0 top-[68px] z-30 bg-black/30 backdrop-blur-[2px] transition-opacity duration-300 lg:top-[76px] ${
+                        isSearchOpen
+                            ? "pointer-events-auto opacity-100"
+                            : "pointer-events-none opacity-0"
+                    }`}
+                />
 
-                {isMobileMenuOpen ? (
-                    <div className="max-h-[calc(100vh-68px)] overflow-y-auto border-t border-zinc-100 px-4 py-4 lg:hidden">
-                        <div className="mx-auto max-w-7xl space-y-4">
-                            <form
-                                ref={mobileSearchRef}
-                                className="relative"
-                                onSubmit={(event) => {
-                                    event.preventDefault();
-                                    handleGlobalSearchSubmit(mobileSearchTerm, {
-                                        closeMobileMenu: true,
-                                    });
-                                }}
+                {/* Floating search modal */}
+                <div
+                    aria-hidden={!isSearchOpen}
+                    className={`absolute left-1/2 top-full z-40 w-[calc(100%-32px)] max-w-[560px] -translate-x-1/2 transition-all duration-300 ease-out ${
+                        isSearchOpen
+                            ? "pointer-events-auto translate-y-3 opacity-100"
+                            : "pointer-events-none -translate-y-1 opacity-0"
+                    }`}
+                >
+                    <form
+                        onSubmit={(event) => {
+                            event.preventDefault();
+                            handleGlobalSearchSubmit(searchTerm);
+                        }}
+                    >
+                        <label className="flex h-11 w-full items-center gap-2.5 rounded-full border border-[#d5d1ce] bg-white px-4 text-sm text-zinc-400 shadow-[0_18px_40px_rgba(17,24,39,0.10)]">
+                            <SearchIcon />
+                            <input
+                                ref={searchInputRef}
+                                type="search"
+                                placeholder={animatedPlaceholder}
+                                value={searchTerm}
+                                onChange={(event) =>
+                                    setSearchTerm(event.target.value)
+                                }
+                                className="w-full border-0 bg-transparent text-[14px] text-zinc-700 outline-none placeholder:text-zinc-400"
+                            />
+                            <button
+                                type="button"
+                                aria-label="Voice search"
+                                onClick={handleVoiceSearch}
+                                className={`text-pink-400 transition ${
+                                    isVoiceListening
+                                        ? "scale-110 text-pink-500"
+                                        : "hover:text-pink-500"
+                                }`}
                             >
-                                <label className="flex h-11 items-center gap-3 rounded-xl border border-zinc-200 bg-white px-4 text-sm text-zinc-400 shadow-[0_1px_0_rgba(17,24,39,0.03)]">
-                                    <SearchIcon />
-                                    <input
-                                        type="search"
-                                        placeholder={animatedPlaceholder}
-                                        value={mobileSearchTerm}
-                                        onFocus={() =>
-                                            setIsMobileSearchOpen(true)
-                                        }
-                                        onChange={(event) =>
-                                            setMobileSearchTerm(
-                                                event.target.value,
-                                            )
-                                        }
-                                        className="w-full border-0 bg-transparent text-sm text-zinc-700 outline-none placeholder:text-zinc-400"
-                                    />
-                                    <button
-                                        type="button"
-                                        aria-label="Voice search"
-                                        onClick={() =>
-                                            handleVoiceSearch("mobile")
-                                        }
-                                        className={`text-pink-400 transition ${isVoiceListening ? "scale-110 text-pink-500" : "hover:text-pink-500"}`}
-                                    >
-                                        <MicIcon />
-                                    </button>
-                                </label>
+                                <MicIcon />
+                            </button>
+                        </label>
 
-                                {isMobileSearchOpen &&
-                                mobileSearchTerm.trim().length > 0 ? (
-                                    <div className="mt-2 rounded-xl border border-[#eadfd4] bg-white p-3 shadow-[0_16px_40px_rgba(55,31,10,0.12)]">
-                                        <p className="text-sm font-medium text-zinc-900">
-                                            Search for "
-                                            <span className="text-pink-500">
-                                                {mobileSearchTerm.trim()}
-                                            </span>
-                                            "
+                        {searchTerm.trim().length > 0 ? (
+                            <div className="mt-2.5 rounded-2xl border border-[#eadfd4] bg-white p-3.5 shadow-[0_18px_50px_rgba(55,31,10,0.10)]">
+                                <p className="text-[13px] font-medium text-zinc-900">
+                                    Search for &quot;
+                                    <span className="text-pink-500">
+                                        {searchTerm.trim()}
+                                    </span>
+                                    &quot;
+                                </p>
+
+                                {querySuggestions.length > 0 ? (
+                                    <div className="mt-2.5">
+                                        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
+                                            Suggestions
                                         </p>
-
-                                        {mobileQuerySuggestions.length > 0 ? (
-                                            <div className="mt-2 flex flex-wrap gap-2">
-                                                {mobileQuerySuggestions.map(
-                                                    (suggestion) => (
-                                                        <button
-                                                            key={suggestion}
-                                                            type="button"
-                                                            onClick={() => {
-                                                                setMobileSearchTerm(
-                                                                    suggestion,
-                                                                );
-                                                                handleGlobalSearchSubmit(
-                                                                    suggestion,
-                                                                    {
-                                                                        closeMobileMenu:
-                                                                            true,
-                                                                    },
-                                                                );
-                                                            }}
-                                                            className="rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700"
-                                                        >
-                                                            {suggestion}
-                                                        </button>
-                                                    ),
-                                                )}
-                                            </div>
-                                        ) : null}
-
-                                        <div className="mt-3 space-y-2">
-                                            {isMobileSearchLoading ? (
-                                                <p className="text-sm text-zinc-500">
-                                                    Searching products...
-                                                </p>
-                                            ) : mobilePredictiveProducts.length >
-                                              0 ? (
-                                                mobilePredictiveProducts.map(
-                                                    (product) => (
-                                                        <Link
-                                                            key={product.id}
-                                                            to={buildProductDetailHref(
-                                                                product,
-                                                            )}
-                                                            onClick={closeMenus}
-                                                            className="flex items-center gap-3 rounded-lg px-2 py-2 transition hover:bg-[#fff7fb]"
-                                                        >
-                                                            <img
-                                                                src={
-                                                                    product.primaryImage
-                                                                }
-                                                                alt={
-                                                                    product.title
-                                                                }
-                                                                className="h-10 w-10 rounded-md object-cover"
-                                                            />
-                                                            <div className="min-w-0 flex-1">
-                                                                <p className="truncate text-sm text-zinc-900">
-                                                                    {
-                                                                        product.title
-                                                                    }
-                                                                </p>
-                                                                <p className="text-xs text-zinc-500">
-                                                                    {formatPrice(
-                                                                        product.minPrice,
-                                                                        currency,
-                                                                    )}
-                                                                </p>
-                                                            </div>
-                                                        </Link>
-                                                    ),
-                                                )
-                                            ) : (
-                                                <p className="text-sm text-zinc-500">
-                                                    No related products found.
-                                                </p>
+                                        <div className="mt-1.5 flex flex-wrap gap-1.5">
+                                            {querySuggestions.map(
+                                                (suggestion) => (
+                                                    <button
+                                                        key={suggestion}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setSearchTerm(
+                                                                suggestion,
+                                                            );
+                                                            handleGlobalSearchSubmit(
+                                                                suggestion,
+                                                            );
+                                                        }}
+                                                        className="rounded-full border border-zinc-200 px-2.5 py-0.5 text-[11px] font-medium text-zinc-700 transition hover:border-pink-300 hover:text-pink-500"
+                                                    >
+                                                        {suggestion}
+                                                    </button>
+                                                ),
                                             )}
                                         </div>
-
-                                        <button
-                                            type="button"
-                                            onClick={() =>
-                                                handleGlobalSearchSubmit(
-                                                    mobileSearchTerm,
-                                                    {
-                                                        closeMobileMenu: true,
-                                                    },
-                                                )
-                                            }
-                                            className="mt-3 w-full rounded-lg border border-[#e5d7cc] px-3 py-2 text-sm font-semibold text-[#3c2b20]"
-                                        >
-                                            View all results
-                                        </button>
                                     </div>
                                 ) : null}
-                            </form>
 
-                            {!isAdmin ? (
-                                <div className="rounded-xl border border-zinc-200 bg-white px-4 py-3">
-                                    <CurrencySelectorRow
-                                        currency={currency}
-                                        setCurrency={setCurrency}
-                                    />
-                                </div>
-                            ) : null}
-
-                            <nav className="grid gap-1 rounded-2xl border border-zinc-200 bg-white p-2">
-                                {activeNavLinks.map((link) => {
-                                    if (link.label === "Shop" && !isAdmin) {
-                                        return (
-                                            <div
-                                                key={link.label}
-                                                className="rounded-xl border border-[#f1e1d7] bg-[#fffaf7] p-2"
-                                            >
-                                                <button
-                                                    type="button"
-                                                    aria-expanded={
-                                                        isMobileShopMenuOpen
-                                                    }
-                                                    onClick={() =>
-                                                        setIsMobileShopMenuOpen(
-                                                            (currentValue) =>
-                                                                !currentValue,
-                                                        )
-                                                    }
-                                                    className="flex w-full items-center justify-between rounded-xl px-2 py-2 text-sm font-semibold uppercase tracking-[0.02em] text-zinc-900"
-                                                >
-                                                    <span>{link.label}</span>
-                                                    <span
-                                                        className={`transition-transform duration-300 ${isMobileShopMenuOpen ? "rotate-180" : ""}`}
-                                                    >
-                                                        <ChevronIcon />
-                                                    </span>
-                                                </button>
-
-                                                <div
-                                                    className={`shop-mobile-menu ${isMobileShopMenuOpen ? "shop-mobile-menu--open" : ""}`}
-                                                >
-                                                    <div className="space-y-2 pt-2">
-                                                        <Link
-                                                            to="/products"
-                                                            onClick={closeMenus}
-                                                            className="block rounded-xl bg-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.02em] text-zinc-900 transition hover:bg-zinc-50"
-                                                        >
-                                                            All
-                                                        </Link>
-
-                                                        {visibleShopCategories.map(
-                                                            (category) => (
-                                                                <Link
-                                                                    key={
-                                                                        category
-                                                                    }
-                                                                    to={buildCategoryHref(
-                                                                        category,
-                                                                    )}
-                                                                    onClick={
-                                                                        closeMenus
-                                                                    }
-                                                                    className="block rounded-xl bg-white px-4 py-3 text-sm font-semibold uppercase tracking-[0.02em] text-zinc-900 transition hover:bg-zinc-50"
-                                                                >
-                                                                    {normalizeCategoryLabel(
-                                                                        category,
-                                                                    )}
-                                                                </Link>
-                                                            ),
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        );
-                                    }
-
-                                    return (
-                                        <MenuLink
-                                            key={link.label}
-                                            label={link.label}
-                                            to={link.to}
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                            className="rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.02em] text-zinc-900 transition hover:bg-zinc-50"
-                                        />
-                                    );
-                                })}
-                            </nav>
-
-                            <div className="rounded-2xl border border-zinc-200 bg-white p-3 text-sm text-zinc-700 sm:hidden">
-                                {isAuthenticated ? (
-                                    <>
-                                        <p className="px-2 pb-2 text-base font-medium text-zinc-900">
-                                            {accountName}
+                                <div className="mt-3 space-y-1">
+                                    {isSearchLoading ? (
+                                        <p className="text-[13px] text-zinc-500">
+                                            Searching products...
                                         </p>
-
-                                        {isAdmin ? (
-                                            <div className="grid grid-cols-2 gap-2">
-                                                <Link
-                                                    to="/admin/address"
-                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                    onClick={() =>
-                                                        setIsMobileMenuOpen(false)
-                                                    }
-                                                >
-                                                    <span className="inline-flex items-center gap-1">
-                                                        <MapPinHouse className="h-4 w-4" />
-                                                        Address
-                                                    </span>
-                                                </Link>
-                                                <Link
-                                                    to="/admin/wishlist"
-                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                    onClick={() =>
-                                                        setIsMobileMenuOpen(false)
-                                                    }
-                                                >
-                                                    Wishlists
-                                                </Link>
-                                                <Link
-                                                    to="/admin/cart"
-                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                    onClick={() =>
-                                                        setIsMobileMenuOpen(false)
-                                                    }
-                                                >
-                                                    Carts
-                                                </Link>
-                                                <button
-                                                    type="button"
-                                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                    onClick={() => {
-                                                        logout();
-                                                        setIsMobileMenuOpen(false);
-                                                    }}
-                                                >
-                                                    <span className="inline-flex items-center gap-1">
-                                                        <LogOut className="h-4 w-4" />
-                                                        Logout
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        ) : (
-                                            <>
-                                                <div className="grid grid-cols-2 gap-2">
-                                                    <Link
-                                                        to="/wishlist"
-                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                        onClick={() =>
-                                                            setIsMobileMenuOpen(false)
-                                                        }
-                                                    >
-                                                        Wishlist
-                                                    </Link>
-                                                    <Link
-                                                        to="/profile"
-                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                        onClick={() =>
-                                                            setIsMobileMenuOpen(false)
-                                                        }
-                                                    >
-                                                        Profile
-                                                    </Link>
-                                                    <Link
-                                                        to="/payments/history"
-                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                        onClick={() =>
-                                                            setIsMobileMenuOpen(false)
-                                                        }
-                                                    >
-                                                        <span className="inline-flex items-center gap-1">
-                                                            <CreditCard className="h-4 w-4" />
-                                                            Payments
-                                                        </span>
-                                                    </Link>
-                                                    <Link
-                                                        to="/orders"
-                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                        onClick={() =>
-                                                            setIsMobileMenuOpen(false)
-                                                        }
-                                                    >
-                                                        <span className="inline-flex items-center gap-1">
-                                                            <PackageSearch className="h-4 w-4" />
-                                                            Orders
-                                                        </span>
-                                                    </Link>
-                                                    <Link
-                                                        to="/tickets"
-                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                        onClick={() =>
-                                                            setIsMobileMenuOpen(false)
-                                                        }
-                                                    >
-                                                        <span className="inline-flex items-center gap-1">
-                                                            <Ticket className="h-4 w-4" />
-                                                            Tickets
-                                                        </span>
-                                                    </Link>
-                                                    <button
-                                                        type="button"
-                                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                                        onClick={() => {
-                                                            logout();
-                                                            setIsMobileMenuOpen(false);
-                                                        }}
-                                                    >
-                                                        <span className="inline-flex items-center gap-1">
-                                                            <LogOut className="h-4 w-4" />
-                                                            Logout
-                                                        </span>
-                                                    </button>
+                                    ) : predictiveProducts.length > 0 ? (
+                                        predictiveProducts.map((product) => (
+                                            <Link
+                                                key={product.id}
+                                                to={buildProductDetailHref(
+                                                    product,
+                                                )}
+                                                onClick={() =>
+                                                    setIsSearchOpen(false)
+                                                }
+                                                className="flex items-center gap-2.5 rounded-lg px-1.5 py-1.5 transition hover:bg-[#fff7fb]"
+                                            >
+                                                <img
+                                                    src={product.primaryImage}
+                                                    alt={product.title}
+                                                    className="h-9 w-9 rounded-md object-cover"
+                                                />
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="truncate text-[13px] font-medium text-zinc-900">
+                                                        {product.title}
+                                                    </p>
+                                                    <p className="text-[11px] text-zinc-500">
+                                                        {formatPrice(
+                                                            product.minPrice,
+                                                            currency,
+                                                        )}
+                                                    </p>
                                                 </div>
-                                            </>
-                                        )}
-                                    </>
-                                ) : (
-                                    <div className="grid grid-cols-3 gap-2">
-                                        <Link
-                                            to="/tickets"
-                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            <span className="inline-flex items-center gap-1">
-                                                <Ticket className="h-4 w-4" />
-                                                Tickets
-                                            </span>
-                                        </Link>
-                                        <Link
-                                            to="/login"
-                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            <span className="inline-flex items-center gap-1">
-                                                <LogIn className="h-4 w-4" />
-                                                Login
-                                            </span>
-                                        </Link>
-                                        <Link
-                                            to="/register"
-                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center transition hover:bg-zinc-50"
-                                            onClick={() =>
-                                                setIsMobileMenuOpen(false)
-                                            }
-                                        >
-                                            Register
-                                        </Link>
-                                    </div>
-                                )}
+                                            </Link>
+                                        ))
+                                    ) : (
+                                        <p className="text-[13px] text-zinc-500">
+                                            No related products found.
+                                        </p>
+                                    )}
+                                </div>
+
+                                <div className="mt-3">
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            handleGlobalSearchSubmit(searchTerm)
+                                        }
+                                        className="w-full rounded-full border border-[#e5d7cc] px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.04em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                                    >
+                                        View all results
+                                    </button>
+                                </div>
                             </div>
+                        ) : null}
+                    </form>
+                </div>
+            </div>
+
+            {/* Hamburger overlay + drawer */}
+            <div
+                aria-hidden={!isDrawerOpen}
+                onClick={() => setIsDrawerOpen(false)}
+                className={`iwj-hamburger-overlay ${isDrawerOpen ? "iwj-hamburger-overlay--open" : ""}`}
+            />
+
+            <aside
+                ref={drawerRef}
+                aria-hidden={!isDrawerOpen}
+                aria-label="Site menu"
+                className={`iwj-hamburger-drawer font-parsi ${
+                    isDrawerOpen ? "iwj-hamburger-drawer--open" : ""
+                }`}
+            >
+                <div className="flex items-center justify-between border-b border-zinc-100 px-6 py-5">
+                    <span className="font-parsi text-[20px] font-bold uppercase tracking-[-0.01em] ">
+                        EXPLORE
+                    </span>
+                    <button
+                        type="button"
+                        aria-label="Close menu"
+                        onClick={() => setIsDrawerOpen(false)}
+                        className="flex h-9 w-9 items-center justify-center rounded-full text-zinc-700 transition hover:bg-zinc-50 hover:text-zinc-950"
+                    >
+                        <CloseIcon />
+                    </button>
+                </div>
+
+                <div className="flex-1 overflow-y-auto px-6 pb-8 pt-6">
+                    <nav className="flex flex-col">
+                        {drawerLinks.map((link, index) => (
+                            <Link
+                                key={`${link.label}-${link.to}`}
+                                to={link.to}
+                                onClick={() => setIsDrawerOpen(false)}
+                                className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                style={{
+                                    transitionDelay: `${isDrawerOpen ? 80 + index * 40 : 0}ms`,
+                                }}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </nav>
+
+                    <div className="mt-8 space-y-3">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
+                            Account
+                        </p>
+                        {isAuthenticated ? (
+                            <>
+                                <p className="text-sm font-semibold text-zinc-900">
+                                    {accountName}
+                                </p>
+                                <div className="grid gap-2">
+                                    {!isAdmin && (
+                                        <>
+                                            <Link
+                                                to="/profile"
+                                                onClick={() =>
+                                                    setIsDrawerOpen(false)
+                                                }
+                                                className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
+                                            >
+                                                Profile
+                                            </Link>
+                                            <Link
+                                                to="/orders"
+                                                onClick={() =>
+                                                    setIsDrawerOpen(false)
+                                                }
+                                                className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
+                                            >
+                                                <span className="inline-flex items-center gap-2">
+                                                    <PackageSearch className="h-4 w-4" />
+                                                    My Orders
+                                                </span>
+                                            </Link>
+                                            <Link
+                                                to="/tickets"
+                                                onClick={() =>
+                                                    setIsDrawerOpen(false)
+                                                }
+                                                className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
+                                            >
+                                                <span className="inline-flex items-center gap-2">
+                                                    <Ticket className="h-4 w-4" />
+                                                    Tickets
+                                                </span>
+                                            </Link>
+                                        </>
+                                    )}
+                                    {isAdmin && (
+                                        <Link
+                                            to="/admin/address"
+                                            onClick={() =>
+                                                setIsDrawerOpen(false)
+                                            }
+                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
+                                        >
+                                            <span className="inline-flex items-center gap-2">
+                                                <MapPinHouse className="h-4 w-4" />
+                                                Admin Address
+                                            </span>
+                                        </Link>
+                                    )}
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            logout();
+                                            setIsDrawerOpen(false);
+                                        }}
+                                        className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white"
+                                    >
+                                        <span className="inline-flex items-center gap-2">
+                                            <LogOut className="h-4 w-4" />
+                                            Logout
+                                        </span>
+                                    </button>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="grid gap-2">
+                                <Link
+                                    to="/login"
+                                    onClick={() => setIsDrawerOpen(false)}
+                                    className="rounded-lg bg-zinc-900 px-3 py-2 text-center text-[13px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-zinc-700"
+                                >
+                                    <span className="inline-flex items-center gap-2">
+                                        <LogIn className="h-4 w-4" />
+                                        Login
+                                    </span>
+                                </Link>
+                                <Link
+                                    to="/register"
+                                    onClick={() => setIsDrawerOpen(false)}
+                                    className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.14em] text-zinc-800 transition hover:bg-zinc-50"
+                                >
+                                    Register
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="mt-8">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
+                            Follow
+                        </p>
+                        <div className="mt-3 flex items-center gap-3">
+                            {socialLinks.map((social) => (
+                                <a
+                                    key={social.name}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label={social.name}
+                                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition hover:border-pink-300 hover:text-pink-500"
+                                >
+                                    <SocialIcon name={social.name} />
+                                </a>
+                            ))}
                         </div>
                     </div>
-                ) : null}
-            </header>
-        </>
+                </div>
+            </aside>
+        </header>
     );
 }
