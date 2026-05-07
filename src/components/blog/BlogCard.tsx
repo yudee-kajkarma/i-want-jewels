@@ -25,29 +25,26 @@ export default function BlogCard({ post }: BlogCardProps) {
     const postHref = `/blog/${post.slug}`;
 
     return (
-        <article className="group">
-            <Link
-                to={postHref}
-                className="relative block overflow-hidden rounded-[6px]"
-            >
+        <article className="group font-parsi">
+            <Link to={postHref} className="relative block overflow-hidden">
                 <img
                     src={post.coverImage}
                     alt={post.title}
-                    className="h-[340px] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    className="block h-[360px] w-full object-cover transition duration-500 ease-out group-hover:scale-[1.04]"
                 />
 
-                <div className="absolute left-3 top-3 flex h-[56px] w-[56px] flex-col items-center justify-center rounded-[6px] bg-white/95 text-[#171717] shadow-[0_6px_20px_rgba(0,0,0,0.12)]">
-                    <span className="text-base font-semibold leading-none">
+                <div className="absolute left-3 top-3 flex h-14 w-14 flex-col items-center justify-center bg-white text-zinc-900 shadow-[0_6px_20px_rgba(0,0,0,0.12)]">
+                    <span className="text-[15px] font-medium leading-none">
                         {dateParts.day}
                     </span>
-                    <span className="mt-1 text-[11px] uppercase tracking-[0.08em] text-zinc-600">
+                    <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-500">
                         {dateParts.month}
                     </span>
                 </div>
             </Link>
 
-            <div className="pt-4">
-                <h2 className="text-[1.05rem] font-semibold leading-7 text-[#151515]">
+            <div className="pt-5">
+                <h2 className="text-[16px] font-medium leading-snug tracking-[-0.01em] text-zinc-900">
                     <Link
                         to={postHref}
                         className="transition hover:text-pink-500"
@@ -56,7 +53,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                     </Link>
                 </h2>
 
-                <p className="mt-2 text-sm leading-7 text-zinc-600">
+                <p className="mt-2 text-[13px] leading-6 text-zinc-600">
                     {post.excerpt}
                 </p>
             </div>

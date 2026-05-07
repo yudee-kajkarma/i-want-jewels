@@ -21,21 +21,6 @@ const galleryImages = [
     earringProductImage.src,
 ];
 
-const testimonials = [
-    {
-        name: "Julia K.",
-        text: "Beautiful pieces, fast delivery, and the finish feels far more premium than the price suggests.",
-    },
-    {
-        name: "Christine H.",
-        text: "My necklace layers perfectly with everything. The quality and sparkle are exactly what I wanted.",
-    },
-    {
-        name: "Emily A.",
-        text: "The earrings are elegant, lightweight, and packaged so well. It felt like opening a luxury gift.",
-    },
-];
-
 const features = [
     {
         title: "Lab-Grown Diamonds",
@@ -64,7 +49,7 @@ const features = [
 ];
 
 function FeatureIcon({ icon }: { icon: string }) {
-    const className = "h-8 w-8";
+    const className = "h-7 w-7";
 
     switch (icon) {
         case "diamond":
@@ -75,7 +60,7 @@ function FeatureIcon({ icon }: { icon: string }) {
                     className={className}
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.7"
+                    strokeWidth="1.5"
                 >
                     <path
                         d="M6 8.5 9 4h6l3 4.5L12 20 6 8.5Z"
@@ -92,7 +77,7 @@ function FeatureIcon({ icon }: { icon: string }) {
                     className={className}
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.7"
+                    strokeWidth="1.5"
                 >
                     <circle cx="12" cy="12" r="6.5" />
                     <path d="M12 5.5v13M5.5 12h13" strokeLinecap="round" />
@@ -106,7 +91,7 @@ function FeatureIcon({ icon }: { icon: string }) {
                     className={className}
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.7"
+                    strokeWidth="1.5"
                 >
                     <path
                         d="M5 9.5h14l-1.1 10.5H6.1L5 9.5Z"
@@ -126,7 +111,7 @@ function FeatureIcon({ icon }: { icon: string }) {
                     className={className}
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="1.7"
+                    strokeWidth="1.5"
                 >
                     <path
                         d="m12 4 2.5 5.1 5.6.8-4 3.9.9 5.6-5-2.6-5 2.6.9-5.6-4-3.9 5.6-.8L12 4Z"
@@ -139,129 +124,112 @@ function FeatureIcon({ icon }: { icon: string }) {
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-white text-zinc-900">
+        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
             <Header />
 
             <main>
-                <section className="bg-[linear-gradient(180deg,_#f6f1e8,_#fff_80%)] px-4 py-14 text-center md:py-20">
-                    <h1 className="text-3xl font-semibold md:text-4xl">
-                        About Us
-                    </h1>
-                    <p className="mt-3 text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
-                        Homepage / About Us
-                    </p>
+                <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
+                    <div className="mx-auto max-w-[1480px]">
+                        <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
+                            Homepage / About Us
+                        </p>
+                        <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
+                            About Us
+                        </h1>
+                    </div>
                 </section>
 
-                <section className="mx-auto max-w-5xl px-4 py-12 md:py-16">
-                    <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-10">
+                <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
+                    <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
                         <img
                             src={ringModelImage.src}
                             alt="Woman wearing statement jewellery"
-                            className="h-[330px] w-full rounded-sm object-cover md:h-[420px]"
+                            className="block h-[360px] w-full object-cover md:h-[460px] lg:h-[520px]"
                         />
 
                         <div>
-                            <h2 className="max-w-sm text-3xl font-semibold leading-tight">
-                                Why Customers Choose I Want Jewels
+                            <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-[15px]">
+                                Why Customers Choose
                             </h2>
-                            <p className="mt-4 text-sm leading-7 text-zinc-600">
-                                Based in the historic diamond city of Antwerp, I
-                                Want Jewels creates modern jewellery crafted
+                            <h3 className="mt-3 max-w-md text-[26px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px]">
+                                Modern pieces crafted to look polished every
+                                day.
+                            </h3>
+                            <p className="mt-5 max-w-xl text-[14px] leading-7 text-zinc-600">
+                                Based in the historic diamond city of Antwerp,
+                                I Want Jewels creates modern jewellery crafted
                                 with lab-grown diamonds, 925 sterling silver,
                                 and 14kt gold plating. Our collections combine
                                 responsible craftsmanship with timeless design,
-                                offering elegant pieces made to elevate everyday
-                                style.
+                                offering elegant pieces made to elevate
+                                everyday style.
                             </p>
-                            <ul className="mt-6 space-y-4 text-sm font-semibold text-zinc-800">
+                            <ul className="mt-7 space-y-3">
                                 {aboutPoints.map((point) => (
                                     <li
                                         key={point}
-                                        className="flex items-center gap-3"
+                                        className="flex items-center gap-3 text-[13px] uppercase tracking-[0.14em] text-zinc-800"
                                     >
-                                        <span className="h-2.5 w-2.5 rounded-full bg-zinc-900" />
+                                        <span className="h-1.5 w-1.5 bg-pink-500" />
                                         <span>{point}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
+                </section>
 
-                    <div className="mx-auto mt-12 max-w-3xl text-center">
-                        <h2 className="text-3xl font-semibold">
-                            Why Choose I Want Jewels For Fine Jewellery
-                        </h2>
-                        <p className="mt-4 text-sm leading-7 text-zinc-600">
-                            At I Want Jewels, we combine Antwerp renowned
-                            jewellery heritage with modern craftsmanship to
-                            create pieces that shine with elegance and quality.
-                            Our collections feature lab-grown diamonds, 925
-                            sterling silver, and refined 14kt gold plating,
-                            offering the brilliance of fine jewellery with
-                            responsible sourcing. Each piece is thoughtfully
-                            designed to balance timeless beauty with everyday
-                            wearability. With attention to detail, premium
-                            materials, and contemporary style, we create
-                            jewellery that makes every moment feel special.
-                        </p>
-                    </div>
+                <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
+                    <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                        Why Choose I Want Jewels
+                    </h2>
+                    <p className="mt-5 max-w-3xl text-[14px] leading-7 text-zinc-600">
+                        At I Want Jewels, we combine Antwerp&apos;s renowned
+                        jewellery heritage with modern craftsmanship to create
+                        pieces that shine with elegance and quality. Our
+                        collections feature lab-grown diamonds, 925 sterling
+                        silver, and refined 14kt gold plating, offering the
+                        brilliance of fine jewellery with responsible sourcing.
+                        Each piece is thoughtfully designed to balance timeless
+                        beauty with everyday wearability.
+                    </p>
 
-                    <div className="mt-12 grid gap-4 md:grid-cols-3">
+                    <div className="mt-10 grid gap-4 md:grid-cols-3">
                         {galleryImages.map((image, index) => (
                             <img
                                 key={image}
                                 src={image}
                                 alt={`About jewellery gallery ${index + 1}`}
-                                className="h-[360px] w-full rounded-2xl object-cover md:h-[420px]"
+                                className="block h-[380px] w-full object-cover md:h-[440px]"
                             />
                         ))}
                     </div>
                 </section>
 
-                {/* <section className="bg-zinc-50 px-4 py-16">
-          <div className="mx-auto max-w-5xl">
-            <div className="text-center">
-              <h2 className="text-3xl font-semibold">What Our Happy Customers Say</h2>
-              <p className="mt-2 text-sm text-zinc-500">Discover what our customers really think about their story with us.</p>
-            </div>
-
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {testimonials.map((testimonial) => (
-                <article key={testimonial.name} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-100">
-                  <div className="text-sm text-amber-400">★★★★★</div>
-                  <div className="mt-3 flex items-center gap-3">
-                    <div className="h-9 w-9 rounded-full bg-zinc-200" />
-                    <p className="font-semibold text-zinc-900">{testimonial.name}</p>
-                  </div>
-                  <p className="mt-4 text-sm leading-6 text-zinc-600">{testimonial.text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-                <NewsletterSection />
-
-                <section className="bg-[linear-gradient(180deg,_#f6f1e8,_#fff_85%)] px-4 py-16">
-                    <div className="mx-auto grid max-w-6xl gap-8 text-center md:grid-cols-2 lg:grid-cols-4">
-                        {features.map((feature) => (
-                            <div
-                                key={feature.title}
-                                className="mx-auto max-w-xs"
-                            >
-                                <div className="mx-auto flex h-14 w-14 items-center justify-center text-zinc-900">
-                                    <FeatureIcon icon={feature.icon} />
+                <section className="bg-zinc-50 px-6 py-12 lg:px-10 lg:py-16">
+                    <div className="mx-auto max-w-[1480px]">
+                        <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                            What Sets Us Apart
+                        </h2>
+                        <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                            {features.map((feature) => (
+                                <div key={feature.title}>
+                                    <div className="flex h-12 w-12 items-center justify-center bg-pink-500 text-white">
+                                        <FeatureIcon icon={feature.icon} />
+                                    </div>
+                                    <h3 className="mt-5 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="mt-3 text-[13px] leading-6 text-zinc-600">
+                                        {feature.description}
+                                    </p>
                                 </div>
-                                <h3 className="mt-4 text-lg font-semibold">
-                                    {feature.title}
-                                </h3>
-                                <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    {feature.description}
-                                </p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </section>
+
+                <NewsletterSection />
 
                 <InstagramGallerySection />
             </main>
