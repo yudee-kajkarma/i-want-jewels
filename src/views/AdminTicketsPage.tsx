@@ -49,14 +49,14 @@ function TicketListShimmer() {
   return (
     <div className="space-y-4">
       {Array.from({ length: 4 }, (_, index) => (
-        <div key={index} className="animate-pulse rounded-[24px] border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
-          <div className="h-3 w-28 rounded-full bg-[#f2d7e7]" />
-          <div className="mt-3 h-5 w-56 rounded-full bg-[#f4deeb]" />
+        <div key={index} className="animate-pulse border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
+          <div className="h-3 w-28 bg-[#f2d7e7]" />
+          <div className="mt-3 h-5 w-56 bg-[#f4deeb]" />
           <div className="mt-3 flex gap-2">
-            <div className="h-7 w-20 rounded-full bg-[#f1cee2]" />
-            <div className="h-7 w-20 rounded-full bg-[#f4deeb]" />
+            <div className="h-7 w-20 bg-[#f1cee2]" />
+            <div className="h-7 w-20 bg-[#f4deeb]" />
           </div>
-          <div className="mt-4 h-14 rounded-2xl bg-[#fbf1f7]" />
+          <div className="mt-4 h-14 bg-[#fbf1f7]" />
         </div>
       ))}
     </div>
@@ -66,11 +66,11 @@ function TicketListShimmer() {
 function TicketDetailShimmer() {
   return (
     <div className="space-y-4 animate-pulse">
-      <div className="h-4 w-28 rounded-full bg-[#f2d7e7]" />
-      <div className="h-8 w-2/3 rounded-full bg-[#f1cee2]" />
-      <div className="h-24 rounded-[24px] bg-[#fbf1f7]" />
-      <div className="h-24 rounded-[24px] bg-[#fbf1f7]" />
-      <div className="h-36 rounded-[24px] bg-[#f7e6ef]" />
+      <div className="h-4 w-28 bg-[#f2d7e7]" />
+      <div className="h-8 w-2/3 bg-[#f1cee2]" />
+      <div className="h-24 bg-[#fbf1f7]" />
+      <div className="h-24 bg-[#fbf1f7]" />
+      <div className="h-36 bg-[#f7e6ef]" />
     </div>
   )
 }
@@ -246,10 +246,10 @@ export default function AdminTicketsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900">
+    <div className="font-parsi min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
-        <div className="rounded-[34px] border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
+        <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin Support</p>
@@ -259,15 +259,15 @@ export default function AdminTicketsPage() {
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
+            <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Open</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{ticketSummary.open}</p>
             </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff9fd] p-4">
+            <div className="border border-[#f0d3e5] bg-[#fff9fd] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Closed</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{ticketSummary.closed}</p>
             </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
+            <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Escalated</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{ticketSummary.escalated}</p>
             </div>
@@ -279,7 +279,7 @@ export default function AdminTicketsPage() {
                 key={status}
                 type="button"
                 onClick={() => void loadTickets(1, status, true)}
-                className={`rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] transition ${
+                className={`border px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] transition ${
                   statusFilter === status
                     ? 'border-[#cc4f8f] bg-[#cc4f8f] text-white'
                     : 'border-[#e8c5db] bg-white text-[#7a3a61] hover:bg-[#fff2fa]'
@@ -290,14 +290,14 @@ export default function AdminTicketsPage() {
             ))}
           </div>
 
-          {error ? <div className="mt-6 rounded-[24px] border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
+          {error ? <div className="mt-6 border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
 
           <div className="mt-6 grid gap-6 xl:grid-cols-[420px_1fr]">
-            <section className="rounded-[28px] border border-[#f0d7e7] bg-[#fffafd] p-4 shadow-[0_10px_30px_rgba(191,82,136,0.08)]">
+            <section className="border border-[#f0d7e7] bg-[#fffafd] p-4 shadow-[0_10px_30px_rgba(191,82,136,0.08)]">
               {isListLoading ? <TicketListShimmer /> : null}
 
               {!isListLoading && tickets.length === 0 ? (
-                <div className="rounded-[24px] border border-dashed border-[#ebcade] bg-white px-5 py-10 text-center text-sm text-[#8a667b]">
+                <div className="border border-dashed border-[#ebcade] bg-white px-5 py-10 text-center text-sm text-[#8a667b]">
                   No tickets found for this filter.
                 </div>
               ) : null}
@@ -309,7 +309,7 @@ export default function AdminTicketsPage() {
                       key={ticket.id}
                       type="button"
                       onClick={() => void loadTicketDetail(ticket.ticketId)}
-                      className={`w-full rounded-[24px] border p-4 text-left transition ${
+                      className={`w-full border p-4 text-left transition ${
                         selectedTicketId === ticket.ticketId
                           ? 'border-[#cc4f8f] bg-[#fff0f8] shadow-[0_8px_24px_rgba(191,82,136,0.14)]'
                           : 'border-[#f0d7e7] bg-white hover:bg-[#fff7fb]'
@@ -325,14 +325,14 @@ export default function AdminTicketsPage() {
                       </div>
 
                       <div className="mt-4 flex flex-wrap gap-2">
-                        <span className={`inline-flex rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${getStatusClass(ticket.status)}`}>
+                        <span className={`inline-flex border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${getStatusClass(ticket.status)}`}>
                           {ticket.status}
                         </span>
-                        <span className={`inline-flex rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${getPriorityClass(ticket.priority)}`}>
+                        <span className={`inline-flex border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${getPriorityClass(ticket.priority)}`}>
                           {ticket.priority}
                         </span>
                         {ticket.isEscalated ? (
-                          <span className="inline-flex rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-rose-700">
+                          <span className="inline-flex border border-rose-200 bg-rose-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-rose-700">
                             escalated
                           </span>
                         ) : null}
@@ -361,11 +361,11 @@ export default function AdminTicketsPage() {
               ) : null}
             </section>
 
-            <section className="rounded-[28px] border border-[#f0d7e7] bg-white p-6 shadow-[0_12px_34px_rgba(191,82,136,0.10)]">
+            <section className="border border-[#f0d7e7] bg-white p-6 shadow-[0_12px_34px_rgba(191,82,136,0.10)]">
               {isDetailLoading ? <TicketDetailShimmer /> : null}
 
               {!isDetailLoading && !selectedTicket ? (
-                <div className="rounded-[24px] border border-dashed border-[#ebcade] bg-[#fff7fb] px-6 py-12 text-center text-sm text-[#8a667b]">
+                <div className="border border-dashed border-[#ebcade] bg-[#fff7fb] px-6 py-12 text-center text-sm text-[#8a667b]">
                   Select a ticket to review the conversation and manage support actions.
                 </div>
               ) : null}
@@ -380,10 +380,10 @@ export default function AdminTicketsPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getStatusClass(selectedTicket.status)}`}>
+                      <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getStatusClass(selectedTicket.status)}`}>
                         {selectedTicket.status}
                       </span>
-                      <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPriorityClass(selectedTicket.priority)}`}>
+                      <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPriorityClass(selectedTicket.priority)}`}>
                         {selectedTicket.priority}
                       </span>
                     </div>
@@ -392,7 +392,7 @@ export default function AdminTicketsPage() {
                   <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_280px]">
                     <div className="space-y-4">
                       {selectedTicket.messages.map((message, index) => (
-                        <article key={`${message.createdAt}-${index}`} className="rounded-[24px] border border-[#f0dbe8] bg-[#fffafd] p-5">
+                        <article key={`${message.createdAt}-${index}`} className="border border-[#f0dbe8] bg-[#fffafd] p-5">
                           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                             <div>
                               <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{message.senderRole}</p>
@@ -405,15 +405,15 @@ export default function AdminTicketsPage() {
                       ))}
                     </div>
 
-                    <aside className="space-y-4 rounded-[24px] border border-[#f0dbe8] bg-[#fff7fb] p-4">
-                      <div className="rounded-[20px] border border-[#f0dbe8] bg-white p-4">
+                    <aside className="space-y-4 border border-[#f0dbe8] bg-[#fff7fb] p-4">
+                      <div className="border border-[#f0dbe8] bg-white p-4">
                         <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">Status</p>
                         <div className="mt-3 flex flex-wrap gap-2">
                           <button
                             type="button"
                             disabled={actionLoading === 'status' || selectedTicket.status === 'open'}
                             onClick={() => void handleStatusChange('open')}
-                            className="rounded-full border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
+                            className="border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
                           >
                             Open
                           </button>
@@ -421,21 +421,21 @@ export default function AdminTicketsPage() {
                             type="button"
                             disabled={actionLoading === 'status' || selectedTicket.status === 'closed'}
                             onClick={() => void handleStatusChange('closed')}
-                            className="rounded-full border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
+                            className="border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
                           >
                             Close
                           </button>
                         </div>
                       </div>
 
-                      <div className="rounded-[20px] border border-[#f0dbe8] bg-white p-4">
+                      <div className="border border-[#f0dbe8] bg-white p-4">
                         <label className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">
                           Priority
                           <select
                             value={selectedTicket.priority}
                             disabled={actionLoading === 'priority'}
                             onChange={(event) => void handlePriorityChange(event.target.value as TicketPriority)}
-                            className="mt-3 h-11 w-full rounded-2xl border border-[#e7bfd7] bg-white px-4 text-sm text-[#3f1933] outline-none transition focus:border-[#cc4f8f]"
+                            className="mt-3 h-11 w-full border border-[#e7bfd7] bg-white px-4 text-sm text-[#3f1933] outline-none transition focus:border-[#cc4f8f]"
                           >
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
@@ -445,31 +445,31 @@ export default function AdminTicketsPage() {
                         </label>
                       </div>
 
-                      <div className="rounded-[20px] border border-[#f0dbe8] bg-white p-4">
+                      <div className="border border-[#f0dbe8] bg-white p-4">
                         <button
                           type="button"
                           disabled={actionLoading === 'escalate' || selectedTicket.isEscalated}
                           onClick={() => void handleEscalate()}
-                          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-50"
+                          className="inline-flex w-full items-center justify-center gap-2 bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-50"
                         >
                           <AlertTriangle className="h-4 w-4" />
                           {selectedTicket.isEscalated ? 'Escalated' : 'Escalate'}
                         </button>
                       </div>
 
-                      <form className="rounded-[20px] border border-[#f0dbe8] bg-white p-4" onSubmit={(event) => void handleReplySubmit(event)}>
+                      <form className="border border-[#f0dbe8] bg-white p-4" onSubmit={(event) => void handleReplySubmit(event)}>
                         <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">Reply</p>
                         <textarea
                           value={replyMessage}
                           onChange={(event) => setReplyMessage(event.target.value)}
                           rows={6}
-                          className="mt-3 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#cc4f8f]"
+                          className="mt-3 w-full border border-[#e7bfd7] px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#cc4f8f]"
                           placeholder="We're checking with our delivery partner. Will update you shortly."
                         />
                         <button
                           type="submit"
                           disabled={actionLoading === 'reply'}
-                          className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-50"
+                          className="mt-3 inline-flex w-full items-center justify-center gap-2 bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-50"
                         >
                           <MessageSquareText className="h-4 w-4" />
                           {actionLoading === 'reply' ? 'Sending...' : 'Send Reply'}

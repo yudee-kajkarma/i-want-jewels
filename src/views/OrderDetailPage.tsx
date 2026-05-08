@@ -158,7 +158,7 @@ export default function OrderDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <nav className="mb-6 text-sm text-zinc-500">
@@ -168,11 +168,11 @@ export default function OrderDetailPage() {
         </nav>
 
         {isLoading ? <p className="text-sm text-zinc-500">Loading order...</p> : null}
-        {!isLoading && error ? <div className="rounded-[32px] border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div> : null}
+        {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div> : null}
 
         {!isLoading && order ? (
           <div className="grid gap-8 xl:grid-cols-[1fr_380px]">
-            <section className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+            <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
               <div className="flex flex-col gap-4 border-b border-[#efe1d5] pb-6 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
@@ -181,10 +181,10 @@ export default function OrderDetailPage() {
                 </div>
 
                 <div className="flex flex-wrap gap-2">
-                  <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}>
+                  <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}>
                     {order.orderStatus}
                   </span>
-                  <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}>
+                  <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}>
                     {order.paymentStatus}
                   </span>
                 </div>
@@ -192,8 +192,8 @@ export default function OrderDetailPage() {
 
               <div className="mt-6 space-y-5">
                 {order.items.map((item) => (
-                  <article key={`${item.productId}-${item.variantId}`} className="grid gap-5 rounded-[24px] border border-[#efe1d5] bg-[#fffdfa] p-4 sm:grid-cols-[110px_minmax(0,1fr)_auto] sm:items-center">
-                    <div className="overflow-hidden rounded-[20px] bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-3">
+                  <article key={`${item.productId}-${item.variantId}`} className="grid gap-5 border border-[#efe1d5] bg-[#fffdfa] p-4 sm:grid-cols-[110px_minmax(0,1fr)_auto] sm:items-center">
+                    <div className="overflow-hidden bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-3">
                       <img src={item.thumbnail} alt={item.title} className="h-24 w-full object-contain" />
                     </div>
                     <div>
@@ -208,9 +208,9 @@ export default function OrderDetailPage() {
               </div>
             </section>
 
-            <aside className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+            <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
               <div className="space-y-6">
-                <div className="rounded-[26px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <CreditCard className="h-5 w-5" />
                     <h2 className="text-xl font-bold">Payment</h2>
@@ -222,7 +222,7 @@ export default function OrderDetailPage() {
                   </div>
                 </div>
 
-                <div className="rounded-[26px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <MapPinHouse className="h-5 w-5" />
                     <h2 className="text-xl font-bold">Shipping address</h2>
@@ -238,7 +238,7 @@ export default function OrderDetailPage() {
                   )}
                 </div>
 
-                <div className="rounded-[26px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <Package className="h-5 w-5" />
                     <h2 className="text-xl font-bold">Order summary</h2>
@@ -256,7 +256,7 @@ export default function OrderDetailPage() {
                     type="button"
                     onClick={() => void handleRegeneratePayment()}
                     disabled={isRegeneratingPayment || isCancelling}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#1b1210] bg-[#1b1210] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#342721] disabled:opacity-60"
+                    className="inline-flex w-full items-center justify-center gap-2 border border-[#1b1210] bg-[#1b1210] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#342721] disabled:opacity-60"
                   >
                     <CreditCard className="h-4 w-4" />
                     {isRegeneratingPayment ? 'OPENING PAYMENT...' : 'REGENERATE PAYMENT'}
@@ -268,7 +268,7 @@ export default function OrderDetailPage() {
                     type="button"
                     onClick={() => void handleCancelOrder()}
                     disabled={isCancelling}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-rose-200 px-6 py-4 text-sm font-bold tracking-[0.08em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
+                    className="inline-flex w-full items-center justify-center gap-2 border border-rose-200 px-6 py-4 text-sm font-bold tracking-[0.08em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
                   >
                     <Ban className="h-4 w-4" />
                     {isCancelling ? 'CANCELLING...' : 'CANCEL ORDER'}

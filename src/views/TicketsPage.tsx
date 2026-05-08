@@ -101,7 +101,7 @@ export default function TicketsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -113,12 +113,12 @@ export default function TicketsPage() {
         </div>
 
         <div className="mt-8 grid gap-8 xl:grid-cols-[1fr_420px]">
-          <section className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+          <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
             {isLoading ? <p className="text-sm text-zinc-500">Loading tickets...</p> : null}
-            {!isLoading && error ? <div className="rounded-[28px] border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
+            {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
 
             {!isLoading && !error && tickets.length === 0 ? (
-              <div className="rounded-[28px] border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
+              <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
                 <h2 className="text-2xl font-bold text-[#17110d]">No tickets yet</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-500">Create your first support ticket using the form on the right.</p>
               </div>
@@ -127,7 +127,7 @@ export default function TicketsPage() {
             {!isLoading && tickets.length > 0 ? (
               <div className="space-y-5">
                 {tickets.map((ticket) => (
-                  <article key={ticket.id} className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                  <article key={ticket.id} className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                       <div>
                         <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{ticket.ticketId}</p>
@@ -138,11 +138,11 @@ export default function TicketsPage() {
                       </div>
 
                       <div className="flex flex-wrap gap-2 sm:justify-end">
-                        <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getStatusClass(ticket.status)}`}>
+                        <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getStatusClass(ticket.status)}`}>
                           {ticket.status}
                         </span>
                         {ticket.isEscalated ? (
-                          <span className="inline-flex rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-rose-700">
+                          <span className="inline-flex border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-rose-700">
                             Escalated
                           </span>
                         ) : null}
@@ -167,7 +167,7 @@ export default function TicketsPage() {
             ) : null}
           </section>
 
-          <aside className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+          <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Create Ticket</p>
             <h2 className="mt-2 text-2xl font-bold tracking-[-0.04em] text-[#17110d]">Need help with an order?</h2>
             <p className="mt-3 text-sm leading-7 text-zinc-500">Share the issue and your support thread will be created immediately.</p>
@@ -179,7 +179,7 @@ export default function TicketsPage() {
                   type="text"
                   value={form.subject}
                   onChange={(event) => setForm((current) => ({ ...current, subject: event.target.value }))}
-                  className="mt-2 h-12 w-full rounded-xl border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
+                  className="mt-2 h-12 w-full border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
                   placeholder="Order not delivered"
                 />
               </label>
@@ -190,7 +190,7 @@ export default function TicketsPage() {
                   <select
                     value={form.category}
                     onChange={(event) => setForm((current) => ({ ...current, category: event.target.value }))}
-                    className="mt-2 h-12 w-full rounded-xl border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
+                    className="mt-2 h-12 w-full border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
                   >
                     <option value="delivery">Delivery</option>
                     <option value="order">Order</option>
@@ -205,7 +205,7 @@ export default function TicketsPage() {
                   <select
                     value={form.priority}
                     onChange={(event) => setForm((current) => ({ ...current, priority: event.target.value }))}
-                    className="mt-2 h-12 w-full rounded-xl border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
+                    className="mt-2 h-12 w-full border border-[#dfd0c3] px-4 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
                   >
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
@@ -220,7 +220,7 @@ export default function TicketsPage() {
                   value={form.message}
                   onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
                   rows={6}
-                  className="mt-2 w-full rounded-2xl border border-[#dfd0c3] px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
+                  className="mt-2 w-full border border-[#dfd0c3] px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
                   placeholder="Describe your issue and include your order number if available."
                 />
               </label>
@@ -230,7 +230,7 @@ export default function TicketsPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+                className="bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
               >
                 {isSubmitting ? 'CREATING...' : 'CREATE TICKET'}
               </button>

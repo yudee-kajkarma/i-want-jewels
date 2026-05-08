@@ -88,7 +88,7 @@ export default function ResetPasswordPage() {
                             required
                             value={email}
                             onChange={(event) => setEmail(event.target.value)}
-                            className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
+                            className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
                             placeholder="Enter your email"
                         />
                         <button
@@ -97,7 +97,7 @@ export default function ResetPasswordPage() {
                                 void handleSendOtp();
                             }}
                             disabled={isSendingOtp || isSubmitting}
-                            className="shrink-0 rounded-full border border-[#b63f80] px-4 text-xs font-bold tracking-[0.08em] text-[#b63f80] transition hover:bg-[#fff3fa] disabled:opacity-60"
+                            className="shrink-0 border border-[#b63f80] px-4 text-xs font-bold tracking-[0.08em] text-[#b63f80] transition hover:bg-[#fff3fa] disabled:opacity-60"
                         >
                             {isSendingOtp ? "SENDING..." : "SEND OTP"}
                         </button>
@@ -114,7 +114,7 @@ export default function ResetPasswordPage() {
                         value={otp}
                         onChange={(event) => setOtp(event.target.value)}
                         maxLength={6}
-                        className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
+                        className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
                         placeholder="Enter OTP"
                     />
                 </label>
@@ -131,7 +131,7 @@ export default function ResetPasswordPage() {
                             onChange={(event) =>
                                 setNewPassword(event.target.value)
                             }
-                            className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 pr-14 text-base outline-none transition focus:border-[#17110d]"
+                            className="h-14 w-full border border-[#ddcdc0] px-4 pr-14 text-base outline-none transition focus:border-[#17110d]"
                             placeholder="Enter new password"
                         />
                         <button
@@ -158,12 +158,12 @@ export default function ResetPasswordPage() {
                 </label>
 
                 {error ? (
-                    <p className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700">
+                    <p className="bg-rose-50 px-4 py-3 text-sm text-rose-700">
                         {error}
                     </p>
                 ) : null}
                 {message ? (
-                    <p className="rounded-2xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+                    <p className="bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
                         {message}
                     </p>
                 ) : null}
@@ -171,7 +171,7 @@ export default function ResetPasswordPage() {
                 <button
                     type="submit"
                     disabled={isSubmitting || isSendingOtp}
-                    className="w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+                    className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
                     {isSubmitting ? "RESETTING..." : "RESET PASSWORD"}
                 </button>

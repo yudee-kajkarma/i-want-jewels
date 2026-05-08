@@ -393,7 +393,7 @@ export default function AdminOrdersPage() {
                 void handlePageChange(currentPage - 1)
               }}
               disabled={isLoading || isSubmittingAction || !pagination.hasPrevPage}
-              className="rounded-full border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
+              className="border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
             >
               Prev
             </button>
@@ -406,7 +406,7 @@ export default function AdminOrdersPage() {
                   void handlePageChange(pageNumber)
                 }}
                 disabled={isLoading || isSubmittingAction || pageNumber === currentPage}
-                className={`h-8 min-w-8 rounded-full px-2 text-xs font-bold transition ${
+                className={`h-8 min-w-8 px-2 text-xs font-bold transition ${
                   pageNumber === currentPage
                     ? 'bg-[#cc4f8f] text-white'
                     : 'border border-[#e8c5db] text-[#7a3a61] hover:bg-[#fff2fa]'
@@ -422,7 +422,7 @@ export default function AdminOrdersPage() {
                 void handlePageChange(currentPage + 1)
               }}
               disabled={isLoading || isSubmittingAction || !pagination.hasNextPage}
-              className="rounded-full border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
+              className="border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
             >
               Next
             </button>
@@ -440,14 +440,14 @@ export default function AdminOrdersPage() {
             <button
               type="button"
               onClick={() => openActionModal('confirm', order)}
-              className="rounded-full border border-[#de5aa1] bg-[#de5aa1] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#bf4f90]"
+              className="border border-[#de5aa1] bg-[#de5aa1] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#bf4f90]"
             >
               Confirm
             </button>
             <button
               type="button"
               onClick={() => openActionModal('cancel', order)}
-              className="rounded-full border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
+              className="border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
             >
               Cancel Order
             </button>
@@ -458,7 +458,7 @@ export default function AdminOrdersPage() {
           <button
             type="button"
             onClick={() => openActionModal('ship', order)}
-            className="inline-flex items-center gap-1 rounded-full border border-[#d25595] bg-[#fff0f9] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#a43875] transition hover:bg-[#ffe0f2]"
+            className="inline-flex items-center gap-1 border border-[#d25595] bg-[#fff0f9] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#a43875] transition hover:bg-[#ffe0f2]"
           >
             <Truck className="h-3.5 w-3.5" />
             Ship
@@ -471,7 +471,7 @@ export default function AdminOrdersPage() {
               type="button"
               onClick={() => void handleDownloadLabel(order)}
               disabled={downloadingLabelOrderId === order.id}
-              className="inline-flex items-center gap-1 rounded-full border border-[#b56a22] bg-[#fff6e7] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#8f5119] transition hover:bg-[#ffebc8] disabled:cursor-not-allowed disabled:opacity-70"
+              className="inline-flex items-center gap-1 border border-[#b56a22] bg-[#fff6e7] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#8f5119] transition hover:bg-[#ffebc8] disabled:cursor-not-allowed disabled:opacity-70"
             >
               <FileDown className="h-3.5 w-3.5" />
               {downloadingLabelOrderId === order.id ? 'Downloading...' : 'Download Label'}
@@ -479,14 +479,14 @@ export default function AdminOrdersPage() {
             <button
               type="button"
               onClick={() => openActionModal('cancelShipment', order)}
-              className="rounded-full border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
+              className="border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
             >
               Cancel Shipment
             </button>
             <button
               type="button"
               onClick={() => openActionModal('verify', order)}
-              className="rounded-full border border-[#ca4f8b] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#9b336d] transition hover:bg-[#ffe6f5]"
+              className="border border-[#ca4f8b] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#9b336d] transition hover:bg-[#ffe6f5]"
             >
               Verify Delivery
             </button>
@@ -500,21 +500,21 @@ export default function AdminOrdersPage() {
     return (
       <article
         key={`shimmer-${shimmerId}`}
-        className="overflow-hidden rounded-[24px] border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]"
+        className="overflow-hidden border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]"
       >
         <div className="animate-pulse">
-          <div className="h-3 w-32 rounded-full bg-[#f4d9e9]" />
-          <div className="mt-3 h-5 w-56 rounded-full bg-[#f1d0e3]" />
+          <div className="h-3 w-32 bg-[#f4d9e9]" />
+          <div className="mt-3 h-5 w-56 bg-[#f1d0e3]" />
           <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {Array.from({ length: 4 }, (_, index) => (
-              <div key={index} className="rounded-[18px] border border-[#f0dbe8] bg-[#fffbfe] p-3">
-                <div className="h-20 rounded-[14px] bg-[#f6deec]" />
-                <div className="mt-2 h-3 w-4/5 rounded-full bg-[#f2d4e6]" />
-                <div className="mt-2 h-3 w-1/2 rounded-full bg-[#f2d4e6]" />
+              <div key={index} className="border border-[#f0dbe8] bg-[#fffbfe] p-3">
+                <div className="h-20 bg-[#f6deec]" />
+                <div className="mt-2 h-3 w-4/5 bg-[#f2d4e6]" />
+                <div className="mt-2 h-3 w-1/2 bg-[#f2d4e6]" />
               </div>
             ))}
           </div>
-          <div className="mt-4 h-10 rounded-xl bg-[#f5ddea]" />
+          <div className="mt-4 h-10 bg-[#f5ddea]" />
         </div>
       </article>
     )
@@ -523,14 +523,14 @@ export default function AdminOrdersPage() {
   function renderShippingRateTable(carrier: ShippingCarrier, rates: AdminShippingRateOption[]) {
     if (rates.length === 0) {
       return (
-        <div className="rounded-lg border border-dashed border-[#f1d9e7] bg-white p-3 text-xs text-[#7f5d70]">
+        <div className="border border-dashed border-[#f1d9e7] bg-white p-3 text-xs text-[#7f5d70]">
           No {carrier} rates available.
         </div>
       )
     }
 
     return (
-      <div className="overflow-x-auto rounded-lg border border-[#f1d9e7] bg-white">
+      <div className="overflow-x-auto border border-[#f1d9e7] bg-white">
         <table className="w-full table-fixed text-left text-xs">
           <thead className="bg-[#fff2fb] text-[#7a3a61]">
             <tr>
@@ -571,10 +571,10 @@ export default function AdminOrdersPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#fff7fb_100%)] text-zinc-900">
+    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#fff7fb_100%)] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
-        <div className="rounded-[34px] border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
+        <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin</p>
@@ -584,14 +584,14 @@ export default function AdminOrdersPage() {
           </div>
 
           <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-            <div className="inline-flex rounded-full border border-[#edc0de] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#9b3f75]">
+            <div className="inline-flex border border-[#edc0de] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#9b3f75]">
               {orderCountLabel}
             </div>
-            <div className="inline-flex items-center gap-1 rounded-full border border-[#edc0de] bg-white p-1">
+            <div className="inline-flex items-center gap-1 border border-[#edc0de] bg-white p-1">
               <button
                 type="button"
                 onClick={() => setViewMode('grid')}
-                className={`inline-flex h-9 w-9 items-center justify-center rounded-full transition ${
+                className={`inline-flex h-9 w-9 items-center justify-center transition ${
                   viewMode === 'grid' ? 'bg-[#d24a90] text-white' : 'text-[#9b3f75] hover:bg-[#fff3fb]'
                 }`}
                 aria-label="Show grid view"
@@ -602,7 +602,7 @@ export default function AdminOrdersPage() {
               <button
                 type="button"
                 onClick={() => setViewMode('table')}
-                className={`inline-flex h-9 w-9 items-center justify-center rounded-full transition ${
+                className={`inline-flex h-9 w-9 items-center justify-center transition ${
                   viewMode === 'table' ? 'bg-[#d24a90] text-white' : 'text-[#9b3f75] hover:bg-[#fff3fb]'
                 }`}
                 aria-label="Show table view"
@@ -618,7 +618,7 @@ export default function AdminOrdersPage() {
   <button
     type="button"
     onClick={() => handleStatusFilterClick('ALL')}
-    className={`rounded-2xl border px-4 py-3 text-left transition ${
+    className={`border px-4 py-3 text-left transition ${
       selectedStatusFilter === 'ALL'
         ? 'border-[#d24a90] bg-[#fff0f9]'
         : 'border-[#f0d3e5] bg-[#fff7fc] hover:border-[#e7b7d4]'
@@ -641,7 +641,7 @@ export default function AdminOrdersPage() {
   <button
     type="button"
     onClick={() => handleStatusFilterClick('PENDING')}
-    className={`rounded-2xl border px-4 py-3 text-left transition ${
+    className={`border px-4 py-3 text-left transition ${
       selectedStatusFilter === 'PENDING'
         ? 'border-[#d24a90] bg-[#fff0f9]'
         : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
@@ -664,7 +664,7 @@ export default function AdminOrdersPage() {
   <button
     type="button"
     onClick={() => handleStatusFilterClick('CONFIRMED')}
-    className={`rounded-2xl border px-4 py-3 text-left transition ${
+    className={`border px-4 py-3 text-left transition ${
       selectedStatusFilter === 'CONFIRMED'
         ? 'border-[#d24a90] bg-[#fff0f9]'
         : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
@@ -687,7 +687,7 @@ export default function AdminOrdersPage() {
   <button
     type="button"
     onClick={() => handleStatusFilterClick('SHIPPED')}
-    className={`rounded-2xl border px-4 py-3 text-left transition ${
+    className={`border px-4 py-3 text-left transition ${
       selectedStatusFilter === 'SHIPPED'
         ? 'border-[#d24a90] bg-[#fff0f9]'
         : 'border-[#f0d3e5] bg-[#fff8fc] hover:border-[#e7b7d4]'
@@ -710,7 +710,7 @@ export default function AdminOrdersPage() {
   <button
     type="button"
     onClick={() => handleStatusFilterClick('DELIVERED')}
-    className={`rounded-2xl border px-4 py-3 text-left transition ${
+    className={`border px-4 py-3 text-left transition ${
       selectedStatusFilter === 'DELIVERED'
         ? 'border-[#d24a90] bg-[#fff0f9]'
         : 'border-[#f0d3e5] bg-[#fff9fd] hover:border-[#e7b7d4]'
@@ -733,7 +733,7 @@ export default function AdminOrdersPage() {
   <button
     type="button"
     onClick={() => handleStatusFilterClick('CANCELLED')}
-    className={`rounded-2xl border px-4 py-3 text-left transition ${
+    className={`border px-4 py-3 text-left transition ${
       selectedStatusFilter === 'CANCELLED'
         ? 'border-[#d24a90] bg-[#fff0f9]'
         : 'border-[#f0d3e5] bg-[#fff6fb] hover:border-[#e7b7d4]'
@@ -754,10 +754,10 @@ export default function AdminOrdersPage() {
 </div>
 
           {isLoading ? <div className="mt-6 space-y-4">{Array.from({ length: 3 }, (_, index) => renderShimmerCard(index))}</div> : null}
-          {!isLoading && error ? <div className="mt-6 rounded-[24px] border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
+          {!isLoading && error ? <div className="mt-6 border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
 
           {!isLoading && !error && orders.length === 0 ? (
-            <div className="mt-6 rounded-[24px] border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-6 py-10 text-center text-sm text-[#7c5d72]">
+            <div className="mt-6 border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-6 py-10 text-center text-sm text-[#7c5d72]">
               No orders were found.
             </div>
           ) : null}
@@ -765,7 +765,7 @@ export default function AdminOrdersPage() {
           {!isLoading && orders.length > 0 && viewMode === 'grid' ? (
             <div className="mt-6 space-y-4">
               {orders.map((order) => (
-                <article key={order.id} className="rounded-[24px] border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
+                <article key={order.id} className="border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
                   <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div>
                       <Link to={`/admin/orders/${order.id}`} className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400 transition hover:text-[#8f2a60]">
@@ -788,12 +788,12 @@ export default function AdminOrdersPage() {
 
                     <div className="flex flex-wrap gap-2 md:justify-end">
                       <span
-                        className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}
+                        className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}
                       >
                         {order.orderStatus}
                       </span>
                       <span
-                        className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}
+                        className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}
                       >
                         {order.paymentStatus}
                       </span>
@@ -806,8 +806,8 @@ export default function AdminOrdersPage() {
                       const itemTitle = typeof item?.title === 'string' && item.title.trim() ? item.title : 'Order item'
 
                       return (
-                        <div key={`${order.id}-${item?.productId ?? 'product'}-${item?.variantId ?? 'variant'}-${itemIndex}`} className="rounded-[18px] border border-[#f0dbe8] bg-[#fffbfe] p-3">
-                          <div className="overflow-hidden rounded-[14px] bg-[linear-gradient(180deg,#ffe8f5_0%,#ffffff_100%)] p-2">
+                        <div key={`${order.id}-${item?.productId ?? 'product'}-${item?.variantId ?? 'variant'}-${itemIndex}`} className="border border-[#f0dbe8] bg-[#fffbfe] p-3">
+                          <div className="overflow-hidden bg-[linear-gradient(180deg,#ffe8f5_0%,#ffffff_100%)] p-2">
                             {thumbnail ? (
                               <img src={thumbnail} alt={itemTitle} className="h-20 w-full object-contain" />
                             ) : (
@@ -835,7 +835,7 @@ export default function AdminOrdersPage() {
           ) : null}
 
           {!isLoading && orders.length > 0 && viewMode === 'table' ? (
-            <div className="mt-6 overflow-hidden rounded-[24px] border border-[#f0d7e7] bg-white shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
+            <div className="mt-6 overflow-hidden border border-[#f0d7e7] bg-white shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
               <div className="overflow-x-auto">
                 <table className="min-w-[980px] w-full text-left text-sm">
                   <thead className="bg-[#fff6fb] text-xs font-bold uppercase tracking-[0.1em] text-[#8f4a73]">
@@ -863,14 +863,14 @@ export default function AdminOrdersPage() {
                         <td className="px-4 py-4 font-semibold text-[#5c1f45]">{formatPrice(order.totalAmount, currency)}</td>
                         <td className="px-4 py-4">
                           <span
-                            className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}
+                            className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}
                           >
                             {order.orderStatus}
                           </span>
                         </td>
                         <td className="px-4 py-4">
                           <span
-                            className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}
+                            className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}
                           >
                             {order.paymentStatus}
                           </span>
@@ -900,18 +900,18 @@ export default function AdminOrdersPage() {
       {pendingAction ? (
         <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-[#1f0718]/45 px-4 py-4 sm:items-center sm:py-8" role="dialog" aria-modal="true">
           <div
-            className={`w-full rounded-[24px] border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto ${
+            className={`w-full border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto ${
               pendingAction.type === 'ship' ? 'max-w-6xl' : 'max-w-md'
             }`}
           >
             <h3 className="text-xl font-bold text-[#3d1530]">{getActionLabel(pendingAction.type)}</h3>
             <p className="mt-3 text-sm leading-6 text-[#694d5f]">{getActionDescription(pendingAction.type)}</p>
-            <p className="mt-3 rounded-lg bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
+            <p className="mt-3 bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
               Order: {pendingAction.order.orderNumber}
             </p>
 
 {pendingAction.type === "ship" ? (
-  <div className="mt-4 space-y-2 rounded-xl border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
+  <div className="mt-4 space-y-2 border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
     {isLoadingShippingQuote ? (
       <p className="text-sm text-[#694d5f]">Loading shipping cost...</p>
     ) : null}
@@ -935,7 +935,7 @@ export default function AdminOrdersPage() {
         </div>
 
         {selectedShippingRate ? (
-          <div className="rounded-lg border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
+          <div className="border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
             Selected: <span className="font-semibold text-[#4f2040]">{selectedCarrier}</span> /{' '}
             <span className="font-semibold text-[#4f2040]">{selectedShippingRate.serviceCode}</span>
           </div>
@@ -954,7 +954,7 @@ export default function AdminOrdersPage() {
                 type="button"
                 onClick={closeActionModal}
                 disabled={isSubmittingAction}
-                className="rounded-full border border-[#e3bfd6] px-4 py-2 text-sm font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb] disabled:cursor-not-allowed disabled:opacity-70"
+                className="border border-[#e3bfd6] px-4 py-2 text-sm font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 Cancel
               </button>
@@ -965,7 +965,7 @@ export default function AdminOrdersPage() {
                   isSubmittingAction ||
                   (pendingAction.type === 'ship' && (!selectedServiceCode || Boolean(shippingQuoteError)))
                 }
-                className="rounded-full border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
+                className="border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSubmittingAction ? 'Please wait...' : 'Confirm'}
               </button>

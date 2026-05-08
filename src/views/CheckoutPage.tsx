@@ -319,7 +319,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -332,18 +332,18 @@ export default function CheckoutPage() {
           </div>
           <Link
             to={checkoutSource === 'single' ? (singleDraft?.returnPath ?? '/products') : '/cart'}
-            className="rounded-full border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+            className="border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
           >
             {checkoutSource === 'single' ? 'BACK TO PRODUCT' : 'BACK TO CART'}
           </Link>
         </div>
 
         <div className="mt-8 grid gap-8 xl:grid-cols-[1fr_380px]">
-          <section className="space-y-6 rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+          <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
             {checkoutSource === 'cart' && isCartLoading ? <p className="text-sm text-zinc-500">Loading checkout...</p> : null}
 
             {!isCartLoading && items.length === 0 ? (
-              <div className="rounded-[28px] border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
+              <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
                 <h2 className="text-2xl font-bold text-[#17110d]">Nothing to checkout yet</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-500">
                   {checkoutSource === 'single'
@@ -352,7 +352,7 @@ export default function CheckoutPage() {
                 </p>
                 <Link
                   to={checkoutSource === 'single' ? '/products' : '/cart'}
-                  className="mt-6 inline-flex rounded-full bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
+                  className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
                 >
                   {checkoutSource === 'single' ? 'VIEW PRODUCTS' : 'RETURN TO CART'}
                 </Link>
@@ -361,15 +361,15 @@ export default function CheckoutPage() {
 
             {items.length > 0 ? (
               <>
-                <div className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <PackageCheck className="h-5 w-5" />
                     <h2 className="text-xl font-bold">Order items</h2>
                   </div>
                   <div className="mt-5 space-y-4">
                     {items.map((item) => (
-                      <article key={`${item.productId}-${item.variantId}`} className="grid gap-4 rounded-[24px] border border-[#efe1d5] bg-white p-4 sm:grid-cols-[92px_minmax(0,1fr)_auto] sm:items-center">
-                        <div className="overflow-hidden rounded-[18px] bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-2">
+                      <article key={`${item.productId}-${item.variantId}`} className="grid gap-4 border border-[#efe1d5] bg-white p-4 sm:grid-cols-[92px_minmax(0,1fr)_auto] sm:items-center">
+                        <div className="overflow-hidden bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-2">
                           <img src={item.thumbnail} alt={item.title} className="h-20 w-full object-contain" />
                         </div>
                         <div>
@@ -384,7 +384,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-                  <div className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                  <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                     <div className="flex items-center gap-3 text-[#17110d]">
                       <MapPinHouse className="h-5 w-5" />
                       <h2 className="text-xl font-bold">Shipping address</h2>
@@ -394,7 +394,7 @@ export default function CheckoutPage() {
                       <button
                         type="button"
                         onClick={openAddAddressForm}
-                        className="rounded-full border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                        className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                       >
                         ADD ADDRESS
                       </button>
@@ -410,7 +410,7 @@ export default function CheckoutPage() {
                           return (
                             <label
                               key={address.id}
-                              className={`flex cursor-pointer items-start gap-4 rounded-[22px] border px-4 py-4 transition ${
+                              className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${
                                 isSelected ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'
                               }`}
                             >
@@ -440,7 +440,7 @@ export default function CheckoutPage() {
                                       event.preventDefault()
                                       openEditAddressForm(address)
                                     }}
-                                    className="rounded-full border border-[#e2d1c3] px-3 py-1 text-[11px] font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                                    className="border border-[#e2d1c3] px-3 py-1 text-[11px] font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                   >
                                     EDIT
                                   </button>
@@ -453,13 +453,13 @@ export default function CheckoutPage() {
                     ) : null}
 
                     {!isAddressLoading && addresses.length === 0 ? (
-                      <div className="mt-5 rounded-[22px] border border-[#eadfd4] bg-white p-4 text-sm leading-7 text-zinc-600">
+                      <div className="mt-5 border border-[#eadfd4] bg-white p-4 text-sm leading-7 text-zinc-600">
                         No addresses found. Add a shipping address to place your order.
                       </div>
                     ) : null}
 
                     {isAddressFormOpen ? (
-                      <div className="mt-5 rounded-[22px] border border-[#eadfd4] bg-white p-4">
+                      <div className="mt-5 border border-[#eadfd4] bg-white p-4">
                         <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">{editingAddressId ? 'Edit address' : 'Add address'}</h3>
                         <div className="mt-4 grid gap-3 sm:grid-cols-2">
                           <select
@@ -470,7 +470,7 @@ export default function CheckoutPage() {
                               state: '',
                               city: '',
                             }))}
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
                             <option value="">Select country</option>
                             {countryOptions.map((country) => (
@@ -488,7 +488,7 @@ export default function CheckoutPage() {
                                 city: '',
                               }))
                             }
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
                             <option value="">Select state</option>
                             {stateOptions.map((state) => (
@@ -500,7 +500,7 @@ export default function CheckoutPage() {
                           <select
                             value={addressForm.city}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
                             <option value="">Select city</option>
                             {cityOptions.map((city) => (
@@ -513,13 +513,13 @@ export default function CheckoutPage() {
                             value={addressForm.houseNumber ?? ''}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}
                             placeholder="House number"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <input
                             value={addressForm.street}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, street: event.target.value }))}
                             placeholder="Street"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <div>
                             <input
@@ -532,7 +532,7 @@ export default function CheckoutPage() {
                                 setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))
                               }}
                               placeholder="Postal code"
-                              className="w-full rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                              className="w-full border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                             />
                             {postalCodeError ? <p className="mt-2 text-xs text-rose-700">{postalCodeError}</p> : null}
                           </div>
@@ -540,7 +540,7 @@ export default function CheckoutPage() {
                             value={addressForm.addressType}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}
                             placeholder="Address type (home/work)"
-                            className="rounded-xl border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
+                            className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                         </div>
 
@@ -549,14 +549,14 @@ export default function CheckoutPage() {
                             type="button"
                             onClick={() => void handleSaveAddress()}
                             disabled={isAddressSaving}
-                            className="rounded-full bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+                            className="bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                           >
                             {isAddressSaving ? 'SAVING...' : 'SAVE ADDRESS'}
                           </button>
                           <button
                             type="button"
                             onClick={() => setIsAddressFormOpen(false)}
-                            className="rounded-full border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                            className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                           >
                             CANCEL
                           </button>
@@ -571,13 +571,13 @@ export default function CheckoutPage() {
                     ) : null}
                   </div>
 
-                  <div className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                  <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                     <div className="flex items-center gap-3 text-[#17110d]">
                       <CreditCard className="h-5 w-5" />
                       <h2 className="text-xl font-bold">Payment method</h2>
                     </div>
                     <div className="mt-5 space-y-3">
-                      <label className={`flex cursor-pointer items-start gap-4 rounded-[22px] border px-4 py-4 transition ${paymentMethod === 'ONLINE' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
+                      <label className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${paymentMethod === 'ONLINE' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
                         <input
                           type="radio"
                           name="paymentMethod"
@@ -592,7 +592,7 @@ export default function CheckoutPage() {
                         </div>
                       </label>
 
-                      <label className={`flex cursor-pointer items-start gap-4 rounded-[22px] border px-4 py-4 transition ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
+                      <label className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
                         <input
                           type="radio"
                           name="paymentMethod"
@@ -611,17 +611,17 @@ export default function CheckoutPage() {
                 </div>
 
                 {checkoutSource === 'single' ? (
-                  <div className="rounded-[26px] border border-[#f0c4da] bg-[#fff7fb] p-4 text-sm leading-7 text-[#8f2a60]">
+                  <div className="border border-[#f0c4da] bg-[#fff7fb] p-4 text-sm leading-7 text-[#8f2a60]">
                     Buy it now uses a temporary one-item checkout so you can place this order directly from the product page.
                   </div>
                 ) : null}
 
-                {error ? <div className="rounded-[24px] border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">{error}</div> : null}
+                {error ? <div className="border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">{error}</div> : null}
               </>
             ) : null}
           </section>
 
-          <aside className="rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+          <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Order summary</p>
             <div className="mt-6 space-y-4 text-sm text-zinc-600">
               <div className="flex items-center justify-between">
@@ -642,7 +642,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            <div className="mt-6 rounded-[24px] border border-[#efe1d5] bg-[#fffdfa] p-4">
+            <div className="mt-6 border border-[#efe1d5] bg-[#fffdfa] p-4">
               <div className="flex items-start gap-3 text-sm leading-6 text-zinc-500">
                 {paymentMethod === 'ONLINE' ? <ShieldCheck className="mt-0.5 h-4 w-4 text-[#17110d]" /> : <Truck className="mt-0.5 h-4 w-4 text-[#17110d]" />}
                 <p>
@@ -662,7 +662,7 @@ export default function CheckoutPage() {
                 type="button"
                 onClick={() => void handlePlaceOrder()}
                 disabled={items.length === 0 || isSubmitting}
-                className="mt-6 w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+                className="mt-6 w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
               >
                 {isSubmitting ? 'PLACING ORDER...' : paymentMethod === 'ONLINE' ? 'PLACE ORDER AND PAY ONLINE' : 'PLACE COD ORDER'}
               </button>

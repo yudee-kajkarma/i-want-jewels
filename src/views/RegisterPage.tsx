@@ -285,7 +285,7 @@ export default function RegisterPage() {
                 }
               }}
               placeholder="you@example.com"
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
             {emailCheckError ? (
               <p className="mt-2 text-xs text-rose-700">
@@ -305,7 +305,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={isCheckingEmail || !emailCheckValue.trim()}
-            className="w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+            className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
           >
             {isCheckingEmail ? 'CHECKING...' : 'CONTINUE'}
           </button>
@@ -338,7 +338,7 @@ export default function RegisterPage() {
               required
               value={form.username}
               onChange={(event) => updateField('username', event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
           </label>
           <label className="block">
@@ -349,7 +349,7 @@ export default function RegisterPage() {
               readOnly
               disabled
               value={form.email}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] bg-[#f5ede5] px-4 text-zinc-700 outline-none"
+              className="h-14 w-full border border-[#ddcdc0] bg-[#f5ede5] px-4 text-zinc-700 outline-none"
             />
             <p className="mt-2 text-xs text-zinc-500">Email verified. Continue with the rest of your details.</p>
             {emailErrorMessage ? <p className="mt-2 text-xs text-rose-700">{emailErrorMessage}</p> : null}
@@ -361,7 +361,7 @@ export default function RegisterPage() {
               required
               value={form.firstName}
               onChange={(event) => updateField('firstName', event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
           </label>
           <label className="block">
@@ -371,7 +371,7 @@ export default function RegisterPage() {
               required
               value={form.lastName}
               onChange={(event) => updateField('lastName', event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
           </label>
           <label className="block">
@@ -382,7 +382,7 @@ export default function RegisterPage() {
                 required
                 value={form.password}
                 onChange={(event) => updateField('password', event.target.value)}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 pr-14 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 pr-14 outline-none transition focus:border-[#17110d]"
               />
               <button
                 type="button"
@@ -402,7 +402,7 @@ export default function RegisterPage() {
                 required
                 value={form.confirmPassword}
                 onChange={(event) => updateField('confirmPassword', event.target.value)}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 pr-14 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 pr-14 outline-none transition focus:border-[#17110d]"
               />
               <button
                 type="button"
@@ -422,7 +422,7 @@ export default function RegisterPage() {
               required
               value={form.countryCode}
               onChange={(event) => updateField('countryCode', event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
           </label>
           <label className="block">
@@ -432,12 +432,12 @@ export default function RegisterPage() {
               required
               value={form.phoneNumber}
               onChange={(event) => updateField('phoneNumber', event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
             />
           </label>
         </div>
 
-        <div className="rounded-[28px] border border-[#eadfd4] bg-[#fffdfa] p-5">
+        <div className="border border-[#eadfd4] bg-[#fffdfa] p-5">
           <h3 className="text-lg font-bold text-[#17110d]">Address</h3>
           <div className="mt-4 grid gap-5 sm:grid-cols-2">
             <label className="block">
@@ -451,7 +451,7 @@ export default function RegisterPage() {
                   updateAddressField('state', '')
                   updateAddressField('city', '')
                 }}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
                 <option value="">Select country</option>
                 {countryOptions.map((country) => (
@@ -470,7 +470,7 @@ export default function RegisterPage() {
                   updateAddressField('state', event.target.value)
                   updateAddressField('city', '')
                 }}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
                 <option value="">Select state</option>
                 {stateOptions.map((state) => (
@@ -487,7 +487,7 @@ export default function RegisterPage() {
                 required
                 value={form.address.street}
                 onChange={(event) => updateAddressField('street', event.target.value)}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               />
             </label>
             <label className="block">
@@ -496,7 +496,7 @@ export default function RegisterPage() {
                 required
                 value={form.address.city}
                 onChange={(event) => updateAddressField('city', event.target.value)}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
                 <option value="">Select city</option>
                 {cityOptions.map((city) => (
@@ -519,7 +519,7 @@ export default function RegisterPage() {
 
                   updateAddressField('postalCode', event.target.value)
                 }}
-                className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+                className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               />
               {postalCodeError || postalCodeLiveErrorMessage ? (
                 <p className="mt-2 text-xs text-rose-700">{postalCodeError || postalCodeLiveErrorMessage}</p>
@@ -528,13 +528,13 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        {error ? <p className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
-        {!error && requiredFieldsMessage ? <p className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-700">{requiredFieldsMessage}</p> : null}
+        {error ? <p className="bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
+        {!error && requiredFieldsMessage ? <p className="bg-amber-50 px-4 py-3 text-sm text-amber-700">{requiredFieldsMessage}</p> : null}
 
         <button
           type="submit"
           disabled={isSubmitting || !isRegisterFormValid}
-          className="w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+          className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
         >
           {isSubmitting ? 'CREATING ACCOUNT...' : 'REGISTER'}
         </button>

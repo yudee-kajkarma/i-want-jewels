@@ -634,11 +634,11 @@ export default function AdminProductsPage() {
   const visibleProducts = useMemo(() => products, [products])
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-[#2b1323]">
+    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-[#2b1323] font-parsi">
       <Header />
       <main>
         <div className="mx-auto max-w-[92rem] px-4 py-8 sm:px-6 lg:px-8">
-          <div className="rounded-[32px] border border-[#f0cbe1] bg-[linear-gradient(135deg,#7e2f63_0%,#b94886_55%,#dc74ad_100%)] px-6 py-8 text-white shadow-[0_30px_80px_rgba(153,45,106,0.28)] sm:px-8">
+          <div className="border border-[#f0cbe1] bg-[linear-gradient(135deg,#7e2f63_0%,#b94886_55%,#dc74ad_100%)] px-6 py-8 text-white shadow-[0_30px_80px_rgba(153,45,106,0.28)] sm:px-8">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#f6d6ea]">Admin Panel</p>
             <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -651,7 +651,7 @@ export default function AdminProductsPage() {
                 <button
                   type="button"
                   onClick={() => navigate('/admin/products/import')}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#f6d6ea] bg-white/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#fff4fc] transition hover:bg-white/25"
+                  className="inline-flex items-center gap-2 border border-[#f6d6ea] bg-white/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#fff4fc] transition hover:bg-white/25"
                 >
                   <FileSpreadsheet className="h-4 w-4" />
                   Import File
@@ -659,12 +659,12 @@ export default function AdminProductsPage() {
                 <button
                   type="button"
                   onClick={handleAddNew}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#ffe4f2] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7b235c] transition hover:bg-[#ffd2e9]"
+                  className="inline-flex items-center gap-2 bg-[#ffe4f2] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7b235c] transition hover:bg-[#ffd2e9]"
                 >
                   <Plus className="h-4 w-4" />
                   Add Product
                 </button>
-                <div className="rounded-[24px] border border-[#e9b7d6] bg-white/10 px-5 py-4 text-sm text-[#ffeaf6]">
+                <div className="border border-[#e9b7d6] bg-white/10 px-5 py-4 text-sm text-[#ffeaf6]">
                   <p className="text-xs uppercase tracking-[0.16em] text-[#ffd7ec]">Showing Results</p>
                   <p className="mt-2 text-3xl font-semibold text-white">{pagination?.totalRecords ?? visibleProducts.length}</p>
                 </div>
@@ -672,7 +672,7 @@ export default function AdminProductsPage() {
             </div>
           </div>
 
-          {error ? <p className="mt-6 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
+          {error ? <p className="mt-6 border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
 
           <AdminProductsTable
             isLoading={isLoading}
@@ -726,7 +726,7 @@ export default function AdminProductsPage() {
 
       {productPendingDelete ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#2f0d25]/55 px-4 py-6 backdrop-blur-sm">
-          <div className="w-full max-w-xl rounded-[28px] border border-[#f1cde2] bg-white p-6 shadow-[0_30px_80px_rgba(127,31,91,0.32)]">
+          <div className="w-full max-w-xl border border-[#f1cde2] bg-white p-6 shadow-[0_30px_80px_rgba(127,31,91,0.32)]">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#a3477c]">Delete Product</p>
             <h2 className="mt-3 text-2xl font-semibold text-[#3f1933]">Delete this product?</h2>
             <p className="mt-3 text-sm text-zinc-600">
@@ -739,7 +739,7 @@ export default function AdminProductsPage() {
                 type="button"
                 onClick={handleCloseDeleteModal}
                 disabled={Boolean(isDeleting)}
-                className="rounded-full border border-[#e8c5db] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-60"
+                className="border border-[#e8c5db] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-60"
               >
                 Cancel
               </button>
@@ -747,7 +747,7 @@ export default function AdminProductsPage() {
                 type="button"
                 onClick={() => void handleConfirmDelete()}
                 disabled={Boolean(isDeleting)}
-                className="rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
+                className="bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
               >
                 {isDeleting ? 'Deleting...' : 'Delete Product'}
               </button>

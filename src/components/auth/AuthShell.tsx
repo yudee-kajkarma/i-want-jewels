@@ -19,10 +19,10 @@ export default function AuthShell({
   asideBody: string
 }) {
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="px-4 py-8 lg:px-8 lg:py-12">
-        <div className="mx-auto max-w-[1480px] overflow-hidden rounded-[36px] border border-[#eadfd4] bg-white shadow-[0_25px_80px_rgba(89,60,33,0.08)] lg:grid lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="mx-auto max-w-[1480px] overflow-hidden border border-[#eadfd4] bg-white shadow-[0_25px_80px_rgba(89,60,33,0.08)] lg:grid lg:grid-cols-[0.92fr_1.08fr]">
           <section className="relative overflow-hidden bg-[linear-gradient(160deg,#ffd9e7_0%,#f7c3db_33%,#f8e5ef_100%)] px-6 py-10 sm:px-10 lg:min-h-[860px] lg:px-12 lg:py-14">
             <div className="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.8),transparent_50%)]" />
             <div className="relative z-10 flex h-full flex-col justify-between gap-10">
@@ -40,8 +40,8 @@ export default function AuthShell({
                   'Quick OTP verification',
                   'Saved locally after success',
                 ].map((item) => (
-                  <div key={item} className="rounded-[28px] border border-white/50 bg-white/55 px-5 py-6 backdrop-blur-sm">
-                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-white text-lg text-[#b63f80] shadow-sm">
+                  <div key={item} className="border border-white/50 bg-white/55 px-5 py-6 backdrop-blur-sm">
+                    <div className="mb-3 flex h-11 w-11 items-center justify-center bg-white text-lg text-[#b63f80] shadow-sm">
                       ✦
                     </div>
                     <p className="text-sm font-semibold leading-6 text-[#6b2950]">{item}</p>

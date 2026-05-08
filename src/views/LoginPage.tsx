@@ -82,7 +82,7 @@ export default function LoginPage() {
             required
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
+            className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
             placeholder="Enter your email"
           />
         </label>
@@ -95,7 +95,7 @@ export default function LoginPage() {
               required
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 pr-14 text-base outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full border border-[#ddcdc0] px-4 pr-14 text-base outline-none transition focus:border-[#17110d]"
               placeholder="Enter your password"
             />
             <button
@@ -114,12 +114,12 @@ export default function LoginPage() {
           </div>
         </label>
 
-        {error ? <p className="rounded-2xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
+        {error ? <p className="bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+          className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
         >
           {isSubmitting ? 'SIGNING IN...' : 'SIGN IN'}
         </button>

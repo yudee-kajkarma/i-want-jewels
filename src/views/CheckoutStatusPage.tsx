@@ -71,10 +71,10 @@ export default function CheckoutStatusPage() {
   }, [dispatch, paymentResult, pendingOrder?.source])
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[980px] px-4 py-10 lg:px-8">
-        <section className="overflow-hidden rounded-[36px] border border-[#eadfd4] bg-white shadow-[0_24px_70px_rgba(55,31,10,0.08)]">
+        <section className="overflow-hidden border border-[#eadfd4] bg-white shadow-[0_24px_70px_rgba(55,31,10,0.08)]">
           <div className={`px-6 py-8 text-white sm:px-8 ${paymentResult === 'success' ? 'bg-[#17110d]' : 'bg-[#8a2638]'}`}>
             <div className="flex items-center gap-4">
               {paymentResult === 'success' ? <CheckCircle2 className="h-10 w-10" /> : <XCircle className="h-10 w-10" />}
@@ -88,7 +88,7 @@ export default function CheckoutStatusPage() {
           </div>
 
           <div className="space-y-6 px-6 py-8 sm:px-8">
-            <div className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5 text-sm leading-7 text-zinc-600">
+            <div className="border border-[#efe1d5] bg-[#fffdfa] p-5 text-sm leading-7 text-zinc-600">
               {pendingOrder?.orderNumber ? (
                 <p>
                   Order number: <span className="font-bold text-[#17110d]">{pendingOrder.orderNumber}</span>
@@ -108,7 +108,7 @@ export default function CheckoutStatusPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               <Link
                 to="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] !text-white transition hover:bg-[#2e221b]"
+                className="inline-flex items-center justify-center gap-2 bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] !text-white transition hover:bg-[#2e221b]"
               >
                 <ShoppingBag className="h-4 w-4" />
                 CONTINUE SHOPPING
@@ -116,7 +116,7 @@ export default function CheckoutStatusPage() {
 
               <Link
                 to={paymentResult === 'success' ? '/orders' : '/checkout'}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#dbc8b8] px-6 py-4 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:!text-white"
+                className="inline-flex items-center justify-center gap-2 border border-[#dbc8b8] px-6 py-4 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:!text-white"
               >
                 <RotateCcw className="h-4 w-4" />
                 {paymentResult === 'success' ? 'VIEW ORDERS' : 'TRY CHECKOUT AGAIN'}

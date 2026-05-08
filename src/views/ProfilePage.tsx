@@ -512,7 +512,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -523,9 +523,9 @@ export default function ProfilePage() {
           <p className="text-sm text-zinc-500">Update your basic info and maintain multiple delivery addresses.</p>
         </div>
 
-        <section className="mt-8 rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+        <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
           {isProfileLoading ? <p className="mb-5 text-sm text-zinc-500">Loading profile...</p> : null}
-          <div className="rounded-[24px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+          <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Profile Details</p>
@@ -535,7 +535,7 @@ export default function ProfilePage() {
               <button
                 type="button"
                 onClick={openEditProfilePopup}
-                className="rounded-full border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                className="border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
               >
                 EDIT PROFILE
               </button>
@@ -549,7 +549,7 @@ export default function ProfilePage() {
                 <button
                   type="button"
                   onClick={addAddress}
-                  className="rounded-full border border-[#e5d7cc] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                  className="border border-[#e5d7cc] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                 >
                   ADD ADDRESS
                 </button>
@@ -557,7 +557,7 @@ export default function ProfilePage() {
 
               <div className="space-y-4">
                 {addresses.map((address, index) => (
-                  <article key={address.id} className="rounded-[24px] border border-[#efe1d5] bg-[#fffdfa] p-4 sm:p-5">
+                  <article key={address.id} className="border border-[#efe1d5] bg-[#fffdfa] p-4 sm:p-5">
                     <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                       <p className="text-sm font-bold uppercase tracking-[0.12em] text-zinc-500">Address {index + 1}</p>
                       <div className="flex items-center gap-3">
@@ -574,7 +574,7 @@ export default function ProfilePage() {
                           type="button"
                           onClick={() => removeAddress(address.id)}
                           disabled={!canRemoveAddress}
-                          className="rounded-full border border-[#ebd0cf] px-3 py-1 text-xs font-bold tracking-[0.08em] text-rose-600 transition enabled:hover:bg-rose-600 enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+                          className="border border-[#ebd0cf] px-3 py-1 text-xs font-bold tracking-[0.08em] text-rose-600 transition enabled:hover:bg-rose-600 enabled:hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
                         >
                           REMOVE
                         </button>
@@ -591,7 +591,7 @@ export default function ProfilePage() {
                             handleAddressChange(address.id, 'state', '')
                             handleAddressChange(address.id, 'city', '')
                           }}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         >
                           <option value="">Select country</option>
@@ -610,7 +610,7 @@ export default function ProfilePage() {
                             handleAddressChange(address.id, 'state', event.target.value)
                             handleAddressChange(address.id, 'city', '')
                           }}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         >
                           <option value="">Select state</option>
@@ -626,7 +626,7 @@ export default function ProfilePage() {
                         <select
                           value={address.city}
                           onChange={(event) => handleAddressChange(address.id, 'city', event.target.value)}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         >
                           <option value="">Select city</option>
@@ -643,7 +643,7 @@ export default function ProfilePage() {
                           type="text"
                           value={address.houseNumber ?? ''}
                           onChange={(event) => handleAddressChange(address.id, 'houseNumber', event.target.value)}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                         />
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
@@ -652,7 +652,7 @@ export default function ProfilePage() {
                           type="text"
                           value={address.street}
                           onChange={(event) => handleAddressChange(address.id, 'street', event.target.value)}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         />
                       </label>
@@ -662,7 +662,7 @@ export default function ProfilePage() {
                           type="text"
                           value={address.postalCode}
                           onChange={(event) => handleAddressChange(address.id, 'postalCode', event.target.value)}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                           required
                         />
                         {postalCodeErrorsByAddressId[address.id] ? (
@@ -674,7 +674,7 @@ export default function ProfilePage() {
                         <select
                           value={address.addressType}
                           onChange={(event) => handleAddressChange(address.id, 'addressType', event.target.value)}
-                          className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                         >
                           <option value="home">Home</option>
                           <option value="work">Work</option>
@@ -688,7 +688,7 @@ export default function ProfilePage() {
                         type="button"
                         onClick={() => void saveAddress(address.id)}
                         disabled={savingAddressId !== null}
-                        className="rounded-full bg-[#111111] px-5 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
+                        className="bg-[#111111] px-5 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
                       >
                         {savingAddressId === address.id
                           ? (address.apiId ? 'UPDATING...' : 'ADDING...')
@@ -700,15 +700,15 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            {successMessage ? <p className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">{successMessage}</p> : null}
-            {errorMessage ? <p className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">{errorMessage}</p> : null}
+            {successMessage ? <p className="border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">{successMessage}</p> : null}
+            {errorMessage ? <p className="border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">{errorMessage}</p> : null}
 
           </div>
         </section>
 
         {isEditProfileOpen ? (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-            <div className="w-full max-w-2xl rounded-[28px] border border-[#eadfd4] bg-white p-6 shadow-[0_30px_80px_rgba(55,31,10,0.2)] sm:p-8">
+            <div className="w-full max-w-2xl border border-[#eadfd4] bg-white p-6 shadow-[0_30px_80px_rgba(55,31,10,0.2)] sm:p-8">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#17110d]">Edit Profile Details</h2>
@@ -717,7 +717,7 @@ export default function ProfilePage() {
                 <button
                   type="button"
                   onClick={() => setIsEditProfileOpen(false)}
-                  className="rounded-full border border-[#e5d7cc] px-3 py-1 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                  className="border border-[#e5d7cc] px-3 py-1 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                 >
                   CLOSE
                 </button>
@@ -730,7 +730,7 @@ export default function ProfilePage() {
                     type="text"
                     value={draftFirstName}
                     onChange={(event) => setDraftFirstName(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -740,7 +740,7 @@ export default function ProfilePage() {
                     type="text"
                     value={draftLastName}
                     onChange={(event) => setDraftLastName(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -750,7 +750,7 @@ export default function ProfilePage() {
                     type="text"
                     value={draftCountryCode}
                     onChange={(event) => setDraftCountryCode(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -760,7 +760,7 @@ export default function ProfilePage() {
                     type="tel"
                     value={draftPhoneNumber}
                     onChange={(event) => setDraftPhoneNumber(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -769,14 +769,14 @@ export default function ProfilePage() {
                   <button
                     type="button"
                     onClick={() => setIsEditProfileOpen(false)}
-                    className="rounded-full border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                    className="border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                   >
                     CANCEL
                   </button>
                   <button
                     type="submit"
                     disabled={isSavingProfileDetails}
-                    className="rounded-full bg-[#111111] px-6 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="bg-[#111111] px-6 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {isSavingProfileDetails ? 'SAVING...' : 'SAVE PROFILE DETAILS'}
                   </button>
@@ -786,8 +786,8 @@ export default function ProfilePage() {
           </div>
         ) : null}
 
-        <section className="mt-8 rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-          <div className="rounded-[24px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+        <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+          <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Security</p>
@@ -797,7 +797,7 @@ export default function ProfilePage() {
               <button
                 type="button"
                 onClick={openChangePasswordPopup}
-                className="rounded-full border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                className="border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
               >
                 OPEN CHANGE PASSWORD
               </button>
@@ -807,7 +807,7 @@ export default function ProfilePage() {
 
         {isChangePasswordOpen ? (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-            <div className="w-full max-w-2xl rounded-[28px] border border-[#eadfd4] bg-white p-6 shadow-[0_30px_80px_rgba(55,31,10,0.2)] sm:p-8">
+            <div className="w-full max-w-2xl border border-[#eadfd4] bg-white p-6 shadow-[0_30px_80px_rgba(55,31,10,0.2)] sm:p-8">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#17110d]">Change Password</h2>
@@ -816,7 +816,7 @@ export default function ProfilePage() {
                 <button
                   type="button"
                   onClick={() => setIsChangePasswordOpen(false)}
-                  className="rounded-full border border-[#e5d7cc] px-3 py-1 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                  className="border border-[#e5d7cc] px-3 py-1 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                 >
                   CLOSE
                 </button>
@@ -829,7 +829,7 @@ export default function ProfilePage() {
                     type="password"
                     value={oldPassword}
                     onChange={(event) => setOldPassword(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -840,7 +840,7 @@ export default function ProfilePage() {
                     type="password"
                     value={newPassword}
                     onChange={(event) => setNewPassword(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -851,7 +851,7 @@ export default function ProfilePage() {
                     type="password"
                     value={confirmPassword}
                     onChange={(event) => setConfirmPassword(event.target.value)}
-                    className="h-11 rounded-xl border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                    className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
                   />
                 </label>
@@ -860,14 +860,14 @@ export default function ProfilePage() {
                   <button
                     type="button"
                     onClick={() => setIsChangePasswordOpen(false)}
-                    className="rounded-full border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                    className="border border-[#e5d7cc] px-5 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                   >
                     CANCEL
                   </button>
                   <button
                     type="submit"
                     disabled={isChangingPassword}
-                    className="rounded-full bg-[#111111] px-6 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="bg-[#111111] px-6 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {isChangingPassword ? 'UPDATING...' : 'CHANGE PASSWORD'}
                   </button>

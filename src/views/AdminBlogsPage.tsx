@@ -349,11 +349,11 @@ export default function AdminBlogsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900">
+    <div className="font-parsi min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900">
       <Header />
 
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
-        <div className="rounded-[34px] border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
+        <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin Content</p>
@@ -364,7 +364,7 @@ export default function AdminBlogsPage() {
               <button
                 type="button"
                 onClick={() => void loadBlogs(currentPage)}
-                className="inline-flex items-center gap-2 rounded-full border border-[#e8c5db] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
+                className="inline-flex items-center gap-2 border border-[#e8c5db] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
               >
                 <RefreshCw className="h-4 w-4" />
                 Refresh
@@ -373,7 +373,7 @@ export default function AdminBlogsPage() {
               <button
                 type="button"
                 onClick={openCreateModal}
-                className="inline-flex items-center gap-2 rounded-full bg-[#cc4f8f] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78]"
+                className="inline-flex items-center gap-2 bg-[#cc4f8f] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78]"
               >
                 <Plus className="h-4 w-4" />
                 Add Blog
@@ -382,15 +382,15 @@ export default function AdminBlogsPage() {
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
+            <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Total</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{pagination?.totalRecords ?? blogs.length}</p>
             </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff9fd] p-4">
+            <div className="border border-[#f0d3e5] bg-[#fff9fd] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Published</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{blogs.filter((blog) => blog.status === 'published').length}</p>
             </div>
-            <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
+            <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Draft</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{blogs.filter((blog) => blog.status === 'draft').length}</p>
             </div>
@@ -407,7 +407,7 @@ export default function AdminBlogsPage() {
                 type="button"
                 onClick={() => void handleStatusTabChange(tab.value)}
                 disabled={isLoading}
-                className={`rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] transition ${
+                className={`border px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] transition ${
                   statusFilter === tab.value
                     ? 'border-[#cc4f8f] bg-[#cc4f8f] text-white'
                     : 'border-[#e8c5db] bg-white text-[#7a3a61] hover:bg-[#fff2fa]'
@@ -418,9 +418,9 @@ export default function AdminBlogsPage() {
             ))}
           </div>
 
-          {error ? <div className="mt-6 rounded-[24px] border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
+          {error ? <div className="mt-6 border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div> : null}
 
-          <div className="mt-6 overflow-x-auto rounded-[24px] border border-[#f0d7e7] bg-white shadow-[0_10px_30px_rgba(191,82,136,0.08)]">
+          <div className="mt-6 overflow-x-auto border border-[#f0d7e7] bg-white shadow-[0_10px_30px_rgba(191,82,136,0.08)]">
             <table className="min-w-full text-left text-sm">
               <thead className="border-b border-[#f1d8e8] bg-[#fff5fb] text-xs uppercase tracking-[0.09em] text-[#8d5574]">
                 <tr>
@@ -437,7 +437,7 @@ export default function AdminBlogsPage() {
                   Array.from({ length: 5 }, (_, index) => (
                     <tr key={index} className="border-b border-[#f7e7f1]">
                       <td colSpan={6} className="px-4 py-4">
-                        <div className="h-5 w-full animate-pulse rounded bg-[#f8e8f1]" />
+                        <div className="h-5 w-full animate-pulse bg-[#f8e8f1]" />
                       </td>
                     </tr>
                   ))
@@ -460,7 +460,7 @@ export default function AdminBlogsPage() {
                         </td>
                         <td className="px-4 py-4">
                           <span
-                            className={`rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${
+                            className={`border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${
                               blog.status === 'published'
                                 ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
                                 : 'border-amber-200 bg-amber-50 text-amber-700'
@@ -478,7 +478,7 @@ export default function AdminBlogsPage() {
                               type="button"
                               onClick={() => void openEditModal(blog)}
                               disabled={actionLoadingId === blog.id}
-                              className="inline-flex items-center gap-1 rounded-full border border-[#e8c5db] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
+                              className="inline-flex items-center gap-1 border border-[#e8c5db] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
                             >
                               {actionLoadingId === blog.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <FilePenLine className="h-3 w-3" />}
                               Edit
@@ -488,14 +488,14 @@ export default function AdminBlogsPage() {
                               type="button"
                               onClick={() => void handleToggleStatus(blog)}
                               disabled={actionLoadingId === blog.id}
-                              className="inline-flex items-center rounded-full border border-[#e8c5db] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
+                              className="inline-flex items-center border border-[#e8c5db] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
                             >
                               {blog.status === 'published' ? 'Move To Draft' : 'Publish'}
                             </button>
 
                             <Link
                               to={`/admin/blogs/${blog.slug}`}
-                              className="inline-flex items-center gap-1 rounded-full border border-[#d7d8f7] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#4745a8] transition hover:bg-[#f5f5ff]"
+                              className="inline-flex items-center gap-1 border border-[#d7d8f7] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#4745a8] transition hover:bg-[#f5f5ff]"
                             >
                               <Eye className="h-3 w-3" />
                               View
@@ -505,7 +505,7 @@ export default function AdminBlogsPage() {
                               type="button"
                               onClick={() => openDeleteConfirmation(blog)}
                               disabled={actionLoadingId === blog.id}
-                              className="inline-flex items-center gap-1 rounded-full border border-rose-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-50"
+                              className="inline-flex items-center gap-1 border border-rose-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-50"
                             >
                               <Trash2 className="h-3 w-3" />
                               Delete
@@ -559,7 +559,7 @@ export default function AdminBlogsPage() {
 
       {blogPendingDelete ? (
         <div className="fixed inset-0 z-[130] flex items-center justify-center bg-black/45 px-4 py-6">
-          <div className="w-full max-w-[480px] rounded-3xl border border-[#f1cde2] bg-white p-6 shadow-[0_28px_72px_rgba(0,0,0,0.2)]">
+          <div className="w-full max-w-[480px] border border-[#f1cde2] bg-white p-6 shadow-[0_28px_72px_rgba(0,0,0,0.2)]">
             <h3 className="text-xl font-extrabold text-[#3f1933]">Delete Blog?</h3>
             <p className="mt-3 text-sm leading-6 text-[#6d4d61]">
               Are you sure you want to delete <span className="font-semibold text-[#3f1933]">{blogPendingDelete.title}</span>? This action cannot be undone.
@@ -570,7 +570,7 @@ export default function AdminBlogsPage() {
                 type="button"
                 onClick={closeDeleteConfirmation}
                 disabled={Boolean(actionLoadingId)}
-                className="rounded-full border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
+                className="border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Cancel
               </button>
@@ -578,7 +578,7 @@ export default function AdminBlogsPage() {
                 type="button"
                 onClick={() => void handleDelete()}
                 disabled={Boolean(actionLoadingId)}
-                className="inline-flex items-center gap-2 rounded-full bg-rose-600 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex items-center gap-2 bg-rose-600 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {actionLoadingId ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
                 Confirm Delete

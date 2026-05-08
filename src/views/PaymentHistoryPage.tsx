@@ -73,7 +73,7 @@ export default function PaymentHistoryPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -84,20 +84,20 @@ export default function PaymentHistoryPage() {
           <p className="text-sm text-zinc-500">Review Stripe sessions, payment status, and linked orders in one list.</p>
         </div>
 
-        <section className="mt-8 rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+        <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
           {isLoading ? <p className="text-sm text-zinc-500">Loading payment history...</p> : null}
-          {!isLoading && error ? <div className="rounded-[28px] border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
+          {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
 
           {!isLoading && !error && payments.length === 0 ? (
-            <div className="rounded-[28px] border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#dbc8b8] text-[#17110d]">
+            <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center border border-[#dbc8b8] text-[#17110d]">
                 <ReceiptText className="h-6 w-6" />
               </div>
               <h2 className="mt-5 text-2xl font-bold text-[#17110d]">No payment history yet</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-500">Online payment attempts and completed payments will appear here after checkout.</p>
               <Link
                 to="/products"
-                className="mt-6 inline-flex rounded-full bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
+                className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
               >
                 SHOP NOW
               </Link>
@@ -107,7 +107,7 @@ export default function PaymentHistoryPage() {
           {!isLoading && payments.length > 0 ? (
             <div className="space-y-5">
               {payments.map((payment) => (
-                <article key={`${payment.orderId}-${payment.sessionId}`} className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <article key={`${payment.orderId}-${payment.sessionId}`} className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{payment.orderNumber}</p>
@@ -127,16 +127,16 @@ export default function PaymentHistoryPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-2 sm:justify-end">
-                      <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(payment.paymentStatus)}`}>
+                      <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(payment.paymentStatus)}`}>
                         {payment.paymentStatus}
                       </span>
-                      <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(payment.orderStatus)}`}>
+                      <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(payment.orderStatus)}`}>
                         {payment.orderStatus}
                       </span>
                     </div>
                   </div>
 
-                  <div className="mt-5 grid gap-3 rounded-[22px] border border-[#efe1d5] bg-white p-4 sm:grid-cols-2">
+                  <div className="mt-5 grid gap-3 border border-[#efe1d5] bg-white p-4 sm:grid-cols-2">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Session ID</p>
                       <p className="mt-2 break-all text-sm text-zinc-600">{payment.sessionId}</p>

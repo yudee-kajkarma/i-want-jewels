@@ -73,7 +73,7 @@ export default function OrdersPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -84,20 +84,20 @@ export default function OrdersPage() {
           <p className="text-sm text-zinc-500">Track placed orders, payment status, and shipping details from one place.</p>
         </div>
 
-        <section className="mt-8 rounded-[34px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+        <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
           {isLoading ? <p className="text-sm text-zinc-500">Loading orders...</p> : null}
-          {!isLoading && error ? <div className="rounded-[28px] border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
+          {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
 
           {!isLoading && !error && orders.length === 0 ? (
-            <div className="rounded-[28px] border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#dbc8b8] text-[#17110d]">
+            <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center border border-[#dbc8b8] text-[#17110d]">
                 <ReceiptText className="h-6 w-6" />
               </div>
               <h2 className="mt-5 text-2xl font-bold text-[#17110d]">No orders yet</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-500">Place your first order from the cart or buy directly from a product page.</p>
               <Link
                 to="/products"
-                className="mt-6 inline-flex rounded-full bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
+                className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
               >
                 SHOP NOW
               </Link>
@@ -107,7 +107,7 @@ export default function OrdersPage() {
           {!isLoading && orders.length > 0 ? (
             <div className="space-y-5">
               {orders.map((order) => (
-                <article key={order.id} className="rounded-[28px] border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <article key={order.id} className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
@@ -127,10 +127,10 @@ export default function OrdersPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-2 sm:justify-end">
-                      <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}>
+                      <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}>
                         {order.orderStatus}
                       </span>
-                      <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}>
+                      <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}>
                         {order.paymentStatus}
                       </span>
                     </div>
@@ -138,8 +138,8 @@ export default function OrdersPage() {
 
                   <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                     {order.items.slice(0, 4).map((item) => (
-                      <div key={`${order.id}-${item.productId}-${item.variantId}`} className="rounded-[22px] border border-[#efe1d5] bg-white p-3">
-                        <div className="overflow-hidden rounded-[18px] bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-2">
+                      <div key={`${order.id}-${item.productId}-${item.variantId}`} className="border border-[#efe1d5] bg-white p-3">
+                        <div className="overflow-hidden bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-2">
                           <img src={item.thumbnail} alt={item.title} className="h-24 w-full object-contain" />
                         </div>
                         <p className="mt-3 text-sm font-bold text-[#17110d] line-clamp-2">{item.title}</p>

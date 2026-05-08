@@ -202,7 +202,7 @@ export default function AdminOrderDetailPage() {
     }
 
     return (
-        <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+        <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
             <Header />
             <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
                 <nav className="mb-6 text-sm text-zinc-500">
@@ -213,29 +213,29 @@ export default function AdminOrderDetailPage() {
 
                 {isLoading ? <p className="text-sm text-zinc-500">Loading order...</p> : null}
                 {!isLoading && error ? (
-                    <div className="rounded-[24px] border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div>
+                    <div className="border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div>
                 ) : null}
 
                 {!isLoading && order ? (
                     <div className="grid gap-6 xl:grid-cols-[1fr_380px]">
-                        <section className="space-y-6 rounded-[30px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+                        <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
                             <div className="flex flex-wrap items-center justify-between gap-3">
                                 <div>
                                     <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Order Number</p>
                                     <h1 className="mt-2 text-3xl font-extrabold tracking-[-0.04em] text-[#17110d]">{order.orderNumber}</h1>
                                 </div>
                                 <div className="flex flex-wrap items-center gap-2">
-                                    <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}>
+                                    <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}>
                                         {order.orderStatus}
                                     </span>
-                                    <span className={`inline-flex rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}>
+                                    <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPaymentStatusClass(order.paymentStatus)}`}>
                                         {order.paymentStatus}
                                     </span>
                                 </div>
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="rounded-[20px] border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
+                                <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
                                     <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Clock3 className="h-4 w-4" />Created</p>
                                     <p>{formatOrderDate(order.createdAt)}</p>
                                     <p className="mt-2 inline-flex items-center gap-2 font-semibold text-[#17110d]"><BadgeCheck className="h-4 w-4" />Updated</p>
@@ -243,7 +243,7 @@ export default function AdminOrderDetailPage() {
                                     <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">Refund: {order.refundStatus}</p>
                                 </div>
 
-                                <div className="rounded-[20px] border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
+                                <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
                                     <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><User className="h-4 w-4" />Customer</p>
                                     <p>{order.customer?.firstName} {order.customer?.lastName}</p>
                                     <p>{order.customer?.email}</p>
@@ -252,14 +252,14 @@ export default function AdminOrderDetailPage() {
                                 </div>
                             </div>
 
-                            <div className="rounded-[20px] border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
+                            <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
                                 <div className="flex flex-wrap items-center justify-between gap-2">
                                     <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><MapPinHouse className="h-4 w-4" />Shipping Address</p>
                                     {canEditShippingAddress ? (
                                         <button
                                             type="button"
                                             onClick={openEditShippingAddress}
-                                            className="rounded-full border border-[#e5d7cc] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
+                                            className="border border-[#e5d7cc] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                                         >
                                             Change Address
                                         </button>
@@ -281,7 +281,7 @@ export default function AdminOrderDetailPage() {
     href={order.trackingUrl}
     target="_blank"
     rel="noreferrer"
-    className="inline-flex items-center justify-center rounded-full bg-[#8f2a60] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#74224f]"
+    className="inline-flex items-center justify-center bg-[#8f2a60] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#74224f]"
   >
     Track Shipment
   </a>
@@ -289,7 +289,7 @@ export default function AdminOrderDetailPage() {
                             </div>
 
                             {isEditAddressOpen ? (
-                                <div className="rounded-[20px] border border-[#efe1d5] bg-white p-4 text-sm">
+                                <div className="border border-[#efe1d5] bg-white p-4 text-sm">
                                     <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">Edit Shipping Address</h3>
                                     <p className="mt-1 text-xs text-zinc-500">Allowed before shipment only.</p>
 
@@ -306,7 +306,7 @@ export default function AdminOrderDetailPage() {
                                                         city: '',
                                                     }))
                                                 }
-                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                                className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                                             >
                                                 <option value="">Select country</option>
                                                 {countryOptions.map((country) => (
@@ -328,7 +328,7 @@ export default function AdminOrderDetailPage() {
                                                         city: '',
                                                     }))
                                                 }
-                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                                className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                                             >
                                                 <option value="">Select state</option>
                                                 {stateOptions.map((state) => (
@@ -349,7 +349,7 @@ export default function AdminOrderDetailPage() {
                                                         city: event.target.value,
                                                     }))
                                                 }
-                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                                className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                                             >
                                                 <option value="">Select city</option>
                                                 {cityOptions.map((city) => (
@@ -375,7 +375,7 @@ export default function AdminOrderDetailPage() {
                                                     }))
                                                 }}
                                                 placeholder="Postal Code"
-                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                                className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                                             />
                                             {postalCodeError ? <p className="text-xs text-rose-700">{postalCodeError}</p> : null}
                                         </label>
@@ -391,19 +391,19 @@ export default function AdminOrderDetailPage() {
                                                     }))
                                                 }
                                                 placeholder="Street"
-                                                className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                                                className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                                             />
                                         </label>
                                     </div>
 
-                                    {addressError ? <p className="mt-3 rounded-lg bg-rose-50 px-3 py-2 text-xs text-rose-700">{addressError}</p> : null}
+                                    {addressError ? <p className="mt-3 bg-rose-50 px-3 py-2 text-xs text-rose-700">{addressError}</p> : null}
 
                                     <div className="mt-4 flex flex-wrap justify-end gap-2">
                                         <button
                                             type="button"
                                             onClick={closeEditShippingAddress}
                                             disabled={isSavingAddress}
-                                            className="rounded-full border border-[#e5d7cc] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white disabled:cursor-not-allowed disabled:opacity-70"
+                                            className="border border-[#e5d7cc] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-black hover:text-white disabled:cursor-not-allowed disabled:opacity-70"
                                         >
                                             Cancel
                                         </button>
@@ -411,7 +411,7 @@ export default function AdminOrderDetailPage() {
                                             type="button"
                                             onClick={() => void handleUpdateShippingAddress()}
                                             disabled={isSavingAddress}
-                                            className="rounded-full bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
+                                            className="bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-70"
                                         >
                                             {isSavingAddress ? 'Updating...' : 'Update Address'}
                                         </button>
@@ -419,12 +419,12 @@ export default function AdminOrderDetailPage() {
                                 </div>
                             ) : null}
 
-                            <div className="rounded-[20px] border border-[#efe1d5] bg-[#fffdfa] p-4">
+                            <div className="border border-[#efe1d5] bg-[#fffdfa] p-4">
                                 <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Package className="h-4 w-4" />Items</p>
                                 <div className="mt-4 space-y-3">
                                     {order.items.map((item, index) => (
-                                        <article key={`${item.productId}-${item.variantId}-${index}`} className="grid gap-3 rounded-[16px] border border-[#efe1d5] bg-white p-3 sm:grid-cols-[72px_minmax(0,1fr)_auto] sm:items-center">
-                                            <div className="overflow-hidden rounded-[12px] bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-1.5">
+                                        <article key={`${item.productId}-${item.variantId}-${index}`} className="grid gap-3 border border-[#efe1d5] bg-white p-3 sm:grid-cols-[72px_minmax(0,1fr)_auto] sm:items-center">
+                                            <div className="overflow-hidden bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-1.5">
                                                 <img src={item.thumbnail} alt={item.title} className="h-14 w-full object-contain" />
                                             </div>
                                             <div>
@@ -438,7 +438,7 @@ export default function AdminOrderDetailPage() {
                             </div>
                         </section>
 
-                        <aside className="rounded-[30px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+                        <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
                             <h2 className="text-xl font-bold text-[#17110d]">Summary</h2>
                             <div className="mt-5 space-y-3 text-sm text-zinc-600">
                                 <div className="flex items-center justify-between">

@@ -130,11 +130,11 @@ export default function AdminAddressPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="font-parsi min-h-screen bg-[#fffdfa] text-zinc-900">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#fff2fa] text-[#8f2a60]">
+          <span className="inline-flex h-10 w-10 items-center justify-center bg-[#fff2fa] text-[#8f2a60]">
             <MapPinHouse className="h-5 w-5" />
           </span>
           <div>
@@ -143,7 +143,7 @@ export default function AdminAddressPage() {
           </div>
         </div>
 
-        <section className="mt-8 rounded-[30px] border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+        <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
           {isLoading ? (
             <p className="text-sm text-zinc-500">Loading admin address...</p>
           ) : (
@@ -158,7 +158,7 @@ export default function AdminAddressPage() {
                       updateField('state', '')
                       updateField('city', '')
                     }}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
                     <option value="">Select country</option>
                     {countryOptions.map((country) => (
@@ -177,7 +177,7 @@ export default function AdminAddressPage() {
                       updateField('state', event.target.value)
                       updateField('city', '')
                     }}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
                     <option value="">Select state</option>
                     {stateOptions.map((state) => (
@@ -193,7 +193,7 @@ export default function AdminAddressPage() {
                   <select
                     value={form.city}
                     onChange={(event) => updateField('city', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
                     <option value="">Select city</option>
                     {cityOptions.map((city) => (
@@ -209,7 +209,7 @@ export default function AdminAddressPage() {
                   <input
                     value={form.houseNumber}
                     onChange={(event) => updateField('houseNumber', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                     placeholder="House Number"
                   />
                 </label>
@@ -219,7 +219,7 @@ export default function AdminAddressPage() {
                   <input
                     value={form.street}
                     onChange={(event) => updateField('street', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                     placeholder="Street"
                   />
                 </label>
@@ -229,7 +229,7 @@ export default function AdminAddressPage() {
                   <input
                     value={form.postalCode}
                     onChange={(event) => updateField('postalCode', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                     placeholder="Postal Code"
                   />
                   {postalCodeError ? <p className="text-xs text-rose-700">{postalCodeError}</p> : null}
@@ -243,14 +243,14 @@ export default function AdminAddressPage() {
                   <input
                     value={form.addressType}
                     onChange={(event) => updateField('addressType', event.target.value)}
-                    className="w-full rounded-xl border border-[#e5d7cc] py-2.5 pl-10 pr-3 outline-none transition focus:border-[#b88a65]"
+                    className="w-full border border-[#e5d7cc] py-2.5 pl-10 pr-3 outline-none transition focus:border-[#b88a65]"
                     placeholder="billing, work, shipping..."
                   />
                 </div>
               </label>
 
               {error ? (
-                <div className="rounded-[20px] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+                <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
                   {error}
                 </div>
               ) : null}
@@ -259,7 +259,7 @@ export default function AdminAddressPage() {
                 <button
                   type="submit"
                   disabled={isSaving}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-5 py-3 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+                  className="inline-flex items-center gap-2 bg-[#111111] px-5 py-3 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
                   <Save className="h-4 w-4" />
                   {isSaving ? 'UPDATING...' : 'UPDATE ADDRESS'}
