@@ -301,16 +301,7 @@ export default function CheckoutPage() {
           throw new Error('Missing checkout session URL.')
         }
 
-        const checkoutWindow = window.open(
-          result.checkoutSession.url,
-          'iwjStripeCheckout',
-          'popup=yes,width=540,height=760,noopener,noreferrer',
-        )
-
-        if (!checkoutWindow) {
-          setError('Popup was blocked by your browser. Please allow popups and try again.')
-        }
-
+        window.location.assign(result.checkoutSession.url)
         return
       }
 
@@ -336,7 +327,7 @@ export default function CheckoutPage() {
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Checkout</p>
             <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Review and place your order</h1>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-500">
-              Choose your payment method and confirm this order. Online payments open Stripe in a popup window and return here after the payment step.
+              Choose your payment method and confirm this order. Online payments redirect you to Stripe and return you back here after the payment step.
             </p>
           </div>
           <Link
@@ -597,7 +588,7 @@ export default function CheckoutPage() {
                         />
                         <div>
                           <p className="font-bold text-[#17110d]">Online payment</p>
-                          <p className="mt-1 text-sm leading-6 text-zinc-500">Stripe checkout opens in a popup window to complete payment securely.</p>
+                          <p className="mt-1 text-sm leading-6 text-zinc-500">You'll be redirected to Stripe to complete payment securely, and brought back here once it's done.</p>
                         </div>
                       </label>
 
@@ -656,7 +647,7 @@ export default function CheckoutPage() {
                 {paymentMethod === 'ONLINE' ? <ShieldCheck className="mt-0.5 h-4 w-4 text-[#17110d]" /> : <Truck className="mt-0.5 h-4 w-4 text-[#17110d]" />}
                 <p>
                   {paymentMethod === 'ONLINE'
-                    ? 'Stripe checkout opens after order creation. Once payment succeeds, you return to this website automatically.'
+                    ? 'After order creation you are redirected to Stripe. Once payment succeeds, you return to this website automatically.'
                     : 'Cash on delivery places the order immediately with no external payment redirect.'}
                 </p>
               </div>

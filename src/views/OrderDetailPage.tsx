@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Ban, CreditCard, MapPinHouse, Package } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
@@ -67,7 +67,6 @@ export default function OrderDetailPage() {
   const [isRegeneratingPayment, setIsRegeneratingPayment] = useState(false)
   const [error, setError] = useState('')
   const [feedback, setFeedback] = useState('')
-  const paymentStatusPollRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   async function refreshOrder(currentOrderId: string, showLoader: boolean) {
     if (showLoader) {
@@ -108,15 +107,6 @@ export default function OrderDetailPage() {
       void refreshOrder(orderId, true)
     }
   }, [orderId])
-
-  useEffect(() => {
-    return () => {
-      if (paymentStatusPollRef.current) {
-        clearInterval(paymentStatusPollRef.current)
-        paymentStatusPollRef.current = null
-      }
-    }
-  }, [])
 
   async function handleCancelOrder() {
     if (!order || !canCancelOrder(order)) {
@@ -160,49 +150,9 @@ export default function OrderDetailPage() {
         throw new Error('Missing checkout session URL.')
       }
 
-      const checkoutWindow = window.open(
-        result.checkoutSession.url,
-        'iwjStripeCheckout',
-        'popup=yes,width=540,height=760,noopener,noreferrer',
-      )
-
-      if (!checkoutWindow) {
-        setFeedback('Popup was blocked by your browser. Please allow popups and try again.')
-        return
-      }
-
-      if (paymentStatusPollRef.current) {
-        clearInterval(paymentStatusPollRef.current)
-      }
-
-      paymentStatusPollRef.current = setInterval(() => {
-        if (!checkoutWindow.closed) {
-          return
-        }
-
-        if (paymentStatusPollRef.current) {
-          clearInterval(paymentStatusPollRef.current)
-          paymentStatusPollRef.current = null
-        }
-
-        void refreshOrder(order.id, false).then((updatedOrder) => {
-          if (!updatedOrder) {
-            return
-          }
-
-          const paymentStatus = updatedOrder.paymentStatus.toLowerCase()
-
-          if (paymentStatus === 'paid') {
-            setFeedback('Payment completed successfully. Order status has been updated.')
-            return
-          }
-
-          setFeedback('Payment was not completed. You can retry payment or cancel this order.')
-        })
-      }, 1500)
+      window.location.assign(result.checkoutSession.url)
     } catch {
       setFeedback('Unable to start payment right now. Please try again.')
-    } finally {
       setIsRegeneratingPayment(false)
     }
   }
