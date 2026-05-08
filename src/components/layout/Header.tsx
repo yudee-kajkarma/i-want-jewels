@@ -842,7 +842,7 @@ export default function Header() {
 
                     {/* Right cluster */}
                     <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-5">
-                        <div ref={accountMenuRef} className="relative">
+                        <div ref={accountMenuRef} className="relative hidden lg:block">
                             <HeaderIconButton
                                 label={accountLabel}
                                 ariaExpanded={isAccountMenuOpen}
@@ -997,19 +997,23 @@ export default function Header() {
                             <SearchIcon />
                         </HeaderIconButton>
 
-                        <MiniCurrencySelector
-                            currency={currency}
-                            setCurrency={setCurrency}
-                        />
+                        <div className="hidden lg:block">
+                            <MiniCurrencySelector
+                                currency={currency}
+                                setCurrency={setCurrency}
+                            />
+                        </div>
 
                         {isAdmin ? (
                             <>
-                                <HeaderIconButton
-                                    label="Admin Wishlist"
-                                    to="/admin/wishlist"
-                                >
-                                    <HeartIcon />
-                                </HeaderIconButton>
+                                <div className="hidden lg:block">
+                                    <HeaderIconButton
+                                        label="Admin Wishlist"
+                                        to="/admin/wishlist"
+                                    >
+                                        <HeartIcon />
+                                    </HeaderIconButton>
+                                </div>
                                 <HeaderIconButton
                                     label="Admin Cart"
                                     to="/admin/cart"
@@ -1019,13 +1023,15 @@ export default function Header() {
                             </>
                         ) : (
                             <>
-                                <HeaderIconButton
-                                    label="Wishlist"
-                                    count={wishlistCount}
-                                    to="/wishlist"
-                                >
-                                    <HeartIcon />
-                                </HeaderIconButton>
+                                <div className="hidden lg:block">
+                                    <HeaderIconButton
+                                        label="Wishlist"
+                                        count={wishlistCount}
+                                        to="/wishlist"
+                                    >
+                                        <HeartIcon />
+                                    </HeaderIconButton>
+                                </div>
                                 <HeaderIconButton
                                     label="Cart"
                                     count={itemCount}
@@ -1218,6 +1224,41 @@ export default function Header() {
                 </div>
 
                 <div className="flex-1 overflow-y-auto px-6 pb-8 pt-6">
+                    {!isAdmin ? (
+                        <nav className="mb-2 flex flex-col lg:hidden">
+                            <Link
+                                to="/products"
+                                onClick={() => setIsDrawerOpen(false)}
+                                className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                style={{
+                                    transitionDelay: `${isDrawerOpen ? 60 : 0}ms`,
+                                }}
+                            >
+                                Shop
+                            </Link>
+                            <Link
+                                to="/about"
+                                onClick={() => setIsDrawerOpen(false)}
+                                className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                style={{
+                                    transitionDelay: `${isDrawerOpen ? 100 : 0}ms`,
+                                }}
+                            >
+                                About
+                            </Link>
+                            <Link
+                                to="/contact"
+                                onClick={() => setIsDrawerOpen(false)}
+                                className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                style={{
+                                    transitionDelay: `${isDrawerOpen ? 140 : 0}ms`,
+                                }}
+                            >
+                                Contact
+                            </Link>
+                        </nav>
+                    ) : null}
+
                     <nav className="flex flex-col">
                         {drawerLinks.map((link, index) => (
                             <Link
@@ -1331,6 +1372,37 @@ export default function Header() {
                                 </Link>
                             </div>
                         )}
+                    </div>
+
+                    <div className="mt-8 lg:hidden">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
+                            Currency
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                            {CURRENCY_OPTIONS.map((opt) => {
+                                const isActive = currency === opt.code;
+
+                                return (
+                                    <button
+                                        key={opt.code}
+                                        type="button"
+                                        onClick={() => setCurrency(opt.code)}
+                                        className={`flex items-center gap-2 border px-3 py-2 text-[12px] font-medium uppercase tracking-[0.14em] transition ${
+                                            isActive
+                                                ? "border-zinc-900 bg-zinc-900 text-white"
+                                                : "border-zinc-200 bg-white text-zinc-800 hover:bg-zinc-50"
+                                        }`}
+                                    >
+                                        <img
+                                            src={opt.flag}
+                                            alt=""
+                                            className="h-4 w-4 object-cover"
+                                        />
+                                        <span>{opt.short}</span>
+                                    </button>
+                                );
+                            })}
+                        </div>
                     </div>
 
                     <div className="mt-8">

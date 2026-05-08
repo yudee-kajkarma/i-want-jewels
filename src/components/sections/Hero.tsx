@@ -2,14 +2,20 @@
 
 import { Link } from "@/lib/router";
 import bannerHero from "@/assets/banner/Banner-Hero.jpg";
+import bannerHeroSmall from "@/assets/banner/Hero-Banner-sm.png";
 
 export default function Hero() {
     return (
-        <section className="relative w-full overflow-hidden bg-white px-20">
+        <section className="relative w-full overflow-hidden bg-white px-5 lg:px-20">
+            <img
+                src={bannerHeroSmall.src}
+                alt="Fresh Style for the Season"
+                className="iwj-hero-image block h-auto w-full md:hidden"
+            />
             <img
                 src={bannerHero.src}
                 alt="Fresh Style for the Season"
-                className="iwj-hero-image block h-auto w-full"
+                className="iwj-hero-image hidden h-auto w-full md:block"
             />
 
             <div className="pointer-events-none absolute inset-x-0 top-[85%] flex justify-center px-4">

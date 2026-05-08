@@ -305,12 +305,12 @@ export default function HomeBody() {
                 <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
                     Categories
                 </h2>
-                <div className="mt-7 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
+                <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                     {categoryShowcase.map((item, index) => (
                         <Link
                             key={item.label}
                             to={item.href}
-                            className="iwj-category-card group block"
+                            className="iwj-category-card group block w-[260px] flex-shrink-0 snap-start sm:w-[320px] lg:w-[340px]"
                             style={{
                                 animationDelay: `${120 + index * 130}ms`,
                             }}
@@ -355,7 +355,7 @@ export default function HomeBody() {
                     })}
                 </div>
 
-                <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-1 lg:grid-cols-4">
                     {isLoadingProducts
                         ? productSkeletons
                               .slice(0, 4)
@@ -366,7 +366,7 @@ export default function HomeBody() {
                                   <ProductCard
                                       key={item.id}
                                       item={item}
-                                      className="h-[30rem]"
+                                      className="aspect-square md:aspect-auto  md:h-[30rem]"
                                   />
                               ))}
                 </div>
@@ -432,7 +432,7 @@ export default function HomeBody() {
                     })}
                 </div>
 
-                <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-1 lg:grid-cols-4">
                     {isLoadingProducts
                         ? productSkeletons
                               .slice(0, 4)
@@ -445,7 +445,7 @@ export default function HomeBody() {
                                   <ProductCard
                                       key={`metal-${item.id}`}
                                       item={item}
-                                      className="h-[30rem]"
+                                      className="aspect-square md:aspect-auto md:h-[30rem]"
                                   />
                               ))}
                 </div>
@@ -478,13 +478,14 @@ export default function HomeBody() {
             </section>
             {/* Giftcard Banner section */}
             <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
-                <div
-                    className="relative bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${bannerGiftcardImage.src})`,
-                    }}
-                >
-                    <div className="flex items-center justify-start px-6 py-12 sm:px-10 lg:px-14 lg:py-20">
+                <div className="relative overflow-hidden">
+                    <img
+                        src={bannerGiftcardImage.src}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 hidden h-full w-full object-cover object-center lg:block"
+                    />
+                    <div className="relative flex items-center justify-start px-6 py-12 sm:px-10 lg:px-14 lg:py-20">
                         <div className="w-full max-w-[440px] bg-black px-8 py-10 text-white sm:px-10 sm:py-12">
                             <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px]">
                                 <span className="block">Mother&apos;s Day</span>
