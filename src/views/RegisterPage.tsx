@@ -2,13 +2,16 @@
 
 import { useMemo, useState } from 'react'
 import axios from 'axios'
+import { toast } from 'react-hot-toast'
 import { Eye, EyeOff } from 'lucide-react'
 import { Link, useNavigate } from '@/lib/router'
 import AuthShell from '../components/auth/AuthShell'
 import { useAuth } from '../context/AuthContext'
-import { registerUser } from '../services/authService'
+import { checkRegisterEmail, registerUser } from '../services/authService'
 import type { RegisterPayload } from '../types/auth'
 import { getCityOptions, getCountryOptions, getStateOptions, isValidEmailAddress, isValidPostalCode } from '../utils/location'
+
+type RegisterPhase = 'email-check' | 'details'
 
 const initialForm: RegisterPayload = {
   username: '',
@@ -33,6 +36,11 @@ const initialForm: RegisterPayload = {
 export default function RegisterPage() {
   const navigate = useNavigate()
   const { setOtpEmail } = useAuth()
+  const [phase, setPhase] = useState<RegisterPhase>('email-check')
+  const [emailCheckValue, setEmailCheckValue] = useState('')
+  const [emailCheckError, setEmailCheckError] = useState('')
+  const [emailCheckUserExists, setEmailCheckUserExists] = useState(false)
+  const [isCheckingEmail, setIsCheckingEmail] = useState(false)
   const [form, setForm] = useState<RegisterPayload>(initialForm)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
@@ -161,6 +169,61 @@ export default function RegisterPage() {
     }))
   }
 
+  async function handleEmailCheck(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const trimmedEmail = emailCheckValue.trim()
+
+    if (!isValidEmailAddress(trimmedEmail)) {
+      setEmailCheckError('Please write a valid email address.')
+      return
+    }
+
+    setIsCheckingEmail(true)
+    setEmailCheckError('')
+    setEmailCheckUserExists(false)
+
+    try {
+      const result = await checkRegisterEmail(trimmedEmail)
+
+      switch (result.code) {
+        case 'EMAIL_AVAILABLE': {
+          setForm((current) => ({ ...current, email: trimmedEmail }))
+          setPhase('details')
+          break
+        }
+        case 'OTP_ALREADY_SENT':
+        case 'OTP_RESENT': {
+          if (result.message) {
+            toast.success(result.message)
+          }
+          setOtpEmail(trimmedEmail)
+          navigate('/verify-otp', { replace: true })
+          break
+        }
+        case 'USER_EXISTS': {
+          setEmailCheckUserExists(true)
+          setEmailCheckError(result.message || 'This email is already registered. Please log in instead.')
+          break
+        }
+        case 'EMAIL_SENT_FAILED':
+        case 'CHECK_EMAIL_ERROR':
+        default: {
+          toast.error(result.message || 'Something went wrong. Please try again.')
+          break
+        }
+      }
+    } catch (caughtError) {
+      const fallbackMessage = axios.isAxiosError(caughtError)
+        ? (caughtError.response?.data as { message?: string } | undefined)?.message
+        : ''
+
+      toast.error(fallbackMessage || 'Unable to verify email right now. Please try again.')
+    } finally {
+      setIsCheckingEmail(false)
+    }
+  }
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setPostalCodeError('')
@@ -194,6 +257,70 @@ export default function RegisterPage() {
     }
   }
 
+  if (phase === 'email-check') {
+    return (
+      <AuthShell
+        title="Register"
+        description="Verify your email to start"
+        eyebrow="New Member"
+        asideTitle="Let’s start with your email."
+        asideBody="We’ll check whether this address is new, already registered, or has a pending verification, then take you to the right next step."
+      >
+        <form className="space-y-5" onSubmit={handleEmailCheck}>
+          <label className="block">
+            <span className="mb-2 block text-sm font-semibold text-[#17110d]">Email Address</span>
+            <input
+              type="email"
+              required
+              value={emailCheckValue}
+              onChange={(event) => {
+                setEmailCheckValue(event.target.value)
+
+                if (emailCheckError) {
+                  setEmailCheckError('')
+                }
+
+                if (emailCheckUserExists) {
+                  setEmailCheckUserExists(false)
+                }
+              }}
+              placeholder="you@example.com"
+              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+            />
+            {emailCheckError ? (
+              <p className="mt-2 text-xs text-rose-700">
+                {emailCheckError}
+                {emailCheckUserExists ? (
+                  <>
+                    {' '}
+                    <Link to="/login" className="font-bold underline underline-offset-4">
+                      Sign in here
+                    </Link>
+                  </>
+                ) : null}
+              </p>
+            ) : null}
+          </label>
+
+          <button
+            type="submit"
+            disabled={isCheckingEmail || !emailCheckValue.trim()}
+            className="w-full rounded-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
+          >
+            {isCheckingEmail ? 'CHECKING...' : 'CONTINUE'}
+          </button>
+
+          <p className="text-center text-sm text-zinc-500">
+            Already have an account?{' '}
+            <Link to="/login" className="font-bold text-[#b63f80] underline underline-offset-4">
+              Sign in
+            </Link>
+          </p>
+        </form>
+      </AuthShell>
+    )
+  }
+
   return (
     <AuthShell
       title="Register"
@@ -219,10 +346,12 @@ export default function RegisterPage() {
             <input
               type="email"
               required
+              readOnly
+              disabled
               value={form.email}
-              onChange={(event) => updateField('email', event.target.value)}
-              className="h-14 w-full rounded-2xl border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+              className="h-14 w-full rounded-2xl border border-[#ddcdc0] bg-[#f5ede5] px-4 text-zinc-700 outline-none"
             />
+            <p className="mt-2 text-xs text-zinc-500">Email verified. Continue with the rest of your details.</p>
             {emailErrorMessage ? <p className="mt-2 text-xs text-rose-700">{emailErrorMessage}</p> : null}
           </label>
           <label className="block">

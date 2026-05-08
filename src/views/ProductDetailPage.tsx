@@ -1,1189 +1,1453 @@
-'use client'
+"use client";
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
-  CircleHelp,
-  Clock3,
-  CreditCard,
-  Eye,
-  Heart,
-  Headset,
-  Package,
-  PencilLine,
-  RotateCcw,
-  ShieldCheck,
-  Trash2,
-  Truck,
-  X,
-} from 'lucide-react'
-import { Link, useLocation, useNavigate, useParams } from '@/lib/router'
-import Footer from '../components/layout/Footer'
-import Header from '../components/layout/Header'
-import ProductCard from '../components/sections/ProductCard'
-import ringSizeGuideImage from '../assets/image/ringsize.jpeg'
-import { useAuth } from '../context/AuthContext'
-import { useCurrency } from '../context/CurrencyContext'
+    Headset,
+    Heart,
+    Package,
+    PencilLine,
+    ShieldCheck,
+    Trash2,
+    Truck,
+    X,
+} from "lucide-react";
+import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
+import ProductCard from "../components/sections/ProductCard";
+import ringSizeGuideImage from "../assets/image/ringsize.jpeg";
+import { useAuth } from "../context/AuthContext";
+import { useCurrency } from "../context/CurrencyContext";
 import {
-  createProductReview,
-  deleteProductReview,
-  getProductBySlug,
-  getProductReviews,
-  updateProductReview,
-} from '../services/productService'
-import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { addToCart } from '../store/cartSlice'
-import { addToWishlist, removeWishlistItem } from '../store/wishlistSlice'
+    createProductReview,
+    deleteProductReview,
+    getProductBySlug,
+    getProductReviews,
+    updateProductReview,
+} from "../services/productService";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { addToCart } from "../store/cartSlice";
+import { addToWishlist, removeWishlistItem } from "../store/wishlistSlice";
 import type {
-  ProductDetail,
-  ProductImage,
-  ProductReview,
-  ProductReviewsPagination,
-  ProductReviewsResult,
-  ProductVariant,
-  ReviewPayload,
-} from '../types/product'
+    ProductDetail,
+    ProductImage,
+    ProductReview,
+    ProductReviewsPagination,
+    ProductReviewsResult,
+    ProductVariant,
+    ReviewPayload,
+} from "../types/product";
 import {
-  formatReviewCount,
-  getMetalToneClass,
-  getVariantGallery,
-  getVariantImage,
-} from '../utils/productUtils'
-import { formatPrice, getPriceAmount } from '../utils/price'
-import { setSingleCheckoutDraft } from '../utils/checkoutStorage'
-
-const todayBenefits = [
-  {
-    title: 'Free Shipping',
-    description: 'Free shipping on orders over $75.',
-  },
-  {
-    title: 'Support Everyday',
-    description: 'Support from 8:30 AM to 10:00 PM everyday',
-  },
-  {
-    title: '100 Day Returns',
-    description: 'Not impressed? Get a refund. You have 100 days to break our hearts.',
-  },
-]
+    formatReviewCount,
+    getMetalToneClass,
+    getVariantGallery,
+    getVariantImage,
+} from "../utils/productUtils";
+import { formatPrice } from "../utils/price";
+import { setSingleCheckoutDraft } from "../utils/checkoutStorage";
 
 const productFeatureItems = [
-  {
-    title: 'Shipping Faster',
-    description: 'Use on walls, furniture, doors and many more surfaces. The possibilities are endless.',
-  },
-  {
-    title: 'Cost Material',
-    description: 'Use on walls, furniture, doors and many more surfaces. The possibilities are endless.',
-  },
-  {
-    title: 'High Quality',
-    description: 'Use on walls, furniture, doors and many more surfaces. The possibilities are endless.',
-  },
-  {
-    title: 'Highly Compatible',
-    description: 'Use on walls, furniture, doors and many more surfaces. The possibilities are endless.',
-  },
-]
+    {
+        title: "Shipping Faster",
+        description:
+            "Carefully packed and dispatched within 1–2 business days from our Antwerp boutique.",
+    },
+    {
+        title: "Cost Material",
+        description:
+            "Lab-grown diamonds and sterling silver crafted at fair, considered pricing.",
+    },
+    {
+        title: "High Quality",
+        description:
+            "Every piece is QC-checked twice before shipping to keep the finish flawless.",
+    },
+    {
+        title: "Highly Compatible",
+        description:
+            "Hypoallergenic finishes designed for daily wear and gentle on sensitive skin.",
+    },
+];
 
 function StarRating({ rating }: { rating: number }) {
-  const filledStars = Math.round(rating)
+    const filledStars = Math.round(rating);
 
-  return (
-    <div className="flex items-center gap-1 text-[#f2b22f]">
-      {Array.from({ length: 5 }, (_, index) => (
-        <span key={index} aria-hidden="true" className="text-lg leading-none">
-          {index < filledStars ? '★' : '☆'}
-        </span>
-      ))}
-    </div>
-  )
+    return (
+        <div className="flex items-center gap-1 text-pink-500">
+            {Array.from({ length: 5 }, (_, index) => (
+                <span
+                    key={index}
+                    aria-hidden="true"
+                    className="text-base leading-none"
+                >
+                    {index < filledStars ? "★" : "☆"}
+                </span>
+            ))}
+        </div>
+    );
 }
 
-function PaymentIcon({ type }: { type: 'visa' | 'mastercard' | 'rupay' | 'amex' | 'upi' | 'card' }) {
-  if (type === 'visa') {
-    return (
-      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="Visa">
-        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
-        <text x="36" y="26" textAnchor="middle" fill="#1a4ec7" fontSize="16" fontWeight="700" fontStyle="italic">
-          VISA
-        </text>
-      </svg>
-    )
-  }
+function PaymentIcon({
+    type,
+}: {
+    type: "visa" | "mastercard" | "rupay" | "amex" | "upi" | "card";
+}) {
+    if (type === "visa") {
+        return (
+            <svg
+                viewBox="0 0 72 40"
+                className="h-8 w-full"
+                role="img"
+                aria-label="Visa"
+            >
+                <rect
+                    x="1"
+                    y="1"
+                    width="70"
+                    height="38"
+                    fill="#ffffff"
+                    stroke="#d8d8d8"
+                />
+                <text
+                    x="36"
+                    y="26"
+                    textAnchor="middle"
+                    fill="#1a4ec7"
+                    fontSize="16"
+                    fontWeight="700"
+                    fontStyle="italic"
+                >
+                    VISA
+                </text>
+            </svg>
+        );
+    }
 
-  if (type === 'mastercard') {
-    return (
-      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="MasterCard">
-        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
-        <circle cx="30" cy="20" r="10" fill="#eb001b" />
-        <circle cx="42" cy="20" r="10" fill="#f79e1b" fillOpacity="0.95" />
-      </svg>
-    )
-  }
+    if (type === "mastercard") {
+        return (
+            <svg
+                viewBox="0 0 72 40"
+                className="h-8 w-full"
+                role="img"
+                aria-label="MasterCard"
+            >
+                <rect
+                    x="1"
+                    y="1"
+                    width="70"
+                    height="38"
+                    fill="#ffffff"
+                    stroke="#d8d8d8"
+                />
+                <circle cx="30" cy="20" r="10" fill="#eb001b" />
+                <circle
+                    cx="42"
+                    cy="20"
+                    r="10"
+                    fill="#f79e1b"
+                    fillOpacity="0.95"
+                />
+            </svg>
+        );
+    }
 
-  if (type === 'rupay') {
-    return (
-      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="RuPay">
-        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
-        <polygon points="12,28 42,28 50,22 20,22" fill="#128b3d" />
-        <polygon points="18,22 48,22 56,16 26,16" fill="#f08c23" />
-        <text x="48" y="28" textAnchor="middle" fill="#1746a2" fontSize="10" fontWeight="700">
-          RuPay
-        </text>
-      </svg>
-    )
-  }
+    if (type === "rupay") {
+        return (
+            <svg
+                viewBox="0 0 72 40"
+                className="h-8 w-full"
+                role="img"
+                aria-label="RuPay"
+            >
+                <rect
+                    x="1"
+                    y="1"
+                    width="70"
+                    height="38"
+                    fill="#ffffff"
+                    stroke="#d8d8d8"
+                />
+                <polygon points="12,28 42,28 50,22 20,22" fill="#128b3d" />
+                <polygon points="18,22 48,22 56,16 26,16" fill="#f08c23" />
+                <text
+                    x="48"
+                    y="28"
+                    textAnchor="middle"
+                    fill="#1746a2"
+                    fontSize="10"
+                    fontWeight="700"
+                >
+                    RuPay
+                </text>
+            </svg>
+        );
+    }
 
-  if (type === 'amex') {
-    return (
-      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="Amex">
-        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
-        <rect x="10" y="9" width="52" height="22" rx="4" fill="#1f7acb" />
-        <text x="36" y="24" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="700">
-          AMEX
-        </text>
-      </svg>
-    )
-  }
+    if (type === "amex") {
+        return (
+            <svg
+                viewBox="0 0 72 40"
+                className="h-8 w-full"
+                role="img"
+                aria-label="Amex"
+            >
+                <rect
+                    x="1"
+                    y="1"
+                    width="70"
+                    height="38"
+                    fill="#ffffff"
+                    stroke="#d8d8d8"
+                />
+                <rect x="10" y="9" width="52" height="22" fill="#1f7acb" />
+                <text
+                    x="36"
+                    y="24"
+                    textAnchor="middle"
+                    fill="#ffffff"
+                    fontSize="10"
+                    fontWeight="700"
+                >
+                    AMEX
+                </text>
+            </svg>
+        );
+    }
 
-  if (type === 'upi') {
-    return (
-      <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="UPI">
-        <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
-        <text x="28" y="25" textAnchor="middle" fill="#222222" fontSize="14" fontWeight="700">
-          UPI
-        </text>
-        <polygon points="44,13 56,20 44,27" fill="#f08c23" />
-        <polygon points="49,13 61,20 49,27" fill="#21a453" fillOpacity="0.95" />
-      </svg>
-    )
-  }
+    if (type === "upi") {
+        return (
+            <svg
+                viewBox="0 0 72 40"
+                className="h-8 w-full"
+                role="img"
+                aria-label="UPI"
+            >
+                <rect
+                    x="1"
+                    y="1"
+                    width="70"
+                    height="38"
+                    fill="#ffffff"
+                    stroke="#d8d8d8"
+                />
+                <text
+                    x="28"
+                    y="25"
+                    textAnchor="middle"
+                    fill="#222222"
+                    fontSize="14"
+                    fontWeight="700"
+                >
+                    UPI
+                </text>
+                <polygon points="44,13 56,20 44,27" fill="#f08c23" />
+                <polygon
+                    points="49,13 61,20 49,27"
+                    fill="#21a453"
+                    fillOpacity="0.95"
+                />
+            </svg>
+        );
+    }
 
-  return (
-    <svg viewBox="0 0 72 40" className="h-8 w-full" role="img" aria-label="Card">
-      <rect x="1" y="1" width="70" height="38" rx="8" fill="#ffffff" stroke="#d8d8d8" />
-      <rect x="1" y="11" width="70" height="8" fill="#2d2d2d" />
-      <rect x="10" y="24" width="14" height="7" rx="2" fill="#f0b45b" />
-      <rect x="29" y="24" width="26" height="4" rx="2" fill="#8b8b8b" />
-    </svg>
-  )
+    return (
+        <svg
+            viewBox="0 0 72 40"
+            className="h-8 w-full"
+            role="img"
+            aria-label="Card"
+        >
+            <rect
+                x="1"
+                y="1"
+                width="70"
+                height="38"
+                fill="#ffffff"
+                stroke="#d8d8d8"
+            />
+            <rect x="1" y="11" width="70" height="8" fill="#2d2d2d" />
+            <rect x="10" y="24" width="14" height="7" fill="#f0b45b" />
+            <rect x="29" y="24" width="26" height="4" fill="#8b8b8b" />
+        </svg>
+    );
 }
 
 function ProductFeatureGrid() {
-  const featureIcons = [Truck, Package, ShieldCheck, Headset]
+    const featureIcons = [Truck, Package, ShieldCheck, Headset];
 
-  return (
-    <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-      {productFeatureItems.map((item, index) => {
-        const FeatureIcon = featureIcons[index] ?? ShieldCheck
+    return (
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {productFeatureItems.map((item, index) => {
+                const FeatureIcon = featureIcons[index] ?? ShieldCheck;
 
-        return (
-          <article key={item.title} className="space-y-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center text-[#2a2a2a]">
-              <FeatureIcon strokeWidth={1.7} className="h-6 w-6" />
-            </span>
-            <h4 className="text-[1.65rem] font-semibold tracking-[-0.04em] text-[#191919] sm:text-[1.35rem]">
-              {item.title}
-            </h4>
-            <p className="max-w-[18rem] text-sm leading-7 text-[#6a6a6a]">{item.description}</p>
-          </article>
-        )
-      })}
-    </div>
-  )
+                return (
+                    <article key={item.title} className="space-y-3">
+                        <span className="inline-flex h-10 w-10 items-center justify-center bg-pink-500 text-white">
+                            <FeatureIcon
+                                strokeWidth={1.6}
+                                className="h-5 w-5"
+                            />
+                        </span>
+                        <h4 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                            {item.title}
+                        </h4>
+                        <p className="max-w-[18rem] text-[13px] leading-7 text-zinc-600">
+                            {item.description}
+                        </p>
+                    </article>
+                );
+            })}
+        </div>
+    );
 }
 
 function ProductDetailSkeleton() {
-  return (
-    <div className="mx-auto max-w-[1580px] px-4 py-10 lg:px-8">
-      <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
-        <div className="grid gap-6 lg:grid-cols-[160px_minmax(0,1fr)]">
-          <div className="space-y-4">
-            <div className="shimmer-surface h-28 rounded-[24px]" />
-            <div className="shimmer-surface h-28 rounded-[24px]" />
-          </div>
-          <div className="shimmer-surface min-h-[520px] rounded-[32px]" />
+    return (
+        <div className="mx-auto max-w-[1480px] px-6 py-10 lg:px-10">
+            <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
+                <div className="grid gap-6 lg:grid-cols-[160px_minmax(0,1fr)]">
+                    <div className="space-y-4">
+                        <div className="shimmer-surface h-28" />
+                        <div className="shimmer-surface h-28" />
+                    </div>
+                    <div className="shimmer-surface min-h-[520px]" />
+                </div>
+                <div className="space-y-5 border border-zinc-200 bg-white p-8">
+                    <div className="shimmer-surface h-8 w-1/2" />
+                    <div className="shimmer-surface h-5 w-1/3" />
+                    <div className="shimmer-surface h-10 w-32" />
+                    <div className="shimmer-surface h-5 w-40" />
+                    <div className="flex gap-2">
+                        <div className="shimmer-surface h-6 w-6 rounded-full" />
+                        <div className="shimmer-surface h-6 w-6 rounded-full" />
+                        <div className="shimmer-surface h-6 w-6 rounded-full" />
+                    </div>
+                    <div className="shimmer-surface h-32" />
+                    <div className="shimmer-surface h-12" />
+                    <div className="shimmer-surface h-12" />
+                </div>
+            </div>
         </div>
-        <div className="space-y-5 rounded-[32px] border border-[#ecdcd0] bg-white p-8 shadow-[0_20px_60px_rgba(55,31,10,0.08)]">
-          <div className="shimmer-surface h-8 w-1/2 rounded-full" />
-          <div className="shimmer-surface h-5 w-1/3 rounded-full" />
-          <div className="shimmer-surface h-10 w-32 rounded-full" />
-          <div className="shimmer-surface h-5 w-40 rounded-full" />
-          <div className="flex gap-2">
-            <div className="shimmer-surface h-6 w-6 rounded-full" />
-            <div className="shimmer-surface h-6 w-6 rounded-full" />
-            <div className="shimmer-surface h-6 w-6 rounded-full" />
-          </div>
-          <div className="shimmer-surface h-32 rounded-[24px]" />
-          <div className="shimmer-surface h-12 rounded-full" />
-          <div className="shimmer-surface h-12 rounded-full" />
-        </div>
-      </div>
-    </div>
-  )
+    );
 }
 
 function formatReviewDate(value: string): string {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-  }).format(new Date(value))
+    return new Intl.DateTimeFormat("en-IN", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    }).format(new Date(value));
 }
 
 function getReviewHeadline(comment: string): string {
-  const trimmedComment = comment.trim()
+    const trimmedComment = comment.trim();
 
-  if (!trimmedComment) {
-    return 'Customer Review'
-  }
+    if (!trimmedComment) {
+        return "Customer Review";
+    }
 
-  return trimmedComment.length > 52 ? `${trimmedComment.slice(0, 52)}...` : trimmedComment
+    return trimmedComment.length > 52
+        ? `${trimmedComment.slice(0, 52)}...`
+        : trimmedComment;
 }
 
 function getInitialVariantId(product: ProductDetail | null): string {
-  return product?.variants[0]?.id ?? ''
+    return product?.variants[0]?.id ?? "";
 }
 
 function getInitialImageId(product: ProductDetail | null): string {
-  const firstVariant = product?.variants[0]
-  const firstImage = firstVariant ? getVariantGallery(firstVariant)[0] : undefined
+    const firstVariant = product?.variants[0];
+    const firstImage = firstVariant
+        ? getVariantGallery(firstVariant)[0]
+        : undefined;
 
-  return firstImage?.id ?? ''
+    return firstImage?.id ?? "";
 }
 
 const initialReviewForm: ReviewPayload = {
-  rating: 5,
-  comment: '',
-}
+    rating: 5,
+    comment: "",
+};
 
-const reviewRatingOptions = [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5]
+const reviewRatingOptions = [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5];
 
 type ProductDetailPageProps = {
-  initialProduct?: ProductDetail | null
-  initialReviewsData?: ProductReviewsResult | null
-}
+    initialProduct?: ProductDetail | null;
+    initialReviewsData?: ProductReviewsResult | null;
+};
 
 export default function ProductDetailPage({
-  initialProduct = null,
-  initialReviewsData = null,
+    initialProduct = null,
+    initialReviewsData = null,
 }: ProductDetailPageProps) {
-  const navigate = useNavigate()
-  const location = useLocation()
-  const params = useParams<{ slug?: string | string[]; productId?: string | string[] }>()
-  const slugParam = typeof params.slug === 'string' ? params.slug : ''
-  const legacyProductIdParam = typeof params.productId === 'string' ? params.productId : ''
-  const productIdentifier = slugParam || legacyProductIdParam
-  const { isAuthenticated, session } = useAuth()
-  const { currency } = useCurrency()
-  const dispatch = useAppDispatch()
-  const [product, setProduct] = useState<ProductDetail | null>(initialProduct)
-  const resolvedProductId = product?.id ?? initialProduct?.id ?? ''
-  const shouldSkipInitialFetchRef = useRef(
-    Boolean(initialReviewsData) && Boolean(initialProduct) && (initialProduct?.slug === slugParam || initialProduct?.id === productIdentifier),
-  )
-  const wishlistItem = useAppSelector((state) =>
-    state.wishlist.wishlist?.items.find((item) => item.productId === resolvedProductId),
-  )
-  const [reviews, setReviews] = useState<ProductReview[]>(initialReviewsData?.reviews ?? [])
-  const [reviewsPagination, setReviewsPagination] = useState<ProductReviewsPagination | null>(
-    initialReviewsData?.pagination ?? null,
-  )
-  const [isLoading, setIsLoading] = useState(!initialProduct)
-  const [error, setError] = useState('')
-  const [selectedVariantId, setSelectedVariantId] = useState(getInitialVariantId(initialProduct))
-  const [selectedImageId, setSelectedImageId] = useState(getInitialImageId(initialProduct))
-  const [quantity, setQuantity] = useState(1)
-  const [cartFeedback, setCartFeedback] = useState('')
-  const [wishlistFeedback, setWishlistFeedback] = useState('')
-  const [reviewFeedback, setReviewFeedback] = useState('')
-  const [reviewForm, setReviewForm] = useState<ReviewPayload>(initialReviewForm)
-  const [isReviewFormOpen, setIsReviewFormOpen] = useState(false)
-  const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false)
-  const [isAddingToCart, setIsAddingToCart] = useState(false)
-  const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false)
-  const [isSubmittingReview, setIsSubmittingReview] = useState(false)
-  const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0])
+    const navigate = useNavigate();
+    const location = useLocation();
+    const params = useParams<{
+        slug?: string | string[];
+        productId?: string | string[];
+    }>();
+    const slugParam = typeof params.slug === "string" ? params.slug : "";
+    const legacyProductIdParam =
+        typeof params.productId === "string" ? params.productId : "";
+    const productIdentifier = slugParam || legacyProductIdParam;
+    const { isAuthenticated, session } = useAuth();
+    const { currency } = useCurrency();
+    const dispatch = useAppDispatch();
+    const [product, setProduct] = useState<ProductDetail | null>(
+        initialProduct,
+    );
+    const resolvedProductId = product?.id ?? initialProduct?.id ?? "";
+    const shouldSkipInitialFetchRef = useRef(
+        Boolean(initialReviewsData) &&
+            Boolean(initialProduct) &&
+            (initialProduct?.slug === slugParam ||
+                initialProduct?.id === productIdentifier),
+    );
+    const wishlistItem = useAppSelector((state) =>
+        state.wishlist.wishlist?.items.find(
+            (item) => item.productId === resolvedProductId,
+        ),
+    );
+    const [reviews, setReviews] = useState<ProductReview[]>(
+        initialReviewsData?.reviews ?? [],
+    );
+    const [reviewsPagination, setReviewsPagination] =
+        useState<ProductReviewsPagination | null>(
+            initialReviewsData?.pagination ?? null,
+        );
+    const [isLoading, setIsLoading] = useState(!initialProduct);
+    const [error, setError] = useState("");
+    const [selectedVariantId, setSelectedVariantId] = useState(
+        getInitialVariantId(initialProduct),
+    );
+    const [selectedImageId, setSelectedImageId] = useState(
+        getInitialImageId(initialProduct),
+    );
+    const [quantity, setQuantity] = useState(1);
+    const [cartFeedback, setCartFeedback] = useState("");
+    const [wishlistFeedback, setWishlistFeedback] = useState("");
+    const [reviewFeedback, setReviewFeedback] = useState("");
+    const [reviewForm, setReviewForm] =
+        useState<ReviewPayload>(initialReviewForm);
+    const [isReviewFormOpen, setIsReviewFormOpen] = useState(false);
+    const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
+    const [isAddingToCart, setIsAddingToCart] = useState(false);
+    const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false);
+    const [isSubmittingReview, setIsSubmittingReview] = useState(false);
+    const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0]);
 
-  async function loadReviews(targetProductId: string) {
-    const reviewsResponse = await getProductReviews(targetProductId)
+    async function loadReviews(targetProductId: string) {
+        const reviewsResponse = await getProductReviews(targetProductId);
 
-    setReviews(reviewsResponse.reviews)
-    setReviewsPagination(reviewsResponse.pagination)
-  }
-
-  useEffect(() => {
-    let isMounted = true
-
-    if (shouldSkipInitialFetchRef.current && (initialProduct?.slug === slugParam || initialProduct?.id === productIdentifier)) {
-      shouldSkipInitialFetchRef.current = false
-      return () => {
-        isMounted = false
-      }
+        setReviews(reviewsResponse.reviews);
+        setReviewsPagination(reviewsResponse.pagination);
     }
 
-    async function loadProduct() {
-      setIsLoading(true)
+    useEffect(() => {
+        let isMounted = true;
 
-      try {
-        const productResponse = await getProductBySlug(productIdentifier)
-        const reviewsResponse = await getProductReviews(productResponse.id)
-
-        if (!isMounted) {
-          return
+        if (
+            shouldSkipInitialFetchRef.current &&
+            (initialProduct?.slug === slugParam ||
+                initialProduct?.id === productIdentifier)
+        ) {
+            shouldSkipInitialFetchRef.current = false;
+            return () => {
+                isMounted = false;
+            };
         }
 
-        const firstVariant = productResponse.variants[0]
-        const firstImage = firstVariant ? getVariantGallery(firstVariant)[0] : undefined
+        async function loadProduct() {
+            setIsLoading(true);
 
-        setProduct(productResponse)
-        setReviews(reviewsResponse.reviews)
-        setReviewsPagination(reviewsResponse.pagination)
-        setSelectedVariantId(firstVariant?.id ?? '')
-        setSelectedImageId(firstImage?.id ?? '')
-        setQuantity(1)
-        setReviewForm(initialReviewForm)
-        setReviewFeedback('')
-        setIsReviewFormOpen(false)
-        setError('')
-      } catch {
-        if (!isMounted) {
-          return
+            try {
+                const productResponse =
+                    await getProductBySlug(productIdentifier);
+                const reviewsResponse = await getProductReviews(
+                    productResponse.id,
+                );
+
+                if (!isMounted) {
+                    return;
+                }
+
+                const firstVariant = productResponse.variants[0];
+                const firstImage = firstVariant
+                    ? getVariantGallery(firstVariant)[0]
+                    : undefined;
+
+                setProduct(productResponse);
+                setReviews(reviewsResponse.reviews);
+                setReviewsPagination(reviewsResponse.pagination);
+                setSelectedVariantId(firstVariant?.id ?? "");
+                setSelectedImageId(firstImage?.id ?? "");
+                setQuantity(1);
+                setReviewForm(initialReviewForm);
+                setReviewFeedback("");
+                setIsReviewFormOpen(false);
+                setError("");
+            } catch {
+                if (!isMounted) {
+                    return;
+                }
+
+                setProduct(null);
+                setReviews([]);
+                setReviewsPagination(null);
+                setError("Unable to load this product right now.");
+            } finally {
+                if (isMounted) {
+                    setIsLoading(false);
+                }
+            }
         }
 
-        setProduct(null)
-        setReviews([])
-        setReviewsPagination(null)
-        setError('Unable to load this product right now.')
-      } finally {
-        if (isMounted) {
-          setIsLoading(false)
+        if (productIdentifier) {
+            void loadProduct();
         }
-      }
+
+        return () => {
+            isMounted = false;
+        };
+    }, [
+        initialProduct?.id,
+        initialProduct?.slug,
+        productIdentifier,
+        slugParam,
+    ]);
+
+    useEffect(() => {
+        if (!isSizeGuideOpen) {
+            return;
+        }
+
+        const previousOverflow = document.body.style.overflow;
+
+        function handleEscapeKey(event: KeyboardEvent) {
+            if (event.key === "Escape") {
+                setIsSizeGuideOpen(false);
+            }
+        }
+
+        document.body.style.overflow = "hidden";
+        window.addEventListener("keydown", handleEscapeKey);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            window.removeEventListener("keydown", handleEscapeKey);
+        };
+    }, [isSizeGuideOpen]);
+
+    useEffect(() => {
+        if (!product) {
+            return;
+        }
+
+        setOpenFaqIndexes([0].filter((index) => index < product.faqs.length));
+    }, [product]);
+
+    const selectedVariant = useMemo<ProductVariant | undefined>(() => {
+        if (!product) {
+            return undefined;
+        }
+
+        return (
+            product.variants.find(
+                (variant) => variant.id === selectedVariantId,
+            ) ?? product.variants[0]
+        );
+    }, [product, selectedVariantId]);
+
+    const galleryImages = useMemo<ProductImage[]>(() => {
+        if (!selectedVariant) {
+            return [];
+        }
+
+        return getVariantGallery(selectedVariant);
+    }, [selectedVariant]);
+
+    const selectedImage =
+        galleryImages.find((image) => image.id === selectedImageId) ??
+        galleryImages[0];
+
+    const currentUserReview = useMemo(() => {
+        if (!session) {
+            return undefined;
+        }
+
+        return reviews.find(
+            (review) =>
+                review.isEditable ||
+                review.userEmail === session.email ||
+                review.reviewerEmail === session.email ||
+                review.username === session.username,
+        );
+    }, [reviews, session]);
+
+    const totalReviewCount =
+        reviewsPagination?.totalReviews ?? product?.reviewsCount ?? 0;
+    const averageReviewRating =
+        reviews.length > 0
+            ? reviews.reduce((total, review) => total + review.rating, 0) /
+              reviews.length
+            : (product?.rating ?? 0);
+    const normalizedCategory = (product?.category ?? "").trim().toLowerCase();
+    const isRingCategory =
+        normalizedCategory === "ring" || normalizedCategory === "rings";
+    const basePrice = selectedVariant?.price;
+
+    const reviewBreakdown = [5, 4, 3, 2, 1].map((star) => {
+        const count = reviews.filter(
+            (review) => Math.round(review.rating) === star,
+        ).length;
+        const width =
+            totalReviewCount > 0 ? (count / totalReviewCount) * 100 : 0;
+
+        return { star, count, width };
+    });
+
+    function toggleFaq(index: number) {
+        setOpenFaqIndexes((currentIndexes) =>
+            currentIndexes.includes(index)
+                ? currentIndexes.filter(
+                      (currentIndex) => currentIndex !== index,
+                  )
+                : [...currentIndexes, index],
+        );
     }
 
-    if (productIdentifier) {
-      void loadProduct()
+    function handleVariantChange(variant: ProductVariant) {
+        const nextGallery = getVariantGallery(variant);
+
+        setSelectedVariantId(variant.id);
+        setSelectedImageId(nextGallery[0]?.id ?? "");
     }
 
-    return () => {
-      isMounted = false
-    }
-  }, [initialProduct?.id, initialProduct?.slug, productIdentifier, slugParam])
+    async function handleAddToCart() {
+        if (!product || !selectedVariant) {
+            return;
+        }
 
-  useEffect(() => {
-    if (!isSizeGuideOpen) {
-      return
-    }
+        if (!isAuthenticated) {
+            navigate("/login", { state: { from: location.pathname } });
+            return;
+        }
 
-    const previousOverflow = document.body.style.overflow
+        setIsAddingToCart(true);
+        setCartFeedback("");
 
-    function handleEscapeKey(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        setIsSizeGuideOpen(false)
-      }
-    }
+        try {
+            await dispatch(
+                addToCart({
+                    productId: product.id,
+                    quantity,
+                    variantId: selectedVariant.id,
+                }),
+            ).unwrap();
 
-    document.body.style.overflow = 'hidden'
-    window.addEventListener('keydown', handleEscapeKey)
-
-    return () => {
-      document.body.style.overflow = previousOverflow
-      window.removeEventListener('keydown', handleEscapeKey)
-    }
-  }, [isSizeGuideOpen])
-
-  useEffect(() => {
-    if (!product) {
-      return
+            setCartFeedback("Item added to cart successfully.");
+        } catch {
+            setCartFeedback("Unable to add this item to cart right now.");
+        } finally {
+            setIsAddingToCart(false);
+        }
     }
 
-    setOpenFaqIndexes([0].filter((index) => index < product.faqs.length))
-  }, [product])
+    function handleBuyNow() {
+        if (!product || !selectedVariant) {
+            return;
+        }
 
-  const selectedVariant = useMemo<ProductVariant | undefined>(() => {
-    if (!product) {
-      return undefined
+        if (!isAuthenticated) {
+            navigate("/login", { state: { from: location.pathname } });
+            return;
+        }
+
+        const draft = {
+            item: {
+                id: `${product.id}-${selectedVariant.id}`,
+                productId: product.id,
+                variantId: selectedVariant.id,
+                title: product.title,
+                variantTitle: selectedVariant.title,
+                thumbnail: getVariantImage(selectedVariant),
+                price: selectedVariant.price,
+                quantity,
+            },
+            returnPath: location.pathname,
+        };
+
+        setSingleCheckoutDraft(draft);
+        navigate("/checkout?source=single", {
+            state: {
+                source: "single",
+                draft,
+            },
+        });
     }
 
-    return product.variants.find((variant) => variant.id === selectedVariantId) ?? product.variants[0]
-  }, [product, selectedVariantId])
+    async function handleWishlistAction() {
+        if (!product) {
+            return;
+        }
 
-  const galleryImages = useMemo<ProductImage[]>(() => {
-    if (!selectedVariant) {
-      return []
+        if (!isAuthenticated) {
+            navigate("/login", { state: { from: location.pathname } });
+            return;
+        }
+
+        setIsUpdatingWishlist(true);
+        setWishlistFeedback("");
+
+        try {
+            if (wishlistItem) {
+                await dispatch(removeWishlistItem(wishlistItem.id)).unwrap();
+                setWishlistFeedback("Item removed from wishlist.");
+                return;
+            }
+
+            await dispatch(addToWishlist(product.id)).unwrap();
+            setWishlistFeedback("Item saved to wishlist.");
+        } catch {
+            setWishlistFeedback("Unable to update wishlist right now.");
+        } finally {
+            setIsUpdatingWishlist(false);
+        }
     }
 
-    return getVariantGallery(selectedVariant)
-  }, [selectedVariant])
+    function openReviewForm() {
+        if (!isAuthenticated) {
+            navigate("/login", { state: { from: location.pathname } });
+            return;
+        }
 
-  const selectedImage =
-    galleryImages.find((image) => image.id === selectedImageId) ?? galleryImages[0]
+        if (currentUserReview) {
+            setReviewForm({
+                rating: currentUserReview.rating,
+                comment: currentUserReview.comment,
+            });
+        } else {
+            setReviewForm(initialReviewForm);
+        }
 
-  const currentUserReview = useMemo(() => {
-    if (!session) {
-      return undefined
+        setReviewFeedback("");
+        setIsReviewFormOpen(true);
     }
 
-    return reviews.find(
-      (review) =>
-        review.isEditable ||
-        review.userEmail === session.email ||
-        review.reviewerEmail === session.email ||
-        review.username === session.username,
-    )
-  }, [reviews, session])
+    async function handleReviewSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
 
-  const totalReviewCount = reviewsPagination?.totalReviews ?? product?.reviewsCount ?? 0
-  const averageReviewRating =
-    reviews.length > 0 ? reviews.reduce((total, review) => total + review.rating, 0) / reviews.length : (product?.rating ?? 0)
-  const normalizedCategory = (product?.category ?? '').trim().toLowerCase()
-  const isRingCategory = normalizedCategory === 'ring' || normalizedCategory === 'rings'
-  const basePrice = selectedVariant?.price
-  const basePriceAmount = getPriceAmount(basePrice, currency)
-  const comparePriceAmount = Math.round(basePriceAmount / 0.625)
-  const discountPercent = Math.max(
-    1,
-    Math.round(((comparePriceAmount - basePriceAmount) / Math.max(comparePriceAmount, 1)) * 100),
-  )
+        if (!product) {
+            return;
+        }
 
-  const reviewBreakdown = [5, 4, 3, 2, 1].map((star) => {
-    const count = reviews.filter((review) => Math.round(review.rating) === star).length
-    const width = totalReviewCount > 0 ? (count / totalReviewCount) * 100 : 0
+        if (!isAuthenticated) {
+            navigate("/login", { state: { from: location.pathname } });
+            return;
+        }
 
-    return { star, count, width }
-  })
+        if (!reviewForm.comment.trim()) {
+            setReviewFeedback("Review comment is required.");
+            return;
+        }
 
-  function toggleFaq(index: number) {
-    setOpenFaqIndexes((currentIndexes) =>
-      currentIndexes.includes(index)
-        ? currentIndexes.filter((currentIndex) => currentIndex !== index)
-        : [...currentIndexes, index],
-    )
-  }
+        setIsSubmittingReview(true);
+        setReviewFeedback("");
 
-  function handleVariantChange(variant: ProductVariant) {
-    const nextGallery = getVariantGallery(variant)
+        try {
+            if (currentUserReview) {
+                await updateProductReview(currentUserReview.id, {
+                    rating: reviewForm.rating,
+                    comment: reviewForm.comment.trim(),
+                });
+                setReviewFeedback("Review updated successfully.");
+            } else {
+                await createProductReview(product.id, {
+                    rating: reviewForm.rating,
+                    comment: reviewForm.comment.trim(),
+                });
+                setReviewFeedback("Review added successfully.");
+            }
 
-    setSelectedVariantId(variant.id)
-    setSelectedImageId(nextGallery[0]?.id ?? '')
-  }
-
-  async function handleAddToCart() {
-    if (!product || !selectedVariant) {
-      return
+            await loadReviews(product.id);
+            setIsReviewFormOpen(false);
+            setReviewForm(initialReviewForm);
+        } catch {
+            setReviewFeedback("Unable to save review right now.");
+        } finally {
+            setIsSubmittingReview(false);
+        }
     }
 
-    if (!isAuthenticated) {
-      navigate('/login', { state: { from: location.pathname } })
-      return
+    async function handleDeleteReview() {
+        if (!product || !currentUserReview) {
+            return;
+        }
+
+        setIsSubmittingReview(true);
+        setReviewFeedback("");
+
+        try {
+            await deleteProductReview(currentUserReview.id);
+            await loadReviews(product.id);
+            setReviewForm(initialReviewForm);
+            setIsReviewFormOpen(false);
+            setReviewFeedback(
+                "Review deleted successfully. You can add a new review now.",
+            );
+        } catch {
+            setReviewFeedback("Unable to delete review right now.");
+        } finally {
+            setIsSubmittingReview(false);
+        }
     }
 
-    setIsAddingToCart(true)
-    setCartFeedback('')
+    return (
+        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
+            <Header />
+            <main className="pb-16">
+                {isLoading ? <ProductDetailSkeleton /> : null}
 
-    try {
-      await dispatch(addToCart({
-        productId: product.id,
-        quantity,
-        variantId: selectedVariant.id,
-      })).unwrap()
-
-      setCartFeedback('Item added to cart successfully.')
-    } catch {
-      setCartFeedback('Unable to add this item to cart right now.')
-    } finally {
-      setIsAddingToCart(false)
-    }
-  }
-
-  function handleBuyNow() {
-    if (!product || !selectedVariant) {
-      return
-    }
-
-    if (!isAuthenticated) {
-      navigate('/login', { state: { from: location.pathname } })
-      return
-    }
-
-    const draft = {
-      item: {
-        id: `${product.id}-${selectedVariant.id}`,
-        productId: product.id,
-        variantId: selectedVariant.id,
-        title: product.title,
-        variantTitle: selectedVariant.title,
-        thumbnail: getVariantImage(selectedVariant),
-        price: selectedVariant.price,
-        quantity,
-      },
-      returnPath: location.pathname,
-    }
-
-    setSingleCheckoutDraft(draft)
-    navigate('/checkout?source=single', {
-      state: {
-        source: 'single',
-        draft,
-      },
-    })
-  }
-
-  async function handleWishlistAction() {
-    if (!product) {
-      return
-    }
-
-    if (!isAuthenticated) {
-      navigate('/login', { state: { from: location.pathname } })
-      return
-    }
-
-    setIsUpdatingWishlist(true)
-    setWishlistFeedback('')
-
-    try {
-      if (wishlistItem) {
-        await dispatch(removeWishlistItem(wishlistItem.id)).unwrap()
-        setWishlistFeedback('Item removed from wishlist.')
-        return
-      }
-
-      await dispatch(addToWishlist(product.id)).unwrap()
-      setWishlistFeedback('Item saved to wishlist.')
-    } catch {
-      setWishlistFeedback('Unable to update wishlist right now.')
-    } finally {
-      setIsUpdatingWishlist(false)
-    }
-  }
-
-  function openReviewForm() {
-    if (!isAuthenticated) {
-      navigate('/login', { state: { from: location.pathname } })
-      return
-    }
-
-    if (currentUserReview) {
-      setReviewForm({
-        rating: currentUserReview.rating,
-        comment: currentUserReview.comment,
-      })
-    } else {
-      setReviewForm(initialReviewForm)
-    }
-
-    setReviewFeedback('')
-    setIsReviewFormOpen(true)
-  }
-
-  async function handleReviewSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-
-    if (!product) {
-      return
-    }
-
-    if (!isAuthenticated) {
-      navigate('/login', { state: { from: location.pathname } })
-      return
-    }
-
-    if (!reviewForm.comment.trim()) {
-      setReviewFeedback('Review comment is required.')
-      return
-    }
-
-    setIsSubmittingReview(true)
-    setReviewFeedback('')
-
-    try {
-      if (currentUserReview) {
-        await updateProductReview(currentUserReview.id, {
-          rating: reviewForm.rating,
-          comment: reviewForm.comment.trim(),
-        })
-        setReviewFeedback('Review updated successfully.')
-      } else {
-        await createProductReview(product.id, {
-          rating: reviewForm.rating,
-          comment: reviewForm.comment.trim(),
-        })
-        setReviewFeedback('Review added successfully.')
-      }
-
-      await loadReviews(product.id)
-      setIsReviewFormOpen(false)
-      setReviewForm(initialReviewForm)
-    } catch {
-      setReviewFeedback('Unable to save review right now.')
-    } finally {
-      setIsSubmittingReview(false)
-    }
-  }
-
-  async function handleDeleteReview() {
-    if (!product || !currentUserReview) {
-      return
-    }
-
-    setIsSubmittingReview(true)
-    setReviewFeedback('')
-
-    try {
-      await deleteProductReview(currentUserReview.id)
-      await loadReviews(product.id)
-      setReviewForm(initialReviewForm)
-      setIsReviewFormOpen(false)
-      setReviewFeedback('Review deleted successfully. You can add a new review now.')
-    } catch {
-      setReviewFeedback('Unable to delete review right now.')
-    } finally {
-      setIsSubmittingReview(false)
-    }
-  }
-
-  return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900">
-      <Header />
-      <main className="pb-16">
-        {isLoading ? <ProductDetailSkeleton /> : null}
-
-        {!isLoading && error ? (
-          <div className="mx-auto max-w-[1580px] px-4 py-10 lg:px-8">
-            <div className="rounded-[32px] border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div>
-          </div>
-        ) : null}
-
-        {!isLoading && product && selectedVariant ? (
-          <div className="mx-auto max-w-[1580px] px-4 py-8 lg:px-8">
-            <nav className="mb-6 text-sm text-zinc-500">
-              <Link to="/" className="transition hover:text-zinc-900">
-                Home
-              </Link>{' '}
-              /{' '}
-              <Link to="/products" className="transition hover:text-zinc-900">
-                All Products
-              </Link>{' '}
-              / <span className="text-zinc-900">{product.title}</span>
-            </nav>
-
-            <section className="grid gap-10 xl:grid-cols-[1.08fr_0.92fr]">
-              <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
-                <div className="grid gap-6 lg:grid-cols-[160px_minmax(0,1fr)]">
-                  <div className="order-2 flex gap-4 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                    {galleryImages.map((image) => {
-                      const isSelectedImage = selectedImage?.id === image.id
-
-                      return (
-                        <button
-                          key={image.id}
-                          type="button"
-                          onClick={() => setSelectedImageId(image.id)}
-                          className={`min-w-[132px] overflow-hidden rounded-[24px] border bg-white p-2 shadow-sm transition lg:min-w-0 ${isSelectedImage ? 'border-[#111111]' : 'border-[#eadfd4] hover:border-[#8f6b52]'
-                            }`}
-                        >
-                          <img src={image.src} alt={product.title} className="h-28 w-full object-cover" />
-                        </button>
-                      )
-                    })}
-                  </div>
-
-                  <div className="order-1 relative overflow-hidden rounded-[34px] p-6 object-cover lg:order-2">
-                    <button
-                      type="button"
-                      onClick={() => void handleWishlistAction()}
-                      disabled={isUpdatingWishlist}
-                      className={`absolute right-8 top-8 z-10 flex h-9 w-9 items-center justify-center rounded-md border bg-white/90 shadow-sm backdrop-blur transition disabled:opacity-60 ${wishlistItem
-                        ? 'border-[#f3c8df] text-[#e83fa9]'
-                        : 'border-[#d9d9d9] text-zinc-600 hover:border-[#e83fa9] hover:text-[#e83fa9]'
-                        }`}
-                      aria-label={wishlistItem ? 'Remove from wishlist' : 'Add to wishlist'}
-                    >
-                      <Heart
-                        className={`h-4 w-4 ${wishlistItem ? 'fill-current' : ''}`}
-                        strokeWidth={1.9}
-                      />
-                    </button>
-                    <img
-                      src={selectedImage?.src ?? getVariantImage(selectedVariant)}
-                      alt={product.title}
-                      className="h-[540px] w-full object-contain"
-                    />
-                  </div>
-                </div>
-
-              </div>
-
-              <div className="space-y-6 bg-white p-2 sm:p-4">
-                <div>
-                  {/* <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">FASHION</p> */}
-                  <h1 className="mt-1 text-[2.15rem] font-semibold tracking-[-0.05em] text-[#151515]">{product.title}</h1>
-                  {product.h2 ? <h2 className="mt-2 text-sm font-medium text-zinc-600">{product.h2}</h2> : null}
-                  <div className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
-                    <StarRating rating={averageReviewRating} />
-                    <span>({formatReviewCount(totalReviewCount)} reviews)</span>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <p className="text-[2rem] font-semibold text-[#151515]">{formatPrice(basePrice, currency)}</p>
-                    {/* <p className="text-base text-zinc-400 line-through">{formatPrice(comparePriceAmount, currency)}</p> */}
-                    {/* <span className="rounded-full bg-[#ff48b2] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white">
-                      -{discountPercent}%
-                    </span> */}
-                  </div>
-                  <p className="mt-4 max-w-[36rem] text-sm leading-7 text-zinc-500">{product.description}</p>
-                  <p className="mt-2 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">SKU:</span> {selectedVariant.sku ?? 'N/A'}</p>
-                  {product.style ? <p className="mt-1 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">Style:</span> {product.style}</p> : null}
-                  {product.metal ? <p className="mt-1 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">Metal:</span> {product.metal}</p> : null}
-                  {product.finish ? <p className="mt-1 text-sm text-zinc-600"><span className="font-semibold text-zinc-900">Finish:</span> {product.finish}</p> : null}
-                </div>
-
-                <div className="border-y border-[#ebebeb] py-4 text-sm text-zinc-700">
-                  <p className="font-medium text-zinc-900">
-                    Colors:
-                  </p>
-                  <div className="mt-3 flex items-center gap-3">
-                    {product.variants.map((variant) => (
-                      <button
-                        key={variant.id}
-                        type="button"
-                        onClick={() => handleVariantChange(variant)}
-                        title={variant.title}
-                        className={`h-6 w-6 rounded-full border transition ${selectedVariant.id === variant.id ? 'border-[#171717]' : 'border-transparent'
-                          }`}
-                      >
-                        <span className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`} />
-                      </button>
-                    ))}
-                  </div>
-
-                  {isRingCategory ? (
-                    <div className="mt-4 flex items-center  text-sm">
-                      {/* <p className="font-medium text-zinc-900">Ring Size:</p> */}
-                      <button
-                        type="button"
-                        onClick={() => setIsSizeGuideOpen(true)}
-                        className="text-[15px] font-medium text-pink-500 underline underline-offset-2 "
-                      >
-                        View Size Guide
-                      </button>
-                    </div>
-                  ) : null}
-
-                  <div className="mt-4">
-                    <p className="mb-2 text-sm font-medium text-zinc-900">
-                      Quantity:
-                    </p>
-
-                    {/* One Line Mobile + Desktop */}
-                    <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-2 items-center">
-
-                      {/* Quantity Box */}
-                      <div className="flex h-[44px] items-center overflow-hidden rounded-md border border-[#d9d9d9]">
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setQuantity((value) => Math.max(1, value - 1))
-                          }
-                          className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
-                        >
-                          -
-                        </button>
-
-                        <span className="flex h-full w-1/2 items-center justify-center border-x border-[#d9d9d9] text-sm font-medium">
-                          {quantity}
-                        </span>
-
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setQuantity((value) => value + 1)
-                          }
-                          className="flex h-full w-1/2 items-center justify-center text-base text-zinc-700"
-                        >
-                          +
-                        </button>
-                      </div>
-
-                      {/* Add To Cart */}
-                      <button
-                        type="button"
-                        onClick={() => void handleAddToCart()}
-                        disabled={isAddingToCart}
-                        className="h-[44px] w-full rounded-xl border border-[#1a1a1a] px-4 text-[10px] sm:text-xs font-bold tracking-[0.12em] text-[#1a1a1a] transition hover:bg-[#1a1a1a] hover:text-white disabled:opacity-60"
-                      >
-                        {isAddingToCart ? "ADDING..." : "ADD TO CART"}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid gap-3">
-                  <button
-                    type="button"
-                    onClick={handleBuyNow}
-                    className="w-full rounded-xl bg-[#1a1a1a] px-4 py-3 text-xs font-bold tracking-[0.12em] text-white transition hover:bg-[#303030] disabled:opacity-60"
-                  >
-                    BUY IT NOW
-                  </button>
-                </div>
-
-                {cartFeedback ? <p className="text-xs text-zinc-600">{cartFeedback}</p> : null}
-                {wishlistFeedback ? <p className="text-xs text-zinc-600">{wishlistFeedback}</p> : null}
-
-                {/* <div className="space-y-2 pt-1 text-[13px] leading-6 text-zinc-700">
-                  <div className="flex flex-wrap items-center gap-5">
-                    <p className="inline-flex items-center gap-2 font-semibold text-zinc-900">
-                      <RotateCcw strokeWidth={2.4} className="h-3.5 w-3.5" />
-                      Delivery & Return
-                    </p>
-                    <p className="inline-flex items-center gap-2 font-semibold text-zinc-900">
-                      <CircleHelp strokeWidth={2.4} className="h-3.5 w-3.5" />
-                      Ask A Question
-                    </p>
-                  </div>
-                  <div>
-                  <p className="inline-flex items-center gap-2">
-                    <Clock3 strokeWidth={2.4} className="h-3.5 w-3.5" />
-                    <span className="font-semibold text-zinc-900">Estimated Delivery:</span>
-                    <span className="text-zinc-500">14 January - 18 January</span>
-                  </p>
-                  </div>
-                  <div>
-                  <p className="inline-flex items-center gap-2">
-                    <Eye strokeWidth={2.4} className="h-3.5 w-3.5" />
-                    <span className="font-semibold text-zinc-900">38</span>
-                    <span>people viewing this product right now</span>
-                  </p>
-                  </div>
-                  <p><span className="font-semibold text-zinc-900">Categories:</span> <span className="text-zinc-500">{product.category}, {product.vendor}</span></p>
-                  <p><span className="font-semibold text-zinc-900">Tag:</span> <span className="text-zinc-500">{product.tags[0] ?? 'new'}</span></p>
-                </div> */}
-
-                <div className="rounded-2xl border border-[#e9e5df] p-4">
-                  <p className="text-center text-sm font-semibold text-zinc-900">Guaranteed Safe Checkout</p>
-                  <div className="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-6">
-                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="visa" /></span>
-                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="mastercard" /></span>
-                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="rupay" /></span>
-                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="amex" /></span>
-                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="upi" /></span>
-                    <span className="flex items-center justify-center rounded-md bg-[#f8f8f8] p-1"><PaymentIcon type="card" /></span>
-                  </div>
-                </div>
-                {/* <div className="border-t border-[#ebebeb] pt-4">
-                  <h3 className="text-sm font-semibold leading-none tracking-[-0.03em] text-[#111111]">Get It Today</h3>
-                  <div className="mt-5 space-y-4">
-                    {todayBenefits.map((item) => {
-                      const ItemIcon = item.title === 'Free Shipping'
-                        ? Truck
-                        : item.title === 'Support Everyday'
-                          ? Headset
-                          : Package
-
-                      return (
-                        <div key={item.title} className="flex items-start gap-3">
-                          <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center text-zinc-900">
-                            <ItemIcon strokeWidth={1.9} className="h-5 w-5" />
-                          </span>
-                          <div>
-                            <p className="text-sm font-semibold leading-none tracking-[-0.03em] text-[#111111]">{item.title}</p>
-                            <p className="mt-1 text-sm leading-7 text-[#6b7280]">{item.description}</p>
-                          </div>
+                {!isLoading && error ? (
+                    <div className="mx-auto max-w-[1480px] px-6 py-10 lg:px-10">
+                        <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-[13px] uppercase tracking-[0.16em] text-rose-700">
+                            {error}
                         </div>
-                      )
-                    })}
-                  </div>
-                </div> */}
-              </div>
-            </section>
-
-            <section className="mx-auto mt-16 max-w-[1150px] border-t border-[#e7e7e7] pt-10">
-              {/* <div className="border-b border-[#e7e7e7] pb-3 text-center">
-                <p className="text-[1.15rem] font-semibold text-[#1a1a1a]">Description</p>
-              </div> */}
-
-              <div className="grid gap-14 py-10 md:grid-cols-2">
-                <div>
-                  <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">Description</h3>
-                  <p className="mt-3 whitespace-pre-line text-base leading-8 text-zinc-600">
-                    {product.additionalSeoContent || product.details || product.description}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-[1.15rem] font-semibold text-[#1a1a1a]">About This Products</h3>
-                  {product.bulletPoints.length > 0 ? (
-                    <ul className="mt-3 space-y-2 text-base leading-8 text-zinc-600">
-                      {product.bulletPoints.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <span className="mt-3 block h-1 w-1 rounded-full bg-zinc-400" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="mt-3 text-base leading-8 text-zinc-600">No product highlights available.</p>
-                  )}
-                </div>
-              </div>
-
-              <ProductFeatureGrid />
-
-              {product.faqs.length > 0 ? (
-                <section className="mt-16">
-                  <h3 className="text-center text-[2rem] font-semibold tracking-[-0.03em] text-[#111111] sm:text-[2.2rem]">FAQ</h3>
-
-                  <div className="mx-auto mt-8 max-w-[980px] border-y border-[#e7e7e7]">
-                    {product.faqs.map((faq, index) => {
-                      const isOpen = openFaqIndexes.includes(index)
-
-                      return (
-                        <article key={`${faq.question}-${index}`} className="border-b border-[#e7e7e7] last:border-b-0">
-                          <button
-                            type="button"
-                            onClick={() => toggleFaq(index)}
-                            className="flex w-full items-center justify-between gap-4 py-5 text-left"
-                            aria-expanded={isOpen}
-                          >
-                            <span className="pr-3 text-[1.04rem] font-semibold leading-7 text-[#191919]">
-                              {index + 1}. {faq.question}
-                            </span>
-                            <span className="text-2xl font-light leading-none text-[#2b2b2b]">{isOpen ? '-' : '+'}</span>
-                          </button>
-
-                          {isOpen ? (
-                            <div className="pb-5 pr-8">
-                              <p className="max-w-[860px] text-[1.02rem] leading-8 text-zinc-600">{faq.answer}</p>
-                            </div>
-                          ) : null}
-                        </article>
-                      )
-                    })}
-                  </div>
-                </section>
-              ) : null}
-            </section>
-
-            <section className="mt-16 border border-[#e7e7e7] bg-white px-6 py-8 sm:px-10">
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <h2 className="text-2xl font-semibold text-[#171717]">Customer Review</h2>
-                <button
-                  type="button"
-                  onClick={openReviewForm}
-                  className="flex items-center gap-2 border border-[#191919] px-4 py-2 text-[11px] font-bold tracking-[0.12em] text-[#191919] transition hover:bg-[#191919] hover:text-white"
-                >
-                  <PencilLine className="h-4 w-4" />
-                  {currentUserReview ? 'EDIT REVIEW' : 'WRITE REVIEW'}
-                </button>
-              </div>
-
-              <div className="mt-6 grid gap-8 border-b border-[#ececec] pb-8 lg:grid-cols-[220px_minmax(0,1fr)]">
-                <div>
-                  <p className="text-5xl font-semibold leading-none text-[#191919]">{averageReviewRating.toFixed(1)}</p>
-                  <div className="mt-2">
-                    <StarRating rating={averageReviewRating} />
-                  </div>
-                  <p className="mt-2 text-xs text-zinc-500">({formatReviewCount(totalReviewCount)}) Rating</p>
-                </div>
-
-                <div className="space-y-2">
-                  {reviewBreakdown.map((item) => (
-                    <div key={item.star} className="grid grid-cols-[24px_1fr_36px] items-center gap-3 text-xs text-zinc-500">
-                      <span>{item.star}</span>
-                      <div className="h-2 overflow-hidden rounded-full bg-[#ececec]">
-                        <div className="h-full bg-[#d29c1f]" style={{ width: `${item.width}%` }} />
-                      </div>
-                      <span>{item.count}</span>
                     </div>
-                  ))}
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {['Newest', '5 Star', '4 Star', '3 Star', '2 Star', '1 Star'].map((filter) => (
-                      <span key={filter} className="rounded-full border border-[#dddddd] px-3 py-1 text-[11px] text-zinc-600">
-                        {filter}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {isReviewFormOpen ? (
-                <form onSubmit={(event) => void handleReviewSubmit(event)} className="mt-8 border border-[#ebebeb] bg-[#fcfcfc] p-6 text-left">
-                  <div className="grid gap-4 sm:grid-cols-[180px_minmax(0,1fr)] sm:items-start">
-                    <label className="text-sm font-semibold text-[#17110d]">
-                      Rating
-                      <select
-                        value={reviewForm.rating}
-                        onChange={(event) => setReviewForm((current) => ({ ...current, rating: Number(event.target.value) }))}
-                        className="mt-2 h-12 w-full border border-[#dfdfdf] bg-white px-4 text-sm text-zinc-800 outline-none transition focus:border-[#8f8f8f]"
-                      >
-                        {reviewRatingOptions.map((rating) => (
-                          <option key={rating} value={rating}>
-                            {rating} / 5
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-
-                    <label className="text-sm font-semibold text-[#17110d]">
-                      Comment
-                      <textarea
-                        value={reviewForm.comment}
-                        onChange={(event) => setReviewForm((current) => ({ ...current, comment: event.target.value }))}
-                        rows={5}
-                        className="mt-2 w-full border border-[#dfdfdf] bg-white px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#8f8f8f]"
-                        placeholder="Share your experience with this product."
-                      />
-                    </label>
-                  </div>
-
-                  <div className="mt-5 flex flex-wrap gap-3">
-                    <button
-                      type="submit"
-                      disabled={isSubmittingReview}
-                      className="flex items-center gap-2 bg-[#111111] px-6 py-3 text-xs font-bold tracking-[0.12em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
-                    >
-                      <PencilLine className="h-4 w-4" />
-                      {isSubmittingReview ? 'SAVING...' : currentUserReview ? 'UPDATE REVIEW' : 'SUBMIT REVIEW'}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setIsReviewFormOpen(false)
-                        setReviewFeedback('')
-                        setReviewForm(initialReviewForm)
-                      }}
-                      className="border border-[#cfcfcf] px-6 py-3 text-xs font-bold tracking-[0.12em] text-zinc-700 transition hover:bg-[#111111] hover:text-white"
-                    >
-                      CANCEL
-                    </button>
-                    {currentUserReview ? (
-                      <button
-                        type="button"
-                        onClick={() => void handleDeleteReview()}
-                        disabled={isSubmittingReview}
-                        className="flex items-center gap-2 border border-rose-300 px-6 py-3 text-xs font-bold tracking-[0.12em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
-                      >
-                        <Trash2 className="h-4 w-4" />
-                        DELETE REVIEW
-                      </button>
-                    ) : null}
-                  </div>
-                </form>
-              ) : null}
-
-              {reviewFeedback ? <p className="mt-6 text-center text-sm text-zinc-600">{reviewFeedback}</p> : null}
-
-              <div className="mt-8 space-y-6">
-                {reviews.length === 0 ? (
-                  <div className="border border-dashed border-[#dddddd] bg-[#fcfcfc] px-6 py-10 text-center">
-                    <h3 className="text-xl font-semibold text-[#17110d]">No reviews yet</h3>
-                    <p className="mt-2 text-sm text-zinc-500">Be the first to share feedback about this product.</p>
-                  </div>
                 ) : null}
 
-                {reviews.map((review) => (
-                  <article key={review.id} className="border-b border-[#ececec] pb-6 last:border-b-0 last:pb-0">
-                    <div className="grid gap-4 sm:grid-cols-[72px_minmax(0,1fr)]">
-                      <div className="space-y-2">
-                        <div className="h-10 w-10 rounded bg-[#dedede]" />
-                        <div className="h-3 w-10 rounded bg-[#dedede]" />
-                        <div className="h-3 w-10 rounded bg-[#dedede]" />
-                      </div>
-                      <div>
-                        <div className="flex flex-wrap items-center gap-3">
-                          <StarRating rating={review.rating} />
-                          <span className="text-xs text-zinc-500">{formatReviewDate(review.createdAt)}</span>
-                        </div>
-                        <h3 className="mt-2 text-base font-semibold text-[#171717]">{getReviewHeadline(review.comment)}</h3>
-                        <p className="mt-2 text-sm leading-7 text-zinc-600">{review.comment}</p>
-                        <p className="mt-2 text-xs text-zinc-500">By {review.reviewerName || review.username}</p>
-                      </div>
+                {!isLoading && product && selectedVariant ? (
+                    <div className="mx-auto max-w-[1480px] px-6 py-10 lg:px-10">
+                        <nav className="mb-8 text-[12px] uppercase tracking-[0.18em] text-zinc-500">
+                            <Link
+                                to="/"
+                                className="transition hover:text-zinc-900"
+                            >
+                                Home
+                            </Link>{" "}
+                            /{" "}
+                            <Link
+                                to="/products"
+                                className="transition hover:text-zinc-900"
+                            >
+                                Shop
+                            </Link>{" "}
+                            /{" "}
+                            <span className="text-zinc-900">
+                                {product.title}
+                            </span>
+                        </nav>
+
+                        <section className="grid gap-12 xl:grid-cols-[1.08fr_0.92fr]">
+                            <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
+                                <div className="grid gap-5 lg:grid-cols-[120px_minmax(0,1fr)]">
+                                    <div className="order-2 flex gap-3 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
+                                        {galleryImages.map((image) => {
+                                            const isSelectedImage =
+                                                selectedImage?.id === image.id;
+
+                                            return (
+                                                <button
+                                                    key={image.id}
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setSelectedImageId(
+                                                            image.id,
+                                                        )
+                                                    }
+                                                    className={`min-w-[100px] overflow-hidden border bg-white transition lg:min-w-0 ${
+                                                        isSelectedImage
+                                                            ? "border-zinc-900"
+                                                            : "border-zinc-200 hover:border-zinc-500"
+                                                    }`}
+                                                >
+                                                    <img
+                                                        src={image.src}
+                                                        alt={product.title}
+                                                        className="block h-24 w-full object-cover"
+                                                    />
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+
+                                    <div className="order-1 relative overflow-hidden bg-zinc-50 lg:order-2">
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                void handleWishlistAction()
+                                            }
+                                            disabled={isUpdatingWishlist}
+                                            className={`absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center border bg-white transition disabled:opacity-60 ${
+                                                wishlistItem
+                                                    ? "border-pink-500 text-pink-500"
+                                                    : "border-zinc-300 text-zinc-700 hover:border-pink-500 hover:text-pink-500"
+                                            }`}
+                                            aria-label={
+                                                wishlistItem
+                                                    ? "Remove from wishlist"
+                                                    : "Add to wishlist"
+                                            }
+                                        >
+                                            <Heart
+                                                className={`h-4 w-4 ${wishlistItem ? "fill-current" : ""}`}
+                                                strokeWidth={1.8}
+                                            />
+                                        </button>
+                                        <img
+                                            src={
+                                                selectedImage?.src ??
+                                                getVariantImage(selectedVariant)
+                                            }
+                                            alt={product.title}
+                                            className="block h-[540px] w-full object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div>
+                                    <h1 className="text-[28px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px] lg:text-[36px]">
+                                        {product.title}
+                                    </h1>
+                                    {product.h2 ? (
+                                        <h2 className="mt-2 text-[13px] uppercase tracking-[0.14em] text-zinc-600">
+                                            {product.h2}
+                                        </h2>
+                                    ) : null}
+                                    <div className="mt-3 flex items-center gap-3 text-[12px] uppercase tracking-[0.14em] text-zinc-500">
+                                        <StarRating
+                                            rating={averageReviewRating}
+                                        />
+                                        <span>
+                                            (
+                                            {formatReviewCount(
+                                                totalReviewCount,
+                                            )}{" "}
+                                            reviews)
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-zinc-200 pt-5">
+                                    <p className="text-[28px] font-medium tracking-[-0.01em] text-zinc-900 sm:text-[32px]">
+                                        {formatPrice(basePrice, currency)}
+                                    </p>
+                                    <p className="mt-4 max-w-[36rem] text-[14px] leading-7 text-zinc-600">
+                                        {product.description}
+                                    </p>
+                                    <div className="mt-4 space-y-1.5 text-[12px] uppercase tracking-[0.14em] text-zinc-600">
+                                        <p>
+                                            <span className="text-zinc-900">
+                                                SKU:
+                                            </span>{" "}
+                                            {selectedVariant.sku ?? "N/A"}
+                                        </p>
+                                        {product.style ? (
+                                            <p>
+                                                <span className="text-zinc-900">
+                                                    Style:
+                                                </span>{" "}
+                                                {product.style}
+                                            </p>
+                                        ) : null}
+                                        {product.metal ? (
+                                            <p>
+                                                <span className="text-zinc-900">
+                                                    Metal:
+                                                </span>{" "}
+                                                {product.metal}
+                                            </p>
+                                        ) : null}
+                                        {product.finish ? (
+                                            <p>
+                                                <span className="text-zinc-900">
+                                                    Finish:
+                                                </span>{" "}
+                                                {product.finish}
+                                            </p>
+                                        ) : null}
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-zinc-200 py-5">
+                                    <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                        Color
+                                    </p>
+                                    <div className="mt-3 flex items-center gap-3">
+                                        {product.variants.map((variant) => (
+                                            <button
+                                                key={variant.id}
+                                                type="button"
+                                                onClick={() =>
+                                                    handleVariantChange(variant)
+                                                }
+                                                title={variant.title}
+                                                className={`h-7 w-7 rounded-full border-2 transition ${
+                                                    selectedVariant.id ===
+                                                    variant.id
+                                                        ? "border-zinc-900"
+                                                        : "border-transparent hover:border-zinc-300"
+                                                }`}
+                                            >
+                                                <span
+                                                    className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`}
+                                                />
+                                            </button>
+                                        ))}
+                                    </div>
+
+                                    {isRingCategory ? (
+                                        <div className="mt-4 flex items-center text-sm">
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    setIsSizeGuideOpen(true)
+                                                }
+                                                className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
+                                            >
+                                                View Size Guide
+                                            </button>
+                                        </div>
+                                    ) : null}
+
+                                    <div className="mt-6">
+                                        <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                            Quantity
+                                        </p>
+
+                                        <div className="grid grid-cols-[120px_minmax(0,1fr)] gap-3 items-stretch">
+                                            <div className="flex h-[46px] items-center border border-zinc-800">
+                                                <button
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setQuantity((value) =>
+                                                            Math.max(
+                                                                1,
+                                                                value - 1,
+                                                            ),
+                                                        )
+                                                    }
+                                                    className="flex h-full w-1/3 items-center justify-center text-base text-zinc-800 transition hover:bg-zinc-100"
+                                                >
+                                                    −
+                                                </button>
+
+                                                <span className="flex h-full w-1/3 items-center justify-center border-x border-zinc-800 text-[13px] font-medium">
+                                                    {quantity}
+                                                </span>
+
+                                                <button
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setQuantity(
+                                                            (value) =>
+                                                                value + 1,
+                                                        )
+                                                    }
+                                                    className="flex h-full w-1/3 items-center justify-center text-base text-zinc-800 transition hover:bg-zinc-100"
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    void handleAddToCart()
+                                                }
+                                                disabled={isAddingToCart}
+                                                className="h-[46px] w-full border border-zinc-800 bg-white px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white disabled:opacity-60 sm:text-[13px]"
+                                            >
+                                                {isAddingToCart
+                                                    ? "Adding..."
+                                                    : "Add to Cart"}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    onClick={handleBuyNow}
+                                    className="block w-full bg-pink-500 px-4 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 disabled:opacity-60 sm:text-[13px]"
+                                >
+                                    Buy It Now
+                                </button>
+
+                                {cartFeedback ? (
+                                    <p className="text-[12px] uppercase tracking-[0.14em] text-zinc-600">
+                                        {cartFeedback}
+                                    </p>
+                                ) : null}
+                                {wishlistFeedback ? (
+                                    <p className="text-[12px] uppercase tracking-[0.14em] text-zinc-600">
+                                        {wishlistFeedback}
+                                    </p>
+                                ) : null}
+                            </div>
+                        </section>
+
+                        <section className="mt-16 border-t border-zinc-200 pt-12">
+                            <div className="grid gap-14 md:grid-cols-2">
+                                <div>
+                                    <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                        Description
+                                    </h3>
+                                    <p className="mt-4 whitespace-pre-line text-[14px] leading-7 text-zinc-600">
+                                        {product.additionalSeoContent ||
+                                            product.details ||
+                                            product.description}
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                        About This Product
+                                    </h3>
+                                    {product.bulletPoints.length > 0 ? (
+                                        <ul className="mt-4 space-y-2 text-[14px] leading-7 text-zinc-600">
+                                            {product.bulletPoints.map(
+                                                (item) => (
+                                                    <li
+                                                        key={item}
+                                                        className="flex items-start gap-3"
+                                                    >
+                                                        <span className="mt-3 block h-1 w-1 rounded-full bg-pink-500" />
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ),
+                                            )}
+                                        </ul>
+                                    ) : (
+                                        <p className="mt-4 text-[14px] leading-7 text-zinc-600">
+                                            No product highlights available.
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+
+                            <ProductFeatureGrid />
+
+                            {product.faqs.length > 0 ? (
+                                <section className="mt-16">
+                                    <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                        FAQ
+                                    </h3>
+
+                                    <div className="mt-6 border-t border-zinc-200">
+                                        {product.faqs.map((faq, index) => {
+                                            const isOpen =
+                                                openFaqIndexes.includes(index);
+
+                                            return (
+                                                <article
+                                                    key={`${faq.question}-${index}`}
+                                                    className="border-b border-zinc-200"
+                                                >
+                                                    <button
+                                                        type="button"
+                                                        onClick={() =>
+                                                            toggleFaq(index)
+                                                        }
+                                                        className="flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-pink-500"
+                                                        aria-expanded={isOpen}
+                                                    >
+                                                        <span className="pr-3 text-[14px] font-medium uppercase tracking-[0.08em] text-zinc-900 sm:text-[15px]">
+                                                            {index + 1}.{" "}
+                                                            {faq.question}
+                                                        </span>
+                                                        <span className="text-xl font-light leading-none">
+                                                            {isOpen ? "−" : "+"}
+                                                        </span>
+                                                    </button>
+
+                                                    {isOpen ? (
+                                                        <div className="pb-5">
+                                                            <p className="max-w-[860px] text-[14px] leading-7 text-zinc-600">
+                                                                {faq.answer}
+                                                            </p>
+                                                        </div>
+                                                    ) : null}
+                                                </article>
+                                            );
+                                        })}
+                                    </div>
+                                </section>
+                            ) : null}
+                        </section>
+
+                        <section className="mt-16 border-t border-zinc-200 pt-12">
+                            <div className="flex flex-wrap items-center justify-between gap-4">
+                                <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                    Customer Reviews
+                                </h2>
+                                <button
+                                    type="button"
+                                    onClick={openReviewForm}
+                                    className="flex items-center gap-2 border border-zinc-800 bg-white px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
+                                >
+                                    <PencilLine className="h-4 w-4" />
+                                    {currentUserReview
+                                        ? "Edit Review"
+                                        : "Write Review"}
+                                </button>
+                            </div>
+
+                            <div className="mt-8 grid gap-8 border-b border-zinc-200 pb-8 lg:grid-cols-[220px_minmax(0,1fr)]">
+                                <div>
+                                    <p className="text-[44px] font-medium leading-none text-zinc-900">
+                                        {averageReviewRating.toFixed(1)}
+                                    </p>
+                                    <div className="mt-2">
+                                        <StarRating
+                                            rating={averageReviewRating}
+                                        />
+                                    </div>
+                                    <p className="mt-2 text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+                                        ({formatReviewCount(totalReviewCount)})
+                                        Rating
+                                    </p>
+                                </div>
+
+                                <div className="space-y-2">
+                                    {reviewBreakdown.map((item) => (
+                                        <div
+                                            key={item.star}
+                                            className="grid grid-cols-[24px_1fr_36px] items-center gap-3 text-[12px] tracking-[0.08em] text-zinc-500"
+                                        >
+                                            <span>{item.star}</span>
+                                            <div className="h-1.5 overflow-hidden bg-zinc-200">
+                                                <div
+                                                    className="h-full bg-pink-500"
+                                                    style={{
+                                                        width: `${item.width}%`,
+                                                    }}
+                                                />
+                                            </div>
+                                            <span>{item.count}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {isReviewFormOpen ? (
+                                <form
+                                    onSubmit={(event) =>
+                                        void handleReviewSubmit(event)
+                                    }
+                                    className="mt-8 border border-zinc-200 bg-white p-6 text-left"
+                                >
+                                    <div className="grid gap-4 sm:grid-cols-[180px_minmax(0,1fr)] sm:items-start">
+                                        <label className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                            Rating
+                                            <select
+                                                value={reviewForm.rating}
+                                                onChange={(event) =>
+                                                    setReviewForm(
+                                                        (current) => ({
+                                                            ...current,
+                                                            rating: Number(
+                                                                event.target
+                                                                    .value,
+                                                            ),
+                                                        }),
+                                                    )
+                                                }
+                                                className="mt-2 h-12 w-full border border-zinc-300 bg-white px-4 text-[13px] text-zinc-800 outline-none transition focus:border-zinc-900"
+                                            >
+                                                {reviewRatingOptions.map(
+                                                    (rating) => (
+                                                        <option
+                                                            key={rating}
+                                                            value={rating}
+                                                        >
+                                                            {rating} / 5
+                                                        </option>
+                                                    ),
+                                                )}
+                                            </select>
+                                        </label>
+
+                                        <label className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                            Comment
+                                            <textarea
+                                                value={reviewForm.comment}
+                                                onChange={(event) =>
+                                                    setReviewForm(
+                                                        (current) => ({
+                                                            ...current,
+                                                            comment:
+                                                                event.target
+                                                                    .value,
+                                                        }),
+                                                    )
+                                                }
+                                                rows={5}
+                                                className="mt-2 w-full border border-zinc-300 bg-white px-4 py-3 text-[13px] text-zinc-800 outline-none transition focus:border-zinc-900"
+                                                placeholder="Share your experience with this product."
+                                            />
+                                        </label>
+                                    </div>
+
+                                    <div className="mt-5 flex flex-wrap gap-3">
+                                        <button
+                                            type="submit"
+                                            disabled={isSubmittingReview}
+                                            className="flex items-center gap-2 bg-pink-500 px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 disabled:opacity-60"
+                                        >
+                                            <PencilLine className="h-4 w-4" />
+                                            {isSubmittingReview
+                                                ? "Saving..."
+                                                : currentUserReview
+                                                  ? "Update Review"
+                                                  : "Submit Review"}
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                setIsReviewFormOpen(false);
+                                                setReviewFeedback("");
+                                                setReviewForm(
+                                                    initialReviewForm,
+                                                );
+                                            }}
+                                            className="border border-zinc-800 px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white"
+                                        >
+                                            Cancel
+                                        </button>
+                                        {currentUserReview ? (
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    void handleDeleteReview()
+                                                }
+                                                disabled={isSubmittingReview}
+                                                className="flex items-center gap-2 border border-rose-400 px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
+                                            >
+                                                <Trash2 className="h-4 w-4" />
+                                                Delete Review
+                                            </button>
+                                        ) : null}
+                                    </div>
+                                </form>
+                            ) : null}
+
+                            {reviewFeedback ? (
+                                <p className="mt-6 text-center text-[12px] uppercase tracking-[0.14em] text-zinc-600">
+                                    {reviewFeedback}
+                                </p>
+                            ) : null}
+
+                            <div className="mt-8 space-y-6">
+                                {reviews.length === 0 ? (
+                                    <div className="border border-dashed border-zinc-300 bg-white px-6 py-10 text-center">
+                                        <h3 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
+                                            No reviews yet
+                                        </h3>
+                                        <p className="mt-2 text-[12px] uppercase tracking-[0.16em] text-zinc-500">
+                                            Be the first to share feedback about
+                                            this product.
+                                        </p>
+                                    </div>
+                                ) : null}
+
+                                {reviews.map((review) => (
+                                    <article
+                                        key={review.id}
+                                        className="border-b border-zinc-200 pb-6 last:border-b-0 last:pb-0"
+                                    >
+                                        <div className="grid gap-4 sm:grid-cols-[72px_minmax(0,1fr)]">
+                                            <div className="space-y-2">
+                                                <div className="h-10 w-10 bg-zinc-200" />
+                                                <div className="h-2.5 w-10 bg-zinc-200" />
+                                                <div className="h-2.5 w-10 bg-zinc-200" />
+                                            </div>
+                                            <div>
+                                                <div className="flex flex-wrap items-center gap-3">
+                                                    <StarRating
+                                                        rating={review.rating}
+                                                    />
+                                                    <span className="text-[11px] uppercase tracking-[0.14em] text-zinc-500">
+                                                        {formatReviewDate(
+                                                            review.createdAt,
+                                                        )}
+                                                    </span>
+                                                </div>
+                                                <h3 className="mt-2 text-[14px] font-medium uppercase tracking-[0.06em] text-zinc-900">
+                                                    {getReviewHeadline(
+                                                        review.comment,
+                                                    )}
+                                                </h3>
+                                                <p className="mt-2 text-[14px] leading-7 text-zinc-600">
+                                                    {review.comment}
+                                                </p>
+                                                <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-zinc-500">
+                                                    By{" "}
+                                                    {review.reviewerName ||
+                                                        review.username}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                        </section>
+
+                        {product.recommendedProducts.length > 0 ? (
+                            <section className="mt-16 border-t border-zinc-200 pt-12">
+                                <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                    Related Products
+                                </h2>
+
+                                <div className="mt-8 grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
+                                    {product.recommendedProducts.map(
+                                        (recommendedProduct) => (
+                                            <ProductCard
+                                                key={recommendedProduct.id}
+                                                item={recommendedProduct}
+                                            />
+                                        ),
+                                    )}
+                                </div>
+                            </section>
+                        ) : null}
                     </div>
-                  </article>
-                ))}
-              </div>
-            </section>
+                ) : null}
+            </main>
+            {isSizeGuideOpen ? (
+                <div
+                    className="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 p-2 sm:p-4"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="size-guide-title"
+                    onClick={() => setIsSizeGuideOpen(false)}
+                >
+                    <div
+                        className="relative flex max-h-full w-auto max-w-full items-center justify-center"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <img
+                            src={ringSizeGuideImage.src}
+                            alt="Ring size guide"
+                            className="block h-auto max-h-[92vh] w-auto max-w-[96vw] object-contain sm:max-w-[92vw] lg:max-w-[88vw]"
+                        />
 
-            {product.recommendedProducts.length > 0 ? (
-              <section className="mt-16">
-                <div className="flex items-center justify-between gap-4">
-                  <button type="button" className="flex h-7 w-7 items-center justify-center rounded-full border border-[#d7d7d7] text-zinc-500">
-                    {'<'}
-                  </button>
-                  <h2 className="text-center text-3xl font-semibold text-[#171717]">Related Products</h2>
-                  <Link to="/products" className="flex h-7 w-7 items-center justify-center rounded-full border border-[#d7d7d7] text-zinc-500">
-                    {'>'}
-                  </Link>
+                        <button
+                            type="button"
+                            onClick={() => setIsSizeGuideOpen(false)}
+                            className="absolute right-2 top-2 z-20 flex h-9 w-9 items-center justify-center bg-white text-zinc-900 shadow-lg transition hover:scale-105 sm:right-3 sm:top-3 sm:h-10 sm:w-10"
+                            aria-label="Close size guide"
+                        >
+                            <X
+                                className="h-4 w-4 sm:h-5 sm:w-5"
+                                strokeWidth={2.2}
+                            />
+                        </button>
+                    </div>
                 </div>
-
-                <div className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-                  {product.recommendedProducts.map((recommendedProduct) => (
-                    <ProductCard key={recommendedProduct.id} item={recommendedProduct} />
-                  ))}
-                </div>
-              </section>
             ) : null}
-          </div>
-        ) : null}
-      </main>
-      {isSizeGuideOpen ? (
-        <div
-          className="fixed inset-0 z-[80] bg-black/80 flex items-center justify-center p-2 sm:p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="size-guide-title"
-          onClick={() => setIsSizeGuideOpen(false)}
-        >
-          <div
-            className="relative w-auto max-w-full max-h-full flex items-center justify-center"
-            onClick={(event) => event.stopPropagation()}
-          >
-            {/* Responsive Image */}
-            <img
-              src={ringSizeGuideImage.src}
-              alt="Ring size guide"
-              className="
-          w-auto
-          max-w-[96vw]
-          sm:max-w-[92vw]
-          lg:max-w-[88vw]
-          h-auto
-          max-h-[92vh]
-          object-contain
-          rounded-lg sm:rounded-xl
-        "
-            />
-
-            {/* Responsive Close Button */}
-            <button
-              type="button"
-              onClick={() => setIsSizeGuideOpen(false)}
-              className="
-          absolute
-          top-2 right-2
-          sm:top-3 sm:right-3
-          z-20
-          flex items-center justify-center
-          h-9 w-9
-          sm:h-10 sm:w-10
-          rounded-full
-          bg-white text-black
-          shadow-lg
-          transition hover:scale-105
-        "
-              aria-label="Close size guide"
-            >
-              <X className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={2.5} />
-            </button>
-          </div>
+            <Footer />
         </div>
-      ) : null}
-      <Footer />
-    </div>
-  )
+    );
 }
