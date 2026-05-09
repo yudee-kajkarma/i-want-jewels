@@ -429,7 +429,7 @@ export default function ProductsPage({
                     </div>
                 </section>
 
-                <section className="mx-auto max-w-[1480px] px-6  lg:px-10 ">
+                <section className="mx-auto max-w-[1480px] px-3  lg:px-10 ">
                     <div className="mb-8 flex items-center justify-between gap-4">
                         <button
                             type="button"
