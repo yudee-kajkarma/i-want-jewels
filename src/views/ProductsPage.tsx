@@ -570,13 +570,13 @@ export default function ProductsPage({
                                 </div>
                             ) : null}
 
-                            <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
+                            <div className="grid gap-5 grid-cols-2 sm:gap-6 xl:grid-cols-3">
                                 {sortedProducts.map((product) => (
                                     <ProductCard
                                         key={product.id}
                                         item={product}
                                         layout="grid"
-                                        className="h-[30rem]"
+                                        className="aspect-square md:aspect-auto h-[10rem] md:h-[30rem]"
                                     />
                                 ))}
                             </div>

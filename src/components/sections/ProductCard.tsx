@@ -448,7 +448,7 @@ export default function ProductCard({
                 </Link>
 
                 <div className="pointer-events-none absolute inset-x-4 bottom-4 z-20 translate-y-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <div className="grid grid-cols-2 gap-2 pointer-events-auto">
+                    <div className="md:grid grid-cols-2 gap-2 pointer-events-auto hidden">
                         <button
                             type="button"
                             onClick={(event) => void handleAddToCart(event)}

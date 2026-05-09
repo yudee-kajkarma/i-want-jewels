@@ -355,7 +355,7 @@ export default function HomeBody() {
                     })}
                 </div>
 
-                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-1 lg:grid-cols-4">
+                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-2 lg:grid-cols-4">
                     {isLoadingProducts
                         ? productSkeletons
                               .slice(0, 4)
@@ -366,7 +366,7 @@ export default function HomeBody() {
                                   <ProductCard
                                       key={item.id}
                                       item={item}
-                                      className="aspect-square md:aspect-auto  md:h-[30rem]"
+                                      className="aspect-square md:aspect-auto h-[10rem]  md:h-[30rem]"
                                   />
                               ))}
                 </div>
@@ -432,7 +432,7 @@ export default function HomeBody() {
                     })}
                 </div>
 
-                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-1 lg:grid-cols-4">
+                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-2 lg:grid-cols-4">
                     {isLoadingProducts
                         ? productSkeletons
                               .slice(0, 4)
@@ -445,7 +445,7 @@ export default function HomeBody() {
                                   <ProductCard
                                       key={`metal-${item.id}`}
                                       item={item}
-                                      className="aspect-square md:aspect-auto md:h-[30rem]"
+                                      className="aspect-square md:aspect-auto h-[10rem] md:h-[30rem]"
                                   />
                               ))}
                 </div>
