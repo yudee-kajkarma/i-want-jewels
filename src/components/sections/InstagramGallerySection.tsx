@@ -9,7 +9,7 @@ type InstagramGallerySectionProps = {
 };
 
 export default function InstagramGallerySection({
-    title = "I Want Jewel On Instagram",
+    title = "I Want Jewels On Instagram",
     subtitle = "#Atvoguetheme",
 }: InstagramGallerySectionProps) {
     const [videos, setVideos] = useState<Reel[]>([]);
