@@ -65,6 +65,7 @@ export type ProductDetail = Product & {
   color: string
   shape: string
   carat: number
+  totalDiamondWeight: number
   origin: string
   treatment: string
   certificate: string
@@ -85,6 +86,7 @@ export type AdminProductUpdatePayload = {
   color: string
   shape: string
   carat: number
+  totalDiamondWeight: number
   origin: string
   treatment: string
   availability: boolean
@@ -101,7 +103,7 @@ export type AdminProductVariantPayload = {
   variantName: AdminVariantName
   sku: string
   stock: number
-  price: Price
+  price: number
   position: number
 }
 

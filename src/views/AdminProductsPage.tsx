@@ -471,6 +471,7 @@ export default function AdminProductsPage() {
           color: form.color,
           shape: form.shape,
           carat: Number(form.carat) || 0,
+          totalDiamondWeight: Number(form.totalDiamondWeight) || 0,
           origin: form.origin,
           treatment: form.treatment,
           availability: form.availability,
@@ -541,13 +542,12 @@ export default function AdminProductsPage() {
           (variant) =>
             !variant.title.trim() ||
             !variant.sku.trim() ||
-            variant.price.eur <= 0 ||
-            variant.price.pou <= 0 ||
+            variant.price <= 0 ||
             variant.stock < 0,
         )
 
         if (hasInvalidVariant) {
-          showOperationError('Complete each variant with a title, SKU, non-negative stock, and prices greater than zero for all currencies.')
+          showOperationError('Complete each variant with a title, SKU, non-negative stock, and a price greater than zero.')
           return
         }
 
@@ -567,6 +567,7 @@ export default function AdminProductsPage() {
           color: form.color,
           shape: form.shape,
           carat: Number(form.carat) || 0,
+          totalDiamondWeight: Number(form.totalDiamondWeight) || 0,
           origin: form.origin,
           treatment: form.treatment,
           availability: form.availability,

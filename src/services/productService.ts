@@ -87,6 +87,7 @@ type ProductDetailApiResponse = {
   color: string
   shape: string
   carat: number
+  totalDiamondWeight: number
   origin: string
   treatment: string
   availability: boolean
@@ -189,7 +190,7 @@ export type BulkCreateVariantPayload = {
   title: string
   variant_name: AdminVariantName
   sku: string
-  price: Price
+  price: number
   stock: number
 }
 
@@ -339,6 +340,7 @@ function normalizeProductDetail(
     color: product.color.trim(),
     shape: product.shape.trim(),
     carat: product.carat,
+    totalDiamondWeight: normalizeNumber(product.totalDiamondWeight),
     origin: product.origin.trim(),
     treatment: product.treatment.trim(),
     certificate: product.certificate.trim(),
@@ -582,6 +584,7 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
   formData.append('color', payload.color)
   formData.append('shape', payload.shape)
   formData.append('carat', String(payload.carat))
+  formData.append('totalDiamondWeight', String(payload.totalDiamondWeight))
   formData.append('origin', payload.origin)
   formData.append('treatment', payload.treatment)
   formData.append('availability', String(payload.availability))
@@ -605,7 +608,11 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
       })),
     ),
   )
-  formData.append('imageMapping', JSON.stringify(payload.imageMapping))
+  const hasImageMappingEntries = payload.imageMapping.some((indexes) => indexes.length > 0)
+
+  if (hasImageMappingEntries) {
+    formData.append('imageMapping', JSON.stringify(payload.imageMapping))
+  }
 
   if ('existingImages' in payload) {
     formData.append(
@@ -619,7 +626,11 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
       ),
     )
 
-    formData.append('delImgMapping', JSON.stringify(payload.delImgMapping))
+    const hasDeletedImages = payload.delImgMapping.some((indexes) => indexes.length > 0)
+
+    if (hasDeletedImages) {
+      formData.append('delImgMapping', JSON.stringify(payload.delImgMapping))
+    }
   }
 
   payload.images.forEach((imageFile) => {

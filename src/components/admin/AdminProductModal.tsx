@@ -216,6 +216,17 @@ export default function AdminProductModal({
                     />
                   </label>
                   <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Total Diamond Weight</span>
+                    <input
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value={form.totalDiamondWeight}
+                      onChange={(event) => onFieldChange('totalDiamondWeight', Number(event.target.value))}
+                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                    />
+                  </label>
+                  <label className="block">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Origin</span>
                     <input
                       value={form.origin}
@@ -393,45 +404,20 @@ export default function AdminProductModal({
                               required
                             />
                           </label>
-                          <div className="lg:col-span-2">
+                          <label className="block lg:col-span-2">
                             <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Price</span>
-                            <div className="grid grid-cols-2 gap-2">
-                              <label className="block">
-                                <span className="mb-1 block text-xs font-medium text-zinc-500">EUR (€)</span>
-                                <input
-                                  type="number"
-                                  min="0"
-                                  step="0.01"
-                                  value={variant.price.eur}
-                                  onChange={(event) =>
-                                    onVariantFieldChange(variant.id, 'price', {
-                                      ...variant.price,
-                                      eur: Number(event.target.value) || 0,
-                                    })
-                                  }
-                                  className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                                  required
-                                />
-                              </label>
-                              <label className="block">
-                                <span className="mb-1 block text-xs font-medium text-zinc-500">GBP (£)</span>
-                                <input
-                                  type="number"
-                                  min="0"
-                                  step="0.01"
-                                  value={variant.price.pou}
-                                  onChange={(event) =>
-                                    onVariantFieldChange(variant.id, 'price', {
-                                      ...variant.price,
-                                      pou: Number(event.target.value) || 0,
-                                    })
-                                  }
-                                  className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                                  required
-                                />
-                              </label>
-                            </div>
-                          </div>
+                            <input
+                              type="number"
+                              min="0"
+                              step="0.01"
+                              value={variant.price}
+                              onChange={(event) =>
+                                onVariantFieldChange(variant.id, 'price', Number(event.target.value) || 0)
+                              }
+                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                              required
+                            />
+                          </label>
                         </div>
 
                         <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">

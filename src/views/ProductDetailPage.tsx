@@ -968,6 +968,14 @@ export default function ProductDetailPage({
                                                 {product.finish}
                                             </p>
                                         ) : null}
+                                        {product.totalDiamondWeight > 0 ? (
+                                            <p>
+                                                <span className="text-zinc-900">
+                                                    Total Diamond Weight:
+                                                </span>{" "}
+                                                {product.totalDiamondWeight} gm
+                                            </p>
+                                        ) : null}
                                     </div>
                                 </div>
 
