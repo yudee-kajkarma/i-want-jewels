@@ -852,10 +852,10 @@ export default function Header() {
                             </HeaderIconButton>
 
                             {isAccountMenuOpen ? (
-                                <div className="absolute right-0 top-[calc(100%+18px)] z-40 w-72 overflow-hidden rounded-[24px] border border-[#eadfd4] bg-white p-3 shadow-[0_24px_60px_rgba(55,31,10,0.14)]">
+                                <div className="absolute right-0 top-[calc(100%+18px)] z-40 w-72 overflow-hidden border border-[#eadfd4] bg-white p-3 shadow-[0_24px_60px_rgba(55,31,10,0.14)]">
                                     {isAuthenticated ? (
                                         <>
-                                            <div className="rounded-[18px] bg-[#fff7fb] px-4 py-4">
+                                            <div className="bg-[#fff7fb] px-4 py-4">
                                                 <p className="text-base font-bold text-[#17110d]">
                                                     {accountName}
                                                 </p>
@@ -874,7 +874,7 @@ export default function Header() {
                                                             false,
                                                         )
                                                     }
-                                                    className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                    className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                 >
                                                     <MapPinHouse className="h-4 w-4" />
                                                     ADMIN ADDRESS
@@ -888,7 +888,7 @@ export default function Header() {
                                                                 false,
                                                             )
                                                         }
-                                                        className="mt-3 flex w-full items-center justify-center rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                        className="mt-3 flex w-full items-center justify-center border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         PROFILE
                                                     </Link>
@@ -899,7 +899,7 @@ export default function Header() {
                                                                 false,
                                                             )
                                                         }
-                                                        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                        className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         <PackageSearch className="h-4 w-4" />
                                                         MY ORDERS
@@ -911,7 +911,7 @@ export default function Header() {
                                                                 false,
                                                             )
                                                         }
-                                                        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                        className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         <CreditCard className="h-4 w-4" />
                                                         PAYMENT HISTORY
@@ -923,7 +923,7 @@ export default function Header() {
                                                                 false,
                                                             )
                                                         }
-                                                        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                        className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         <Ticket className="h-4 w-4" />
                                                         MY TICKETS
@@ -936,7 +936,7 @@ export default function Header() {
                                                     logout();
                                                     setIsAccountMenuOpen(false);
                                                 }}
-                                                className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                                                className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                             >
                                                 <LogOut className="h-4 w-4" />
                                                 LOGOUT
@@ -944,7 +944,7 @@ export default function Header() {
                                         </>
                                     ) : (
                                         <>
-                                            <div className="rounded-[18px] bg-[#fff7fb] px-4 py-4">
+                                            <div className="bg-[#fff7fb] px-4 py-4">
                                                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">
                                                     Welcome
                                                 </p>
@@ -965,7 +965,7 @@ export default function Header() {
                                                             false,
                                                         )
                                                     }
-                                                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[#111111] px-4 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] hover:text-white"
+                                                    className="flex w-full items-center justify-center gap-2 bg-[#111111] px-4 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] hover:text-white"
                                                     style={{ color: "#ffffff" }}
                                                 >
                                                     <LogIn className="h-4 w-4" />
@@ -978,7 +978,7 @@ export default function Header() {
                                                             false,
                                                         )
                                                     }
-                                                    className="flex w-full items-center justify-center rounded-full border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                                                    className="flex w-full items-center justify-center border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                                 >
                                                     REGISTER
                                                 </Link>
