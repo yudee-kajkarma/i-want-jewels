@@ -1,7 +1,7 @@
 'use client'
 
-import type { FormEvent } from 'react'
-import { Plus, X } from 'lucide-react'
+import { useState, type FormEvent } from 'react'
+import { GripVertical, Plus, X } from 'lucide-react'
 import type { AdminVariantName } from '../../types/product'
 import {
   getVariantLabel,
@@ -44,7 +44,10 @@ type AdminProductModalProps = {
   onImagesChange: (variantId: string, files: FileList | null) => void
   onRemoveImage: (imageIndex: number) => void
   onToggleVariantImage: (variantId: string, imageIndex: number) => void
+  onReorderVariantImages: (variantId: string, fromPosition: number, toPosition: number) => void
 }
+
+const VARIANT_IMAGE_DRAG_TYPE = 'application/x-iwj-variant-image'
 
 export default function AdminProductModal({
   isOpen,
@@ -69,9 +72,79 @@ export default function AdminProductModal({
   onImagesChange,
   onRemoveImage,
   onToggleVariantImage,
+  onReorderVariantImages,
 }: AdminProductModalProps) {
+  const [dragState, setDragState] = useState<{
+    variantId: string
+    fromPosition: number
+    overPosition: number | null
+  } | null>(null)
+
   if (!isOpen) {
     return null
+  }
+
+  function handleVariantImageDragStart(
+    event: React.DragEvent<HTMLDivElement>,
+    variantId: string,
+    fromPosition: number,
+  ) {
+    if (!isEditing) {
+      return
+    }
+
+    event.dataTransfer.effectAllowed = 'move'
+    event.dataTransfer.setData(VARIANT_IMAGE_DRAG_TYPE, `${variantId}|${fromPosition}`)
+    setDragState({ variantId, fromPosition, overPosition: null })
+  }
+
+  function handleVariantImageDragOver(
+    event: React.DragEvent<HTMLDivElement>,
+    variantId: string,
+    overPosition: number,
+  ) {
+    if (!isEditing || !dragState || dragState.variantId !== variantId) {
+      return
+    }
+
+    event.preventDefault()
+    event.dataTransfer.dropEffect = 'move'
+
+    if (dragState.overPosition !== overPosition) {
+      setDragState({ ...dragState, overPosition })
+    }
+  }
+
+  function handleVariantImageDrop(
+    event: React.DragEvent<HTMLDivElement>,
+    variantId: string,
+    toPosition: number,
+  ) {
+    if (!isEditing) {
+      return
+    }
+
+    const payload = event.dataTransfer.getData(VARIANT_IMAGE_DRAG_TYPE)
+
+    if (!payload) {
+      return
+    }
+
+    event.preventDefault()
+    const [sourceVariantId, fromPositionRaw] = payload.split('|')
+    const fromPosition = Number(fromPositionRaw)
+
+    setDragState(null)
+
+    if (sourceVariantId !== variantId || !Number.isFinite(fromPosition)) {
+      return
+    }
+
+    onReorderVariantImages(variantId, fromPosition, toPosition)
+  }
+
+  function handleVariantImageDragEnd() {
+    setDragState(null)
   }
 
   return (
@@ -443,35 +516,77 @@ export default function AdminProductModal({
                           </div>
 
                           {variant.imageIndexes.length > 0 ? (
-                            <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                              {variant.imageIndexes.map((imageIndex) => (
-                                <div
-                                  key={`${variant.id}-selected-${imageIndex}`}
-                                  className="overflow-hidden rounded-[20px] border border-[#f0d8e8] bg-white"
-                                >
-                                  {imagePreviewUrls[imageIndex] ? (
-                                    <img
-                                      src={imagePreviewUrls[imageIndex]}
-                                      alt={form.images[imageIndex]?.name ?? `Variant image ${imageIndex}`}
-                                      className="h-32 w-full object-cover"
-                                    />
-                                  ) : null}
-                                  <div className="space-y-2 px-3 py-3 text-xs text-zinc-600">
-                                    <div>
-                                      <span className="font-semibold text-[#3f1933]">Image {imageIndex}</span>
-                                      <p className="mt-1 break-all">{form.images[imageIndex]?.name ?? 'Uploaded image'}</p>
-                                    </div>
-                                    <button
-                                      type="button"
-                                      onClick={() => onToggleVariantImage(variant.id, imageIndex)}
-                                      className="rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
+                            <>
+                              {isEditing ? (
+                                <p className="mt-4 text-[11px] uppercase tracking-[0.12em] text-zinc-500">
+                                  Drag a card to reorder images for this variant.
+                                </p>
+                              ) : null}
+                              <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                                {variant.imageIndexes.map((imageIndex, currentPosition) => {
+                                  const isDraggingThis =
+                                    isEditing &&
+                                    dragState?.variantId === variant.id &&
+                                    dragState.fromPosition === currentPosition
+                                  const isDropTarget =
+                                    isEditing &&
+                                    dragState?.variantId === variant.id &&
+                                    dragState.overPosition === currentPosition &&
+                                    dragState.fromPosition !== currentPosition
+
+                                  return (
+                                    <div
+                                      key={`${variant.id}-selected-${imageIndex}`}
+                                      draggable={isEditing}
+                                      onDragStart={(event) =>
+                                        handleVariantImageDragStart(event, variant.id, currentPosition)
+                                      }
+                                      onDragOver={(event) =>
+                                        handleVariantImageDragOver(event, variant.id, currentPosition)
+                                      }
+                                      onDrop={(event) => handleVariantImageDrop(event, variant.id, currentPosition)}
+                                      onDragEnd={handleVariantImageDragEnd}
+                                      className={`overflow-hidden rounded-[20px] border bg-white transition ${
+                                        isDropTarget
+                                          ? 'border-[#cc4f8f] ring-2 ring-[#f0a7cd]'
+                                          : 'border-[#f0d8e8]'
+                                      } ${isDraggingThis ? 'opacity-50' : ''} ${
+                                        isEditing ? 'cursor-move' : ''
+                                      }`}
                                     >
-                                      Unassign
-                                    </button>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
+                                      <div className="relative">
+                                        {imagePreviewUrls[imageIndex] ? (
+                                          <img
+                                            src={imagePreviewUrls[imageIndex]}
+                                            alt={form.images[imageIndex]?.name ?? `Variant image ${imageIndex}`}
+                                            className="h-32 w-full object-cover"
+                                          />
+                                        ) : null}
+                                        {isEditing ? (
+                                          <span className="pointer-events-none absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-white/90 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#7a3a61] shadow-sm">
+                                            <GripVertical className="h-3 w-3" />
+                                            {currentPosition + 1}
+                                          </span>
+                                        ) : null}
+                                      </div>
+                                      <div className="space-y-2 px-3 py-3 text-xs text-zinc-600">
+                                        <div>
+                                          <span className="font-semibold text-[#3f1933]">Image {imageIndex}</span>
+                                          <p className="mt-1 break-all">{form.images[imageIndex]?.name ?? 'Uploaded image'}</p>
+                                        </div>
+                                        <button
+                                          type="button"
+                                          onClick={() => onToggleVariantImage(variant.id, imageIndex)}
+                                          className="rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
+                                        >
+                                          Unassign
+                                        </button>
+                                      </div>
+                                    </div>
+                                  )
+                                })}
+                              </div>
+                            </>
                           ) : (
                             <p className="mt-4 text-sm text-zinc-500">No images assigned yet.</p>
                           )}

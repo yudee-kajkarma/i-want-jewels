@@ -63,7 +63,7 @@ export default function AdminProductsPage() {
   const [isDeleting, setIsDeleting] = useState<string | null>(null)
   const [productPendingDelete, setProductPendingDelete] = useState<Product | null>(null)
   const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([])
-  const [initialVariantImageIdsByVariantId, setInitialVariantImageIdsByVariantId] = useState<Record<string, string[]>>({})
+  const [initialVariantIds, setInitialVariantIds] = useState<string[]>([])
 
   useEffect(() => {
     void initializePage()
@@ -203,7 +203,11 @@ export default function AdminProductsPage() {
       const editableForm = buildForm(product)
       setCreateStep(1)
       setForm(editableForm)
-      setInitialVariantImageIdsByVariantId(createInitialVariantImageMap(editableForm))
+      setInitialVariantIds(
+        editableForm.variants
+          .map((variant) => variant.variantId)
+          .filter((variantId): variantId is string => Boolean(variantId)),
+      )
     } catch {
       handleClosePanel()
       setError('Unable to open this product for editing.')
@@ -218,7 +222,7 @@ export default function AdminProductsPage() {
     setCreateStep(1)
     setSelectedProductId(null)
     setForm(createEmptyForm())
-    setInitialVariantImageIdsByVariantId({})
+    setInitialVariantIds([])
   }
 
   function handleClosePanel() {
@@ -226,56 +230,42 @@ export default function AdminProductsPage() {
     setCreateStep(1)
     setSelectedProductId(null)
     setForm(createEmptyForm())
-    setInitialVariantImageIdsByVariantId({})
     setIsEditModalLoading(false)
+    setInitialVariantIds([])
   }
 
-  function createInitialVariantImageMap(currentForm: EditableProductForm): Record<string, string[]> {
-    return currentForm.variants.reduce<Record<string, string[]>>((mappingByVariantId, variant) => {
-      if (!variant.variantId) {
-        return mappingByVariantId
+  function buildEditImageMapping(currentForm: EditableProductForm): Array<Array<string | number>> {
+    const newImagePositionByIndex = new Map<number, number>()
+    let newImagePosition = 0
+
+    currentForm.images.forEach((image, imageIndex) => {
+      if (!image.isExisting) {
+        newImagePositionByIndex.set(imageIndex, newImagePosition)
+        newImagePosition += 1
       }
+    })
 
-      const existingImageIds = variant.imageIndexes
-        .map((imageIndex) => currentForm.images[imageIndex])
-        .filter((image): image is ProductImageFormItem => Boolean(image?.isExisting && image.id))
-        .map((image) => image.id)
+    return currentForm.variants.map((variant) =>
+      variant.imageIndexes.reduce<Array<string | number>>((entries, imageIndex) => {
+        const image = currentForm.images[imageIndex]
 
-      mappingByVariantId[variant.variantId] = existingImageIds
-      return mappingByVariantId
-    }, {})
-  }
+        if (!image) {
+          return entries
+        }
 
-  function buildEditImageMappings(currentForm: EditableProductForm): { imageMapping: number[][]; delImgMapping: number[][] } {
-    return currentForm.variants.reduce<{ imageMapping: number[][]; delImgMapping: number[][] }>(
-      (result, variant) => {
-        const variantImageMapping = variant.imageIndexes.reduce<number[]>((positions, imageIndex, currentPosition) => {
-          if (!currentForm.images[imageIndex]?.isExisting) {
-            positions.push(currentPosition)
-          }
+        if (image.isExisting && image.id) {
+          entries.push(image.id)
+          return entries
+        }
 
-          return positions
-        }, [])
+        const newPosition = newImagePositionByIndex.get(imageIndex)
 
-        const currentExistingImageIds = variant.imageIndexes
-          .map((imageIndex) => currentForm.images[imageIndex])
-          .filter((image): image is ProductImageFormItem => Boolean(image?.isExisting && image.id))
-          .map((image) => image.id)
+        if (typeof newPosition === 'number') {
+          entries.push(newPosition)
+        }
 
-        const initialImageIds = (variant.variantId && initialVariantImageIdsByVariantId[variant.variantId]) || []
-        const variantDeletedImageMapping = initialImageIds.reduce<number[]>((deletedIndexes, imageId, initialPosition) => {
-          if (!currentExistingImageIds.includes(imageId)) {
-            deletedIndexes.push(initialPosition)
-          }
-
-          return deletedIndexes
-        }, [])
-
-        result.imageMapping.push(variantImageMapping)
-        result.delImgMapping.push(variantDeletedImageMapping)
-        return result
-      },
-      { imageMapping: [], delImgMapping: [] },
+        return entries
+      }, []),
     )
   }
 
@@ -401,6 +391,29 @@ export default function AdminProductsPage() {
     })
   }
 
+  function handleReorderVariantImages(variantId: string, fromPosition: number, toPosition: number) {
+    if (fromPosition === toPosition) {
+      return
+    }
+
+    handleVariantChange(variantId, (variant) => {
+      if (
+        fromPosition < 0 ||
+        fromPosition >= variant.imageIndexes.length ||
+        toPosition < 0 ||
+        toPosition >= variant.imageIndexes.length
+      ) {
+        return variant
+      }
+
+      const nextImageIndexes = [...variant.imageIndexes]
+      const [movedIndex] = nextImageIndexes.splice(fromPosition, 1)
+      nextImageIndexes.splice(toPosition, 0, movedIndex)
+
+      return { ...variant, imageIndexes: nextImageIndexes }
+    })
+  }
+
   function toggleVariantImage(variantId: string, imageIndex: number) {
     handleVariantChange(variantId, (variant) => {
       const hasImage = variant.imageIndexes.includes(imageIndex)
@@ -461,7 +474,16 @@ export default function AdminProductsPage() {
           return
         }
 
-        const { imageMapping, delImgMapping } = buildEditImageMappings(form)
+        const imageMapping = buildEditImageMapping(form)
+        const referencedImageIndexes = new Set(
+          form.variants.flatMap((variant) => variant.imageIndexes),
+        )
+        const currentVariantIds = form.variants
+          .map((variant) => variant.variantId)
+          .filter((variantId): variantId is string => Boolean(variantId))
+        const hasDeletedVariants = initialVariantIds.some(
+          (initialVariantId) => !currentVariantIds.includes(initialVariantId),
+        )
         const payload: AdminProductEditPayload = {
           title: form.title,
           description: form.description,
@@ -492,16 +514,20 @@ export default function AdminProductsPage() {
             price: variant.price,
             position: index + 1,
           })),
+          ...(hasDeletedVariants ? { variantPos: currentVariantIds } : {}),
           existingImages: form.images
-            .filter((image) => image.isExisting)
-            .map((image, index) => ({
+            .map((image, originalIndex) => ({ image, originalIndex }))
+            .filter(
+              ({ image, originalIndex }) =>
+                image.isExisting && referencedImageIndexes.has(originalIndex),
+            )
+            .map(({ image }, position) => ({
               id: image.id,
               src: image.src,
-              position: index,
+              position,
             })),
           images: form.images.filter((image) => !image.isExisting).map((image) => image.file).filter(Boolean) as File[],
           imageMapping,
-          delImgMapping,
         }
 
         await updateProduct(selectedProductId, payload)
@@ -713,6 +739,7 @@ export default function AdminProductsPage() {
         onImagesChange={handleImagesChange}
         onRemoveImage={handleRemoveImage}
         onToggleVariantImage={toggleVariantImage}
+        onReorderVariantImages={handleReorderVariantImages}
       />
 
       <AdminProductFilterModal

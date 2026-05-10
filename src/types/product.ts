@@ -121,7 +121,7 @@ export type AdminProductCreatePayload = AdminProductUpdatePayload & {
   diamondPcs: number
   variants: AdminProductVariantPayload[]
   images: File[]
-  imageMapping: number[][]
+  imageMapping: Array<Array<string | number>>
 }
 
 export type AdminProductEditPayload = AdminProductUpdatePayload & {
@@ -131,10 +131,10 @@ export type AdminProductEditPayload = AdminProductUpdatePayload & {
   certificateUrls: string[]
   diamondPcs: number
   variants: AdminProductVariantPayload[]
+  variantPos?: string[]
   existingImages: AdminExistingProductImagePayload[]
   images: File[]
-  imageMapping: number[][]
-  delImgMapping: number[][]
+  imageMapping: Array<Array<string | number>>
 }
 
 export type ProductReview = {

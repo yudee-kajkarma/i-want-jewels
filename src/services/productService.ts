@@ -608,11 +608,7 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
       })),
     ),
   )
-  const hasImageMappingEntries = payload.imageMapping.some((indexes) => indexes.length > 0)
-
-  if (hasImageMappingEntries) {
-    formData.append('imageMapping', JSON.stringify(payload.imageMapping))
-  }
+  formData.append('imageMapping', JSON.stringify(payload.imageMapping))
 
   if ('existingImages' in payload) {
     formData.append(
@@ -626,10 +622,8 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
       ),
     )
 
-    const hasDeletedImages = payload.delImgMapping.some((indexes) => indexes.length > 0)
-
-    if (hasDeletedImages) {
-      formData.append('delImgMapping', JSON.stringify(payload.delImgMapping))
+    if (payload.variantPos !== undefined) {
+      formData.append('variantPos', JSON.stringify(payload.variantPos))
     }
   }
 
