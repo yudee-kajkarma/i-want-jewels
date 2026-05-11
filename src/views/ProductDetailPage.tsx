@@ -973,7 +973,7 @@ export default function ProductDetailPage({
                                                 <span className="text-zinc-900">
                                                     Total Diamond Weight:
                                                 </span>{" "}
-                                                {product.totalDiamondWeight} gm
+                                                {product.totalDiamondWeight} carats
                                             </p>
                                         ) : null}
                                     </div>

@@ -1,8 +1,10 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { GripVertical, Plus, X } from 'lucide-react'
 import type { AdminVariantName } from '../../types/product'
+import type { ProductAllFilters } from '../../types/product'
+import { getAllProductFilters } from '../../services/productService'
 import {
   getVariantLabel,
   type CreateVariantForm,
@@ -33,7 +35,7 @@ type AdminProductModalProps = {
   generatedImageMapping: number[][]
   isSaving: boolean
   onClose: () => void
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void
+  onSubmit: (event: SubmitEvent) => void
   onFieldChange: FormChangeHandler
   onGoToStepTwo: () => void
   onBackToStepOne: () => void
@@ -79,6 +81,22 @@ export default function AdminProductModal({
     fromPosition: number
     overPosition: number | null
   } | null>(null)
+  const [filters, setFilters] = useState<ProductAllFilters | null>(null)
+  const [customOptions, setCustomOptions] = useState({
+    category: false,
+    color: false,
+    shape: false,
+    stoneType: false,
+    metal: false,
+  })
+
+  useEffect(() => {
+    if (isOpen && !filters) {
+      void getAllProductFilters().then(setFilters).catch(() => {
+        console.error('Failed to fetch product filters')
+      })
+    }
+  }, [isOpen, filters])
 
   if (!isOpen) {
     return null
@@ -147,6 +165,69 @@ export default function AdminProductModal({
     setDragState(null)
   }
 
+  function renderFilterSelect(
+    fieldName: keyof typeof customOptions,
+    label: string,
+    options: string[] | undefined,
+    currentValue: string,
+  ) {
+    const isCustom = customOptions[fieldName]
+    const optionsArray = options ?? []
+
+    return (
+      <label className="block">
+        <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{label}</span>
+        {!isCustom ? (
+          <div className="flex gap-2">
+            <select
+              value={currentValue && optionsArray.includes(currentValue) ? currentValue : ''}
+              onChange={(event) => {
+                if (event.target.value === '__add_custom__') {
+                  setCustomOptions((prev) => ({ ...prev, [fieldName]: true }))
+                } else {
+                  onFieldChange(fieldName, event.target.value)
+                }
+              }}
+              className="flex-1 h-12 rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+            >
+              <option value="">Select {label.toLowerCase()}</option>
+              {optionsArray.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+              {currentValue && !optionsArray.includes(currentValue) && (
+                <option value={currentValue}>{currentValue} (current)</option>
+              )}
+              <option value="__add_custom__">+ Add Custom {label.toLowerCase()}</option>
+            </select>
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={currentValue}
+              onChange={(event) => onFieldChange(fieldName, event.target.value)}
+              placeholder={`Enter custom ${label.toLowerCase()}`}
+              className="flex-1 h-12 rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+              autoFocus
+            />
+            <button
+              type="button"
+              onClick={() => {
+                setCustomOptions((prev) => ({ ...prev, [fieldName]: false }))
+                onFieldChange(fieldName, '')
+              }}
+              className="px-4 py-2 rounded-2xl border border-[#e7bfd7] text-sm font-semibold text-[#3f1933] transition hover:bg-[#f0d8e8]"
+            >
+              Cancel
+            </button>
+          </div>
+        )}
+      </label>
+    )
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#2f0d25]/55 px-4 py-6 backdrop-blur-sm">
       <div className={`max-h-[92vh] w-full overflow-hidden rounded-[32px] border border-[#f0d0e3] bg-white shadow-[0_30px_80px_rgba(127,31,91,0.30)] ${isEditing ? 'max-w-4xl' : 'max-w-5xl'}`}>
@@ -180,7 +261,7 @@ export default function AdminProductModal({
               return
             }
 
-            onSubmit(event)
+            onSubmit(event.nativeEvent as SubmitEvent)
           }}
         >
           {isEditLoading ? (
@@ -235,15 +316,7 @@ export default function AdminProductModal({
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Category</span>
-                    <input
-                      value={form.category}
-                      onChange={(event) => onFieldChange('category', event.target.value)}
-                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                      required
-                    />
-                  </label>
+                  {renderFilterSelect('category', 'Category', filters?.categories, form.category)}
                   <label className="block lg:col-span-2">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Tags</span>
                     <input
@@ -253,30 +326,10 @@ export default function AdminProductModal({
                       placeholder="Best Seller, Earrings, Diamond"
                     />
                   </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Stone Type</span>
-                    <input
-                      value={form.stoneType}
-                      onChange={(event) => onFieldChange('stoneType', event.target.value)}
-                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Color</span>
-                    <input
-                      value={form.color}
-                      onChange={(event) => onFieldChange('color', event.target.value)}
-                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Shape</span>
-                    <input
-                      value={form.shape}
-                      onChange={(event) => onFieldChange('shape', event.target.value)}
-                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                    />
-                  </label>
+                  {renderFilterSelect('stoneType', 'Stone Type', filters?.stoneTypes, form.stoneType)}
+                  {renderFilterSelect('color', 'Color', filters?.colors, form.color)}
+                  {renderFilterSelect('shape', 'Shape', filters?.shapes, form.shape)}
+                  {renderFilterSelect('metal', 'Metal', filters?.metals, form.metal)}
                   <label className="block">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Carat</span>
                     <input

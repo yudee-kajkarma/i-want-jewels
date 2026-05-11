@@ -37,6 +37,7 @@ export type Order = {
   orderStatus: OrderStatus
   totalAmount: Price
   totalItems: number
+  sessionId?: string
 }
 
 export type OrdersPagination = {

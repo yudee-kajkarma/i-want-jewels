@@ -2,12 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
-import { BadgeCheck, Clock3, MapPinHouse, Package, User } from 'lucide-react'
+import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
-import { getAdminOrderById, updateOrderShippingAddressForAdmin } from '../services/orderService'
+import { getAdminOrderById, updateOrderShippingAddressForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
 import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice } from '../utils/price'
@@ -76,6 +76,7 @@ export default function AdminOrderDetailPage() {
     const [addressForm, setAddressForm] = useState<AdminShippingAddressForm>(EMPTY_SHIPPING_ADDRESS_FORM)
     const [addressError, setAddressError] = useState('')
     const [postalCodeError, setPostalCodeError] = useState('')
+    const [isVerifyingPayment, setIsVerifyingPayment] = useState(false)
     const countryOptions = useMemo(() => getCountryOptions(), [])
     const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
     const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
@@ -199,6 +200,36 @@ export default function AdminOrderDetailPage() {
         } finally {
             setIsSavingAddress(false)
         }
+    }
+
+    async function handleVerifyPayment() {
+        if (!order || isVerifyingPayment || !order.sessionId) {
+            return
+        }
+
+        setIsVerifyingPayment(true)
+
+        try {
+            await verifyPaymentStatus(order.sessionId)
+            const refreshedOrder = await getAdminOrderById(order.id)
+            setOrder(refreshedOrder)
+            toast.success('Payment verified successfully.')
+        } catch (error) {
+            console.error('Payment verification failed:', error)
+            const errorMessage = error instanceof Error ? error.message : 'Unable to verify payment. Please try again.'
+            toast.error(errorMessage)
+        } finally {
+            setIsVerifyingPayment(false)
+        }
+    }
+
+    function canVerifyPayment(): boolean {
+        if (!order) return false
+        return (
+            order.paymentMethod === 'ONLINE' &&
+            order.paymentStatus?.toLowerCase() === 'pending' &&
+            !!order.sessionId
+        )
     }
 
     return (
@@ -464,6 +495,18 @@ export default function AdminOrderDetailPage() {
                                     <span className="font-semibold text-[#17110d]">{order.isActive ? 'Yes' : 'No'}</span>
                                 </div>
                             </div>
+
+                            {canVerifyPayment() ? (
+                                <button
+                                    type="button"
+                                    onClick={() => void handleVerifyPayment()}
+                                    disabled={isVerifyingPayment}
+                                    className="mt-6 inline-flex w-full items-center justify-center gap-2 border border-sky-200 bg-sky-50 px-4 py-3 text-sm font-bold tracking-[0.08em] text-sky-700 transition hover:bg-sky-100 disabled:opacity-60"
+                                >
+                                    <CreditCard className="h-4 w-4" />
+                                    {isVerifyingPayment ? 'VERIFYING...' : 'VERIFY PAYMENT MANUALLY'}
+                                </button>
+                            ) : null}
                         </aside>
                     </div>
                 ) : null}
