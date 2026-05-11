@@ -29,6 +29,7 @@ export type EditableProductForm = AdminProductUpdatePayload & {
   videoUrls: string
   certificateUrls: string
   diamondPcs: number
+  metal: string
   variants: CreateVariantForm[]
   images: ProductImageFormItem[]
 }
@@ -119,6 +120,7 @@ export function createEmptyForm(): EditableProductForm {
     videoUrls: '',
     certificateUrls: '',
     diamondPcs: 0,
+    metal: '',
     variants: [createEmptyVariant()],
     images: [],
   }
@@ -165,6 +167,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
     videoUrls: product.videoUrls.join(', '),
     certificateUrls: product.certificateUrls.join(', '),
     diamondPcs: product.diamondPcs,
+    metal: product.metal,
     variants:
       product.variants.length > 0
         ? product.variants.map((variant) => ({

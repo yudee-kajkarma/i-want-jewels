@@ -455,7 +455,7 @@ export default function AdminProductsPage() {
     setCreateStep(2)
   }
 
-  async function handleSave(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSave(event: SubmitEvent) {
     event.preventDefault()
 
     if (createStep === 1) {

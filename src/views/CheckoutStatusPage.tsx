@@ -6,6 +6,7 @@ import { Link, useSearchParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { addCartItem, clearCartItems } from '../services/cartService'
+import { getOrderById, verifyPaymentStatus } from '../services/orderService'
 import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch } from '../store/hooks'
 import {
@@ -29,6 +30,18 @@ export default function CheckoutStatusPage() {
 
     async function syncCartAfterCheckout() {
       try {
+        if (paymentResult === 'success' && pendingOrder?.paymentMethod === 'ONLINE' && pendingOrder?.orderId) {
+          try {
+            const order = await getOrderById(pendingOrder.orderId)
+
+            if (order.sessionId && order.paymentStatus?.toLowerCase() === 'pending') {
+              await verifyPaymentStatus(order.sessionId)
+            }
+          } catch {
+            console.log('Payment verification sync in progress (webhook handling)')
+          }
+        }
+
         if (pendingOrder?.source === 'single') {
           const snapshot = getCartRestoreSnapshot()
 

@@ -40,6 +40,7 @@ type OrderApiResponse = {
   trackingNumber?: string | null
   trackingUrl?: string | null
   isActive?: boolean
+  sessionId?: string
 }
 
 type CreateOrderApiResponse = {
@@ -155,6 +156,13 @@ type AdminShippingQuoteApiResponse = {
         }>
       | Record<string, unknown>
   }
+}
+
+type VerifyPaymentApiResponse = {
+  success: boolean
+  code: string
+  message: string
+  data: OrderApiResponse
 }
 
 function normalizeShippingRateOptions(
@@ -279,6 +287,7 @@ function normalizeOrder(order: OrderApiResponse): Order {
     orderStatus: normalizeOrderStatus(order.orderStatus),
     totalAmount: toPrice(order.totalAmount),
     totalItems: order.totalItems,
+    sessionId: typeof order.sessionId === 'string' ? order.sessionId : undefined,
   }
 }
 
@@ -502,4 +511,10 @@ export async function getAllOrdersForAdminByStatus(
     orders: (response.data.data ?? []).map(normalizeOrder),
     pagination: response.data.pagination ?? null,
   }
+}
+
+export async function verifyPaymentStatus(sessionId: string): Promise<Order> {
+  const response = await authApiClient.get<VerifyPaymentApiResponse>(`/orders/verify-payment/${sessionId}`)
+
+  return normalizeOrder(response.data.data)
 }
