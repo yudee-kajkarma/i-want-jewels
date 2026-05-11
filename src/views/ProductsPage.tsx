@@ -474,34 +474,6 @@ export default function ProductsPage({
                         <div>
                             <div className="mb-6 flex flex-col gap-4 border-b border-zinc-200 pb-5 xl:flex-row xl:items-center xl:justify-between">
                                 <div className="flex flex-wrap items-center gap-5">
-                                    <label className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.14em] text-zinc-700">
-                                        <input
-                                            type="checkbox"
-                                            checked={filters.tags.includes(
-                                                "sale",
-                                            )}
-                                            onChange={(event) =>
-                                                setFilters((currentValue) => ({
-                                                    ...currentValue,
-                                                    tags: event.target.checked
-                                                        ? Array.from(
-                                                              new Set([
-                                                                  ...currentValue.tags,
-                                                                  "sale",
-                                                              ]),
-                                                          )
-                                                        : currentValue.tags.filter(
-                                                              (tag) =>
-                                                                  tag !==
-                                                                  "sale",
-                                                          ),
-                                                }))
-                                            }
-                                            className="h-4 w-4 border-zinc-400 text-pink-500 focus:ring-pink-500"
-                                        />
-                                        Show only on sale
-                                    </label>
-
                                     <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
                                         {sortedProducts.length} Products
                                     </span>

@@ -16,8 +16,8 @@ const quickShopLinks = [
 ];
 
 const questionLinks = [
-    { label: "Ring Sizer", to: "/help/ring-sizer" },
-    { label: "Jewelry Care", to: "/help/jewelry-care" },
+    { label: "Ring Sizer", to: "/help" },
+    { label: "Jewelry Care", to: "/help" },
     { label: "Blog", to: "/blog" },
 ];
 

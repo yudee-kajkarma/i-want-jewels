@@ -1,10 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import { Link } from '@/lib/router'
-import { Trash2 } from 'lucide-react'
+import { ShoppingBag, Trash2 } from 'lucide-react'
+import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
+import { getProductById } from '../services/productService'
+import { addToCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { clearWishlist, removeWishlistItem } from '../store/wishlistSlice'
 import { formatPrice } from '../utils/price'
@@ -30,6 +34,53 @@ export default function WishlistPage() {
   )
   const error = useAppSelector((state) => state.wishlist.error)
   const itemCount = wishlist?.items.length ?? 0
+  const [isTransferring, setIsTransferring] = useState(false)
+
+  async function handleTransferToCart() {
+    if (!wishlist || wishlist.items.length === 0 || isTransferring) {
+      return
+    }
+
+    setIsTransferring(true)
+
+    let successCount = 0
+    let failureCount = 0
+
+    for (const item of wishlist.items) {
+      try {
+        const product = await getProductById(item.productId)
+        const variant = product.variants.find((entry) => entry.available) ?? product.variants[0]
+
+        if (!variant) {
+          failureCount += 1
+          continue
+        }
+
+        await dispatch(
+          addToCart({
+            productId: item.productId,
+            variantId: variant.id,
+            quantity: 1,
+          }),
+        ).unwrap()
+
+        await dispatch(removeWishlistItem(item.id)).unwrap()
+        successCount += 1
+      } catch {
+        failureCount += 1
+      }
+    }
+
+    setIsTransferring(false)
+
+    if (successCount > 0) {
+      toast.success(`Moved ${successCount} item${successCount === 1 ? '' : 's'} to cart.`)
+    }
+
+    if (failureCount > 0) {
+      toast.error(`Could not transfer ${failureCount} item${failureCount === 1 ? '' : 's'}.`)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
@@ -41,13 +92,25 @@ export default function WishlistPage() {
             <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Saved pieces you love</h1>
           </div>
           {wishlist && wishlist.items.length > 0 ? (
-            <button
-              type="button"
-              onClick={() => void dispatch(clearWishlist())}
-              className="border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
-            >
-              CLEAR WISHLIST
-            </button>
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={() => void handleTransferToCart()}
+                disabled={isTransferring}
+                className="inline-flex items-center gap-2 bg-[#111111] px-5 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <ShoppingBag className="h-4 w-4" />
+                {isTransferring ? 'TRANSFERRING...' : 'TRANSFER TO CART'}
+              </button>
+              <button
+                type="button"
+                onClick={() => void dispatch(clearWishlist())}
+                disabled={isTransferring}
+                className="border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                CLEAR WISHLIST
+              </button>
+            </div>
           ) : null}
         </div>
 

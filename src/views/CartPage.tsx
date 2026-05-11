@@ -87,7 +87,24 @@ export default function CartPage() {
                       <div className="inline-flex items-center overflow-hidden border border-[#d8c8bb]">
                         <button
                           type="button"
-                          onClick={() => void dispatch(changeCartItemQuantity({ itemId: item.id || item.productId, quantity: Math.max(1, item.quantity - 1) }))}
+                          onClick={() => {
+                            if (item.quantity <= 1) {
+                              void dispatch(
+                                removeCartItem({
+                                  productId: item.productId,
+                                  variantId: item.variantId,
+                                }),
+                              )
+                              return
+                            }
+
+                            void dispatch(
+                              changeCartItemQuantity({
+                                itemId: item.id || item.productId,
+                                quantity: item.quantity - 1,
+                              }),
+                            )
+                          }}
                           className="flex h-10 w-10 items-center justify-center text-lg transition hover:bg-[#111111] hover:text-white"
                         >
                           -

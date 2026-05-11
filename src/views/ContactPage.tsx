@@ -75,7 +75,6 @@ export default function ContactPage() {
                         </h1>
                     </div>
                 </section>
-
                 <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
                     <div className="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
                         <div>
@@ -161,18 +160,6 @@ export default function ContactPage() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                <section className="mx-auto max-w-[1480px] px-6 pb-16 lg:px-10">
-                    <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
-                        <iframe
-                            title="Store location map"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=4.381%2C51.207%2C4.431%2C51.229&layer=mapnik&marker=51.2181%2C4.4025"
-                            className="block h-[420px] w-full md:h-[520px]"
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
                     </div>
                 </section>
             </main>

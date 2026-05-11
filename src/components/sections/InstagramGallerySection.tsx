@@ -73,7 +73,7 @@ export default function InstagramGallerySection({
 
         const timer = setInterval(() => {
             setDesktopIndex((prev) => prev + 1);
-        }, 2500);
+        }, 8000);
 
         return () => clearInterval(timer);
     }, [videos.length]);
@@ -184,7 +184,21 @@ export default function InstagramGallerySection({
                                 <button
                                     key={index}
                                     onClick={openInstagram}
-                                    className="group relative h-[65vh] w-[calc(100%/6-16px)] flex-shrink-0 overflow-hidden "
+                                    onMouseEnter={(event) => {
+                                        const videoElement =
+                                            event.currentTarget.querySelector(
+                                                "video",
+                                            );
+                                        videoElement?.play().catch(() => {});
+                                    }}
+                                    onMouseLeave={(event) => {
+                                        const videoElement =
+                                            event.currentTarget.querySelector(
+                                                "video",
+                                            );
+                                        videoElement?.pause();
+                                    }}
+                                    className="group relative h-[55vh] w-auto flex-shrink-0 overflow-hidden "
                                 >
                                     {/* shimmer */}
                                     {!loadedVideos[sourceIndex] && (
@@ -195,9 +209,9 @@ export default function InstagramGallerySection({
                                         <video
                                             src={video.url}
                                             muted
-                                            autoPlay
                                             loop
                                             playsInline
+                                            preload="metadata"
                                             onLoadedData={() =>
                                                 setLoadedVideos((prev) => ({
                                                     ...prev,
@@ -213,7 +227,7 @@ export default function InstagramGallerySection({
                                     </div>
 
                                     {/* overlay */}
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition group-hover:opacity-100">
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-100 transition group-hover:opacity-0">
                                         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-xl shadow-xl">
                                             ▶
                                         </div>

@@ -533,3 +533,15 @@
 .blog-rich-content ol li::marker {
   color: #bb923a;
 }
+
+.iwj-range-dual {
+  pointer-events: none;
+}
+
+.iwj-range-dual::-webkit-slider-thumb {
+  pointer-events: auto;
+}
+
+.iwj-range-dual::-moz-range-thumb {
+  pointer-events: auto;
+}
