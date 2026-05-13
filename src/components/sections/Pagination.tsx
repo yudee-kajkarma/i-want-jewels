@@ -104,14 +104,14 @@ export default function Pagination({
     );
 
     return (
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+        <div className="mt-10 flex items-center justify-center gap-1 sm:gap-2">
             <button
                 type="button"
                 onClick={() =>
                     onPageChange(Math.max(1, pagination.currentPage - 1))
                 }
                 disabled={disabled || !pagination.hasPrevPage}
-                className="flex h-11 w-11 items-center justify-center  border border-[#d8c8bb] bg-white text-[#24160f] transition hover:bg-[#111111] hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex h-8 w-8 shrink-0 items-center justify-center border border-[#d8c8bb] bg-white text-[#24160f] transition hover:bg-[#111111] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 sm:h-11 sm:w-11"
             >
                 <ChevronIcon direction="left" />
             </button>
@@ -121,7 +121,7 @@ export default function Pagination({
                     return (
                         <span
                             key={`ellipsis-${index}`}
-                            className="flex h-11 w-11 items-center justify-center text-sm font-semibold text-zinc-400"
+                            className="flex h-8 w-6 shrink-0 items-center justify-center text-xs font-semibold text-zinc-400 sm:h-11 sm:w-11 sm:text-sm"
                         >
                             ...
                         </span>
@@ -134,7 +134,7 @@ export default function Pagination({
                         type="button"
                         onClick={() => onPageChange(pageItem)}
                         disabled={disabled}
-                        className={`flex h-11 w-11 items-center justify-center   text-sm font-semibold transition ${
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center border text-xs font-semibold transition sm:h-11 sm:w-11 sm:text-sm ${
                             pagination.currentPage === pageItem
                                 ? "border-[#111111] bg-[#202020] text-white"
                                 : "border-[#d8c8bb] bg-white text-[#24160f] hover:bg-[#111111] hover:text-white"
@@ -156,7 +156,7 @@ export default function Pagination({
                     )
                 }
                 disabled={disabled || !pagination.hasNextPage}
-                className="flex h-11 w-11 items-center justify-center  border border-[#d8c8bb] bg-white text-[#24160f] transition hover:bg-[#111111] hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex h-8 w-8 shrink-0 items-center justify-center border border-[#d8c8bb] bg-white text-[#24160f] transition hover:bg-[#111111] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 sm:h-11 sm:w-11"
             >
                 <ChevronIcon direction="right" />
             </button>

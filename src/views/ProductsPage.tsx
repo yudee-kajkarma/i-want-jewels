@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import shopPageBanner from "../assets/banner/Shop-page-banner.jpg";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Pagination from "../components/sections/Pagination";
@@ -393,7 +394,15 @@ export default function ProductsPage({
         <div className="min-h-screen bg-white text-zinc-900 font-parsi">
             <Header />
             <main className="pb-16">
-                <section className=" bg-white px-6 pb-5 lg:px-10 ">
+                <section className="w-full overflow-hidden bg-white px-5 lg:px-20">
+                    <img
+                        src={shopPageBanner.src}
+                        alt="Shop the collection"
+                        className="block h-auto w-full"
+                    />
+                </section>
+
+                <section className=" bg-white px-6 pb-5 lg:px-10 pt-8">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
                             Homepage / Shop
@@ -402,7 +411,7 @@ export default function ProductsPage({
                             Shop
                         </h1>
 
-                        <div className="mt-7 flex flex-wrap items-center gap-3">
+                        <div className="mt-7 hidden flex-wrap items-center gap-3 lg:flex">
                             {topCategories.map((categoryLabel) => {
                                 const isActive =
                                     filters.category.toLowerCase() ===
@@ -433,15 +442,15 @@ export default function ProductsPage({
                     <div className="mb-8 flex items-center justify-between gap-4">
                         <button
                             type="button"
+                            aria-label="Open filters"
                             onClick={() =>
                                 setIsMobileFiltersOpen(
                                     (currentValue) => !currentValue,
                                 )
                             }
-                            className="inline-flex items-center gap-2 border border-zinc-800 bg-white px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:bg-zinc-50 lg:hidden"
+                            className="inline-flex items-center justify-center border border-zinc-800 bg-white p-2.5 text-zinc-800 transition hover:bg-zinc-50 lg:hidden"
                         >
                             <FilterIcon />
-                            Filter
                         </button>
 
                         <div className="ml-auto text-right">
@@ -474,7 +483,7 @@ export default function ProductsPage({
                         <div>
                             <div className="mb-6 flex flex-col gap-4 border-b border-zinc-200 pb-5 xl:flex-row xl:items-center xl:justify-between">
                                 <div className="flex flex-wrap items-center gap-5">
-                                    <span className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                    <span className="hidden text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900 lg:inline">
                                         {sortedProducts.length} Products
                                     </span>
 
@@ -489,7 +498,7 @@ export default function ProductsPage({
                                     ) : null}
                                 </div>
 
-                                <label className="flex items-center gap-3 text-[12px] uppercase tracking-[0.14em] text-zinc-700">
+                                <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
                                     <span>Sort By</span>
                                     <select
                                         value={sortOption}
@@ -499,7 +508,7 @@ export default function ProductsPage({
                                                     .value as SortOption,
                                             )
                                         }
-                                        className="h-10 min-w-[180px] border border-zinc-800 bg-white px-4 text-[12px] uppercase tracking-[0.14em] text-zinc-800 outline-none transition focus:border-pink-500"
+                                        className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
                                     >
                                         <option value="featured">
                                             Featured
