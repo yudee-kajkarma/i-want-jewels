@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { Eye, EyeOff } from "lucide-react";
+import { ChevronDown, Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import AuthShell from "../components/auth/AuthShell";
 import { useAuth } from "../context/AuthContext";
@@ -98,7 +98,7 @@ const initialForm: RegisterPayload = {
         city: "",
         state: "",
         postalCode: "",
-        country: "IN",
+        country: "BE",
         isDefault: true,
         addressType: "home",
     },
@@ -119,6 +119,8 @@ export default function RegisterPage() {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
         useState(false);
+    const [isCityListOpen, setIsCityListOpen] = useState(false);
+    const cityFieldRef = useRef<HTMLDivElement>(null);
     const countryOptions = useMemo(() => getCountryOptions(), []);
     const stateOptions = useMemo(
         () => getStateOptions(form.address.country),
@@ -128,6 +130,34 @@ export default function RegisterPage() {
         () => getCityOptions(form.address.country, form.address.state),
         [form.address.country, form.address.state],
     );
+    const filteredCityOptions = useMemo(() => {
+        const query = form.address.city.trim().toLowerCase();
+
+        if (!query) {
+            return cityOptions;
+        }
+
+        return cityOptions.filter((city) =>
+            city.name.toLowerCase().includes(query),
+        );
+    }, [cityOptions, form.address.city]);
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (
+                cityFieldRef.current &&
+                !cityFieldRef.current.contains(event.target as Node)
+            ) {
+                setIsCityListOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
     const isRegisterFormValid = useMemo(() => {
         const hasRequiredFields =
             form.username.trim() !== "" &&
@@ -324,13 +354,19 @@ export default function RegisterPage() {
                 }
             }
         } catch (caughtError) {
-            const fallbackMessage = axios.isAxiosError(caughtError)
-                ? (
-                      caughtError.response?.data as
-                          | { message?: string }
-                          | undefined
-                  )?.message
-                : "";
+            let fallbackMessage = "";
+
+            if (axios.isAxiosError(caughtError)) {
+                const responseData = caughtError.response?.data as
+                    | {
+                          message?: string;
+                          error?: { message?: string };
+                      }
+                    | undefined;
+
+                fallbackMessage =
+                    responseData?.error?.message ?? responseData?.message ?? "";
+            }
 
             toast.error(
                 fallbackMessage ||
@@ -364,11 +400,15 @@ export default function RegisterPage() {
         setError("");
 
         try {
+            const stateName =
+                stateOptions.find(
+                    (option) => option.code === form.address.state,
+                )?.name ?? form.address.state;
             const payload: RegisterPayload = {
                 ...form,
                 address: {
                     ...form.address,
-                    city: form.address.city.trim() || form.address.state,
+                    city: form.address.city.trim() || stateName,
                 },
             };
             const response = await registerUser(payload);
@@ -686,11 +726,26 @@ export default function RegisterPage() {
                                 required
                                 value={form.address.state}
                                 onChange={(event) => {
+                                    const nextStateCode = event.target.value;
+                                    const nextStateName =
+                                        stateOptions.find(
+                                            (option) =>
+                                                option.code === nextStateCode,
+                                        )?.name ?? "";
+                                    const cityChoices = nextStateCode
+                                        ? getCityOptions(
+                                              form.address.country,
+                                              nextStateCode,
+                                          )
+                                        : [];
+
+                                    updateAddressField("state", nextStateCode);
                                     updateAddressField(
-                                        "state",
-                                        event.target.value,
+                                        "city",
+                                        cityChoices.length === 0
+                                            ? nextStateName
+                                            : "",
                                     );
-                                    updateAddressField("city", "");
                                 }}
                                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
                             >
@@ -722,29 +777,83 @@ export default function RegisterPage() {
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
                                 City{" "}
-                                <span className="font-normal text-zinc-500">
-                                    (optional)
-                                </span>
                             </span>
-                            <select
-                                value={form.address.city}
-                                onChange={(event) =>
-                                    updateAddressField(
-                                        "city",
-                                        event.target.value,
-                                    )
-                                }
-                                className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-                            >
-                                <option value="">
-                                    Select city (defaults to state)
-                                </option>
-                                {cityOptions.map((city) => (
-                                    <option key={city.name} value={city.name}>
-                                        {city.name}
-                                    </option>
-                                ))}
-                            </select>
+                            <div ref={cityFieldRef} className="relative">
+                                <input
+                                    type="text"
+                                    value={form.address.city}
+                                    onChange={(event) => {
+                                        updateAddressField(
+                                            "city",
+                                            event.target.value,
+                                        );
+
+                                        if (cityOptions.length > 0) {
+                                            setIsCityListOpen(true);
+                                        }
+                                    }}
+                                    onFocus={() => {
+                                        if (cityOptions.length > 0) {
+                                            setIsCityListOpen(true);
+                                        }
+                                    }}
+                                    placeholder={
+                                        cityOptions.length > 0
+                                            ? "Select or type a city"
+                                            : "Defaults to state — edit if you like"
+                                    }
+                                    className="h-14 w-full border border-[#ddcdc0] bg-white px-4 pr-12 outline-none transition focus:border-[#17110d]"
+                                />
+                                {cityOptions.length > 0 ? (
+                                    <button
+                                        type="button"
+                                        aria-label="Toggle city options"
+                                        onClick={() =>
+                                            setIsCityListOpen(
+                                                (previous) => !previous,
+                                            )
+                                        }
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 transition hover:text-[#17110d]"
+                                    >
+                                        <ChevronDown
+                                            className={`h-5 w-5 transition-transform ${
+                                                isCityListOpen
+                                                    ? "rotate-180"
+                                                    : ""
+                                            }`}
+                                        />
+                                    </button>
+                                ) : null}
+                                {isCityListOpen &&
+                                filteredCityOptions.length > 0 ? (
+                                    <ul className="absolute left-0 right-0 top-full z-20 mt-1 max-h-56 overflow-y-auto border border-[#ddcdc0] bg-white shadow-lg">
+                                        {filteredCityOptions.map((city) => (
+                                            <li key={city.name}>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        updateAddressField(
+                                                            "city",
+                                                            city.name,
+                                                        );
+                                                        setIsCityListOpen(
+                                                            false,
+                                                        );
+                                                    }}
+                                                    className={`block w-full px-4 py-2 text-left text-sm transition hover:bg-[#f5ede5] ${
+                                                        form.address.city ===
+                                                        city.name
+                                                            ? "bg-[#f5ede5] font-semibold text-[#17110d]"
+                                                            : "text-[#17110d]"
+                                                    }`}
+                                                >
+                                                    {city.name}
+                                                </button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : null}
+                            </div>
                         </label>
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">

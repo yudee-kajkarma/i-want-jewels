@@ -1,3 +1,4 @@
+import axios from "axios";
 import type {
     AuthSession,
     LoginPayload,
@@ -110,22 +111,56 @@ export type CheckEmailResult = {
     message: string;
 };
 
+type CheckEmailResponseBody = {
+    success?: boolean;
+    code?: string;
+    message?: string;
+    error?: {
+        code?: string;
+        message?: string;
+    };
+};
+
+function parseCheckEmailResponse(
+    body: CheckEmailResponseBody | undefined,
+    fallbackCode: CheckEmailCode,
+): CheckEmailResult {
+    const nestedError = body?.error;
+
+    return {
+        success: Boolean(body?.success),
+        code:
+            (body?.code as CheckEmailCode | undefined) ??
+            (nestedError?.code as CheckEmailCode | undefined) ??
+            fallbackCode,
+        message: body?.message ?? nestedError?.message ?? "",
+    };
+}
+
 export async function checkRegisterEmail(
     email: string,
 ): Promise<CheckEmailResult> {
-    const response = await apiClient.post<{
-        success?: boolean;
-        code?: string;
-        message?: string;
-    }>("/users/register/check-email", { email });
+    try {
+        const response = await apiClient.post<CheckEmailResponseBody>(
+            "/users/register/check-email",
+            { email },
+        );
 
-    return {
-        success: Boolean(response.data.success),
-        code:
-            (response.data.code as CheckEmailCode | undefined) ??
-            "CHECK_EMAIL_ERROR",
-        message: response.data.message ?? "",
-    };
+        return parseCheckEmailResponse(response.data, "CHECK_EMAIL_ERROR");
+    } catch (caughtError) {
+        if (axios.isAxiosError(caughtError) && caughtError.response) {
+            const body = caughtError.response.data as
+                | CheckEmailResponseBody
+                | undefined;
+            const parsed = parseCheckEmailResponse(body, "CHECK_EMAIL_ERROR");
+
+            if (parsed.code !== "CHECK_EMAIL_ERROR" || parsed.message) {
+                return parsed;
+            }
+        }
+
+        throw caughtError;
+    }
 }
 
 export async function registerUser(
