@@ -9,7 +9,7 @@ import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
 import { getAdminOrderById, updateOrderShippingAddressForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
-import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
+import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice } from '../utils/price'
 
 type AdminShippingAddressForm = {
@@ -79,7 +79,6 @@ export default function AdminOrderDetailPage() {
     const [isVerifyingPayment, setIsVerifyingPayment] = useState(false)
     const countryOptions = useMemo(() => getCountryOptions(), [])
     const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
-    const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
     const canEditShippingAddress = order?.orderStatus === 'PENDING' || order?.orderStatus === 'CONFIRMED'
 
     useEffect(() => {
@@ -334,7 +333,6 @@ export default function AdminOrderDetailPage() {
                                                         ...currentValue,
                                                         country: event.target.value,
                                                         state: '',
-                                                        city: '',
                                                     }))
                                                 }
                                                 className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
@@ -356,7 +354,6 @@ export default function AdminOrderDetailPage() {
                                                     setAddressForm((currentValue) => ({
                                                         ...currentValue,
                                                         state: event.target.value,
-                                                        city: '',
                                                     }))
                                                 }
                                                 className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
@@ -372,7 +369,7 @@ export default function AdminOrderDetailPage() {
 
                                         <label className="space-y-1">
                                             <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">City</span>
-                                            <select
+                                            <input
                                                 value={addressForm.city}
                                                 onChange={(event) =>
                                                     setAddressForm((currentValue) => ({
@@ -380,15 +377,9 @@ export default function AdminOrderDetailPage() {
                                                         city: event.target.value,
                                                     }))
                                                 }
+                                                placeholder="City"
                                                 className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                                            >
-                                                <option value="">Select city</option>
-                                                {cityOptions.map((city) => (
-                                                    <option key={city.name} value={city.name}>
-                                                        {city.name}
-                                                    </option>
-                                                ))}
-                                            </select>
+                                            />
                                         </label>
 
                                         <label className="space-y-1">

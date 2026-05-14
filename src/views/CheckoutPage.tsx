@@ -14,7 +14,7 @@ import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import type { CheckoutSource, PaymentMethod, SingleCheckoutDraft } from '../types/order'
 import type { UserAddress, UserProfileAddressPayload } from '../types/profile'
-import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
+import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
 import {
   clearSingleCheckoutDraft,
@@ -84,7 +84,6 @@ export default function CheckoutPage() {
   const persistedDraft = useMemo(() => getSingleCheckoutDraft(), [location.key])
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
-  const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
   const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search])
   const isSingleFromQuery = searchParams.get('source') === 'single'
   const checkoutSource: CheckoutSource = locationState?.source === 'single' || isSingleFromQuery ? 'single' : 'cart'
@@ -468,7 +467,6 @@ export default function CheckoutPage() {
                               ...currentValue,
                               country: event.target.value,
                               state: '',
-                              city: '',
                             }))}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
@@ -485,7 +483,6 @@ export default function CheckoutPage() {
                               setAddressForm((currentValue) => ({
                                 ...currentValue,
                                 state: event.target.value,
-                                city: '',
                               }))
                             }
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
@@ -497,18 +494,12 @@ export default function CheckoutPage() {
                               </option>
                             ))}
                           </select>
-                          <select
+                          <input
                             value={addressForm.city}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
+                            placeholder="City"
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          >
-                            <option value="">Select city</option>
-                            {cityOptions.map((city) => (
-                              <option key={city.name} value={city.name}>
-                                {city.name}
-                              </option>
-                            ))}
-                          </select>
+                          />
                           <input
                             value={addressForm.houseNumber ?? ''}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}

@@ -120,11 +120,61 @@ export type AdminShippingRateOption = {
   tag?: string
 }
 
+export type AdminShipmentPartyPreview = {
+  name: string
+  phone: string
+  email: string
+  street: string
+  houseNumber?: string
+  city: string
+  state?: string
+  postalCode: string
+  country: string
+}
+
+export type AdminShipmentPackagePreview = {
+  totalWeightKg: number
+  declaredValueEUR: number
+  description: string
+  incoterm: string
+  isCustomsDeclarable: boolean
+}
+
+export type AdminShipmentPreviewItem = {
+  number: number
+  title: string
+  qty: number
+  unitPriceEUR: number
+  unitWeightG: number
+  mfrCountry: string
+  hsCode: string
+}
+
+export type AdminShipmentPreview = {
+  shipper: AdminShipmentPartyPreview
+  receiver: AdminShipmentPartyPreview
+  package: AdminShipmentPackagePreview
+  items: AdminShipmentPreviewItem[]
+}
+
+export type AdminShipmentValidation = {
+  shipperPostalOk: boolean
+  receiverPostalOk: boolean
+  shipperPhoneOk: boolean
+  receiverPhoneOk: boolean
+  receiverEmailOk: boolean
+  descriptionOk: boolean
+  weightOk: boolean
+  issues: string[]
+}
+
 export type AdminShippingQuote = {
   rates: {
     FEDEX: AdminShippingRateOption[]
     DHL: AdminShippingRateOption[]
   }
+  preview?: AdminShipmentPreview
+  validation?: AdminShipmentValidation
 }
 
 export type AdminOrderCustomer = {

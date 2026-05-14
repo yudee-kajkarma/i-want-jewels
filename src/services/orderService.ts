@@ -134,27 +134,29 @@ type AdminLabelUrlApiResponse = {
   }
 }
 
+type AdminShippingQuoteRateArray =
+  | Array<{
+      serviceName?: string
+      serviceCode?: string
+      price?: number
+      deliveryDays?: number
+      tag?: string
+    }>
+  | Record<string, unknown>
+
 type AdminShippingQuoteApiResponse = {
   success: boolean
   data?: {
-    FEDEX?:
-      | Array<{
-          serviceName?: string
-          serviceCode?: string
-          price?: number
-          deliveryDays?: number
-          tag?: string
-        }>
-      | Record<string, unknown>
-    DHL?:
-      | Array<{
-          serviceName?: string
-          serviceCode?: string
-          price?: number
-          deliveryDays?: number
-          tag?: string
-        }>
-      | Record<string, unknown>
+    // New shape: { rates: { FEDEX, DHL }, preview, validation }
+    rates?: {
+      FEDEX?: AdminShippingQuoteRateArray
+      DHL?: AdminShippingQuoteRateArray
+    }
+    preview?: unknown
+    validation?: unknown
+    // Legacy shape (pre-preview): { FEDEX, DHL }
+    FEDEX?: AdminShippingQuoteRateArray
+    DHL?: AdminShippingQuoteRateArray
   }
 }
 
@@ -344,11 +346,21 @@ function normalizeAdminShippingQuote(
 ): AdminShippingQuote | null {
   if (!data) return null
 
+  const fedex = data.rates?.FEDEX ?? data.FEDEX
+  const dhl = data.rates?.DHL ?? data.DHL
+
+  // preview + validation come straight from the backend; cast through
+  // unknown because we already declare the strict shape on AdminShippingQuote.
+  const preview = data.preview as AdminShippingQuote['preview']
+  const validation = data.validation as AdminShippingQuote['validation']
+
   return {
     rates: {
-      FEDEX: normalizeShippingRateOptions(data.FEDEX),
-      DHL: normalizeShippingRateOptions(data.DHL),
+      FEDEX: normalizeShippingRateOptions(fedex),
+      DHL: normalizeShippingRateOptions(dhl),
     },
+    preview,
+    validation,
   }
 }
 
@@ -462,7 +474,7 @@ export async function shipOrderForAdmin(
 
 export async function updateOrderShippingAddressForAdmin(
   orderId: string,
-  payload: { street: string; city: string; state: string; postalCode: string; country: string },
+  payload: Partial<{ street: string; city: string; state: string; postalCode: string; country: string }>,
 ): Promise<Order | null> {
   const response = await adminApiClient.patch<AdminOrderUpdateApiResponse>(`/orders/admin/${orderId}/shipping-address`, payload)
 
