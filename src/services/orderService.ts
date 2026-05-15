@@ -487,12 +487,6 @@ export async function cancelShipmentForAdmin(orderId: string): Promise<string> {
   return response.data.message || 'Shipment cancelled successfully.'
 }
 
-export async function verifyOrderDeliveryForAdmin(orderId: string): Promise<Order | null> {
-  const response = await adminApiClient.post<AdminOrderUpdateApiResponse>(`/orders/${orderId}/verify-delivery`)
-
-  return response.data.data ? normalizeOrder(response.data.data) : null
-}
-
 export async function getAdminOrderById(orderId: string): Promise<AdminOrderDetail> {
   const response = await adminApiClient.get<AdminOrderDetailApiResponse>(`/orders/admin/${orderId}`)
 

@@ -14,13 +14,12 @@ import {
   shipOrderForAdmin,
   updateOrderShippingAddressForAdmin,
   updateOrderStatusForAdmin,
-  verifyOrderDeliveryForAdmin,
 } from '../services/orderService'
 import { useCurrency } from '../context/CurrencyContext'
 import type { AdminShippingQuote, AdminShippingRateOption, Order, OrdersPagination, ShippingCarrier } from '../types/order'
 import { formatPrice } from '../utils/price'
 
-type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'verify' | 'cancelShipment'
+type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'cancelShipment'
 
 type PendingAction = {
   type: PendingActionType
@@ -81,7 +80,7 @@ function getActionLabel(type: PendingActionType) {
     return 'Cancel Shipment'
   }
 
-  return 'Verify Delivery'
+  return ''
 }
 
 function getActionDescription(type: PendingActionType) {
@@ -101,7 +100,7 @@ function getActionDescription(type: PendingActionType) {
     return 'This will cancel shipment and revert the order status to CONFIRMED.'
   }
 
-  return 'This will complete delivery and move the order status to DELIVERED.'
+  return ''
 }
 
 export default function AdminOrdersPage() {
@@ -354,11 +353,6 @@ export default function AdminOrdersPage() {
         toast.success(`Order ${pendingAction.order.orderNumber} marked as shipped.`)
       }
 
-      if (pendingAction.type === 'verify') {
-        await verifyOrderDeliveryForAdmin(pendingAction.order.id)
-        toast.success(`Delivery verified for order ${pendingAction.order.orderNumber}.`)
-      }
-
       if (pendingAction.type === 'cancelShipment') {
         const message = await cancelShipmentForAdmin(pendingAction.order.id)
         toast.success(message)
@@ -528,13 +522,6 @@ export default function AdminOrdersPage() {
               className="border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
             >
               Cancel Shipment
-            </button>
-            <button
-              type="button"
-              onClick={() => openActionModal('verify', order)}
-              className="border border-[#ca4f8b] bg-[#fff3fb] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#9b336d] transition hover:bg-[#ffe6f5]"
-            >
-              Verify Delivery
             </button>
           </>
         ) : null}
