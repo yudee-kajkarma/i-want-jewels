@@ -517,7 +517,7 @@ export default function Header() {
             { label: "Home", to: "/" },
             { label: "All Products", to: "/products" },
             ...categoryLinks,
-            { label: "Blog", to: "/blog" },
+            { label: "Blog", to: "/blogs" },
             { label: "Resources", to: "/help" },
             { label: "Help", to: "/help" },
         ];
@@ -842,7 +842,10 @@ export default function Header() {
 
                     {/* Right cluster */}
                     <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-5">
-                        <div ref={accountMenuRef} className="relative hidden lg:block">
+                        <div
+                            ref={accountMenuRef}
+                            className="relative hidden lg:block"
+                        >
                             <HeaderIconButton
                                 label={accountLabel}
                                 ariaExpanded={isAccountMenuOpen}
