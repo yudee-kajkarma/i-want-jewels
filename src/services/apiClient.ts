@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { getStoredAuthSession } from '../utils/authStorage'
+import { clearStoredAuthSession, getStoredAuthSession } from '../utils/authStorage'
 
-const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL 
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
 
 const apiClient = axios.create({
   baseURL: apiBaseUrl,
@@ -38,5 +38,36 @@ adminApiClient.interceptors.request.use((config) => {
 
   return config
 })
+
+function isTokenExpiredResponse(data: unknown): boolean {
+  if (data && typeof data === 'object') {
+    const d = data as Record<string, unknown>
+    return d.success === false && d.message === 'Token expired'
+  }
+  return false
+}
+
+function handleTokenExpiry(): void {
+  clearStoredAuthSession()
+  window.location.href = '/login'
+}
+
+function onResponseFulfilled(response: import('axios').AxiosResponse) {
+  if (isTokenExpiredResponse(response.data)) {
+    handleTokenExpiry()
+  }
+  return response
+}
+
+function onResponseRejected(error: unknown) {
+  const axiosError = error as import('axios').AxiosError
+  if (isTokenExpiredResponse(axiosError.response?.data)) {
+    handleTokenExpiry()
+  }
+  return Promise.reject(error)
+}
+
+authApiClient.interceptors.response.use(onResponseFulfilled, onResponseRejected)
+adminApiClient.interceptors.response.use(onResponseFulfilled, onResponseRejected)
 
 export default apiClient

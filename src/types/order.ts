@@ -38,6 +38,81 @@ export type Order = {
   totalAmount: Price
   totalItems: number
   sessionId?: string
+  shippingCarrier?: string | null
+  pickupId?: string | null
+}
+
+export type PickupStatus = 'SCHEDULED' | 'CANCELLED' | 'PICKED_UP'
+
+export type Pickup = {
+  id: string
+  carrier: ShippingCarrier
+  confirmationNumber: string
+  status: PickupStatus
+  plannedPickupDateAndTime: string
+  closeTime: string
+  location: string
+  locationType: 'business' | 'residence'
+  remark?: string
+  packageCount: number
+  totalWeightKg: number
+  orderIds: string[]
+  adminUserId: string
+  createdAt: string
+  updatedAt: string
+}
+
+export type PickupsResult = {
+  data: Pickup[]
+  pagination: OrdersPagination | null
+}
+
+export type PickupOrderSummaryItem = {
+  title: string
+  sku: string
+  quantity: number
+  price: Price
+  weight: number
+}
+
+export type PickupOrderSummary = {
+  id: string
+  orderNumber: string
+  orderStatus: OrderStatus
+  shippingCarrier: string | null
+  trackingNumber: string | null
+  trackingUrl: string | null
+  totalAmount: Price
+  totalItems: number
+  shippingAddress: ShippingAddress | null
+  items: PickupOrderSummaryItem[]
+}
+
+export type PickupDetail = {
+  pickup: Pickup
+  orderCount: number
+  orders: PickupOrderSummary[]
+  missingOrderIds: string[]
+}
+
+export type FedExPickupOption = {
+  carrier: string
+  available: boolean
+  pickupDate: string
+  cutOffTime: string
+  accessTime: { hours: number; minutes: number }
+  residentialAvailable: boolean
+  readyTimeOptions: string[]
+  defaultReadyTime: string
+  latestTimeOptions: string[]
+  defaultLatestTimeOptions: string
+  countryRelationship: string
+  scheduleDay: string
+}
+
+export type FedExPickupAvailability = {
+  available: boolean
+  options: FedExPickupOption[]
 }
 
 export type OrdersPagination = {
