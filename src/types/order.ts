@@ -23,6 +23,28 @@ export type OrderItem = {
   price: Price
   quantity: number
   thumbnail: string
+  isGiftCard?: boolean
+  giftCard?: {
+    recipientEmail?: string
+    recipientName?: string
+    senderName?: string
+    message?: string
+  }
+}
+
+export type IssuedGiftCard = {
+  id: string
+  code: string
+  initialAmount: number
+  currency: string
+  status: string
+  currentOwnerEmail: string
+  recipientEmail?: string
+  recipientName?: string
+  senderName?: string
+  message?: string
+  purchaseOrderItemKey?: string
+  createdAt?: string
 }
 
 export type Order = {
@@ -36,10 +58,14 @@ export type Order = {
   paymentStatus: string
   orderStatus: OrderStatus
   totalAmount: Price
+  payableAmount?: Price
+  giftCardDiscount?: number
+  appliedGiftCardCode?: string
   totalItems: number
   sessionId?: string
   shippingCarrier?: string | null
   pickupId?: string | null
+  issuedGiftCards?: IssuedGiftCard[]
 }
 
 export type PickupStatus = 'SCHEDULED' | 'CANCELLED' | 'PICKED_UP'
@@ -158,6 +184,7 @@ export type CreateOrderPayload = {
   currency: string
   successUrl?: string
   cancelUrl?: string
+  giftCardCode?: string
 }
 
 export type CreateOrderResult = {

@@ -39,6 +39,9 @@ type OrderApiResponse = {
   paymentStatus: string;
   orderStatus: string;
   totalAmount: number | Price;
+  payableAmount?: number | Price;
+  giftCardDiscount?: number;
+  appliedGiftCardCode?: string;
   totalItems: number;
   refundStatus?: string;
   shippingCarrier?: string | null;
@@ -48,6 +51,7 @@ type OrderApiResponse = {
   isActive?: boolean;
   sessionId?: string;
   pickupId?: string | null;
+  issuedGiftCards?: Array<Record<string, unknown>>;
 };
 
 type CreateOrderApiResponse = {
@@ -235,6 +239,17 @@ function getBooleanValue(
   return record[key] === true;
 }
 
+function getObjectValue(
+  record: Record<string, unknown>,
+  key: string,
+): Record<string, unknown> | null {
+  const value = record[key];
+
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : null;
+}
+
 function normalizeShippingAddress(
   address?: Record<string, unknown>,
 ): ShippingAddress | null {
@@ -253,6 +268,8 @@ function normalizeShippingAddress(
 }
 
 function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
+  const giftCard = getObjectValue(item, "giftCard");
+
   return {
     productId: getStringValue(item, "productId"),
     variantId: getStringValue(item, "variantId"),
@@ -264,6 +281,34 @@ function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
     price: getPriceValue(item, "price"),
     quantity: getNumberValue(item, "quantity") || 1,
     thumbnail: getStringValue(item, "thumbnail"),
+    isGiftCard: getBooleanValue(item, "isGiftCard"),
+    ...(giftCard
+      ? {
+          giftCard: {
+            recipientEmail: getStringValue(giftCard, "recipientEmail") || undefined,
+            recipientName: getStringValue(giftCard, "recipientName") || undefined,
+            senderName: getStringValue(giftCard, "senderName") || undefined,
+            message: getStringValue(giftCard, "message") || undefined,
+          },
+        }
+      : {}),
+  };
+}
+
+function normalizeIssuedGiftCard(card: Record<string, unknown>) {
+  return {
+    id: getStringValue(card, "id"),
+    code: getStringValue(card, "code"),
+    initialAmount: getNumberValue(card, "initialAmount"),
+    currency: getStringValue(card, "currency"),
+    status: getStringValue(card, "status"),
+    currentOwnerEmail: getStringValue(card, "currentOwnerEmail"),
+    recipientEmail: getStringValue(card, "recipientEmail") || undefined,
+    recipientName: getStringValue(card, "recipientName") || undefined,
+    senderName: getStringValue(card, "senderName") || undefined,
+    message: getStringValue(card, "message") || undefined,
+    purchaseOrderItemKey: getStringValue(card, "purchaseOrderItemKey") || undefined,
+    createdAt: getStringValue(card, "createdAt") || undefined,
   };
 }
 
@@ -306,12 +351,21 @@ function normalizeOrder(order: OrderApiResponse): Order {
     paymentStatus: order.paymentStatus,
     orderStatus: normalizeOrderStatus(order.orderStatus),
     totalAmount: toPrice(order.totalAmount),
+    payableAmount:
+      order.payableAmount === undefined ? undefined : toPrice(order.payableAmount),
+    giftCardDiscount:
+      typeof order.giftCardDiscount === "number" ? order.giftCardDiscount : undefined,
+    appliedGiftCardCode:
+      typeof order.appliedGiftCardCode === "string" ? order.appliedGiftCardCode : undefined,
     totalItems: order.totalItems,
     sessionId:
       typeof order.sessionId === "string" ? order.sessionId : undefined,
     shippingCarrier:
       typeof order.shippingCarrier === "string" ? order.shippingCarrier : null,
     pickupId: typeof order.pickupId === "string" ? order.pickupId : null,
+    issuedGiftCards: Array.isArray(order.issuedGiftCards)
+      ? order.issuedGiftCards.map(normalizeIssuedGiftCard)
+      : [],
   };
 }
 

@@ -1,5 +1,12 @@
 import type { Price } from '../utils/price'
 
+export type GiftCardDetails = {
+  recipientEmail?: string
+  recipientName?: string
+  senderName?: string
+  message?: string
+}
+
 export type CartItem = {
   id: string
   productId: string
@@ -9,6 +16,8 @@ export type CartItem = {
   thumbnail: string
   price: Price
   quantity: number
+  isGiftCard?: boolean
+  giftCard?: GiftCardDetails
 }
 
 export type Cart = {
@@ -74,4 +83,5 @@ export type AddToCartPayload = {
   productId: string
   quantity: number
   variantId: string
+  giftCard?: GiftCardDetails
 }
