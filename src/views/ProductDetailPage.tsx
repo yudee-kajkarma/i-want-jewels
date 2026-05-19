@@ -944,7 +944,13 @@ export default function ProductDetailPage({
                             <div className="space-y-6">
                                 <div>
                                     <h1 className="text-[28px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px] lg:text-[36px]">
-                                        {product.title}
+                                        {(() => {
+                                            const match = product.title.match(/^(.*?)\s*(lab grown.*)$/i)
+                                            if (match) {
+                                                return <><span className="font-bold">{match[1]}</span>{' '}{match[2]}</>
+                                            }
+                                            return <span className="font-bold">{product.title}</span>
+                                        })()}
                                     </h1>
                                     {product.h2 ? (
                                         <h2 className="mt-2 text-[13px] uppercase tracking-[0.14em] text-zinc-600">
@@ -1035,7 +1041,7 @@ export default function ProductDetailPage({
                                                 }`}
                                             >
                                                 <span
-                                                    className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`}
+                                                    className={`block h-full w-full rounded-full ${isGiftCardProduct ? 'bg-[#de5aa1]' : getMetalToneClass(variant.title)}`}
                                                 />
                                             </button>
                                         ))}

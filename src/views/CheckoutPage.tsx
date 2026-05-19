@@ -643,29 +643,31 @@ export default function CheckoutPage() {
                         </div>
                       </label>
 
-                      <label className={`flex items-start gap-4 border px-4 py-4 transition ${
-                        hasGiftCardItems || (giftValidation?.valid ?? false)
-                          ? 'cursor-not-allowed border-[#eadfd4] bg-zinc-50 opacity-60'
-                          : `cursor-pointer ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`
-                      }`}>
-                        <input
-                          type="radio"
-                          name="paymentMethod"
-                          value="COD"
-                          checked={paymentMethod === 'COD'}
-                          disabled={hasGiftCardItems || (giftValidation?.valid ?? false)}
-                          onChange={() => setPaymentMethod('COD')}
-                          className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
-                        />
-                        <div>
-                          <p className="font-bold text-[#17110d]">Cash on delivery</p>
-                          <p className="mt-1 text-sm leading-6 text-zinc-500">
-                            {hasGiftCardItems || (giftValidation?.valid ?? false)
-                              ? 'Not available — gift card orders are paid online.'
-                              : 'Your order is placed immediately and payment is collected on delivery.'}
-                          </p>
-                        </div>
-                      </label>
+                      {!hasGiftCardItems ? (
+                        <label className={`flex items-start gap-4 border px-4 py-4 transition ${
+                          giftValidation?.valid
+                            ? 'cursor-not-allowed border-[#eadfd4] bg-zinc-50 opacity-60'
+                            : `cursor-pointer ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`
+                        }`}>
+                          <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="COD"
+                            checked={paymentMethod === 'COD'}
+                            disabled={giftValidation?.valid ?? false}
+                            onChange={() => setPaymentMethod('COD')}
+                            className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
+                          />
+                          <div>
+                            <p className="font-bold text-[#17110d]">Cash on delivery</p>
+                            <p className="mt-1 text-sm leading-6 text-zinc-500">
+                              {giftValidation?.valid
+                                ? 'Not available — a gift card discount has been applied.'
+                                : 'Your order is placed immediately and payment is collected on delivery.'}
+                            </p>
+                          </div>
+                        </label>
+                      ) : null}
                     </div>
                   </div>
                 </div>

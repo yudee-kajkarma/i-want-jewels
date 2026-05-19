@@ -26,6 +26,7 @@ import {
 import { useCurrency } from '../context/CurrencyContext'
 import type { AdminShippingQuote, AdminShippingRateOption, FedExPickupAvailability, Order, OrdersPagination, Pickup, PickupDetail, ShippingCarrier } from '../types/order'
 import { formatPrice } from '../utils/price'
+import { getCountryOptions, getStateOptions } from '../utils/location'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'cancelShipment' | 'reorder'
 
@@ -754,6 +755,9 @@ export default function AdminOrdersPage() {
   }
 
   function renderOrderActions(order: Order) {
+    const isGiftCardOnly = order.items.length > 0 && order.items.every((item) => item.isGiftCard)
+    if (isGiftCardOnly) return null
+
     return (
       <div className="flex flex-wrap gap-2">
         {order.orderStatus === 'PENDING' ? (
@@ -2155,7 +2159,7 @@ export default function AdminOrdersPage() {
                 </div>
               ) : (
                 <div className="space-y-1.5">
-                  {(['street', 'city', 'state', 'postalCode', 'country'] as const).map((field) => (
+                  {(['street', 'city', 'postalCode'] as const).map((field) => (
                     <div key={field} className="flex items-center gap-2">
                       <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{field}</label>
                       <input
@@ -2165,6 +2169,32 @@ export default function AdminOrdersPage() {
                       />
                     </div>
                   ))}
+                  <div className="flex items-center gap-2">
+                    <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">country</label>
+                    <select
+                      value={receiverDraft?.country ?? ''}
+                      onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, country: e.target.value, state: '' } : prev)}
+                      className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    >
+                      <option value="">Select country</option>
+                      {getCountryOptions().map((c) => (
+                        <option key={c.code} value={c.code}>{c.name}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">state</label>
+                    <select
+                      value={receiverDraft?.state ?? ''}
+                      onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, state: e.target.value } : prev)}
+                      className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    >
+                      <option value="">Select state</option>
+                      {getStateOptions(receiverDraft?.country ?? '').map((s) => (
+                        <option key={s.code} value={s.code}>{s.name}</option>
+                      ))}
+                    </select>
+                  </div>
                   {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
                   <div className="flex justify-end gap-2 pt-1">
                     <button

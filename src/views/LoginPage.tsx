@@ -13,17 +13,9 @@ type LocationState = {
 }
 
 function getPostLoginRoute(session: AuthSession, from?: string): string {
-  const defaultRoute = session.role === 'ADMIN' ? '/admin' : '/'
-
-  if (session.role === 'ADMIN') {
-    return defaultRoute
-  }
+  const defaultRoute = '/'
 
   if (!from || from === '/login' || from === '/register') {
-    return defaultRoute
-  }
-
-  if (from.startsWith('/admin')) {
     return defaultRoute
   }
 

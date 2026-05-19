@@ -1,16 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { ChevronDown, Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import AuthShell from "../components/auth/AuthShell";
 import { useAuth } from "../context/AuthContext";
 import { checkRegisterEmail, registerUser } from "../services/authService";
 import type { RegisterPayload } from "../types/auth";
 import {
-    getCityOptions,
     getCountryOptions,
     getStateOptions,
     isValidEmailAddress,
@@ -19,70 +18,6 @@ import {
 
 type RegisterPhase = "email-check" | "details";
 
-const COUNTRY_CODE_OPTIONS: ReadonlyArray<{ code: string; label: string }> = [
-    { code: "+1", label: "United States (+1)" },
-    { code: "+1", label: "Canada (+1)" },
-    { code: "+52", label: "Mexico (+52)" },
-    { code: "+54", label: "Argentina (+54)" },
-    { code: "+591", label: "Bolivia (+591)" },
-    { code: "+55", label: "Brazil (+55)" },
-    { code: "+56", label: "Chile (+56)" },
-    { code: "+57", label: "Colombia (+57)" },
-    { code: "+506", label: "Costa Rica (+506)" },
-    { code: "+53", label: "Cuba (+53)" },
-    { code: "+1", label: "Dominican Republic (+1)" },
-    { code: "+593", label: "Ecuador (+593)" },
-    { code: "+503", label: "El Salvador (+503)" },
-    { code: "+502", label: "Guatemala (+502)" },
-    { code: "+592", label: "Guyana (+592)" },
-    { code: "+509", label: "Haiti (+509)" },
-    { code: "+504", label: "Honduras (+504)" },
-    { code: "+1", label: "Jamaica (+1)" },
-    { code: "+505", label: "Nicaragua (+505)" },
-    { code: "+507", label: "Panama (+507)" },
-    { code: "+595", label: "Paraguay (+595)" },
-    { code: "+51", label: "Peru (+51)" },
-    { code: "+1", label: "Puerto Rico (+1)" },
-    { code: "+597", label: "Suriname (+597)" },
-    { code: "+1", label: "Trinidad and Tobago (+1)" },
-    { code: "+598", label: "Uruguay (+598)" },
-    { code: "+58", label: "Venezuela (+58)" },
-    { code: "+501", label: "Belize (+501)" },
-    { code: "+43", label: "Austria (+43)" },
-    { code: "+32", label: "Belgium (+32)" },
-    { code: "+359", label: "Bulgaria (+359)" },
-    { code: "+385", label: "Croatia (+385)" },
-    { code: "+357", label: "Cyprus (+357)" },
-    { code: "+420", label: "Czech Republic (+420)" },
-    { code: "+45", label: "Denmark (+45)" },
-    { code: "+372", label: "Estonia (+372)" },
-    { code: "+358", label: "Finland (+358)" },
-    { code: "+33", label: "France (+33)" },
-    { code: "+49", label: "Germany (+49)" },
-    { code: "+30", label: "Greece (+30)" },
-    { code: "+36", label: "Hungary (+36)" },
-    { code: "+354", label: "Iceland (+354)" },
-    { code: "+353", label: "Ireland (+353)" },
-    { code: "+39", label: "Italy (+39)" },
-    { code: "+371", label: "Latvia (+371)" },
-    { code: "+423", label: "Liechtenstein (+423)" },
-    { code: "+370", label: "Lithuania (+370)" },
-    { code: "+352", label: "Luxembourg (+352)" },
-    { code: "+356", label: "Malta (+356)" },
-    { code: "+377", label: "Monaco (+377)" },
-    { code: "+31", label: "Netherlands (+31)" },
-    { code: "+47", label: "Norway (+47)" },
-    { code: "+48", label: "Poland (+48)" },
-    { code: "+351", label: "Portugal (+351)" },
-    { code: "+40", label: "Romania (+40)" },
-    { code: "+378", label: "San Marino (+378)" },
-    { code: "+421", label: "Slovakia (+421)" },
-    { code: "+386", label: "Slovenia (+386)" },
-    { code: "+34", label: "Spain (+34)" },
-    { code: "+46", label: "Sweden (+46)" },
-    { code: "+41", label: "Switzerland (+41)" },
-    { code: "+44", label: "United Kingdom (+44)" },
-];
 
 const initialForm: RegisterPayload = {
     username: "",
@@ -119,45 +54,12 @@ export default function RegisterPage() {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
         useState(false);
-    const [isCityListOpen, setIsCityListOpen] = useState(false);
-    const cityFieldRef = useRef<HTMLDivElement>(null);
     const countryOptions = useMemo(() => getCountryOptions(), []);
     const stateOptions = useMemo(
         () => getStateOptions(form.address.country),
         [form.address.country],
     );
-    const cityOptions = useMemo(
-        () => getCityOptions(form.address.country, form.address.state),
-        [form.address.country, form.address.state],
-    );
-    const filteredCityOptions = useMemo(() => {
-        const query = form.address.city.trim().toLowerCase();
 
-        if (!query) {
-            return cityOptions;
-        }
-
-        return cityOptions.filter((city) =>
-            city.name.toLowerCase().includes(query),
-        );
-    }, [cityOptions, form.address.city]);
-
-    useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
-            if (
-                cityFieldRef.current &&
-                !cityFieldRef.current.contains(event.target as Node)
-            ) {
-                setIsCityListOpen(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
     const isRegisterFormValid = useMemo(() => {
         const hasRequiredFields =
             form.username.trim() !== "" &&
@@ -655,21 +557,14 @@ export default function RegisterPage() {
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
                             Country Code
                         </span>
-                        <select
+                        <input
+                            type="text"
                             required
                             value={form.countryCode}
-                            onChange={(event) =>
-                                updateField("countryCode", event.target.value)
-                            }
-                            className="h-14 w-full border border-[#ddcdc0] bg-white px-4 outline-none transition focus:border-[#17110d]"
-                        >
-                            <option value="">Select country code</option>
-                            {COUNTRY_CODE_OPTIONS.map((option) => (
-                                <option key={option.label} value={option.code}>
-                                    {option.label}
-                                </option>
-                            ))}
-                        </select>
+                            onChange={(event) => updateField("countryCode", event.target.value)}
+                            placeholder="+353"
+                            className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
+                        />
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
@@ -726,26 +621,8 @@ export default function RegisterPage() {
                                 required
                                 value={form.address.state}
                                 onChange={(event) => {
-                                    const nextStateCode = event.target.value;
-                                    const nextStateName =
-                                        stateOptions.find(
-                                            (option) =>
-                                                option.code === nextStateCode,
-                                        )?.name ?? "";
-                                    const cityChoices = nextStateCode
-                                        ? getCityOptions(
-                                              form.address.country,
-                                              nextStateCode,
-                                          )
-                                        : [];
-
-                                    updateAddressField("state", nextStateCode);
-                                    updateAddressField(
-                                        "city",
-                                        cityChoices.length === 0
-                                            ? nextStateName
-                                            : "",
-                                    );
+                                    updateAddressField("state", event.target.value);
+                                    updateAddressField("city", "");
                                 }}
                                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
                             >
@@ -778,82 +655,13 @@ export default function RegisterPage() {
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
                                 City{" "}
                             </span>
-                            <div ref={cityFieldRef} className="relative">
-                                <input
-                                    type="text"
-                                    value={form.address.city}
-                                    onChange={(event) => {
-                                        updateAddressField(
-                                            "city",
-                                            event.target.value,
-                                        );
-
-                                        if (cityOptions.length > 0) {
-                                            setIsCityListOpen(true);
-                                        }
-                                    }}
-                                    onFocus={() => {
-                                        if (cityOptions.length > 0) {
-                                            setIsCityListOpen(true);
-                                        }
-                                    }}
-                                    placeholder={
-                                        cityOptions.length > 0
-                                            ? "Select or type a city"
-                                            : "Defaults to state — edit if you like"
-                                    }
-                                    className="h-14 w-full border border-[#ddcdc0] bg-white px-4 pr-12 outline-none transition focus:border-[#17110d]"
-                                />
-                                {cityOptions.length > 0 ? (
-                                    <button
-                                        type="button"
-                                        aria-label="Toggle city options"
-                                        onClick={() =>
-                                            setIsCityListOpen(
-                                                (previous) => !previous,
-                                            )
-                                        }
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 transition hover:text-[#17110d]"
-                                    >
-                                        <ChevronDown
-                                            className={`h-5 w-5 transition-transform ${
-                                                isCityListOpen
-                                                    ? "rotate-180"
-                                                    : ""
-                                            }`}
-                                        />
-                                    </button>
-                                ) : null}
-                                {isCityListOpen &&
-                                filteredCityOptions.length > 0 ? (
-                                    <ul className="absolute left-0 right-0 top-full z-20 mt-1 max-h-56 overflow-y-auto border border-[#ddcdc0] bg-white shadow-lg">
-                                        {filteredCityOptions.map((city) => (
-                                            <li key={city.name}>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => {
-                                                        updateAddressField(
-                                                            "city",
-                                                            city.name,
-                                                        );
-                                                        setIsCityListOpen(
-                                                            false,
-                                                        );
-                                                    }}
-                                                    className={`block w-full px-4 py-2 text-left text-sm transition hover:bg-[#f5ede5] ${
-                                                        form.address.city ===
-                                                        city.name
-                                                            ? "bg-[#f5ede5] font-semibold text-[#17110d]"
-                                                            : "text-[#17110d]"
-                                                    }`}
-                                                >
-                                                    {city.name}
-                                                </button>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                ) : null}
-                            </div>
+                            <input
+                                type="text"
+                                value={form.address.city}
+                                onChange={(event) => updateAddressField("city", event.target.value)}
+                                placeholder="City"
+                                className="h-14 w-full border border-[#ddcdc0] bg-white px-4 outline-none transition focus:border-[#17110d]"
+                            />
                         </label>
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">

@@ -20,8 +20,8 @@ import type { Product } from "../../types/product";
 import brandLogo from "../../assets/logo.svg";
 
 const adminNavLinks = [
+    { label: "Home", to: "/" },
     { label: "Dashboard", to: "/admin" },
-    { label: "Blogs", to: "/admin/blogs" },
     { label: "Orders", to: "/admin/orders" },
     { label: "Gift Cards", to: "/admin/gift-cards" },
     { label: "Carts", to: "/admin/cart" },
@@ -496,7 +496,7 @@ export default function Header() {
             ? `${session.firstName} ${session.lastName}`.trim()
             : session?.firstName || session?.username || "Account";
     const isAdmin = session?.role === "ADMIN";
-    const brandLink = isAdmin ? "/admin" : "/";
+    const brandLink = "/";
 
     const visibleShopCategories = useMemo(
         () =>

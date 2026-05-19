@@ -12,6 +12,8 @@ const metalClasses: Record<string, string> = {
     "Rose Gold": "bg-[#cd8b93]",
     "White Gold": "bg-[#d6d1d1]",
     Silver: "bg-[#d6d1d1]",
+    "gift card": "bg-[#de5aa1]",
+    "Gift Card": "bg-[#de5aa1]",
 };
 
 export function formatEuro(value: number): string {
