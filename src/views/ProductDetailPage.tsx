@@ -15,6 +15,7 @@ import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
+import RecipientEmailPicker from "../components/giftcard/RecipientEmailPicker";
 import ringSizeGuideImage from "../assets/image/ringsize.jpeg";
 import { useAuth } from "../context/AuthContext";
 import { useCurrency } from "../context/CurrencyContext";
@@ -424,6 +425,11 @@ export default function ProductDetailPage({
         getInitialImageId(initialProduct),
     );
     const [quantity, setQuantity] = useState(1);
+    const [giftRecipientEmail, setGiftRecipientEmail] = useState("");
+    const [giftEmailValid, setGiftEmailValid] = useState(false);
+    const [giftRecipientName, setGiftRecipientName] = useState("");
+    const [giftSenderName, setGiftSenderName] = useState("");
+    const [giftMessage, setGiftMessage] = useState("");
     const [cartFeedback, setCartFeedback] = useState("");
     const [wishlistFeedback, setWishlistFeedback] = useState("");
     const [reviewFeedback, setReviewFeedback] = useState("");
@@ -558,6 +564,8 @@ export default function ProductDetailPage({
         );
     }, [product, selectedVariantId]);
 
+    const isGiftCardProduct = product?.productType === "GIFT_CARD";
+
     const galleryImages = useMemo<ProductImage[]>(() => {
         if (!selectedVariant) {
             return [];
@@ -633,6 +641,19 @@ export default function ProductDetailPage({
             return;
         }
 
+        const isGiftCardProduct = product.productType === "GIFT_CARD";
+
+        if (
+            isGiftCardProduct &&
+            giftRecipientEmail.trim() &&
+            !giftEmailValid
+        ) {
+            setCartFeedback(
+                "Choose a recipient from the list — gift cards can only be sent to a registered account. Leave the email blank to keep it for yourself.",
+            );
+            return;
+        }
+
         setIsAddingToCart(true);
         setCartFeedback("");
 
@@ -642,10 +663,24 @@ export default function ProductDetailPage({
                     productId: product.id,
                     quantity,
                     variantId: selectedVariant.id,
+                    ...(isGiftCardProduct
+                        ? {
+                              giftCard: {
+                                  recipientEmail: giftRecipientEmail.trim() || undefined,
+                                  recipientName: giftRecipientName.trim() || undefined,
+                                  senderName: giftSenderName.trim() || undefined,
+                                  message: giftMessage.trim() || undefined,
+                              },
+                          }
+                        : {}),
                 }),
             ).unwrap();
 
-            setCartFeedback("Item added to cart successfully.");
+            setCartFeedback(
+                isGiftCardProduct
+                    ? "Gift card added to cart. Pay online at checkout to send it."
+                    : "Item added to cart successfully.",
+            );
         } catch {
             setCartFeedback("Unable to add this item to cart right now.");
         } finally {
@@ -1020,9 +1055,49 @@ export default function ProductDetailPage({
                                         </div>
                                     ) : null}
 
+                                    {isGiftCardProduct ? (
+                                        <div className="mt-6 space-y-3 border border-zinc-200 bg-zinc-50 p-4">
+                                            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                                Send this gift card
+                                            </p>
+                                            <p className="text-[12px] text-zinc-500">
+                                                Leave the email blank to keep it for yourself — you can transfer it later from your profile. Gift cards require online payment.
+                                            </p>
+                                            <RecipientEmailPicker
+                                                value={giftRecipientEmail}
+                                                onChange={(email, isValid) => {
+                                                    setGiftRecipientEmail(email);
+                                                    setGiftEmailValid(isValid);
+                                                }}
+                                                placeholder="Recipient email (optional)"
+                                                className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
+                                            />
+                                            <input
+                                                type="text"
+                                                value={giftRecipientName}
+                                                onChange={(event) => setGiftRecipientName(event.target.value)}
+                                                placeholder="Recipient name (optional)"
+                                                className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
+                                            />
+                                            <input
+                                                type="text"
+                                                value={giftSenderName}
+                                                onChange={(event) => setGiftSenderName(event.target.value)}
+                                                placeholder="Your name (optional)"
+                                                className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
+                                            />
+                                            <textarea
+                                                value={giftMessage}
+                                                onChange={(event) => setGiftMessage(event.target.value)}
+                                                placeholder="Personal message (optional)"
+                                                className="min-h-[80px] w-full border border-zinc-300 px-3 py-2 text-[13px] outline-none focus:border-zinc-800"
+                                            />
+                                        </div>
+                                    ) : null}
+
                                     <div className="mt-6">
                                         <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                            Quantity
+                                            {isGiftCardProduct ? "Quantity (codes)" : "Quantity"}
                                         </p>
 
                                         <div className="grid grid-cols-[120px_minmax(0,1fr)] gap-3 items-stretch">
@@ -1076,13 +1151,15 @@ export default function ProductDetailPage({
                                     </div>
                                 </div>
 
-                                <button
-                                    type="button"
-                                    onClick={handleBuyNow}
-                                    className="block w-full bg-pink-500 px-4 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 disabled:opacity-60 sm:text-[13px]"
-                                >
-                                    Buy It Now
-                                </button>
+                                {isGiftCardProduct ? null : (
+                                    <button
+                                        type="button"
+                                        onClick={handleBuyNow}
+                                        className="block w-full bg-pink-500 px-4 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 disabled:opacity-60 sm:text-[13px]"
+                                    >
+                                        Buy It Now
+                                    </button>
+                                )}
 
                                 {cartFeedback ? (
                                     <p className="text-[12px] uppercase tracking-[0.14em] text-zinc-600">

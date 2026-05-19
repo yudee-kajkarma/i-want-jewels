@@ -98,8 +98,21 @@ export function createEmptyVariant(variantName: AdminVariantName = 'gold'): Crea
   }
 }
 
+export function createEmptyGiftCardVariant(): CreateVariantForm {
+  return {
+    id: createDraftId(),
+    title: '',
+    variantName: 'gift card',
+    sku: '',
+    stock: 0,
+    price: 0,
+    imageIndexes: [],
+  }
+}
+
 export function createEmptyForm(): EditableProductForm {
   return {
+    productType: 'PHYSICAL',
     title: '',
     description: '',
     vendor: '',
@@ -147,6 +160,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
   const imageIndexByKey = new Map<string, number>()
 
   return {
+    productType: product.productType ?? 'PHYSICAL',
     title: product.title,
     description: product.description,
     vendor: product.vendor,
@@ -177,7 +191,8 @@ export function buildForm(product: ProductDetail): EditableProductForm {
             variantName:
               variant.variantName === 'gold' ||
               variant.variantName === 'rose gold' ||
-              variant.variantName === 'silver'
+              variant.variantName === 'silver' ||
+              variant.variantName === 'gift card'
                 ? variant.variantName
                 : 'gold',
             sku: variant.sku ?? '',

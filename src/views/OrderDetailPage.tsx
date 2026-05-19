@@ -1,11 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Ban, CreditCard, MapPinHouse, Package } from 'lucide-react'
+import { Ban, CreditCard, Gift, MapPinHouse, Package } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import RecipientEmailPicker from '../components/giftcard/RecipientEmailPicker'
+import { useAuth } from '../context/AuthContext'
 import { useCurrency } from '../context/CurrencyContext'
+import { transferGiftCard } from '../services/giftCardService'
 import { cancelOrder, getOrderById, regenerateOrderPayment } from '../services/orderService'
 import type { Order } from '../types/order'
 import { formatPrice, getPriceAmount } from '../utils/price'
@@ -60,6 +63,7 @@ function canRegeneratePayment(order: Order): boolean {
 export default function OrderDetailPage() {
   const params = useParams<{ orderId?: string | string[] }>()
   const { currency } = useCurrency()
+  const { session } = useAuth()
   const orderId = typeof params.orderId === 'string' ? params.orderId : ''
   const [order, setOrder] = useState<Order | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -67,6 +71,13 @@ export default function OrderDetailPage() {
   const [isRegeneratingPayment, setIsRegeneratingPayment] = useState(false)
   const [error, setError] = useState('')
   const [feedback, setFeedback] = useState('')
+  const [transferFor, setTransferFor] = useState<string | null>(null)
+  const [recipientEmail, setRecipientEmail] = useState('')
+  const [recipientEmailValid, setRecipientEmailValid] = useState(false)
+  const [recipientName, setRecipientName] = useState('')
+  const [transferMessage, setTransferMessage] = useState('')
+  const [transferFeedback, setTransferFeedback] = useState('')
+  const [isTransferring, setIsTransferring] = useState(false)
 
   async function refreshOrder(currentOrderId: string, showLoader: boolean) {
     if (showLoader) {
@@ -157,6 +168,48 @@ export default function OrderDetailPage() {
     }
   }
 
+  function openTransfer(code: string) {
+    setTransferFor(code)
+    setRecipientEmail('')
+    setRecipientEmailValid(false)
+    setRecipientName('')
+    setTransferMessage('')
+    setTransferFeedback('')
+  }
+
+  async function handleTransferGiftCard(code: string) {
+    if (!order) return
+    if (!recipientEmail.trim()) {
+      setTransferFeedback('Enter the recipient email.')
+      return
+    }
+    if (!recipientEmailValid) {
+      setTransferFeedback('Pick a recipient from the list. Gift cards can only be transferred to a registered account.')
+      return
+    }
+
+    setIsTransferring(true)
+    setTransferFeedback('')
+
+    try {
+      await transferGiftCard(code, {
+        recipientEmail: recipientEmail.trim(),
+        recipientName: recipientName.trim() || undefined,
+        message: transferMessage.trim() || undefined,
+      })
+      setTransferFor(null)
+      setFeedback('Gift card transferred successfully.')
+      await refreshOrder(order.id, false)
+    } catch (error) {
+      const message =
+        (error as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error?.message ||
+        'Unable to transfer this gift card.'
+      setTransferFeedback(message)
+    } finally {
+      setIsTransferring(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
       <Header />
@@ -191,8 +244,8 @@ export default function OrderDetailPage() {
               </div>
 
               <div className="mt-6 space-y-5">
-                {order.items.map((item) => (
-                  <article key={`${item.productId}-${item.variantId}`} className="grid gap-5 border border-[#efe1d5] bg-[#fffdfa] p-4 sm:grid-cols-[110px_minmax(0,1fr)_auto] sm:items-center">
+                {order.items.map((item, index) => (
+                  <article key={`${item.productId}-${item.variantId}-${index}`} className="grid gap-5 border border-[#efe1d5] bg-[#fffdfa] p-4 sm:grid-cols-[110px_minmax(0,1fr)_auto] sm:items-center">
                     <div className="overflow-hidden bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-3">
                       <img src={item.thumbnail} alt={item.title} className="h-24 w-full object-contain" />
                     </div>
@@ -201,11 +254,103 @@ export default function OrderDetailPage() {
                       <p className="mt-1 text-sm text-zinc-500">{item.variantName || 'Default variant'}</p>
                       <p className="mt-1 text-sm text-zinc-500">SKU: {item.sku || 'N/A'}</p>
                       <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
+                      {item.isGiftCard ? (
+                        <p className="mt-2 text-sm text-[#8f2a60]">
+                          {item.giftCard?.recipientEmail ? `To: ${item.giftCard.recipientEmail}` : 'Delivered to your account'}
+                          {item.giftCard?.message ? ` · ${item.giftCard.message}` : ''}
+                        </p>
+                      ) : null}
                     </div>
                     <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
                   </article>
                 ))}
               </div>
+
+              {order.issuedGiftCards && order.issuedGiftCards.length > 0 ? (
+                <div className="mt-8 border-t border-[#efe1d5] pt-6">
+                  <div className="flex items-center gap-3 text-[#17110d]">
+                    <Gift className="h-5 w-5" />
+                    <h2 className="text-xl font-bold">Gift card codes</h2>
+                  </div>
+                  <div className="mt-4 grid gap-3 md:grid-cols-2">
+                    {order.issuedGiftCards.map((card) => {
+                      const canTransfer =
+                        card.status === 'ACTIVE' &&
+                        card.currentOwnerEmail.toLowerCase() === (session?.email || '').toLowerCase()
+
+                      return (
+                      <article key={card.id || card.code} className="border border-[#eadfd4] bg-[#fffdfa] p-4 text-sm">
+                        <div className="flex flex-wrap items-start justify-between gap-3">
+                          <p className="font-mono text-base font-bold text-[#17110d]">{card.code}</p>
+                          {canTransfer && transferFor !== card.code ? (
+                            <button
+                              type="button"
+                              onClick={() => openTransfer(card.code)}
+                              className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
+                            >
+                              Transfer
+                            </button>
+                          ) : null}
+                        </div>
+                        <div className="mt-3 space-y-1 text-zinc-600">
+                          <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, currency)}</span></p>
+                          <p>Owner: <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
+                          {card.recipientName ? <p>Recipient: <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
+                          {card.recipientEmail ? <p>Email: <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
+                          {card.message ? <p>Message: <span className="font-semibold text-[#17110d]">{card.message}</span></p> : null}
+                          <p>Status: <span className="font-semibold text-[#17110d]">{card.status}</span></p>
+                        </div>
+                        {canTransfer && transferFor === card.code ? (
+                          <div className="mt-4 space-y-2 border-t border-[#eadfd4] pt-4">
+                            <RecipientEmailPicker
+                              value={recipientEmail}
+                              onChange={(email, isValid) => {
+                                setRecipientEmail(email)
+                                setRecipientEmailValid(isValid)
+                              }}
+                              placeholder="Recipient email"
+                              className="h-11 w-full border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
+                            />
+                            <input
+                              type="text"
+                              value={recipientName}
+                              onChange={(event) => setRecipientName(event.target.value)}
+                              placeholder="Recipient name (optional)"
+                              className="h-11 w-full border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
+                            />
+                            <textarea
+                              value={transferMessage}
+                              onChange={(event) => setTransferMessage(event.target.value)}
+                              placeholder="Message (optional)"
+                              className="min-h-[70px] w-full border border-[#e7d3c2] px-3 py-2 text-sm outline-none focus:border-[#17110d]"
+                            />
+                            {transferFeedback ? <p className="text-xs text-rose-600">{transferFeedback}</p> : null}
+                            <div className="flex flex-wrap gap-2">
+                              <button
+                                type="button"
+                                onClick={() => void handleTransferGiftCard(card.code)}
+                                disabled={isTransferring}
+                                className="h-10 bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white disabled:opacity-50"
+                              >
+                                {isTransferring ? 'Sending...' : 'Send'}
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => setTransferFor(null)}
+                                disabled={isTransferring}
+                                className="h-10 border border-[#e7d3c2] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#7a3a61] disabled:opacity-50"
+                              >
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                        ) : null}
+                      </article>
+                      )
+                    })}
+                  </div>
+                </div>
+              ) : null}
             </section>
 
             <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
@@ -219,6 +364,13 @@ export default function OrderDetailPage() {
                     <p>Method: <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span></p>
                     <p>Status: <span className="font-semibold text-[#17110d]">{order.paymentStatus}</span></p>
                     <p>Total: <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, currency)}</span></p>
+                    {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
+                      <>
+                        <p>Gift card: <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.giftCardDiscount, currency)}</span></p>
+                        {order.appliedGiftCardCode ? <p>Code: <span className="font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span></p> : null}
+                        <p>Paid: <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, currency)}</span></p>
+                      </>
+                    ) : null}
                   </div>
                 </div>
 

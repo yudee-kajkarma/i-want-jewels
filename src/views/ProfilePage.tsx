@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast'
 import { useAuth } from '../context/AuthContext'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import GiftCardsSection from '../components/giftcard/GiftCardsSection'
 import {
   createUserAddress,
   deleteUserAddress,
@@ -520,7 +521,20 @@ export default function ProfilePage() {
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Profile</p>
             <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Manage your account details</h1>
           </div>
-          <p className="text-sm text-zinc-500">Update your basic info and maintain multiple delivery addresses.</p>
+          <div className="flex flex-col items-start gap-2 sm:items-end">
+            <p className="text-sm text-zinc-500">Update your basic info and maintain multiple delivery addresses.</p>
+            <button
+              type="button"
+              onClick={() => {
+                document
+                  .getElementById('gift-cards')
+                  ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
+              className="text-xs font-bold uppercase tracking-[0.18em] text-[#a53b79] underline-offset-4 hover:underline"
+            >
+              View my gift cards →
+            </button>
+          </div>
         </div>
 
         <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
@@ -803,6 +817,10 @@ export default function ProfilePage() {
               </button>
             </div>
           </div>
+        </section>
+
+        <section id="gift-cards" className="mt-8 scroll-mt-28 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+          <GiftCardsSection />
         </section>
 
         {isChangePasswordOpen ? (

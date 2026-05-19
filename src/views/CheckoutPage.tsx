@@ -8,13 +8,14 @@ import Header from '../components/layout/Header'
 import { useAuth } from '../context/AuthContext'
 import { useCurrency } from '../context/CurrencyContext'
 import { createOrder } from '../services/orderService'
+import { validateGiftCard, type GiftCardValidation } from '../services/giftCardService'
 import { addCartItem, clearCartItems } from '../services/cartService'
 import { createUserAddress, getUserAddresses, updateUserAddress } from '../services/userService'
 import { fetchCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import type { CheckoutSource, PaymentMethod, SingleCheckoutDraft } from '../types/order'
 import type { UserAddress, UserProfileAddressPayload } from '../types/profile'
-import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
+import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
 import {
   clearSingleCheckoutDraft,
@@ -84,7 +85,6 @@ export default function CheckoutPage() {
   const persistedDraft = useMemo(() => getSingleCheckoutDraft(), [location.key])
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
-  const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
   const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search])
   const isSingleFromQuery = searchParams.get('source') === 'single'
   const checkoutSource: CheckoutSource = locationState?.source === 'single' || isSingleFromQuery ? 'single' : 'cart'
@@ -93,6 +93,56 @@ export default function CheckoutPage() {
   const totalItems = items.reduce((total, item) => total + item.quantity, 0)
   const subtotal = items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0)
   const isCartLoading = cartStatus === 'loading' || cartMutationStatus === 'loading'
+  const hasGiftCardItems = items.some((item) => item.isGiftCard)
+
+  const [giftCodeInput, setGiftCodeInput] = useState('')
+  const [giftValidation, setGiftValidation] = useState<GiftCardValidation | null>(null)
+  const [giftCheckMessage, setGiftCheckMessage] = useState('')
+  const [isCheckingGift, setIsCheckingGift] = useState(false)
+
+  const appliedGiftDiscount =
+    giftValidation?.valid && !hasGiftCardItems
+      ? Math.min(giftValidation.redeemableAmount ?? 0, subtotal)
+      : 0
+  const payableTotal = Math.max(0, subtotal - appliedGiftDiscount)
+
+  useEffect(() => {
+    // Gift card purchases/redemptions are online-only.
+    if ((hasGiftCardItems || (giftValidation?.valid ?? false)) && paymentMethod !== 'ONLINE') {
+      setPaymentMethod('ONLINE')
+    }
+  }, [hasGiftCardItems, giftValidation, paymentMethod])
+
+  async function handleApplyGiftCard() {
+    const code = giftCodeInput.trim()
+    if (!code) return
+    if (hasGiftCardItems) {
+      setGiftCheckMessage('A gift card cannot be used to pay for an order that contains gift cards.')
+      return
+    }
+    setIsCheckingGift(true)
+    setGiftCheckMessage('')
+    try {
+      const result = await validateGiftCard(code)
+      setGiftValidation(result)
+      setGiftCheckMessage(
+        result.valid
+          ? `Applied — €${(result.redeemableAmount ?? 0).toFixed(2)} available.`
+          : result.reason || 'This gift card cannot be applied.',
+      )
+    } catch {
+      setGiftValidation(null)
+      setGiftCheckMessage('Unable to validate this gift card right now.')
+    } finally {
+      setIsCheckingGift(false)
+    }
+  }
+
+  function handleRemoveGiftCard() {
+    setGiftValidation(null)
+    setGiftCodeInput('')
+    setGiftCheckMessage('')
+  }
 
   useEffect(() => {
     if (checkoutSource === 'cart' && !cart && cartStatus === 'idle') {
@@ -279,29 +329,38 @@ export default function CheckoutPage() {
       }
       
 
+      const effectivePaymentMethod: PaymentMethod =
+        hasGiftCardItems || (giftValidation?.valid ?? false) ? 'ONLINE' : paymentMethod
+
       const result = await createOrder({
         addressId: selectedAddressId,
-        paymentMethod,
+        paymentMethod: effectivePaymentMethod,
         currency: getCurrencyIsoCode(currency),
-        successUrl: paymentMethod === 'ONLINE' ? buildReturnUrl('success', checkoutSource) : undefined,
-        cancelUrl: paymentMethod === 'ONLINE' ? buildReturnUrl('cancel', checkoutSource) : undefined,
+        successUrl: effectivePaymentMethod === 'ONLINE' ? buildReturnUrl('success', checkoutSource) : undefined,
+        cancelUrl: effectivePaymentMethod === 'ONLINE' ? buildReturnUrl('cancel', checkoutSource) : undefined,
+        giftCardCode:
+          giftValidation?.valid && !hasGiftCardItems
+            ? giftValidation.code ?? giftCodeInput.trim()
+            : undefined,
       })
 
       setPendingOrderStatus({
         orderId: result.order.id,
         orderNumber: result.order.orderNumber,
-        paymentMethod,
+        paymentMethod: effectivePaymentMethod,
         source: checkoutSource,
       })
 
       await dispatch(fetchCart()).unwrap()
 
-      if (paymentMethod === 'ONLINE') {
-        if (!result.checkoutSession?.url) {
-          throw new Error('Missing checkout session URL.')
+      if (effectivePaymentMethod === 'ONLINE') {
+        if (result.checkoutSession?.url) {
+          window.location.assign(result.checkoutSession.url)
+          return
         }
 
-        window.location.assign(result.checkoutSession.url)
+        // No Stripe session → order fully covered by the gift card (€0 due).
+        navigate('/checkout/status?payment=success', { replace: true })
         return
       }
 
@@ -468,7 +527,6 @@ export default function CheckoutPage() {
                               ...currentValue,
                               country: event.target.value,
                               state: '',
-                              city: '',
                             }))}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
@@ -485,7 +543,6 @@ export default function CheckoutPage() {
                               setAddressForm((currentValue) => ({
                                 ...currentValue,
                                 state: event.target.value,
-                                city: '',
                               }))
                             }
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
@@ -497,18 +554,12 @@ export default function CheckoutPage() {
                               </option>
                             ))}
                           </select>
-                          <select
+                          <input
                             value={addressForm.city}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
+                            placeholder="City"
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
-                          >
-                            <option value="">Select city</option>
-                            {cityOptions.map((city) => (
-                              <option key={city.name} value={city.name}>
-                                {city.name}
-                              </option>
-                            ))}
-                          </select>
+                          />
                           <input
                             value={addressForm.houseNumber ?? ''}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}
@@ -592,18 +643,27 @@ export default function CheckoutPage() {
                         </div>
                       </label>
 
-                      <label className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
+                      <label className={`flex items-start gap-4 border px-4 py-4 transition ${
+                        hasGiftCardItems || (giftValidation?.valid ?? false)
+                          ? 'cursor-not-allowed border-[#eadfd4] bg-zinc-50 opacity-60'
+                          : `cursor-pointer ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`
+                      }`}>
                         <input
                           type="radio"
                           name="paymentMethod"
                           value="COD"
                           checked={paymentMethod === 'COD'}
+                          disabled={hasGiftCardItems || (giftValidation?.valid ?? false)}
                           onChange={() => setPaymentMethod('COD')}
                           className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
                         />
                         <div>
                           <p className="font-bold text-[#17110d]">Cash on delivery</p>
-                          <p className="mt-1 text-sm leading-6 text-zinc-500">Your order is placed immediately and payment is collected on delivery.</p>
+                          <p className="mt-1 text-sm leading-6 text-zinc-500">
+                            {hasGiftCardItems || (giftValidation?.valid ?? false)
+                              ? 'Not available — gift card orders are paid online.'
+                              : 'Your order is placed immediately and payment is collected on delivery.'}
+                          </p>
                         </div>
                       </label>
                     </div>
@@ -640,7 +700,54 @@ export default function CheckoutPage() {
                 <span>Shipping</span>
                 <span className="font-semibold text-[#17110d]">Free</span>
               </div>
+              {appliedGiftDiscount > 0 ? (
+                <div className="flex items-center justify-between text-[#1f7a4d]">
+                  <span>Gift card</span>
+                  <span className="font-semibold">−{formatPrice(appliedGiftDiscount, currency)}</span>
+                </div>
+              ) : null}
             </div>
+
+            {!hasGiftCardItems ? (
+              <div className="mt-6 border-t border-[#efe1d5] pt-6">
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Gift card</p>
+                {giftValidation?.valid ? (
+                  <div className="mt-3 flex items-center justify-between gap-3 text-sm">
+                    <span className="font-semibold text-[#17110d]">{giftValidation.code}</span>
+                    <button
+                      type="button"
+                      onClick={handleRemoveGiftCard}
+                      className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ) : (
+                  <div className="mt-3 flex gap-2">
+                    <input
+                      type="text"
+                      value={giftCodeInput}
+                      onChange={(event) => setGiftCodeInput(event.target.value)}
+                      placeholder="Enter gift card code"
+                      className="h-11 flex-1 border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => void handleApplyGiftCard()}
+                      disabled={isCheckingGift || !giftCodeInput.trim()}
+                      className="h-11 border border-[#17110d] bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:opacity-90 disabled:opacity-50"
+                    >
+                      {isCheckingGift ? '...' : 'Apply'}
+                    </button>
+                  </div>
+                )}
+                {giftCheckMessage ? (
+                  <p className={`mt-2 text-xs ${giftValidation?.valid ? 'text-[#1f7a4d]' : 'text-[#b3261e]'}`}>
+                    {giftCheckMessage}
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
 
             <div className="mt-6 border border-[#efe1d5] bg-[#fffdfa] p-4">
               <div className="flex items-start gap-3 text-sm leading-6 text-zinc-500">
@@ -656,7 +763,7 @@ export default function CheckoutPage() {
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
               <div className="flex items-center justify-between text-lg font-bold text-[#17110d]">
                 <span>Total</span>
-                <span>{formatPrice(subtotal, currency)}</span>
+                <span>{formatPrice(payableTotal, currency)}</span>
               </div>
               <button
                 type="button"

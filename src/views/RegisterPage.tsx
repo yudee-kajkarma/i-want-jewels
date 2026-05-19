@@ -9,7 +9,7 @@ import AuthShell from '../components/auth/AuthShell'
 import { useAuth } from '../context/AuthContext'
 import { checkRegisterEmail, registerUser } from '../services/authService'
 import type { RegisterPayload } from '../types/auth'
-import { getCityOptions, getCountryOptions, getStateOptions, isValidEmailAddress, isValidPostalCode } from '../utils/location'
+import { getCountryOptions, getStateOptions, isValidEmailAddress, isValidPostalCode } from '../utils/location'
 
 type RegisterPhase = 'email-check' | 'details'
 
@@ -49,7 +49,6 @@ export default function RegisterPage() {
   const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] = useState(false)
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(form.address.country), [form.address.country])
-  const cityOptions = useMemo(() => getCityOptions(form.address.country, form.address.state), [form.address.country, form.address.state])
   const isRegisterFormValid = useMemo(() => {
     const hasRequiredFields =
       form.username.trim() !== '' &&
@@ -449,7 +448,6 @@ export default function RegisterPage() {
                   const countryCode = event.target.value
                   updateAddressField('country', countryCode)
                   updateAddressField('state', '')
-                  updateAddressField('city', '')
                 }}
                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
@@ -468,7 +466,6 @@ export default function RegisterPage() {
                 value={form.address.state}
                 onChange={(event) => {
                   updateAddressField('state', event.target.value)
-                  updateAddressField('city', '')
                 }}
                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
               >
@@ -492,19 +489,14 @@ export default function RegisterPage() {
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">City</span>
-              <select
+              <input
+                type="text"
                 required
                 value={form.address.city}
                 onChange={(event) => updateAddressField('city', event.target.value)}
                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-              >
-                <option value="">Select city</option>
-                {cityOptions.map((city) => (
-                  <option key={city.name} value={city.name}>
-                    {city.name}
-                  </option>
-                ))}
-              </select>
+                placeholder="City"
+              />
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-semibold text-[#17110d]">Postal Code</span>

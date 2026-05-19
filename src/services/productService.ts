@@ -46,6 +46,7 @@ type ProductOptionApiResponse = {
 
 type ProductApiResponse = {
   id: string
+  productType?: 'PHYSICAL' | 'GIFT_CARD'
   slug?: string
   title: string
   vendor: string
@@ -60,6 +61,7 @@ type ProductApiResponse = {
 
 type ProductDetailApiResponse = {
   id: string
+  productType?: 'PHYSICAL' | 'GIFT_CARD'
   slug?: string
   createdAt: string
   updatedAt: string
@@ -178,6 +180,7 @@ export type GetProductsParams = {
   priceMax?: string | number
   carat?: string | number
   availability?: string | boolean
+  productType?: 'PHYSICAL' | 'GIFT_CARD'
   currency?: string
 }
 
@@ -275,6 +278,7 @@ function normalizeProduct(product: ProductApiResponse): Product {
 
   return {
     id: product.id,
+    productType: product.productType ?? 'PHYSICAL',
     slug: product.slug ?? '',
     title: product.title,
     vendor: product.vendor.trim(),
@@ -301,6 +305,7 @@ function normalizeProductDetail(
 
   return {
     id: product.id,
+    productType: product.productType ?? 'PHYSICAL',
     slug: product.slug ?? '',
     createdAt: product.createdAt,
     updatedAt: product.updatedAt,
@@ -415,6 +420,10 @@ export async function getProducts(params: GetProductsParams = {}): Promise<Produ
 
   if (params.vendor) {
     requestParams.vendor = params.vendor
+  }
+
+  if (params.productType) {
+    requestParams.productType = params.productType
   }
 
   if (params.tags) {
@@ -574,6 +583,7 @@ export async function getAllProducts(limitPerPage = 100): Promise<Product[]> {
 function buildProductFormData(payload: AdminProductCreatePayload | AdminProductEditPayload): FormData {
   const formData = new FormData()
 
+  formData.append('productType', payload.productType ?? 'PHYSICAL')
   formData.append('title', payload.title)
   formData.append('description', payload.description)
   formData.append('tags', payload.tags.join(','))

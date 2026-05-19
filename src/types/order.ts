@@ -23,6 +23,28 @@ export type OrderItem = {
   price: Price
   quantity: number
   thumbnail: string
+  isGiftCard?: boolean
+  giftCard?: {
+    recipientEmail?: string
+    recipientName?: string
+    senderName?: string
+    message?: string
+  }
+}
+
+export type IssuedGiftCard = {
+  id: string
+  code: string
+  initialAmount: number
+  currency: string
+  status: string
+  currentOwnerEmail: string
+  recipientEmail?: string
+  recipientName?: string
+  senderName?: string
+  message?: string
+  purchaseOrderItemKey?: string
+  createdAt?: string
 }
 
 export type Order = {
@@ -36,8 +58,87 @@ export type Order = {
   paymentStatus: string
   orderStatus: OrderStatus
   totalAmount: Price
+  payableAmount?: Price
+  giftCardDiscount?: number
+  appliedGiftCardCode?: string
   totalItems: number
   sessionId?: string
+  shippingCarrier?: string | null
+  pickupId?: string | null
+  issuedGiftCards?: IssuedGiftCard[]
+}
+
+export type PickupStatus = 'SCHEDULED' | 'CANCELLED' | 'PICKED_UP'
+
+export type Pickup = {
+  id: string
+  carrier: ShippingCarrier
+  confirmationNumber: string
+  status: PickupStatus
+  plannedPickupDateAndTime: string
+  closeTime: string
+  location: string
+  locationType: 'business' | 'residence'
+  remark?: string
+  packageCount: number
+  totalWeightKg: number
+  orderIds: string[]
+  adminUserId: string
+  createdAt: string
+  updatedAt: string
+}
+
+export type PickupsResult = {
+  data: Pickup[]
+  pagination: OrdersPagination | null
+}
+
+export type PickupOrderSummaryItem = {
+  title: string
+  sku: string
+  quantity: number
+  price: Price
+  weight: number
+}
+
+export type PickupOrderSummary = {
+  id: string
+  orderNumber: string
+  orderStatus: OrderStatus
+  shippingCarrier: string | null
+  trackingNumber: string | null
+  trackingUrl: string | null
+  totalAmount: Price
+  totalItems: number
+  shippingAddress: ShippingAddress | null
+  items: PickupOrderSummaryItem[]
+}
+
+export type PickupDetail = {
+  pickup: Pickup
+  orderCount: number
+  orders: PickupOrderSummary[]
+  missingOrderIds: string[]
+}
+
+export type FedExPickupOption = {
+  carrier: string
+  available: boolean
+  pickupDate: string
+  cutOffTime: string
+  accessTime: { hours: number; minutes: number }
+  residentialAvailable: boolean
+  readyTimeOptions: string[]
+  defaultReadyTime: string
+  latestTimeOptions: string[]
+  defaultLatestTimeOptions: string
+  countryRelationship: string
+  scheduleDay: string
+}
+
+export type FedExPickupAvailability = {
+  available: boolean
+  options: FedExPickupOption[]
 }
 
 export type OrdersPagination = {
@@ -83,6 +184,7 @@ export type CreateOrderPayload = {
   currency: string
   successUrl?: string
   cancelUrl?: string
+  giftCardCode?: string
 }
 
 export type CreateOrderResult = {
@@ -120,11 +222,61 @@ export type AdminShippingRateOption = {
   tag?: string
 }
 
+export type AdminShipmentPartyPreview = {
+  name: string
+  phone: string
+  email: string
+  street: string
+  houseNumber?: string
+  city: string
+  state?: string
+  postalCode: string
+  country: string
+}
+
+export type AdminShipmentPackagePreview = {
+  totalWeightKg: number
+  declaredValueEUR: number
+  description: string
+  incoterm: string
+  isCustomsDeclarable: boolean
+}
+
+export type AdminShipmentPreviewItem = {
+  number: number
+  title: string
+  qty: number
+  unitPriceEUR: number
+  unitWeightG: number
+  mfrCountry: string
+  hsCode: string
+}
+
+export type AdminShipmentPreview = {
+  shipper: AdminShipmentPartyPreview
+  receiver: AdminShipmentPartyPreview
+  package: AdminShipmentPackagePreview
+  items: AdminShipmentPreviewItem[]
+}
+
+export type AdminShipmentValidation = {
+  shipperPostalOk: boolean
+  receiverPostalOk: boolean
+  shipperPhoneOk: boolean
+  receiverPhoneOk: boolean
+  receiverEmailOk: boolean
+  descriptionOk: boolean
+  weightOk: boolean
+  issues: string[]
+}
+
 export type AdminShippingQuote = {
   rates: {
     FEDEX: AdminShippingRateOption[]
     DHL: AdminShippingRateOption[]
   }
+  preview?: AdminShipmentPreview
+  validation?: AdminShipmentValidation
 }
 
 export type AdminOrderCustomer = {

@@ -78,8 +78,24 @@ export default function CartPage() {
                     </div>
 
                     <div>
-                      <h2 className="text-xl font-bold text-[#17110d]">{item.title}</h2>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h2 className="text-xl font-bold text-[#17110d]">{item.title}</h2>
+                        {item.isGiftCard ? (
+                          <span className="inline-flex items-center bg-[#fce8f3] px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a53b79]">
+                            Gift Card
+                          </span>
+                        ) : null}
+                      </div>
                       <p className="mt-1 text-sm text-zinc-500">{item.variantTitle || 'Default variant'}</p>
+                      {item.isGiftCard ? (
+                        <p className="mt-1 text-xs text-zinc-500">
+                          {item.giftCard?.recipientEmail
+                            ? `To: ${item.giftCard.recipientEmail}`
+                            : 'For yourself (you can transfer it later)'}
+                          {item.giftCard?.message ? ` · “${item.giftCard.message}”` : ''}
+                          {' · Online payment only'}
+                        </p>
+                      ) : null}
                       <p className="mt-3 text-lg font-bold text-[#17110d]">{formatPrice(item.price, currency)}</p>
                     </div>
 

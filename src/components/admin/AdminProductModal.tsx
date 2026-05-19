@@ -102,6 +102,8 @@ export default function AdminProductModal({
     return null
   }
 
+  const isGiftCard = form.productType === 'GIFT_CARD'
+
   function handleVariantImageDragStart(
     event: React.DragEvent<HTMLDivElement>,
     variantId: string,
@@ -288,6 +290,31 @@ export default function AdminProductModal({
 
             {createStep === 1 ? (
               <div className="grid gap-5 lg:grid-cols-2">
+                  <div className="lg:col-span-2">
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Product Type</span>
+                    <div className="flex gap-3">
+                      {(['PHYSICAL', 'GIFT_CARD'] as const).map((type) => (
+                        <button
+                          key={type}
+                          type="button"
+                          onClick={() => onFieldChange('productType', type)}
+                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold transition ${
+                            (form.productType ?? 'PHYSICAL') === type
+                              ? 'border-[#cc4f8f] bg-[#cc4f8f] text-white'
+                              : 'border-[#e7bfd7] text-[#7a3a61] hover:bg-[#fff2fa]'
+                          }`}
+                        >
+                          {type === 'PHYSICAL' ? 'Physical Product' : 'Gift Card'}
+                        </button>
+                      ))}
+                    </div>
+                    {isGiftCard ? (
+                      <p className="mt-2 text-xs text-zinc-500">
+                        Gift cards are digital. Add each amount as a denomination in Step 2. Only one gift card product can exist.
+                      </p>
+                    ) : null}
+                  </div>
+
                 <label className="block lg:col-span-2">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Title</span>
                     <input
@@ -308,6 +335,8 @@ export default function AdminProductModal({
                     />
                   </label>
 
+                  {!isGiftCard ? (
+                  <>
                   <label className="block">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Vendor</span>
                     <input
@@ -421,6 +450,8 @@ export default function AdminProductModal({
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
+                  </>
+                  ) : null}
                   <label className="flex items-center gap-3 rounded-2xl border border-[#f0d8e8] px-4 py-3 text-sm font-semibold text-[#3f1933]">
                     <input
                       type="checkbox"
@@ -443,6 +474,108 @@ export default function AdminProductModal({
             ) : null}
 
             {createStep === 2 ? (
+              isGiftCard ? (
+              <div className="space-y-6">
+                <section className="rounded-[28px] border border-[#f0d8e8] bg-[#fff6fb] p-5">
+                  <h3 className="text-lg font-semibold text-[#3f1933]">Gift Card Design Image</h3>
+                  <p className="mt-1 text-sm text-zinc-500">Upload one design image — it is used for every denomination.</p>
+                  <div className="mt-4 flex items-center gap-4">
+                    {imagePreviewUrls[0] ? (
+                      <img src={imagePreviewUrls[0]} alt="Gift card design" className="h-28 w-44 rounded-2xl border border-[#f0d8e8] object-cover" />
+                    ) : (
+                      <div className="flex h-28 w-44 items-center justify-center rounded-2xl border border-dashed border-[#e7bfd7] text-xs text-zinc-400">No image</div>
+                    )}
+                    <div className="flex flex-col gap-2">
+                      <label className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white">
+                        <Plus className="h-4 w-4" />
+                        {imagePreviewUrls[0] ? 'Replace Image' : 'Upload Image'}
+                        <input
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          onChange={(event) => {
+                            if (imagePreviewUrls[0]) {
+                              onRemoveImage(0)
+                            }
+                            onImagesChange(form.variants[0]?.id ?? '', event.target.files)
+                            event.target.value = ''
+                          }}
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="rounded-[28px] border border-[#f0d8e8] bg-[#fff6fb] p-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#3f1933]">Denominations</h3>
+                      <p className="mt-1 text-sm text-zinc-500">Each amount a customer can buy (e.g. €50, €100).</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={onAddVariant}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white"
+                    >
+                      <Plus className="h-4 w-4" />
+                      Add Denomination
+                    </button>
+                  </div>
+
+                  <div className="mt-5 space-y-4">
+                    {form.variants.map((variant, index) => (
+                      <div key={variant.id} className="rounded-[24px] border border-[#f0d8e8] bg-white p-4">
+                        <div className="mb-4 flex items-center justify-between gap-3">
+                          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a4a75]">Denomination {index + 1}</p>
+                          <button
+                            type="button"
+                            onClick={() => onRemoveVariant(variant.id)}
+                            disabled={form.variants.length === 1}
+                            className="rounded-full border border-[#e7bfd7] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                        <div className="grid gap-4 lg:grid-cols-3">
+                          <label className="block">
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Label</span>
+                            <input
+                              value={variant.title}
+                              onChange={(event) => onVariantFieldChange(variant.id, 'title', event.target.value)}
+                              placeholder="€50 Gift Card"
+                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                              required
+                            />
+                          </label>
+                          <label className="block">
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Amount (€)</span>
+                            <input
+                              type="number"
+                              min="1"
+                              step="1"
+                              value={variant.price}
+                              onChange={(event) => onVariantFieldChange(variant.id, 'price', Number(event.target.value) || 0)}
+                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                              required
+                            />
+                          </label>
+                          <label className="block">
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">SKU</span>
+                            <input
+                              value={variant.sku}
+                              onChange={(event) => onVariantFieldChange(variant.id, 'sku', event.target.value)}
+                              placeholder="GC-50"
+                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                              required
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+              ) : (
               <div className="space-y-6">
                 <section className="rounded-[28px] border border-[#f0d8e8] bg-[#fff6fb] p-5">
                   <div className="flex flex-wrap items-center justify-between gap-3">
@@ -649,6 +782,7 @@ export default function AdminProductModal({
                   </div>
                 </section>
               </div>
+              )
             ) : null}
           </>
           )}
