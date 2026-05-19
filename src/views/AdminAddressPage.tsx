@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { getAdminAddress, updateAdminAddress } from '../services/userService'
 import type { UpdateAdminAddressPayload } from '../types/address'
-import { getCityOptions, getCountryOptions, getStateOptions, isValidPostalCode } from '../utils/location'
+import { getCountryOptions, getStateOptions, isValidPostalCode } from '../utils/location'
 
 const initialForm: UpdateAdminAddressPayload = {
   street: '',
@@ -27,7 +27,6 @@ export default function AdminAddressPage() {
   const [postalCodeError, setPostalCodeError] = useState('')
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(form.country), [form.country])
-  const cityOptions = useMemo(() => getCityOptions(form.country, form.state), [form.country, form.state])
 
   useEffect(() => {
     let mounted = true
@@ -156,7 +155,6 @@ export default function AdminAddressPage() {
                     onChange={(event) => {
                       updateField('country', event.target.value)
                       updateField('state', '')
-                      updateField('city', '')
                     }}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
@@ -175,7 +173,6 @@ export default function AdminAddressPage() {
                     value={form.state}
                     onChange={(event) => {
                       updateField('state', event.target.value)
-                      updateField('city', '')
                     }}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
@@ -190,18 +187,12 @@ export default function AdminAddressPage() {
 
                 <label className="space-y-2 text-sm">
                   <span className="font-semibold text-[#17110d]">City</span>
-                  <select
+                  <input
                     value={form.city}
                     onChange={(event) => updateField('city', event.target.value)}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                  >
-                    <option value="">Select city</option>
-                    {cityOptions.map((city) => (
-                      <option key={city.name} value={city.name}>
-                        {city.name}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="City"
+                  />
                 </label>
 
                 <label className="space-y-2 text-sm">

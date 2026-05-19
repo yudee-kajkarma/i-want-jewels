@@ -2,14 +2,14 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
-import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard } from 'lucide-react'
+import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
 import { getAdminOrderById, updateOrderShippingAddressForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
-import { getCityOptions, getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
+import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice } from '../utils/price'
 
 type AdminShippingAddressForm = {
@@ -79,7 +79,6 @@ export default function AdminOrderDetailPage() {
     const [isVerifyingPayment, setIsVerifyingPayment] = useState(false)
     const countryOptions = useMemo(() => getCountryOptions(), [])
     const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
-    const cityOptions = useMemo(() => getCityOptions(addressForm.country, addressForm.state), [addressForm.country, addressForm.state])
     const canEditShippingAddress = order?.orderStatus === 'PENDING' || order?.orderStatus === 'CONFIRMED'
 
     useEffect(() => {
@@ -334,7 +333,6 @@ export default function AdminOrderDetailPage() {
                                                         ...currentValue,
                                                         country: event.target.value,
                                                         state: '',
-                                                        city: '',
                                                     }))
                                                 }
                                                 className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
@@ -356,7 +354,6 @@ export default function AdminOrderDetailPage() {
                                                     setAddressForm((currentValue) => ({
                                                         ...currentValue,
                                                         state: event.target.value,
-                                                        city: '',
                                                     }))
                                                 }
                                                 className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
@@ -372,7 +369,7 @@ export default function AdminOrderDetailPage() {
 
                                         <label className="space-y-1">
                                             <span className="text-xs font-semibold uppercase tracking-[0.08em] text-zinc-500">City</span>
-                                            <select
+                                            <input
                                                 value={addressForm.city}
                                                 onChange={(event) =>
                                                     setAddressForm((currentValue) => ({
@@ -380,15 +377,9 @@ export default function AdminOrderDetailPage() {
                                                         city: event.target.value,
                                                     }))
                                                 }
+                                                placeholder="City"
                                                 className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                                            >
-                                                <option value="">Select city</option>
-                                                {cityOptions.map((city) => (
-                                                    <option key={city.name} value={city.name}>
-                                                        {city.name}
-                                                    </option>
-                                                ))}
-                                            </select>
+                                            />
                                         </label>
 
                                         <label className="space-y-1">
@@ -461,12 +452,38 @@ export default function AdminOrderDetailPage() {
                                             <div>
                                                 <p className="font-semibold text-[#17110d]">{item.title}</p>
                                                 <p className="text-xs text-zinc-500">{item.variantName || 'Default'} · Qty {item.quantity}</p>
+                                                {item.isGiftCard ? (
+                                                    <p className="mt-1 text-xs text-[#8f2a60]">
+                                                        {item.giftCard?.recipientEmail ? `To: ${item.giftCard.recipientEmail}` : 'Delivered to buyer'}
+                                                    </p>
+                                                ) : null}
                                             </div>
                                             <p className="font-semibold text-[#17110d]">{formatPrice(item.price, currency)}</p>
                                         </article>
                                     ))}
                                 </div>
                             </div>
+
+                            {order.issuedGiftCards && order.issuedGiftCards.length > 0 ? (
+                                <div className="border border-[#efe1d5] bg-[#fffdfa] p-4">
+                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Gift className="h-4 w-4" />Issued Gift Cards</p>
+                                    <div className="mt-4 grid gap-3 md:grid-cols-2">
+                                        {order.issuedGiftCards.map((card) => (
+                                            <article key={card.id || card.code} className="border border-[#efe1d5] bg-white p-3 text-sm">
+                                                <p className="font-mono font-bold text-[#17110d]">{card.code}</p>
+                                                <div className="mt-2 space-y-1 text-xs text-zinc-600">
+                                                    <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, currency)}</span></p>
+                                                    <p>Owner: <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
+                                                    {card.recipientEmail ? <p>Recipient email: <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
+                                                    {card.recipientName ? <p>Recipient: <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
+                                                    {card.message ? <p>Message: <span className="font-semibold text-[#17110d]">{card.message}</span></p> : null}
+                                                    <p>Status: <span className="font-semibold text-[#17110d]">{card.status}</span></p>
+                                                </div>
+                                            </article>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : null}
                         </section>
 
                         <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
@@ -480,6 +497,24 @@ export default function AdminOrderDetailPage() {
                                     <span>Order Total</span>
                                     <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, currency)}</span>
                                 </div>
+                                {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
+                                    <>
+                                        <div className="flex items-center justify-between text-[#1f7a4d]">
+                                            <span>Gift Card</span>
+                                            <span className="font-semibold">-{formatPrice(order.giftCardDiscount, currency)}</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span>Payable</span>
+                                            <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, currency)}</span>
+                                        </div>
+                                        {order.appliedGiftCardCode ? (
+                                            <div className="flex items-center justify-between gap-3">
+                                                <span>Gift Card Code</span>
+                                                <span className="break-all text-right font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span>
+                                            </div>
+                                        ) : null}
+                                    </>
+                                ) : null}
                                 {typeof order.shippingCost === 'number' ? (
                                     <div className="flex items-center justify-between">
                                         <span>Shipping Cost</span>

@@ -23,6 +23,7 @@ const adminNavLinks = [
     { label: "Dashboard", to: "/admin" },
     { label: "Blogs", to: "/admin/blogs" },
     { label: "Orders", to: "/admin/orders" },
+    { label: "Gift Cards", to: "/admin/gift-cards" },
     { label: "Carts", to: "/admin/cart" },
     { label: "Wishlists", to: "/admin/wishlist" },
     { label: "Tickets", to: "/admin/tickets" },

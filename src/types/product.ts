@@ -32,6 +32,7 @@ export type ProductFaq = {
 
 export type Product = {
   id: string
+  productType: 'PHYSICAL' | 'GIFT_CARD'
   slug: string
   title: string
   vendor: string
@@ -78,6 +79,7 @@ export type ProductDetail = Product & {
 }
 
 export type AdminProductUpdatePayload = {
+  productType?: 'PHYSICAL' | 'GIFT_CARD'
   title: string
   description: string
   vendor: string
@@ -95,7 +97,7 @@ export type AdminProductUpdatePayload = {
   details: string
 }
 
-export type AdminVariantName = 'gold' | 'rose gold' | 'silver'
+export type AdminVariantName = 'gold' | 'rose gold' | 'silver' | 'gift card'
 
 export type AdminProductVariantPayload = {
   id?: string

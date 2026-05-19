@@ -150,6 +150,8 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
     getPriceValue(product ?? {}, 'minPrice') ??
     toPrice(0)
   const quantity = getNumberValue(item, 'quantity') || 1
+  const isGiftCard = item.isGiftCard === true
+  const giftCardRaw = getObjectValue(item, 'giftCard')
 
   return {
     id: getStringValue(item, 'id') || getStringValue(item, '_id') || variantId || productId,
@@ -160,6 +162,17 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
     thumbnail,
     price,
     quantity,
+    isGiftCard,
+    ...(giftCardRaw
+      ? {
+          giftCard: {
+            recipientEmail: getStringValue(giftCardRaw, 'recipientEmail') || undefined,
+            recipientName: getStringValue(giftCardRaw, 'recipientName') || undefined,
+            senderName: getStringValue(giftCardRaw, 'senderName') || undefined,
+            message: getStringValue(giftCardRaw, 'message') || undefined,
+          },
+        }
+      : {}),
   }
 }
 

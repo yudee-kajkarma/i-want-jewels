@@ -11,6 +11,7 @@ import {
   buildForm,
   createEmptyForm,
   createEmptyVariant,
+  createEmptyGiftCardVariant,
   defaultFilters,
   getVariantLabel,
   parseCommaSeparatedValues,
@@ -282,7 +283,20 @@ export default function AdminProductsPage() {
   }
 
   function handleFormChange<Key extends keyof EditableProductForm>(key: Key, value: EditableProductForm[Key]) {
-    setForm((currentValue) => ({ ...currentValue, [key]: value }))
+    setForm((currentValue) => {
+      if (key === 'productType' && value !== currentValue.productType) {
+        const switchingToGiftCard = value === 'GIFT_CARD'
+        return {
+          ...currentValue,
+          productType: value as EditableProductForm['productType'],
+          variants: switchingToGiftCard
+            ? [createEmptyGiftCardVariant()]
+            : [createEmptyVariant()],
+          images: [],
+        }
+      }
+      return { ...currentValue, [key]: value }
+    })
   }
 
   function handleVariantChange(variantId: string, updater: (variant: CreateVariantForm) => CreateVariantForm) {
@@ -313,6 +327,17 @@ export default function AdminProductsPage() {
 
   function handleAddVariant() {
     setForm((currentValue) => {
+      if (currentValue.productType === 'GIFT_CARD') {
+        if (currentValue.variants.length >= 20) {
+          return currentValue
+        }
+
+        return {
+          ...currentValue,
+          variants: [...currentValue.variants, createEmptyGiftCardVariant()],
+        }
+      }
+
       if (currentValue.variants.length >= variantNameOptions.length) {
         return currentValue
       }
@@ -436,7 +461,8 @@ export default function AdminProductsPage() {
       return 'Enter a product description before continuing.'
     }
 
-    if (!form.category.trim()) {
+    // Gift cards have no category — the backend assigns a default.
+    if (form.productType !== 'GIFT_CARD' && !form.category.trim()) {
       return 'Enter a category before continuing.'
     }
 
@@ -467,16 +493,32 @@ export default function AdminProductsPage() {
     setIsSaving(true)
     setError('')
 
+    const isGiftCard = form.productType === 'GIFT_CARD'
+
     try {
       if (panelMode === 'edit' && selectedProductId) {
-        if (form.variants.some((variant) => variant.imageIndexes.length === 0)) {
+        if (!isGiftCard && form.variants.some((variant) => variant.imageIndexes.length === 0)) {
           showOperationError('Assign at least one image to every variant.')
           return
         }
 
-        const imageMapping = buildEditImageMapping(form)
+        if (isGiftCard && form.images.length === 0) {
+          showOperationError('Upload a gift card design image.')
+          return
+        }
+
+        // Gift cards: every denomination reuses the single design image.
+        const giftDesignRef: string | number =
+          form.images.length > 0
+            ? form.images[0].isExisting
+              ? form.images[0].id
+              : 0
+            : 0
+        const imageMapping = isGiftCard
+          ? form.variants.map(() => [giftDesignRef])
+          : buildEditImageMapping(form)
         const referencedImageIndexes = new Set(
-          form.variants.flatMap((variant) => variant.imageIndexes),
+          isGiftCard ? [0] : form.variants.flatMap((variant) => variant.imageIndexes),
         )
         const currentVariantIds = form.variants
           .map((variant) => variant.variantId)
@@ -485,6 +527,7 @@ export default function AdminProductsPage() {
           (initialVariantId) => !currentVariantIds.includes(initialVariantId),
         )
         const payload: AdminProductEditPayload = {
+          productType: form.productType,
           title: form.title,
           description: form.description,
           vendor: form.vendor,
@@ -508,7 +551,7 @@ export default function AdminProductsPage() {
           variants: form.variants.map((variant, index) => ({
             id: variant.variantId,
             title: variant.title.trim(),
-            variantName: variant.variantName,
+            variantName: isGiftCard ? 'gift card' : variant.variantName,
             sku: variant.sku.trim(),
             stock: Number(variant.stock) || 0,
             price: variant.price,
@@ -552,15 +595,21 @@ export default function AdminProductsPage() {
           return
         }
 
-        const duplicateVariantNames = new Set(form.variants.map((variant) => variant.variantName))
+        if (!isGiftCard) {
+          const duplicateVariantNames = new Set(form.variants.map((variant) => variant.variantName))
 
-        if (duplicateVariantNames.size !== form.variants.length) {
-          showOperationError('Each variant name can only be used once.')
-          return
+          if (duplicateVariantNames.size !== form.variants.length) {
+            showOperationError('Each variant name can only be used once.')
+            return
+          }
         }
 
         if (form.images.length === 0) {
-          showOperationError('Upload at least one image before creating the product.')
+          showOperationError(
+            isGiftCard
+              ? 'Upload a gift card design image.'
+              : 'Upload at least one image before creating the product.',
+          )
           return
         }
 
@@ -573,18 +622,26 @@ export default function AdminProductsPage() {
         )
 
         if (hasInvalidVariant) {
-          showOperationError('Complete each variant with a title, SKU, non-negative stock, and a price greater than zero.')
+          showOperationError(
+            isGiftCard
+              ? 'Each denomination needs a label, SKU, and an amount greater than zero.'
+              : 'Complete each variant with a title, SKU, non-negative stock, and a price greater than zero.',
+          )
           return
         }
 
-        const imageMapping = form.variants.map((variant) => variant.imageIndexes)
+        // Gift cards: every denomination reuses the single uploaded design image.
+        const imageMapping = isGiftCard
+          ? form.variants.map(() => [0])
+          : form.variants.map((variant) => variant.imageIndexes)
 
-        if (imageMapping.some((indexes) => indexes.length === 0)) {
+        if (!isGiftCard && imageMapping.some((indexes) => indexes.length === 0)) {
           showOperationError('Assign at least one image to every variant.')
           return
         }
 
         const payload: AdminProductCreatePayload = {
+          productType: form.productType,
           title: form.title,
           description: form.description,
           vendor: form.vendor,
@@ -607,7 +664,7 @@ export default function AdminProductsPage() {
           diamondPcs: Number(form.diamondPcs) || 0,
           variants: form.variants.map((variant, index) => ({
             title: variant.title.trim(),
-            variantName: variant.variantName,
+            variantName: isGiftCard ? 'gift card' : variant.variantName,
             sku: variant.sku.trim(),
             stock: Number(variant.stock) || 0,
             price: variant.price,
