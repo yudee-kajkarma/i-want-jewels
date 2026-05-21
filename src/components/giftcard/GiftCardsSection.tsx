@@ -144,6 +144,11 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                     {card.senderName ? (
                       <p className="mt-1 text-xs text-zinc-500">From {card.senderName}</p>
                     ) : null}
+                    {card.createdAt ? (
+                      <p className="mt-1 text-xs text-zinc-400">
+                        Purchased on {new Date(card.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
+                      </p>
+                    ) : null}
                     {card.message ? (
                       <p className="mt-1 text-sm italic text-zinc-600">&ldquo;{card.message}&rdquo;</p>
                     ) : null}

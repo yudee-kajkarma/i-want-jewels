@@ -17,7 +17,7 @@ import {
   updateUserProfile,
 } from '../services/userService'
 import type { UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
-import { getCityOptions, getCountryOptions, getStateOptions, isValidPostalCode, normalizeCountryCode, normalizeStateCode } from '../utils/location'
+import { getCountryOptions, getStateOptions, isValidPostalCode, normalizeCountryCode, normalizeStateCode } from '../utils/location'
 
 type AddressFormItem = UserProfileAddressPayload & {
   id: string
@@ -637,19 +637,14 @@ export default function ProfilePage() {
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         City
-                        <select
+                        <input
+                          type="text"
                           value={address.city}
                           onChange={(event) => handleAddressChange(address.id, 'city', event.target.value)}
                           className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
+                          placeholder="City"
                           required
-                        >
-                          <option value="">Select city</option>
-                          {getCityOptions(address.country, address.state).map((city) => (
-                            <option key={city.name} value={city.name}>
-                              {city.name}
-                            </option>
-                          ))}
-                        </select>
+                        />
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         House Number
@@ -685,15 +680,13 @@ export default function ProfilePage() {
                       </label>
                       <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                         Address Type
-                        <select
+                        <input
+                          type="text"
                           value={address.addressType}
                           onChange={(event) => handleAddressChange(address.id, 'addressType', event.target.value)}
                           className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
-                        >
-                          <option value="home">Home</option>
-                          <option value="work">Work</option>
-                          <option value="other">Other</option>
-                        </select>
+                          placeholder="home / work / other"
+                        />
                       </label>
                     </div>
 

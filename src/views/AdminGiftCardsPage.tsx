@@ -6,6 +6,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import {
   getAdminGiftCardsByPurchaser,
+  type AdminGiftCardPagination,
   type AdminPurchaserGroup,
 } from '../services/giftCardService'
 
@@ -28,21 +29,25 @@ export default function AdminGiftCardsPage() {
   const [expanded, setExpanded] = useState<string | null>(null)
   const [searchInput, setSearchInput] = useState('')
   const [search, setSearch] = useState('')
+  const [page, setPage] = useState(1)
+  const [pagination, setPagination] = useState<AdminGiftCardPagination | null>(null)
+  const limit = 20
 
   useEffect(() => {
     let active = true
     setStatus('loading')
-    getAdminGiftCardsByPurchaser(1, 50, search || undefined)
+    getAdminGiftCardsByPurchaser(page, limit, search || undefined)
       .then((result) => {
         if (!active) return
         setPurchasers(result.purchasers)
+        setPagination(result.pagination)
         setStatus('ready')
       })
       .catch(() => active && setStatus('error'))
     return () => {
       active = false
     }
-  }, [search])
+  }, [search, page])
 
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
@@ -59,7 +64,8 @@ export default function AdminGiftCardsPage() {
           <form
             onSubmit={(event) => {
               event.preventDefault()
-              setSearch(searchInput.trim())
+              setPage(1)
+            setSearch(searchInput.trim())
             }}
             className="flex items-center gap-2"
           >
@@ -91,7 +97,11 @@ export default function AdminGiftCardsPage() {
           ) : status === 'error' ? (
             <p className="p-8 text-sm text-rose-600">Unable to load gift cards right now.</p>
           ) : purchasers.length === 0 ? (
-            <p className="p-8 text-sm text-zinc-500">No gift card purchases found.</p>
+            <div className="flex flex-col items-center justify-center px-8 py-16 text-center">
+              <Gift className="h-10 w-10 text-zinc-300" />
+              <p className="mt-4 text-base font-semibold text-zinc-700">No gift cards purchased yet</p>
+              <p className="mt-1 text-sm text-zinc-400">No user has bought or redeemed a gift card so far.</p>
+            </div>
           ) : (
             <div className="divide-y divide-[#efe1d5]">
               {purchasers.map((group) => {
@@ -172,6 +182,30 @@ export default function AdminGiftCardsPage() {
             </div>
           )}
         </section>
+
+        {pagination && pagination.totalPages > 1 ? (
+          <div className="mt-6 flex items-center justify-between text-sm text-zinc-500">
+            <p>{pagination.totalRecords} total purchasers · Page {pagination.currentPage} of {pagination.totalPages}</p>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                disabled={!pagination.hasPrevPage}
+                onClick={() => setPage((p) => p - 1)}
+                className="border border-[#e7d3c2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#17110d] transition hover:bg-[#fff6fb] disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                disabled={!pagination.hasNextPage}
+                onClick={() => setPage((p) => p + 1)}
+                className="border border-[#e7d3c2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#17110d] transition hover:bg-[#fff6fb] disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        ) : null}
       </main>
       <Footer />
     </div>
