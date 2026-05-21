@@ -643,6 +643,7 @@ export default function CheckoutPage() {
                         </div>
                       </label>
 
+                      {/* COD option hidden
                       {!hasGiftCardItems ? (
                         <label className={`flex items-start gap-4 border px-4 py-4 transition ${
                           giftValidation?.valid
@@ -668,6 +669,7 @@ export default function CheckoutPage() {
                           </div>
                         </label>
                       ) : null}
+                      */}
                     </div>
                   </div>
                 </div>

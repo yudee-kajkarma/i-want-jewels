@@ -15,7 +15,6 @@ import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
-import RecipientEmailPicker from "../components/giftcard/RecipientEmailPicker";
 import ringSizeGuideImage from "../assets/image/ringsize.jpeg";
 import { useAuth } from "../context/AuthContext";
 import { useCurrency } from "../context/CurrencyContext";
@@ -426,7 +425,6 @@ export default function ProductDetailPage({
     );
     const [quantity, setQuantity] = useState(1);
     const [giftRecipientEmail, setGiftRecipientEmail] = useState("");
-    const [giftEmailValid, setGiftEmailValid] = useState(false);
     const [giftRecipientName, setGiftRecipientName] = useState("");
     const [giftSenderName, setGiftSenderName] = useState("");
     const [giftMessage, setGiftMessage] = useState("");
@@ -643,16 +641,6 @@ export default function ProductDetailPage({
 
         const isGiftCardProduct = product.productType === "GIFT_CARD";
 
-        if (
-            isGiftCardProduct &&
-            giftRecipientEmail.trim() &&
-            !giftEmailValid
-        ) {
-            setCartFeedback(
-                "Choose a recipient from the list — gift cards can only be sent to a registered account. Leave the email blank to keep it for yourself.",
-            );
-            return;
-        }
 
         setIsAddingToCart(true);
         setCartFeedback("");
@@ -1067,14 +1055,12 @@ export default function ProductDetailPage({
                                                 Send this gift card
                                             </p>
                                             <p className="text-[12px] text-zinc-500">
-                                                Leave the email blank to keep it for yourself — you can transfer it later from your profile. Gift cards require online payment.
+                                                Leave the email blank to keep it for yourself. Gift cards require online payment.
                                             </p>
-                                            <RecipientEmailPicker
+                                            <input
+                                                type="email"
                                                 value={giftRecipientEmail}
-                                                onChange={(email, isValid) => {
-                                                    setGiftRecipientEmail(email);
-                                                    setGiftEmailValid(isValid);
-                                                }}
+                                                onChange={(e) => setGiftRecipientEmail(e.target.value)}
                                                 placeholder="Recipient email (optional)"
                                                 className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                                             />
