@@ -283,6 +283,9 @@ function normalizeShippingAddress(
 
 function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
   const giftCard = getObjectValue(item, "giftCard");
+  const sizeRaw = (item as Record<string, unknown>).size;
+  const size = typeof sizeRaw === "number" ? sizeRaw : undefined;
+  const sizeMeasurement = getStringValue(item as Record<string, unknown>, "size_measurement") || undefined;
 
   return {
     productId: getStringValue(item, "productId"),
@@ -306,6 +309,8 @@ function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
           },
         }
       : {}),
+    ...(size !== undefined ? { size } : {}),
+    ...(sizeMeasurement ? { sizeMeasurement } : {}),
   };
 }
 

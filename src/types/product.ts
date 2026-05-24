@@ -1,5 +1,10 @@
 import type { Price } from '../utils/price'
 
+export type VariantSize = {
+  size: number
+  stock: number
+}
+
 export type ProductVariant = {
   id: string
   variantName?: string
@@ -12,6 +17,10 @@ export type ProductVariant = {
   thumbnail: string
   previewImage?: string
   images?: ProductImage[]
+  sizes?: VariantSize[]
+  sizeMeasurement?: string
+  customsValueUsd?: number
+  totalStock?: number
 }
 
 export type ProductImage = {
@@ -107,6 +116,9 @@ export type AdminProductVariantPayload = {
   stock: number
   price: number
   position: number
+  sizes?: VariantSize[]
+  sizeMeasurement?: string
+  customsValueUsd?: number
 }
 
 export type AdminExistingProductImagePayload = {

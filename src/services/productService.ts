@@ -24,6 +24,11 @@ type ProductImageApiResponse = {
   position: number
 }
 
+type VariantSizeApiResponse = {
+  size: number
+  stock: number
+}
+
 type ProductVariantApiResponse = {
   id?: string
   _id?: string
@@ -37,6 +42,10 @@ type ProductVariantApiResponse = {
   thumbnail: string
   previewImage?: string
   images?: ProductImageApiResponse[]
+  sizes?: VariantSizeApiResponse[]
+  size_measurement?: string
+  customsValueUSD?: number
+  totalStock?: number
 }
 
 type ProductOptionApiResponse = {
@@ -253,6 +262,17 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
     thumbnail: variant.thumbnail,
     previewImage: variant.previewImage,
     images: normalizeImages(variant.images),
+    ...(Array.isArray(variant.sizes) &&
+        variant.sizes.length > 0 &&
+        variant.sizes.every(
+          (entry: any) =>
+            entry && typeof entry === 'object' && typeof entry.size === 'number' && typeof entry.stock === 'number',
+        )
+      ? { sizes: variant.sizes.map((entry: any) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
+      : {}),
+    ...(variant.size_measurement ? { sizeMeasurement: variant.size_measurement } : {}),
+    ...(typeof variant.customsValueUSD === 'number' ? { customsValueUsd: variant.customsValueUSD } : {}),
+    ...(typeof variant.totalStock === 'number' ? { totalStock: variant.totalStock } : {}),
   }
 }
 
@@ -615,6 +635,11 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
         stock: variant.stock,
         price: variant.price,
         position: variant.position,
+        ...(Array.isArray(variant.sizes) && variant.sizes.length > 0
+          ? { sizes: variant.sizes.map((entry) => ({ size: entry.size, stock: entry.stock })) }
+          : {}),
+        ...(variant.sizeMeasurement ? { size_measurement: variant.sizeMeasurement } : {}),
+        ...(typeof variant.customsValueUsd === 'number' ? { customsValueUSD: variant.customsValueUsd } : {}),
       })),
     ),
   )

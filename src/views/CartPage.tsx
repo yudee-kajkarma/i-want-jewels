@@ -86,7 +86,10 @@ export default function CartPage() {
                           </span>
                         ) : null}
                       </div>
-                      <p className="mt-1 text-sm text-zinc-500">{item.variantTitle || 'Default variant'}</p>
+                      <p className="mt-1 text-sm text-zinc-500">
+                        {item.variantTitle || 'Default variant'}
+                        {item.size !== undefined ? ` · Size ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
+                      </p>
                       {item.isGiftCard ? (
                         <p className="mt-1 text-xs text-zinc-500">
                           {item.giftCard?.recipientEmail

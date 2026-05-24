@@ -320,7 +320,11 @@ export default function AdminOrderDetailPage() {
                                             </div>
                                             <div>
                                                 <p className="font-semibold text-[#17110d]">{item.title}</p>
-                                                <p className="text-xs text-zinc-500">{item.variantName || 'Default'} · Qty {item.quantity}</p>
+                                                <p className="text-xs text-zinc-500">
+                                                    {item.variantName || 'Default'}
+                                                    {item.size !== undefined ? ` · Size ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
+                                                    {' · Qty '}{item.quantity}
+                                                </p>
                                                 {item.isGiftCard ? (
                                                     <p className="mt-1 text-xs text-[#8f2a60]">
                                                         {item.giftCard?.recipientEmail ? `To: ${item.giftCard.recipientEmail}` : 'Delivered to buyer'}

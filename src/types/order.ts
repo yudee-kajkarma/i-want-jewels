@@ -30,6 +30,8 @@ export type OrderItem = {
     senderName?: string
     message?: string
   }
+  size?: number
+  sizeMeasurement?: string
 }
 
 export type IssuedGiftCard = {

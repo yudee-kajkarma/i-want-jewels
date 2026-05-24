@@ -295,6 +295,7 @@ export default function CheckoutPage() {
         productId: item.productId,
         variantId: item.variantId,
         quantity: item.quantity,
+        ...(item.size !== undefined ? { size: item.size } : {}),
       })
     }
 
@@ -323,6 +324,7 @@ export default function CheckoutPage() {
           productId: singleDraft!.item.productId,
           variantId: singleDraft!.item.variantId,
           quantity: singleDraft!.item.quantity,
+          ...(singleDraft!.item.size !== undefined ? { size: singleDraft!.item.size } : {}),
         })
       } else {
         clearCartRestoreSnapshot()
@@ -433,7 +435,10 @@ export default function CheckoutPage() {
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-[#17110d]">{item.title}</h3>
-                          <p className="mt-1 text-sm text-zinc-500">{item.variantTitle || 'Default variant'}</p>
+                          <p className="mt-1 text-sm text-zinc-500">
+                            {item.variantTitle || 'Default variant'}
+                            {item.size !== undefined ? ` · Size ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
+                          </p>
                           <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
                         </div>
                         <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>

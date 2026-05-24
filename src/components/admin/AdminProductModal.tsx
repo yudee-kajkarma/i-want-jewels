@@ -10,6 +10,7 @@ import {
   type CreateVariantForm,
   type EditableProductForm,
   variantNameOptions,
+  SIZE_MEASUREMENT_OPTIONS,
 } from './adminProductHelpers'
 
 type FormChangeHandler = <Key extends keyof EditableProductForm>(
@@ -652,15 +653,25 @@ export default function AdminProductModal({
                             />
                           </label>
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Stock</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">
+                              Stock
+                              {variant.sizes.length > 0 ? (
+                                <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.1em] text-zinc-500">(managed per size)</span>
+                              ) : null}
+                            </span>
                             <input
                               type="number"
                               min="0"
                               step="1"
-                              value={variant.stock}
+                              value={
+                                variant.sizes.length > 0
+                                  ? variant.sizes.reduce((sum, s) => sum + (Number(s.stock) || 0), 0)
+                                  : variant.stock
+                              }
                               onChange={(event) => onVariantFieldChange(variant.id, 'stock', Number(event.target.value))}
-                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                              required
+                              disabled={variant.sizes.length > 0}
+                              className={`h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79] ${variant.sizes.length > 0 ? 'cursor-not-allowed bg-zinc-100 text-zinc-500' : ''}`}
+                              required={variant.sizes.length === 0}
                             />
                           </label>
                           <label className="block lg:col-span-2">
@@ -677,6 +688,112 @@ export default function AdminProductModal({
                               required
                             />
                           </label>
+                          <label className="block">
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">
+                              Size Measurement
+                              {variant.sizes.length === 0 ? (
+                                <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.1em] text-zinc-500">(add a size first)</span>
+                              ) : null}
+                            </span>
+                            <select
+                              value={variant.sizeMeasurement}
+                              onChange={(event) => onVariantFieldChange(variant.id, 'sizeMeasurement', event.target.value)}
+                              disabled={variant.sizes.length === 0}
+                              className={`h-12 w-full rounded-2xl border border-[#e7bfd7] bg-white px-4 outline-none transition focus:border-[#a53b79] ${variant.sizes.length === 0 ? 'cursor-not-allowed bg-zinc-100 text-zinc-500' : ''}`}
+                            >
+                              <option value="">— None —</option>
+                              {SIZE_MEASUREMENT_OPTIONS.map((opt) => (
+                                <option key={opt} value={opt}>{opt}</option>
+                              ))}
+                            </select>
+                          </label>
+                          <label className="block">
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Customs Value (USD)</span>
+                            <input
+                              type="number"
+                              min="0"
+                              step="0.01"
+                              value={variant.customsValueUsd ?? ''}
+                              onChange={(event) => {
+                                const raw = event.target.value
+                                onVariantFieldChange(
+                                  variant.id,
+                                  'customsValueUsd',
+                                  raw === '' ? null : Number(raw),
+                                )
+                              }}
+                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                            />
+                          </label>
+                        </div>
+
+                        <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
+                          <div className="flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                              <p className="text-sm font-semibold text-[#3f1933]">Sizes for {variant.title || getVariantLabel(variant.variantName)}</p>
+                              <p className="mt-1 text-xs text-zinc-500">Add each size with its own stock. Same SKU is shared across sizes.</p>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                onVariantFieldChange(variant.id, 'sizes', [
+                                  ...variant.sizes,
+                                  { size: 0, stock: 0 },
+                                ])
+                              }
+                              className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white"
+                            >
+                              <Plus className="h-4 w-4" />
+                              Add size
+                            </button>
+                          </div>
+                          {variant.sizes.length > 0 && (
+                            <div className="mt-4 space-y-3">
+                              {variant.sizes.map((entry, sizeIdx) => (
+                                <div key={sizeIdx} className="flex items-end gap-3">
+                                  <label className="flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Size</span>
+                                    <input
+                                      type="number"
+                                      step="0.01"
+                                      value={entry.size}
+                                      onChange={(event) => {
+                                        const next = [...variant.sizes]
+                                        next[sizeIdx] = { ...entry, size: Number(event.target.value) || 0 }
+                                        onVariantFieldChange(variant.id, 'sizes', next)
+                                      }}
+                                      className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                    />
+                                  </label>
+                                  <label className="flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Stock</span>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      step="1"
+                                      value={entry.stock}
+                                      onChange={(event) => {
+                                        const next = [...variant.sizes]
+                                        next[sizeIdx] = { ...entry, stock: Number(event.target.value) || 0 }
+                                        onVariantFieldChange(variant.id, 'sizes', next)
+                                      }}
+                                      className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                    />
+                                  </label>
+                                  <button
+                                    type="button"
+                                    onClick={() => {
+                                      const next = variant.sizes.filter((_, i) => i !== sizeIdx)
+                                      onVariantFieldChange(variant.id, 'sizes', next)
+                                    }}
+                                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e7bfd7] text-[#a53b79] transition hover:bg-white"
+                                  >
+                                    <X className="h-4 w-4" />
+                                  </button>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
 
                         <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
@@ -722,7 +839,7 @@ export default function AdminProductModal({
 
                                   return (
                                     <div
-                                      key={`${variant.id}-selected-${imageIndex}`}
+                                      key={`${variant.id}-selected-${currentPosition}`}
                                       draggable={isEditing}
                                       onDragStart={(event) =>
                                         handleVariantImageDragStart(event, variant.id, currentPosition)

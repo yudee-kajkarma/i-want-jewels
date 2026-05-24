@@ -252,6 +252,9 @@ export default function OrderDetailPage() {
                     <div>
                       <p className="text-lg font-bold text-[#17110d]">{item.title}</p>
                       <p className="mt-1 text-sm text-zinc-500">{item.variantName || 'Default variant'}</p>
+                      {item.size !== undefined ? (
+                        <p className="mt-1 text-sm text-zinc-500">Size: {item.size}{item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}</p>
+                      ) : null}
                       <p className="mt-1 text-sm text-zinc-500">SKU: {item.sku || 'N/A'}</p>
                       <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
                       {item.isGiftCard ? (
