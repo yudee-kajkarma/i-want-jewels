@@ -226,11 +226,15 @@ export type BulkCreateProductPayload = {
 const categoryTags = ['Bracelets', 'Earrings', 'Necklaces', 'Rings', 'Gift Cards']
 
 function normalizeImages(images?: ProductImageApiResponse[]): ProductImage[] {
-  return (images ?? []).map((image) => ({
-    id: image._id,
-    src: image.src,
-    position: image.position,
-  }))
+  const seen = new Set<string>()
+  return (images ?? []).reduce<ProductImage[]>((acc, image, idx) => {
+    const id = image._id || `img-${image.src}-${idx}`
+    if (!seen.has(id)) {
+      seen.add(id)
+      acc.push({ id, src: image.src, position: image.position })
+    }
+    return acc
+  }, [])
 }
 
 function normalizeNumber(value: unknown): number {

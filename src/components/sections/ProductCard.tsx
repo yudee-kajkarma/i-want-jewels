@@ -605,7 +605,13 @@ export default function ProductCard({
           <div className="md:grid grid-cols-2 gap-2 pointer-events-auto hidden">
             <button
               type="button"
-              onClick={(event) => void handleBuyNow(event)}
+              onClick={(event) => {
+                if (variantHasNewShapeSizes(selectedVariant ?? item.variants[0])) {
+                  void handleBuyNow(event)
+                } else {
+                  void handleAddToCart(event)
+                }
+              }}
               disabled={isAdding}
               className="inline-flex h-8 items-center justify-center  bg-white px-1 text-[12px] font-semibold text-[#22201d] shadow-[0_10px_30px_rgba(0,0,0,0.14)] transition hover:bg-[#f4f1ee] disabled:opacity-60"
             >

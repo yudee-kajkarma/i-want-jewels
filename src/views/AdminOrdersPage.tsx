@@ -7,6 +7,7 @@ import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import FedExShipForm from '../components/admin/FedExShipForm'
+import DHLShipForm from '../components/admin/DHLShipForm'
 import {
   cancelPickupForAdmin,
   cancelShipmentForAdmin,
@@ -2085,6 +2086,45 @@ export default function AdminOrdersPage() {
                 </div>
               )}
             </div>
+          ) : pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
+            <div className="w-full max-w-6xl border border-amber-200 bg-white shadow-[0_26px_80px_rgba(180,90,10,0.30)] max-h-[92vh] overflow-y-auto">
+              <div className="flex items-center justify-between border-b border-amber-200 px-5 py-3">
+                <p className="text-xs font-bold uppercase tracking-[0.12em] text-amber-700">
+                  DHL Shipment · {pendingAction.order.orderNumber}
+                </p>
+                <button
+                  type="button"
+                  onClick={closeActionModal}
+                  disabled={isSubmittingAction}
+                  className="text-zinc-400 transition hover:text-zinc-600 disabled:opacity-50"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              {shippingQuote ? (
+                <div className="px-6 py-5">
+                  <DHLShipForm
+                    order={pendingAction.order}
+                    preview={shippingQuote}
+                    onBack={() => setShipCarrierStep('pick')}
+                    onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }}
+                  />
+                </div>
+              ) : isLoadingShippingQuote ? (
+                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">Loading shipment details…</div>
+              ) : (
+                <div className="space-y-3 px-6 py-12 text-center">
+                  <p className="text-sm text-rose-600">{shippingQuoteError || 'Unable to load rates.'}</p>
+                  <button
+                    type="button"
+                    onClick={() => void loadShippingQuote(pendingAction.order.id)}
+                    className="border border-amber-600 px-4 py-2 text-xs font-bold text-amber-700 transition hover:bg-amber-50"
+                  >
+                    Retry
+                  </button>
+                </div>
+              )}
+            </div>
           ) : (
           <div
             className={`w-full border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto ${
@@ -2146,35 +2186,17 @@ export default function AdminOrdersPage() {
                         <span className="text-3xl font-extrabold tracking-tight text-[#3f1933]">FedEx</span>
                         <span className="text-xs text-[#7a4f6a]">International shipping</span>
                       </button>
-                      {/* DHL button — rates fetched on click */}
+                      {/* DHL button — rates load inside DHLShipForm */}
                       <button
                         type="button"
-                        disabled={isLoadingDhlRates}
-                        onClick={async () => {
+                        onClick={() => {
                           setSelectedCarrier('DHL')
-                          setIsLoadingDhlRates(true)
-                          try {
-                            const dhlQuote = await getAdminCarrierRatesForOrder(pendingAction.order.id, 'DHL')
-                            if (dhlQuote) {
-                              setShippingQuote((prev) => prev
-                                ? { ...prev, rates: { ...prev.rates, DHL: dhlQuote.rates.DHL } }
-                                : dhlQuote
-                              )
-                              if (dhlQuote.rates.DHL[0]) setSelectedServiceCode(dhlQuote.rates.DHL[0].serviceCode)
-                            }
-                            setShipCarrierStep('dhl')
-                          } catch {
-                            toast.error('Could not load DHL rates. Please try again.')
-                          } finally {
-                            setIsLoadingDhlRates(false)
-                          }
+                          setShipCarrierStep('dhl')
                         }}
-                        className="flex flex-col items-center gap-3 border-2 border-amber-600 bg-white px-6 py-10 text-center transition hover:bg-amber-50 disabled:cursor-not-allowed disabled:opacity-60"
+                        className="flex flex-col items-center gap-3 border-2 border-amber-600 bg-white px-6 py-10 text-center transition hover:bg-amber-50"
                       >
                         <span className="text-3xl font-extrabold tracking-tight text-amber-700">DHL</span>
-                        <span className="text-xs text-amber-600">
-                          {isLoadingDhlRates ? 'Loading rates…' : 'International shipping'}
-                        </span>
+                        <span className="text-xs text-amber-600">International shipping</span>
                       </button>
                     </div>
                   </>

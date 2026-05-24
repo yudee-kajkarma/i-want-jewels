@@ -162,6 +162,11 @@ type AdminShippingQuoteRateArray =
       netFedExCharge?: number;
       fuelSurchargePercent?: number;
       billingWeightKg?: number;
+      listSurcharges?: Array<{ type: string; description: string; amount: number }>;
+      listTaxes?: Array<{ type: string; description: string; amount: number }>;
+      listTotalSurcharges?: number;
+      listTotalTaxes?: number;
+      listFuelSurchargePercent?: number;
       deliveryDays?: number;
       tag?: string;
     }>
@@ -214,6 +219,11 @@ function normalizeShippingRateOptions(
       netFedExCharge: typeof rate.netFedExCharge === "number" ? rate.netFedExCharge : undefined,
       fuelSurchargePercent: typeof rate.fuelSurchargePercent === "number" ? rate.fuelSurchargePercent : undefined,
       billingWeightKg: typeof rate.billingWeightKg === "number" ? rate.billingWeightKg : undefined,
+      listSurcharges: Array.isArray(rate.listSurcharges) ? rate.listSurcharges : undefined,
+      listTaxes: Array.isArray(rate.listTaxes) ? rate.listTaxes : undefined,
+      listTotalSurcharges: typeof rate.listTotalSurcharges === "number" ? rate.listTotalSurcharges : undefined,
+      listTotalTaxes: typeof rate.listTotalTaxes === "number" ? rate.listTotalTaxes : undefined,
+      listFuelSurchargePercent: typeof rate.listFuelSurchargePercent === "number" ? rate.listFuelSurchargePercent : undefined,
       deliveryDays: typeof rate.deliveryDays === "number" ? rate.deliveryDays : 0,
       tag: rate.tag,
     }))
@@ -638,9 +648,30 @@ export type FedExShipOptions = {
   commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValueEUR?: number }>;
 }
 
+export type DhlShipOptions = {
+  incoterm?: string;
+  shipmentType?: 'commercial' | 'personal';
+  exportReasonType?: string;
+  dimensions?: { lengthCm: number; widthCm: number; heightCm: number };
+  insurance?: { enabled: boolean; valueEUR?: number };
+  goGreen?: boolean;
+  saturdayDelivery?: boolean;
+  paperlessTrade?: boolean;
+  notificationEmails?: string[];
+  dutiesPaymentType?: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY';
+  dutiesAccountNumber?: string;
+  invoiceNumber?: string;
+  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValueEUR?: number }>;
+}
+
 export async function shipOrderForAdmin(
   orderId: string,
-  payload: { carrier: ShippingCarrier; serviceCode: string; fedExOptions?: FedExShipOptions },
+  payload: {
+    carrier: ShippingCarrier;
+    serviceCode: string;
+    fedExOptions?: FedExShipOptions;
+    dhlOptions?: DhlShipOptions;
+  },
 ): Promise<Order | null> {
   const response = await adminApiClient.put<AdminOrderUpdateApiResponse>(
     `/orders/admin/${orderId}/ship`,
@@ -648,6 +679,7 @@ export async function shipOrderForAdmin(
       carrier: payload.carrier,
       serviceCode: payload.serviceCode,
       ...(payload.fedExOptions ? { fedExOptions: payload.fedExOptions } : {}),
+      ...(payload.dhlOptions ? { dhlOptions: payload.dhlOptions } : {}),
     },
   );
 

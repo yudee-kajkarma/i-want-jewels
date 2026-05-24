@@ -3,30 +3,42 @@
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import type { AdminShippingQuote, AdminShipmentPreviewItem, AdminShippingRateOption, Order } from '../../types/order'
-import { shipOrderForAdmin, updateOrderShippingAddressForAdmin, getAdminCarrierRatesForOrder, type FedExShipOptions } from '../../services/orderService'
+import {
+  shipOrderForAdmin,
+  updateOrderShippingAddressForAdmin,
+  getAdminCarrierRatesForOrder,
+  type DhlShipOptions,
+} from '../../services/orderService'
 import { getCountryOptions, getStateOptions } from '../../utils/location'
 
-const PACKAGING_OPTIONS = [
-  { value: 'YOUR_PACKAGING', label: 'Your Packaging' },
-  { value: 'FEDEX_ENVELOPE', label: 'FedEx Envelope' },
-  { value: 'FEDEX_PAK', label: 'FedEx Pak' },
-  { value: 'FEDEX_BOX', label: 'FedEx Box' },
-  { value: 'FEDEX_SMALL_BOX', label: 'FedEx Small Box' },
-  { value: 'FEDEX_MEDIUM_BOX', label: 'FedEx Medium Box' },
-  { value: 'FEDEX_LARGE_BOX', label: 'FedEx Large Box' },
-  { value: 'FEDEX_TUBE', label: 'FedEx Tube' },
+// ── DHL Express constants ──────────────────────────────────────────────
+const INCOTERM_OPTIONS = [
+  { value: 'DAP', label: 'DAP — Delivered at Place (recipient pays duties)' },
+  { value: 'DDP', label: 'DDP — Delivered Duty Paid (sender pays duties)' },
+  { value: 'DDU', label: 'DDU — Delivered Duty Unpaid' },
+  { value: 'CPT', label: 'CPT — Carriage Paid To' },
+  { value: 'CIP', label: 'CIP — Carriage & Insurance Paid To' },
+  { value: 'EXW', label: 'EXW — Ex Works' },
+  { value: 'FCA', label: 'FCA — Free Carrier' },
 ]
 
-const SIGNATURE_OPTIONS = [
-  { value: 'SERVICE_DEFAULT', label: 'Service Default (no override)' },
-  { value: 'NO_SIGNATURE_REQUIRED', label: 'No Signature Required' },
-  { value: 'INDIRECT', label: 'Indirect Signature' },
-  { value: 'DIRECT_SIGNATURE_REQUIRED', label: 'Direct Signature Required' },
-  { value: 'ADULT_SIGNATURE_REQUIRED', label: 'Adult Signature Required' },
+const SHIPMENT_TYPE_OPTIONS = [
+  { value: 'commercial', label: 'Commercial (sale)' },
+  { value: 'personal', label: 'Personal (no sale)' },
+] as const
+
+const EXPORT_REASON_OPTIONS = [
+  { value: 'permanent', label: 'Permanent (sold)' },
+  { value: 'gift', label: 'Gift' },
+  { value: 'sample', label: 'Sample' },
+  { value: 'return', label: 'Return' },
+  { value: 'temporary', label: 'Temporary' },
+  { value: 'warranty_replacement', label: 'Warranty replacement' },
+  { value: 'personal_belongings_or_personal_use', label: 'Personal use' },
 ]
 
 const DUTIES_PAYMENT_OPTIONS = [
-  { value: 'SENDER', label: 'Sender (my FedEx account)' },
+  { value: 'SENDER', label: 'Sender (my DHL account)' },
   { value: 'RECIPIENT', label: 'Recipient (pay on delivery)' },
   { value: 'THIRD_PARTY', label: 'Third Party (enter account #)' },
 ]
@@ -34,7 +46,6 @@ const DUTIES_PAYMENT_OPTIONS = [
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
   countryOfManufacture: string
-  // Admin-entered customs value for this line (sent to FedEx as-is).
   customsValueEUR: number
 }
 
@@ -57,35 +68,35 @@ function fmt(n: number) {
   return `€${n.toFixed(2)}`
 }
 
-export default function FedExShipForm({ order, preview: previewQuote, onBack, onShipped }: Props) {
+export default function DHLShipForm({ order, preview: previewQuote, onBack, onShipped }: Props) {
   const preview = previewQuote.preview
   const validation = previewQuote.validation
 
-  const [fedexRates, setFedexRates] = useState<AdminShippingRateOption[]>([])
+  const [dhlRates, setDhlRates] = useState<AdminShippingRateOption[]>([])
   const [isLoadingRates, setIsLoadingRates] = useState(true)
   const [ratesError, setRatesError] = useState('')
 
   const [selectedServiceCode, setSelectedServiceCode] = useState('')
 
-  async function loadFedexRates() {
+  async function loadDhlRates() {
     setIsLoadingRates(true)
     setRatesError('')
-    setFedexRates([])
+    setDhlRates([])
     setSelectedServiceCode('')
     try {
-      const q = await getAdminCarrierRatesForOrder(order.id, 'FEDEX')
-      const rates = q?.rates.FEDEX ?? []
-      setFedexRates(rates)
+      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL')
+      const rates = q?.rates.DHL ?? []
+      setDhlRates(rates)
       if (rates[0]) setSelectedServiceCode(rates[0].serviceCode)
     } catch {
-      setRatesError('Could not load FedEx rates for this route.')
+      setRatesError('Could not load DHL rates for this route.')
     } finally {
       setIsLoadingRates(false)
     }
   }
 
   useEffect(() => {
-    void loadFedexRates()
+    void loadDhlRates()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [order.id])
 
@@ -115,23 +126,29 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     }))
   )
 
-  const [packagingType, setPackagingType] = useState('YOUR_PACKAGING')
-  const [dimL, setDimL] = useState('')
-  const [dimW, setDimW] = useState('')
-  const [dimH, setDimH] = useState('')
+  // ── DHL-specific form state ──
+  const [incoterm, setIncoterm] = useState('DAP')
+  const [shipmentType, setShipmentType] = useState<'commercial' | 'personal'>('commercial')
+  const [exportReasonType, setExportReasonType] = useState('permanent')
+  const [dimL, setDimL] = useState('20')
+  const [dimW, setDimW] = useState('15')
+  const [dimH, setDimH] = useState('10')
 
-  const [signatureOption, setSignatureOption] = useState('SERVICE_DEFAULT')
+  const [insuranceEnabled, setInsuranceEnabled] = useState(false)
+  const [insuranceValueEUR, setInsuranceValueEUR] = useState('')
   const [saturdayDelivery, setSaturdayDelivery] = useState(false)
+  const [paperlessTrade, setPaperlessTrade] = useState(false)
 
-  const [dutiesPaymentType, setDutiesPaymentType] = useState('SENDER')
+  const [dutiesPaymentType, setDutiesPaymentType] = useState<'SENDER' | 'RECIPIENT' | 'THIRD_PARTY'>('SENDER')
   const [dutiesAccountNumber, setDutiesAccountNumber] = useState('')
+  const [invoiceNumber, setInvoiceNumber] = useState(order.orderNumber || '')
 
   const [notifyRecipient, setNotifyRecipient] = useState(true)
   const [notifyEmail, setNotifyEmail] = useState(preview?.receiver.email ?? '')
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const selectedRate = fedexRates.find((r) => r.serviceCode === selectedServiceCode) ?? null
+  const selectedRate = dhlRates.find((r) => r.serviceCode === selectedServiceCode) ?? null
   const hasBlockers = (validation?.issues?.length ?? 0) > 0
 
   async function handleSaveReceiver() {
@@ -145,7 +162,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
       await updateOrderShippingAddressForAdmin(order.id, receiverDraft)
       setIsEditingReceiver(false)
       toast.success('Receiver address updated — refreshing rates…')
-      void loadFedexRates()
+      void loadDhlRates()
     } catch (err: any) {
       setReceiverSaveError(err?.response?.data?.message || 'Failed to update address.')
     } finally {
@@ -155,23 +172,35 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
   async function handleSubmit() {
     if (!selectedServiceCode) {
-      toast.error('Please select a FedEx service.')
+      toast.error('Please select a DHL product/service.')
       return
     }
     setIsSubmitting(true)
     try {
-      const dims = dimL && dimW && dimH
-        ? { lengthCm: parseFloat(dimL), widthCm: parseFloat(dimW), heightCm: parseFloat(dimH) }
-        : undefined
-
-      const fedExOptions: FedExShipOptions = {
-        packagingType,
-        dimensions: dims,
-        signatureOption: signatureOption !== 'SERVICE_DEFAULT' ? signatureOption : undefined,
+      const dhlOptions: DhlShipOptions = {
+        incoterm,
+        shipmentType,
+        exportReasonType,
+        dimensions: dimL && dimW && dimH
+          ? { lengthCm: parseFloat(dimL), widthCm: parseFloat(dimW), heightCm: parseFloat(dimH) }
+          : undefined,
+        insurance: insuranceEnabled
+          ? {
+              enabled: true,
+              valueEUR: insuranceValueEUR
+                ? parseFloat(insuranceValueEUR)
+                : (preview?.package.declaredValueEUR ?? 0),
+            }
+          : undefined,
         saturdayDelivery: saturdayDelivery || undefined,
-        dutiesPaymentType,
-        dutiesAccountNumber: dutiesPaymentType === 'THIRD_PARTY' ? dutiesAccountNumber : undefined,
+        paperlessTrade: paperlessTrade || undefined,
         notificationEmails: notifyRecipient && notifyEmail ? [notifyEmail] : undefined,
+        dutiesPaymentType: incoterm === 'DDP' ? dutiesPaymentType : undefined,
+        dutiesAccountNumber:
+          incoterm === 'DDP' && dutiesPaymentType === 'THIRD_PARTY'
+            ? dutiesAccountNumber
+            : undefined,
+        invoiceNumber: invoiceNumber || undefined,
         commodityOverrides: commodities.map((c) => ({
           hsCode: c.hsCode,
           countryOfManufacture: c.countryOfManufacture,
@@ -180,14 +209,14 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
       }
 
       await shipOrderForAdmin(order.id, {
-        carrier: 'FEDEX',
+        carrier: 'DHL',
         serviceCode: selectedServiceCode,
-        fedExOptions,
+        dhlOptions,
       })
-      toast.success(`Order ${order.orderNumber} shipped via FedEx.`)
+      toast.success(`Order ${order.orderNumber} shipped via DHL Express.`)
       onShipped()
     } catch (err: any) {
-      toast.error(err?.response?.data?.message || 'Failed to create FedEx shipment.')
+      toast.error(err?.response?.data?.message || 'Failed to create DHL shipment.')
     } finally {
       setIsSubmitting(false)
     }
@@ -289,7 +318,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </section>
       </div>
 
-      {/* ── CUSTOMS / COMMODITIES ── */}
+      {/* ── CUSTOMS / COMMODITIES (read-only) ── */}
       {commodities.length > 0 ? (
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
@@ -319,10 +348,12 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                     <td className="px-3 py-2 text-right">{c.unitPriceEUR.toFixed(2)}</td>
                     <td className="px-3 py-2 text-right">{c.unitWeightG}</td>
                     <td className="px-2 py-1.5">
-                      <input value={c.hsCode}
+                      <input
+                        value={c.hsCode}
                         onChange={(e) => setCommodities((prev) => prev.map((r, i) => i === idx ? { ...r, hsCode: e.target.value } : r))}
                         maxLength={10}
-                        className="w-24 border border-[#e3bfd6] px-1.5 py-1 font-mono text-[11px] outline-none focus:border-[#d24a90]" />
+                        className="w-24 border border-[#e3bfd6] px-1.5 py-1 font-mono text-[11px] outline-none focus:border-[#d24a90]"
+                      />
                     </td>
                     <td className="px-3 py-2 font-mono uppercase">{c.countryOfManufacture}</td>
                     <td className="px-3 py-2 text-right font-mono">{c.customsValueEUR.toFixed(2)}</td>
@@ -335,11 +366,46 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
             <div className="border-t border-[#efcfe1] px-4 py-2.5 text-[11px] text-[#694d5f]">
               <span className="font-semibold text-[#4f2040]">Total customs value: </span>
               {fmt(preview.package.declaredValueEUR)}
-              <span className="ml-3 font-semibold text-[#4f2040]">Incoterm: </span>{preview.package.incoterm}
+              <span className="ml-3 font-semibold text-[#4f2040]">Currency: </span>EUR
             </div>
           ) : null}
         </section>
       ) : null}
+
+      {/* ── CUSTOMS / EXPORT DECLARATION ── */}
+      <section className="border border-[#efcfe1] bg-white">
+        <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Customs Declaration</p>
+        </div>
+        <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Incoterm *</label>
+            <select value={incoterm} onChange={(e) => setIncoterm(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+              {INCOTERM_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Shipment Type</label>
+            <select value={shipmentType} onChange={(e) => setShipmentType(e.target.value as 'commercial' | 'personal')}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+              {SHIPMENT_TYPE_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Export Reason</label>
+            <select value={exportReasonType} onChange={(e) => setExportReasonType(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+              {EXPORT_REASON_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Invoice Number</label>
+            <input value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+          </div>
+        </div>
+      </section>
 
       {/* ── PACKAGE DETAILS ── */}
       <section className="border border-[#efcfe1] bg-white">
@@ -348,13 +414,6 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Packaging Type</label>
-            <select value={packagingType} onChange={(e) => setPackagingType(e.target.value)}
-              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {PACKAGING_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-            </select>
-          </div>
-          <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
               Weight (auto-calculated from items)
             </label>
@@ -362,27 +421,21 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
               {preview?.package.totalWeightKg ?? 0} kg
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              Dimensions (cm) — only used with Your Packaging
+              Dimensions (cm)
             </label>
-            {packagingType !== 'YOUR_PACKAGING' ? (
-              <p className="text-[10px] text-amber-600">
-                FedEx already knows the dimensions of its own box types. Custom dimensions are ignored unless you select &quot;Your Packaging&quot;.
-              </p>
-            ) : (
-              <div className="flex items-center gap-2">
-                <input type="number" min="0" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder="L"
-                  className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
-                <span className="text-zinc-400">×</span>
-                <input type="number" min="0" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder="W"
-                  className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
-                <span className="text-zinc-400">×</span>
-                <input type="number" min="0" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder="H"
-                  className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
-                <span className="text-xs text-zinc-400">cm</span>
-              </div>
-            )}
+            <div className="flex items-center gap-2">
+              <input type="number" min="1" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder="L"
+                className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+              <span className="text-zinc-400">×</span>
+              <input type="number" min="1" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder="W"
+                className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+              <span className="text-zinc-400">×</span>
+              <input type="number" min="1" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder="H"
+                className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+              <span className="text-xs text-zinc-400">cm</span>
+            </div>
           </div>
         </div>
       </section>
@@ -392,25 +445,25 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Select FedEx Service</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Select DHL Product</p>
           </div>
           <div className="px-4 py-3 space-y-3">
             {isLoadingRates ? (
-              <p className="text-[11px] text-zinc-400">Loading available services…</p>
+              <p className="text-[11px] text-zinc-400">Loading available products…</p>
             ) : ratesError ? (
               <p className="text-[11px] text-rose-600">{ratesError}</p>
-            ) : fedexRates.length === 0 ? (
-              <p className="text-[11px] text-rose-600">No FedEx services available for this route.</p>
+            ) : dhlRates.length === 0 ? (
+              <p className="text-[11px] text-rose-600">No DHL products available for this route.</p>
             ) : (
               <select
                 value={selectedServiceCode}
                 onChange={(e) => setSelectedServiceCode(e.target.value)}
                 className="w-full border border-[#e3bfd6] px-3 py-2.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
               >
-                <option value="">— Choose a service —</option>
-                {fedexRates.map((rate) => (
+                <option value="">— Choose a product —</option>
+                {dhlRates.map((rate) => (
                   <option key={rate.serviceCode} value={rate.serviceCode}>
-                    {rate.serviceName}
+                    {rate.serviceName} ({rate.serviceCode})
                   </option>
                 ))}
               </select>
@@ -423,171 +476,129 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                     ? <span className="text-zinc-400">~{selectedRate.deliveryDays} days</span>
                     : null}
                 </span>
-                <span className="font-mono font-bold text-[#d24a90]">{fmt(selectedRate.price)}</span>
+                <span className="font-mono font-bold text-amber-700">{fmt(selectedRate.price)}</span>
               </div>
             ) : null}
           </div>
         </section>
 
-        {selectedRate && selectedRate.baseCharge !== undefined ? (() => {
-          const totalDiscount = (selectedRate.freightDiscounts ?? []).reduce((s, d) => s + d.amount, 0)
-          const afterDiscount = parseFloat(((selectedRate.baseCharge ?? 0) - totalDiscount).toFixed(2))
-          const savings = selectedRate.listPrice && selectedRate.listPrice > selectedRate.price
-            ? parseFloat((selectedRate.listPrice - selectedRate.price).toFixed(2))
-            : null
-
-          // Pair account-side surcharges with list-side by type (FUEL→FUEL, DEMAND→DEMAND)
-          const listSurMap = new Map<string, number>()
-          ;(selectedRate.listSurcharges ?? []).forEach((s) => {
-            listSurMap.set((s.type || s.description || '').toUpperCase(), s.amount)
-          })
-          const listTaxMap = new Map<string, number>()
-          ;(selectedRate.listTaxes ?? []).forEach((t) => {
-            listTaxMap.set((t.type || t.description || '').toUpperCase(), t.amount)
-          })
-
-          return (
-            <section className="border border-[#efcfe1] bg-white">
-              <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-                  {selectedRate.serviceName} — Charge Breakdown
-                </p>
-              </div>
-
-              <table className="w-full text-[11px] text-[#694d5f]">
-                <thead className="bg-[#fff2fb] text-left">
-                  <tr>
-                    <th className="px-4 py-2 font-bold uppercase tracking-[0.08em] text-[10px] text-[#8b5a75]">Line</th>
-                    <th className="px-4 py-2 text-right font-bold uppercase tracking-[0.08em] text-[10px] text-zinc-500">Public / Walk-in</th>
-                    <th className="px-4 py-2 text-right font-bold uppercase tracking-[0.08em] text-[10px] text-[#d24a90]">Your FedEx</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#f6e3ee]">
-                  <tr>
-                    <td className="px-4 py-1.5">Base charge</td>
-                    <td className="px-4 py-1.5 text-right font-mono">
-                      {selectedRate.listBaseCharge ? fmt(selectedRate.listBaseCharge) : <span className="text-zinc-400">—</span>}
-                    </td>
-                    <td className="px-4 py-1.5 text-right font-mono">{fmt(selectedRate.baseCharge!)}</td>
-                  </tr>
-                  {(selectedRate.freightDiscounts ?? []).map((d, i) => (
-                    <tr key={`disc-${i}`} className="text-emerald-700">
-                      <td className="px-4 py-1.5">{d.description} ({d.percent}%)</td>
-                      <td className="px-4 py-1.5 text-right font-mono text-zinc-400">—</td>
-                      <td className="px-4 py-1.5 text-right font-mono">−{fmt(d.amount)}</td>
-                    </tr>
-                  ))}
-                  {totalDiscount > 0 ? (
-                    <tr className="text-[#4f2040] bg-[#fff8fd]">
-                      <td className="px-4 py-1.5 font-semibold">After discount</td>
-                      <td className="px-4 py-1.5 text-right font-mono text-zinc-400">—</td>
-                      <td className="px-4 py-1.5 text-right font-mono font-semibold">{fmt(afterDiscount)}</td>
-                    </tr>
-                  ) : null}
-                  {(selectedRate.surcharges ?? []).map((s, i) => {
-                    const listAmount = listSurMap.get((s.type || s.description || '').toUpperCase())
-                    const isFuel = s.type === 'FUEL'
-                    return (
-                      <tr key={`sur-${i}`}>
-                        <td className="px-4 py-1.5">
-                          {s.description}
-                          {isFuel && selectedRate.fuelSurchargePercent ? ` (${selectedRate.fuelSurchargePercent}%)` : ''}
-                        </td>
-                        <td className="px-4 py-1.5 text-right font-mono">
-                          {listAmount !== undefined ? `+${fmt(listAmount)}` : <span className="text-zinc-400">—</span>}
-                        </td>
-                        <td className="px-4 py-1.5 text-right font-mono">+{fmt(s.amount)}</td>
-                      </tr>
-                    )
-                  })}
-                  {(selectedRate.taxes ?? []).map((t, i) => {
-                    const listAmount = listTaxMap.get((t.type || t.description || '').toUpperCase())
-                    return (
-                      <tr key={`tax-${i}`} className="text-amber-700">
-                        <td className="px-4 py-1.5">{t.description || t.type}</td>
-                        <td className="px-4 py-1.5 text-right font-mono">
-                          {listAmount !== undefined ? `+${fmt(listAmount)}` : <span className="text-zinc-400">—</span>}
-                        </td>
-                        <td className="px-4 py-1.5 text-right font-mono">+{fmt(t.amount)}</td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-                <tfoot className="border-t-2 border-[#efcfe1]">
-                  <tr className="font-bold text-[#3d1530] text-xs bg-[#fff0f9]">
-                    <td className="px-4 py-2">Total</td>
-                    <td className="px-4 py-2 text-right font-mono text-zinc-500 line-through">
-                      {selectedRate.listPrice ? fmt(selectedRate.listPrice) : '—'}
-                    </td>
-                    <td className="px-4 py-2 text-right font-mono text-[#d24a90]">{fmt(selectedRate.price)}</td>
-                  </tr>
-                  {savings ? (
-                    <tr className="text-emerald-700 text-[11px]">
-                      <td className="px-4 py-1.5">You save</td>
-                      <td colSpan={2} className="px-4 py-1.5 text-right font-mono font-semibold">−{fmt(savings)}</td>
-                    </tr>
-                  ) : null}
-                </tfoot>
-              </table>
-
-              {selectedRate.billingWeightKg ? (
-                <div className="border-t border-[#efcfe1] px-4 py-2 text-[10px] text-zinc-400">
-                  Billing weight: <span className="font-semibold text-[#8b5a75]">{selectedRate.billingWeightKg} kg</span>
+        {selectedRate ? (
+          <section className="border border-[#efcfe1] bg-white">
+            <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
+              <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
+                {selectedRate.serviceName} — Charge Breakdown
+              </p>
+            </div>
+            <div className="px-4 py-3 space-y-1 text-[11px] text-[#694d5f]">
+              {selectedRate.baseCharge !== undefined ? (
+                <div className="flex justify-between">
+                  <span>Base charge</span>
+                  <span className="font-mono">{fmt(selectedRate.baseCharge)}</span>
                 </div>
               ) : null}
-            </section>
-          )
-        })() : (
+
+              {(selectedRate.surcharges ?? []).map((s, i) => (
+                <div key={`dhl-sur-${i}`} className="flex justify-between">
+                  <span>{s.description}</span>
+                  <span className="font-mono">+{fmt(s.amount)}</span>
+                </div>
+              ))}
+
+              {(selectedRate.taxes ?? []).map((t, i) => (
+                <div key={`dhl-tax-${i}`} className="flex justify-between text-amber-700">
+                  <span>{t.description || t.type}</span>
+                  <span className="font-mono">+{fmt(t.amount)}</span>
+                </div>
+              ))}
+
+              <div className="mt-2 border-t border-[#f0dbe8] pt-2">
+                <div className="flex justify-between font-bold text-[#3d1530] text-xs">
+                  <span>Account rate <span className="text-[9px] font-normal text-[#8b5a75]">(your DHL)</span></span>
+                  <span className="font-mono text-amber-700">{fmt(selectedRate.price)}</span>
+                </div>
+              </div>
+
+              {selectedRate.billingWeightKg ? (
+                <div className="flex justify-between pt-1 text-zinc-400">
+                  <span>Billing weight</span>
+                  <span>{selectedRate.billingWeightKg} kg</span>
+                </div>
+              ) : null}
+              {selectedRate.deliveryDays ? (
+                <div className="flex justify-between text-zinc-400">
+                  <span>Estimated transit</span>
+                  <span>~{selectedRate.deliveryDays} days</span>
+                </div>
+              ) : null}
+            </div>
+          </section>
+        ) : (
           <div className="flex items-center justify-center border border-dashed border-[#efcfe1] p-8 text-[11px] text-zinc-400">
-            Select a service to see the breakdown
+            Select a product to see the breakdown
           </div>
         )}
       </div>
 
-      {/* ── SERVICE OPTIONS ── */}
+      {/* ── VALUE-ADDED SERVICES ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Service Options</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Value-Added Services</p>
         </div>
-        <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
-          <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Signature Option</label>
-            <select value={signatureOption} onChange={(e) => setSignatureOption(e.target.value)}
-              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {SIGNATURE_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-            </select>
-          </div>
-          <div className="flex items-center gap-2 pt-5">
-            <input type="checkbox" id="saturday" checked={saturdayDelivery} onChange={(e) => setSaturdayDelivery(e.target.checked)}
-              className="h-4 w-4 accent-[#d24a90]" />
-            <label htmlFor="saturday" className="text-xs text-[#4f2040]">Saturday Delivery</label>
-          </div>
+        <div className="grid gap-3 px-4 py-3 sm:grid-cols-2">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" checked={insuranceEnabled} onChange={(e) => setInsuranceEnabled(e.target.checked)}
+              className="h-4 w-4 accent-amber-600" />
+            <span className="text-xs text-[#4f2040]">Shipment Insurance (II)</span>
+          </label>
+          {insuranceEnabled ? (
+            <div className="flex items-center gap-2">
+              <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Insured €</label>
+              <input type="number" min="0" step="0.01" value={insuranceValueEUR}
+                onChange={(e) => setInsuranceValueEUR(e.target.value)}
+                placeholder={(preview?.package.declaredValueEUR ?? 0).toFixed(2)}
+                className="w-28 border border-[#e3bfd6] px-2 py-1.5 text-xs outline-none focus:border-[#d24a90]" />
+            </div>
+          ) : <div />}
+
+          <label className="flex items-center gap-2">
+            <input type="checkbox" checked={saturdayDelivery} onChange={(e) => setSaturdayDelivery(e.target.checked)}
+              className="h-4 w-4 accent-amber-600" />
+            <span className="text-xs text-[#4f2040]">Saturday Delivery (AA)</span>
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" checked={paperlessTrade} onChange={(e) => setPaperlessTrade(e.target.checked)}
+              className="h-4 w-4 accent-amber-600" />
+            <span className="text-xs text-[#4f2040]">Paperless Trade — electronic invoice (WY)</span>
+          </label>
         </div>
       </section>
 
-      {/* ── DUTIES PAYMENT ── */}
-      <section className="border border-[#efcfe1] bg-white">
-        <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Billing / Duties Payment</p>
-        </div>
-        <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
-          <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Bill Duties To</label>
-            <select value={dutiesPaymentType} onChange={(e) => setDutiesPaymentType(e.target.value)}
-              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {DUTIES_PAYMENT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-            </select>
+      {/* ── DUTIES PAYMENT (DDP only) ── */}
+      {incoterm === 'DDP' ? (
+        <section className="border border-[#efcfe1] bg-white">
+          <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Billing / Duties Payment</p>
+            <p className="mt-0.5 text-[10px] text-zinc-400">DDP only — sender controls who pays duties &amp; taxes.</p>
           </div>
-          {dutiesPaymentType === 'THIRD_PARTY' ? (
+          <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Third Party FedEx Account #</label>
-              <input value={dutiesAccountNumber} onChange={(e) => setDutiesAccountNumber(e.target.value)}
-                placeholder="Account number"
-                className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+              <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Bill Duties To</label>
+              <select value={dutiesPaymentType} onChange={(e) => setDutiesPaymentType(e.target.value as 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY')}
+                className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+                {DUTIES_PAYMENT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              </select>
             </div>
-          ) : null}
-        </div>
-      </section>
+            {dutiesPaymentType === 'THIRD_PARTY' ? (
+              <div>
+                <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Third-Party DHL Account #</label>
+                <input value={dutiesAccountNumber} onChange={(e) => setDutiesAccountNumber(e.target.value)}
+                  placeholder="Account number"
+                  className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+              </div>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
 
       {/* ── NOTIFICATIONS ── */}
       <section className="border border-[#efcfe1] bg-white">
@@ -596,9 +607,9 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </div>
         <div className="px-4 py-3 space-y-3">
           <div className="flex items-center gap-2">
-            <input type="checkbox" id="notify-recipient" checked={notifyRecipient} onChange={(e) => setNotifyRecipient(e.target.checked)}
-              className="h-4 w-4 accent-[#d24a90]" />
-            <label htmlFor="notify-recipient" className="text-xs text-[#4f2040]">Email recipient on shipment, delivery &amp; exceptions</label>
+            <input type="checkbox" id="dhl-notify-recipient" checked={notifyRecipient} onChange={(e) => setNotifyRecipient(e.target.checked)}
+              className="h-4 w-4 accent-amber-600" />
+            <label htmlFor="dhl-notify-recipient" className="text-xs text-[#4f2040]">Email recipient on shipment events</label>
           </div>
           {notifyRecipient ? (
             <div className="flex items-center gap-2">
@@ -611,6 +622,14 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </div>
       </section>
 
+      {/* ── PRICE & CUSTOMS BREAKDOWN ── */}
+      <CustomsBreakdown
+        commodities={commodities}
+        pkg={preview?.package}
+        isOutsideEU={isOutsideEU}
+        incoterm={incoterm}
+      />
+
       {/* ── VALIDATION BLOCKERS ── */}
       {hasBlockers ? (
         <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">
@@ -621,9 +640,6 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </div>
       ) : null}
 
-      {/* ── PRICE & CUSTOMS BREAKDOWN ── */}
-      <CustomsBreakdown commodities={commodities} pkg={preview?.package} isOutsideEU={isOutsideEU} />
-
       {/* ── FOOTER ── */}
       <div className="flex items-center justify-between gap-3 border-t border-[#efcfe1] pt-4">
         <button type="button" onClick={onBack}
@@ -632,7 +648,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </button>
         <button type="button" onClick={() => void handleSubmit()}
           disabled={isSubmitting || !selectedServiceCode || hasBlockers || isEditingReceiver}
-          className="border border-[#d24a90] bg-[#d24a90] px-6 py-2.5 text-sm font-bold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70">
+          className="border border-amber-600 bg-amber-600 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-70">
           {isSubmitting
             ? 'Creating shipment…'
             : selectedRate
@@ -648,10 +664,12 @@ function CustomsBreakdown({
   commodities,
   pkg,
   isOutsideEU,
+  incoterm,
 }: {
   commodities: CommodityRow[]
   pkg: import('../../types/order').AdminShipmentPackagePreview | undefined
   isOutsideEU: boolean
+  incoterm: string
 }) {
   if (!pkg || !isOutsideEU) return null
 
@@ -666,7 +684,7 @@ function CustomsBreakdown({
           Customs Declaration
         </p>
         <p className="mt-0.5 text-[10px] text-zinc-400">
-          Customs values from product records — sent to FedEx as-is
+          Customs values from product records — sent to DHL as-is
         </p>
       </div>
 
@@ -678,7 +696,7 @@ function CustomsBreakdown({
                 <span className="truncate max-w-[220px]" title={c.title}>
                   {c.title} <span className="text-zinc-400">× {c.qty}</span>
                 </span>
-                <span className="font-mono text-[#4f2040]">{fmt(c.customsValueEUR)}</span>
+                <span className="font-mono text-[#4f2040]">€{c.customsValueEUR.toFixed(2)}</span>
               </div>
             ))}
           </div>
@@ -689,15 +707,15 @@ function CustomsBreakdown({
             <span className="font-bold text-[#3d1530]">
               Total declared customs value
               <span className="ml-1.5 text-[9px] font-normal text-zinc-400 uppercase tracking-[0.06em]">
-                sent to FedEx
+                sent to DHL
               </span>
             </span>
-            <span className="font-mono font-bold text-[#d24a90] text-sm">{fmt(totalCustomsValue)}</span>
+            <span className="font-mono font-bold text-amber-700 text-sm">€{totalCustomsValue.toFixed(2)}</span>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-[10px] text-zinc-400">
-          <span><span className="font-semibold text-[#8b5a75]">Incoterm:</span> {pkg.incoterm}</span>
+          <span><span className="font-semibold text-[#8b5a75]">Incoterm:</span> {incoterm}</span>
           <span><span className="font-semibold text-[#8b5a75]">Total weight:</span> {pkg.totalWeightKg} kg</span>
           <span><span className="font-semibold text-[#8b5a75]">Currency:</span> EUR</span>
           <span className="text-amber-600">Outside EU — import duties apply at destination</span>

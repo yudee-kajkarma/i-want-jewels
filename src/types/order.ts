@@ -245,6 +245,12 @@ export type AdminShippingRateOption = {
   netFedExCharge?: number
   fuelSurchargePercent?: number
   billingWeightKg?: number
+  // ── LIST-side itemization (walk-in rack rate) ──
+  listSurcharges?: FedExRateSurcharge[]
+  listTaxes?: FedExRateSurcharge[]
+  listTotalSurcharges?: number
+  listTotalTaxes?: number
+  listFuelSurchargePercent?: number
   deliveryDays: number
   tag?: string
 }
@@ -279,6 +285,7 @@ export type AdminShipmentPreviewItem = {
   unitWeightG: number
   mfrCountry: string
   hsCode: string
+  customsValueUSD?: number
 }
 
 export type AdminShipmentPreview = {

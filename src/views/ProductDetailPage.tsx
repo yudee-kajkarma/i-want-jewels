@@ -906,13 +906,13 @@ export default function ProductDetailPage({
                             <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
                                 <div className="grid gap-5 lg:grid-cols-[120px_minmax(0,1fr)]">
                                     <div className="order-2 flex gap-3 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                                        {galleryImages.map((image) => {
+                                        {galleryImages.map((image, imageIdx) => {
                                             const isSelectedImage =
                                                 selectedImage?.id === image.id;
 
                                             return (
                                                 <button
-                                                    key={image.id}
+                                                    key={`${image.id}-${imageIdx}`}
                                                     type="button"
                                                     onClick={() =>
                                                         setSelectedImageId(
