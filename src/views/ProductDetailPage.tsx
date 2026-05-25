@@ -423,6 +423,7 @@ export default function ProductDetailPage({
     const [selectedImageId, setSelectedImageId] = useState(
         getInitialImageId(initialProduct),
     );
+    const [selectedSizeIndex, setSelectedSizeIndex] = useState<number | null>(null);
     const [quantity, setQuantity] = useState(1);
     const [giftRecipientEmail, setGiftRecipientEmail] = useState("");
     const [giftRecipientName, setGiftRecipientName] = useState("");
@@ -564,6 +565,26 @@ export default function ProductDetailPage({
 
     const isGiftCardProduct = product?.productType === "GIFT_CARD";
 
+    // True only when sizes is in the NEW `[{size, stock}]` shape; legacy
+    // number-array data should be ignored until backend migration runs.
+    const variantHasSizes = !!(
+        selectedVariant?.sizes &&
+        selectedVariant.sizes.length > 0 &&
+        selectedVariant.sizes.every(
+            (s) => typeof s?.size === 'number' && typeof s?.stock === 'number',
+        )
+    );
+
+    // When the variant changes, default-pick the first in-stock size (or null if none).
+    useEffect(() => {
+        if (!variantHasSizes) {
+            setSelectedSizeIndex(null);
+            return;
+        }
+        const firstInStock = selectedVariant!.sizes!.findIndex((s) => s.stock > 0);
+        setSelectedSizeIndex(firstInStock >= 0 ? firstInStock : 0);
+    }, [selectedVariant, variantHasSizes]);
+
     const galleryImages = useMemo<ProductImage[]>(() => {
         if (!selectedVariant) {
             return [];
@@ -646,11 +667,21 @@ export default function ProductDetailPage({
         setCartFeedback("");
 
         try {
+            const chosenSize = variantHasSizes && selectedSizeIndex !== null
+                ? selectedVariant.sizes![selectedSizeIndex]?.size
+                : undefined
+            if (variantHasSizes && chosenSize === undefined) {
+                setCartFeedback('Please choose a size before adding to cart.')
+                setIsAddingToCart(false)
+                return
+            }
+
             await dispatch(
                 addToCart({
                     productId: product.id,
                     quantity,
                     variantId: selectedVariant.id,
+                    ...(chosenSize !== undefined ? { size: chosenSize } : {}),
                     ...(isGiftCardProduct
                         ? {
                               giftCard: {
@@ -686,9 +717,17 @@ export default function ProductDetailPage({
             return;
         }
 
+        const chosenSize = variantHasSizes && selectedSizeIndex !== null
+            ? selectedVariant.sizes![selectedSizeIndex]?.size
+            : undefined;
+        if (variantHasSizes && chosenSize === undefined) {
+            setCartFeedback('Please choose a size before buying.');
+            return;
+        }
+
         const draft = {
             item: {
-                id: `${product.id}-${selectedVariant.id}`,
+                id: `${product.id}-${selectedVariant.id}${chosenSize !== undefined ? `-${chosenSize}` : ''}`,
                 productId: product.id,
                 variantId: selectedVariant.id,
                 title: product.title,
@@ -696,6 +735,8 @@ export default function ProductDetailPage({
                 thumbnail: getVariantImage(selectedVariant),
                 price: selectedVariant.price,
                 quantity,
+                ...(chosenSize !== undefined ? { size: chosenSize } : {}),
+                ...(selectedVariant.sizeMeasurement ? { sizeMeasurement: selectedVariant.sizeMeasurement } : {}),
             },
             returnPath: location.pathname,
         };
@@ -865,13 +906,13 @@ export default function ProductDetailPage({
                             <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
                                 <div className="grid gap-5 lg:grid-cols-[120px_minmax(0,1fr)]">
                                     <div className="order-2 flex gap-3 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                                        {galleryImages.map((image) => {
+                                        {galleryImages.map((image, imageIdx) => {
                                             const isSelectedImage =
                                                 selectedImage?.id === image.id;
 
                                             return (
                                                 <button
-                                                    key={image.id}
+                                                    key={`${image.id}-${imageIdx}`}
                                                     type="button"
                                                     onClick={() =>
                                                         setSelectedImageId(
@@ -1046,6 +1087,38 @@ export default function ProductDetailPage({
                                             >
                                                 View Size Guide
                                             </button>
+                                        </div>
+                                    ) : null}
+
+                                    {variantHasSizes ? (
+                                        <div className="mt-5">
+                                            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                                Size{selectedVariant.sizeMeasurement ? ` (${selectedVariant.sizeMeasurement})` : ''}
+                                            </p>
+                                            <div className="mt-3 flex flex-wrap gap-2">
+                                                {selectedVariant.sizes!.map((sizeEntry, idx) => {
+                                                    const isSelected = selectedSizeIndex === idx;
+                                                    const isOutOfStock = sizeEntry.stock <= 0;
+                                                    return (
+                                                        <button
+                                                            key={`${sizeEntry.size}-${idx}`}
+                                                            type="button"
+                                                            disabled={isOutOfStock}
+                                                            onClick={() => setSelectedSizeIndex(idx)}
+                                                            title={isOutOfStock ? 'Out of stock' : `${sizeEntry.stock} in stock`}
+                                                            className={`flex h-11 min-w-[44px] items-center justify-center border px-3 text-sm font-medium transition ${
+                                                                isOutOfStock
+                                                                    ? 'cursor-not-allowed border-zinc-200 text-zinc-300 line-through'
+                                                                    : isSelected
+                                                                        ? 'border-zinc-900 bg-zinc-900 text-white'
+                                                                        : 'border-zinc-300 text-zinc-900 hover:border-zinc-900'
+                                                            }`}
+                                                        >
+                                                            {sizeEntry.size}
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
                                         </div>
                                     ) : null}
 

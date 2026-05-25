@@ -30,6 +30,8 @@ export type OrderItem = {
     senderName?: string
     message?: string
   }
+  size?: number
+  sizeMeasurement?: string
 }
 
 export type IssuedGiftCard = {
@@ -214,10 +216,41 @@ export type CartRestoreSnapshot = {
 
 export type ShippingCarrier = 'FEDEX' | 'DHL'
 
+export type FedExRateSurcharge = {
+  type: string
+  description: string
+  amount: number
+}
+
+export type FedExRateFreightDiscount = {
+  type: string
+  description: string
+  amount: number
+  percent: number
+}
+
 export type AdminShippingRateOption = {
   serviceName: string
   serviceCode: string
-  price: number
+  price: number           // ACCOUNT rate — what you pay
+  listPrice?: number      // LIST rate — public rack rate
+  baseCharge?: number
+  listBaseCharge?: number
+  totalDiscount?: number
+  totalSurcharges?: number
+  surcharges?: FedExRateSurcharge[]
+  freightDiscounts?: FedExRateFreightDiscount[]
+  taxes?: FedExRateSurcharge[]
+  totalTaxes?: number
+  netFedExCharge?: number
+  fuelSurchargePercent?: number
+  billingWeightKg?: number
+  // ── LIST-side itemization (walk-in rack rate) ──
+  listSurcharges?: FedExRateSurcharge[]
+  listTaxes?: FedExRateSurcharge[]
+  listTotalSurcharges?: number
+  listTotalTaxes?: number
+  listFuelSurchargePercent?: number
   deliveryDays: number
   tag?: string
 }
@@ -240,6 +273,8 @@ export type AdminShipmentPackagePreview = {
   description: string
   incoterm: string
   isCustomsDeclarable: boolean
+  retailValueEUR?: number
+  deliveryChargeEUR?: number
 }
 
 export type AdminShipmentPreviewItem = {
@@ -250,6 +285,7 @@ export type AdminShipmentPreviewItem = {
   unitWeightG: number
   mfrCountry: string
   hsCode: string
+  customsValueUSD?: number
 }
 
 export type AdminShipmentPreview = {

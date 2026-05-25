@@ -1,7 +1,10 @@
 'use client'
 
-import type { AdminProductUpdatePayload, AdminVariantName, ProductDetail } from '../../types/product'
+import type { AdminProductUpdatePayload, AdminVariantName, ProductDetail, VariantSize } from '../../types/product'
 import { toPrice } from '../../utils/price'
+
+export const SIZE_MEASUREMENT_OPTIONS = ['EURO', 'INCH', 'US', 'MM'] as const
+export type SizeMeasurement = typeof SIZE_MEASUREMENT_OPTIONS[number]
 
 export type ProductImageFormItem = {
   id: string
@@ -21,6 +24,9 @@ export type CreateVariantForm = {
   stock: number
   price: number
   imageIndexes: number[]
+  sizes: VariantSize[]
+  sizeMeasurement: string
+  customsValueUsd: number | null
 }
 
 export type EditableProductForm = AdminProductUpdatePayload & {
@@ -95,6 +101,9 @@ export function createEmptyVariant(variantName: AdminVariantName = 'gold'): Crea
     stock: 0,
     price: 0,
     imageIndexes: [],
+    sizes: [],
+    sizeMeasurement: '',
+    customsValueUsd: null,
   }
 }
 
@@ -107,6 +116,9 @@ export function createEmptyGiftCardVariant(): CreateVariantForm {
     stock: 0,
     price: 0,
     imageIndexes: [],
+    sizes: [],
+    sizeMeasurement: '',
+    customsValueUsd: null,
   }
 }
 
@@ -198,6 +210,11 @@ export function buildForm(product: ProductDetail): EditableProductForm {
             sku: variant.sku ?? '',
             stock: variant.stock ?? 0,
             price: toPrice(variant.price).eur,
+            sizes: Array.isArray(variant.sizes)
+              ? variant.sizes.map((entry) => ({ size: entry.size, stock: entry.stock }))
+              : [],
+            sizeMeasurement: variant.sizeMeasurement ?? '',
+            customsValueUsd: typeof variant.customsValueUsd === 'number' ? variant.customsValueUsd : null,
             imageIndexes: (variant.images ?? []).map((image) => {
               const imageKey = image.id || image.src
               const existingImageIndex = imageIndexByKey.get(imageKey)

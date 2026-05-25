@@ -153,6 +153,10 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
   const isGiftCard = item.isGiftCard === true
   const giftCardRaw = getObjectValue(item, 'giftCard')
 
+  const sizeRaw = (item as Record<string, unknown>).size
+  const size = typeof sizeRaw === 'number' ? sizeRaw : undefined
+  const sizeMeasurement = getStringValue(item as Record<string, unknown>, 'size_measurement') || undefined
+
   return {
     id: getStringValue(item, 'id') || getStringValue(item, '_id') || variantId || productId,
     productId,
@@ -173,6 +177,8 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
           },
         }
       : {}),
+    ...(size !== undefined ? { size } : {}),
+    ...(sizeMeasurement ? { sizeMeasurement } : {}),
   }
 }
 

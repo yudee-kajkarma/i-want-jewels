@@ -18,6 +18,8 @@ export type CartItem = {
   quantity: number
   isGiftCard?: boolean
   giftCard?: GiftCardDetails
+  size?: number
+  sizeMeasurement?: string
 }
 
 export type Cart = {
@@ -84,4 +86,5 @@ export type AddToCartPayload = {
   quantity: number
   variantId: string
   giftCard?: GiftCardDetails
+  size?: number
 }

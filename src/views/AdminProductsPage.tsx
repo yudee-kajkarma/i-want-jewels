@@ -556,6 +556,11 @@ export default function AdminProductsPage() {
             stock: Number(variant.stock) || 0,
             price: variant.price,
             position: index + 1,
+            ...(variant.sizes.length > 0
+              ? { sizes: variant.sizes.map((entry) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
+              : {}),
+            ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
+            ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
           })),
           ...(hasDeletedVariants ? { variantPos: currentVariantIds } : {}),
           existingImages: form.images
@@ -669,6 +674,11 @@ export default function AdminProductsPage() {
             stock: Number(variant.stock) || 0,
             price: variant.price,
             position: index + 1,
+            ...(variant.sizes.length > 0
+              ? { sizes: variant.sizes.map((entry) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
+              : {}),
+            ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
+            ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
           })),
           images: form.images.map((image) => image.file).filter(Boolean) as File[],
           imageMapping,

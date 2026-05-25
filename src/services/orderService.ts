@@ -150,6 +150,23 @@ type AdminShippingQuoteRateArray =
       serviceName?: string;
       serviceCode?: string;
       price?: number;
+      listPrice?: number;
+      baseCharge?: number;
+      listBaseCharge?: number;
+      totalDiscount?: number;
+      totalSurcharges?: number;
+      surcharges?: Array<{ type: string; description: string; amount: number }>;
+      freightDiscounts?: Array<{ type: string; description: string; amount: number; percent: number }>;
+      taxes?: Array<{ type: string; description: string; amount: number }>;
+      totalTaxes?: number;
+      netFedExCharge?: number;
+      fuelSurchargePercent?: number;
+      billingWeightKg?: number;
+      listSurcharges?: Array<{ type: string; description: string; amount: number }>;
+      listTaxes?: Array<{ type: string; description: string; amount: number }>;
+      listTotalSurcharges?: number;
+      listTotalTaxes?: number;
+      listFuelSurchargePercent?: number;
       deliveryDays?: number;
       tag?: string;
     }>
@@ -179,16 +196,7 @@ type VerifyPaymentApiResponse = {
 };
 
 function normalizeShippingRateOptions(
-  rates:
-    | Array<{
-        serviceName?: string;
-        serviceCode?: string;
-        price?: number;
-        deliveryDays?: number;
-        tag?: string;
-      }>
-    | Record<string, unknown>
-    | undefined,
+  rates: AdminShippingQuoteRateArray | undefined,
 ) {
   if (!Array.isArray(rates)) {
     return [];
@@ -199,8 +207,24 @@ function normalizeShippingRateOptions(
       serviceName: rate.serviceName ?? "",
       serviceCode: rate.serviceCode ?? "",
       price: typeof rate.price === "number" ? rate.price : 0,
-      deliveryDays:
-        typeof rate.deliveryDays === "number" ? rate.deliveryDays : 0,
+      listPrice: typeof rate.listPrice === "number" ? rate.listPrice : undefined,
+      baseCharge: typeof rate.baseCharge === "number" ? rate.baseCharge : undefined,
+      listBaseCharge: typeof rate.listBaseCharge === "number" ? rate.listBaseCharge : undefined,
+      totalDiscount: typeof rate.totalDiscount === "number" ? rate.totalDiscount : undefined,
+      totalSurcharges: typeof rate.totalSurcharges === "number" ? rate.totalSurcharges : undefined,
+      surcharges: Array.isArray(rate.surcharges) ? rate.surcharges : undefined,
+      freightDiscounts: Array.isArray(rate.freightDiscounts) ? rate.freightDiscounts : undefined,
+      taxes: Array.isArray(rate.taxes) ? rate.taxes : undefined,
+      totalTaxes: typeof rate.totalTaxes === "number" ? rate.totalTaxes : undefined,
+      netFedExCharge: typeof rate.netFedExCharge === "number" ? rate.netFedExCharge : undefined,
+      fuelSurchargePercent: typeof rate.fuelSurchargePercent === "number" ? rate.fuelSurchargePercent : undefined,
+      billingWeightKg: typeof rate.billingWeightKg === "number" ? rate.billingWeightKg : undefined,
+      listSurcharges: Array.isArray(rate.listSurcharges) ? rate.listSurcharges : undefined,
+      listTaxes: Array.isArray(rate.listTaxes) ? rate.listTaxes : undefined,
+      listTotalSurcharges: typeof rate.listTotalSurcharges === "number" ? rate.listTotalSurcharges : undefined,
+      listTotalTaxes: typeof rate.listTotalTaxes === "number" ? rate.listTotalTaxes : undefined,
+      listFuelSurchargePercent: typeof rate.listFuelSurchargePercent === "number" ? rate.listFuelSurchargePercent : undefined,
+      deliveryDays: typeof rate.deliveryDays === "number" ? rate.deliveryDays : 0,
       tag: rate.tag,
     }))
     .filter((rate) => rate.serviceCode);
@@ -269,6 +293,9 @@ function normalizeShippingAddress(
 
 function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
   const giftCard = getObjectValue(item, "giftCard");
+  const sizeRaw = (item as Record<string, unknown>).size;
+  const size = typeof sizeRaw === "number" ? sizeRaw : undefined;
+  const sizeMeasurement = getStringValue(item as Record<string, unknown>, "size_measurement") || undefined;
 
   return {
     productId: getStringValue(item, "productId"),
@@ -292,6 +319,8 @@ function normalizeOrderItem(item: OrderItemApiResponse): OrderItem {
           },
         }
       : {}),
+    ...(size !== undefined ? { size } : {}),
+    ...(sizeMeasurement ? { sizeMeasurement } : {}),
   };
 }
 
@@ -583,15 +612,74 @@ export async function getAdminShippingQuoteForOrder(
   return normalizeAdminShippingQuote(response.data.data);
 }
 
+// Fast preview — returns shipper/receiver/package immediately, no carrier API call
+export async function getAdminShippingPreviewForOrder(
+  orderId: string,
+): Promise<AdminShippingQuote | null> {
+  const response = await adminApiClient.get<AdminShippingQuoteApiResponse>(
+    `/orders/admin/${orderId}/shipping-cost?previewOnly=true`,
+  );
+  return normalizeAdminShippingQuote(response.data.data);
+}
+
+// Fetch rates for a single carrier, optionally filtered to one service type
+export async function getAdminCarrierRatesForOrder(
+  orderId: string,
+  carrier: 'FEDEX' | 'DHL',
+  serviceCode?: string,
+): Promise<AdminShippingQuote | null> {
+  const params = new URLSearchParams({ carrier })
+  if (serviceCode) params.set('serviceCode', serviceCode)
+  const response = await adminApiClient.get<AdminShippingQuoteApiResponse>(
+    `/orders/admin/${orderId}/shipping-cost?${params.toString()}`,
+  );
+  return normalizeAdminShippingQuote(response.data.data);
+}
+
+export type FedExShipOptions = {
+  packagingType?: string;
+  dimensions?: { lengthCm: number; widthCm: number; heightCm: number };
+  signatureOption?: string;
+  saturdayDelivery?: boolean;
+  shipDate?: string;
+  dutiesPaymentType?: string;
+  dutiesAccountNumber?: string;
+  notificationEmails?: string[];
+  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValueEUR?: number }>;
+}
+
+export type DhlShipOptions = {
+  incoterm?: string;
+  shipmentType?: 'commercial' | 'personal';
+  exportReasonType?: string;
+  dimensions?: { lengthCm: number; widthCm: number; heightCm: number };
+  insurance?: { enabled: boolean; valueEUR?: number };
+  goGreen?: boolean;
+  saturdayDelivery?: boolean;
+  paperlessTrade?: boolean;
+  notificationEmails?: string[];
+  dutiesPaymentType?: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY';
+  dutiesAccountNumber?: string;
+  invoiceNumber?: string;
+  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValueEUR?: number }>;
+}
+
 export async function shipOrderForAdmin(
   orderId: string,
-  payload: { carrier: ShippingCarrier; serviceCode: string },
+  payload: {
+    carrier: ShippingCarrier;
+    serviceCode: string;
+    fedExOptions?: FedExShipOptions;
+    dhlOptions?: DhlShipOptions;
+  },
 ): Promise<Order | null> {
   const response = await adminApiClient.put<AdminOrderUpdateApiResponse>(
     `/orders/admin/${orderId}/ship`,
     {
       carrier: payload.carrier,
       serviceCode: payload.serviceCode,
+      ...(payload.fedExOptions ? { fedExOptions: payload.fedExOptions } : {}),
+      ...(payload.dhlOptions ? { dhlOptions: payload.dhlOptions } : {}),
     },
   );
 

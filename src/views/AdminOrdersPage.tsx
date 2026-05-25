@@ -6,12 +6,15 @@ import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown, Package, Chevron
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import FedExShipForm from '../components/admin/FedExShipForm'
+import DHLShipForm from '../components/admin/DHLShipForm'
 import {
   cancelPickupForAdmin,
   cancelShipmentForAdmin,
   checkFedExPickupAvailabilityForAdmin,
   getAdminOrderLabelUrl,
-  getAdminShippingQuoteForOrder,
+  getAdminShippingPreviewForOrder,
+  getAdminCarrierRatesForOrder,
   getAllOrdersForAdminByStatus,
   getPickupByIdForAdmin,
   getPickupsForAdmin,
@@ -149,8 +152,10 @@ export default function AdminOrdersPage() {
   const [shippingQuote, setShippingQuote] = useState<AdminShippingQuote | null>(null)
   const [shippingQuoteError, setShippingQuoteError] = useState('')
   const [isLoadingShippingQuote, setIsLoadingShippingQuote] = useState(false)
+  const [isLoadingDhlRates, setIsLoadingDhlRates] = useState(false)
   const [selectedCarrier, setSelectedCarrier] = useState<ShippingCarrier>('FEDEX')
   const [selectedServiceCode, setSelectedServiceCode] = useState('')
+  const [shipCarrierStep, setShipCarrierStep] = useState<'pick' | 'fedex' | 'dhl'>('pick')
   const [downloadingLabelOrderId, setDownloadingLabelOrderId] = useState('')
   const [selectedStatusFilter, setSelectedStatusFilter] = useState<Order['orderStatus'] | 'ALL'>('ALL')
   const [allOrdersTotalCount, setAllOrdersTotalCount] = useState(0)
@@ -213,8 +218,8 @@ export default function AdminOrdersPage() {
     void loadOrders(true, 1)
   }, [])
 
-  // Fetch the full shipping quote for an order (rates + preview + validation).
-  // Extracted from useEffect so the receiver-Save handler can re-trigger it.
+  // Load just the preview (shipper/receiver/package) — no FedEx rate call, returns fast.
+  // Rates are fetched inside FedExShipForm after the user sees the form.
   async function loadShippingQuote(
     orderId: string,
     opts: { resetSelection?: boolean } = { resetSelection: true },
@@ -229,23 +234,10 @@ export default function AdminOrdersPage() {
     }
 
     try {
-      const quote = await getAdminShippingQuoteForOrder(orderId)
+      const quote = await getAdminShippingPreviewForOrder(orderId)
       setShippingQuote(quote)
-
-      if (opts.resetSelection) {
-        const defaultFedexService = quote?.rates.FEDEX[0]
-        const defaultDhlService = quote?.rates.DHL[0]
-
-        if (defaultFedexService) {
-          setSelectedCarrier('FEDEX')
-          setSelectedServiceCode(defaultFedexService.serviceCode)
-        } else if (defaultDhlService) {
-          setSelectedCarrier('DHL')
-          setSelectedServiceCode(defaultDhlService.serviceCode)
-        }
-      }
     } catch {
-      setShippingQuoteError('Unable to load shipping estimate right now.')
+      setShippingQuoteError('Unable to load shipment details right now.')
     } finally {
       setIsLoadingShippingQuote(false)
     }
@@ -328,12 +320,14 @@ export default function AdminOrdersPage() {
     setShippingQuote(null)
     setShippingQuoteError('')
     setIsLoadingShippingQuote(false)
+    setIsLoadingDhlRates(false)
     setSelectedCarrier('FEDEX')
     setSelectedServiceCode('')
     setIsEditingReceiver(false)
     setReceiverDraft(null)
     setIsSavingReceiver(false)
     setReceiverSaveError('')
+    setShipCarrierStep('pick')
   }
 
   function startEditReceiver() {
@@ -2053,250 +2047,349 @@ export default function AdminOrdersPage() {
 
       {pendingAction ? (
         <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-[#1f0718]/45 px-4 py-4 sm:items-center sm:py-8" role="dialog" aria-modal="true">
+
+          {/* ── FedEx full-form step: takes over the entire modal ── */}
+          {pendingAction.type === 'ship' && shipCarrierStep === 'fedex' ? (
+            <div className="w-full max-w-6xl border border-[#efc5df] bg-white shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto">
+              <div className="flex items-center justify-between border-b border-[#f0d7e7] px-5 py-3">
+                <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#a63f7f]">
+                  FedEx Shipment · {pendingAction.order.orderNumber}
+                </p>
+                <button
+                  type="button"
+                  onClick={closeActionModal}
+                  disabled={isSubmittingAction}
+                  className="text-zinc-400 transition hover:text-zinc-600 disabled:opacity-50"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              {shippingQuote ? (
+                <FedExShipForm
+                  order={pendingAction.order}
+                  preview={shippingQuote}
+                  onBack={() => setShipCarrierStep('pick')}
+                  onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }}
+                />
+              ) : isLoadingShippingQuote ? (
+                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">Loading shipment details…</div>
+              ) : (
+                <div className="space-y-3 px-6 py-12 text-center">
+                  <p className="text-sm text-rose-600">{shippingQuoteError || 'Unable to load rates.'}</p>
+                  <button
+                    type="button"
+                    onClick={() => void loadShippingQuote(pendingAction.order.id)}
+                    className="border border-[#d24a90] px-4 py-2 text-xs font-bold text-[#d24a90] transition hover:bg-[#fff2fb]"
+                  >
+                    Retry
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
+            <div className="w-full max-w-6xl border border-amber-200 bg-white shadow-[0_26px_80px_rgba(180,90,10,0.30)] max-h-[92vh] overflow-y-auto">
+              <div className="flex items-center justify-between border-b border-amber-200 px-5 py-3">
+                <p className="text-xs font-bold uppercase tracking-[0.12em] text-amber-700">
+                  DHL Shipment · {pendingAction.order.orderNumber}
+                </p>
+                <button
+                  type="button"
+                  onClick={closeActionModal}
+                  disabled={isSubmittingAction}
+                  className="text-zinc-400 transition hover:text-zinc-600 disabled:opacity-50"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              {shippingQuote ? (
+                <div className="px-6 py-5">
+                  <DHLShipForm
+                    order={pendingAction.order}
+                    preview={shippingQuote}
+                    onBack={() => setShipCarrierStep('pick')}
+                    onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }}
+                  />
+                </div>
+              ) : isLoadingShippingQuote ? (
+                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">Loading shipment details…</div>
+              ) : (
+                <div className="space-y-3 px-6 py-12 text-center">
+                  <p className="text-sm text-rose-600">{shippingQuoteError || 'Unable to load rates.'}</p>
+                  <button
+                    type="button"
+                    onClick={() => void loadShippingQuote(pendingAction.order.id)}
+                    className="border border-amber-600 px-4 py-2 text-xs font-bold text-amber-700 transition hover:bg-amber-50"
+                  >
+                    Retry
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
           <div
             className={`w-full border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto ${
               pendingAction.type === 'ship' ? 'max-w-6xl' : 'max-w-md'
             }`}
           >
-            <h3 className="text-xl font-bold text-[#3d1530]">{getActionLabel(pendingAction.type)}</h3>
-            <p className="mt-3 text-sm leading-6 text-[#694d5f]">{getActionDescription(pendingAction.type)}</p>
+            {/* Header — DHL step shows Back arrow instead of title/description */}
+            {pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setShipCarrierStep('pick')}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:text-[#d24a90]"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  Back
+                </button>
+                <h3 className="text-xl font-bold text-[#3d1530]">DHL Shipment</h3>
+              </div>
+            ) : (
+              <>
+                <h3 className="text-xl font-bold text-[#3d1530]">{getActionLabel(pendingAction.type)}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#694d5f]">{getActionDescription(pendingAction.type)}</p>
+              </>
+            )}
             <p className="mt-3 bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
               Order: {pendingAction.order.orderNumber}
             </p>
 
-{pendingAction.type === "ship" ? (
-  <div className="mt-4 space-y-2 border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
-    {isLoadingShippingQuote ? (
-      <p className="text-sm text-[#694d5f]">Loading shipping cost...</p>
-    ) : null}
-
-    {!isLoadingShippingQuote && shippingQuote ? (
-      <>
-        <p className="flex justify-center text-sm font-semibold text-[#4f2040] ">
-          Available Shipping Rates
-        </p>
-
-        <div className="grid gap-3 xl:grid-cols-2">
-          <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">FEDEX</p>
-            {renderShippingRateTable('FEDEX', shippingQuote.rates.FEDEX)}
-          </div>
-
-          <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">DHL</p>
-            {renderShippingRateTable('DHL', shippingQuote.rates.DHL)}
-          </div>
-        </div>
-
-        {selectedShippingRate ? (
-          <div className="border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
-            Selected: <span className="font-semibold text-[#4f2040]">{selectedCarrier}</span> /{' '}
-            <span className="font-semibold text-[#4f2040]">{selectedShippingRate.serviceCode}</span>
-          </div>
-        ) : null}
-
-        {/* ====== Shipper / Receiver / Package / Items preview ====== */}
-        {shippingQuote.preview ? (
-          <div className="mt-4 grid gap-3 xl:grid-cols-2">
-
-            {/* Shipper card (read-only) */}
-            <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
-              <div className="mb-1 flex items-center justify-between">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Shipper</p>
-                <span className={`text-[10px] font-semibold ${shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? 'text-emerald-600' : 'text-rose-600'}`}>
-                  {shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? '✓ ready' : '⚠ check fields'}
-                </span>
-              </div>
-              <div className="space-y-0.5">
-                <p className="font-semibold text-[#4f2040]">{shippingQuote.preview.shipper.name}</p>
-                <p>{shippingQuote.preview.shipper.street}{shippingQuote.preview.shipper.houseNumber ? ' ' + shippingQuote.preview.shipper.houseNumber : ''}</p>
-                <p>
-                  {shippingQuote.preview.shipper.city}
-                  {shippingQuote.preview.shipper.postalCode ? ', ' + shippingQuote.preview.shipper.postalCode : ''} · {shippingQuote.preview.shipper.country}
-                </p>
-                <p className={shippingQuote.validation?.shipperPhoneOk ? '' : 'text-rose-600'}>
-                  📞 {shippingQuote.preview.shipper.phone || '—'}
-                </p>
-                <p className="truncate">✉ {shippingQuote.preview.shipper.email || '—'}</p>
-              </div>
-            </div>
-
-            {/* Receiver card (read-only or edit form) */}
-            <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
-              <div className="mb-1 flex items-center justify-between">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Receiver</p>
-                <div className="flex items-center gap-2">
-                  <span className={`text-[10px] font-semibold ${shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? 'text-emerald-600' : 'text-rose-600'}`}>
-                    {shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? '✓ ready' : '⚠ check fields'}
-                  </span>
-                  {!isEditingReceiver ? (
+            {/* ── Ship: Carrier pick step ── */}
+            {pendingAction.type === 'ship' && shipCarrierStep === 'pick' ? (
+              <div className="mt-6 space-y-4">
+                {isLoadingShippingQuote ? (
+                  <div className="py-8 text-center text-sm text-[#694d5f]">Loading shipping rates…</div>
+                ) : shippingQuoteError ? (
+                  <div className="space-y-3 py-4 text-center">
+                    <p className="text-sm text-rose-600">{shippingQuoteError}</p>
                     <button
                       type="button"
-                      onClick={startEditReceiver}
-                      className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] transition hover:bg-[#fff2fb]"
+                      onClick={() => void loadShippingQuote(pendingAction.order.id)}
+                      className="border border-[#d24a90] px-4 py-2 text-xs font-bold text-[#d24a90] transition hover:bg-[#fff2fb]"
                     >
-                      Edit
+                      Retry
                     </button>
-                  ) : null}
-                </div>
-              </div>
-
-              {!isEditingReceiver ? (
-                <div className="space-y-0.5">
-                  <p className="font-semibold text-[#4f2040]">{shippingQuote.preview.receiver.name}</p>
-                  <p>{shippingQuote.preview.receiver.street}</p>
-                  <p>
-                    {shippingQuote.preview.receiver.city}
-                    {shippingQuote.preview.receiver.state ? ', ' + shippingQuote.preview.receiver.state : ''}
-                    {shippingQuote.preview.receiver.postalCode ? ' ' + shippingQuote.preview.receiver.postalCode : ''} · {shippingQuote.preview.receiver.country}
-                  </p>
-                  <p className={shippingQuote.validation?.receiverPhoneOk ? '' : 'text-rose-600'}>
-                    📞 {shippingQuote.preview.receiver.phone || '—'}
-                  </p>
-                  <p className={`truncate ${shippingQuote.validation?.receiverEmailOk ? '' : 'text-rose-600'}`}>
-                    ✉ {shippingQuote.preview.receiver.email || '—'}
-                  </p>
-                </div>
-              ) : (
-                <div className="space-y-1.5">
-                  {(['street', 'city', 'postalCode'] as const).map((field) => (
-                    <div key={field} className="flex items-center gap-2">
-                      <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{field}</label>
-                      <input
-                        value={receiverDraft?.[field] ?? ''}
-                        onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, [field]: e.target.value } : prev)}
-                        className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                      />
+                  </div>
+                ) : shippingQuote ? (
+                  <>
+                    <p className="text-sm font-semibold text-[#4f2040]">Select a carrier to continue</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      {/* FedEx button — rates load inside FedExShipForm */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedCarrier('FEDEX')
+                          setShipCarrierStep('fedex')
+                        }}
+                        className="flex flex-col items-center gap-3 border-2 border-[#3f1933] bg-white px-6 py-10 text-center transition hover:bg-[#fdf4fa]"
+                      >
+                        <span className="text-3xl font-extrabold tracking-tight text-[#3f1933]">FedEx</span>
+                        <span className="text-xs text-[#7a4f6a]">International shipping</span>
+                      </button>
+                      {/* DHL button — rates load inside DHLShipForm */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelectedCarrier('DHL')
+                          setShipCarrierStep('dhl')
+                        }}
+                        className="flex flex-col items-center gap-3 border-2 border-amber-600 bg-white px-6 py-10 text-center transition hover:bg-amber-50"
+                      >
+                        <span className="text-3xl font-extrabold tracking-tight text-amber-700">DHL</span>
+                        <span className="text-xs text-amber-600">International shipping</span>
+                      </button>
                     </div>
-                  ))}
-                  <div className="flex items-center gap-2">
-                    <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">country</label>
-                    <select
-                      value={receiverDraft?.country ?? ''}
-                      onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, country: e.target.value, state: '' } : prev)}
-                      className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                    >
-                      <option value="">Select country</option>
-                      {getCountryOptions().map((c) => (
-                        <option key={c.code} value={c.code}>{c.name}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">state</label>
-                    <select
-                      value={receiverDraft?.state ?? ''}
-                      onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, state: e.target.value } : prev)}
-                      className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                    >
-                      <option value="">Select state</option>
-                      {getStateOptions(receiverDraft?.country ?? '').map((s) => (
-                        <option key={s.code} value={s.code}>{s.name}</option>
-                      ))}
-                    </select>
-                  </div>
-                  {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
-                  <div className="flex justify-end gap-2 pt-1">
-                    <button
-                      type="button"
-                      onClick={cancelEditReceiver}
-                      disabled={isSavingReceiver}
-                      className="border border-[#e3bfd6] px-2 py-0.5 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => void saveReceiverDraft()}
-                      disabled={isSavingReceiver}
-                      className="border border-[#d24a90] bg-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-white hover:bg-[#b83f7d] disabled:opacity-60"
-                    >
-                      {isSavingReceiver ? 'Saving…' : 'Save'}
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Package card (read-only) */}
-            <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
-              <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Package &amp; Customs</p>
-              <div className="grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
-                <p>
-                  <span className="font-semibold text-[#4f2040]">Weight:</span> {shippingQuote.preview.package.totalWeightKg} kg
-                </p>
-                <p>
-                  <span className="font-semibold text-[#4f2040]">Declared:</span> €{shippingQuote.preview.package.declaredValueEUR.toFixed(2)}
-                </p>
-                <p>
-                  <span className="font-semibold text-[#4f2040]">Incoterm:</span> {shippingQuote.preview.package.incoterm}
-                </p>
-                <p>
-                  <span className="font-semibold text-[#4f2040]">Customs:</span>{' '}
-                  <span className={shippingQuote.preview.package.isCustomsDeclarable ? 'text-amber-700' : 'text-emerald-700'}>
-                    {shippingQuote.preview.package.isCustomsDeclarable ? 'Yes – cross-border' : 'No – domestic / intra-EU'}
-                  </span>
-                </p>
-                <p className={`sm:col-span-2 ${shippingQuote.validation?.descriptionOk ? '' : 'text-rose-600'}`}>
-                  <span className="font-semibold text-[#4f2040]">Description:</span> {shippingQuote.preview.package.description}
-                </p>
+                  </>
+                ) : null}
               </div>
-            </div>
+            ) : null}
 
-            {/* Items card (read-only) */}
-            <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
-              <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Line items</p>
-              <div className="overflow-x-auto">
-                <table className="min-w-full text-[11px]">
-                  <thead>
-                    <tr className="text-left text-[#8b5a75]">
-                      <th className="pr-2">#</th>
-                      <th className="pr-2">Title</th>
-                      <th className="pr-2 text-right">Qty</th>
-                      <th className="pr-2 text-right">Unit €</th>
-                      <th className="pr-2 text-right">Unit g</th>
-                      <th className="pr-2">Mfr</th>
-                      <th>HS code</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {shippingQuote.preview.items.map((it) => (
-                      <tr key={it.number} className="border-t border-[#f6e3ee]">
-                        <td className="pr-2 py-0.5">{it.number}</td>
-                        <td className="pr-2 py-0.5">{it.title}</td>
-                        <td className="pr-2 py-0.5 text-right">{it.qty}</td>
-                        <td className="pr-2 py-0.5 text-right">{it.unitPriceEUR.toFixed(2)}</td>
-                        <td className="pr-2 py-0.5 text-right">{it.unitWeightG}</td>
-                        <td className="pr-2 py-0.5">{it.mfrCountry}</td>
-                        <td className="py-0.5 font-mono">{it.hsCode}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            {/* ── Ship: DHL step ── */}
+            {pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
+              <div className="mt-4 space-y-2 border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
+                {isLoadingShippingQuote ? (
+                  <p className="text-sm text-[#694d5f]">Loading shipping cost...</p>
+                ) : null}
+
+                {!isLoadingShippingQuote && shippingQuote ? (
+                  <>
+                    <p className="flex justify-center text-sm font-semibold text-[#4f2040]">DHL Shipping Rates</p>
+                    <div className="space-y-2">
+                      {renderShippingRateTable('DHL', shippingQuote.rates.DHL)}
+                    </div>
+
+                    {selectedShippingRate ? (
+                      <div className="border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
+                        Selected: <span className="font-semibold text-[#4f2040]">DHL</span> /{' '}
+                        <span className="font-semibold text-[#4f2040]">{selectedShippingRate.serviceCode}</span>
+                      </div>
+                    ) : null}
+
+                    {shippingQuote.preview ? (
+                      <div className="mt-4 grid gap-3 xl:grid-cols-2">
+                        {/* Shipper */}
+                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
+                          <div className="mb-1 flex items-center justify-between">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Shipper</p>
+                            <span className={`text-[10px] font-semibold ${shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? 'text-emerald-600' : 'text-rose-600'}`}>
+                              {shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? '✓ ready' : '⚠ check fields'}
+                            </span>
+                          </div>
+                          <div className="space-y-0.5">
+                            <p className="font-semibold text-[#4f2040]">{shippingQuote.preview.shipper.name}</p>
+                            <p>{shippingQuote.preview.shipper.street}{shippingQuote.preview.shipper.houseNumber ? ' ' + shippingQuote.preview.shipper.houseNumber : ''}</p>
+                            <p>{shippingQuote.preview.shipper.city}{shippingQuote.preview.shipper.postalCode ? ', ' + shippingQuote.preview.shipper.postalCode : ''} · {shippingQuote.preview.shipper.country}</p>
+                            <p className={shippingQuote.validation?.shipperPhoneOk ? '' : 'text-rose-600'}>📞 {shippingQuote.preview.shipper.phone || '—'}</p>
+                            <p className="truncate">✉ {shippingQuote.preview.shipper.email || '—'}</p>
+                          </div>
+                        </div>
+
+                        {/* Receiver (editable) */}
+                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
+                          <div className="mb-1 flex items-center justify-between">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Receiver</p>
+                            <div className="flex items-center gap-2">
+                              <span className={`text-[10px] font-semibold ${shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? 'text-emerald-600' : 'text-rose-600'}`}>
+                                {shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? '✓ ready' : '⚠ check fields'}
+                              </span>
+                              {!isEditingReceiver ? (
+                                <button type="button" onClick={startEditReceiver} className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] transition hover:bg-[#fff2fb]">Edit</button>
+                              ) : null}
+                            </div>
+                          </div>
+                          {!isEditingReceiver ? (
+                            <div className="space-y-0.5">
+                              <p className="font-semibold text-[#4f2040]">{shippingQuote.preview.receiver.name}</p>
+                              <p>{shippingQuote.preview.receiver.street}</p>
+                              <p>
+                                {shippingQuote.preview.receiver.city}
+                                {shippingQuote.preview.receiver.state ? ', ' + shippingQuote.preview.receiver.state : ''}
+                                {shippingQuote.preview.receiver.postalCode ? ' ' + shippingQuote.preview.receiver.postalCode : ''} · {shippingQuote.preview.receiver.country}
+                              </p>
+                              <p className={shippingQuote.validation?.receiverPhoneOk ? '' : 'text-rose-600'}>📞 {shippingQuote.preview.receiver.phone || '—'}</p>
+                              <p className={`truncate ${shippingQuote.validation?.receiverEmailOk ? '' : 'text-rose-600'}`}>✉ {shippingQuote.preview.receiver.email || '—'}</p>
+                            </div>
+                          ) : (
+                            <div className="space-y-1.5">
+                              {(['street', 'city', 'postalCode'] as const).map((field) => (
+                                <div key={field} className="flex items-center gap-2">
+                                  <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{field}</label>
+                                  <input
+                                    value={receiverDraft?.[field] ?? ''}
+                                    onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, [field]: e.target.value } : prev)}
+                                    className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                                  />
+                                </div>
+                              ))}
+                              <div className="flex items-center gap-2">
+                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">country</label>
+                                <select
+                                  value={receiverDraft?.country ?? ''}
+                                  onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, country: e.target.value, state: '' } : prev)}
+                                  className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                                >
+                                  <option value="">Select country</option>
+                                  {getCountryOptions().map((c) => (
+                                    <option key={c.code} value={c.code}>{c.name}</option>
+                                  ))}
+                                </select>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">state</label>
+                                <select
+                                  value={receiverDraft?.state ?? ''}
+                                  onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, state: e.target.value } : prev)}
+                                  className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                                >
+                                  <option value="">Select state</option>
+                                  {getStateOptions(receiverDraft?.country ?? '').map((s) => (
+                                    <option key={s.code} value={s.code}>{s.name}</option>
+                                  ))}
+                                </select>
+                              </div>
+                              {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
+                              <div className="flex justify-end gap-2 pt-1">
+                                <button type="button" onClick={cancelEditReceiver} disabled={isSavingReceiver} className="border border-[#e3bfd6] px-2 py-0.5 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60">Cancel</button>
+                                <button type="button" onClick={() => void saveReceiverDraft()} disabled={isSavingReceiver} className="border border-[#d24a90] bg-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-white hover:bg-[#b83f7d] disabled:opacity-60">
+                                  {isSavingReceiver ? 'Saving…' : 'Save'}
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Package */}
+                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
+                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Package &amp; Customs</p>
+                          <div className="grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
+                            <p><span className="font-semibold text-[#4f2040]">Weight:</span> {shippingQuote.preview.package.totalWeightKg} kg</p>
+                            <p><span className="font-semibold text-[#4f2040]">Declared:</span> €{shippingQuote.preview.package.declaredValueEUR.toFixed(2)}</p>
+                            <p><span className="font-semibold text-[#4f2040]">Incoterm:</span> {shippingQuote.preview.package.incoterm}</p>
+                            <p>
+                              <span className="font-semibold text-[#4f2040]">Customs:</span>{' '}
+                              <span className={shippingQuote.preview.package.isCustomsDeclarable ? 'text-amber-700' : 'text-emerald-700'}>
+                                {shippingQuote.preview.package.isCustomsDeclarable ? 'Yes – cross-border' : 'No – domestic / intra-EU'}
+                              </span>
+                            </p>
+                            <p className={`sm:col-span-2 ${shippingQuote.validation?.descriptionOk ? '' : 'text-rose-600'}`}>
+                              <span className="font-semibold text-[#4f2040]">Description:</span> {shippingQuote.preview.package.description}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Items */}
+                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
+                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Line items</p>
+                          <div className="overflow-x-auto">
+                            <table className="min-w-full text-[11px]">
+                              <thead>
+                                <tr className="text-left text-[#8b5a75]">
+                                  <th className="pr-2">#</th>
+                                  <th className="pr-2">Title</th>
+                                  <th className="pr-2 text-right">Qty</th>
+                                  <th className="pr-2 text-right">Unit €</th>
+                                  <th className="pr-2 text-right">Unit g</th>
+                                  <th className="pr-2">Mfr</th>
+                                  <th>HS code</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {shippingQuote.preview.items.map((it) => (
+                                  <tr key={it.number} className="border-t border-[#f6e3ee]">
+                                    <td className="pr-2 py-0.5">{it.number}</td>
+                                    <td className="pr-2 py-0.5">{it.title}</td>
+                                    <td className="pr-2 py-0.5 text-right">{it.qty}</td>
+                                    <td className="pr-2 py-0.5 text-right">{it.unitPriceEUR.toFixed(2)}</td>
+                                    <td className="pr-2 py-0.5 text-right">{it.unitWeightG}</td>
+                                    <td className="pr-2 py-0.5">{it.mfrCountry}</td>
+                                    <td className="py-0.5 font-mono">{it.hsCode}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
+
+                    {shippingQuote.validation && shippingQuote.validation.issues.length > 0 ? (
+                      <div className="mt-3 border border-rose-200 bg-rose-50 px-3 py-2 text-xs text-rose-700">
+                        <p className="mb-1 font-semibold">Cannot ship until these are fixed:</p>
+                        <ul className="list-inside list-disc">
+                          {shippingQuote.validation.issues.map((issue) => (
+                            <li key={issue}>{issue}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </>
+                ) : null}
+
+                {shippingQuoteError ? (
+                  <p className="text-xs text-rose-600">{shippingQuoteError}</p>
+                ) : null}
               </div>
-            </div>
-          </div>
-        ) : null}
-
-        {/* Validation banner (red strip) */}
-        {shippingQuote.validation && shippingQuote.validation.issues.length > 0 ? (
-          <div className="mt-3 border border-rose-200 bg-rose-50 px-3 py-2 text-xs text-rose-700">
-            <p className="mb-1 font-semibold">Cannot ship until these are fixed:</p>
-            <ul className="list-inside list-disc">
-              {shippingQuote.validation.issues.map((issue) => (
-                <li key={issue}>{issue}</li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-      </>
-    ) : null}
-
-    {shippingQuoteError ? (
-      <p className="text-xs text-rose-600">{shippingQuoteError}</p>
-    ) : null}
-  </div>
-) : null}
+            ) : null}
 
             <div className="mt-5 flex items-center justify-end gap-2">
               <button
@@ -2307,24 +2400,27 @@ export default function AdminOrdersPage() {
               >
                 Cancel
               </button>
-              <button
-                type="button"
-                onClick={() => void handleActionConfirm()}
-                disabled={
-                  isSubmittingAction ||
-                  (pendingAction.type === 'ship' && (
-                    !selectedServiceCode ||
-                    Boolean(shippingQuoteError) ||
-                    isEditingReceiver ||
-                    (shippingQuote?.validation ? shippingQuote.validation.issues.length > 0 : false)
-                  ))
-                }
-                className="border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {isSubmittingAction ? 'Please wait...' : 'Confirm'}
-              </button>
+              {!(pendingAction.type === 'ship' && shipCarrierStep === 'pick') ? (
+                <button
+                  type="button"
+                  onClick={() => void handleActionConfirm()}
+                  disabled={
+                    isSubmittingAction ||
+                    (pendingAction.type === 'ship' && (
+                      !selectedServiceCode ||
+                      Boolean(shippingQuoteError) ||
+                      isEditingReceiver ||
+                      (shippingQuote?.validation ? shippingQuote.validation.issues.length > 0 : false)
+                    ))
+                  }
+                  className="border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  {isSubmittingAction ? 'Please wait...' : 'Confirm'}
+                </button>
+              ) : null}
             </div>
           </div>
+          )}
         </div>
       ) : null}
 
