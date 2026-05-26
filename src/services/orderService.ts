@@ -52,6 +52,12 @@ type OrderApiResponse = {
   sessionId?: string;
   pickupId?: string | null;
   issuedGiftCards?: Array<Record<string, unknown>>;
+  deliveredAt?: string | null;
+  returnStatus?: string;
+  returnRequestedAt?: string | null;
+  returnReason?: string | null;
+  returnAdminNote?: string | null;
+  returnWindowDays?: number;
 };
 
 type CreateOrderApiResponse = {
@@ -362,6 +368,7 @@ function normalizeOrderStatus(status: string): OrderStatus {
     case "SHIPPED":
     case "DELIVERED":
     case "CANCELLED":
+    case "RETURNED":
       return status;
     default:
       return "PENDING";
@@ -395,7 +402,30 @@ function normalizeOrder(order: OrderApiResponse): Order {
     issuedGiftCards: Array.isArray(order.issuedGiftCards)
       ? order.issuedGiftCards.map(normalizeIssuedGiftCard)
       : [],
+    deliveredAt: typeof order.deliveredAt === "string" ? order.deliveredAt : null,
+    returnStatus: normalizeReturnStatus(order.returnStatus),
+    returnRequestedAt:
+      typeof order.returnRequestedAt === "string" ? order.returnRequestedAt : null,
+    returnReason: typeof order.returnReason === "string" ? order.returnReason : null,
+    returnAdminNote:
+      typeof order.returnAdminNote === "string" ? order.returnAdminNote : null,
+    returnWindowDays:
+      typeof order.returnWindowDays === "number" ? order.returnWindowDays : 7,
   };
+}
+
+function normalizeReturnStatus(
+  value: unknown,
+): import("../types/order").ReturnStatus {
+  switch (value) {
+    case "REQUESTED":
+    case "APPROVED":
+    case "REJECTED":
+    case "COMPLETED":
+      return value;
+    default:
+      return "NONE";
+  }
 }
 
 function normalizeAdminOrderCustomer(
@@ -517,6 +547,79 @@ export async function cancelOrder(orderId: string): Promise<Order> {
   );
 
   return normalizeOrder(response.data.data);
+}
+
+type ReturnRequestApiResponse = {
+  success: boolean;
+  message?: string;
+  data?: {
+    orderNumber?: string;
+    returnStatus?: string;
+    returnRequestedAt?: string;
+  };
+};
+
+export async function requestOrderReturn(
+  orderId: string,
+  reason: string,
+): Promise<{ returnStatus: string; returnRequestedAt?: string }> {
+  const response = await authApiClient.post<ReturnRequestApiResponse>(
+    `/orders/${orderId}/return`,
+    { reason },
+  );
+
+  return {
+    returnStatus: response.data.data?.returnStatus || "REQUESTED",
+    returnRequestedAt: response.data.data?.returnRequestedAt,
+  };
+}
+
+export async function cancelOrderReturnRequest(
+  orderId: string,
+): Promise<{ returnStatus: string }> {
+  const response = await authApiClient.delete<ReturnRequestApiResponse>(
+    `/orders/${orderId}/return`,
+  );
+
+  return { returnStatus: response.data.data?.returnStatus || "NONE" };
+}
+
+type AdminReturnActionResponse = {
+  success: boolean;
+  message?: string;
+  data?: {
+    orderNumber?: string;
+    returnStatus?: string;
+    refundStatus?: string;
+    refundId?: string;
+    returnAdminNote?: string;
+  };
+};
+
+export async function approveOrderReturn(
+  orderId: string,
+  adminNote?: string,
+): Promise<{ returnStatus: string; refundStatus?: string; refundId?: string }> {
+  const response = await adminApiClient.post<AdminReturnActionResponse>(
+    `/orders/admin/${orderId}/return/approve`,
+    adminNote ? { adminNote } : {},
+  );
+  return {
+    returnStatus: response.data.data?.returnStatus || "APPROVED",
+    refundStatus: response.data.data?.refundStatus,
+    refundId: response.data.data?.refundId,
+  };
+}
+
+export async function rejectOrderReturn(
+  orderId: string,
+  adminNote: string,
+): Promise<{ returnStatus: string }> {
+  const response = await adminApiClient.post<AdminReturnActionResponse>(
+    `/orders/admin/${orderId}/return/reject`,
+    { adminNote },
+  );
+  return { returnStatus: response.data.data?.returnStatus || "REJECTED" };
 }
 
 export async function regenerateOrderPayment(

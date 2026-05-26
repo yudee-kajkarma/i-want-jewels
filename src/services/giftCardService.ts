@@ -105,6 +105,7 @@ export type AdminGiftCard = {
   balance: number
   currency: string
   status: 'PENDING_PAYMENT' | 'ACTIVE' | 'DEPLETED' | 'CANCELLED'
+  expiresAt: string | null
   senderName?: string
   recipientName?: string
   recipientEmail?: string
