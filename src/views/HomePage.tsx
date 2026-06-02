@@ -3,6 +3,7 @@
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import Hero from '../components/sections/Hero'
+import FeatureHighlights from '../components/sections/FeatureHighlights'
 import HomeBody from '../components/sections/HomeBody'
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <FeatureHighlights />
         <HomeBody />
       </main>
       <Footer />

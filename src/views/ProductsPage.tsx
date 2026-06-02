@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import shopPageBanner from "../assets/banner/Shop-page-banner.jpg";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Pagination from "../components/sections/Pagination";
@@ -394,14 +393,6 @@ export default function ProductsPage({
         <div className="min-h-screen bg-white text-zinc-900 font-parsi">
             <Header />
             <main className="pb-16">
-                <section className="w-full overflow-hidden bg-white px-5 lg:px-20">
-                    <img
-                        src={shopPageBanner.src}
-                        alt="Shop the collection"
-                        className="block h-auto w-full"
-                    />
-                </section>
-
                 <section className=" bg-white px-6 pb-5 lg:px-10 pt-8">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
