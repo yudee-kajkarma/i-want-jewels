@@ -4,10 +4,10 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import InstagramGallerySection from "../components/sections/InstagramGallerySection";
 import NewsletterSection from "../components/sections/NewsletterSection";
-import braceletCloseupImage from "../assets/image/bracelet.jpg";
-import earringProductImage from "../assets/image/earing1.jpg";
-import necklaceModelImage from "../assets/image/nackwear.jpg";
-import ringModelImage from "../assets/image/ring1.jpg";
+import aboutHeroImage from "../assets/about-us/aboutus1.jpeg";
+import aboutGalleryImage1 from "../assets/about-us/under-about1.jpeg";
+import aboutGalleryImage2 from "../assets/about-us/under-about2.jpeg";
+import aboutGalleryImage3 from "../assets/about-us/under-about3.jpeg";
 
 const aboutPoints = [
     "Brilliant lab-grown diamond jewellery",
@@ -16,9 +16,9 @@ const aboutPoints = [
 ];
 
 const galleryImages = [
-    necklaceModelImage.src,
-    braceletCloseupImage.src,
-    earringProductImage.src,
+    aboutGalleryImage1.src,
+    aboutGalleryImage2.src,
+    aboutGalleryImage3.src,
 ];
 
 const features = [
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
                     <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
                         <img
-                            src={ringModelImage.src}
+                            src={aboutHeroImage.src}
                             alt="Woman wearing statement jewellery"
                             className="block h-[360px] w-full object-cover md:h-[460px] lg:h-[520px]"
                         />
