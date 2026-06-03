@@ -2,12 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
-import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift } from 'lucide-react'
+import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift, Undo2, Check, X } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
-import { getAdminOrderById, updateOrderShippingAddressForAdmin, verifyPaymentStatus } from '../services/orderService'
+import { approveOrderReturn, getAdminOrderById, rejectOrderReturn, updateOrderShippingAddressForAdmin, updateOrderStatusForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
 import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice } from '../utils/price'
@@ -47,6 +47,8 @@ function getOrderStatusClass(status: string) {
             return 'bg-rose-50 text-rose-700 border-rose-200'
         case 'shipped':
             return 'bg-sky-50 text-sky-700 border-sky-200'
+        case 'returned':
+            return 'bg-violet-50 text-violet-700 border-violet-200'
         default:
             return 'bg-amber-50 text-amber-700 border-amber-200'
     }
@@ -57,6 +59,21 @@ function getPaymentStatusClass(status: string) {
         case 'paid':
             return 'bg-emerald-50 text-emerald-700 border-emerald-200'
         case 'failed':
+            return 'bg-rose-50 text-rose-700 border-rose-200'
+        default:
+            return 'bg-zinc-100 text-zinc-700 border-zinc-200'
+    }
+}
+
+function getReturnStatusClass(status: string) {
+    switch (status) {
+        case 'REQUESTED':
+            return 'bg-amber-50 text-amber-700 border-amber-200'
+        case 'APPROVED':
+            return 'bg-sky-50 text-sky-700 border-sky-200'
+        case 'COMPLETED':
+            return 'bg-emerald-50 text-emerald-700 border-emerald-200'
+        case 'REJECTED':
             return 'bg-rose-50 text-rose-700 border-rose-200'
         default:
             return 'bg-zinc-100 text-zinc-700 border-zinc-200'
@@ -77,6 +94,11 @@ export default function AdminOrderDetailPage() {
     const [addressError, setAddressError] = useState('')
     const [postalCodeError, setPostalCodeError] = useState('')
     const [isVerifyingPayment, setIsVerifyingPayment] = useState(false)
+    const [adminNote, setAdminNote] = useState('')
+    const [isApprovingReturn, setIsApprovingReturn] = useState(false)
+    const [isRejectingReturn, setIsRejectingReturn] = useState(false)
+    const [returnActionError, setReturnActionError] = useState('')
+    const [isMarkingReturned, setIsMarkingReturned] = useState(false)
     const countryOptions = useMemo(() => getCountryOptions(), [])
     const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
     const canEditShippingAddress = order?.orderStatus === 'PENDING' || order?.orderStatus === 'CONFIRMED'
@@ -222,6 +244,70 @@ export default function AdminOrderDetailPage() {
         }
     }
 
+    async function handleApproveReturn() {
+        if (!order) return
+        setIsApprovingReturn(true)
+        setReturnActionError('')
+        try {
+            await approveOrderReturn(order.id, adminNote.trim() || undefined)
+            toast.success('Return approved and refund initiated')
+            setAdminNote('')
+            const refreshed = await getAdminOrderById(order.id)
+            setOrder(refreshed)
+        } catch (err) {
+            const message =
+                (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+                'Unable to approve return.'
+            setReturnActionError(message)
+            toast.error(message)
+        } finally {
+            setIsApprovingReturn(false)
+        }
+    }
+
+    async function handleRejectReturn() {
+        if (!order) return
+        if (!adminNote.trim()) {
+            setReturnActionError('A note is required to reject a return.')
+            return
+        }
+        setIsRejectingReturn(true)
+        setReturnActionError('')
+        try {
+            await rejectOrderReturn(order.id, adminNote.trim())
+            toast.success('Return rejected')
+            setAdminNote('')
+            const refreshed = await getAdminOrderById(order.id)
+            setOrder(refreshed)
+        } catch (err) {
+            const message =
+                (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+                'Unable to reject return.'
+            setReturnActionError(message)
+            toast.error(message)
+        } finally {
+            setIsRejectingReturn(false)
+        }
+    }
+
+    async function handleMarkAsReturned() {
+        if (!order) return
+        setIsMarkingReturned(true)
+        try {
+            await updateOrderStatusForAdmin(order.id, 'RETURNED')
+            toast.success('Order marked as RETURNED')
+            const refreshed = await getAdminOrderById(order.id)
+            setOrder(refreshed)
+        } catch (err) {
+            const message =
+                (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+                'Unable to update order status.'
+            toast.error(message)
+        } finally {
+            setIsMarkingReturned(false)
+        }
+    }
+
     function canVerifyPayment(): boolean {
         if (!order) return false
         return (
@@ -281,6 +367,79 @@ export default function AdminOrderDetailPage() {
                                     <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">Username: {order.customer?.username || 'N/A'}</p>
                                 </div>
                             </div>
+
+                            {order.returnStatus && order.returnStatus !== 'NONE' ? (
+                                <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
+                                    <div className="flex flex-wrap items-center justify-between gap-2">
+                                        <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Undo2 className="h-4 w-4" />Return Request</p>
+                                        <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getReturnStatusClass(order.returnStatus)}`}>
+                                            {order.returnStatus}
+                                        </span>
+                                    </div>
+                                    <div className="mt-4 grid gap-2 text-sm text-zinc-600 md:grid-cols-2">
+                                        {order.returnRequestedAt ? (
+                                            <p>Requested: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
+                                        ) : null}
+                                        {order.deliveredAt ? (
+                                            <p>Delivered: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.deliveredAt)}</span></p>
+                                        ) : null}
+                                        {order.returnReason ? (
+                                            <p className="md:col-span-2">Reason: <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>
+                                        ) : null}
+                                        {order.returnAdminNote ? (
+                                            <p className="md:col-span-2">Admin note: <span className="font-semibold text-[#17110d]">{order.returnAdminNote}</span></p>
+                                        ) : null}
+                                    </div>
+
+                                    {(order.returnStatus === 'APPROVED' || order.returnStatus === 'COMPLETED') && order.orderStatus === 'DELIVERED' ? (
+                                        <div className="mt-4 border-t border-[#efe1d5] pt-4">
+                                            <p className="text-sm text-zinc-600">Once the item is physically back in your possession, mark the order as returned.</p>
+                                            <button
+                                                type="button"
+                                                onClick={() => void handleMarkAsReturned()}
+                                                disabled={isMarkingReturned}
+                                                className="mt-3 inline-flex w-full items-center justify-center gap-2 border border-violet-200 bg-violet-600 px-4 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-violet-700 disabled:opacity-60"
+                                            >
+                                                <Undo2 className="h-4 w-4" />
+                                                {isMarkingReturned ? 'UPDATING...' : 'MARK ORDER AS RETURNED'}
+                                            </button>
+                                        </div>
+                                    ) : null}
+
+                                    {order.returnStatus === 'REQUESTED' ? (
+                                        <div className="mt-4 space-y-3">
+                                            <textarea
+                                                value={adminNote}
+                                                onChange={(event) => setAdminNote(event.target.value)}
+                                                placeholder="Optional note (required for reject) — visible to the customer"
+                                                className="min-h-[70px] w-full border border-[#e7d3c2] bg-white px-3 py-2 text-sm outline-none focus:border-[#17110d]"
+                                            />
+                                            {returnActionError ? <p className="text-xs text-rose-600">{returnActionError}</p> : null}
+                                            <div className="flex flex-wrap gap-2">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => void handleApproveReturn()}
+                                                    disabled={isApprovingReturn || isRejectingReturn}
+                                                    className="inline-flex flex-1 items-center justify-center gap-2 border border-emerald-200 bg-emerald-600 px-4 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-emerald-700 disabled:opacity-60"
+                                                >
+                                                    <Check className="h-4 w-4" />
+                                                    {isApprovingReturn ? 'APPROVING...' : 'APPROVE & REFUND'}
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => void handleRejectReturn()}
+                                                    disabled={isApprovingReturn || isRejectingReturn}
+                                                    className="inline-flex flex-1 items-center justify-center gap-2 border border-rose-200 px-4 py-3 text-sm font-bold tracking-[0.08em] text-rose-700 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
+                                                >
+                                                    <X className="h-4 w-4" />
+                                                    {isRejectingReturn ? 'REJECTING...' : 'REJECT'}
+                                                </button>
+                                            </div>
+                                            <p className="text-xs text-zinc-500">Approving auto-issues a Stripe refund (for ONLINE+PAID orders) and restores stock.</p>
+                                        </div>
+                                    ) : null}
+                                </div>
+                            ) : null}
 
                             <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
                                 <div className="flex flex-wrap items-center justify-between gap-2">
