@@ -133,6 +133,22 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
           {cards.map((card) => {
             const canTransfer = tab === 'mine' && card.status === 'ACTIVE' && card.balance > 0
             const heldBy = card.currentOwnerEmail || card.recipientEmail
+            const expiryInfo = (() => {
+              if (!card.expiresAt) return { label: 'Never expires', tone: 'muted' as const }
+              const expiry = new Date(card.expiresAt)
+              const daysLeft = Math.ceil((expiry.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+              const formatted = expiry.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+              if (daysLeft <= 0) return { label: `Expired on ${formatted}`, tone: 'expired' as const }
+              if (daysLeft <= 7) return { label: `Expires in ${daysLeft} day${daysLeft === 1 ? '' : 's'} (${formatted})`, tone: 'urgent' as const }
+              if (daysLeft <= 30) return { label: `Expires on ${formatted} (${daysLeft} days left)`, tone: 'warning' as const }
+              return { label: `Expires on ${formatted}`, tone: 'normal' as const }
+            })()
+            const expiryClass =
+              expiryInfo.tone === 'urgent' || expiryInfo.tone === 'expired'
+                ? 'text-rose-600 font-semibold'
+                : expiryInfo.tone === 'warning'
+                  ? 'text-amber-600'
+                  : 'text-zinc-400'
             return (
               <div key={card.id} className="border border-[#efe1d5] bg-white p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
@@ -149,6 +165,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                         Purchased on {new Date(card.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
                       </p>
                     ) : null}
+                    <p className={`mt-1 text-xs ${expiryClass}`}>{expiryInfo.label}</p>
                     {card.message ? (
                       <p className="mt-1 text-sm italic text-zinc-600">&ldquo;{card.message}&rdquo;</p>
                     ) : null}

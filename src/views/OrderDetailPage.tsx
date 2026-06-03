@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Ban, CreditCard, Gift, MapPinHouse, Package } from 'lucide-react'
+import { Ban, CreditCard, Gift, MapPinHouse, Package, Undo2 } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -9,7 +9,7 @@ import RecipientEmailPicker from '../components/giftcard/RecipientEmailPicker'
 import { useAuth } from '../context/AuthContext'
 import { useCurrency } from '../context/CurrencyContext'
 import { transferGiftCard } from '../services/giftCardService'
-import { cancelOrder, getOrderById, regenerateOrderPayment } from '../services/orderService'
+import { cancelOrder, cancelOrderReturnRequest, getOrderById, regenerateOrderPayment, requestOrderReturn } from '../services/orderService'
 import type { Order } from '../types/order'
 import { formatPrice, getPriceAmount } from '../utils/price'
 
@@ -60,6 +60,34 @@ function canRegeneratePayment(order: Order): boolean {
   return isOnlinePayment && isPendingOrder && !isPaymentSettled
 }
 
+function getReturnWindowInfo(order: Order): { canRequest: boolean; daysLeft: number; windowDays: number } {
+  const windowDays = order.returnWindowDays || 7
+  if (order.orderStatus !== 'DELIVERED' || !order.deliveredAt) {
+    return { canRequest: false, daysLeft: 0, windowDays }
+  }
+  const ageMs = Date.now() - new Date(order.deliveredAt).getTime()
+  const ageDays = ageMs / (1000 * 60 * 60 * 24)
+  const daysLeft = Math.max(0, Math.ceil(windowDays - ageDays))
+  const status = order.returnStatus || 'NONE'
+  const canRequest = (status === 'NONE' || status === 'REJECTED') && ageDays <= windowDays
+  return { canRequest, daysLeft, windowDays }
+}
+
+function getReturnStatusClass(status: string): string {
+  switch (status) {
+    case 'REQUESTED':
+      return 'bg-amber-50 text-amber-700 border-amber-200'
+    case 'APPROVED':
+      return 'bg-sky-50 text-sky-700 border-sky-200'
+    case 'COMPLETED':
+      return 'bg-emerald-50 text-emerald-700 border-emerald-200'
+    case 'REJECTED':
+      return 'bg-rose-50 text-rose-700 border-rose-200'
+    default:
+      return 'bg-zinc-100 text-zinc-700 border-zinc-200'
+  }
+}
+
 export default function OrderDetailPage() {
   const params = useParams<{ orderId?: string | string[] }>()
   const { currency } = useCurrency()
@@ -71,6 +99,11 @@ export default function OrderDetailPage() {
   const [isRegeneratingPayment, setIsRegeneratingPayment] = useState(false)
   const [error, setError] = useState('')
   const [feedback, setFeedback] = useState('')
+  const [showReturnForm, setShowReturnForm] = useState(false)
+  const [returnReason, setReturnReason] = useState('')
+  const [isSubmittingReturn, setIsSubmittingReturn] = useState(false)
+  const [isCancellingReturn, setIsCancellingReturn] = useState(false)
+  const [returnFeedback, setReturnFeedback] = useState('')
   const [transferFor, setTransferFor] = useState<string | null>(null)
   const [recipientEmail, setRecipientEmail] = useState('')
   const [recipientEmailValid, setRecipientEmailValid] = useState(false)
@@ -165,6 +198,48 @@ export default function OrderDetailPage() {
     } catch {
       setFeedback('Unable to start payment right now. Please try again.')
       setIsRegeneratingPayment(false)
+    }
+  }
+
+  async function handleSubmitReturn() {
+    if (!order) return
+    if (!returnReason.trim()) {
+      setReturnFeedback('Please tell us why you want to return this order.')
+      return
+    }
+    setIsSubmittingReturn(true)
+    setReturnFeedback('')
+    try {
+      await requestOrderReturn(order.id, returnReason.trim())
+      setShowReturnForm(false)
+      setReturnReason('')
+      setFeedback('Return request received. Our team will reach out to you shortly.')
+      await refreshOrder(order.id, false)
+    } catch (err) {
+      const message =
+        (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+        'Unable to submit return request right now.'
+      setReturnFeedback(message)
+    } finally {
+      setIsSubmittingReturn(false)
+    }
+  }
+
+  async function handleCancelReturn() {
+    if (!order) return
+    setIsCancellingReturn(true)
+    setReturnFeedback('')
+    try {
+      await cancelOrderReturnRequest(order.id)
+      setFeedback('Return request cancelled.')
+      await refreshOrder(order.id, false)
+    } catch (err) {
+      const message =
+        (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
+        'Unable to cancel return request right now.'
+      setReturnFeedback(message)
+    } finally {
+      setIsCancellingReturn(false)
     }
   }
 
@@ -429,6 +504,92 @@ export default function OrderDetailPage() {
                     {isCancelling ? 'CANCELLING...' : 'CANCEL ORDER'}
                   </button>
                 ) : null}
+
+                {order.orderStatus === 'DELIVERED' ? (() => {
+                  const status = order.returnStatus || 'NONE'
+                  const info = getReturnWindowInfo(order)
+                  return (
+                    <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
+                      <div className="flex items-center gap-3 text-[#17110d]">
+                        <Undo2 className="h-5 w-5" />
+                        <h2 className="text-xl font-bold">Return</h2>
+                      </div>
+
+                      {status !== 'NONE' ? (
+                        <div className="mt-4 space-y-2 text-sm text-zinc-600">
+                          <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getReturnStatusClass(status)}`}>
+                            {status}
+                          </span>
+                          {order.returnRequestedAt ? (
+                            <p>Requested: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
+                          ) : null}
+                          {order.returnReason ? (
+                            <p>Reason: <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>
+                          ) : null}
+                          {order.returnAdminNote ? (
+                            <p>Note from us: <span className="font-semibold text-[#17110d]">{order.returnAdminNote}</span></p>
+                          ) : null}
+                        </div>
+                      ) : (
+                        <p className="mt-4 text-sm text-zinc-600">
+                          {info.canRequest
+                            ? `You have ${info.daysLeft} day${info.daysLeft === 1 ? '' : 's'} left to request a return.`
+                            : 'The return window for this order has closed.'}
+                        </p>
+                      )}
+
+                      {returnFeedback ? <p className="mt-3 text-xs text-rose-600">{returnFeedback}</p> : null}
+
+                      {showReturnForm ? (
+                        <div className="mt-4 space-y-3">
+                          <textarea
+                            value={returnReason}
+                            onChange={(event) => setReturnReason(event.target.value)}
+                            placeholder="Why do you want to return this order?"
+                            className="min-h-[90px] w-full border border-[#e7d3c2] px-3 py-2 text-sm outline-none focus:border-[#17110d]"
+                          />
+                          <div className="flex gap-2">
+                            <button
+                              type="button"
+                              onClick={() => void handleSubmitReturn()}
+                              disabled={isSubmittingReturn}
+                              className="h-11 flex-1 bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white disabled:opacity-50"
+                            >
+                              {isSubmittingReturn ? 'SUBMITTING...' : 'SUBMIT RETURN'}
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => { setShowReturnForm(false); setReturnFeedback(''); }}
+                              disabled={isSubmittingReturn}
+                              className="h-11 border border-[#e7d3c2] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#7a3a61] disabled:opacity-50"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </div>
+                      ) : status === 'REQUESTED' ? (
+                        <button
+                          type="button"
+                          onClick={() => void handleCancelReturn()}
+                          disabled={isCancellingReturn}
+                          className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-rose-200 px-6 py-3 text-sm font-bold tracking-[0.08em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
+                        >
+                          <Ban className="h-4 w-4" />
+                          {isCancellingReturn ? 'CANCELLING...' : 'CANCEL RETURN REQUEST'}
+                        </button>
+                      ) : info.canRequest ? (
+                        <button
+                          type="button"
+                          onClick={() => { setShowReturnForm(true); setReturnFeedback(''); }}
+                          className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-[#1b1210] bg-[#1b1210] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#342721]"
+                        >
+                          <Undo2 className="h-4 w-4" />
+                          REQUEST RETURN
+                        </button>
+                      ) : null}
+                    </div>
+                  )
+                })() : null}
               </div>
             </aside>
           </div>

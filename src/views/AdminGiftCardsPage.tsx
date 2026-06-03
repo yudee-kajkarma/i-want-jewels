@@ -136,7 +136,7 @@ export default function AdminGiftCardsPage() {
 
                     {isOpen ? (
                       <div className="overflow-x-auto border-t border-[#efe1d5] bg-[#fffdfa] px-6 py-4">
-                        <table className="w-full min-w-[760px] text-left text-sm">
+                        <table className="w-full min-w-[880px] text-left text-sm">
                           <thead>
                             <tr className="text-[11px] uppercase tracking-[0.14em] text-zinc-400">
                               <th className="py-2 pr-4">Code</th>
@@ -145,33 +145,47 @@ export default function AdminGiftCardsPage() {
                               <th className="py-2 pr-4">Status</th>
                               <th className="py-2 pr-4">Recipient</th>
                               <th className="py-2 pr-4">Order #</th>
-                              <th className="py-2 pr-4">Date</th>
+                              <th className="py-2 pr-4">Purchased</th>
+                              <th className="py-2 pr-4">Expires</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {group.cards.map((card) => (
-                              <tr key={card.id} className="border-t border-[#f0e5da]">
-                                <td className="py-3 pr-4 font-semibold tracking-[1px] text-[#17110d]">
-                                  {card.codeMasked}
-                                </td>
-                                <td className="py-3 pr-4">€{card.initialAmount.toFixed(2)}</td>
-                                <td className="py-3 pr-4 text-[#1f7a4d]">€{card.balance.toFixed(2)}</td>
-                                <td className="py-3 pr-4">
-                                  <span
-                                    className={`inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em] ${statusClass(
-                                      card.status,
-                                    )}`}
-                                  >
-                                    {card.status}
-                                  </span>
-                                </td>
-                                <td className="py-3 pr-4 text-zinc-600">{card.recipientEmail || '—'}</td>
-                                <td className="py-3 pr-4 text-zinc-600">{card.purchaseOrderNumber || '—'}</td>
-                                <td className="py-3 pr-4 text-zinc-500">
-                                  {new Date(card.createdAt).toLocaleDateString()}
-                                </td>
-                              </tr>
-                            ))}
+                            {group.cards.map((card) => {
+                              const expiry = (() => {
+                                if (!card.expiresAt) return { text: 'Never', className: 'text-zinc-400' }
+                                const d = new Date(card.expiresAt)
+                                const daysLeft = Math.ceil((d.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+                                const formatted = d.toLocaleDateString()
+                                if (daysLeft <= 0) return { text: `${formatted} (expired)`, className: 'text-rose-600 font-semibold' }
+                                if (daysLeft <= 7) return { text: `${formatted} (${daysLeft}d)`, className: 'text-rose-600 font-semibold' }
+                                if (daysLeft <= 30) return { text: `${formatted} (${daysLeft}d)`, className: 'text-amber-600' }
+                                return { text: formatted, className: 'text-zinc-500' }
+                              })()
+                              return (
+                                <tr key={card.id} className="border-t border-[#f0e5da]">
+                                  <td className="py-3 pr-4 font-semibold tracking-[1px] text-[#17110d]">
+                                    {card.codeMasked}
+                                  </td>
+                                  <td className="py-3 pr-4">€{card.initialAmount.toFixed(2)}</td>
+                                  <td className="py-3 pr-4 text-[#1f7a4d]">€{card.balance.toFixed(2)}</td>
+                                  <td className="py-3 pr-4">
+                                    <span
+                                      className={`inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em] ${statusClass(
+                                        card.status,
+                                      )}`}
+                                    >
+                                      {card.status}
+                                    </span>
+                                  </td>
+                                  <td className="py-3 pr-4 text-zinc-600">{card.recipientEmail || '—'}</td>
+                                  <td className="py-3 pr-4 text-zinc-600">{card.purchaseOrderNumber || '—'}</td>
+                                  <td className="py-3 pr-4 text-zinc-500">
+                                    {new Date(card.createdAt).toLocaleDateString()}
+                                  </td>
+                                  <td className={`py-3 pr-4 ${expiry.className}`}>{expiry.text}</td>
+                                </tr>
+                              )
+                            })}
                           </tbody>
                         </table>
                       </div>

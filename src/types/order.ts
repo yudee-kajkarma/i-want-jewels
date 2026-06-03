@@ -3,7 +3,7 @@ import type { CartItem } from './cart'
 
 export type PaymentMethod = 'COD' | 'ONLINE'
 
-export type OrderStatus = 'PENDING' | 'CONFIRMED' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED'
+export type OrderStatus = 'PENDING' | 'CONFIRMED' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED' | 'RETURNED'
 
 export type ShippingAddress = {
   street: string
@@ -49,6 +49,8 @@ export type IssuedGiftCard = {
   createdAt?: string
 }
 
+export type ReturnStatus = 'NONE' | 'REQUESTED' | 'APPROVED' | 'REJECTED' | 'COMPLETED'
+
 export type Order = {
   id: string
   createdAt: string
@@ -68,6 +70,12 @@ export type Order = {
   shippingCarrier?: string | null
   pickupId?: string | null
   issuedGiftCards?: IssuedGiftCard[]
+  deliveredAt?: string | null
+  returnStatus?: ReturnStatus
+  returnRequestedAt?: string | null
+  returnReason?: string | null
+  returnAdminNote?: string | null
+  returnWindowDays?: number
 }
 
 export type PickupStatus = 'SCHEDULED' | 'CANCELLED' | 'PICKED_UP'
