@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         montserrat: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
         parsi: ['var(--font-parsi)', 'system-ui', 'sans-serif'],
+        raleway: ['var(--font-raleway)', 'system-ui', 'sans-serif'],
       },
     },
   },

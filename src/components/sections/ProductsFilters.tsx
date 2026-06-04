@@ -9,6 +9,9 @@ import type {
     ProductsFilterState,
 } from "../../types/product";
 import { formatPrice } from "../../utils/price";
+import goldSwatchImage from "../../assets/colors/gold.jpeg";
+import rosePinkSwatchImage from "../../assets/colors/rose-pink.jpeg";
+import silverSwatchImage from "../../assets/colors/silver.jpeg";
 
 type ProductsFiltersProps = {
     filterOptions: ProductAllFilters | null;
@@ -33,6 +36,16 @@ const colorSwatchMap: Record<string, string> = {
     purple: "#8a84dd",
     black: "#1f1f22",
     white: "#f3ecdd",
+};
+
+const colorSwatchImageMap: Record<string, string> = {
+    gold: goldSwatchImage.src,
+    "yellow gold": goldSwatchImage.src,
+    "rose gold": rosePinkSwatchImage.src,
+    "rose pink": rosePinkSwatchImage.src,
+    pink: rosePinkSwatchImage.src,
+    silver: silverSwatchImage.src,
+    "white gold": silverSwatchImage.src,
 };
 
 function formatFilterLabel(value: string): string {
@@ -363,6 +376,9 @@ export default function ProductsFilters({
                                 : filters.metal,
                         };
 
+                        const swatchImageSrc =
+                            colorSwatchImageMap[colorValue.toLowerCase()];
+
                         return (
                             <button
                                 key={colorValue}
@@ -374,15 +390,24 @@ export default function ProductsFilters({
                                         : "border-[#e3dad0] text-[#161311] hover:border-[#cfc1b4]"
                                 }`}
                             >
-                                <span
-                                    className="h-6 w-6 rounded-full"
-                                    style={{
-                                        backgroundColor:
-                                            colorSwatchMap[
-                                                colorValue.toLowerCase()
-                                            ] ?? "#d4d4d8",
-                                    }}
-                                />
+                                {swatchImageSrc ? (
+                                    <img
+                                        src={swatchImageSrc}
+                                        alt=""
+                                        aria-hidden="true"
+                                        className="h-6 w-6 rounded-full object-cover"
+                                    />
+                                ) : (
+                                    <span
+                                        className="h-6 w-6 rounded-full"
+                                        style={{
+                                            backgroundColor:
+                                                colorSwatchMap[
+                                                    colorValue.toLowerCase()
+                                                ] ?? "#d4d4d8",
+                                        }}
+                                    />
+                                )}
                                 <span>{formatFilterLabel(colorValue)}</span>
                             </button>
                         );

@@ -124,7 +124,7 @@ function FeatureIcon({ icon }: { icon: string }) {
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
+        <div className="min-h-screen bg-white text-zinc-900 font-raleway">
             <Header />
 
             <main>
@@ -133,7 +133,7 @@ export default function AboutPage() {
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
                             Homepage / About Us
                         </p>
-                        <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
+                        <h1 className="mt-3 font-parsi text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
                             About Us
                         </h1>
                     </div>
@@ -148,21 +148,21 @@ export default function AboutPage() {
                         />
 
                         <div>
-                            <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-[15px]">
+                            <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-[15px] font-parsi">
                                 Why Customers Choose
                             </h2>
-                            <h3 className="mt-3 max-w-md text-[26px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px]">
+                            <h3 className="mt-3 max-w-md text-[26px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px] font-parsi">
                                 Modern pieces crafted to look polished every
                                 day.
                             </h3>
                             <p className="mt-5 max-w-xl text-[14px] leading-7 text-zinc-600">
-                                Based in the historic diamond city of Antwerp,
-                                I Want Jewels creates modern jewellery crafted
+                                Based in the historic diamond city of Antwerp, I
+                                Want Jewels creates modern jewellery crafted
                                 with lab-grown diamonds, 925 sterling silver,
                                 and 14kt gold plating. Our collections combine
                                 responsible craftsmanship with timeless design,
-                                offering elegant pieces made to elevate
-                                everyday style.
+                                offering elegant pieces made to elevate everyday
+                                style.
                             </p>
                             <ul className="mt-7 space-y-3">
                                 {aboutPoints.map((point) => (
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 </section>
 
                 <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
-                    <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                    <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl font-parsi">
                         Why Choose I Want Jewels
                     </h2>
                     <p className="mt-5 max-w-3xl text-[14px] leading-7 text-zinc-600">
@@ -206,7 +206,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                <section className="bg-zinc-50 px-6 py-12 lg:px-10 lg:py-16">
+                {/* <section className="bg-zinc-50 px-6 py-12 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1480px]">
                         <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
                             What Sets Us Apart
@@ -227,7 +227,7 @@ export default function AboutPage() {
                             ))}
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <NewsletterSection />
 

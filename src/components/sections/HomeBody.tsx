@@ -18,8 +18,7 @@ import {
 import type { Product } from "../../types/product";
 import braceletCloseupImage from "../../assets/image/bracelet.jpg";
 import bannerShopImage from "../../assets/banner/Banner-Shop.jpg";
-import bannerSixImage from "../../assets/banner/Banner-6.jpg";
-import bannerGiftcardImage from "../../assets/banner/Banner-Giftcard.jpg";
+import bannerGiftcardImage from "../../assets/shopping-banner/gift-card-bg.jpeg";
 import earringImage from "../../assets/image/earing.jpeg";
 import earringProductImage from "../../assets/image/earing.jpg";
 import necklaceImage from "../../assets/image/nackwear.jpg";
@@ -32,6 +31,7 @@ import braceletCategoryImage from "../../assets/categories/Bracelet.jpg";
 import ringsCategoryImage from "../../assets/categories/Rings.jpg";
 import collectionsCategoryImage from "../../assets/about-us/collections.jpg.jpeg";
 import ProductCard from "./ProductCard";
+import ShopTheLookBanner from "./ShopTheLookBanner";
 import InstagramGallerySection from "./InstagramGallerySection";
 import NewsletterSection from "./NewsletterSection";
 import ProductCardSkeleton from "./ProductCardSkeleton";
@@ -171,7 +171,9 @@ export default function HomeBody() {
     const [categories, setCategories] = useState<string[]>([]);
     const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
     const [activeCategory, setActiveCategory] = useState("All");
-    const [collectionGroups, setCollectionGroups] = useState<UmbrellaCollectionGroup[]>([]);
+    const [collectionGroups, setCollectionGroups] = useState<
+        UmbrellaCollectionGroup[]
+    >([]);
     const [activeCollection, setActiveCollection] = useState<string>("");
     const [collectionProducts, setCollectionProducts] = useState<Product[]>([]);
     const [isLoadingCollection, setIsLoadingCollection] = useState(false);
@@ -201,7 +203,9 @@ export default function HomeBody() {
                 setCategories(dynamicCategories);
                 setCollectionGroups(groups);
                 if (groups.length > 0) {
-                    setActiveCollection((current) => current || groups[0].label);
+                    setActiveCollection(
+                        (current) => current || groups[0].label,
+                    );
                 }
                 setCategoriesError("");
             } catch {
@@ -341,7 +345,10 @@ export default function HomeBody() {
                     return;
                 }
 
-                collectionCacheRef.current.set(activeCollection, response.products);
+                collectionCacheRef.current.set(
+                    activeCollection,
+                    response.products,
+                );
                 setCollectionProducts(response.products);
             } catch {
                 if (!isMounted) {
@@ -374,14 +381,15 @@ export default function HomeBody() {
     const collectionCardHref = concettaGroup
         ? buildCollectionFilterHref(concettaGroup)
         : "/products?collection=Concetta";
-    const categoryCards: Array<{ label: string; image: string; href: string }> = [
-        ...categoryShowcase,
-        {
-            label: "Collection",
-            image: collectionsCategoryImage.src,
-            href: collectionCardHref,
-        },
-    ];
+    const categoryCards: Array<{ label: string; image: string; href: string }> =
+        [
+            ...categoryShowcase,
+            {
+                label: "Collection",
+                image: collectionsCategoryImage.src,
+                href: collectionCardHref,
+            },
+        ];
 
     return (
         <>
@@ -570,23 +578,9 @@ export default function HomeBody() {
             ) : null}
 
             {/* Shop Banner */}
-            <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
-                <div className="relative">
-                    <img
-                        src={bannerSixImage.src}
-                        alt="Shop the latest jewellery collection"
-                        className="block h-auto w-full"
-                    />
-                    <Link
-                        to="/products"
-                        className="absolute bottom-4 right-4 border border-zinc-800 bg-white px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:bottom-8 sm:right-8 sm:px-6 sm:py-3 sm:text-[12px] lg:bottom-12 lg:right-16 lg:px-8 lg:py-3.5 lg:text-[18px]"
-                    >
-                        Shop Now
-                    </Link>
-                </div>
-            </section>
+            <ShopTheLookBanner />
             {/* Giftcard Banner section */}
-            <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
+            <section className="mx-auto max-w-[1480px] px-6 py-12 font-raleway lg:px-10">
                 <div className="relative overflow-hidden">
                     <img
                         src={bannerGiftcardImage.src}
@@ -594,14 +588,15 @@ export default function HomeBody() {
                         aria-hidden="true"
                         className="absolute inset-0 hidden h-full w-full object-cover object-center lg:block"
                     />
-                    <div className="relative flex items-center justify-start px-6 py-12 sm:px-10 lg:px-14 lg:py-20">
+                    <div className="relative flex items-center justify-center px-6 py-12 sm:px-10 lg:justify-start lg:px-14 lg:py-20">
                         <div className="w-full max-w-[440px] bg-black px-8 py-10 text-white sm:px-10 sm:py-12">
-                            <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px]">
+                            <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px] font-parsi">
                                 <span className="block">The Perfect Gift,</span>
                                 <span className="block">Every Time</span>
                             </h2>
                             <p className="mt-3 text-center text-[12px] tracking-wide text-white/90">
-                                Give them the freedom to choose jewellery that feels truly personal.
+                                Give them the freedom to choose jewellery that
+                                feels truly personal.
                             </p>
 
                             <ul className="mt-10 space-y-2 pl-2 text-[13px] text-white/95">
@@ -617,7 +612,7 @@ export default function HomeBody() {
 
                             <Link
                                 to="/products?category=Gift%20card"
-                                className="mt-3 block w-full bg-pink-500 px-6 py-3.5 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 sm:text-[13px]"
+                                className="mt-3 block w-full bg-pink-500 px-6 py-3.5 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 sm:text-[13px] font-parsi"
                             >
                                 Shop Gift Cards
                             </Link>
@@ -626,7 +621,7 @@ export default function HomeBody() {
                 </div>
             </section>
 
-            <NewsletterSection description="Subscribe to receive new jewellery releases, exclusive offers, and style inspiration directly to your inbox." />
+            <NewsletterSection />
 
             <InstagramGallerySection />
         </>

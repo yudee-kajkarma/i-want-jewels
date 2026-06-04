@@ -107,9 +107,9 @@ export default function InstagramGallerySection({
             {/* Heading */}
             <div className="mx-auto max-w-6xl px-4 py-10 text-center">
                 <h2 className="text-3xl font-semibold md:text-4xl">{title}</h2>
-                <p className="mt-3 text-sm text-zinc-500 md:text-base">
+                {/* <p className="mt-3 text-sm text-zinc-500 md:text-base">
                     {subtitle}
-                </p>
+                </p> */}
             </div>
 
             {/* Loading */}

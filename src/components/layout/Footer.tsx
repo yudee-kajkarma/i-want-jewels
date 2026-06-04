@@ -16,14 +16,14 @@ const quickShopLinks = [
 ];
 
 const questionLinks = [
-    {
-        label: "Best Tennis Necklaces Under €500",
-        to: "/blogs/tennis-necklace-under-500",
-    },
-    {
-        label: "How to Style a Tennis Bracelet",
-        to: "/blogs/how-to-style-tennis-bracelet",
-    },
+    // {
+    //     label: "Best Tennis Necklaces Under €500",
+    //     to: "/blogs/tennis-necklace-under-500",
+    // },
+    // {
+    //     label: "How to Style a Tennis Bracelet",
+    //     to: "/blogs/how-to-style-tennis-bracelet",
+    // },
     { label: "Blog", to: "/blogs" },
 ];
 
