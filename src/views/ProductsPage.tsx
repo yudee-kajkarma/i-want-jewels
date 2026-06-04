@@ -18,7 +18,7 @@ import { getCurrencyIsoCode, getPriceAmount } from "../utils/price";
 import type { CurrencyCode } from "../utils/price";
 import { buildCollectionGroups } from "../utils/featuredCollections";
 
-const productsPerPage = 10;
+const productsPerPage = 9;
 
 type SortOption = "featured" | "title-asc" | "price-asc" | "price-desc";
 
@@ -447,7 +447,9 @@ export default function ProductsPage({
         filters.carat ? `${filters.carat} ct` : "",
         ...filters.tags,
         ...filters.metal.map((metalValue) => formatFilterLabel(metalValue)),
-        ...filters.collection.map((collectionValue) => formatFilterLabel(collectionValue)),
+        ...filters.collection.map((collectionValue) =>
+            formatFilterLabel(collectionValue),
+        ),
     ].filter(Boolean);
 
     return (
@@ -486,6 +488,29 @@ export default function ProductsPage({
                                     </button>
                                 );
                             })}
+
+                            {collectionGroups.length > 0 ? (
+                                <select
+                                    value={activeUmbrellaLabel}
+                                    onChange={(event) =>
+                                        applyUmbrellaCollection(
+                                            event.target.value,
+                                        )
+                                    }
+                                    aria-label="Filter by collection"
+                                    className="ml-auto cursor-pointer border border-zinc-800 bg-white px-5 py-2.5 pr-9 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 outline-none transition hover:bg-zinc-50 focus:border-pink-500 sm:px-6 sm:py-4 sm:pr-10 sm:text-[13px]"
+                                >
+                                    <option value="">All Collections</option>
+                                    {collectionGroups.map((group) => (
+                                        <option
+                                            key={group.label}
+                                            value={group.label}
+                                        >
+                                            {group.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            ) : null}
                         </div>
                     </div>
                 </section>
@@ -550,63 +575,32 @@ export default function ProductsPage({
                                     ) : null}
                                 </div>
 
-                                <div className="flex flex-wrap items-center gap-3 lg:gap-4">
-                                    {collectionGroups.length > 0 ? (
-                                        <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
-                                            <span>Collection</span>
-                                            <select
-                                                value={activeUmbrellaLabel}
-                                                onChange={(event) =>
-                                                    applyUmbrellaCollection(
-                                                        event.target.value,
-                                                    )
-                                                }
-                                                className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
-                                            >
-                                                <option value="">
-                                                    All Collections
-                                                </option>
-                                                {collectionGroups.map(
-                                                    (group) => (
-                                                        <option
-                                                            key={group.label}
-                                                            value={group.label}
-                                                        >
-                                                            {group.label}
-                                                        </option>
-                                                    ),
-                                                )}
-                                            </select>
-                                        </label>
-                                    ) : null}
-
-                                    <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
-                                        <span>Sort By</span>
-                                        <select
-                                            value={sortOption}
-                                            onChange={(event) =>
-                                                setSortOption(
-                                                    event.target
-                                                        .value as SortOption,
-                                                )
-                                            }
-                                            className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
-                                        >
-                                            <option value="featured">
-                                                Featured
-                                            </option>
-                                            <option value="title-asc">
-                                                Title A-Z
-                                            </option>
-                                            <option value="price-asc">
-                                                Price Low to High
-                                            </option>
-                                            <option value="price-desc">
-                                                Price High to Low
-                                            </option>
-                                        </select>
-                                    </label>
-                                </div>
+                                <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
+                                    <span>Sort By</span>
+                                    <select
+                                        value={sortOption}
+                                        onChange={(event) =>
+                                            setSortOption(
+                                                event.target
+                                                    .value as SortOption,
+                                            )
+                                        }
+                                        className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
+                                    >
+                                        <option value="featured">
+                                            Featured
+                                        </option>
+                                        <option value="title-asc">
+                                            Title A-Z
+                                        </option>
+                                        <option value="price-asc">
+                                            Price Low to High
+                                        </option>
+                                        <option value="price-desc">
+                                            Price High to Low
+                                        </option>
+                                    </select>
+                                </label>
                             </div>
 
                             {!productsData ? (

@@ -6,7 +6,7 @@ import ProductsPage from '../../views/ProductsPage'
 
 export const dynamic = 'force-dynamic'
 
-const productsPerPage = 10
+const productsPerPage = 9
 
 export const metadata: Metadata = {
   title: 'Shop Jewellery | I Want Jewels',

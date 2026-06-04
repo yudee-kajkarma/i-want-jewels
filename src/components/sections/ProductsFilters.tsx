@@ -48,6 +48,16 @@ const colorSwatchImageMap: Record<string, string> = {
     "white gold": silverSwatchImage.src,
 };
 
+const colorDisplayNameMap: Record<string, string> = {
+    gold: "Yellow Gold",
+    "yellow gold": "Yellow Gold",
+    "rose gold": "Rose Gold",
+    "rose pink": "Rose Gold",
+    pink: "Rose Gold",
+    silver: "White Gold",
+    "white gold": "White Gold",
+};
+
 function formatFilterLabel(value: string): string {
     return value
         .split(" ")
@@ -378,6 +388,9 @@ export default function ProductsFilters({
 
                         const swatchImageSrc =
                             colorSwatchImageMap[colorValue.toLowerCase()];
+                        const displayLabel =
+                            colorDisplayNameMap[colorValue.toLowerCase()] ??
+                            formatFilterLabel(colorValue);
 
                         return (
                             <button
@@ -408,7 +421,7 @@ export default function ProductsFilters({
                                         }}
                                     />
                                 )}
-                                <span>{formatFilterLabel(colorValue)}</span>
+                                <span>{displayLabel}</span>
                             </button>
                         );
                     })}

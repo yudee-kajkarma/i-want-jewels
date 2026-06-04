@@ -530,7 +530,7 @@ export default function HomeBody() {
                             productSkeletons.slice(0, 6).map((item) => (
                                 <div
                                     key={`collection-skeleton-${item}`}
-                                    className="w-[220px] flex-shrink-0 snap-start sm:w-[280px] lg:w-[300px]"
+                                    className="w-[260px] flex-shrink-0 snap-start sm:w-[320px] lg:w-[340px]"
                                 >
                                     <ProductCardSkeleton />
                                 </div>
@@ -539,11 +539,11 @@ export default function HomeBody() {
                             collectionProducts.map((item) => (
                                 <div
                                     key={`collection-${item.id}`}
-                                    className="w-[220px] flex-shrink-0 snap-start sm:w-[280px] lg:w-[300px]"
+                                    className="w-[260px] flex-shrink-0 snap-start sm:w-[320px] lg:w-[340px]"
                                 >
                                     <ProductCard
                                         item={item}
-                                        className="h-[20rem] sm:h-[26rem] lg:h-[30rem]"
+                                        className="h-[420px] sm:h-[460px] lg:h-[500px]"
                                     />
                                 </div>
                             ))

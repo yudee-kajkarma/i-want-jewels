@@ -63,6 +63,8 @@ const HOTSPOTS: HotspotConfig[] = [
 type HotspotProduct = {
     title: string;
     price: PriceInput | null;
+    category: string;
+    collectionName: string;
 };
 
 export default function ShopTheLookBanner() {
@@ -95,6 +97,8 @@ export default function ShopTheLookBanner() {
                     next[hotspot.key] = {
                         title: result.value.title || hotspot.fallbackLabel,
                         price: result.value.minPrice,
+                        category: result.value.category ?? "",
+                        collectionName: result.value.collectionName ?? "",
                     };
                 }
             });
@@ -220,7 +224,13 @@ export default function ShopTheLookBanner() {
 
                     {HOTSPOTS.map((hotspot) => {
                         const product = products[hotspot.key];
-                        const label = product?.title ?? hotspot.fallbackLabel;
+                        const collectionPart =
+                            product?.collectionName?.trim().toLowerCase() ||
+                            "alessia";
+                        const categoryPart =
+                            product?.category?.trim().toLowerCase() ||
+                            hotspot.key;
+                        const label = `${collectionPart.charAt(0).toUpperCase() + collectionPart.slice(1)} ${categoryPart.charAt(0).toUpperCase() + categoryPart.slice(1)}`;
                         const isOpen = activeKey === hotspot.key;
                         const markerSize =
                             hotspot.size === "lg"
