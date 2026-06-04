@@ -635,6 +635,7 @@ export default function ProductsPage({
                                         item={product}
                                         layout="grid"
                                         className="aspect-square md:aspect-auto h-[10rem] md:h-[30rem]"
+                                        selectedMetals={filters.metal}
                                     />
                                 ))}
                             </div>

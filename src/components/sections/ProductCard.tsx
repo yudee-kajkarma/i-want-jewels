@@ -12,6 +12,7 @@ import { addToWishlist, removeWishlistItem } from "../../store/wishlistSlice";
 import { setSingleCheckoutDraft } from "../../utils/checkoutStorage";
 import type { Product } from "../../types/product";
 import {
+    findVariantByMetals,
     getMetalToneClass,
     getVariantGallery,
     getVariantImage,
@@ -23,6 +24,7 @@ type ProductCardProps = {
     item: Product;
     layout?: "grid" | "list";
     className?: string;
+    selectedMetals?: string[];
 };
 
 function buildListSummary(item: Product): string {
@@ -41,6 +43,7 @@ export default function ProductCard({
     item,
     layout = "grid",
     className,
+    selectedMetals,
 }: ProductCardProps) {
     const navigate = useNavigate();
     const location = useLocation();
@@ -52,9 +55,12 @@ export default function ProductCard({
             (wishlistEntry) => wishlistEntry.productId === item.id,
         ),
     );
-    const [selectedVariantId, setSelectedVariantId] = useState(
-        () => item.variants[0]?.id ?? "",
-    );
+    const [selectedVariantId, setSelectedVariantId] = useState(() => {
+        const metalMatchedVariant = selectedMetals
+            ? findVariantByMetals(item.variants, selectedMetals)
+            : undefined;
+        return metalMatchedVariant?.id ?? item.variants[0]?.id ?? "";
+    });
     const [isAdding, setIsAdding] = useState(false);
     const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false);
     const [sizePickerOpen, setSizePickerOpen] = useState(false);
@@ -104,8 +110,13 @@ export default function ProductCard({
     const listSummary = buildListSummary(item);
 
     useEffect(() => {
-        setSelectedVariantId(item.variants[0]?.id ?? "");
-    }, [item.id, item.variants]);
+        const metalMatchedVariant = selectedMetals
+            ? findVariantByMetals(item.variants, selectedMetals)
+            : undefined;
+        setSelectedVariantId(
+            metalMatchedVariant?.id ?? item.variants[0]?.id ?? "",
+        );
+    }, [item.id, item.variants, selectedMetals]);
 
     useEffect(() => {
         return () => {

@@ -6,16 +6,16 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { sendContactMessage } from "../services/contactService";
 
-const contactDetails = [
-    "I Want Jewels Boutique",
-    "Email: info@iwantjewels.com",
-];
+// const contactDetails = [
+//     "I Want Jewels Boutique",
+//     "Email: info@iwantjewels.com",
+// ];
 
-const openHours = [
-    "Mon - Fri: 7:30am - 8:00pm PST",
-    "Saturday: 8:00am - 6:00pm PST",
-    "Sunday: 9:00am - 5:00pm PST",
-];
+// const openHours = [
+//     "Mon - Fri: 7:30am - 8:00pm PST",
+//     "Saturday: 8:00am - 6:00pm PST",
+//     "Sunday: 9:00am - 5:00pm PST",
+// ];
 
 export default function ContactPage() {
     const [name, setName] = useState("");
@@ -137,7 +137,7 @@ export default function ContactPage() {
                             </form>
                         </div>
 
-                        <div className="space-y-10 lg:pl-6">
+                        {/* <div className="space-y-10 lg:pl-6">
                             <div>
                                 <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600">
                                     Our Store
@@ -159,7 +159,7 @@ export default function ContactPage() {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </main>

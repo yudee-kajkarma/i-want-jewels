@@ -86,6 +86,57 @@ export function getMetalToneClass(metal: string): string {
     return metalClasses[metal] ?? "bg-[#d6d1d1]";
 }
 
+const metalAliasMap: Record<string, string[]> = {
+    "yellow gold": ["yellow gold", "gold"],
+    gold: ["gold", "yellow gold"],
+    "white gold": ["white gold", "silver"],
+    silver: ["silver", "white gold"],
+    "rose gold": ["rose gold", "pink gold", "pink", "rose"],
+    "pink gold": ["pink gold", "rose gold", "pink", "rose"],
+    pink: ["pink", "rose gold", "pink gold", "rose"],
+    rose: ["rose", "rose gold", "pink gold", "pink"],
+};
+
+function getMetalAliases(metal: string): string[] {
+    const normalized = metal.trim().toLowerCase();
+    return metalAliasMap[normalized] ?? [normalized];
+}
+
+export function findVariantByMetal(
+    variants: ProductVariant[],
+    metal: string,
+): ProductVariant | undefined {
+    if (!metal) {
+        return undefined;
+    }
+
+    const aliases = getMetalAliases(metal);
+
+    return variants.find((variant) => {
+        const variantName = (variant.variantName ?? "").trim().toLowerCase();
+        const variantTitle = (variant.title ?? "").toLowerCase();
+        return aliases.some(
+            (alias) =>
+                variantName === alias ||
+                variantTitle.split("/")[0]?.trim() === alias ||
+                variantTitle.includes(alias),
+        );
+    });
+}
+
+export function findVariantByMetals(
+    variants: ProductVariant[],
+    metals: string[],
+): ProductVariant | undefined {
+    for (const metal of metals) {
+        const matched = findVariantByMetal(variants, metal);
+        if (matched) {
+            return matched;
+        }
+    }
+    return undefined;
+}
+
 export function getProductCaption(product: Product): string {
     const visibleTags = product.tags.filter(
         (tag) => tag !== product.category && tag !== "Trending Products",
