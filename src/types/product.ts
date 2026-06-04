@@ -49,6 +49,7 @@ export type Product = {
   reviewsCount: number
   tags: string[]
   availability: boolean
+  collectionName?: string
   variants: ProductVariant[]
   minPrice: Price
   options: ProductOption[]
@@ -222,6 +223,7 @@ export type ProductAllFilters = {
   vendors: string[]
   tags: string[]
   metals: string[]
+  collections: string[]
   priceRange: ProductPriceRange
   ratingRange: ProductNumericRange
   caratRange: ProductNumericRange
@@ -241,6 +243,7 @@ export type ProductsFilterState = {
   vendor: string
   tags: string[]
   metal: string[]
+  collection: string[]
   priceMin: string
   priceMax: string
   carat: string

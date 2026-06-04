@@ -16,6 +16,7 @@ import type {
 } from "../types/product";
 import { getCurrencyIsoCode, getPriceAmount } from "../utils/price";
 import type { CurrencyCode } from "../utils/price";
+import { buildCollectionGroups } from "../utils/featuredCollections";
 
 const productsPerPage = 10;
 
@@ -63,6 +64,7 @@ function buildDefaultFilterState(
         vendor: "",
         tags: [],
         metal: [],
+        collection: [],
         priceMin: String(filterOptions?.priceRange.min?.[currency] ?? 0),
         priceMax: String(filterOptions?.priceRange.max?.[currency] ?? 0),
         carat: "",
@@ -134,6 +136,10 @@ function buildFilterSearchParams(
         searchParams.set("metal", filters.metal.join(","));
     }
 
+    if (filters.collection.length > 0) {
+        searchParams.set("collection", filters.collection.join(","));
+    }
+
     if (filters.priceMin && filters.priceMin !== defaultMinimumPrice) {
         searchParams.set("price_min", filters.priceMin);
     }
@@ -182,6 +188,26 @@ export default function ProductsPage({
                 : ["earrings", "rings", "bracelets", "necklace", "gift card"],
         [initialFilterOptions],
     );
+    const collectionGroups = useMemo(
+        () => buildCollectionGroups(initialFilterOptions?.collections ?? []),
+        [initialFilterOptions],
+    );
+    const activeUmbrellaLabel = useMemo(() => {
+        if (filters.collection.length === 0) {
+            return "";
+        }
+        const selectedSet = new Set(
+            filters.collection.map((value) => value.toLowerCase()),
+        );
+        const matchedGroup = collectionGroups.find(
+            (group) =>
+                group.members.length === selectedSet.size &&
+                group.members.every((member) =>
+                    selectedSet.has(member.toLowerCase()),
+                ),
+        );
+        return matchedGroup?.label ?? "";
+    }, [filters.collection, collectionGroups]);
 
     const products = productsData?.products ?? [];
     const pagination = productsData?.pagination ?? null;
@@ -262,6 +288,7 @@ export default function ProductsPage({
             ...(nextFilters.vendor ? ["vendor"] : []),
             ...(nextFilters.tags.length > 0 ? ["tags"] : []),
             ...(nextFilters.metal.length > 0 ? ["metal"] : []),
+            ...(nextFilters.collection.length > 0 ? ["collection"] : []),
             ...(nextFilters.carat ? ["carat"] : []),
             ...(nextFilters.priceMin !== defaultMinimumPrice ||
             nextFilters.priceMax !== defaultMaximumPrice
@@ -292,6 +319,10 @@ export default function ProductsPage({
                 metal:
                     nextFilters.metal.length > 0
                         ? nextFilters.metal
+                        : undefined,
+                collection:
+                    nextFilters.collection.length > 0
+                        ? nextFilters.collection
                         : undefined,
                 priceMin: nextFilters.priceMin || undefined,
                 priceMax: nextFilters.priceMax || undefined,
@@ -363,6 +394,35 @@ export default function ProductsPage({
         void fetchProducts(defaultFilterState);
     }
 
+    function applyUmbrellaCollection(umbrellaLabel: string) {
+        if (!umbrellaLabel) {
+            const nextFilters = {
+                ...filters,
+                page: 1,
+                collection: [],
+            };
+            setFilters(nextFilters);
+            void fetchProducts(nextFilters);
+            return;
+        }
+
+        const matchedGroup = collectionGroups.find(
+            (group) => group.label === umbrellaLabel,
+        );
+
+        if (!matchedGroup) {
+            return;
+        }
+
+        const nextFilters = {
+            ...filters,
+            page: 1,
+            collection: matchedGroup.members,
+        };
+        setFilters(nextFilters);
+        void fetchProducts(nextFilters);
+    }
+
     function applyQuickCategory(categoryLabel: string) {
         const normalizedCategory = (
             initialFilterOptions?.categories ?? []
@@ -387,6 +447,7 @@ export default function ProductsPage({
         filters.carat ? `${filters.carat} ct` : "",
         ...filters.tags,
         ...filters.metal.map((metalValue) => formatFilterLabel(metalValue)),
+        ...filters.collection.map((collectionValue) => formatFilterLabel(collectionValue)),
     ].filter(Boolean);
 
     return (
@@ -489,32 +550,63 @@ export default function ProductsPage({
                                     ) : null}
                                 </div>
 
-                                <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
-                                    <span>Sort By</span>
-                                    <select
-                                        value={sortOption}
-                                        onChange={(event) =>
-                                            setSortOption(
-                                                event.target
-                                                    .value as SortOption,
-                                            )
-                                        }
-                                        className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
-                                    >
-                                        <option value="featured">
-                                            Featured
-                                        </option>
-                                        <option value="title-asc">
-                                            Title A-Z
-                                        </option>
-                                        <option value="price-asc">
-                                            Price Low to High
-                                        </option>
-                                        <option value="price-desc">
-                                            Price High to Low
-                                        </option>
-                                    </select>
-                                </label>
+                                <div className="flex flex-wrap items-center gap-3 lg:gap-4">
+                                    {collectionGroups.length > 0 ? (
+                                        <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
+                                            <span>Collection</span>
+                                            <select
+                                                value={activeUmbrellaLabel}
+                                                onChange={(event) =>
+                                                    applyUmbrellaCollection(
+                                                        event.target.value,
+                                                    )
+                                                }
+                                                className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
+                                            >
+                                                <option value="">
+                                                    All Collections
+                                                </option>
+                                                {collectionGroups.map(
+                                                    (group) => (
+                                                        <option
+                                                            key={group.label}
+                                                            value={group.label}
+                                                        >
+                                                            {group.label}
+                                                        </option>
+                                                    ),
+                                                )}
+                                            </select>
+                                        </label>
+                                    ) : null}
+
+                                    <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
+                                        <span>Sort By</span>
+                                        <select
+                                            value={sortOption}
+                                            onChange={(event) =>
+                                                setSortOption(
+                                                    event.target
+                                                        .value as SortOption,
+                                                )
+                                            }
+                                            className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
+                                        >
+                                            <option value="featured">
+                                                Featured
+                                            </option>
+                                            <option value="title-asc">
+                                                Title A-Z
+                                            </option>
+                                            <option value="price-asc">
+                                                Price Low to High
+                                            </option>
+                                            <option value="price-desc">
+                                                Price High to Low
+                                            </option>
+                                        </select>
+                                    </label>
+                                </div>
                             </div>
 
                             {!productsData ? (

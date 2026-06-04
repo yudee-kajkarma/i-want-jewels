@@ -674,7 +674,7 @@ export default function ProductCard({
                     </h3>
                 </Link>
 
-                <div className="flex items-center gap-2.5 transition-all duration-300 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                {/* <div className="flex items-center gap-2.5 transition-all duration-300 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                     {item.variants.map((variant) => {
                         const metalLabel =
                             variant.title.split("/")[0]?.trim() ||
@@ -695,10 +695,10 @@ export default function ProductCard({
                             />
                         );
                     })}
-                </div>
+                </div> */}
 
                 <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 text-[#26221f]">
-                    <p className="text-[1.5rem] font-semibold leading-none tracking-[-0.04em]">
+                    <p className="text-sm md:text-[1.2rem] font-semibold leading-none tracking-[-0.04em]">
                         {formatPrice(basePrice, currency)}
                     </p>
                     {/* {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatPrice(comparePriceAmount, currency)}</p> : null}

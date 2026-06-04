@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
     Gem,
     Gift,
@@ -30,10 +30,16 @@ import earringsCategoryImage from "../../assets/categories/Earrings.jpg";
 import necklaceCategoryImage from "../../assets/categories/Necklace.jpg";
 import braceletCategoryImage from "../../assets/categories/Bracelet.jpg";
 import ringsCategoryImage from "../../assets/categories/Rings.jpg";
+import collectionsCategoryImage from "../../assets/about-us/collections.jpg.jpeg";
 import ProductCard from "./ProductCard";
 import InstagramGallerySection from "./InstagramGallerySection";
 import NewsletterSection from "./NewsletterSection";
 import ProductCardSkeleton from "./ProductCardSkeleton";
+import {
+    buildCollectionFilterHref,
+    buildCollectionGroups,
+    type UmbrellaCollectionGroup,
+} from "../../utils/featuredCollections";
 
 const productSkeletons = Array.from({ length: 5 }, (_, index) => index);
 
@@ -95,8 +101,6 @@ const qualityPoints = [
     "Premium 925 sterling silver craftsmanship",
     "Elegant 14kt gold plated finishes",
 ];
-
-const metalFilters = ["Gold", "Rose Gold", "Silver"] as const;
 
 function normalizeCategoryValue(value: string): string {
     return value.trim().toLowerCase().replace(/ies$/, "y").replace(/s$/, "");
@@ -167,8 +171,12 @@ export default function HomeBody() {
     const [categories, setCategories] = useState<string[]>([]);
     const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
     const [activeCategory, setActiveCategory] = useState("All");
-    const [activeMetal, setActiveMetal] =
-        useState<(typeof metalFilters)[number]>("Gold");
+    const [collectionGroups, setCollectionGroups] = useState<UmbrellaCollectionGroup[]>([]);
+    const [activeCollection, setActiveCollection] = useState<string>("");
+    const [collectionProducts, setCollectionProducts] = useState<Product[]>([]);
+    const [isLoadingCollection, setIsLoadingCollection] = useState(false);
+    const [collectionError, setCollectionError] = useState("");
+    const collectionCacheRef = useRef<Map<string, Product[]>>(new Map());
     const [isLoadingProducts, setIsLoadingProducts] = useState(true);
     const [categoriesError, setCategoriesError] = useState("");
     const [productsError, setProductsError] = useState("");
@@ -182,12 +190,19 @@ export default function HomeBody() {
                 const dynamicCategories = buildDynamicCategories(
                     filtersData.categories ?? [],
                 );
+                const groups = buildCollectionGroups(
+                    (filtersData.collections ?? []).filter(Boolean),
+                );
 
                 if (!isMounted) {
                     return;
                 }
 
                 setCategories(dynamicCategories);
+                setCollectionGroups(groups);
+                if (groups.length > 0) {
+                    setActiveCollection((current) => current || groups[0].label);
+                }
                 setCategoriesError("");
             } catch {
                 if (!isMounted) {
@@ -195,6 +210,7 @@ export default function HomeBody() {
                 }
 
                 setCategories([]);
+                setCollectionGroups([]);
                 setCategoriesError("Unable to load collections right now.");
             }
         }
@@ -284,20 +300,88 @@ export default function HomeBody() {
         };
     }, [activeCategory]);
 
+    useEffect(() => {
+        if (!activeCollection) {
+            setCollectionProducts([]);
+            return;
+        }
+
+        const activeGroup = collectionGroups.find(
+            (group) => group.label === activeCollection,
+        );
+
+        if (!activeGroup || activeGroup.members.length === 0) {
+            setCollectionProducts([]);
+            setIsLoadingCollection(false);
+            setCollectionError("");
+            return;
+        }
+
+        const cached = collectionCacheRef.current.get(activeCollection);
+        if (cached) {
+            setCollectionProducts(cached);
+            setIsLoadingCollection(false);
+            setCollectionError("");
+            return;
+        }
+
+        let isMounted = true;
+        setIsLoadingCollection(true);
+        setCollectionError("");
+
+        (async () => {
+            try {
+                const response = await getProducts({
+                    page: 1,
+                    limit: 20,
+                    collection: activeGroup.members,
+                });
+
+                if (!isMounted) {
+                    return;
+                }
+
+                collectionCacheRef.current.set(activeCollection, response.products);
+                setCollectionProducts(response.products);
+            } catch {
+                if (!isMounted) {
+                    return;
+                }
+
+                setCollectionProducts([]);
+                setCollectionError("Unable to load this collection right now.");
+            } finally {
+                if (isMounted) {
+                    setIsLoadingCollection(false);
+                }
+            }
+        })();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [activeCollection, collectionGroups]);
+
     const categoryTabs =
         categories.length > 0
             ? ["All", ...categories.slice(0, 4)]
             : fallbackCategoryLabels;
     const latestProducts = featuredProducts.slice(0, 5);
-    const metalProducts = featuredProducts.filter((item) =>
-        item.metals.some((metal) =>
-            metal.toLowerCase().includes(activeMetal.toLowerCase()),
-        ),
-    );
-    const visibleMetalProducts = (
-        metalProducts.length > 0 ? metalProducts : featuredProducts
-    ).slice(0, 5);
     const newlyLaunched = featuredProducts.slice(0, 2);
+    const concettaGroup = collectionGroups.find(
+        (group) => group.label === "Concetta",
+    );
+    const collectionCardHref = concettaGroup
+        ? buildCollectionFilterHref(concettaGroup)
+        : "/products?collection=Concetta";
+    const categoryCards: Array<{ label: string; image: string; href: string }> = [
+        ...categoryShowcase,
+        {
+            label: "Collection",
+            image: collectionsCategoryImage.src,
+            href: collectionCardHref,
+        },
+    ];
 
     return (
         <>
@@ -306,7 +390,7 @@ export default function HomeBody() {
                     Categories
                 </h2>
                 <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    {categoryShowcase.map((item, index) => (
+                    {categoryCards.map((item, index) => (
                         <Link
                             key={item.label}
                             to={item.href}
@@ -406,59 +490,84 @@ export default function HomeBody() {
                     className="block h-auto w-full"
                 />
             </section>
-            {/* Shop by Metal */}
-            <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
-                <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                    Shop Jewellery By Metal Type
-                </h2>
-                <div className="mt-5 flex flex-wrap items-center gap-3">
-                    {metalFilters.map((metal) => {
-                        const isActive = activeMetal === metal;
+            {/* Shop by Collection */}
+            {collectionGroups.length > 0 ? (
+                <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
+                    <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                        Shop By Collection
+                    </h2>
+                    <div className="mt-5 flex flex-wrap items-center gap-3">
+                        {collectionGroups.map(({ label }) => {
+                            const isActive = activeCollection === label;
 
-                        return (
-                            <button
-                                key={metal}
-                                type="button"
-                                onClick={() => setActiveMetal(metal)}
-                                className={`px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] transition sm:px-6 sm:py-3 sm:text-[13px] ${
-                                    isActive
-                                        ? "bg-pink-500 text-white"
-                                        : "border border-zinc-800 bg-white text-zinc-800 hover:bg-zinc-50"
-                                }`}
-                            >
-                                {metal}
-                            </button>
-                        );
-                    })}
-                </div>
+                            return (
+                                <button
+                                    key={label}
+                                    type="button"
+                                    onClick={() => setActiveCollection(label)}
+                                    className={`px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] transition sm:px-6 sm:py-3 sm:text-[13px] ${
+                                        isActive
+                                            ? "bg-pink-500 text-white"
+                                            : "border border-zinc-800 bg-white text-zinc-800 hover:bg-zinc-50"
+                                    }`}
+                                >
+                                    {label}
+                                </button>
+                            );
+                        })}
+                    </div>
 
-                <div className="mt-10 grid md:grid-cols-2 gap-5 sm:gap-6 grid-cols-2 lg:grid-cols-4">
-                    {isLoadingProducts
-                        ? productSkeletons
-                              .slice(0, 4)
-                              .map((item) => (
-                                  <ProductCardSkeleton key={`metal-${item}`} />
-                              ))
-                        : visibleMetalProducts
-                              .slice(0, 4)
-                              .map((item) => (
-                                  <ProductCard
-                                      key={`metal-${item.id}`}
-                                      item={item}
-                                      className="aspect-square md:aspect-auto h-[10rem] md:h-[30rem]"
-                                  />
-                              ))}
-                </div>
+                    <div className="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                        {isLoadingCollection ? (
+                            productSkeletons.slice(0, 6).map((item) => (
+                                <div
+                                    key={`collection-skeleton-${item}`}
+                                    className="w-[220px] flex-shrink-0 snap-start sm:w-[280px] lg:w-[300px]"
+                                >
+                                    <ProductCardSkeleton />
+                                </div>
+                            ))
+                        ) : collectionProducts.length > 0 ? (
+                            collectionProducts.map((item) => (
+                                <div
+                                    key={`collection-${item.id}`}
+                                    className="w-[220px] flex-shrink-0 snap-start sm:w-[280px] lg:w-[300px]"
+                                >
+                                    <ProductCard
+                                        item={item}
+                                        className="h-[20rem] sm:h-[26rem] lg:h-[30rem]"
+                                    />
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-[12px] uppercase tracking-[0.16em] text-zinc-500">
+                                No products in this collection yet.
+                            </p>
+                        )}
+                    </div>
 
-                <div className="mt-10 flex justify-start">
-                    <Link
-                        to="/products"
-                        className="border border-zinc-800 bg-white px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
-                    >
-                        View All New Pieces
-                    </Link>
-                </div>
-            </section>
+                    {collectionError ? (
+                        <p className="mt-4 text-[12px] uppercase tracking-[0.16em] text-rose-600">
+                            {collectionError}
+                        </p>
+                    ) : null}
+
+                    <div className="mt-10 flex justify-start">
+                        <Link
+                            to={buildCollectionFilterHref(
+                                collectionGroups.find(
+                                    (group) => group.label === activeCollection,
+                                ),
+                            )}
+                            className="border border-zinc-800 bg-white px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
+                        >
+                            {activeCollection
+                                ? `View All in ${activeCollection}`
+                                : "View All New Pieces"}
+                        </Link>
+                    </div>
+                </section>
+            ) : null}
 
             {/* Shop Banner */}
             <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">

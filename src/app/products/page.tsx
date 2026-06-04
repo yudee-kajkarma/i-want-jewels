@@ -116,6 +116,7 @@ function buildFilterState(searchParams: Record<string, string | string[] | undef
     vendor: readSingleValue(searchParams.vendor),
     tags: readListValue(searchParams.tags),
     metal: readListValue(searchParams.metal).length > 0 ? readListValue(searchParams.metal) : readListValue(searchParams.metals),
+    collection: readListValue(searchParams.collection).length > 0 ? readListValue(searchParams.collection) : readListValue(searchParams.collections),
     priceMin:
       readSingleValue(searchParams.price_min) ||
       readSingleValue(searchParams.minPrice) ||
@@ -195,6 +196,7 @@ export default async function Page({ searchParams }: PageProps) {
     vendor: filterState.vendor || undefined,
     tags: filterState.tags.length > 0 ? filterState.tags : undefined,
     metal: filterState.metal.length > 0 ? filterState.metal : undefined,
+    collection: filterState.collection.length > 0 ? filterState.collection : undefined,
     priceMin: filterState.priceMin || undefined,
     priceMax: filterState.priceMax || undefined,
     carat: filterState.carat || undefined,
@@ -209,6 +211,7 @@ export default async function Page({ searchParams }: PageProps) {
       ...(productsResponse?.appliedFilters ?? []),
       ...(filterState.tags.length > 0 ? ['tags'] : []),
       ...(filterState.metal.length > 0 ? ['metal'] : []),
+      ...(filterState.collection.length > 0 ? ['collection'] : []),
       ...(filterState.priceMin !== String(filterOptions.priceRange.min?.[DEFAULT_CURRENCY] ?? 0) ||
       filterState.priceMax !== String(filterOptions.priceRange.max?.[DEFAULT_CURRENCY] ?? 0)
         ? ['price']

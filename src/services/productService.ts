@@ -63,6 +63,7 @@ type ProductApiResponse = {
   reviews_count: number
   tags: string[]
   availability: boolean
+  collectionName?: string
   variants: ProductVariantApiResponse[]
   minPrice: Price | number
   options: ProductOptionApiResponse[]
@@ -72,6 +73,7 @@ type ProductDetailApiResponse = {
   id: string
   productType?: 'PHYSICAL' | 'GIFT_CARD'
   slug?: string
+  collectionName?: string
   createdAt: string
   updatedAt: string
   title: string
@@ -163,6 +165,7 @@ type AllProductFiltersResponse = {
   message: string
   data: Omit<ProductAllFilters, 'categories' | 'categoryCounts' | 'priceRange'> & {
     categories: Array<string | { name: string; count: number }>
+    collections?: string[]
     priceRange: {
       min: Price | number
       max: Price | number
@@ -185,6 +188,7 @@ export type GetProductsParams = {
   vendor?: string
   tags?: string | string[]
   metal?: string | string[]
+  collection?: string | string[]
   priceMin?: string | number
   priceMax?: string | number
   carat?: string | number
@@ -310,6 +314,7 @@ function normalizeProduct(product: ProductApiResponse): Product {
     reviewsCount: Math.max(0, Math.floor(normalizeNumber(product.reviews_count))),
     tags: product.tags,
     availability: product.availability,
+    collectionName: product.collectionName,
     variants,
     minPrice: minPriceOf(variants.map((variant) => variant.price)),
     options: product.options,
@@ -331,6 +336,7 @@ function normalizeProductDetail(
     id: product.id,
     productType: product.productType ?? 'PHYSICAL',
     slug: product.slug ?? '',
+    collectionName: product.collectionName,
     createdAt: product.createdAt,
     updatedAt: product.updatedAt,
     title: product.title,
@@ -458,6 +464,10 @@ export async function getProducts(params: GetProductsParams = {}): Promise<Produ
     requestParams.metal = Array.isArray(params.metal) ? params.metal.join(',') : params.metal
   }
 
+  if (params.collection) {
+    requestParams.collection = Array.isArray(params.collection) ? params.collection.join(',') : params.collection
+  }
+
   if (params.priceMin !== undefined && params.priceMin !== '') {
     requestParams.price_min = params.priceMin
   }
@@ -549,6 +559,7 @@ export async function getAllProductFilters(): Promise<ProductAllFilters> {
     ...response.data.data,
     categories: normalizedCategories,
     categoryCounts,
+    collections: response.data.data.collections ?? [],
     priceRange: {
       min: toPrice(response.data.data.priceRange?.min),
       max: toPrice(response.data.data.priceRange?.max),
