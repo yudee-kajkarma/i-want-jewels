@@ -9,9 +9,7 @@ import type {
     ProductsFilterState,
 } from "../../types/product";
 import { formatPrice } from "../../utils/price";
-import goldSwatchImage from "../../assets/colors/gold.jpeg";
-import rosePinkSwatchImage from "../../assets/colors/rose-pink.jpeg";
-import silverSwatchImage from "../../assets/colors/silver.jpeg";
+import { getMetalSwatchImage } from "../../utils/productUtils";
 
 type ProductsFiltersProps = {
     filterOptions: ProductAllFilters | null;
@@ -36,16 +34,6 @@ const colorSwatchMap: Record<string, string> = {
     purple: "#8a84dd",
     black: "#1f1f22",
     white: "#f3ecdd",
-};
-
-const colorSwatchImageMap: Record<string, string> = {
-    gold: goldSwatchImage.src,
-    "yellow gold": goldSwatchImage.src,
-    "rose gold": rosePinkSwatchImage.src,
-    "rose pink": rosePinkSwatchImage.src,
-    pink: rosePinkSwatchImage.src,
-    silver: silverSwatchImage.src,
-    "white gold": silverSwatchImage.src,
 };
 
 const colorDisplayNameMap: Record<string, string> = {
@@ -386,8 +374,7 @@ export default function ProductsFilters({
                                 : filters.metal,
                         };
 
-                        const swatchImageSrc =
-                            colorSwatchImageMap[colorValue.toLowerCase()];
+                        const swatchImageSrc = getMetalSwatchImage(colorValue);
                         const displayLabel =
                             colorDisplayNameMap[colorValue.toLowerCase()] ??
                             formatFilterLabel(colorValue);

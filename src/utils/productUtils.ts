@@ -1,4 +1,7 @@
 import type { Product, ProductImage, ProductVariant } from "../types/product";
+import goldSwatchImage from "../assets/colors/gold.jpeg";
+import rosePinkSwatchImage from "../assets/colors/rose-pink.jpeg";
+import silverSwatchImage from "../assets/colors/silver.jpeg";
 
 const euroFormatter = new Intl.NumberFormat("en-IE", {
     style: "currency",
@@ -14,6 +17,19 @@ const metalClasses: Record<string, string> = {
     Silver: "bg-[#d6d1d1]",
     "gift card": "bg-[#de5aa1]",
     "Gift Card": "bg-[#de5aa1]",
+};
+
+// Photographic swatch images shared with the product filters, keyed by the
+// lowercased metal name. The single source of truth so every colour swatch
+// across the app (filters + product detail) shows the same artwork.
+const metalSwatchImageMap: Record<string, string> = {
+    gold: goldSwatchImage.src,
+    "yellow gold": goldSwatchImage.src,
+    "rose gold": rosePinkSwatchImage.src,
+    "rose pink": rosePinkSwatchImage.src,
+    pink: rosePinkSwatchImage.src,
+    silver: silverSwatchImage.src,
+    "white gold": silverSwatchImage.src,
 };
 
 export function formatEuro(value: number): string {
@@ -84,6 +100,17 @@ export function getVariantGallery(variant: ProductVariant): ProductImage[] {
 
 export function getMetalToneClass(metal: string): string {
     return metalClasses[metal] ?? "bg-[#d6d1d1]";
+}
+
+// Returns the swatch image for a metal/colour (matching the product filters),
+// or undefined when there is no artwork for it (caller falls back to a tone).
+export function getMetalSwatchImage(metal: string): string | undefined {
+    if (!metal) {
+        return undefined;
+    }
+
+    const label = (metal.split("/")[0] ?? "").trim().toLowerCase();
+    return metalSwatchImageMap[label];
 }
 
 const metalAliasMap: Record<string, string[]> = {

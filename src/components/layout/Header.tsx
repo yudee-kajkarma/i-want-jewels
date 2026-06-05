@@ -463,6 +463,7 @@ export default function Header() {
     const drawerRef = useRef<HTMLDivElement | null>(null);
     const searchInputRef = useRef<HTMLInputElement | null>(null);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
     const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
@@ -506,23 +507,43 @@ export default function Header() {
         [shopCategories],
     );
 
-    const drawerLinks = useMemo(() => {
-        if (isAdmin) return adminNavLinks;
+    // Storefront drawer: the "Products" dropdown holds All Products → Rings.
+    // Gift cards are kept outside the dropdown, and Home is removed entirely.
+    const isGiftCardCategory = (category: string) =>
+        /gift\s*card/i.test(category);
 
-        const categoryLinks = visibleShopCategories.map((category) => ({
-            label: normalizeCategoryLabel(category),
-            to: buildCategoryHref(category),
-        }));
+    const productsMenuLinks = useMemo(() => {
+        const categoryLinks = visibleShopCategories
+            .filter((category) => !isGiftCardCategory(category))
+            .map((category) => ({
+                label: normalizeCategoryLabel(category),
+                to: buildCategoryHref(category),
+            }));
 
         return [
-            { label: "Home", to: "/" },
             { label: "All Products", to: "/products" },
             ...categoryLinks,
+        ];
+    }, [visibleShopCategories]);
+
+    const secondaryDrawerLinks = useMemo(() => {
+        const giftCategory = visibleShopCategories.find(isGiftCardCategory);
+        const giftCardLink = giftCategory
+            ? [
+                  {
+                      label: normalizeCategoryLabel(giftCategory),
+                      to: buildCategoryHref(giftCategory),
+                  },
+              ]
+            : [];
+
+        return [
+            ...giftCardLink,
             { label: "Blog", to: "/blogs" },
             { label: "Resources", to: "/help" },
             { label: "Help", to: "/help" },
         ];
-    }, [isAdmin, visibleShopCategories]);
+    }, [visibleShopCategories]);
 
     const querySuggestions = useMemo(
         () => buildPredictiveQuerySuggestions(searchTerm, predictiveProducts),
@@ -1264,19 +1285,86 @@ export default function Header() {
                     ) : null}
 
                     <nav className="flex flex-col">
-                        {drawerLinks.map((link, index) => (
-                            <Link
-                                key={`${link.label}-${link.to}`}
-                                to={link.to}
-                                onClick={() => setIsDrawerOpen(false)}
-                                className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
-                                style={{
-                                    transitionDelay: `${isDrawerOpen ? 80 + index * 40 : 0}ms`,
-                                }}
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
+                        {isAdmin ? (
+                            adminNavLinks.map((link, index) => (
+                                <Link
+                                    key={`${link.label}-${link.to}`}
+                                    to={link.to}
+                                    onClick={() => setIsDrawerOpen(false)}
+                                    className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                    style={{
+                                        transitionDelay: `${isDrawerOpen ? 80 + index * 40 : 0}ms`,
+                                    }}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))
+                        ) : (
+                            <>
+                                {/* Products dropdown — opens on click, chevron rotates */}
+                                <div>
+                                    <button
+                                        type="button"
+                                        aria-expanded={isProductsMenuOpen}
+                                        onClick={() =>
+                                            setIsProductsMenuOpen(
+                                                (current) => !current,
+                                            )
+                                        }
+                                        className="iwj-hamburger-link flex w-full items-center justify-between border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                        style={{
+                                            transitionDelay: `${isDrawerOpen ? 80 : 0}ms`,
+                                        }}
+                                    >
+                                        <span>Products</span>
+                                        <ChevronIcon
+                                            className={`h-3.5 w-3.5 transition-transform duration-300 ${
+                                                isProductsMenuOpen
+                                                    ? "rotate-180"
+                                                    : ""
+                                            }`}
+                                        />
+                                    </button>
+
+                                    <div
+                                        className={`grid overflow-hidden transition-all duration-300 ease-out ${
+                                            isProductsMenuOpen
+                                                ? "grid-rows-[1fr] opacity-100"
+                                                : "grid-rows-[0fr] opacity-0"
+                                        }`}
+                                    >
+                                        <div className="min-h-0">
+                                            {productsMenuLinks.map((link) => (
+                                                <Link
+                                                    key={`${link.label}-${link.to}`}
+                                                    to={link.to}
+                                                    onClick={() =>
+                                                        setIsDrawerOpen(false)
+                                                    }
+                                                    className="iwj-hamburger-link block border-b border-zinc-100 py-3 pl-4 text-[13px] font-medium uppercase tracking-[0.16em] text-zinc-600 transition hover:text-pink-500"
+                                                >
+                                                    {link.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {secondaryDrawerLinks.map((link, index) => (
+                                    <Link
+                                        key={`${link.label}-${link.to}`}
+                                        to={link.to}
+                                        onClick={() => setIsDrawerOpen(false)}
+                                        className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                                        style={{
+                                            transitionDelay: `${isDrawerOpen ? 120 + index * 40 : 0}ms`,
+                                        }}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                            </>
+                        )}
                     </nav>
 
                     <div className="mt-8 space-y-3">

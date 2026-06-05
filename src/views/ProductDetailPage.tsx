@@ -39,6 +39,7 @@ import type {
 } from "../types/product";
 import {
     formatReviewCount,
+    getMetalSwatchImage,
     getMetalToneClass,
     getVariantGallery,
     getVariantImage,
@@ -1054,26 +1055,46 @@ export default function ProductDetailPage({
                                         Color
                                     </p>
                                     <div className="mt-3 flex items-center gap-3">
-                                        {product.variants.map((variant) => (
-                                            <button
-                                                key={variant.id}
-                                                type="button"
-                                                onClick={() =>
-                                                    handleVariantChange(variant)
-                                                }
-                                                title={variant.title}
-                                                className={`h-7 w-7 rounded-full border-2 transition ${
-                                                    selectedVariant.id ===
-                                                    variant.id
-                                                        ? "border-zinc-900"
-                                                        : "border-transparent hover:border-zinc-300"
-                                                }`}
-                                            >
-                                                <span
-                                                    className={`block h-full w-full rounded-full ${isGiftCardProduct ? 'bg-[#de5aa1]' : getMetalToneClass(variant.title)}`}
-                                                />
-                                            </button>
-                                        ))}
+                                        {product.variants.map((variant) => {
+                                            const swatchImage =
+                                                isGiftCardProduct
+                                                    ? undefined
+                                                    : getMetalSwatchImage(
+                                                          variant.title,
+                                                      );
+
+                                            return (
+                                                <button
+                                                    key={variant.id}
+                                                    type="button"
+                                                    onClick={() =>
+                                                        handleVariantChange(
+                                                            variant,
+                                                        )
+                                                    }
+                                                    title={variant.title}
+                                                    className={`h-7 w-7 rounded-full border-2 transition ${
+                                                        selectedVariant.id ===
+                                                        variant.id
+                                                            ? "border-zinc-900"
+                                                            : "border-transparent hover:border-zinc-300"
+                                                    }`}
+                                                >
+                                                    {swatchImage ? (
+                                                        <img
+                                                            src={swatchImage}
+                                                            alt=""
+                                                            aria-hidden="true"
+                                                            className="block h-full w-full rounded-full object-cover"
+                                                        />
+                                                    ) : (
+                                                        <span
+                                                            className={`block h-full w-full rounded-full ${isGiftCardProduct ? "bg-[#de5aa1]" : getMetalToneClass(variant.title)}`}
+                                                        />
+                                                    )}
+                                                </button>
+                                            );
+                                        })}
                                     </div>
 
                                     {isRingCategory ? (
