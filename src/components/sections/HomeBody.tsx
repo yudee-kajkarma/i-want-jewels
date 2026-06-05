@@ -18,8 +18,6 @@ import {
 import type { Product } from "../../types/product";
 import braceletCloseupImage from "../../assets/image/bracelet.jpg";
 import bannerGiftcardImage from "../../assets/image/Gift-card.png";
-import concettaDesktopBanner from "../../assets/concetaa-shopiing-banner/D.Concetta-Collection.jpeg";
-import concettaMobileBanner from "../../assets/concetaa-shopiing-banner/M.Concetta-Collection.png";
 import earringImage from "../../assets/image/earing.jpeg";
 import earringProductImage from "../../assets/image/earing.jpg";
 import necklaceImage from "../../assets/image/nackwear.jpg";
@@ -32,6 +30,7 @@ import braceletCategoryImage from "../../assets/categories/Bracelet.jpg";
 import ringsCategoryImage from "../../assets/categories/Rings.jpg";
 import collectionsCategoryImage from "../../assets/about-us/collections.jpg.jpeg";
 import ProductCard from "./ProductCard";
+import ConcettaShoppableBanner from "./ConcettaShoppableBanner";
 import ShopTheLookBanner from "./ShopTheLookBanner";
 import InstagramGallerySection from "./InstagramGallerySection";
 import NewsletterSection from "./NewsletterSection";
@@ -101,49 +100,6 @@ const qualityPoints = [
     "Brilliant lab-grown diamond jewellery",
     "Premium 925 sterling silver craftsmanship",
     "Elegant 14kt gold plated finishes",
-];
-
-type ConcettaHotspotPosition = {
-    left: string;
-    top: string;
-    size: number;
-};
-
-type ConcettaHotspot = {
-    label: string;
-    href: string;
-    desktop: ConcettaHotspotPosition;
-    mobile: ConcettaHotspotPosition;
-};
-
-// Markers sit over each jewellery piece in the Concetta banner photos and
-// deep-link to the matching product. Positions are percentages of the image,
-// so they track the photo as it scales across breakpoints.
-const concettaHotspots: ConcettaHotspot[] = [
-    {
-        label: "Earrings",
-        href: "products/concetta-long-lab-grown-diamond-earrings-14kt-gold-plating-663613",
-        desktop: { left: "55%", top: "21%", size: 60 },
-        mobile: { left: "42%", top: "28%", size: 34 },
-    },
-    {
-        label: "Pendant",
-        href: "/products/aurora-spark-lab-grown-diamond-necklace-pendant-14kt-gold-639613",
-        desktop: { left: "66.5%", top: "71%", size: 42 },
-        mobile: { left: "59%", top: "59%", size: 26 },
-    },
-    {
-        label: "Necklace",
-        href: "/products/aurora-y-836221",
-        desktop: { left: "68%", top: "87%", size: 78 },
-        mobile: { left: "61%", top: "66%", size: 40 },
-    },
-    {
-        label: "Bracelet",
-        href: "/products/concetta-lab-grown-diamond-bracelet-classic-chain-14kt-gold-347645",
-        desktop: { left: "83.5%", top: "88%", size: 64 },
-        mobile: { left: "83%", top: "73%", size: 34 },
-    },
 ];
 
 function normalizeCategoryValue(value: string): string {
@@ -535,93 +491,7 @@ export default function HomeBody() {
             </section>
 
             {/* Banner Card — Concetta shoppable banner */}
-            <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
-                <div className="relative overflow-hidden">
-                    {/* Desktop */}
-                    <div className="relative hidden lg:block">
-                        <img
-                            src={concettaDesktopBanner.src}
-                            alt="Crafted for modern elegance — the Concetta collection"
-                            className="block h-auto w-full"
-                        />
-
-                        <div className="pointer-events-none absolute left-0 top-0 p-12 xl:p-16">
-                            <h2 className="text-[34px] font-medium uppercase leading-[1.18] tracking-[0.16em] text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.28)] xl:text-[42px]">
-                                <span className="block">Crafted For</span>
-                                <span className="block">Modern Elegance</span>
-                            </h2>
-                        </div>
-
-                        <Link
-                            to={collectionCardHref}
-                            className="absolute bottom-12 left-12 inline-block border border-white px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.24em] text-white transition hover:bg-white hover:text-zinc-900 xl:left-16"
-                        >
-                            Shop Now
-                        </Link>
-
-                        {concettaHotspots.map((hotspot) => (
-                            <Link
-                                key={`concetta-desktop-${hotspot.label}`}
-                                to={hotspot.href}
-                                aria-label={`Shop ${hotspot.label}`}
-                                style={{
-                                    left: hotspot.desktop.left,
-                                    top: hotspot.desktop.top,
-                                    width: hotspot.desktop.size,
-                                    height: hotspot.desktop.size,
-                                }}
-                                className="group/hot absolute grid -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/90 bg-white/0 shadow-[0_0_18px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:border-white hover:bg-white/15"
-                            >
-                                <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_0_4px_rgba(255,255,255,0.22)] transition group-hover/hot:scale-150" />
-                                <span className="pointer-events-none absolute bottom-[calc(100%+10px)] left-1/2 -translate-x-1/2 whitespace-nowrap bg-white px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-800 opacity-0 shadow-md transition duration-300 group-hover/hot:opacity-100">
-                                    {hotspot.label}
-                                </span>
-                            </Link>
-                        ))}
-                    </div>
-
-                    {/* Mobile */}
-                    <div className="relative lg:hidden">
-                        <img
-                            src={concettaMobileBanner.src}
-                            alt="Crafted for modern elegance — the Concetta collection"
-                            className="block h-auto w-full"
-                        />
-
-                        <div className="absolute bottom-5 left-5">
-                            <h2 className="text-[18px] font-medium uppercase leading-[1.22] tracking-[0.12em] text-[#2a211c]">
-                                <span className="block">
-                                    Crafted For Modern
-                                </span>
-                                <span className="block">Elegance</span>
-                            </h2>
-                            <Link
-                                to={collectionCardHref}
-                                className="mt-3 inline-block border border-[#2a211c] px-5 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#2a211c] transition hover:bg-[#2a211c] hover:text-white"
-                            >
-                                Shop Now
-                            </Link>
-                        </div>
-
-                        {concettaHotspots.map((hotspot) => (
-                            <Link
-                                key={`concetta-mobile-${hotspot.label}`}
-                                to={hotspot.href}
-                                aria-label={`Shop ${hotspot.label}`}
-                                style={{
-                                    left: hotspot.mobile.left,
-                                    top: hotspot.mobile.top,
-                                    width: hotspot.mobile.size,
-                                    height: hotspot.mobile.size,
-                                }}
-                                className="absolute grid -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/95 bg-white/0 shadow-[0_0_12px_rgba(0,0,0,0.18)] transition hover:bg-white/20"
-                            >
-                                <span className="h-1 w-1 rounded-full bg-white shadow-[0_0_0_3px_rgba(255,255,255,0.22)]" />
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <ConcettaShoppableBanner />
             {/* Shop by Collection */}
             {collectionGroups.length > 0 ? (
                 <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
