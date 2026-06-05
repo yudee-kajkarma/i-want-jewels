@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
-import Pagination from "../components/sections/Pagination";
 import ProductCard from "../components/sections/ProductCard";
 import ProductsFilters from "../components/sections/ProductsFilters";
 import { useCurrency } from "../context/CurrencyContext";
@@ -83,10 +82,6 @@ function buildFilterSearchParams(
     const defaultMaximumPrice = String(
         filterOptions?.priceRange.max?.[currency] ?? 0,
     );
-
-    if (filters.page > 1) {
-        searchParams.set("page", String(filters.page));
-    }
 
     if (filters.search.trim()) {
         searchParams.set("search", filters.search.trim());
@@ -170,6 +165,8 @@ export default function ProductsPage({
     const { currency } = useCurrency();
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
+    const sentinelRef = useRef<HTMLDivElement | null>(null);
     const [sortOption, setSortOption] = useState<SortOption>("featured");
     const defaultFilterState = useMemo(
         () => buildDefaultFilterState(initialFilterOptions, currency),
@@ -297,8 +294,15 @@ export default function ProductsPage({
         ];
     }
 
-    async function fetchProducts(nextFilters: ProductsFilterState) {
-        setIsLoading(true);
+    async function fetchProducts(
+        nextFilters: ProductsFilterState,
+        mode: "replace" | "append" = "replace",
+    ) {
+        if (mode === "append") {
+            setIsLoadingMore(true);
+        } else {
+            setIsLoading(true);
+        }
 
         try {
             const response = await getProducts({
@@ -330,31 +334,54 @@ export default function ProductsPage({
                 currency: getCurrencyIsoCode(currency),
             });
 
-            setProductsData({
-                ...response,
-                appliedFilters: Array.from(
-                    new Set([
-                        ...response.appliedFilters,
-                        ...buildAppliedFilters(nextFilters),
-                    ]),
-                ),
+            const mergedAppliedFilters = Array.from(
+                new Set([
+                    ...response.appliedFilters,
+                    ...buildAppliedFilters(nextFilters),
+                ]),
+            );
+
+            setProductsData((current) => {
+                if (mode === "append" && current) {
+                    const existingIds = new Set(
+                        current.products.map((product) => product.id),
+                    );
+                    const newProducts = response.products.filter(
+                        (product) => !existingIds.has(product.id),
+                    );
+                    return {
+                        products: [...current.products, ...newProducts],
+                        pagination: response.pagination,
+                        appliedFilters: mergedAppliedFilters,
+                    };
+                }
+                return {
+                    ...response,
+                    appliedFilters: mergedAppliedFilters,
+                };
             });
         } catch {
-            setProductsData({
-                products: [],
-                pagination: {
-                    currentPage: nextFilters.page,
-                    totalPages: 1,
-                    totalRecords: 0,
-                    recordsPerPage: productsPerPage,
-                    hasNextPage: false,
-                    hasPrevPage: nextFilters.page > 1,
-                },
-                appliedFilters: buildAppliedFilters(nextFilters),
-            });
+            if (mode !== "append") {
+                setProductsData({
+                    products: [],
+                    pagination: {
+                        currentPage: nextFilters.page,
+                        totalPages: 1,
+                        totalRecords: 0,
+                        recordsPerPage: productsPerPage,
+                        hasNextPage: false,
+                        hasPrevPage: nextFilters.page > 1,
+                    },
+                    appliedFilters: buildAppliedFilters(nextFilters),
+                });
+            }
         } finally {
-            setIsLoading(false);
-            if (typeof window !== "undefined") {
+            if (mode === "append") {
+                setIsLoadingMore(false);
+            } else {
+                setIsLoading(false);
+            }
+            if (mode !== "append" && typeof window !== "undefined") {
                 const search = buildFilterSearchParams(
                     nextFilters,
                     initialFilterOptions,
@@ -379,15 +406,49 @@ export default function ProductsPage({
         void fetchProducts(normalizedFilters);
     }
 
-    function changePage(pageNumber: number) {
+    function loadMoreProducts() {
+        if (
+            isLoading ||
+            isLoadingMore ||
+            !productsData?.pagination?.hasNextPage
+        ) {
+            return;
+        }
+
         const nextFilters = {
             ...filters,
-            page: pageNumber,
+            page: (productsData.pagination.currentPage ?? filters.page) + 1,
         };
 
         setFilters(nextFilters);
-        void fetchProducts(nextFilters);
+        void fetchProducts(nextFilters, "append");
     }
+
+    useEffect(() => {
+        const sentinel = sentinelRef.current;
+        if (!sentinel) {
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0]?.isIntersecting) {
+                    loadMoreProducts();
+                }
+            },
+            { rootMargin: "200px" },
+        );
+
+        observer.observe(sentinel);
+        return () => observer.disconnect();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [
+        productsData?.pagination?.hasNextPage,
+        productsData?.pagination?.currentPage,
+        isLoading,
+        isLoadingMore,
+        filters,
+    ]);
 
     function resetFilters() {
         setFilters(defaultFilterState);
@@ -652,15 +713,28 @@ export default function ProductsPage({
                                 </div>
                             ) : null}
 
-                            {pagination ? (
-                                <div className="mt-10">
-                                    <Pagination
-                                        pagination={pagination}
-                                        currentItemCount={products.length}
-                                        disabled={isLoading}
-                                        onPageChange={changePage}
+                            {productsData && products.length > 0 ? (
+                                <>
+                                    <div
+                                        ref={sentinelRef}
+                                        aria-hidden="true"
+                                        className="h-1 w-full"
                                     />
-                                </div>
+
+                                    {isLoadingMore ? (
+                                        <p className="mt-8 text-center text-[12px] uppercase tracking-[0.22em] text-zinc-500">
+                                            Loading more products...
+                                        </p>
+                                    ) : null}
+
+                                    {!isLoadingMore &&
+                                    pagination &&
+                                    !pagination.hasNextPage ? (
+                                        <p className="mt-10 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
+                                            You&apos;ve reached the end
+                                        </p>
+                                    ) : null}
+                                </>
                             ) : null}
                         </div>
                     </div>
