@@ -6,9 +6,9 @@ import { Link } from "@/lib/router";
 import { useCurrency } from "../../context/CurrencyContext";
 import { getProductBySlug } from "../../services/productService";
 import type { PriceInput } from "../../utils/price";
-import alessiaRingShellImage from "../../assets/shopping-banner/alessia-collection-2.jpeg";
+import alessiaRingShellImage from "../../assets/shopping-banner/D.Alessia-Rings.png";
 import alessiaBanglesImage from "../../assets/shopping-banner/alessia-collection-1.jpeg";
-import alessiaNecklaceImage from "../../assets/shopping-banner/alessia-collection-3.jpeg";
+import alessiaNecklaceImage from "../../assets/image/D.Alessia-Necklace.png";
 import alessiaModelImage from "../../assets/shopping-banner/alessia-collection-4.png";
 
 const ALESSIA_COLLECTION_HREF = "/products?collection=Alessia";
@@ -203,7 +203,7 @@ export default function ShopTheLookBanner() {
                             />
                             <Link
                                 to={ALESSIA_COLLECTION_HREF}
-                                className="absolute bottom-5 right-5 border border-zinc-900 bg-white/95 px-6 py-3 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
+                                className="absolute bottom-5 right-5 border border-zinc-900 bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
                             >
                                 Explore More
                             </Link>

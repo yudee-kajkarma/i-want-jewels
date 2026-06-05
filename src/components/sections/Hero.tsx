@@ -2,7 +2,7 @@
 
 import { Link } from "@/lib/router";
 import bannerHero from "@/assets/banner/Banner-Hero.jpg";
-import bannerHeroSmall from "@/assets/banner/Hero-Banner-sm.png";
+import bannerHeroSmall from "@/assets/image/M.Banner.jpeg";
 import shopPageBanner from "@/assets/banner/Shop-page-banner.jpg";
 
 export default function Hero() {
