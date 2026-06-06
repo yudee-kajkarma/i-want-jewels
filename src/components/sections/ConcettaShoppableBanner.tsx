@@ -49,6 +49,13 @@ const HOTSPOTS: ConcettaHotspot[] = [
         mobile: { x: "59%", y: "59%", size: "sm", open: "left" },
     },
     {
+        key: "ring",
+        slug: "renata-lab-grown-diamond-ring-classic-setting-14kt-gold-579837",
+        fallbackLabel: "Renata Ring",
+        desktop: { x: "75%", y: "50%", size: "sm", open: "left" },
+        mobile: { x: "73%", y: "46%", size: "sm", open: "left" },
+    },
+    {
         key: "necklace",
         slug: "aurora-y-836221",
         fallbackLabel: "Aurora Necklace",

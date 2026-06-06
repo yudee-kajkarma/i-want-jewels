@@ -6,10 +6,8 @@ import { Link } from "@/lib/router";
 import { useCurrency } from "../../context/CurrencyContext";
 import { getProductBySlug } from "../../services/productService";
 import type { PriceInput } from "../../utils/price";
-import alessiaRingShellImage from "../../assets/shopping-banner/D.Alessia-Rings.png";
-import alessiaBanglesImage from "../../assets/shopping-banner/alessia-collection-1.jpeg";
-import alessiaNecklaceImage from "../../assets/image/D.Alessia-Necklace.png";
-import alessiaModelImage from "../../assets/shopping-banner/alessia-collection-4.png";
+import alessiaCollageImage from "../../assets/shopping-banner/alessia-1.jpg";
+import alessiaModelImage from "../../assets/alessia-collection-4.png";
 
 const ALESSIA_COLLECTION_HREF = "/products?collection=Alessia";
 
@@ -35,7 +33,7 @@ const HOTSPOTS: HotspotConfig[] = [
         key: "ring",
         slug: "alessia-lab-grown-diamond-ring-delicate-14kt-gold-plating-088317",
         fallbackLabel: "Diamond Ring",
-        x: "12.5%",
+        x: "15%",
         y: "63%",
         size: "sm",
         open: "right",
@@ -44,8 +42,17 @@ const HOTSPOTS: HotspotConfig[] = [
         key: "necklace",
         slug: "alessia-lab-grown-diamond-necklace-layering-pendant-14kt-gold-032829",
         fallbackLabel: "Layering Necklace",
-        x: "52%",
+        x: "62.5%",
         y: "65%",
+        size: "sm",
+        open: "right",
+    },
+    {
+        key: "necklace2",
+        slug: "vittoria-lab-grown-diamond-necklace-classic-pendant-14kt-gold-884797",
+        fallbackLabel: "Layering Necklace",
+        x: "64%",
+        y: "60%",
         size: "sm",
         open: "right",
     },
@@ -53,7 +60,7 @@ const HOTSPOTS: HotspotConfig[] = [
         key: "bracelet",
         slug: "alessia-lab-grown-diamond-bracelet-carat-crush-14kt-gold-888893",
         fallbackLabel: "Carat Crush Bracelet",
-        x: "46%",
+        x: "56%",
         y: "77%",
         size: "lg",
         open: "left",
@@ -184,37 +191,25 @@ export default function ShopTheLookBanner() {
                         <span className="block">Alessia Collection</span>
                     </h2>
 
-                    <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+                    <div className="relative mt-8">
                         <img
-                            src={alessiaRingShellImage.src}
-                            alt="Alessia diamond ring resting on a seashell"
-                            className="aspect-square w-full object-cover"
+                            src={alessiaCollageImage.src}
+                            alt="Alessia collection: ring, bracelets, and necklace"
+                            className="w-full object-cover"
                         />
-                        <img
-                            src={alessiaBanglesImage.src}
-                            alt="Stacked Alessia diamond bracelets"
-                            className="aspect-square w-full object-cover"
-                        />
-                        <div className="relative col-span-2">
-                            <img
-                                src={alessiaNecklaceImage.src}
-                                alt="Alessia horseshoe pendant necklace"
-                                className="aspect-[16/10] w-full object-cover"
-                            />
-                            <Link
-                                to={ALESSIA_COLLECTION_HREF}
-                                className="absolute bottom-5 right-5 border border-zinc-900 bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
-                            >
-                                Explore More
-                            </Link>
-                        </div>
+                        <Link
+                            to={ALESSIA_COLLECTION_HREF}
+                            className="absolute bottom-5 left-5 border border-zinc-900 bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
+                        >
+                            Explore More
+                        </Link>
                     </div>
                 </div>
 
                 {/* Right: shoppable model image */}
                 <div
                     ref={containerRef}
-                    className="relative aspect-[4/5] w-full"
+                    className="relative aspect-[4/5] w-full h-full flex items-center"
                 >
                     <img
                         src={alessiaModelImage.src}

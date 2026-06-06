@@ -25,7 +25,7 @@ import ringModelImage from "../../assets/image/ring.jpeg";
 import brandLogo from "../../assets/logo.svg";
 import earringsCategoryImage from "../../assets/categories/Earrings.jpg";
 import necklaceCategoryImage from "../../assets/categories/Necklace.jpg";
-import braceletCategoryImage from "../../assets/categories/Bracelet.jpg";
+import braceletCategoryImage from "../../assets/categories/Bracelet.png";
 import ringsCategoryImage from "../../assets/categories/Rings.jpg";
 import collectionsCategoryImage from "../../assets/about-us/collections.jpg.jpeg";
 import ProductCard from "./ProductCard";

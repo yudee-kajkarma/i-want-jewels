@@ -3,7 +3,7 @@
 import { Link } from "@/lib/router";
 import bannerHero from "@/assets/banner/Banner-Hero.jpg";
 import bannerHeroSmall from "@/assets/image/M.Banner.jpeg";
-import shopPageBanner from "@/assets/banner/Shop-page-banner.jpg";
+import shopPageBanner from "@/assets/banner/hero-banner.jpeg";
 
 export default function Hero() {
     return (
