@@ -15,7 +15,7 @@ import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
-import ringSizeGuideImage from "../assets/image/ringsize.jpeg";
+import ringSizeGuideImage from "../assets/image/Ring-Size-Guide.jpeg";
 import { useAuth } from "../context/AuthContext";
 import { useCurrency } from "../context/CurrencyContext";
 import {
@@ -1601,7 +1601,10 @@ export default function ProductDetailPage({
                         <img
                             src={ringSizeGuideImage.src}
                             alt="Ring size guide"
-                            className="block h-auto max-h-[92vh] w-auto max-w-[96vw] object-contain sm:max-w-[92vw] lg:max-w-[88vw]"
+                            width={755}
+                            height={1068}
+                            className="block h-auto max-h-[92vh] w-[755px] max-w-[96vw] object-contain"
+                            style={{ aspectRatio: "755 / 1068" }}
                         />
 
                         <button

@@ -13,6 +13,7 @@ import { setSingleCheckoutDraft } from "../../utils/checkoutStorage";
 import type { Product } from "../../types/product";
 import {
     findVariantByMetals,
+    getMetalSwatchImage,
     getMetalToneClass,
     getVariantGallery,
     getVariantImage,
@@ -479,6 +480,8 @@ export default function ProductCard({
                                 variant.title.split("/")[0]?.trim() ||
                                 variant.title;
                             const isActive = variant.id === selectedVariant?.id;
+                            const swatchImageSrc =
+                                getMetalSwatchImage(metalLabel);
 
                             return (
                                 <button
@@ -488,12 +491,21 @@ export default function ProductCard({
                                     onClick={() =>
                                         setSelectedVariantId(variant.id)
                                     }
-                                    className={`h-5 w-5 rounded-full border-2 border-white shadow-sm transition ${getMetalToneClass(metalLabel)} ${
+                                    className={`h-5 w-5 overflow-hidden rounded-full border-2 border-white shadow-sm transition ${swatchImageSrc ? "" : getMetalToneClass(metalLabel)} ${
                                         isActive
                                             ? "ring-1 ring-[#3b342f] ring-offset-2"
                                             : "ring-0"
                                     }`}
-                                />
+                                >
+                                    {swatchImageSrc ? (
+                                        <img
+                                            src={swatchImageSrc}
+                                            alt=""
+                                            aria-hidden="true"
+                                            className="h-full w-full object-cover"
+                                        />
+                                    ) : null}
+                                </button>
                             );
                         })}
                     </div>
@@ -685,12 +697,13 @@ export default function ProductCard({
                     </h3>
                 </Link>
 
-                {/* <div className="flex items-center gap-2.5 transition-all duration-300 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                <div className="flex items-center gap-2.5 transition-all duration-300 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                     {item.variants.map((variant) => {
                         const metalLabel =
                             variant.title.split("/")[0]?.trim() ||
                             variant.title;
                         const isActive = variant.id === selectedVariant?.id;
+                        const swatchImageSrc = getMetalSwatchImage(metalLabel);
 
                         return (
                             <button
@@ -698,15 +711,24 @@ export default function ProductCard({
                                 type="button"
                                 title={variant.title}
                                 onClick={() => setSelectedVariantId(variant.id)}
-                                className={`h-5 w-5 rounded-full border-2 border-white shadow-sm transition ${getMetalToneClass(metalLabel)} ${
+                                className={`h-5 w-5 overflow-hidden rounded-full border-2 border-white shadow-sm transition ${swatchImageSrc ? "" : getMetalToneClass(metalLabel)} ${
                                     isActive
                                         ? "ring-1 ring-[#3b342f] ring-offset-2"
                                         : "ring-0"
                                 }`}
-                            />
+                            >
+                                {swatchImageSrc ? (
+                                    <img
+                                        src={swatchImageSrc}
+                                        alt=""
+                                        aria-hidden="true"
+                                        className="h-full w-full object-cover"
+                                    />
+                                ) : null}
+                            </button>
                         );
                     })}
-                </div> */}
+                </div>
 
                 <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 text-[#26221f]">
                     <p className="text-sm md:text-[1.2rem] font-semibold leading-none tracking-[-0.04em]">
