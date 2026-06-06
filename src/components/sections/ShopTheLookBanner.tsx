@@ -199,7 +199,7 @@ export default function ShopTheLookBanner() {
                         />
                         <Link
                             to={ALESSIA_COLLECTION_HREF}
-                            className="absolute bottom-5 left-5 border border-zinc-900 bg-transparent px-6 py-3 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
+                            className="absolute bottom-2 left-2 md:bottom-5 md:left-5 border border-zinc-900 bg-transparent md:px-6 px-1.5 md:py-3 py-2 md:text-[11px] text-[9px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
                         >
                             Explore More
                         </Link>
