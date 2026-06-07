@@ -6,7 +6,7 @@ import { Link } from "@/lib/router";
 import { useCurrency } from "../../context/CurrencyContext";
 import { getProductBySlug } from "../../services/productService";
 import type { PriceInput } from "../../utils/price";
-import concettaDesktopBanner from "../../assets/concetaa-shopiing-banner/D.Concetta-Collection.jpeg";
+import concettaDesktopBanner from "../../assets/imageD.Concetta-Collection1.jpeg";
 import concettaMobileBanner from "../../assets/concetaa-shopiing-banner/M.Concetta-Collection.png";
 
 const CONCETTA_COLLECTION_HREF = "/products?collection=Concetta";
