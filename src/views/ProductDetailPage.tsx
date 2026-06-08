@@ -424,7 +424,9 @@ export default function ProductDetailPage({
     const [selectedImageId, setSelectedImageId] = useState(
         getInitialImageId(initialProduct),
     );
-    const [selectedSizeIndex, setSelectedSizeIndex] = useState<number | null>(null);
+    const [selectedSizeIndex, setSelectedSizeIndex] = useState<number | null>(
+        null,
+    );
     const [quantity, setQuantity] = useState(1);
     const [giftRecipientEmail, setGiftRecipientEmail] = useState("");
     const [giftRecipientName, setGiftRecipientName] = useState("");
@@ -572,7 +574,7 @@ export default function ProductDetailPage({
         selectedVariant?.sizes &&
         selectedVariant.sizes.length > 0 &&
         selectedVariant.sizes.every(
-            (s) => typeof s?.size === 'number' && typeof s?.stock === 'number',
+            (s) => typeof s?.size === "number" && typeof s?.stock === "number",
         )
     );
 
@@ -582,7 +584,9 @@ export default function ProductDetailPage({
             setSelectedSizeIndex(null);
             return;
         }
-        const firstInStock = selectedVariant!.sizes!.findIndex((s) => s.stock > 0);
+        const firstInStock = selectedVariant!.sizes!.findIndex(
+            (s) => s.stock > 0,
+        );
         setSelectedSizeIndex(firstInStock >= 0 ? firstInStock : 0);
     }, [selectedVariant, variantHasSizes]);
 
@@ -663,18 +667,18 @@ export default function ProductDetailPage({
 
         const isGiftCardProduct = product.productType === "GIFT_CARD";
 
-
         setIsAddingToCart(true);
         setCartFeedback("");
 
         try {
-            const chosenSize = variantHasSizes && selectedSizeIndex !== null
-                ? selectedVariant.sizes![selectedSizeIndex]?.size
-                : undefined
+            const chosenSize =
+                variantHasSizes && selectedSizeIndex !== null
+                    ? selectedVariant.sizes![selectedSizeIndex]?.size
+                    : undefined;
             if (variantHasSizes && chosenSize === undefined) {
-                setCartFeedback('Please choose a size before adding to cart.')
-                setIsAddingToCart(false)
-                return
+                setCartFeedback("Please choose a size before adding to cart.");
+                setIsAddingToCart(false);
+                return;
             }
 
             await dispatch(
@@ -686,9 +690,12 @@ export default function ProductDetailPage({
                     ...(isGiftCardProduct
                         ? {
                               giftCard: {
-                                  recipientEmail: giftRecipientEmail.trim() || undefined,
-                                  recipientName: giftRecipientName.trim() || undefined,
-                                  senderName: giftSenderName.trim() || undefined,
+                                  recipientEmail:
+                                      giftRecipientEmail.trim() || undefined,
+                                  recipientName:
+                                      giftRecipientName.trim() || undefined,
+                                  senderName:
+                                      giftSenderName.trim() || undefined,
                                   message: giftMessage.trim() || undefined,
                               },
                           }
@@ -718,17 +725,18 @@ export default function ProductDetailPage({
             return;
         }
 
-        const chosenSize = variantHasSizes && selectedSizeIndex !== null
-            ? selectedVariant.sizes![selectedSizeIndex]?.size
-            : undefined;
+        const chosenSize =
+            variantHasSizes && selectedSizeIndex !== null
+                ? selectedVariant.sizes![selectedSizeIndex]?.size
+                : undefined;
         if (variantHasSizes && chosenSize === undefined) {
-            setCartFeedback('Please choose a size before buying.');
+            setCartFeedback("Please choose a size before buying.");
             return;
         }
 
         const draft = {
             item: {
-                id: `${product.id}-${selectedVariant.id}${chosenSize !== undefined ? `-${chosenSize}` : ''}`,
+                id: `${product.id}-${selectedVariant.id}${chosenSize !== undefined ? `-${chosenSize}` : ""}`,
                 productId: product.id,
                 variantId: selectedVariant.id,
                 title: product.title,
@@ -737,7 +745,9 @@ export default function ProductDetailPage({
                 price: selectedVariant.price,
                 quantity,
                 ...(chosenSize !== undefined ? { size: chosenSize } : {}),
-                ...(selectedVariant.sizeMeasurement ? { sizeMeasurement: selectedVariant.sizeMeasurement } : {}),
+                ...(selectedVariant.sizeMeasurement
+                    ? { sizeMeasurement: selectedVariant.sizeMeasurement }
+                    : {}),
             },
             returnPath: location.pathname,
         };
@@ -907,33 +917,36 @@ export default function ProductDetailPage({
                             <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
                                 <div className="grid gap-5 lg:grid-cols-[120px_minmax(0,1fr)]">
                                     <div className="order-2 flex gap-3 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                                        {galleryImages.map((image, imageIdx) => {
-                                            const isSelectedImage =
-                                                selectedImage?.id === image.id;
+                                        {galleryImages.map(
+                                            (image, imageIdx) => {
+                                                const isSelectedImage =
+                                                    selectedImage?.id ===
+                                                    image.id;
 
-                                            return (
-                                                <button
-                                                    key={`${image.id}-${imageIdx}`}
-                                                    type="button"
-                                                    onClick={() =>
-                                                        setSelectedImageId(
-                                                            image.id,
-                                                        )
-                                                    }
-                                                    className={`min-w-[100px] overflow-hidden border bg-white transition lg:min-w-0 ${
-                                                        isSelectedImage
-                                                            ? "border-zinc-900"
-                                                            : "border-zinc-200 hover:border-zinc-500"
-                                                    }`}
-                                                >
-                                                    <img
-                                                        src={image.src}
-                                                        alt={product.title}
-                                                        className="block h-24 w-full object-cover"
-                                                    />
-                                                </button>
-                                            );
-                                        })}
+                                                return (
+                                                    <button
+                                                        key={`${image.id}-${imageIdx}`}
+                                                        type="button"
+                                                        onClick={() =>
+                                                            setSelectedImageId(
+                                                                image.id,
+                                                            )
+                                                        }
+                                                        className={`min-w-[100px] overflow-hidden border bg-white transition lg:min-w-0 ${
+                                                            isSelectedImage
+                                                                ? "border-zinc-900"
+                                                                : "border-zinc-200 hover:border-zinc-500"
+                                                        }`}
+                                                    >
+                                                        <img
+                                                            src={image.src}
+                                                            alt={product.title}
+                                                            className="block h-24 w-full object-cover"
+                                                        />
+                                                    </button>
+                                                );
+                                            },
+                                        )}
                                     </div>
 
                                     <div className="order-1 relative overflow-hidden bg-zinc-50 lg:order-2">
@@ -975,11 +988,24 @@ export default function ProductDetailPage({
                                 <div>
                                     <h1 className="text-[28px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px] lg:text-[36px]">
                                         {(() => {
-                                            const match = product.title.match(/^(.*?)\s*(lab grown.*)$/i)
+                                            const match = product.title.match(
+                                                /^(.*?)\s*(lab grown.*)$/i,
+                                            );
                                             if (match) {
-                                                return <><span className="font-bold">{match[1]}</span>{' '}{match[2]}</>
+                                                return (
+                                                    <>
+                                                        <span className="font-bold">
+                                                            {match[1]}
+                                                        </span>{" "}
+                                                        {match[2]}
+                                                    </>
+                                                );
                                             }
-                                            return <span className="font-bold">{product.title}</span>
+                                            return (
+                                                <span className="font-bold">
+                                                    {product.title}
+                                                </span>
+                                            );
                                         })()}
                                     </h1>
                                     {product.h2 ? (
@@ -1044,7 +1070,8 @@ export default function ProductDetailPage({
                                                 <span className="text-zinc-900">
                                                     Total Diamond Weight:
                                                 </span>{" "}
-                                                {product.totalDiamondWeight} carats
+                                                {product.totalDiamondWeight}{" "}
+                                                carats
                                             </p>
                                         ) : null}
                                     </div>
@@ -1111,7 +1138,7 @@ export default function ProductDetailPage({
                                         </div>
                                     ) : null}
 
-                                    {variantHasSizes ? (
+                                    {/* {variantHasSizes ? (
                                         <div className="mt-5">
                                             <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
                                                 Size{selectedVariant.sizeMeasurement ? ` (${selectedVariant.sizeMeasurement})` : ''}
@@ -1141,7 +1168,7 @@ export default function ProductDetailPage({
                                                 })}
                                             </div>
                                         </div>
-                                    ) : null}
+                                    ) : null} */}
 
                                     {isGiftCardProduct ? (
                                         <div className="mt-6 space-y-3 border border-zinc-200 bg-zinc-50 p-4">
@@ -1149,32 +1176,50 @@ export default function ProductDetailPage({
                                                 Send this gift card
                                             </p>
                                             <p className="text-[12px] text-zinc-500">
-                                                Leave the email blank to keep it for yourself. Gift cards require online payment.
+                                                Leave the email blank to keep it
+                                                for yourself. Gift cards require
+                                                online payment.
                                             </p>
                                             <input
                                                 type="email"
                                                 value={giftRecipientEmail}
-                                                onChange={(e) => setGiftRecipientEmail(e.target.value)}
+                                                onChange={(e) =>
+                                                    setGiftRecipientEmail(
+                                                        e.target.value,
+                                                    )
+                                                }
                                                 placeholder="Recipient email (optional)"
                                                 className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                                             />
                                             <input
                                                 type="text"
                                                 value={giftRecipientName}
-                                                onChange={(event) => setGiftRecipientName(event.target.value)}
+                                                onChange={(event) =>
+                                                    setGiftRecipientName(
+                                                        event.target.value,
+                                                    )
+                                                }
                                                 placeholder="Recipient name (optional)"
                                                 className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                                             />
                                             <input
                                                 type="text"
                                                 value={giftSenderName}
-                                                onChange={(event) => setGiftSenderName(event.target.value)}
+                                                onChange={(event) =>
+                                                    setGiftSenderName(
+                                                        event.target.value,
+                                                    )
+                                                }
                                                 placeholder="Your name (optional)"
                                                 className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                                             />
                                             <textarea
                                                 value={giftMessage}
-                                                onChange={(event) => setGiftMessage(event.target.value)}
+                                                onChange={(event) =>
+                                                    setGiftMessage(
+                                                        event.target.value,
+                                                    )
+                                                }
                                                 placeholder="Personal message (optional)"
                                                 className="min-h-[80px] w-full border border-zinc-300 px-3 py-2 text-[13px] outline-none focus:border-zinc-800"
                                             />
@@ -1183,7 +1228,9 @@ export default function ProductDetailPage({
 
                                     <div className="mt-6">
                                         <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                            {isGiftCardProduct ? "Quantity (codes)" : "Quantity"}
+                                            {isGiftCardProduct
+                                                ? "Quantity (codes)"
+                                                : "Quantity"}
                                         </p>
 
                                         <div className="grid grid-cols-[120px_minmax(0,1fr)] gap-3 items-stretch">
