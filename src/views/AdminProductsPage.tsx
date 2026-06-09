@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { FileSpreadsheet, Plus } from 'lucide-react'
+import { FileSpreadsheet, Plus, Search, X } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from '@/lib/router'
 import AdminProductFilterModal from '../components/admin/AdminProductFilterModal'
@@ -59,6 +59,7 @@ export default function AdminProductsPage() {
   const [createStep, setCreateStep] = useState<1 | 2>(1)
   const [form, setForm] = useState<EditableProductForm>(createEmptyForm)
   const [filters, setFilters] = useState<AdminFilters>(defaultFilters)
+  const [searchTerm, setSearchTerm] = useState('')
   const [isSaving, setIsSaving] = useState(false)
   const [isEditModalLoading, setIsEditModalLoading] = useState(false)
   const [isDeleting, setIsDeleting] = useState<string | null>(null)
@@ -147,13 +148,18 @@ export default function AdminProductsPage() {
     }
   }
 
-  async function loadProducts(currentFilters: AdminFilters = filters, page: number = currentPage) {
+  async function loadProducts(
+    currentFilters: AdminFilters = filters,
+    page: number = currentPage,
+    search: string = searchTerm,
+  ) {
     setIsLoading(true)
     setError('')
 
     try {
       const response = await getAllProductsForAdmin({
         ...buildServerFilters(currentFilters),
+        search: search.trim() || undefined,
         page,
         limit: recordsPerPage,
       })
@@ -170,6 +176,15 @@ export default function AdminProductsPage() {
 
   function handleFilterChange<Key extends keyof AdminFilters>(key: Key, value: AdminFilters[Key]) {
     setFilters((currentValue) => ({ ...currentValue, [key]: value }))
+  }
+
+  async function handleSearch() {
+    await loadProducts(filters, 1, searchTerm)
+  }
+
+  async function handleClearSearch() {
+    setSearchTerm('')
+    await loadProducts(filters, 1, '')
   }
 
   async function handleApplyFilters() {
@@ -767,6 +782,44 @@ export default function AdminProductsPage() {
           </div>
 
           {error ? <p className="mt-6 border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">{error}</p> : null}
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="relative flex-1">
+              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[#b76499]" />
+              <input
+                type="search"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') {
+                    event.preventDefault()
+                    void handleSearch()
+                  }
+                }}
+                placeholder="Search by SKU, title, vendor, category..."
+                className="w-full border border-[#e9b7d6] bg-white py-3 pl-11 pr-10 text-sm text-[#2b1323] outline-none transition placeholder:text-[#b58aa6] focus:border-[#cc4f8f] focus:ring-2 focus:ring-[#f2c4de]"
+              />
+              {searchTerm ? (
+                <button
+                  type="button"
+                  onClick={() => void handleClearSearch()}
+                  aria-label="Clear search"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#b76499] transition hover:text-[#7b235c]"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              ) : null}
+            </div>
+            <button
+              type="button"
+              onClick={() => void handleSearch()}
+              disabled={isLoading}
+              className="inline-flex items-center justify-center gap-2 bg-[#cc4f8f] px-6 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
+            >
+              <Search className="h-4 w-4" />
+              Search
+            </button>
+          </div>
 
           <AdminProductsTable
             isLoading={isLoading}

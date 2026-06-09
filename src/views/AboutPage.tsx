@@ -9,12 +9,6 @@ import aboutGalleryImage1 from "../assets/about-us/under-about1.jpeg";
 import aboutGalleryImage2 from "../assets/about-us/under-about2.jpeg";
 import aboutGalleryImage3 from "../assets/about-us/under-about3.jpeg";
 
-const aboutPoints = [
-    "Brilliant lab-grown diamond jewellery",
-    "Premium 925 sterling silver craftsmanship",
-    "Elegant 14kt gold plated finishes",
-];
-
 const galleryImages = [
     aboutGalleryImage1.src,
     aboutGalleryImage2.src,
@@ -248,8 +242,9 @@ export default function AboutPage() {
                     </div>
                 </section> */}
 
-                <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:py-16">
-                    <div className="mx-auto max-w-2xl">
+                <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
+                    <div className="mx-auto grid max-w-[1480px] items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
+                        <div className="max-w-2xl">
                         <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-400">
                             Where it began
                         </p>
@@ -296,6 +291,12 @@ export default function AboutPage() {
                                 customer.
                             </p>
                         </div>
+                        </div>
+                        <img
+                            src={aboutHeroImage.src}
+                            alt="Woman wearing statement jewellery"
+                            className="block h-[360px] w-full object-cover md:h-[460px] lg:h-[560px]"
+                        />
                     </div>
                 </section>
 
@@ -426,61 +427,7 @@ export default function AboutPage() {
                 </section>
 
                 <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
-                    <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
-                        <img
-                            src={aboutHeroImage.src}
-                            alt="Woman wearing statement jewellery"
-                            className="block h-[360px] w-full object-cover md:h-[460px] lg:h-[520px]"
-                        />
-
-                        <div>
-                            <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-[15px] font-parsi">
-                                Why Customers Choose
-                            </h2>
-                            <h3 className="mt-3 max-w-md text-[26px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px] font-parsi">
-                                Modern pieces crafted to look polished every
-                                day.
-                            </h3>
-                            <p className="mt-5 max-w-xl text-[14px] leading-7 text-zinc-600">
-                                Based in the historic diamond city of Antwerp, I
-                                Want Jewels creates modern jewellery crafted
-                                with lab-grown diamonds, 925 sterling silver,
-                                and 14kt gold plating. Our collections combine
-                                responsible craftsmanship with timeless design,
-                                offering elegant pieces made to elevate everyday
-                                style.
-                            </p>
-                            <ul className="mt-7 space-y-3">
-                                {aboutPoints.map((point) => (
-                                    <li
-                                        key={point}
-                                        className="flex items-center gap-3 text-[13px] uppercase tracking-[0.14em] text-zinc-800"
-                                    >
-                                        <span className="h-1.5 w-1.5 bg-pink-500" />
-                                        <span>{point}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
-                    <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl font-parsi">
-                        Why Choose I Want Jewels
-                    </h2>
-                    <p className="mt-5 max-w-3xl text-[14px] leading-7 text-zinc-600">
-                        At I Want Jewels, we combine Antwerp&apos;s renowned
-                        jewellery heritage with modern craftsmanship to create
-                        pieces that shine with elegance and quality. Our
-                        collections feature lab-grown diamonds, 925 sterling
-                        silver, and refined 14kt gold plating, offering the
-                        brilliance of fine jewellery with responsible sourcing.
-                        Each piece is thoughtfully designed to balance timeless
-                        beauty with everyday wearability.
-                    </p>
-
-                    <div className="mt-10 grid gap-4 md:grid-cols-3">
+                    <div className="grid gap-4 md:grid-cols-3">
                         {galleryImages.map((image, index) => (
                             <img
                                 key={image}
