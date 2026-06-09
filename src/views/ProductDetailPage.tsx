@@ -1078,64 +1078,66 @@ export default function ProductDetailPage({
                                 </div>
 
                                 <div className="border-t border-zinc-200 py-5">
-                                    <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                        Color
-                                    </p>
-                                    <div className="mt-3 flex items-center gap-3">
-                                        {product.variants.map((variant) => {
-                                            const swatchImage =
-                                                isGiftCardProduct
-                                                    ? undefined
-                                                    : getMetalSwatchImage(
-                                                          variant.title,
-                                                      );
+                                    {!isGiftCardProduct ? (
+                                        <>
+                                            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                                Color
+                                            </p>
+                                            <div className="mt-3 flex items-center gap-3">
+                                                {product.variants.map((variant) => {
+                                                    const swatchImage =
+                                                        getMetalSwatchImage(
+                                                            variant.title,
+                                                        );
 
-                                            return (
-                                                <button
-                                                    key={variant.id}
-                                                    type="button"
-                                                    onClick={() =>
-                                                        handleVariantChange(
-                                                            variant,
-                                                        )
-                                                    }
-                                                    title={variant.title}
-                                                    className={`h-7 w-7 rounded-full border-2 transition ${
-                                                        selectedVariant.id ===
-                                                        variant.id
-                                                            ? "border-zinc-900"
-                                                            : "border-transparent hover:border-zinc-300"
-                                                    }`}
-                                                >
-                                                    {swatchImage ? (
-                                                        <img
-                                                            src={swatchImage}
-                                                            alt=""
-                                                            aria-hidden="true"
-                                                            className="block h-full w-full rounded-full object-cover"
-                                                        />
-                                                    ) : (
-                                                        <span
-                                                            className={`block h-full w-full rounded-full ${isGiftCardProduct ? "bg-[#de5aa1]" : getMetalToneClass(variant.title)}`}
-                                                        />
-                                                    )}
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
+                                                    return (
+                                                        <button
+                                                            key={variant.id}
+                                                            type="button"
+                                                            onClick={() =>
+                                                                handleVariantChange(
+                                                                    variant,
+                                                                )
+                                                            }
+                                                            title={variant.title}
+                                                            className={`h-7 w-7 rounded-full border-2 transition ${
+                                                                selectedVariant.id ===
+                                                                variant.id
+                                                                    ? "border-zinc-900"
+                                                                    : "border-transparent hover:border-zinc-300"
+                                                            }`}
+                                                        >
+                                                            {swatchImage ? (
+                                                                <img
+                                                                    src={swatchImage}
+                                                                    alt=""
+                                                                    aria-hidden="true"
+                                                                    className="block h-full w-full rounded-full object-cover"
+                                                                />
+                                                            ) : (
+                                                                <span
+                                                                    className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`}
+                                                                />
+                                                            )}
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
 
-                                    {isRingCategory ? (
-                                        <div className="mt-4 flex items-center text-sm">
-                                            <button
-                                                type="button"
-                                                onClick={() =>
-                                                    setIsSizeGuideOpen(true)
-                                                }
-                                                className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
-                                            >
-                                                View Size Guide
-                                            </button>
-                                        </div>
+                                            {isRingCategory ? (
+                                                <div className="mt-4 flex items-center text-sm">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() =>
+                                                            setIsSizeGuideOpen(true)
+                                                        }
+                                                        className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
+                                                    >
+                                                        View Size Guide
+                                                    </button>
+                                                </div>
+                                            ) : null}
+                                        </>
                                     ) : null}
 
                                     {/* {variantHasSizes ? (
