@@ -692,8 +692,12 @@ export default function ProductCard({
             <div className="flex flex-1 flex-col gap-3 px-2 pb-2 pt-4">
                 <Link to={productDetailUrl} className="block">
                     <h3 className="text-[1rem] font-medium leading-none tracking-[-0.03em] text-[#26221f] transition hover:text-[#f23ea9]">
-                        {item.title.split(" ")[0]?.trim() || item.title}{" "}
-                        {item.category}
+                        {item.title.split(" ")[0]?.trim() || item.title}
+                        {item.productType !== "GIFT_CARD" &&
+                        item.category &&
+                        item.category.toLowerCase() !== "jewellery"
+                            ? ` ${item.category}`
+                            : ""}
                     </h3>
                 </Link>
 

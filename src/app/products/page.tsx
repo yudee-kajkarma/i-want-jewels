@@ -181,6 +181,9 @@ export default async function Page({ searchParams }: PageProps) {
   }
 
   const filterState = buildFilterState(resolvedSearchParams, filterOptions)
+  // Gift card prices (50/100/200) sit below the physical-product price floor
+  // returned by /all-filters, so forwarding priceMin would hide them.
+  const isGiftCardCategory = filterState.category.trim().toLowerCase() === 'gift card'
   const productsResponse = await getProducts({
     page: filterState.page,
     limit: productsPerPage,
@@ -197,8 +200,8 @@ export default async function Page({ searchParams }: PageProps) {
     tags: filterState.tags.length > 0 ? filterState.tags : undefined,
     metal: filterState.metal.length > 0 ? filterState.metal : undefined,
     collection: filterState.collection.length > 0 ? filterState.collection : undefined,
-    priceMin: filterState.priceMin || undefined,
-    priceMax: filterState.priceMax || undefined,
+    priceMin: isGiftCardCategory ? undefined : (filterState.priceMin || undefined),
+    priceMax: isGiftCardCategory ? undefined : (filterState.priceMax || undefined),
     carat: filterState.carat || undefined,
   }).catch(() => null)
 

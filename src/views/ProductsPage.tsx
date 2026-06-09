@@ -289,6 +289,11 @@ export default function ProductsPage({
             setIsLoading(true);
         }
 
+        // Gift card prices (50/100/200) sit below the physical-product price
+        // floor returned by /all-filters, so forwarding priceMin would hide them.
+        const isGiftCardCategory =
+            nextFilters.category.trim().toLowerCase() === "gift card";
+
         try {
             const response = await getProducts({
                 page: nextFilters.page,
@@ -313,8 +318,12 @@ export default function ProductsPage({
                     nextFilters.collection.length > 0
                         ? nextFilters.collection
                         : undefined,
-                priceMin: nextFilters.priceMin || undefined,
-                priceMax: nextFilters.priceMax || undefined,
+                priceMin: isGiftCardCategory
+                    ? undefined
+                    : nextFilters.priceMin || undefined,
+                priceMax: isGiftCardCategory
+                    ? undefined
+                    : nextFilters.priceMax || undefined,
                 carat: nextFilters.carat || undefined,
                 currency: getCurrencyIsoCode(currency),
             });
