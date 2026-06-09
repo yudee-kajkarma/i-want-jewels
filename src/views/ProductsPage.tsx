@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
+import ProductCardSkeleton from "../components/sections/ProductCardSkeleton";
 import ProductsFilters from "../components/sections/ProductsFilters";
 import { useCurrency } from "../context/CurrencyContext";
 import { getProducts } from "../services/productService";
@@ -15,7 +16,6 @@ import type {
 } from "../types/product";
 import { getCurrencyIsoCode, getPriceAmount } from "../utils/price";
 import type { CurrencyCode } from "../utils/price";
-import { buildCollectionGroups } from "../utils/featuredCollections";
 
 const productsPerPage = 9;
 
@@ -185,26 +185,11 @@ export default function ProductsPage({
                 : ["earrings", "rings", "bracelets", "necklace", "gift card"],
         [initialFilterOptions],
     );
-    const collectionGroups = useMemo(
-        () => buildCollectionGroups(initialFilterOptions?.collections ?? []),
-        [initialFilterOptions],
-    );
-    const activeUmbrellaLabel = useMemo(() => {
-        if (filters.collection.length === 0) {
-            return "";
-        }
-        const selectedSet = new Set(
-            filters.collection.map((value) => value.toLowerCase()),
-        );
-        const matchedGroup = collectionGroups.find(
-            (group) =>
-                group.members.length === selectedSet.size &&
-                group.members.every((member) =>
-                    selectedSet.has(member.toLowerCase()),
-                ),
-        );
-        return matchedGroup?.label ?? "";
-    }, [filters.collection, collectionGroups]);
+    const availableCollections = useMemo(() => {
+        const collections = initialFilterOptions?.collections ?? [];
+        return [...collections].sort((a, b) => a.localeCompare(b));
+    }, [initialFilterOptions]);
+    const activeCollection = filters.collection[0] ?? "";
 
     const products = productsData?.products ?? [];
     const pagination = productsData?.pagination ?? null;
@@ -455,30 +440,11 @@ export default function ProductsPage({
         void fetchProducts(defaultFilterState);
     }
 
-    function applyUmbrellaCollection(umbrellaLabel: string) {
-        if (!umbrellaLabel) {
-            const nextFilters = {
-                ...filters,
-                page: 1,
-                collection: [],
-            };
-            setFilters(nextFilters);
-            void fetchProducts(nextFilters);
-            return;
-        }
-
-        const matchedGroup = collectionGroups.find(
-            (group) => group.label === umbrellaLabel,
-        );
-
-        if (!matchedGroup) {
-            return;
-        }
-
+    function applyCollection(collectionValue: string) {
         const nextFilters = {
             ...filters,
             page: 1,
-            collection: matchedGroup.members,
+            collection: collectionValue ? [collectionValue] : [],
         };
         setFilters(nextFilters);
         void fetchProducts(nextFilters);
@@ -550,24 +516,22 @@ export default function ProductsPage({
                                 );
                             })}
 
-                            {collectionGroups.length > 0 ? (
+                            {availableCollections.length > 0 ? (
                                 <select
-                                    value={activeUmbrellaLabel}
+                                    value={activeCollection}
                                     onChange={(event) =>
-                                        applyUmbrellaCollection(
-                                            event.target.value,
-                                        )
+                                        applyCollection(event.target.value)
                                     }
                                     aria-label="Filter by collection"
                                     className="ml-auto cursor-pointer border border-zinc-800 bg-white px-5 py-2.5 pr-9 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 outline-none transition hover:bg-zinc-50 focus:border-pink-500 sm:px-6 sm:py-4 sm:pr-10 sm:text-[13px]"
                                 >
                                     <option value="">All Collections</option>
-                                    {collectionGroups.map((group) => (
+                                    {availableCollections.map((collectionName) => (
                                         <option
-                                            key={group.label}
-                                            value={group.label}
+                                            key={collectionName}
+                                            value={collectionName}
                                         >
-                                            {group.label}
+                                            {formatFilterLabel(collectionName)}
                                         </option>
                                     ))}
                                 </select>
@@ -670,12 +634,6 @@ export default function ProductsPage({
                                 </p>
                             ) : null}
 
-                            {isLoading ? (
-                                <p className="mb-5 border border-zinc-200 bg-zinc-50 px-4 py-3 text-[12px] uppercase tracking-[0.16em] text-zinc-700">
-                                    Loading products...
-                                </p>
-                            ) : null}
-
                             {appliedFilterPills.length > 0 ? (
                                 <div className="mb-6 flex flex-wrap gap-2">
                                     {appliedFilterPills.map((filterValue) => (
@@ -690,18 +648,22 @@ export default function ProductsPage({
                             ) : null}
 
                             <div className="grid gap-5 grid-cols-2 sm:gap-6 xl:grid-cols-3">
-                                {sortedProducts.map((product) => (
-                                    <ProductCard
-                                        key={product.id}
-                                        item={product}
-                                        layout="grid"
-                                        className="aspect-square md:aspect-auto h-[10rem] md:h-[30rem]"
-                                        selectedMetals={filters.metal}
-                                    />
-                                ))}
+                                {isLoading
+                                    ? Array.from({ length: productsPerPage }).map((_, index) => (
+                                          <ProductCardSkeleton key={`skeleton-${index}`} />
+                                      ))
+                                    : sortedProducts.map((product) => (
+                                          <ProductCard
+                                              key={product.id}
+                                              item={product}
+                                              layout="grid"
+                                              className="aspect-square md:aspect-auto h-[10rem] md:h-[30rem]"
+                                              selectedMetals={filters.metal}
+                                          />
+                                      ))}
                             </div>
 
-                            {productsData && products.length === 0 ? (
+                            {!isLoading && productsData && products.length === 0 ? (
                                 <div className="mt-8 border border-dashed border-zinc-300 bg-white px-6 py-10 text-center">
                                     <h3 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
                                         No products match the selected filters
