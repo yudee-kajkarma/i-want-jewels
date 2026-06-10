@@ -436,7 +436,9 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
-            ...(variant.videos && variant.videos.length > 0 ? { videos: variant.videos } : {}),
+            // Always send videos (even when empty) so the backend can tell
+            // "field omitted, no change" apart from "cleared to []".
+            videos: variant.videos ?? [],
           })),
           ...(hasDeletedVariants ? { variantPos: currentVariantIds } : {}),
           existingImages: form.images
@@ -540,7 +542,9 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
-            ...(variant.videos && variant.videos.length > 0 ? { videos: variant.videos } : {}),
+            // Always send videos (even when empty) so the backend can tell
+            // "field omitted, no change" apart from "cleared to []".
+            videos: variant.videos ?? [],
           })),
           images: form.images.map((image) => image.file).filter(Boolean) as File[],
           imageMapping,

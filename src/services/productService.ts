@@ -656,7 +656,9 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
           : {}),
         ...(variant.sizeMeasurement ? { size_measurement: variant.sizeMeasurement } : {}),
         ...(typeof variant.customsValueUsd === 'number' ? { customsValueUSD: variant.customsValueUsd } : {}),
-        ...(variant.videos && variant.videos.length > 0 ? { videos: variant.videos } : {}),
+        // Always emit videos so an empty array reaches the backend as an
+        // explicit clear (not as "field absent, no change").
+        videos: variant.videos ?? [],
       })),
     ),
   )
