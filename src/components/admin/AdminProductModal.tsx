@@ -714,7 +714,7 @@ export default function AdminProductModal({
                             <input
                               type="number"
                               min="0"
-                              step="0.01"
+                              step="any"
                               value={variant.customsValueUsd ?? ''}
                               onChange={(event) => {
                                 const raw = event.target.value
