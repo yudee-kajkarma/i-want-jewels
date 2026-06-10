@@ -248,7 +248,7 @@ export default function AdminProductForm({
       </div>
 
       <form
-          className="max-h-[calc(92vh-96px)] overflow-y-auto px-6 py-5"
+          className="px-6 py-5"
           onSubmit={(event) => {
             const submitEvent = event.nativeEvent as SubmitEvent & {
               submitter?: HTMLElement | null
