@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+    ChevronDown,
+    ChevronUp,
     Headset,
     Heart,
     Package,
@@ -614,11 +616,13 @@ export default function ProductDetailPage({
         | { kind: "image"; id: string; src: string; position: number };
 
     const galleryItems = useMemo<GalleryItem[]>(() => {
-        const videoItems: GalleryItem[] = (selectedVariant?.videos ?? []).map((v) => ({
-            kind: "video",
-            id: v.key,
-            url: v.url,
-        }));
+        const videoItems: GalleryItem[] = (selectedVariant?.videos ?? []).map(
+            (v) => ({
+                kind: "video",
+                id: v.key,
+                url: v.url,
+            }),
+        );
         const imageItems: GalleryItem[] = galleryImages.map((img) => ({
             kind: "image",
             id: img.id,
@@ -638,6 +642,42 @@ export default function ProductDetailPage({
 
     // Poster image for the main video render — first available product image.
     const videoPosterSrc = galleryImages[0]?.src;
+
+    // Vertical thumbnail strip — button-driven scroll, no autoplay, no loop.
+    // Step matches one thumbnail (h-24 = 96px) plus the gap-3 between items (12px).
+    const THUMB_SCROLL_STEP = 108;
+    const thumbScrollRef = useRef<HTMLDivElement | null>(null);
+    const [thumbScrollState, setThumbScrollState] = useState({
+        atTop: true,
+        atBottom: true,
+    });
+
+    function updateThumbScrollState() {
+        const el = thumbScrollRef.current;
+        if (!el) return;
+        const atTop = el.scrollTop <= 0;
+        const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+        setThumbScrollState((prev) =>
+            prev.atTop === atTop && prev.atBottom === atBottom
+                ? prev
+                : { atTop, atBottom },
+        );
+    }
+
+    useEffect(() => {
+        // Recompute reachability whenever the item set changes (variant swap
+        // can grow or shrink the list).
+        updateThumbScrollState();
+    }, [galleryItems]);
+
+    function scrollThumbs(direction: "up" | "down") {
+        const el = thumbScrollRef.current;
+        if (!el) return;
+        el.scrollBy({
+            top: direction === "down" ? THUMB_SCROLL_STEP : -THUMB_SCROLL_STEP,
+            behavior: "smooth",
+        });
+    }
 
     const currentUserReview = useMemo(() => {
         if (!session) {
@@ -957,53 +997,96 @@ export default function ProductDetailPage({
                         <section className="grid gap-12 xl:grid-cols-[1.08fr_0.92fr]">
                             <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
                                 <div className="grid gap-5 lg:grid-cols-[120px_minmax(0,1fr)]">
-                                    <div className="order-2 flex gap-3 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                                        {galleryItems.map((item, itemIdx) => {
-                                            const isSelected =
-                                                selectedGalleryItem?.id === item.id;
-                                            const thumbBorder = isSelected
-                                                ? "border-zinc-900"
-                                                : "border-zinc-200 hover:border-zinc-500";
+                                    <div className="order-2 flex flex-col lg:order-1 lg:max-h-[540px] lg:gap-2">
+                                        <button
+                                            type="button"
+                                            onClick={() => scrollThumbs("up")}
+                                            disabled={thumbScrollState.atTop}
+                                            aria-label="Scroll thumbnails up"
+                                            className="hidden h-8 w-full items-center justify-center border border-zinc-200 bg-white text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900 disabled:cursor-not-allowed disabled:opacity-30 lg:flex"
+                                        >
+                                            <ChevronUp
+                                                className="h-4 w-4"
+                                                strokeWidth={2}
+                                            />
+                                        </button>
+                                        <div
+                                            ref={thumbScrollRef}
+                                            onScroll={updateThumbScrollState}
+                                            className="flex gap-3 overflow-x-auto pb-2 lg:flex-1 lg:flex-col lg:overflow-x-visible lg:overflow-y-auto lg:pb-0 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] max-md:max-w-[calc(100vw-48px)]"
+                                        >
+                                            {galleryItems.map(
+                                                (item, itemIdx) => {
+                                                    const isSelected =
+                                                        selectedGalleryItem?.id ===
+                                                        item.id;
+                                                    const thumbBorder =
+                                                        isSelected
+                                                            ? "border-zinc-900"
+                                                            : "border-zinc-200 hover:border-zinc-500";
 
-                                            return (
-                                                <button
-                                                    key={`${item.id}-${itemIdx}`}
-                                                    type="button"
-                                                    onClick={() =>
-                                                        setSelectedImageId(item.id)
-                                                    }
-                                                    className={`relative min-w-[100px] overflow-hidden border bg-white transition lg:min-w-0 ${thumbBorder}`}
-                                                >
-                                                    {item.kind === "video" ? (
-                                                        <>
-                                                            <img
-                                                                src={
-                                                                    videoPosterSrc ??
-                                                                    getVariantImage(
-                                                                        selectedVariant,
-                                                                    )
-                                                                }
-                                                                alt={`${product.title} video`}
-                                                                className="block h-24 w-full object-cover"
-                                                            />
-                                                            <span className="absolute inset-0 flex items-center justify-center bg-black/30">
-                                                                <Play
-                                                                    className="h-6 w-6 text-white"
-                                                                    strokeWidth={2}
-                                                                    fill="white"
+                                                    return (
+                                                        <button
+                                                            key={`${item.id}-${itemIdx}`}
+                                                            type="button"
+                                                            onClick={() =>
+                                                                setSelectedImageId(
+                                                                    item.id,
+                                                                )
+                                                            }
+                                                            className={`relative min-w-[100px] shrink-0 overflow-hidden border bg-white transition lg:min-w-0 ${thumbBorder}`}
+                                                        >
+                                                            {item.kind ===
+                                                            "video" ? (
+                                                                <>
+                                                                    <img
+                                                                        src={
+                                                                            videoPosterSrc ??
+                                                                            getVariantImage(
+                                                                                selectedVariant,
+                                                                            )
+                                                                        }
+                                                                        alt={`${product.title} video`}
+                                                                        className="block h-24 w-full object-cover"
+                                                                    />
+                                                                    <span className="absolute inset-0 flex items-center justify-center bg-black/30">
+                                                                        <Play
+                                                                            className="h-6 w-6 text-white"
+                                                                            strokeWidth={
+                                                                                2
+                                                                            }
+                                                                            fill="white"
+                                                                        />
+                                                                    </span>
+                                                                </>
+                                                            ) : (
+                                                                <img
+                                                                    src={
+                                                                        item.src
+                                                                    }
+                                                                    alt={
+                                                                        product.title
+                                                                    }
+                                                                    className="block h-24 w-full object-cover"
                                                                 />
-                                                            </span>
-                                                        </>
-                                                    ) : (
-                                                        <img
-                                                            src={item.src}
-                                                            alt={product.title}
-                                                            className="block h-24 w-full object-cover"
-                                                        />
-                                                    )}
-                                                </button>
-                                            );
-                                        })}
+                                                            )}
+                                                        </button>
+                                                    );
+                                                },
+                                            )}
+                                        </div>
+                                        <button
+                                            type="button"
+                                            onClick={() => scrollThumbs("down")}
+                                            disabled={thumbScrollState.atBottom}
+                                            aria-label="Scroll thumbnails down"
+                                            className="hidden h-8 w-full items-center justify-center border border-zinc-200 bg-white text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900 disabled:cursor-not-allowed disabled:opacity-30 lg:flex"
+                                        >
+                                            <ChevronDown
+                                                className="h-4 w-4"
+                                                strokeWidth={2}
+                                            />
+                                        </button>
                                     </div>
 
                                     <div className="order-1 relative overflow-hidden bg-zinc-50 lg:order-2">
@@ -1029,7 +1112,8 @@ export default function ProductDetailPage({
                                                 strokeWidth={1.8}
                                             />
                                         </button>
-                                        {selectedGalleryItem?.kind === "video" ? (
+                                        {selectedGalleryItem?.kind ===
+                                        "video" ? (
                                             <video
                                                 key={selectedGalleryItem.id}
                                                 src={selectedGalleryItem.url}
@@ -1038,14 +1122,16 @@ export default function ProductDetailPage({
                                                 muted
                                                 loop
                                                 playsInline
-                                                controls
-                                                className="block h-[540px] w-full bg-black object-contain"
+                                                // controls
+                                                className="block h-[540px] w-full bg-white border border-zinc-300 object-contain"
                                             />
                                         ) : (
                                             <img
                                                 src={
                                                     selectedImage?.src ??
-                                                    getVariantImage(selectedVariant)
+                                                    getVariantImage(
+                                                        selectedVariant,
+                                                    )
                                                 }
                                                 alt={product.title}
                                                 className="block h-[540px] w-full object-contain"
@@ -1155,44 +1241,50 @@ export default function ProductDetailPage({
                                                 Color
                                             </p>
                                             <div className="mt-3 flex items-center gap-3">
-                                                {product.variants.map((variant) => {
-                                                    const swatchImage =
-                                                        getMetalSwatchImage(
-                                                            variant.title,
-                                                        );
+                                                {product.variants.map(
+                                                    (variant) => {
+                                                        const swatchImage =
+                                                            getMetalSwatchImage(
+                                                                variant.title,
+                                                            );
 
-                                                    return (
-                                                        <button
-                                                            key={variant.id}
-                                                            type="button"
-                                                            onClick={() =>
-                                                                handleVariantChange(
-                                                                    variant,
-                                                                )
-                                                            }
-                                                            title={variant.title}
-                                                            className={`h-7 w-7 rounded-full border-2 transition ${
-                                                                selectedVariant.id ===
-                                                                variant.id
-                                                                    ? "border-zinc-900"
-                                                                    : "border-transparent hover:border-zinc-300"
-                                                            }`}
-                                                        >
-                                                            {swatchImage ? (
-                                                                <img
-                                                                    src={swatchImage}
-                                                                    alt=""
-                                                                    aria-hidden="true"
-                                                                    className="block h-full w-full rounded-full object-cover"
-                                                                />
-                                                            ) : (
-                                                                <span
-                                                                    className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`}
-                                                                />
-                                                            )}
-                                                        </button>
-                                                    );
-                                                })}
+                                                        return (
+                                                            <button
+                                                                key={variant.id}
+                                                                type="button"
+                                                                onClick={() =>
+                                                                    handleVariantChange(
+                                                                        variant,
+                                                                    )
+                                                                }
+                                                                title={
+                                                                    variant.title
+                                                                }
+                                                                className={`h-7 w-7 rounded-full border-2 transition ${
+                                                                    selectedVariant.id ===
+                                                                    variant.id
+                                                                        ? "border-zinc-900"
+                                                                        : "border-transparent hover:border-zinc-300"
+                                                                }`}
+                                                            >
+                                                                {swatchImage ? (
+                                                                    <img
+                                                                        src={
+                                                                            swatchImage
+                                                                        }
+                                                                        alt=""
+                                                                        aria-hidden="true"
+                                                                        className="block h-full w-full rounded-full object-cover"
+                                                                    />
+                                                                ) : (
+                                                                    <span
+                                                                        className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`}
+                                                                    />
+                                                                )}
+                                                            </button>
+                                                        );
+                                                    },
+                                                )}
                                             </div>
 
                                             {isRingCategory ? (
@@ -1200,7 +1292,9 @@ export default function ProductDetailPage({
                                                     <button
                                                         type="button"
                                                         onClick={() =>
-                                                            setIsSizeGuideOpen(true)
+                                                            setIsSizeGuideOpen(
+                                                                true,
+                                                            )
                                                         }
                                                         className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
                                                     >
