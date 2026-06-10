@@ -425,14 +425,6 @@ export default function AdminProductModal({
                       className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
-                  <div className="lg:col-span-2">
-                    <VideoUploader
-                      productId={editingProductId ?? undefined}
-                      videos={form.videos}
-                      onChange={(videos) => onFieldChange('videos', videos)}
-                      max={3}
-                    />
-                  </div>
                   <label className="block lg:col-span-2">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Certificate URLs</span>
                     <textarea
@@ -727,6 +719,15 @@ export default function AdminProductModal({
                               className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                             />
                           </label>
+                        </div>
+
+                        <div className="mt-5">
+                          <VideoUploader
+                            productId={editingProductId ?? undefined}
+                            videos={variant.videos}
+                            onChange={(videos) => onVariantFieldChange(variant.id, 'videos', videos)}
+                            max={3}
+                          />
                         </div>
 
                         <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
