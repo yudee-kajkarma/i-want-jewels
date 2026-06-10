@@ -25,8 +25,7 @@ type VariantFieldChangeHandler = <Key extends keyof CreateVariantForm>(
   value: CreateVariantForm[Key],
 ) => void
 
-type AdminProductModalProps = {
-  isOpen: boolean
+type AdminProductFormProps = {
   isEditing: boolean
   isEditLoading: boolean
   panelTitle: string
@@ -54,8 +53,7 @@ type AdminProductModalProps = {
 
 const VARIANT_IMAGE_DRAG_TYPE = 'application/x-iwj-variant-image'
 
-export default function AdminProductModal({
-  isOpen,
+export default function AdminProductForm({
   isEditing,
   isEditLoading,
   panelTitle,
@@ -79,7 +77,7 @@ export default function AdminProductModal({
   onRemoveImage,
   onToggleVariantImage,
   onReorderVariantImages,
-}: AdminProductModalProps) {
+}: AdminProductFormProps) {
   const [dragState, setDragState] = useState<{
     variantId: string
     fromPosition: number
@@ -95,16 +93,12 @@ export default function AdminProductModal({
   })
 
   useEffect(() => {
-    if (isOpen && !filters) {
+    if (!filters) {
       void getAllProductFilters().then(setFilters).catch(() => {
         console.error('Failed to fetch product filters')
       })
     }
-  }, [isOpen, filters])
-
-  if (!isOpen) {
-    return null
-  }
+  }, [filters])
 
   const isGiftCard = form.productType === 'GIFT_CARD'
 
@@ -235,26 +229,26 @@ export default function AdminProductModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#2f0d25]/55 px-4 py-6 backdrop-blur-sm">
-      <div className={`max-h-[92vh] w-full overflow-hidden rounded-[32px] border border-[#f0d0e3] bg-white shadow-[0_30px_80px_rgba(127,31,91,0.30)] ${isEditing ? 'max-w-4xl' : 'max-w-5xl'}`}>
-        <div className="flex items-start justify-between border-b border-[#f3e3ee] px-6 py-5">
-          <div>
-            <h2 className="text-2xl font-semibold text-[#3f1933]">{panelTitle}</h2>
-            <p className="mt-1 text-sm text-zinc-500">{panelDescription}</p>
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            disabled={isEditLoading || isSaving}
-            aria-label="Close modal"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e7bfd7] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            <X className="h-4 w-4" />
-          </button>
+    <div className="w-full overflow-hidden rounded-[32px] border border-[#f0d0e3] bg-white shadow-[0_20px_60px_rgba(127,31,91,0.12)]">
+      <div className="flex items-start justify-between border-b border-[#f3e3ee] px-6 py-5">
+        <div>
+          <h2 className="text-2xl font-semibold text-[#3f1933]">{panelTitle}</h2>
+          <p className="mt-1 text-sm text-zinc-500">{panelDescription}</p>
         </div>
+        <button
+          type="button"
+          onClick={onClose}
+          disabled={isEditLoading || isSaving}
+          aria-label="Back to products list"
+          className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          <X className="h-4 w-4" />
+          Cancel
+        </button>
+      </div>
 
-        <form
-          className="max-h-[calc(92vh-96px)] overflow-y-auto px-6 py-5"
+      <form
+          className="px-6 py-5"
           onSubmit={(event) => {
             const submitEvent = event.nativeEvent as SubmitEvent & {
               submitter?: HTMLElement | null
@@ -425,14 +419,6 @@ export default function AdminProductModal({
                       className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
-                  <div className="lg:col-span-2">
-                    <VideoUploader
-                      productId={editingProductId ?? undefined}
-                      videos={form.videos}
-                      onChange={(videos) => onFieldChange('videos', videos)}
-                      max={3}
-                    />
-                  </div>
                   <label className="block lg:col-span-2">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Certificate URLs</span>
                     <textarea
@@ -729,6 +715,15 @@ export default function AdminProductModal({
                           </label>
                         </div>
 
+                        <div className="mt-5">
+                          <VideoUploader
+                            productId={editingProductId ?? undefined}
+                            videos={variant.videos}
+                            onChange={(videos) => onVariantFieldChange(variant.id, 'videos', videos)}
+                            max={3}
+                          />
+                        </div>
+
                         <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
                           <div className="flex flex-wrap items-center justify-between gap-3">
                             <div>
@@ -950,7 +945,6 @@ export default function AdminProductModal({
             )}
           </div>
         </form>
-      </div>
     </div>
   )
 }

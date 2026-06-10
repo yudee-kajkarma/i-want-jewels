@@ -5,39 +5,21 @@ import { FileSpreadsheet, Plus, Search, X } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from '@/lib/router'
 import AdminProductFilterModal from '../components/admin/AdminProductFilterModal'
-import AdminProductModal from '../components/admin/AdminProductModal'
 import AdminProductsTable from '../components/admin/AdminProductsTable'
 import {
-  buildForm,
-  createEmptyForm,
-  createEmptyVariant,
-  createEmptyGiftCardVariant,
   defaultFilters,
-  getVariantLabel,
-  parseCommaSeparatedValues,
   type AdminFilters,
-  type CreateVariantForm,
-  type EditableProductForm,
-  type PanelMode,
-  type ProductImageFormItem,
-  variantNameOptions,
 } from '../components/admin/adminProductHelpers'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
 import { getCurrencyIsoCode } from '../utils/price'
 import {
-  createProduct,
   deleteProduct,
   getAllProductFilters,
   getAllProductsForAdmin,
-  getProductById,
-  updateProduct,
 } from '../services/productService'
 import type {
-  AdminProductCreatePayload,
-  AdminProductEditPayload,
-  AdminVariantName,
   Product,
   ProductAllFilters,
   ProductsPagination,
@@ -54,18 +36,10 @@ export default function AdminProductsPage() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState('')
   const [isFilterOpen, setIsFilterOpen] = useState(false)
-  const [panelMode, setPanelMode] = useState<PanelMode>('closed')
-  const [selectedProductId, setSelectedProductId] = useState<string | null>(null)
-  const [createStep, setCreateStep] = useState<1 | 2>(1)
-  const [form, setForm] = useState<EditableProductForm>(createEmptyForm)
   const [filters, setFilters] = useState<AdminFilters>(defaultFilters)
   const [searchTerm, setSearchTerm] = useState('')
-  const [isSaving, setIsSaving] = useState(false)
-  const [isEditModalLoading, setIsEditModalLoading] = useState(false)
   const [isDeleting, setIsDeleting] = useState<string | null>(null)
   const [productPendingDelete, setProductPendingDelete] = useState<Product | null>(null)
-  const [imagePreviewUrls, setImagePreviewUrls] = useState<string[]>([])
-  const [initialVariantIds, setInitialVariantIds] = useState<string[]>([])
 
   useEffect(() => {
     void initializePage()
@@ -80,30 +54,6 @@ export default function AdminProductsPage() {
     setError('')
     toast.success(message)
   }
-
-  useEffect(() => {
-    if (form.images.length === 0) {
-      setImagePreviewUrls([])
-      return
-    }
-
-    const nextPreviewUrls = form.images.map((imageItem) => {
-      if (imageItem.isExisting || !imageItem.file) {
-        return imageItem.src
-      }
-
-      return URL.createObjectURL(imageItem.file)
-    })
-    setImagePreviewUrls(nextPreviewUrls)
-
-    return () => {
-      nextPreviewUrls.forEach((previewUrl, index) => {
-        if (!form.images[index]?.isExisting) {
-          URL.revokeObjectURL(previewUrl)
-        }
-      })
-    }
-  }, [form.images])
 
   async function initializePage() {
     setIsLoading(true)
@@ -206,83 +156,12 @@ export default function AdminProductsPage() {
     await loadProducts(filters, page)
   }
 
-  async function handleEdit(productId: string) {
-    setError('')
-    setPanelMode('edit')
-    setCreateStep(1)
-    setSelectedProductId(productId)
-    setForm(createEmptyForm())
-    setIsEditModalLoading(true)
-
-    try {
-      const product = await getProductById(productId)
-      const editableForm = buildForm(product)
-      setCreateStep(1)
-      setForm(editableForm)
-      setInitialVariantIds(
-        editableForm.variants
-          .map((variant) => variant.variantId)
-          .filter((variantId): variantId is string => Boolean(variantId)),
-      )
-    } catch {
-      handleClosePanel()
-      setError('Unable to open this product for editing.')
-    } finally {
-      setIsEditModalLoading(false)
-    }
-  }
-
   function handleAddNew() {
-    setError('')
-    setPanelMode('create')
-    setCreateStep(1)
-    setSelectedProductId(null)
-    setForm(createEmptyForm())
-    setInitialVariantIds([])
+    navigate('/admin/products/new')
   }
 
-  function handleClosePanel() {
-    setPanelMode('closed')
-    setCreateStep(1)
-    setSelectedProductId(null)
-    setForm(createEmptyForm())
-    setIsEditModalLoading(false)
-    setInitialVariantIds([])
-  }
-
-  function buildEditImageMapping(currentForm: EditableProductForm): Array<Array<string | number>> {
-    const newImagePositionByIndex = new Map<number, number>()
-    let newImagePosition = 0
-
-    currentForm.images.forEach((image, imageIndex) => {
-      if (!image.isExisting) {
-        newImagePositionByIndex.set(imageIndex, newImagePosition)
-        newImagePosition += 1
-      }
-    })
-
-    return currentForm.variants.map((variant) =>
-      variant.imageIndexes.reduce<Array<string | number>>((entries, imageIndex) => {
-        const image = currentForm.images[imageIndex]
-
-        if (!image) {
-          return entries
-        }
-
-        if (image.isExisting && image.id) {
-          entries.push(image.id)
-          return entries
-        }
-
-        const newPosition = newImagePositionByIndex.get(imageIndex)
-
-        if (typeof newPosition === 'number') {
-          entries.push(newPosition)
-        }
-
-        return entries
-      }, []),
-    )
+  function handleEdit(productId: string) {
+    navigate(`/admin/products/${productId}/edit`)
   }
 
   function handleDeleteRequest(product: Product) {
@@ -295,421 +174,6 @@ export default function AdminProductsPage() {
     }
 
     setProductPendingDelete(null)
-  }
-
-  function handleFormChange<Key extends keyof EditableProductForm>(key: Key, value: EditableProductForm[Key]) {
-    setForm((currentValue) => {
-      if (key === 'productType' && value !== currentValue.productType) {
-        const switchingToGiftCard = value === 'GIFT_CARD'
-        return {
-          ...currentValue,
-          productType: value as EditableProductForm['productType'],
-          variants: switchingToGiftCard
-            ? [createEmptyGiftCardVariant()]
-            : [createEmptyVariant()],
-          images: [],
-        }
-      }
-      return { ...currentValue, [key]: value }
-    })
-  }
-
-  function handleVariantChange(variantId: string, updater: (variant: CreateVariantForm) => CreateVariantForm) {
-    setForm((currentValue) => ({
-      ...currentValue,
-      variants: currentValue.variants.map((variant) => (variant.id === variantId ? updater(variant) : variant)),
-    }))
-  }
-
-  function handleVariantFieldChange<Key extends keyof CreateVariantForm>(
-    variantId: string,
-    key: Key,
-    value: CreateVariantForm[Key],
-  ) {
-    handleVariantChange(variantId, (variant) => ({ ...variant, [key]: value }))
-  }
-
-  function handleVariantNameChange(variantId: string, value: AdminVariantName) {
-    handleVariantChange(variantId, (currentVariant) => ({
-      ...currentVariant,
-      variantName: value,
-      title:
-        currentVariant.title === getVariantLabel(currentVariant.variantName) || !currentVariant.title.trim()
-          ? getVariantLabel(value)
-          : currentVariant.title,
-    }))
-  }
-
-  function handleAddVariant() {
-    setForm((currentValue) => {
-      if (currentValue.productType === 'GIFT_CARD') {
-        if (currentValue.variants.length >= 20) {
-          return currentValue
-        }
-
-        return {
-          ...currentValue,
-          variants: [...currentValue.variants, createEmptyGiftCardVariant()],
-        }
-      }
-
-      if (currentValue.variants.length >= variantNameOptions.length) {
-        return currentValue
-      }
-
-      const nextVariantOption = variantNameOptions.find(
-        (option) => !currentValue.variants.some((variant) => variant.variantName === option.value),
-      )
-
-      return {
-        ...currentValue,
-        variants: [...currentValue.variants, createEmptyVariant(nextVariantOption?.value ?? 'gold')],
-      }
-    })
-  }
-
-  function handleRemoveVariant(variantId: string) {
-    setForm((currentValue) => {
-      if (currentValue.variants.length === 1) {
-        return currentValue
-      }
-
-      return {
-        ...currentValue,
-        variants: currentValue.variants.filter((variant) => variant.id !== variantId),
-      }
-    })
-  }
-
-  function handleImagesChange(variantId: string, files: FileList | null) {
-    const selectedFiles = Array.from(files ?? [])
-
-    if (selectedFiles.length === 0) {
-      return
-    }
-
-    setForm((currentValue) => ({
-      ...currentValue,
-      images: [
-        ...currentValue.images,
-        ...selectedFiles.map<ProductImageFormItem>((file, index) => ({
-          id: `${Date.now()}-${file.name}-${index}`,
-          name: file.name,
-          src: '',
-          file,
-          position: currentValue.images.length + index,
-          isExisting: false,
-        })),
-      ],
-      variants: currentValue.variants.map((variant) => ({
-        ...variant,
-        imageIndexes:
-          variant.id === variantId
-            ? [
-                ...variant.imageIndexes,
-                ...selectedFiles.map((_, index) => currentValue.images.length + index),
-              ]
-            : variant.imageIndexes.filter((imageIndex) => imageIndex < currentValue.images.length + selectedFiles.length),
-      })),
-    }))
-  }
-
-  function handleRemoveImage(imageIndex: number) {
-    setForm((currentValue) => {
-      const nextImages = currentValue.images.filter((_, currentIndex) => currentIndex !== imageIndex)
-
-      return {
-        ...currentValue,
-        images: nextImages,
-        variants: currentValue.variants.map((variant) => ({
-          ...variant,
-          imageIndexes: variant.imageIndexes
-            .filter((currentIndex) => currentIndex !== imageIndex)
-            .map((currentIndex) => (currentIndex > imageIndex ? currentIndex - 1 : currentIndex)),
-        })),
-      }
-    })
-  }
-
-  function handleReorderVariantImages(variantId: string, fromPosition: number, toPosition: number) {
-    if (fromPosition === toPosition) {
-      return
-    }
-
-    handleVariantChange(variantId, (variant) => {
-      if (
-        fromPosition < 0 ||
-        fromPosition >= variant.imageIndexes.length ||
-        toPosition < 0 ||
-        toPosition >= variant.imageIndexes.length
-      ) {
-        return variant
-      }
-
-      const nextImageIndexes = [...variant.imageIndexes]
-      const [movedIndex] = nextImageIndexes.splice(fromPosition, 1)
-      nextImageIndexes.splice(toPosition, 0, movedIndex)
-
-      return { ...variant, imageIndexes: nextImageIndexes }
-    })
-  }
-
-  function toggleVariantImage(variantId: string, imageIndex: number) {
-    handleVariantChange(variantId, (variant) => {
-      const hasImage = variant.imageIndexes.includes(imageIndex)
-
-      return {
-        ...variant,
-        imageIndexes: hasImage
-          ? variant.imageIndexes.filter((currentIndex) => currentIndex !== imageIndex)
-          : [...variant.imageIndexes, imageIndex].sort((leftIndex, rightIndex) => leftIndex - rightIndex),
-      }
-    })
-  }
-
-  function validateCreateStepOne(): string {
-    if (!form.title.trim()) {
-      return 'Enter a product title before continuing.'
-    }
-
-    if (!form.description.trim()) {
-      return 'Enter a product description before continuing.'
-    }
-
-    // Gift cards have no category — the backend assigns a default.
-    if (form.productType !== 'GIFT_CARD' && !form.category.trim()) {
-      return 'Enter a category before continuing.'
-    }
-
-    return ''
-  }
-
-  function handleGoToStepTwo() {
-    const validationError = validateCreateStepOne()
-
-    if (validationError) {
-      showOperationError(validationError)
-      return
-    }
-
-    setError('')
-    setCreateStep(2)
-  }
-
-  async function handleSave(event: SubmitEvent) {
-    event.preventDefault()
-
-    if (createStep === 1) {
-      // Step 1 should never trigger save logic.
-      // Navigation to Step 2 is handled only by the explicit Next Step button.
-      return
-    }
-
-    setIsSaving(true)
-    setError('')
-
-    const isGiftCard = form.productType === 'GIFT_CARD'
-
-    try {
-      if (panelMode === 'edit' && selectedProductId) {
-        if (!isGiftCard && form.variants.some((variant) => variant.imageIndexes.length === 0)) {
-          showOperationError('Assign at least one image to every variant.')
-          return
-        }
-
-        if (isGiftCard && form.images.length === 0) {
-          showOperationError('Upload a gift card design image.')
-          return
-        }
-
-        // Gift cards: every denomination reuses the single design image.
-        const giftDesignRef: string | number =
-          form.images.length > 0
-            ? form.images[0].isExisting
-              ? form.images[0].id
-              : 0
-            : 0
-        const imageMapping = isGiftCard
-          ? form.variants.map(() => [giftDesignRef])
-          : buildEditImageMapping(form)
-        const referencedImageIndexes = new Set(
-          isGiftCard ? [0] : form.variants.flatMap((variant) => variant.imageIndexes),
-        )
-        const currentVariantIds = form.variants
-          .map((variant) => variant.variantId)
-          .filter((variantId): variantId is string => Boolean(variantId))
-        const hasDeletedVariants = initialVariantIds.some(
-          (initialVariantId) => !currentVariantIds.includes(initialVariantId),
-        )
-        const payload: AdminProductEditPayload = {
-          productType: form.productType,
-          title: form.title,
-          description: form.description,
-          vendor: form.vendor,
-          category: form.category,
-          stoneType: form.stoneType,
-          color: form.color,
-          shape: form.shape,
-          carat: Number(form.carat) || 0,
-          totalDiamondWeight: Number(form.totalDiamondWeight) || 0,
-          origin: form.origin,
-          treatment: form.treatment,
-          availability: form.availability,
-          certificate: form.certificate,
-          measurement: form.measurement,
-          details: form.details,
-          tags: parseCommaSeparatedValues(form.tags),
-          isFeatured: form.isFeatured,
-          videos: form.videos,
-          certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
-          diamondPcs: Number(form.diamondPcs) || 0,
-          variants: form.variants.map((variant, index) => ({
-            id: variant.variantId,
-            title: variant.title.trim(),
-            variantName: isGiftCard ? 'gift card' : variant.variantName,
-            sku: variant.sku.trim(),
-            stock: Number(variant.stock) || 0,
-            price: variant.price,
-            position: index + 1,
-            ...(variant.sizes.length > 0
-              ? { sizes: variant.sizes.map((entry) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
-              : {}),
-            ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
-            ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
-          })),
-          ...(hasDeletedVariants ? { variantPos: currentVariantIds } : {}),
-          existingImages: form.images
-            .map((image, originalIndex) => ({ image, originalIndex }))
-            .filter(
-              ({ image, originalIndex }) =>
-                image.isExisting && referencedImageIndexes.has(originalIndex),
-            )
-            .map(({ image }, position) => ({
-              id: image.id,
-              src: image.src,
-              position,
-            })),
-          images: form.images.filter((image) => !image.isExisting).map((image) => image.file).filter(Boolean) as File[],
-          imageMapping,
-        }
-
-        await updateProduct(selectedProductId, payload)
-        showOperationSuccess('Product updated successfully.')
-
-        setProducts((currentProducts) =>
-          currentProducts.map((product) =>
-            product.id === selectedProductId
-              ? {
-                  ...product,
-                  title: form.title,
-                  vendor: form.vendor,
-                  category: form.category,
-                  availability: form.availability,
-                }
-              : product,
-          ),
-        )
-      } else {
-        if (form.variants.length === 0) {
-          showOperationError('Add at least one variant before creating the product.')
-          return
-        }
-
-        if (!isGiftCard) {
-          const duplicateVariantNames = new Set(form.variants.map((variant) => variant.variantName))
-
-          if (duplicateVariantNames.size !== form.variants.length) {
-            showOperationError('Each variant name can only be used once.')
-            return
-          }
-        }
-
-        if (form.images.length === 0) {
-          showOperationError(
-            isGiftCard
-              ? 'Upload a gift card design image.'
-              : 'Upload at least one image before creating the product.',
-          )
-          return
-        }
-
-        const hasInvalidVariant = form.variants.some(
-          (variant) =>
-            !variant.title.trim() ||
-            !variant.sku.trim() ||
-            variant.price <= 0 ||
-            variant.stock < 0,
-        )
-
-        if (hasInvalidVariant) {
-          showOperationError(
-            isGiftCard
-              ? 'Each denomination needs a label, SKU, and an amount greater than zero.'
-              : 'Complete each variant with a title, SKU, non-negative stock, and a price greater than zero.',
-          )
-          return
-        }
-
-        // Gift cards: every denomination reuses the single uploaded design image.
-        const imageMapping = isGiftCard
-          ? form.variants.map(() => [0])
-          : form.variants.map((variant) => variant.imageIndexes)
-
-        if (!isGiftCard && imageMapping.some((indexes) => indexes.length === 0)) {
-          showOperationError('Assign at least one image to every variant.')
-          return
-        }
-
-        const payload: AdminProductCreatePayload = {
-          productType: form.productType,
-          title: form.title,
-          description: form.description,
-          vendor: form.vendor,
-          category: form.category,
-          stoneType: form.stoneType,
-          color: form.color,
-          shape: form.shape,
-          carat: Number(form.carat) || 0,
-          totalDiamondWeight: Number(form.totalDiamondWeight) || 0,
-          origin: form.origin,
-          treatment: form.treatment,
-          availability: form.availability,
-          certificate: form.certificate,
-          measurement: form.measurement,
-          details: form.details,
-          tags: parseCommaSeparatedValues(form.tags),
-          isFeatured: form.isFeatured,
-          videos: form.videos,
-          certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
-          diamondPcs: Number(form.diamondPcs) || 0,
-          variants: form.variants.map((variant, index) => ({
-            title: variant.title.trim(),
-            variantName: isGiftCard ? 'gift card' : variant.variantName,
-            sku: variant.sku.trim(),
-            stock: Number(variant.stock) || 0,
-            price: variant.price,
-            position: index + 1,
-            ...(variant.sizes.length > 0
-              ? { sizes: variant.sizes.map((entry) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
-              : {}),
-            ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
-            ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
-          })),
-          images: form.images.map((image) => image.file).filter(Boolean) as File[],
-          imageMapping,
-        }
-
-        await createProduct(payload)
-        await loadProducts(filters, currentPage)
-        showOperationSuccess('Product created successfully.')
-      }
-
-      handleClosePanel()
-    } catch {
-      showOperationError(panelMode === 'edit' ? 'Unable to save changes right now.' : 'Unable to create product right now.')
-    } finally {
-      setIsSaving(false)
-    }
   }
 
   async function handleConfirmDelete() {
@@ -733,13 +197,6 @@ export default function AdminProductsPage() {
     }
   }
 
-  const isPanelOpen = panelMode !== 'closed'
-  const isEditing = panelMode === 'edit'
-  const panelTitle = isEditing ? 'Edit Product' : 'Add Product'
-  const panelDescription = isEditing
-    ? 'Update the selected product and save the changes.'
-    : 'Add a new product in two steps: details first, then variants and image mapping.'
-  const generatedImageMapping = useMemo(() => form.variants.map((variant) => variant.imageIndexes), [form.variants])
   const visibleProducts = useMemo(() => products, [products])
 
   return (
@@ -830,38 +287,11 @@ export default function AdminProductsPage() {
             onRefresh={() => void loadProducts(filters, currentPage)}
             pagination={pagination}
             onPageChange={(page) => void handlePageChange(page)}
-            onEdit={(productId) => void handleEdit(productId)}
+            onEdit={handleEdit}
             onDelete={handleDeleteRequest}
           />
         </div>
       </main>
-
-      <AdminProductModal
-        isOpen={isPanelOpen}
-        isEditing={isEditing}
-        isEditLoading={isEditModalLoading}
-        panelTitle={panelTitle}
-        panelDescription={panelDescription}
-        createStep={createStep}
-        form={form}
-        editingProductId={selectedProductId}
-        imagePreviewUrls={imagePreviewUrls}
-        generatedImageMapping={generatedImageMapping}
-        isSaving={isSaving}
-        onClose={handleClosePanel}
-        onSubmit={handleSave}
-        onFieldChange={handleFormChange}
-        onGoToStepTwo={handleGoToStepTwo}
-        onBackToStepOne={() => setCreateStep(1)}
-        onVariantNameChange={handleVariantNameChange}
-        onVariantFieldChange={handleVariantFieldChange}
-        onAddVariant={handleAddVariant}
-        onRemoveVariant={handleRemoveVariant}
-        onImagesChange={handleImagesChange}
-        onRemoveImage={handleRemoveImage}
-        onToggleVariantImage={toggleVariantImage}
-        onReorderVariantImages={handleReorderVariantImages}
-      />
 
       <AdminProductFilterModal
         isOpen={isFilterOpen}
