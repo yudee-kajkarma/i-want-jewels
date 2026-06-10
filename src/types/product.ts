@@ -21,6 +21,7 @@ export type ProductVariant = {
   sizeMeasurement?: string
   customsValueUsd?: number
   totalStock?: number
+  videos?: { url: string; key: string }[]
 }
 
 export type ProductImage = {
@@ -82,7 +83,6 @@ export type ProductDetail = Product & {
   certificate: string
   measurement: string
   details: string
-  videos: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   recommendedProducts: Product[]
@@ -120,6 +120,7 @@ export type AdminProductVariantPayload = {
   sizes?: VariantSize[]
   sizeMeasurement?: string
   customsValueUsd?: number
+  videos?: { url: string; key: string }[]
 }
 
 export type AdminExistingProductImagePayload = {
@@ -131,7 +132,6 @@ export type AdminExistingProductImagePayload = {
 export type AdminProductCreatePayload = AdminProductUpdatePayload & {
   tags: string[]
   isFeatured: boolean
-  videos: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   variants: AdminProductVariantPayload[]
@@ -142,7 +142,6 @@ export type AdminProductCreatePayload = AdminProductUpdatePayload & {
 export type AdminProductEditPayload = AdminProductUpdatePayload & {
   tags: string[]
   isFeatured: boolean
-  videos: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   variants: AdminProductVariantPayload[]
