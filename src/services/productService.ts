@@ -46,6 +46,7 @@ type ProductVariantApiResponse = {
   size_measurement?: string
   customsValueUSD?: number
   totalStock?: number
+  videos?: { url: string; key: string }[]
 }
 
 type ProductOptionApiResponse = {
@@ -107,7 +108,6 @@ type ProductDetailApiResponse = {
   certificate: string
   measurement: string
   details: string
-  videos?: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   variants: ProductVariantApiResponse[]
@@ -281,6 +281,9 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
     ...(variant.size_measurement ? { sizeMeasurement: variant.size_measurement } : {}),
     ...(typeof variant.customsValueUSD === 'number' ? { customsValueUsd: variant.customsValueUSD } : {}),
     ...(typeof variant.totalStock === 'number' ? { totalStock: variant.totalStock } : {}),
+    ...(Array.isArray(variant.videos) && variant.videos.length > 0
+      ? { videos: variant.videos }
+      : {}),
   }
 }
 
@@ -381,7 +384,6 @@ function normalizeProductDetail(
     certificate: product.certificate.trim(),
     measurement: product.measurement.trim(),
     details: product.details.trim(),
-    videos: product.videos ?? [],
     certificateUrls: product.certificateUrls,
     diamondPcs: product.diamondPcs,
     recommendedProducts: recommendedProducts.map(normalizeProduct),
@@ -636,7 +638,6 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
   formData.append('certificate', payload.certificate)
   formData.append('measurement', payload.measurement)
   formData.append('details', payload.details)
-  formData.append('videos', JSON.stringify(payload.videos))
   formData.append('certificateUrls', payload.certificateUrls.join(','))
   formData.append('diamondPcs', String(payload.diamondPcs))
   formData.append(
@@ -655,6 +656,7 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
           : {}),
         ...(variant.sizeMeasurement ? { size_measurement: variant.sizeMeasurement } : {}),
         ...(typeof variant.customsValueUsd === 'number' ? { customsValueUSD: variant.customsValueUsd } : {}),
+        ...(variant.videos && variant.videos.length > 0 ? { videos: variant.videos } : {}),
       })),
     ),
   )
