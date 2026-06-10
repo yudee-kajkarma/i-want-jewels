@@ -6,6 +6,7 @@ import {
     Heart,
     Package,
     PencilLine,
+    Play,
     ShieldCheck,
     Trash2,
     Truck,
@@ -357,6 +358,11 @@ function getInitialVariantId(product: ProductDetail | null): string {
 }
 
 function getInitialImageId(product: ProductDetail | null): string {
+    // Prefer the first video — videos render before images in the gallery and
+    // should be the default selection so they autoplay on page load.
+    const firstVideoKey = product?.videos?.[0]?.key;
+    if (firstVideoKey) return firstVideoKey;
+
     const firstVariant = product?.variants[0];
     const firstImage = firstVariant
         ? getVariantGallery(firstVariant)[0]
@@ -483,12 +489,13 @@ export default function ProductDetailPage({
                 const firstImage = firstVariant
                     ? getVariantGallery(firstVariant)[0]
                     : undefined;
+                const firstVideoKey = productResponse.videos?.[0]?.key;
 
                 setProduct(productResponse);
                 setReviews(reviewsResponse.reviews);
                 setReviewsPagination(reviewsResponse.pagination);
                 setSelectedVariantId(firstVariant?.id ?? "");
-                setSelectedImageId(firstImage?.id ?? "");
+                setSelectedImageId(firstVideoKey ?? firstImage?.id ?? "");
                 setQuantity(1);
                 setReviewForm(initialReviewForm);
                 setReviewFeedback("");
@@ -598,9 +605,37 @@ export default function ProductDetailPage({
         return getVariantGallery(selectedVariant);
     }, [selectedVariant]);
 
+    // Videos are product-level (not variant-scoped) and render before images in
+    // the gallery so the first one is the default selection and autoplays.
+    type GalleryItem =
+        | { kind: "video"; id: string; url: string }
+        | { kind: "image"; id: string; src: string; position: number };
+
+    const galleryItems = useMemo<GalleryItem[]>(() => {
+        const videoItems: GalleryItem[] = (product?.videos ?? []).map((v) => ({
+            kind: "video",
+            id: v.key,
+            url: v.url,
+        }));
+        const imageItems: GalleryItem[] = galleryImages.map((img) => ({
+            kind: "image",
+            id: img.id,
+            src: img.src,
+            position: img.position,
+        }));
+        return [...videoItems, ...imageItems];
+    }, [product?.videos, galleryImages]);
+
+    const selectedGalleryItem =
+        galleryItems.find((item) => item.id === selectedImageId) ??
+        galleryItems[0];
+
     const selectedImage =
         galleryImages.find((image) => image.id === selectedImageId) ??
         galleryImages[0];
+
+    // Poster image for the main video render — first available product image.
+    const videoPosterSrc = galleryImages[0]?.src;
 
     const currentUserReview = useMemo(() => {
         if (!session) {
@@ -652,7 +687,11 @@ export default function ProductDetailPage({
         const nextGallery = getVariantGallery(variant);
 
         setSelectedVariantId(variant.id);
-        setSelectedImageId(nextGallery[0]?.id ?? "");
+        // Videos are product-level — keep the first one selected on variant
+        // change so it stays the default. Fall back to the new variant's
+        // first image if there are no videos.
+        const firstVideoKey = product?.videos?.[0]?.key;
+        setSelectedImageId(firstVideoKey ?? nextGallery[0]?.id ?? "");
     }
 
     async function handleAddToCart() {
@@ -917,36 +956,52 @@ export default function ProductDetailPage({
                             <div className="space-y-6 xl:sticky xl:top-24 xl:self-start">
                                 <div className="grid gap-5 lg:grid-cols-[120px_minmax(0,1fr)]">
                                     <div className="order-2 flex gap-3 overflow-x-auto pb-2 lg:order-1 lg:flex-col lg:overflow-visible">
-                                        {galleryImages.map(
-                                            (image, imageIdx) => {
-                                                const isSelectedImage =
-                                                    selectedImage?.id ===
-                                                    image.id;
+                                        {galleryItems.map((item, itemIdx) => {
+                                            const isSelected =
+                                                selectedGalleryItem?.id === item.id;
+                                            const thumbBorder = isSelected
+                                                ? "border-zinc-900"
+                                                : "border-zinc-200 hover:border-zinc-500";
 
-                                                return (
-                                                    <button
-                                                        key={`${image.id}-${imageIdx}`}
-                                                        type="button"
-                                                        onClick={() =>
-                                                            setSelectedImageId(
-                                                                image.id,
-                                                            )
-                                                        }
-                                                        className={`min-w-[100px] overflow-hidden border bg-white transition lg:min-w-0 ${
-                                                            isSelectedImage
-                                                                ? "border-zinc-900"
-                                                                : "border-zinc-200 hover:border-zinc-500"
-                                                        }`}
-                                                    >
+                                            return (
+                                                <button
+                                                    key={`${item.id}-${itemIdx}`}
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setSelectedImageId(item.id)
+                                                    }
+                                                    className={`relative min-w-[100px] overflow-hidden border bg-white transition lg:min-w-0 ${thumbBorder}`}
+                                                >
+                                                    {item.kind === "video" ? (
+                                                        <>
+                                                            <img
+                                                                src={
+                                                                    videoPosterSrc ??
+                                                                    getVariantImage(
+                                                                        selectedVariant,
+                                                                    )
+                                                                }
+                                                                alt={`${product.title} video`}
+                                                                className="block h-24 w-full object-cover"
+                                                            />
+                                                            <span className="absolute inset-0 flex items-center justify-center bg-black/30">
+                                                                <Play
+                                                                    className="h-6 w-6 text-white"
+                                                                    strokeWidth={2}
+                                                                    fill="white"
+                                                                />
+                                                            </span>
+                                                        </>
+                                                    ) : (
                                                         <img
-                                                            src={image.src}
+                                                            src={item.src}
                                                             alt={product.title}
                                                             className="block h-24 w-full object-cover"
                                                         />
-                                                    </button>
-                                                );
-                                            },
-                                        )}
+                                                    )}
+                                                </button>
+                                            );
+                                        })}
                                     </div>
 
                                     <div className="order-1 relative overflow-hidden bg-zinc-50 lg:order-2">
@@ -972,14 +1027,28 @@ export default function ProductDetailPage({
                                                 strokeWidth={1.8}
                                             />
                                         </button>
-                                        <img
-                                            src={
-                                                selectedImage?.src ??
-                                                getVariantImage(selectedVariant)
-                                            }
-                                            alt={product.title}
-                                            className="block h-[540px] w-full object-contain"
-                                        />
+                                        {selectedGalleryItem?.kind === "video" ? (
+                                            <video
+                                                key={selectedGalleryItem.id}
+                                                src={selectedGalleryItem.url}
+                                                poster={videoPosterSrc}
+                                                autoPlay
+                                                muted
+                                                loop
+                                                playsInline
+                                                controls
+                                                className="block h-[540px] w-full bg-black object-contain"
+                                            />
+                                        ) : (
+                                            <img
+                                                src={
+                                                    selectedImage?.src ??
+                                                    getVariantImage(selectedVariant)
+                                                }
+                                                alt={product.title}
+                                                className="block h-[540px] w-full object-contain"
+                                            />
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -1308,28 +1377,6 @@ export default function ProductDetailPage({
                                 ) : null}
                             </div>
                         </section>
-
-                        {product.videos && product.videos.length > 0 ? (
-                            <section className="mt-16 border-t border-zinc-200 pt-12">
-                                <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                    Videos
-                                </h3>
-                                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                                    {product.videos.map((video, index) => (
-                                        <video
-                                            key={video.url}
-                                            src={video.url}
-                                            poster={selectedImage?.src ?? undefined}
-                                            preload={index === 0 ? "metadata" : "none"}
-                                            muted
-                                            playsInline
-                                            controls
-                                            className="aspect-video w-full rounded-2xl bg-black object-cover"
-                                        />
-                                    ))}
-                                </div>
-                            </section>
-                        ) : null}
 
                         <section className="mt-16 border-t border-zinc-200 pt-12">
                             <div className="grid gap-14 md:grid-cols-2">
