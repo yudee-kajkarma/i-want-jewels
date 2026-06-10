@@ -27,12 +27,12 @@ export type CreateVariantForm = {
   sizes: VariantSize[]
   sizeMeasurement: string
   customsValueUsd: number | null
+  videos: { url: string; key: string }[]
 }
 
 export type EditableProductForm = AdminProductUpdatePayload & {
   tags: string
   isFeatured: boolean
-  videos: { url: string; key: string }[]
   certificateUrls: string
   diamondPcs: number
   metal: string
@@ -104,6 +104,7 @@ export function createEmptyVariant(variantName: AdminVariantName = 'gold'): Crea
     sizes: [],
     sizeMeasurement: '',
     customsValueUsd: null,
+    videos: [],
   }
 }
 
@@ -119,6 +120,7 @@ export function createEmptyGiftCardVariant(): CreateVariantForm {
     sizes: [],
     sizeMeasurement: '',
     customsValueUsd: null,
+    videos: [],
   }
 }
 
@@ -142,7 +144,6 @@ export function createEmptyForm(): EditableProductForm {
     details: '',
     tags: '',
     isFeatured: false,
-    videos: [],
     certificateUrls: '',
     diamondPcs: 0,
     metal: '',
@@ -190,7 +191,6 @@ export function buildForm(product: ProductDetail): EditableProductForm {
     details: product.details,
     tags: product.tags.join(', '),
     isFeatured: product.isFeatured,
-    videos: product.videos ?? [],
     certificateUrls: product.certificateUrls.join(', '),
     diamondPcs: product.diamondPcs,
     metal: product.metal,
@@ -215,6 +215,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
               : [],
             sizeMeasurement: variant.sizeMeasurement ?? '',
             customsValueUsd: typeof variant.customsValueUsd === 'number' ? variant.customsValueUsd : null,
+            videos: variant.videos ?? [],
             imageIndexes: (variant.images ?? []).map((image) => {
               const imageKey = image.id || image.src
               const existingImageIndex = imageIndexByKey.get(imageKey)
