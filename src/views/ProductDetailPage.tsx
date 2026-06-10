@@ -358,12 +358,13 @@ function getInitialVariantId(product: ProductDetail | null): string {
 }
 
 function getInitialImageId(product: ProductDetail | null): string {
-    // Prefer the first video — videos render before images in the gallery and
-    // should be the default selection so they autoplay on page load.
-    const firstVideoKey = product?.videos?.[0]?.key;
+    const firstVariant = product?.variants[0];
+
+    // Prefer the first video on the first variant — videos render before
+    // images in the gallery and autoplay on page load.
+    const firstVideoKey = firstVariant?.videos?.[0]?.key;
     if (firstVideoKey) return firstVideoKey;
 
-    const firstVariant = product?.variants[0];
     const firstImage = firstVariant
         ? getVariantGallery(firstVariant)[0]
         : undefined;
@@ -489,7 +490,7 @@ export default function ProductDetailPage({
                 const firstImage = firstVariant
                     ? getVariantGallery(firstVariant)[0]
                     : undefined;
-                const firstVideoKey = productResponse.videos?.[0]?.key;
+                const firstVideoKey = firstVariant?.videos?.[0]?.key;
 
                 setProduct(productResponse);
                 setReviews(reviewsResponse.reviews);
@@ -605,14 +606,15 @@ export default function ProductDetailPage({
         return getVariantGallery(selectedVariant);
     }, [selectedVariant]);
 
-    // Videos are product-level (not variant-scoped) and render before images in
-    // the gallery so the first one is the default selection and autoplays.
+    // Videos live on the selected variant and render before images in the
+    // gallery, so the first one is the default selection and autoplays.
+    // Switching variants swaps the video set.
     type GalleryItem =
         | { kind: "video"; id: string; url: string }
         | { kind: "image"; id: string; src: string; position: number };
 
     const galleryItems = useMemo<GalleryItem[]>(() => {
-        const videoItems: GalleryItem[] = (product?.videos ?? []).map((v) => ({
+        const videoItems: GalleryItem[] = (selectedVariant?.videos ?? []).map((v) => ({
             kind: "video",
             id: v.key,
             url: v.url,
@@ -624,7 +626,7 @@ export default function ProductDetailPage({
             position: img.position,
         }));
         return [...videoItems, ...imageItems];
-    }, [product?.videos, galleryImages]);
+    }, [selectedVariant, galleryImages]);
 
     const selectedGalleryItem =
         galleryItems.find((item) => item.id === selectedImageId) ??
@@ -687,10 +689,10 @@ export default function ProductDetailPage({
         const nextGallery = getVariantGallery(variant);
 
         setSelectedVariantId(variant.id);
-        // Videos are product-level — keep the first one selected on variant
-        // change so it stays the default. Fall back to the new variant's
-        // first image if there are no videos.
-        const firstVideoKey = product?.videos?.[0]?.key;
+        // Videos are variant-scoped — pick the new variant's first video as
+        // the default selection. Fall back to the new variant's first image
+        // if it has no videos.
+        const firstVideoKey = variant.videos?.[0]?.key;
         setSelectedImageId(firstVideoKey ?? nextGallery[0]?.id ?? "");
     }
 
