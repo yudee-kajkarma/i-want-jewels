@@ -560,7 +560,6 @@ export default function AdminProductsPage() {
           details: form.details,
           tags: parseCommaSeparatedValues(form.tags),
           isFeatured: form.isFeatured,
-          videos: form.videos,
           certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
           diamondPcs: Number(form.diamondPcs) || 0,
           variants: form.variants.map((variant, index) => ({
@@ -576,6 +575,7 @@ export default function AdminProductsPage() {
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
+            ...(variant.videos && variant.videos.length > 0 ? { videos: variant.videos } : {}),
           })),
           ...(hasDeletedVariants ? { variantPos: currentVariantIds } : {}),
           existingImages: form.images
@@ -679,7 +679,6 @@ export default function AdminProductsPage() {
           details: form.details,
           tags: parseCommaSeparatedValues(form.tags),
           isFeatured: form.isFeatured,
-          videos: form.videos,
           certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
           diamondPcs: Number(form.diamondPcs) || 0,
           variants: form.variants.map((variant, index) => ({
@@ -694,6 +693,7 @@ export default function AdminProductsPage() {
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
+            ...(variant.videos && variant.videos.length > 0 ? { videos: variant.videos } : {}),
           })),
           images: form.images.map((image) => image.file).filter(Boolean) as File[],
           imageMapping,
