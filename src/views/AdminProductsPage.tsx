@@ -844,6 +844,7 @@ export default function AdminProductsPage() {
         panelDescription={panelDescription}
         createStep={createStep}
         form={form}
+        editingProductId={selectedProductId}
         imagePreviewUrls={imagePreviewUrls}
         generatedImageMapping={generatedImageMapping}
         isSaving={isSaving}
