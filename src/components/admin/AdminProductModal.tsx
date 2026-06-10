@@ -12,6 +12,7 @@ import {
   variantNameOptions,
   SIZE_MEASUREMENT_OPTIONS,
 } from './adminProductHelpers'
+import { VideoUploader } from './VideoUploader'
 
 type FormChangeHandler = <Key extends keyof EditableProductForm>(
   key: Key,
@@ -32,6 +33,7 @@ type AdminProductModalProps = {
   panelDescription: string
   createStep: 1 | 2
   form: EditableProductForm
+  editingProductId: string | null
   imagePreviewUrls: string[]
   generatedImageMapping: number[][]
   isSaving: boolean
@@ -60,6 +62,7 @@ export default function AdminProductModal({
   panelDescription,
   createStep,
   form,
+  editingProductId,
   imagePreviewUrls,
   generatedImageMapping,
   isSaving,
@@ -422,15 +425,14 @@ export default function AdminProductModal({
                       className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
-                  <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Video URLs</span>
-                    <textarea
-                      value={form.videoUrls}
-                      onChange={(event) => onFieldChange('videoUrls', event.target.value)}
-                      className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
-                      placeholder="https://example.com/video-1.mp4, https://example.com/video-2.mp4"
+                  <div className="lg:col-span-2">
+                    <VideoUploader
+                      productId={editingProductId ?? undefined}
+                      videos={form.videos}
+                      onChange={(videos) => onFieldChange('videos', videos)}
+                      max={3}
                     />
-                  </label>
+                  </div>
                   <label className="block lg:col-span-2">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Certificate URLs</span>
                     <textarea

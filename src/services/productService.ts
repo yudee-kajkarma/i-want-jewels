@@ -16,7 +16,7 @@ import type {
   ReviewPayload,
 } from '../types/product'
 import { minPriceOf, toPrice, type Price } from '../utils/price'
-import apiClient, { authApiClient } from './apiClient'
+import apiClient, { authApiClient, adminApiClient } from './apiClient'
 
 type ProductImageApiResponse = {
   _id: string
@@ -107,7 +107,7 @@ type ProductDetailApiResponse = {
   certificate: string
   measurement: string
   details: string
-  videoUrls: string[]
+  videos?: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   variants: ProductVariantApiResponse[]
@@ -381,7 +381,7 @@ function normalizeProductDetail(
     certificate: product.certificate.trim(),
     measurement: product.measurement.trim(),
     details: product.details.trim(),
-    videoUrls: product.videoUrls,
+    videos: product.videos ?? [],
     certificateUrls: product.certificateUrls,
     diamondPcs: product.diamondPcs,
     recommendedProducts: recommendedProducts.map(normalizeProduct),
@@ -636,7 +636,7 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
   formData.append('certificate', payload.certificate)
   formData.append('measurement', payload.measurement)
   formData.append('details', payload.details)
-  formData.append('videoUrls', payload.videoUrls.join(','))
+  formData.append('videos', JSON.stringify(payload.videos))
   formData.append('certificateUrls', payload.certificateUrls.join(','))
   formData.append('diamondPcs', String(payload.diamondPcs))
   formData.append(
@@ -707,4 +707,29 @@ export async function deleteProduct(productId: string): Promise<void> {
 
 export async function bulkCreateProducts(payload: { products: BulkCreateProductPayload[] }): Promise<void> {
   await authApiClient.post('/products/bulk-create', payload)
+}
+
+// ── Product video uploads (presigned PUT direct to S3) ──────────────────────
+
+export type VideoUploadUrlRequest = {
+  filename: string
+  contentType: 'video/mp4' | 'video/quicktime' | 'video/webm'
+  sizeBytes: number
+  productId?: string
+}
+
+export type VideoUploadUrlResponse = {
+  uploadUrl: string
+  key: string
+  publicUrl: string
+}
+
+export async function requestVideoUploadUrl(
+  payload: VideoUploadUrlRequest,
+): Promise<VideoUploadUrlResponse> {
+  const { data } = await adminApiClient.post<{
+    success: boolean
+    data: VideoUploadUrlResponse
+  }>('/products/videos/upload-url', payload)
+  return data.data
 }

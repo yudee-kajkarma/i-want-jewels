@@ -82,7 +82,7 @@ export type ProductDetail = Product & {
   certificate: string
   measurement: string
   details: string
-  videoUrls: string[]
+  videos: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   recommendedProducts: Product[]
@@ -131,7 +131,7 @@ export type AdminExistingProductImagePayload = {
 export type AdminProductCreatePayload = AdminProductUpdatePayload & {
   tags: string[]
   isFeatured: boolean
-  videoUrls: string[]
+  videos: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   variants: AdminProductVariantPayload[]
@@ -142,7 +142,7 @@ export type AdminProductCreatePayload = AdminProductUpdatePayload & {
 export type AdminProductEditPayload = AdminProductUpdatePayload & {
   tags: string[]
   isFeatured: boolean
-  videoUrls: string[]
+  videos: { url: string; key: string }[]
   certificateUrls: string[]
   diamondPcs: number
   variants: AdminProductVariantPayload[]

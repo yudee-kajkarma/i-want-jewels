@@ -560,7 +560,7 @@ export default function AdminProductsPage() {
           details: form.details,
           tags: parseCommaSeparatedValues(form.tags),
           isFeatured: form.isFeatured,
-          videoUrls: parseCommaSeparatedValues(form.videoUrls),
+          videos: form.videos,
           certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
           diamondPcs: Number(form.diamondPcs) || 0,
           variants: form.variants.map((variant, index) => ({
@@ -679,7 +679,7 @@ export default function AdminProductsPage() {
           details: form.details,
           tags: parseCommaSeparatedValues(form.tags),
           isFeatured: form.isFeatured,
-          videoUrls: parseCommaSeparatedValues(form.videoUrls),
+          videos: form.videos,
           certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
           diamondPcs: Number(form.diamondPcs) || 0,
           variants: form.variants.map((variant, index) => ({
@@ -844,6 +844,7 @@ export default function AdminProductsPage() {
         panelDescription={panelDescription}
         createStep={createStep}
         form={form}
+        editingProductId={selectedProductId}
         imagePreviewUrls={imagePreviewUrls}
         generatedImageMapping={generatedImageMapping}
         isSaving={isSaving}

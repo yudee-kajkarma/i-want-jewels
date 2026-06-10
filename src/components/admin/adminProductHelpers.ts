@@ -32,7 +32,7 @@ export type CreateVariantForm = {
 export type EditableProductForm = AdminProductUpdatePayload & {
   tags: string
   isFeatured: boolean
-  videoUrls: string
+  videos: { url: string; key: string }[]
   certificateUrls: string
   diamondPcs: number
   metal: string
@@ -142,7 +142,7 @@ export function createEmptyForm(): EditableProductForm {
     details: '',
     tags: '',
     isFeatured: false,
-    videoUrls: '',
+    videos: [],
     certificateUrls: '',
     diamondPcs: 0,
     metal: '',
@@ -190,7 +190,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
     details: product.details,
     tags: product.tags.join(', '),
     isFeatured: product.isFeatured,
-    videoUrls: product.videoUrls.join(', '),
+    videos: product.videos ?? [],
     certificateUrls: product.certificateUrls.join(', '),
     diamondPcs: product.diamondPcs,
     metal: product.metal,
