@@ -1309,6 +1309,28 @@ export default function ProductDetailPage({
                             </div>
                         </section>
 
+                        {product.videos && product.videos.length > 0 ? (
+                            <section className="mt-16 border-t border-zinc-200 pt-12">
+                                <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                    Videos
+                                </h3>
+                                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                    {product.videos.map((video, index) => (
+                                        <video
+                                            key={video.url}
+                                            src={video.url}
+                                            poster={selectedImage?.src ?? undefined}
+                                            preload={index === 0 ? "metadata" : "none"}
+                                            muted
+                                            playsInline
+                                            controls
+                                            className="aspect-video w-full rounded-2xl bg-black object-cover"
+                                        />
+                                    ))}
+                                </div>
+                            </section>
+                        ) : null}
+
                         <section className="mt-16 border-t border-zinc-200 pt-12">
                             <div className="grid gap-14 md:grid-cols-2">
                                 <div>
