@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, type FormEvent } from 'react'
-import { GripVertical, Plus, X } from 'lucide-react'
+import { GripVertical, Plus, Star, X } from 'lucide-react'
 import type { AdminVariantName } from '../../types/product'
 import type { ProductAllFilters } from '../../types/product'
 import { getAllProductFilters } from '../../services/productService'
@@ -868,19 +868,39 @@ export default function AdminProductForm({
                                             {currentPosition + 1}
                                           </span>
                                         ) : null}
+                                        {currentPosition === 0 ? (
+                                          <span className="pointer-events-none absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-[#cc4f8f] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white shadow-sm">
+                                            <Star className="h-3 w-3 fill-white" />
+                                            Thumbnail
+                                          </span>
+                                        ) : null}
                                       </div>
                                       <div className="space-y-2 px-3 py-3 text-xs text-zinc-600">
                                         <div>
                                           <span className="font-semibold text-[#3f1933]">Image {imageIndex}</span>
                                           <p className="mt-1 break-all">{form.images[imageIndex]?.name ?? 'Uploaded image'}</p>
                                         </div>
-                                        <button
-                                          type="button"
-                                          onClick={() => onToggleVariantImage(variant.id, imageIndex)}
-                                          className="rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
-                                        >
-                                          Unassign
-                                        </button>
+                                        <div className="flex flex-wrap gap-2">
+                                          {currentPosition !== 0 ? (
+                                            <button
+                                              type="button"
+                                              onClick={() =>
+                                                onReorderVariantImages(variant.id, currentPosition, 0)
+                                              }
+                                              className="inline-flex items-center gap-1 rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
+                                            >
+                                              <Star className="h-3 w-3" />
+                                              Set as thumbnail
+                                            </button>
+                                          ) : null}
+                                          <button
+                                            type="button"
+                                            onClick={() => onToggleVariantImage(variant.id, imageIndex)}
+                                            className="rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
+                                          >
+                                            Unassign
+                                          </button>
+                                        </div>
                                       </div>
                                     </div>
                                   )
