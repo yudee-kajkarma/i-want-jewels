@@ -421,11 +421,11 @@ export default function ProductCard({
                     to={productDetailUrl}
                     className="relative block overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)]"
                 >
-                    {isNewArrival ? (
+                    {/* {isNewArrival ? (
                         <span className="absolute left-4 top-4 z-20 rounded-full bg-[#f23ea9] px-3 py-1 text-[10px] font-bold leading-none text-white shadow-[0_10px_20px_rgba(242,62,169,0.22)]">
                             NEW
                         </span>
-                    ) : null}
+                    ) : null} */}
 
                     <div className="relative h-[20rem] w-full overflow-hidden">
                         <img
