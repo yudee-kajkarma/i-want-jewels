@@ -573,11 +573,11 @@ export default function ProductCard({
     return (
         <article className="group flex h-full flex-col bg-transparent transition-transform duration-300 hover:-translate-y-1 group">
             <div className="relative overflow-hidden  bg-[linear-gradient(180deg,#fcfaf7_0%,#f6f0ea_100%)] pt-0">
-                {isNewArrival ? (
+                {/* {isNewArrival ? (
                     <span className="absolute left-4 top-4 z-20   px-3 py-1 text-[10px] font-bold leading-none group-hover:text-white text-black/70  ">
                         NEW
                     </span>
-                ) : null}
+                ) : null} */}
 
                 <div className="absolute right-4 top-4 z-20 flex translate-x-4 flex-col gap-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
                     <button
