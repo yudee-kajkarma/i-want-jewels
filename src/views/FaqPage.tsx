@@ -12,63 +12,57 @@ const faqData = [
             {
                 question: "Where is I Want Jewels based?",
                 answer:
-                    "We're based in Belgium – land of waffles, fries, beer and stunning jewels.",
+                    "I Want Jewels is based in Antwerp, Belgium — one of the world's most celebrated diamond cities and the heart of Europe's fine jewellery heritage.",
             },
             {
-                question: "Where do you ship?",
+                question: "Where do you ship to?",
                 answer:
-                    "We currently ship across Europe, the UK, and the US! Don't worry, other countries will get our love soon enough!\n\nHeads up: import duties or taxes (if any) are on you, darlin'.",
+                    "We currently ship across Europe, the United Kingdom, and the United States. Please note that import duties or customs charges for Europe and the UK are already paid for. Any import duties or customs charges applicable in the US are the responsibility of the buyer.",
             },
             {
-                question: "How long will my order take?",
+                question: "How long does delivery take?",
                 answer:
-                    "Usually dispatched in 1–2 business days. During high demand or restocks, it may take up to 15–20 working days.\n\nShipping times vary by country – full info at checkout.",
+                    "Orders are typically dispatched within 1–2 business days. During periods of high demand or collection restocks, dispatch may take up to 15–20 working days. Estimated delivery times by country are shown at checkout. EU and UK customers can expect delivery within 1-2 working days and 2–3 working days from dispatch, respectively.",
             },
             {
                 question: "How do I track my order?",
                 answer:
-                    "Once shipped, you'll get a tracking link via email (and maybe a little ping on WhatsApp/SMS if you gave us your digits).",
+                    "Once your order has been dispatched, you will receive a tracking link by email. If you provided a phone number at checkout, you may also receive updates via SMS or WhatsApp.",
             },
             {
-                question: "Can I cancel or change my order?",
+                question: "Can I cancel or amend my order?",
                 answer:
-                    "If it hasn't shipped yet, drop us an email ASAP. We'll do our best, but once it's out the door, it's on its way!",
-            },
-            {
-                question:
-                    "What is the delivery timeline for UK orders?",
-                answer:
-                    "We provide seamless delivery across the UK, with orders arriving within 2–3 working days from dispatch.",
+                    "If your order has not yet been dispatched, please contact us as soon as possible and we will do our best to assist you. Once an order has been shipped, it cannot be modified or cancelled.",
             },
         ],
     },
     {
-        category: "Product & Quality",
+        category: "Materials & Quality",
         items: [
             {
                 question: "Are your diamonds real?",
                 answer:
-                    "100% they're lab-grown, which means they're real AF – same sparkle, less guilt.",
+                    "Yes. I Want Jewels uses exclusively lab-grown diamonds — chemically, physically, and optically identical to mined diamonds. Lab-grown diamonds offer the same brilliance and durability with a significantly lower environmental impact.",
             },
             {
-                question: "What's your jewelry made of?",
+                question: "What materials are your jewellery pieces made from?",
                 answer:
-                    "Gorgeousness in 92.5 sterling silver – durable, hypoallergenic, and cute for everyday slay.",
+                    "Our collections are crafted in 925 sterling silver with rhodium or 14kt gold plating, and feature lab-grown diamonds. All materials are selected for their quality, durability, and hypoallergenic properties, making them suitable for everyday wear.",
             },
             {
-                question: "Will it tarnish?",
+                question: "Will my jewellery tarnish over time?",
                 answer:
-                    "Silver might dull over time, but our pieces are made for daily wear. Keep 'em dry and store them in their pouch to keep that shine alive.",
+                    "Our pieces are designed and plated for long-term wear. To maintain their finish, we recommend keeping jewellery dry, avoiding direct contact with perfume or harsh chemicals, and storing pieces in their pouch when not in use.",
             },
             {
-                question: "Can I shower/swim/sweat in it?",
+                question: "Can I wear my jewellery in water?",
                 answer:
-                    "You totally can! Our silver is rhodium or gold plated, so it's extra resistant to tarnish. Just give it a quick wipe after and you're good to glow.",
+                    "Our rhodium and gold-plated pieces are resistant to tarnish and can withstand daily wear, including light exposure to water. We recommend gently drying your jewellery after contact with water to preserve its finish.",
             },
             {
-                question: "How do I clean my jewelry?",
+                question: "How do I care for my jewellery?",
                 answer:
-                    "Use a soft cloth and mild soap if needed. No harsh vibes (or chemicals) please.",
+                    "Clean with a soft cloth and, if needed, a small amount of mild soap diluted in water. Avoid abrasive materials or chemical cleaners. Store each piece individually in its pouch to prevent scratching.",
             },
         ],
     },
@@ -76,24 +70,25 @@ const faqData = [
         category: "Returns & Exchanges",
         items: [
             {
-                question: "Can I return or exchange my order?",
+                question: "What is your return policy?",
                 answer:
-                    "Totally.\nReturns: Within 2 days of delivery.\nExchanges: Within 10 days (on eligible items).\nJust head to our Returns page to start.",
+                    "We accept returns within 2 days of delivery and exchanges within 5 days of delivery on eligible items. To begin a return or exchange, please visit our Returns page or contact our customer care team.",
             },
             {
-                question: "Are all items returnable?",
+                question: "Are all items eligible for return?",
                 answer:
-                    "Nope. Discounted items, or anything marked final sale cannot be returned.",
+                    "Items purchased at a discount or marked as final sale are not eligible for return or exchange.",
             },
             {
-                question: "When do I get my refund?",
+                question: "When will I receive my refund?",
                 answer:
-                    "Once we get your return and give it a once-over, refunds roll out in 7–10 working days.",
+                    "Once your return has been received and inspected, refunds are processed within 7–10 working days to your original payment method.",
             },
             {
-                question: "My item arrived damaged or wrong – what now?",
+                question:
+                    "My order arrived damaged or incorrect — what should I do?",
                 answer:
-                    "Take a pic and email us within 2 days. We got you covered.",
+                    "Please photograph the item and contact us within 2 days of delivery at care@iwantjewels.com. We will resolve the issue promptly.",
             },
         ],
     },
@@ -101,19 +96,19 @@ const faqData = [
         category: "Payments & Security",
         items: [
             {
-                question: "How can I pay?",
+                question: "What payment methods do you accept?",
                 answer:
-                    "All major credit/debit cards are accepted as well as PayPal. In Belgium, Bancontact is also possible.",
+                    "We accept all major credit and debit cards, as well as PayPal. Customers based in Belgium can also pay via Bancontact.",
             },
             {
-                question: "Is your site secure?",
+                question: "Is the I Want Jewels website secure?",
                 answer:
-                    "Heck yeah! SSL encrypted and hacker-repellent. Your data's locked up tighter than your jewellery box.",
+                    "Yes. Our website uses SSL encryption to ensure that all personal and payment information is fully protected.",
             },
             {
-                question: "Will I have to pay import duties?",
+                question: "Will I be charged import duties?",
                 answer:
-                    "If you're outside the EU (like in the UK or US), your country might charge VAT or customs duties when your order arrives. These are the buyer's responsibility.",
+                    "Customers within the European Union, and those in the UK, will not be charged import duties. Customers from the US, may be subject to VAT or customs duties upon delivery. These charges are determined by your country's customs authority and are the buyer's responsibility.",
             },
         ],
     },
@@ -123,28 +118,33 @@ const faqData = [
             {
                 question: "How do I find my ring size?",
                 answer:
-                    "Check out our size guide or use a ring sizer – or grab a string and measure like a DIY queen.",
+                    "We recommend using our size guide, available on each ring product page. You can also measure using a strip of paper or thin string around your finger and compare against a standard ring size chart.",
             },
             {
                 question:
-                    "Do your necklaces/bracelets come in different lengths?",
+                    "Do necklaces and bracelets come in different lengths?",
                 answer:
-                    "Most do! Check each product page for size options and recommendations.",
+                    "Many of our pieces are available in multiple lengths. Our necklaces have loops at 16cm. 17cm and 18cm. Our bracelets also have an extra loop to shorten it. Please refer to the individual product page for available size options and fit guidance.",
             },
             {
-                question: "Do you offer gift wrapping?",
+                question: "Do you offer gift wrapping or gift notes?",
                 answer:
-                    "Yup! You can add a cute gift note at checkout. Packaging is chic enough for you to post on Insta!",
+                    "Yes. You can add a personalised gift note at checkout. Our packaging is designed to be gift-ready and is made from recyclable materials.",
+            },
+            {
+                question: "Do you offer gift cards?",
+                answer:
+                    "Yes. I Want Jewels gift cards are available in flexible amounts, delivered instantly by email, and redeemable across our full jewellery collection — a thoughtful choice for any occasion.",
             },
         ],
     },
     {
-        category: "Ethics & Sustainability",
+        category: "Sustainability & Ethics",
         items: [
             {
-                question: "Is your jewellery sustainable?",
+                question: "Is I Want Jewels committed to sustainable practices?",
                 answer:
-                    "We're all about conscious sparkle. Lab-grown diamonds = less environmental impact, and our packaging is recyclable too.",
+                    "Sustainability is central to how we create. Our use of lab-grown diamonds reduces the environmental footprint associated with traditional diamond mining, and our packaging is made from recyclable materials. We are committed to offering fine jewellery that is both beautiful and responsibly made.",
             },
         ],
     },
@@ -152,18 +152,18 @@ const faqData = [
         category: "Customer Support",
         items: [
             {
-                question: "Need help?",
+                question: "How can I contact I Want Jewels?",
                 answer: (
                     <>
-                        Slide into our inbox at{" "}
+                        Our customer care team is available at{" "}
                         <a
                             href="mailto:care@iwantjewels.com"
                             className="font-medium text-zinc-900 underline transition hover:text-pink-500"
                         >
                             care@iwantjewels.com
-                        </a>{" "}
-                        – we reply in 1–2 business days (faster if you&apos;re
-                        nice).
+                        </a>
+                        . We aim to respond to all enquiries within 1–2 business
+                        days.
                     </>
                 ),
             },
