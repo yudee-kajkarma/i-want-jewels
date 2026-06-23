@@ -58,7 +58,7 @@ export default function CheckoutPage() {
   const location = useLocation()
   const dispatch = useAppDispatch()
   const { session } = useAuth()
-  const { currency } = useCurrency()
+  const { currency, applyAddressCountry } = useCurrency()
   const cart = useAppSelector((state) => state.cart.cart)
   const cartStatus = useAppSelector((state) => state.cart.status)
   const cartMutationStatus = useAppSelector((state) => state.cart.mutationStatus)
@@ -198,6 +198,12 @@ export default function CheckoutPage() {
     () => addresses.find((address) => address.id === selectedAddressId) ?? null,
     [addresses, selectedAddressId],
   )
+
+  // Selecting (or defaulting to) a UK address switches the display to GBP,
+  // unless the shopper has made an explicit manual currency choice.
+  useEffect(() => {
+    applyAddressCountry(selectedAddress?.country)
+  }, [selectedAddress?.country, applyAddressCountry])
 
   function openAddAddressForm() {
     setAddressError('')

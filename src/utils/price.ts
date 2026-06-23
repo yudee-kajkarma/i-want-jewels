@@ -7,6 +7,9 @@ export type Price = {
 }
 
 export const CURRENCY_STORAGE_KEY = 'iwj_currency'
+// Set to '1' once the visitor explicitly picks a currency from the switcher.
+// A manual choice wins over the automatic address/timezone detection.
+export const CURRENCY_MANUAL_KEY = 'iwj_currency_manual'
 export const DEFAULT_CURRENCY: CurrencyCode = 'eur'
 
 export const CURRENCY_OPTIONS: Array<{ code: CurrencyCode; label: string; symbol: string }> = [
@@ -23,6 +26,55 @@ const CURRENCY_ISO: Record<CurrencyCode, string> = {
 
 export function getCurrencyIsoCode(currency: CurrencyCode): string {
   return CURRENCY_ISO[currency]
+}
+
+// Map a backend ISO code (e.g. 'GBP'/'EUR') to our internal currency code.
+// Returns null for anything we don't support so callers can fall back.
+export function isoToCurrencyCode(iso: string | null | undefined): CurrencyCode | null {
+  if (!iso) {
+    return null
+  }
+
+  const normalized = iso.trim().toUpperCase()
+
+  if (normalized === 'GBP') {
+    return 'pou'
+  }
+
+  if (normalized === 'EUR') {
+    return 'eur'
+  }
+
+  return null
+}
+
+// Best-effort, client-only guess of whether the visitor is in the UK, based on
+// browser language and timezone. No network/IP lookup. UK → GBP, else EUR.
+export function detectLocaleCurrency(): CurrencyCode {
+  if (typeof window === 'undefined') {
+    return DEFAULT_CURRENCY
+  }
+
+  try {
+    const languages =
+      (Array.isArray(navigator.languages) && navigator.languages.length > 0
+        ? navigator.languages
+        : [navigator.language]
+      ).filter(Boolean) as string[]
+
+    if (languages.some((lang) => lang.toLowerCase() === 'en-gb')) {
+      return 'pou'
+    }
+
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    if (timeZone === 'Europe/London') {
+      return 'pou'
+    }
+  } catch {
+    // Intl/navigator unavailable — fall through to the default.
+  }
+
+  return DEFAULT_CURRENCY
 }
 
 const CURRENCY_LOCALE: Record<CurrencyCode, string> = {

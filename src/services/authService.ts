@@ -72,6 +72,15 @@ function normalizeAuthSession(
         getStringValue(baseRecord, "jwt");
     const isVerifiedValue = userRecord.isVerified;
     const role = getUserRole(userRecord.role);
+    const preferredCurrencyValue = userRecord.preferredCurrency;
+    const preferredCurrency =
+        preferredCurrencyValue === "GBP" || preferredCurrencyValue === "EUR"
+            ? preferredCurrencyValue
+            : undefined;
+    const currencyManuallySet =
+        typeof userRecord.currencyManuallySet === "boolean"
+            ? userRecord.currencyManuallySet
+            : undefined;
 
     return {
         email,
@@ -82,6 +91,8 @@ function normalizeAuthSession(
         token: token || undefined,
         isVerified:
             typeof isVerifiedValue === "boolean" ? isVerifiedValue : true,
+        preferredCurrency,
+        currencyManuallySet,
         raw: baseRecord,
     };
 }
@@ -220,4 +231,12 @@ export async function resetPassword(payload: {
 
 export async function logoutUser(): Promise<void> {
     await authApiClient.post("/users/logout");
+}
+
+// Persist a manually chosen currency to the logged-in user's account so it
+// follows them across devices. Marks the choice as manual on the backend.
+export async function updateCurrencyPreference(
+    currency: "EUR" | "GBP",
+): Promise<void> {
+    await authApiClient.patch("/users/preference/currency", { currency });
 }

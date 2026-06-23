@@ -320,7 +320,7 @@ function MiniCurrencySelector({
     setCurrency,
 }: {
     currency: CurrencyCode;
-    setCurrency: (c: CurrencyCode) => void;
+    setCurrency: (c: CurrencyCode, options?: { manual?: boolean }) => void;
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement | null>(null);
@@ -381,7 +381,7 @@ function MiniCurrencySelector({
                             key={opt.code}
                             type="button"
                             onClick={() => {
-                                setCurrency(opt.code);
+                                setCurrency(opt.code, { manual: true });
                                 setIsOpen(false);
                             }}
                             className={`flex w-full items-center gap-2 px-3 py-2.5 text-left text-[13px] tracking-[0.02em] ${
@@ -1478,7 +1478,11 @@ export default function Header() {
                                     <button
                                         key={opt.code}
                                         type="button"
-                                        onClick={() => setCurrency(opt.code)}
+                                        onClick={() =>
+                                            setCurrency(opt.code, {
+                                                manual: true,
+                                            })
+                                        }
                                         className={`flex items-center gap-2 border px-3 py-2 text-[12px] font-medium uppercase tracking-[0.14em] transition ${
                                             isActive
                                                 ? "border-zinc-900 bg-zinc-900 text-white"

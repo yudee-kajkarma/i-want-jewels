@@ -41,5 +41,7 @@ export type AuthSession = {
   role: UserRole
   token?: string
   isVerified: boolean
+  preferredCurrency?: 'EUR' | 'GBP'
+  currencyManuallySet?: boolean
   raw?: Record<string, unknown>
 }

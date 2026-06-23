@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
 import { useAuth } from '../context/AuthContext'
+import { useCurrency } from '../context/CurrencyContext'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import GiftCardsSection from '../components/giftcard/GiftCardsSection'
@@ -41,6 +42,7 @@ function createAddress(defaults?: Partial<UserProfileAddressPayload>, apiId: str
 
 export default function ProfilePage() {
   const { session, saveSession } = useAuth()
+  const { applyAddressCountry } = useCurrency()
   const [firstName, setFirstName] = useState(session?.firstName ?? '')
   const [lastName, setLastName] = useState(session?.lastName ?? '')
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -224,6 +226,7 @@ export default function ProfilePage() {
       const selectedAddress = nextAddresses.find((address) => address.id === id)
 
       if (selectedAddress?.apiId) {
+        applyAddressCountry(selectedAddress.country)
         void setDefaultUserAddress(selectedAddress.apiId).catch((error) => {
           const message = getApiErrorMessage(error, 'Unable to set default address right now.')
           setErrorMessage(message)
@@ -367,6 +370,7 @@ export default function ProfilePage() {
           await setDefaultUserAddress(createdAddress.id)
         }
 
+        applyAddressCountry(payload.country)
         setSuccessMessage('Address added successfully.')
         toast.success('Address added successfully.')
         return
@@ -400,6 +404,7 @@ export default function ProfilePage() {
         ...currentValue,
         [address.apiId as string]: payload,
       }))
+      applyAddressCountry(payload.country)
       setSuccessMessage('Address updated successfully.')
       toast.success('Address updated successfully.')
     } catch (error) {
