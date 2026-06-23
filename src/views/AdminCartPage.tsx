@@ -119,7 +119,7 @@ export default function AdminCartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900 font-parsi">
+    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900 font-poppins">
       <Header />
 
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">

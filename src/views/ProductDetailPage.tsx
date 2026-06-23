@@ -1829,8 +1829,8 @@ export default function ProductDetailPage({
                         </section>
                         */}
 
-                        <section className="mt-16 border-t border-zinc-200 pt-12 font-parsi">
-                            <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                        <section className="mt-16 border-t border-zinc-200 pt-12 font-poppins">
+                            <h2 className="font-play text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
                                 Categories
                             </h2>
                             <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

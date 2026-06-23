@@ -194,7 +194,7 @@ export default function GiftCardShoppableBanner() {
     }
 
     return (
-        <section className="mx-auto max-w-[1480px] px-6 py-12 font-raleway lg:px-10">
+        <section className="mx-auto max-w-[1480px] px-6 py-12 font-poppins lg:px-10">
             <div ref={containerRef} className="relative overflow-hidden">
                 <img
                     src={bannerGiftcardImage.src}
@@ -263,7 +263,7 @@ export default function GiftCardShoppableBanner() {
                                             isOpen ? "pointer-events-auto" : ""
                                         }`}
                                     >
-                                        <p className="line-clamp-2 text-[12px] font-medium leading-snug tracking-[-0.01em] text-zinc-900 xl:text-[13px] font-parsi">
+                                        <p className="line-clamp-2 text-[12px] font-medium leading-snug tracking-[-0.01em] text-zinc-900 xl:text-[13px] font-poppins">
                                             {label}
                                         </p>
                                         <div className="mt-1.5 flex items-center justify-between gap-2">
@@ -286,7 +286,7 @@ export default function GiftCardShoppableBanner() {
 
                 <div className="relative flex items-center justify-center px-6 py-12 sm:px-10 lg:justify-start lg:px-14 lg:py-20">
                     <div className="w-full max-w-[440px] bg-black px-8 py-10 text-white sm:px-10 sm:py-12">
-                        <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px] font-parsi">
+                        <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px] font-play">
                             <span className="block">The Perfect Gift,</span>
                             <span className="block">Every Time</span>
                         </h2>
@@ -308,7 +308,7 @@ export default function GiftCardShoppableBanner() {
 
                         <Link
                             to={GIFT_CARD_HREF}
-                            className="mt-3 block w-full bg-pink-500 px-6 py-3.5 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 sm:text-[13px] font-parsi"
+                            className="mt-3 block w-full bg-pink-500 px-6 py-3.5 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 sm:text-[13px] font-poppins"
                         >
                             Shop Gift Cards
                         </Link>

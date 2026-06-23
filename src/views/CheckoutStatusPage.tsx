@@ -84,7 +84,7 @@ export default function CheckoutStatusPage() {
   }, [dispatch, paymentResult, pendingOrder?.source])
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
       <Header />
       <main className="mx-auto max-w-[980px] px-4 py-10 lg:px-8">
         <section className="overflow-hidden border border-[#eadfd4] bg-white shadow-[0_24px_70px_rgba(55,31,10,0.08)]">

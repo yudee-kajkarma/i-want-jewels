@@ -26,7 +26,7 @@ const features: Array<{ icon: string; alt: string; lines: [string, string] }> =
 
 export default function FeatureHighlights() {
     return (
-        <section className="mx-auto max-w-[1480px] px-6 py-10 font-parsi lg:px-10">
+        <section className="mx-auto max-w-[1480px] px-6 py-10 font-play lg:px-10">
             <ul className="grid grid-cols-2 gap-y-10 sm:grid-cols-4 sm:gap-y-0">
                 {features.map((feature) => (
                     <li key={feature.alt} className="flex justify-center">

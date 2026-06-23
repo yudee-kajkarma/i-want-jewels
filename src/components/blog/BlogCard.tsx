@@ -25,7 +25,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     const postHref = `/blog/${post.slug}`;
 
     return (
-        <article className="group font-parsi">
+        <article className="group font-poppins">
             <Link to={postHref} className="relative block overflow-hidden">
                 <img
                     src={post.coverImage}

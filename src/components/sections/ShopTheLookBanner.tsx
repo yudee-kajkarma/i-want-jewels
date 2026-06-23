@@ -182,7 +182,7 @@ export default function ShopTheLookBanner() {
     }
 
     return (
-        <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
+        <section className="mx-auto max-w-[1480px] px-6 py-12 font-play lg:px-10">
             <div className="grid items-stretch overflow-hidden lg:grid-cols-2 lg:items-start">
                 {/* Left: collage card */}
                 <div className="flex flex-col bg-[#f1f1f1] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">

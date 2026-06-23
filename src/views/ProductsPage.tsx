@@ -489,7 +489,7 @@ export default function ProductsPage({
     ].filter(Boolean);
 
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
+        <div className="min-h-screen bg-white text-zinc-900 font-play">
             <Header />
             <main className="pb-16">
                 <section className=" bg-white px-6 pb-5 lg:px-10 pt-8">
@@ -535,14 +535,18 @@ export default function ProductsPage({
                                     className="ml-auto cursor-pointer border border-zinc-800 bg-white px-5 py-2.5 pr-9 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 outline-none transition hover:bg-zinc-50 focus:border-pink-500 sm:px-6 sm:py-4 sm:pr-10 sm:text-[13px]"
                                 >
                                     <option value="">All Collections</option>
-                                    {availableCollections.map((collectionName) => (
-                                        <option
-                                            key={collectionName}
-                                            value={collectionName}
-                                        >
-                                            {formatFilterLabel(collectionName)}
-                                        </option>
-                                    ))}
+                                    {availableCollections.map(
+                                        (collectionName) => (
+                                            <option
+                                                key={collectionName}
+                                                value={collectionName}
+                                            >
+                                                {formatFilterLabel(
+                                                    collectionName,
+                                                )}
+                                            </option>
+                                        ),
+                                    )}
                                 </select>
                             ) : null}
                         </div>
@@ -658,8 +662,12 @@ export default function ProductsPage({
 
                             <div className="grid gap-5 grid-cols-2 sm:gap-6 xl:grid-cols-3">
                                 {isLoading
-                                    ? Array.from({ length: productsPerPage }).map((_, index) => (
-                                          <ProductCardSkeleton key={`skeleton-${index}`} />
+                                    ? Array.from({
+                                          length: productsPerPage,
+                                      }).map((_, index) => (
+                                          <ProductCardSkeleton
+                                              key={`skeleton-${index}`}
+                                          />
                                       ))
                                     : sortedProducts.map((product) => (
                                           <ProductCard
@@ -672,7 +680,9 @@ export default function ProductsPage({
                                       ))}
                             </div>
 
-                            {!isLoading && productsData && products.length === 0 ? (
+                            {!isLoading &&
+                            productsData &&
+                            products.length === 0 ? (
                                 <div className="mt-8 border border-dashed border-zinc-300 bg-white px-6 py-10 text-center">
                                     <h3 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
                                         No products match the selected filters

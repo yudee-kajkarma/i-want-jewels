@@ -103,10 +103,12 @@ export default function InstagramGallerySection({
     };
 
     return (
-        <section className="overflow-hidden font-parsi">
+        <section className="overflow-hidden font-poppins">
             {/* Heading */}
             <div className="mx-auto max-w-6xl px-4 py-10 text-center">
-                <h2 className="text-3xl font-semibold md:text-4xl">{title}</h2>
+                <h2 className="text-3xl font-semibold md:text-4xl font-play">
+                    {title}
+                </h2>
                 {/* <p className="mt-3 text-sm text-zinc-500 md:text-base">
                     {subtitle}
                 </p> */}

@@ -101,7 +101,7 @@ export default function TicketsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">

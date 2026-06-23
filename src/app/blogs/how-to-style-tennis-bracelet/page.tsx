@@ -530,7 +530,7 @@ const BlogPage = () => (
         <Header />
         <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-12 relative mb-20">
             <div className="flex-1 w-full lg:w-2/3">
-                <h1 className="text-4xl md:text-5xl font-parsi font-semibold text-[#1f2732] mb-6">
+                <h1 className="text-4xl md:text-5xl font-play font-semibold text-[#1f2732] mb-6">
                     10 Ways to Style a Diamond Tennis Bracelet (From Office to
                     Evening)
                 </h1>

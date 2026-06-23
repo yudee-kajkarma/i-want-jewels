@@ -41,7 +41,7 @@ const BlogSidebar = ({
     return (
         <div className={className}>
             <div className="bg-[#f7f8fa] p-8 w-full shadow-sm rounded-sm lg:rounded-none">
-                <h3 className="text-4xl lg:text-3xl font-semibold font-parsi mb-6 text-[#0f172a]">
+                <h3 className="text-4xl lg:text-3xl font-semibold font-play mb-6 text-[#0f172a]">
                     More Articles
                 </h3>
                 <ul className="space-y-3 lg:space-y-5 max-h-none lg:max-h-[70vh] lg:overflow-y-auto lg:pr-2">
@@ -56,7 +56,7 @@ const BlogSidebar = ({
                             >
                                 <div className="flex items-center gap-4">
                                     <span className="hidden lg:block w-2 h-2 rounded-full border border-current shrink-0 group-hover:border-[#bb923a]"></span>
-                                    <span className="font-parsi text-lg lg:text-sm lg:font-sans lg:font-semibold lg:tracking-wide underline lg:no-underline underline-offset-4">
+                                    <span className="font-poppins text-lg lg:text-sm lg:font-sans lg:font-semibold lg:tracking-wide underline lg:no-underline underline-offset-4">
                                         {link.title}
                                     </span>
                                 </div>

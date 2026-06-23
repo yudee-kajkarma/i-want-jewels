@@ -11,10 +11,10 @@ export default function NewsletterSection({
         <section className=" container mx-auto">
             <div className="bg-black text-center text-white ">
                 <div className="mx-auto max-w-[1100px] px-4 py-12 sm:py-14 md:py-16 lg:py-20">
-                    <h2 className="text-[26px] font-medium uppercase leading-tight tracking-[0.04em] sm:text-[34px] md:text-[42px] lg:text-[48px] font-parsi">
+                    <h2 className="text-[26px] font-medium uppercase leading-tight tracking-[0.04em] sm:text-[34px] md:text-[42px] lg:text-[48px] font-play">
                         {title}
                     </h2>
-                    <p className="mx-auto mt-4 max-w-3xl text-[12px] leading-6 text-white/85 sm:text-[13px] md:text-[14px] font-raleway">
+                    <p className="mx-auto mt-4 max-w-3xl text-[12px] leading-6 text-white/85 sm:text-[13px] md:text-[14px] font-poppins">
                         {description}
                     </p>
 

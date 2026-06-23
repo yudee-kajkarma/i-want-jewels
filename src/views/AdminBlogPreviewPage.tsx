@@ -59,7 +59,7 @@ export default function AdminBlogPreviewPage({ slug }: AdminBlogPreviewPageProps
 
   if (isLoading) {
     return (
-      <div className="font-parsi min-h-screen bg-white px-4 py-20 text-center text-zinc-600">
+      <div className="font-poppins min-h-screen bg-white px-4 py-20 text-center text-zinc-600">
         Loading blog preview...
       </div>
     )
@@ -67,7 +67,7 @@ export default function AdminBlogPreviewPage({ slug }: AdminBlogPreviewPageProps
 
   if (!blogDetail) {
     return (
-      <div className="font-parsi min-h-screen bg-white px-4 py-20 text-center text-zinc-600">
+      <div className="font-poppins min-h-screen bg-white px-4 py-20 text-center text-zinc-600">
         {error || 'Blog not found.'}
       </div>
     )

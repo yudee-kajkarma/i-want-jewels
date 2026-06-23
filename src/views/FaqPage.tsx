@@ -181,7 +181,7 @@ export default function FAQPage() {
     let count = 0;
 
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
+        <div className="min-h-screen bg-white text-zinc-900 font-poppins">
             <Header />
 
             <main>

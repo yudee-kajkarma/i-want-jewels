@@ -25,14 +25,14 @@ interface DynamicArticleProps {
 
 const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
     return (
-        <div className="text-slate-700 text-lg font-parsi leading-relaxed">
+        <div className="text-slate-700 text-lg font-poppins leading-relaxed">
             {sections.map((section, idx) => (
                 <div
                     key={idx}
                     className={idx > 0 && section.heading ? "mt-10" : ""}
                 >
                     {section.heading && (
-                        <h2 className="text-3xl md:text-4xl font-parsi font-semibold text-[#1f2732] mb-6">
+                        <h2 className="text-3xl md:text-4xl font-play font-semibold text-[#1f2732] mb-6">
                             {section.heading}
                         </h2>
                     )}
@@ -79,7 +79,7 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                             />
                                         </div>
                                         {/* {block.caption && (
-                                            <figcaption className="text-sm text-slate-500 mt-3 text-center italic font-parsi">
+                                            <figcaption className="text-sm text-slate-500 mt-3 text-center italic font-poppins">
                                                 {block.caption}
                                             </figcaption>
                                         )} */}

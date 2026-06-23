@@ -106,7 +106,7 @@ function SocialIcon({ name }: { name: string }) {
 
 export default function Footer() {
     return (
-        <footer className="bg-white font-parsi">
+        <footer className="bg-white font-poppins">
             <div className="mx-auto container px-6 py-12 lg:px-10 lg:py-16">
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
                     <div>

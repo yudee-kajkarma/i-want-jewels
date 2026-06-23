@@ -19,7 +19,7 @@ export default function AuthShell({
   asideBody: string
 }) {
   return (
-    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-parsi">
+    <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
       <Header />
       <main className="px-4 py-8 lg:px-8 lg:py-12">
         <div className="mx-auto max-w-[1480px] overflow-hidden border border-[#eadfd4] bg-white shadow-[0_25px_80px_rgba(89,60,33,0.08)] lg:grid lg:grid-cols-[0.92fr_1.08fr]">

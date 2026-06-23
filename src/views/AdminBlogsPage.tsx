@@ -349,7 +349,7 @@ export default function AdminBlogsPage() {
   }
 
   return (
-    <div className="font-parsi min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900">
+    <div className="font-poppins min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-zinc-900">
       <Header />
 
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">

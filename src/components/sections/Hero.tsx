@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="pointer-events-none absolute inset-x-0 bottom-4 left-[7%] px-4 md:top-[55%] md:bottom-auto md:left-[10.5%]">
                 <Link
                     to="/products"
-                    className="iwj-hero-cta pointer-events-auto inline-block border border-zinc-200 bg-white px-5 py-2.5 font-parsi text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:px-8 sm:py-3 sm:text-[12px] sm:tracking-[0.22em] md:px-6 md:py-2.5 md:text-[13px] lg:px-10 lg:py-3.5 lg:text-[14px]"
+                    className="iwj-hero-cta pointer-events-auto inline-block border border-zinc-200 bg-white px-5 py-2.5 font-poppins text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:px-8 sm:py-3 sm:text-[12px] sm:tracking-[0.22em] md:px-6 md:py-2.5 md:text-[13px] lg:px-10 lg:py-3.5 lg:text-[14px]"
                 >
                     Explore Collection
                 </Link>

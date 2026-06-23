@@ -24,7 +24,7 @@ const BlogsIndexPage = () => (
                     <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
                         Homepage / Blog
                     </p>
-                    <h1 className="mt-3 font-parsi text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
+                    <h1 className="mt-3 font-play text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
                         Blog
                     </h1>
                 </div>
@@ -37,7 +37,7 @@ const BlogsIndexPage = () => (
                         href={link.href}
                         className="group flex flex-col justify-between gap-6 bg-[#f7f8fa] p-7 rounded-sm shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <h2 className="text-2xl font-parsi font-medium text-[#1f2732] leading-snug group-hover:text-pink-500 transition-colors">
+                        <h2 className="text-2xl font-play font-medium text-[#1f2732] leading-snug group-hover:text-pink-500 transition-colors">
                             {link.title}
                         </h2>
                         <span className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-black">

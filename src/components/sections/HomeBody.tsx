@@ -393,7 +393,7 @@ export default function HomeBody() {
 
     return (
         <>
-            <section className="mx-auto max-w-[1480px] px-6 py-16 font-parsi lg:px-10">
+            <section className="mx-auto max-w-[1480px] px-6 py-16 font-play lg:px-10">
                 <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
                     Categories
                 </h2>
@@ -422,7 +422,7 @@ export default function HomeBody() {
                 </div>
             </section>
             {/* Discover Jewellery section */}
-            <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
+            <section className="mx-auto max-w-[1480px] px-6 py-12 font-play lg:px-10">
                 <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
                     Discover Our Latest Jewellery Pieces
                 </h2>
@@ -494,7 +494,7 @@ export default function HomeBody() {
             <ConcettaShoppableBanner />
             {/* Shop by Collection */}
             {collectionGroups.length > 0 ? (
-                <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
+                <section className="mx-auto max-w-[1480px] px-6 py-12 font-play lg:px-10">
                     <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
                         Shop By Collection
                     </h2>

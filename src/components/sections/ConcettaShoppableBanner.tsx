@@ -282,7 +282,7 @@ export default function ConcettaShoppableBanner() {
     }
 
     return (
-        <section className="mx-auto max-w-[1480px] px-6 py-12 font-parsi lg:px-10">
+        <section className="mx-auto max-w-[1480px] px-6 py-12 font-poppins lg:px-10">
             <div ref={containerRef} className="relative overflow-hidden">
                 {/* Desktop */}
                 <div className="relative hidden lg:block">

@@ -61,7 +61,7 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
+        <div className="min-h-screen bg-white text-zinc-900 font-poppins">
             <Header />
 
             <main>

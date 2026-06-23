@@ -562,7 +562,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
   }
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-[#2b1323] font-parsi">
+    <div className="min-h-screen bg-[linear-gradient(180deg,#fff7fc_0%,#fffdfb_36%,#ffffff_100%)] text-[#2b1323] font-poppins">
       <Header />
       <main>
         <div className="mx-auto max-w-[92rem] px-4 py-8 sm:px-6 lg:px-8">

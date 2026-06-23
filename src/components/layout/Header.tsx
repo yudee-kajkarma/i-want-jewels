@@ -824,7 +824,7 @@ export default function Header() {
         "relative inline-flex items-center text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-700 transition hover:text-zinc-950 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-zinc-950 after:transition-transform after:duration-200 hover:after:scale-x-100";
 
     return (
-        <header className="sticky top-0 z-30  bg-white font-parsi">
+        <header className="sticky top-0 z-30  bg-white font-poppins">
             <div ref={desktopSearchRef} className="relative">
                 <div className="mx-auto flex h-[68px] max-w-[1480px] items-center justify-between gap-4 px-4 lg:h-[76px] lg:px-10">
                     {/* Left cluster */}
@@ -1230,12 +1230,12 @@ export default function Header() {
                 ref={drawerRef}
                 aria-hidden={!isDrawerOpen}
                 aria-label="Site menu"
-                className={`iwj-hamburger-drawer font-parsi ${
+                className={`iwj-hamburger-drawer font-poppins ${
                     isDrawerOpen ? "iwj-hamburger-drawer--open" : ""
                 }`}
             >
                 <div className="flex items-center justify-between border-b border-zinc-100 px-6 py-5">
-                    <span className="font-parsi text-[20px] font-bold uppercase tracking-[-0.01em] ">
+                    <span className="font-play text-[20px] font-bold uppercase tracking-[-0.01em] ">
                         EXPLORE MORE
                     </span>
                     <button

@@ -212,7 +212,7 @@ function FeatureIcon({ icon }: { icon: string }) {
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-raleway">
+        <div className="min-h-screen bg-white text-zinc-900 font-poppins">
             <Header />
 
             <main>
@@ -221,7 +221,7 @@ export default function AboutPage() {
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
                             Homepage / About Us
                         </p>
-                        <h1 className="mt-3 font-parsi text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
+                        <h1 className="mt-3 font-play text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
                             About Us
                         </h1>
                     </div>
@@ -233,7 +233,7 @@ export default function AboutPage() {
                         <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-500">
                             Our story
                         </p>
-                        <h2 className="mt-4 font-parsi text-[40px] font-light leading-[1.1] tracking-[-0.01em] text-zinc-900 sm:text-[46px]">
+                        <h2 className="mt-4 font-play text-[40px] font-light leading-[1.1] tracking-[-0.01em] text-zinc-900 sm:text-[46px]">
                             I Want <em className="italic">Jewels</em>
                         </h2>
                         <p className="mt-3 text-[14px] font-light tracking-[0.08em] text-zinc-600">
@@ -248,7 +248,7 @@ export default function AboutPage() {
                         <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-400">
                             Where it began
                         </p>
-                        <p className="mt-5 border-l-[1.5px] border-zinc-400 pl-5 font-parsi text-[22px] font-light italic leading-[1.5] text-zinc-900 sm:text-[24px]">
+                        <p className="mt-5 border-l-[1.5px] border-zinc-400 pl-5 font-play text-[22px] font-light italic leading-[1.5] text-zinc-900 sm:text-[24px]">
                             &ldquo;I never put on jewellery around my neck again
                             — and that changed everything.&rdquo;
                         </p>
@@ -308,7 +308,7 @@ export default function AboutPage() {
                         <div className="mt-6 grid gap-px border border-zinc-200 bg-zinc-200 sm:grid-cols-3">
                             <div className="bg-white p-6 lg:p-7">
                                 <ShieldCheckIcon className="h-6 w-6 text-pink-500" />
-                                <h3 className="mt-3 font-parsi text-[18px] font-normal leading-tight text-zinc-900">
+                                <h3 className="mt-3 font-play text-[18px] font-normal leading-tight text-zinc-900">
                                     Hypoallergenic by design
                                 </h3>
                                 <p className="mt-2 text-[13px] font-light leading-[1.7] text-zinc-600">
@@ -319,7 +319,7 @@ export default function AboutPage() {
                             </div>
                             <div className="bg-white p-6 lg:p-7">
                                 <FactoryIcon className="h-6 w-6 text-pink-500" />
-                                <h3 className="mt-3 font-parsi text-[18px] font-normal leading-tight text-zinc-900">
+                                <h3 className="mt-3 font-play text-[18px] font-normal leading-tight text-zinc-900">
                                     Made in our own factory
                                 </h3>
                                 <p className="mt-2 text-[13px] font-light leading-[1.7] text-zinc-600">
@@ -331,7 +331,7 @@ export default function AboutPage() {
                             </div>
                             <div className="bg-white p-6 lg:p-7">
                                 <CoinIcon className="h-6 w-6 text-pink-500" />
-                                <h3 className="mt-3 font-parsi text-[18px] font-normal leading-tight text-zinc-900">
+                                <h3 className="mt-3 font-play text-[18px] font-normal leading-tight text-zinc-900">
                                     Accessible luxury
                                 </h3>
                                 <p className="mt-2 text-[13px] font-light leading-[1.7] text-zinc-600">
@@ -352,7 +352,7 @@ export default function AboutPage() {
                         </p>
                         <div className="mt-5 grid gap-3 sm:grid-cols-3">
                             <div className="bg-zinc-50 px-4 py-6 text-center">
-                                <h3 className="font-parsi text-[17px] font-normal text-zinc-900">
+                                <h3 className="font-play text-[17px] font-normal text-zinc-900">
                                     Sterling silver base
                                 </h3>
                                 <p className="mt-1 text-[12px] font-light leading-[1.5] text-zinc-600">
@@ -362,7 +362,7 @@ export default function AboutPage() {
                                 </p>
                             </div>
                             <div className="bg-zinc-50 px-4 py-6 text-center">
-                                <h3 className="font-parsi text-[17px] font-normal text-zinc-900">
+                                <h3 className="font-play text-[17px] font-normal text-zinc-900">
                                     14kt gold plating
                                 </h3>
                                 <p className="mt-1 text-[12px] font-light leading-[1.5] text-zinc-600">
@@ -372,7 +372,7 @@ export default function AboutPage() {
                                 </p>
                             </div>
                             <div className="bg-zinc-50 px-4 py-6 text-center">
-                                <h3 className="font-parsi text-[17px] font-normal text-zinc-900">
+                                <h3 className="font-play text-[17px] font-normal text-zinc-900">
                                     Lab grown diamonds
                                 </h3>
                                 <p className="mt-1 text-[12px] font-light leading-[1.5] text-zinc-600">
@@ -395,7 +395,7 @@ export default function AboutPage() {
 
                 <section className="bg-white px-6 py-10 text-center lg:py-14">
                     <div className="mx-auto max-w-xl">
-                        <h2 className="font-parsi text-[28px] font-light italic leading-[1.3] text-zinc-900 sm:text-[30px]">
+                        <h2 className="font-play text-[28px] font-light italic leading-[1.3] text-zinc-900 sm:text-[30px]">
                             Start your collection with us.
                         </h2>
                         <p className="mt-4 text-[14px] font-light leading-[1.8] text-zinc-600">

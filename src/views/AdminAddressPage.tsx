@@ -129,7 +129,7 @@ export default function AdminAddressPage() {
   }
 
   return (
-    <div className="font-parsi min-h-screen bg-[#fffdfa] text-zinc-900">
+    <div className="font-poppins min-h-screen bg-[#fffdfa] text-zinc-900">
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-wrap items-center gap-3">
