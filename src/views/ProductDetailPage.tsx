@@ -3,15 +3,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
     ChevronDown,
+    ChevronLeft,
+    ChevronRight,
     ChevronUp,
-    Headset,
     Heart,
-    Package,
     PencilLine,
     Play,
-    ShieldCheck,
     Trash2,
-    Truck,
     X,
 } from "lucide-react";
 import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
@@ -19,6 +17,11 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
 import ringSizeGuideImage from "../assets/image/Ring-Size-Guide.jpeg";
+import earringsCategoryImage from "../assets/categories/Earrings.jpg";
+import necklaceCategoryImage from "../assets/categories/Necklace.jpg";
+import braceletCategoryImage from "../assets/categories/Bracelet.png";
+import ringsCategoryImage from "../assets/categories/Rings.jpg";
+import collectionsCategoryImage from "../assets/about-us/collections.jpg.jpeg";
 import { useAuth } from "../context/AuthContext";
 import { useCurrency } from "../context/CurrencyContext";
 import {
@@ -50,26 +53,31 @@ import {
 import { formatPrice } from "../utils/price";
 import { setSingleCheckoutDraft } from "../utils/checkoutStorage";
 
-const productFeatureItems = [
+const categoryCards: Array<{ label: string; image: string; href: string }> = [
     {
-        title: "Shipping Faster",
-        description:
-            "Carefully packed and dispatched within 1–2 business days from our Antwerp boutique.",
+        label: "Earrings",
+        image: earringsCategoryImage.src,
+        href: "/products?category=Earrings",
     },
     {
-        title: "Cost Material",
-        description:
-            "Lab-grown diamonds and sterling silver crafted at fair, considered pricing.",
+        label: "Necklaces",
+        image: necklaceCategoryImage.src,
+        href: "/products?category=Necklace",
     },
     {
-        title: "High Quality",
-        description:
-            "Every piece is QC-checked twice before shipping to keep the finish flawless.",
+        label: "Bracelet",
+        image: braceletCategoryImage.src,
+        href: "/products?category=Bracelets",
     },
     {
-        title: "Highly Compatible",
-        description:
-            "Hypoallergenic finishes designed for daily wear and gentle on sensitive skin.",
+        label: "Rings",
+        image: ringsCategoryImage.src,
+        href: "/products?category=Rings",
+    },
+    {
+        label: "Collection",
+        image: collectionsCategoryImage.src,
+        href: "/products?collection=Concetta",
     },
 ];
 
@@ -276,35 +284,6 @@ function PaymentIcon({
     );
 }
 
-function ProductFeatureGrid() {
-    const featureIcons = [Truck, Package, ShieldCheck, Headset];
-
-    return (
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {productFeatureItems.map((item, index) => {
-                const FeatureIcon = featureIcons[index] ?? ShieldCheck;
-
-                return (
-                    <article key={item.title} className="space-y-3">
-                        <span className="inline-flex h-10 w-10 items-center justify-center bg-pink-500 text-white">
-                            <FeatureIcon
-                                strokeWidth={1.6}
-                                className="h-5 w-5"
-                            />
-                        </span>
-                        <h4 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                            {item.title}
-                        </h4>
-                        <p className="max-w-[18rem] text-[13px] leading-7 text-zinc-600">
-                            {item.description}
-                        </p>
-                    </article>
-                );
-            })}
-        </div>
-    );
-}
-
 function ProductDetailSkeleton() {
     return (
         <div className="mx-auto max-w-[1480px] px-6 py-10 lg:px-10">
@@ -452,6 +431,7 @@ export default function ProductDetailPage({
     const [isUpdatingWishlist, setIsUpdatingWishlist] = useState(false);
     const [isSubmittingReview, setIsSubmittingReview] = useState(false);
     const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0]);
+    const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
     async function loadReviews(targetProductId: string) {
         const reviewsResponse = await getProductReviews(targetProductId);
@@ -675,6 +655,20 @@ export default function ProductDetailPage({
         if (!el) return;
         el.scrollBy({
             top: direction === "down" ? THUMB_SCROLL_STEP : -THUMB_SCROLL_STEP,
+            behavior: "smooth",
+        });
+    }
+
+    // Horizontal "You May Also Like" carousel — scrolls ~80% of the visible
+    // width per arrow click rather than wrapping onto a second row.
+    const recoScrollRef = useRef<HTMLDivElement | null>(null);
+
+    function scrollReco(direction: "left" | "right") {
+        const el = recoScrollRef.current;
+        if (!el) return;
+        const step = el.clientWidth * 0.8;
+        el.scrollBy({
+            left: direction === "right" ? step : -step,
             behavior: "smooth",
         });
     }
@@ -959,7 +953,7 @@ export default function ProductDetailPage({
     }
 
     return (
-        <div className="min-h-screen bg-white text-zinc-900 font-parsi">
+        <div className="min-h-screen bg-white text-zinc-900 font-poppins">
             <Header />
             <main className="pb-16">
                 {isLoading ? <ProductDetailSkeleton /> : null}
@@ -1141,170 +1135,159 @@ export default function ProductDetailPage({
                                 </div>
                             </div>
 
-                            <div className="space-y-6">
-                                <div>
-                                    <h1 className="text-[28px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[32px] lg:text-[36px]">
-                                        {(() => {
-                                            const match = product.title.match(
-                                                /^(.*?)\s*(lab grown.*)$/i,
-                                            );
-                                            if (match) {
-                                                return (
-                                                    <>
-                                                        <span className="font-bold">
-                                                            {match[1]}
-                                                        </span>{" "}
-                                                        {match[2]}
-                                                    </>
-                                                );
-                                            }
-                                            return (
-                                                <span className="font-bold">
-                                                    {product.title}
-                                                </span>
-                                            );
-                                        })()}
-                                    </h1>
-                                    {product.h2 ? (
-                                        <h2 className="mt-2 text-[13px] uppercase tracking-[0.14em] text-zinc-600">
-                                            {product.h2}
-                                        </h2>
-                                    ) : null}
-                                    <div className="mt-3 flex items-center gap-3 text-[12px] uppercase tracking-[0.14em] text-zinc-500">
-                                        <StarRating
-                                            rating={averageReviewRating}
-                                        />
-                                        <span>
-                                            (
-                                            {formatReviewCount(
-                                                totalReviewCount,
-                                            )}{" "}
-                                            reviews)
-                                        </span>
-                                    </div>
-                                </div>
+                            <div className="space-y-6 font-poppins">
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="min-w-0">
+                                        <h1 className="font-play text-[24px] font-normal leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[28px] lg:text-[32px]">
+                                            {(() => {
+                                                const collection =
+                                                    product.collectionName?.trim();
+                                                if (
+                                                    collection &&
+                                                    product.title
+                                                        .toLowerCase()
+                                                        .startsWith(
+                                                            collection.toLowerCase(),
+                                                        )
+                                                ) {
+                                                    const rest = product.title
+                                                        .slice(collection.length)
+                                                        .trim();
+                                                    return (
+                                                        <>
+                                                            <span className="font-bold">
+                                                                {collection}
+                                                            </span>
+                                                            {rest ? (
+                                                                <>
+                                                                    {" "}
+                                                                    {rest}
+                                                                </>
+                                                            ) : null}
+                                                        </>
+                                                    );
+                                                }
 
-                                <div className="border-t border-zinc-200 pt-5">
-                                    <p className="text-[28px] font-medium tracking-[-0.01em] text-zinc-900 sm:text-[32px]">
+                                                const words =
+                                                    product.title.split(" ");
+                                                if (words.length > 2) {
+                                                    return (
+                                                        <>
+                                                            <span className="font-bold">
+                                                                {words
+                                                                    .slice(0, 2)
+                                                                    .join(" ")}
+                                                            </span>{" "}
+                                                            {words
+                                                                .slice(2)
+                                                                .join(" ")}
+                                                        </>
+                                                    );
+                                                }
+
+                                                return (
+                                                    <span className="font-bold">
+                                                        {product.title}
+                                                    </span>
+                                                );
+                                            })()}
+                                        </h1>
+                                        {product.h2 ? (
+                                            <h2 className="mt-2 text-[12px] uppercase tracking-[0.14em] text-zinc-500">
+                                                {product.h2}
+                                            </h2>
+                                        ) : null}
+                                    </div>
+                                    <p className="font-play shrink-0 whitespace-nowrap text-[20px] font-medium text-zinc-900 sm:text-[24px]">
                                         {formatPrice(basePrice, currency)}
                                     </p>
-                                    <p className="mt-4 max-w-[36rem] text-[14px] leading-7 text-zinc-600">
-                                        {product.description}
-                                    </p>
-                                    <div className="mt-4 space-y-1.5 text-[12px] uppercase tracking-[0.14em] text-zinc-600">
-                                        <p>
-                                            <span className="text-zinc-900">
-                                                SKU:
-                                            </span>{" "}
-                                            {selectedVariant.sku ?? "N/A"}
-                                        </p>
-                                        {product.style ? (
-                                            <p>
-                                                <span className="text-zinc-900">
-                                                    Style:
-                                                </span>{" "}
-                                                {product.style}
-                                            </p>
-                                        ) : null}
-                                        {product.metal ? (
-                                            <p>
-                                                <span className="text-zinc-900">
-                                                    Metal:
-                                                </span>{" "}
-                                                {product.metal}
-                                            </p>
-                                        ) : null}
-                                        {product.finish ? (
-                                            <p>
-                                                <span className="text-zinc-900">
-                                                    Finish:
-                                                </span>{" "}
-                                                {product.finish}
-                                            </p>
-                                        ) : null}
-                                        {product.totalDiamondWeight > 0 ? (
-                                            <p>
-                                                <span className="text-zinc-900">
-                                                    Total Diamond Weight:
-                                                </span>{" "}
-                                                {product.totalDiamondWeight}{" "}
-                                                carats
-                                            </p>
-                                        ) : null}
-                                    </div>
                                 </div>
 
-                                <div className="border-t border-zinc-200 py-5">
-                                    {!isGiftCardProduct ? (
-                                        <>
-                                            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                                Color
-                                            </p>
-                                            <div className="mt-3 flex items-center gap-3">
-                                                {product.variants.map(
-                                                    (variant) => {
-                                                        const swatchImage =
-                                                            getMetalSwatchImage(
-                                                                variant.title,
-                                                            );
+                                {!isGiftCardProduct ? (
+                                    <div className="border-t border-zinc-200 pt-5">
+                                        <p className="font-play text-[13px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                            Metal
+                                        </p>
+                                        <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-3">
+                                            {product.variants.map((variant) => {
+                                                const swatchImage =
+                                                    getMetalSwatchImage(
+                                                        variant.title,
+                                                    );
+                                                const isSelected =
+                                                    selectedVariant.id ===
+                                                    variant.id;
+                                                const metalLabel =
+                                                    variant.title
+                                                        .split("/")[0]
+                                                        ?.trim() ||
+                                                    variant.title;
 
-                                                        return (
-                                                            <button
-                                                                key={variant.id}
-                                                                type="button"
-                                                                onClick={() =>
-                                                                    handleVariantChange(
-                                                                        variant,
-                                                                    )
-                                                                }
-                                                                title={
-                                                                    variant.title
-                                                                }
-                                                                className={`h-7 w-7 rounded-full border-2 transition ${
-                                                                    selectedVariant.id ===
-                                                                    variant.id
-                                                                        ? "border-zinc-900"
-                                                                        : "border-transparent hover:border-zinc-300"
-                                                                }`}
-                                                            >
-                                                                {swatchImage ? (
-                                                                    <img
-                                                                        src={
-                                                                            swatchImage
-                                                                        }
-                                                                        alt=""
-                                                                        aria-hidden="true"
-                                                                        className="block h-full w-full rounded-full object-cover"
-                                                                    />
-                                                                ) : (
-                                                                    <span
-                                                                        className={`block h-full w-full rounded-full ${getMetalToneClass(variant.title)}`}
-                                                                    />
-                                                                )}
-                                                            </button>
-                                                        );
-                                                    },
-                                                )}
-                                            </div>
-
-                                            {isRingCategory ? (
-                                                <div className="mt-4 flex items-center text-sm">
+                                                return (
                                                     <button
+                                                        key={variant.id}
                                                         type="button"
                                                         onClick={() =>
-                                                            setIsSizeGuideOpen(
-                                                                true,
+                                                            handleVariantChange(
+                                                                variant,
                                                             )
                                                         }
-                                                        className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
+                                                        title={variant.title}
+                                                        className="flex items-center gap-2.5 text-left"
                                                     >
-                                                        View Size Guide
+                                                        <span
+                                                            className={`flex h-8 w-8 items-center justify-center rounded-full border-2 transition ${
+                                                                isSelected
+                                                                    ? "border-zinc-900"
+                                                                    : "border-zinc-200"
+                                                            }`}
+                                                        >
+                                                            {swatchImage ? (
+                                                                <img
+                                                                    src={
+                                                                        swatchImage
+                                                                    }
+                                                                    alt=""
+                                                                    aria-hidden="true"
+                                                                    className="block h-6 w-6 rounded-full object-cover"
+                                                                />
+                                                            ) : (
+                                                                <span
+                                                                    className={`block h-6 w-6 rounded-full ${getMetalToneClass(variant.title)}`}
+                                                                />
+                                                            )}
+                                                        </span>
+                                                        <span
+                                                            className={`text-[12px] ${
+                                                                isSelected
+                                                                    ? "text-zinc-900"
+                                                                    : "text-zinc-500"
+                                                            }`}
+                                                        >
+                                                            {metalLabel}
+                                                        </span>
                                                     </button>
-                                                </div>
-                                            ) : null}
-                                        </>
-                                    ) : null}
+                                                );
+                                            })}
+                                        </div>
 
+                                        {isRingCategory ? (
+                                            <div className="mt-4">
+                                                <button
+                                                    type="button"
+                                                    onClick={() =>
+                                                        setIsSizeGuideOpen(true)
+                                                    }
+                                                    className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
+                                                >
+                                                    View Size Guide
+                                                </button>
+                                            </div>
+                                        ) : null}
+                                    </div>
+                                ) : null}
+
+                                <div>
                                     {/* {variantHasSizes ? (
                                         <div className="mt-5">
                                             <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
@@ -1393,73 +1376,174 @@ export default function ProductDetailPage({
                                         </div>
                                     ) : null}
 
-                                    <div className="mt-6">
-                                        <p className="mb-3 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                    <div className="mt-2">
+                                        <p className="mb-2 font-play text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
                                             {isGiftCardProduct
                                                 ? "Quantity (codes)"
                                                 : "Quantity"}
                                         </p>
-
-                                        <div className="grid grid-cols-[120px_minmax(0,1fr)] gap-3 items-stretch">
-                                            <div className="flex h-[46px] items-center border border-zinc-800">
-                                                <button
-                                                    type="button"
-                                                    onClick={() =>
-                                                        setQuantity((value) =>
-                                                            Math.max(
-                                                                1,
-                                                                value - 1,
-                                                            ),
-                                                        )
-                                                    }
-                                                    className="flex h-full w-1/3 items-center justify-center text-base text-zinc-800 transition hover:bg-zinc-100"
-                                                >
-                                                    −
-                                                </button>
-
-                                                <span className="flex h-full w-1/3 items-center justify-center border-x border-zinc-800 text-[13px] font-medium">
-                                                    {quantity}
-                                                </span>
-
-                                                <button
-                                                    type="button"
-                                                    onClick={() =>
-                                                        setQuantity(
-                                                            (value) =>
-                                                                value + 1,
-                                                        )
-                                                    }
-                                                    className="flex h-full w-1/3 items-center justify-center text-base text-zinc-800 transition hover:bg-zinc-100"
-                                                >
-                                                    +
-                                                </button>
-                                            </div>
-
+                                        <div className="flex h-[46px] w-[130px] items-center border border-zinc-800">
                                             <button
                                                 type="button"
                                                 onClick={() =>
-                                                    void handleAddToCart()
+                                                    setQuantity((value) =>
+                                                        Math.max(1, value - 1),
+                                                    )
                                                 }
-                                                disabled={isAddingToCart}
-                                                className="h-[46px] w-full border border-zinc-800 bg-white px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white disabled:opacity-60 sm:text-[13px]"
+                                                className="flex h-full w-1/3 items-center justify-center text-base text-zinc-800 transition hover:bg-zinc-100"
                                             >
-                                                {isAddingToCart
-                                                    ? "Adding..."
-                                                    : "Add to Cart"}
+                                                −
                                             </button>
+                                            <span className="flex h-full w-1/3 items-center justify-center border-x border-zinc-800 text-[13px] font-medium">
+                                                {quantity}
+                                            </span>
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    setQuantity(
+                                                        (value) => value + 1,
+                                                    )
+                                                }
+                                                className="flex h-full w-1/3 items-center justify-center text-base text-zinc-800 transition hover:bg-zinc-100"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        className={`mt-5 grid gap-3 ${
+                                            isGiftCardProduct
+                                                ? ""
+                                                : "grid-cols-2"
+                                        }`}
+                                    >
+                                        {isGiftCardProduct ? null : (
+                                            <button
+                                                type="button"
+                                                onClick={handleBuyNow}
+                                                className="h-[50px] bg-zinc-900 px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-zinc-700 sm:text-[13px]"
+                                            >
+                                                Buy Now
+                                            </button>
+                                        )}
+                                        <button
+                                            type="button"
+                                            onClick={() => void handleAddToCart()}
+                                            disabled={isAddingToCart}
+                                            className="h-[50px] border border-zinc-900 bg-white px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white disabled:opacity-60 sm:text-[13px]"
+                                        >
+                                            {isAddingToCart
+                                                ? "Adding..."
+                                                : "Add to Bag"}
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-zinc-200 pt-5">
+                                    <p className="text-[14px] leading-7 text-zinc-600">
+                                        {product.description}
+                                    </p>
+                                </div>
+
+                                <div className="border-t border-zinc-200">
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setIsDetailsOpen((value) => !value)
+                                        }
+                                        className="flex w-full items-center justify-between gap-4 py-4 text-left"
+                                        aria-expanded={isDetailsOpen}
+                                    >
+                                        <span className="font-play text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                            Details
+                                        </span>
+                                        <ChevronDown
+                                            className={`h-5 w-5 text-zinc-600 transition-transform ${
+                                                isDetailsOpen ? "rotate-180" : ""
+                                            }`}
+                                            strokeWidth={1.6}
+                                        />
+                                    </button>
+                                    <div
+                                        className={`grid transition-all duration-300 ease-in-out ${
+                                            isDetailsOpen
+                                                ? "grid-rows-[1fr] opacity-100"
+                                                : "grid-rows-[0fr] opacity-0"
+                                        }`}
+                                    >
+                                        <div className="overflow-hidden">
+                                            <div className="space-y-1.5 pb-5 text-[12px] uppercase tracking-[0.14em] text-zinc-600">
+                                                <p>
+                                                    <span className="text-zinc-900">
+                                                        SKU:
+                                                    </span>{" "}
+                                                    {selectedVariant.sku ??
+                                                        "N/A"}
+                                                </p>
+                                                {product.style ? (
+                                                    <p>
+                                                        <span className="text-zinc-900">
+                                                            Style:
+                                                        </span>{" "}
+                                                        {product.style}
+                                                    </p>
+                                                ) : null}
+                                                {product.metal ? (
+                                                    <p>
+                                                        <span className="text-zinc-900">
+                                                            Metal:
+                                                        </span>{" "}
+                                                        {product.metal}
+                                                    </p>
+                                                ) : null}
+                                                {product.finish ? (
+                                                    <p>
+                                                        <span className="text-zinc-900">
+                                                            Finish:
+                                                        </span>{" "}
+                                                        {product.finish}
+                                                    </p>
+                                                ) : null}
+                                                {product.totalDiamondWeight >
+                                                0 ? (
+                                                    <p>
+                                                        <span className="text-zinc-900">
+                                                            Total Diamond Weight:
+                                                        </span>{" "}
+                                                        {
+                                                            product.totalDiamondWeight
+                                                        }{" "}
+                                                        carats
+                                                    </p>
+                                                ) : null}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                {isGiftCardProduct ? null : (
-                                    <button
-                                        type="button"
-                                        onClick={handleBuyNow}
-                                        className="block w-full bg-pink-500 px-4 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 disabled:opacity-60 sm:text-[13px]"
-                                    >
-                                        Buy It Now
-                                    </button>
-                                )}
+                                <div className="border-t border-zinc-200 pt-5">
+                                    <h3 className="font-play text-[15px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                        About This Product
+                                    </h3>
+                                    {product.bulletPoints.length > 0 ? (
+                                        <ul className="mt-4 space-y-2.5 text-[14px] leading-7 text-zinc-600">
+                                            {product.bulletPoints.map((item) => (
+                                                <li
+                                                    key={item}
+                                                    className="flex items-start gap-3"
+                                                >
+                                                    <span className="mt-3 block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-500" />
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="mt-4 text-[14px] leading-7 text-zinc-600">
+                                            No product highlights available.
+                                        </p>
+                                    )}
+                                </div>
 
                                 {cartFeedback ? (
                                     <p className="text-[12px] uppercase tracking-[0.14em] text-zinc-600">
@@ -1474,94 +1558,59 @@ export default function ProductDetailPage({
                             </div>
                         </section>
 
-                        <section className="mt-16 border-t border-zinc-200 pt-12">
-                            <div className="grid gap-14 md:grid-cols-2">
-                                <div>
-                                    <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                        Description
-                                    </h3>
-                                    <p className="mt-4 whitespace-pre-line text-[14px] leading-7 text-zinc-600">
-                                        {product.additionalSeoContent ||
-                                            product.details ||
-                                            product.description}
-                                    </p>
+                        {product.recommendedProducts.length > 0 ? (
+                            <section className="mt-16 border-t border-zinc-200 pt-12">
+                                <div className="flex items-center justify-between gap-4">
+                                    <h2 className="font-play text-[18px] font-medium uppercase tracking-[0.18em] text-zinc-900 sm:text-[22px]">
+                                        You May Also Like
+                                    </h2>
+                                    <div className="hidden items-center gap-2 sm:flex">
+                                        <button
+                                            type="button"
+                                            onClick={() => scrollReco("left")}
+                                            aria-label="Scroll products left"
+                                            className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
+                                        >
+                                            <ChevronLeft
+                                                className="h-4 w-4"
+                                                strokeWidth={2}
+                                            />
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => scrollReco("right")}
+                                            aria-label="Scroll products right"
+                                            className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
+                                        >
+                                            <ChevronRight
+                                                className="h-4 w-4"
+                                                strokeWidth={2}
+                                            />
+                                        </button>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                        About This Product
-                                    </h3>
-                                    {product.bulletPoints.length > 0 ? (
-                                        <ul className="mt-4 space-y-2 text-[14px] leading-7 text-zinc-600">
-                                            {product.bulletPoints.map(
-                                                (item) => (
-                                                    <li
-                                                        key={item}
-                                                        className="flex items-start gap-3"
-                                                    >
-                                                        <span className="mt-3 block h-1 w-1 rounded-full bg-pink-500" />
-                                                        <span>{item}</span>
-                                                    </li>
-                                                ),
-                                            )}
-                                        </ul>
-                                    ) : (
-                                        <p className="mt-4 text-[14px] leading-7 text-zinc-600">
-                                            No product highlights available.
-                                        </p>
+
+                                <div
+                                    ref={recoScrollRef}
+                                    className="mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 sm:gap-6 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+                                >
+                                    {product.recommendedProducts.map(
+                                        (recommendedProduct) => (
+                                            <div
+                                                key={recommendedProduct.id}
+                                                className="w-[62%] min-w-[200px] max-w-[280px] shrink-0 snap-start sm:w-[280px]"
+                                            >
+                                                <ProductCard
+                                                    item={recommendedProduct}
+                                                />
+                                            </div>
+                                        ),
                                     )}
                                 </div>
-                            </div>
+                            </section>
+                        ) : null}
 
-                            <ProductFeatureGrid />
-
-                            {product.faqs.length > 0 ? (
-                                <section className="mt-16">
-                                    <h3 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                        FAQ
-                                    </h3>
-
-                                    <div className="mt-6 border-t border-zinc-200">
-                                        {product.faqs.map((faq, index) => {
-                                            const isOpen =
-                                                openFaqIndexes.includes(index);
-
-                                            return (
-                                                <article
-                                                    key={`${faq.question}-${index}`}
-                                                    className="border-b border-zinc-200"
-                                                >
-                                                    <button
-                                                        type="button"
-                                                        onClick={() =>
-                                                            toggleFaq(index)
-                                                        }
-                                                        className="flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-pink-500"
-                                                        aria-expanded={isOpen}
-                                                    >
-                                                        <span className="pr-3 text-[14px] font-medium uppercase tracking-[0.08em] text-zinc-900 sm:text-[15px]">
-                                                            {index + 1}.{" "}
-                                                            {faq.question}
-                                                        </span>
-                                                        <span className="text-xl font-light leading-none">
-                                                            {isOpen ? "−" : "+"}
-                                                        </span>
-                                                    </button>
-
-                                                    {isOpen ? (
-                                                        <div className="pb-5">
-                                                            <p className="max-w-[860px] text-[14px] leading-7 text-zinc-600">
-                                                                {faq.answer}
-                                                            </p>
-                                                        </div>
-                                                    ) : null}
-                                                </article>
-                                            );
-                                        })}
-                                    </div>
-                                </section>
-                            ) : null}
-                        </section>
-
+                        {/* Customer Reviews — hidden for now, preserved for later
                         <section className="mt-16 border-t border-zinc-200 pt-12">
                             <div className="flex flex-wrap items-center justify-between gap-4">
                                 <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
@@ -1778,25 +1827,92 @@ export default function ProductDetailPage({
                                 ))}
                             </div>
                         </section>
+                        */}
 
-                        {product.recommendedProducts.length > 0 ? (
-                            <section className="mt-16 border-t border-zinc-200 pt-12">
-                                <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                    Related Products
-                                </h2>
-
-                                <div className="mt-8 grid gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
-                                    {product.recommendedProducts.map(
-                                        (recommendedProduct) => (
-                                            <ProductCard
-                                                key={recommendedProduct.id}
-                                                item={recommendedProduct}
+                        <section className="mt-16 border-t border-zinc-200 pt-12 font-parsi">
+                            <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
+                                Categories
+                            </h2>
+                            <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                                {categoryCards.map((item, index) => (
+                                    <Link
+                                        key={item.label}
+                                        to={item.href}
+                                        className="iwj-category-card group block w-[260px] flex-shrink-0 snap-start sm:w-[320px] lg:w-[340px]"
+                                        style={{
+                                            animationDelay: `${120 + index * 130}ms`,
+                                        }}
+                                    >
+                                        <div className="overflow-hidden">
+                                            <img
+                                                src={item.image}
+                                                alt={item.label}
+                                                className="iwj-category-card-image block h-[420px] w-full object-cover object-center sm:h-[460px] lg:h-[500px]"
                                             />
-                                        ),
-                                    )}
+                                        </div>
+                                        <p className="iwj-category-card-label mt-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-[13px]">
+                                            {item.label}
+                                        </p>
+                                    </Link>
+                                ))}
+                            </div>
+                        </section>
+
+                        <section className="mt-16 border-t border-zinc-200 pt-12">
+                            <h2 className="font-play text-[20px] font-bold tracking-[-0.01em] text-zinc-900 sm:text-[26px]">
+                                {product.title}
+                            </h2>
+                            <p className="mt-4 max-w-[60rem] whitespace-pre-line text-[14px] leading-7 text-zinc-500">
+                                {product.additionalSeoContent ||
+                                    product.details ||
+                                    product.description}
+                            </p>
+
+                            {product.faqs.length > 0 ? (
+                                <div className="mt-10 border-t border-zinc-200">
+                                    {product.faqs.map((faq, index) => {
+                                        const isOpen =
+                                            openFaqIndexes.includes(index);
+
+                                        return (
+                                            <article
+                                                key={`${faq.question}-${index}`}
+                                                className="border-b border-zinc-200"
+                                            >
+                                                <button
+                                                    type="button"
+                                                    onClick={() =>
+                                                        toggleFaq(index)
+                                                    }
+                                                    className="flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-pink-500"
+                                                    aria-expanded={isOpen}
+                                                >
+                                                    <span className="pr-3 text-[14px] font-medium text-zinc-800 sm:text-[15px]">
+                                                        {faq.question}
+                                                    </span>
+                                                    <ChevronDown
+                                                        className={`h-5 w-5 shrink-0 text-zinc-500 transition-transform ${
+                                                            isOpen
+                                                                ? "rotate-180"
+                                                                : ""
+                                                        }`}
+                                                        strokeWidth={1.6}
+                                                    />
+                                                </button>
+
+                                                {isOpen ? (
+                                                    <div className="pb-5">
+                                                        <p className="max-w-[860px] text-[14px] leading-7 text-zinc-600">
+                                                            {faq.answer}
+                                                        </p>
+                                                    </div>
+                                                ) : null}
+                                            </article>
+                                        );
+                                    })}
                                 </div>
-                            </section>
-                        ) : null}
+                            ) : null}
+                        </section>
                     </div>
                 ) : null}
             </main>
