@@ -30,12 +30,14 @@ import {
     deleteProductReview,
     getProductBySlug,
     getProductReviews,
+    getProducts,
     updateProductReview,
 } from "../services/productService";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { addToCart } from "../store/cartSlice";
 import { addToWishlist, removeWishlistItem } from "../store/wishlistSlice";
 import type {
+    Product,
     ProductDetail,
     ProductImage,
     ProductReview,
@@ -433,6 +435,7 @@ export default function ProductDetailPage({
     const [isSubmittingReview, setIsSubmittingReview] = useState(false);
     const [openFaqIndexes, setOpenFaqIndexes] = useState<number[]>([0]);
     const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+    const [collectionProducts, setCollectionProducts] = useState<Product[]>([]);
 
     async function loadReviews(targetProductId: string) {
         const reviewsResponse = await getProductReviews(targetProductId);
@@ -544,6 +547,35 @@ export default function ProductDetailPage({
 
         setOpenFaqIndexes([0].filter((index) => index < product.faqs.length));
     }, [product]);
+
+    useEffect(() => {
+        const collectionName = product?.collectionName?.trim();
+        if (!product || !collectionName) {
+            setCollectionProducts([]);
+            return;
+        }
+
+        let isMounted = true;
+
+        (async () => {
+            try {
+                const result = await getProducts({
+                    collection: collectionName,
+                    limit: 12,
+                });
+                if (!isMounted) return;
+                setCollectionProducts(
+                    result.products.filter((item) => item.id !== product.id),
+                );
+            } catch {
+                if (isMounted) setCollectionProducts([]);
+            }
+        })();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [product?.id, product?.collectionName]);
 
     const selectedVariant = useMemo<ProductVariant | undefined>(() => {
         if (!product) {
@@ -663,9 +695,20 @@ export default function ProductDetailPage({
     // Horizontal "You May Also Like" carousel — scrolls ~80% of the visible
     // width per arrow click rather than wrapping onto a second row.
     const recoScrollRef = useRef<HTMLDivElement | null>(null);
+    const collectionScrollRef = useRef<HTMLDivElement | null>(null);
 
     function scrollReco(direction: "left" | "right") {
         const el = recoScrollRef.current;
+        if (!el) return;
+        const step = el.clientWidth * 0.8;
+        el.scrollBy({
+            left: direction === "right" ? step : -step,
+            behavior: "smooth",
+        });
+    }
+
+    function scrollCollection(direction: "left" | "right") {
+        const el = collectionScrollRef.current;
         if (!el) return;
         const step = el.clientWidth * 0.8;
         el.scrollBy({
@@ -1558,6 +1601,62 @@ export default function ProductDetailPage({
                                 ) : null}
                             </div>
                         </section>
+
+                        {product.collectionName && collectionProducts.length > 0 ? (
+                            <section className="mt-16 border-t border-zinc-200 pt-12">
+                                <div className="flex items-center justify-between gap-4">
+                                    <h2 className="font-play text-[18px] font-medium uppercase tracking-[0.18em] text-zinc-900 sm:text-[22px]">
+                                        More from {product.collectionName}
+                                    </h2>
+                                    <div className="hidden items-center gap-2 sm:flex">
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                scrollCollection("left")
+                                            }
+                                            aria-label="Scroll collection products left"
+                                            className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
+                                        >
+                                            <ChevronLeft
+                                                className="h-4 w-4"
+                                                strokeWidth={2}
+                                            />
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                scrollCollection("right")
+                                            }
+                                            aria-label="Scroll collection products right"
+                                            className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
+                                        >
+                                            <ChevronRight
+                                                className="h-4 w-4"
+                                                strokeWidth={2}
+                                            />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div
+                                    ref={collectionScrollRef}
+                                    className="mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 sm:gap-6 [&::-webkit-scrollbar]:hidden [scrollbar-width:none]"
+                                >
+                                    {collectionProducts.map(
+                                        (collectionProduct) => (
+                                            <div
+                                                key={collectionProduct.id}
+                                                className="w-[62%] min-w-[200px] max-w-[280px] shrink-0 snap-start sm:w-[280px]"
+                                            >
+                                                <ProductCard
+                                                    item={collectionProduct}
+                                                />
+                                            </div>
+                                        ),
+                                    )}
+                                </div>
+                            </section>
+                        ) : null}
 
                         {product.recommendedProducts.length > 0 ? (
                             <section className="mt-16 border-t border-zinc-200 pt-12">
