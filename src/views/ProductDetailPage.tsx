@@ -16,6 +16,7 @@ import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
+import SeoSectionsAccordion from "../components/sections/SeoSectionsAccordion";
 import ringSizeGuideImage from "../assets/image/Ring-Size-Guide.jpeg";
 import earringsCategoryImage from "../assets/categories/Earrings.jpg";
 import necklaceCategoryImage from "../assets/categories/Necklace.jpg";
@@ -1859,14 +1860,15 @@ export default function ProductDetailPage({
                         </section>
 
                         <section className="mt-16 border-t border-zinc-200 pt-12">
-                            <h2 className="font-play text-[20px] font-bold tracking-[-0.01em] text-zinc-900 sm:text-[26px]">
-                                {product.title}
-                            </h2>
-                            <p className="mt-4 max-w-[60rem] whitespace-pre-line text-[14px] leading-7 text-zinc-500">
-                                {product.additionalSeoContent ||
+                            <SeoSectionsAccordion
+                                sections={product.seoExtended}
+                                fallbackTitle={product.title}
+                                fallbackOpeningParagraph={
+                                    product.additionalSeoContent ||
                                     product.details ||
-                                    product.description}
-                            </p>
+                                    product.description
+                                }
+                            />
 
                             {product.faqs.length > 0 ? (
                                 <div className="mt-10 border-t border-zinc-200">

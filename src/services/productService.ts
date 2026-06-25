@@ -14,6 +14,7 @@ import type {
   ProductsApiResult,
   ProductsPagination,
   ReviewPayload,
+  SeoExtendedSection,
 } from '../types/product'
 import { minPriceOf, toPrice, type Price } from '../utils/price'
 import apiClient, { authApiClient, adminApiClient } from './apiClient'
@@ -70,6 +71,24 @@ type ProductApiResponse = {
   options: ProductOptionApiResponse[]
 }
 
+type SeoExtendedSectionApiResponse =
+  | {
+      sectionType: 'intro'
+      h1?: string
+      openingParagraph?: string
+    }
+  | {
+      sectionType: 'standard-h2'
+      h2?: string
+      quickAnswer?: string
+      tables?: Array<{
+        tableName?: string
+        columns?: string[]
+        rows?: Array<Record<string, string>>
+      }>
+      readMoreDropdown?: string
+    }
+
 type ProductDetailApiResponse = {
   id: string
   productType?: 'PHYSICAL' | 'GIFT_CARD'
@@ -112,6 +131,7 @@ type ProductDetailApiResponse = {
   diamondPcs: number
   variants: ProductVariantApiResponse[]
   options: ProductOptionApiResponse[]
+  seoextended?: SeoExtendedSectionApiResponse[]
 }
 
 type ProductsApiResponse = {
@@ -327,6 +347,59 @@ function normalizeProduct(product: ProductApiResponse): Product {
   }
 }
 
+function normalizeSeoExtended(
+  raw: SeoExtendedSectionApiResponse[] | undefined,
+): SeoExtendedSection[] {
+  if (!Array.isArray(raw)) return []
+
+  const out: SeoExtendedSection[] = []
+
+  for (const section of raw) {
+    if (!section || typeof section !== 'object') continue
+
+    if (section.sectionType === 'intro') {
+      const h1 = (section.h1 ?? '').trim()
+      const openingParagraph = (section.openingParagraph ?? '').trim()
+      if (h1 || openingParagraph) {
+        out.push({ sectionType: 'intro', h1, openingParagraph })
+      }
+      continue
+    }
+
+    if (section.sectionType === 'standard-h2') {
+      const h2 = (section.h2 ?? '').trim()
+      if (!h2) continue
+
+      const tables = Array.isArray(section.tables)
+        ? section.tables
+            .map((table) => ({
+              tableName: (table?.tableName ?? '').trim(),
+              columns: Array.isArray(table?.columns)
+                ? table.columns.map((col) => String(col ?? '').trim()).filter(Boolean)
+                : [],
+              rows: Array.isArray(table?.rows)
+                ? table.rows.filter(
+                    (row): row is Record<string, string> =>
+                      !!row && typeof row === 'object',
+                  )
+                : [],
+            }))
+            .filter((table) => table.columns.length > 0 && table.rows.length > 0)
+        : []
+
+      out.push({
+        sectionType: 'standard-h2',
+        h2,
+        quickAnswer: (section.quickAnswer ?? '').trim(),
+        tables,
+        readMoreDropdown: (section.readMoreDropdown ?? '').trim(),
+      })
+    }
+  }
+
+  return out
+}
+
 function normalizeProductDetail(
   product: ProductDetailApiResponse,
   recommendedProducts: ProductApiResponse[] = [],
@@ -387,6 +460,7 @@ function normalizeProductDetail(
     certificateUrls: product.certificateUrls,
     diamondPcs: product.diamondPcs,
     recommendedProducts: recommendedProducts.map(normalizeProduct),
+    seoExtended: normalizeSeoExtended(product.seoextended),
   }
 }
 

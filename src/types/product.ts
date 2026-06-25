@@ -40,6 +40,28 @@ export type ProductFaq = {
   answer: string
 }
 
+export type SeoExtendedTable = {
+  tableName: string
+  columns: string[]
+  rows: Array<Record<string, string>>
+}
+
+export type SeoIntroSection = {
+  sectionType: 'intro'
+  h1: string
+  openingParagraph: string
+}
+
+export type SeoStandardSection = {
+  sectionType: 'standard-h2'
+  h2: string
+  quickAnswer: string
+  tables: SeoExtendedTable[]
+  readMoreDropdown: string
+}
+
+export type SeoExtendedSection = SeoIntroSection | SeoStandardSection
+
 export type Product = {
   id: string
   productType: 'PHYSICAL' | 'GIFT_CARD'
@@ -86,6 +108,7 @@ export type ProductDetail = Product & {
   certificateUrls: string[]
   diamondPcs: number
   recommendedProducts: Product[]
+  seoExtended: SeoExtendedSection[]
 }
 
 export type AdminProductUpdatePayload = {
