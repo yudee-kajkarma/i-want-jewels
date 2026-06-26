@@ -459,167 +459,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How do you style a tennis necklace?",
-            },
-            {
-                type: "paragraph",
-                text: "Keep it simple and let it complement your outfit.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear it every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it works well for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "What outfits work best?",
-            },
-            {
-                type: "paragraph",
-                text: "Minimal and open-neck styles.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I layer it with other necklaces?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with thinner chains.",
-            },
-            {
-                type: "paragraph",
-                text: "Should it be the focal point?",
-            },
-            {
-                type: "paragraph",
-                text: "Often, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "What neckline is best?",
-            },
-            {
-                type: "paragraph",
-                text: "V-neck or open collar.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it casually?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially in 2026 trends.",
-            },
-            {
-                type: "paragraph",
-                text: "What earrings match best?",
-            },
-            {
-                type: "paragraph",
-                text: "Studs or small hoops.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it to work?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it adds subtle polish.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it too formal?",
-            },
-            {
-                type: "paragraph",
-                text: "No, it's now worn casually too.",
-            },
-            {
-                type: "paragraph",
-                text: "What length is most versatile?",
-            },
-            {
-                type: "paragraph",
-                text: "16–18 inches.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men style it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's unisex.",
-            },
-            {
-                type: "paragraph",
-                text: "Should metals match?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessary but helpful.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I stack bracelets with it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, keep balance.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid?",
-            },
-            {
-                type: "paragraph",
-                text: "Over-layering and clutter.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it go with all outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Most, especially neutral tones.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it good for beginners?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, easy to style.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it with hoodies?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for contrast styling.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is it popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Because of versatility and minimalism.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I know it looks right?",
-            },
-            {
-                type: "paragraph",
-                text: "If it feels natural, it works.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How do you style a tennis necklace?",
+                        answer: "Keep it simple and let it complement your outfit.",
+                    },
+                    {
+                        question: "Can you wear it every day?",
+                        answer: "Yes, it works well for daily wear.",
+                    },
+                    {
+                        question: "What outfits work best?",
+                        answer: "Minimal and open-neck styles.",
+                    },
+                    {
+                        question: "Can I layer it with other necklaces?",
+                        answer: "Yes, with thinner chains.",
+                    },
+                    {
+                        question: "Should it be the focal point?",
+                        answer: "Often, yes.",
+                    },
+                    {
+                        question: "What neckline is best?",
+                        answer: "V-neck or open collar.",
+                    },
+                    {
+                        question: "Can I wear it casually?",
+                        answer: "Yes, especially in 2026 trends.",
+                    },
+                    {
+                        question: "What earrings match best?",
+                        answer: "Studs or small hoops.",
+                    },
+                    {
+                        question: "Can I wear it to work?",
+                        answer: "Yes, it adds subtle polish.",
+                    },
+                    {
+                        question: "Is it too formal?",
+                        answer: "No, it's now worn casually too.",
+                    },
+                    {
+                        question: "What length is most versatile?",
+                        answer: "16–18 inches.",
+                    },
+                    {
+                        question: "Can men style it?",
+                        answer: "Yes, it's unisex.",
+                    },
+                    {
+                        question: "Should metals match?",
+                        answer: "Not necessary but helpful.",
+                    },
+                    {
+                        question: "Can I stack bracelets with it?",
+                        answer: "Yes, keep balance.",
+                    },
+                    {
+                        question: "What should I avoid?",
+                        answer: "Over-layering and clutter.",
+                    },
+                    {
+                        question: "Does it go with all outfits?",
+                        answer: "Most, especially neutral tones.",
+                    },
+                    {
+                        question: "Is it good for beginners?",
+                        answer: "Yes, easy to style.",
+                    },
+                    {
+                        question: "Can I wear it with hoodies?",
+                        answer: "Yes, for contrast styling.",
+                    },
+                    {
+                        question: "Why is it popular?",
+                        answer: "Because of versatility and minimalism.",
+                    },
+                    {
+                        question: "How do I know it looks right?",
+                        answer: "If it feels natural, it works.",
+                    },
+                ],
             },
         ],
     },

@@ -426,167 +426,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How tight should a tennis bracelet be?",
-            },
-            {
-                type: "paragraph",
-                text: "Slightly loose but controlled.",
-            },
-            {
-                type: "paragraph",
-                text: "Should it slide on the wrist?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but not excessively.",
-            },
-            {
-                type: "paragraph",
-                text: "Can it be worn tight?",
-            },
-            {
-                type: "paragraph",
-                text: "Not recommended for comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the one-finger rule?",
-            },
-            {
-                type: "paragraph",
-                text: "You should fit one finger between wrist and bracelet.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I measure my wrist?",
-            },
-            {
-                type: "paragraph",
-                text: "Use a tape and add 0.5–1 inch.",
-            },
-            {
-                type: "paragraph",
-                text: "What size is standard?",
-            },
-            {
-                type: "paragraph",
-                text: "Around 6.5–7.5 inches.",
-            },
-            {
-                type: "paragraph",
-                text: "Does diamond size affect fit?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, larger stones reduce flexibility.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I resize a bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Often yes, by adjusting links.",
-            },
-            {
-                type: "paragraph",
-                text: "Should it rotate?",
-            },
-            {
-                type: "paragraph",
-                text: "Slight movement is fine, full rotation isn't ideal.",
-            },
-            {
-                type: "paragraph",
-                text: "Is loose or tight better?",
-            },
-            {
-                type: "paragraph",
-                text: "Slightly loose is best.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it all day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if properly fitted.",
-            },
-            {
-                type: "paragraph",
-                text: "Does fit affect appearance?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, significantly.",
-            },
-            {
-                type: "paragraph",
-                text: "What if it's too loose?",
-            },
-            {
-                type: "paragraph",
-                text: "It may feel unstable.",
-            },
-            {
-                type: "paragraph",
-                text: "What if it's too tight?",
-            },
-            {
-                type: "paragraph",
-                text: "It becomes uncomfortable.",
-            },
-            {
-                type: "paragraph",
-                text: "Should the clasp stay underneath?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, ideally.",
-            },
-            {
-                type: "paragraph",
-                text: "Can wrist size change?",
-            },
-            {
-                type: "paragraph",
-                text: "Slightly, throughout the day.",
-            },
-            {
-                type: "paragraph",
-                text: "Is fit important for durability?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, excessive movement can cause wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I size up or down?",
-            },
-            {
-                type: "paragraph",
-                text: "Slightly up for comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "Can beginners get sizing right?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with simple measurement.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most?",
-            },
-            {
-                type: "paragraph",
-                text: "Comfort and natural movement.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How tight should a tennis bracelet be?",
+                        answer: "Slightly loose but controlled.",
+                    },
+                    {
+                        question: "Should it slide on the wrist?",
+                        answer: "Yes, but not excessively.",
+                    },
+                    {
+                        question: "Can it be worn tight?",
+                        answer: "Not recommended for comfort.",
+                    },
+                    {
+                        question: "What is the one-finger rule?",
+                        answer: "You should fit one finger between wrist and bracelet.",
+                    },
+                    {
+                        question: "How do I measure my wrist?",
+                        answer: "Use a tape and add 0.5–1 inch.",
+                    },
+                    {
+                        question: "What size is standard?",
+                        answer: "Around 6.5–7.5 inches.",
+                    },
+                    {
+                        question: "Does diamond size affect fit?",
+                        answer: "Yes, larger stones reduce flexibility.",
+                    },
+                    {
+                        question: "Can I resize a bracelet?",
+                        answer: "Often yes, by adjusting links.",
+                    },
+                    {
+                        question: "Should it rotate?",
+                        answer: "Slight movement is fine, full rotation isn't ideal.",
+                    },
+                    {
+                        question: "Is loose or tight better?",
+                        answer: "Slightly loose is best.",
+                    },
+                    {
+                        question: "Can I wear it all day?",
+                        answer: "Yes, if properly fitted.",
+                    },
+                    {
+                        question: "Does fit affect appearance?",
+                        answer: "Yes, significantly.",
+                    },
+                    {
+                        question: "What if it's too loose?",
+                        answer: "It may feel unstable.",
+                    },
+                    {
+                        question: "What if it's too tight?",
+                        answer: "It becomes uncomfortable.",
+                    },
+                    {
+                        question: "Should the clasp stay underneath?",
+                        answer: "Yes, ideally.",
+                    },
+                    {
+                        question: "Can wrist size change?",
+                        answer: "Slightly, throughout the day.",
+                    },
+                    {
+                        question: "Is fit important for durability?",
+                        answer: "Yes, excessive movement can cause wear.",
+                    },
+                    {
+                        question: "Should I size up or down?",
+                        answer: "Slightly up for comfort.",
+                    },
+                    {
+                        question: "Can beginners get sizing right?",
+                        answer: "Yes, with simple measurement.",
+                    },
+                    {
+                        question: "What matters most?",
+                        answer: "Comfort and natural movement.",
+                    },
+                ],
             },
         ],
     },

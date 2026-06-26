@@ -427,167 +427,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Are lab-grown tennis bracelets worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for value, appearance, and everyday use.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they look like real diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are real diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are they cheaper?",
-            },
-            {
-                type: "paragraph",
-                text: "Because of efficient production methods.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, as durable as natural diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they hold value?",
-            },
-            {
-                type: "paragraph",
-                text: "Not in resale terms, but in usage value.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear them daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are ideal for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they popular in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, increasingly so.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they ethical?",
-            },
-            {
-                type: "paragraph",
-                text: "Often considered more transparent.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy lab-grown or natural?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on your priorities.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they lose shine?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they maintain brilliance.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they good for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially due to affordability.",
-            },
-            {
-                type: "paragraph",
-                text: "Can professionals tell the difference?",
-            },
-            {
-                type: "paragraph",
-                text: "Only with specialized tools.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they safe to buy online?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, from reputable sellers.",
-            },
-            {
-                type: "paragraph",
-                text: "What price range should I expect?",
-            },
-            {
-                type: "paragraph",
-                text: "Typically €100–€500.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they suitable for beginners?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, very accessible.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they feel luxurious?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, depending on design and quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Can they be resized?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on the bracelet design.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they trendy or long-term?",
-            },
-            {
-                type: "paragraph",
-                text: "Both—they're growing in popularity.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most when buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Fit, design, and comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy one now?",
-            },
-            {
-                type: "paragraph",
-                text: "If it fits your needs, yes.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Are lab-grown tennis bracelets worth it?",
+                        answer: "Yes, for value, appearance, and everyday use.",
+                    },
+                    {
+                        question: "Do they look like real diamonds?",
+                        answer: "Yes, they are real diamonds.",
+                    },
+                    {
+                        question: "Why are they cheaper?",
+                        answer: "Because of efficient production methods.",
+                    },
+                    {
+                        question: "Are they durable?",
+                        answer: "Yes, as durable as natural diamonds.",
+                    },
+                    {
+                        question: "Do they hold value?",
+                        answer: "Not in resale terms, but in usage value.",
+                    },
+                    {
+                        question: "Can you wear them daily?",
+                        answer: "Yes, they are ideal for daily wear.",
+                    },
+                    {
+                        question: "Are they popular in 2026?",
+                        answer: "Yes, increasingly so.",
+                    },
+                    {
+                        question: "Are they ethical?",
+                        answer: "Often considered more transparent.",
+                    },
+                    {
+                        question: "Should I buy lab-grown or natural?",
+                        answer: "Depends on your priorities.",
+                    },
+                    {
+                        question: "Do they lose shine?",
+                        answer: "No, they maintain brilliance.",
+                    },
+                    {
+                        question: "Are they good for gifting?",
+                        answer: "Yes, especially due to affordability.",
+                    },
+                    {
+                        question: "Can professionals tell the difference?",
+                        answer: "Only with specialized tools.",
+                    },
+                    {
+                        question: "Are they safe to buy online?",
+                        answer: "Yes, from reputable sellers.",
+                    },
+                    {
+                        question: "What price range should I expect?",
+                        answer: "Typically €100–€500.",
+                    },
+                    {
+                        question: "Are they suitable for beginners?",
+                        answer: "Yes, very accessible.",
+                    },
+                    {
+                        question: "Do they feel luxurious?",
+                        answer: "Yes, depending on design and quality.",
+                    },
+                    {
+                        question: "Can they be resized?",
+                        answer: "Depends on the bracelet design.",
+                    },
+                    {
+                        question: "Are they trendy or long-term?",
+                        answer: "Both—they're growing in popularity.",
+                    },
+                    {
+                        question: "What matters most when buying?",
+                        answer: "Fit, design, and comfort.",
+                    },
+                    {
+                        question: "Should I buy one now?",
+                        answer: "If it fits your needs, yes.",
+                    },
+                ],
             },
         ],
     },

@@ -468,167 +468,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the best clasp for a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "A box clasp with a safety latch.",
-            },
-            {
-                type: "paragraph",
-                text: "Are box clasps secure?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with a safety latch.",
-            },
-            {
-                type: "paragraph",
-                text: "What is a lobster clasp?",
-            },
-            {
-                type: "paragraph",
-                text: "A spring-loaded clasp shaped like a claw.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lobster clasps better?",
-            },
-            {
-                type: "paragraph",
-                text: "They are easier to use but less seamless.",
-            },
-            {
-                type: "paragraph",
-                text: "What is a safety latch?",
-            },
-            {
-                type: "paragraph",
-                text: "An extra locking mechanism for added security.",
-            },
-            {
-                type: "paragraph",
-                text: "Can a clasp break?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with wear or poor quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I replace a clasp?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, a jeweller can replace it.",
-            },
-            {
-                type: "paragraph",
-                text: "Which clasp is easiest to use?",
-            },
-            {
-                type: "paragraph",
-                text: "Lobster clasps are generally easiest.",
-            },
-            {
-                type: "paragraph",
-                text: "Are hidden clasps safe?",
-            },
-            {
-                type: "paragraph",
-                text: "They can be, but vary in quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is clasp quality important?",
-            },
-            {
-                type: "paragraph",
-                text: "It affects security and usability.",
-            },
-            {
-                type: "paragraph",
-                text: "Do all bracelets have safety latches?",
-            },
-            {
-                type: "paragraph",
-                text: "No, but high-quality ones often do.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a bracelet daily with any clasp?",
-            },
-            {
-                type: "paragraph",
-                text: "Better to choose a secure option.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I know if a clasp is good?",
-            },
-            {
-                type: "paragraph",
-                text: "It should feel solid and click securely.",
-            },
-            {
-                type: "paragraph",
-                text: "Are spring ring clasps reliable?",
-            },
-            {
-                type: "paragraph",
-                text: "Less reliable for heavier bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Can clasps loosen over time?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I test the clasp before buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if possible.",
-            },
-            {
-                type: "paragraph",
-                text: "Is clasp type visible?",
-            },
-            {
-                type: "paragraph",
-                text: "Usually minimal, depending on design.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the safest option?",
-            },
-            {
-                type: "paragraph",
-                text: "Box clasp with safety latch.",
-            },
-            {
-                type: "paragraph",
-                text: "Are modern clasps better?",
-            },
-            {
-                type: "paragraph",
-                text: "Generally, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid?",
-            },
-            {
-                type: "paragraph",
-                text: "Weak or loose clasp mechanisms.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the best clasp for a tennis bracelet?",
+                        answer: "A box clasp with a safety latch.",
+                    },
+                    {
+                        question: "Are box clasps secure?",
+                        answer: "Yes, especially with a safety latch.",
+                    },
+                    {
+                        question: "What is a lobster clasp?",
+                        answer: "A spring-loaded clasp shaped like a claw.",
+                    },
+                    {
+                        question: "Are lobster clasps better?",
+                        answer: "They are easier to use but less seamless.",
+                    },
+                    {
+                        question: "What is a safety latch?",
+                        answer: "An extra locking mechanism for added security.",
+                    },
+                    {
+                        question: "Can a clasp break?",
+                        answer: "Yes, with wear or poor quality.",
+                    },
+                    {
+                        question: "Can I replace a clasp?",
+                        answer: "Yes, a jeweller can replace it.",
+                    },
+                    {
+                        question: "Which clasp is easiest to use?",
+                        answer: "Lobster clasps are generally easiest.",
+                    },
+                    {
+                        question: "Are hidden clasps safe?",
+                        answer: "They can be, but vary in quality.",
+                    },
+                    {
+                        question: "Why is clasp quality important?",
+                        answer: "It affects security and usability.",
+                    },
+                    {
+                        question: "Do all bracelets have safety latches?",
+                        answer: "No, but high-quality ones often do.",
+                    },
+                    {
+                        question: "Can I wear a bracelet daily with any clasp?",
+                        answer: "Better to choose a secure option.",
+                    },
+                    {
+                        question: "How do I know if a clasp is good?",
+                        answer: "It should feel solid and click securely.",
+                    },
+                    {
+                        question: "Are spring ring clasps reliable?",
+                        answer: "Less reliable for heavier bracelets.",
+                    },
+                    {
+                        question: "Can clasps loosen over time?",
+                        answer: "Yes, with wear.",
+                    },
+                    {
+                        question: "Should I test the clasp before buying?",
+                        answer: "Yes, if possible.",
+                    },
+                    {
+                        question: "Is clasp type visible?",
+                        answer: "Usually minimal, depending on design.",
+                    },
+                    {
+                        question: "What is the safest option?",
+                        answer: "Box clasp with safety latch.",
+                    },
+                    {
+                        question: "Are modern clasps better?",
+                        answer: "Generally, yes.",
+                    },
+                    {
+                        question: "What should I avoid?",
+                        answer: "Weak or loose clasp mechanisms.",
+                    },
+                ],
             },
         ],
     },

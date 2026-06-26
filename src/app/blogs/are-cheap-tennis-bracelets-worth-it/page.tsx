@@ -367,167 +367,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Are cheap tennis bracelets worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "They can be, depending on materials and expectations.",
-            },
-            {
-                type: "paragraph",
-                text: "What is considered a cheap tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Typically under €100.",
-            },
-            {
-                type: "paragraph",
-                text: "Are cheap bracelets real diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Usually not, unless lab-grown.",
-            },
-            {
-                type: "paragraph",
-                text: "Can cheap bracelets last long?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always, especially with low-quality materials.",
-            },
-            {
-                type: "paragraph",
-                text: "What is a better alternative?",
-            },
-            {
-                type: "paragraph",
-                text: "Affordable lab-grown diamond bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I avoid very cheap options?",
-            },
-            {
-                type: "paragraph",
-                text: "If you want durability, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "What affects quality the most?",
-            },
-            {
-                type: "paragraph",
-                text: "Materials and craftsmanship.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown bracelets cheap?",
-            },
-            {
-                type: "paragraph",
-                text: "They are affordable, not cheap.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a cheap bracelet daily?",
-            },
-            {
-                type: "paragraph",
-                text: "It may not hold up well.",
-            },
-            {
-                type: "paragraph",
-                text: "Do cheap bracelets lose shine?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially imitation stones.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best budget range?",
-            },
-            {
-                type: "paragraph",
-                text: "€100–€500 for good value.",
-            },
-            {
-                type: "paragraph",
-                text: "Are plated metals durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Less durable than solid gold.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I gift a cheap bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but consider quality.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I know if it's good quality?",
-            },
-            {
-                type: "paragraph",
-                text: "Check materials and craftsmanship.",
-            },
-            {
-                type: "paragraph",
-                text: "Are cheap bracelets popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but awareness is increasing.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better to spend more?",
-            },
-            {
-                type: "paragraph",
-                text: "For daily wear, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Do cheap bracelets look fake?",
-            },
-            {
-                type: "paragraph",
-                text: "Some can, depending on quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I upgrade later?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, many people start with affordable options.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid?",
-            },
-            {
-                type: "paragraph",
-                text: "Unclear product details.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most?",
-            },
-            {
-                type: "paragraph",
-                text: "Value, not just price.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Are cheap tennis bracelets worth it?",
+                        answer: "They can be, depending on materials and expectations.",
+                    },
+                    {
+                        question: "What is considered a cheap tennis bracelet?",
+                        answer: "Typically under €100.",
+                    },
+                    {
+                        question: "Are cheap bracelets real diamonds?",
+                        answer: "Usually not, unless lab-grown.",
+                    },
+                    {
+                        question: "Can cheap bracelets last long?",
+                        answer: "Not always, especially with low-quality materials.",
+                    },
+                    {
+                        question: "What is a better alternative?",
+                        answer: "Affordable lab-grown diamond bracelets.",
+                    },
+                    {
+                        question: "Should I avoid very cheap options?",
+                        answer: "If you want durability, yes.",
+                    },
+                    {
+                        question: "What affects quality the most?",
+                        answer: "Materials and craftsmanship.",
+                    },
+                    {
+                        question: "Are lab-grown bracelets cheap?",
+                        answer: "They are affordable, not cheap.",
+                    },
+                    {
+                        question: "Can I wear a cheap bracelet daily?",
+                        answer: "It may not hold up well.",
+                    },
+                    {
+                        question: "Do cheap bracelets lose shine?",
+                        answer: "Yes, especially imitation stones.",
+                    },
+                    {
+                        question: "What is the best budget range?",
+                        answer: "€100–€500 for good value.",
+                    },
+                    {
+                        question: "Are plated metals durable?",
+                        answer: "Less durable than solid gold.",
+                    },
+                    {
+                        question: "Can I gift a cheap bracelet?",
+                        answer: "Yes, but consider quality.",
+                    },
+                    {
+                        question: "How do I know if it's good quality?",
+                        answer: "Check materials and craftsmanship.",
+                    },
+                    {
+                        question: "Are cheap bracelets popular?",
+                        answer: "Yes, but awareness is increasing.",
+                    },
+                    {
+                        question: "Is it better to spend more?",
+                        answer: "For daily wear, yes.",
+                    },
+                    {
+                        question: "Do cheap bracelets look fake?",
+                        answer: "Some can, depending on quality.",
+                    },
+                    {
+                        question: "Can I upgrade later?",
+                        answer: "Yes, many people start with affordable options.",
+                    },
+                    {
+                        question: "What should I avoid?",
+                        answer: "Unclear product details.",
+                    },
+                    {
+                        question: "What matters most?",
+                        answer: "Value, not just price.",
+                    },
+                ],
             },
         ],
     },

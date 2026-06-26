@@ -431,167 +431,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the difference between a tennis bracelet and a bangle?",
-            },
-            {
-                type: "paragraph",
-                text: "A tennis bracelet is flexible, while a bangle is rigid.",
-            },
-            {
-                type: "paragraph",
-                text: "What is a chain bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "A bracelet made from linked metal loops.",
-            },
-            {
-                type: "paragraph",
-                text: "Which bracelet is best for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets are often the most comfortable for daily use.",
-            },
-            {
-                type: "paragraph",
-                text: "Are bangles comfortable?",
-            },
-            {
-                type: "paragraph",
-                text: "They can be, but are less flexible.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a chain bracelet every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are lightweight and easy to wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Which bracelet is more elegant?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets are generally considered more refined.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially when well-crafted.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I stack these bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they can be layered together.",
-            },
-            {
-                type: "paragraph",
-                text: "Which bracelet is more casual?",
-            },
-            {
-                type: "paragraph",
-                text: "Chain bracelets are the most casual.",
-            },
-            {
-                type: "paragraph",
-                text: "Do bangles go out of style?",
-            },
-            {
-                type: "paragraph",
-                text: "No, but they are more trend-dependent.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets trendy in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they remain popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Which bracelet is best for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets are a versatile option.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear these bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, all styles are unisex.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the most versatile bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets due to their balance of style and comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "Are chain bracelets cheaper?",
-            },
-            {
-                type: "paragraph",
-                text: "Generally, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Do bangles fit all wrist sizes?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always—they need proper sizing.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear multiple bracelets together?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, layering is common.",
-            },
-            {
-                type: "paragraph",
-                text: "Which bracelet looks more expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets often appear more refined.",
-            },
-            {
-                type: "paragraph",
-                text: "Are all three styles popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, depending on personal preference.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I choose the right one?",
-            },
-            {
-                type: "paragraph",
-                text: "Based on comfort, style, and how often you'll wear it.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the difference between a tennis bracelet and a bangle?",
+                        answer: "A tennis bracelet is flexible, while a bangle is rigid.",
+                    },
+                    {
+                        question: "What is a chain bracelet?",
+                        answer: "A bracelet made from linked metal loops.",
+                    },
+                    {
+                        question: "Which bracelet is best for daily wear?",
+                        answer: "Tennis bracelets are often the most comfortable for daily use.",
+                    },
+                    {
+                        question: "Are bangles comfortable?",
+                        answer: "They can be, but are less flexible.",
+                    },
+                    {
+                        question: "Can I wear a chain bracelet every day?",
+                        answer: "Yes, they are lightweight and easy to wear.",
+                    },
+                    {
+                        question: "Which bracelet is more elegant?",
+                        answer: "Tennis bracelets are generally considered more refined.",
+                    },
+                    {
+                        question: "Are tennis bracelets durable?",
+                        answer: "Yes, especially when well-crafted.",
+                    },
+                    {
+                        question: "Can I stack these bracelets?",
+                        answer: "Yes, they can be layered together.",
+                    },
+                    {
+                        question: "Which bracelet is more casual?",
+                        answer: "Chain bracelets are the most casual.",
+                    },
+                    {
+                        question: "Do bangles go out of style?",
+                        answer: "No, but they are more trend-dependent.",
+                    },
+                    {
+                        question: "Are tennis bracelets trendy in 2026?",
+                        answer: "Yes, they remain popular.",
+                    },
+                    {
+                        question: "Which bracelet is best for gifting?",
+                        answer: "Tennis bracelets are a versatile option.",
+                    },
+                    {
+                        question: "Can men wear these bracelets?",
+                        answer: "Yes, all styles are unisex.",
+                    },
+                    {
+                        question: "What is the most versatile bracelet?",
+                        answer: "Tennis bracelets due to their balance of style and comfort.",
+                    },
+                    {
+                        question: "Are chain bracelets cheaper?",
+                        answer: "Generally, yes.",
+                    },
+                    {
+                        question: "Do bangles fit all wrist sizes?",
+                        answer: "Not always—they need proper sizing.",
+                    },
+                    {
+                        question: "Can I wear multiple bracelets together?",
+                        answer: "Yes, layering is common.",
+                    },
+                    {
+                        question: "Which bracelet looks more expensive?",
+                        answer: "Tennis bracelets often appear more refined.",
+                    },
+                    {
+                        question: "Are all three styles popular?",
+                        answer: "Yes, depending on personal preference.",
+                    },
+                    {
+                        question: "How do I choose the right one?",
+                        answer: "Based on comfort, style, and how often you'll wear it.",
+                    },
+                ],
             },
         ],
     },

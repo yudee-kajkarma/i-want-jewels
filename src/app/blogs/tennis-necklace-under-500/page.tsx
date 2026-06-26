@@ -404,167 +404,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Can I get a tennis necklace under €500?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with lab-grown diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they real diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Often yes, lab-grown diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they look like expensive ones?",
-            },
-            {
-                type: "paragraph",
-                text: "Visually, very similar.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they good for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, that's their main advantage.",
-            },
-            {
-                type: "paragraph",
-                text: "What length is best?",
-            },
-            {
-                type: "paragraph",
-                text: "16–18 inches.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if well-made.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I spend more?",
-            },
-            {
-                type: "paragraph",
-                text: "Only if you want larger stones.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I layer them?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they're ideal for layering.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they lightweight?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, most are designed for comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "Is €200 enough?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for entry-level options.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they lose shine?",
-            },
-            {
-                type: "paragraph",
-                text: "No, diamonds maintain brilliance.",
-            },
-            {
-                type: "paragraph",
-                text: "What metal is best?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they trendy in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, very popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Can beginners buy one?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, great starting point.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they good for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to accessibility.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid?",
-            },
-            {
-                type: "paragraph",
-                text: "Unclear materials or poor craftsmanship.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they comfortable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if properly fitted.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they feel luxurious?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, depending on design.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear them casually?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, very easily.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for everyday use and value.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Can I get a tennis necklace under €500?",
+                        answer: "Yes, especially with lab-grown diamonds.",
+                    },
+                    {
+                        question: "Are they real diamonds?",
+                        answer: "Often yes, lab-grown diamonds.",
+                    },
+                    {
+                        question: "Do they look like expensive ones?",
+                        answer: "Visually, very similar.",
+                    },
+                    {
+                        question: "Are they good for daily wear?",
+                        answer: "Yes, that's their main advantage.",
+                    },
+                    {
+                        question: "What length is best?",
+                        answer: "16–18 inches.",
+                    },
+                    {
+                        question: "Are they durable?",
+                        answer: "Yes, if well-made.",
+                    },
+                    {
+                        question: "Should I spend more?",
+                        answer: "Only if you want larger stones.",
+                    },
+                    {
+                        question: "Can I layer them?",
+                        answer: "Yes, they're ideal for layering.",
+                    },
+                    {
+                        question: "Are they lightweight?",
+                        answer: "Yes, most are designed for comfort.",
+                    },
+                    {
+                        question: "Is €200 enough?",
+                        answer: "Yes, for entry-level options.",
+                    },
+                    {
+                        question: "Do they lose shine?",
+                        answer: "No, diamonds maintain brilliance.",
+                    },
+                    {
+                        question: "What metal is best?",
+                        answer: "White gold is most versatile.",
+                    },
+                    {
+                        question: "Are they trendy in 2026?",
+                        answer: "Yes, very popular.",
+                    },
+                    {
+                        question: "Can beginners buy one?",
+                        answer: "Yes, great starting point.",
+                    },
+                    {
+                        question: "Are they good for gifting?",
+                        answer: "Yes, due to accessibility.",
+                    },
+                    {
+                        question: "What should I avoid?",
+                        answer: "Unclear materials or poor craftsmanship.",
+                    },
+                    {
+                        question: "Are they comfortable?",
+                        answer: "Yes, if properly fitted.",
+                    },
+                    {
+                        question: "Do they feel luxurious?",
+                        answer: "Yes, depending on design.",
+                    },
+                    {
+                        question: "Can I wear them casually?",
+                        answer: "Yes, very easily.",
+                    },
+                    {
+                        question: "Are they worth it?",
+                        answer: "Yes, for everyday use and value.",
+                    },
+                ],
             },
         ],
     },

@@ -404,167 +404,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How much should I spend on a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "It depends on your budget and usage, but €100–€500 is common.",
-            },
-            {
-                type: "paragraph",
-                text: "Are expensive bracelets better?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always for everyday use.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the average price?",
-            },
-            {
-                type: "paragraph",
-                text: "Ranges from €100 to €5,000+.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown options cheaper?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, significantly.",
-            },
-            {
-                type: "paragraph",
-                text: "Is €200 enough for a good bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for entry-level lab-grown options.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I spend more for quality?",
-            },
-            {
-                type: "paragraph",
-                text: "Only if it matches your needs.",
-            },
-            {
-                type: "paragraph",
-                text: "What affects the price most?",
-            },
-            {
-                type: "paragraph",
-                text: "Diamond type and carat weight.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it worth buying a cheaper option?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it's well-made.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a low-cost bracelet daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it's durable.",
-            },
-            {
-                type: "paragraph",
-                text: "Are natural diamonds necessary?",
-            },
-            {
-                type: "paragraph",
-                text: "No, unless you prefer them.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best value range?",
-            },
-            {
-                type: "paragraph",
-                text: "€100–€500 for most buyers.",
-            },
-            {
-                type: "paragraph",
-                text: "Do higher prices mean better durability?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I set a budget first?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it helps narrow choices.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I upgrade later?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, many buyers do.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it a good investment?",
-            },
-            {
-                type: "paragraph",
-                text: "More for use than resale.",
-            },
-            {
-                type: "paragraph",
-                text: "Are mid-range bracelets worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for added quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I consider brand names?",
-            },
-            {
-                type: "paragraph",
-                text: "Only if it matters to you.",
-            },
-            {
-                type: "paragraph",
-                text: "What is cost per wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Value based on how often you use it.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better to save or buy now?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on your priorities.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most?",
-            },
-            {
-                type: "paragraph",
-                text: "Comfort, usability, and value.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How much should I spend on a tennis bracelet?",
+                        answer: "It depends on your budget and usage, but €100–€500 is common.",
+                    },
+                    {
+                        question: "Are expensive bracelets better?",
+                        answer: "Not always for everyday use.",
+                    },
+                    {
+                        question: "What is the average price?",
+                        answer: "Ranges from €100 to €5,000+.",
+                    },
+                    {
+                        question: "Are lab-grown options cheaper?",
+                        answer: "Yes, significantly.",
+                    },
+                    {
+                        question: "Is €200 enough for a good bracelet?",
+                        answer: "Yes, for entry-level lab-grown options.",
+                    },
+                    {
+                        question: "Should I spend more for quality?",
+                        answer: "Only if it matches your needs.",
+                    },
+                    {
+                        question: "What affects the price most?",
+                        answer: "Diamond type and carat weight.",
+                    },
+                    {
+                        question: "Is it worth buying a cheaper option?",
+                        answer: "Yes, if it's well-made.",
+                    },
+                    {
+                        question: "Can I wear a low-cost bracelet daily?",
+                        answer: "Yes, if it's durable.",
+                    },
+                    {
+                        question: "Are natural diamonds necessary?",
+                        answer: "No, unless you prefer them.",
+                    },
+                    {
+                        question: "What is the best value range?",
+                        answer: "€100–€500 for most buyers.",
+                    },
+                    {
+                        question: "Do higher prices mean better durability?",
+                        answer: "Not always.",
+                    },
+                    {
+                        question: "Should I set a budget first?",
+                        answer: "Yes, it helps narrow choices.",
+                    },
+                    {
+                        question: "Can I upgrade later?",
+                        answer: "Yes, many buyers do.",
+                    },
+                    {
+                        question: "Is it a good investment?",
+                        answer: "More for use than resale.",
+                    },
+                    {
+                        question: "Are mid-range bracelets worth it?",
+                        answer: "Yes, for added quality.",
+                    },
+                    {
+                        question: "Should I consider brand names?",
+                        answer: "Only if it matters to you.",
+                    },
+                    {
+                        question: "What is cost per wear?",
+                        answer: "Value based on how often you use it.",
+                    },
+                    {
+                        question: "Is it better to save or buy now?",
+                        answer: "Depends on your priorities.",
+                    },
+                    {
+                        question: "What matters most?",
+                        answer: "Comfort, usability, and value.",
+                    },
+                ],
             },
         ],
     },

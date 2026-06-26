@@ -365,167 +365,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How do I measure my wrist for a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Use a measuring tape or string and add 0.5 to 1 inch for comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the standard tennis bracelet size?",
-            },
-            {
-                type: "paragraph",
-                text: "Most are between 6.5 and 7.5 inches.",
-            },
-            {
-                type: "paragraph",
-                text: "Should a tennis bracelet be tight or loose?",
-            },
-            {
-                type: "paragraph",
-                text: "It should be slightly loose but not slide excessively.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I resize a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but it depends on the design and structure.",
-            },
-            {
-                type: "paragraph",
-                text: "What size is best for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "A balanced or slightly relaxed fit works best.",
-            },
-            {
-                type: "paragraph",
-                text: "How much extra length should I add?",
-            },
-            {
-                type: "paragraph",
-                text: "Usually 0.5 to 1 inch depending on preference.",
-            },
-            {
-                type: "paragraph",
-                text: "What happens if my bracelet is too loose?",
-            },
-            {
-                type: "paragraph",
-                text: "It may slide and twist constantly.",
-            },
-            {
-                type: "paragraph",
-                text: "What if it's too tight?",
-            },
-            {
-                type: "paragraph",
-                text: "It can feel uncomfortable and restrict movement.",
-            },
-            {
-                type: "paragraph",
-                text: "Are all tennis bracelets adjustable?",
-            },
-            {
-                type: "paragraph",
-                text: "No, some require professional resizing.",
-            },
-            {
-                type: "paragraph",
-                text: "Does diamond size affect fit?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, larger stones can make the bracelet feel stiffer.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the average wrist size?",
-            },
-            {
-                type: "paragraph",
-                text: "Around 7 inches for women.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a tight tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "It's not recommended for long-term comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I know if it fits properly?",
-            },
-            {
-                type: "paragraph",
-                text: "It should allow slight movement without discomfort.",
-            },
-            {
-                type: "paragraph",
-                text: "What size should I buy as a gift?",
-            },
-            {
-                type: "paragraph",
-                text: "Around 7 inches is a safe choice.",
-            },
-            {
-                type: "paragraph",
-                text: "Are UK and EU sizes different?",
-            },
-            {
-                type: "paragraph",
-                text: "They use similar measurements with cm conversions.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I measure without tools?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, using string or paper.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I size up or down?",
-            },
-            {
-                type: "paragraph",
-                text: "Sizing slightly up is usually safer.",
-            },
-            {
-                type: "paragraph",
-                text: "Does wrist shape matter?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, flatter wrists may affect fit.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it fits comfortably.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is sizing important?",
-            },
-            {
-                type: "paragraph",
-                text: "It affects comfort, wearability, and overall experience.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How do I measure my wrist for a tennis bracelet?",
+                        answer: "Use a measuring tape or string and add 0.5 to 1 inch for comfort.",
+                    },
+                    {
+                        question: "What is the standard tennis bracelet size?",
+                        answer: "Most are between 6.5 and 7.5 inches.",
+                    },
+                    {
+                        question: "Should a tennis bracelet be tight or loose?",
+                        answer: "It should be slightly loose but not slide excessively.",
+                    },
+                    {
+                        question: "Can I resize a tennis bracelet?",
+                        answer: "Yes, but it depends on the design and structure.",
+                    },
+                    {
+                        question: "What size is best for daily wear?",
+                        answer: "A balanced or slightly relaxed fit works best.",
+                    },
+                    {
+                        question: "How much extra length should I add?",
+                        answer: "Usually 0.5 to 1 inch depending on preference.",
+                    },
+                    {
+                        question: "What happens if my bracelet is too loose?",
+                        answer: "It may slide and twist constantly.",
+                    },
+                    {
+                        question: "What if it's too tight?",
+                        answer: "It can feel uncomfortable and restrict movement.",
+                    },
+                    {
+                        question: "Are all tennis bracelets adjustable?",
+                        answer: "No, some require professional resizing.",
+                    },
+                    {
+                        question: "Does diamond size affect fit?",
+                        answer: "Yes, larger stones can make the bracelet feel stiffer.",
+                    },
+                    {
+                        question: "What is the average wrist size?",
+                        answer: "Around 7 inches for women.",
+                    },
+                    {
+                        question: "Can I wear a tight tennis bracelet?",
+                        answer: "It's not recommended for long-term comfort.",
+                    },
+                    {
+                        question: "How do I know if it fits properly?",
+                        answer: "It should allow slight movement without discomfort.",
+                    },
+                    {
+                        question: "What size should I buy as a gift?",
+                        answer: "Around 7 inches is a safe choice.",
+                    },
+                    {
+                        question: "Are UK and EU sizes different?",
+                        answer: "They use similar measurements with cm conversions.",
+                    },
+                    {
+                        question: "Can I measure without tools?",
+                        answer: "Yes, using string or paper.",
+                    },
+                    {
+                        question: "Should I size up or down?",
+                        answer: "Sizing slightly up is usually safer.",
+                    },
+                    {
+                        question: "Does wrist shape matter?",
+                        answer: "Yes, flatter wrists may affect fit.",
+                    },
+                    {
+                        question: "Can I wear it every day?",
+                        answer: "Yes, if it fits comfortably.",
+                    },
+                    {
+                        question: "Why is sizing important?",
+                        answer: "It affects comfort, wearability, and overall experience.",
+                    },
+                ],
             },
         ],
     },

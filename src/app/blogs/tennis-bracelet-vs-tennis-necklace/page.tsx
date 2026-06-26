@@ -419,167 +419,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the difference between a tennis bracelet and necklace?",
-            },
-            {
-                type: "paragraph",
-                text: "A bracelet is worn on the wrist, a necklace around the neck.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is more expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis necklaces are usually more expensive.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is better for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets are more practical.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a tennis necklace every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but it's less common.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is more noticeable?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis necklaces.",
-            },
-            {
-                type: "paragraph",
-                text: "Are both styles timeless?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, both are classic designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy a bracelet or necklace first?",
-            },
-            {
-                type: "paragraph",
-                text: "Most people start with a bracelet.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear both together?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially for formal looks.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they made the same way?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, both use a continuous line of diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is more versatile?",
-            },
-            {
-                type: "paragraph",
-                text: "Tennis bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they match all outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Bracelets match more easily.",
-            },
-            {
-                type: "paragraph",
-                text: "Are necklaces heavier?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to more material.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear these?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, both styles are unisex.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown options available?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for both.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is better for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Bracelets are more versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Do necklaces require more care?",
-            },
-            {
-                type: "paragraph",
-                text: "Slightly, due to positioning.",
-            },
-            {
-                type: "paragraph",
-                text: "Are bracelets easier to style?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Do necklaces feel more formal?",
-            },
-            {
-                type: "paragraph",
-                text: "Often, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Which looks more luxurious?",
-            },
-            {
-                type: "paragraph",
-                text: "Necklaces are more visible.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I choose?",
-            },
-            {
-                type: "paragraph",
-                text: "Based on lifestyle and usage.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the difference between a tennis bracelet and necklace?",
+                        answer: "A bracelet is worn on the wrist, a necklace around the neck.",
+                    },
+                    {
+                        question: "Which is more expensive?",
+                        answer: "Tennis necklaces are usually more expensive.",
+                    },
+                    {
+                        question: "Which is better for daily wear?",
+                        answer: "Tennis bracelets are more practical.",
+                    },
+                    {
+                        question: "Can I wear a tennis necklace every day?",
+                        answer: "Yes, but it's less common.",
+                    },
+                    {
+                        question: "Which is more noticeable?",
+                        answer: "Tennis necklaces.",
+                    },
+                    {
+                        question: "Are both styles timeless?",
+                        answer: "Yes, both are classic designs.",
+                    },
+                    {
+                        question: "Should I buy a bracelet or necklace first?",
+                        answer: "Most people start with a bracelet.",
+                    },
+                    {
+                        question: "Can I wear both together?",
+                        answer: "Yes, especially for formal looks.",
+                    },
+                    {
+                        question: "Are they made the same way?",
+                        answer: "Yes, both use a continuous line of diamonds.",
+                    },
+                    {
+                        question: "Which is more versatile?",
+                        answer: "Tennis bracelets.",
+                    },
+                    {
+                        question: "Do they match all outfits?",
+                        answer: "Bracelets match more easily.",
+                    },
+                    {
+                        question: "Are necklaces heavier?",
+                        answer: "Yes, due to more material.",
+                    },
+                    {
+                        question: "Can men wear these?",
+                        answer: "Yes, both styles are unisex.",
+                    },
+                    {
+                        question: "Are lab-grown options available?",
+                        answer: "Yes, for both.",
+                    },
+                    {
+                        question: "Which is better for gifting?",
+                        answer: "Bracelets are more versatile.",
+                    },
+                    {
+                        question: "Do necklaces require more care?",
+                        answer: "Slightly, due to positioning.",
+                    },
+                    {
+                        question: "Are bracelets easier to style?",
+                        answer: "Yes.",
+                    },
+                    {
+                        question: "Do necklaces feel more formal?",
+                        answer: "Often, yes.",
+                    },
+                    {
+                        question: "Which looks more luxurious?",
+                        answer: "Necklaces are more visible.",
+                    },
+                    {
+                        question: "What should I choose?",
+                        answer: "Based on lifestyle and usage.",
+                    },
+                ],
             },
         ],
     },

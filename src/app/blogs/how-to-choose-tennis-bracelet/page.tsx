@@ -428,167 +428,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How do I choose a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Focus on fit, comfort, and diamond type.",
-            },
-            {
-                type: "paragraph",
-                text: "What size should I get?",
-            },
-            {
-                type: "paragraph",
-                text: "Wrist size plus 0.5–1 inch.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds better?",
-            },
-            {
-                type: "paragraph",
-                text: "They offer better value for most buyers.",
-            },
-            {
-                type: "paragraph",
-                text: "What metal is best?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the ideal carat size?",
-            },
-            {
-                type: "paragraph",
-                text: "Small to medium for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a tennis bracelet worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for its versatility and usability.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it's well-made.",
-            },
-            {
-                type: "paragraph",
-                text: "What clasp should I choose?",
-            },
-            {
-                type: "paragraph",
-                text: "Box clasp with safety latch.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy online?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, from reputable sellers.",
-            },
-            {
-                type: "paragraph",
-                text: "Are expensive bracelets better?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always in practical use.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most?",
-            },
-            {
-                type: "paragraph",
-                text: "Comfort and wearability.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I gift one?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a great gift option.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with proper care.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they go out of style?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they are timeless.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I resize one?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on the design.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the average price?",
-            },
-            {
-                type: "paragraph",
-                text: "€100–€500 for lab-grown.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I match my jewellery?",
-            },
-            {
-                type: "paragraph",
-                text: "It helps with styling.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they good for beginners?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, very easy to wear.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid?",
-            },
-            {
-                type: "paragraph",
-                text: "Poor fit and weak clasps.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I know it's right?",
-            },
-            {
-                type: "paragraph",
-                text: "If you wear it without hesitation.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How do I choose a tennis bracelet?",
+                        answer: "Focus on fit, comfort, and diamond type.",
+                    },
+                    {
+                        question: "What size should I get?",
+                        answer: "Wrist size plus 0.5–1 inch.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds better?",
+                        answer: "They offer better value for most buyers.",
+                    },
+                    {
+                        question: "What metal is best?",
+                        answer: "White gold is the most versatile.",
+                    },
+                    {
+                        question: "What is the ideal carat size?",
+                        answer: "Small to medium for daily wear.",
+                    },
+                    {
+                        question: "Is a tennis bracelet worth it?",
+                        answer: "Yes, for its versatility and usability.",
+                    },
+                    {
+                        question: "Can I wear it every day?",
+                        answer: "Yes, if it's well-made.",
+                    },
+                    {
+                        question: "What clasp should I choose?",
+                        answer: "Box clasp with safety latch.",
+                    },
+                    {
+                        question: "Should I buy online?",
+                        answer: "Yes, from reputable sellers.",
+                    },
+                    {
+                        question: "Are expensive bracelets better?",
+                        answer: "Not always in practical use.",
+                    },
+                    {
+                        question: "What matters most?",
+                        answer: "Comfort and wearability.",
+                    },
+                    {
+                        question: "Can I gift one?",
+                        answer: "Yes, it's a great gift option.",
+                    },
+                    {
+                        question: "Are they durable?",
+                        answer: "Yes, with proper care.",
+                    },
+                    {
+                        question: "Do they go out of style?",
+                        answer: "No, they are timeless.",
+                    },
+                    {
+                        question: "Can I resize one?",
+                        answer: "Depends on the design.",
+                    },
+                    {
+                        question: "What is the average price?",
+                        answer: "€100–€500 for lab-grown.",
+                    },
+                    {
+                        question: "Should I match my jewellery?",
+                        answer: "It helps with styling.",
+                    },
+                    {
+                        question: "Are they good for beginners?",
+                        answer: "Yes, very easy to wear.",
+                    },
+                    {
+                        question: "What should I avoid?",
+                        answer: "Poor fit and weak clasps.",
+                    },
+                    {
+                        question: "How do I know it's right?",
+                        answer: "If you wear it without hesitation.",
+                    },
+                ],
             },
         ],
     },

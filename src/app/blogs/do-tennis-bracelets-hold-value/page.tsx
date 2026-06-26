@@ -434,167 +434,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Do tennis bracelets hold value?",
-            },
-            {
-                type: "paragraph",
-                text: "Not significantly in resale terms.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they increase in value?",
-            },
-            {
-                type: "paragraph",
-                text: "Usually no.",
-            },
-            {
-                type: "paragraph",
-                text: "Are natural diamond bracelets better for resale?",
-            },
-            {
-                type: "paragraph",
-                text: "Slightly, but not guaranteed.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown bracelets have resale value?",
-            },
-            {
-                type: "paragraph",
-                text: "Lower than natural diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets a good investment?",
-            },
-            {
-                type: "paragraph",
-                text: "Not primarily for financial gain.",
-            },
-            {
-                type: "paragraph",
-                text: "What affects resale value?",
-            },
-            {
-                type: "paragraph",
-                text: "Diamond quality, size, and brand.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I sell a tennis bracelet later?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but likely at a lower price.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are they still popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Because of wearability and style.",
-            },
-            {
-                type: "paragraph",
-                text: "What is cost-per-wear value?",
-            },
-            {
-                type: "paragraph",
-                text: "Value based on usage frequency.",
-            },
-            {
-                type: "paragraph",
-                text: "Are expensive bracelets worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on usage, not just price.",
-            },
-            {
-                type: "paragraph",
-                text: "Do brands affect value?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, luxury brands may hold slightly more value.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy for investment?",
-            },
-            {
-                type: "paragraph",
-                text: "Only if it meets specific criteria.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the main benefit of buying one?",
-            },
-            {
-                type: "paragraph",
-                text: "Everyday usability.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they last long?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with proper care.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they timeless?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, in design.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I insure a bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially higher-value pieces.",
-            },
-            {
-                type: "paragraph",
-                text: "Is resale easy?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on market demand.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most when buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Comfort and usability.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I worry about resale?",
-            },
-            {
-                type: "paragraph",
-                text: "Not for everyday pieces.",
-            },
-            {
-                type: "paragraph",
-                text: "Why do people still buy them?",
-            },
-            {
-                type: "paragraph",
-                text: "Because they are practical and elegant.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Do tennis bracelets hold value?",
+                        answer: "Not significantly in resale terms.",
+                    },
+                    {
+                        question: "Do they increase in value?",
+                        answer: "Usually no.",
+                    },
+                    {
+                        question: "Are natural diamond bracelets better for resale?",
+                        answer: "Slightly, but not guaranteed.",
+                    },
+                    {
+                        question: "Do lab-grown bracelets have resale value?",
+                        answer: "Lower than natural diamonds.",
+                    },
+                    {
+                        question: "Are tennis bracelets a good investment?",
+                        answer: "Not primarily for financial gain.",
+                    },
+                    {
+                        question: "What affects resale value?",
+                        answer: "Diamond quality, size, and brand.",
+                    },
+                    {
+                        question: "Can I sell a tennis bracelet later?",
+                        answer: "Yes, but likely at a lower price.",
+                    },
+                    {
+                        question: "Why are they still popular?",
+                        answer: "Because of wearability and style.",
+                    },
+                    {
+                        question: "What is cost-per-wear value?",
+                        answer: "Value based on usage frequency.",
+                    },
+                    {
+                        question: "Are expensive bracelets worth it?",
+                        answer: "Depends on usage, not just price.",
+                    },
+                    {
+                        question: "Do brands affect value?",
+                        answer: "Yes, luxury brands may hold slightly more value.",
+                    },
+                    {
+                        question: "Should I buy for investment?",
+                        answer: "Only if it meets specific criteria.",
+                    },
+                    {
+                        question: "What is the main benefit of buying one?",
+                        answer: "Everyday usability.",
+                    },
+                    {
+                        question: "Do they last long?",
+                        answer: "Yes, with proper care.",
+                    },
+                    {
+                        question: "Are they timeless?",
+                        answer: "Yes, in design.",
+                    },
+                    {
+                        question: "Can I insure a bracelet?",
+                        answer: "Yes, especially higher-value pieces.",
+                    },
+                    {
+                        question: "Is resale easy?",
+                        answer: "Depends on market demand.",
+                    },
+                    {
+                        question: "What matters most when buying?",
+                        answer: "Comfort and usability.",
+                    },
+                    {
+                        question: "Should I worry about resale?",
+                        answer: "Not for everyday pieces.",
+                    },
+                    {
+                        question: "Why do people still buy them?",
+                        answer: "Because they are practical and elegant.",
+                    },
+                ],
             },
         ],
     },

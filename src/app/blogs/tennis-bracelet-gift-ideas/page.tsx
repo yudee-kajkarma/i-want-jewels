@@ -375,167 +375,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Is a tennis bracelet a good gift?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's versatile and meaningful.",
-            },
-            {
-                type: "paragraph",
-                text: "When should you gift a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Anniversaries, birthdays, graduations, and special achievements.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it suitable for everyday wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, which makes it a practical gift.",
-            },
-            {
-                type: "paragraph",
-                text: "Can it be given without an occasion?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, “just because” gifts are very effective.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it a romantic gift?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially for anniversaries.",
-            },
-            {
-                type: "paragraph",
-                text: "What age group is it suitable for?",
-            },
-            {
-                type: "paragraph",
-                text: "All age groups.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I choose lab-grown or natural?",
-            },
-            {
-                type: "paragraph",
-                text: "Lab-grown offers better value for gifting.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I choose the right size?",
-            },
-            {
-                type: "paragraph",
-                text: "Go slightly loose if unsure.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better than other jewellery gifts?",
-            },
-            {
-                type: "paragraph",
-                text: "It's one of the most versatile options.",
-            },
-            {
-                type: "paragraph",
-                text: "Can it be worn daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, that's one of its strengths.",
-            },
-            {
-                type: "paragraph",
-                text: "What occasions are best?",
-            },
-            {
-                type: "paragraph",
-                text: "Milestones and meaningful moments.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it too expensive for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessarily, especially with lab-grown options.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it hold emotional value?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with frequent wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men gift it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a common gift choice.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it a luxury gift?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but accessible options exist.",
-            },
-            {
-                type: "paragraph",
-                text: "Will it go out of style?",
-            },
-            {
-                type: "paragraph",
-                text: "No, it's timeless.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it good for first-time jewellery buyers?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's easy to wear.",
-            },
-            {
-                type: "paragraph",
-                text: "What metal should I choose?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the safest option.",
-            },
-            {
-                type: "paragraph",
-                text: "Can it be returned or resized?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on the seller.",
-            },
-            {
-                type: "paragraph",
-                text: "Why do people choose it as a gift?",
-            },
-            {
-                type: "paragraph",
-                text: "Because it's practical, elegant, and long-lasting.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Is a tennis bracelet a good gift?",
+                        answer: "Yes, it's versatile and meaningful.",
+                    },
+                    {
+                        question: "When should you gift a tennis bracelet?",
+                        answer: "Anniversaries, birthdays, graduations, and special achievements.",
+                    },
+                    {
+                        question: "Is it suitable for everyday wear?",
+                        answer: "Yes, which makes it a practical gift.",
+                    },
+                    {
+                        question: "Can it be given without an occasion?",
+                        answer: "Yes, “just because” gifts are very effective.",
+                    },
+                    {
+                        question: "Is it a romantic gift?",
+                        answer: "Yes, especially for anniversaries.",
+                    },
+                    {
+                        question: "What age group is it suitable for?",
+                        answer: "All age groups.",
+                    },
+                    {
+                        question: "Should I choose lab-grown or natural?",
+                        answer: "Lab-grown offers better value for gifting.",
+                    },
+                    {
+                        question: "How do I choose the right size?",
+                        answer: "Go slightly loose if unsure.",
+                    },
+                    {
+                        question: "Is it better than other jewellery gifts?",
+                        answer: "It's one of the most versatile options.",
+                    },
+                    {
+                        question: "Can it be worn daily?",
+                        answer: "Yes, that's one of its strengths.",
+                    },
+                    {
+                        question: "What occasions are best?",
+                        answer: "Milestones and meaningful moments.",
+                    },
+                    {
+                        question: "Is it too expensive for gifting?",
+                        answer: "Not necessarily, especially with lab-grown options.",
+                    },
+                    {
+                        question: "Does it hold emotional value?",
+                        answer: "Yes, especially with frequent wear.",
+                    },
+                    {
+                        question: "Can men gift it?",
+                        answer: "Yes, it's a common gift choice.",
+                    },
+                    {
+                        question: "Is it a luxury gift?",
+                        answer: "Yes, but accessible options exist.",
+                    },
+                    {
+                        question: "Will it go out of style?",
+                        answer: "No, it's timeless.",
+                    },
+                    {
+                        question: "Is it good for first-time jewellery buyers?",
+                        answer: "Yes, it's easy to wear.",
+                    },
+                    {
+                        question: "What metal should I choose?",
+                        answer: "White gold is the safest option.",
+                    },
+                    {
+                        question: "Can it be returned or resized?",
+                        answer: "Depends on the seller.",
+                    },
+                    {
+                        question: "Why do people choose it as a gift?",
+                        answer: "Because it's practical, elegant, and long-lasting.",
+                    },
+                ],
             },
         ],
     },

@@ -428,167 +428,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Which is better, white gold or yellow gold tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "It depends on style preference and versatility needs.",
-            },
-            {
-                type: "paragraph",
-                text: "Does white gold make diamonds look better?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it enhances their brightness.",
-            },
-            {
-                type: "paragraph",
-                text: "Is yellow gold more traditional?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it has a classic appeal.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is more versatile?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold.",
-            },
-            {
-                type: "paragraph",
-                text: "Does white gold require maintenance?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, occasional rhodium plating.",
-            },
-            {
-                type: "paragraph",
-                text: "Does yellow gold fade?",
-            },
-            {
-                type: "paragraph",
-                text: "No, it maintains its color naturally.",
-            },
-            {
-                type: "paragraph",
-                text: "Which suits warm skin tones?",
-            },
-            {
-                type: "paragraph",
-                text: "Yellow gold.",
-            },
-            {
-                type: "paragraph",
-                text: "Which suits cool skin tones?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I mix both metals?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if styled intentionally.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is better for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Both work, but white gold is more subtle.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds available in both?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Which looks more modern?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold.",
-            },
-            {
-                type: "paragraph",
-                text: "Which looks more bold?",
-            },
-            {
-                type: "paragraph",
-                text: "Yellow gold.",
-            },
-            {
-                type: "paragraph",
-                text: "Is one more expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Prices are generally similar.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I match my other jewellery?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for a cohesive look.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear both?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is trending in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold slightly, but both are popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Does metal affect durability?",
-            },
-            {
-                type: "paragraph",
-                text: "Not significantly.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is easier to style?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I choose?",
-            },
-            {
-                type: "paragraph",
-                text: "Based on personal style and usage.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Which is better, white gold or yellow gold tennis bracelet?",
+                        answer: "It depends on style preference and versatility needs.",
+                    },
+                    {
+                        question: "Does white gold make diamonds look better?",
+                        answer: "Yes, it enhances their brightness.",
+                    },
+                    {
+                        question: "Is yellow gold more traditional?",
+                        answer: "Yes, it has a classic appeal.",
+                    },
+                    {
+                        question: "Which is more versatile?",
+                        answer: "White gold.",
+                    },
+                    {
+                        question: "Does white gold require maintenance?",
+                        answer: "Yes, occasional rhodium plating.",
+                    },
+                    {
+                        question: "Does yellow gold fade?",
+                        answer: "No, it maintains its color naturally.",
+                    },
+                    {
+                        question: "Which suits warm skin tones?",
+                        answer: "Yellow gold.",
+                    },
+                    {
+                        question: "Which suits cool skin tones?",
+                        answer: "White gold.",
+                    },
+                    {
+                        question: "Can I mix both metals?",
+                        answer: "Yes, if styled intentionally.",
+                    },
+                    {
+                        question: "Which is better for daily wear?",
+                        answer: "Both work, but white gold is more subtle.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds available in both?",
+                        answer: "Yes.",
+                    },
+                    {
+                        question: "Which looks more modern?",
+                        answer: "White gold.",
+                    },
+                    {
+                        question: "Which looks more bold?",
+                        answer: "Yellow gold.",
+                    },
+                    {
+                        question: "Is one more expensive?",
+                        answer: "Prices are generally similar.",
+                    },
+                    {
+                        question: "Should I match my other jewellery?",
+                        answer: "Yes, for a cohesive look.",
+                    },
+                    {
+                        question: "Can men wear both?",
+                        answer: "Yes.",
+                    },
+                    {
+                        question: "Which is trending in 2026?",
+                        answer: "White gold slightly, but both are popular.",
+                    },
+                    {
+                        question: "Does metal affect durability?",
+                        answer: "Not significantly.",
+                    },
+                    {
+                        question: "Which is easier to style?",
+                        answer: "White gold.",
+                    },
+                    {
+                        question: "How do I choose?",
+                        answer: "Based on personal style and usage.",
+                    },
+                ],
             },
         ],
     },

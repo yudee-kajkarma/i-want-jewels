@@ -505,167 +505,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is a tennis necklace?",
-            },
-            {
-                type: "paragraph",
-                text: "A necklace made of a continuous line of diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is it called a tennis necklace?",
-            },
-            {
-                type: "paragraph",
-                text: "Named after Chris Evert and the origin of tennis bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it different from a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's worn around the neck instead of the wrist.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis necklaces expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Generally more expensive than bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear one daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if designed for comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "What length is best?",
-            },
-            {
-                type: "paragraph",
-                text: "16–18 inches is most popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown options available?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, widely.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they go out of style?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they are timeless.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear tennis necklaces?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are unisex.",
-            },
-            {
-                type: "paragraph",
-                text: "How do you style one?",
-            },
-            {
-                type: "paragraph",
-                text: "Alone or layered with other chains.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they heavy?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on carat weight.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it a good investment?",
-            },
-            {
-                type: "paragraph",
-                text: "More for use than resale.",
-            },
-            {
-                type: "paragraph",
-                text: "What makes a good quality one?",
-            },
-            {
-                type: "paragraph",
-                text: "Consistency and craftsmanship.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they formal only?",
-            },
-            {
-                type: "paragraph",
-                text: "No, now worn casually too.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy one or a bracelet first?",
-            },
-            {
-                type: "paragraph",
-                text: "Most people start with a bracelet.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they match all outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially minimal styles.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I layer them?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, layering is common.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with proper care.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they sparkle a lot?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to continuous diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are they trending?",
-            },
-            {
-                type: "paragraph",
-                text: "Because of minimal and everyday luxury trends.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is a tennis necklace?",
+                        answer: "A necklace made of a continuous line of diamonds.",
+                    },
+                    {
+                        question: "Why is it called a tennis necklace?",
+                        answer: "Named after Chris Evert and the origin of tennis bracelets.",
+                    },
+                    {
+                        question: "Is it different from a tennis bracelet?",
+                        answer: "Yes, it's worn around the neck instead of the wrist.",
+                    },
+                    {
+                        question: "Are tennis necklaces expensive?",
+                        answer: "Generally more expensive than bracelets.",
+                    },
+                    {
+                        question: "Can you wear one daily?",
+                        answer: "Yes, if designed for comfort.",
+                    },
+                    {
+                        question: "What length is best?",
+                        answer: "16–18 inches is most popular.",
+                    },
+                    {
+                        question: "Are lab-grown options available?",
+                        answer: "Yes, widely.",
+                    },
+                    {
+                        question: "Do they go out of style?",
+                        answer: "No, they are timeless.",
+                    },
+                    {
+                        question: "Can men wear tennis necklaces?",
+                        answer: "Yes, they are unisex.",
+                    },
+                    {
+                        question: "How do you style one?",
+                        answer: "Alone or layered with other chains.",
+                    },
+                    {
+                        question: "Are they heavy?",
+                        answer: "Depends on carat weight.",
+                    },
+                    {
+                        question: "Is it a good investment?",
+                        answer: "More for use than resale.",
+                    },
+                    {
+                        question: "What makes a good quality one?",
+                        answer: "Consistency and craftsmanship.",
+                    },
+                    {
+                        question: "Are they formal only?",
+                        answer: "No, now worn casually too.",
+                    },
+                    {
+                        question: "Should I buy one or a bracelet first?",
+                        answer: "Most people start with a bracelet.",
+                    },
+                    {
+                        question: "Do they match all outfits?",
+                        answer: "Yes, especially minimal styles.",
+                    },
+                    {
+                        question: "Can I layer them?",
+                        answer: "Yes, layering is common.",
+                    },
+                    {
+                        question: "Are they durable?",
+                        answer: "Yes, with proper care.",
+                    },
+                    {
+                        question: "Do they sparkle a lot?",
+                        answer: "Yes, due to continuous diamonds.",
+                    },
+                    {
+                        question: "Why are they trending?",
+                        answer: "Because of minimal and everyday luxury trends.",
+                    },
+                ],
             },
         ],
     },

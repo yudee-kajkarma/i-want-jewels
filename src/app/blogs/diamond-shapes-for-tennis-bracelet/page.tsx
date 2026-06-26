@@ -442,167 +442,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the best diamond shape for a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Round cut is the most popular due to its sparkle.",
-            },
-            {
-                type: "paragraph",
-                text: "Which shape sparkles the most?",
-            },
-            {
-                type: "paragraph",
-                text: "Round diamonds reflect the most light.",
-            },
-            {
-                type: "paragraph",
-                text: "Are oval diamonds good for tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they offer a balanced look.",
-            },
-            {
-                type: "paragraph",
-                text: "What is a princess cut bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "A bracelet with square-shaped diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Are emerald cuts less sparkly?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they offer a softer reflection.",
-            },
-            {
-                type: "paragraph",
-                text: "Which shape looks most expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Round and emerald cuts are often perceived as premium.",
-            },
-            {
-                type: "paragraph",
-                text: "Are baguette diamonds used in bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for a sleek, modern look.",
-            },
-            {
-                type: "paragraph",
-                text: "Do shapes affect comfort?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, some shapes feel more flexible than others.",
-            },
-            {
-                type: "paragraph",
-                text: "Are unique shapes trending?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially in modern designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Is round cut always the best choice?",
-            },
-            {
-                type: "paragraph",
-                text: "It's the safest and most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I mix diamond shapes?",
-            },
-            {
-                type: "paragraph",
-                text: "Some modern designs allow it.",
-            },
-            {
-                type: "paragraph",
-                text: "Do shapes affect price?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but not drastically in bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds available in all shapes?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, most shapes are available.",
-            },
-            {
-                type: "paragraph",
-                text: "Which shape is best for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Round and oval.",
-            },
-            {
-                type: "paragraph",
-                text: "What shape is most modern?",
-            },
-            {
-                type: "paragraph",
-                text: "Princess and baguette cuts.",
-            },
-            {
-                type: "paragraph",
-                text: "Do shapes change bracelet flexibility?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, some designs feel stiffer.",
-            },
-            {
-                type: "paragraph",
-                text: "Are marquise diamonds common?",
-            },
-            {
-                type: "paragraph",
-                text: "Less common but unique.",
-            },
-            {
-                type: "paragraph",
-                text: "Which shape is easiest to style?",
-            },
-            {
-                type: "paragraph",
-                text: "Round cut.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I follow trends?",
-            },
-            {
-                type: "paragraph",
-                text: "Choose based on personal preference.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters more: shape or size?",
-            },
-            {
-                type: "paragraph",
-                text: "Shape often affects appearance more than size.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the best diamond shape for a tennis bracelet?",
+                        answer: "Round cut is the most popular due to its sparkle.",
+                    },
+                    {
+                        question: "Which shape sparkles the most?",
+                        answer: "Round diamonds reflect the most light.",
+                    },
+                    {
+                        question: "Are oval diamonds good for tennis bracelets?",
+                        answer: "Yes, they offer a balanced look.",
+                    },
+                    {
+                        question: "What is a princess cut bracelet?",
+                        answer: "A bracelet with square-shaped diamonds.",
+                    },
+                    {
+                        question: "Are emerald cuts less sparkly?",
+                        answer: "Yes, they offer a softer reflection.",
+                    },
+                    {
+                        question: "Which shape looks most expensive?",
+                        answer: "Round and emerald cuts are often perceived as premium.",
+                    },
+                    {
+                        question: "Are baguette diamonds used in bracelets?",
+                        answer: "Yes, for a sleek, modern look.",
+                    },
+                    {
+                        question: "Do shapes affect comfort?",
+                        answer: "Yes, some shapes feel more flexible than others.",
+                    },
+                    {
+                        question: "Are unique shapes trending?",
+                        answer: "Yes, especially in modern designs.",
+                    },
+                    {
+                        question: "Is round cut always the best choice?",
+                        answer: "It's the safest and most versatile.",
+                    },
+                    {
+                        question: "Can I mix diamond shapes?",
+                        answer: "Some modern designs allow it.",
+                    },
+                    {
+                        question: "Do shapes affect price?",
+                        answer: "Yes, but not drastically in bracelets.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds available in all shapes?",
+                        answer: "Yes, most shapes are available.",
+                    },
+                    {
+                        question: "Which shape is best for daily wear?",
+                        answer: "Round and oval.",
+                    },
+                    {
+                        question: "What shape is most modern?",
+                        answer: "Princess and baguette cuts.",
+                    },
+                    {
+                        question: "Do shapes change bracelet flexibility?",
+                        answer: "Yes, some designs feel stiffer.",
+                    },
+                    {
+                        question: "Are marquise diamonds common?",
+                        answer: "Less common but unique.",
+                    },
+                    {
+                        question: "Which shape is easiest to style?",
+                        answer: "Round cut.",
+                    },
+                    {
+                        question: "Should I follow trends?",
+                        answer: "Choose based on personal preference.",
+                    },
+                    {
+                        question: "What matters more: shape or size?",
+                        answer: "Shape often affects appearance more than size.",
+                    },
+                ],
             },
         ],
     },

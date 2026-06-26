@@ -342,167 +342,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the difference between lab-grown and natural diamond tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Lab-grown diamonds are created in labs, while natural diamonds are mined. Both look and perform the same.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds real?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are real diamonds with the same physical and chemical properties.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are lab-grown diamond bracelets cheaper?",
-            },
-            {
-                type: "paragraph",
-                text: "They are more cost-efficient to produce compared to mined diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown diamonds last as long as natural ones?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, both have the same durability and hardness.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you tell the difference between lab-grown and natural diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Not without specialized equipment.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is better for everyday wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Both are equally suitable for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Do natural diamonds have better resale value?",
-            },
-            {
-                type: "paragraph",
-                text: "Generally, yes, but jewellery is not a strong investment overall.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds ethical?",
-            },
-            {
-                type: "paragraph",
-                text: "They are often considered more transparent and environmentally controlled.",
-            },
-            {
-                type: "paragraph",
-                text: "Which looks more expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Lab-grown can look more impressive for the same budget due to larger or higher-quality stones.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds popular in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are becoming increasingly mainstream.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a lab-grown tennis bracelet worth buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially for value and everyday use.",
-            },
-            {
-                type: "paragraph",
-                text: "Are natural diamonds better quality?",
-            },
-            {
-                type: "paragraph",
-                text: "No, both have the same quality standards.",
-            },
-            {
-                type: "paragraph",
-                text: "Which is better for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Both are good, depending on personal preference.",
-            },
-            {
-                type: "paragraph",
-                text: "Can lab-grown diamonds be certified?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are graded and certified like natural diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown diamonds fade or lose shine?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they maintain their brilliance permanently.",
-            },
-            {
-                type: "paragraph",
-                text: "Are natural diamonds more luxurious?",
-            },
-            {
-                type: "paragraph",
-                text: "They are traditionally perceived as more luxurious due to rarity.",
-            },
-            {
-                type: "paragraph",
-                text: "Which option is more budget-friendly?",
-            },
-            {
-                type: "paragraph",
-                text: "Lab-grown diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy lab-grown or natural?",
-            },
-            {
-                type: "paragraph",
-                text: "It depends on your priorities—value vs tradition.",
-            },
-            {
-                type: "paragraph",
-                text: "Are both types available in tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, both are widely available.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters more: origin or appearance?",
-            },
-            {
-                type: "paragraph",
-                text: "That depends on individual preference and buying intent.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the difference between lab-grown and natural diamond tennis bracelets?",
+                        answer: "Lab-grown diamonds are created in labs, while natural diamonds are mined. Both look and perform the same.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds real?",
+                        answer: "Yes, they are real diamonds with the same physical and chemical properties.",
+                    },
+                    {
+                        question: "Why are lab-grown diamond bracelets cheaper?",
+                        answer: "They are more cost-efficient to produce compared to mined diamonds.",
+                    },
+                    {
+                        question: "Do lab-grown diamonds last as long as natural ones?",
+                        answer: "Yes, both have the same durability and hardness.",
+                    },
+                    {
+                        question: "Can you tell the difference between lab-grown and natural diamonds?",
+                        answer: "Not without specialized equipment.",
+                    },
+                    {
+                        question: "Which is better for everyday wear?",
+                        answer: "Both are equally suitable for daily wear.",
+                    },
+                    {
+                        question: "Do natural diamonds have better resale value?",
+                        answer: "Generally, yes, but jewellery is not a strong investment overall.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds ethical?",
+                        answer: "They are often considered more transparent and environmentally controlled.",
+                    },
+                    {
+                        question: "Which looks more expensive?",
+                        answer: "Lab-grown can look more impressive for the same budget due to larger or higher-quality stones.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds popular in 2026?",
+                        answer: "Yes, they are becoming increasingly mainstream.",
+                    },
+                    {
+                        question: "Is a lab-grown tennis bracelet worth buying?",
+                        answer: "Yes, especially for value and everyday use.",
+                    },
+                    {
+                        question: "Are natural diamonds better quality?",
+                        answer: "No, both have the same quality standards.",
+                    },
+                    {
+                        question: "Which is better for gifting?",
+                        answer: "Both are good, depending on personal preference.",
+                    },
+                    {
+                        question: "Can lab-grown diamonds be certified?",
+                        answer: "Yes, they are graded and certified like natural diamonds.",
+                    },
+                    {
+                        question: "Do lab-grown diamonds fade or lose shine?",
+                        answer: "No, they maintain their brilliance permanently.",
+                    },
+                    {
+                        question: "Are natural diamonds more luxurious?",
+                        answer: "They are traditionally perceived as more luxurious due to rarity.",
+                    },
+                    {
+                        question: "Which option is more budget-friendly?",
+                        answer: "Lab-grown diamonds.",
+                    },
+                    {
+                        question: "Should I buy lab-grown or natural?",
+                        answer: "It depends on your priorities—value vs tradition.",
+                    },
+                    {
+                        question: "Are both types available in tennis bracelets?",
+                        answer: "Yes, both are widely available.",
+                    },
+                    {
+                        question: "What matters more: origin or appearance?",
+                        answer: "That depends on individual preference and buying intent.",
+                    },
+                ],
             },
         ],
     },

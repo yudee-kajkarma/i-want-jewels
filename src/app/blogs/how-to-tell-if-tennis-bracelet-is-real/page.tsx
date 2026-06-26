@@ -399,167 +399,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How can I tell if a tennis bracelet is real?",
-            },
-            {
-                type: "paragraph",
-                text: "Check for certification, metal stamps, and overall craftsmanship.",
-            },
-            {
-                type: "paragraph",
-                text: "Do real tennis bracelets have stamps?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, most have markings like 14K or 18K.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamond bracelets real?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are real diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the fog test for diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Breathing on the stone—real diamonds clear fog quickly.",
-            },
-            {
-                type: "paragraph",
-                text: "Can fake bracelets look real?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, some imitations are very convincing.",
-            },
-            {
-                type: "paragraph",
-                text: "Do real bracelets feel heavier?",
-            },
-            {
-                type: "paragraph",
-                text: "Usually, yes, due to quality materials.",
-            },
-            {
-                type: "paragraph",
-                text: "Should all diamonds have inclusions?",
-            },
-            {
-                type: "paragraph",
-                text: "Most real diamonds have small imperfections.",
-            },
-            {
-                type: "paragraph",
-                text: "Is certification necessary?",
-            },
-            {
-                type: "paragraph",
-                text: "It's helpful but not always included for smaller pieces.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I test diamonds at home?",
-            },
-            {
-                type: "paragraph",
-                text: "Basic tests can help, but they're not foolproof.",
-            },
-            {
-                type: "paragraph",
-                text: "Does price indicate authenticity?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always—lab-grown options are affordable.",
-            },
-            {
-                type: "paragraph",
-                text: "Where is the metal stamp located?",
-            },
-            {
-                type: "paragraph",
-                text: "Usually near the clasp.",
-            },
-            {
-                type: "paragraph",
-                text: "Can jewellers verify authenticity?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with specialized tools.",
-            },
-            {
-                type: "paragraph",
-                text: "Are all expensive bracelets real?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessarily—always verify.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best way to check authenticity?",
-            },
-            {
-                type: "paragraph",
-                text: "Certification and buying from reputable sellers.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I trust online purchases?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if the seller is reputable.",
-            },
-            {
-                type: "paragraph",
-                text: "Do fake diamonds sparkle differently?",
-            },
-            {
-                type: "paragraph",
-                text: "Often, but not always noticeably.",
-            },
-            {
-                type: "paragraph",
-                text: "Is weight a reliable indicator?",
-            },
-            {
-                type: "paragraph",
-                text: "It helps, but shouldn't be the only test.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets easy to fake?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with modern materials.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I get insurance for a real bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "For higher-value pieces, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid when buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Unverified sellers and unclear product details.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How can I tell if a tennis bracelet is real?",
+                        answer: "Check for certification, metal stamps, and overall craftsmanship.",
+                    },
+                    {
+                        question: "Do real tennis bracelets have stamps?",
+                        answer: "Yes, most have markings like 14K or 18K.",
+                    },
+                    {
+                        question: "Are lab-grown diamond bracelets real?",
+                        answer: "Yes, they are real diamonds.",
+                    },
+                    {
+                        question: "What is the fog test for diamonds?",
+                        answer: "Breathing on the stone—real diamonds clear fog quickly.",
+                    },
+                    {
+                        question: "Can fake bracelets look real?",
+                        answer: "Yes, some imitations are very convincing.",
+                    },
+                    {
+                        question: "Do real bracelets feel heavier?",
+                        answer: "Usually, yes, due to quality materials.",
+                    },
+                    {
+                        question: "Should all diamonds have inclusions?",
+                        answer: "Most real diamonds have small imperfections.",
+                    },
+                    {
+                        question: "Is certification necessary?",
+                        answer: "It's helpful but not always included for smaller pieces.",
+                    },
+                    {
+                        question: "Can I test diamonds at home?",
+                        answer: "Basic tests can help, but they're not foolproof.",
+                    },
+                    {
+                        question: "Does price indicate authenticity?",
+                        answer: "Not always—lab-grown options are affordable.",
+                    },
+                    {
+                        question: "Where is the metal stamp located?",
+                        answer: "Usually near the clasp.",
+                    },
+                    {
+                        question: "Can jewellers verify authenticity?",
+                        answer: "Yes, with specialized tools.",
+                    },
+                    {
+                        question: "Are all expensive bracelets real?",
+                        answer: "Not necessarily—always verify.",
+                    },
+                    {
+                        question: "What is the best way to check authenticity?",
+                        answer: "Certification and buying from reputable sellers.",
+                    },
+                    {
+                        question: "Can I trust online purchases?",
+                        answer: "Yes, if the seller is reputable.",
+                    },
+                    {
+                        question: "Do fake diamonds sparkle differently?",
+                        answer: "Often, but not always noticeably.",
+                    },
+                    {
+                        question: "Is weight a reliable indicator?",
+                        answer: "It helps, but shouldn't be the only test.",
+                    },
+                    {
+                        question: "Are tennis bracelets easy to fake?",
+                        answer: "Yes, especially with modern materials.",
+                    },
+                    {
+                        question: "Should I get insurance for a real bracelet?",
+                        answer: "For higher-value pieces, yes.",
+                    },
+                    {
+                        question: "What should I avoid when buying?",
+                        answer: "Unverified sellers and unclear product details.",
+                    },
+                ],
             },
         ],
     },

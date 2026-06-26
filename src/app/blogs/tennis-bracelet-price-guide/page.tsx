@@ -290,167 +290,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How much does a tennis bracelet cost in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Prices range from around €100 for lab-grown options to over €10,000 for natural diamond bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are tennis bracelets so expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Cost depends on diamond type, carat weight, and craftsmanship.",
-            },
-            {
-                type: "paragraph",
-                text: "Are cheap tennis bracelets worth buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if they use real materials like lab-grown diamonds and solid gold.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the average price of a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Most buyers spend between €150 and €2,000.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown tennis bracelets cost less?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, significantly less than natural diamond versions.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a €150 tennis bracelet real?",
-            },
-            {
-                type: "paragraph",
-                text: "It can be, especially if it uses lab-grown diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "What affects tennis bracelet price the most?",
-            },
-            {
-                type: "paragraph",
-                text: "Diamond type and total carat weight.",
-            },
-            {
-                type: "paragraph",
-                text: "Are expensive tennis bracelets better?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always in appearance—often the price reflects rarity.",
-            },
-            {
-                type: "paragraph",
-                text: "How much should I spend on a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "It depends on your budget and how often you'll wear it.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets a good investment?",
-            },
-            {
-                type: "paragraph",
-                text: "They are better viewed as wearable luxury rather than financial investments.",
-            },
-            {
-                type: "paragraph",
-                text: "Why do natural diamond bracelets cost more?",
-            },
-            {
-                type: "paragraph",
-                text: "Because natural diamonds are rarer and harder to source.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best budget for a first tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Around €100–€500 for a lab-grown option.",
-            },
-            {
-                type: "paragraph",
-                text: "Do tennis bracelets hold value?",
-            },
-            {
-                type: "paragraph",
-                text: "They hold emotional and wearable value more than resale value.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better to buy lab-grown or natural?",
-            },
-            {
-                type: "paragraph",
-                text: "Lab-grown offers better value; natural offers tradition.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear an expensive tennis bracelet daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but many prefer more affordable options for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets worth the price?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to their versatility and timeless design.",
-            },
-            {
-                type: "paragraph",
-                text: "What is included in the cost?",
-            },
-            {
-                type: "paragraph",
-                text: "Diamonds, metal, craftsmanship, and brand positioning.",
-            },
-            {
-                type: "paragraph",
-                text: "Are UK and EU prices different?",
-            },
-            {
-                type: "paragraph",
-                text: "They are similar but may vary slightly due to taxes and currency.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy online or in-store?",
-            },
-            {
-                type: "paragraph",
-                text: "Both are fine if the seller is reputable.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I avoid overpaying?",
-            },
-            {
-                type: "paragraph",
-                text: "Understand the materials and compare value, not just price.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How much does a tennis bracelet cost in 2026?",
+                        answer: "Prices range from around €100 for lab-grown options to over €10,000 for natural diamond bracelets.",
+                    },
+                    {
+                        question: "Why are tennis bracelets so expensive?",
+                        answer: "Cost depends on diamond type, carat weight, and craftsmanship.",
+                    },
+                    {
+                        question: "Are cheap tennis bracelets worth buying?",
+                        answer: "Yes, if they use real materials like lab-grown diamonds and solid gold.",
+                    },
+                    {
+                        question: "What is the average price of a tennis bracelet?",
+                        answer: "Most buyers spend between €150 and €2,000.",
+                    },
+                    {
+                        question: "Do lab-grown tennis bracelets cost less?",
+                        answer: "Yes, significantly less than natural diamond versions.",
+                    },
+                    {
+                        question: "Is a €150 tennis bracelet real?",
+                        answer: "It can be, especially if it uses lab-grown diamonds.",
+                    },
+                    {
+                        question: "What affects tennis bracelet price the most?",
+                        answer: "Diamond type and total carat weight.",
+                    },
+                    {
+                        question: "Are expensive tennis bracelets better?",
+                        answer: "Not always in appearance—often the price reflects rarity.",
+                    },
+                    {
+                        question: "How much should I spend on a tennis bracelet?",
+                        answer: "It depends on your budget and how often you'll wear it.",
+                    },
+                    {
+                        question: "Are tennis bracelets a good investment?",
+                        answer: "They are better viewed as wearable luxury rather than financial investments.",
+                    },
+                    {
+                        question: "Why do natural diamond bracelets cost more?",
+                        answer: "Because natural diamonds are rarer and harder to source.",
+                    },
+                    {
+                        question: "What is the best budget for a first tennis bracelet?",
+                        answer: "Around €100–€500 for a lab-grown option.",
+                    },
+                    {
+                        question: "Do tennis bracelets hold value?",
+                        answer: "They hold emotional and wearable value more than resale value.",
+                    },
+                    {
+                        question: "Is it better to buy lab-grown or natural?",
+                        answer: "Lab-grown offers better value; natural offers tradition.",
+                    },
+                    {
+                        question: "Can I wear an expensive tennis bracelet daily?",
+                        answer: "Yes, but many prefer more affordable options for daily wear.",
+                    },
+                    {
+                        question: "Are tennis bracelets worth the price?",
+                        answer: "Yes, due to their versatility and timeless design.",
+                    },
+                    {
+                        question: "What is included in the cost?",
+                        answer: "Diamonds, metal, craftsmanship, and brand positioning.",
+                    },
+                    {
+                        question: "Are UK and EU prices different?",
+                        answer: "They are similar but may vary slightly due to taxes and currency.",
+                    },
+                    {
+                        question: "Should I buy online or in-store?",
+                        answer: "Both are fine if the seller is reputable.",
+                    },
+                    {
+                        question: "How do I avoid overpaying?",
+                        answer: "Understand the materials and compare value, not just price.",
+                    },
+                ],
             },
         ],
     },

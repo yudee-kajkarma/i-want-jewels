@@ -400,167 +400,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Are tennis bracelets unisex?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they can be worn by anyone.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's becoming more common.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they still considered women's jewellery?",
-            },
-            {
-                type: "paragraph",
-                text: "Less so in 2026.",
-            },
-            {
-                type: "paragraph",
-                text: "What style works best for men?",
-            },
-            {
-                type: "paragraph",
-                text: "Balanced, slightly larger designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear them daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if comfortable.",
-            },
-            {
-                type: "paragraph",
-                text: "Should men choose different designs?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessarily—fit and size matter more.",
-            },
-            {
-                type: "paragraph",
-                text: "Are celebrities wearing them?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, increasingly.",
-            },
-            {
-                type: "paragraph",
-                text: "What metal is best for men?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men layer them with watches?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a popular style.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they look too delicate?",
-            },
-            {
-                type: "paragraph",
-                text: "Depends on design choice.",
-            },
-            {
-                type: "paragraph",
-                text: "Is this a trend or long-term shift?",
-            },
-            {
-                type: "paragraph",
-                text: "Likely a long-term shift.",
-            },
-            {
-                type: "paragraph",
-                text: "Can beginners try this style?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's easy to integrate.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown options available?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, widely.",
-            },
-            {
-                type: "paragraph",
-                text: "Should men wear them on one wrist?",
-            },
-            {
-                type: "paragraph",
-                text: "Preference-based.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they suitable for formal wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men gift them?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, and also wear them.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they match all outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially minimal styles.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it socially accepted?",
-            },
-            {
-                type: "paragraph",
-                text: "Increasingly, yes.",
-            },
-            {
-                type: "paragraph",
-                text: "What matters most when choosing?",
-            },
-            {
-                type: "paragraph",
-                text: "Comfort and style.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I try one?",
-            },
-            {
-                type: "paragraph",
-                text: "If it fits your style, yes.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Are tennis bracelets unisex?",
+                        answer: "Yes, they can be worn by anyone.",
+                    },
+                    {
+                        question: "Can men wear tennis bracelets?",
+                        answer: "Yes, it's becoming more common.",
+                    },
+                    {
+                        question: "Are they still considered women's jewellery?",
+                        answer: "Less so in 2026.",
+                    },
+                    {
+                        question: "What style works best for men?",
+                        answer: "Balanced, slightly larger designs.",
+                    },
+                    {
+                        question: "Can men wear them daily?",
+                        answer: "Yes, if comfortable.",
+                    },
+                    {
+                        question: "Should men choose different designs?",
+                        answer: "Not necessarily—fit and size matter more.",
+                    },
+                    {
+                        question: "Are celebrities wearing them?",
+                        answer: "Yes, increasingly.",
+                    },
+                    {
+                        question: "What metal is best for men?",
+                        answer: "White gold is most versatile.",
+                    },
+                    {
+                        question: "Can men layer them with watches?",
+                        answer: "Yes, it's a popular style.",
+                    },
+                    {
+                        question: "Do they look too delicate?",
+                        answer: "Depends on design choice.",
+                    },
+                    {
+                        question: "Is this a trend or long-term shift?",
+                        answer: "Likely a long-term shift.",
+                    },
+                    {
+                        question: "Can beginners try this style?",
+                        answer: "Yes, it's easy to integrate.",
+                    },
+                    {
+                        question: "Are lab-grown options available?",
+                        answer: "Yes, widely.",
+                    },
+                    {
+                        question: "Should men wear them on one wrist?",
+                        answer: "Preference-based.",
+                    },
+                    {
+                        question: "Are they suitable for formal wear?",
+                        answer: "Yes.",
+                    },
+                    {
+                        question: "Can men gift them?",
+                        answer: "Yes, and also wear them.",
+                    },
+                    {
+                        question: "Do they match all outfits?",
+                        answer: "Yes, especially minimal styles.",
+                    },
+                    {
+                        question: "Is it socially accepted?",
+                        answer: "Increasingly, yes.",
+                    },
+                    {
+                        question: "What matters most when choosing?",
+                        answer: "Comfort and style.",
+                    },
+                    {
+                        question: "Should I try one?",
+                        answer: "If it fits your style, yes.",
+                    },
+                ],
             },
         ],
     },

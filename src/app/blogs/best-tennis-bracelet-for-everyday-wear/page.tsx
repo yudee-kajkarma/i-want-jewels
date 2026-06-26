@@ -437,167 +437,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the best tennis bracelet for everyday wear?",
-            },
-            {
-                type: "paragraph",
-                text: "A flexible, comfortable bracelet with smaller diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear a tennis bracelet daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it's well-made and properly fitted.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown bracelets better for daily use?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are more affordable and practical.",
-            },
-            {
-                type: "paragraph",
-                text: "What size diamonds are best for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Smaller to medium stones.",
-            },
-            {
-                type: "paragraph",
-                text: "Which metal is best?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Should it be tight or loose?",
-            },
-            {
-                type: "paragraph",
-                text: "A slightly relaxed fit is ideal.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a safety clasp necessary?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for added security.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it while working?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it's comfortable.",
-            },
-            {
-                type: "paragraph",
-                text: "Will it get damaged easily?",
-            },
-            {
-                type: "paragraph",
-                text: "Not if it's well-crafted.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it with other jewellery?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it pairs easily.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I remove it at night?",
-            },
-            {
-                type: "paragraph",
-                text: "It's recommended.",
-            },
-            {
-                type: "paragraph",
-                text: "How often should I clean it?",
-            },
-            {
-                type: "paragraph",
-                text: "Every 1–2 weeks.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it worth buying for daily use?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to versatility.",
-            },
-            {
-                type: "paragraph",
-                text: "What style is best?",
-            },
-            {
-                type: "paragraph",
-                text: "Classic single-row designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Can beginners buy one?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a great starting piece.",
-            },
-            {
-                type: "paragraph",
-                text: "Are thin bracelets durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if properly made.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it go with all outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, that's its strength.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the average price?",
-            },
-            {
-                type: "paragraph",
-                text: "€100–€500 for lab-grown options.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it while traveling?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but take precautions.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is it so popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Because it's practical and easy to wear.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the best tennis bracelet for everyday wear?",
+                        answer: "A flexible, comfortable bracelet with smaller diamonds.",
+                    },
+                    {
+                        question: "Can I wear a tennis bracelet daily?",
+                        answer: "Yes, if it's well-made and properly fitted.",
+                    },
+                    {
+                        question: "Are lab-grown bracelets better for daily use?",
+                        answer: "Yes, they are more affordable and practical.",
+                    },
+                    {
+                        question: "What size diamonds are best for daily wear?",
+                        answer: "Smaller to medium stones.",
+                    },
+                    {
+                        question: "Which metal is best?",
+                        answer: "White gold is the most versatile.",
+                    },
+                    {
+                        question: "Should it be tight or loose?",
+                        answer: "A slightly relaxed fit is ideal.",
+                    },
+                    {
+                        question: "Is a safety clasp necessary?",
+                        answer: "Yes, for added security.",
+                    },
+                    {
+                        question: "Can I wear it while working?",
+                        answer: "Yes, if it's comfortable.",
+                    },
+                    {
+                        question: "Will it get damaged easily?",
+                        answer: "Not if it's well-crafted.",
+                    },
+                    {
+                        question: "Can I wear it with other jewellery?",
+                        answer: "Yes, it pairs easily.",
+                    },
+                    {
+                        question: "Should I remove it at night?",
+                        answer: "It's recommended.",
+                    },
+                    {
+                        question: "How often should I clean it?",
+                        answer: "Every 1–2 weeks.",
+                    },
+                    {
+                        question: "Is it worth buying for daily use?",
+                        answer: "Yes, due to versatility.",
+                    },
+                    {
+                        question: "What style is best?",
+                        answer: "Classic single-row designs.",
+                    },
+                    {
+                        question: "Can beginners buy one?",
+                        answer: "Yes, it's a great starting piece.",
+                    },
+                    {
+                        question: "Are thin bracelets durable?",
+                        answer: "Yes, if properly made.",
+                    },
+                    {
+                        question: "Does it go with all outfits?",
+                        answer: "Yes, that's its strength.",
+                    },
+                    {
+                        question: "What is the average price?",
+                        answer: "€100–€500 for lab-grown options.",
+                    },
+                    {
+                        question: "Can I wear it while traveling?",
+                        answer: "Yes, but take precautions.",
+                    },
+                    {
+                        question: "Why is it so popular?",
+                        answer: "Because it's practical and easy to wear.",
+                    },
+                ],
             },
         ],
     },

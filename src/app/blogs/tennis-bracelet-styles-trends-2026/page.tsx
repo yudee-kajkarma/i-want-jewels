@@ -432,167 +432,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is the most popular tennis bracelet style?",
-            },
-            {
-                type: "paragraph",
-                text: "The classic single-row design remains the most popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets trending in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with modern design updates.",
-            },
-            {
-                type: "paragraph",
-                text: "What is a bezel-set tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "A design where diamonds are fully surrounded by metal.",
-            },
-            {
-                type: "paragraph",
-                text: "Are chunky tennis bracelets in style?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for those who prefer a bold look.",
-            },
-            {
-                type: "paragraph",
-                text: "What are ultra-thin tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Delicate designs ideal for stacking.",
-            },
-            {
-                type: "paragraph",
-                text: "Can tennis bracelets have coloured diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, subtle colour accents are trending.",
-            },
-            {
-                type: "paragraph",
-                text: "What is east-west diamond setting?",
-            },
-            {
-                type: "paragraph",
-                text: "Diamonds are set horizontally instead of vertically.",
-            },
-            {
-                type: "paragraph",
-                text: "Are mixed metal bracelets popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they offer more styling flexibility.",
-            },
-            {
-                type: "paragraph",
-                text: "Which style is best for daily wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Classic or ultra-thin designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamond styles trending?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are driving design innovation.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I customize a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Many brands now offer customization options.",
-            },
-            {
-                type: "paragraph",
-                text: "Do trends affect value?",
-            },
-            {
-                type: "paragraph",
-                text: "Mostly in terms of wearability, not resale.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I follow trends or go classic?",
-            },
-            {
-                type: "paragraph",
-                text: "A balance of both works best.",
-            },
-            {
-                type: "paragraph",
-                text: "Are modern designs less timeless?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessarily—they often build on classic elements.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best metal for style?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear these styles?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially chunkier designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Are thin bracelets durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if well-made.",
-            },
-            {
-                type: "paragraph",
-                text: "What's the biggest trend right now?",
-            },
-            {
-                type: "paragraph",
-                text: "Subtle variations in classic designs.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I pick the right style?",
-            },
-            {
-                type: "paragraph",
-                text: "Based on your lifestyle and preferences.",
-            },
-            {
-                type: "paragraph",
-                text: "Will tennis bracelets change more in the future?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but the core design will remain the same.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is the most popular tennis bracelet style?",
+                        answer: "The classic single-row design remains the most popular.",
+                    },
+                    {
+                        question: "Are tennis bracelets trending in 2026?",
+                        answer: "Yes, especially with modern design updates.",
+                    },
+                    {
+                        question: "What is a bezel-set tennis bracelet?",
+                        answer: "A design where diamonds are fully surrounded by metal.",
+                    },
+                    {
+                        question: "Are chunky tennis bracelets in style?",
+                        answer: "Yes, for those who prefer a bold look.",
+                    },
+                    {
+                        question: "What are ultra-thin tennis bracelets?",
+                        answer: "Delicate designs ideal for stacking.",
+                    },
+                    {
+                        question: "Can tennis bracelets have coloured diamonds?",
+                        answer: "Yes, subtle colour accents are trending.",
+                    },
+                    {
+                        question: "What is east-west diamond setting?",
+                        answer: "Diamonds are set horizontally instead of vertically.",
+                    },
+                    {
+                        question: "Are mixed metal bracelets popular?",
+                        answer: "Yes, they offer more styling flexibility.",
+                    },
+                    {
+                        question: "Which style is best for daily wear?",
+                        answer: "Classic or ultra-thin designs.",
+                    },
+                    {
+                        question: "Are lab-grown diamond styles trending?",
+                        answer: "Yes, they are driving design innovation.",
+                    },
+                    {
+                        question: "Can I customize a tennis bracelet?",
+                        answer: "Many brands now offer customization options.",
+                    },
+                    {
+                        question: "Do trends affect value?",
+                        answer: "Mostly in terms of wearability, not resale.",
+                    },
+                    {
+                        question: "Should I follow trends or go classic?",
+                        answer: "A balance of both works best.",
+                    },
+                    {
+                        question: "Are modern designs less timeless?",
+                        answer: "Not necessarily—they often build on classic elements.",
+                    },
+                    {
+                        question: "What is the best metal for style?",
+                        answer: "White gold is the most versatile.",
+                    },
+                    {
+                        question: "Can men wear these styles?",
+                        answer: "Yes, especially chunkier designs.",
+                    },
+                    {
+                        question: "Are thin bracelets durable?",
+                        answer: "Yes, if well-made.",
+                    },
+                    {
+                        question: "What's the biggest trend right now?",
+                        answer: "Subtle variations in classic designs.",
+                    },
+                    {
+                        question: "How do I pick the right style?",
+                        answer: "Based on your lifestyle and preferences.",
+                    },
+                    {
+                        question: "Will tennis bracelets change more in the future?",
+                        answer: "Yes, but the core design will remain the same.",
+                    },
+                ],
             },
         ],
     },

@@ -361,167 +361,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How do I clean a tennis bracelet at home?",
-            },
-            {
-                type: "paragraph",
-                text: "Use warm water, mild soap, and a soft brush.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I use dish soap?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, as long as it's mild.",
-            },
-            {
-                type: "paragraph",
-                text: "How often should I clean it?",
-            },
-            {
-                type: "paragraph",
-                text: "Every 1–2 weeks if worn daily.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I use a toothbrush?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if it's soft.",
-            },
-            {
-                type: "paragraph",
-                text: "Are harsh chemicals safe?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they can damage the bracelet.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I use an ultrasonic cleaner?",
-            },
-            {
-                type: "paragraph",
-                text: "Only if the bracelet is in perfect condition.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown diamonds need different care?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they are cleaned the same way.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I dry it with a towel?",
-            },
-            {
-                type: "paragraph",
-                text: "Use a soft, lint-free cloth.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I clean it every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Light cleaning is fine, but not necessary daily.",
-            },
-            {
-                type: "paragraph",
-                text: "What makes diamonds look dull?",
-            },
-            {
-                type: "paragraph",
-                text: "Oil, dirt, and residue buildup.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I remove it before showering?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, to avoid soap residue.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it while working out?",
-            },
-            {
-                type: "paragraph",
-                text: "It's better to remove it.",
-            },
-            {
-                type: "paragraph",
-                text: "Do I need professional cleaning?",
-            },
-            {
-                type: "paragraph",
-                text: "Occasionally, for deep cleaning.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I store it?",
-            },
-            {
-                type: "paragraph",
-                text: "In a separate pouch or box.",
-            },
-            {
-                type: "paragraph",
-                text: "Can cleaning damage it?",
-            },
-            {
-                type: "paragraph",
-                text: "Not if done gently.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the safest method?",
-            },
-            {
-                type: "paragraph",
-                text: "Warm water and mild soap.",
-            },
-            {
-                type: "paragraph",
-                text: "How long should I soak it?",
-            },
-            {
-                type: "paragraph",
-                text: "Around 10–15 minutes.",
-            },
-            {
-                type: "paragraph",
-                text: "Does cleaning improve sparkle?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, significantly.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I use jewellery cleaner solutions?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if they are safe for diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is regular cleaning important?",
-            },
-            {
-                type: "paragraph",
-                text: "It maintains appearance and longevity.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How do I clean a tennis bracelet at home?",
+                        answer: "Use warm water, mild soap, and a soft brush.",
+                    },
+                    {
+                        question: "Can I use dish soap?",
+                        answer: "Yes, as long as it's mild.",
+                    },
+                    {
+                        question: "How often should I clean it?",
+                        answer: "Every 1–2 weeks if worn daily.",
+                    },
+                    {
+                        question: "Can I use a toothbrush?",
+                        answer: "Yes, if it's soft.",
+                    },
+                    {
+                        question: "Are harsh chemicals safe?",
+                        answer: "No, they can damage the bracelet.",
+                    },
+                    {
+                        question: "Can I use an ultrasonic cleaner?",
+                        answer: "Only if the bracelet is in perfect condition.",
+                    },
+                    {
+                        question: "Do lab-grown diamonds need different care?",
+                        answer: "No, they are cleaned the same way.",
+                    },
+                    {
+                        question: "Should I dry it with a towel?",
+                        answer: "Use a soft, lint-free cloth.",
+                    },
+                    {
+                        question: "Can I clean it every day?",
+                        answer: "Light cleaning is fine, but not necessary daily.",
+                    },
+                    {
+                        question: "What makes diamonds look dull?",
+                        answer: "Oil, dirt, and residue buildup.",
+                    },
+                    {
+                        question: "Should I remove it before showering?",
+                        answer: "Yes, to avoid soap residue.",
+                    },
+                    {
+                        question: "Can I wear it while working out?",
+                        answer: "It's better to remove it.",
+                    },
+                    {
+                        question: "Do I need professional cleaning?",
+                        answer: "Occasionally, for deep cleaning.",
+                    },
+                    {
+                        question: "How do I store it?",
+                        answer: "In a separate pouch or box.",
+                    },
+                    {
+                        question: "Can cleaning damage it?",
+                        answer: "Not if done gently.",
+                    },
+                    {
+                        question: "What is the safest method?",
+                        answer: "Warm water and mild soap.",
+                    },
+                    {
+                        question: "How long should I soak it?",
+                        answer: "Around 10–15 minutes.",
+                    },
+                    {
+                        question: "Does cleaning improve sparkle?",
+                        answer: "Yes, significantly.",
+                    },
+                    {
+                        question: "Can I use jewellery cleaner solutions?",
+                        answer: "Yes, if they are safe for diamonds.",
+                    },
+                    {
+                        question: "Why is regular cleaning important?",
+                        answer: "It maintains appearance and longevity.",
+                    },
+                ],
             },
         ],
     },

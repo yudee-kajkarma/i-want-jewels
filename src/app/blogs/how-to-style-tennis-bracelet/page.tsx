@@ -359,167 +359,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "How do you style a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Keep it simple and let it complement your outfit rather than dominate it.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear a tennis bracelet every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it works well for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it go with casual outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it pairs well with simple, everyday clothing.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it with a watch?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, stacking with a watch is a popular styling option.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I layer it with other bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but keep the layers minimal and balanced.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it suitable for workwear?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it adds a polished look without being distracting.",
-            },
-            {
-                type: "paragraph",
-                text: "What outfits work best with it?",
-            },
-            {
-                type: "paragraph",
-                text: "Neutral, minimal, and structured outfits work well.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it to formal events?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it complements evening wear beautifully.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it okay to wear with statement jewellery?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but balance is important.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best way to stack it?",
-            },
-            {
-                type: "paragraph",
-                text: "Pair with thin, simple bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it work in all seasons?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it adapts well to different styles.",
-            },
-            {
-                type: "paragraph",
-                text: "Should it be tight or loose for styling?",
-            },
-            {
-                type: "paragraph",
-                text: "A balanced fit works best.",
-            },
-            {
-                type: "paragraph",
-                text: "Can beginners style it easily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's one of the easiest pieces to wear.",
-            },
-            {
-                type: "paragraph",
-                text: "What metals match best?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the most versatile.",
-            },
-            {
-                type: "paragraph",
-                text: "Can it be worn alone?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it often looks best on its own.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it match all jewellery styles?",
-            },
-            {
-                type: "paragraph",
-                text: "It works with most styles due to its simplicity.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it good for layering necklaces too?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it complements layered jewellery looks.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I avoid when styling?",
-            },
-            {
-                type: "paragraph",
-                text: "Over-layering and making it the focal point.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is it so versatile?",
-            },
-            {
-                type: "paragraph",
-                text: "Because of its simple and balanced design.",
-            },
-            {
-                type: "paragraph",
-                text: "How do I make it look expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "Pair it with clean, minimal outfits and avoid over-accessorizing.",
+                type: "faq",
+                items: [
+                    {
+                        question: "How do you style a tennis bracelet?",
+                        answer: "Keep it simple and let it complement your outfit rather than dominate it.",
+                    },
+                    {
+                        question: "Can you wear a tennis bracelet every day?",
+                        answer: "Yes, it works well for daily wear.",
+                    },
+                    {
+                        question: "Does it go with casual outfits?",
+                        answer: "Yes, it pairs well with simple, everyday clothing.",
+                    },
+                    {
+                        question: "Can I wear it with a watch?",
+                        answer: "Yes, stacking with a watch is a popular styling option.",
+                    },
+                    {
+                        question: "Should I layer it with other bracelets?",
+                        answer: "Yes, but keep the layers minimal and balanced.",
+                    },
+                    {
+                        question: "Is it suitable for workwear?",
+                        answer: "Yes, it adds a polished look without being distracting.",
+                    },
+                    {
+                        question: "What outfits work best with it?",
+                        answer: "Neutral, minimal, and structured outfits work well.",
+                    },
+                    {
+                        question: "Can I wear it to formal events?",
+                        answer: "Yes, it complements evening wear beautifully.",
+                    },
+                    {
+                        question: "Is it okay to wear with statement jewellery?",
+                        answer: "Yes, but balance is important.",
+                    },
+                    {
+                        question: "What is the best way to stack it?",
+                        answer: "Pair with thin, simple bracelets.",
+                    },
+                    {
+                        question: "Does it work in all seasons?",
+                        answer: "Yes, it adapts well to different styles.",
+                    },
+                    {
+                        question: "Should it be tight or loose for styling?",
+                        answer: "A balanced fit works best.",
+                    },
+                    {
+                        question: "Can beginners style it easily?",
+                        answer: "Yes, it's one of the easiest pieces to wear.",
+                    },
+                    {
+                        question: "What metals match best?",
+                        answer: "White gold is the most versatile.",
+                    },
+                    {
+                        question: "Can it be worn alone?",
+                        answer: "Yes, it often looks best on its own.",
+                    },
+                    {
+                        question: "Does it match all jewellery styles?",
+                        answer: "It works with most styles due to its simplicity.",
+                    },
+                    {
+                        question: "Is it good for layering necklaces too?",
+                        answer: "Yes, it complements layered jewellery looks.",
+                    },
+                    {
+                        question: "What should I avoid when styling?",
+                        answer: "Over-layering and making it the focal point.",
+                    },
+                    {
+                        question: "Why is it so versatile?",
+                        answer: "Because of its simple and balanced design.",
+                    },
+                    {
+                        question: "How do I make it look expensive?",
+                        answer: "Pair it with clean, minimal outfits and avoid over-accessorizing.",
+                    },
+                ],
             },
         ],
     },

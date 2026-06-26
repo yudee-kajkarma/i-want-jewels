@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import FAQSection, { type FAQItem } from "@/components/shared/FAQSection";
 
 export type ContentBlock =
     | { type: "paragraph"; text: string }
     | { type: "bullet-list"; items: string[] }
     | { type: "numbered-list"; items: string[] }
+    | { type: "faq"; title?: string; items: FAQItem[] }
     | {
           type: "image";
           src: string;
@@ -64,6 +66,19 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                             <li key={i}>{item}</li>
                                         ))}
                                     </ol>
+                                );
+                            }
+                            if (block.type === "faq") {
+                                return (
+                                    <FAQSection
+                                        key={bIdx}
+                                        faqs={block.items}
+                                        title={
+                                            block.title ??
+                                            "Frequently Asked Questions"
+                                        }
+                                        className="my-8"
+                                    />
                                 );
                             }
                             if (block.type === "image") {

@@ -349,167 +349,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Can I get a real tennis bracelet under €500?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with lab-grown diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Are cheap tennis bracelets worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if they are well-made and comfortable.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I look for under €500?",
-            },
-            {
-                type: "paragraph",
-                text: "Focus on design, flexibility, and clasp quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds used in this price range?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, almost all bracelets under €500 use lab-grown diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they look like expensive bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, visually they can be very similar.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they durable?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if made with quality materials.",
-            },
-            {
-                type: "paragraph",
-                text: "Is €200 enough for a good bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for entry-level options.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I spend more for better quality?",
-            },
-            {
-                type: "paragraph",
-                text: "Not always—value depends on usage.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, most are designed for regular use.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they good for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are popular gift options.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they come in gold?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, many use gold or gold-plated settings.",
-            },
-            {
-                type: "paragraph",
-                text: "What size should I choose?",
-            },
-            {
-                type: "paragraph",
-                text: "Based on your wrist measurement plus extra length.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they adjustable?",
-            },
-            {
-                type: "paragraph",
-                text: "Some are, but not all.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they lose shine over time?",
-            },
-            {
-                type: "paragraph",
-                text: "No, diamonds maintain their brilliance.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the best brand for this price?",
-            },
-            {
-                type: "paragraph",
-                text: "Look for brands focusing on lab-grown jewellery.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I stack it with other bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they work well for layering.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they popular in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, this category is growing rapidly.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they feel lightweight?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, most are designed for comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better than buying nothing?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it offers accessible luxury.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy one now or wait?",
-            },
-            {
-                type: "paragraph",
-                text: "If it fits your budget and lifestyle, it's worth buying now.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Can I get a real tennis bracelet under €500?",
+                        answer: "Yes, especially with lab-grown diamonds.",
+                    },
+                    {
+                        question: "Are cheap tennis bracelets worth it?",
+                        answer: "Yes, if they are well-made and comfortable.",
+                    },
+                    {
+                        question: "What should I look for under €500?",
+                        answer: "Focus on design, flexibility, and clasp quality.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds used in this price range?",
+                        answer: "Yes, almost all bracelets under €500 use lab-grown diamonds.",
+                    },
+                    {
+                        question: "Do they look like expensive bracelets?",
+                        answer: "Yes, visually they can be very similar.",
+                    },
+                    {
+                        question: "Are they durable?",
+                        answer: "Yes, if made with quality materials.",
+                    },
+                    {
+                        question: "Is €200 enough for a good bracelet?",
+                        answer: "Yes, for entry-level options.",
+                    },
+                    {
+                        question: "Should I spend more for better quality?",
+                        answer: "Not always—value depends on usage.",
+                    },
+                    {
+                        question: "Can I wear it daily?",
+                        answer: "Yes, most are designed for regular use.",
+                    },
+                    {
+                        question: "Are they good for gifting?",
+                        answer: "Yes, they are popular gift options.",
+                    },
+                    {
+                        question: "Do they come in gold?",
+                        answer: "Yes, many use gold or gold-plated settings.",
+                    },
+                    {
+                        question: "What size should I choose?",
+                        answer: "Based on your wrist measurement plus extra length.",
+                    },
+                    {
+                        question: "Are they adjustable?",
+                        answer: "Some are, but not all.",
+                    },
+                    {
+                        question: "Do they lose shine over time?",
+                        answer: "No, diamonds maintain their brilliance.",
+                    },
+                    {
+                        question: "What is the best brand for this price?",
+                        answer: "Look for brands focusing on lab-grown jewellery.",
+                    },
+                    {
+                        question: "Can I stack it with other bracelets?",
+                        answer: "Yes, they work well for layering.",
+                    },
+                    {
+                        question: "Are they popular in 2026?",
+                        answer: "Yes, this category is growing rapidly.",
+                    },
+                    {
+                        question: "Do they feel lightweight?",
+                        answer: "Yes, most are designed for comfort.",
+                    },
+                    {
+                        question: "Is it better than buying nothing?",
+                        answer: "Yes, it offers accessible luxury.",
+                    },
+                    {
+                        question: "Should I buy one now or wait?",
+                        answer: "If it fits your budget and lifestyle, it's worth buying now.",
+                    },
+                ],
             },
         ],
     },

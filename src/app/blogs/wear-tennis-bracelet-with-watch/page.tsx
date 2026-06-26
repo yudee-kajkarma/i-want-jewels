@@ -404,167 +404,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Can you wear a tennis bracelet with a watch?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a common and stylish combination.",
-            },
-            {
-                type: "paragraph",
-                text: "Should they go on the same wrist?",
-            },
-            {
-                type: "paragraph",
-                text: "They can, depending on preference.",
-            },
-            {
-                type: "paragraph",
-                text: "Which goes first, watch or bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "The watch should sit closer to the hand.",
-            },
-            {
-                type: "paragraph",
-                text: "Can they touch each other?",
-            },
-            {
-                type: "paragraph",
-                text: "Slight contact is fine, but avoid constant friction.",
-            },
-            {
-                type: "paragraph",
-                text: "Should metals match?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessary—both matching and mixed metals work.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it comfortable to wear both?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if sized correctly.",
-            },
-            {
-                type: "paragraph",
-                text: "What type of watch works best?",
-            },
-            {
-                type: "paragraph",
-                text: "Slim, minimal designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear them daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they're suitable for everyday wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it work for formal events?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, with a cleaner, more refined approach.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear this combination?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's becoming more common.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I stack other bracelets too?",
-            },
-            {
-                type: "paragraph",
-                text: "Keep it minimal to avoid overcrowding.",
-            },
-            {
-                type: "paragraph",
-                text: "What if my watch is bulky?",
-            },
-            {
-                type: "paragraph",
-                text: "Wear them on separate wrists.",
-            },
-            {
-                type: "paragraph",
-                text: "Does bracelet size matter?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it affects how they sit together.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I mix styles?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but maintain balance.",
-            },
-            {
-                type: "paragraph",
-                text: "Is this a trend?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially in modern styling.",
-            },
-            {
-                type: "paragraph",
-                text: "Will they scratch each other?",
-            },
-            {
-                type: "paragraph",
-                text: "Possible, so ensure proper spacing.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I remove them together?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, for convenience and care.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear them while working?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, if comfortable.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better than wearing one?",
-            },
-            {
-                type: "paragraph",
-                text: "It adds more dimension to your look.",
-            },
-            {
-                type: "paragraph",
-                text: "Why does this combination work?",
-            },
-            {
-                type: "paragraph",
-                text: "Because it balances function and style.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Can you wear a tennis bracelet with a watch?",
+                        answer: "Yes, it's a common and stylish combination.",
+                    },
+                    {
+                        question: "Should they go on the same wrist?",
+                        answer: "They can, depending on preference.",
+                    },
+                    {
+                        question: "Which goes first, watch or bracelet?",
+                        answer: "The watch should sit closer to the hand.",
+                    },
+                    {
+                        question: "Can they touch each other?",
+                        answer: "Slight contact is fine, but avoid constant friction.",
+                    },
+                    {
+                        question: "Should metals match?",
+                        answer: "Not necessary—both matching and mixed metals work.",
+                    },
+                    {
+                        question: "Is it comfortable to wear both?",
+                        answer: "Yes, if sized correctly.",
+                    },
+                    {
+                        question: "What type of watch works best?",
+                        answer: "Slim, minimal designs.",
+                    },
+                    {
+                        question: "Can I wear them daily?",
+                        answer: "Yes, they're suitable for everyday wear.",
+                    },
+                    {
+                        question: "Does it work for formal events?",
+                        answer: "Yes, with a cleaner, more refined approach.",
+                    },
+                    {
+                        question: "Can men wear this combination?",
+                        answer: "Yes, it's becoming more common.",
+                    },
+                    {
+                        question: "Should I stack other bracelets too?",
+                        answer: "Keep it minimal to avoid overcrowding.",
+                    },
+                    {
+                        question: "What if my watch is bulky?",
+                        answer: "Wear them on separate wrists.",
+                    },
+                    {
+                        question: "Does bracelet size matter?",
+                        answer: "Yes, it affects how they sit together.",
+                    },
+                    {
+                        question: "Can I mix styles?",
+                        answer: "Yes, but maintain balance.",
+                    },
+                    {
+                        question: "Is this a trend?",
+                        answer: "Yes, especially in modern styling.",
+                    },
+                    {
+                        question: "Will they scratch each other?",
+                        answer: "Possible, so ensure proper spacing.",
+                    },
+                    {
+                        question: "Should I remove them together?",
+                        answer: "Yes, for convenience and care.",
+                    },
+                    {
+                        question: "Can I wear them while working?",
+                        answer: "Yes, if comfortable.",
+                    },
+                    {
+                        question: "Is it better than wearing one?",
+                        answer: "It adds more dimension to your look.",
+                    },
+                    {
+                        question: "Why does this combination work?",
+                        answer: "Because it balances function and style.",
+                    },
+                ],
             },
         ],
     },

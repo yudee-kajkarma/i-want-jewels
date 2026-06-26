@@ -309,119 +309,67 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "What is a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "A tennis bracelet is a flexible bracelet made of a continuous line of diamonds or gemstones, designed for comfort and elegance.",
-            },
-            {
-                type: "paragraph",
-                text: "Why is it called a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "It was named after a tennis match incident involving Chris Evert, who lost her bracelet during play.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets still in style?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they remain one of the most timeless and popular jewellery pieces in 2026.",
-            },
-            {
-                type: "paragraph",
-                text: "How much does a tennis bracelet cost?",
-            },
-            {
-                type: "paragraph",
-                text: "Prices range from around €100 for lab-grown versions to over €10,000 for natural diamond pieces.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear a tennis bracelet every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are designed for daily wear due to their flexibility and comfort.",
-            },
-            {
-                type: "paragraph",
-                text: "What size tennis bracelet should I get?",
-            },
-            {
-                type: "paragraph",
-                text: "It should fit slightly loose, with about half an inch of space around your wrist.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamond tennis bracelets real?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, lab-grown diamonds are chemically and visually identical to natural diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "What metal is best for a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the most popular, but yellow and rose gold are also great options.",
-            },
-            {
-                type: "paragraph",
-                text: "Do tennis bracelets break easily?",
-            },
-            {
-                type: "paragraph",
-                text: "High-quality ones are durable, especially if they have a secure clasp and safety latch.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, tennis bracelets are increasingly popular among men as well.",
-            },
-            {
-                type: "paragraph",
-                text: "How do you clean a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Use mild soap, warm water, and a soft brush to gently clean it.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a tennis bracelet a good gift?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a popular choice for anniversaries, birthdays, and special occasions.",
-            },
-            {
-                type: "paragraph",
-                text: "What's the difference between a tennis bracelet and a bangle?",
-            },
-            {
-                type: "paragraph",
-                text: "A tennis bracelet is flexible, while a bangle is rigid and solid.",
-            },
-            {
-                type: "paragraph",
-                text: "How tight should a tennis bracelet be?",
-            },
-            {
-                type: "paragraph",
-                text: "It should be snug but not tight—comfortable enough to move slightly.",
+                type: "faq",
+                items: [
+                    {
+                        question: "What is a tennis bracelet?",
+                        answer: "A tennis bracelet is a flexible bracelet made of a continuous line of diamonds or gemstones, designed for comfort and elegance.",
+                    },
+                    {
+                        question: "Why is it called a tennis bracelet?",
+                        answer: "It was named after a tennis match incident involving Chris Evert, who lost her bracelet during play.",
+                    },
+                    {
+                        question: "Are tennis bracelets still in style?",
+                        answer: "Yes, they remain one of the most timeless and popular jewellery pieces in 2026.",
+                    },
+                    {
+                        question: "How much does a tennis bracelet cost?",
+                        answer: "Prices range from around €100 for lab-grown versions to over €10,000 for natural diamond pieces.",
+                    },
+                    {
+                        question: "Can you wear a tennis bracelet every day?",
+                        answer: "Yes, they are designed for daily wear due to their flexibility and comfort.",
+                    },
+                    {
+                        question: "What size tennis bracelet should I get?",
+                        answer: "It should fit slightly loose, with about half an inch of space around your wrist.",
+                    },
+                    {
+                        question: "Are lab-grown diamond tennis bracelets real?",
+                        answer: "Yes, lab-grown diamonds are chemically and visually identical to natural diamonds.",
+                    },
+                    {
+                        question: "What metal is best for a tennis bracelet?",
+                        answer: "White gold is the most popular, but yellow and rose gold are also great options.",
+                    },
+                    {
+                        question: "Do tennis bracelets break easily?",
+                        answer: "High-quality ones are durable, especially if they have a secure clasp and safety latch.",
+                    },
+                    {
+                        question: "Can men wear tennis bracelets?",
+                        answer: "Yes, tennis bracelets are increasingly popular among men as well.",
+                    },
+                    {
+                        question: "How do you clean a tennis bracelet?",
+                        answer: "Use mild soap, warm water, and a soft brush to gently clean it.",
+                    },
+                    {
+                        question: "Is a tennis bracelet a good gift?",
+                        answer: "Yes, it's a popular choice for anniversaries, birthdays, and special occasions.",
+                    },
+                    {
+                        question: "What's the difference between a tennis bracelet and a bangle?",
+                        answer: "A tennis bracelet is flexible, while a bangle is rigid and solid.",
+                    },
+                    {
+                        question: "How tight should a tennis bracelet be?",
+                        answer: "It should be snug but not tight—comfortable enough to move slightly.",
+                    },
+                ],
             },
         ],
     },

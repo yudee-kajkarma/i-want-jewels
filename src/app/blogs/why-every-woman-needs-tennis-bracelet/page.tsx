@@ -383,167 +383,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Why is a tennis bracelet so popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Because it's versatile, timeless, and easy to wear with any outfit.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear a tennis bracelet every day?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's designed for daily wear.",
-            },
-            {
-                type: "paragraph",
-                text: "What makes a tennis bracelet special?",
-            },
-            {
-                type: "paragraph",
-                text: "Its simplicity, flexibility, and consistent diamond design.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a tennis bracelet worth buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to its practicality and long-term usability.",
-            },
-            {
-                type: "paragraph",
-                text: "Does it go with casual outfits?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it works with both casual and formal wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets trendy in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they remain consistently popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Can beginners buy a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's one of the easiest fine jewellery pieces to start with.",
-            },
-            {
-                type: "paragraph",
-                text: "What outfits work with a tennis bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Almost all—office, casual, and evening wear.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it better than other bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "It offers more versatility compared to many styles.",
-            },
-            {
-                type: "paragraph",
-                text: "Can it be layered with other jewellery?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with watches or chain bracelets.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it suitable for gifting?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's a common gift for many occasions.",
-            },
-            {
-                type: "paragraph",
-                text: "Do tennis bracelets go out of style?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they are considered timeless.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it comfortable to wear?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, due to its flexible design.",
-            },
-            {
-                type: "paragraph",
-                text: "What age group wears tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "All age groups.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they heavy?",
-            },
-            {
-                type: "paragraph",
-                text: "No, most are lightweight and comfortable.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear it to work?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it's subtle enough for professional settings.",
-            },
-            {
-                type: "paragraph",
-                text: "Is it good for special occasions?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it works well for both daily and special events.",
-            },
-            {
-                type: "paragraph",
-                text: "What metal is best?",
-            },
-            {
-                type: "paragraph",
-                text: "White gold is the most popular.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown tennis bracelets popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially for their affordability.",
-            },
-            {
-                type: "paragraph",
-                text: "Why should I own one?",
-            },
-            {
-                type: "paragraph",
-                text: "Because it's one of the most versatile and wearable jewellery pieces available.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Why is a tennis bracelet so popular?",
+                        answer: "Because it's versatile, timeless, and easy to wear with any outfit.",
+                    },
+                    {
+                        question: "Can you wear a tennis bracelet every day?",
+                        answer: "Yes, it's designed for daily wear.",
+                    },
+                    {
+                        question: "What makes a tennis bracelet special?",
+                        answer: "Its simplicity, flexibility, and consistent diamond design.",
+                    },
+                    {
+                        question: "Is a tennis bracelet worth buying?",
+                        answer: "Yes, due to its practicality and long-term usability.",
+                    },
+                    {
+                        question: "Does it go with casual outfits?",
+                        answer: "Yes, it works with both casual and formal wear.",
+                    },
+                    {
+                        question: "Are tennis bracelets trendy in 2026?",
+                        answer: "Yes, they remain consistently popular.",
+                    },
+                    {
+                        question: "Can beginners buy a tennis bracelet?",
+                        answer: "Yes, it's one of the easiest fine jewellery pieces to start with.",
+                    },
+                    {
+                        question: "What outfits work with a tennis bracelet?",
+                        answer: "Almost all—office, casual, and evening wear.",
+                    },
+                    {
+                        question: "Is it better than other bracelets?",
+                        answer: "It offers more versatility compared to many styles.",
+                    },
+                    {
+                        question: "Can it be layered with other jewellery?",
+                        answer: "Yes, especially with watches or chain bracelets.",
+                    },
+                    {
+                        question: "Is it suitable for gifting?",
+                        answer: "Yes, it's a common gift for many occasions.",
+                    },
+                    {
+                        question: "Do tennis bracelets go out of style?",
+                        answer: "No, they are considered timeless.",
+                    },
+                    {
+                        question: "Is it comfortable to wear?",
+                        answer: "Yes, due to its flexible design.",
+                    },
+                    {
+                        question: "What age group wears tennis bracelets?",
+                        answer: "All age groups.",
+                    },
+                    {
+                        question: "Are they heavy?",
+                        answer: "No, most are lightweight and comfortable.",
+                    },
+                    {
+                        question: "Can I wear it to work?",
+                        answer: "Yes, it's subtle enough for professional settings.",
+                    },
+                    {
+                        question: "Is it good for special occasions?",
+                        answer: "Yes, it works well for both daily and special events.",
+                    },
+                    {
+                        question: "What metal is best?",
+                        answer: "White gold is the most popular.",
+                    },
+                    {
+                        question: "Are lab-grown tennis bracelets popular?",
+                        answer: "Yes, especially for their affordability.",
+                    },
+                    {
+                        question: "Why should I own one?",
+                        answer: "Because it's one of the most versatile and wearable jewellery pieces available.",
+                    },
+                ],
             },
         ],
     },

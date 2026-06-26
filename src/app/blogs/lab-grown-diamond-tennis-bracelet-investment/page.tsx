@@ -370,167 +370,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Are lab-grown diamond tennis bracelets a good investment?",
-            },
-            {
-                type: "paragraph",
-                text: "They are not financial investments but offer strong value in daily use.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown diamonds increase in value?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they typically do not appreciate over time.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you resell a lab-grown diamond bracelet?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but resale value is usually lower than the purchase price.",
-            },
-            {
-                type: "paragraph",
-                text: "Are natural diamond bracelets better investments?",
-            },
-            {
-                type: "paragraph",
-                text: "They may retain slightly more value but rarely generate profit.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are lab-grown diamonds cheaper?",
-            },
-            {
-                type: "paragraph",
-                text: "They are more efficient to produce and not limited by natural supply.",
-            },
-            {
-                type: "paragraph",
-                text: "Is jewellery a good investment in general?",
-            },
-            {
-                type: "paragraph",
-                text: "Most jewellery is better viewed as wearable luxury rather than an asset.",
-            },
-            {
-                type: "paragraph",
-                text: "What is cost per wear?",
-            },
-            {
-                type: "paragraph",
-                text: "It's the price divided by how often you wear the item.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds real?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they have the same properties as natural diamonds.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy jewellery for resale value?",
-            },
-            {
-                type: "paragraph",
-                text: "Not usually, unless you are buying rare or collectible pieces.",
-            },
-            {
-                type: "paragraph",
-                text: "What makes a tennis bracelet valuable?",
-            },
-            {
-                type: "paragraph",
-                text: "Design, materials, and how often it's worn.",
-            },
-            {
-                type: "paragraph",
-                text: "Is a €150 tennis bracelet worth it?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially for regular use.",
-            },
-            {
-                type: "paragraph",
-                text: "Do lab-grown diamonds lose shine?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they maintain their brilliance over time.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown diamonds popular in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are widely accepted and growing rapidly.",
-            },
-            {
-                type: "paragraph",
-                text: "Can a tennis bracelet be worn daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are designed for everyday wear.",
-            },
-            {
-                type: "paragraph",
-                text: "What is the main benefit of lab-grown bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Affordability and visual quality.",
-            },
-            {
-                type: "paragraph",
-                text: "Do people regret buying lab-grown diamonds?",
-            },
-            {
-                type: "paragraph",
-                text: "Most buyers value the cost savings and usability.",
-            },
-            {
-                type: "paragraph",
-                text: "Are expensive bracelets better?",
-            },
-            {
-                type: "paragraph",
-                text: "Not necessarily in terms of appearance or usage.",
-            },
-            {
-                type: "paragraph",
-                text: "What should I focus on when buying?",
-            },
-            {
-                type: "paragraph",
-                text: "Fit, comfort, and how often you'll wear it.",
-            },
-            {
-                type: "paragraph",
-                text: "Is jewellery an emotional purchase?",
-            },
-            {
-                type: "paragraph",
-                text: "Often, yes—it's tied to personal moments and style.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy a tennis bracelet for investment?",
-            },
-            {
-                type: "paragraph",
-                text: "Only if you define investment as everyday value, not financial return.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Are lab-grown diamond tennis bracelets a good investment?",
+                        answer: "They are not financial investments but offer strong value in daily use.",
+                    },
+                    {
+                        question: "Do lab-grown diamonds increase in value?",
+                        answer: "No, they typically do not appreciate over time.",
+                    },
+                    {
+                        question: "Can you resell a lab-grown diamond bracelet?",
+                        answer: "Yes, but resale value is usually lower than the purchase price.",
+                    },
+                    {
+                        question: "Are natural diamond bracelets better investments?",
+                        answer: "They may retain slightly more value but rarely generate profit.",
+                    },
+                    {
+                        question: "Why are lab-grown diamonds cheaper?",
+                        answer: "They are more efficient to produce and not limited by natural supply.",
+                    },
+                    {
+                        question: "Is jewellery a good investment in general?",
+                        answer: "Most jewellery is better viewed as wearable luxury rather than an asset.",
+                    },
+                    {
+                        question: "What is cost per wear?",
+                        answer: "It's the price divided by how often you wear the item.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds real?",
+                        answer: "Yes, they have the same properties as natural diamonds.",
+                    },
+                    {
+                        question: "Should I buy jewellery for resale value?",
+                        answer: "Not usually, unless you are buying rare or collectible pieces.",
+                    },
+                    {
+                        question: "What makes a tennis bracelet valuable?",
+                        answer: "Design, materials, and how often it's worn.",
+                    },
+                    {
+                        question: "Is a €150 tennis bracelet worth it?",
+                        answer: "Yes, especially for regular use.",
+                    },
+                    {
+                        question: "Do lab-grown diamonds lose shine?",
+                        answer: "No, they maintain their brilliance over time.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds popular in 2026?",
+                        answer: "Yes, they are widely accepted and growing rapidly.",
+                    },
+                    {
+                        question: "Can a tennis bracelet be worn daily?",
+                        answer: "Yes, they are designed for everyday wear.",
+                    },
+                    {
+                        question: "What is the main benefit of lab-grown bracelets?",
+                        answer: "Affordability and visual quality.",
+                    },
+                    {
+                        question: "Do people regret buying lab-grown diamonds?",
+                        answer: "Most buyers value the cost savings and usability.",
+                    },
+                    {
+                        question: "Are expensive bracelets better?",
+                        answer: "Not necessarily in terms of appearance or usage.",
+                    },
+                    {
+                        question: "What should I focus on when buying?",
+                        answer: "Fit, comfort, and how often you'll wear it.",
+                    },
+                    {
+                        question: "Is jewellery an emotional purchase?",
+                        answer: "Often, yes—it's tied to personal moments and style.",
+                    },
+                    {
+                        question: "Should I buy a tennis bracelet for investment?",
+                        answer: "Only if you define investment as everyday value, not financial return.",
+                    },
+                ],
             },
         ],
     },

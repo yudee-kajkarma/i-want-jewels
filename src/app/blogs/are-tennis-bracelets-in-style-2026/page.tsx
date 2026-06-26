@@ -439,167 +439,91 @@ const articleData: ArticleSection[] = [
         ],
     },
     {
-        heading: "Frequently Asked Questions",
         content: [
             {
-                type: "paragraph",
-                text: "Are tennis bracelets still in style in 2026?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are both timeless and currently trending.",
-            },
-            {
-                type: "paragraph",
-                text: "Why are tennis bracelets popular again?",
-            },
-            {
-                type: "paragraph",
-                text: "Because of everyday wear trends and lab-grown diamond accessibility.",
-            },
-            {
-                type: "paragraph",
-                text: "Are tennis bracelets outdated?",
-            },
-            {
-                type: "paragraph",
-                text: "No, they remain relevant due to their simple design.",
-            },
-            {
-                type: "paragraph",
-                text: "Who wears tennis bracelets today?",
-            },
-            {
-                type: "paragraph",
-                text: "All age groups, from younger buyers to collectors.",
-            },
-            {
-                type: "paragraph",
-                text: "Can you wear a tennis bracelet casually?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, it works well with casual outfits.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they trendy or timeless?",
-            },
-            {
-                type: "paragraph",
-                text: "Both—they are timeless but currently trending.",
-            },
-            {
-                type: "paragraph",
-                text: "What styles are popular now?",
-            },
-            {
-                type: "paragraph",
-                text: "Classic, ultra-thin, and modern variations.",
-            },
-            {
-                type: "paragraph",
-                text: "Can I wear one daily?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are designed for regular use.",
-            },
-            {
-                type: "paragraph",
-                text: "Do they match modern fashion?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially with minimal and layered styles.",
-            },
-            {
-                type: "paragraph",
-                text: "Are lab-grown tennis bracelets popular?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they have increased accessibility.",
-            },
-            {
-                type: "paragraph",
-                text: "Do celebrities wear tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are commonly seen in modern styling.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they suitable for workwear?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they are subtle and refined.",
-            },
-            {
-                type: "paragraph",
-                text: "Can men wear tennis bracelets?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, especially chunkier designs.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they expensive?",
-            },
-            {
-                type: "paragraph",
-                text: "They range from affordable to high-end.",
-            },
-            {
-                type: "paragraph",
-                text: "What makes them timeless?",
-            },
-            {
-                type: "paragraph",
-                text: "Their simple and balanced design.",
-            },
-            {
-                type: "paragraph",
-                text: "Do trends affect their popularity?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, but they don't depend on trends.",
-            },
-            {
-                type: "paragraph",
-                text: "Should I buy one now?",
-            },
-            {
-                type: "paragraph",
-                text: "If it fits your style, it's a good time.",
-            },
-            {
-                type: "paragraph",
-                text: "Are they good for layering?",
-            },
-            {
-                type: "paragraph",
-                text: "Yes, they work well with other jewellery.",
-            },
-            {
-                type: "paragraph",
-                text: "Will they go out of style?",
-            },
-            {
-                type: "paragraph",
-                text: "Unlikely, due to their versatility.",
-            },
-            {
-                type: "paragraph",
-                text: "Why do people still buy them?",
-            },
-            {
-                type: "paragraph",
-                text: "Because they are practical, elegant, and easy to wear.",
+                type: "faq",
+                items: [
+                    {
+                        question: "Are tennis bracelets still in style in 2026?",
+                        answer: "Yes, they are both timeless and currently trending.",
+                    },
+                    {
+                        question: "Why are tennis bracelets popular again?",
+                        answer: "Because of everyday wear trends and lab-grown diamond accessibility.",
+                    },
+                    {
+                        question: "Are tennis bracelets outdated?",
+                        answer: "No, they remain relevant due to their simple design.",
+                    },
+                    {
+                        question: "Who wears tennis bracelets today?",
+                        answer: "All age groups, from younger buyers to collectors.",
+                    },
+                    {
+                        question: "Can you wear a tennis bracelet casually?",
+                        answer: "Yes, it works well with casual outfits.",
+                    },
+                    {
+                        question: "Are they trendy or timeless?",
+                        answer: "Both—they are timeless but currently trending.",
+                    },
+                    {
+                        question: "What styles are popular now?",
+                        answer: "Classic, ultra-thin, and modern variations.",
+                    },
+                    {
+                        question: "Can I wear one daily?",
+                        answer: "Yes, they are designed for regular use.",
+                    },
+                    {
+                        question: "Do they match modern fashion?",
+                        answer: "Yes, especially with minimal and layered styles.",
+                    },
+                    {
+                        question: "Are lab-grown tennis bracelets popular?",
+                        answer: "Yes, they have increased accessibility.",
+                    },
+                    {
+                        question: "Do celebrities wear tennis bracelets?",
+                        answer: "Yes, they are commonly seen in modern styling.",
+                    },
+                    {
+                        question: "Are they suitable for workwear?",
+                        answer: "Yes, they are subtle and refined.",
+                    },
+                    {
+                        question: "Can men wear tennis bracelets?",
+                        answer: "Yes, especially chunkier designs.",
+                    },
+                    {
+                        question: "Are they expensive?",
+                        answer: "They range from affordable to high-end.",
+                    },
+                    {
+                        question: "What makes them timeless?",
+                        answer: "Their simple and balanced design.",
+                    },
+                    {
+                        question: "Do trends affect their popularity?",
+                        answer: "Yes, but they don't depend on trends.",
+                    },
+                    {
+                        question: "Should I buy one now?",
+                        answer: "If it fits your style, it's a good time.",
+                    },
+                    {
+                        question: "Are they good for layering?",
+                        answer: "Yes, they work well with other jewellery.",
+                    },
+                    {
+                        question: "Will they go out of style?",
+                        answer: "Unlikely, due to their versatility.",
+                    },
+                    {
+                        question: "Why do people still buy them?",
+                        answer: "Because they are practical, elegant, and easy to wear.",
+                    },
+                ],
             },
         ],
     },
