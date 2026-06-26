@@ -4,8 +4,10 @@ import FAQSection, { type FAQItem } from "@/components/shared/FAQSection";
 
 export type ContentBlock =
     | { type: "paragraph"; text: string }
+    | { type: "subheading"; text: string }
     | { type: "bullet-list"; items: string[] }
     | { type: "numbered-list"; items: string[] }
+    | { type: "table"; headers: string[]; rows: string[][] }
     | { type: "faq"; title?: string; items: FAQItem[] }
     | {
           type: "image";
@@ -44,6 +46,16 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                             if (block.type === "paragraph") {
                                 return <p key={bIdx}>{block.text}</p>;
                             }
+                            if (block.type === "subheading") {
+                                return (
+                                    <h3
+                                        key={bIdx}
+                                        className="text-xl md:text-2xl font-play font-semibold text-[#1f2732] mt-8 mb-3"
+                                    >
+                                        {block.text}
+                                    </h3>
+                                );
+                            }
                             if (block.type === "bullet-list") {
                                 return (
                                     <ul
@@ -66,6 +78,52 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                             <li key={i}>{item}</li>
                                         ))}
                                     </ol>
+                                );
+                            }
+                            if (block.type === "table") {
+                                return (
+                                    <div
+                                        key={bIdx}
+                                        className="my-6 overflow-x-auto rounded-md border border-gray-200"
+                                    >
+                                        <table className="w-full border-collapse text-base font-poppins">
+                                            <thead>
+                                                <tr>
+                                                    {block.headers.map(
+                                                        (header, i) => (
+                                                            <th
+                                                                key={i}
+                                                                className="border-b border-gray-200 bg-[#f7f8fa] px-4 py-3 text-left font-play text-lg font-semibold text-[#1f2732]"
+                                                            >
+                                                                {header}
+                                                            </th>
+                                                        ),
+                                                    )}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {block.rows.map((row, r) => (
+                                                    <tr
+                                                        key={r}
+                                                        className={
+                                                            r % 2 === 1
+                                                                ? "bg-[#faf9f7]"
+                                                                : "bg-white"
+                                                        }
+                                                    >
+                                                        {row.map((cell, c) => (
+                                                            <td
+                                                                key={c}
+                                                                className="border-t border-gray-100 px-4 py-3 align-top text-slate-700"
+                                                            >
+                                                                {cell}
+                                                            </td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 );
                             }
                             if (block.type === "faq") {

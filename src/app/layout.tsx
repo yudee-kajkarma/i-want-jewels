@@ -24,6 +24,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://www.iwantjewels.com"),
     title: "I Want Jewels",
     description: "Jewellery storefront migrated to Next.js",
 };
