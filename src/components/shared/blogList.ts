@@ -5,6 +5,150 @@ export type BlogLink = {
 
 export const blogLinks: BlogLink[] = [
     {
+        title: "Best Graduation Jewellery Gifts for Her in 2026",
+        href: "/blogs/best-graduation-jewellery-gifts-for-her-2026",
+    },
+    {
+        title: "Everyday Diamond Earrings You Can Wear to Work",
+        href: "/blogs/the-everyday-diamond-earrings-for-work-in-2026",
+    },
+    {
+        title: "Best Travel-Friendly Diamond Earrings for Women",
+        href: "/blogs/the-best-travel-friendly-diamond-earrings-in-2026",
+    },
+    {
+        title: "Best Pavé Hoop Earrings for Everyday Luxury",
+        href: "/blogs/the-best-pave-hoop-earrings-everyday-luxury-2026",
+    },
+    {
+        title: "Best Everyday Earrings for Women: Brunch, Work & Dinner",
+        href: "/blogs/best-everyday-earrings-for-women-2026",
+    },
+    {
+        title: "Date Night Earrings That Are Elegant but Not Too Much",
+        href: "/blogs/the-best-date-night-earrings",
+    },
+    {
+        title: "Best Classic Jewellery Gifts for Her",
+        href: "/blogs/best-classic-jewellery-gifts-for-her-2026",
+    },
+    {
+        title: "Best Statement Earrings for Black Tie Events",
+        href: "/blogs/best-statement-earrings-for-black-tie-events-2026",
+    },
+    {
+        title: "What Jewellery to Wear to a Gala or Awards Night",
+        href: "/blogs/the-gala-jewellery-guide-in-the-2026",
+    },
+    {
+        title: "Best Luxury Earrings for a Milestone Birthday Gift",
+        href: "/blogs/the-luxury-earrings-gift-milestone-birthday",
+    },
+    {
+        title: "Cocktail Party Jewellery Ideas That Look Expensive",
+        href: "/blogs/cocktail-party-jewellery-ideas-in-the-2026",
+    },
+    {
+        title: "How to Style Statement Earrings Without Overdoing It",
+        href: "/blogs/how-to-style-statement-earrings-in-the-2026",
+    },
+    {
+        title: "What Earrings to Wear With a Black Dress",
+        href: "/blogs/the-earrings-with-black-dress-in-2026",
+    },
+    {
+        title: "How to Make Jewellery the Hero of Your Outfit",
+        href: "/blogs/the-statement-jewellery-styling-in-2026",
+    },
+    {
+        title: "Statement Earrings vs Classic Studs: Which Should You Wear?",
+        href: "/blogs/statement-earrings-vs-classic-studs-in-2026",
+    },
+    {
+        title: "Diamond Hoops vs Statement Earrings for Evening Events",
+        href: "/blogs/the-diamond-hoops-vs-statement-earrings-in-the-2026",
+    },
+    {
+        title: "Best First Diamond Stud Earrings to Buy in 2026",
+        href: "/blogs/the-first-diamond-stud-earrings-2026",
+    },
+    {
+        title: "Best Everyday Earrings for Office and Workwear",
+        href: "/blogs/everyday-office-earrings-in-2026",
+    },
+    {
+        title: "Travel-Friendly Diamond Earrings You Can Wear Anywhere",
+        href: "/blogs/the-travel-friendly-diamond-earrings-in-2026",
+    },
+    {
+        title: "Best Fine Jewellery Gifts for Someone Who Likes Simple Style",
+        href: "/blogs/simple-jewellery-gifts-in-the-2026",
+    },
+    {
+        title: "How to Style Diamond Studs for Everyday Outfits",
+        href: "/blogs/how-to-style-diamond-studs-everyday-in-2026",
+    },
+    {
+        title: "Milestone Birthday Jewellery Gifts That Feel Timeless",
+        href: "/blogs/milestone-birthday-jewellery-gifts-in-the-2026",
+    },
+    {
+        title: "Best Anniversary Diamond Earrings for Her",
+        href: "/blogs/the-best-anniversary-diamond-earrings-for-her",
+    },
+    {
+        title: "Best Diamond Stud Earrings for Wedding Guests",
+        href: "/blogs/best-diamond-stud-earrings-for-wedding-guests-in-2026",
+    },
+    {
+        title: "Jewellery to Wear to a Formal Dinner Without Looking Overdressed",
+        href: "/blogs/the-jewellery-to-wear-to-a-formal-dinner-without-looking-overdressed-in-2026",
+    },
+    {
+        title: "How to Style Medium Diamond Studs From Day to Night",
+        href: "/blogs/how-to-style-medium-diamond-studs-from-day-to-night-in-the-2026",
+    },
+    {
+        title: "What Earrings to Wear With a Silk Dress",
+        href: "/blogs/what-earrings-to-wear-with-a-silk-dress",
+    },
+    {
+        title: "How to Make Classic Diamond Studs Look More Modern",
+        href: "/blogs/how-to-make-classic-diamond-studs-look-more-modern-in-2026",
+    },
+    {
+        title: "Best Butterfly Earrings for Evening Events",
+        href: "/blogs/best-butterfly-earrings-for-evening-events-in-the-2026",
+    },
+    {
+        title: "What Jewellery to Wear to an Anniversary Dinner",
+        href: "/blogs/what-are-the-jewellery-to-wear-to-an-anniversary-dinner",
+    },
+    {
+        title: "Best Earrings for a Girls' Night Out",
+        href: "/blogs/best-earrings-for-a-girls-night-out-in-2026",
+    },
+    {
+        title: "Best Wedding Guest Earrings for Spring and Summer Weddings",
+        href: "/blogs/best-wedding-guest-earrings-for-spring-and-summer-weddings",
+    },
+    {
+        title: "How to Style Pavé Butterfly Earrings Elegantly",
+        href: "/blogs/how-to-style-pave-butterfly-earrings-elegantly-in-2026",
+    },
+    {
+        title: "What Earrings to Wear With a Romantic Dress",
+        href: "/blogs/what-the-earrings-to-wear-with-a-romantic-dres-2026",
+    },
+    {
+        title: "How to Wear Eye-Catching Earrings Without Overdoing It",
+        href: "/blogs/how-to-wear-eye-catching-earrings-without-overdoing-it-2026",
+    },
+    {
+        title: "Pavé Butterfly Earrings vs Simple Butterfly Earrings",
+        href: "/blogs/the-pave-butterfly-earrings-vs-simple-butterfly-earrings",
+    },
+    {
         title: "Gold Butterfly Earrings: How to Style Them Every Day",
         href: "/blogs/gold-butterfly-earrings-how-to-style-every-day",
     },

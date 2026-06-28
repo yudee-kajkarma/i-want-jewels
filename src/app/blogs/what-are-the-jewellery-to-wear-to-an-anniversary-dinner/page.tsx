@@ -1,0 +1,510 @@
+import React from "react";
+import { Metadata } from "next";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import BlogSidebar from "@/components/shared/BlogSidebar";
+import DynamicArticle, {
+    ArticleSection,
+} from "@/components/shared/DynamicArticle";
+
+export const metadata: Metadata = {
+    title: "What Jewellery to Wear to an Anniversary Dinner | Farfalla Lab-Grown Diamond Butterfly Earrings",
+    description:
+        "Wondering what jewellery to wear to an anniversary dinner? Discover timeless styling ideas and why the Farfalla Lab-Grown Diamond Butterfly Earrings are the perfect romantic choice for a memorable evening.",
+    alternates: {
+        canonical: "/blogs/what-are-the-jewellery-to-wear-to-an-anniversary-dinner",
+    },
+};
+
+const articleData: ArticleSection[] = [
+    {
+        content: [
+            {
+                type: "paragraph",
+                text: "An anniversary dinner is more than a reservation at a beautiful restaurant.",
+            },
+            {
+                type: "paragraph",
+                text: "It is an occasion that celebrates a shared journey, cherished memories and the promise of many more moments together. Unlike birthdays or formal business events, anniversaries carry a personal meaning that makes every detail feel more important, including the jewellery you choose to wear.",
+            },
+            {
+                type: "paragraph",
+                text: "Many people spend hours selecting the perfect dress, deciding on the right shoes and planning every part of the evening. Yet jewellery often becomes the final decision, even though it is one of the first details people notice. The right pair of earrings can elevate a simple outfit into something elegant, while the wrong choice can easily distract from the sophisticated look you are trying to create.",
+            },
+            {
+                type: "paragraph",
+                text: "This is why so many people search for anniversary dinner jewellery before an important evening.",
+            },
+            {
+                type: "paragraph",
+                text: "They are not necessarily looking for the biggest diamonds or the boldest accessories. They are looking for jewellery that feels romantic, refined and memorable. Something that complements the occasion rather than competing with it.",
+            },
+            {
+                type: "paragraph",
+                text: "Timeless jewellery has always been associated with romance because it remains beautiful long after the evening has ended. Instead of following seasonal fashion, it becomes part of the memories created during that special celebration. Years later, the same earrings may remind you of the restaurant, the conversation, the photographs and the milestone you celebrated together.",
+            },
+            {
+                type: "paragraph",
+                text: "Butterfly jewellery brings an additional layer of meaning to these moments.",
+            },
+            {
+                type: "paragraph",
+                text: "Across different cultures, butterflies have long symbolised love, growth, transformation and new beginnings. These qualities naturally reflect the journey of a relationship, making butterfly-inspired jewellery especially meaningful for anniversary celebrations. Rather than being chosen purely for appearance, butterfly earrings represent the experiences two people have shared and the future they continue building together.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings have been designed around this romantic philosophy. Their graceful butterfly silhouette combines pavé-inspired brilliance with sparkling lab-grown diamonds, creating jewellery that feels elegant enough for fine dining while remaining timeless enough to wear for many future anniversaries. Crafted from premium 925 sterling silver, they balance romance, sophistication and everyday luxury in a way that perfectly complements one of life's most meaningful celebrations.",
+            },
+        ],
+    },
+    {
+        heading: "Quick Answer",
+        content: [
+            {
+                type: "paragraph",
+                text: "The best jewellery to wear to an anniversary dinner combines elegance, comfort and romantic symbolism. Butterfly diamond earrings are an excellent choice because they add refined sparkle while representing love, growth and beautiful new memories. The Farfalla Lab-Grown Diamond Butterfly Earrings bring together timeless butterfly styling, brilliant lab-grown diamonds and premium craftsmanship, making them a beautiful choice for anniversary dinners and other romantic occasions.",
+            },
+        ],
+    },
+    {
+        heading: "Frequently Asked Questions",
+        content: [
+            {
+                type: "faq",
+                title: "Frequently Asked Questions",
+                items: [
+                    {
+                        question: "What jewellery is best for an anniversary dinner?",
+                        answer:
+                            "Elegant jewellery such as butterfly diamond earrings, delicate bracelets and timeless rings are ideal because they complement romantic evening outfits without overwhelming them.",
+                    },
+                    {
+                        question: "Are butterfly earrings suitable for anniversary celebrations?",
+                        answer:
+                            "Yes. Butterfly earrings symbolise transformation, beauty and lasting love, making them particularly meaningful for anniversaries.",
+                    },
+                    {
+                        question: "Should jewellery be subtle or bold for a romantic dinner?",
+                        answer:
+                            "In most cases, refined jewellery creates a more sophisticated appearance. Elegant sparkle often feels more romantic than oversized statement pieces.",
+                    },
+                    {
+                        question: "Can butterfly earrings be worn after the anniversary dinner?",
+                        answer:
+                            "Absolutely. Timeless butterfly earrings transition beautifully into weddings, formal dinners, celebrations and elegant everyday styling.",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Why Romantic Jewellery Creates Lasting Memories",
+        content: [
+            {
+                type: "paragraph",
+                text: "People rarely remember every detail of an anniversary dinner.",
+            },
+            {
+                type: "paragraph",
+                text: "They may forget the menu or the music that was playing, but they often remember how they felt during the evening. They remember the laughter, the conversations, the photographs and the jewellery they wore while celebrating another year together.",
+            },
+            {
+                type: "paragraph",
+                text: "That emotional connection is what makes romantic jewellery different from ordinary accessories.",
+            },
+            {
+                type: "paragraph",
+                text: "Fine jewellery has always carried sentimental value because it becomes attached to life's most meaningful occasions. Every time the earrings are worn again, they quietly bring those memories back. A beautiful pair chosen for an anniversary dinner may later accompany future celebrations, holidays, weddings and other milestones, gradually becoming part of a personal story rather than simply remaining an accessory.",
+            },
+            {
+                type: "paragraph",
+                text: "Butterfly jewellery makes this connection even stronger.",
+            },
+            {
+                type: "paragraph",
+                text: "Its symbolism of growth, transformation and enduring beauty reflects the evolution of a relationship over time. This makes butterfly earrings especially appropriate for anniversary celebrations, where the occasion itself is about recognising how far two people have come together.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings celebrate exactly these emotions. Their elegant butterfly silhouette, pavé-inspired wings and brilliant lab-grown diamonds create a sophisticated look that enhances romantic evening wear while carrying symbolism that extends far beyond a single dinner. Premium 925 sterling silver craftsmanship ensures they remain just as beautiful for future anniversaries as they are on the first evening they are worn.",
+            },
+            {
+                type: "subheading",
+                text: "Why Butterfly Earrings Are Perfect for Anniversary Dinners",
+            },
+            {
+                type: "table",
+                headers: ["Feature", "Why It Matters"],
+                rows: [
+                    ["Butterfly Symbolism", "Represents love, growth and new beginnings"],
+                    ["Lab-Grown Diamonds", "Elegant sparkle for romantic evenings"],
+                    ["Pavé-Inspired Design", "Beautiful light reflection"],
+                    ["Premium Craftsmanship", "Made for lasting memories"],
+                    ["Timeless Styling", "Suitable for future celebrations"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Choosing Jewellery You'll Love Beyond One Special Evening",
+        content: [
+            {
+                type: "paragraph",
+                text: "The best anniversary jewellery is never chosen for one night alone.",
+            },
+            {
+                type: "paragraph",
+                text: "It should continue feeling meaningful every time it is worn.",
+            },
+            {
+                type: "paragraph",
+                text: "That is why timeless butterfly earrings have become such a popular choice for romantic occasions. Their elegant design allows them to complement anniversary dinners today while remaining equally appropriate for weddings, celebrations, date nights and future milestones.",
+            },
+            {
+                type: "paragraph",
+                text: "Rather than becoming jewellery that waits inside a jewellery box, they naturally become part of your favourite collection, reminding you of beautiful memories each time you wear them.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings have been created with exactly this long-term philosophy, offering romantic symbolism, exceptional sparkle and timeless elegance that continues well beyond the anniversary itself.",
+            },
+            {
+                type: "subheading",
+                text: "Qualities of Great Anniversary Dinner Jewellery",
+            },
+            {
+                type: "table",
+                headers: ["Quality", "Long-Term Benefit"],
+                rows: [
+                    ["Romantic Design", "Creates emotional value"],
+                    ["Timeless Elegance", "Never feels outdated"],
+                    ["Versatile Styling", "Suitable for many occasions"],
+                    ["Premium Materials", "Designed to last"],
+                    ["Meaningful Symbolism", "Makes every celebration more memorable"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "How to Choose Jewellery That Complements the Romance of an Anniversary Dinner",
+        content: [
+            {
+                type: "paragraph",
+                text: "An anniversary dinner is one of those occasions where every detail contributes to the overall experience.",
+            },
+            {
+                type: "paragraph",
+                text: "The restaurant is carefully chosen. The outfit is planned in advance. Even the timing of the evening often carries significance. Jewellery deserves the same level of attention because it helps complete the overall look while reflecting the importance of the occasion.",
+            },
+            {
+                type: "paragraph",
+                text: "One of the biggest mistakes people make is assuming that anniversary jewellery has to be dramatic to feel special. In reality, elegance is often far more memorable than extravagance. Jewellery that complements your outfit instead of competing with it usually creates a stronger impression.",
+            },
+            {
+                type: "paragraph",
+                text: "This is exactly why butterfly earrings have become increasingly popular for romantic occasions.",
+            },
+            {
+                type: "paragraph",
+                text: "Their graceful silhouette immediately introduces a sense of softness and femininity. Unlike oversized statement earrings that dominate the outfit, butterfly earrings add character while maintaining balance. The design feels romantic without becoming overly decorative, making it ideal for intimate evenings rather than grand red-carpet events.",
+            },
+            {
+                type: "paragraph",
+                text: "The symbolism also makes a meaningful difference. Butterflies are widely associated with transformation, hope and lasting beauty. These qualities naturally reflect the journey of a relationship, making butterfly jewellery especially appropriate for celebrating another year together.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings have been designed around this romantic philosophy. Their elegant butterfly silhouette features pavé-inspired wings set with brilliant lab-grown diamonds, allowing the earrings to sparkle beautifully under evening lighting. Crafted using premium 925 sterling silver, they offer timeless sophistication that pairs effortlessly with elegant dresses while remaining comfortable enough to wear throughout the evening. Rather than simply completing an outfit, they become part of the memories created during the celebration.",
+            },
+            {
+                type: "paragraph",
+                text: "Another advantage of timeless jewellery is that it never feels restricted to a single event. The earrings chosen for an anniversary dinner today can later accompany future celebrations, weddings, holidays and romantic evenings, gradually becoming more meaningful with every occasion.",
+            },
+            {
+                type: "subheading",
+                text: "What Makes Jewellery Perfect for an Anniversary Dinner?",
+            },
+            {
+                type: "table",
+                headers: ["Feature", "Why It Enhances the Evening"],
+                rows: [
+                    ["Butterfly Design", "Symbolises love, growth and beautiful memories"],
+                    ["Lab-Grown Diamonds", "Adds refined sparkle under evening lighting"],
+                    ["Pavé-Inspired Wings", "Creates elegant brilliance without excess"],
+                    ["Premium Craftsmanship", "Designed for years of wear"],
+                    ["Timeless Style", "Suitable for future romantic occasions"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Why Romantic Jewellery Should Feel Elegant Rather Than Overdone",
+        content: [
+            {
+                type: "paragraph",
+                text: "Romantic styling has changed considerably over the years.",
+            },
+            {
+                type: "paragraph",
+                text: "Today, elegance is defined less by wearing more jewellery and more by choosing jewellery thoughtfully. Instead of layering multiple statement accessories together, modern styling focuses on one beautifully crafted piece that quietly becomes the highlight of the outfit.",
+            },
+            {
+                type: "paragraph",
+                text: "This approach works particularly well for anniversary dinners because the evening itself is personal rather than theatrical. The focus should remain on the people, the conversation and the experience rather than on overly dramatic styling.",
+            },
+            {
+                type: "paragraph",
+                text: "Butterfly earrings naturally fit into this philosophy.",
+            },
+            {
+                type: "paragraph",
+                text: "Their graceful curves and delicate detailing create visual interest without demanding attention. They bring softness to tailored dresses, complement flowing fabrics like silk and satin, and add sparkle that feels refined instead of overwhelming.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings embody this balance beautifully. Their carefully proportioned butterfly silhouette catches the light through pavé-inspired lab-grown diamonds, while the premium 925 sterling silver setting ensures durability and lasting elegance. Whether paired with a minimalist black dress, a romantic floral gown or a timeless satin outfit, they enhance the look while allowing the overall styling to remain harmonious.",
+            },
+            {
+                type: "paragraph",
+                text: "Another benefit of choosing timeless jewellery is confidence. When every element of an outfit feels balanced, there is no need to constantly adjust accessories or question styling choices. Instead, you can focus on enjoying the evening, knowing your jewellery complements the occasion perfectly.",
+            },
+            {
+                type: "subheading",
+                text: "Anniversary Dinner Outfits That Pair Beautifully with Butterfly Earrings",
+            },
+            {
+                type: "table",
+                headers: ["Outfit", "Styling Advantage"],
+                rows: [
+                    ["Satin Midi Dress", "Elegant sparkle without distraction"],
+                    ["Silk Slip Dress", "Romantic and refined"],
+                    ["Floral Evening Dress", "Complements feminine styling"],
+                    ["Classic Black Dress", "Timeless sophistication"],
+                    ["Tailored Jumpsuit", "Modern elegance with subtle glamour"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Why Timeless Jewellery Creates New Memories Every Time You Wear It",
+        content: [
+            {
+                type: "paragraph",
+                text: "Fine jewellery is different from most fashion purchases because its value often grows with time.",
+            },
+            {
+                type: "paragraph",
+                text: "A beautiful pair of earrings rarely remains connected to only one occasion. Instead, it gradually becomes associated with many important moments throughout life. The earrings worn during an anniversary dinner may later appear in holiday photographs, family celebrations, engagement parties or milestone birthdays. Every new memory adds emotional significance to the jewellery itself.",
+            },
+            {
+                type: "paragraph",
+                text: "That is one reason timeless designs continue outperforming trend-driven accessories.",
+            },
+            {
+                type: "paragraph",
+                text: "Fashion changes quickly, but meaningful jewellery evolves alongside your personal story.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings have been created with this long-term philosophy at their heart. Their romantic butterfly silhouette, sparkling lab-grown diamonds, premium 925 sterling silver construction and pavé-inspired detailing ensure they remain just as elegant years from now as they are during the first anniversary dinner. Rather than becoming another beautiful accessory stored away after one occasion, they become jewellery that accompanies life's most treasured celebrations again and again.",
+            },
+            {
+                type: "subheading",
+                text: "Why Timeless Jewellery Is Worth Investing In",
+            },
+            {
+                type: "table",
+                headers: ["Quality", "Long-Term Benefit"],
+                rows: [
+                    ["Romantic Symbolism", "Creates emotional connection"],
+                    ["Elegant Design", "Never feels outdated"],
+                    ["Premium Materials", "Built for lasting beauty"],
+                    ["Occasion Versatility", "Perfect for many celebrations"],
+                    ["Meaningful Memories", "Grows in sentimental value over time"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Common Mistakes to Avoid When Choosing Jewellery for an Anniversary Dinner",
+        content: [
+            {
+                type: "paragraph",
+                text: "Choosing jewellery for an anniversary dinner should feel exciting, but many people unknowingly make styling decisions that take away from the elegance of the occasion. The goal of anniversary jewellery is not simply to add sparkle. It is to create a look that reflects the importance of the evening while allowing your personal style to shine naturally.",
+            },
+            {
+                type: "paragraph",
+                text: "One of the most common mistakes is choosing jewellery that is too bold for an intimate celebration. Oversized statement earrings or heavily layered accessories may work for fashion events, but they can easily overpower the romantic atmosphere of an anniversary dinner. Elegant styling is usually built around balance rather than excess. A thoughtfully designed pair of earrings often creates a stronger impression than several accessories competing for attention.",
+            },
+            {
+                type: "paragraph",
+                text: "Another mistake is selecting jewellery that only works for one evening. Many people buy trend-driven accessories specifically for a celebration and rarely wear them again. While they may look fashionable at the moment, they often lose their appeal after one season. Timeless jewellery offers far greater value because it becomes part of your wardrobe for years rather than months.",
+            },
+            {
+                type: "paragraph",
+                text: "Ignoring the symbolism behind jewellery is another missed opportunity. An anniversary celebrates a relationship that has grown stronger over time. Choosing jewellery with meaningful symbolism adds emotional depth to the occasion. Butterfly earrings represent transformation, hope, beauty and new beginnings, making them especially appropriate for celebrating another year together.",
+            },
+            {
+                type: "paragraph",
+                text: "Comfort should never be overlooked either. Anniversary dinners often last several hours, and jewellery that feels heavy or uncomfortable quickly becomes distracting. Elegant earrings should feel light enough to wear throughout the evening while still providing the sparkle expected from fine jewellery.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings have been created to avoid these common problems. Their graceful butterfly silhouette delivers noticeable brilliance through pavé-inspired lab-grown diamonds without becoming overwhelming. Crafted from premium 925 sterling silver, they combine timeless elegance with everyday comfort, allowing you to enjoy the evening rather than thinking about your jewellery. Their versatility also means they can be worn long after the anniversary dinner, making them a meaningful addition to any jewellery collection.",
+            },
+            {
+                type: "subheading",
+                text: "Common Jewellery Mistakes and Better Alternatives",
+            },
+            {
+                type: "table",
+                headers: ["Common Mistake", "Better Choice"],
+                rows: [
+                    ["Wearing oversized statement earrings", "Elegant butterfly earrings with balanced sparkle"],
+                    ["Buying jewellery for one event only", "Timeless jewellery for many celebrations"],
+                    ["Wearing too many accessories together", "Let one signature piece become the focus"],
+                    ["Ignoring comfort", "Lightweight premium craftsmanship"],
+                    ["Following temporary trends", "Choose timeless butterfly designs"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Why the Farfalla Lab-Grown Diamond Butterfly Earrings Are Perfect for Romantic Evenings",
+        content: [
+            {
+                type: "paragraph",
+                text: "The most memorable jewellery is rarely the jewellery that attracts the most attention.",
+            },
+            {
+                type: "paragraph",
+                text: "Instead, it is the jewellery that becomes part of life's most meaningful memories.",
+            },
+            {
+                type: "paragraph",
+                text: "That is exactly what makes the Farfalla Lab-Grown Diamond Butterfly Earrings such an ideal choice for anniversary dinners. Their design has been created to celebrate romance through elegance rather than extravagance. The graceful butterfly silhouette immediately conveys femininity and sophistication, while the pavé-inspired wings allow the lab-grown diamonds to reflect light beautifully throughout the evening.",
+            },
+            {
+                type: "paragraph",
+                text: "Crafted from premium 925 sterling silver, the earrings balance luxury with practicality. They feel refined enough for an elegant restaurant yet versatile enough to complement future celebrations such as weddings, engagement parties, formal dinners and romantic holidays. Instead of becoming jewellery reserved for one anniversary, they naturally become part of many important milestones throughout your relationship.",
+            },
+            {
+                type: "paragraph",
+                text: "Another reason Farfalla stands out is its symbolism. Butterflies have long represented growth, transformation and enduring beauty. These qualities closely mirror the journey of a lasting relationship. Every anniversary marks another chapter together, making butterfly-inspired jewellery especially meaningful for the occasion.",
+            },
+            {
+                type: "paragraph",
+                text: "The timeless design also ensures lasting relevance. Fashion trends may change, but jewellery built around elegant craftsmanship and meaningful symbolism continues feeling appropriate year after year. That makes the Farfalla Lab-Grown Diamond Butterfly Earrings not only a beautiful accessory but also a lasting reminder of the memories created while wearing them.",
+            },
+            {
+                type: "subheading",
+                text: "Why Farfalla Is the Perfect Anniversary Jewellery",
+            },
+            {
+                type: "table",
+                headers: ["Feature", "Benefit"],
+                rows: [
+                    ["Butterfly Silhouette", "Symbolises love and lasting growth"],
+                    ["Pavé-Inspired Design", "Elegant sparkle for romantic evenings"],
+                    ["Lab-Grown Diamonds", "Brilliant light reflection"],
+                    ["925 Sterling Silver", "Premium quality and durability"],
+                    ["Timeless Styling", "Suitable for future anniversaries and celebrations"],
+                    ["Romantic Versatility", "Complements elegant evening outfits beautifully"],
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Frequently Asked Questions",
+        content: [
+            {
+                type: "faq",
+                title: "Frequently Asked Questions",
+                items: [
+                    {
+                        question: "What jewellery should I wear to an anniversary dinner?",
+                        answer:
+                            "Elegant jewellery with timeless appeal is the best choice. Butterfly diamond earrings, delicate bracelets and refined rings complement romantic evening outfits without overpowering them.",
+                    },
+                    {
+                        question: "Why are butterfly earrings suitable for anniversaries?",
+                        answer:
+                            "Butterflies symbolise transformation, hope, beauty and lasting growth, making them a meaningful representation of a relationship that continues to evolve over time.",
+                    },
+                    {
+                        question: "Can I wear butterfly earrings with a formal dress?",
+                        answer:
+                            "Yes. Butterfly earrings pair beautifully with satin dresses, silk gowns, cocktail dresses and other elegant evening outfits, adding sparkle while maintaining sophistication.",
+                    },
+                    {
+                        question: "Are the Farfalla Lab-Grown Diamond Butterfly Earrings suitable for romantic occasions?",
+                        answer:
+                            "Absolutely. Their graceful butterfly design, pavé-inspired lab-grown diamonds and premium craftsmanship make them an ideal choice for anniversary dinners, date nights and meaningful celebrations.",
+                    },
+                    {
+                        question: "Can butterfly earrings be worn after the anniversary dinner?",
+                        answer:
+                            "Yes. Their timeless design makes them suitable for weddings, engagement parties, formal dinners, holiday celebrations and elegant everyday styling.",
+                    },
+                    {
+                        question: "Are lab-grown diamonds real diamonds?",
+                        answer:
+                            "Yes. Lab-grown diamonds have the same physical, chemical and optical properties as mined diamonds while offering the same brilliance and durability.",
+                    },
+                    {
+                        question: "Will butterfly earrings go out of fashion?",
+                        answer:
+                            "No. Butterfly jewellery has remained popular for generations because it combines timeless symbolism with elegant design rather than relying on short-term fashion trends.",
+                    },
+                    {
+                        question: "How should I care for butterfly diamond earrings?",
+                        answer:
+                            "Store them in a soft jewellery box, clean them gently with a lint-free cloth and avoid prolonged exposure to perfumes, lotions and harsh chemicals to help maintain their brilliance and finish.",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        heading: "Conclusion",
+        content: [
+            {
+                type: "paragraph",
+                text: "An anniversary dinner deserves jewellery that feels just as meaningful as the occasion itself. Rather than choosing accessories based only on current trends, timeless jewellery allows you to create memories that remain special long after the evening has ended.",
+            },
+            {
+                type: "paragraph",
+                text: "Butterfly earrings are particularly well suited to romantic celebrations because they represent growth, transformation and lasting beauty. Their symbolism adds emotional depth while their elegant design complements formal evening wear without feeling excessive.",
+            },
+            {
+                type: "paragraph",
+                text: "The Farfalla Lab-Grown Diamond Butterfly Earrings combine graceful butterfly styling, pavé-inspired brilliance, sparkling lab-grown diamonds and premium 925 sterling silver craftsmanship to create jewellery that feels perfect for anniversary dinners and every celebration that follows. Whether worn for your next romantic evening or treasured for future milestones, they become more than an accessory—they become part of your story.",
+            },
+            {
+                type: "paragraph",
+                text: "If you are looking for anniversary dinner jewellery that combines elegance, symbolism and timeless versatility, the Farfalla Lab-Grown Diamond Butterfly Earrings are a beautiful choice that will continue creating memories for years to come.",
+            },
+        ],
+    },
+];
+
+const BlogPage = () => (
+    <div className="min-h-screen bg-white">
+        <Header />
+        <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-12 relative mb-20">
+            <div className="flex-1 w-full lg:w-2/3">
+                <h1 className="text-4xl md:text-5xl font-play font-semibold text-[#1f2732] mb-6">
+                    What Jewellery to Wear to an Anniversary Dinner
+                </h1>
+                <DynamicArticle sections={articleData} />
+            </div>
+            <BlogSidebar
+                className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"
+                currentHref="/blogs/what-are-the-jewellery-to-wear-to-an-anniversary-dinner"
+            />
+        </div>
+        <Footer />
+    </div>
+);
+
+export default BlogPage;
