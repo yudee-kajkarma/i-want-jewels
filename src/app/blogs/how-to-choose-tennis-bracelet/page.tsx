@@ -527,7 +527,7 @@ const BlogPage = () => (
                     How to Choose a Tennis Bracelet: A Complete Beginner to
                     Expert Guide
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-78.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"

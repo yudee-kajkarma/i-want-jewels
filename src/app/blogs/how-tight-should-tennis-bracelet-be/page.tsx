@@ -525,7 +525,7 @@ const BlogPage = () => (
                     How Tight Should a Tennis Bracelet Be? (The Perfect Fit
                     Explained)
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-81.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"

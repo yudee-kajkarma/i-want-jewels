@@ -468,7 +468,7 @@ const BlogPage = () => (
                 <h1 className="text-4xl md:text-5xl font-play font-semibold text-[#1f2732] mb-6">
                     Are Lab-Grown Diamond Tennis Bracelets a Good Investment?
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-60.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"

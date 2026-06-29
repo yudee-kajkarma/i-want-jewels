@@ -498,7 +498,7 @@ const BlogPage = () => (
                     How to Tell if a Tennis Bracelet Is Real (Without Being an
                     Expert)
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-65.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"

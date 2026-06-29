@@ -465,7 +465,7 @@ const BlogPage = () => (
                 <h1 className="text-4xl md:text-5xl font-play font-semibold text-[#1f2732] mb-6">
                     What Jewellery to Wear to a Gala or Awards Night
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-9.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"

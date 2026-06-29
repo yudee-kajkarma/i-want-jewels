@@ -441,7 +441,7 @@ const BlogPage = () => (
                     Lab-Grown vs Natural Diamond Tennis Bracelets: An Honest
                     Comparison
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-58.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"

@@ -25,9 +25,48 @@ export type ArticleSection = {
 
 interface DynamicArticleProps {
     sections: ArticleSection[];
+    /**
+     * Optional feature image rendered inline within the article. It is placed
+     * right after the second paragraph (or the first, if the article has only
+     * one) so it sits a little way into the content rather than at the top.
+     */
+    featureImage?: string;
 }
 
-const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
+// Find where the feature image should be injected: after the 2nd paragraph,
+// or after the 1st when the article has fewer than two paragraphs.
+function findFeatureImageSlot(
+    sections: ArticleSection[],
+): { sectionIndex: number; blockIndex: number } | null {
+    let firstSlot: { sectionIndex: number; blockIndex: number } | null = null;
+    let paragraphCount = 0;
+
+    for (let s = 0; s < sections.length; s++) {
+        const content = sections[s].content;
+        for (let b = 0; b < content.length; b++) {
+            if (content[b].type === "paragraph") {
+                paragraphCount += 1;
+                if (paragraphCount === 1) {
+                    firstSlot = { sectionIndex: s, blockIndex: b };
+                }
+                if (paragraphCount === 2) {
+                    return { sectionIndex: s, blockIndex: b };
+                }
+            }
+        }
+    }
+
+    return firstSlot;
+}
+
+const DynamicArticle: React.FC<DynamicArticleProps> = ({
+    sections,
+    featureImage,
+}) => {
+    const featureImageSlot = featureImage
+        ? findFeatureImageSlot(sections)
+        : null;
+
     return (
         <div className="text-slate-700 text-lg font-poppins leading-relaxed">
             {sections.map((section, idx) => (
@@ -43,8 +82,28 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
 
                     <div className="space-y-4">
                         {section.content.map((block, bIdx) => {
+                            const showFeatureImageHere =
+                                featureImage &&
+                                featureImageSlot?.sectionIndex === idx &&
+                                featureImageSlot?.blockIndex === bIdx;
+
                             if (block.type === "paragraph") {
-                                return <p key={bIdx}>{block.text}</p>;
+                                return (
+                                    <React.Fragment key={bIdx}>
+                                        <p>{block.text}</p>
+                                        {showFeatureImageHere && (
+                                            <figure className="my-8">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img
+                                                    src={featureImage}
+                                                    alt=""
+                                                    loading="lazy"
+                                                    className="w-full h-auto rounded-xl"
+                                                />
+                                            </figure>
+                                        )}
+                                    </React.Fragment>
+                                );
                             }
                             if (block.type === "subheading") {
                                 return (

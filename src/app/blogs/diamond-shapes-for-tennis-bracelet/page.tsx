@@ -541,7 +541,7 @@ const BlogPage = () => (
                     What Diamond Shape Is Best for a Tennis Bracelet? A Complete
                     Guide
                 </h1>
-                <DynamicArticle sections={articleData} />
+                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-69.jpg" />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"
