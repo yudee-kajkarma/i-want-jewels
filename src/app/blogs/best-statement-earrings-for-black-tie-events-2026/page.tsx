@@ -470,10 +470,16 @@ const BlogPage = () => (
         <Header />
         <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row gap-12 relative mb-20">
             <div className="flex-1 w-full lg:w-2/3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src="/blog-images/blog-image-8.jpg"
+                    alt=""
+                    className="w-full h-auto mb-6"
+                />
                 <h1 className="text-4xl md:text-5xl font-play font-semibold text-[#1f2732] mb-6">
                     Best Statement Earrings for Black Tie Events
                 </h1>
-                <DynamicArticle sections={articleData} featureImage="/blog-images/blog-image-8.jpg" />
+                <DynamicArticle sections={articleData} />
             </div>
             <BlogSidebar
                 className="w-full lg:w-1/3 lg:sticky lg:top-24 h-fit"
