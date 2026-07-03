@@ -1,0 +1,513 @@
+import type { Metadata } from 'next'
+import ResourceArticleV2Page from '../../../../views/ResourceArticleV2Page'
+import type {
+  V2ArticleSection,
+  V2HeroIntro,
+  V2QuickSummary,
+  V2FAQItem,
+  V2CTABlock,
+} from '../../../../views/ResourceArticleV2Page'
+import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../data/resources'
+import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'What Jewellery to Wear with a Green Dress',
+  description:
+    'Choose jewellery for a green dress with gold, silver, rose gold, diamond earrings, wedding guest looks, party styling and outfit ideas.',
+}
+
+const heroIntro: V2HeroIntro = {
+  image: '/blog-images/blog-image-93.jpg',
+  title: 'What Jewellery to Wear with a Green Dress:',
+  subtitle: 'Earrings, Metals & Styling Guide',
+  paragraphs: [
+    'A green dress can look rich, soft, romantic or modern depending on the shade. Emerald green feels bold and evening-ready. Sage green feels soft and elegant. Olive green feels warm and earthy. Mint green feels fresh and light. Because green has so many moods, the jewellery should be chosen around the exact shade, the dress fabric and the occasion.',
+    'Gold jewellery is usually one of the strongest choices with a green dress because it brings warmth and richness. Diamond earrings also work beautifully because they add brightness against green fabric. White or silver-tone jewellery can make green feel cleaner and more modern, while rose gold works best with softer greens such as sage, mint and pastel green.',
+    'This resource helps shoppers choose jewellery for green dresses by colour shade, neckline, fabric, event type and hairstyle. It also connects each styling direction to IWantJewels products such as Orsola drop earrings, Pave Hoops, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Lusso bold statement earrings, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings, Concetta Short earrings, Concetta Long earrings, Amadea Huggie earrings and Laluce minimalist diamond earrings.',
+  ],
+  shopLabel: 'Shop Earrings for Green Dresses',
+  shopHref: '/products?category=Earring',
+}
+
+const quickSummary: V2QuickSummary = {
+  items: [
+    'Choose jewellery for green dresses.',
+    'Decide whether gold, white/silver tone or rose gold works best with green.',
+    'Match earrings to emerald, sage, olive, mint, forest and satin green dresses.',
+    'Style green dresses for weddings, parties, dinners, birthdays and formal events.',
+    'Choose earrings based on neckline and hairstyle.',
+    'Decide between studs, hoops, drops, butterfly earrings and bold statement earrings.',
+    'Build green dress ear stack combinations.',
+    'Find IWantJewels product recommendations by green dress style.',
+    'Plan image blocks, product modules, CTA sections and internal links for this page.',
+  ],
+  image: '/blog-images/blog-image-95.jpg',
+}
+
+const articleContent: V2ArticleSection[] = [
+  // ── Section 0: Selector ──────────────────────────────────────────────────────
+  {
+    heading: 'Green Dress Jewellery Selector',
+    content: [
+      { type: 'paragraph', text: 'Use this table near the top of the page as the main styling decision tool.' },
+      {
+        type: 'table',
+        headers: ['Green Dress Style', 'Best Jewellery Direction', 'Recommended IWJ Direction'],
+        rows: [
+          ['Emerald green dress', 'Gold drops, hoops or bold earrings', 'Orsola, Pave Hoops, Lusso'],
+          ['Sage green dress', 'Soft drops, studs or butterfly earrings', 'Concetta Short, Cadenza S, Farfalla'],
+          ['Olive green dress', 'Gold hoops, medium studs or drops', 'Pave Hoops, Cadenza M, Orsola'],
+          ['Mint green dress', 'Rose gold, white/silver tone or soft diamond studs', 'Farfalla, Cadenza S, Laluce'],
+          ['Forest green dress', 'Gold drops, long drops or bold earrings', 'Orsola, Concetta Long, Lusso'],
+          ['Green satin dress', 'Drop earrings or medium studs', 'Orsola, Cadenza M'],
+          ['Green wedding guest dress', 'Drops, studs or romantic earrings', 'Orsola, Cadenza M, Farfalla'],
+          ['Green party dress', 'Hoops, drops or bold statement earrings', 'Pave Hoops, Orsola, Lusso'],
+          ['Detailed green dress', 'Studs or clean huggies', 'Cadenza M, Cadenza S, Amadea'],
+          ['Green ear stack', 'Main earring + small support', 'Orsola + Cadenza S, Pave Hoops + Cadenza S'],
+        ],
+      },
+    ],
+  },
+
+  // ── Section 1: Why Green Works Well ──────────────────────────────────────────
+  {
+    heading: 'Why Green Dresses Work Well with Jewellery',
+    content: [
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-97.jpg',
+        content: [
+          { type: 'paragraph', text: 'Green is a strong jewellery colour because it pairs well with both warmth and sparkle. Gold makes green feel rich and polished. Diamond earrings brighten the outfit. White or silver-tone jewellery can make green feel cleaner and more formal. Rose gold softens lighter greens and works well for romantic styling.' },
+          { type: 'paragraph', text: 'The best jewellery depends on the green shade. Emerald and forest green can handle stronger jewellery. Sage and mint usually look better with softer earrings. Olive green works best with warm metal tones. Satin green dresses need balance because the fabric already reflects light.' },
+          { type: 'paragraph', text: 'The main rule is simple: if the green dress is bold and simple, the jewellery can be stronger. If the dress already has detail, print, sequins, lace or heavy draping, choose cleaner earrings.' },
+          { type: 'see-also', text: 'Gold vs White vs Rose Gold Lab-Grown Diamond Earrings', href: '/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings' },
+        ],
+      },
+    ],
+  },
+
+  // ── Section 2: Metal Colour ───────────────────────────────────────────────────
+  {
+    heading: 'Gold, Silver or Rose Gold with a Green Dress',
+    content: [
+      { type: 'paragraph', text: 'Gold is usually the easiest metal colour with a green dress, especially with emerald, olive, forest and warm green tones. White or silver-tone jewellery works better when the green dress feels cool, formal or modern. Rose gold is strongest with softer green shades such as sage, mint and pastel green.' },
+      {
+        type: 'table',
+        headers: ['Metal Colour', 'Feeling with Green Dresses', 'Best Green Shades'],
+        rows: [
+          ['Yellow gold', 'Warm, rich, classic and evening-ready', 'Emerald, olive, forest, sage, dark green'],
+          ['White or silver tone', 'Clean, bright, modern and formal', 'Mint, cool green, teal green, deep green'],
+          ['Rose gold', 'Soft, romantic and feminine', 'Sage, mint, pastel green, soft olive'],
+          ['Mixed metals', 'Modern and creative', 'Minimal green dresses and ear stacks'],
+        ],
+      },
+      { type: 'paragraph', text: 'For IWantJewels styling, yellow gold is strongest for Orsola, Pave Hoops and Lusso with green dresses. Rose gold is stronger for Farfalla, Alidi Farfalla and Concetta Short with softer green outfits. White or silver-tone styling works well for Cadenza M, Laluce and Concetta Long when the look should feel clean and formal.' },
+      { type: 'see-also', text: 'Party Earrings Guide', href: '/resources/earring-style-guides/party-earrings-guide' },
+    ],
+  },
+
+  // ── Section 3: Emerald Green ──────────────────────────────────────────────────
+  {
+    heading: 'Best Earrings for an Emerald Green Dress',
+    content: [
+      { type: 'paragraph', text: 'Emerald green is rich, bold and evening-ready. It usually looks best with gold jewellery, diamond sparkle and earrings that have enough presence to balance the strength of the colour.' },
+      { type: 'paragraph', text: 'Drop earrings work beautifully because they add movement and elegance. Hoops add modern shape. Bold statement earrings can work when the emerald dress is simple. Medium studs are better when the dress already has detail.' },
+      {
+        type: 'table',
+        headers: ['Emerald Green Dress Style', 'Best Earring Direction', 'Product Direction'],
+        rows: [
+          ['Simple emerald dress', 'Drops or bold earrings', 'Orsola, Lusso'],
+          ['Emerald satin dress', 'Drop earrings or medium studs', 'Orsola, Cadenza M'],
+          ['Emerald party dress', 'Hoops, drops or bold earrings', 'Pave Hoops, Orsola, Lusso'],
+          ['Emerald wedding guest dress', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Detailed emerald dress', 'Studs or huggies', 'Cadenza M, Amadea'],
+          ['Formal emerald dress', 'Long drops or refined studs', 'Concetta Long, Cadenza M'],
+          ['Emerald V-neck dress', 'Drops or medium studs', 'Orsola, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery for V-Neck Dresses', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress' },
+    ],
+  },
+
+  // ── Section 4: Sage Green ─────────────────────────────────────────────────────
+  {
+    heading: 'Best Earrings for a Sage Green Dress',
+    content: [
+      { type: 'paragraph', text: 'Sage green feels soft, elegant and understated. It usually works best with softer jewellery rather than very heavy statement pieces.' },
+      { type: 'paragraph', text: 'Rose gold, yellow gold and delicate diamond earrings work beautifully with sage. Butterfly earrings can make sage feel romantic, while small studs and delicate drops keep the look clean. For weddings and bridesmaid styling, Cadenza S, Concetta Short and Farfalla are especially strong.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-99.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Sage Green Dress Style', 'Best Earring Direction', 'Product Direction'],
+            rows: [
+              ['Sage wedding guest dress', 'Soft drops or medium studs', 'Concetta Short, Cadenza M'],
+              ['Sage bridesmaid dress', 'Small studs or delicate drops', 'Cadenza S, Concetta Short'],
+              ['Sage satin dress', 'Drop earrings or soft studs', 'Orsola, Cadenza S'],
+              ['Romantic sage dress', 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
+              ['Sage floral dress', 'Butterfly earrings or small studs', 'Farfalla, Cadenza S'],
+              ['Sage party dress', 'Drops or hoops', 'Orsola, Pave Hoops'],
+              ['Minimal sage dress', 'Studs or minimalist earrings', 'Cadenza S, Laluce'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Minimalist Earrings Guide', href: '/resources/earring-style-guides/minimalist-earrings-guide' },
+    ],
+  },
+
+  // ── Section 5: Olive Green ────────────────────────────────────────────────────
+  {
+    heading: 'Best Earrings for an Olive Green Dress',
+    content: [
+      { type: 'paragraph', text: 'Olive green feels warm, earthy and stylish. It usually pairs best with yellow gold because gold brings out the warmth of the green.' },
+      { type: 'paragraph', text: 'Hoops work especially well with olive because they add shape and polish. Medium studs are good for a clean everyday or dinner look. Drop earrings work when the olive dress is more elegant or event-ready.' },
+      {
+        type: 'table',
+        headers: ['Olive Green Dress Style', 'Best Earring Direction', 'Product Direction'],
+        rows: [
+          ['Casual olive dress', 'Hoops or huggies', 'Pave Hoops, Amadea'],
+          ['Olive dinner dress', 'Medium studs or drops', 'Cadenza M, Orsola'],
+          ['Olive satin dress', 'Drops or hoops', 'Orsola, Pave Hoops'],
+          ['Olive party dress', 'Hoops or bold earrings', 'Pave Hoops, Lusso'],
+          ['Olive wedding guest dress', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Detailed olive dress', 'Studs or huggies', 'Cadenza S, Amadea'],
+          ['Minimal olive dress', 'Hoops or clean studs', 'Pave Hoops, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'Hoop vs Huggie Earrings', href: '/resources/earring-style-guides/hoop-vs-huggie-earrings' },
+    ],
+  },
+
+  // ── Section 6: Mint Green ─────────────────────────────────────────────────────
+  {
+    heading: 'Best Earrings for a Mint Green Dress',
+    content: [
+      { type: 'paragraph', text: 'Mint green feels fresh, light and youthful. It usually looks best with softer jewellery, white/silver tone, rose gold or delicate yellow gold.' },
+      { type: 'paragraph', text: 'Small studs, minimalist earrings, butterfly earrings and delicate drops work well with mint. Very bold earrings can overpower mint unless the dress is simple and the event is party-focused.' },
+      {
+        type: 'table',
+        headers: ['Mint Green Dress Style', 'Best Earring Direction', 'Product Direction'],
+        rows: [
+          ['Mint wedding guest dress', 'Soft drops or small studs', 'Concetta Short, Cadenza S'],
+          ['Mint bridesmaid dress', 'Small studs or delicate earrings', 'Cadenza S, Laluce'],
+          ['Mint satin dress', 'Soft drops or medium studs', 'Orsola, Cadenza M'],
+          ['Romantic mint dress', 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
+          ['Mint party dress', 'Hoops or soft drops', 'Pave Hoops, Orsola'],
+          ['Minimal mint dress', 'Minimalist earrings or studs', 'Laluce, Cadenza S'],
+          ['Mint floral dress', 'Butterfly earrings or small studs', 'Farfalla, Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery for Sweetheart Neckline', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline' },
+    ],
+  },
+
+  // ── Section 7: Green Satin ────────────────────────────────────────────────────
+  {
+    heading: 'Best Earrings for a Green Satin Dress',
+    content: [
+      { type: 'paragraph', text: 'Green satin already has shine and colour strength, so the jewellery should add balance.' },
+      { type: 'paragraph', text: 'Drop earrings are usually the strongest choice because they add movement and match the flow of satin. Medium studs are safer when the satin dress already has a dramatic neckline or strong drape. Hoops work well for a modern green satin look. Bold statement earrings work best when the dress is simple.' },
+      {
+        type: 'table',
+        headers: ['Green Satin Dress Style', 'Best Earring Direction', 'Product Direction'],
+        rows: [
+          ['Emerald satin dress', 'Gold drops or hoops', 'Orsola, Pave Hoops'],
+          ['Sage satin dress', 'Soft drops or studs', 'Concetta Short, Cadenza S'],
+          ['Olive satin dress', 'Drops or hoops', 'Orsola, Pave Hoops'],
+          ['Mint satin dress', 'Soft drops or medium studs', 'Concetta Short, Cadenza M'],
+          ['Green satin slip dress', 'Drop earrings', 'Orsola'],
+          ['Green satin high-neck dress', 'Studs or hoops', 'Cadenza M, Pave Hoops'],
+          ['Green satin party dress', 'Drops, hoops or bold earrings', 'Orsola, Pave Hoops, Lusso'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery with Satin Dress', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress' },
+    ],
+  },
+
+  // ── Section 8: Wedding Guest ──────────────────────────────────────────────────
+  {
+    heading: 'Jewellery for Green Wedding Guest Dresses',
+    content: [
+      { type: 'paragraph', text: 'Green is a beautiful wedding guest colour because it can feel elegant without looking bridal. The jewellery should match the mood of the shade.' },
+      { type: 'paragraph', text: 'Emerald green can carry gold drops or medium diamond studs. Sage and mint work better with softer earrings, butterfly designs or delicate drops. Olive works well with gold hoops or drops. If the dress is printed or detailed, keep the earrings cleaner.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-101.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Green Wedding Guest Dress', 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ['Emerald wedding guest dress', 'Gold drops or medium studs', 'Orsola, Cadenza M'],
+              ['Sage wedding guest dress', 'Soft drops or butterfly earrings', 'Concetta Short, Farfalla'],
+              ['Olive wedding guest dress', 'Gold hoops or drops', 'Pave Hoops, Orsola'],
+              ['Mint wedding guest dress', 'Small studs or delicate drops', 'Cadenza S, Concetta Short'],
+              ['Green satin wedding guest dress', 'Drop earrings', 'Orsola'],
+              ['Green floral wedding guest dress', 'Butterfly earrings or studs', 'Farfalla, Cadenza S'],
+              ['Detailed green wedding guest dress', 'Studs or huggies', 'Cadenza M, Amadea'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Weddings', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings' },
+    ],
+  },
+
+  // ── Section 9: Party ─────────────────────────────────────────────────────────
+  {
+    heading: 'Jewellery for Green Party Dresses',
+    content: [
+      { type: 'paragraph', text: 'Green party dresses can carry stronger earrings, especially in emerald, forest green or satin green.' },
+      { type: 'paragraph', text: 'Choose Lusso if the earrings should become the main feature. Choose Orsola if you want elegant movement. Choose Pave Hoops if you want modern shape. Choose Cadenza M if the green dress already has detail and needs clean sparkle.' },
+      {
+        type: 'table',
+        headers: ['Green Party Dress Style', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Simple green party dress', 'Bold earrings or drops', 'Lusso, Orsola'],
+          ['Emerald party dress', 'Hoops, drops or bold earrings', 'Pave Hoops, Orsola, Lusso'],
+          ['Green satin party dress', 'Drops or hoops', 'Orsola, Pave Hoops'],
+          ['Forest green party dress', 'Long drops or bold earrings', 'Concetta Long, Lusso'],
+          ['Sequin green dress', 'Studs or huggies', 'Cadenza M, Amadea'],
+          ['Birthday green dress', 'Butterfly earrings, drops or studs', 'Farfalla, Orsola, Cadenza M'],
+          ['Cocktail green dress', 'Hoops, drops or medium studs', 'Pave Hoops, Orsola, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'Bold Statement Earrings Guide', href: '/resources/earring-style-guides/bold-statement-earrings-guide' },
+    ],
+  },
+
+  // ── Section 10: By Neckline ────────────────────────────────────────────────────
+  {
+    heading: 'Jewellery for Green Dresses by Neckline',
+    content: [
+      { type: 'paragraph', text: 'The neckline helps decide whether earrings, a necklace or both should lead.' },
+      {
+        type: 'table',
+        headers: ['Green Dress Neckline', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['V-neck green dress', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Sweetheart green dress', 'Butterfly earrings or soft drops', 'Farfalla, Concetta Short'],
+          ['Off-shoulder green dress', 'Drops, hoops or bold earrings', 'Orsola, Pave Hoops, Lusso'],
+          ['High-neck green dress', 'Studs or hoops', 'Cadenza M, Pave Hoops'],
+          ['Halter green dress', 'Studs or slim drops', 'Cadenza M, Concetta Long'],
+          ['Square-neck green dress', 'Hoops, drops or medium studs', 'Pave Hoops, Orsola, Cadenza M'],
+          ['Strapless green dress', 'Drops or bold earrings', 'Orsola, Lusso'],
+          ['Cowl-neck green dress', 'Studs or soft drops', 'Cadenza M, Orsola'],
+        ],
+      },
+      { type: 'see-also', text: 'Earrings for Off-Shoulder Dresses', href: '/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress' },
+    ],
+  },
+
+  // ── Section 11: By Hairstyle ──────────────────────────────────────────────────
+  {
+    heading: 'Jewellery for Green Dresses by Hairstyle',
+    content: [
+      { type: 'paragraph', text: 'Hairstyle changes how visible earrings are, especially with a strong colour like green.' },
+      { type: 'paragraph', text: 'If the hair is down, medium studs, hoops and drops usually show better. If the hair is pulled back, drop earrings, hoops and bold earrings can frame the face beautifully. Soft hairstyles pair well with butterfly earrings and delicate drops.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-103.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Hairstyle', 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ['Hair down', 'Medium studs, hoops or drops', 'Cadenza M, Pave Hoops, Orsola'],
+              ['Soft waves', 'Drops, butterfly earrings or visible studs', 'Orsola, Farfalla, Cadenza M'],
+              ['Sleek ponytail', 'Hoops, drops or bold earrings', 'Pave Hoops, Orsola, Lusso'],
+              ['Low bun', 'Drops, butterfly earrings or bold earrings', 'Orsola, Farfalla, Lusso'],
+              ['High bun', 'Hoops, drops or bold earrings', 'Pave Hoops, Orsola, Lusso'],
+              ['Half-up hair', 'Studs, huggies or soft drops', 'Cadenza M, Amadea, Concetta Short'],
+              ['Short hair', 'Studs, hoops or bold earrings', 'Cadenza M, Pave Hoops, Lusso'],
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ── Section 12: Necklace ──────────────────────────────────────────────────────
+  {
+    heading: 'Necklace or No Necklace with a Green Dress?',
+    content: [
+      { type: 'paragraph', text: 'The necklace decision depends on the dress neckline and earring choice.' },
+      { type: 'paragraph', text: 'If the earrings are bold or long, skip the necklace or choose a very delicate chain. If the earrings are simple studs, a necklace can become more visible. If the green dress has a high neckline, earrings usually matter more than a necklace. If the dress has a deep V-neck, a delicate necklace can work with cleaner earrings.' },
+      {
+        type: 'table',
+        headers: ['Earring Choice', 'Necklace Direction'],
+        rows: [
+          ['Bold statement earrings', 'No necklace or very delicate chain'],
+          ['Long drop earrings', 'No necklace or simple pendant'],
+          ['Hoop earrings', 'Delicate necklace or no necklace'],
+          ['Medium studs', 'Necklace can be more visible'],
+          ['Small studs', 'Necklace can lead the look'],
+          ['Butterfly earrings', 'Soft delicate necklace if needed'],
+          ['Huggies', 'Simple necklace can work'],
+          ['Minimalist earrings', 'Necklace can become the focal point'],
+        ],
+      },
+      { type: 'paragraph', text: 'For a green dress, avoid making both the earrings and necklace too heavy. Green already has visual strength, so one clear jewellery focal point usually looks better.' },
+      { type: 'see-also', text: 'Jewellery for V-Neck Dresses', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress' },
+    ],
+  },
+
+  // ── Section 13: Ear Stack Ideas ───────────────────────────────────────────────
+  {
+    heading: 'Green Dress Ear Stack Ideas',
+    content: [
+      { type: 'paragraph', text: 'A green dress works well with ear stacks when the metal colour and main earring are chosen carefully.' },
+      { type: 'paragraph', text: 'For emerald and forest green, gold-toned ear stacks feel rich and evening-ready. For sage and mint, rose gold or softer white/silver-tone stacks can feel more delicate. The stack should have one main piece and one smaller support piece.' },
+      {
+        type: 'table',
+        headers: ['Green Dress Stack Goal', 'Main Piece', 'Support Piece', 'Product Direction'],
+        rows: [
+          ['Elegant green dress stack', 'Drop earring', 'Small stud', 'Orsola + Cadenza S'],
+          ['Bold emerald stack', 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
+          ['Modern green stack', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
+          ['Classic green stack', 'Medium stud', 'Huggie', 'Cadenza M + Amadea'],
+          ['Minimal sage stack', 'Small stud', 'Minimalist earring', 'Cadenza S + Laluce'],
+          ['Romantic green stack', 'Butterfly earring', 'Small stud', 'Farfalla + Cadenza S'],
+          ['Formal forest green stack', 'Long drop', 'Small stud', 'Concetta Long + Cadenza S'],
+          ['Delicate mint stack', 'Short drop', 'Small stud', 'Concetta Short + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'How to Stack Earrings', href: '/resources/earring-style-guides/how-to-stack-earrings' },
+      { type: 'see-also', text: 'Diamond Ear Stack Ideas', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Ear Stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+    ],
+  },
+
+  // ── Section 14: Product Pathways ──────────────────────────────────────────────
+  {
+    heading: 'Product Pathways by Green Dress Styling Need',
+    content: [
+      { type: 'subheading', text: 'For the Safest Green Dress Earrings' },
+      { type: 'paragraph', text: 'Choose Cadenza M diamond stud earrings. They add visible sparkle without competing with the green shade.' },
+      { type: 'subheading', text: 'For Elegant Green Dress Movement' },
+      { type: 'paragraph', text: 'Choose Orsola drop earrings. They work beautifully with emerald, satin, wedding guest and evening green dresses.' },
+      { type: 'subheading', text: 'For Modern Green Dress Shape' },
+      { type: 'paragraph', text: 'Choose Pave Hoops. They are strong for olive green, emerald green, green party dresses and simple green outfits.' },
+      { type: 'subheading', text: 'For Bold Emerald or Forest Green Looks' },
+      { type: 'paragraph', text: 'Choose Lusso bold statement earrings when the green dress is simple and the earrings should lead.' },
+      { type: 'subheading', text: 'For Romantic Sage or Mint Styling' },
+      { type: 'paragraph', text: 'Choose Farfalla butterfly earrings, Alidi Farfalla butterfly earrings or Concetta Short earrings. These work well with sage, mint, pastel green and romantic wedding guest outfits.' },
+      { type: 'subheading', text: 'For Formal Green Dress Styling' },
+      { type: 'paragraph', text: 'Choose Concetta Long earrings when the outfit needs a refined long line, especially with forest green, emerald green or formal satin dresses.' },
+    ],
+  },
+
+  // ── Section 15: Product Recommendations ──────────────────────────────────────
+  {
+    heading: 'Product Recommendations from IWantJewels',
+    content: [
+      {
+        type: 'table',
+        headers: ['Product', 'Best Green Dress Role', 'Why It Works'],
+        rows: [
+          ['Orsola drop earrings', 'Best overall green dress earring', 'Adds movement and polish'],
+          ['Pave Hoops', 'Best modern shape option', 'Works well with olive, emerald and party green dresses'],
+          ['Cadenza M diamond stud earrings', 'Safest sparkle option', 'Strong when the green dress already has detail'],
+          ['Cadenza S lab-grown diamond studs', 'Support piece', 'Balances drops, hoops and bold earrings'],
+          ['Lusso bold statement earrings', 'Strongest emerald/party option', 'Best with simple green dresses'],
+          ['Farfalla butterfly earrings', 'Romantic green dress styling', 'Works well with sage, mint and soft greens'],
+          ['Alidi Farfalla butterfly earrings', 'Gift-led romantic option', 'Strong for birthdays and soft green dresses'],
+          ['Concetta Short earrings', 'Delicate wedding guest styling', 'Works for sage, mint and bridesmaid looks'],
+          ['Concetta Long earrings', 'Formal green dress styling', 'Creates a refined evening line'],
+          ['Amadea Huggie earrings', 'Modern support piece', 'Works with detailed dresses and ear stacks'],
+          ['Laluce minimalist diamond earrings', 'Soft detail', 'Useful with mint, sage and detailed outfits'],
+        ],
+      },
+      { type: 'paragraph', text: 'Choose green dress jewellery by shade. Pick Orsola for elegant movement, Pave Hoops for modern shape, Cadenza M for clean sparkle, Lusso for bold emerald styling, and Farfalla or Concetta Short for softer sage and mint looks.' },
+    ],
+  },
+
+  // ── Section 16: Mistakes ──────────────────────────────────────────────────────
+  {
+    heading: 'Common Green Dress Jewellery Mistakes to Avoid',
+    content: [
+      { type: 'paragraph', text: 'One common mistake is treating all green dresses the same. Emerald, sage, olive and mint need different jewellery moods.' },
+      { type: 'paragraph', text: 'Another mistake is choosing jewellery that is too cool for a warm green dress. Olive, emerald and forest green often look better with yellow gold than very icy styling.' },
+      { type: 'paragraph', text: 'A third mistake is wearing bold earrings with a very detailed green dress. If the dress has sequins, lace, embroidery or a strong print, studs or huggies may look more polished.' },
+      { type: 'paragraph', text: 'Another mistake is choosing earrings that are too small for a dark green evening dress. Emerald and forest green can visually overpower tiny earrings, especially when hair is down.' },
+      { type: 'paragraph', text: 'Finally, do not ignore the fabric. Green satin needs balanced jewellery because the fabric already has shine, while matte green dresses can usually carry stronger sparkle.' },
+      { type: 'see-also', text: 'Gold-Plated Jewellery Care Guide', href: '/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery' },
+    ],
+  },
+
+  // ── Section 17: Final Checklist ───────────────────────────────────────────────
+  {
+    heading: 'Final Green Dress Jewellery Checklist',
+    content: [
+      { type: 'paragraph', text: 'Before choosing jewellery for a green dress, ask:' },
+      {
+        type: 'bullet-list',
+        items: [
+          'Is the green shade emerald, sage, olive, mint, forest or pastel?',
+          'Is the dress simple or detailed?',
+          'Is the fabric satin, lace, sequin, floral, knit or plain?',
+          'Will my hair hide or show the earrings?',
+          'Do I want sparkle, movement, shape or softness?',
+          'Should the earrings or necklace be the main jewellery moment?',
+          'Am I wearing a necklace, or should I skip it?',
+          'Does gold, white/silver tone or rose gold suit this shade better?',
+          'Is the occasion a wedding, party, dinner or formal event?',
+          'Are the earrings comfortable for the full event?',
+          'Is the ear stack balanced with one main piece?',
+          'Can the jewellery be worn again with other outfits?',
+        ],
+      },
+      { type: 'paragraph', text: 'If you are unsure, choose gold drop earrings for emerald or forest green, medium studs for detailed green dresses, and butterfly earrings or delicate drops for sage and mint green.' },
+    ],
+  },
+]
+
+const faq: V2FAQItem[] = [
+  { question: 'What jewellery should I wear with a green dress?', answer: 'The best jewellery for a green dress depends on the shade. Gold jewellery works well with emerald, olive and forest green. Softer jewellery works better with sage, mint and pastel green.' },
+  { question: 'What earrings look best with a green dress?', answer: 'Drop earrings, hoops, medium diamond studs, butterfly earrings and bold statement earrings can all work with a green dress. Choose based on the shade, fabric and occasion.' },
+  { question: 'Does gold jewellery go with a green dress?', answer: 'Yes, gold jewellery is one of the best choices with a green dress because it adds warmth, richness and polish.' },
+  { question: 'Does silver jewellery go with a green dress?', answer: 'Yes, white or silver-tone jewellery can work well with cool green shades, navy-green tones, formal green dresses and modern outfits.' },
+  { question: 'Does rose gold go with a green dress?', answer: 'Rose gold works best with softer green shades such as sage, mint, pastel green and soft olive.' },
+  { question: 'What earrings should I wear with an emerald green dress?', answer: 'Emerald green dresses work well with gold drop earrings, hoops, medium diamond studs or bold statement earrings.' },
+  { question: 'What jewellery should I wear with a sage green dress?', answer: 'Sage green dresses look beautiful with soft drops, small diamond studs, butterfly earrings, rose gold or delicate yellow gold jewellery.' },
+  { question: 'What jewellery should I wear with a green satin dress?', answer: 'Green satin dresses work well with drop earrings or medium diamond studs. Drops add movement, while studs keep the look clean.' },
+  { question: 'What jewellery should wedding guests wear with a green dress?', answer: 'Wedding guests can wear drop earrings, medium studs, butterfly earrings or delicate drops with green dresses. The best choice depends on whether the dress is emerald, sage, olive or mint.' },
+  { question: 'What IWantJewels earrings are best with a green dress?', answer: 'Orsola, Pave Hoops, Cadenza M, Lusso, Farfalla, Alidi Farfalla, Concetta Short and Concetta Long are strong green dress options depending on whether you want movement, shape, sparkle, boldness or softness.' },
+]
+
+const cta: V2CTABlock = {
+  heading: 'A green dress can feel rich, romantic, earthy or fresh depending on the shade. Choose gold drops for emerald and forest green, soft earrings for sage and mint, hoops for modern green outfits, and bold earrings when the green dress is simple enough to let the jewellery lead.',
+  body: 'Start with IWantJewels demi-fine lab-grown diamond earrings if you want green dress jewellery with real diamond sparkle. Choose Orsola for elegant movement, Pave Hoops for modern shape, Cadenza M for clean sparkle, Lusso for bold party styling, and Farfalla or Concetta Short for softer romantic green looks.',
+  primaryLabel: 'Shop Earrings for Green Dresses',
+  primaryHref: '/products?category=Earring',
+  secondaryLabel: 'Explore Drop Earrings',
+  secondaryHref: '/products?category=Earring',
+  tertiaryLabel: 'Read the Party Earrings Guide',
+  tertiaryHref: '/resources/earring-style-guides/party-earrings-guide',
+}
+
+export default function Page() {
+  const category = getCategoryBySlug('earring-style-guides')
+  const article = getArticleBySlug('earring-style-guides', 'what-jewellery-to-wear-with-a-green-dress')
+  if (!category || !article) notFound()
+  const relatedArticles = getRelatedArticles('earring-style-guides', 'what-jewellery-to-wear-with-a-green-dress', 3)
+  return (
+    <ResourceArticleV2Page
+      category={category}
+      article={article}
+      relatedArticles={relatedArticles}
+      heroIntro={heroIntro}
+      quickSummary={quickSummary}
+      content={articleContent}
+      faq={faq}
+      cta={cta}
+    />
+  )
+}

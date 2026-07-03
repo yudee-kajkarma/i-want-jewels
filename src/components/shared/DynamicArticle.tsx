@@ -10,13 +10,13 @@ export type ContentBlock =
     | { type: "table"; headers: string[]; rows: string[][] }
     | { type: "faq"; title?: string; items: FAQItem[] }
     | {
-          type: "image";
-          src: string;
-          alt: string;
-          //   caption?: string;
-          width?: number;
-          height?: number;
-      };
+        type: "image";
+        src: string;
+        alt: string;
+        //   caption?: string;
+        width?: number;
+        height?: number;
+    };
 
 export type ArticleSection = {
     heading?: string;

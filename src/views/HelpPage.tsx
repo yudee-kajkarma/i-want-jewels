@@ -40,15 +40,21 @@ export default function HelpPage() {
 
                     <div className="mt-10 flex flex-wrap items-center gap-3">
                         <Link
+                            to="/resources"
+                            className="inline-flex items-center gap-2 bg-[#17110d] px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-black sm:text-[13px]"
+                        >
+                            Browse Jewellery Guides
+                        </Link>
+                        <Link
                             to="/contact"
-                            className="inline-flex items-center gap-2 bg-pink-500 px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 sm:text-[13px]"
+                            className="inline-flex items-center gap-2 border border-zinc-800 bg-white px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
                         >
                             <Headset className="h-4 w-4" />
                             Contact Support
                         </Link>
                         <Link
                             to="/"
-                            className="inline-flex items-center border border-zinc-800 bg-white px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
+                            className="inline-flex items-center border border-zinc-300 bg-white px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-600 transition hover:bg-zinc-100 sm:text-[13px]"
                         >
                             Back to Home
                         </Link>

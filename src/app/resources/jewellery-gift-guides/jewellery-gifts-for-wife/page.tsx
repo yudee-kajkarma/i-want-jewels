@@ -1,0 +1,511 @@
+import type { Metadata } from 'next'
+import ResourceArticleV2Page from '../../../../views/ResourceArticleV2Page'
+import type {
+  V2ArticleSection,
+  V2HeroIntro,
+  V2QuickSummary,
+  V2FAQItem,
+  V2CTABlock,
+} from '../../../../views/ResourceArticleV2Page'
+import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../data/resources'
+import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'Jewellery Gifts for Wife',
+  description:
+    'Choose jewellery gifts for your wife with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and romantic gift ideas.',
+}
+
+const heroIntro: V2HeroIntro = {
+  image: '/blog-images/blog-image-23.jpg',
+  title: 'Jewellery Gifts for Wife:',
+  subtitle: 'Romantic, Meaningful Earrings She Will Actually Wear',
+  paragraphs: [
+    'Jewellery for your wife should feel personal, thoughtful and useful beyond the gift moment. The best jewellery gift is not only the piece that looks beautiful in the box. It is the piece that feels chosen for her, suits her style and becomes something she can wear for dinners, anniversaries, birthdays, holidays, date nights, weddings and everyday moments.',
+    'Lab-grown diamond earrings are one of the strongest jewellery gifts for a wife because they feel special while still being wearable. Butterfly earrings are ideal when the gift should feel romantic and meaningful. Drop earrings work beautifully for anniversary dinners, date nights and dressy evenings. Diamond studs are the safest classic choice. Huggies are perfect if she likes modern everyday jewellery. Minimalist earrings are best when she prefers quiet, understated pieces. Hoops and bold earrings work well if she enjoys visible jewellery and evening styling.',
+    'At IWantJewels, Alidi Farfalla butterfly earrings, Farfalla butterfly earrings, Orsola drop earrings, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Amadea Huggie earrings, Laluce minimalist diamond earrings, Concetta Short earrings, Concetta Long earrings, Pave Hoops and Lusso bold statement earrings all work for different wife gift needs.',
+  ],
+  shopLabel: 'Shop Jewellery Gifts for Wife',
+  shopHref: '/products?category=Earring',
+}
+
+const quickSummary: V2QuickSummary = {
+  items: [
+    'Choose jewellery gifts for your wife.',
+    'Pick lab-grown diamond earrings as a romantic gift.',
+    'Decide between butterfly earrings, diamond studs, drop earrings, huggies, hoops, minimalist earrings and bold earrings.',
+    'Choose gifts for anniversaries, birthdays, date nights, milestones, holidays and surprise moments.',
+    'Find meaningful jewellery gifts with symbolism.',
+    'Choose safe jewellery gifts when you are unsure of her exact style.',
+    'Match earrings to her personal style, outfits and metal colour.',
+    'Build romantic ear stack gift ideas.',
+  ],
+  image: '/blog-images/blog-image-21.jpg',
+}
+
+const articleContent: V2ArticleSection[] = [
+  {
+    heading: 'Jewellery Gift Selector for Wife',
+    content: [
+      { type: 'paragraph', text: 'Use this table as the main gift decision tool.' },
+      {
+        type: 'table',
+        headers: ['Wife Gift Need', 'Best Jewellery Direction', 'Recommended IWJ Direction'],
+        rows: [
+          ['Most romantic jewellery gift for wife', 'Butterfly earrings', 'Alidi Farfalla, Farfalla'],
+          ['Meaningful jewellery gift', 'Butterfly earrings or butterfly stack', 'Farfalla, Farfalla + Cadenza S'],
+          ['Safest jewellery gift for wife', 'Medium diamond studs', 'Cadenza M'],
+          ['Classic diamond gift', 'Medium diamond studs', 'Cadenza M'],
+          ['Subtle everyday gift', 'Small diamond studs', 'Cadenza S'],
+          ['Anniversary gift for wife', 'Butterfly earrings, drops or classic studs', 'Alidi Farfalla, Orsola, Cadenza M'],
+          ['Birthday gift for wife', 'Butterfly earrings, studs, huggies or drops', 'Farfalla, Cadenza M, Amadea, Orsola'],
+          ['Date night gift', 'Drop earrings', 'Orsola'],
+          ['Milestone gift', 'Long drops, butterfly earrings or polished studs', 'Concetta Long, Alidi Farfalla, Cadenza M'],
+          ['Modern everyday gift', 'Huggies', 'Amadea Huggie'],
+          ['Minimalist gift', 'Minimalist earrings or small studs', 'Laluce, Cadenza S'],
+          ['Party gift for wife', 'Hoops or bold earrings', 'Pave Hoops, Lusso'],
+          ['Romantic ear stack gift', 'Butterfly + stud or drop + stud', 'Farfalla + Cadenza S, Orsola + Cadenza S'],
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'What Jewellery Should You Buy for Your Wife?',
+    content: [
+      { type: 'paragraph', text: 'The best jewellery to buy for your wife is jewellery that feels personal and wearable. Since the relationship is already meaningful, the gift can carry more emotion than a casual jewellery gift. But it should still match what she actually wears.' },
+      { type: 'paragraph', text: 'If she loves romantic pieces, butterfly earrings are a strong choice. If she enjoys dinners and dressing up, drop earrings are ideal. If she prefers classic jewellery, diamond studs are safest. If she wears jewellery daily, huggies, small studs or minimalist earrings may be the most useful. If she likes bold evening styling, hoops or Lusso bold statement earrings can work beautifully.' },
+      {
+        type: 'table',
+        headers: ['What to Consider', 'Why It Matters'],
+        rows: [
+          ['Her usual jewellery style', 'Shows whether she prefers studs, huggies, hoops, drops or bold earrings'],
+          ['Occasion', 'Anniversary, birthday, milestone and date night gifts need different moods'],
+          ['Metal colour', 'Helps the gift match what she already wears'],
+          ['Lifestyle', 'Everyday pieces should be comfortable and repeatable'],
+          ['Emotional meaning', 'Romantic gifts feel stronger when there is symbolism'],
+          ['Outfit habits', 'Dinner dresses, workwear and casual outfits need different earrings'],
+          ['Rewear value', 'The best gift should not stay in the box'],
+          ['Comfort', 'Jewellery for a wife should feel beautiful and easy to wear'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery gifts for her', href: '/resources/jewellery-gift-guides/jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Safest Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'The safest jewellery gifts for your wife are usually diamond studs, huggies or minimalist earrings. These pieces are wearable, elegant and easy to style with many outfits.' },
+      { type: 'paragraph', text: 'Cadenza M diamond stud earrings are the strongest safe wife gift because they feel polished and special without being too risky. Cadenza S is better if she prefers subtle jewellery. Amadea is best if she likes modern everyday earrings. Laluce is ideal if her style is understated.' },
+      { type: 'paragraph', text: 'Butterfly earrings and drops can be stronger than studs when the gift should feel romantic, but they depend more on her style.' },
+      {
+        type: 'table',
+        headers: ['Safe Wife Gift Option', 'Best For', 'Product Direction'],
+        rows: [
+          ['Medium diamond studs', 'Safe classic sparkle', 'Cadenza M'],
+          ['Small diamond studs', 'Subtle everyday sparkle', 'Cadenza S'],
+          ['Huggies', 'Modern daily jewellery', 'Amadea'],
+          ['Minimalist earrings', 'Understated style', 'Laluce'],
+          ['Stud + huggie set', 'Practical ear stack gift', 'Cadenza S + Amadea'],
+          ['Butterfly earrings', 'Meaningful romantic gift', 'Alidi Farfalla, Farfalla'],
+          ['Drop earrings', 'Dinner or anniversary gift', 'Orsola, Concetta Short'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
+    ],
+  },
+  {
+    heading: 'Romantic Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'Romantic jewellery for your wife should feel chosen, not generic. It should connect to the relationship, her personal style or the moment you are celebrating.' },
+      { type: 'paragraph', text: 'Butterfly earrings are the strongest romantic direction when the gift should feel meaningful. Drop earrings are best when the gift is connected to a dinner, date night or anniversary plan. Diamond studs are ideal when she prefers classic jewellery. Huggies and minimalist earrings are romantic in a quieter way because they become everyday pieces she can wear often.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-77.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Romantic Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ['Most romantic gift', 'Butterfly earrings', 'Alidi Farfalla'],
+              ['Meaningful romantic gift', 'Butterfly earrings', 'Farfalla'],
+              ['Romantic dinner gift', 'Drop earrings', 'Orsola'],
+              ['Classic romantic gift', 'Medium studs', 'Cadenza M'],
+              ['Subtle romantic gift', 'Small studs', 'Cadenza S'],
+              ['Everyday romantic gift', 'Huggies', 'Amadea'],
+              ['Minimal romantic gift', 'Minimalist earrings', 'Laluce'],
+              ['Bold romantic evening gift', 'Hoops or bold earrings', 'Pave Hoops, Lusso'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Romantic jewellery gifts', href: '/resources/jewellery-gift-guides/romantic-jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Meaningful Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'A meaningful jewellery gift should carry a message. It might represent growth, love, a shared journey, a new chapter, a milestone or appreciation.' },
+      { type: 'paragraph', text: 'Butterfly earrings are especially strong for meaningful gifts because a butterfly can symbolise transformation, beauty, growth and new beginnings. For a wife, that symbolism can connect beautifully to anniversaries, marriage milestones, personal changes, family moments and romantic surprises.' },
+      {
+        type: 'table',
+        headers: ['Meaningful Gift Moment', 'Why It Works', 'Product Direction'],
+        rows: [
+          ['Anniversary', 'Represents growth together', 'Alidi Farfalla'],
+          ['Birthday', 'Symbolises growth and a new year', 'Farfalla'],
+          ['Marriage milestone', 'Feels personal and symbolic', 'Alidi Farfalla'],
+          ['New chapter', 'Represents transformation', 'Farfalla'],
+          ['Romantic surprise', 'Feels soft and thoughtful', 'Alidi Farfalla'],
+          ['Personal achievement', 'Symbolises confidence and growth', 'Farfalla'],
+          ['Meaningful ear stack', 'Combines symbolism and sparkle', 'Farfalla + Cadenza S'],
+          ['Quiet meaningful gift', 'Subtle daily reminder', 'Cadenza S, Laluce'],
+        ],
+      },
+      { type: 'see-also', text: 'Butterfly earrings meaning', href: '#' },
+    ],
+  },
+  {
+    heading: 'Anniversary Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'Anniversary jewellery for your wife should feel romantic, thoughtful and wearable. It should mark the occasion while still becoming something she can use again.' },
+      { type: 'paragraph', text: 'Butterfly earrings are strong for meaning. Drop earrings are ideal for anniversary dinners. Diamond studs are safest if she loves classic jewellery. Long drops work beautifully for milestone anniversaries or formal evening plans.' },
+      {
+        type: 'table',
+        headers: ['Anniversary Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Most romantic anniversary gift', 'Butterfly earrings', 'Alidi Farfalla'],
+          ['Meaningful anniversary gift', 'Butterfly earrings', 'Farfalla'],
+          ['Anniversary dinner gift', 'Drop earrings', 'Orsola'],
+          ['Classic anniversary gift', 'Medium diamond studs', 'Cadenza M'],
+          ['Subtle anniversary gift', 'Small studs', 'Cadenza S'],
+          ['Formal anniversary dinner', 'Long drops', 'Concetta Long'],
+          ['Soft anniversary gift', 'Short drops or butterfly earrings', 'Concetta Short, Farfalla'],
+          ['Anniversary ear stack', 'Butterfly + small stud', 'Farfalla + Cadenza S'],
+          ['Modern anniversary gift', 'Huggies or hoops', 'Amadea, Pave Hoops'],
+        ],
+      },
+      { type: 'see-also', text: 'Anniversary jewellery gifts', href: '/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Birthday Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'Birthday jewellery for your wife should feel celebratory, personal and useful. The gift can be romantic, classic, modern, meaningful or bold depending on her style.' },
+      { type: 'paragraph', text: 'Diamond studs are safest. Butterfly earrings are meaningful. Huggies are modern and wearable. Drop earrings work well if the birthday includes a dinner or special plan. Hoops and bold earrings are better if she enjoys party styling.' },
+      {
+        type: 'table',
+        headers: ['Birthday Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Safe birthday gift', 'Medium diamond studs', 'Cadenza M'],
+          ['Subtle birthday gift', 'Small studs', 'Cadenza S'],
+          ['Meaningful birthday gift', 'Butterfly earrings', 'Farfalla'],
+          ['Romantic birthday gift', 'Butterfly earrings or drops', 'Alidi Farfalla, Orsola'],
+          ['Modern birthday gift', 'Huggies', 'Amadea'],
+          ['Minimalist birthday gift', 'Minimalist earrings', 'Laluce'],
+          ['Birthday dinner gift', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Party birthday gift', 'Hoops or bold earrings', 'Pave Hoops, Lusso'],
+          ['Birthday ear stack gift', 'Butterfly + stud or stud + huggie', 'Farfalla + Cadenza S, Cadenza S + Amadea'],
+        ],
+      },
+      { type: 'see-also', text: 'Birthday jewellery gifts', href: '/resources/jewellery-gift-guides/birthday-jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Date Night Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'Date night jewellery gifts work well because they can be worn immediately. If you are planning dinner, drinks, a weekend evening or an anniversary date, earrings become part of the moment.' },
+      { type: 'paragraph', text: 'Orsola is the strongest date-night direction because it adds movement and elegance. Alidi Farfalla and Farfalla are better when the gift should feel more meaningful. Cadenza M is safest for classic sparkle. Pave Hoops are better for modern evening outfits.' },
+      {
+        type: 'table',
+        headers: ['Date Night Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Romantic dinner gift', 'Drop earrings', 'Orsola'],
+          ['Meaningful date night gift', 'Butterfly earrings', 'Alidi Farfalla, Farfalla'],
+          ['Classic date sparkle', 'Medium studs', 'Cadenza M'],
+          ['Modern dinner look', 'Hoops', 'Pave Hoops'],
+          ['Minimal date night gift', 'Small studs or minimalist earrings', 'Cadenza S, Laluce'],
+          ['Casual dinner gift', 'Huggies', 'Amadea'],
+          ['Formal date night gift', 'Long drops', 'Concetta Long'],
+          ['Date night ear stack', 'Drop + small stud', 'Orsola + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Date night jewellery guide', href: '/resources/jewellery-gift-guides/date-night-jewellery-guide' },
+    ],
+  },
+  {
+    heading: 'Milestone Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'Milestone gifts should feel elevated and meaningful. This could be a major anniversary, important birthday, personal achievement, family moment, new chapter or a romantic surprise after many years together.' },
+      { type: 'paragraph', text: 'For milestone gifts, butterfly earrings, long drops, polished studs and elegant drops work especially well. The gift should feel special, but it should still match her real style.' },
+      {
+        type: 'table',
+        headers: ['Milestone Gift Moment', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Major anniversary', 'Butterfly earrings or long drops', 'Alidi Farfalla, Concetta Long'],
+          ['Milestone birthday', 'Classic studs, butterfly earrings or drops', 'Cadenza M, Farfalla, Orsola'],
+          ['Personal achievement', 'Butterfly earrings or polished studs', 'Farfalla, Cadenza M'],
+          ['Family milestone', 'Meaningful earrings', 'Alidi Farfalla, Farfalla'],
+          ['Formal celebration', 'Long drops or medium studs', 'Concetta Long, Cadenza M'],
+          ['Romantic milestone dinner', 'Drops or butterfly earrings', 'Orsola, Alidi Farfalla'],
+          ['Subtle milestone gift', 'Small studs or minimalist earrings', 'Cadenza S, Laluce'],
+          ['Milestone ear stack', 'Butterfly + small stud', 'Farfalla + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Anniversary jewellery gifts', href: '/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Everyday Jewellery Gifts for Wife',
+    content: [
+      { type: 'paragraph', text: 'Everyday jewellery gifts are powerful because they become part of her daily routine. These gifts should be comfortable, easy to repeat and easy to style with multiple outfits.' },
+      { type: 'paragraph', text: 'Studs, huggies and minimalist earrings are the strongest everyday gift directions. Hoops can work if she likes visible daily jewellery. Butterfly earrings can also become everyday pieces if her style is soft and romantic.' },
+      {
+        type: 'table',
+        headers: ['Everyday Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Safest everyday gift', 'Small studs', 'Cadenza S'],
+          ['More polished everyday sparkle', 'Medium studs', 'Cadenza M'],
+          ['Modern everyday gift', 'Huggies', 'Amadea'],
+          ['Minimalist everyday gift', 'Minimalist earrings', 'Laluce'],
+          ['Everyday ear stack gift', 'Stud + huggie', 'Cadenza S + Amadea'],
+          ['Weekend everyday gift', 'Hoops', 'Pave Hoops'],
+          ['Romantic everyday gift', 'Butterfly earrings', 'Farfalla'],
+          ['Daily-to-dinner gift', 'Medium studs or drops', 'Cadenza M, Orsola'],
+        ],
+      },
+      { type: 'see-also', text: 'Everyday lab-grown diamond earrings guide', href: '/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide' },
+    ],
+  },
+  {
+    heading: 'Jewellery Gifts by Her Personal Style',
+    content: [
+      { type: 'paragraph', text: 'Her personal style should guide the gift more than the occasion alone. A wife who loves classic pieces may prefer diamond studs. A wife who loves romantic jewellery may prefer butterfly earrings. A wife who dresses up often may love drop earrings. A wife who prefers everyday simplicity may use huggies or small studs most often.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-79.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Her Style', 'Best Gift Direction', 'Product Direction'],
+            rows: [
+              ['Classic', 'Diamond studs', 'Cadenza M, Cadenza S'],
+              ['Minimalist', 'Small studs or minimalist earrings', 'Cadenza S, Laluce'],
+              ['Romantic', 'Butterfly earrings or drops', 'Alidi Farfalla, Farfalla, Orsola'],
+              ['Modern', 'Huggies or hoops', 'Amadea, Pave Hoops'],
+              ['Soft feminine', 'Butterfly earrings or short drops', 'Farfalla, Concetta Short'],
+              ['Workwear-focused', 'Studs or huggies', 'Cadenza M, Amadea'],
+              ['Party style', 'Hoops or bold earrings', 'Pave Hoops, Lusso'],
+              ['Occasion dresser', 'Drop earrings', 'Orsola, Concetta Short, Concetta Long'],
+              ['Ear stack lover', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+              ['Safe gift recipient', 'Studs', 'Cadenza S, Cadenza M'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
+    ],
+  },
+  {
+    heading: 'Jewellery Gifts by Outfit and Lifestyle',
+    content: [
+      { type: 'paragraph', text: 'A strong jewellery gift should fit what she actually wears. If she wears workwear often, studs or huggies may be most useful. If she loves dinners and dresses, Orsola or Concetta Long may be ideal. If she prefers soft romantic outfits, butterfly earrings or short drops may feel more personal.' },
+      {
+        type: 'table',
+        headers: ['Outfit / Lifestyle', 'Best Jewellery Gift Direction', 'Product Direction'],
+        rows: [
+          ['Everyday casual outfits', 'Small studs or huggies', 'Cadenza S, Amadea'],
+          ['Workwear', 'Medium studs or huggies', 'Cadenza M, Amadea'],
+          ['Romantic dresses', 'Butterfly earrings or short drops', 'Farfalla, Concetta Short'],
+          ['Satin dresses', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Black dresses', 'Drops, hoops, studs or bold earrings', 'Orsola, Pave Hoops, Cadenza M, Lusso'],
+          ['Red dresses', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Green dresses', 'Gold drops or hoops', 'Orsola, Pave Hoops'],
+          ['Party outfits', 'Hoops or bold earrings', 'Pave Hoops, Lusso'],
+          ['Minimal outfits', 'Minimalist earrings or studs', 'Laluce, Cadenza S'],
+          ['Travel-heavy lifestyle', 'Studs or huggies', 'Cadenza S, Amadea'],
+          ['Ear stack wearer', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+          ['Formal dinners', 'Long drops or medium studs', 'Concetta Long, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'What jewellery to wear with a black dress', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress' },
+    ],
+  },
+  {
+    heading: 'Jewellery Gifts by Metal Colour',
+    content: [
+      { type: 'paragraph', text: 'Metal colour is one of the easiest ways to make the gift feel right. The safest choice is the metal colour she already wears most often.' },
+      { type: 'paragraph', text: 'If she wears gold rings, gold bracelets or gold necklaces, choose yellow gold. If she wears silver-tone jewellery, choose white or silver tone. If she likes soft romantic jewellery, rose gold can work beautifully, especially for butterfly earrings and sentimental gifts.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-81.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Metal Colour', 'Gift Feeling', 'Best For'],
+            rows: [
+              ['Yellow gold', 'Warm, classic and romantic', 'Everyday gifts, anniversary gifts, black dresses, green dresses'],
+              ['White or silver tone', 'Clean, bright and modern', 'Minimalist gifts, workwear, formal outfits'],
+              ['Rose gold', 'Soft, romantic and feminine', 'Butterfly earrings, blush outfits, sentimental gifts'],
+              ['Mixed metals', 'Creative and personal', 'Ear stack lovers and trend-led recipients'],
+            ],
+          },
+        ],
+      },
+      { type: 'paragraph', text: 'For wife gifts, avoid choosing metal colour only because it is trending. Match what she already wears first.' },
+      { type: 'see-also', text: 'Gold vs white vs rose gold lab-grown diamond earrings', href: '/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings' },
+    ],
+  },
+  {
+    heading: 'Giftable Ear Stack Ideas for Wife',
+    content: [
+      { type: 'paragraph', text: 'Ear stack gifts are useful if your wife has multiple piercings or likes layered jewellery. They can also feel more thoughtful than a single pair because the combination looks intentionally styled.' },
+      { type: 'paragraph', text: 'A two-piece stack is usually safer than a three-piece stack. The most romantic stack is a butterfly earring with a small stud. The best dinner stack is a drop earring with a small support stud. The safest everyday stack is a small stud with a huggie.' },
+      {
+        type: 'table',
+        headers: ['Giftable Stack Type', 'Main Piece', 'Support Piece', 'Product Direction'],
+        rows: [
+          ['Romantic wife stack', 'Butterfly earring', 'Small stud', 'Farfalla + Cadenza S'],
+          ['Meaningful stack gift', 'Butterfly earring', 'Minimalist detail', 'Alidi Farfalla + Laluce'],
+          ['Safest everyday stack', 'Small stud', 'Huggie', 'Cadenza S + Amadea'],
+          ['Classic sparkle stack', 'Medium stud', 'Small stud', 'Cadenza M + Cadenza S'],
+          ['Dinner stack gift', 'Drop earring', 'Small stud', 'Orsola + Cadenza S'],
+          ['Soft occasion stack', 'Short drop', 'Small stud', 'Concetta Short + Cadenza S'],
+          ['Formal dinner stack', 'Long drop', 'Small stud', 'Concetta Long + Cadenza S'],
+          ['Modern hoop stack', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
+          ['Bold evening stack', 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
+          ['Minimalist stack gift', 'Small stud', 'Minimalist earring', 'Cadenza S + Laluce'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+    ],
+  },
+  {
+    heading: 'Product Pathways by Gift Need',
+    content: [
+      { type: 'subheading', text: 'For the Most Romantic Jewellery Gift for Your Wife' },
+      { type: 'paragraph', text: 'Choose Alidi Farfalla butterfly earrings. They are strongest when the gift should feel personal, emotional and meaningful.' },
+      { type: 'subheading', text: 'For a Meaningful Gift With Symbolism' },
+      { type: 'paragraph', text: 'Choose Farfalla butterfly earrings. Butterfly earrings can represent growth, transformation, beauty and new beginnings, which makes them strong for anniversaries and milestones.' },
+      { type: 'subheading', text: 'For a Romantic Dinner Gift' },
+      { type: 'paragraph', text: 'Choose Orsola drop earrings. They add movement and elegance for date nights, anniversary dinners and satin outfits.' },
+      { type: 'subheading', text: 'For the Safest Jewellery Gift for Your Wife' },
+      { type: 'paragraph', text: 'Choose Cadenza M diamond stud earrings. They are classic, polished and easy to wear with many outfits.' },
+      { type: 'subheading', text: 'For a Subtle Everyday Gift' },
+      { type: 'paragraph', text: 'Choose Cadenza S lab-grown diamond studs. They are simple, wearable and useful for daily styling or ear stacks.' },
+      { type: 'subheading', text: 'For a Modern Everyday Gift' },
+      { type: 'paragraph', text: 'Choose Amadea Huggie earrings. They are close-fitting, stackable and easy to wear often.' },
+      { type: 'subheading', text: 'For a Minimalist Gift' },
+      { type: 'paragraph', text: 'Choose Laluce minimalist diamond earrings or Cadenza S. These are best for someone who prefers understated jewellery.' },
+      { type: 'subheading', text: 'For a Formal Milestone Gift' },
+      { type: 'paragraph', text: 'Choose Concetta Long earrings. They work best for formal dinners, milestone anniversaries and dressier evening styling.' },
+      { type: 'subheading', text: 'For a Party Gift' },
+      { type: 'paragraph', text: 'Choose Pave Hoops or Lusso bold statement earrings only if she likes visible jewellery and standout styling. If you are unsure, Cadenza M is safer.' },
+    ],
+  },
+  {
+    heading: 'Product Recommendations from IWantJewels',
+    content: [
+      {
+        type: 'table',
+        headers: ['Product', 'Best Wife Gift Role', 'Why It Works'],
+        rows: [
+          ['Alidi Farfalla butterfly earrings', 'Best romantic gift for wife', 'Soft, personal and meaningful'],
+          ['Farfalla butterfly earrings', 'Best symbolic gift', 'Represents growth, beauty and transformation'],
+          ['Orsola drop earrings', 'Best date-night or anniversary dinner gift', 'Adds elegant movement'],
+          ['Cadenza M diamond stud earrings', 'Best safe classic gift', 'Polished, timeless and wearable'],
+          ['Cadenza S lab-grown diamond studs', 'Best subtle everyday gift', 'Simple, delicate and stackable'],
+          ['Amadea Huggie earrings', 'Best modern everyday gift', 'Close-fitting, wearable and stack-friendly'],
+          ['Laluce minimalist diamond earrings', 'Best understated gift', 'Quiet, clean and easy for minimal style'],
+          ['Concetta Short earrings', 'Best soft romantic gift', 'Delicate and feminine'],
+          ['Concetta Long earrings', 'Best formal milestone gift', 'Refined and polished for dressy occasions'],
+          ['Pave Hoops', 'Best modern party gift', 'Adds shape and sparkle'],
+          ['Lusso bold statement earrings', 'Best bold evening gift', 'Strong for someone who loves standout jewellery'],
+        ],
+      },
+      { type: 'paragraph', text: 'Choose the gift by her style and the meaning behind the occasion. Pick Alidi Farfalla for romance, Farfalla for symbolism, Orsola for dinners, Cadenza M for safe classic sparkle, Cadenza S for subtle daily wear, Amadea for modern huggies, Laluce for minimalist style and Concetta Long for formal milestones.' },
+    ],
+  },
+  {
+    heading: 'Common Jewellery Gift Mistakes to Avoid',
+    content: [
+      { type: 'paragraph', text: 'One common mistake is choosing jewellery that feels impressive but does not match her style. If she wears delicate pieces every day, very bold earrings may not be the safest gift.' },
+      { type: 'paragraph', text: 'Another mistake is buying jewellery only for one dinner or one event. A strong gift for your wife should feel special in the moment and still be useful after it.' },
+      { type: 'paragraph', text: 'A third mistake is guessing the metal colour. Look at what she already wears. If most of her jewellery is yellow gold, choose yellow gold. If she wears white or silver-tone jewellery, choose that direction.' },
+      { type: 'paragraph', text: 'Another mistake is choosing symbolic jewellery for someone who prefers classic pieces. Butterfly earrings are meaningful, but Cadenza M may be safer for someone traditional.' },
+      { type: 'paragraph', text: 'A fifth mistake is ignoring lifestyle. If she wears workwear often, Cadenza M or Amadea may be more useful than occasion-only earrings. If she loves evening outfits, Orsola, Concetta Long or Pave Hoops may be stronger.' },
+      { type: 'paragraph', text: 'Finally, do not forget comfort and care. Jewellery that is worn often should be easy to clean, store and protect from showering, sleeping, swimming and heavy product exposure.' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+    ],
+  },
+  {
+    heading: 'Final Gift Checklist',
+    content: [
+      { type: 'paragraph', text: 'Before choosing jewellery for your wife, ask:' },
+      {
+        type: 'bullet-list',
+        items: [
+          'Does she prefer classic, minimalist, romantic, modern or bold jewellery?',
+          'What metal colour does she already wear?',
+          'Is this for an anniversary, birthday, date night, milestone or surprise gift?',
+          'Should the gift feel emotional, practical or both?',
+          'Does she wear earrings daily?',
+          'Does she prefer studs, huggies, hoops, drops or symbolic jewellery?',
+          'Would butterfly earrings feel meaningful to her?',
+          'Would diamond studs be safer?',
+          'Is there a dinner outfit or occasion outfit to consider?',
+          'Can the earrings be worn with more than one outfit?',
+          'Does she have multiple piercings for an ear stack gift?',
+          'Would a two-piece stack gift feel more thoughtful than one pair?',
+          'Are the earrings comfortable for long wear?',
+          'Will the gift still feel wearable after the occasion?',
+        ],
+      },
+      { type: 'paragraph', text: 'If you are unsure, choose diamond studs. If you want meaning, choose butterfly earrings. If the gift is tied to dinner or anniversary plans, choose drops. If she likes modern everyday jewellery, choose huggies.' },
+    ],
+  },
+]
+
+const faq: V2FAQItem[] = [
+  { question: 'What jewellery should I buy for my wife?', answer: 'The best jewellery to buy for your wife is something that matches her style and the occasion. Butterfly earrings are romantic, drop earrings are elegant for dinners, diamond studs are safest, and huggies are strong for everyday wear.' },
+  { question: 'Are earrings a good gift for a wife?', answer: 'Yes, earrings are a good gift for a wife because they feel personal, can be worn often and are easier to choose than rings.' },
+  { question: 'Are lab-grown diamond earrings a good gift for a wife?', answer: 'Yes, lab-grown diamond earrings are a strong wife gift because they feel special while still being wearable for anniversaries, birthdays, date nights and everyday styling.' },
+  { question: 'What are the safest earrings to gift a wife?', answer: 'Medium diamond studs are the safest earrings to gift a wife because they are classic, polished and easy to wear with many outfits.' },
+  { question: 'Are butterfly earrings a romantic gift for a wife?', answer: 'Yes, butterfly earrings can be a romantic gift because they are soft, feminine and symbolic. They can represent growth, beauty, transformation and new beginnings.' },
+  { question: 'What jewellery should I buy my wife for an anniversary?', answer: 'For an anniversary, butterfly earrings, drop earrings and classic diamond studs are strong choices depending on whether her style is romantic, elegant or classic.' },
+  { question: 'What jewellery should I buy my wife for her birthday?', answer: 'For your wife\'s birthday, choose diamond studs for safe sparkle, butterfly earrings for meaning, huggies for modern daily wear, or drops if the birthday includes dinner.' },
+  { question: 'What jewellery should I buy for an anniversary dinner?', answer: 'Drop earrings are one of the best jewellery choices for an anniversary dinner because they add movement and elegance.' },
+  { question: 'What metal colour should I choose for my wife\'s jewellery gift?', answer: 'Choose the metal colour she already wears most often. Yellow gold feels warm, white or silver tone feels clean, and rose gold feels romantic.' },
+  { question: 'What IWantJewels earrings are best for wife gifts?', answer: 'Alidi Farfalla, Farfalla, Orsola, Cadenza M, Cadenza S, Amadea, Laluce, Concetta Short, Concetta Long, Pave Hoops and Lusso are strong wife gift options depending on her style and the occasion.' },
+]
+
+const cta: V2CTABlock = {
+  heading: 'Jewellery gifts for your wife should feel thoughtful, romantic and wearable. Choose butterfly earrings for meaning, drop earrings for anniversary dinners, diamond studs for safe classic sparkle, huggies for modern everyday jewellery, minimalist earrings for quiet style and hoops or bold earrings only if she loves visible styling.',
+  body: 'Start with IWantJewels demi-fine lab-grown diamond earrings if you want a jewellery gift with real diamond sparkle. Choose Alidi Farfalla for romance, Farfalla for symbolism, Orsola for date nights, Cadenza M for classic polish, Cadenza S for subtle daily wear, Amadea for huggies, Laluce for minimalist style and Concetta Long for formal milestones.',
+  primaryLabel: 'Shop Jewellery Gifts for Wife',
+  primaryHref: '/products?category=Earring',
+  secondaryLabel: 'Explore Romantic Jewellery Gifts',
+  secondaryHref: '/resources/jewellery-gift-guides/romantic-jewellery-gifts-for-her',
+  tertiaryLabel: 'Read the Anniversary Jewellery Gifts Guide',
+  tertiaryHref: '/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her',
+}
+
+export default function Page() {
+  const category = getCategoryBySlug('jewellery-gift-guides')
+  const article = getArticleBySlug('jewellery-gift-guides', 'jewellery-gifts-for-wife')
+  if (!category || !article) notFound()
+  const relatedArticles = getRelatedArticles('jewellery-gift-guides', 'jewellery-gifts-for-wife', 3)
+  return (
+    <ResourceArticleV2Page
+      category={category}
+      article={article}
+      relatedArticles={relatedArticles}
+      heroIntro={heroIntro}
+      quickSummary={quickSummary}
+      content={articleContent}
+      cta={cta}
+      faq={faq}
+    />
+  )
+}
