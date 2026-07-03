@@ -207,6 +207,13 @@ export default function ProductCard({
         variant: NonNullable<typeof selectedVariant>,
         chosenSize?: number,
     ) {
+        // Prefer per-size price when a specific size was picked; else fall back
+        // to the variant's base price. Backend re-verifies on order creation.
+        const sizeEntry =
+            chosenSize !== undefined && Array.isArray(variant.sizes)
+                ? variant.sizes.find((s) => s.size === chosenSize)
+                : undefined;
+        const resolvedPrice = sizeEntry?.price ?? variant.price;
         const draft = {
             item: {
                 id: `${item.id}-${variant.id}${chosenSize !== undefined ? `-${chosenSize}` : ""}`,
@@ -215,7 +222,7 @@ export default function ProductCard({
                 title: item.title,
                 variantTitle: variant.title,
                 thumbnail: getVariantImage(variant),
-                price: variant.price,
+                price: resolvedPrice,
                 quantity: 1,
                 ...(chosenSize !== undefined ? { size: chosenSize } : {}),
                 ...(variant.sizeMeasurement

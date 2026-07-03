@@ -28,6 +28,12 @@ type ProductImageApiResponse = {
 type VariantSizeApiResponse = {
   size: number
   stock: number
+  // Optional per-size price override from backend. Numeric fallback covers the
+  // legacy pre-Price shape; new responses ship the Price object directly.
+  price?: Price | number
+  // Optional per-size spec overrides.
+  totalDiamondWeight?: number
+  measurement?: string
 }
 
 type ProductVariantApiResponse = {
@@ -296,7 +302,21 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
           (entry: any) =>
             entry && typeof entry === 'object' && typeof entry.size === 'number' && typeof entry.stock === 'number',
         )
-      ? { sizes: variant.sizes.map((entry: any) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
+      ? {
+          sizes: variant.sizes.map((entry: any) => ({
+            size: Number(entry.size),
+            stock: Number(entry.stock) || 0,
+            ...(entry?.price !== undefined && entry.price !== null
+              ? { price: toPrice(entry.price) }
+              : {}),
+            ...(typeof entry?.totalDiamondWeight === 'number'
+              ? { totalDiamondWeight: entry.totalDiamondWeight }
+              : {}),
+            ...(typeof entry?.measurement === 'string' && entry.measurement.trim().length > 0
+              ? { measurement: entry.measurement.trim() }
+              : {}),
+          })),
+        }
       : {}),
     ...(variant.size_measurement ? { sizeMeasurement: variant.size_measurement } : {}),
     ...(typeof variant.customsValueUSD === 'number' ? { customsValueUsd: variant.customsValueUSD } : {}),

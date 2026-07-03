@@ -3,6 +3,14 @@ import type { Price } from '../utils/price'
 export type VariantSize = {
   size: number
   stock: number
+  // Optional per-size price override in Price shape ({dol, eur, pou}).
+  // When absent, the parent variant's `price` applies. Backend enforces the
+  // invariant that variant.price === min(size.price) whenever any size uses
+  // per-size pricing, so listing surfaces (cards, minPrice) still work.
+  price?: Price
+  // Optional per-size spec overrides. When absent, product-level values apply.
+  totalDiamondWeight?: number
+  measurement?: string
 }
 
 export type ProductVariant = {

@@ -741,7 +741,22 @@ export default function ProductDetailPage({
     const normalizedCategory = (product?.category ?? "").trim().toLowerCase();
     const isRingCategory =
         normalizedCategory === "ring" || normalizedCategory === "rings";
-    const basePrice = selectedVariant?.price;
+    // Prefer the chosen size's price override when a size is selected; fall
+    // back to the variant's base price. Kept in one place so the price shown
+    // in the right rail, the buy-now draft, and the cart snapshot all agree.
+    const chosenSizeEntry =
+        selectedVariant?.sizes && selectedSizeIndex !== null
+            ? selectedVariant.sizes[selectedSizeIndex]
+            : undefined;
+    const basePrice = chosenSizeEntry?.price ?? selectedVariant?.price;
+    // Per-size spec overrides (Cadenza-style). When absent, product-level
+    // values apply so legacy products render exactly as before.
+    const displayedDiamondWeight =
+        chosenSizeEntry?.totalDiamondWeight ??
+        product?.totalDiamondWeight ??
+        0;
+    const displayedMeasurement =
+        chosenSizeEntry?.measurement ?? product?.measurement ?? "";
 
     const reviewBreakdown = [5, 4, 3, 2, 1].map((star) => {
         const count = reviews.filter(
@@ -861,7 +876,7 @@ export default function ProductDetailPage({
                 title: product.title,
                 variantTitle: selectedVariant.title,
                 thumbnail: getVariantImage(selectedVariant),
-                price: selectedVariant.price,
+                price: basePrice ?? selectedVariant.price,
                 quantity,
                 ...(chosenSize !== undefined ? { size: chosenSize } : {}),
                 ...(selectedVariant.sizeMeasurement
@@ -1332,15 +1347,16 @@ export default function ProductDetailPage({
                                 ) : null}
 
                                 <div>
-                                    {/* {variantHasSizes ? (
+                                    {variantHasSizes ? (
                                         <div className="mt-5">
-                                            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
+                                            <p className="font-play text-[13px] font-medium uppercase tracking-[0.18em] text-zinc-900">
                                                 Size{selectedVariant.sizeMeasurement ? ` (${selectedVariant.sizeMeasurement})` : ''}
                                             </p>
                                             <div className="mt-3 flex flex-wrap gap-2">
                                                 {selectedVariant.sizes!.map((sizeEntry, idx) => {
                                                     const isSelected = selectedSizeIndex === idx;
                                                     const isOutOfStock = sizeEntry.stock <= 0;
+                                                    const hasPerSizePrice = !!sizeEntry.price;
                                                     return (
                                                         <button
                                                             key={`${sizeEntry.size}-${idx}`}
@@ -1348,7 +1364,7 @@ export default function ProductDetailPage({
                                                             disabled={isOutOfStock}
                                                             onClick={() => setSelectedSizeIndex(idx)}
                                                             title={isOutOfStock ? 'Out of stock' : `${sizeEntry.stock} in stock`}
-                                                            className={`flex h-11 min-w-[44px] items-center justify-center border px-3 text-sm font-medium transition ${
+                                                            className={`flex ${hasPerSizePrice ? 'h-14 min-w-[72px] flex-col' : 'h-11 min-w-[44px] items-center'} justify-center border px-3 text-sm font-medium transition ${
                                                                 isOutOfStock
                                                                     ? 'cursor-not-allowed border-zinc-200 text-zinc-300 line-through'
                                                                     : isSelected
@@ -1356,13 +1372,22 @@ export default function ProductDetailPage({
                                                                         : 'border-zinc-300 text-zinc-900 hover:border-zinc-900'
                                                             }`}
                                                         >
-                                                            {sizeEntry.size}
+                                                            <span className="leading-none">{sizeEntry.size}</span>
+                                                            {hasPerSizePrice ? (
+                                                                <span className={`mt-1 text-[11px] font-normal leading-none ${
+                                                                    isSelected
+                                                                        ? 'text-white/80'
+                                                                        : 'text-zinc-500'
+                                                                }`}>
+                                                                    {formatPrice(sizeEntry.price!, currency)}
+                                                                </span>
+                                                            ) : null}
                                                         </button>
                                                     );
                                                 })}
                                             </div>
                                         </div>
-                                    ) : null} */}
+                                    ) : null}
 
                                     {isGiftCardProduct ? (
                                         <div className="mt-6 space-y-3 border border-zinc-200 bg-zinc-50 p-4">
@@ -1549,16 +1574,21 @@ export default function ProductDetailPage({
                                                         {product.finish}
                                                     </p>
                                                 ) : null}
-                                                {product.totalDiamondWeight >
-                                                0 ? (
+                                                {displayedDiamondWeight > 0 ? (
                                                     <p>
                                                         <span className="text-zinc-900">
                                                             Total Diamond Weight:
                                                         </span>{" "}
-                                                        {
-                                                            product.totalDiamondWeight
-                                                        }{" "}
+                                                        {displayedDiamondWeight}{" "}
                                                         carats
+                                                    </p>
+                                                ) : null}
+                                                {displayedMeasurement ? (
+                                                    <p>
+                                                        <span className="text-zinc-900">
+                                                            Measurement:
+                                                        </span>{" "}
+                                                        {displayedMeasurement}
                                                     </p>
                                                 ) : null}
                                             </div>
