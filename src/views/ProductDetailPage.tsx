@@ -752,9 +752,7 @@ export default function ProductDetailPage({
     // Per-size spec overrides (Cadenza-style). When absent, product-level
     // values apply so legacy products render exactly as before.
     const displayedDiamondWeight =
-        chosenSizeEntry?.totalDiamondWeight ??
-        product?.totalDiamondWeight ??
-        0;
+        chosenSizeEntry?.totalDiamondWeight ?? product?.totalDiamondWeight ?? 0;
     const displayedMeasurement =
         chosenSizeEntry?.measurement ?? product?.measurement ?? "";
 
@@ -1299,41 +1297,70 @@ export default function ProductDetailPage({
                                     {variantHasSizes ? (
                                         <div className="mt-5">
                                             <p className="font-play text-[13px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                                Size{selectedVariant.sizeMeasurement ? ` (${selectedVariant.sizeMeasurement})` : ''}
+                                                Size
+                                                {selectedVariant.sizeMeasurement
+                                                    ? ` (${selectedVariant.sizeMeasurement})`
+                                                    : ""}
                                             </p>
                                             <div className="mt-3 flex flex-wrap gap-2">
-                                                {selectedVariant.sizes!.map((sizeEntry, idx) => {
-                                                    const isSelected = selectedSizeIndex === idx;
-                                                    const isOutOfStock = sizeEntry.stock <= 0;
-                                                    const hasPerSizePrice = !!sizeEntry.price;
-                                                    return (
-                                                        <button
-                                                            key={`${sizeEntry.size}-${idx}`}
-                                                            type="button"
-                                                            disabled={isOutOfStock}
-                                                            onClick={() => setSelectedSizeIndex(idx)}
-                                                            title={isOutOfStock ? 'Out of stock' : `${sizeEntry.stock} in stock`}
-                                                            className={`flex ${hasPerSizePrice ? 'h-14 min-w-[72px] flex-col' : 'h-11 min-w-[44px] items-center'} justify-center border px-3 text-sm font-medium transition ${
-                                                                isOutOfStock
-                                                                    ? 'cursor-not-allowed border-zinc-200 text-zinc-300 line-through'
-                                                                    : isSelected
-                                                                        ? 'border-zinc-900 bg-zinc-900 text-white'
-                                                                        : 'border-zinc-300 text-zinc-900 hover:border-zinc-900'
-                                                            }`}
-                                                        >
-                                                            <span className="leading-none">{sizeEntry.size}</span>
-                                                            {hasPerSizePrice ? (
-                                                                <span className={`mt-1 text-[11px] font-normal leading-none ${
-                                                                    isSelected
-                                                                        ? 'text-white/80'
-                                                                        : 'text-zinc-500'
-                                                                }`}>
-                                                                    {formatPrice(sizeEntry.price!, currency)}
+                                                {selectedVariant.sizes!.map(
+                                                    (sizeEntry, idx) => {
+                                                        const isSelected =
+                                                            selectedSizeIndex ===
+                                                            idx;
+                                                        const isOutOfStock =
+                                                            sizeEntry.stock <=
+                                                            0;
+                                                        const hasPerSizePrice =
+                                                            !!sizeEntry.price;
+                                                        return (
+                                                            <button
+                                                                key={`${sizeEntry.size}-${idx}`}
+                                                                type="button"
+                                                                disabled={
+                                                                    isOutOfStock
+                                                                }
+                                                                onClick={() =>
+                                                                    setSelectedSizeIndex(
+                                                                        idx,
+                                                                    )
+                                                                }
+                                                                title={
+                                                                    isOutOfStock
+                                                                        ? "Out of stock"
+                                                                        : `${sizeEntry.stock} in stock`
+                                                                }
+                                                                className={`flex ${hasPerSizePrice ? "h-14 min-w-[72px] flex-col" : "h-11 min-w-[44px] items-center"} justify-center border px-3 text-sm font-medium transition ${
+                                                                    isOutOfStock
+                                                                        ? "cursor-not-allowed border-zinc-200 text-zinc-300 line-through"
+                                                                        : isSelected
+                                                                          ? "border-zinc-900 bg-zinc-900 text-white"
+                                                                          : "border-zinc-300 text-zinc-900 hover:border-zinc-900"
+                                                                }`}
+                                                            >
+                                                                <span className="leading-none">
+                                                                    {
+                                                                        sizeEntry.size
+                                                                    }
                                                                 </span>
-                                                            ) : null}
-                                                        </button>
-                                                    );
-                                                })}
+                                                                {hasPerSizePrice ? (
+                                                                    <span
+                                                                        className={`mt-1 text-[11px] font-normal leading-none ${
+                                                                            isSelected
+                                                                                ? "text-white/80"
+                                                                                : "text-zinc-500"
+                                                                        }`}
+                                                                    >
+                                                                        {formatPrice(
+                                                                            sizeEntry.price!,
+                                                                            currency,
+                                                                        )}
+                                                                    </span>
+                                                                ) : null}
+                                                            </button>
+                                                        );
+                                                    },
+                                                )}
                                             </div>
                                         </div>
                                     ) : null}
@@ -1447,7 +1474,9 @@ export default function ProductDetailPage({
                                         )}
                                         <button
                                             type="button"
-                                            onClick={() => void handleAddToCart()}
+                                            onClick={() =>
+                                                void handleAddToCart()
+                                            }
                                             disabled={isAddingToCart}
                                             className="h-[50px] border border-zinc-900 bg-white px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white disabled:opacity-60 sm:text-[13px]"
                                         >
@@ -1478,7 +1507,9 @@ export default function ProductDetailPage({
                                         </span>
                                         <ChevronDown
                                             className={`h-5 w-5 text-zinc-600 transition-transform ${
-                                                isDetailsOpen ? "rotate-180" : ""
+                                                isDetailsOpen
+                                                    ? "rotate-180"
+                                                    : ""
                                             }`}
                                             strokeWidth={1.6}
                                         />
@@ -1526,7 +1557,8 @@ export default function ProductDetailPage({
                                                 {displayedDiamondWeight > 0 ? (
                                                     <p>
                                                         <span className="text-zinc-900">
-                                                            Total Diamond Weight:
+                                                            Total Diamond
+                                                            Weight:
                                                         </span>{" "}
                                                         {displayedDiamondWeight}{" "}
                                                         carats
@@ -1551,15 +1583,17 @@ export default function ProductDetailPage({
                                     </h3>
                                     {product.bulletPoints.length > 0 ? (
                                         <ul className="mt-4 space-y-2.5 text-[14px] leading-7 text-zinc-600">
-                                            {product.bulletPoints.map((item) => (
-                                                <li
-                                                    key={item}
-                                                    className="flex items-start gap-3"
-                                                >
-                                                    <span className="mt-3 block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-500" />
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
+                                            {product.bulletPoints.map(
+                                                (item) => (
+                                                    <li
+                                                        key={item}
+                                                        className="flex items-start gap-3"
+                                                    >
+                                                        <span className="mt-3 block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-500" />
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ),
+                                            )}
                                         </ul>
                                     ) : (
                                         <p className="mt-4 text-[14px] leading-7 text-zinc-600">
@@ -1581,7 +1615,8 @@ export default function ProductDetailPage({
                             </div>
                         </section>
 
-                        {product.collectionName && collectionProducts.length > 0 ? (
+                        {product.collectionName &&
+                        collectionProducts.length > 0 ? (
                             <section className="mt-16 border-t border-zinc-200 pt-12">
                                 <div className="flex items-center justify-between gap-4">
                                     <h2 className="font-play text-[18px] font-medium uppercase tracking-[0.18em] text-zinc-900 sm:text-[22px]">
@@ -1908,9 +1943,21 @@ export default function ProductDetailPage({
                         </section>
                         */}
 
-                        <section className="mt-16 border-t border-zinc-200 pt-12 font-poppins">
+                        <section className="mt-16 border-t border-zinc-200 pt-12">
+                            <SeoSectionsAccordion
+                                sections={product.seoExtended}
+                                fallbackTitle={product.title}
+                                fallbackOpeningParagraph={
+                                    product.additionalSeoContent ||
+                                    product.details ||
+                                    product.description
+                                }
+                            />
+                        </section>
+
+                        <section className="pt-12 font-poppins">
                             <h2 className="font-play text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                Categories
+                                Shop from other Categories
                             </h2>
                             <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                                 {categoryCards.map((item, index) => (
@@ -1937,62 +1984,65 @@ export default function ProductDetailPage({
                             </div>
                         </section>
 
-                        <section className="mt-16 border-t border-zinc-200 pt-12">
-                            <SeoSectionsAccordion
-                                sections={product.seoExtended}
-                                fallbackTitle={product.title}
-                                fallbackOpeningParagraph={
-                                    product.additionalSeoContent ||
-                                    product.details ||
-                                    product.description
-                                }
-                            />
+                        {product.faqs.length > 0 ? (
+                            <section className="mt-16 border-t border-zinc-100 pt-14 font-poppins">
+                                {/* Header — mirrors the resource-page FAQ style */}
+                                <div className="mb-10 text-center">
+                                    <p className="text-[12px] font-medium uppercase tracking-[0.26em] text-pink-400">
+                                        Got Questions?
+                                    </p>
+                                    <h2 className="mt-2 font-play text-[24px] font-semibold text-[#1f2732] md:text-[30px]">
+                                        Frequently Asked Questions for{" "}
+                                        {product.title}
+                                    </h2>
+                                    <div className="mx-auto mt-4 h-px w-16 bg-pink-400" />
+                                </div>
 
-                            {product.faqs.length > 0 ? (
-                                <div className="mt-10 border-t border-zinc-200">
+                                {/* Accordion list */}
+                                <div className="mx-auto flex w-full container flex-col gap-3">
                                     {product.faqs.map((faq, index) => {
                                         const isOpen =
                                             openFaqIndexes.includes(index);
 
                                         return (
-                                            <article
+                                            <div
                                                 key={`${faq.question}-${index}`}
-                                                className="border-b border-zinc-200"
+                                                className="overflow-hidden border border-zinc-200 bg-white"
                                             >
                                                 <button
                                                     type="button"
                                                     onClick={() =>
                                                         toggleFaq(index)
                                                     }
-                                                    className="flex w-full items-center justify-between gap-4 py-5 text-left transition hover:text-pink-500"
+                                                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-zinc-50"
                                                     aria-expanded={isOpen}
                                                 >
-                                                    <span className="pr-3 text-[14px] font-medium text-zinc-800 sm:text-[15px]">
+                                                    <span className="font-poppins text-[16px] font-medium text-[#1f2732]">
                                                         {faq.question}
                                                     </span>
                                                     <ChevronDown
-                                                        className={`h-5 w-5 shrink-0 text-zinc-500 transition-transform ${
+                                                        className={`h-4 w-4 flex-shrink-0 text-[#1f2732] transition-transform duration-200 ${
                                                             isOpen
                                                                 ? "rotate-180"
                                                                 : ""
                                                         }`}
-                                                        strokeWidth={1.6}
+                                                        strokeWidth={2}
                                                     />
                                                 </button>
 
                                                 {isOpen ? (
-                                                    <div className="pb-5">
-                                                        <p className="max-w-[860px] text-[14px] leading-7 text-zinc-600">
+                                                    <div className="border-t border-zinc-100 bg-[#fafaf8] px-5 py-4">
+                                                        <p className="font-poppins text-[15px] leading-7 text-[#344256]">
                                                             {faq.answer}
                                                         </p>
                                                     </div>
                                                 ) : null}
-                                            </article>
+                                            </div>
                                         );
                                     })}
                                 </div>
-                            ) : null}
-                        </section>
+                            </section>
+                        ) : null}
                     </div>
                 ) : null}
             </main>
