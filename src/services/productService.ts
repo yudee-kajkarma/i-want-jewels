@@ -49,6 +49,7 @@ type ProductVariantApiResponse = {
   available?: boolean
   position: number
   thumbnail: string
+  coverImage?: string
   previewImage?: string
   images?: ProductImageApiResponse[]
   sizes?: VariantSizeApiResponse[]
@@ -313,6 +314,9 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
     available: variant.available ?? true,
     position: variant.position,
     thumbnail: variant.thumbnail,
+    ...(typeof variant.coverImage === 'string' && variant.coverImage.trim().length > 0
+      ? { coverImage: variant.coverImage }
+      : {}),
     previewImage: variant.previewImage,
     images: normalizeImages(variant.images),
     ...(Array.isArray(variant.sizes) &&
@@ -775,6 +779,9 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
         stock: variant.stock,
         price: variant.price,
         position: variant.position,
+        // Detail-page lead image src. Always emit (empty string clears it) so a
+        // cleared cover reaches the backend as an explicit reset.
+        coverImage: variant.coverImage ?? '',
         ...(Array.isArray(variant.sizes) && variant.sizes.length > 0
           ? { sizes: variant.sizes.map((entry) => ({
               size: entry.size,

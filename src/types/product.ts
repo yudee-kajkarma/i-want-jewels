@@ -25,6 +25,10 @@ export type ProductVariant = {
   available: boolean
   position: number
   thumbnail: string
+  // Optional detail-page lead image (an image `src`). When absent the detail
+  // viewer leads with the first non-thumbnail image. Distinct from `thumbnail`
+  // (the card cover).
+  coverImage?: string
   previewImage?: string
   images?: ProductImage[]
   sizes?: VariantSize[]
@@ -150,6 +154,7 @@ export type AdminProductVariantPayload = {
   stock: number
   price: number
   position: number
+  coverImage?: string
   sizes?: VariantSize[]
   sizeMeasurement?: string
   customsValueUsd?: number

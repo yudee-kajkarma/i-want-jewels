@@ -431,6 +431,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
             stock: Number(variant.stock) || 0,
             price: variant.price,
             position: index + 1,
+            coverImage: variant.coverImage ?? '',
             ...(variant.sizes.length > 0
               ? { sizes: variant.sizes.map((entry) => ({
                   size: Number(entry.size),
@@ -544,6 +545,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
             stock: Number(variant.stock) || 0,
             price: variant.price,
             position: index + 1,
+            coverImage: variant.coverImage ?? '',
             ...(variant.sizes.length > 0
               ? { sizes: variant.sizes.map((entry) => ({
                   size: Number(entry.size),

@@ -111,9 +111,26 @@ export function getVariantGallery(variant: ProductVariant): ProductImage[] {
  */
 export function getDetailPageGallery(variant: ProductVariant): ProductImage[] {
     const raw = getVariantGallery(variant);
-    if (!variant.thumbnail) return raw;
-    const filtered = raw.filter((image) => image.src !== variant.thumbnail);
-    return filtered.length > 0 ? filtered : raw;
+    const filtered = variant.thumbnail
+        ? raw.filter((image) => image.src !== variant.thumbnail)
+        : raw;
+    const gallery = filtered.length > 0 ? filtered : raw;
+
+    // Lead with the designated cover image when set and present. Falls back to
+    // the default order (first non-thumbnail image leads) when the cover is
+    // unset, equals the excluded thumbnail, or no longer matches any image.
+    const cover = variant.coverImage?.trim();
+    if (cover) {
+        const idx = gallery.findIndex((image) => image.src === cover);
+        if (idx > 0) {
+            return [
+                gallery[idx],
+                ...gallery.slice(0, idx),
+                ...gallery.slice(idx + 1),
+            ];
+        }
+    }
+    return gallery;
 }
 
 export function getMetalToneClass(metal: string): string {

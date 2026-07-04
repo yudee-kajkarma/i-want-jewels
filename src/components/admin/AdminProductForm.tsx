@@ -925,6 +925,19 @@ export default function AdminProductForm({
                                     dragState.overPosition === currentPosition &&
                                     dragState.fromPosition !== currentPosition
 
+                                  // Detail-page cover image. Explicit when its
+                                  // src matches variant.coverImage; otherwise the
+                                  // image at position 1 is the default cover.
+                                  const imageSrc = form.images[imageIndex]?.src ?? ''
+                                  const coverSrc = variant.coverImage?.trim() ?? ''
+                                  const isExplicitCover = coverSrc.length > 0 && imageSrc === coverSrc
+                                  const isDefaultCover = coverSrc.length === 0 && currentPosition === 1
+                                  const isCover = isExplicitCover || isDefaultCover
+                                  // Cover can only be pinned to an image that already
+                                  // has a src (existing/saved image). New uploads must
+                                  // be saved first before they can lead the detail page.
+                                  const canSetCover = currentPosition !== 0 && imageSrc.length > 0
+
                                   return (
                                     <div
                                       key={`${variant.id}-selected-${currentPosition}`}
@@ -964,6 +977,11 @@ export default function AdminProductForm({
                                             <Star className="h-3 w-3 fill-white" />
                                             Thumbnail
                                           </span>
+                                        ) : isCover ? (
+                                          <span className="pointer-events-none absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-[#3f1933] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white shadow-sm">
+                                            <Star className="h-3 w-3 fill-white" />
+                                            Cover{isDefaultCover ? ' (default)' : ''}
+                                          </span>
                                         ) : null}
                                       </div>
                                       <div className="space-y-2 px-3 py-3 text-xs text-zinc-600">
@@ -982,6 +1000,27 @@ export default function AdminProductForm({
                                             >
                                               <Star className="h-3 w-3" />
                                               Set as thumbnail
+                                            </button>
+                                          ) : null}
+                                          {canSetCover ? (
+                                            <button
+                                              type="button"
+                                              onClick={() =>
+                                                onVariantFieldChange(
+                                                  variant.id,
+                                                  'coverImage',
+                                                  isExplicitCover ? '' : imageSrc,
+                                                )
+                                              }
+                                              className={`inline-flex items-center gap-1 rounded-full border px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] transition ${
+                                                isExplicitCover
+                                                  ? 'border-[#3f1933] bg-[#3f1933] text-white hover:bg-[#2c1224]'
+                                                  : 'border-[#e7bfd7] text-[#7a3a61] hover:bg-[#fff2fa]'
+                                              }`}
+                                              title="Image shown first in the product detail page"
+                                            >
+                                              <Star className={`h-3 w-3 ${isExplicitCover ? 'fill-white' : ''}`} />
+                                              {isExplicitCover ? 'Cover image ✓' : 'Set as cover image'}
                                             </button>
                                           ) : null}
                                           <button

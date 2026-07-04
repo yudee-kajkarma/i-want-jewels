@@ -24,6 +24,8 @@ export type CreateVariantForm = {
   stock: number
   price: number
   imageIndexes: number[]
+  // Detail-page lead image src. Empty/undefined → detail leads with image 1.
+  coverImage?: string
   sizes: VariantSize[]
   sizeMeasurement: string
   customsValueUsd: number | null
@@ -210,6 +212,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
             sku: variant.sku ?? '',
             stock: variant.stock ?? 0,
             price: toPrice(variant.price).eur,
+            ...(variant.coverImage ? { coverImage: variant.coverImage } : {}),
             sizes: Array.isArray(variant.sizes)
               ? variant.sizes.map((entry) => ({
                   size: entry.size,
