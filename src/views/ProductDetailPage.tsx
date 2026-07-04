@@ -48,9 +48,9 @@ import type {
 } from "../types/product";
 import {
     formatReviewCount,
+    getDetailPageGallery,
     getMetalSwatchImage,
     getMetalToneClass,
-    getVariantGallery,
     getVariantImage,
 } from "../utils/productUtils";
 import { formatPrice } from "../utils/price";
@@ -350,7 +350,7 @@ function getInitialImageId(product: ProductDetail | null): string {
     if (firstVideoKey) return firstVideoKey;
 
     const firstImage = firstVariant
-        ? getVariantGallery(firstVariant)[0]
+        ? getDetailPageGallery(firstVariant)[0]
         : undefined;
 
     return firstImage?.id ?? "";
@@ -474,7 +474,7 @@ export default function ProductDetailPage({
 
                 const firstVariant = productResponse.variants[0];
                 const firstImage = firstVariant
-                    ? getVariantGallery(firstVariant)[0]
+                    ? getDetailPageGallery(firstVariant)[0]
                     : undefined;
                 const firstVideoKey = firstVariant?.videos?.[0]?.key;
 
@@ -618,7 +618,7 @@ export default function ProductDetailPage({
             return [];
         }
 
-        return getVariantGallery(selectedVariant);
+        return getDetailPageGallery(selectedVariant);
     }, [selectedVariant]);
 
     // Videos live on the selected variant and render before images in the
@@ -779,7 +779,7 @@ export default function ProductDetailPage({
     }
 
     function handleVariantChange(variant: ProductVariant) {
-        const nextGallery = getVariantGallery(variant);
+        const nextGallery = getDetailPageGallery(variant);
 
         setSelectedVariantId(variant.id);
         // Videos are variant-scoped — pick the new variant's first video as

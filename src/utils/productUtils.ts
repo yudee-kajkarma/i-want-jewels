@@ -98,6 +98,24 @@ export function getVariantGallery(variant: ProductVariant): ProductImage[] {
     ];
 }
 
+/**
+ * Product-detail-page variant of `getVariantGallery`. Filters out any image
+ * whose src matches the variant's `thumbnail`, so the thumbnail — used as the
+ * card cover on listings — doesn't render again as the first slide inside the
+ * detail page's gallery. Safety fallback: if filtering leaves the gallery
+ * empty (variant has only the thumbnail image and nothing else), the raw
+ * unfiltered list is returned so the detail page still has something to show.
+ *
+ * All other consumers (ProductCard cover + hover chain, wishlist, etc.) keep
+ * using `getVariantGallery` and are unaffected by this filter.
+ */
+export function getDetailPageGallery(variant: ProductVariant): ProductImage[] {
+    const raw = getVariantGallery(variant);
+    if (!variant.thumbnail) return raw;
+    const filtered = raw.filter((image) => image.src !== variant.thumbnail);
+    return filtered.length > 0 ? filtered : raw;
+}
+
 export function getMetalToneClass(metal: string): string {
     return metalClasses[metal] ?? "bg-[#d6d1d1]";
 }
