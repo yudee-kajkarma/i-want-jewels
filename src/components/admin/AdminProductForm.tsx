@@ -5,6 +5,7 @@ import { GripVertical, Plus, Star, X } from 'lucide-react'
 import type { AdminVariantName } from '../../types/product'
 import type { ProductAllFilters } from '../../types/product'
 import { getAllProductFilters } from '../../services/productService'
+import { toPrice } from '../../utils/price'
 import {
   getVariantLabel,
   type CreateVariantForm,
@@ -728,7 +729,7 @@ export default function AdminProductForm({
                           <div className="flex flex-wrap items-center justify-between gap-3">
                             <div>
                               <p className="text-sm font-semibold text-[#3f1933]">Sizes for {variant.title || getVariantLabel(variant.variantName)}</p>
-                              <p className="mt-1 text-xs text-zinc-500">Add each size with its own stock. Same SKU is shared across sizes.</p>
+                              <p className="mt-1 text-xs text-zinc-500">Add each size with its own stock. Price, total diamond weight and measurement are optional per size — leave blank to use the variant/product defaults. Same SKU is shared across sizes.</p>
                             </div>
                             <button
                               type="button"
@@ -747,9 +748,11 @@ export default function AdminProductForm({
                           {variant.sizes.length > 0 && (
                             <div className="mt-4 space-y-3">
                               {variant.sizes.map((entry, sizeIdx) => (
-                                <div key={sizeIdx} className="flex items-end gap-3">
-                                  <label className="flex-1">
-                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Size</span>
+                                <div key={sizeIdx} className="flex flex-wrap items-end gap-3">
+                                  <label className="min-w-[100px] flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">
+                                      Size{variant.sizeMeasurement ? ` (${variant.sizeMeasurement})` : ''}
+                                    </span>
                                     <input
                                       type="number"
                                       step="0.01"
@@ -762,7 +765,7 @@ export default function AdminProductForm({
                                       className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
                                     />
                                   </label>
-                                  <label className="flex-1">
+                                  <label className="min-w-[80px] flex-1">
                                     <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Stock</span>
                                     <input
                                       type="number"
@@ -772,6 +775,73 @@ export default function AdminProductForm({
                                       onChange={(event) => {
                                         const next = [...variant.sizes]
                                         next[sizeIdx] = { ...entry, stock: Number(event.target.value) || 0 }
+                                        onVariantFieldChange(variant.id, 'sizes', next)
+                                      }}
+                                      className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                    />
+                                  </label>
+                                  <label className="min-w-[90px] flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Price (€)</span>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      step="0.01"
+                                      placeholder="Base price"
+                                      value={entry.price?.eur ?? ''}
+                                      onChange={(event) => {
+                                        const raw = event.target.value
+                                        const next = [...variant.sizes]
+                                        if (raw === '') {
+                                          // Cleared → drop the override; variant base price applies.
+                                          const { price: _drop, ...rest } = entry
+                                          next[sizeIdx] = rest
+                                        } else {
+                                          next[sizeIdx] = { ...entry, price: toPrice(Number(raw) || 0) }
+                                        }
+                                        onVariantFieldChange(variant.id, 'sizes', next)
+                                      }}
+                                      className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                    />
+                                  </label>
+                                  <label className="min-w-[110px] flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Total Diamond Wt.</span>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      step="0.01"
+                                      placeholder="Product default"
+                                      value={entry.totalDiamondWeight ?? ''}
+                                      onChange={(event) => {
+                                        const raw = event.target.value
+                                        const next = [...variant.sizes]
+                                        if (raw === '') {
+                                          // Cleared → drop the override; product-level TDW applies.
+                                          const { totalDiamondWeight: _dropTdw, ...rest } = entry
+                                          next[sizeIdx] = rest
+                                        } else {
+                                          next[sizeIdx] = { ...entry, totalDiamondWeight: Number(raw) || 0 }
+                                        }
+                                        onVariantFieldChange(variant.id, 'sizes', next)
+                                      }}
+                                      className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                    />
+                                  </label>
+                                  <label className="min-w-[120px] flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Measurement</span>
+                                    <input
+                                      type="text"
+                                      placeholder="Product default"
+                                      value={entry.measurement ?? ''}
+                                      onChange={(event) => {
+                                        const raw = event.target.value
+                                        const next = [...variant.sizes]
+                                        if (raw.trim() === '') {
+                                          // Cleared → drop the override; product-level measurement applies.
+                                          const { measurement: _dropMeas, ...rest } = entry
+                                          next[sizeIdx] = rest
+                                        } else {
+                                          next[sizeIdx] = { ...entry, measurement: raw }
+                                        }
                                         onVariantFieldChange(variant.id, 'sizes', next)
                                       }}
                                       className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"

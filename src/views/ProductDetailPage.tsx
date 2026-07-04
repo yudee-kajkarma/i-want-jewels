@@ -1197,59 +1197,8 @@ export default function ProductDetailPage({
                             <div className="space-y-6 font-poppins">
                                 <div className="flex items-start justify-between gap-4">
                                     <div className="min-w-0">
-                                        <h1 className="font-play text-[24px] font-normal leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[28px] lg:text-[32px]">
-                                            {(() => {
-                                                const collection =
-                                                    product.collectionName?.trim();
-                                                if (
-                                                    collection &&
-                                                    product.title
-                                                        .toLowerCase()
-                                                        .startsWith(
-                                                            collection.toLowerCase(),
-                                                        )
-                                                ) {
-                                                    const rest = product.title
-                                                        .slice(collection.length)
-                                                        .trim();
-                                                    return (
-                                                        <>
-                                                            <span className="font-bold">
-                                                                {collection}
-                                                            </span>
-                                                            {rest ? (
-                                                                <>
-                                                                    {" "}
-                                                                    {rest}
-                                                                </>
-                                                            ) : null}
-                                                        </>
-                                                    );
-                                                }
-
-                                                const words =
-                                                    product.title.split(" ");
-                                                if (words.length > 2) {
-                                                    return (
-                                                        <>
-                                                            <span className="font-bold">
-                                                                {words
-                                                                    .slice(0, 2)
-                                                                    .join(" ")}
-                                                            </span>{" "}
-                                                            {words
-                                                                .slice(2)
-                                                                .join(" ")}
-                                                        </>
-                                                    );
-                                                }
-
-                                                return (
-                                                    <span className="font-bold">
-                                                        {product.title}
-                                                    </span>
-                                                );
-                                            })()}
+                                        <h1 className="font-play text-[24px] font-bold leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[28px] lg:text-[32px]">
+                                            {product.title}
                                         </h1>
                                         {product.h2 ? (
                                             <h2 className="mt-2 text-[12px] uppercase tracking-[0.14em] text-zinc-500">

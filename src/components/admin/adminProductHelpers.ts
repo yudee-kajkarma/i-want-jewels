@@ -211,7 +211,17 @@ export function buildForm(product: ProductDetail): EditableProductForm {
             stock: variant.stock ?? 0,
             price: toPrice(variant.price).eur,
             sizes: Array.isArray(variant.sizes)
-              ? variant.sizes.map((entry) => ({ size: entry.size, stock: entry.stock }))
+              ? variant.sizes.map((entry) => ({
+                  size: entry.size,
+                  stock: entry.stock,
+                  // Round-trip the per-size price + spec overrides so editing a
+                  // product through admin never silently wipes them.
+                  ...(entry.price ? { price: entry.price } : {}),
+                  ...(typeof entry.totalDiamondWeight === 'number'
+                    ? { totalDiamondWeight: entry.totalDiamondWeight }
+                    : {}),
+                  ...(entry.measurement ? { measurement: entry.measurement } : {}),
+                }))
               : [],
             sizeMeasurement: variant.sizeMeasurement ?? '',
             customsValueUsd: typeof variant.customsValueUsd === 'number' ? variant.customsValueUsd : null,

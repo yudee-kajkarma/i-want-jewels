@@ -71,6 +71,7 @@ type ProductApiResponse = {
   reviews_count: number
   tags: string[]
   availability: boolean
+  category?: string
   collectionName?: string
   variants: ProductVariantApiResponse[]
   minPrice: Price | number
@@ -255,6 +256,22 @@ export type BulkCreateProductPayload = {
 
 const categoryTags = ['Bracelets', 'Earrings', 'Necklaces', 'Rings', 'Gift Cards']
 
+// Map the backend's singular `category` field to the plural display label used
+// on product cards, so a product resolves its category even when it lacks the
+// matching plural tag (e.g. bracelets that carry no "Bracelets" tag).
+const categoryDisplayLabels: Record<string, string> = {
+  bracelet: 'Bracelets',
+  bracelets: 'Bracelets',
+  earring: 'Earrings',
+  earrings: 'Earrings',
+  necklace: 'Necklaces',
+  necklaces: 'Necklaces',
+  ring: 'Rings',
+  rings: 'Rings',
+  'gift card': 'Gift Cards',
+  'gift cards': 'Gift Cards',
+}
+
 function normalizeImages(images?: ProductImageApiResponse[]): ProductImage[] {
   const seen = new Set<string>()
   return (images ?? []).reduce<ProductImage[]>((acc, image, idx) => {
@@ -327,8 +344,16 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
   }
 }
 
-function getCategory(tags: string[]): string {
-  return tags.find((tag) => categoryTags.includes(tag)) ?? 'Jewellery'
+function getCategory(tags: string[], rawCategory?: string): string {
+  // Prefer an explicit plural category tag when present (keeps existing display).
+  const tagMatch = tags.find((tag) => categoryTags.includes(tag))
+  if (tagMatch) return tagMatch
+  // Fall back to the backend's real category, mapped to its plural label.
+  const raw = rawCategory?.trim()
+  if (raw) {
+    return categoryDisplayLabels[raw.toLowerCase()] ?? raw
+  }
+  return 'Jewellery'
 }
 
 function getMetals(variants: ProductVariant[]): string[] {
@@ -361,7 +386,7 @@ function normalizeProduct(product: ProductApiResponse): Product {
     variants,
     minPrice: minPriceOf(variants.map((variant) => variant.price)),
     options: product.options,
-    category: getCategory(product.tags),
+    category: getCategory(product.tags, product.category),
     metals: getMetals(variants),
     primaryImage: primaryVariant?.thumbnail ?? '',
   }
@@ -746,7 +771,15 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
         price: variant.price,
         position: variant.position,
         ...(Array.isArray(variant.sizes) && variant.sizes.length > 0
-          ? { sizes: variant.sizes.map((entry) => ({ size: entry.size, stock: entry.stock })) }
+          ? { sizes: variant.sizes.map((entry) => ({
+              size: entry.size,
+              stock: entry.stock,
+              // Backend stores a single numeric price and fans it out to
+              // {dol,eur,pou} on read, mirroring variant.price. Send the EUR value.
+              ...(entry.price ? { price: entry.price.eur } : {}),
+              ...(typeof entry.totalDiamondWeight === 'number' ? { totalDiamondWeight: entry.totalDiamondWeight } : {}),
+              ...(entry.measurement ? { measurement: entry.measurement } : {}),
+            })) }
           : {}),
         ...(variant.sizeMeasurement ? { size_measurement: variant.sizeMeasurement } : {}),
         ...(typeof variant.customsValueUsd === 'number' ? { customsValueUSD: variant.customsValueUsd } : {}),

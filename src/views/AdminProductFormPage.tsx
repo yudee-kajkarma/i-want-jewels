@@ -432,7 +432,13 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
             price: variant.price,
             position: index + 1,
             ...(variant.sizes.length > 0
-              ? { sizes: variant.sizes.map((entry) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
+              ? { sizes: variant.sizes.map((entry) => ({
+                  size: Number(entry.size),
+                  stock: Number(entry.stock) || 0,
+                  ...(entry.price ? { price: entry.price } : {}),
+                  ...(typeof entry.totalDiamondWeight === 'number' ? { totalDiamondWeight: entry.totalDiamondWeight } : {}),
+                  ...(entry.measurement ? { measurement: entry.measurement } : {}),
+                })) }
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
@@ -538,7 +544,13 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
             price: variant.price,
             position: index + 1,
             ...(variant.sizes.length > 0
-              ? { sizes: variant.sizes.map((entry) => ({ size: Number(entry.size), stock: Number(entry.stock) || 0 })) }
+              ? { sizes: variant.sizes.map((entry) => ({
+                  size: Number(entry.size),
+                  stock: Number(entry.stock) || 0,
+                  ...(entry.price ? { price: entry.price } : {}),
+                  ...(typeof entry.totalDiamondWeight === 'number' ? { totalDiamondWeight: entry.totalDiamondWeight } : {}),
+                  ...(entry.measurement ? { measurement: entry.measurement } : {}),
+                })) }
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
