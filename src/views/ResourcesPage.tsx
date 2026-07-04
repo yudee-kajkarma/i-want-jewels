@@ -4,6 +4,7 @@ import { Link } from "@/lib/router";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { resourceCategories, getArticleCount } from "../data/resources";
+import { blogLinks } from "@/components/shared/blogList";
 
 function ArrowRightIcon() {
     return (
@@ -115,6 +116,47 @@ export default function ResourcesPage() {
                                 </div>
                             </Link>
                         ))}
+
+                        {/* ── Blog card → redirects to /blogs ───────────────── */}
+                        <Link
+                            to="/blogs"
+                            className="group relative block overflow-hidden border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_18px_40px_rgba(194,110,143,0.12)]"
+                        >
+                            {/* Cover image */}
+                            <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">
+                                <img
+                                    src="/blog-images/blog-image-60.jpg"
+                                    alt="Blog"
+                                    className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
+                                />
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+                                {/* Article count badge */}
+                                <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-white px-3 py-1.5">
+                                    <BookOpenIcon />
+                                    <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-700">
+                                        {blogLinks.length} Articles
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-6">
+                                <h2 className="font-play text-[18px] font-semibold leading-snug text-zinc-900 sm:text-[20px]">
+                                    Blog
+                                </h2>
+                                <p className="mt-2.5 text-[13px] leading-6 text-zinc-600 line-clamp-2">
+                                    Styling inspiration, gift ideas, and expert
+                                    tips on tennis bracelets, earrings, and
+                                    everyday diamonds.
+                                </p>
+                                <div className="mt-5 flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition group-hover:text-pink-500">
+                                    <span>Read Articles</span>
+                                    <ArrowRightIcon />
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </section>
 

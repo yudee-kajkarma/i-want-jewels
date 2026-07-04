@@ -30,23 +30,37 @@ const BlogsIndexPage = () => (
                 </div>
             </section>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
                 {blogLinks.map((link, idx) => (
                     <Link
                         key={idx}
                         href={link.href}
-                        className="group flex flex-col justify-between gap-6 bg-[#f7f8fa] p-7 rounded-sm shadow-sm hover:shadow-md transition-shadow"
+                        className="group relative flex flex-col overflow-hidden border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_18px_40px_rgba(194,110,143,0.12)]"
                     >
-                        <h2 className="text-2xl font-play font-medium text-[#1f2732] leading-snug group-hover:text-pink-500 transition-colors">
-                            {link.title}
-                        </h2>
-                        <span className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-black">
-                            Read article
-                            <ArrowUpRight
-                                className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                                strokeWidth={2}
+                        {/* Cover image */}
+                        <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={link.coverImage}
+                                alt={link.title}
+                                className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
                             />
-                        </span>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex flex-1 flex-col justify-between gap-6 p-6">
+                            <h2 className="text-xl font-play font-medium text-[#1f2732] leading-snug group-hover:text-pink-500 transition-colors sm:text-2xl">
+                                {link.title}
+                            </h2>
+                            <span className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-black">
+                                Read article
+                                <ArrowUpRight
+                                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                    strokeWidth={2}
+                                />
+                            </span>
+                        </div>
                     </Link>
                 ))}
             </div>

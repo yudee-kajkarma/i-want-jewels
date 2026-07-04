@@ -520,10 +520,7 @@ export default function Header() {
                 to: buildCategoryHref(category),
             }));
 
-        return [
-            { label: "All Products", to: "/products" },
-            ...categoryLinks,
-        ];
+        return [{ label: "All Products", to: "/products" }, ...categoryLinks];
     }, [visibleShopCategories]);
 
     const secondaryDrawerLinks = useMemo(() => {
@@ -539,7 +536,6 @@ export default function Header() {
 
         return [
             ...giftCardLink,
-            { label: "Blog", to: "/blogs" },
             { label: "Resources", to: "/resources" },
             { label: "Help", to: "/help" },
         ];
@@ -607,7 +603,11 @@ export default function Header() {
 
                 if (!isMounted) return;
 
-                setShopCategories(Array.isArray(categoryData) ? categoryData : getShopCategoriesFallback());
+                setShopCategories(
+                    Array.isArray(categoryData)
+                        ? categoryData
+                        : getShopCategoriesFallback(),
+                );
             } catch {
                 if (!isMounted) return;
 
@@ -839,9 +839,6 @@ export default function Header() {
                         <nav className="hidden items-center gap-9 lg:flex">
                             <Link to="/products" className={topNavLinkClass}>
                                 SHOP
-                            </Link>
-                            <Link to="/resources" className={topNavLinkClass}>
-                                RESOURCES
                             </Link>
                             <Link to="/about" className={topNavLinkClass}>
                                 ABOUT
