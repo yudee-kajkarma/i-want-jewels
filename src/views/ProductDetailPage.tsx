@@ -755,6 +755,8 @@ export default function ProductDetailPage({
         chosenSizeEntry?.totalDiamondWeight ?? product?.totalDiamondWeight ?? 0;
     const displayedMeasurement =
         chosenSizeEntry?.measurement ?? product?.measurement ?? "";
+    // Prefer the chosen size's SKU; fall back to the variant's base SKU.
+    const displayedSku = chosenSizeEntry?.sku ?? selectedVariant?.sku ?? "N/A";
 
     const reviewBreakdown = [5, 4, 3, 2, 1].map((star) => {
         const count = reviews.filter(
@@ -1527,8 +1529,7 @@ export default function ProductDetailPage({
                                                     <span className="text-zinc-900">
                                                         SKU:
                                                     </span>{" "}
-                                                    {selectedVariant.sku ??
-                                                        "N/A"}
+                                                    {displayedSku}
                                                 </p>
                                                 {product.style ? (
                                                     <p>
@@ -1957,7 +1958,7 @@ export default function ProductDetailPage({
 
                         <section className="pt-12 font-poppins">
                             <h2 className="font-play text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                Shop from other Categories
+                                Explore more products by Categories
                             </h2>
                             <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                                 {categoryCards.map((item, index) => (

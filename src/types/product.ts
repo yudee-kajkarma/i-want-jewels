@@ -3,6 +3,8 @@ import type { Price } from '../utils/price'
 export type VariantSize = {
   size: number
   stock: number
+  // Optional per-size SKU override. When absent, the parent variant's sku applies.
+  sku?: string
   // Optional per-size price override in Price shape ({dol, eur, pou}).
   // When absent, the parent variant's `price` applies. Backend enforces the
   // invariant that variant.price === min(size.price) whenever any size uses

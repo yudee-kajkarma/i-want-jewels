@@ -435,6 +435,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
               ? { sizes: variant.sizes.map((entry) => ({
                   size: Number(entry.size),
                   stock: Number(entry.stock) || 0,
+                  ...(entry.sku ? { sku: entry.sku } : {}),
                   ...(entry.price ? { price: entry.price } : {}),
                   ...(typeof entry.totalDiamondWeight === 'number' ? { totalDiamondWeight: entry.totalDiamondWeight } : {}),
                   ...(entry.measurement ? { measurement: entry.measurement } : {}),
@@ -547,6 +548,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
               ? { sizes: variant.sizes.map((entry) => ({
                   size: Number(entry.size),
                   stock: Number(entry.stock) || 0,
+                  ...(entry.sku ? { sku: entry.sku } : {}),
                   ...(entry.price ? { price: entry.price } : {}),
                   ...(typeof entry.totalDiamondWeight === 'number' ? { totalDiamondWeight: entry.totalDiamondWeight } : {}),
                   ...(entry.measurement ? { measurement: entry.measurement } : {}),

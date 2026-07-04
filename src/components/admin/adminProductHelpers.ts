@@ -214,8 +214,9 @@ export function buildForm(product: ProductDetail): EditableProductForm {
               ? variant.sizes.map((entry) => ({
                   size: entry.size,
                   stock: entry.stock,
-                  // Round-trip the per-size price + spec overrides so editing a
-                  // product through admin never silently wipes them.
+                  // Round-trip the per-size sku + price + spec overrides so
+                  // editing a product through admin never silently wipes them.
+                  ...(entry.sku ? { sku: entry.sku } : {}),
                   ...(entry.price ? { price: entry.price } : {}),
                   ...(typeof entry.totalDiamondWeight === 'number'
                     ? { totalDiamondWeight: entry.totalDiamondWeight }

@@ -28,6 +28,8 @@ type ProductImageApiResponse = {
 type VariantSizeApiResponse = {
   size: number
   stock: number
+  // Optional per-size SKU override from backend.
+  sku?: string
   // Optional per-size price override from backend. Numeric fallback covers the
   // legacy pre-Price shape; new responses ship the Price object directly.
   price?: Price | number
@@ -323,6 +325,9 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
           sizes: variant.sizes.map((entry: any) => ({
             size: Number(entry.size),
             stock: Number(entry.stock) || 0,
+            ...(typeof entry?.sku === 'string' && entry.sku.trim().length > 0
+              ? { sku: entry.sku.trim() }
+              : {}),
             ...(entry?.price !== undefined && entry.price !== null
               ? { price: toPrice(entry.price) }
               : {}),
@@ -774,6 +779,7 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
           ? { sizes: variant.sizes.map((entry) => ({
               size: entry.size,
               stock: entry.stock,
+              ...(entry.sku ? { sku: entry.sku } : {}),
               // Backend stores a single numeric price and fans it out to
               // {dol,eur,pou} on read, mirroring variant.price. Send the EUR value.
               ...(entry.price ? { price: entry.price.eur } : {}),

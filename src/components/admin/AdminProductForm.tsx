@@ -729,7 +729,7 @@ export default function AdminProductForm({
                           <div className="flex flex-wrap items-center justify-between gap-3">
                             <div>
                               <p className="text-sm font-semibold text-[#3f1933]">Sizes for {variant.title || getVariantLabel(variant.variantName)}</p>
-                              <p className="mt-1 text-xs text-zinc-500">Add each size with its own stock. Price, total diamond weight and measurement are optional per size — leave blank to use the variant/product defaults. Same SKU is shared across sizes.</p>
+                              <p className="mt-1 text-xs text-zinc-500">Add each size with its own stock. SKU, price, total diamond weight and measurement are optional per size — leave blank to use the variant/product defaults.</p>
                             </div>
                             <button
                               type="button"
@@ -760,6 +760,27 @@ export default function AdminProductForm({
                                       onChange={(event) => {
                                         const next = [...variant.sizes]
                                         next[sizeIdx] = { ...entry, size: Number(event.target.value) || 0 }
+                                        onVariantFieldChange(variant.id, 'sizes', next)
+                                      }}
+                                      className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                    />
+                                  </label>
+                                  <label className="min-w-[130px] flex-1">
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">SKU</span>
+                                    <input
+                                      type="text"
+                                      placeholder="Variant SKU"
+                                      value={entry.sku ?? ''}
+                                      onChange={(event) => {
+                                        const raw = event.target.value
+                                        const next = [...variant.sizes]
+                                        if (raw.trim() === '') {
+                                          // Cleared → drop the override; variant base SKU applies.
+                                          const { sku: _dropSku, ...rest } = entry
+                                          next[sizeIdx] = rest
+                                        } else {
+                                          next[sizeIdx] = { ...entry, sku: raw }
+                                        }
                                         onVariantFieldChange(variant.id, 'sizes', next)
                                       }}
                                       className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
