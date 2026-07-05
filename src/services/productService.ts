@@ -633,6 +633,17 @@ export async function getProducts(params: GetProductsParams = {}): Promise<Produ
   }
 }
 
+export async function getRandomProducts(count = 4): Promise<Product[]> {
+  try {
+    const response = await apiClient.get<{ data: ProductApiResponse[] }>('/products/random', {
+      params: { count },
+    })
+    return (response.data.data ?? []).map(normalizeProduct)
+  } catch {
+    return []
+  }
+}
+
 export async function getProductById(productId: string): Promise<ProductDetail> {
   const response = await apiClient.get<ProductDetailResponse>(`/products/${productId}`)
 

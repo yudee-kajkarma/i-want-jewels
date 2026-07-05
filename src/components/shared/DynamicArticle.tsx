@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import FAQSection, { type FAQItem } from "@/components/shared/FAQSection";
+import ExploreOurStore from "@/components/shared/ExploreOurStore";
 
 export type ContentBlock =
     | { type: "paragraph"; text: string }
@@ -28,14 +29,25 @@ interface DynamicArticleProps {
 }
 
 const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
+    // Anchor points for the "Explore Our Store" product rows: one before the
+    // "Quick Answer" section and one before the FAQ section.
+    const quickAnswerIdx = sections.findIndex((section) =>
+        section.heading?.toLowerCase().includes("quick answer"),
+    );
+    const faqIdx = sections.findIndex((section) =>
+        section.content.some((block) => block.type === "faq"),
+    );
+
     return (
         <div className="text-slate-700 text-lg font-poppins leading-relaxed">
             {sections.map((section, idx) => (
-                <div
-                    key={idx}
-                    className={idx > 0 && section.heading ? "mt-10" : ""}
-                >
-                    {section.heading && (
+                <React.Fragment key={idx}>
+                    {idx === quickAnswerIdx && <ExploreOurStore count={6} />}
+                    {idx === faqIdx && <ExploreOurStore count={6} />}
+                    <div
+                        className={idx > 0 && section.heading ? "mt-10" : ""}
+                    >
+                        {section.heading && (
                         <h2 className="text-3xl md:text-4xl font-play font-semibold text-[#1f2732] mb-6">
                             {section.heading}
                         </h2>
@@ -162,7 +174,8 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                             return null;
                         })}
                     </div>
-                </div>
+                    </div>
+                </React.Fragment>
             ))}
         </div>
     );

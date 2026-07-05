@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "@/lib/router";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import ExploreOurStore from "@/components/shared/ExploreOurStore";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 
 // ─── Extended Content Types ───────────────────────────────────────────────────
@@ -541,7 +542,11 @@ export default function ResourceArticleV2Page({
 
           <div>
             {content.map((section, i) => (
-              <RenderSection key={i} section={section} index={i} />
+              <Fragment key={i}>
+                <RenderSection section={section} index={i} />
+                {/* "Explore Our Store" row after the first couple of sections. */}
+                {i === Math.min(1, content.length - 1) && <ExploreOurStore count={6} />}
+              </Fragment>
             ))}
           </div>
 
@@ -549,6 +554,13 @@ export default function ResourceArticleV2Page({
 
 
 
+
+        {/* ─── Explore Our Store — before the FAQ ──────────────────────── */}
+        {faq && faq.length > 0 && (
+          <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+            <ExploreOurStore count={6} />
+          </div>
+        )}
 
         {/* ─── 6. FAQ Section ───────────────────────────────────────────── */}
         {faq && faq.length > 0 && <FAQSection items={faq} />}
