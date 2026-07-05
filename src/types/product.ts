@@ -131,6 +131,7 @@ export type AdminProductUpdatePayload = {
   description: string
   vendor: string
   category: string
+  collectionName?: string
   stoneType: string
   color: string
   shape: string

@@ -345,6 +345,25 @@ export default function AdminProductForm({
                     />
                   </label>
                   {renderFilterSelect('category', 'Category', filters?.categories, form.category)}
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Collection</span>
+                    <input
+                      type="text"
+                      list="collection-options"
+                      value={form.collectionName ?? ''}
+                      onChange={(event) => onFieldChange('collectionName', event.target.value)}
+                      placeholder="Pick existing or type a new collection"
+                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                    />
+                    <datalist id="collection-options">
+                      {(filters?.collections ?? []).map((collectionOption) => (
+                        <option key={collectionOption} value={collectionOption} />
+                      ))}
+                    </datalist>
+                    <p className="mt-1 text-xs text-zinc-500">
+                      Pick an existing collection or type a new one. Case and spacing variants merge automatically; leave blank for none.
+                    </p>
+                  </label>
                   <label className="block lg:col-span-2">
                     <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Tags</span>
                     <input

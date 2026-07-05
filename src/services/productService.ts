@@ -755,6 +755,8 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
   formData.append('vendor', payload.vendor)
   formData.append('is_featured', String(payload.isFeatured))
   formData.append('category', payload.category)
+  // Always emit collectionName (empty string clears the collection).
+  formData.append('collectionName', payload.collectionName ?? '')
   formData.append('stoneType', payload.stoneType)
   formData.append('color', payload.color)
   formData.append('shape', payload.shape)
