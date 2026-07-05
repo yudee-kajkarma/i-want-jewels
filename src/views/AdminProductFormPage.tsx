@@ -420,10 +420,26 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
           certificate: form.certificate,
           measurement: form.measurement,
           details: form.details,
+          metal: form.metal,
+          finish: form.finish ?? '',
+          style: form.style ?? '',
+          hypoallergenic: form.hypoallergenic ?? false,
+          weight: Number(form.weight) || 100,
+          metaTitle: form.metaTitle ?? '',
+          metaDescription: form.metaDescription ?? '',
+          h2: form.h2 ?? '',
+          additionalSeoContent: form.additionalSeoContent ?? '',
           tags: parseCommaSeparatedValues(form.tags),
           isFeatured: form.isFeatured,
           certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
           diamondPcs: Number(form.diamondPcs) || 0,
+          bulletPoints: form.bulletPoints
+            .split('\n')
+            .map((line) => line.trim())
+            .filter(Boolean),
+          faqs: form.faqs
+            .map((faq) => ({ question: faq.question.trim(), answer: faq.answer.trim() }))
+            .filter((faq) => faq.question && faq.answer),
           variants: form.variants.map((variant, index) => ({
             id: variant.variantId,
             title: variant.title.trim(),
@@ -536,10 +552,26 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
           certificate: form.certificate,
           measurement: form.measurement,
           details: form.details,
+          metal: form.metal,
+          finish: form.finish ?? '',
+          style: form.style ?? '',
+          hypoallergenic: form.hypoallergenic ?? false,
+          weight: Number(form.weight) || 100,
+          metaTitle: form.metaTitle ?? '',
+          metaDescription: form.metaDescription ?? '',
+          h2: form.h2 ?? '',
+          additionalSeoContent: form.additionalSeoContent ?? '',
           tags: parseCommaSeparatedValues(form.tags),
           isFeatured: form.isFeatured,
           certificateUrls: parseCommaSeparatedValues(form.certificateUrls),
           diamondPcs: Number(form.diamondPcs) || 0,
+          bulletPoints: form.bulletPoints
+            .split('\n')
+            .map((line) => line.trim())
+            .filter(Boolean),
+          faqs: form.faqs
+            .map((faq) => ({ question: faq.question.trim(), answer: faq.answer.trim() }))
+            .filter((faq) => faq.question && faq.answer),
           variants: form.variants.map((variant, index) => ({
             title: variant.title.trim(),
             variantName: isGiftCard ? 'gift card' : variant.variantName,

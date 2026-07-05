@@ -108,6 +108,8 @@ export type ProductDetail = Product & {
   style: string
   metal: string
   finish: string
+  hypoallergenic?: boolean
+  weight?: number
   isFeatured: boolean
   stoneType: string
   color: string
@@ -143,6 +145,17 @@ export type AdminProductUpdatePayload = {
   certificate: string
   measurement: string
   details: string
+  // Jewellery attributes
+  metal?: string
+  finish?: string
+  style?: string
+  hypoallergenic?: boolean
+  weight?: number
+  // SEO / content scalars
+  metaTitle?: string
+  metaDescription?: string
+  h2?: string
+  additionalSeoContent?: string
 }
 
 export type AdminVariantName = 'gold' | 'rose gold' | 'silver' | 'gift card'
@@ -173,6 +186,8 @@ export type AdminProductCreatePayload = AdminProductUpdatePayload & {
   isFeatured: boolean
   certificateUrls: string[]
   diamondPcs: number
+  bulletPoints: string[]
+  faqs: { question: string; answer: string }[]
   variants: AdminProductVariantPayload[]
   images: File[]
   imageMapping: Array<Array<string | number>>
@@ -183,6 +198,8 @@ export type AdminProductEditPayload = AdminProductUpdatePayload & {
   isFeatured: boolean
   certificateUrls: string[]
   diamondPcs: number
+  bulletPoints: string[]
+  faqs: { question: string; answer: string }[]
   variants: AdminProductVariantPayload[]
   variantPos?: string[]
   existingImages: AdminExistingProductImagePayload[]
@@ -262,6 +279,8 @@ export type ProductAllFilters = {
   tags: string[]
   metals: string[]
   collections: string[]
+  finishes: string[]
+  styles: string[]
   priceRange: ProductPriceRange
   ratingRange: ProductNumericRange
   caratRange: ProductNumericRange

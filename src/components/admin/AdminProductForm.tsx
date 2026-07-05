@@ -85,6 +85,7 @@ export default function AdminProductForm({
     overPosition: number | null
   } | null>(null)
   const [filters, setFilters] = useState<ProductAllFilters | null>(null)
+  const [seoOpen, setSeoOpen] = useState(false)
   const [customOptions, setCustomOptions] = useState({
     category: false,
     color: false,
@@ -469,6 +470,59 @@ export default function AdminProductForm({
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Finish</span>
+                    <input
+                      type="text"
+                      list="finish-options"
+                      value={form.finish ?? ''}
+                      onChange={(event) => onFieldChange('finish', event.target.value)}
+                      placeholder="Pick or type a finish"
+                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                    />
+                    <datalist id="finish-options">
+                      {(filters?.finishes ?? []).map((option) => (
+                        <option key={option} value={option} />
+                      ))}
+                    </datalist>
+                  </label>
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Style</span>
+                    <input
+                      type="text"
+                      list="style-options"
+                      value={form.style ?? ''}
+                      onChange={(event) => onFieldChange('style', event.target.value)}
+                      placeholder="Pick or type a style"
+                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                    />
+                    <datalist id="style-options">
+                      {(filters?.styles ?? []).map((option) => (
+                        <option key={option} value={option} />
+                      ))}
+                    </datalist>
+                  </label>
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Weight (g)</span>
+                    <input
+                      type="number"
+                      min="1"
+                      step="1"
+                      value={form.weight ?? 100}
+                      onChange={(event) => onFieldChange('weight', Number(event.target.value))}
+                      className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                    />
+                    <p className="mt-1 text-xs text-zinc-500">Shipping weight incl. packaging.</p>
+                  </label>
+                  <label className="flex items-center gap-3 rounded-2xl border border-[#f0d8e8] px-4 py-3 text-sm font-semibold text-[#3f1933]">
+                    <input
+                      type="checkbox"
+                      checked={form.hypoallergenic ?? false}
+                      onChange={(event) => onFieldChange('hypoallergenic', event.target.checked)}
+                      className="h-4 w-4 rounded border-[#e2bdd4] text-[#7a3a61] focus:ring-[#cc4f8f]"
+                    />
+                    Hypoallergenic
+                  </label>
                   </>
                   ) : null}
                   <label className="flex items-center gap-3 rounded-2xl border border-[#f0d8e8] px-4 py-3 text-sm font-semibold text-[#3f1933]">
@@ -489,6 +543,124 @@ export default function AdminProductForm({
                     />
                     Available for shoppers
                   </label>
+
+                  <div className="lg:col-span-2 overflow-hidden rounded-2xl border border-[#f0d8e8] bg-[#fffafd]">
+                    <button
+                      type="button"
+                      onClick={() => setSeoOpen((v) => !v)}
+                      className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-[#3f1933]"
+                      aria-expanded={seoOpen}
+                    >
+                      <span>SEO &amp; Content</span>
+                      <span className="text-lg leading-none text-[#a53b79]">{seoOpen ? '−' : '+'}</span>
+                    </button>
+                    {seoOpen ? (
+                      <div className="space-y-4 border-t border-[#f0d8e8] p-4">
+                        <label className="block">
+                          <span className="mb-1 flex items-center justify-between text-sm font-semibold text-[#3f1933]">
+                            <span>Meta Title</span>
+                            <span className="text-xs font-normal text-zinc-400">{(form.metaTitle ?? '').length}/60</span>
+                          </span>
+                          <input
+                            value={form.metaTitle ?? ''}
+                            onChange={(event) => onFieldChange('metaTitle', event.target.value)}
+                            className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                          />
+                        </label>
+                        <label className="block">
+                          <span className="mb-1 flex items-center justify-between text-sm font-semibold text-[#3f1933]">
+                            <span>Meta Description</span>
+                            <span className="text-xs font-normal text-zinc-400">{(form.metaDescription ?? '').length}/160</span>
+                          </span>
+                          <textarea
+                            value={form.metaDescription ?? ''}
+                            onChange={(event) => onFieldChange('metaDescription', event.target.value)}
+                            className="min-h-20 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
+                          />
+                        </label>
+                        <label className="block">
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">H2 Heading</span>
+                          <input
+                            value={form.h2 ?? ''}
+                            onChange={(event) => onFieldChange('h2', event.target.value)}
+                            className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                          />
+                        </label>
+                        <label className="block">
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Additional SEO Content</span>
+                          <textarea
+                            value={form.additionalSeoContent ?? ''}
+                            onChange={(event) => onFieldChange('additionalSeoContent', event.target.value)}
+                            className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
+                          />
+                        </label>
+                        <label className="block">
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Bullet Points</span>
+                          <textarea
+                            value={form.bulletPoints}
+                            onChange={(event) => onFieldChange('bulletPoints', event.target.value)}
+                            placeholder="One bullet per line"
+                            className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
+                          />
+                          <p className="mt-1 text-xs text-zinc-500">One bullet per line.</p>
+                        </label>
+                        <div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm font-semibold text-[#3f1933]">FAQs</span>
+                            <button
+                              type="button"
+                              onClick={() => onFieldChange('faqs', [...form.faqs, { question: '', answer: '' }])}
+                              className="inline-flex items-center gap-1 rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
+                            >
+                              <Plus className="h-3 w-3" />
+                              Add FAQ
+                            </button>
+                          </div>
+                          {form.faqs.length > 0 ? (
+                            <div className="mt-3 space-y-3">
+                              {form.faqs.map((faq, faqIdx) => (
+                                <div key={faqIdx} className="rounded-2xl border border-[#f0d8e8] p-3">
+                                  <div className="flex items-start gap-2">
+                                    <div className="flex-1 space-y-2">
+                                      <input
+                                        value={faq.question}
+                                        placeholder="Question"
+                                        onChange={(event) => {
+                                          const next = [...form.faqs]
+                                          next[faqIdx] = { ...faq, question: event.target.value }
+                                          onFieldChange('faqs', next)
+                                        }}
+                                        className="h-10 w-full rounded-xl border border-[#e7bfd7] px-3 outline-none transition focus:border-[#a53b79]"
+                                      />
+                                      <textarea
+                                        value={faq.answer}
+                                        placeholder="Answer"
+                                        onChange={(event) => {
+                                          const next = [...form.faqs]
+                                          next[faqIdx] = { ...faq, answer: event.target.value }
+                                          onFieldChange('faqs', next)
+                                        }}
+                                        className="min-h-16 w-full rounded-xl border border-[#e7bfd7] px-3 py-2 outline-none transition focus:border-[#a53b79]"
+                                      />
+                                    </div>
+                                    <button
+                                      type="button"
+                                      onClick={() => onFieldChange('faqs', form.faqs.filter((_, j) => j !== faqIdx))}
+                                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e7bfd7] text-[#a53b79] transition hover:bg-white"
+                                    >
+                                      <X className="h-4 w-4" />
+                                    </button>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <p className="mt-2 text-xs text-zinc-500">No FAQs yet.</p>
+                          )}
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
               </div>
             ) : null}
 

@@ -116,6 +116,8 @@ type ProductDetailApiResponse = {
   style?: string
   metal?: string
   finish?: string
+  hypoallergenic?: boolean
+  weight?: number
   faqs?: Array<{
     question?: string
     answer?: string
@@ -481,6 +483,8 @@ function normalizeProductDetail(
     style: (product.style ?? '').trim(),
     metal: (product.metal ?? '').trim(),
     finish: (product.finish ?? '').trim(),
+    ...(typeof product.hypoallergenic === 'boolean' ? { hypoallergenic: product.hypoallergenic } : {}),
+    ...(typeof product.weight === 'number' ? { weight: product.weight } : {}),
     faqs: Array.isArray(product.faqs)
       ? product.faqs
           .map((faq) => ({
@@ -690,6 +694,8 @@ export async function getAllProductFilters(): Promise<ProductAllFilters> {
     categories: normalizedCategories,
     categoryCounts,
     collections: response.data.data.collections ?? [],
+    finishes: response.data.data.finishes ?? [],
+    styles: response.data.data.styles ?? [],
     priceRange: {
       min: toPrice(response.data.data.priceRange?.min),
       max: toPrice(response.data.data.priceRange?.max),
@@ -769,7 +775,28 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
   formData.append('measurement', payload.measurement)
   formData.append('details', payload.details)
   formData.append('certificateUrls', payload.certificateUrls.join(','))
-  formData.append('diamondPcs', String(payload.diamondPcs))
+  // Backend expects `numberOfStones` (the form calls it "Diamond Pcs").
+  formData.append('numberOfStones', String(payload.diamondPcs))
+  // Jewellery attributes
+  formData.append('metal', payload.metal ?? '')
+  formData.append('finish', payload.finish ?? '')
+  formData.append('style', payload.style ?? '')
+  formData.append('hypoallergenic', String(payload.hypoallergenic ?? false))
+  formData.append('weight', String(payload.weight ?? 100))
+  // SEO / content scalars
+  formData.append('metaTitle', payload.metaTitle ?? '')
+  formData.append('metaDescription', payload.metaDescription ?? '')
+  formData.append('h2', payload.h2 ?? '')
+  formData.append('additionalSeoContent', payload.additionalSeoContent ?? '')
+  // bulletPoints as repeated fields (parseStringArray coalesces to an array);
+  // a single empty value when the list is empty so the backend clears it.
+  if (payload.bulletPoints.length === 0) {
+    formData.append('bulletPoints', '')
+  } else {
+    payload.bulletPoints.forEach((bullet) => formData.append('bulletPoints', bullet))
+  }
+  // faqs as JSON (backend parseFaqs expects a JSON array string).
+  formData.append('faqs', JSON.stringify(payload.faqs))
   formData.append(
     'variants',
     JSON.stringify(

@@ -38,6 +38,9 @@ export type EditableProductForm = AdminProductUpdatePayload & {
   certificateUrls: string
   diamondPcs: number
   metal: string
+  // Bullet points as one-per-line text (split to string[] on save).
+  bulletPoints: string
+  faqs: { question: string; answer: string }[]
   variants: CreateVariantForm[]
   images: ProductImageFormItem[]
 }
@@ -150,6 +153,16 @@ export function createEmptyForm(): EditableProductForm {
     certificateUrls: '',
     diamondPcs: 0,
     metal: '',
+    finish: '',
+    style: '',
+    hypoallergenic: false,
+    weight: 100,
+    metaTitle: '',
+    metaDescription: '',
+    h2: '',
+    additionalSeoContent: '',
+    bulletPoints: '',
+    faqs: [],
     variants: [createEmptyVariant()],
     images: [],
   }
@@ -198,6 +211,16 @@ export function buildForm(product: ProductDetail): EditableProductForm {
     certificateUrls: product.certificateUrls.join(', '),
     diamondPcs: product.diamondPcs,
     metal: product.metal,
+    finish: product.finish ?? '',
+    style: product.style ?? '',
+    hypoallergenic: product.hypoallergenic ?? false,
+    weight: product.weight ?? 100,
+    metaTitle: product.metaTitle ?? '',
+    metaDescription: product.metaDescription ?? '',
+    h2: product.h2 ?? '',
+    additionalSeoContent: product.additionalSeoContent ?? '',
+    bulletPoints: (product.bulletPoints ?? []).join('\n'),
+    faqs: (product.faqs ?? []).map((faq) => ({ question: faq.question, answer: faq.answer })),
     variants:
       product.variants.length > 0
         ? product.variants.map((variant) => ({
