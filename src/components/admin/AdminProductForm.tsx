@@ -279,12 +279,22 @@ export default function AdminProductForm({
           ) : (
           <>
             <div className="mb-6 flex flex-wrap items-center gap-3 rounded-[24px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
-              <div className={`rounded-full px-4 py-2 text-sm font-semibold ${createStep === 1 ? 'bg-[#cc4f8f] text-white' : 'bg-white text-[#7a3a61]'}`}>
+              <button
+                type="button"
+                onClick={onBackToStepOne}
+                aria-current={createStep === 1 ? 'step' : undefined}
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${createStep === 1 ? 'bg-[#cc4f8f] text-white' : 'bg-white text-[#7a3a61] hover:bg-[#fbe6f1]'}`}
+              >
                 Step 1: Product Details
-              </div>
-              <div className={`rounded-full px-4 py-2 text-sm font-semibold ${createStep === 2 ? 'bg-[#cc4f8f] text-white' : 'bg-white text-[#7a3a61]'}`}>
+              </button>
+              <button
+                type="button"
+                onClick={onGoToStepTwo}
+                aria-current={createStep === 2 ? 'step' : undefined}
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${createStep === 2 ? 'bg-[#cc4f8f] text-white' : 'bg-white text-[#7a3a61] hover:bg-[#fbe6f1]'}`}
+              >
                 Step 2: Variants & Images
-              </div>
+              </button>
             </div>
 
             {createStep === 1 ? (
