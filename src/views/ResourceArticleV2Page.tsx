@@ -5,6 +5,7 @@ import { Link } from "@/lib/router";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import ExploreOurStore from "@/components/shared/ExploreOurStore";
+import shopPageBanner from "@/assets/banner/hero-banner-3.jpg";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 
 // ─── Extended Content Types ───────────────────────────────────────────────────
@@ -538,20 +539,21 @@ export default function ResourceArticleV2Page({
             <Header />
 
             <main>
-                {/* ─── 1. Full-width banner: single shared image + dark overlay + text ─── */}
+                {/* ─── 1. Full-width banner: shared shop banner image + CTA ─── */}
                 <div className="relative w-full overflow-hidden bg-[#f5ece3]">
                     <img
-                        src="/blog-images/blog-image-4.jpg"
-                        alt=""
-                        aria-hidden="true"
-                        className="h-[220px] w-full object-cover md:h-[320px] lg:h-[380px]"
+                        src={shopPageBanner.src}
+                        alt="Shop the collection"
+                        className="h-auto w-full"
                     />
-                    <div className="absolute inset-0 bg-black/40" />
-                    <div className="absolute inset-0 flex items-center justify-start px-6 sm:px-10 lg:px-16">
-                        <h2 className="text-left font-play text-2xl font-semibold uppercase tracking-[0.18em] text-white sm:text-3xl lg:text-5xl">
-                            Explore This Article
-                        </h2>
-                    </div>
+                    {/* <div className="pointer-events-none absolute inset-x-0 bottom-4 left-[7%] px-4 md:top-[55%] md:bottom-auto md:left-[10.5%]">
+                        <Link
+                            to="/products"
+                            className="iwj-hero-cta pointer-events-auto inline-block border border-zinc-200 bg-white px-5 py-2.5 font-poppins text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:px-8 sm:py-3 sm:text-[12px] sm:tracking-[0.22em] md:px-6 md:py-2.5 md:text-[13px] lg:px-10 lg:py-3.5 lg:text-[14px]"
+                        >
+                            Explore Collection
+                        </Link>
+                    </div> */}
                 </div>
 
                 {/* ─── 2. Hero intro: image left | title + text + CTA right ────────── */}
