@@ -129,6 +129,8 @@ export type ProductDetail = Product & {
 
 export type AdminProductUpdatePayload = {
   productType?: 'PHYSICAL' | 'GIFT_CARD'
+  // URL slug (/products/<slug>). Blank = keep current / auto-generate from SKU.
+  slug?: string
   title: string
   description: string
   vendor: string

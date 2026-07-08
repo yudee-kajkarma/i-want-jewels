@@ -258,7 +258,9 @@ export default function AdminProductForm({
             const submitterElement = submitEvent.submitter
             const isExplicitSaveSubmit = submitterElement?.getAttribute('data-submit-action') === 'save-product'
 
-            if (createStep !== 2 || !isExplicitSaveSubmit) {
+            // Create mode saves only from step 2; edit mode can save from
+            // either step (step-2 data is already loaded into the form).
+            if (!isExplicitSaveSubmit || (createStep !== 2 && !isEditing)) {
               event.preventDefault()
               return
             }
@@ -556,6 +558,22 @@ export default function AdminProductForm({
                     </button>
                     {seoOpen ? (
                       <div className="space-y-4 border-t border-[#f0d8e8] p-4">
+                        <label className="block">
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">URL Slug</span>
+                          <div className="flex items-center gap-1">
+                            <span className="text-sm text-zinc-400">/products/</span>
+                            <input
+                              value={form.slug ?? ''}
+                              onChange={(event) => onFieldChange('slug', event.target.value)}
+                              placeholder="auto-generated from SKU"
+                              className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
+                            />
+                          </div>
+                          <p className="mt-1 text-xs text-zinc-500">
+                            Lowercase letters, numbers and hyphens only. Leave blank to keep the current slug
+                            (or auto-generate from the first variant SKU on create). Changing it breaks the old URL.
+                          </p>
+                        </label>
                         <label className="block">
                           <span className="mb-1 flex items-center justify-between text-sm font-semibold text-[#3f1933]">
                             <span>Meta Title</span>
@@ -1271,6 +1289,16 @@ export default function AdminProductForm({
                 Back
               </button>
             ) : null}
+            {createStep === 1 && isEditing ? (
+              <button
+                type="submit"
+                data-submit-action="save-product"
+                disabled={isEditLoading || isSaving}
+                className="rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
+              >
+                {isSaving ? 'Saving...' : 'Save Changes'}
+              </button>
+            ) : null}
             {createStep === 1 ? (
               <button
                 type="button"
@@ -1280,7 +1308,11 @@ export default function AdminProductForm({
                   setTimeout(onGoToStepTwo, 0)
                 }}
                 disabled={isEditLoading || isSaving}
-                className="rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:cursor-not-allowed disabled:opacity-60"
+                className={`rounded-full px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] transition disabled:cursor-not-allowed disabled:opacity-60 ${
+                  isEditing
+                    ? 'border border-[#e7bfd7] text-[#7a3a61] hover:bg-[#fff2fa]'
+                    : 'bg-[#cc4f8f] text-white hover:bg-[#ad3f78]'
+                }`}
               >
                 Next Step
               </button>

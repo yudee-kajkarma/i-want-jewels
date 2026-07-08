@@ -132,6 +132,7 @@ export function createEmptyGiftCardVariant(): CreateVariantForm {
 export function createEmptyForm(): EditableProductForm {
   return {
     productType: 'PHYSICAL',
+    slug: '',
     title: '',
     description: '',
     vendor: '',
@@ -190,6 +191,7 @@ export function buildForm(product: ProductDetail): EditableProductForm {
 
   return {
     productType: product.productType ?? 'PHYSICAL',
+    slug: product.slug ?? '',
     title: product.title,
     description: product.description,
     vendor: product.vendor,

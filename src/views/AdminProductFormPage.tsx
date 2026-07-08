@@ -404,6 +404,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
         )
         const payload: AdminProductEditPayload = {
           productType: form.productType,
+          slug: form.slug ?? '',
           title: form.title,
           description: form.description,
           vendor: form.vendor,
@@ -536,6 +537,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
 
         const payload: AdminProductCreatePayload = {
           productType: form.productType,
+          slug: form.slug ?? '',
           title: form.title,
           description: form.description,
           vendor: form.vendor,

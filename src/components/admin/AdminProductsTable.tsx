@@ -159,7 +159,9 @@ export default function AdminProductsTable({
                       </div>
                       <div>
                         <p className="font-semibold text-[#3f1933]">{product.title}</p>
-                        <p className="mt-1 text-xs text-zinc-500">{product.id}</p>
+                        <p className="mt-1 text-xs text-zinc-500">
+                          {product.variants.find((variant) => variant.sku)?.sku ?? product.id}
+                        </p>
                       </div>
                     </div>
                   </td>

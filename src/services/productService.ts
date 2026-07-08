@@ -766,6 +766,8 @@ function buildProductFormData(payload: AdminProductCreatePayload | AdminProductE
   const formData = new FormData()
 
   formData.append('productType', payload.productType ?? 'PHYSICAL')
+  // Only send slug when set — blank means "keep current / auto-generate".
+  if (payload.slug?.trim()) formData.append('slug', payload.slug.trim())
   formData.append('title', payload.title)
   formData.append('description', payload.description)
   formData.append('tags', payload.tags.join(','))
