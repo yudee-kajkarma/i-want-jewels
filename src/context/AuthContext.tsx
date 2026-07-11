@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { toast } from 'react-hot-toast'
 import { logoutUser } from '../services/authService'
 import type { AuthSession } from '../types/auth'
 import {
@@ -6,6 +7,7 @@ import {
   clearStoredAuthSession,
   getPendingOtpEmail,
   getStoredAuthSession,
+  isJwtExpired,
   setPendingOtpEmail,
   storeAuthSession,
 } from '../utils/authStorage'
@@ -29,7 +31,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [pendingOtpEmail, setPendingOtpEmailState] = useState('')
 
   useEffect(() => {
-    setSession(getStoredAuthSession())
+    const storedSession = getStoredAuthSession()
+
+    // A session with an expired token is dead weight: the user looks logged
+    // in but every authenticated call would 401. Drop it up front and say so.
+    if (storedSession?.token && isJwtExpired(storedSession.token)) {
+      clearStoredAuthSession()
+      setSession(null)
+      toast.error('Your session has expired. You have been logged out.')
+    } else {
+      setSession(storedSession)
+    }
+
     setPendingOtpEmailState(getPendingOtpEmail())
     setIsAuthReady(true)
   }, [])

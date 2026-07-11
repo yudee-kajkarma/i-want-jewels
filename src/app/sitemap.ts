@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogLinks } from "@/components/shared/blogList";
+import { resourceArticles, resourceCategories } from "@/data/resources";
 import { getAllProducts } from "@/services/productService";
 
 const BASE_URL = "https://www.iwantjewels.com";
@@ -23,6 +24,7 @@ const STATIC_ROUTES: Array<{
     { path: "/faq", changeFrequency: "monthly", priority: 0.5 },
     { path: "/help", changeFrequency: "monthly", priority: 0.4 },
     { path: "/gift-cards", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/resources", changeFrequency: "weekly", priority: 0.8 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -41,6 +43,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: "monthly",
         priority: 0.7,
     }));
+
+    const resourceCategoryEntries: MetadataRoute.Sitemap =
+        resourceCategories.map((category) => ({
+            url: `${BASE_URL}${category.href}`,
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        }));
+
+    const resourceArticleEntries: MetadataRoute.Sitemap = resourceArticles.map(
+        (article) => ({
+            url: `${BASE_URL}/resources/${article.categorySlug}/${article.slug}`,
+            lastModified,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        })
+    );
 
     let productEntries: MetadataRoute.Sitemap = [];
 
@@ -61,5 +80,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error("sitemap: failed to load products", error);
     }
 
-    return [...staticEntries, ...blogEntries, ...productEntries];
+    return [
+        ...staticEntries,
+        ...blogEntries,
+        ...resourceCategoryEntries,
+        ...resourceArticleEntries,
+        ...productEntries,
+    ];
 }

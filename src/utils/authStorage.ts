@@ -28,6 +28,31 @@ function getStoredRole(session: Partial<AuthSession>): 'USER' | 'ADMIN' {
   return rawRecord.role === 'ADMIN' ? 'ADMIN' : 'USER'
 }
 
+// Decode the JWT payload and report whether its `exp` claim has passed.
+// Tokens without an exp claim are treated as valid; malformed tokens as
+// expired (the backend would reject them anyway).
+export function isJwtExpired(token: string | undefined | null): boolean {
+  if (!token) {
+    return true
+  }
+
+  try {
+    const payloadPart = token.split('.')[1]
+    if (!payloadPart) {
+      return true
+    }
+    const payload = JSON.parse(
+      atob(payloadPart.replace(/-/g, '+').replace(/_/g, '/')),
+    ) as Record<string, unknown>
+    if (typeof payload.exp !== 'number') {
+      return false
+    }
+    return payload.exp * 1000 <= Date.now()
+  } catch {
+    return true
+  }
+}
+
 export function getStoredAuthSession(): AuthSession | null {
   if (!isBrowser()) {
     return null
