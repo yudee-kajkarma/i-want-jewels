@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Drop Earrings Guide | I Want Jewels',
   description:
     'Learn how to choose lab grown diamond drop earrings for weddings, parties, gifts, evening outfits and everyday occasion styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Birthday Jewellery Gifts for Her',
   description:
     'Choose birthday jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and meaningful gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/birthday-jewellery-gifts-for-her',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/birthday-jewellery-gifts-for-her',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -185,7 +191,7 @@ const articleContent: V2ArticleSection[] = [
           ['Daily birthday gift', 'Amadea', 'Modern and wearable'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -388,7 +394,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop birthday stack', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

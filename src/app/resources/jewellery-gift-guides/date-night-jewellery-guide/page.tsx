@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Date Night Jewellery Guide',
   description:
     'Choose date night jewellery with lab grown diamond earrings, studs, drops, hoops, butterfly earrings and romantic styling ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/date-night-jewellery-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/date-night-jewellery-guide',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -213,7 +219,7 @@ const articleContent: V2ArticleSection[] = [
           ['If hoops feel too visible', 'Huggies or studs', 'Amadea, Cadenza M'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond hoop earrings guide', href: '/resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide' },
+      { type: 'see-also', text: 'Lab-grown diamond hoop earrings guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide' },
     ],
   },
   {
@@ -418,7 +424,7 @@ const articleContent: V2ArticleSection[] = [
           ['Bold evening stack', 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -523,7 +529,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Another mistake is choosing bold earrings for a casual date when huggies, studs or minimalist earrings would feel more natural.' },
       { type: 'paragraph', text: 'A fifth mistake is guessing the metal colour. Match the jewellery to the outfit and to the metal tone the wearer normally prefers.' },
       { type: 'paragraph', text: 'Finally, do not choose earrings that feel uncomfortable. Date night jewellery should feel easy for dinner, conversation, photos and the full evening.' },
-      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
     ],
   },
   {

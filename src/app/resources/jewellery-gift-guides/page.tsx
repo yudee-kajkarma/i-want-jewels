@@ -6,6 +6,14 @@ import { notFound } from 'next/navigation'
 export const metadata: Metadata = {
   title: 'Jewellery Gift Guides | I Want Jewels Resources',
   description: 'Find the perfect jewellery gift for any occasion, budget, or personality — from first-time buyers to seasoned jewellery lovers.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides',
+  },
+  openGraph: {
+    title: 'Jewellery Gift Guides | I Want Jewels Resources',
+    description: 'Find the perfect jewellery gift for any occasion, budget, or personality — from first-time buyers to seasoned jewellery lovers.',
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides',
+  },
 }
 
 export default function Page() {

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown vs Natural Diamonds: Simple Guide | I Want Jewels',
   description:
     'Compare lab grown and natural diamonds in simple language. Learn the difference in origin, price, sparkle, value and jewellery use before buying.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-vs-natural-diamonds',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-vs-natural-diamonds',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

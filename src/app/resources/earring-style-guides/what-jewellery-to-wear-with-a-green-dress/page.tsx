@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Jewellery to Wear with a Green Dress',
   description:
     'Choose jewellery for a green dress with gold, silver, rose gold, diamond earrings, wedding guest looks, party styling and outfit ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -381,7 +387,7 @@ const articleContent: V2ArticleSection[] = [
       },
       { type: 'see-also', text: 'How to Stack Earrings', href: '/resources/earring-style-guides/how-to-stack-earrings' },
       { type: 'see-also', text: 'Diamond Ear Stack Ideas', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Ear Stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Ear Stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
 

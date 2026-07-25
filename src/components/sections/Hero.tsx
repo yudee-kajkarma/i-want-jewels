@@ -24,6 +24,11 @@ export default function Hero() {
                 className="iwj-hero-image hidden h-auto w-full md:block"
             /> */}
 
+            <div className="pointer-events-none absolute inset-x-0 top-4 left-[7%] px-4 md:top-[8%] md:left-[10.5%] lg:top-[10%]">
+                <h1 className="max-w-[16rem] text-[20px] font-semibold uppercase tracking-[0.18em] text-zinc-900 sm:max-w-[22rem] sm:text-[28px] md:max-w-[28rem] md:text-[34px] lg:max-w-[34rem] lg:text-[42px]">
+                    Lab-grown diamond jewellery for everyday luxury
+                </h1>
+            </div>
             <div className="pointer-events-none absolute inset-x-0 bottom-4 left-[7%] px-4 md:top-[55%] md:bottom-auto md:left-[10.5%]">
                 <Link
                     to="/products"

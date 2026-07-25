@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Earrings for Gifts',
   description:
     'Choose lab grown diamond earrings as gifts for birthdays, anniversaries, bridesmaids, weddings, romantic gifts and everyday jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts',
+  },
+  openGraph: {
+    title: 'Lab Grown Diamond Earrings for Gifts',
+    description:
+      'Choose lab grown diamond earrings as gifts for birthdays, anniversaries, bridesmaids, weddings, romantic gifts and everyday jewellery.',
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -395,7 +404,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop stack gift', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

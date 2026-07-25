@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Earrings for Weddings',
   description:
     'Choose lab grown diamond earrings for weddings, wedding guests, bridesmaids, receptions, dresses, necklines and elegant occasion styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

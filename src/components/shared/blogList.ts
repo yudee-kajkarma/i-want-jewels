@@ -11,26 +11,6 @@ export const blogLinks: BlogLink[] = [
         coverImage: "/blog-images/blog-image-1.jpg",
     },
     {
-        title: "Everyday Diamond Earrings You Can Wear to Work",
-        href: "/blogs/the-everyday-diamond-earrings-for-work-in-2026",
-        coverImage: "/blog-images/blog-image-2.jpg",
-    },
-    {
-        title: "Best Travel-Friendly Diamond Earrings for Women",
-        href: "/blogs/the-best-travel-friendly-diamond-earrings-in-2026",
-        coverImage: "/blog-images/blog-image-3.jpg",
-    },
-    {
-        title: "Best Pavé Hoop Earrings for Everyday Luxury",
-        href: "/blogs/the-best-pave-hoop-earrings-everyday-luxury-2026",
-        coverImage: "/blog-images/blog-image-4.jpg",
-    },
-    {
-        title: "Best Everyday Earrings for Women: Brunch, Work & Dinner",
-        href: "/blogs/best-everyday-earrings-for-women-2026",
-        coverImage: "/blog-images/blog-image-5.jpg",
-    },
-    {
         title: "Date Night Earrings That Are Elegant but Not Too Much",
         href: "/blogs/the-best-date-night-earrings",
         coverImage: "/blog-images/blog-image-6.jpg",
@@ -86,29 +66,9 @@ export const blogLinks: BlogLink[] = [
         coverImage: "/blog-images/blog-image-16.jpg",
     },
     {
-        title: "Best First Diamond Stud Earrings to Buy in 2026",
-        href: "/blogs/the-first-diamond-stud-earrings-2026",
-        coverImage: "/blog-images/blog-image-17.jpg",
-    },
-    {
-        title: "Best Everyday Earrings for Office and Workwear",
-        href: "/blogs/everyday-office-earrings-in-2026",
-        coverImage: "/blog-images/blog-image-18.jpg",
-    },
-    {
-        title: "Travel-Friendly Diamond Earrings You Can Wear Anywhere",
-        href: "/blogs/the-travel-friendly-diamond-earrings-in-2026",
-        coverImage: "/blog-images/blog-image-19.jpg",
-    },
-    {
         title: "Best Fine Jewellery Gifts for Someone Who Likes Simple Style",
         href: "/blogs/simple-jewellery-gifts-in-the-2026",
         coverImage: "/blog-images/blog-image-20.jpg",
-    },
-    {
-        title: "How to Style Diamond Studs for Everyday Outfits",
-        href: "/blogs/how-to-style-diamond-studs-everyday-in-2026",
-        coverImage: "/blog-images/blog-image-21.jpg",
     },
     {
         title: "Milestone Birthday Jewellery Gifts That Feel Timeless",
@@ -131,19 +91,9 @@ export const blogLinks: BlogLink[] = [
         coverImage: "/blog-images/blog-image-25.jpg",
     },
     {
-        title: "How to Style Medium Diamond Studs From Day to Night",
-        href: "/blogs/how-to-style-medium-diamond-studs-from-day-to-night-in-the-2026",
-        coverImage: "/blog-images/blog-image-26.jpg",
-    },
-    {
         title: "What Earrings to Wear With a Silk Dress",
         href: "/blogs/what-earrings-to-wear-with-a-silk-dress",
         coverImage: "/blog-images/blog-image-27.jpg",
-    },
-    {
-        title: "How to Make Classic Diamond Studs Look More Modern",
-        href: "/blogs/how-to-make-classic-diamond-studs-look-more-modern-in-2026",
-        coverImage: "/blog-images/blog-image-28.jpg",
     },
     {
         title: "Best Butterfly Earrings for Evening Events",
@@ -201,16 +151,6 @@ export const blogLinks: BlogLink[] = [
         coverImage: "/blog-images/blog-image-39.jpg",
     },
     {
-        title: "Best Earrings to Wear From Office to Dinner",
-        href: "/blogs/best-office-to-dinner-earrings-2026",
-        coverImage: "/blog-images/blog-image-40.jpg",
-    },
-    {
-        title: "Travel Jewellery for Women: City Break & Weekend Trip Picks",
-        href: "/blogs/the-travel-jewellery-for-the-women",
-        coverImage: "/blog-images/blog-image-41.jpg",
-    },
-    {
         title: "How to Style Geometric Earrings With Modern Outfits",
         href: "/blogs/how-to-style-geometric-earrings-in-2026",
         coverImage: "/blog-images/blog-image-42.jpg",
@@ -224,66 +164,6 @@ export const blogLinks: BlogLink[] = [
         title: "Geometric Earrings vs Classic Hoop Earrings: Which Is Right for You?",
         href: "/blogs/the-geometric-earrings-vs-classic-hoop-earrings-in-2026",
         coverImage: "/blog-images/blog-image-44.jpg",
-    },
-    {
-        title: "Best Huggie Earrings for Everyday Wear",
-        href: "/blogs/the-best-huggie-earrings-for-everyday-wear-in-2026",
-        coverImage: "/blog-images/blog-image-45.jpg",
-    },
-    {
-        title: "What Are Huggie Earrings and Are They Comfortable?",
-        href: "/blogs/what-are-huggie-earrings-and-are-they-comfortable-in-2026",
-        coverImage: "/blog-images/blog-image-46.jpg",
-    },
-    {
-        title: "How to Style Diamond Huggies From Morning to Evening",
-        href: "/blogs/how-to-style-diamond-huggies-from-morning-to-evening-2026",
-        coverImage: "/blog-images/blog-image-47.jpg",
-    },
-    {
-        title: "Huggie Earrings vs Hoop Earrings: What Is the Difference?",
-        href: "/blogs/huggie-earrings-vs-hoop-earrings-in-2026",
-        coverImage: "/blog-images/blog-image-48.jpg",
-    },
-    {
-        title: "How to Build a Minimalist Jewellery Capsule Wardrobe",
-        href: "/blogs/minimalist-jewellery-capsule-wardrobe",
-        coverImage: "/blog-images/blog-image-49.jpg",
-    },
-    {
-        title: "Best Diamond Earrings for the Office",
-        href: "/blogs/best-diamond-earrings-for-office",
-        coverImage: "/blog-images/blog-image-50.jpg",
-    },
-    {
-        title: "Travel Jewellery Essentials: Earrings You Can Wear All Day",
-        href: "/blogs/the-travel-jewellery-earrings-you-can-wear-all-day",
-        coverImage: "/blog-images/blog-image-51.jpg",
-    },
-    {
-        title: "Minimalist Jewellery Gifts for Women Who Love Simple Luxury",
-        href: "/blogs/the-minimalist-jewellery-gifts-for-women",
-        coverImage: "/blog-images/blog-image-52.jpg",
-    },
-    {
-        title: "Huggie Earrings vs Stud Earrings for Everyday Wear",
-        href: "/blogs/the-huggie-earrings-vs-stud-earrings-2026",
-        coverImage: "/blog-images/blog-image-53.jpg",
-    },
-    {
-        title: "Why Minimalist Huggie Earrings Are a Quiet Luxury Essential in 2026",
-        href: "/blogs/the-minimalist-huggie-earrings-quiet-luxury-2026",
-        coverImage: "/blog-images/blog-image-54.jpg",
-    },
-    {
-        title: "How to Style Huggie Earrings in an Ear Stack",
-        href: "/blogs/how-to-style-huggie-earrings-in-theear-stack",
-        coverImage: "/blog-images/blog-image-55.jpg",
-    },
-    {
-        title: "Best First Diamond Earrings to Buy in 2026",
-        href: "/blogs/the-best-first-diamond-earrings-2026",
-        coverImage: "/blog-images/blog-image-56.jpg",
     },
     {
         title: "What Is a Tennis Bracelet? Meaning, Cost & Buying Guide",

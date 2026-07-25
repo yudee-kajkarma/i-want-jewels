@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Bridesmaid Jewellery Gifts for Her',
   description:
     'Choose bridesmaid jewellery gifts with lab grown diamond earrings, studs, drops, butterfly earrings, huggies and wedding-ready gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/bridesmaid-jewellery-gifts',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/bridesmaid-jewellery-gifts',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -361,7 +367,7 @@ const articleContent: V2ArticleSection[] = [
           ['Modern bridesmaid stack', 'Huggie', 'Small stud', 'Amadea + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

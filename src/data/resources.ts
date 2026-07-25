@@ -254,44 +254,6 @@ export const resourceArticles: ResourceArticle[] = [
     tags: ["worth it", "value", "earrings", "lab-grown"],
   },
   {
-    slug: "lab-grown-diamond-earrings-for-gifts",
-    categorySlug: "lab-grown-diamond-guides",
-    title:
-      "Lab-Grown Diamond Earrings for Gifts: Birthday, Anniversary & Bridesmaid Guide",
-    excerpt:
-      "Choose lab grown diamond earrings for birthday gifts, anniversary gifts, bridesmaids, romantic gifts and everyday jewellery gifts.",
-    coverImage: "/blog-images/blog-image-60.jpg",
-    publishedAt: "2025-05-14",
-    readTime: "13 min read",
-    tags: [
-      "gifts",
-      "birthday",
-      "anniversary",
-      "bridesmaid",
-      "earrings",
-      "lab-grown",
-    ],
-  },
-  {
-    slug: "lab-grown-diamond-earrings-for-ear-stacks",
-    categorySlug: "lab-grown-diamond-guides",
-    title:
-      "Lab-Grown Diamond Earrings for Ear Stacks: Studs, Huggies & Styling Guide",
-    excerpt:
-      "Build a diamond ear stack with lab grown diamond studs, huggies, hoops and minimalist earrings for everyday styling and occasions.",
-    coverImage: "/blog-images/blog-image-102.jpg",
-    publishedAt: "2025-05-18",
-    readTime: "13 min read",
-    tags: [
-      "ear stacks",
-      "studs",
-      "huggies",
-      "earrings",
-      "lab-grown",
-      "styling",
-    ],
-  },
-  {
     slug: "gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings",
     categorySlug: "lab-grown-diamond-guides",
     title:
@@ -1016,25 +978,6 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
-    slug: "lab-grown-diamond-hoop-earrings-guide",
-    categorySlug: "earring-style-guides",
-    title:
-      "Lab-Grown Diamond Hoop Earrings Guide: How to Choose and Style Diamond Hoops",
-    excerpt:
-      "Learn how to choose lab grown diamond hoop earrings for everyday wear, parties, weddings, gifts, ear stacks and outfit styling.",
-    coverImage: "/blog-images/blog-image-99.jpg",
-    publishedAt: "2025-09-27",
-    readTime: "14 min read",
-    tags: [
-      "hoop earrings",
-      "lab-grown diamond earrings",
-      "earring styling",
-      "ear stacks",
-      "everyday wear",
-      "lab-grown",
-    ],
-  },
-  {
     slug: "everyday-lab-grown-diamond-earrings-guide",
     categorySlug: "earring-style-guides",
     title:
@@ -1050,25 +993,6 @@ export const resourceArticles: ResourceArticle[] = [
       "workwear",
       "ear stacks",
       "daily jewellery",
-      "lab-grown",
-    ],
-  },
-  {
-    slug: "can-you-wear-lab-grown-diamond-earrings-every-day",
-    categorySlug: "earring-style-guides",
-    title:
-      "Can You Wear Lab-Grown Diamond Earrings Every Day? Daily Wear, Care & Styling Guide",
-    excerpt:
-      "Learn if lab grown diamond earrings are good for everyday wear, work, sleep, showering, sensitive ears, care, gifts and daily styling.",
-    coverImage: "/blog-images/blog-image-103.jpg",
-    publishedAt: "2025-10-05",
-    readTime: "14 min read",
-    tags: [
-      "everyday earrings",
-      "daily wear",
-      "lab-grown diamond earrings",
-      "earring care",
-      "workwear",
       "lab-grown",
     ],
   },
@@ -1092,8 +1016,41 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
+    slug: "travel-jewellery-guide",
+    categorySlug: "earring-style-guides",
+    title: "Travel Jewellery Guide: Best Earrings for Travel",
+    excerpt:
+      "Discover the best travel-friendly jewellery, including lab-grown diamond stud earrings, huggies, and versatile pieces you can wear all day on vacation.",
+    coverImage: "/blog-images/blog-image-41.jpg",
+    publishedAt: "2025-11-01",
+    readTime: "12 min read",
+    tags: ["travel", "everyday wear", "huggies", "studs", "lab-grown"],
+  },
+  {
+    slug: "what-are-huggie-earrings",
+    categorySlug: "earring-style-guides",
+    title: "What Are Huggie Earrings? The Ultimate Guide",
+    excerpt:
+      "Learn what huggie earrings are, why they are so comfortable, and how to choose the best lab-grown diamond huggies for everyday wear and ear stacks.",
+    coverImage: "/blog-images/blog-image-46.jpg",
+    publishedAt: "2025-11-05",
+    readTime: "10 min read",
+    tags: ["huggie earrings", "everyday wear", "comfort", "lab-grown"],
+  },
+  {
+    slug: "how-to-style-huggie-earrings",
+    categorySlug: "earring-style-guides",
+    title: "How to Style Huggie Earrings From Morning to Evening",
+    excerpt:
+      "Discover how to style lab-grown diamond huggie earrings for the office, weekend casual outfits, ear stacks, and elegant evening dinners.",
+    coverImage: "/blog-images/blog-image-47.jpg",
+    publishedAt: "2025-11-10",
+    readTime: "11 min read",
+    tags: ["huggie earrings", "styling", "workwear", "ear stacks", "lab-grown"],
+  },
+  {
     slug: "valentines-day-jewellery-gifts",
-    categorySlug: "jewellery-care-guides",
+    categorySlug: "jewellery-gift-guides",
     title: "Valentine's Day Jewellery Gifts: Romantic Earrings She Will Actually Wear",
     excerpt:
       "Choose Valentine's Day jewellery gifts with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and romantic gift ideas.",
@@ -1101,17 +1058,6 @@ export const resourceArticles: ResourceArticle[] = [
     publishedAt: "2025-10-05",
     readTime: "17 min read",
     tags: ["valentine's day", "romantic", "butterfly earrings", "studs", "earrings", "lab-grown"],
-  },
-  {
-    slug: "new-year-jewellery-gifts",
-    categorySlug: "jewellery-care-guides",
-    title: "New Year Jewellery Gifts: Earrings for a Fresh Start and Every Celebration After",
-    excerpt:
-      "Choose New Year jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and party-ready gift ideas.",
-    coverImage: "/blog-images/blog-image-11.jpg",
-    publishedAt: "2025-10-01",
-    readTime: "17 min read",
-    tags: ["new year gifts", "party jewellery", "butterfly earrings", "studs", "earrings", "lab-grown"],
   },
   {
     slug: "new-year-jewellery-gifts",
@@ -1177,6 +1123,15 @@ export function getCategoryBySlug(slug: string): ResourceCategory | undefined {
 }
 
 export function getArticlesByCategory(categorySlug: string): ResourceArticle[] {
+  if (categorySlug === "jewellery-care-guides") {
+    const careSlugs = [
+      "how-to-clean-lab-grown-diamond-earrings",
+      "how-to-care-for-gold-plated-jewellery",
+      "can-you-shower-with-gold-plated-jewellery",
+      "does-gold-plated-jewellery-tarnish",
+    ];
+    return resourceArticles.filter((a) => careSlugs.includes(a.slug));
+  }
   return resourceArticles.filter((a) => a.categorySlug === categorySlug);
 }
 
@@ -1200,5 +1155,5 @@ export function getRelatedArticles(
 }
 
 export function getArticleCount(categorySlug: string): number {
-  return resourceArticles.filter((a) => a.categorySlug === categorySlug).length;
+  return getArticlesByCategory(categorySlug).length;
 }

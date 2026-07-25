@@ -24,9 +24,23 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.iwantjewels.com"),
-    title: "I Want Jewels",
-    description: "Jewellery storefront migrated to Next.js",
+    metadataBase: new URL("https://iwantjewels.com"),
+    title: {
+        default: "I Want Jewels | Lab-Grown Diamond Jewellery",
+        template: "%s | I Want Jewels",
+    },
+    description:
+        "Discover lab-grown diamond jewellery, engagement rings, earrings, necklaces and bracelets designed for modern everyday luxury.",
+    alternates: {
+        canonical: "https://iwantjewels.com",
+    },
+    openGraph: {
+        title: "I Want Jewels | Lab-Grown Diamond Jewellery",
+        description:
+            "Discover lab-grown diamond jewellery, engagement rings, earrings, necklaces and bracelets designed for modern everyday luxury.",
+        type: "website",
+        url: "https://iwantjewels.com",
+    },
 };
 
 export default function RootLayout({

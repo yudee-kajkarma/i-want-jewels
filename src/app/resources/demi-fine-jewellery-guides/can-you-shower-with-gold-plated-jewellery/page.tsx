@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Can You Shower with Gold Plated Jewellery?',
   description:
     'Learn if you can shower with gold-plated jewellery, how water affects 14kt gold plating, and how to protect demi-fine earrings.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/can-you-shower-with-gold-plated-jewellery',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/can-you-shower-with-gold-plated-jewellery',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

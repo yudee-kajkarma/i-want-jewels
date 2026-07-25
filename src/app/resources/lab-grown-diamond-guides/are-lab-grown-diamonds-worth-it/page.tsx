@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Are Lab Grown Diamonds Worth It? Simple Guide | I Want Jewels',
   description:
     'Find out if lab grown diamonds are worth buying, how they compare to natural diamonds, and when lab grown diamond jewellery makes sense.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/are-lab-grown-diamonds-worth-it',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/are-lab-grown-diamonds-worth-it',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

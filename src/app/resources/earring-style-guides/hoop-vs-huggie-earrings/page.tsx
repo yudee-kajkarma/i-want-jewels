@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Hoop vs Huggie Earrings: Which Is Better?',
   description:
     'Compare hoop and huggie earrings for everyday wear, ear stacks, gifts, workwear, parties and lab grown diamond styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/hoop-vs-huggie-earrings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/hoop-vs-huggie-earrings',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

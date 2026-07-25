@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Earrings to Wear with an Off Shoulder Dress',
   description:
     'Choose earrings for an off shoulder dress with diamonds, drops, hoops, studs, gold, party looks, wedding guest outfits and evening styling ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -288,7 +294,7 @@ const articleContent: V2ArticleSection[] = [
           },
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
 

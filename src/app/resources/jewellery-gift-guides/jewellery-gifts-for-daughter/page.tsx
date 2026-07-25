@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Jewellery Gifts for Daughter',
   description:
     'Choose jewellery gifts for your daughter with lab grown diamond earrings, studs, huggies, butterfly earrings, hoops and meaningful gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-daughter',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-daughter',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -420,7 +426,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop stack gift', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

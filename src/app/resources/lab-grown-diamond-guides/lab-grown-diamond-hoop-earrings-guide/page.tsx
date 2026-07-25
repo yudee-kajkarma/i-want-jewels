@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Hoop Earrings Guide | I Want Jewels',
   description:
     'Learn how to choose lab grown diamond hoop earrings for everyday wear, ear stacks, gifts, parties and modern jewellery styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

@@ -6,6 +6,14 @@ import { notFound } from 'next/navigation'
 export const metadata: Metadata = {
   title: 'Lab-Grown Diamond Guides | I Want Jewels Resources',
   description: 'Everything you need to know about lab-grown diamonds — how they are made, how they compare to mined diamonds, and why they are the smart, ethical choice.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides',
+  },
+  openGraph: {
+    title: 'Lab-Grown Diamond Guides | I Want Jewels Resources',
+    description: 'Everything you need to know about lab-grown diamonds — how they are made, how they compare to mined diamonds, and why they are the smart, ethical choice.',
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides',
+  },
 }
 
 export default function Page() {

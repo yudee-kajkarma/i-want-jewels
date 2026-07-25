@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Minimalist Earrings Guide',
   description:
     'Learn how to choose minimalist earrings for everyday wear, work outfits, ear stacks, gifts and simple lab grown diamond styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/minimalist-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/minimalist-earrings-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

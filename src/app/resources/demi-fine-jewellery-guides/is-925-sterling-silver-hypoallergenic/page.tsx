@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Is 925 Sterling Silver Hypoallergenic?',
   description:
     'Learn if 925 sterling silver is hypoallergenic, whether it is good for sensitive ears, and how to choose safe demi-fine earrings.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -209,7 +215,7 @@ const articleContent: V2ArticleSection[] = [
           },
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
   {

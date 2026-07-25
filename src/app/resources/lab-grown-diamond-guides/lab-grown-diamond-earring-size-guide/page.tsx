@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Earring Size Guide',
   description:
     'Compare lab grown diamond earring sizes, from small studs to 1ct styles. Learn what size is best for everyday wear, gifts and occasions.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

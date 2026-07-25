@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'How to Clean Lab Grown Diamond Earrings',
   description:
     'Learn how to clean lab grown diamond earrings safely, protect gold plating, avoid dullness, and keep your jewellery sparkling for longer.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

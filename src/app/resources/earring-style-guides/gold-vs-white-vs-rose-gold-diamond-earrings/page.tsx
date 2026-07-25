@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Gold vs White vs Rose Gold Diamond Earrings',
   description:
     'Compare gold, white and rose gold lab grown diamond earrings for everyday wear, gifts, weddings, parties, skin tone and outfit styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -185,7 +191,7 @@ const articleContent: V2ArticleSection[] = [
           },
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
 
@@ -244,7 +250,7 @@ const articleContent: V2ArticleSection[] = [
           ['Ear stack gift', 'Keep both pieces same metal colour', 'Cadenza S + Amadea'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
 

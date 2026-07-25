@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Jewellery to Wear with a Red Dress',
   description:
     'Choose jewellery for a red dress with gold, silver, rose gold, diamond earrings, party looks, wedding guest outfits and evening styling ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

@@ -533,9 +533,35 @@ export default function ResourceArticleV2Page({
     cta,
 }: Props) {
     const categoryHref = `/resources/${category.slug}`;
+    const canonicalUrl = `https://iwantjewels.com/resources/${category.slug}/${article.slug}`;
+
+    const jsonLdSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": canonicalUrl,
+        "url": canonicalUrl,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl,
+        },
+        "headline": article.title,
+        "description": article.excerpt,
+        "image": article.coverImage.startsWith("http")
+            ? article.coverImage
+            : `https://iwantjewels.com${article.coverImage}`,
+        "publisher": {
+            "@type": "Organization",
+            "name": "I Want Jewels",
+            "url": "https://iwantjewels.com",
+        },
+    };
 
     return (
         <div className="min-h-screen bg-white font-poppins text-[#1f2732]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+            />
             <Header />
 
             <main>

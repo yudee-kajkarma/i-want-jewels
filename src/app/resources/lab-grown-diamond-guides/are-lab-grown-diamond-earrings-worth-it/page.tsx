@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Are Lab Grown Diamond Earrings Worth It?',
   description:
     'Find out if lab grown diamond earrings are worth buying for everyday wear, gifts, weddings, ear stacks and occasion jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

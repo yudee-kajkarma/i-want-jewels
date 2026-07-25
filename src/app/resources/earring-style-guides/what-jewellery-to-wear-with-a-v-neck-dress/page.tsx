@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Jewellery to Wear with a V Neck Dress',
   description:
     'Choose jewellery for a V neck dress with earrings, necklaces, diamonds, gold, party looks, weddings and evening styling ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

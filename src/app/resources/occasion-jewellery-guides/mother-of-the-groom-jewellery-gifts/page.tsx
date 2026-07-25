@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Mother of the Groom Jewellery Gifts',
   description:
     'Choose mother of the groom jewellery gifts with lab grown diamond earrings, studs, drops, huggies, butterfly earrings and elegant wedding gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/occasion-jewellery-guides/mother-of-the-groom-jewellery-gifts',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/occasion-jewellery-guides/mother-of-the-groom-jewellery-gifts',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

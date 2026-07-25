@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.iwantjewels.com";
+const BASE_URL = "https://iwantjewels.com";
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -20,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
                 "/register",
                 "/reset-password",
                 "/verify-otp",
+                "/help",
             ],
         },
         sitemap: `${BASE_URL}/sitemap.xml`,

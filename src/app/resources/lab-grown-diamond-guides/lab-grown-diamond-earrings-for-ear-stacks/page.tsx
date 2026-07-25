@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Earrings for Ear Stacks',
   description:
     'Build a diamond ear stack with lab grown diamond studs, huggies, hoops and minimalist earrings for everyday styling and occasions.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/diamond-ear-stack-ideas',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/diamond-ear-stack-ideas',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

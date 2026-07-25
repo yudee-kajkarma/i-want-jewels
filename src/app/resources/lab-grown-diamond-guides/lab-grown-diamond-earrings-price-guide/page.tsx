@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Earrings Price Guide | I Want Jewels',
   description:
     'Learn how much lab grown diamond earrings cost, what affects the price, and how to choose studs, huggies, drops and gift earrings.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

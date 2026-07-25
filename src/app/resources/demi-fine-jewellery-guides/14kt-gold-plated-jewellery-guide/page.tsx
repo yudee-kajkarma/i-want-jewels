@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: '14kt Gold Plated Jewellery Guide',
   description:
     'Learn what 14kt gold-plated jewellery means, how it compares to solid gold, how to care for it, and whether it is good for everyday wear.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/14kt-gold-plated-jewellery-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/14kt-gold-plated-jewellery-guide',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -255,7 +261,7 @@ const articleContent: V2ArticleSection[] = [
           ['Party-loving recipient', 'Bold earrings', 'Lusso'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
   {
@@ -284,7 +290,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Gold-plated jewellery is especially useful for ear stacks because it creates a warm, cohesive look when multiple earrings are worn together.' },
       { type: 'paragraph', text: 'The easiest approach is to keep the whole ear stack in the same metal colour. For example, choose gold-plated studs with gold-plated huggies for a clean and balanced finish.' },
       { type: 'paragraph', text: 'A simple IWantJewels gold-tone ear stack could include Cadenza S lab-grown diamond studs with Amadea Huggie earrings. For a softer stack, add Laluce minimalist diamond earrings. For a more visible stack, use Cadenza M as the main stud.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

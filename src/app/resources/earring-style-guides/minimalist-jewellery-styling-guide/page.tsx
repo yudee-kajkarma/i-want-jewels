@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Minimalist Jewellery Styling Guide',
   description:
     'Learn how to style minimalist jewellery with earrings, studs, huggies, lab grown diamonds, workwear, gifts, weddings and everyday outfits.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/minimalist-jewellery-styling-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/minimalist-jewellery-styling-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -328,7 +334,7 @@ const articleContent: V2ArticleSection[] = [
           ['Anniversary gift', 'Drops or butterfly earrings', 'Orsola, Alidi Farfalla'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
 
@@ -360,7 +366,7 @@ const articleContent: V2ArticleSection[] = [
         ],
       },
 
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Ear Stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Ear Stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
 

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Party Earrings Guide for Women',
   description:
     'Choose party earrings with lab grown diamond studs, drops, hoops, bold earrings, butterfly earrings and styling ideas for dresses.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/party-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/party-earrings-guide',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -199,7 +205,7 @@ const articleContent: V2ArticleSection[] = [
           ['If hoops feel too strong', 'Huggies or studs', 'Amadea, Cadenza M'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond hoop earrings guide', href: '/resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide' },
+      { type: 'see-also', text: 'Lab-grown diamond hoop earrings guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide' },
     ],
   },
   {
@@ -406,7 +412,7 @@ const articleContent: V2ArticleSection[] = [
           ['Modern party stack', 'Huggie', 'Small stud', 'Amadea + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -511,7 +517,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Another mistake is ignoring hairstyle. Party earrings should be visible in photos, so choose enough size or movement if the hair is down.' },
       { type: 'paragraph', text: 'A fifth mistake is choosing earrings only for one night. The best party earrings should also work for future dinners, birthdays, weddings or evening outfits.' },
       { type: 'paragraph', text: 'Finally, do not ignore comfort. Party earrings should feel secure enough for dinner, photos, dancing and several hours of wear.' },
-      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
     ],
   },
   {

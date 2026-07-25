@@ -6,6 +6,14 @@ import { notFound } from 'next/navigation'
 export const metadata: Metadata = {
   title: 'Demi-Fine Jewellery Guides | I Want Jewels Resources',
   description: 'Explore the world of demi-fine jewellery — sterling silver, gold vermeil, and lab-grown stones that sit beautifully between costume and fine jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides',
+  },
+  openGraph: {
+    title: 'Demi-Fine Jewellery Guides | I Want Jewels Resources',
+    description: 'Explore the world of demi-fine jewellery — sterling silver, gold vermeil, and lab-grown stones that sit beautifully between costume and fine jewellery.',
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides',
+  },
 }
 
 export default function Page() {

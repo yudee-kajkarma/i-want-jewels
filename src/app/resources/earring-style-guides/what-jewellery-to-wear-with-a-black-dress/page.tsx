@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Jewellery to Wear with a Black Dress',
   description:
     'Choose jewellery for a black dress with earrings, diamonds, gold, silver, rose gold, party looks, weddings and evening outfit styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -517,7 +523,7 @@ const articleContent: V2ArticleSection[] = [
       {
         type: 'see-also',
         text: 'Lab-Grown Diamond Earrings for Ear Stacks',
-        href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks',
+        href: '/resources/earring-style-guides/diamond-ear-stack-ideas',
       },
     ],
   },

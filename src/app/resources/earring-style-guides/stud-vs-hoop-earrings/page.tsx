@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Stud vs Hoop Earrings: Which Is Better?',
   description:
     'Compare stud and hoop earrings for everyday wear, gifts, workwear, ear stacks, weddings, parties and lab grown diamond styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/stud-vs-hoop-earrings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/stud-vs-hoop-earrings',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

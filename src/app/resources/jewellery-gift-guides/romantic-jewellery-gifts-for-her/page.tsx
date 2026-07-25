@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Romantic Jewellery Gifts for Her',
   description:
     'Choose romantic jewellery gifts with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and meaningful gift ideas for her.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/romantic-jewellery-gifts-for-her',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/romantic-jewellery-gifts-for-her',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -391,7 +397,7 @@ const articleContent: V2ArticleSection[] = [
           ['Bold romantic evening stack', 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

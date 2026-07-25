@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Earrings to Wear as a Wedding Guest',
   description:
     'Choose earrings to wear as a wedding guest with lab grown diamond studs, drops, hoops, butterfly earrings and styling ideas for every dress.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -149,7 +155,7 @@ const articleContent: V2ArticleSection[] = [
           ['Giftable wedding guest earrings', 'Cadenza M', 'Safe and reusable'],
         ],
       },
-      { type: 'see-also', text: 'Can You Wear Lab-Grown Diamond Earrings Every Day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+      { type: 'see-also', text: 'Can You Wear Lab-Grown Diamond Earrings Every Day?', href: '/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
     ],
   },
 
@@ -226,7 +232,7 @@ const articleContent: V2ArticleSection[] = [
           ['If hoops feel too visible', 'Huggies or studs', 'Amadea, Cadenza M'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Hoop Earrings Guide', href: '/resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Hoop Earrings Guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide' },
     ],
   },
 

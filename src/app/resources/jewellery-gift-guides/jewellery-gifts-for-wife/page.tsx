@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Jewellery Gifts for Wife',
   description:
     'Choose jewellery gifts for your wife with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and romantic gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-wife',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-wife',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -378,7 +384,7 @@ const articleContent: V2ArticleSection[] = [
           ['Minimalist stack gift', 'Small stud', 'Minimalist earring', 'Cadenza S + Laluce'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -436,7 +442,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Another mistake is choosing symbolic jewellery for someone who prefers classic pieces. Butterfly earrings are meaningful, but Cadenza M may be safer for someone traditional.' },
       { type: 'paragraph', text: 'A fifth mistake is ignoring lifestyle. If she wears workwear often, Cadenza M or Amadea may be more useful than occasion-only earrings. If she loves evening outfits, Orsola, Concetta Long or Pave Hoops may be stronger.' },
       { type: 'paragraph', text: 'Finally, do not forget comfort and care. Jewellery that is worn often should be easy to clean, store and protect from showering, sleeping, swimming and heavy product exposure.' },
-      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
     ],
   },
   {

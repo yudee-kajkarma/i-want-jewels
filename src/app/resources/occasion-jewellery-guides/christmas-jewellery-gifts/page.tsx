@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Christmas Jewellery Gifts for Her',
   description:
     'Choose Christmas jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and elegant gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/occasion-jewellery-guides/christmas-jewellery-gifts',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/occasion-jewellery-guides/christmas-jewellery-gifts',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -441,7 +447,7 @@ const articleContent: V2ArticleSection[] = [
           ['Party Christmas stack', 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

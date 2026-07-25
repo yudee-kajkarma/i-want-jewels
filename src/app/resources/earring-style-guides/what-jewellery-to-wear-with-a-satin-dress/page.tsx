@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Jewellery to Wear with a Satin Dress',
   description:
     'Choose jewellery for a satin dress with earrings, gold, silver, diamonds, party looks, wedding guest outfits and evening styling ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -196,7 +202,7 @@ const articleContent: V2ArticleSection[] = [
           ['Soft floral satin look', 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
       { type: 'see-also', text: 'Wedding Guest Jewellery Guide', href: '/resources/occasion-jewellery-guides/lab-grown-diamond-earrings-for-weddings' },
     ],
   },

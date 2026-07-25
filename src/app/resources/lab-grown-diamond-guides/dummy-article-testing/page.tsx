@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: 'What Are Lab-Grown Diamonds? A Simple Guide Before You Buy | I Want Jewels',
   description:
     'Lab-grown diamonds are real diamonds created in a controlled laboratory environment. Learn how they are made, how they compare to natural diamonds, and why they work beautifully in everyday jewellery.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/dummy-article-testing',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/dummy-article-testing',
+  },
 }
 
 // ─── Section 1: Hero Intro ────────────────────────────────────────────────────

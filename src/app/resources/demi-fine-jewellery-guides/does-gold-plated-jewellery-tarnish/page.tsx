@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Does Gold Plated Jewellery Tarnish?',
   description:
     'Learn whether gold-plated jewellery tarnishes, why it changes colour, how to protect it, and how to care for demi-fine gold-plated earrings.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/does-gold-plated-jewellery-tarnish',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/does-gold-plated-jewellery-tarnish',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -246,7 +252,7 @@ const articleContent: V2ArticleSection[] = [
           ['Party-loving recipient', 'Bold earrings', 'Lusso'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
   {
@@ -286,7 +292,7 @@ const articleContent: V2ArticleSection[] = [
           ['Party stack', 'Lusso + Cadenza S', 'Lets one bold piece stand out'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'How to Stack Earrings: Ear Stack Guide',
   description:
     'Learn how to stack earrings with studs, huggies, hoops, drops and lab grown diamond earrings for everyday, wedding and party looks.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/how-to-stack-earrings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/how-to-stack-earrings',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -73,7 +79,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'The best ear stacks do not look random. They have a clear structure. One piece usually leads the look, while the others support it.' },
       { type: 'paragraph', text: 'For example, if you wear a bold earring as the main piece, the rest of the stack should stay smaller. If you wear a small stud as the main piece, you can add a huggie or minimalist earring for shape. If you wear a drop earring, it should usually be the focus because it adds length and movement.' },
       { type: 'paragraph', text: 'Ear stacks work especially well with demi-fine jewellery because small pieces can still feel elevated. Lab-grown diamond studs, huggies and minimalist earrings add sparkle without making the ear look too heavy.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -457,7 +463,7 @@ const cta: V2CTABlock = {
   secondaryLabel: 'Explore Huggie Earrings',
   secondaryHref: '/products?category=Earring',
   tertiaryLabel: 'Read Lab-Grown Diamond Earrings for Ear Stacks',
-  tertiaryHref: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks',
+  tertiaryHref: '/resources/earring-style-guides/diamond-ear-stack-ideas',
 }
 
 export default function Page() {

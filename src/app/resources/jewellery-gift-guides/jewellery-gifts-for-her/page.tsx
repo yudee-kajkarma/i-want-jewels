@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Jewellery Gifts for Her',
   description:
     'Choose jewellery gifts for her with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and romantic gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-her',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-her',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -411,7 +417,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop stack gift', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -467,7 +473,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Another mistake is choosing a symbolic gift when she prefers classic pieces. Butterfly earrings are meaningful, but diamond studs may be safer for someone traditional.' },
       { type: 'paragraph', text: 'A fifth mistake is ignoring lifestyle. Someone who dresses casually may wear Cadenza S or Amadea more often than formal drop earrings. Someone who dresses up often may love Orsola or Concetta Long.' },
       { type: 'paragraph', text: 'Finally, do not forget repeat wear. The best jewellery gifts should still feel useful after the birthday, anniversary, date night or wedding is over.' },
-      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
     ],
   },
   {

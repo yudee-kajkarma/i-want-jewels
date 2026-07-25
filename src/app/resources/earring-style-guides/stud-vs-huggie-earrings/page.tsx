@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Stud vs Huggie Earrings: Which Is Better?',
   description:
     'Compare stud and huggie earrings for everyday wear, ear stacks, gifts, workwear and lab grown diamond styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/stud-vs-huggie-earrings',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/stud-vs-huggie-earrings',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

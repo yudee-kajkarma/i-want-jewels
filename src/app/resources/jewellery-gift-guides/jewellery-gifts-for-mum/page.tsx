@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Jewellery Gifts for Mum',
   description:
     'Choose jewellery gifts for mum with lab grown diamond earrings, studs, huggies, butterfly earrings, drops and meaningful gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-mum',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/jewellery-gifts-for-mum',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -407,7 +413,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop stack gift', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -463,7 +469,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Another mistake is choosing earrings that feel too young or too trend-led if her style is classic. In that case, Cadenza M, Cadenza S or Orsola may be safer.' },
       { type: 'paragraph', text: 'A fifth mistake is ignoring comfort. Mum gifts should be easy to wear for long periods, especially if she will use them for dinners, travel or family events.' },
       { type: 'paragraph', text: 'Finally, do not forget repeat wear. The best jewellery gift for mum should feel thoughtful and still be useful after the occasion is over.' },
-      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
     ],
   },
   {

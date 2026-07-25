@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Diamond Ear Stack Ideas',
   description:
     'Explore diamond ear stack ideas with studs, huggies, hoops, drops and lab grown diamond earrings for everyday, wedding and party looks.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/diamond-ear-stack-ideas',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/diamond-ear-stack-ideas',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

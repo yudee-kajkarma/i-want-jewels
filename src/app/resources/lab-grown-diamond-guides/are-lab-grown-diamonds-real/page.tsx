@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Are Lab Grown Diamonds Real? Simple Answer | I Want Jewels',
   description:
     'Yes, lab grown diamonds are real diamonds. Learn how they compare to natural diamonds, fake diamonds, cubic zirconia and moissanite before buying.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/are-lab-grown-diamonds-real',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/are-lab-grown-diamonds-real',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Jewellery to Wear with a Sweetheart Neckline',
   description:
     'Choose jewellery for a sweetheart neckline dress with earrings, necklaces, diamonds, gold, wedding guest looks and party styling ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -197,7 +203,7 @@ const articleContent: V2ArticleSection[] = [
           },
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
       { type: 'see-also', text: 'Wedding Guest Jewellery Guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings' },
     ],
   },

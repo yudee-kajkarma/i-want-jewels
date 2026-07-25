@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Earrings Buying Guide | I Want Jewels',
   description:
     'Learn how to choose lab grown diamond earrings, including studs, huggies, drops, metal colours, sizes, gifts and everyday styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

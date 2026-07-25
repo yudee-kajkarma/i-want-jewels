@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Gold Plated vs Solid Gold Jewellery',
   description:
     'Compare gold-plated and solid gold jewellery. Learn the difference in price, durability, care, everyday wear and gifting value.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -189,7 +195,7 @@ const articleContent: V2ArticleSection[] = [
         ],
       },
       { type: 'paragraph', text: 'For IWantJewels, Cadenza M diamond stud earrings work well as a classic gift. Farfalla butterfly earrings and Alidi Farfalla butterfly earrings are stronger for symbolic gifts. Orsola drop earrings are better for romantic or occasion-led gifts.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
   {
@@ -236,7 +242,7 @@ const articleContent: V2ArticleSection[] = [
         ],
       },
       { type: 'paragraph', text: 'A simple IWantJewels stack could include Cadenza S lab-grown diamond studs with Amadea Huggie earrings. A softer stack could add Laluce minimalist diamond earrings. For a more visible stack, Cadenza M can become the main piece.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

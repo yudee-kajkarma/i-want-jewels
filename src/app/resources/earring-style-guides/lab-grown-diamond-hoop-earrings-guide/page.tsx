@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Hoop Earrings Guide',
   description:
     'Learn how to choose lab grown diamond hoop earrings for everyday wear, parties, weddings, gifts, ear stacks and outfit styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -363,7 +369,7 @@ const articleContent: V2ArticleSection[] = [
           ['Ear stack gift', 'Hoops with small studs can work', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
 

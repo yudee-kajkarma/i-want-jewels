@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   title: 'Can You Wear Lab Grown Diamond Earrings Every Day?',
   description:
     'Learn if lab grown diamond earrings are good for everyday wear, how to choose daily earrings, and how to care for studs, huggies and drops.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day',
+  },
+  openGraph: {
+    title: 'Can You Wear Lab Grown Diamond Earrings Every Day?',
+    description:
+      'Learn if lab grown diamond earrings are good for everyday wear, how to choose daily earrings, and how to care for studs, huggies and drops.',
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Bold Statement Earrings Guide',
   description:
     'Learn how to style bold statement earrings with black dresses, party outfits, evening looks, lab grown diamonds, studs and ear stacks.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/bold-statement-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/bold-statement-earrings-guide',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -404,7 +410,7 @@ const articleContent: V2ArticleSection[] = [
           },
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

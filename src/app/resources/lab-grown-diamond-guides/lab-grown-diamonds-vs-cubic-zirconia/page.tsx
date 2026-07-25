@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamonds vs Cubic Zirconia',
   description:
     'Learn the difference between lab grown diamonds and cubic zirconia, including sparkle, durability, price, value and jewellery use.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

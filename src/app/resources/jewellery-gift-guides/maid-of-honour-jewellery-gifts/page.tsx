@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Maid of Honour Jewellery Gifts',
   description:
     'Choose maid of honour jewellery gifts with lab grown diamond earrings, studs, drops, huggies, butterfly earrings and wedding-ready gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/maid-of-honour-jewellery-gifts',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/maid-of-honour-jewellery-gifts',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -422,7 +428,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop stack', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

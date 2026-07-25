@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   title: 'New Year Jewellery Gifts for Her',
   description:
     'Choose New Year jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and party-ready gift ideas.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/occasion-jewellery-guides/new-year-jewellery-gifts',
+  },
+  openGraph: {
+    title: 'New Year Jewellery Gifts for Her',
+    description:
+      'Choose New Year jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and party-ready gift ideas.',
+    url: 'https://iwantjewels.com/resources/occasion-jewellery-guides/new-year-jewellery-gifts',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -465,7 +474,7 @@ const articleContent: V2ArticleSection[] = [
           ['Party New Year stack', 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

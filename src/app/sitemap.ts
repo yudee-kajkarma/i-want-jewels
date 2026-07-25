@@ -3,7 +3,26 @@ import { blogLinks } from "@/components/shared/blogList";
 import { resourceArticles, resourceCategories } from "@/data/resources";
 import { getAllProducts } from "@/services/productService";
 
-const BASE_URL = "https://www.iwantjewels.com";
+const BASE_URL = "https://iwantjewels.com";
+
+const CANONICAL_RESOURCE_ARTICLES = new Map<string, string>([
+    [
+        "can-you-wear-lab-grown-diamond-earrings-every-day",
+        "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day",
+    ],
+    [
+        "lab-grown-diamond-earrings-for-gifts",
+        "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts",
+    ],
+    [
+        "new-year-jewellery-gifts",
+        "/resources/occasion-jewellery-guides/new-year-jewellery-gifts",
+    ],
+    [
+        "valentines-day-jewellery-gifts",
+        "/resources/jewellery-gift-guides/valentines-day-jewellery-gifts",
+    ],
+]);
 
 // Regenerate the sitemap at most once per hour so newly added products and
 // blogs appear without a full redeploy.
@@ -22,7 +41,6 @@ const STATIC_ROUTES: Array<{
     { path: "/about", changeFrequency: "monthly", priority: 0.5 },
     { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
     { path: "/faq", changeFrequency: "monthly", priority: 0.5 },
-    { path: "/help", changeFrequency: "monthly", priority: 0.4 },
     { path: "/gift-cards", changeFrequency: "monthly", priority: 0.6 },
     { path: "/resources", changeFrequency: "weekly", priority: 0.8 },
 ];
@@ -52,32 +70,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         }));
 
-    const resourceArticleEntries: MetadataRoute.Sitemap = resourceArticles.map(
-        (article) => ({
+    const resourceArticleEntries: MetadataRoute.Sitemap = resourceArticles
+        .filter((article) => {
+            const articlePath = `/resources/${article.categorySlug}/${article.slug}`;
+            const canonicalPath = CANONICAL_RESOURCE_ARTICLES.get(article.slug);
+            return !canonicalPath || canonicalPath === articlePath;
+        })
+        .map((article) => ({
             url: `${BASE_URL}/resources/${article.categorySlug}/${article.slug}`,
             lastModified,
             changeFrequency: "monthly",
             priority: 0.7,
-        })
-    );
+        }));
 
     let productEntries: MetadataRoute.Sitemap = [];
 
-    try {
-        const products = await getAllProducts();
+    if (process.env.NEXT_PUBLIC_API_BASE_URL?.trim()) {
+        try {
+            const products = await getAllProducts();
 
-        productEntries = products
-            .filter((product) => Boolean(product.slug))
-            .map((product) => ({
-                url: `${BASE_URL}/products/${product.slug}`,
-                lastModified,
-                changeFrequency: "weekly",
-                priority: 0.8,
-            }));
-    } catch (error) {
-        // If the API is unreachable at build/request time, still emit a valid
-        // sitemap with the static and blog routes rather than failing.
-        console.error("sitemap: failed to load products", error);
+            productEntries = products
+                .filter((product) => Boolean(product.slug))
+                .map((product) => ({
+                    url: `${BASE_URL}/products/${product.slug}`,
+                    lastModified,
+                    changeFrequency: "weekly",
+                    priority: 0.8,
+                }));
+        } catch (error) {
+            // If the API is unreachable at build/request time, still emit a valid
+            // sitemap with the static and blog routes rather than failing.
+            console.error("sitemap: failed to load products", error);
+        }
     }
 
     return [

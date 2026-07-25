@@ -9,14 +9,18 @@ export const dynamic = 'force-dynamic'
 const productsPerPage = 9
 
 export const metadata: Metadata = {
-  title: 'Shop Jewellery | I Want Jewels',
+  title: 'Shop Lab-Grown Diamond Jewellery | I Want Jewels',
   description:
-    'Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO.',
+    'Browse handcrafted lab-grown diamond jewellery including earrings, rings, necklaces, and bracelets at I Want Jewels.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/products',
+  },
   openGraph: {
-    title: 'Shop Jewellery | I Want Jewels',
+    title: 'Shop Lab-Grown Diamond Jewellery | I Want Jewels',
     description:
-      'Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO.',
+      'Browse handcrafted lab-grown diamond jewellery including earrings, rings, necklaces, and bracelets at I Want Jewels.',
     type: 'website',
+    url: 'https://iwantjewels.com/products',
   },
 }
 

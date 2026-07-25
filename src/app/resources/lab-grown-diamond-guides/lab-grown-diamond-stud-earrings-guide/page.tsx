@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamond Stud Earrings Guide | I Want Jewels',
   description:
     'Learn how to choose lab grown diamond stud earrings for everyday wear, gifts, ear stacks, metal colour, size and styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {

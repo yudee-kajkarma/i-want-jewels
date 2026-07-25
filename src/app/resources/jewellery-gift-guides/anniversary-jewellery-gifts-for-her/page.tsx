@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Anniversary Jewellery Gifts for Her',
   description:
     'Choose anniversary jewellery gifts with lab grown diamond earrings, butterfly earrings, studs, drops, hoops and romantic gift ideas for her.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -364,7 +370,7 @@ const articleContent: V2ArticleSection[] = [
           ['Hoop anniversary stack', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

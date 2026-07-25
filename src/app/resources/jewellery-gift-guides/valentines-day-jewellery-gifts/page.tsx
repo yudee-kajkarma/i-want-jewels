@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: "Valentine's Day Jewellery Gifts for Her",
   description:
     "Choose Valentine's Day jewellery gifts with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and romantic gift ideas.",
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/jewellery-gift-guides/valentines-day-jewellery-gifts',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/jewellery-gift-guides/valentines-day-jewellery-gifts',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -438,7 +444,7 @@ const articleContent: V2ArticleSection[] = [
           ["Party Valentine's stack", 'Bold earring', 'Small stud', 'Lusso + Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -551,10 +557,10 @@ const cta: V2CTABlock = {
 }
 
 export default function Page() {
-  const category = getCategoryBySlug('jewellery-care-guides')
-  const article = getArticleBySlug('jewellery-care-guides', 'valentines-day-jewellery-gifts')
+  const category = getCategoryBySlug('jewellery-gift-guides')
+  const article = getArticleBySlug('jewellery-gift-guides', 'valentines-day-jewellery-gifts')
   if (!category || !article) notFound()
-  const relatedArticles = getRelatedArticles('jewellery-care-guides', 'valentines-day-jewellery-gifts', 3)
+  const relatedArticles = getRelatedArticles('jewellery-gift-guides', 'valentines-day-jewellery-gifts', 3)
   return (
     <ResourceArticleV2Page
       category={category}

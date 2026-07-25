@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'What Are Lab Grown Diamonds? Simple Guide | I Want Jewels',
   description:
     'Learn what lab grown diamonds are, if they are real, how they compare to natural diamonds, and how to choose lab grown diamond jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

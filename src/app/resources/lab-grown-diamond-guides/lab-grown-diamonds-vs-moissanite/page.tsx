@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Lab Grown Diamonds vs Moissanite',
   description:
     'Compare lab grown diamonds and moissanite in simple language. Learn the difference in sparkle, durability, price, value and jewellery use.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

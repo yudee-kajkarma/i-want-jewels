@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: '925 Sterling Silver Jewellery Guide',
   description:
     'Learn what 925 sterling silver means, why it is used in demi fine jewellery, and how to care for sterling silver earrings and gold-plated jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/925-sterling-silver-jewellery-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/925-sterling-silver-jewellery-guide',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

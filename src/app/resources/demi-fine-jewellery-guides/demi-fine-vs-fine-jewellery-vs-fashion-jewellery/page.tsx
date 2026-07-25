@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Demi Fine vs Fine Jewellery vs Fashion Jewellery',
   description:
     'Compare demi fine, fine and fashion jewellery. Learn the difference in materials, price, quality, wearability and gifting value.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -181,7 +187,7 @@ const articleContent: V2ArticleSection[] = [
         ],
       },
       { type: 'paragraph', text: 'For IWantJewels, Cadenza M diamond stud earrings work well as a safe classic gift. Farfalla butterfly earrings and Alidi Farfalla butterfly earrings are stronger when the gift needs meaning. Orsola drop earrings are better for romantic or occasion-led gifts. Amadea Huggie earrings are ideal for someone who likes modern jewellery.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
   {
@@ -229,7 +235,7 @@ const articleContent: V2ArticleSection[] = [
         ],
       },
       { type: 'paragraph', text: 'For IWantJewels, a simple ear stack could include Cadenza S lab-grown diamond studs with Amadea Huggie earrings. A softer stack could add Laluce minimalist diamond earrings. A more visible stack could use Cadenza M as the main stud.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

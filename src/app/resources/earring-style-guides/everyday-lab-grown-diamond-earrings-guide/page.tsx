@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Everyday Lab Grown Diamond Earrings Guide',
   description:
     'Choose everyday lab grown diamond earrings for work, casual outfits, ear stacks, gifts, travel and daily jewellery styling.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide',
+  },
 }
 
 const heroIntro: V2HeroIntro = {
@@ -225,7 +231,7 @@ const articleContent: V2ArticleSection[] = [
           ['If hoops feel too visible', 'Huggies or studs', 'Amadea, Cadenza S'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Hoop Earrings Guide', href: '/resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Hoop Earrings Guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide' },
     ],
   },
 
@@ -437,7 +443,7 @@ const articleContent: V2ArticleSection[] = [
           ['Daily-to-dinner gift', 'Medium studs or soft drops', 'Cadenza M, Orsola'],
         ],
       },
-      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-Grown Diamond Earrings for Gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
 
@@ -551,7 +557,7 @@ const cta: V2CTABlock = {
   secondaryLabel: 'Explore Diamond Stud Earrings',
   secondaryHref: '/products?category=Earring',
   tertiaryLabel: 'Read the Lab-Grown Diamond Earrings for Ear Stacks Guide',
-  tertiaryHref: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks',
+  tertiaryHref: '/resources/earring-style-guides/diamond-ear-stack-ideas',
 }
 
 export default function Page() {

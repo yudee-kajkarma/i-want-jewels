@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'How to Care for Gold Plated Jewellery',
   description:
     'Learn how to care for gold-plated jewellery, protect 14kt gold plating, avoid tarnish, clean earrings safely and store demi-fine jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -229,7 +235,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'Huggies and hoops need care around the hinge, curve and closure.' },
       { type: 'paragraph', text: 'Use a soft cloth to wipe both the outside and inside of the earring. If the huggie has a hinge, make sure the area is dry before storing. Avoid forcing the closure or cleaning roughly around moving parts.' },
       { type: 'paragraph', text: 'Amadea Huggie earrings are ideal for everyday styling and ear stacks, so they should be wiped regularly if worn often. Pave Hoops should be stored separately to avoid friction and protect the diamond details and gold finish.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {

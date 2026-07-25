@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   title: 'Is Demi Fine Jewellery Good for Everyday Wear?',
   description:
     'Learn whether demi fine jewellery is good for everyday wear, how to choose daily pieces, and how to care for gold-plated and sterling silver jewellery.',
+  alternates: {
+    canonical: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear',
+  },
+  openGraph: {
+    url: 'https://iwantjewels.com/resources/demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear',
+  },
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────
@@ -135,7 +141,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'A huggie sits close to the ear, making it practical for daily outfits and ear stacks. A small hoop creates more shape than a stud but still feels easy to wear. Both are useful when the wearer wants jewellery that feels slightly more styled than classic studs.' },
       { type: 'paragraph', text: 'Amadea Huggie earrings are a strong everyday option because they work alone or with studs. Pave Hoops are better when the wearer wants a classic hoop shape with more visible sparkle.' },
       { type: 'paragraph', text: 'For a simple daily ear stack, pair Cadenza S lab-grown diamond studs with Amadea Huggie earrings. This creates one sparkle point and one shaped earring without making the ear look crowded.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/earring-style-guides/diamond-ear-stack-ideas' },
     ],
   },
   {
@@ -172,7 +178,7 @@ const articleContent: V2ArticleSection[] = [
       { type: 'paragraph', text: 'They are especially useful for shoppers who want daily jewellery with meaning. Butterfly earrings can symbolise growth, transformation, beauty and new beginnings, which makes them feel more personal than a basic stud.' },
       { type: 'paragraph', text: 'Farfalla butterfly earrings and Alidi Farfalla butterfly earrings are strong options for soft feminine styling, birthday gifts, romantic gifts and personal milestone jewellery. For everyday use, they work best with simple outfits, soft colours and minimal supporting jewellery.' },
       { type: 'paragraph', text: 'For a more subtle daily look, pair butterfly earrings with simple studs or minimalist jewellery. For gifts, butterfly earrings can feel more thoughtful than a plain everyday earring.' },
-      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
     ],
   },
   {
