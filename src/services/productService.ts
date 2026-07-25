@@ -16,6 +16,7 @@ import type {
   ReviewPayload,
   SeoExtendedSection,
 } from '../types/product'
+import axios from 'axios'
 import { minPriceOf, toPrice, type Price } from '../utils/price'
 import apiClient, { authApiClient, adminApiClient } from './apiClient'
 
@@ -650,16 +651,14 @@ export async function getProductById(productId: string): Promise<ProductDetail> 
   return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
 }
 
+export function isProductNotFoundError(error: unknown): boolean {
+  return axios.isAxiosError(error) && error.response?.status === 404
+}
+
 export async function getProductBySlug(slug: string): Promise<ProductDetail> {
-  try {
-    const response = await apiClient.get<ProductDetailResponse>(`/products/slug/${slug}`)
+  const response = await apiClient.get<ProductDetailResponse>(`/products/slug/${slug}`)
 
-    return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
-  } catch {
-    const fallbackResponse = await apiClient.get<ProductDetailResponse>(`/products/${slug}`)
-
-    return normalizeProductDetail(fallbackResponse.data.data, fallbackResponse.data.recommendedProducts)
-  }
+  return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
 }
 
 export async function getProductReviews(productId: string): Promise<ProductReviewsResult> {

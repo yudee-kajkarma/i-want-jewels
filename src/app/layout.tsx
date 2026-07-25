@@ -25,8 +25,12 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.iwantjewels.com"),
-    title: "I Want Jewels",
-    description: "Jewellery storefront migrated to Next.js",
+    title: {
+        default: "I Want Jewels | Lab Grown Diamond Jewellery",
+        template: "%s | I Want Jewels",
+    },
+    description:
+        "Shop lab grown diamond earrings, tennis bracelets and demi-fine jewellery. I Want Jewels is a sustainable jewellery brand that creates beautiful pieces for everyday wear.",
 };
 
 export default function RootLayout({
