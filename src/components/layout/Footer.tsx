@@ -9,10 +9,10 @@ const informationLinks = [
 ];
 
 const quickShopLinks = [
-    { label: "Necklace", to: "/products?category=Necklace" },
-    { label: "Rings", to: "/products?category=Ring" },
-    { label: "Earrings", to: "/products?category=Earring" },
-    { label: "Bracelet", to: "/products?category=Bracelet" },
+    { label: "Necklaces", to: "/category/necklaces" },
+    { label: "Rings", to: "/category/rings" },
+    { label: "Earrings", to: "/category/earrings" },
+    { label: "Bracelets", to: "/category/bracelets" },
 ];
 
 const questionLinks = [

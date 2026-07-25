@@ -634,6 +634,12 @@ export async function getProducts(params: GetProductsParams = {}): Promise<Produ
   }
 }
 
+export async function getProductCategories(): Promise<string[]> {
+  const response = await apiClient.get<{ data: string[] }>('/products/categories')
+
+  return (response.data.data ?? []).filter(Boolean)
+}
+
 export async function getRandomProducts(count = 4): Promise<Product[]> {
   try {
     const response = await apiClient.get<{ data: ProductApiResponse[] }>('/products/random', {

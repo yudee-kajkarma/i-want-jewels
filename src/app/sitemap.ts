@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { blogLinks } from "@/components/shared/blogList";
 import { resourceArticles, resourceCategories } from "@/data/resources";
-import { getAllProducts } from "@/services/productService";
+import { getAllProducts, getProductCategories } from "@/services/productService";
+import { categorySlug } from "@/utils/categorySlug";
 
 const BASE_URL = "https://www.iwantjewels.com";
 
@@ -61,6 +62,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         })
     );
 
+    let categoryEntries: MetadataRoute.Sitemap = [];
+
+    try {
+        const categories = await getProductCategories();
+
+        categoryEntries = categories.map((category) => ({
+            url: `${BASE_URL}/category/${categorySlug(category)}`,
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.9,
+        }));
+    } catch (error) {
+        console.error("sitemap: failed to load categories", error);
+    }
+
     let productEntries: MetadataRoute.Sitemap = [];
 
     try {
@@ -82,6 +98,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [
         ...staticEntries,
+        ...categoryEntries,
         ...blogEntries,
         ...resourceCategoryEntries,
         ...resourceArticleEntries,
