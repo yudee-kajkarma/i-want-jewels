@@ -28,7 +28,7 @@ import {
 } from '../services/orderService'
 import { useCurrency } from '../context/CurrencyContext'
 import type { AdminShippingQuote, AdminShippingRateOption, FedExPickupAvailability, Order, OrdersPagination, Pickup, PickupDetail, ShippingCarrier } from '../types/order'
-import { formatPrice } from '../utils/price'
+import { formatPrice, isoToCurrencyCode } from '../utils/price'
 import { getCountryOptions, getStateOptions } from '../utils/location'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'cancelShipment' | 'reorder'
@@ -1162,7 +1162,10 @@ export default function AdminOrdersPage() {
 
           {viewTab === 'orders' && !isLoading && orders.length > 0 && viewMode === 'grid' ? (
             <div className="mt-6 space-y-4">
-              {orders.map((order) => (
+              {orders.map((order) => {
+                const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
+
+                return (
                 <article key={order.id} className="border border-[#f0d7e7] bg-white p-5 shadow-[0_6px_18px_rgba(191,82,136,0.08)]">
                   <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div>
@@ -1170,7 +1173,7 @@ export default function AdminOrdersPage() {
                         {order.orderNumber}
                       </Link>
                       <h2 className="mt-2 text-xl font-bold text-[#361128]">
-                        {order.totalItems} item{order.totalItems === 1 ? '' : 's'} · {formatPrice(order.totalAmount, currency)}
+                        {order.totalItems} item{order.totalItems === 1 ? '' : 's'} · {formatPrice(order.totalAmount, orderCurrency)}
                       </h2>
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
@@ -1224,11 +1227,12 @@ export default function AdminOrdersPage() {
                   </div>
 
                   <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#f0dbe8] pt-4">
-                    <div className="text-sm text-zinc-500">Customer total: {formatPrice(order.totalAmount, currency)}</div>
+                    <div className="text-sm text-zinc-500">Customer total: {formatPrice(order.totalAmount, orderCurrency)}</div>
                     {renderOrderActions(order)}
                   </div>
                 </article>
-              ))}
+                )
+              })}
             </div>
           ) : null}
 
@@ -1248,7 +1252,10 @@ export default function AdminOrdersPage() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#f3e3ed]">
-                    {orders.map((order) => (
+                    {orders.map((order) => {
+                      const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
+
+                      return (
                       <tr key={`table-${order.id}`} className="hover:bg-[#fff9fd]">
                         <td className="px-4 py-4">
                           <Link to={`/admin/orders/${order.id}`} className="font-semibold text-[#351626] transition hover:text-[#8f2a60]">
@@ -1258,7 +1265,7 @@ export default function AdminOrdersPage() {
                         </td>
                         <td className="px-4 py-4 text-zinc-600">{formatOrderDate(order.createdAt)}</td>
                         <td className="px-4 py-4 text-zinc-600">{order.totalItems}</td>
-                        <td className="px-4 py-4 font-semibold text-[#5c1f45]">{formatPrice(order.totalAmount, currency)}</td>
+                        <td className="px-4 py-4 font-semibold text-[#5c1f45]">{formatPrice(order.totalAmount, orderCurrency)}</td>
                         <td className="px-4 py-4">
                           <span
                             className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getOrderStatusClass(order.orderStatus)}`}
@@ -1277,7 +1284,8 @@ export default function AdminOrdersPage() {
                           <div className="flex justify-end">{renderOrderActions(order)}</div>
                         </td>
                       </tr>
-                    ))}
+                      )
+                    })}
                   </tbody>
                 </table>
               </div>
@@ -1419,6 +1427,7 @@ export default function AdminOrdersPage() {
                         {shippedOrdersForPickup.map(order => {
                           const isExpanded = expandedPickupOrderId === order.id
                           const isChecked = selectedPickupOrderIds.includes(order.id)
+                          const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
                           return (
                             <div key={order.id}>
                               <div className="flex items-center gap-3 px-4 py-3">
@@ -1466,7 +1475,7 @@ export default function AdminOrdersPage() {
                                           )}
                                           <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-black/75 px-2 text-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                                             <p className="line-clamp-3 text-[11px] font-semibold text-white">{title}</p>
-                                            <p className="text-[11px] font-bold text-[#ffb3da]">{formatPrice(item.price, currency)}</p>
+                                            <p className="text-[11px] font-bold text-[#ffb3da]">{formatPrice(item.price, orderCurrency)}</p>
                                             <p className="text-[10px] text-zinc-300">Qty {item?.quantity ?? 1}</p>
                                           </div>
                                         </div>

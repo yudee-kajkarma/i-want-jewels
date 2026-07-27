@@ -7,11 +7,10 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import RecipientEmailPicker from '../components/giftcard/RecipientEmailPicker'
 import { useAuth } from '../context/AuthContext'
-import { useCurrency } from '../context/CurrencyContext'
 import { transferGiftCard } from '../services/giftCardService'
 import { cancelOrder, cancelOrderReturnRequest, getOrderById, regenerateOrderPayment, requestOrderReturn } from '../services/orderService'
 import type { Order } from '../types/order'
-import { formatPrice, getPriceAmount } from '../utils/price'
+import { formatPrice, getPriceAmount, isoToCurrencyCode } from '../utils/price'
 
 function formatOrderDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -90,7 +89,6 @@ function getReturnStatusClass(status: string): string {
 
 export default function OrderDetailPage() {
   const params = useParams<{ orderId?: string | string[] }>()
-  const { currency } = useCurrency()
   const { session } = useAuth()
   const orderId = typeof params.orderId === 'string' ? params.orderId : ''
   const [order, setOrder] = useState<Order | null>(null)
@@ -298,7 +296,10 @@ export default function OrderDetailPage() {
         {isLoading ? <p className="text-sm text-zinc-500">Loading order...</p> : null}
         {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div> : null}
 
-        {!isLoading && order ? (
+        {!isLoading && order ? (() => {
+          const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
+
+          return (
           <div className="grid gap-8 xl:grid-cols-[1fr_380px]">
             <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
               <div className="flex flex-col gap-4 border-b border-[#efe1d5] pb-6 sm:flex-row sm:items-start sm:justify-between">
@@ -339,7 +340,7 @@ export default function OrderDetailPage() {
                         </p>
                       ) : null}
                     </div>
-                    <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
+                    <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, orderCurrency) * item.quantity, orderCurrency)}</p>
                   </article>
                 ))}
               </div>
@@ -371,7 +372,7 @@ export default function OrderDetailPage() {
                           ) : null}
                         </div>
                         <div className="mt-3 space-y-1 text-zinc-600">
-                          <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, currency)}</span></p>
+                          <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, orderCurrency)}</span></p>
                           <p>Owner: <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
                           {card.recipientName ? <p>Recipient: <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
                           {card.recipientEmail ? <p>Email: <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
@@ -441,12 +442,12 @@ export default function OrderDetailPage() {
                   <div className="mt-4 space-y-2 text-sm text-zinc-600">
                     <p>Method: <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span></p>
                     <p>Status: <span className="font-semibold text-[#17110d]">{order.paymentStatus}</span></p>
-                    <p>Total: <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, currency)}</span></p>
+                    <p>Total: <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span></p>
                     {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
                       <>
-                        <p>Gift card: <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.giftCardDiscount, currency)}</span></p>
+                        <p>Gift card: <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.giftCardDiscount, orderCurrency)}</span></p>
                         {order.appliedGiftCardCode ? <p>Code: <span className="font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span></p> : null}
-                        <p>Paid: <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, currency)}</span></p>
+                        <p>Paid: <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span></p>
                       </>
                     ) : null}
                   </div>
@@ -593,7 +594,8 @@ export default function OrderDetailPage() {
               </div>
             </aside>
           </div>
-        ) : null}
+          )
+        })() : null}
       </main>
       <Footer />
     </div>

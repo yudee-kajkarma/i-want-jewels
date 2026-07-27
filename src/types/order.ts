@@ -63,6 +63,7 @@ export type Order = {
   orderStatus: OrderStatus
   totalAmount: Price
   payableAmount?: Price
+  currency?: 'EUR' | 'USD' | 'GBP'
   giftCardDiscount?: number
   appliedGiftCardCode?: string
   totalItems: number

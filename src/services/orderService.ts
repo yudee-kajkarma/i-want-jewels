@@ -40,6 +40,7 @@ type OrderApiResponse = {
   orderStatus: string;
   totalAmount: number | Price;
   payableAmount?: number | Price;
+  currency?: string;
   giftCardDiscount?: number;
   appliedGiftCardCode?: string;
   totalItems: number;
@@ -375,6 +376,12 @@ function normalizeOrderStatus(status: string): OrderStatus {
   }
 }
 
+function normalizeOrderCurrency(
+  value: string | undefined,
+): 'EUR' | 'USD' | 'GBP' | undefined {
+  return value === 'EUR' || value === 'USD' || value === 'GBP' ? value : undefined;
+}
+
 function normalizeOrder(order: OrderApiResponse): Order {
   return {
     id: order.id,
@@ -389,6 +396,7 @@ function normalizeOrder(order: OrderApiResponse): Order {
     totalAmount: toPrice(order.totalAmount),
     payableAmount:
       order.payableAmount === undefined ? undefined : toPrice(order.payableAmount),
+    currency: normalizeOrderCurrency(order.currency),
     giftCardDiscount:
       typeof order.giftCardDiscount === "number" ? order.giftCardDiscount : undefined,
     appliedGiftCardCode:

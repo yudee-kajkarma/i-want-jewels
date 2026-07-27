@@ -10,7 +10,7 @@ import { useCurrency } from '../context/CurrencyContext'
 import { approveOrderReturn, getAdminOrderById, rejectOrderReturn, updateOrderShippingAddressForAdmin, updateOrderStatusForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
 import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
-import { formatPrice } from '../utils/price'
+import { formatPrice, isoToCurrencyCode } from '../utils/price'
 
 type AdminShippingAddressForm = {
     street: string
@@ -332,7 +332,10 @@ export default function AdminOrderDetailPage() {
                     <div className="border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div>
                 ) : null}
 
-                {!isLoading && order ? (
+                {!isLoading && order ? (() => {
+                    const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
+
+                    return (
                     <div className="grid gap-6 xl:grid-cols-[1fr_380px]">
                         <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
                             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -490,7 +493,7 @@ export default function AdminOrderDetailPage() {
                                                     </p>
                                                 ) : null}
                                             </div>
-                                            <p className="font-semibold text-[#17110d]">{formatPrice(item.price, currency)}</p>
+                                            <p className="font-semibold text-[#17110d]">{formatPrice(item.price, orderCurrency)}</p>
                                         </article>
                                     ))}
                                 </div>
@@ -504,7 +507,7 @@ export default function AdminOrderDetailPage() {
                                             <article key={card.id || card.code} className="border border-[#efe1d5] bg-white p-3 text-sm">
                                                 <p className="font-mono font-bold text-[#17110d]">{card.code}</p>
                                                 <div className="mt-2 space-y-1 text-xs text-zinc-600">
-                                                    <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, currency)}</span></p>
+                                                    <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, orderCurrency)}</span></p>
                                                     <p>Owner: <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
                                                     {card.recipientEmail ? <p>Recipient email: <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
                                                     {card.recipientName ? <p>Recipient: <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
@@ -527,17 +530,17 @@ export default function AdminOrderDetailPage() {
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <span>Order Total</span>
-                                    <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, currency)}</span>
+                                    <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span>
                                 </div>
                                 {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
                                     <>
                                         <div className="flex items-center justify-between text-[#1f7a4d]">
                                             <span>Gift Card</span>
-                                            <span className="font-semibold">-{formatPrice(order.giftCardDiscount, currency)}</span>
+                                            <span className="font-semibold">-{formatPrice(order.giftCardDiscount, orderCurrency)}</span>
                                         </div>
                                         <div className="flex items-center justify-between">
                                             <span>Payable</span>
-                                            <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, currency)}</span>
+                                            <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span>
                                         </div>
                                         {order.appliedGiftCardCode ? (
                                             <div className="flex items-center justify-between gap-3">
@@ -576,7 +579,8 @@ export default function AdminOrderDetailPage() {
                             ) : null}
                         </aside>
                     </div>
-                ) : null}
+                    )
+                })() : null}
             </main>
             <Footer />
         </div>

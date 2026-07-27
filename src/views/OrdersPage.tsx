@@ -5,10 +5,9 @@ import { Clock3, Package, ReceiptText } from 'lucide-react'
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
-import { useCurrency } from '../context/CurrencyContext'
 import { getOrders } from '../services/orderService'
 import type { Order, OrdersPagination } from '../types/order'
-import { formatPrice } from '../utils/price'
+import { formatPrice, isoToCurrencyCode } from '../utils/price'
 
 function formatOrderDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -44,7 +43,6 @@ function getPaymentStatusClass(status: string) {
 }
 
 export default function OrdersPage() {
-  const { currency } = useCurrency()
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -106,7 +104,10 @@ export default function OrdersPage() {
 
           {!isLoading && orders.length > 0 ? (
             <div className="space-y-5">
-              {orders.map((order) => (
+              {orders.map((order) => {
+                const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
+
+                return (
                 <article key={order.id} className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -149,13 +150,14 @@ export default function OrdersPage() {
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Total {formatPrice(order.totalAmount, currency)}</span>
+                    <span>Total {formatPrice(order.totalAmount, orderCurrency)}</span>
                     <Link to={`/orders/${order.id}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
                       VIEW DETAILS
                     </Link>
                   </div>
                 </article>
-              ))}
+                )
+              })}
             </div>
           ) : null}
 
