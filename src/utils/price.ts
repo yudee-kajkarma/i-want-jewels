@@ -1,7 +1,7 @@
-export type CurrencyCode = 'eur' | 'pou'
+export type CurrencyCode = 'dol' | 'eur' | 'pou'
 
 export type Price = {
-  // dol: number
+  dol: number
   eur: number
   pou: number
 }
@@ -13,13 +13,13 @@ export const CURRENCY_MANUAL_KEY = 'iwj_currency_manual'
 export const DEFAULT_CURRENCY: CurrencyCode = 'eur'
 
 export const CURRENCY_OPTIONS: Array<{ code: CurrencyCode; label: string; symbol: string }> = [
-  // { code: 'dol', label: 'USD', symbol: '$' },
   { code: 'eur', label: 'EUR', symbol: '€' },
   { code: 'pou', label: 'GBP', symbol: '£' },
+  { code: 'dol', label: 'USD', symbol: '$' },
 ]
 
 const CURRENCY_ISO: Record<CurrencyCode, string> = {
-  // dol: 'USD',
+  dol: 'USD',
   eur: 'EUR',
   pou: 'GBP',
 }
@@ -43,6 +43,10 @@ export function isoToCurrencyCode(iso: string | null | undefined): CurrencyCode 
 
   if (normalized === 'EUR') {
     return 'eur'
+  }
+
+  if (normalized === 'USD') {
+    return 'dol'
   }
 
   return null
@@ -70,6 +74,19 @@ export function detectLocaleCurrency(): CurrencyCode {
     if (timeZone === 'Europe/London') {
       return 'pou'
     }
+
+    const US_TIMEZONES = new Set([
+      'America/New_York', 'America/Chicago', 'America/Denver',
+      'America/Los_Angeles', 'America/Phoenix', 'America/Anchorage',
+      'Pacific/Honolulu', 'America/Detroit', 'America/Indiana/Indianapolis',
+    ])
+
+    if (languages.some((lang) => lang.toLowerCase() === 'en-us')) {
+      return 'dol'
+    }
+    if (US_TIMEZONES.has(timeZone)) {
+      return 'dol'
+    }
   } catch {
     // Intl/navigator unavailable — fall through to the default.
   }
@@ -78,7 +95,7 @@ export function detectLocaleCurrency(): CurrencyCode {
 }
 
 const CURRENCY_LOCALE: Record<CurrencyCode, string> = {
-  // dol: 'en-US',
+  dol: 'en-US',
   eur: 'en-IE',
   pou: 'en-GB',
 }
@@ -104,22 +121,23 @@ export type PriceInput = Price | number | null | undefined
 
 export function toPrice(value: PriceInput): Price {
   if (value == null) {
-    return { eur: 0, pou: 0 }
+    return { dol: 0, eur: 0, pou: 0 }
   }
 
   if (typeof value === 'number') {
-    return { eur: value, pou: value }
+    return { dol: value, eur: value, pou: value }
   }
 
   if (typeof value === 'object') {
+    const eur = Number((value as Price).eur) || 0
     return {
-      // dol: Number((value as Price).dol) || 0,
-      eur: Number((value as Price).eur) || 0,
+      dol: Number((value as Price).dol) || eur,
+      eur,
       pou: Number((value as Price).pou) || 0,
     }
   }
 
-  return {  eur: 0, pou: 0 }
+  return { dol: 0, eur: 0, pou: 0 }
 }
 
 export function getPriceAmount(price: PriceInput, currency: CurrencyCode): number {
@@ -136,12 +154,13 @@ export function getCurrencySymbol(currency: CurrencyCode): string {
 
 export function minPriceOf(prices: PriceInput[]): Price {
   if (prices.length === 0) {
-    return { eur: 0, pou: 0 }
+    return { dol: 0, eur: 0, pou: 0 }
   }
 
   const normalized = prices.map(toPrice)
 
   return {
+    dol: Math.min(...normalized.map((price) => price.dol)),
     eur: Math.min(...normalized.map((price) => price.eur)),
     pou: Math.min(...normalized.map((price) => price.pou)),
   }

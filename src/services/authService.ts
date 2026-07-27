@@ -74,7 +74,9 @@ function normalizeAuthSession(
     const role = getUserRole(userRecord.role);
     const preferredCurrencyValue = userRecord.preferredCurrency;
     const preferredCurrency =
-        preferredCurrencyValue === "GBP" || preferredCurrencyValue === "EUR"
+        preferredCurrencyValue === "GBP" ||
+        preferredCurrencyValue === "EUR" ||
+        preferredCurrencyValue === "USD"
             ? preferredCurrencyValue
             : undefined;
     const currencyManuallySet =
@@ -236,7 +238,7 @@ export async function logoutUser(): Promise<void> {
 // Persist a manually chosen currency to the logged-in user's account so it
 // follows them across devices. Marks the choice as manual on the backend.
 export async function updateCurrencyPreference(
-    currency: "EUR" | "GBP",
+    currency: "EUR" | "GBP" | "USD",
 ): Promise<void> {
     await authApiClient.patch("/users/preference/currency", { currency });
 }

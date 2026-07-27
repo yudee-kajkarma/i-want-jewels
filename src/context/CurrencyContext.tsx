@@ -34,8 +34,9 @@ type SetCurrencyOptions = {
 type CurrencyContextValue = {
   currency: CurrencyCode
   setCurrency: (currency: CurrencyCode, options?: SetCurrencyOptions) => void
-  // Auto-switch to GBP when a UK ('GB') address is entered/selected, unless the
-  // user has already made an explicit manual choice. No-op for other countries.
+  // Auto-switch to GBP when a UK ('GB') address is entered/selected, or to USD
+  // when a US ('US') address is entered/selected, unless the user has already
+  // made an explicit manual choice. No-op for other countries.
   applyAddressCountry: (country: string | null | undefined) => void
   format: (price: PriceInput) => string
   amount: (price: PriceInput) => number
@@ -116,7 +117,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
       // other devices. Local state stays correct even if this request fails.
       if (options?.manual && session?.token) {
         const iso = getCurrencyIsoCode(next)
-        if (iso === 'EUR' || iso === 'GBP') {
+        if (iso === 'EUR' || iso === 'GBP' || iso === 'USD') {
           void updateCurrencyPreference(iso).catch(() => {})
         }
       }
@@ -130,7 +131,10 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         return
       }
 
-      if ((country ?? '').trim().toUpperCase() !== 'GB') {
+      const target = ((country ?? '').trim().toUpperCase() === 'GB') ? 'pou'
+        : ((country ?? '').trim().toUpperCase() === 'US') ? 'dol'
+        : null
+      if (!target) {
         return
       }
 
@@ -141,7 +145,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         return
       }
 
-      setCurrencyState('pou')
+      setCurrencyState(target)
     },
     [currencyManuallySet],
   )
