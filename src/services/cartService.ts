@@ -114,6 +114,16 @@ function getObjectValue(record: Record<string, unknown>, key: string): Record<st
   return null
 }
 
+function dividePrice(price: Price, quantity: number): Price {
+  const divisor = quantity > 0 ? quantity : 1
+
+  return {
+    dol: price.dol / divisor,
+    eur: price.eur / divisor,
+    pou: price.pou / divisor,
+  }
+}
+
 const fallbackCartThumbnail =
   'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22320%22 height=%22320%22 viewBox=%220 0 320 320%22%3E%3Crect width=%22320%22 height=%22320%22 fill=%22%23f7efe7%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%238b5f43%22 font-family=%22Arial%22 font-size=%2220%22%3ENo Image%3C/text%3E%3C/svg%3E'
 
@@ -144,12 +154,17 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
     getStringValue(product ?? {}, 'thumbnail') ||
     getStringValue(product ?? {}, 'primaryImage') ||
     fallbackCartThumbnail
+  const quantity = getNumberValue(item, 'quantity') || 1
+  // The API sends `unitPrice` (per unit) and `price` (line total = unit × qty).
+  // CartItem.price must always be per-unit — divide the line total by quantity
+  // only as a fallback for responses that don't include unitPrice.
+  const rawLinePrice = getPriceValue(item, 'price')
   const price =
-    getPriceValue(item, 'price') ??
+    getPriceValue(item, 'unitPrice') ??
+    (rawLinePrice ? dividePrice(rawLinePrice, quantity) : null) ??
     getPriceValue(variant ?? {}, 'price') ??
     getPriceValue(product ?? {}, 'minPrice') ??
     toPrice(0)
-  const quantity = getNumberValue(item, 'quantity') || 1
   const isGiftCard = item.isGiftCard === true
   const giftCardRaw = getObjectValue(item, 'giftCard')
 

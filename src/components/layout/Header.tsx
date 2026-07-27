@@ -62,6 +62,12 @@ const CURRENCY_OPTIONS: Array<{
         label: "United Kingdom (GBP £)",
         short: "GBP £",
     },
+    {
+        code: "dol",
+        flag: "https://flagcdn.com/w40/us.png",
+        label: "United States (USD $)",
+        short: "USD $",
+    },
 ];
 
 function buildProductDetailHref(product: Product): string {

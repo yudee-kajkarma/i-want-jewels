@@ -127,7 +127,7 @@ export default function CheckoutPage() {
       setGiftValidation(result)
       setGiftCheckMessage(
         result.valid
-          ? `Applied — €${(result.redeemableAmount ?? 0).toFixed(2)} available.`
+          ? `Applied — ${formatPrice(result.redeemableAmount ?? 0, currency)} available.`
           : result.reason || 'This gift card cannot be applied.',
       )
     } catch {

@@ -99,7 +99,7 @@ export default function CartPage() {
                           {' · Online payment only'}
                         </p>
                       ) : null}
-                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatPrice(item.price, currency)}</p>
+                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
                     </div>
 
                     <div className="flex flex-col items-start gap-4 sm:items-end">
