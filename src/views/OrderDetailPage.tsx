@@ -283,6 +283,8 @@ export default function OrderDetailPage() {
     }
   }
 
+  const orderCurrency = order ? (isoToCurrencyCode(order.currency) ?? 'eur') : 'eur'
+
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
       <Header />
@@ -296,10 +298,7 @@ export default function OrderDetailPage() {
         {isLoading ? <p className="text-sm text-zinc-500">Loading order...</p> : null}
         {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div> : null}
 
-        {!isLoading && order ? (() => {
-          const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
-
-          return (
+        {!isLoading && order ? (
           <div className="grid gap-8 xl:grid-cols-[1fr_380px]">
             <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
               <div className="flex flex-col gap-4 border-b border-[#efe1d5] pb-6 sm:flex-row sm:items-start sm:justify-between">
@@ -594,8 +593,7 @@ export default function OrderDetailPage() {
               </div>
             </aside>
           </div>
-          )
-        })() : null}
+        ) : null}
       </main>
       <Footer />
     </div>

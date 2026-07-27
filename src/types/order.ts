@@ -120,6 +120,7 @@ export type PickupOrderSummary = {
   trackingNumber: string | null
   trackingUrl: string | null
   totalAmount: Price
+  currency?: 'EUR' | 'USD' | 'GBP'
   totalItems: number
   shippingAddress: ShippingAddress | null
   items: PickupOrderSummaryItem[]
@@ -172,6 +173,7 @@ export type PaymentHistoryItem = {
   sessionId: string
   transactionId?: string
   amount: number
+  currency?: 'EUR' | 'USD' | 'GBP'
   paymentStatus: string
   orderStatus: string
   paymentMethod: PaymentMethod

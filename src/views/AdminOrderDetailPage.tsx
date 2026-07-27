@@ -317,6 +317,8 @@ export default function AdminOrderDetailPage() {
         )
     }
 
+    const orderCurrency = order ? (isoToCurrencyCode(order.currency) ?? 'eur') : 'eur'
+
     return (
         <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
             <Header />
@@ -332,10 +334,7 @@ export default function AdminOrderDetailPage() {
                     <div className="border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div>
                 ) : null}
 
-                {!isLoading && order ? (() => {
-                    const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
-
-                    return (
+                {!isLoading && order ? (
                     <div className="grid gap-6 xl:grid-cols-[1fr_380px]">
                         <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
                             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -579,8 +578,7 @@ export default function AdminOrderDetailPage() {
                             ) : null}
                         </aside>
                     </div>
-                    )
-                })() : null}
+                ) : null}
             </main>
             <Footer />
         </div>

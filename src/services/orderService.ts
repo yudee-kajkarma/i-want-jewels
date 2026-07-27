@@ -378,8 +378,8 @@ function normalizeOrderStatus(status: string): OrderStatus {
 
 function normalizeOrderCurrency(
   value: string | undefined,
-): 'EUR' | 'USD' | 'GBP' | undefined {
-  return value === 'EUR' || value === 'USD' || value === 'GBP' ? value : undefined;
+): "EUR" | "USD" | "GBP" | undefined {
+  return value === "EUR" || value === "USD" || value === "GBP" ? value : undefined;
 }
 
 function normalizeOrder(order: OrderApiResponse): Order {
@@ -485,6 +485,7 @@ function normalizePaymentHistoryItem(
     sessionId: getStringValue(item, "sessionId"),
     transactionId: getStringValue(item, "transactionId") || undefined,
     amount: getNumberValue(item, "amount"),
+    currency: normalizeOrderCurrency(getStringValue(item, "currency")),
     paymentStatus: getStringValue(item, "paymentStatus"),
     orderStatus: getStringValue(item, "orderStatus"),
     paymentMethod: (getStringValue(item, "paymentMethod") || "ONLINE") as
@@ -1145,6 +1146,7 @@ function normalizePickupOrderSummary(
       typeof raw.trackingNumber === "string" ? raw.trackingNumber : null,
     trackingUrl: typeof raw.trackingUrl === "string" ? raw.trackingUrl : null,
     totalAmount: getPriceValue(raw, "totalAmount"),
+    currency: normalizeOrderCurrency(getStringValue(raw, "currency")),
     totalItems: getNumberValue(raw, "totalItems"),
     shippingAddress: normalizeShippingAddress(
       raw.shippingAddress && typeof raw.shippingAddress === "object"

@@ -5,10 +5,9 @@ import { Clock3, CreditCard, ReceiptText } from 'lucide-react'
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
-import { useCurrency } from '../context/CurrencyContext'
 import { getPaymentHistory } from '../services/orderService'
 import type { OrdersPagination, PaymentHistoryItem } from '../types/order'
-import { formatPrice } from '../utils/price'
+import { formatPrice, isoToCurrencyCode } from '../utils/price'
 
 function formatPaymentDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -44,7 +43,6 @@ function getOrderStatusClass(status: string) {
 }
 
 export default function PaymentHistoryPage() {
-  const { currency } = useCurrency()
   const [payments, setPayments] = useState<PaymentHistoryItem[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -106,7 +104,10 @@ export default function PaymentHistoryPage() {
 
           {!isLoading && payments.length > 0 ? (
             <div className="space-y-5">
-              {payments.map((payment) => (
+              {payments.map((payment) => {
+                const paymentCurrency = isoToCurrencyCode(payment.currency) ?? 'eur'
+
+                return (
                 <article key={`${payment.orderId}-${payment.sessionId}`} className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -148,7 +149,7 @@ export default function PaymentHistoryPage() {
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Amount {formatPrice(payment.amount, currency)}</span>
+                    <span>Amount {formatPrice(payment.amount, paymentCurrency)}</span>
                     <div className="flex items-center gap-4">
                       <span>Updated {formatPaymentDate(payment.updatedAt)}</span>
                       <Link to={`/orders/${payment.orderId}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
@@ -157,7 +158,8 @@ export default function PaymentHistoryPage() {
                     </div>
                   </div>
                 </article>
-              ))}
+                )
+              })}
             </div>
           ) : null}
 

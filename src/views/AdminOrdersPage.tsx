@@ -2014,7 +2014,7 @@ export default function AdminOrdersPage() {
                                               ) : null}
                                             </div>
                                             <div className="text-xs text-zinc-500 sm:text-right">
-                                              {o.totalItems} item{o.totalItems === 1 ? '' : 's'} · {formatPrice(o.totalAmount, currency)}
+                                              {o.totalItems} item{o.totalItems === 1 ? '' : 's'} · {formatPrice(o.totalAmount, isoToCurrencyCode(o.currency) ?? 'eur')}
                                             </div>
                                           </div>
                                           {o.items.length > 0 ? (
@@ -2024,7 +2024,7 @@ export default function AdminOrdersPage() {
                                                   <span>
                                                     {it.title} <span className="text-zinc-400">({it.sku})</span> × {it.quantity}
                                                   </span>
-                                                  <span className="font-semibold text-[#5c1f45]">{formatPrice(it.price, currency)}</span>
+                                                  <span className="font-semibold text-[#5c1f45]">{formatPrice(it.price, isoToCurrencyCode(o.currency) ?? 'eur')}</span>
                                                 </li>
                                               ))}
                                             </ul>
