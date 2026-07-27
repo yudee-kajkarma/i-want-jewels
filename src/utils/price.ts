@@ -75,15 +75,15 @@ export function detectLocaleCurrency(): CurrencyCode {
       return 'pou'
     }
 
+    // US detection is timezone-only: unlike en-GB, the en-US browser language
+    // is the worldwide default (e.g. Chrome in India reports en-US), so it says
+    // nothing about where the visitor actually is.
     const US_TIMEZONES = new Set([
       'America/New_York', 'America/Chicago', 'America/Denver',
       'America/Los_Angeles', 'America/Phoenix', 'America/Anchorage',
       'Pacific/Honolulu', 'America/Detroit', 'America/Indiana/Indianapolis',
     ])
 
-    if (languages.some((lang) => lang.toLowerCase() === 'en-us')) {
-      return 'dol'
-    }
     if (US_TIMEZONES.has(timeZone)) {
       return 'dol'
     }
