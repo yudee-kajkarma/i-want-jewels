@@ -35,7 +35,9 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const content = getCategoryContent(categorySlug(categoryName), categoryDisplayName(categoryName))
 
   return {
-    title: content.metaTitle,
+    // Absolute: the content's metaTitle already carries the brand suffix,
+    // which the root layout's title template would otherwise duplicate.
+    title: { absolute: content.metaTitle },
     description: content.metaDescription,
     alternates: {
       canonical: `/category/${categorySlug(categoryName)}`,
