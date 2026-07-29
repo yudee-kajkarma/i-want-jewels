@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { getReels, type Reel } from "../../services/reelsService";
 
 type InstagramGallerySectionProps = {
@@ -9,9 +10,12 @@ type InstagramGallerySectionProps = {
 };
 
 export default function InstagramGallerySection({
-    title = "I Want Jewels On Instagram",
-    subtitle = "#Atvoguetheme",
+    title,
+    subtitle,
 }: InstagramGallerySectionProps) {
+    const { t } = useTranslation();
+    const displayTitle = title ?? t("home.instagramTitle");
+    const displaySubtitle = subtitle ?? t("home.instagramSubtitle");
     const [videos, setVideos] = useState<Reel[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -107,10 +111,10 @@ export default function InstagramGallerySection({
             {/* Heading */}
             <div className="mx-auto max-w-6xl px-4 py-10 text-center">
                 <h2 className="text-3xl font-semibold md:text-4xl font-play">
-                    {title}
+                    {displayTitle}
                 </h2>
                 {/* <p className="mt-3 text-sm text-zinc-500 md:text-base">
-                    {subtitle}
+                    {displaySubtitle}
                 </p> */}
             </div>
 

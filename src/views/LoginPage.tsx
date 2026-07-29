@@ -7,6 +7,7 @@ import AuthShell from '../components/auth/AuthShell'
 import { useAuth } from '../context/AuthContext'
 import { loginUser } from '../services/authService'
 import type { AuthSession } from '../types/auth'
+import { useTranslation } from 'react-i18next'
 
 type LocationState = {
   from?: string
@@ -23,6 +24,7 @@ function getPostLoginRoute(session: AuthSession, from?: string): string {
 }
 
 export default function LoginPage() {
+  const { t } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
   const { isAuthReady, isAuthenticated, saveSession, session } = useAuth()
@@ -52,7 +54,7 @@ export default function LoginPage() {
       saveSession(session)
       navigate(getPostLoginRoute(session, from), { replace: true })
     } catch {
-      setError('Login failed. Check your email and password, or create a new account.')
+      setError(t('auth.loginFailed'))
     } finally {
       setIsSubmitting(false)
     }
@@ -60,27 +62,27 @@ export default function LoginPage() {
 
   return (
     <AuthShell
-      title="Login"
-      description="Welcome back to your jewellery account"
-      eyebrow="Account Access"
-      asideTitle="Sign in and keep your favourites close."
-      asideBody="Use your email and password to access your saved experience. Once login succeeds, the session is stored locally so the account stays available in this browser."
+      title={t('auth.loginTitle')}
+      description={t('auth.loginDesc')}
+      eyebrow={t('auth.loginEyebrow')}
+      asideTitle={t('auth.loginAsideTitle')}
+      asideBody={t('auth.loginAsideBody')}
     >
       <form className="space-y-5" onSubmit={handleSubmit}>
         <label className="block">
-          <span className="mb-2 block text-sm font-semibold text-[#17110d]">Email Address</span>
+          <span className="mb-2 block text-sm font-semibold text-[#17110d]">{t('auth.emailLabel')}</span>
           <input
             type="email"
             required
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
-            placeholder="Enter your email"
+            placeholder={t('auth.emailPlaceholder')}
           />
         </label>
 
         <label className="block">
-          <span className="mb-2 block text-sm font-semibold text-[#17110d]">Password</span>
+          <span className="mb-2 block text-sm font-semibold text-[#17110d]">{t('auth.passwordLabel')}</span>
           <div className="relative">
             <input
               type={isPasswordVisible ? 'text' : 'password'}
@@ -88,12 +90,12 @@ export default function LoginPage() {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               className="h-14 w-full border border-[#ddcdc0] px-4 pr-14 text-base outline-none transition focus:border-[#17110d]"
-              placeholder="Enter your password"
+              placeholder={t('auth.passwordPlaceholder')}
             />
             <button
               type="button"
               onClick={() => setIsPasswordVisible((currentValue) => !currentValue)}
-              aria-label={isPasswordVisible ? 'Hide password' : 'Show password'}
+              aria-label={isPasswordVisible ? t('auth.hidePassword') : t('auth.showPassword')}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 transition hover:text-[#b63f80]"
             >
               {isPasswordVisible ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
@@ -101,7 +103,7 @@ export default function LoginPage() {
           </div>
           <div className="mt-2 text-right">
             <Link to="/reset-password" className="text-xs font-semibold text-[#b63f80] underline underline-offset-4">
-              Forgot password?
+              {t('auth.forgotPassword')}
             </Link>
           </div>
         </label>
@@ -113,13 +115,13 @@ export default function LoginPage() {
           disabled={isSubmitting}
           className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
         >
-          {isSubmitting ? 'SIGNING IN...' : 'SIGN IN'}
+          {isSubmitting ? t('auth.signingIn') : t('auth.signIn')}
         </button>
 
         <p className="text-center text-sm text-zinc-500">
-          Don&apos;t have an account?{' '}
+          {t('auth.noAccount')}{' '}
           <Link to="/register" className="font-bold text-[#b63f80] underline underline-offset-4">
-            Register here
+            {t('auth.registerHere')}
           </Link>
         </p>
       </form>

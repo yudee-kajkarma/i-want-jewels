@@ -6,6 +6,7 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { addTicketMessage, getTicketById } from '../services/ticketService'
 import type { Ticket } from '../types/ticket'
+import { useTranslation } from 'react-i18next'
 
 function formatTicketDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -29,6 +30,7 @@ function getStatusClass(status: string) {
 }
 
 export default function TicketDetailPage() {
+  const { t } = useTranslation()
   const params = useParams<{ ticketId?: string | string[] }>()
   const ticketId = typeof params.ticketId === 'string' ? params.ticketId : ''
   const [ticket, setTicket] = useState<Ticket | null>(null)
@@ -48,7 +50,7 @@ export default function TicketDetailPage() {
       setError('')
     } catch {
       setTicket(null)
-      setError('Unable to load this support ticket right now.')
+      setError(t('account.ticketDetails.loadError'))
     } finally {
       setIsLoading(false)
     }
@@ -66,7 +68,7 @@ export default function TicketDetailPage() {
     event.preventDefault()
 
     if (!reply.trim()) {
-      setFeedback('Reply message is required.')
+      setFeedback(t('account.ticketDetails.replyRequired'))
       return
     }
 
@@ -76,10 +78,10 @@ export default function TicketDetailPage() {
     try {
       await addTicketMessage(ticketId, { message: reply.trim() })
       setReply('')
-      setFeedback('Reply sent successfully.')
+      setFeedback(t('account.ticketDetails.sendSuccess'))
       await loadTicket()
     } catch {
-      setFeedback('Unable to send reply right now.')
+      setFeedback(t('account.ticketDetails.sendError'))
     } finally {
       setIsSending(false)
     }
@@ -90,12 +92,12 @@ export default function TicketDetailPage() {
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <nav className="mb-6 text-sm text-zinc-500">
-          <Link to="/tickets" className="transition hover:text-zinc-900">Support Tickets</Link>
+          <Link to="/tickets" className="transition hover:text-zinc-900">{t('account.ticketDetails.breadcrumb')}</Link>
           {' / '}
           <span className="text-zinc-900">{ticketId}</span>
         </nav>
 
-        {isLoading ? <p className="text-sm text-zinc-500">Loading ticket...</p> : null}
+        {isLoading ? <p className="text-sm text-zinc-500">{t('account.ticketDetails.loading')}</p> : null}
         {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div> : null}
 
         {!isLoading && ticket ? (
@@ -105,7 +107,7 @@ export default function TicketDetailPage() {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{ticket.ticketId}</p>
                   <h1 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#17110d]">{ticket.subject}</h1>
-                  <p className="mt-3 text-sm text-zinc-500">{ticket.category} · {ticket.priority} priority</p>
+                  <p className="mt-3 text-sm text-zinc-500">{ticket.category} · {t('account.ticketDetails.priority', { priority: ticket.priority })}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -114,7 +116,7 @@ export default function TicketDetailPage() {
                   </span>
                   {ticket.isEscalated ? (
                     <span className="inline-flex border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-rose-700">
-                      Escalated
+                      {t('account.ticketDetails.escalated')}
                     </span>
                   ) : null}
                 </div>
@@ -137,19 +139,19 @@ export default function TicketDetailPage() {
             </section>
 
             <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Reply</p>
-              <h2 className="mt-2 text-2xl font-bold tracking-[-0.04em] text-[#17110d]">Send a message</h2>
-              <p className="mt-3 text-sm leading-7 text-zinc-500">Add more details or respond to the support team from here.</p>
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('account.ticketDetails.replyLabel')}</p>
+              <h2 className="mt-2 text-2xl font-bold tracking-[-0.04em] text-[#17110d]">{t('account.ticketDetails.sendMessage')}</h2>
+              <p className="mt-3 text-sm leading-7 text-zinc-500">{t('account.ticketDetails.replyDesc')}</p>
 
               <form className="mt-6 grid gap-4" onSubmit={(event) => void handleReplySubmit(event)}>
                 <label className="text-sm font-semibold text-[#17110d]">
-                  Message
+                  {t('account.ticketDetails.message')}
                   <textarea
                     value={reply}
                     onChange={(event) => setReply(event.target.value)}
                     rows={8}
                     className="mt-2 w-full border border-[#dfd0c3] px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
-                    placeholder="Thanks for the quick response. Please expedite."
+                    placeholder={t('account.ticketDetails.replyPlaceholder')}
                   />
                 </label>
 
@@ -160,13 +162,13 @@ export default function TicketDetailPage() {
                   disabled={isSending}
                   className="bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
-                  {isSending ? 'SENDING...' : 'SEND REPLY'}
+                  {isSending ? t('account.ticketDetails.sending') : t('account.ticketDetails.sendReply')}
                 </button>
               </form>
 
               <div className="mt-6 border-t border-[#efe1d5] pt-6 text-sm text-zinc-500">
-                <p>Created {formatTicketDate(ticket.createdAt)}</p>
-                <p className="mt-2">Last updated {formatTicketDate(ticket.updatedAt)}</p>
+                <p>{t('account.ticketDetails.created', { date: formatTicketDate(ticket.createdAt) })}</p>
+                <p className="mt-2">{t('account.ticketDetails.lastUpdated', { date: formatTicketDate(ticket.updatedAt) })}</p>
               </div>
             </aside>
           </div>

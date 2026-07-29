@@ -4,6 +4,7 @@ import { Eye, Heart, ShoppingBag } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Link, useLocation, useNavigate } from "@/lib/router";
+import { useTranslation } from "react-i18next";
 import { useAuth } from "../../context/AuthContext";
 import { useCurrency } from "../../context/CurrencyContext";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
@@ -46,6 +47,7 @@ export default function ProductCard({
     className,
     selectedMetals,
 }: ProductCardProps) {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const location = useLocation();
     const dispatch = useAppDispatch();
@@ -306,7 +308,7 @@ export default function ProductCard({
                           <div className="flex items-start justify-between gap-4">
                               <div className="flex-1">
                                   <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">
-                                      Choose a size
+                                      {t("common.chooseSize")}
                                   </p>
                                   <h3 className="mt-1 text-lg font-semibold text-[#17110d]">
                                       {item.title}
@@ -335,20 +337,20 @@ export default function ProductCard({
                           </div>
                           {item.vendor ? (
                               <p className="mt-3 text-sm text-zinc-600">
-                                  <span className="font-semibold">Vendor:</span>{" "}
+                                  <span className="font-semibold">{t("common.vendor")}:</span>{" "}
                                   {item.vendor}
                               </p>
                           ) : null}
                           {item.category ? (
                               <p className="mt-2 text-sm text-zinc-600">
                                   <span className="font-semibold">
-                                      Category:
+                                      {t("common.category")}:
                                   </span>{" "}
                                   {item.category}
                               </p>
                           ) : null}
                           <p className="mt-5 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                              Size
+                              {t("common.size")}
                               {selectedVariant.sizeMeasurement
                                   ? ` (${selectedVariant.sizeMeasurement})`
                                   : ""}
@@ -365,8 +367,8 @@ export default function ProductCard({
                                           onClick={() => setPickerSizeIdx(idx)}
                                           title={
                                               out
-                                                  ? "Out of stock"
-                                                  : `${s.stock} in stock`
+                                                  ? t("common.outOfStock")
+                                                  : t("common.inStock", { count: s.stock })
                                           }
                                           className={`flex h-11 min-w-[44px] items-center justify-center border px-3 text-sm font-medium transition ${
                                               out
@@ -392,7 +394,7 @@ export default function ProductCard({
                                   }
                                   className="h-12 bg-[#17110d] text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#2a201a] disabled:cursor-not-allowed disabled:opacity-50"
                               >
-                                  Buy It Now
+                                  {t("common.buyItNow")}
                               </button>
                               <button
                                   type="button"
@@ -405,14 +407,14 @@ export default function ProductCard({
                                   }
                                   className="h-12 border border-[#17110d] bg-white text-sm font-bold uppercase tracking-[0.08em] text-[#17110d] transition hover:bg-[#f5f5f5] disabled:cursor-not-allowed disabled:opacity-50"
                               >
-                                  {isAdding ? "ADDING..." : "Add to Cart"}
+                                  {isAdding ? t("common.adding") : t("common.addToCart")}
                               </button>
                               <button
                                   type="button"
                                   onClick={() => setSizePickerOpen(false)}
                                   className="h-12 border border-zinc-300 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50"
                               >
-                                  Cancel
+                                  {t("common.cancel")}
                               </button>
                           </div>
                       </div>
@@ -524,7 +526,7 @@ export default function ProductCard({
                         onClick={handleBuyNow}
                         className="inline-flex h-12 min-w-[152px] items-center justify-center rounded-full border border-[#2c2622] px-6 text-sm font-semibold text-[#161311] transition hover:bg-[#161311] hover:text-white"
                     >
-                        QUICK SHOP
+                        {t("common.quickShop")}
                     </button>
 
                     <div className="flex items-center gap-5 text-[#2b2724]">
@@ -534,8 +536,8 @@ export default function ProductCard({
                             disabled={isUpdatingWishlist}
                             aria-label={
                                 wishlistItem
-                                    ? "Remove from wishlist"
-                                    : "Add to wishlist"
+                                    ? t("common.removeFromWishlist")
+                                    : t("common.addToWishlist")
                             }
                             className={`transition hover:text-[#f23ea9] ${wishlistItem ? "text-[#f23ea9]" : ""} disabled:opacity-60`}
                         >
@@ -549,7 +551,7 @@ export default function ProductCard({
                             type="button"
                             onClick={(event) => void handleAddToCart(event)}
                             disabled={isAdding}
-                            aria-label="Add to cart"
+                            aria-label={t("common.addToCart")}
                             className="transition hover:text-[#f23ea9] disabled:opacity-60"
                         >
                             <ShoppingBag
@@ -562,7 +564,7 @@ export default function ProductCard({
                         <Link
                             to={productDetailUrl}
                             className="transition hover:text-[#f23ea9]"
-                            aria-label="Quick view"
+                            aria-label={t("common.quickView")}
                         >
                             <Eye
                                 className="h-5 w-5"
@@ -593,8 +595,8 @@ export default function ProductCard({
                         disabled={isUpdatingWishlist}
                         aria-label={
                             wishlistItem
-                                ? "Remove from wishlist"
-                                : "Add to wishlist"
+                                ? t("common.removeFromWishlist")
+                                : t("common.addToWishlist")
                         }
                         className={`flex h-10 w-10 items-center justify-center rounded-full  text-[#ffffff]  transition hover:text-[#2d2926] ${
                             wishlistItem ? "text-[#f23ea9]" : ""
@@ -616,7 +618,7 @@ export default function ProductCard({
                         type="button"
                         onClick={(event) => void handleBuyNow(event)}
                         disabled={isAdding}
-                        aria-label="Add to cart"
+                        aria-label={t("common.addToCart")}
                         className="flex h-10 w-10 items-center justify-center rounded-full  text-[#fff]  transition hover:text-[#2d2926] disabled:opacity-60"
                     >
                         <ShoppingBag
@@ -683,14 +685,14 @@ export default function ProductCard({
                             disabled={isAdding}
                             className="inline-flex h-8 items-center justify-center  bg-white px-1 text-[12px] font-semibold text-[#22201d] shadow-[0_10px_30px_rgba(0,0,0,0.14)] transition hover:bg-[#f4f1ee] disabled:opacity-60"
                         >
-                            {isAdding ? "ADDING..." : "ADD CART"}
+                            {isAdding ? t("common.adding") : t("common.addCart")}
                         </button>
                         <button
                             type="button"
                             onClick={handleBuyNow}
                             className="inline-flex h-8 items-center justify-center  bg-[#151515] px-1 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition hover:bg-black"
                         >
-                            BUY NOW
+                            {t("common.buyNow")}
                         </button>
                     </div>
                 </div>

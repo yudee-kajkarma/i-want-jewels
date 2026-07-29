@@ -8,6 +8,7 @@ import Header from '../components/layout/Header'
 import { getOrders } from '../services/orderService'
 import type { Order, OrdersPagination } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
+import { useTranslation } from 'react-i18next'
 
 function formatOrderDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -43,6 +44,7 @@ function getPaymentStatusClass(status: string) {
 }
 
 export default function OrdersPage() {
+  const { t } = useTranslation()
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -61,7 +63,7 @@ export default function OrdersPage() {
       } catch {
         setOrders([])
         setPagination(null)
-        setError('Unable to load orders right now.')
+        setError(t('account.orders.loadError'))
       } finally {
         setIsLoading(false)
       }
@@ -76,14 +78,14 @@ export default function OrdersPage() {
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Orders</p>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Your order history</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('account.orders.breadcrumb')}</p>
+            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">{t('account.orders.title')}</h1>
           </div>
-          <p className="text-sm text-zinc-500">Track placed orders, payment status, and shipping details from one place.</p>
+          <p className="text-sm text-zinc-500">{t('account.orders.subtitle')}</p>
         </div>
 
         <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-          {isLoading ? <p className="text-sm text-zinc-500">Loading orders...</p> : null}
+          {isLoading ? <p className="text-sm text-zinc-500">{t('account.orders.loading')}</p> : null}
           {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
 
           {!isLoading && !error && orders.length === 0 ? (
@@ -91,13 +93,13 @@ export default function OrdersPage() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center border border-[#dbc8b8] text-[#17110d]">
                 <ReceiptText className="h-6 w-6" />
               </div>
-              <h2 className="mt-5 text-2xl font-bold text-[#17110d]">No orders yet</h2>
-              <p className="mt-3 text-sm leading-7 text-zinc-500">Place your first order from the cart or buy directly from a product page.</p>
+              <h2 className="mt-5 text-2xl font-bold text-[#17110d]">{t('account.orders.emptyTitle')}</h2>
+              <p className="mt-3 text-sm leading-7 text-zinc-500">{t('account.orders.emptyDesc')}</p>
               <Link
                 to="/products"
                 className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
               >
-                SHOP NOW
+                {t('account.orders.shopNow')}
               </Link>
             </div>
           ) : null}
@@ -113,7 +115,7 @@ export default function OrdersPage() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
                       <Link to={`/orders/${order.id}`} className="mt-2 block text-xl font-bold text-[#17110d] transition hover:text-pink-500">
-                        Order for {order.totalItems} item{order.totalItems === 1 ? '' : 's'}
+                        {t('account.orders.orderFor', { count: order.totalItems })}
                       </Link>
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
@@ -144,15 +146,15 @@ export default function OrdersPage() {
                           <img src={item.thumbnail} alt={item.title} className="h-24 w-full object-contain" />
                         </div>
                         <p className="mt-3 text-sm font-bold text-[#17110d] line-clamp-2">{item.title}</p>
-                        <p className="mt-1 text-xs text-zinc-500">{item.variantName || 'Default variant'} · Qty {item.quantity}</p>
+                        <p className="mt-1 text-xs text-zinc-500">{item.variantName || t('account.orders.defaultVariant')} · {t('account.orders.qty', { count: item.quantity })}</p>
                       </div>
                     ))}
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Total {formatPrice(order.totalAmount, orderCurrency)}</span>
+                    <span>{t('account.orders.total', { price: formatPrice(order.totalAmount, orderCurrency) })}</span>
                     <Link to={`/orders/${order.id}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
-                      VIEW DETAILS
+                      {t('account.orders.viewDetails')}
                     </Link>
                   </div>
                 </article>
@@ -163,7 +165,7 @@ export default function OrdersPage() {
 
           {pagination ? (
             <div className="mt-6 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500">
-              Showing page {pagination.currentPage} of {pagination.totalPages} · {pagination.totalRecords} order{pagination.totalRecords === 1 ? '' : 's'}
+              {t('account.orders.showingPage', { current: pagination.currentPage, total: pagination.totalPages, records: pagination.totalRecords, count: pagination.totalRecords })}
             </div>
           ) : null}
         </section>

@@ -8,6 +8,7 @@ import {
   type MyGiftCard,
 } from '../../services/giftCardService'
 import RecipientEmailPicker from './RecipientEmailPicker'
+import { useTranslation } from 'react-i18next'
 
 type GiftCardTab = 'mine' | 'transferred'
 
@@ -19,6 +20,7 @@ type GiftCardsSectionProps = {
 }
 
 export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionProps) {
+  const { t } = useTranslation('giftCardsSection')
   const [tab, setTab] = useState<GiftCardTab>('mine')
   const [cards, setCards] = useState<MyGiftCard[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
@@ -58,11 +60,11 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
 
   async function submitTransfer(code: string) {
     if (!recipientEmail.trim()) {
-      setFeedback('Enter the recipient email.')
+      setFeedback(t('errorNoEmail'))
       return
     }
     if (!recipientEmailValid) {
-      setFeedback('Pick a recipient from the list — they must have a registered account.')
+      setFeedback(t('errorInvalidEmail'))
       return
     }
     setIsTransferring(true)
@@ -79,7 +81,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
     } catch (error) {
       const msg =
         (error as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error?.message ||
-        'Unable to transfer this gift card.'
+        t('errorTransferFailed')
       setFeedback(msg)
     } finally {
       setIsTransferring(false)
@@ -90,9 +92,9 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
     <section id={id}>
       {!hideHeading ? (
         <>
-          <h2 className="text-2xl font-bold text-[#17110d]">My Gift Cards</h2>
+          <h2 className="text-2xl font-bold text-[#17110d]">{t('title')}</h2>
           <p className="mt-2 text-sm text-zinc-500">
-            Gift cards linked to your email. Apply the code at checkout, or transfer a card to a friend.
+            {t('subtitle')}
           </p>
         </>
       ) : null}
@@ -105,7 +107,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
             tab === 'mine' ? 'bg-[#17110d] text-white' : 'bg-white text-[#7a3a61] hover:bg-[#fff2fa]'
           }`}
         >
-          My Gift Cards
+          {t('tabMine')}
         </button>
         <button
           type="button"
@@ -114,19 +116,19 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
             tab === 'transferred' ? 'bg-[#17110d] text-white' : 'bg-white text-[#7a3a61] hover:bg-[#fff2fa]'
           }`}
         >
-          Transferred
+          {t('tabTransferred')}
         </button>
       </div>
 
       {status === 'loading' ? (
-        <p className="mt-6 text-sm text-zinc-500">Loading…</p>
+        <p className="mt-6 text-sm text-zinc-500">{t('loading')}</p>
       ) : status === 'error' ? (
-        <p className="mt-6 text-sm text-rose-600">Unable to load your gift cards right now.</p>
+        <p className="mt-6 text-sm text-rose-600">{t('error')}</p>
       ) : cards.length === 0 ? (
         <p className="mt-6 text-sm text-zinc-500">
           {tab === 'transferred'
-            ? "You haven't transferred or gifted any cards yet."
-            : "You don't have any gift cards yet."}
+            ? t('emptyTransferred')
+            : t('emptyMine')}
         </p>
       ) : (
         <div className="mt-6 space-y-4">
@@ -134,14 +136,19 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
             const canTransfer = tab === 'mine' && card.status === 'ACTIVE' && card.balance > 0
             const heldBy = card.currentOwnerEmail || card.recipientEmail
             const expiryInfo = (() => {
-              if (!card.expiresAt) return { label: 'Never expires', tone: 'muted' as const }
+              if (!card.expiresAt) return { label: t('neverExpires'), tone: 'muted' as const }
               const expiry = new Date(card.expiresAt)
               const daysLeft = Math.ceil((expiry.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
               const formatted = expiry.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
-              if (daysLeft <= 0) return { label: `Expired on ${formatted}`, tone: 'expired' as const }
-              if (daysLeft <= 7) return { label: `Expires in ${daysLeft} day${daysLeft === 1 ? '' : 's'} (${formatted})`, tone: 'urgent' as const }
-              if (daysLeft <= 30) return { label: `Expires on ${formatted} (${daysLeft} days left)`, tone: 'warning' as const }
-              return { label: `Expires on ${formatted}`, tone: 'normal' as const }
+              if (daysLeft <= 0) return { label: t('expiredOn', { date: formatted }), tone: 'expired' as const }
+              if (daysLeft <= 7) {
+                return { 
+                  label: daysLeft === 1 ? t('expiresInDay', { date: formatted }) : t('expiresInDays', { days: daysLeft, date: formatted }), 
+                  tone: 'urgent' as const 
+                }
+              }
+              if (daysLeft <= 30) return { label: t('expiresOnDaysLeft', { date: formatted, days: daysLeft }), tone: 'warning' as const }
+              return { label: t('expiresOn', { date: formatted }), tone: 'normal' as const }
             })()
             const expiryClass =
               expiryInfo.tone === 'urgent' || expiryInfo.tone === 'expired'
@@ -155,14 +162,14 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                   <div>
                     <p className="text-lg font-bold tracking-[2px] text-[#17110d]">{card.code}</p>
                     {tab === 'transferred' && heldBy ? (
-                      <p className="mt-1 text-xs text-[#a53b79]">Now with {heldBy}</p>
+                      <p className="mt-1 text-xs text-[#a53b79]">{t('nowWith', { email: heldBy })}</p>
                     ) : null}
                     {card.senderName ? (
-                      <p className="mt-1 text-xs text-zinc-500">From {card.senderName}</p>
+                      <p className="mt-1 text-xs text-zinc-500">{t('fromSender', { name: card.senderName })}</p>
                     ) : null}
                     {card.createdAt ? (
                       <p className="mt-1 text-xs text-zinc-400">
-                        Purchased on {new Date(card.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}
+                        {t('purchasedOn', { date: new Date(card.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) })}
                       </p>
                     ) : null}
                     <p className={`mt-1 text-xs ${expiryClass}`}>{expiryInfo.label}</p>
@@ -173,13 +180,13 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                   <div className="text-right">
                     <p className="text-xl font-bold text-[#1f7a4d]">€{card.balance.toFixed(2)}</p>
                     <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-400">
-                      of €{card.initialAmount.toFixed(2)} · {card.status}
+                      {t('ofInitial', { amount: card.initialAmount.toFixed(2), status: card.status })}
                     </p>
                   </div>
                 </div>
 
                 {card.redemptions.length > 0 ? (
-                  <p className="mt-3 text-xs text-zinc-500">Used on {card.redemptions.length} order(s).</p>
+                  <p className="mt-3 text-xs text-zinc-500">{t('usedOnOrders', { count: card.redemptions.length })}</p>
                 ) : null}
 
                 {canTransfer ? (
@@ -191,20 +198,20 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                           setRecipientEmail(email)
                           setRecipientEmailValid(isValid)
                         }}
-                        placeholder="Recipient email"
+                        placeholder={t('recipientEmailPlaceholder')}
                         className="h-11 w-full border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
                       />
                       <input
                         type="text"
                         value={recipientName}
                         onChange={(event) => setRecipientName(event.target.value)}
-                        placeholder="Recipient name (optional)"
+                        placeholder={t('recipientNamePlaceholder')}
                         className="h-11 w-full border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
                       />
                       <textarea
                         value={message}
                         onChange={(event) => setMessage(event.target.value)}
-                        placeholder="Message (optional)"
+                        placeholder={t('messagePlaceholder')}
                         className="min-h-[70px] w-full border border-[#e7d3c2] px-3 py-2 text-sm outline-none focus:border-[#17110d]"
                       />
                       {feedback ? <p className="text-xs text-rose-600">{feedback}</p> : null}
@@ -215,14 +222,14 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                           disabled={isTransferring}
                           className="h-10 bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white disabled:opacity-50"
                         >
-                          {isTransferring ? 'Sending…' : 'Send'}
+                          {isTransferring ? t('sending') : t('send')}
                         </button>
                         <button
                           type="button"
                           onClick={() => setTransferFor(null)}
                           className="h-10 border border-[#e7d3c2] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#7a3a61]"
                         >
-                          Cancel
+                          {t('cancel')}
                         </button>
                       </div>
                     </div>
@@ -232,7 +239,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                       onClick={() => openTransfer(card.code)}
                       className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
                     >
-                      Transfer to a friend
+                      {t('transferToFriend')}
                     </button>
                   )
                 ) : null}

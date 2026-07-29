@@ -11,6 +11,7 @@ import { transferGiftCard } from '../services/giftCardService'
 import { cancelOrder, cancelOrderReturnRequest, getOrderById, regenerateOrderPayment, requestOrderReturn } from '../services/orderService'
 import type { Order } from '../types/order'
 import { formatPrice, getPriceAmount, isoToCurrencyCode } from '../utils/price'
+import { useTranslation } from 'react-i18next'
 
 function formatOrderDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -88,6 +89,7 @@ function getReturnStatusClass(status: string): string {
 }
 
 export default function OrderDetailPage() {
+  const { t } = useTranslation()
   const params = useParams<{ orderId?: string | string[] }>()
   const { session } = useAuth()
   const orderId = typeof params.orderId === 'string' ? params.orderId : ''
@@ -124,7 +126,7 @@ export default function OrderDetailPage() {
       return response
     } catch {
       setOrder(null)
-      setError('Unable to load this order right now.')
+      setError(t('account.orderDetails.loadError'))
       return null
     } finally {
       if (showLoader) {
@@ -162,9 +164,9 @@ export default function OrderDetailPage() {
       const updatedOrder = await cancelOrder(order.id)
 
       setOrder(updatedOrder)
-      setFeedback('Order cancelled successfully.')
+      setFeedback(t('account.orderDetails.cancelSuccess'))
     } catch {
-      setFeedback('Unable to cancel this order right now.')
+      setFeedback(t('account.orderDetails.cancelError'))
     } finally {
       setIsCancelling(false)
     }
@@ -194,7 +196,7 @@ export default function OrderDetailPage() {
 
       window.location.assign(result.checkoutSession.url)
     } catch {
-      setFeedback('Unable to start payment right now. Please try again.')
+      setFeedback(t('account.orderDetails.paymentError'))
       setIsRegeneratingPayment(false)
     }
   }
@@ -202,7 +204,7 @@ export default function OrderDetailPage() {
   async function handleSubmitReturn() {
     if (!order) return
     if (!returnReason.trim()) {
-      setReturnFeedback('Please tell us why you want to return this order.')
+      setReturnFeedback(t('account.orderDetails.returnErrorEmpty'))
       return
     }
     setIsSubmittingReturn(true)
@@ -211,12 +213,12 @@ export default function OrderDetailPage() {
       await requestOrderReturn(order.id, returnReason.trim())
       setShowReturnForm(false)
       setReturnReason('')
-      setFeedback('Return request received. Our team will reach out to you shortly.')
+      setFeedback(t('account.orderDetails.returnSuccess'))
       await refreshOrder(order.id, false)
     } catch (err) {
       const message =
         (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
-        'Unable to submit return request right now.'
+        t('account.orderDetails.returnErrorDefault')
       setReturnFeedback(message)
     } finally {
       setIsSubmittingReturn(false)
@@ -229,12 +231,12 @@ export default function OrderDetailPage() {
     setReturnFeedback('')
     try {
       await cancelOrderReturnRequest(order.id)
-      setFeedback('Return request cancelled.')
+      setFeedback(t('account.orderDetails.cancelReturnSuccess'))
       await refreshOrder(order.id, false)
     } catch (err) {
       const message =
         (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
-        'Unable to cancel return request right now.'
+        t('account.orderDetails.cancelReturnError')
       setReturnFeedback(message)
     } finally {
       setIsCancellingReturn(false)
@@ -253,11 +255,11 @@ export default function OrderDetailPage() {
   async function handleTransferGiftCard(code: string) {
     if (!order) return
     if (!recipientEmail.trim()) {
-      setTransferFeedback('Enter the recipient email.')
+      setTransferFeedback(t('account.orderDetails.transferErrorEmail'))
       return
     }
     if (!recipientEmailValid) {
-      setTransferFeedback('Pick a recipient from the list. Gift cards can only be transferred to a registered account.')
+      setTransferFeedback(t('account.orderDetails.transferErrorInvalid'))
       return
     }
 
@@ -271,12 +273,12 @@ export default function OrderDetailPage() {
         message: transferMessage.trim() || undefined,
       })
       setTransferFor(null)
-      setFeedback('Gift card transferred successfully.')
+      setFeedback(t('account.orderDetails.transferSuccess'))
       await refreshOrder(order.id, false)
     } catch (error) {
       const message =
         (error as { response?: { data?: { error?: { message?: string } } } })?.response?.data?.error?.message ||
-        'Unable to transfer this gift card.'
+        t('account.orderDetails.transferDefaultError')
       setTransferFeedback(message)
     } finally {
       setIsTransferring(false)
@@ -290,12 +292,12 @@ export default function OrderDetailPage() {
       <Header />
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <nav className="mb-6 text-sm text-zinc-500">
-          <Link to="/orders" className="transition hover:text-zinc-900">Orders</Link>
+          <Link to="/orders" className="transition hover:text-zinc-900">{t('account.orderDetails.breadcrumb')}</Link>
           {' / '}
           <span className="text-zinc-900">{order?.orderNumber || orderId}</span>
         </nav>
 
-        {isLoading ? <p className="text-sm text-zinc-500">Loading order...</p> : null}
+        {isLoading ? <p className="text-sm text-zinc-500">{t('account.orderDetails.loading')}</p> : null}
         {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-rose-700">{error}</div> : null}
 
         {!isLoading && order ? (
@@ -304,8 +306,8 @@ export default function OrderDetailPage() {
               <div className="flex flex-col gap-4 border-b border-[#efe1d5] pb-6 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
-                  <h1 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#17110d]">Order details</h1>
-                  <p className="mt-3 text-sm text-zinc-500">Placed {formatOrderDate(order.createdAt)}</p>
+                  <h1 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#17110d]">{t('account.orderDetails.title')}</h1>
+                  <p className="mt-3 text-sm text-zinc-500">{t('account.orderDetails.placed', { date: formatOrderDate(order.createdAt) })}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -326,15 +328,15 @@ export default function OrderDetailPage() {
                     </div>
                     <div>
                       <p className="text-lg font-bold text-[#17110d]">{item.title}</p>
-                      <p className="mt-1 text-sm text-zinc-500">{item.variantName || 'Default variant'}</p>
+                      <p className="mt-1 text-sm text-zinc-500">{item.variantName || t('account.orderDetails.defaultVariant')}</p>
                       {item.size !== undefined ? (
-                        <p className="mt-1 text-sm text-zinc-500">Size: {item.size}{item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}</p>
+                        <p className="mt-1 text-sm text-zinc-500">{t('account.orderDetails.size', { size: `${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` })}</p>
                       ) : null}
-                      <p className="mt-1 text-sm text-zinc-500">SKU: {item.sku || 'N/A'}</p>
-                      <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
+                      <p className="mt-1 text-sm text-zinc-500">{t('account.orderDetails.sku', { sku: item.sku || 'N/A' })}</p>
+                      <p className="mt-1 text-sm text-zinc-500">{t('account.orderDetails.quantity', { qty: item.quantity })}</p>
                       {item.isGiftCard ? (
                         <p className="mt-2 text-sm text-[#8f2a60]">
-                          {item.giftCard?.recipientEmail ? `To: ${item.giftCard.recipientEmail}` : 'Delivered to your account'}
+                          {item.giftCard?.recipientEmail ? t('account.orderDetails.giftCardTo', { email: item.giftCard.recipientEmail }) : t('account.orderDetails.giftCardDeliveredAccount')}
                           {item.giftCard?.message ? ` · ${item.giftCard.message}` : ''}
                         </p>
                       ) : null}
@@ -348,7 +350,7 @@ export default function OrderDetailPage() {
                 <div className="mt-8 border-t border-[#efe1d5] pt-6">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <Gift className="h-5 w-5" />
-                    <h2 className="text-xl font-bold">Gift card codes</h2>
+                    <h2 className="text-xl font-bold">{t('account.orderDetails.giftCardCodes')}</h2>
                   </div>
                   <div className="mt-4 grid gap-3 md:grid-cols-2">
                     {order.issuedGiftCards.map((card) => {
@@ -366,17 +368,17 @@ export default function OrderDetailPage() {
                               onClick={() => openTransfer(card.code)}
                               className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
                             >
-                              Transfer
+                              {t('account.orderDetails.transfer')}
                             </button>
                           ) : null}
                         </div>
                         <div className="mt-3 space-y-1 text-zinc-600">
-                          <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, orderCurrency)}</span></p>
-                          <p>Owner: <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
-                          {card.recipientName ? <p>Recipient: <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
-                          {card.recipientEmail ? <p>Email: <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
-                          {card.message ? <p>Message: <span className="font-semibold text-[#17110d]">{card.message}</span></p> : null}
-                          <p>Status: <span className="font-semibold text-[#17110d]">{card.status}</span></p>
+                          <p>{t('account.orderDetails.value')} <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, orderCurrency)}</span></p>
+                          <p>{t('account.orderDetails.owner')} <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
+                          {card.recipientName ? <p>{t('account.orderDetails.recipient')} <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
+                          {card.recipientEmail ? <p>{t('account.orderDetails.email')} <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
+                          {card.message ? <p>{t('account.orderDetails.message')} <span className="font-semibold text-[#17110d]">{card.message}</span></p> : null}
+                          <p>{t('account.orderDetails.status')} <span className="font-semibold text-[#17110d]">{card.status}</span></p>
                         </div>
                         {canTransfer && transferFor === card.code ? (
                           <div className="mt-4 space-y-2 border-t border-[#eadfd4] pt-4">
@@ -386,20 +388,20 @@ export default function OrderDetailPage() {
                                 setRecipientEmail(email)
                                 setRecipientEmailValid(isValid)
                               }}
-                              placeholder="Recipient email"
+                              placeholder={t('account.orderDetails.transferEmailPlaceholder')}
                               className="h-11 w-full border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
                             />
                             <input
                               type="text"
                               value={recipientName}
                               onChange={(event) => setRecipientName(event.target.value)}
-                              placeholder="Recipient name (optional)"
+                              placeholder={t('account.orderDetails.transferNamePlaceholder')}
                               className="h-11 w-full border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
                             />
                             <textarea
                               value={transferMessage}
                               onChange={(event) => setTransferMessage(event.target.value)}
-                              placeholder="Message (optional)"
+                              placeholder={t('account.orderDetails.transferMessagePlaceholder')}
                               className="min-h-[70px] w-full border border-[#e7d3c2] px-3 py-2 text-sm outline-none focus:border-[#17110d]"
                             />
                             {transferFeedback ? <p className="text-xs text-rose-600">{transferFeedback}</p> : null}
@@ -410,7 +412,7 @@ export default function OrderDetailPage() {
                                 disabled={isTransferring}
                                 className="h-10 bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white disabled:opacity-50"
                               >
-                                {isTransferring ? 'Sending...' : 'Send'}
+                                {isTransferring ? t('account.orderDetails.transferring') : t('account.orderDetails.confirmTransfer')}
                               </button>
                               <button
                                 type="button"
@@ -418,7 +420,7 @@ export default function OrderDetailPage() {
                                 disabled={isTransferring}
                                 className="h-10 border border-[#e7d3c2] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#7a3a61] disabled:opacity-50"
                               >
-                                Cancel
+                                {t('account.orderDetails.cancelTransfer')}
                               </button>
                             </div>
                           </div>
@@ -436,17 +438,17 @@ export default function OrderDetailPage() {
                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <CreditCard className="h-5 w-5" />
-                    <h2 className="text-xl font-bold">Payment</h2>
+                    <h2 className="text-xl font-bold">{t('account.orderDetails.payment')}</h2>
                   </div>
                   <div className="mt-4 space-y-2 text-sm text-zinc-600">
-                    <p>Method: <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span></p>
-                    <p>Status: <span className="font-semibold text-[#17110d]">{order.paymentStatus}</span></p>
-                    <p>Total: <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span></p>
+                    <p>{t('account.orderDetails.method')} <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span></p>
+                    <p>{t('account.orderDetails.status')} <span className="font-semibold text-[#17110d]">{order.paymentStatus}</span></p>
+                    <p>{t('account.orderDetails.totalAmount')} <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span></p>
                     {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
                       <>
-                        <p>Gift card: <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.giftCardDiscount, orderCurrency)}</span></p>
-                        {order.appliedGiftCardCode ? <p>Code: <span className="font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span></p> : null}
-                        <p>Paid: <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span></p>
+                        <p>{t('account.orderDetails.giftCardLabel')} <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.giftCardDiscount, orderCurrency)}</span></p>
+                        {order.appliedGiftCardCode ? <p>{t('account.orderDetails.code')} <span className="font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span></p> : null}
+                        <p>{t('account.orderDetails.paid')} <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span></p>
                       </>
                     ) : null}
                   </div>
@@ -455,7 +457,7 @@ export default function OrderDetailPage() {
                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <MapPinHouse className="h-5 w-5" />
-                    <h2 className="text-xl font-bold">Shipping address</h2>
+                    <h2 className="text-xl font-bold">{t('account.orderDetails.shippingAddress')}</h2>
                   </div>
                   {order.shippingAddress ? (
                     <div className="mt-4 text-sm leading-7 text-zinc-600">
@@ -464,18 +466,18 @@ export default function OrderDetailPage() {
                       <p>{order.shippingAddress.country}</p>
                     </div>
                   ) : (
-                    <p className="mt-4 text-sm text-zinc-500">No shipping address available.</p>
+                    <p className="mt-4 text-sm text-zinc-500">{t('account.orderDetails.noShippingAddress')}</p>
                   )}
                 </div>
 
                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <Package className="h-5 w-5" />
-                    <h2 className="text-xl font-bold">Order summary</h2>
+                    <h2 className="text-xl font-bold">{t('account.orderDetails.summaryTitle')}</h2>
                   </div>
                   <div className="mt-4 space-y-2 text-sm text-zinc-600">
-                    <p>Items: <span className="font-semibold text-[#17110d]">{order.totalItems}</span></p>
-                    <p>Updated: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.updatedAt)}</span></p>
+                    <p>{t('account.orderDetails.items')} <span className="font-semibold text-[#17110d]">{order.totalItems}</span></p>
+                    <p>{t('account.orderDetails.updated')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.updatedAt)}</span></p>
                   </div>
                 </div>
 
@@ -489,7 +491,7 @@ export default function OrderDetailPage() {
                     className="inline-flex w-full items-center justify-center gap-2 border border-[#1b1210] bg-[#1b1210] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#342721] disabled:opacity-60"
                   >
                     <CreditCard className="h-4 w-4" />
-                    {isRegeneratingPayment ? 'OPENING PAYMENT...' : 'REGENERATE PAYMENT'}
+                    {isRegeneratingPayment ? t('account.orderDetails.startingPayment') : t('account.orderDetails.payNow')}
                   </button>
                 ) : null}
 
@@ -501,7 +503,7 @@ export default function OrderDetailPage() {
                     className="inline-flex w-full items-center justify-center gap-2 border border-rose-200 px-6 py-4 text-sm font-bold tracking-[0.08em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
                   >
                     <Ban className="h-4 w-4" />
-                    {isCancelling ? 'CANCELLING...' : 'CANCEL ORDER'}
+                    {isCancelling ? t('account.orderDetails.cancelling') : t('account.orderDetails.cancelOrder')}
                   </button>
                 ) : null}
 
@@ -512,7 +514,7 @@ export default function OrderDetailPage() {
                     <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                       <div className="flex items-center gap-3 text-[#17110d]">
                         <Undo2 className="h-5 w-5" />
-                        <h2 className="text-xl font-bold">Return</h2>
+                        <h2 className="text-xl font-bold">{t('account.orderDetails.returnTitle')}</h2>
                       </div>
 
                       {status !== 'NONE' ? (
@@ -521,20 +523,20 @@ export default function OrderDetailPage() {
                             {status}
                           </span>
                           {order.returnRequestedAt ? (
-                            <p>Requested: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
+                            <p>{t('account.orderDetails.requested')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
                           ) : null}
                           {order.returnReason ? (
-                            <p>Reason: <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>
+                            <p>{t('account.orderDetails.reason')} <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>
                           ) : null}
                           {order.returnAdminNote ? (
-                            <p>Note from us: <span className="font-semibold text-[#17110d]">{order.returnAdminNote}</span></p>
+                            <p>{t('account.orderDetails.noteFromUs')} <span className="font-semibold text-[#17110d]">{order.returnAdminNote}</span></p>
                           ) : null}
                         </div>
                       ) : (
                         <p className="mt-4 text-sm text-zinc-600">
                           {info.canRequest
-                            ? `You have ${info.daysLeft} day${info.daysLeft === 1 ? '' : 's'} left to request a return.`
-                            : 'The return window for this order has closed.'}
+                            ? t('account.orderDetails.daysLeft', { count: info.daysLeft })
+                            : t('account.orderDetails.windowClosed')}
                         </p>
                       )}
 
@@ -545,7 +547,7 @@ export default function OrderDetailPage() {
                           <textarea
                             value={returnReason}
                             onChange={(event) => setReturnReason(event.target.value)}
-                            placeholder="Why do you want to return this order?"
+                            placeholder={t('account.orderDetails.returnReasonPlaceholder')}
                             className="min-h-[90px] w-full border border-[#e7d3c2] px-3 py-2 text-sm outline-none focus:border-[#17110d]"
                           />
                           <div className="flex gap-2">
@@ -555,7 +557,7 @@ export default function OrderDetailPage() {
                               disabled={isSubmittingReturn}
                               className="h-11 flex-1 bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white disabled:opacity-50"
                             >
-                              {isSubmittingReturn ? 'SUBMITTING...' : 'SUBMIT RETURN'}
+                              {isSubmittingReturn ? t('account.orderDetails.submitting') : t('account.orderDetails.submitRequest')}
                             </button>
                             <button
                               type="button"
@@ -563,7 +565,7 @@ export default function OrderDetailPage() {
                               disabled={isSubmittingReturn}
                               className="h-11 border border-[#e7d3c2] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#7a3a61] disabled:opacity-50"
                             >
-                              Cancel
+                              {t('account.orderDetails.cancel')}
                             </button>
                           </div>
                         </div>
@@ -575,7 +577,7 @@ export default function OrderDetailPage() {
                           className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-rose-200 px-6 py-3 text-sm font-bold tracking-[0.08em] text-rose-600 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
                         >
                           <Ban className="h-4 w-4" />
-                          {isCancellingReturn ? 'CANCELLING...' : 'CANCEL RETURN REQUEST'}
+                          {isCancellingReturn ? t('account.orderDetails.cancellingReturn') : t('account.orderDetails.cancelReturnRequest')}
                         </button>
                       ) : info.canRequest ? (
                         <button
@@ -584,7 +586,7 @@ export default function OrderDetailPage() {
                           className="mt-4 inline-flex w-full items-center justify-center gap-2 border border-[#1b1210] bg-[#1b1210] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#342721]"
                         >
                           <Undo2 className="h-4 w-4" />
-                          REQUEST RETURN
+                          {t('account.orderDetails.requestReturn')}
                         </button>
                       ) : null}
                     </div>

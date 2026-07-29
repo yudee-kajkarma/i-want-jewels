@@ -12,6 +12,7 @@ import { addToCart } from '../store/cartSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { clearWishlist, removeWishlistItem } from '../store/wishlistSlice'
 import { formatPrice } from '../utils/price'
+import { useTranslation } from 'react-i18next'
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -26,6 +27,7 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default function WishlistPage() {
+  const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const { currency } = useCurrency()
   const wishlist = useAppSelector((state) => state.wishlist.wishlist)
@@ -74,11 +76,11 @@ export default function WishlistPage() {
     setIsTransferring(false)
 
     if (successCount > 0) {
-      toast.success(`Moved ${successCount} item${successCount === 1 ? '' : 's'} to cart.`)
+      toast.success(t('account.wishlist.toastMovedToCart', { count: successCount }))
     }
 
     if (failureCount > 0) {
-      toast.error(`Could not transfer ${failureCount} item${failureCount === 1 ? '' : 's'}.`)
+      toast.error(t('account.wishlist.toastTransferFailed', { count: failureCount }))
     }
   }
 
@@ -88,8 +90,8 @@ export default function WishlistPage() {
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Wishlist</p>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Saved pieces you love</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('account.wishlist.breadcrumb')}</p>
+            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">{t('account.wishlist.title')}</h1>
           </div>
           {wishlist && wishlist.items.length > 0 ? (
             <div className="flex flex-wrap items-center gap-3">
@@ -100,7 +102,7 @@ export default function WishlistPage() {
                 className="inline-flex items-center gap-2 bg-[#111111] px-5 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <ShoppingBag className="h-4 w-4" />
-                {isTransferring ? 'TRANSFERRING...' : 'TRANSFER TO CART'}
+                {isTransferring ? t('account.wishlist.transferring') : t('account.wishlist.transferToCart')}
               </button>
               <button
                 type="button"
@@ -108,7 +110,7 @@ export default function WishlistPage() {
                 disabled={isTransferring}
                 className="border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
               >
-                CLEAR WISHLIST
+                {t('account.wishlist.clearWishlist')}
               </button>
             </div>
           ) : null}
@@ -116,7 +118,7 @@ export default function WishlistPage() {
 
         <div className="mt-8 grid gap-8 xl:grid-cols-[1fr_360px]">
           <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            {isLoading ? <p className="text-sm text-zinc-500">Loading wishlist...</p> : null}
+            {isLoading ? <p className="text-sm text-zinc-500">{t('account.wishlist.loading')}</p> : null}
 
             {!isLoading && error ? (
               <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div>
@@ -124,13 +126,13 @@ export default function WishlistPage() {
 
             {!isLoading && (!wishlist || wishlist.items.length === 0) ? (
               <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
-                <h2 className="text-2xl font-bold text-[#17110d]">Your wishlist is empty</h2>
-                <p className="mt-3 text-sm leading-7 text-zinc-500">Save products from the listing or product detail page and they will appear here.</p>
+                <h2 className="text-2xl font-bold text-[#17110d]">{t('account.wishlist.emptyTitle')}</h2>
+                <p className="mt-3 text-sm leading-7 text-zinc-500">{t('account.wishlist.emptyDesc')}</p>
                 <Link
                   to="/products"
                   className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
                 >
-                  BROWSE PRODUCTS
+                  {t('account.wishlist.browseProducts')}
                 </Link>
               </div>
             ) : null}
@@ -152,7 +154,7 @@ export default function WishlistPage() {
                       <div className="mt-3 flex items-center gap-3 text-sm text-zinc-500">
                         <StarRating rating={item.rating} />
                         <span>{item.rating.toFixed(1)} / 5</span>
-                        <span>{item.reviewsCount} reviews</span>
+                        <span>{t('account.wishlist.reviews', { count: item.reviewsCount })}</span>
                       </div>
                       <p className="mt-3 text-lg font-bold text-[#17110d]">{formatPrice(item.price, currency)}</p>
                     </div>
@@ -162,7 +164,7 @@ export default function WishlistPage() {
                         to={`/products/${item.slug || item.productId}`}
                         className="border border-[#dbc8b8] px-5 py-3 text-xs font-bold tracking-[0.1em] text-[#3c2b20] transition hover:bg-[#111111] hover:!text-white"
                       >
-                        VIEW PRODUCT
+                        {t('account.wishlist.viewProduct')}
                       </Link>
                       <button
                         type="button"
@@ -170,7 +172,7 @@ export default function WishlistPage() {
                         className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.08em] text-rose-600 transition hover:text-rose-700"
                       >
                         <Trash2 className="h-4 w-4" />
-                        REMOVE
+                        {t('account.wishlist.remove')}
                       </button>
                     </div>
                   </article>
@@ -180,24 +182,24 @@ export default function WishlistPage() {
           </section>
 
           <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Summary</p>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('account.wishlist.summary')}</p>
             <div className="mt-6 space-y-4 text-sm text-zinc-600">
               <div className="flex items-center justify-between">
-                <span>Saved items</span>
+                <span>{t('account.wishlist.savedItems')}</span>
                 <span className="font-semibold text-[#17110d]">{itemCount}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>Ready to shop</span>
-                <span className="font-semibold text-[#17110d]">{itemCount > 0 ? 'Yes' : 'No'}</span>
+                <span>{t('account.wishlist.readyToShop')}</span>
+                <span className="font-semibold text-[#17110d]">{itemCount > 0 ? t('account.wishlist.yes') : t('account.wishlist.no')}</span>
               </div>
             </div>
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
-              <p className="text-sm leading-7 text-zinc-500">Open any saved piece to choose its variant and add it to your cart.</p>
+              <p className="text-sm leading-7 text-zinc-500">{t('account.wishlist.summaryDesc')}</p>
               <Link
                 to="/products"
                 className="mt-6 inline-flex w-full justify-center bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] !text-white transition hover:bg-[#2e221b]"
               >
-                CONTINUE SHOPPING
+                {t('account.wishlist.continueShopping')}
               </Link>
             </div>
           </aside>

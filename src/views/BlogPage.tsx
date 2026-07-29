@@ -6,6 +6,7 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Pagination from "../components/sections/Pagination";
 import type { BlogListItem, BlogPagination } from "../types/blog";
+import { useTranslation } from "react-i18next";
 
 type BlogPageProps = {
     blogs: BlogListItem[];
@@ -13,6 +14,7 @@ type BlogPageProps = {
 };
 
 export default function BlogPage({ blogs, pagination }: BlogPageProps) {
+    const { t } = useTranslation('blog');
     const navigate = useNavigate();
 
     return (
@@ -23,10 +25,10 @@ export default function BlogPage({ blogs, pagination }: BlogPageProps) {
                 <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            Homepage / Blog
+                            {t('list.breadcrumb')}
                         </p>
                         <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
-                            Blog
+                            {t('list.title')}
                         </h1>
                     </div>
                 </section>
@@ -41,10 +43,10 @@ export default function BlogPage({ blogs, pagination }: BlogPageProps) {
                     {blogs.length === 0 ? (
                         <div className="border border-dashed border-zinc-300 bg-white px-6 py-12 text-center">
                             <h2 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
-                                No blogs found
+                                {t('list.emptyTitle')}
                             </h2>
                             <p className="mt-2 text-[12px] uppercase tracking-[0.16em] text-zinc-500">
-                                Please check again later.
+                                {t('list.emptyDesc')}
                             </p>
                         </div>
                     ) : null}

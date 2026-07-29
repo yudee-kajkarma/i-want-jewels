@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
 import { useCurrency } from "../../context/CurrencyContext";
@@ -87,6 +88,7 @@ function buildCollectionLabel(
 }
 
 export default function GiftCardShoppableBanner() {
+    const { t } = useTranslation();
     const { format } = useCurrency();
     const [products, setProducts] = useState<Record<string, HotspotProduct>>(
         {},
@@ -270,7 +272,7 @@ export default function GiftCardShoppableBanner() {
                                             <span className="text-[13px] font-semibold text-zinc-900 xl:text-[15px]">
                                                 {product?.price != null
                                                     ? format(product.price)
-                                                    : "View product"}
+                                                    : t("home.viewProduct")}
                                             </span>
                                             <ArrowRight
                                                 className="h-4 w-4 text-zinc-500"
@@ -287,30 +289,29 @@ export default function GiftCardShoppableBanner() {
                 <div className="relative flex items-center justify-center px-6 py-12 sm:px-10 lg:justify-start lg:px-14 lg:py-20">
                     <div className="w-full max-w-[440px] bg-black px-8 py-10 text-white sm:px-10 sm:py-12">
                         <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px] font-play">
-                            <span className="block">The Perfect Gift,</span>
-                            <span className="block">Every Time</span>
+                            <span className="block">{t("home.thePerfectGift").split('\n')[0] || "The Perfect Gift,"}</span>
+                            <span className="block">{t("home.thePerfectGift").split('\n')[1] || "Every Time"}</span>
                         </h2>
                         <p className="mt-3 text-center text-[12px] tracking-wide text-white/90">
-                            Give them the freedom to choose jewellery that feels
-                            truly personal.
+                            {t("home.giveGiftOfChoiceDesc")}
                         </p>
 
                         <ul className="mt-10 space-y-2 pl-2 text-[13px] text-white/95">
-                            <li>• Delivered instantly by email</li>
-                            <li>• Available in flexible amounts</li>
-                            <li>• Redeemable across all jewellery</li>
-                            <li>• Ideal for every special moment</li>
+                            <li>• {t("home.giftCardBenefit1")}</li>
+                            <li>• {t("home.giftCardBenefit2")}</li>
+                            <li>• {t("home.giftCardBenefit3")}</li>
+                            <li>• {t("home.giftCardBenefit4")}</li>
                         </ul>
 
                         <p className="mt-10 text-center text-[11px] tracking-wide text-white/80">
-                            Simple. Personal. Always appreciated.
+                            {t("home.giftCardFooterDesc")}
                         </p>
 
                         <Link
                             to={GIFT_CARD_HREF}
                             className="mt-3 block w-full bg-pink-500 px-6 py-3.5 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 sm:text-[13px] font-poppins"
                         >
-                            Shop Gift Cards
+                            {t("home.shopGiftCards")}
                         </Link>
                     </div>
                 </div>

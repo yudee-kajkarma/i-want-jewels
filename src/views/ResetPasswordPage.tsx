@@ -5,8 +5,10 @@ import { Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import AuthShell from "../components/auth/AuthShell";
 import { resetPassword, sendOtp } from "../services/authService";
+import { useTranslation } from "react-i18next";
 
 export default function ResetPasswordPage() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [otp, setOtp] = useState("");
@@ -19,7 +21,7 @@ export default function ResetPasswordPage() {
 
     async function handleSendOtp() {
         if (!email.trim()) {
-            setError("Enter your email first.");
+            setError(t("auth.enterEmailFirst"));
             return;
         }
 
@@ -29,9 +31,9 @@ export default function ResetPasswordPage() {
 
         try {
             const response = await sendOtp({ email: email.trim() });
-            setMessage(response.message || "OTP sent to your email.");
+            setMessage(response.message || t("auth.otpSent"));
         } catch {
-            setError("Unable to send OTP right now. Please try again.");
+            setError(t("auth.otpSendError"));
         } finally {
             setIsSendingOtp(false);
         }
@@ -41,7 +43,7 @@ export default function ResetPasswordPage() {
         event.preventDefault();
 
         if (!email.trim() || !otp.trim() || !newPassword.trim()) {
-            setError("Email, OTP, and new password are required.");
+            setError(t("auth.resetPasswordRequired"));
             return;
         }
 
@@ -57,12 +59,12 @@ export default function ResetPasswordPage() {
             });
             setMessage(
                 response.message ||
-                    "Password reset successful. You can sign in now.",
+                    t("auth.passwordResetSuccess"),
             );
             navigate("/login", { replace: true });
         } catch {
             setError(
-                "Password reset failed. Check email, OTP, and password, then try again.",
+                t("auth.passwordResetFailed"),
             );
         } finally {
             setIsSubmitting(false);
@@ -71,16 +73,16 @@ export default function ResetPasswordPage() {
 
     return (
         <AuthShell
-            title="Reset Password"
-            description="Send OTP and set a new password"
-            eyebrow="Account Recovery"
-            asideTitle="Recover access with email OTP."
-            asideBody="This flow uses your API endpoints: request an OTP for the email, then submit email, otp, and newPassword to reset the account password."
+            title={t("auth.resetPasswordTitle")}
+            description={t("auth.resetPasswordDesc")}
+            eyebrow={t("auth.accountRecovery")}
+            asideTitle={t("auth.resetPasswordAsideTitle")}
+            asideBody={t("auth.resetPasswordAsideBody")}
         >
             <form className="space-y-5" onSubmit={handleSubmit}>
                 <label className="block">
                     <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                        Email Address
+                        {t("auth.emailLabel")}
                     </span>
                     <div className="flex gap-2">
                         <input
@@ -89,7 +91,7 @@ export default function ResetPasswordPage() {
                             value={email}
                             onChange={(event) => setEmail(event.target.value)}
                             className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
-                            placeholder="Enter your email"
+                            placeholder={t("auth.enterEmailPlaceholder")}
                         />
                         <button
                             type="button"
@@ -99,14 +101,14 @@ export default function ResetPasswordPage() {
                             disabled={isSendingOtp || isSubmitting}
                             className="shrink-0 border border-[#b63f80] px-4 text-xs font-bold tracking-[0.08em] text-[#b63f80] transition hover:bg-[#fff3fa] disabled:opacity-60"
                         >
-                            {isSendingOtp ? "SENDING..." : "SEND OTP"}
+                            {isSendingOtp ? t("auth.sendingOtp") : t("auth.sendOtpBtn")}
                         </button>
                     </div>
                 </label>
 
                 <label className="block">
                     <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                        OTP Code
+                        {t("auth.otpCode")}
                     </span>
                     <input
                         type="text"
@@ -115,13 +117,13 @@ export default function ResetPasswordPage() {
                         onChange={(event) => setOtp(event.target.value)}
                         maxLength={6}
                         className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
-                        placeholder="Enter OTP"
+                        placeholder={t("auth.enterOtp")}
                     />
                 </label>
 
                 <label className="block">
                     <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                        New Password
+                        {t("profile.newPasswordLabel")}
                     </span>
                     <div className="relative">
                         <input
@@ -132,7 +134,7 @@ export default function ResetPasswordPage() {
                                 setNewPassword(event.target.value)
                             }
                             className="h-14 w-full border border-[#ddcdc0] px-4 pr-14 text-base outline-none transition focus:border-[#17110d]"
-                            placeholder="Enter new password"
+                            placeholder={t("auth.enterNewPassword")}
                         />
                         <button
                             type="button"
@@ -143,8 +145,8 @@ export default function ResetPasswordPage() {
                             }
                             aria-label={
                                 isPasswordVisible
-                                    ? "Hide password"
-                                    : "Show password"
+                                    ? t("auth.hidePassword")
+                                    : t("auth.showPassword")
                             }
                             className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 transition hover:text-[#b63f80]"
                         >
@@ -173,16 +175,16 @@ export default function ResetPasswordPage() {
                     disabled={isSubmitting || isSendingOtp}
                     className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
-                    {isSubmitting ? "RESETTING..." : "RESET PASSWORD"}
+                    {isSubmitting ? t("auth.resetting") : t("auth.resetPasswordBtn")}
                 </button>
 
                 <p className="text-center text-sm text-zinc-500">
-                    Back to sign in?{" "}
+                    {t("auth.backToSignIn").replace("?", "")}?{" "}
                     <Link
                         to="/login"
                         className="font-bold text-[#b63f80] underline underline-offset-4"
                     >
-                        Login here
+                        {t("auth.loginHere")}
                     </Link>
                 </p>
             </form>

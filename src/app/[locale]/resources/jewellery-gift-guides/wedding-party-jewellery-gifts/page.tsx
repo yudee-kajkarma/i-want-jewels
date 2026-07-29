@@ -1,0 +1,605 @@
+import type { Metadata } from 'next'
+import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
+import type {
+  V2ArticleSection,
+  V2HeroIntro,
+  V2QuickSummary,
+  V2FAQItem,
+  V2CTABlock,
+} from '../../../../../views/ResourceArticleV2Page'
+import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
+import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'Wedding Party Jewellery Gifts',
+  description:
+    'Choose wedding party jewellery gifts with lab grown diamond earrings, studs, huggies, drops, butterfly earrings and wedding-ready gift ideas.',
+}
+
+const heroIntro: V2HeroIntro = {
+  image: '/blog-images/blog-image-97.jpg',
+  title: 'Wedding Party Jewellery Gifts:',
+  subtitle: 'Earrings They Can Wear on the Day and After',
+  paragraphs: [
+    'Wedding party jewellery gifts should feel thoughtful, beautiful and useful after the wedding day. The best gift is not only something that looks good in the proposal box or matches one dress. It should be jewellery the person can wear again for dinners, birthdays, work, holidays, wedding guest outfits, date nights and everyday styling.',
+    'Earrings are one of the strongest wedding party gifts because they are easy to size, easy to package and easy to coordinate across a group. Small diamond studs are the safest option for bridesmaids and junior bridesmaids. Huggies are ideal for a modern wedding party. Drop earrings work beautifully for the maid of honour, mothers, sisters and formal wedding looks. Butterfly earrings are meaningful when the gift should feel personal. Minimalist earrings are best for clean, understated wedding styling.',
+    'At IWantJewels, Cadenza S lab-grown diamond studs, Cadenza M diamond stud earrings, Amadea Huggie earrings, Laluce minimalist diamond earrings, Concetta Short earrings, Orsola drop earrings, Concetta Long earrings, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings and Pave Hoops all work for different wedding party gift needs. Lusso bold statement earrings can work only for a fashion-led wedding party or someone who genuinely loves bold visible jewellery.',
+  ],
+  shopLabel: 'Shop Wedding Party Jewellery Gifts',
+  shopHref: '/products?category=Earring',
+}
+
+const quickSummary: V2QuickSummary = {
+  items: [
+    'Choose wedding party jewellery gifts.',
+    'Pick earrings for bridesmaids, maid of honour, mothers, sisters, daughters and best friends.',
+    'Choose jewellery for proposal boxes, thank-you gifts and wedding-day styling.',
+    'Decide between studs, huggies, butterfly earrings, drops, hoops and minimalist earrings.',
+    'Choose matching jewellery or personalised wedding party gifts.',
+    'Match jewellery to dress colour, neckline, hairstyle and wedding style.',
+    'Find meaningful wedding party gifts with symbolism.',
+    'Build wedding party ear stack gift ideas.',
+  ],
+  image: '/blog-images/blog-image-93.jpg',
+}
+
+const articleContent: V2ArticleSection[] = [
+  {
+    heading: 'Wedding Party Jewellery Gift Selector',
+    content: [
+      { type: 'paragraph', text: 'Use this table as the main gift decision tool.' },
+      {
+        type: 'table',
+        headers: ['Wedding Party Gift Need', 'Best Jewellery Direction', 'Recommended IWJ Direction'],
+        rows: [
+          ['Safest wedding party gift', 'Small diamond studs', 'Cadenza S'],
+          ['Polished wedding party gift', 'Medium diamond studs', 'Cadenza M'],
+          ['Modern wedding party gift', 'Huggies', 'Amadea Huggie'],
+          ['Minimalist wedding party gift', 'Minimalist earrings or small studs', 'Laluce, Cadenza S'],
+          ['Meaningful wedding party gift', 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
+          ['Bridesmaid gift', 'Small studs, huggies or short drops', 'Cadenza S, Amadea, Concetta Short'],
+          ['Maid of honour gift', 'Butterfly earrings, drops or medium studs', 'Alidi Farfalla, Orsola, Cadenza M'],
+          ['Mother of bride/groom gift', 'Classic studs or elegant drops', 'Cadenza M, Orsola, Concetta Long'],
+          ['Sister wedding gift', 'Butterfly earrings, huggies or studs', 'Farfalla, Amadea, Cadenza M'],
+          ['Best friend wedding gift', 'Huggies, butterfly earrings or drops', 'Amadea, Farfalla, Orsola'],
+          ['Proposal box gift', 'Small studs, huggies or butterfly earrings', 'Cadenza S, Amadea, Farfalla'],
+          ['Thank-you gift', 'Drops, butterfly earrings or polished studs', 'Orsola, Alidi Farfalla, Cadenza M'],
+          ['Wedding party ear stack', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'What Makes Jewellery a Good Wedding Party Gift?',
+    content: [
+      { type: 'paragraph', text: 'A good wedding party jewellery gift should feel beautiful for the wedding day and useful after the celebration. The mistake many people make is choosing jewellery that only matches one outfit. A stronger gift should work with the wedding look and still feel wearable later.' },
+      { type: 'paragraph', text: 'Earrings are especially practical because they do not require ring sizing and can be coordinated across a group. They can also be gifted in proposal boxes, morning-of wedding boxes or thank-you gifts after the wedding. Small studs work across many personal styles. Huggies feel modern and wearable. Drops add elegance for important wedding roles. Butterfly earrings add emotion and meaning.' },
+      {
+        type: 'table',
+        headers: ['What Makes It a Strong Wedding Party Gift', 'Why It Matters'],
+        rows: [
+          ['Wedding-day use', 'The gift can be worn during the ceremony, photos or reception'],
+          ['Rewear value', 'The jewellery stays useful after the wedding'],
+          ['Easy sizing', 'Earrings are simpler to gift than rings'],
+          ['Role-appropriate', 'Bridesmaid, maid of honour and mother gifts can differ'],
+          ['Personal meaning', 'Close people may deserve more emotional gifts'],
+          ['Comfort', 'Wedding party members wear jewellery for many hours'],
+          ['Dress and hairstyle match', 'Earrings should show well in photos'],
+          ['Metal colour coordination', 'Keeps the wedding styling polished'],
+        ],
+      },
+      { type: 'see-also', text: 'Bridesmaid jewellery gifts', href: '/resources/jewellery-gift-guides/bridesmaid-jewellery-gifts' },
+    ],
+  },
+  {
+    heading: 'Safest Wedding Party Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'The safest wedding party jewellery gifts are small studs, medium studs, huggies and minimalist earrings. These styles are easy to wear, easy to match and less likely to clash with different personal styles.' },
+      { type: 'paragraph', text: 'Cadenza S is the safest group gift because it is subtle and wearable. Cadenza M works when the gift should feel more polished. Amadea is strong for a modern wedding party. Laluce is best for a clean, understated wedding look.' },
+      {
+        type: 'table',
+        headers: ['Safe Wedding Party Gift Option', 'Best For', 'Product Direction'],
+        rows: [
+          ['Small diamond studs', 'Safest group gift', 'Cadenza S'],
+          ['Medium diamond studs', 'Polished wedding party gift', 'Cadenza M'],
+          ['Huggies', 'Modern wedding party styling', 'Amadea'],
+          ['Minimalist earrings', 'Clean understated wedding', 'Laluce'],
+          ['Stud + huggie set', 'Giftable ear stack', 'Cadenza S + Amadea'],
+          ['Short drops', 'Soft bridesmaid or sister styling', 'Concetta Short'],
+          ['Drop earrings', 'Maid of honour or mother gift', 'Orsola'],
+          ['Butterfly earrings', 'Meaningful gift for close people', 'Farfalla, Alidi Farfalla'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
+    ],
+  },
+  {
+    heading: 'Matching vs Personalised Wedding Party Jewellery',
+    content: [
+      { type: 'paragraph', text: 'Matching jewellery creates a clean and coordinated wedding look. This is useful when bridesmaids wear the same dress colour, similar necklines or matching hairstyles. Small studs and huggies are the easiest styles to match across a group.' },
+      { type: 'paragraph', text: 'Personalised jewellery feels more thoughtful. This works well when the wedding party includes different roles, ages and personal styles. For example, bridesmaids can receive Cadenza S, the maid of honour can receive Orsola or Alidi Farfalla, and mothers can receive Cadenza M or Concetta Long.' },
+      {
+        type: 'table',
+        headers: ['Gift Approach', 'Best For', 'Product Direction'],
+        rows: [
+          ['Matching small studs', 'Safest group gift', 'Cadenza S'],
+          ['Matching huggies', 'Modern bridal party', 'Amadea'],
+          ['Matching medium studs', 'Polished group sparkle', 'Cadenza M'],
+          ['Matching minimalist earrings', 'Minimal wedding style', 'Laluce'],
+          ['Personalised by role', 'Different wedding party roles', 'Cadenza S, Orsola, Alidi Farfalla'],
+          ['Maid of honour upgrade', 'Slightly elevated gift', 'Orsola, Alidi Farfalla, Cadenza M'],
+          ['Mother upgrade', 'Classic or formal gift', 'Cadenza M, Concetta Long'],
+          ['Meaningful individual gifts', 'Sister, best friend or close family', 'Farfalla, Alidi Farfalla'],
+        ],
+      },
+      { type: 'see-also', text: 'Maid of honour jewellery gifts', href: '/resources/jewellery-gift-guides/maid-of-honour-jewellery-gifts' },
+    ],
+  },
+  {
+    heading: 'Wedding Party Jewellery Gifts by Role',
+    content: [
+      { type: 'paragraph', text: 'The best wedding party gift depends on the role. Bridesmaids usually need something coordinated and wearable. The maid of honour can receive something slightly more special. Mothers often suit classic studs or elegant drops. Sisters and best friends may appreciate meaningful pieces.' },
+      {
+        type: 'table',
+        headers: ['Wedding Party Role', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Bridesmaid', 'Small studs, huggies or short drops', 'Cadenza S, Amadea, Concetta Short'],
+          ['Maid of honour', 'Drops, butterfly earrings or medium studs', 'Orsola, Alidi Farfalla, Cadenza M'],
+          ['Mother of the bride', 'Classic studs or elegant drops', 'Cadenza M, Orsola, Concetta Long'],
+          ['Mother of the groom', 'Classic studs or elegant drops', 'Cadenza M, Orsola, Concetta Long'],
+          ['Sister', 'Butterfly earrings, huggies or studs', 'Farfalla, Amadea, Cadenza M'],
+          ['Best friend', 'Huggies, butterfly earrings or drops', 'Amadea, Farfalla, Orsola'],
+          ['Daughter', 'Small studs, huggies or butterfly earrings', 'Cadenza S, Amadea, Farfalla'],
+          ['Junior bridesmaid', 'Small studs', 'Cadenza S'],
+          ['Sister-in-law', 'Studs, huggies or delicate drops', 'Cadenza M, Amadea, Concetta Short'],
+          ['Flower girl alternative gift', 'Very simple small studs only if age-appropriate', 'Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery gifts for sister', href: '/resources/jewellery-gift-guides/jewellery-gifts-for-sister' },
+    ],
+  },
+  {
+    heading: 'Bridesmaid Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'Bridesmaid jewellery gifts should be easy to coordinate and easy to wear again. For most bridesmaids, small studs, huggies or delicate drops are the safest choices.' },
+      { type: 'paragraph', text: 'Cadenza S is the strongest bridesmaid gift if you want one style for the whole group. Amadea is best for a modern bridal party. Concetta Short works well for soft dresses, champagne dresses, blush dresses and romantic wedding styling.' },
+      {
+        type: 'table',
+        headers: ['Bridesmaid Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Safest bridesmaid gift', 'Small studs', 'Cadenza S'],
+          ['More polished bridesmaid gift', 'Medium studs', 'Cadenza M'],
+          ['Modern bridesmaid gift', 'Huggies', 'Amadea'],
+          ['Minimal bridesmaid gift', 'Minimalist earrings', 'Laluce'],
+          ['Soft bridesmaid dress', 'Short drops', 'Concetta Short'],
+          ['Meaningful bridesmaid gift', 'Butterfly earrings', 'Farfalla'],
+          ['Bridesmaid proposal gift', 'Small studs or huggies', 'Cadenza S, Amadea'],
+          ['Bridesmaid ear stack', 'Small stud + huggie', 'Cadenza S + Amadea'],
+        ],
+      },
+      { type: 'see-also', text: 'Bridesmaid jewellery gifts', href: '/resources/jewellery-gift-guides/bridesmaid-jewellery-gifts' },
+    ],
+  },
+  {
+    heading: 'Maid of Honour Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'The maid of honour gift can feel more personal and elevated than the bridesmaid gifts. She is usually the bride\'s closest support, so jewellery with meaning or more polished styling works well.' },
+      { type: 'paragraph', text: 'Alidi Farfalla is the strongest meaningful maid of honour gift. Orsola is best for wedding-day elegance. Cadenza M is safest for classic sparkle. Concetta Long works for a formal wedding or black-tie celebration.' },
+      {
+        type: 'table',
+        headers: ['Maid of Honour Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Most meaningful gift', 'Butterfly earrings', 'Alidi Farfalla'],
+          ['Soft symbolic gift', 'Butterfly earrings', 'Farfalla'],
+          ['Wedding-day elegant gift', 'Drop earrings', 'Orsola'],
+          ['Safe classic gift', 'Medium studs', 'Cadenza M'],
+          ['Proposal box gift', 'Small studs or huggies', 'Cadenza S, Amadea'],
+          ['Formal wedding gift', 'Long drops', 'Concetta Long'],
+          ['Soft wedding dress gift', 'Short drops', 'Concetta Short'],
+          ['Maid of honour ear stack', 'Butterfly + small stud', 'Farfalla + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Maid of honour jewellery gifts', href: '/resources/jewellery-gift-guides/maid-of-honour-jewellery-gifts' },
+    ],
+  },
+  {
+    heading: 'Mother of the Bride and Groom Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'Jewellery gifts for the mother of the bride or mother of the groom should feel elegant, thoughtful and wearable beyond the wedding day. Classic studs and elegant drops are usually safer than bold fashion-led pieces.' },
+      { type: 'paragraph', text: 'Cadenza M is the safest classic gift. Orsola works beautifully for ceremony and reception outfits. Concetta Long is strong for formal or black-tie weddings. Farfalla or Alidi Farfalla can work if the gift should feel sentimental.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-95.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Mother Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ['Safest mother gift', 'Medium diamond studs', 'Cadenza M'],
+              ['Elegant wedding-day gift', 'Drop earrings', 'Orsola'],
+              ['Formal mother gift', 'Long drops', 'Concetta Long'],
+              ['Subtle everyday gift', 'Small studs', 'Cadenza S'],
+              ['Modern everyday gift', 'Huggies', 'Amadea'],
+              ['Minimal mother gift', 'Minimalist earrings', 'Laluce'],
+              ['Sentimental mother gift', 'Butterfly earrings', 'Alidi Farfalla, Farfalla'],
+              ['Mother ear stack', 'Stud + huggie', 'Cadenza S + Amadea'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery gifts for mum', href: '/resources/jewellery-gift-guides/jewellery-gifts-for-mum' },
+    ],
+  },
+  {
+    heading: 'Sister and Best Friend Wedding Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'Sisters and best friends often deserve wedding party gifts that feel more personal than a standard group gift. Butterfly earrings, huggies, drops and polished studs can all work depending on their style.' },
+      { type: 'paragraph', text: 'For a sister, Farfalla or Alidi Farfalla can feel meaningful. For a best friend, Amadea, Farfalla or Orsola can feel stylish and personal. If you are unsure, Cadenza M or Cadenza S is safest.' },
+      {
+        type: 'table',
+        headers: ['Recipient', 'Best Wedding Gift Direction', 'Product Direction'],
+        rows: [
+          ['Sister in wedding party', 'Butterfly earrings, huggies or studs', 'Farfalla, Amadea, Cadenza M'],
+          ['Best friend in wedding party', 'Huggies, butterfly earrings or drops', 'Amadea, Farfalla, Orsola'],
+          ['Sister as maid of honour', 'Butterfly earrings or drops', 'Alidi Farfalla, Orsola'],
+          ['Best friend as maid of honour', 'Butterfly earrings, huggies or drops', 'Farfalla, Amadea, Orsola'],
+          ['Sister as bridesmaid', 'Huggies, studs or butterfly earrings', 'Amadea, Cadenza S, Farfalla'],
+          ['Best friend as bridesmaid', 'Small studs, huggies or short drops', 'Cadenza S, Amadea, Concetta Short'],
+          ['Meaningful wedding gift', 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
+          ['Safe wedding gift', 'Diamond studs', 'Cadenza S, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery gifts for best friend', href: '/resources/jewellery-gift-guides/jewellery-gifts-for-best-friend' },
+    ],
+  },
+  {
+    heading: 'Proposal Box Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'Wedding party proposal boxes work best when the jewellery is compact, beautiful and wearable. Small studs, huggies and butterfly earrings are the strongest choices because they fit neatly into a gift box and do not feel too difficult to wear.' },
+      { type: 'paragraph', text: 'Cadenza S is safest. Amadea is modern. Farfalla is meaningful. Laluce is understated. For a maid of honour proposal, Alidi Farfalla or Cadenza M can feel more elevated.' },
+      {
+        type: 'table',
+        headers: ['Proposal Box Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Safest proposal box gift', 'Small studs', 'Cadenza S'],
+          ['Modern proposal box gift', 'Huggies', 'Amadea'],
+          ['Meaningful proposal box gift', 'Butterfly earrings', 'Farfalla'],
+          ['Minimal proposal box gift', 'Minimalist earrings', 'Laluce'],
+          ['Maid of honour proposal gift', 'Butterfly earrings or medium studs', 'Alidi Farfalla, Cadenza M'],
+          ['Bridesmaid proposal gift', 'Small studs or huggies', 'Cadenza S, Amadea'],
+          ['Sister proposal gift', 'Butterfly earrings or huggies', 'Farfalla, Amadea'],
+          ['Best friend proposal gift', 'Huggies or butterfly earrings', 'Amadea, Farfalla'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
+    ],
+  },
+  {
+    heading: 'Wedding Thank-You Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'Wedding thank-you jewellery gifts can be given before the wedding, on the wedding morning or after the celebration. These gifts should feel appreciative and personal.' },
+      { type: 'paragraph', text: 'For thank-you gifts, Orsola is strong for elegance, Alidi Farfalla is strong for meaning, Cadenza M is safest for classic sparkle, and Amadea is strong for modern everyday wear.' },
+      {
+        type: 'table',
+        headers: ['Thank-You Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Elegant thank-you gift', 'Drop earrings', 'Orsola'],
+          ['Sentimental thank-you gift', 'Butterfly earrings', 'Alidi Farfalla'],
+          ['Safe classic thank-you gift', 'Medium studs', 'Cadenza M'],
+          ['Modern thank-you gift', 'Huggies', 'Amadea'],
+          ['Minimal thank-you gift', 'Minimalist earrings', 'Laluce'],
+          ['Soft thank-you gift', 'Short drops or butterfly earrings', 'Concetta Short, Farfalla'],
+          ['Formal thank-you gift', 'Long drops', 'Concetta Long'],
+          ['Thank-you ear stack', 'Drop + small stud', 'Orsola + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery gifts for her', href: '/resources/jewellery-gift-guides/jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Wedding Party Earrings by Dress Colour',
+    content: [
+      { type: 'paragraph', text: 'Dress colour is one of the most useful ways to choose wedding party jewellery. The goal is to make the jewellery support the outfit, not compete with it.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-97.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Dress Colour', 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ['Blush', 'Butterfly earrings, short drops or small studs', 'Farfalla, Concetta Short, Cadenza S'],
+              ['Champagne', 'Short drops, medium studs or butterfly earrings', 'Concetta Short, Cadenza M, Farfalla'],
+              ['Sage green', 'Small studs, huggies or butterfly earrings', 'Cadenza S, Amadea, Farfalla'],
+              ['Emerald green', 'Gold drops, medium studs or hoops', 'Orsola, Cadenza M, Pave Hoops'],
+              ['Navy', 'Medium studs, huggies or refined drops', 'Cadenza M, Amadea, Orsola'],
+              ['Burgundy', 'Drops, long drops or medium studs', 'Orsola, Concetta Long, Cadenza M'],
+              ['Black', 'Drops, studs, hoops or bold earrings if fashion-led', 'Orsola, Cadenza M, Pave Hoops, Lusso'],
+              ['Dusty blue', 'Studs, huggies or minimalist earrings', 'Cadenza S, Amadea, Laluce'],
+              ['Silver or grey', 'White/silver tone studs or minimalist earrings', 'Cadenza S, Cadenza M, Laluce'],
+              ['Floral', 'Butterfly earrings or small studs', 'Farfalla, Cadenza S'],
+              ['Satin', 'Drops or medium studs', 'Orsola, Cadenza M'],
+              ['Pastel', 'Butterfly earrings, short drops or small studs', 'Farfalla, Concetta Short, Cadenza S'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery with satin dress', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress' },
+    ],
+  },
+  {
+    heading: 'Wedding Party Earrings by Neckline',
+    content: [
+      { type: 'paragraph', text: 'Neckline helps decide whether earrings should be small, soft, long or more visible.' },
+      {
+        type: 'table',
+        headers: ['Neckline', 'Best Earring Direction', 'Product Direction'],
+        rows: [
+          ['V-neck', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Sweetheart neckline', 'Butterfly earrings, short drops or studs', 'Farfalla, Concetta Short, Cadenza M'],
+          ['Off-shoulder dress', 'Drops, studs or huggies', 'Orsola, Cadenza M, Amadea'],
+          ['Strapless dress', 'Drops, polished studs or bold earrings if simple', 'Orsola, Cadenza M, Lusso'],
+          ['Square neckline', 'Studs, huggies or short drops', 'Cadenza S, Amadea, Concetta Short'],
+          ['High-neck dress', 'Studs, huggies or hoops', 'Cadenza M, Amadea, Pave Hoops'],
+          ['Halter dress', 'Studs or slim long drops', 'Cadenza M, Concetta Long'],
+          ['Cowl neck', 'Studs or soft drops', 'Cadenza M, Orsola'],
+          ['One-shoulder dress', 'Studs or clean drops', 'Cadenza M, Orsola'],
+          ['Detailed neckline', 'Small studs or minimalist earrings', 'Cadenza S, Laluce'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery for sweetheart neckline', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline' },
+    ],
+  },
+  {
+    heading: 'Wedding Party Earrings by Hairstyle',
+    content: [
+      { type: 'paragraph', text: 'Hairstyle affects how visible earrings are in photos. Wedding party earrings should be comfortable, secure and visible enough for the chosen hairstyle.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-99.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Hairstyle', 'Best Earring Direction', 'Product Direction'],
+            rows: [
+              ['Hair down', 'Medium studs, huggies or drops', 'Cadenza M, Amadea, Orsola'],
+              ['Soft waves', 'Butterfly earrings, short drops or medium studs', 'Farfalla, Concetta Short, Cadenza M'],
+              ['Half-up hair', 'Studs, huggies or butterfly earrings', 'Cadenza S, Amadea, Farfalla'],
+              ['Low bun', 'Drops, butterfly earrings or long drops', 'Orsola, Farfalla, Concetta Long'],
+              ['Sleek bun', 'Drops, studs or huggies', 'Orsola, Cadenza M, Amadea'],
+              ['Ponytail', 'Huggies, drops, hoops or studs', 'Amadea, Orsola, Pave Hoops, Cadenza M'],
+              ['Short hair', 'Studs, huggies, drops or hoops', 'Cadenza S, Amadea, Orsola, Pave Hoops'],
+              ['Braided style', 'Studs, huggies or butterfly earrings', 'Cadenza S, Amadea, Farfalla'],
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'Wedding Party Jewellery by Wedding Style',
+    content: [
+      { type: 'paragraph', text: 'Wedding style should guide how classic, modern, romantic or formal the jewellery feels.' },
+      {
+        type: 'table',
+        headers: ['Wedding Style', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Classic wedding', 'Studs or soft drops', 'Cadenza M, Concetta Short'],
+          ['Modern wedding', 'Huggies or minimalist earrings', 'Amadea, Laluce'],
+          ['Romantic wedding', 'Butterfly earrings or soft drops', 'Farfalla, Concetta Short'],
+          ['Garden wedding', 'Butterfly earrings, studs or huggies', 'Farfalla, Cadenza S, Amadea'],
+          ['Beach wedding', 'Small studs, huggies or minimalist earrings', 'Cadenza S, Amadea, Laluce'],
+          ['Black-tie wedding', 'Medium studs or long drops', 'Cadenza M, Concetta Long'],
+          ['City wedding', 'Huggies, studs or hoops', 'Amadea, Cadenza M, Pave Hoops'],
+          ['Minimal wedding', 'Small studs or minimalist earrings', 'Cadenza S, Laluce'],
+          ['Boho wedding', 'Butterfly earrings or small studs', 'Farfalla, Cadenza S'],
+          ['Evening wedding', 'Drops, studs or hoops', 'Orsola, Cadenza M, Pave Hoops'],
+        ],
+      },
+      { type: 'see-also', text: 'Wedding guest jewellery guide', href: '#' },
+    ],
+  },
+  {
+    heading: 'Meaningful Wedding Party Jewellery Gifts',
+    content: [
+      { type: 'paragraph', text: 'Meaningful wedding party gifts should feel like appreciation. They should recognise friendship, sisterhood, family support, shared memories and the role each person played in the wedding.' },
+      { type: 'paragraph', text: 'Butterfly earrings are one of the strongest meaningful wedding party gifts because they can symbolise transformation, growth, beauty and new beginnings. That symbolism fits weddings naturally because the day marks a new chapter.' },
+      {
+        type: 'table',
+        headers: ['Meaningful Gift Need', 'Why It Works', 'Product Direction'],
+        rows: [
+          ['Meaningful bridesmaid gift', 'Personal and friendship-led', 'Farfalla'],
+          ['Maid of honour meaningful gift', 'More elevated and emotional', 'Alidi Farfalla'],
+          ['Sister wedding gift', 'Symbolic and personal', 'Farfalla, Alidi Farfalla'],
+          ['Best friend wedding gift', 'Meaningful without being too romantic', 'Farfalla'],
+          ['Mother wedding gift', 'Sentimental and appreciative', 'Alidi Farfalla, Cadenza M'],
+          ['Wedding new chapter gift', 'Symbolises growth and transformation', 'Farfalla'],
+          ['Meaningful ear stack', 'Symbolism plus sparkle', 'Farfalla + Cadenza S'],
+          ['If she prefers classic jewellery', 'Choose studs instead', 'Cadenza M, Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Butterfly earrings meaning', href: '#' },
+    ],
+  },
+  {
+    heading: 'Wedding Party Jewellery by Metal Colour',
+    content: [
+      { type: 'paragraph', text: 'Metal colour should match the wedding palette and the jewellery each person is likely to wear again. If the jewellery will be worn on the wedding day, choose a shared tone for a polished group look. If the jewellery is a personal thank-you gift, choose the metal colour each person already wears.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-101.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Metal Colour', 'Wedding Party Gift Feeling', 'Best For'],
+            rows: [
+              ['Yellow gold', 'Warm, romantic and classic', 'Champagne, blush, green, burgundy, black and cream dresses'],
+              ['White or silver tone', 'Clean, bright and timeless', 'Navy, silver, grey, dusty blue, black and cool-toned dresses'],
+              ['Rose gold', 'Soft, feminine and sentimental', 'Blush, pink, champagne, floral and pastel dresses'],
+              ['Mixed metals', 'Personal and modern', 'Ear stack lovers and personalised gifts'],
+            ],
+          },
+        ],
+      },
+      { type: 'paragraph', text: 'For wedding party gifts, yellow gold is strong for warm palettes, white or silver tone is strong for cool palettes, and rose gold is strong for soft romantic styling.' },
+      { type: 'see-also', text: 'Gold vs white vs rose gold lab-grown diamond earrings', href: '/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings' },
+    ],
+  },
+  {
+    heading: 'Wedding Party Ear Stack Gift Ideas',
+    content: [
+      { type: 'paragraph', text: 'Ear stack gifts are strong when the recipient has multiple piercings or likes layered jewellery. A two-piece stack is usually safer than a three-piece stack.' },
+      { type: 'paragraph', text: 'The safest wedding party stack is a small stud with a huggie. The most meaningful stack is a butterfly earring with a small stud. The best formal stack is a drop or long drop with a small support stud.' },
+      {
+        type: 'table',
+        headers: ['Wedding Party Stack Type', 'Main Piece', 'Support Piece', 'Product Direction'],
+        rows: [
+          ['Safest wedding party stack', 'Small stud', 'Huggie', 'Cadenza S + Amadea'],
+          ['Classic sparkle stack', 'Medium stud', 'Small stud', 'Cadenza M + Cadenza S'],
+          ['Minimal wedding stack', 'Small stud', 'Minimalist earring', 'Cadenza S + Laluce'],
+          ['Meaningful wedding stack', 'Butterfly earring', 'Small stud', 'Farfalla + Cadenza S'],
+          ['Maid of honour stack', 'Butterfly earring', 'Minimalist detail', 'Alidi Farfalla + Laluce'],
+          ['Elegant wedding stack', 'Drop earring', 'Small stud', 'Orsola + Cadenza S'],
+          ['Soft bridesmaid stack', 'Short drop', 'Small stud', 'Concetta Short + Cadenza S'],
+          ['Formal mother/maid stack', 'Long drop', 'Small stud', 'Concetta Long + Cadenza S'],
+          ['Modern wedding stack', 'Huggie', 'Small stud', 'Amadea + Cadenza S'],
+          ['Hoop wedding stack', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+    ],
+  },
+  {
+    heading: 'Product Pathways by Wedding Party Gift Need',
+    content: [
+      { type: 'subheading', text: 'For the Safest Wedding Party Gift' },
+      { type: 'paragraph', text: 'Choose Cadenza S lab-grown diamond studs. They are subtle, easy to match across a group and wearable after the wedding.' },
+      { type: 'subheading', text: 'For a More Polished Wedding Party Gift' },
+      { type: 'paragraph', text: 'Choose Cadenza M diamond stud earrings. They add more visible sparkle while staying classic and easy to rewear.' },
+      { type: 'subheading', text: 'For a Modern Wedding Party Gift' },
+      { type: 'paragraph', text: 'Choose Amadea Huggie earrings. They are close-fitting, wearable and strong for modern bridal party styling.' },
+      { type: 'subheading', text: 'For a Minimalist Wedding Party Gift' },
+      { type: 'paragraph', text: 'Choose Laluce minimalist diamond earrings or Cadenza S. These are best for clean, understated wedding styling.' },
+      { type: 'subheading', text: 'For a Soft Wedding Dress Gift' },
+      { type: 'paragraph', text: 'Choose Concetta Short earrings. They work beautifully with blush, champagne, pastel, floral and soft satin dresses.' },
+      { type: 'subheading', text: 'For an Elegant Wedding-Day Gift' },
+      { type: 'paragraph', text: 'Choose Orsola drop earrings. They add movement and polish for the ceremony, reception and future occasion outfits.' },
+      { type: 'subheading', text: 'For a Formal Wedding Party Gift' },
+      { type: 'paragraph', text: 'Choose Concetta Long earrings. They work best for black-tie weddings, formal mother gifts and elevated maid of honour styling.' },
+      { type: 'subheading', text: 'For a Meaningful Wedding Party Gift' },
+      { type: 'paragraph', text: 'Choose Farfalla butterfly earrings or Alidi Farfalla butterfly earrings. They are strong when the gift should feel personal, symbolic and appreciation-led.' },
+    ],
+  },
+  {
+    heading: 'Product Recommendations from IWantJewels',
+    content: [
+      {
+        type: 'table',
+        headers: ['Product', 'Best Wedding Party Gift Role', 'Why It Works'],
+        rows: [
+          ['Cadenza S lab-grown diamond studs', 'Best safe group gift', 'Small, subtle and easy to match'],
+          ['Cadenza M diamond stud earrings', 'Best polished classic gift', 'Strong for mothers, maid of honour and classic bridesmaids'],
+          ['Amadea Huggie earrings', 'Best modern group gift', 'Close-fitting, wearable and stack-friendly'],
+          ['Laluce minimalist diamond earrings', 'Best understated wedding gift', 'Clean and quiet for minimal styling'],
+          ['Concetta Short earrings', 'Best soft bridesmaid gift', 'Delicate and feminine for soft dresses'],
+          ['Orsola drop earrings', 'Best elegant wedding-day gift', 'Adds movement and polish'],
+          ['Concetta Long earrings', 'Best formal wedding party gift', 'Refined for black-tie and elevated roles'],
+          ['Farfalla butterfly earrings', 'Best meaningful wedding party gift', 'Symbolic, soft and friendship-friendly'],
+          ['Alidi Farfalla butterfly earrings', 'Best elevated meaningful gift', 'Strong for maid of honour, sister or mother'],
+          ['Pave Hoops', 'Best modern shape gift', 'Works for fashion-led wedding styling'],
+          ['Lusso bold statement earrings', 'Best bold option only if she loves standout jewellery', 'Strong but less universal'],
+        ],
+      },
+      { type: 'paragraph', text: 'Choose wedding party jewellery that feels beautiful on the day and useful after it. Pick Cadenza S for the safest group gift, Cadenza M for polished sparkle, Amadea for modern huggies, Laluce for minimal styling, Concetta Short for soft dresses, Orsola for elegant movement and Farfalla for meaningful gifting.' },
+    ],
+  },
+  {
+    heading: 'Common Wedding Party Jewellery Gift Mistakes to Avoid',
+    content: [
+      { type: 'paragraph', text: 'One common mistake is choosing jewellery that only works for the wedding day. A stronger wedding party gift should be wearable after the ceremony too.' },
+      { type: 'paragraph', text: 'Another mistake is giving every role the same gift when some roles deserve a little more recognition. Bridesmaids can receive Cadenza S or Amadea, while the maid of honour, mother or sister can receive Orsola, Alidi Farfalla or Cadenza M.' },
+      { type: 'paragraph', text: 'A third mistake is choosing earrings that clash with the dress neckline or hairstyle. If the neckline is detailed, choose studs or huggies. If the hair is down, choose earrings with enough visibility.' },
+      { type: 'paragraph', text: 'Another mistake is choosing jewellery that is too bold for a mixed group. If the wedding party has different styles, small studs or huggies are safer than large earrings.' },
+      { type: 'paragraph', text: 'A fifth mistake is choosing the wrong metal colour. Match the wedding palette if the jewellery will be worn on the day. Match each person\'s usual jewellery tone if the gift is more personal.' },
+      { type: 'paragraph', text: 'Finally, do not forget comfort. Wedding party members wear jewellery through getting ready, photos, ceremony, dinner and dancing. The earrings should feel secure and easy to wear.' },
+      { type: 'see-also', text: 'Gold-plated jewellery care guide', href: '/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery' },
+    ],
+  },
+  {
+    heading: 'Final Wedding Party Gift Checklist',
+    content: [
+      { type: 'paragraph', text: 'Before choosing wedding party jewellery gifts, ask:' },
+      {
+        type: 'bullet-list',
+        items: [
+          'Who is receiving the jewellery?',
+          'Is the gift for proposal boxes, wedding-day wear or thank-you gifts?',
+          'Should the jewellery match across the group?',
+          'Should the maid of honour receive an upgraded gift?',
+          'Should mothers receive a more classic or formal piece?',
+          'What dress colours are being worn?',
+          'What necklines do the dresses have?',
+          'What hairstyles will be used?',
+          'Is the wedding classic, modern, romantic, garden, beach, minimal or black-tie?',
+          'What metal colour best suits the wedding palette?',
+          'What metal colour does each person usually wear?',
+          'Will the earrings be wearable after the wedding?',
+          'Would butterfly earrings feel meaningful?',
+          'Would diamond studs be safest?',
+          'Would huggies feel more modern?',
+          'Does anyone have multiple piercings for an ear stack gift?',
+          'Are the earrings comfortable for long wear?',
+          'Are the earrings easy to clean and store?',
+        ],
+      },
+      { type: 'paragraph', text: 'If you are unsure, choose Cadenza S for the safest group gift. Choose Cadenza M for polished sparkle, Amadea for a modern group gift, Orsola for elevated wedding-day elegance and Farfalla or Alidi Farfalla for meaningful wedding party gifts.' },
+    ],
+  },
+]
+
+const faq: V2FAQItem[] = [
+  { question: 'What jewellery is best for wedding party gifts?', answer: 'The best wedding party jewellery gifts are earrings that can be worn on the wedding day and after. Small studs, huggies, short drops, butterfly earrings and minimalist earrings are strong choices.' },
+  { question: 'Are earrings good wedding party gifts?', answer: 'Yes, earrings are good wedding party gifts because they are easy to size, easy to package and useful after the wedding.' },
+  { question: 'Should wedding party jewellery match?', answer: 'Wedding party jewellery can match if you want a coordinated look. If the group has different styles, choose one metal colour and similar sparkle level instead of identical earrings.' },
+  { question: 'What earrings are safest for bridesmaids?', answer: 'Small diamond studs are the safest bridesmaid earrings because they work with many dress colours, necklines, hairstyles and personal styles.' },
+  { question: 'What jewellery should I gift my maid of honour?', answer: 'For a maid of honour, choose something slightly more elevated, such as butterfly earrings, drop earrings or polished diamond studs.' },
+  { question: 'What jewellery should I gift the mother of the bride?', answer: 'Classic diamond studs or elegant drop earrings are strong mother of the bride gifts because they feel polished and wearable.' },
+  { question: 'What jewellery should I put in a bridesmaid proposal box?', answer: 'Small studs, huggies, minimalist earrings or butterfly earrings work well in bridesmaid proposal boxes.' },
+  { question: 'Are butterfly earrings good wedding party gifts?', answer: 'Yes, butterfly earrings can be meaningful wedding party gifts because they can symbolise growth, beauty, transformation and new beginnings.' },
+  { question: 'What metal colour is best for wedding party jewellery?', answer: 'Choose the metal colour that suits the wedding palette. Yellow gold works well with warm colours, white or silver tone works well with cool colours, and rose gold works well with blush and romantic palettes.' },
+  { question: 'What IWantJewels earrings are best for wedding party gifts?', answer: 'Cadenza S, Cadenza M, Amadea, Laluce, Concetta Short, Orsola, Concetta Long, Farfalla and Alidi Farfalla are strong wedding party gift options depending on the role and wedding style.' },
+]
+
+const cta: V2CTABlock = {
+  heading: 'Wedding party jewellery gifts should feel beautiful on the wedding day and wearable after it. Choose small diamond studs for the safest group gift, huggies for modern wedding parties, short drops for soft dresses, drop earrings for elegant roles, butterfly earrings for meaning and minimalist earrings for clean understated styling.',
+  body: 'Start with IWantJewels demi-fine lab-grown diamond earrings if you want wedding party gifts with real diamond sparkle. Choose Cadenza S for safe matching gifts, Cadenza M for polished sparkle, Amadea for huggies, Laluce for minimal style, Concetta Short for soft dresses, Orsola for elegant movement and Farfalla or Alidi Farfalla for meaningful gifting.',
+  primaryLabel: 'Shop Wedding Party Jewellery Gifts',
+  primaryHref: '/products?category=Earring',
+  secondaryLabel: 'Explore Bridesmaid Jewellery Gifts',
+  secondaryHref: '/resources/jewellery-gift-guides/bridesmaid-jewellery-gifts',
+  tertiaryLabel: 'Read the Maid of Honour Jewellery Gifts Guide',
+  tertiaryHref: '/resources/jewellery-gift-guides/maid-of-honour-jewellery-gifts',
+}
+
+export default function Page() {
+  const category = getCategoryBySlug('jewellery-gift-guides')
+  const article = getArticleBySlug('jewellery-gift-guides', 'wedding-party-jewellery-gifts')
+  if (!category || !article) notFound()
+  const relatedArticles = getRelatedArticles('jewellery-gift-guides', 'wedding-party-jewellery-gifts', 3)
+  return (
+    <ResourceArticleV2Page
+      category={category}
+      article={article}
+      relatedArticles={relatedArticles}
+      heroIntro={heroIntro}
+      quickSummary={quickSummary}
+      content={articleContent}
+      cta={cta}
+      faq={faq}
+    />
+  )
+}

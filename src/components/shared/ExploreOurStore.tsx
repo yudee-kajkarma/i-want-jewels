@@ -7,6 +7,7 @@ import ProductCard from "@/components/sections/ProductCard";
 import ProductCardSkeleton from "@/components/sections/ProductCardSkeleton";
 import { getRandomProducts } from "@/services/productService";
 import type { Product } from "@/types/product";
+import { useTranslation } from "react-i18next";
 
 type ExploreOurStoreProps = {
     count?: number;
@@ -25,6 +26,7 @@ export default function ExploreOurStore({
     title = "Explore Our Store",
     className = "",
 }: ExploreOurStoreProps) {
+    const { t } = useTranslation();
     const [products, setProducts] = useState<Product[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -81,13 +83,13 @@ export default function ExploreOurStore({
         <section className={`my-12 ${className}`}>
             <div className="mb-6 flex items-end justify-between gap-4">
                 <h2 className="font-play text-2xl md:text-3xl font-semibold text-[#1f2732]">
-                    {title}
+                    {title === "Explore Our Store" ? t("exploreOurStore.title") : title}
                 </h2>
                 <Link
                     to="/products"
                     className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold uppercase tracking-[0.14em] text-[#a53b79] transition hover:text-[#7a3a61]"
                 >
-                    View all &rarr;
+                    {t("exploreOurStore.viewAll")} &rarr;
                 </Link>
             </div>
 

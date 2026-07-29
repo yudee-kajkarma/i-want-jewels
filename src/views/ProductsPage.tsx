@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
@@ -161,6 +162,7 @@ export default function ProductsPage({
     initialFilterOptions = null,
     initialFilterState = null,
 }: ProductsPageProps) {
+    const { t } = useTranslation();
     const pathname = usePathname();
     const { currency } = useCurrency();
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
@@ -495,10 +497,10 @@ export default function ProductsPage({
                 <section className=" bg-white px-6 pb-5 lg:px-10 pt-8">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            Homepage / Shop
+                            {t("products.breadcrumbsShop")}
                         </p>
                         <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
-                            Shop
+                            {t("products.shop")}
                         </h1>
 
                         <div className="mt-7 hidden flex-wrap items-center gap-3 lg:flex">
@@ -534,7 +536,7 @@ export default function ProductsPage({
                                     aria-label="Filter by collection"
                                     className="ml-auto cursor-pointer border border-zinc-800 bg-white px-5 py-2.5 pr-9 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 outline-none transition hover:bg-zinc-50 focus:border-pink-500 sm:px-6 sm:py-4 sm:pr-10 sm:text-[13px]"
                                 >
-                                    <option value="">All Collections</option>
+                                    <option value="">{t("products.allCollections")}</option>
                                     {availableCollections.map(
                                         (collectionName) => (
                                             <option
@@ -570,12 +572,12 @@ export default function ProductsPage({
 
                         <div className="ml-auto text-right">
                             <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                Showing
+                                {t("products.showing")}
                             </p>
                             <p className="mt-1 text-[14px] font-medium uppercase tracking-[0.08em] text-zinc-900">
                                 {productsData
-                                    ? `${sortedProducts.length} of ${pagination?.totalRecords ?? sortedProducts.length} products`
-                                    : "Unable to load products"}
+                                    ? t("products.showingProductsOf", { count: sortedProducts.length, total: pagination?.totalRecords ?? sortedProducts.length })
+                                    : t("products.unableToLoad")}
                             </p>
                         </div>
                     </div>
@@ -599,7 +601,7 @@ export default function ProductsPage({
                             <div className="mb-6 flex flex-col gap-4 border-b border-zinc-200 pb-5 xl:flex-row xl:items-center xl:justify-between">
                                 <div className="flex flex-wrap items-center gap-5">
                                     <span className="hidden text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900 lg:inline">
-                                        {sortedProducts.length} Products
+                                        {t("products.productsCount", { count: sortedProducts.length })}
                                     </span>
 
                                     {appliedFilterKeys.length > 0 ? (
@@ -608,13 +610,13 @@ export default function ProductsPage({
                                             onClick={resetFilters}
                                             className="border border-pink-500 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-pink-500 transition hover:bg-pink-500 hover:text-white"
                                         >
-                                            Clear All
+                                            {t("products.clearAll")}
                                         </button>
                                     ) : null}
                                 </div>
 
                                 <label className="flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-zinc-700 lg:gap-3 lg:text-[12px] lg:tracking-[0.14em]">
-                                    <span>Sort By</span>
+                                    <span>{t("products.sortBy")}</span>
                                     <select
                                         value={sortOption}
                                         onChange={(event) =>
@@ -626,16 +628,16 @@ export default function ProductsPage({
                                         className="h-8 border border-zinc-800 bg-white px-2 pr-6 text-[11px] uppercase tracking-[0.1em] text-zinc-800 outline-none transition focus:border-pink-500 lg:h-10 lg:min-w-[180px] lg:px-4 lg:pr-4 lg:text-[12px] lg:tracking-[0.14em]"
                                     >
                                         <option value="featured">
-                                            Featured
+                                            {t("products.featured")}
                                         </option>
                                         <option value="title-asc">
-                                            Title A-Z
+                                            {t("products.titleAsc")}
                                         </option>
                                         <option value="price-asc">
-                                            Price Low to High
+                                            {t("products.priceLowHigh")}
                                         </option>
                                         <option value="price-desc">
-                                            Price High to Low
+                                            {t("products.priceHighLow")}
                                         </option>
                                     </select>
                                 </label>
@@ -643,7 +645,7 @@ export default function ProductsPage({
 
                             {!productsData ? (
                                 <p className="mb-5 border border-rose-200 bg-rose-50 px-4 py-3 text-[12px] uppercase tracking-[0.16em] text-rose-700">
-                                    Unable to load products right now.
+                                    {t("products.unableToLoadRightNow")}
                                 </p>
                             ) : null}
 
@@ -685,11 +687,10 @@ export default function ProductsPage({
                             products.length === 0 ? (
                                 <div className="mt-8 border border-dashed border-zinc-300 bg-white px-6 py-10 text-center">
                                     <h3 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
-                                        No products match the selected filters
+                                        {t("products.noProducts")}
                                     </h3>
                                     <p className="mt-2 text-[12px] uppercase tracking-[0.16em] text-zinc-500">
-                                        Adjust the selected filter options and
-                                        apply again to see more pieces.
+                                        {t("products.adjustFilters")}
                                     </p>
                                 </div>
                             ) : null}
@@ -704,7 +705,7 @@ export default function ProductsPage({
 
                                     {isLoadingMore ? (
                                         <p className="mt-8 text-center text-[12px] uppercase tracking-[0.22em] text-zinc-500">
-                                            Loading more products...
+                                            {t("products.loadingMore")}
                                         </p>
                                     ) : null}
 
@@ -712,7 +713,7 @@ export default function ProductsPage({
                                     pagination &&
                                     !pagination.hasNextPage ? (
                                         <p className="mt-10 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                            You&apos;ve reached the end
+                                            {t("products.reachedEnd")}
                                         </p>
                                     ) : null}
                                 </>

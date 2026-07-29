@@ -5,8 +5,10 @@ import { Link, useNavigate } from '@/lib/router'
 import AuthShell from '../components/auth/AuthShell'
 import { useAuth } from '../context/AuthContext'
 import { verifyOtp } from '../services/authService'
+import { useTranslation } from 'react-i18next'
 
 export default function VerifyOtpPage() {
+  const { t } = useTranslation()
   const navigate = useNavigate()
   const { clearOtpEmail, pendingOtpEmail } = useAuth()
   const [email, setEmail] = useState(pendingOtpEmail)
@@ -28,7 +30,7 @@ export default function VerifyOtpPage() {
       clearOtpEmail()
       navigate('/login', { replace: true })
     } catch {
-      setError('OTP verification failed. Check the email and OTP, then try again.')
+      setError(t('auth.verifyOtpFailed'))
     } finally {
       setIsSubmitting(false)
     }
@@ -36,15 +38,15 @@ export default function VerifyOtpPage() {
 
   return (
     <AuthShell
-      title="Verify OTP"
-      description="Confirm your account using the OTP"
-      eyebrow="Verification"
-      asideTitle="One final step before your account is ready."
-      asideBody="Use the OTP sent for your registration email. After verification succeeds, continue by signing in with your email and password."
+      title={t('auth.verifyOtpTitle')}
+      description={t('auth.verifyOtpDesc')}
+      eyebrow={t('auth.verification')}
+      asideTitle={t('auth.verifyOtpAsideTitle')}
+      asideBody={t('auth.verifyOtpAsideBody')}
     >
       <form className="space-y-5" onSubmit={handleSubmit}>
         <label className="block">
-          <span className="mb-2 block text-sm font-semibold text-[#17110d]">Email Address</span>
+          <span className="mb-2 block text-sm font-semibold text-[#17110d]">{t('auth.emailLabel')}</span>
           <input
             type="email"
             required
@@ -55,7 +57,7 @@ export default function VerifyOtpPage() {
         </label>
 
         <label className="block">
-          <span className="mb-2 block text-sm font-semibold text-[#17110d]">OTP Code</span>
+          <span className="mb-2 block text-sm font-semibold text-[#17110d]">{t('auth.otpCode')}</span>
           <input
             type="text"
             required
@@ -63,7 +65,7 @@ export default function VerifyOtpPage() {
             onChange={(event) => setOtp(event.target.value)}
             maxLength={6}
             className="h-14 w-full border border-[#ddcdc0] px-4 text-base outline-none transition focus:border-[#17110d]"
-            placeholder="Enter OTP"
+            placeholder={t('auth.enterOtp')}
           />
         </label>
 
@@ -74,13 +76,13 @@ export default function VerifyOtpPage() {
           disabled={isSubmitting}
           className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
         >
-          {isSubmitting ? 'VERIFYING...' : 'VERIFY OTP'}
+          {isSubmitting ? t('auth.verifying') : t('auth.verifyOtpBtn')}
         </button>
 
         <p className="text-center text-sm text-zinc-500">
-          Need to create another account?{' '}
+          {t('auth.needAnotherAccount').replace("Register again", "")}
           <Link to="/register" className="font-bold text-[#b63f80] underline underline-offset-4">
-            Register again
+            {t('auth.registerAgain')}
           </Link>
         </p>
       </form>

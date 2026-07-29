@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import { sendContactMessage } from "../services/contactService";
+import { useTranslation } from "react-i18next";
 
 // const contactDetails = [
 //     "I Want Jewels Boutique",
@@ -18,6 +19,7 @@ import { sendContactMessage } from "../services/contactService";
 // ];
 
 export default function ContactPage() {
+    const { t } = useTranslation();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -31,7 +33,7 @@ export default function ContactPage() {
         const trimmedMessage = message.trim();
 
         if (!trimmedName || !trimmedEmail || !trimmedMessage) {
-            toast.error("Please fill in your name, email, and message.");
+            toast.error(t("contact.fillRequiredFields"));
             return;
         }
 
@@ -46,14 +48,14 @@ export default function ContactPage() {
 
             toast.success(
                 response.message ||
-                    "Thank you for your message. We will get back to you soon!",
+                    t("contact.successMessage"),
             );
             setName("");
             setEmail("");
             setMessage("");
         } catch {
             toast.error(
-                "Unable to send your message right now. Please try again.",
+                t("contact.errorMessage"),
             );
         } finally {
             setIsSubmitting(false);
@@ -68,10 +70,10 @@ export default function ContactPage() {
                 <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            Homepage / Contact Us
+                            {t("contact.breadcrumbs")}
                         </p>
                         <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
-                            Contact Us
+                            {t("contact.title")}
                         </h1>
                     </div>
                 </section>
@@ -79,12 +81,10 @@ export default function ContactPage() {
                     <div className="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
                         <div>
                             <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                Get In Touch With Our Team
+                                {t("contact.subtitle")}
                             </h2>
                             <p className="mt-4 max-w-2xl text-[14px] leading-7 text-zinc-600">
-                                Reach out for support, product questions, or
-                                order assistance. We&apos;re always happy to
-                                help.
+                                {t("contact.description")}
                             </p>
 
                             <form
@@ -94,7 +94,7 @@ export default function ContactPage() {
                                 <div className="grid gap-4 md:grid-cols-2">
                                     <input
                                         type="text"
-                                        placeholder="Your Name*"
+                                        placeholder={t("contact.namePlaceholder")}
                                         value={name}
                                         onChange={(event) =>
                                             setName(event.target.value)
@@ -104,7 +104,7 @@ export default function ContactPage() {
                                     />
                                     <input
                                         type="email"
-                                        placeholder="Your Email*"
+                                        placeholder={t("contact.emailPlaceholder")}
                                         value={email}
                                         onChange={(event) =>
                                             setEmail(event.target.value)
@@ -115,7 +115,7 @@ export default function ContactPage() {
                                 </div>
 
                                 <textarea
-                                    placeholder="Your Message*"
+                                    placeholder={t("contact.messagePlaceholder")}
                                     rows={6}
                                     value={message}
                                     onChange={(event) =>
@@ -131,8 +131,8 @@ export default function ContactPage() {
                                     className="bg-pink-500 px-8 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-pink-600 disabled:cursor-not-allowed disabled:opacity-60 sm:text-[13px]"
                                 >
                                     {isSubmitting
-                                        ? "Sending..."
-                                        : "Send Message"}
+                                        ? t("contact.sending")
+                                        : t("contact.sendBtn")}
                                 </button>
                             </form>
                         </div>

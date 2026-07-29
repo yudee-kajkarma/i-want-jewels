@@ -27,6 +27,7 @@ import {
   setPendingOrderStatus,
   setSingleCheckoutDraft,
 } from '../utils/checkoutStorage'
+import { useTranslation } from 'react-i18next'
 
 type CheckoutLocationState = {
   source?: CheckoutSource
@@ -54,6 +55,7 @@ function buildReturnUrl(result: 'success' | 'cancel', source: CheckoutSource): s
 }
 
 export default function CheckoutPage() {
+  const { t } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
   const dispatch = useAppDispatch()
@@ -391,37 +393,37 @@ export default function CheckoutPage() {
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Checkout</p>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Review and place your order</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('checkout.title')}</p>
+            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">{t('checkout.reviewTitle')}</h1>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-500">
-              Choose your payment method and confirm this order. Online payments redirect you to Stripe and return you back here after the payment step.
+              {t('checkout.reviewDesc')}
             </p>
           </div>
           <Link
             to={checkoutSource === 'single' ? (singleDraft?.returnPath ?? '/products') : '/cart'}
             className="border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
           >
-            {checkoutSource === 'single' ? 'BACK TO PRODUCT' : 'BACK TO CART'}
+            {checkoutSource === 'single' ? t('checkout.backToProduct') : t('checkout.backToCart')}
           </Link>
         </div>
 
         <div className="mt-8 grid gap-8 xl:grid-cols-[1fr_380px]">
           <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            {checkoutSource === 'cart' && isCartLoading ? <p className="text-sm text-zinc-500">Loading checkout...</p> : null}
+            {checkoutSource === 'cart' && isCartLoading ? <p className="text-sm text-zinc-500">{t('checkout.loading')}</p> : null}
 
             {!isCartLoading && items.length === 0 ? (
               <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
-                <h2 className="text-2xl font-bold text-[#17110d]">Nothing to checkout yet</h2>
+                <h2 className="text-2xl font-bold text-[#17110d]">{t('checkout.nothingToCheckout')}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-500">
                   {checkoutSource === 'single'
-                    ? 'Go back to the product page and choose Buy it now again.'
-                    : 'Add products to your cart before placing an order.'}
+                    ? t('checkout.goBackSingle')
+                    : t('checkout.goBackCart')}
                 </p>
                 <Link
                   to={checkoutSource === 'single' ? '/products' : '/cart'}
                   className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
                 >
-                  {checkoutSource === 'single' ? 'VIEW PRODUCTS' : 'RETURN TO CART'}
+                  {checkoutSource === 'single' ? t('checkout.viewProducts') : t('checkout.returnToCart')}
                 </Link>
               </div>
             ) : null}
@@ -431,7 +433,7 @@ export default function CheckoutPage() {
                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <PackageCheck className="h-5 w-5" />
-                    <h2 className="text-xl font-bold">Order items</h2>
+                    <h2 className="text-xl font-bold">{t('checkout.orderItems')}</h2>
                   </div>
                   <div className="mt-5 space-y-4">
                     {items.map((item) => (
@@ -442,10 +444,10 @@ export default function CheckoutPage() {
                         <div>
                           <h3 className="text-lg font-bold text-[#17110d]">{item.title}</h3>
                           <p className="mt-1 text-sm text-zinc-500">
-                            {item.variantTitle || 'Default variant'}
-                            {item.size !== undefined ? ` · Size ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
+                            {item.variantTitle || t('checkout.defaultVariant')}
+                            {item.size !== undefined ? ` · ${t('checkout.size')} ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
                           </p>
-                          <p className="mt-1 text-sm text-zinc-500">Quantity: {item.quantity}</p>
+                          <p className="mt-1 text-sm text-zinc-500">{t('checkout.quantity', { quantity: item.quantity })}</p>
                         </div>
                         <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
                       </article>
@@ -455,22 +457,22 @@ export default function CheckoutPage() {
 
                 <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
                   <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
-                    <div className="flex items-center gap-3 text-[#17110d]">
-                      <MapPinHouse className="h-5 w-5" />
-                      <h2 className="text-xl font-bold">Shipping address</h2>
-                    </div>
+                      <div className="flex items-center gap-3 text-[#17110d]">
+                        <MapPinHouse className="h-5 w-5" />
+                        <h2 className="text-xl font-bold">{t('checkout.shippingAddress')}</h2>
+                      </div>
 
-                    <div className="mt-4 flex flex-wrap gap-3">
-                      <button
-                        type="button"
-                        onClick={openAddAddressForm}
-                        className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
-                      >
-                        ADD ADDRESS
-                      </button>
-                    </div>
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        <button
+                          type="button"
+                          onClick={openAddAddressForm}
+                          className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                        >
+                          {t('checkout.addAddress')}
+                        </button>
+                      </div>
 
-                    {isAddressLoading ? <p className="mt-4 text-sm text-zinc-500">Loading your addresses...</p> : null}
+                      {isAddressLoading ? <p className="mt-4 text-sm text-zinc-500">{t('checkout.loadingAddresses')}</p> : null}
 
                     {!isAddressLoading && addresses.length > 0 ? (
                       <div className="mt-4 space-y-3">
@@ -502,7 +504,7 @@ export default function CheckoutPage() {
                                 <p>{getCountryName(address.country)}</p>
                                 <div className="mt-2 flex flex-wrap items-center gap-3">
                                   {address.isDefault ? (
-                                    <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">Default address</span>
+                                    <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">{t('checkout.defaultAddress')}</span>
                                   ) : null}
                                   <button
                                     type="button"
@@ -512,7 +514,7 @@ export default function CheckoutPage() {
                                     }}
                                     className="border border-[#e2d1c3] px-3 py-1 text-[11px] font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                   >
-                                    EDIT
+                                    {t('checkout.edit')}
                                   </button>
                                 </div>
                               </div>
@@ -524,13 +526,13 @@ export default function CheckoutPage() {
 
                     {!isAddressLoading && addresses.length === 0 ? (
                       <div className="mt-5 border border-[#eadfd4] bg-white p-4 text-sm leading-7 text-zinc-600">
-                        No addresses found. Add a shipping address to place your order.
+                        {t('checkout.noAddresses')}
                       </div>
                     ) : null}
 
                     {isAddressFormOpen ? (
                       <div className="mt-5 border border-[#eadfd4] bg-white p-4">
-                        <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">{editingAddressId ? 'Edit address' : 'Add address'}</h3>
+                        <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">{editingAddressId ? t('checkout.editAddressTitle') : t('checkout.addAddressTitle')}</h3>
                         <div className="mt-4 grid gap-3 sm:grid-cols-2">
                           <select
                             value={addressForm.country}
@@ -541,7 +543,7 @@ export default function CheckoutPage() {
                             }))}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
-                            <option value="">Select country</option>
+                            <option value="">{t('checkout.selectCountry')}</option>
                             {countryOptions.map((country) => (
                               <option key={country.code} value={country.code}>
                                 {country.name}
@@ -558,7 +560,7 @@ export default function CheckoutPage() {
                             }
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
-                            <option value="">Select state</option>
+                            <option value="">{t('checkout.selectState')}</option>
                             {stateOptions.map((state) => (
                               <option key={state.code} value={state.code}>
                                 {state.name}
@@ -568,19 +570,19 @@ export default function CheckoutPage() {
                           <input
                             value={addressForm.city}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
-                            placeholder="City"
+                            placeholder={t('checkout.city')}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <input
                             value={addressForm.houseNumber ?? ''}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}
-                            placeholder="House number"
+                            placeholder={t('checkout.houseNumber')}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <input
                             value={addressForm.street}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, street: event.target.value }))}
-                            placeholder="Street"
+                            placeholder={t('checkout.street')}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <div>
@@ -593,7 +595,7 @@ export default function CheckoutPage() {
 
                                 setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))
                               }}
-                              placeholder="Postal code"
+                              placeholder={t('checkout.postalCode')}
                               className="w-full border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                             />
                             {postalCodeError ? <p className="mt-2 text-xs text-rose-700">{postalCodeError}</p> : null}
@@ -601,7 +603,7 @@ export default function CheckoutPage() {
                           <input
                             value={addressForm.addressType}
                             onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}
-                            placeholder="Address type (home/work)"
+                            placeholder={t('checkout.addressType')}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                         </div>
@@ -613,14 +615,14 @@ export default function CheckoutPage() {
                             disabled={isAddressSaving}
                             className="bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                           >
-                            {isAddressSaving ? 'SAVING...' : 'SAVE ADDRESS'}
+                            {isAddressSaving ? t('checkout.saving') : t('checkout.saveAddress')}
                           </button>
                           <button
                             type="button"
                             onClick={() => setIsAddressFormOpen(false)}
                             className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                           >
-                            CANCEL
+                            {t('checkout.cancel')}
                           </button>
                         </div>
                       </div>
@@ -629,14 +631,14 @@ export default function CheckoutPage() {
                     {addressError ? <p className="mt-4 text-sm text-rose-600">{addressError}</p> : null}
 
                     {!selectedAddress && !isAddressLoading ? (
-                      <p className="mt-4 text-sm text-zinc-500">Select an address to continue checkout.</p>
+                      <p className="mt-4 text-sm text-zinc-500">{t('checkout.selectAddress')}</p>
                     ) : null}
                   </div>
 
                   <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                     <div className="flex items-center gap-3 text-[#17110d]">
                       <CreditCard className="h-5 w-5" />
-                      <h2 className="text-xl font-bold">Payment method</h2>
+                      <h2 className="text-xl font-bold">{t('checkout.paymentMethod')}</h2>
                     </div>
                     <div className="mt-5 space-y-3">
                       <label className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${paymentMethod === 'ONLINE' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
@@ -649,8 +651,8 @@ export default function CheckoutPage() {
                           className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
                         />
                         <div>
-                          <p className="font-bold text-[#17110d]">Online payment</p>
-                          <p className="mt-1 text-sm leading-6 text-zinc-500">You'll be redirected to Stripe to complete payment securely, and brought back here once it's done.</p>
+                          <p className="font-bold text-[#17110d]">{t('checkout.onlinePayment')}</p>
+                          <p className="mt-1 text-sm leading-6 text-zinc-500">{t('checkout.onlinePaymentDesc')}</p>
                         </div>
                       </label>
 
@@ -687,7 +689,7 @@ export default function CheckoutPage() {
 
                 {checkoutSource === 'single' ? (
                   <div className="border border-[#f0c4da] bg-[#fff7fb] p-4 text-sm leading-7 text-[#8f2a60]">
-                    Buy it now uses a temporary one-item checkout so you can place this order directly from the product page.
+                    {t('checkout.singleCheckoutNote')}
                   </div>
                 ) : null}
 
@@ -697,27 +699,27 @@ export default function CheckoutPage() {
           </section>
 
           <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Order summary</p>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('checkout.orderSummary')}</p>
             <div className="mt-6 space-y-4 text-sm text-zinc-600">
               <div className="flex items-center justify-between">
-                <span>Checkout type</span>
-                <span className="font-semibold text-[#17110d]">{checkoutSource === 'single' ? 'Buy it now' : 'Cart checkout'}</span>
+                <span>{t('checkout.checkoutType')}</span>
+                <span className="font-semibold text-[#17110d]">{checkoutSource === 'single' ? t('checkout.buyItNow') : t('checkout.cartCheckout')}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>Items</span>
+                <span>{t('checkout.items')}</span>
                 <span className="font-semibold text-[#17110d]">{totalItems}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>Subtotal</span>
+                <span>{t('checkout.subtotal')}</span>
                 <span className="font-semibold text-[#17110d]">{formatPrice(subtotal, currency)}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span>Shipping</span>
-                <span className="font-semibold text-[#17110d]">Free</span>
+                <span>{t('checkout.shipping')}</span>
+                <span className="font-semibold text-[#17110d]">{t('checkout.free')}</span>
               </div>
               {appliedGiftDiscount > 0 ? (
                 <div className="flex items-center justify-between text-[#1f7a4d]">
-                  <span>Gift card</span>
+                  <span>{t('checkout.giftCard')}</span>
                   <span className="font-semibold">−{formatPrice(appliedGiftDiscount, currency)}</span>
                 </div>
               ) : null}
@@ -725,7 +727,7 @@ export default function CheckoutPage() {
 
             {!hasGiftCardItems ? (
               <div className="mt-6 border-t border-[#efe1d5] pt-6">
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Gift card</p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('checkout.giftCard')}</p>
                 {giftValidation?.valid ? (
                   <div className="mt-3 flex items-center justify-between gap-3 text-sm">
                     <span className="font-semibold text-[#17110d]">{giftValidation.code}</span>
@@ -734,7 +736,7 @@ export default function CheckoutPage() {
                       onClick={handleRemoveGiftCard}
                       className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
                     >
-                      Remove
+                      {t('checkout.remove')}
                     </button>
                   </div>
                 ) : (
@@ -743,7 +745,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={giftCodeInput}
                       onChange={(event) => setGiftCodeInput(event.target.value)}
-                      placeholder="Enter gift card code"
+                      placeholder={t('checkout.enterGiftCard')}
                       className="h-11 flex-1 border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
                     />
                     <button
@@ -752,7 +754,7 @@ export default function CheckoutPage() {
                       disabled={isCheckingGift || !giftCodeInput.trim()}
                       className="h-11 border border-[#17110d] bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:opacity-90 disabled:opacity-50"
                     >
-                      {isCheckingGift ? '...' : 'Apply'}
+                      {isCheckingGift ? '...' : t('checkout.apply')}
                     </button>
                   </div>
                 )}
@@ -769,15 +771,15 @@ export default function CheckoutPage() {
                 {paymentMethod === 'ONLINE' ? <ShieldCheck className="mt-0.5 h-4 w-4 text-[#17110d]" /> : <Truck className="mt-0.5 h-4 w-4 text-[#17110d]" />}
                 <p>
                   {paymentMethod === 'ONLINE'
-                    ? 'After order creation you are redirected to Stripe. Once payment succeeds, you return to this website automatically.'
-                    : 'Cash on delivery places the order immediately with no external payment redirect.'}
+                    ? t('checkout.stripeNote')
+                    : t('checkout.codNote')}
                 </p>
               </div>
             </div>
 
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
               <div className="flex items-center justify-between text-lg font-bold text-[#17110d]">
-                <span>Total</span>
+                <span>{t('checkout.total')}</span>
                 <span>{formatPrice(payableTotal, currency)}</span>
               </div>
               <button
@@ -786,7 +788,7 @@ export default function CheckoutPage() {
                 disabled={items.length === 0 || isSubmitting}
                 className="mt-6 w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
               >
-                {isSubmitting ? 'PLACING ORDER...' : paymentMethod === 'ONLINE' ? 'PLACE ORDER AND PAY ONLINE' : 'PLACE COD ORDER'}
+                {isSubmitting ? t('checkout.placingOrder') : paymentMethod === 'ONLINE' ? t('checkout.placeOrderOnline') : t('checkout.placeCodOrder')}
               </button>
             </div>
           </aside>

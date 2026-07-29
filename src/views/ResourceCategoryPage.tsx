@@ -5,6 +5,7 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 import { resourceCategories, getArticleCount } from "../data/resources";
+import { useTranslation } from "react-i18next";
 
 type ResourceCategoryPageProps = {
     category: ResourceCategory;
@@ -68,6 +69,7 @@ function ArrowRightIcon() {
 }
 
 function ArticleCard({ article }: { article: ResourceArticle }) {
+    const { t } = useTranslation('resourceCategory');
     const href = `/resources/${article.categorySlug}/${article.slug}`;
     return (
         <article className="group border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_12px_32px_rgba(194,110,143,0.1)]">
@@ -119,7 +121,7 @@ function ArticleCard({ article }: { article: ResourceArticle }) {
                     to={href}
                     className="mt-5 flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition group-hover:text-pink-500"
                 >
-                    <span>Read Article</span>
+                    <span>{t('readArticle')}</span>
                     <ArrowRightIcon />
                 </Link>
             </div>
@@ -131,6 +133,7 @@ export default function ResourceCategoryPage({
     category,
     articles,
 }: ResourceCategoryPageProps) {
+    const { t } = useTranslation('resourceCategory');
     const otherCategories = resourceCategories.filter(
         (c) => c.slug !== category.slug,
     );
@@ -148,14 +151,14 @@ export default function ResourceCategoryPage({
                                 to="/"
                                 className="transition hover:text-zinc-800"
                             >
-                                Homepage
+                                {t('breadcrumbHome')}
                             </Link>{" "}
                             /{" "}
                             <Link
                                 to="/resources"
                                 className="transition hover:text-zinc-800"
                             >
-                                Resources
+                                {t('breadcrumbResources')}
                             </Link>{" "}
                             / {category.title}
                         </p>
@@ -166,8 +169,7 @@ export default function ResourceCategoryPage({
                             {category.description}
                         </p>
                         <p className="mt-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-400">
-                            {articles.length} Article
-                            {articles.length !== 1 ? "s" : ""}
+                            {t('articlesCount', { count: articles.length })}
                         </p>
                     </div>
                 </section>
@@ -186,7 +188,7 @@ export default function ResourceCategoryPage({
                     ) : (
                         <div className="border border-dashed border-zinc-300 px-6 py-16 text-center">
                             <p className="text-[13px] font-medium uppercase tracking-[0.18em] text-zinc-500">
-                                No articles yet — check back soon.
+                                {t('empty')}
                             </p>
                         </div>
                     )}
@@ -197,7 +199,7 @@ export default function ResourceCategoryPage({
                     <section className="border-t border-zinc-100 bg-[#fafafa] px-6 py-14 lg:px-10 lg:py-16">
                         <div className="mx-auto max-w-[1480px]">
                             <h2 className="font-play text-[20px] font-semibold text-zinc-900 sm:text-[22px]">
-                                Explore Other Guides
+                                {t('exploreOther')}
                             </h2>
                             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                                 {otherCategories.map((cat) => (
@@ -217,7 +219,7 @@ export default function ResourceCategoryPage({
                                             {cat.title}
                                         </p>
                                         <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-500">
-                                            {getArticleCount(cat.slug)} Articles
+                                            {t('articlesCount', { count: getArticleCount(cat.slug) })}
                                         </p>
                                     </Link>
                                 ))}

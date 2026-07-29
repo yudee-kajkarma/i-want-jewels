@@ -15,6 +15,7 @@ import {
     isValidEmailAddress,
     isValidPostalCode,
 } from "../utils/location";
+import { useTranslation } from "react-i18next";
 
 type RegisterPhase = "email-check" | "details";
 
@@ -40,6 +41,7 @@ const initialForm: RegisterPayload = {
 };
 
 export default function RegisterPage() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const { setOtpEmail } = useAuth();
     const [phase, setPhase] = useState<RegisterPhase>("email-check");
@@ -96,8 +98,8 @@ export default function RegisterPage() {
 
         return isValidEmailAddress(form.email)
             ? ""
-            : "Please write a valid email address.";
-    }, [form.email]);
+            : t("auth.validEmailError");
+    }, [form.email, t]);
     const postalCodeLiveErrorMessage = useMemo(() => {
         if (!form.address.postalCode.trim()) {
             return "";
@@ -105,8 +107,8 @@ export default function RegisterPage() {
 
         return isValidPostalCode(form.address.postalCode, form.address.country)
             ? ""
-            : "Please write a valid postal code.";
-    }, [form.address.country, form.address.postalCode]);
+            : t("auth.validPostalCodeError");
+    }, [form.address.country, form.address.postalCode, t]);
     const passwordMismatchMessage = useMemo(() => {
         if (!form.confirmPassword.trim()) {
             return "";
@@ -114,8 +116,8 @@ export default function RegisterPage() {
 
         return form.password === form.confirmPassword
             ? ""
-            : "Password and confirm password must match.";
-    }, [form.confirmPassword, form.password]);
+            : t("auth.passwordMatchError");
+    }, [form.confirmPassword, form.password, t]);
     const requiredFieldsMessage = useMemo(() => {
         const hasAnyInput =
             form.username.trim() ||
@@ -136,8 +138,8 @@ export default function RegisterPage() {
             return "";
         }
 
-        return "Please fill all required fields.";
-    }, [form, isRegisterFormValid]);
+        return t("auth.fillRequiredFields");
+    }, [form, isRegisterFormValid, t]);
 
     function getRegisterErrorMessage(error: unknown): string {
         if (!axios.isAxiosError(error)) {
@@ -179,7 +181,7 @@ export default function RegisterPage() {
             }
         }
 
-        return "Registration failed. Check the details and try again.";
+        return t("auth.registrationFailed");
     }
 
     function updateField<Key extends keyof RegisterPayload>(
@@ -211,7 +213,7 @@ export default function RegisterPage() {
         const trimmedEmail = emailCheckValue.trim();
 
         if (!isValidEmailAddress(trimmedEmail)) {
-            setEmailCheckError("Please write a valid email address.");
+            setEmailCheckError(t("auth.validEmailError"));
             return;
         }
 
@@ -241,7 +243,7 @@ export default function RegisterPage() {
                     setEmailCheckUserExists(true);
                     setEmailCheckError(
                         result.message ||
-                            "This email is already registered. Please log in instead.",
+                            t("auth.emailRegistered"),
                     );
                     break;
                 }
@@ -250,7 +252,7 @@ export default function RegisterPage() {
                 default: {
                     toast.error(
                         result.message ||
-                            "Something went wrong. Please try again.",
+                            t("auth.somethingWentWrong"),
                     );
                     break;
                 }
@@ -272,7 +274,7 @@ export default function RegisterPage() {
 
             toast.error(
                 fallbackMessage ||
-                    "Unable to verify email right now. Please try again.",
+                    t("auth.unableToVerifyEmail"),
             );
         } finally {
             setIsCheckingEmail(false);
@@ -284,17 +286,17 @@ export default function RegisterPage() {
         setPostalCodeError("");
 
         if (!isValidEmailAddress(form.email)) {
-            setError("Please write a valid email address.");
+            setError(t("auth.validEmailError"));
             return;
         }
 
         if (!isValidPostalCode(form.address.postalCode, form.address.country)) {
-            setPostalCodeError("Please write a valid postal code.");
+            setPostalCodeError(t("auth.validPostalCodeError"));
             return;
         }
 
         if (form.password !== form.confirmPassword) {
-            setError("Password and confirm password must match.");
+            setError(t("auth.passwordMatchError"));
             return;
         }
 
@@ -326,16 +328,16 @@ export default function RegisterPage() {
     if (phase === "email-check") {
         return (
             <AuthShell
-                title="Register"
-                description="Verify your email to start"
-                eyebrow="New Member"
-                asideTitle="Let’s start with your email."
-                asideBody="We’ll check whether this address is new, already registered, or has a pending verification, then take you to the right next step."
+                title={t("auth.registerTitle")}
+                description={t("auth.registerDescEmail")}
+                eyebrow={t("auth.newMember")}
+                asideTitle={t("auth.registerAsideTitleEmail")}
+                asideBody={t("auth.registerAsideBodyEmail")}
             >
                 <form className="space-y-5" onSubmit={handleEmailCheck}>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Email Address
+                            {t("auth.emailLabel")}
                         </span>
                         <input
                             type="email"
@@ -352,7 +354,7 @@ export default function RegisterPage() {
                                     setEmailCheckUserExists(false);
                                 }
                             }}
-                            placeholder="you@example.com"
+                            placeholder={t("auth.emailPlaceholder")}
                             className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
                         />
                         {emailCheckError ? (
@@ -365,7 +367,7 @@ export default function RegisterPage() {
                                             to="/login"
                                             className="font-bold underline underline-offset-4"
                                         >
-                                            Sign in here
+                                            {t("auth.signInHere")}
                                         </Link>
                                     </>
                                 ) : null}
@@ -378,16 +380,16 @@ export default function RegisterPage() {
                         disabled={isCheckingEmail || !emailCheckValue.trim()}
                         className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                     >
-                        {isCheckingEmail ? "CHECKING..." : "CONTINUE"}
+                        {isCheckingEmail ? t("auth.checking") : t("auth.continue")}
                     </button>
 
                     <p className="text-center text-sm text-zinc-500">
-                        Already have an account?{" "}
+                        {t("auth.alreadyHaveAccount").replace("Sign in", "")}
                         <Link
                             to="/login"
                             className="font-bold text-[#b63f80] underline underline-offset-4"
                         >
-                            Sign in
+                            {t("auth.signInLink")}
                         </Link>
                     </p>
                 </form>
@@ -397,17 +399,17 @@ export default function RegisterPage() {
 
     return (
         <AuthShell
-            title="Register"
-            description="Create your jewellery account"
-            eyebrow="New Member"
-            asideTitle="Register once, verify with OTP, and continue shopping."
-            asideBody="This flow matches your API: first register, then verify the OTP using the same email address. After verification, the account is stored locally in this browser."
+            title={t("auth.registerTitle")}
+            description={t("auth.registerDescDetails")}
+            eyebrow={t("auth.newMember")}
+            asideTitle={t("auth.registerAsideTitleDetails")}
+            asideBody={t("auth.registerAsideBodyDetails")}
         >
             <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid gap-5 sm:grid-cols-2">
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Username
+                            {t("auth.username")}
                         </span>
                         <input
                             type="text"
@@ -421,7 +423,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Email
+                            {t("auth.emailLabel")}
                         </span>
                         <input
                             type="email"
@@ -432,8 +434,7 @@ export default function RegisterPage() {
                             className="h-14 w-full border border-[#ddcdc0] bg-[#f5ede5] px-4 text-zinc-700 outline-none"
                         />
                         <p className="mt-2 text-xs text-zinc-500">
-                            Email verified. Continue with the rest of your
-                            details.
+                            {t("auth.emailVerifiedDetails")}
                         </p>
                         {emailErrorMessage ? (
                             <p className="mt-2 text-xs text-rose-700">
@@ -443,7 +444,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            First Name
+                            {t("auth.firstName")}
                         </span>
                         <input
                             type="text"
@@ -457,7 +458,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Last Name
+                            {t("auth.lastName")}
                         </span>
                         <input
                             type="text"
@@ -471,7 +472,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Password
+                            {t("auth.passwordLabel")}
                         </span>
                         <div className="relative">
                             <input
@@ -492,8 +493,8 @@ export default function RegisterPage() {
                                 }
                                 aria-label={
                                     isPasswordVisible
-                                        ? "Hide password"
-                                        : "Show password"
+                                        ? t("auth.hidePassword")
+                                        : t("auth.showPassword")
                                 }
                                 className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 transition hover:text-[#b63f80]"
                             >
@@ -507,7 +508,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Confirm Password
+                            {t("auth.confirmPassword")}
                         </span>
                         <div className="relative">
                             <input
@@ -535,8 +536,8 @@ export default function RegisterPage() {
                                 }
                                 aria-label={
                                     isConfirmPasswordVisible
-                                        ? "Hide confirm password"
-                                        : "Show confirm password"
+                                        ? t("auth.hideConfirmPassword")
+                                        : t("auth.showConfirmPassword")
                                 }
                                 className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 transition hover:text-[#b63f80]"
                             >
@@ -555,7 +556,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Country Code
+                            {t("auth.countryCode")}
                         </span>
                         <input
                             type="text"
@@ -568,7 +569,7 @@ export default function RegisterPage() {
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                            Phone Number
+                            {t("auth.phoneNumber")}
                         </span>
                         <input
                             type="tel"
@@ -584,12 +585,12 @@ export default function RegisterPage() {
 
                 <div className="border border-[#eadfd4] bg-[#fffdfa] p-5">
                     <h3 className="text-lg font-bold text-[#17110d]">
-                        Address
+                        {t("auth.address")}
                     </h3>
                     <div className="mt-4 grid gap-5 sm:grid-cols-2">
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                                Country
+                                {t("auth.country")}
                             </span>
                             <select
                                 required
@@ -602,7 +603,7 @@ export default function RegisterPage() {
                                 }}
                                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
                             >
-                                <option value="">Select country</option>
+                                <option value="">{t("checkout.selectCountry")}</option>
                                 {countryOptions.map((country) => (
                                     <option
                                         key={country.code}
@@ -615,7 +616,7 @@ export default function RegisterPage() {
                         </label>
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                                State
+                                {t("auth.state")}
                             </span>
                             <select
                                 required
@@ -626,7 +627,7 @@ export default function RegisterPage() {
                                 }}
                                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
                             >
-                                <option value="">Select state</option>
+                                <option value="">{t("checkout.selectState")}</option>
                                 {stateOptions.map((state) => (
                                     <option key={state.code} value={state.code}>
                                         {state.name}
@@ -636,7 +637,7 @@ export default function RegisterPage() {
                         </label>
                         <label className="block sm:col-span-2">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                                Street
+                                {t("auth.street")}
                             </span>
                             <input
                                 type="text"
@@ -653,19 +654,19 @@ export default function RegisterPage() {
                         </label>
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                                City{" "}
+                                {t("auth.city")}
                             </span>
                             <input
                                 type="text"
                                 value={form.address.city}
                                 onChange={(event) => updateAddressField("city", event.target.value)}
-                                placeholder="City"
+                                placeholder={t("auth.city")}
                                 className="h-14 w-full border border-[#ddcdc0] bg-white px-4 outline-none transition focus:border-[#17110d]"
                             />
                         </label>
                         <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#17110d]">
-                                Postal Code
+                                {t("auth.postalCode")}
                             </span>
                             <input
                                 type="text"
@@ -709,16 +710,16 @@ export default function RegisterPage() {
                     disabled={isSubmitting || !isRegisterFormValid}
                     className="w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
-                    {isSubmitting ? "CREATING ACCOUNT..." : "REGISTER"}
+                    {isSubmitting ? t("auth.creatingAccount") : t("auth.register")}
                 </button>
 
                 <p className="text-center text-sm text-zinc-500">
-                    Already have an account?{" "}
+                    {t("auth.alreadyHaveAccount").replace("Sign in", "")}
                     <Link
                         to="/login"
                         className="font-bold text-[#b63f80] underline underline-offset-4"
                     >
-                        Sign in
+                        {t("auth.signInLink")}
                     </Link>
                 </p>
             </form>

@@ -1,0 +1,538 @@
+import type { Metadata } from 'next'
+import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
+import type {
+  V2ArticleSection,
+  V2HeroIntro,
+  V2QuickSummary,
+  V2FAQItem,
+  V2CTABlock,
+} from '../../../../../views/ResourceArticleV2Page'
+import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
+import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'Jewellery Gifts for Mum',
+  description:
+    'Choose jewellery gifts for mum with lab grown diamond earrings, studs, huggies, butterfly earrings, drops and meaningful gift ideas.',
+}
+
+const heroIntro: V2HeroIntro = {
+  image: '/blog-images/blog-image-77.jpg',
+  title: 'Jewellery Gifts for Mum:',
+  subtitle: 'Thoughtful Earrings She Will Actually Wear',
+  paragraphs: [
+    'Jewellery for mum should feel thoughtful, elegant and useful. The best gift is not only the piece that looks beautiful in the box. It is the piece she can wear comfortably with everyday outfits, dinners, family events, holidays, birthdays, weddings and special occasions.',
+    'Lab-grown diamond earrings are strong jewellery gifts for mum because they feel special without being difficult to choose. Diamond studs are the safest option because they are classic, polished and wearable. Huggies are ideal if she likes modern everyday jewellery. Butterfly earrings are a meaningful choice when the gift should feel symbolic or emotional. Drop earrings work beautifully for dinners, family celebrations and occasion outfits. Minimalist earrings are best if she prefers quiet, understated pieces.',
+    'At IWantJewels, Cadenza S lab-grown diamond studs, Cadenza M diamond stud earrings, Amadea Huggie earrings, Laluce minimalist diamond earrings, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings, Orsola drop earrings, Concetta Short earrings, Concetta Long earrings and Pave Hoops all work for different mum gift needs. Lusso can also work if she loves bold evening jewellery, but for most mum gifts, classic, elegant and wearable pieces are safer.',
+  ],
+  shopLabel: 'Shop Jewellery Gifts for Mum',
+  shopHref: '/products?category=Earring',
+}
+
+const quickSummary: V2QuickSummary = {
+  items: [
+    'Choose jewellery gifts for mum.',
+    'Pick lab-grown diamond earrings as a birthday, Mother\'s Day, holiday or thank-you gift.',
+    'Decide between studs, huggies, butterfly earrings, drops, hoops and minimalist earrings.',
+    'Choose safe jewellery gifts when you are unsure of her style.',
+    'Find meaningful jewellery gifts with symbolism.',
+    'Match earrings to her personal style, lifestyle, outfits and metal colour.',
+    'Choose jewellery for mums who like classic, minimalist, modern, romantic or occasion-ready styling.',
+    'Build giftable ear stack ideas.',
+  ],
+  image: '/blog-images/blog-image-19.jpg',
+}
+
+const articleContent: V2ArticleSection[] = [
+  {
+    heading: 'Jewellery Gift Selector for Mum',
+    content: [
+      { type: 'paragraph', text: 'Use this table as the main gift decision tool.' },
+      {
+        type: 'table',
+        headers: ['Mum Gift Need', 'Best Jewellery Direction', 'Recommended IWJ Direction'],
+        rows: [
+          ['Safest jewellery gift for mum', 'Medium diamond studs', 'Cadenza M'],
+          ['Subtle everyday gift', 'Small diamond studs', 'Cadenza S'],
+          ['Classic sparkle gift', 'Medium diamond studs', 'Cadenza M'],
+          ['Meaningful gift', 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
+          ['Elegant dinner gift', 'Drop earrings', 'Orsola'],
+          ['Soft occasion gift', 'Short drops or butterfly earrings', 'Concetta Short, Farfalla'],
+          ['Modern everyday gift', 'Huggies', 'Amadea Huggie'],
+          ['Minimalist gift', 'Minimalist earrings or small studs', 'Laluce, Cadenza S'],
+          ['Birthday gift for mum', 'Studs, butterfly earrings or drops', 'Cadenza M, Farfalla, Orsola'],
+          ["Mother's Day gift", 'Studs, butterfly earrings or huggies', 'Cadenza M, Farfalla, Amadea'],
+          ['Wedding/family event gift', 'Drops or polished studs', 'Orsola, Cadenza M'],
+          ['Giftable ear stack', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+          ['If unsure of her style', 'Diamond studs', 'Cadenza S, Cadenza M'],
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'What Jewellery Should You Buy for Mum?',
+    content: [
+      { type: 'paragraph', text: 'The best jewellery to buy for mum is jewellery that feels thoughtful and comfortable. It should suit her real life, not just the occasion. If she wears jewellery every day, studs, huggies or minimalist earrings may be the best choice. If she enjoys dinners, weddings or family celebrations, drop earrings or polished studs may feel more useful. If you want the gift to carry emotion, butterfly earrings can feel meaningful without being too heavy.' },
+      { type: 'paragraph', text: 'Earrings are usually easier to gift than rings because they do not require sizing. They are also easier to wear repeatedly because they can work with casual outfits, workwear, family dinners, wedding guest looks, holiday outfits and special occasions.' },
+      {
+        type: 'table',
+        headers: ['What to Consider', 'Why It Matters'],
+        rows: [
+          ['Her usual jewellery', 'Shows whether she prefers studs, huggies, drops, hoops or simple pieces'],
+          ['Occasion', 'Birthday, Mother\'s Day, milestone and thank-you gifts need different moods'],
+          ['Personal style', 'Classic, minimalist, romantic, modern and occasion-ready styles need different pieces'],
+          ['Metal colour', 'Helps the gift match what she already wears'],
+          ['Lifestyle', 'Everyday jewellery should be comfortable and repeatable'],
+          ['Outfit habits', 'Workwear, family events and occasion outfits need different earrings'],
+          ['Comfort', 'Mum gifts should feel easy to wear'],
+          ['Rewear value', 'A strong gift should be useful after the occasion'],
+        ],
+      },
+      { type: 'see-also', text: 'Jewellery gifts for her', href: '/resources/jewellery-gift-guides/jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Safest Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'The safest jewellery gifts for mum are usually diamond studs, huggies or minimalist earrings because they are wearable and not too style-specific.' },
+      { type: 'paragraph', text: 'Cadenza M is the strongest safe gift for mum because it feels polished and special while still being easy to style. Cadenza S is better if she prefers subtle jewellery. Amadea is best if she likes modern everyday earrings. Laluce works well if she prefers understated pieces.' },
+      { type: 'paragraph', text: 'Butterfly earrings and drop earrings can be stronger when the gift should feel more meaningful or occasion-ready, but they depend more on her personal style.' },
+      {
+        type: 'table',
+        headers: ['Safe Mum Gift Option', 'Best For', 'Product Direction'],
+        rows: [
+          ['Medium diamond studs', 'Classic sparkle gift', 'Cadenza M'],
+          ['Small diamond studs', 'Subtle everyday sparkle', 'Cadenza S'],
+          ['Huggies', 'Modern everyday jewellery lover', 'Amadea'],
+          ['Minimalist earrings', 'Understated style', 'Laluce'],
+          ['Stud + huggie set', 'Simple ear stack gift', 'Cadenza S + Amadea'],
+          ['Butterfly earrings', 'Meaningful gift if she likes soft styling', 'Farfalla, Alidi Farfalla'],
+          ['Short drops', 'Delicate occasion gift', 'Concetta Short'],
+          ['Drop earrings', 'Elegant dinner or event gift', 'Orsola'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
+    ],
+  },
+  {
+    heading: 'Birthday Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'Birthday jewellery for mum should feel thoughtful, polished and wearable. The gift can be classic, meaningful, modern or elegant depending on her style.' },
+      { type: 'paragraph', text: 'Diamond studs are safest for a birthday gift. Butterfly earrings are meaningful when the gift should feel emotional or symbolic. Huggies are strong if she likes everyday jewellery. Drop earrings are ideal if she enjoys dinners, family celebrations or occasion outfits.' },
+      {
+        type: 'table',
+        headers: ['Birthday Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Safe birthday gift', 'Medium diamond studs', 'Cadenza M'],
+          ['Subtle birthday gift', 'Small studs', 'Cadenza S'],
+          ['Meaningful birthday gift', 'Butterfly earrings', 'Farfalla'],
+          ['Elegant birthday dinner gift', 'Drop earrings', 'Orsola'],
+          ['Soft birthday gift', 'Butterfly earrings or short drops', 'Farfalla, Concetta Short'],
+          ['Modern birthday gift', 'Huggies', 'Amadea'],
+          ['Minimalist birthday gift', 'Minimalist earrings', 'Laluce'],
+          ['Formal birthday gift', 'Long drops or polished studs', 'Concetta Long, Cadenza M'],
+          ['Birthday ear stack gift', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Birthday jewellery gifts', href: '/resources/jewellery-gift-guides/birthday-jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: "Mother's Day Jewellery Gifts",
+    content: [
+      { type: 'paragraph', text: "Mother's Day jewellery should feel appreciative, personal and easy to wear. This is usually not the moment for jewellery that feels too loud unless she clearly loves bold styling. Classic studs, soft butterfly earrings, huggies and delicate drops are usually safer." },
+      { type: 'paragraph', text: 'Cadenza M is a strong Mother\'s Day gift because it feels polished and timeless. Farfalla works well when the gift should feel meaningful. Amadea is ideal for a mum who likes practical everyday jewellery. Orsola is a beautiful option if she enjoys dinners, events and dressier outfits.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-81.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ["Mother's Day Gift Need", 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ["Safe Mother's Day gift", 'Medium diamond studs', 'Cadenza M'],
+              ["Subtle Mother's Day gift", 'Small studs', 'Cadenza S'],
+              ["Meaningful Mother's Day gift", 'Butterfly earrings', 'Farfalla, Alidi Farfalla'],
+              ["Everyday Mother's Day gift", 'Huggies or small studs', 'Amadea, Cadenza S'],
+              ["Elegant Mother's Day gift", 'Drop earrings', 'Orsola'],
+              ['Soft feminine gift', 'Short drops or butterfly earrings', 'Concetta Short, Farfalla'],
+              ["Minimalist Mother's Day gift", 'Minimalist earrings', 'Laluce'],
+              ["Mother's Day ear stack", 'Stud + huggie', 'Cadenza S + Amadea'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Romantic jewellery gifts', href: '/resources/jewellery-gift-guides/romantic-jewellery-gifts-for-her' },
+    ],
+  },
+  {
+    heading: 'Meaningful Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'A meaningful jewellery gift for mum should carry emotion without feeling too dramatic. It can represent appreciation, love, growth, strength, beauty, a new chapter or a family milestone.' },
+      { type: 'paragraph', text: "Butterfly earrings are especially strong for meaningful gifts because a butterfly can symbolise transformation, growth, beauty, freedom and new beginnings. For mum, this meaning can feel personal for birthdays, Mother's Day, milestones, encouragement gifts and sentimental moments." },
+      {
+        type: 'table',
+        headers: ['Meaningful Mum Gift Moment', 'Why It Works', 'Product Direction'],
+        rows: [
+          ["Mother's Day", 'Feels thoughtful and symbolic', 'Farfalla'],
+          ['Birthday', 'Symbolises growth and a new year', 'Farfalla'],
+          ['Family milestone', 'Feels personal and emotional', 'Alidi Farfalla'],
+          ['New chapter', 'Represents transformation', 'Farfalla'],
+          ['Thank-you gift', 'Feels soft and appreciative', 'Alidi Farfalla'],
+          ['Personal achievement', 'Symbolises confidence and beauty', 'Farfalla'],
+          ['Encouragement gift', 'Represents hope and change', 'Alidi Farfalla'],
+          ['Meaningful ear stack', 'Combines symbolism and sparkle', 'Farfalla + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Butterfly earrings meaning', href: '#' },
+    ],
+  },
+  {
+    heading: 'Everyday Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'Everyday jewellery gifts are strong because mum can wear them often. These gifts should be comfortable, simple to style and easy to repeat.' },
+      { type: 'paragraph', text: 'Studs, huggies and minimalist earrings are the strongest everyday gift directions. They work with casual outfits, workwear, travel outfits, family events and simple dresses. Drops and butterfly earrings can also work for everyday styling if her style is more romantic or dressy.' },
+      {
+        type: 'table',
+        headers: ['Everyday Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Safest everyday gift', 'Small studs', 'Cadenza S'],
+          ['Polished everyday sparkle', 'Medium studs', 'Cadenza M'],
+          ['Modern everyday gift', 'Huggies', 'Amadea'],
+          ['Minimalist everyday gift', 'Minimalist earrings', 'Laluce'],
+          ['Everyday ear stack gift', 'Stud + huggie', 'Cadenza S + Amadea'],
+          ['Weekend everyday gift', 'Small hoops or huggies', 'Pave Hoops, Amadea'],
+          ['Romantic everyday gift', 'Butterfly earrings', 'Farfalla'],
+          ['Daily-to-dinner gift', 'Medium studs or drops', 'Cadenza M, Orsola'],
+        ],
+      },
+      { type: 'see-also', text: 'Everyday lab-grown diamond earrings guide', href: '/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide' },
+    ],
+  },
+  {
+    heading: 'Classic Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'Classic jewellery gifts are ideal when you want something safe, polished and timeless.' },
+      { type: 'paragraph', text: 'Diamond studs are the strongest classic direction. Cadenza M feels especially gift-worthy because it adds visible sparkle without feeling too bold. Cadenza S is better for subtle daily wear. Orsola can also feel classic if mum enjoys elegant drops for dinners and occasions.' },
+      {
+        type: 'table',
+        headers: ['Classic Mum Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Timeless sparkle', 'Medium diamond studs', 'Cadenza M'],
+          ['Subtle classic gift', 'Small diamond studs', 'Cadenza S'],
+          ['Classic dinner gift', 'Drop earrings', 'Orsola'],
+          ['Classic formal gift', 'Long drops or medium studs', 'Concetta Long, Cadenza M'],
+          ['Classic workwear gift', 'Studs or huggies', 'Cadenza M, Amadea'],
+          ['Safe milestone gift', 'Medium studs', 'Cadenza M'],
+          ['Classic ear stack gift', 'Medium stud + small stud', 'Cadenza M + Cadenza S'],
+          ['If unsure', 'Diamond studs', 'Cadenza S, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond stud earrings guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide' },
+    ],
+  },
+  {
+    heading: 'Modern Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'Modern jewellery gifts work well for mums who like clean styling, huggies, hoops, ear stacks and everyday jewellery that feels current without being too trend-led.' },
+      { type: 'paragraph', text: 'Amadea Huggie earrings are the strongest modern mum gift because they are wearable and stack-friendly. Pave Hoops can work if she likes visible shape. Cadenza S works well as a support stud for modern stacks.' },
+      {
+        type: 'table',
+        headers: ['Modern Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Modern everyday gift', 'Huggies', 'Amadea'],
+          ['Modern polished gift', 'Medium studs', 'Cadenza M'],
+          ['Modern ear stack gift', 'Stud + huggie', 'Cadenza S + Amadea'],
+          ['Workwear modern gift', 'Medium studs or huggies', 'Cadenza M, Amadea'],
+          ['Casual modern styling', 'Huggies or small hoops', 'Amadea, Pave Hoops'],
+          ['Minimal modern gift', 'Minimalist earrings', 'Laluce'],
+          ['Modern birthday gift', 'Huggies, studs or hoops', 'Amadea, Cadenza M, Pave Hoops'],
+          ['Safer modern gift', 'Small studs', 'Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Stud vs huggie earrings', href: '/resources/earring-style-guides/stud-vs-huggie-earrings' },
+    ],
+  },
+  {
+    heading: 'Minimalist Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'Minimalist jewellery gifts are best when mum prefers quiet, clean and easy-to-repeat pieces.' },
+      { type: 'paragraph', text: 'If she rarely wears large or bold earrings, avoid dramatic designs. Choose small studs, huggies or minimalist earrings instead. These pieces feel thoughtful without forcing a style she may not wear.' },
+      {
+        type: 'table',
+        headers: ['Minimalist Mum Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+        rows: [
+          ['Quiet diamond gift', 'Small studs', 'Cadenza S'],
+          ['Clean sparkle gift', 'Medium studs', 'Cadenza M'],
+          ['Minimalist detail gift', 'Minimalist earrings', 'Laluce'],
+          ['Modern minimal gift', 'Huggies', 'Amadea'],
+          ['Minimal ear stack gift', 'Stud + minimalist earring', 'Cadenza S + Laluce'],
+          ['Workwear-friendly gift', 'Studs or huggies', 'Cadenza M, Amadea'],
+          ['Travel-friendly gift', 'Small studs or huggies', 'Cadenza S, Amadea'],
+          ['Subtle meaningful gift', 'Butterfly earrings or small studs', 'Farfalla, Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Minimalist earrings guide', href: '/resources/earring-style-guides/minimalist-earrings-guide' },
+    ],
+  },
+  {
+    heading: 'Occasion Jewellery Gifts for Mum',
+    content: [
+      { type: 'paragraph', text: 'Occasion jewellery gifts are ideal if mum enjoys family events, dinners, weddings, birthdays, formal evenings or holiday parties.' },
+      { type: 'paragraph', text: 'Orsola is the strongest elegant occasion gift because it adds movement without feeling too heavy. Concetta Short is better for softer outfits. Concetta Long works for formal dinners and milestone events. Cadenza M is safest if you are unsure.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-83.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Occasion Gift Need', 'Best Jewellery Direction', 'Product Direction'],
+            rows: [
+              ['Family dinner gift', 'Drops or medium studs', 'Orsola, Cadenza M'],
+              ['Wedding guest gift', 'Drops or polished studs', 'Orsola, Cadenza M'],
+              ['Holiday dinner gift', 'Drops, studs or huggies', 'Orsola, Cadenza M, Amadea'],
+              ['Formal evening gift', 'Long drops or medium studs', 'Concetta Long, Cadenza M'],
+              ['Soft occasion gift', 'Short drops or butterfly earrings', 'Concetta Short, Farfalla'],
+              ['Black dress occasion gift', 'Drops, studs or hoops', 'Orsola, Cadenza M, Pave Hoops'],
+              ['Satin outfit gift', 'Drops or medium studs', 'Orsola, Cadenza M'],
+              ['If unsure', 'Medium studs', 'Cadenza M'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Wedding guest jewellery guide', href: '#' },
+    ],
+  },
+  {
+    heading: 'Jewellery Gifts by Her Personal Style',
+    content: [
+      { type: 'paragraph', text: "Mum's personal style should guide the gift more than the occasion alone. A mum who loves classic pieces may prefer diamond studs. A mum who loves soft, meaningful jewellery may prefer butterfly earrings. A mum who likes easy daily styling may wear huggies or minimalist earrings most often." },
+      {
+        type: 'grid-layout',
+        imagePosition: 'right',
+        image: '/blog-images/blog-image-85.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Her Style', 'Best Gift Direction', 'Product Direction'],
+            rows: [
+              ['Classic', 'Diamond studs', 'Cadenza M, Cadenza S'],
+              ['Minimalist', 'Small studs or minimalist earrings', 'Cadenza S, Laluce'],
+              ['Romantic', 'Butterfly earrings or drops', 'Farfalla, Alidi Farfalla, Orsola'],
+              ['Modern', 'Huggies or hoops', 'Amadea, Pave Hoops'],
+              ['Soft feminine', 'Butterfly earrings or short drops', 'Farfalla, Concetta Short'],
+              ['Workwear-focused', 'Studs or huggies', 'Cadenza M, Amadea'],
+              ['Occasion dresser', 'Drop earrings', 'Orsola, Concetta Short, Concetta Long'],
+              ['Everyday style', 'Studs, huggies or minimalist earrings', 'Cadenza S, Amadea, Laluce'],
+              ['Ear stack lover', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+              ['Safe gift recipient', 'Studs', 'Cadenza S, Cadenza M'],
+            ],
+          },
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for gifts', href: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts' },
+    ],
+  },
+  {
+    heading: 'Jewellery Gifts by Outfit and Lifestyle',
+    content: [
+      { type: 'paragraph', text: 'A strong jewellery gift should fit what mum actually wears. If she wears everyday outfits and workwear often, studs or huggies may be the most useful. If she enjoys dinners and family events, Orsola or Concetta Short may feel more special.' },
+      {
+        type: 'table',
+        headers: ['Outfit / Lifestyle', 'Best Jewellery Gift Direction', 'Product Direction'],
+        rows: [
+          ['Everyday casual outfits', 'Small studs or huggies', 'Cadenza S, Amadea'],
+          ['Workwear', 'Medium studs or huggies', 'Cadenza M, Amadea'],
+          ['Family dinners', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Wedding guest outfits', 'Drops, studs or butterfly earrings', 'Orsola, Cadenza M, Farfalla'],
+          ['Satin dresses', 'Drops or medium studs', 'Orsola, Cadenza M'],
+          ['Black dresses', 'Drops, studs or hoops', 'Orsola, Cadenza M, Pave Hoops'],
+          ['Green dresses', 'Gold drops or studs', 'Orsola, Cadenza M'],
+          ['Romantic outfits', 'Butterfly earrings or short drops', 'Farfalla, Concetta Short'],
+          ['Minimal outfits', 'Minimalist earrings or studs', 'Laluce, Cadenza S'],
+          ['Travel-heavy lifestyle', 'Studs or huggies', 'Cadenza S, Amadea'],
+          ['Ear stack wearer', 'Stud + huggie or butterfly + stud', 'Cadenza S + Amadea, Farfalla + Cadenza S'],
+          ['Formal dinners', 'Long drops or medium studs', 'Concetta Long, Cadenza M'],
+        ],
+      },
+      { type: 'see-also', text: 'What jewellery to wear with a black dress', href: '/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress' },
+    ],
+  },
+  {
+    heading: 'Jewellery Gifts by Metal Colour',
+    content: [
+      { type: 'paragraph', text: 'Metal colour is one of the easiest ways to make the gift feel right. The safest choice is the metal colour mum already wears most often.' },
+      { type: 'paragraph', text: 'If she wears gold rings, bracelets or necklaces, choose yellow gold. If she wears silver-tone jewellery, choose white or silver tone. If she likes soft romantic styling, rose gold can work beautifully, especially for butterfly earrings and sentimental gifts.' },
+      {
+        type: 'grid-layout',
+        imagePosition: 'left',
+        image: '/blog-images/blog-image-87.jpg',
+        content: [
+          {
+            type: 'table',
+            headers: ['Metal Colour', 'Gift Feeling', 'Best For'],
+            rows: [
+              ['Yellow gold', 'Warm, classic and elegant', 'Everyday gifts, birthday gifts, family events, green dresses'],
+              ['White or silver tone', 'Clean, bright and modern', 'Minimalist gifts, workwear, formal outfits'],
+              ['Rose gold', 'Soft, feminine and meaningful', 'Butterfly earrings, blush outfits, sentimental gifts'],
+              ['Mixed metals', 'Creative and personal', 'Ear stack lovers and trend-led recipients'],
+            ],
+          },
+        ],
+      },
+      { type: 'paragraph', text: 'For mum gifts, avoid choosing metal colour only because it is trending. Match what she already wears first.' },
+      { type: 'see-also', text: 'Gold vs white vs rose gold lab-grown diamond earrings', href: '/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings' },
+    ],
+  },
+  {
+    heading: 'Giftable Ear Stack Ideas for Mum',
+    content: [
+      { type: 'paragraph', text: 'Ear stack gifts work well if mum has multiple piercings or likes layered jewellery. A two-piece stack is usually safer than a three-piece stack.' },
+      { type: 'paragraph', text: 'The safest stack is a small stud with a huggie. The most meaningful stack is a butterfly earring with a small stud. The best occasion stack is a drop earring with a small support stud.' },
+      {
+        type: 'table',
+        headers: ['Giftable Stack Type', 'Main Piece', 'Support Piece', 'Product Direction'],
+        rows: [
+          ['Safest mum stack', 'Small stud', 'Huggie', 'Cadenza S + Amadea'],
+          ['Classic sparkle stack', 'Medium stud', 'Small stud', 'Cadenza M + Cadenza S'],
+          ['Minimalist stack gift', 'Small stud', 'Minimalist earring', 'Cadenza S + Laluce'],
+          ['Meaningful stack gift', 'Butterfly earring', 'Small stud', 'Farfalla + Cadenza S'],
+          ['Soft feminine stack', 'Butterfly earring', 'Minimalist detail', 'Alidi Farfalla + Laluce'],
+          ['Dinner stack gift', 'Drop earring', 'Small stud', 'Orsola + Cadenza S'],
+          ['Soft occasion stack', 'Short drop', 'Small stud', 'Concetta Short + Cadenza S'],
+          ['Formal stack gift', 'Long drop', 'Small stud', 'Concetta Long + Cadenza S'],
+          ['Modern stack gift', 'Huggie', 'Small stud', 'Amadea + Cadenza S'],
+          ['Hoop stack gift', 'Hoop', 'Small stud', 'Pave Hoops + Cadenza S'],
+        ],
+      },
+      { type: 'see-also', text: 'Lab-grown diamond earrings for ear stacks', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks' },
+    ],
+  },
+  {
+    heading: 'Product Pathways by Gift Need',
+    content: [
+      { type: 'subheading', text: 'For the Safest Jewellery Gift for Mum' },
+      { type: 'paragraph', text: 'Choose Cadenza M diamond stud earrings or Cadenza S lab-grown diamond studs. Studs are classic, wearable and safe when you are unsure of her exact style.' },
+      { type: 'subheading', text: 'For a Meaningful Gift' },
+      { type: 'paragraph', text: "Choose Farfalla or Alidi Farfalla butterfly earrings. They work well for Mother's Day, birthdays, thank-you gifts and sentimental moments." },
+      { type: 'subheading', text: 'For a Modern Everyday Gift' },
+      { type: 'paragraph', text: 'Choose Amadea Huggie earrings. They are close-fitting, wearable and useful for daily styling or ear stacks.' },
+      { type: 'subheading', text: 'For a Minimalist Gift' },
+      { type: 'paragraph', text: 'Choose Laluce minimalist diamond earrings or Cadenza S. These are best for a mum who prefers understated jewellery.' },
+      { type: 'subheading', text: 'For a Dinner or Family Event Gift' },
+      { type: 'paragraph', text: 'Choose Orsola drop earrings. They add movement and elegance for dinners, birthdays, weddings and special occasions.' },
+      { type: 'subheading', text: 'For a Soft Occasion Gift' },
+      { type: 'paragraph', text: 'Choose Concetta Short earrings. They are delicate and strong for champagne, blush, pastel, wedding guest and family-event styling.' },
+      { type: 'subheading', text: 'For a Formal Gift' },
+      { type: 'paragraph', text: 'Choose Concetta Long earrings. They work best for formal dinners, milestone celebrations and dressier evening styling.' },
+      { type: 'subheading', text: 'For an Ear Stack Gift' },
+      { type: 'paragraph', text: 'Choose Cadenza S with Amadea for the safest stack, Farfalla with Cadenza S for a meaningful stack, or Orsola with Cadenza S for an elegant occasion stack.' },
+    ],
+  },
+  {
+    heading: 'Product Recommendations from IWantJewels',
+    content: [
+      {
+        type: 'table',
+        headers: ['Product', 'Best Mum Gift Role', 'Why It Works'],
+        rows: [
+          ['Cadenza M diamond stud earrings', 'Best safe classic gift', 'Polished, timeless and easy to style'],
+          ['Cadenza S lab-grown diamond studs', 'Best subtle everyday gift', 'Small, simple and wearable'],
+          ['Amadea Huggie earrings', 'Best modern everyday gift', 'Close-fitting, stackable and practical'],
+          ['Laluce minimalist diamond earrings', 'Best understated gift', 'Quiet, clean and easy for minimal style'],
+          ['Farfalla butterfly earrings', 'Best meaningful gift', 'Symbolic, soft and connected to growth'],
+          ['Alidi Farfalla butterfly earrings', 'Best sentimental gift', "Strong for Mother's Day and personal moments"],
+          ['Orsola drop earrings', 'Best dinner or family-event gift', 'Elegant movement for dresses and occasions'],
+          ['Concetta Short earrings', 'Best soft occasion gift', 'Delicate and feminine'],
+          ['Concetta Long earrings', 'Best formal evening gift', 'Refined and polished for dressy occasions'],
+          ['Pave Hoops', 'Best modern shape gift', 'Works if she likes visible jewellery'],
+          ['Lusso bold statement earrings', 'Best bold gift only if she loves standout jewellery', 'Strong for evening styling, but less universal'],
+        ],
+      },
+      { type: 'paragraph', text: 'Choose the gift by her style first. Pick Cadenza M or Cadenza S for safe sparkle, Amadea for modern daily wear, Laluce for minimal jewellery, Farfalla or Alidi Farfalla for meaning, Orsola for dinners and Concetta Long for formal occasions.' },
+    ],
+  },
+  {
+    heading: 'Common Jewellery Gift Mistakes to Avoid',
+    content: [
+      { type: 'paragraph', text: "One common mistake is choosing jewellery that feels impressive but does not match mum's style. If she wears classic pieces every day, a very bold earring may not be the safest gift." },
+      { type: 'paragraph', text: "Another mistake is buying jewellery that feels too occasion-only. A strong gift for mum should feel special, but it should also be wearable after the birthday, Mother's Day or family celebration." },
+      { type: 'paragraph', text: 'A third mistake is guessing metal colour. Look at what she already wears. If most of her jewellery is gold, choose gold. If it is silver or white-tone, choose that direction.' },
+      { type: 'paragraph', text: 'Another mistake is choosing earrings that feel too young or too trend-led if her style is classic. In that case, Cadenza M, Cadenza S or Orsola may be safer.' },
+      { type: 'paragraph', text: 'A fifth mistake is ignoring comfort. Mum gifts should be easy to wear for long periods, especially if she will use them for dinners, travel or family events.' },
+      { type: 'paragraph', text: 'Finally, do not forget repeat wear. The best jewellery gift for mum should feel thoughtful and still be useful after the occasion is over.' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day' },
+    ],
+  },
+  {
+    heading: 'Final Gift Checklist',
+    content: [
+      { type: 'paragraph', text: 'Before choosing jewellery for mum, ask:' },
+      {
+        type: 'bullet-list',
+        items: [
+          'Does she prefer classic, minimalist, romantic, modern or occasion-ready jewellery?',
+          'What metal colour does she already wear?',
+          "Is this for a birthday, Mother's Day, milestone, thank-you gift or everyday gift?",
+          'Does she wear earrings daily?',
+          'Does she prefer studs, huggies, drops, hoops or symbolic jewellery?',
+          'Would butterfly earrings feel meaningful to her?',
+          'Would diamond studs be safer?',
+          'Is the gift meant to feel emotional, practical or both?',
+          'Can the earrings be worn with more than one outfit?',
+          'Does she have multiple piercings for an ear stack gift?',
+          'Would a two-piece stack gift feel more thoughtful than one pair?',
+          'Are the earrings comfortable for long wear?',
+          'Will the gift still feel wearable after the occasion?',
+          'Is the design easy to clean and store?',
+        ],
+      },
+      { type: 'paragraph', text: 'If you are unsure, choose diamond studs. If you want meaning, choose butterfly earrings. If she likes modern jewellery, choose huggies. If she dresses up often, choose drops.' },
+    ],
+  },
+]
+
+const faq: V2FAQItem[] = [
+  { question: 'What jewellery should I buy for my mum?', answer: 'The best jewellery to buy for mum is something wearable, thoughtful and suited to her style. Diamond studs are safest, huggies are modern, butterfly earrings feel meaningful, and drop earrings are strong for dinners and occasions.' },
+  { question: 'Are earrings a good gift for mum?', answer: 'Yes, earrings are a good gift for mum because they are wearable, personal and easier to choose than rings.' },
+  { question: 'Are lab-grown diamond earrings a good gift for mum?', answer: "Yes, lab-grown diamond earrings are strong mum gifts because they feel special while still being wearable for birthdays, Mother's Day, everyday outfits, dinners and family events." },
+  { question: 'What are the safest earrings to gift mum?', answer: 'Diamond studs are the safest earrings to gift mum because they are classic, simple and easy to wear with many outfits.' },
+  { question: "What jewellery should I buy mum for her birthday?", answer: "For mum's birthday, choose diamond studs for safe sparkle, butterfly earrings for meaning, huggies for modern daily wear, or drops if she enjoys dinners and occasion outfits." },
+  { question: "What jewellery should I buy for Mother's Day?", answer: "For Mother's Day, diamond studs, butterfly earrings, huggies and delicate drops are strong choices because they feel thoughtful and wearable." },
+  { question: 'Are butterfly earrings a meaningful gift for mum?', answer: 'Yes, butterfly earrings can be a meaningful gift because they can symbolise growth, beauty, transformation and new beginnings.' },
+  { question: 'What jewellery should I buy for a mum who likes simple style?', answer: 'Choose small studs, huggies or minimalist earrings. Cadenza S, Amadea and Laluce are strong directions.' },
+  { question: "What metal colour should I choose for mum's jewellery gift?", answer: 'Choose the metal colour she already wears most often. Yellow gold feels warm, white or silver tone feels clean, and rose gold feels soft and meaningful.' },
+  { question: 'What IWantJewels earrings are best for mum gifts?', answer: 'Cadenza M, Cadenza S, Amadea, Laluce, Farfalla, Alidi Farfalla, Orsola, Concetta Short and Concetta Long are strong mum gift options depending on her style and the occasion.' },
+]
+
+const cta: V2CTABlock = {
+  heading: 'Jewellery gifts for mum should feel thoughtful, comfortable and wearable. Choose diamond studs for safe sparkle, huggies for modern everyday jewellery, butterfly earrings for meaning, drops for dinners and family events, and minimalist earrings for quiet everyday style.',
+  body: 'Start with IWantJewels demi-fine lab-grown diamond earrings if you want a jewellery gift with real diamond sparkle. Choose Cadenza M for classic polish, Cadenza S for subtle daily wear, Amadea for huggies, Laluce for minimalist style, Farfalla or Alidi Farfalla for meaning, Orsola for dinners and Concetta Long for formal occasions.',
+  primaryLabel: 'Shop Jewellery Gifts for Mum',
+  primaryHref: '/products?category=Earring',
+  secondaryLabel: 'Explore Jewellery Gifts for Her',
+  secondaryHref: '/resources/jewellery-gift-guides/jewellery-gifts-for-her',
+  tertiaryLabel: 'Read the Lab-Grown Diamond Earrings for Gifts Guide',
+  tertiaryHref: '/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts',
+}
+
+export default function Page() {
+  const category = getCategoryBySlug('jewellery-gift-guides')
+  const article = getArticleBySlug('jewellery-gift-guides', 'jewellery-gifts-for-mum')
+  if (!category || !article) notFound()
+  const relatedArticles = getRelatedArticles('jewellery-gift-guides', 'jewellery-gifts-for-mum', 3)
+  return (
+    <ResourceArticleV2Page
+      category={category}
+      article={article}
+      relatedArticles={relatedArticles}
+      heroIntro={heroIntro}
+      quickSummary={quickSummary}
+      content={articleContent}
+      cta={cta}
+      faq={faq}
+    />
+  )
+}

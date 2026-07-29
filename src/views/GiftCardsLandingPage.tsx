@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react'
 import ProductCard from '../components/sections/ProductCard'
 import { getProducts } from '../services/productService'
 import type { Product } from '../types/product'
+import { useTranslation } from 'react-i18next'
 
 export default function GiftCardsLandingPage() {
+  const { t } = useTranslation('giftCards')
   const [products, setProducts] = useState<Product[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
 
@@ -26,19 +28,18 @@ export default function GiftCardsLandingPage() {
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-12">
       <header className="mb-10 text-center">
-        <h1 className="text-3xl font-bold text-[#17110d]">Gift Cards</h1>
+        <h1 className="text-3xl font-bold text-[#17110d]">{t('title')}</h1>
         <p className="mt-3 text-sm text-zinc-500">
-          Pick an amount, add a personal message, and send it to a friend by email. Gift cards never expire and can be
-          spent across multiple orders.
+          {t('subtitle')}
         </p>
       </header>
 
       {status === 'loading' ? (
-        <p className="text-center text-sm text-zinc-500">Loading gift cards…</p>
+        <p className="text-center text-sm text-zinc-500">{t('loading')}</p>
       ) : status === 'error' ? (
-        <p className="text-center text-sm text-rose-600">Unable to load gift cards right now.</p>
+        <p className="text-center text-sm text-rose-600">{t('error')}</p>
       ) : products.length === 0 ? (
-        <p className="text-center text-sm text-zinc-500">Gift cards are not available yet. Please check back soon.</p>
+        <p className="text-center text-sm text-zinc-500">{t('empty')}</p>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (

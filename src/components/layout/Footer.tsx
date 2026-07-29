@@ -1,31 +1,8 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { Link } from "@/lib/router";
 import logofooter from "@/../public/logofooter.png";
-
-const informationLinks = [
-    { label: "Contact Us", to: "/contact" },
-    { label: "My Account", to: "/profile" },
-    { label: "Order & Returns", to: "/orders" },
-    { label: "FAQs", to: "/faq" },
-];
-
-const quickShopLinks = [
-    { label: "Necklaces", to: "/category/necklaces" },
-    { label: "Rings", to: "/category/rings" },
-    { label: "Earrings", to: "/category/earrings" },
-    { label: "Bracelets", to: "/category/bracelets" },
-];
-
-const questionLinks = [
-    { label: "Blog", to: "/blogs" },
-    { label: "Jewellery Guides", to: "/resources" },
-    { label: "FAQs", to: "/faq" },
-];
-
-const socialLinks = [
-    { name: "Instagram", href: "https://www.instagram.com/iwantjewels/" },
-    { name: "Facebook", href: "https://www.facebook.com/iwjewels/" },
-    { name: "TikTok", href: "https://www.tiktok.com/@iwantjewelsofficial" },
-];
 
 function FooterLink({ label, to }: { label: string; to?: string }) {
     const className =
@@ -99,13 +76,41 @@ function SocialIcon({ name }: { name: string }) {
 }
 
 export default function Footer() {
+    const { t } = useTranslation();
+
+    const informationLinks = [
+        { label: t("footer.contactUs"), to: "/contact" },
+        { label: t("footer.myAccount"), to: "/profile" },
+        { label: t("footer.orderReturns"), to: "/orders" },
+        { label: t("footer.faqs"), to: "/faq" },
+    ];
+
+    const quickShopLinks = [
+        { label: t("footer.necklaces"), to: "/category/necklaces" },
+        { label: t("footer.rings"), to: "/category/rings" },
+        { label: t("footer.earrings"), to: "/category/earrings" },
+        { label: t("footer.bracelets"), to: "/category/bracelets" },
+    ];
+
+    const questionLinks = [
+        { label: t("footer.blog"), to: "/blogs" },
+        { label: t("footer.jewelleryGuides"), to: "/resources" },
+        { label: t("footer.faqs"), to: "/faq" },
+    ];
+
+    const socialLinks = [
+        { name: "Instagram", href: "https://www.instagram.com/iwantjewels/" },
+        { name: "Facebook", href: "https://www.facebook.com/iwjewels/" },
+        { name: "TikTok", href: "https://www.tiktok.com/@iwantjewelsofficial" },
+    ];
+
     return (
         <footer className="bg-white font-poppins">
             <div className="mx-auto container px-6 py-12 lg:px-10 lg:py-16">
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
                     <div>
                         <h4 className="text-[13px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            Information
+                            {t("footer.information")}
                         </h4>
                         <ul className="mt-6 space-y-4">
                             {informationLinks.map((link) => (
@@ -121,7 +126,7 @@ export default function Footer() {
 
                     <div>
                         <h4 className="text-[13px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            Quick Shops
+                            {t("footer.quickShops")}
                         </h4>
                         <ul className="mt-6 space-y-4">
                             {quickShopLinks.map((link) => (
@@ -137,7 +142,7 @@ export default function Footer() {
 
                     <div>
                         <h4 className="text-[13px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            Questions
+                            {t("footer.questions")}
                         </h4>
                         <ul className="mt-6 space-y-4">
                             {questionLinks.map((link) => (
@@ -176,8 +181,7 @@ export default function Footer() {
 
                 <div className="mt-12 border-t border-zinc-200 pt-6">
                     <p className="text-center text-[12px] tracking-[0.06em] text-zinc-500 sm:text-[13px]">
-                        ©{new Date().getFullYear()} I Want Jewels. All Rights
-                        Reserved.
+                        {t("footer.allRightsReserved", { year: new Date().getFullYear() })}
                     </p>
                 </div>
             </div>

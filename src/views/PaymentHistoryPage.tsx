@@ -8,6 +8,7 @@ import Header from '../components/layout/Header'
 import { getPaymentHistory } from '../services/orderService'
 import type { OrdersPagination, PaymentHistoryItem } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
+import { useTranslation } from 'react-i18next'
 
 function formatPaymentDate(value: string) {
   return new Intl.DateTimeFormat('en-IN', {
@@ -43,6 +44,7 @@ function getOrderStatusClass(status: string) {
 }
 
 export default function PaymentHistoryPage() {
+  const { t } = useTranslation()
   const [payments, setPayments] = useState<PaymentHistoryItem[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -61,7 +63,7 @@ export default function PaymentHistoryPage() {
       } catch {
         setPayments([])
         setPagination(null)
-        setError('Unable to load payment history right now.')
+        setError(t('account.paymentHistory.loadError'))
       } finally {
         setIsLoading(false)
       }
@@ -76,14 +78,14 @@ export default function PaymentHistoryPage() {
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Payments</p>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">Your payment history</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('account.paymentHistory.breadcrumb')}</p>
+            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">{t('account.paymentHistory.title')}</h1>
           </div>
-          <p className="text-sm text-zinc-500">Review Stripe sessions, payment status, and linked orders in one list.</p>
+          <p className="text-sm text-zinc-500">{t('account.paymentHistory.subtitle')}</p>
         </div>
 
         <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-          {isLoading ? <p className="text-sm text-zinc-500">Loading payment history...</p> : null}
+          {isLoading ? <p className="text-sm text-zinc-500">{t('account.paymentHistory.loading')}</p> : null}
           {!isLoading && error ? <div className="border border-rose-200 bg-rose-50 px-6 py-8 text-sm text-rose-700">{error}</div> : null}
 
           {!isLoading && !error && payments.length === 0 ? (
@@ -91,13 +93,13 @@ export default function PaymentHistoryPage() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center border border-[#dbc8b8] text-[#17110d]">
                 <ReceiptText className="h-6 w-6" />
               </div>
-              <h2 className="mt-5 text-2xl font-bold text-[#17110d]">No payment history yet</h2>
-              <p className="mt-3 text-sm leading-7 text-zinc-500">Online payment attempts and completed payments will appear here after checkout.</p>
+              <h2 className="mt-5 text-2xl font-bold text-[#17110d]">{t('account.paymentHistory.emptyTitle')}</h2>
+              <p className="mt-3 text-sm leading-7 text-zinc-500">{t('account.paymentHistory.emptyDesc')}</p>
               <Link
                 to="/products"
                 className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
               >
-                SHOP NOW
+                {t('account.paymentHistory.shopNow')}
               </Link>
             </div>
           ) : null}
@@ -113,7 +115,7 @@ export default function PaymentHistoryPage() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{payment.orderNumber}</p>
                       <Link to={`/orders/${payment.orderId}`} className="mt-2 block text-xl font-bold text-[#17110d] transition hover:text-pink-500">
-                        Payment for order {payment.orderNumber}
+                        {t('account.paymentHistory.paymentForOrder', { orderNumber: payment.orderNumber })}
                       </Link>
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
@@ -139,21 +141,21 @@ export default function PaymentHistoryPage() {
 
                   <div className="mt-5 grid gap-3 border border-[#efe1d5] bg-white p-4 sm:grid-cols-2">
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Session ID</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{t('account.paymentHistory.sessionId')}</p>
                       <p className="mt-2 break-all text-sm text-zinc-600">{payment.sessionId}</p>
                     </div>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Transaction ID</p>
-                      <p className="mt-2 break-all text-sm text-zinc-600">{payment.transactionId ?? 'Not available yet'}</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{t('account.paymentHistory.transactionId')}</p>
+                      <p className="mt-2 break-all text-sm text-zinc-600">{payment.transactionId ?? t('account.paymentHistory.notAvailableYet')}</p>
                     </div>
                   </div>
 
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-                    <span>Amount {formatPrice(payment.amount, paymentCurrency)}</span>
+                    <span>{t('account.paymentHistory.amount', { price: formatPrice(payment.amount, paymentCurrency) })}</span>
                     <div className="flex items-center gap-4">
-                      <span>Updated {formatPaymentDate(payment.updatedAt)}</span>
+                      <span>{t('account.paymentHistory.updated', { date: formatPaymentDate(payment.updatedAt) })}</span>
                       <Link to={`/orders/${payment.orderId}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
-                        VIEW ORDER
+                        {t('account.paymentHistory.viewOrder')}
                       </Link>
                     </div>
                   </div>
@@ -165,7 +167,7 @@ export default function PaymentHistoryPage() {
 
           {pagination ? (
             <div className="mt-6 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500">
-              Showing page {pagination.currentPage} of {pagination.totalPages} · {pagination.totalRecords} payment record{pagination.totalRecords === 1 ? '' : 's'}
+              {t('account.paymentHistory.showingPage', { current: pagination.currentPage, total: pagination.totalPages, records: pagination.totalRecords, count: pagination.totalRecords })}
             </div>
           ) : null}
         </section>

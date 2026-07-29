@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
 import { useCurrency } from "../../context/CurrencyContext";
@@ -75,6 +76,7 @@ type HotspotProduct = {
 };
 
 export default function ShopTheLookBanner() {
+    const { t } = useTranslation();
     const { format } = useCurrency();
     const [products, setProducts] = useState<Record<string, HotspotProduct>>(
         {},
@@ -187,8 +189,8 @@ export default function ShopTheLookBanner() {
                 {/* Left: collage card */}
                 <div className="flex flex-col bg-[#f1f1f1] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
                     <h2 className="text-[22px] font-medium uppercase leading-[1.2] tracking-[0.12em] text-zinc-900 sm:text-[26px] lg:text-[34px]">
-                        <span className="block">Explore Our</span>
-                        <span className="block">Alessia Collection</span>
+                        <span className="block">{t("home.alessiaCollection").split('\n')[0] || "Explore Our"}</span>
+                        <span className="block">{t("home.alessiaCollection").split('\n')[1] || "Alessia Collection"}</span>
                     </h2>
 
                     <div className="relative mt-8">
@@ -201,7 +203,7 @@ export default function ShopTheLookBanner() {
                             to={ALESSIA_COLLECTION_HREF}
                             className="absolute bottom-2 left-2 md:bottom-5 md:left-5 border border-zinc-900 bg-transparent md:px-6 px-1.5 md:py-3 py-2 md:text-[11px] text-[9px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white sm:text-[12px]"
                         >
-                            Explore More
+                            {t("home.shopTheLook")}
                         </Link>
                     </div>
                 </div>
@@ -283,7 +285,7 @@ export default function ShopTheLookBanner() {
                                             <span className="text-[13px] font-semibold text-zinc-900 sm:text-[15px]">
                                                 {product?.price != null
                                                     ? format(product.price)
-                                                    : "View product"}
+                                                    : t("home.viewProduct")}
                                             </span>
                                             <ArrowRight
                                                 className="h-4 w-4 text-zinc-500"

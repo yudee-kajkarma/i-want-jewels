@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
     Gem,
     Gift,
@@ -168,6 +169,7 @@ function buildProductsFilterHref(category: string): string {
 }
 
 export default function HomeBody() {
+    const { t } = useTranslation();
     const [categories, setCategories] = useState<string[]>([]);
     const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
     const [activeCategory, setActiveCategory] = useState("All");
@@ -395,7 +397,7 @@ export default function HomeBody() {
         <>
             <section className="mx-auto max-w-[1480px] px-6 py-16 font-play lg:px-10">
                 <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                    Categories
+                    {t("home.categories")}
                 </h2>
                 <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                     {categoryCards.map((item, index) => (
@@ -424,7 +426,7 @@ export default function HomeBody() {
             {/* Discover Jewellery section */}
             <section className="mx-auto max-w-[1480px] px-6 py-12 font-play lg:px-10">
                 <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                    Discover Our Latest Jewellery Pieces
+                    {t("home.discoverLatest")}
                 </h2>
                 <div className="mt-5 flex flex-wrap items-center gap-3">
                     {categoryTabs.map((item) => {
@@ -466,11 +468,10 @@ export default function HomeBody() {
                 {!isLoadingProducts && latestProducts.length === 0 ? (
                     <div className="mt-8 border border-dashed border-zinc-300 bg-white px-6 py-10 text-center">
                         <h3 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
-                            No products found for {activeCategory}
+                            {t("home.noProductsFound", { category: activeCategory })}
                         </h3>
                         <p className="mt-2 text-[12px] uppercase tracking-[0.16em] text-zinc-500">
-                            Choose another tab or open the full products page to
-                            explore more results.
+                            {t("home.noProductsDescription")}
                         </p>
                     </div>
                 ) : null}
@@ -480,7 +481,7 @@ export default function HomeBody() {
                         to={buildProductsFilterHref(activeCategory)}
                         className="border border-zinc-800 bg-white px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
                     >
-                        View All New Pieces
+                        {t("home.viewAllNew")}
                     </Link>
                 </div>
                 {productsError ? (
@@ -496,7 +497,7 @@ export default function HomeBody() {
             {collectionGroups.length > 0 ? (
                 <section className="mx-auto max-w-[1480px] px-6 py-12 font-play lg:px-10">
                     <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                        Shop By Collection
+                        {t("home.shopByCollection")}
                     </h2>
                     <div className="mt-5 flex flex-wrap items-center gap-3">
                         {collectionGroups.map(({ label }) => {
@@ -543,7 +544,7 @@ export default function HomeBody() {
                             ))
                         ) : (
                             <p className="text-[12px] uppercase tracking-[0.16em] text-zinc-500">
-                                No products in this collection yet.
+                                {t("home.noProductsInCollection")}
                             </p>
                         )}
                     </div>
@@ -564,8 +565,8 @@ export default function HomeBody() {
                             className="border border-zinc-800 bg-white px-6 py-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white sm:text-[13px]"
                         >
                             {activeCollection
-                                ? `View All in ${activeCollection}`
-                                : "View All New Pieces"}
+                                ? t("home.viewAllInCollection", { collection: activeCollection })
+                                : t("home.viewAllNew")}
                         </Link>
                     </div>
                 </section>

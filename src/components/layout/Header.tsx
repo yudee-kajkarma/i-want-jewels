@@ -18,6 +18,7 @@ import { getProducts } from "../../services/productService";
 import { useAppSelector } from "../../store/hooks";
 import type { Product } from "../../types/product";
 import brandLogo from "../../assets/logo.svg";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const adminNavLinks = [
     { label: "Home", to: "/" },
@@ -1531,3 +1532,4 @@ export default function Header() {
         </header>
     );
 }
+

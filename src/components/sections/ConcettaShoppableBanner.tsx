@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
 import { useCurrency } from "../../context/CurrencyContext";
@@ -103,6 +104,7 @@ function buildCollectionLabel(
 }
 
 export default function ConcettaShoppableBanner() {
+    const { t } = useTranslation();
     const { format } = useCurrency();
     const [products, setProducts] = useState<Record<string, HotspotProduct>>(
         {},
@@ -267,7 +269,7 @@ export default function ConcettaShoppableBanner() {
                                 <span className="text-[13px] font-semibold text-zinc-900 sm:text-[15px]">
                                     {product?.price != null
                                         ? format(product.price)
-                                        : "View product"}
+                                        : t("home.viewProduct")}
                                 </span>
                                 <ArrowRight
                                     className="h-4 w-4 text-zinc-500"
@@ -294,8 +296,8 @@ export default function ConcettaShoppableBanner() {
 
                     <div className="pointer-events-none absolute left-0 top-0 p-12 xl:p-16">
                         <h2 className="text-[34px] font-medium uppercase leading-[1.18] tracking-[0.16em] text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.28)] xl:text-[42px]">
-                            <span className="block">Crafted For</span>
-                            <span className="block">Modern Elegance</span>
+                            <span className="block">{t("home.craftedForElegance").split('\n')[0] || "Crafted For"}</span>
+                            <span className="block">{t("home.craftedForElegance").split('\n')[1] || "Modern Elegance"}</span>
                         </h2>
                     </div>
 
@@ -303,7 +305,7 @@ export default function ConcettaShoppableBanner() {
                         to={CONCETTA_COLLECTION_HREF}
                         className="absolute bottom-12 left-12 inline-block border border-white px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.24em] text-white transition hover:bg-white hover:text-zinc-900 xl:left-16"
                     >
-                        Shop Now
+                        {t("common.shopNow")}
                     </Link>
 
                     {renderHotspots("desktop")}
@@ -319,14 +321,14 @@ export default function ConcettaShoppableBanner() {
 
                     <div className="absolute bottom-5 left-5">
                         <h2 className="text-[18px] font-medium uppercase leading-[1.22] tracking-[0.12em] text-[#2a211c]">
-                            <span className="block">Crafted For Modern</span>
-                            <span className="block">Elegance</span>
+                            <span className="block">{t("home.craftedForEleganceMobile").split('\n')[0] || "Crafted For Modern"}</span>
+                            <span className="block">{t("home.craftedForEleganceMobile").split('\n')[1] || "Elegance"}</span>
                         </h2>
                         <Link
                             to={CONCETTA_COLLECTION_HREF}
                             className="mt-3 inline-block border border-[#2a211c] px-5 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#2a211c] transition hover:bg-[#2a211c] hover:text-white"
                         >
-                            Shop Now
+                            {t("common.shopNow")}
                         </Link>
                     </div>
 

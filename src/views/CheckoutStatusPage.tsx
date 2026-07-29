@@ -16,8 +16,10 @@ import {
   getCartRestoreSnapshot,
   getPendingOrderStatus,
 } from '../utils/checkoutStorage'
+import { useTranslation } from 'react-i18next'
 
 export default function CheckoutStatusPage() {
+  const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const [searchParams] = useSearchParams()
   const paymentResult = searchParams.get('payment') === 'cancel' ? 'cancel' : 'success'
@@ -92,9 +94,9 @@ export default function CheckoutStatusPage() {
             <div className="flex items-center gap-4">
               {paymentResult === 'success' ? <CheckCircle2 className="h-10 w-10" /> : <XCircle className="h-10 w-10" />}
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/70">Checkout status</p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/70">{t('checkout.statusTitle')}</p>
                 <h1 className="mt-2 text-3xl font-extrabold tracking-[-0.04em]">
-                  {paymentResult === 'success' ? 'Your order was placed successfully' : 'Payment was not completed'}
+                  {paymentResult === 'success' ? t('checkout.successTitle') : t('checkout.failTitle')}
                 </h1>
               </div>
             </div>
@@ -104,17 +106,17 @@ export default function CheckoutStatusPage() {
             <div className="border border-[#efe1d5] bg-[#fffdfa] p-5 text-sm leading-7 text-zinc-600">
               {pendingOrder?.orderNumber ? (
                 <p>
-                  Order number: <span className="font-bold text-[#17110d]">{pendingOrder.orderNumber}</span>
+                  {t('checkout.orderNumber')} <span className="font-bold text-[#17110d]">{pendingOrder.orderNumber}</span>
                 </p>
               ) : null}
               <p>
                 {paymentResult === 'success'
                   ? pendingOrder?.paymentMethod === 'ONLINE'
-                    ? 'Payment completed and the website return flow finished successfully.'
-                    : 'Cash on delivery order was created successfully.'
-                  : 'You returned from the payment flow without completing payment. You can retry checkout when ready.'}
+                    ? t('checkout.paymentCompleted')
+                    : t('checkout.codCompleted')
+                  : t('checkout.paymentFailed')}
               </p>
-              {isSyncing ? <p className="mt-3 text-zinc-500">Syncing your cart and checkout state...</p> : null}
+              {isSyncing ? <p className="mt-3 text-zinc-500">{t('checkout.syncing')}</p> : null}
               {syncError ? <p className="mt-3 text-rose-600">{syncError}</p> : null}
             </div>
 
@@ -124,7 +126,7 @@ export default function CheckoutStatusPage() {
                 className="inline-flex items-center justify-center gap-2 bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] !text-white transition hover:bg-[#2e221b]"
               >
                 <ShoppingBag className="h-4 w-4" />
-                CONTINUE SHOPPING
+                {t('checkout.continueShopping')}
               </Link>
 
               <Link
@@ -132,7 +134,7 @@ export default function CheckoutStatusPage() {
                 className="inline-flex items-center justify-center gap-2 border border-[#dbc8b8] px-6 py-4 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:!text-white"
               >
                 <RotateCcw className="h-4 w-4" />
-                {paymentResult === 'success' ? 'VIEW ORDERS' : 'TRY CHECKOUT AGAIN'}
+                {paymentResult === 'success' ? t('checkout.viewOrders') : t('checkout.tryAgain')}
               </Link>
             </div>
           </div>

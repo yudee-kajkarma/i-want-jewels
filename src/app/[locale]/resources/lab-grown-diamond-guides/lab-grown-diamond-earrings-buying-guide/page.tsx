@@ -1,0 +1,282 @@
+import type { Metadata } from 'next'
+import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
+import type {
+  V2ArticleSection,
+  V2HeroIntro,
+  V2QuickSummary,
+  V2FAQItem,
+  V2CTABlock,
+} from '../../../../../views/ResourceArticleV2Page'
+import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
+import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'Lab Grown Diamond Earrings Buying Guide | I Want Jewels',
+  description:
+    'Learn how to choose lab grown diamond earrings, including studs, huggies, drops, metal colours, sizes, gifts and everyday styling.',
+}
+
+const heroIntro: V2HeroIntro = {
+  image: '/blog-images/blog-image-9.jpg',
+  title: 'Lab-Grown Diamond Earrings Buying Guide',
+  subtitle: 'How to Choose the Right Pair',
+  paragraphs: [
+    'Lab-grown diamond earrings are a strong choice if you want real diamond sparkle in jewellery that feels wearable, modern and easier to style every day. The best pair depends on how you plan to wear them. Stud earrings are the safest everyday choice, huggies are best for ear stacks, drop earrings work beautifully for weddings and evening outfits, and butterfly earrings make thoughtful gifts.',
+    'When buying lab-grown diamond earrings, look beyond the diamond alone. Check the earring style, metal, comfort, closure, size, finish colour and how often you will wear them. For IWantJewels, the strongest starting points are Cadenza S lab-grown diamond studs for everyday wear, Cadenza M diamond stud earrings for more visible sparkle, Amadea Huggie earrings for stacking, Farfalla butterfly earrings for gifting, Orsola drop earrings for occasion styling and Lusso bold statement earrings for parties.',
+  ],
+  shopLabel: 'Shop Lab-Grown Diamond Earrings',
+  shopHref: '/products?category=Earring',
+}
+
+const quickSummary: V2QuickSummary = {
+  items: [
+    'Choose lab-grown diamond studs if you want a simple everyday pair.',
+    'Choose huggies if you like ear stacks or second-piercing styling.',
+    'Choose drop earrings if you need jewellery for weddings, dinners or evening looks.',
+    'Choose butterfly earrings if you want a symbolic birthday, anniversary or bridesmaid gift.',
+    'Choose bold statement earrings if you want stronger sparkle for parties or special occasions.',
+    'Look at the full piece, not only the diamond: metal, comfort, backing, size and finish all matter.',
+    'Yellow gold feels warm and classic, white or silver tones feel clean and modern, and rose gold feels soft and romantic.',
+    'If this is your first pair, diamond studs are usually the safest place to start.',
+  ],
+  image: '/blog-images/blog-image-8.jpg',
+}
+
+const articleContent: V2ArticleSection[] = [
+  {
+    heading: 'Why Buy Lab-Grown Diamond Earrings?',
+    content: [
+      { type: 'paragraph', text: 'Lab-grown diamond earrings are one of the easiest ways to start wearing diamond jewellery. They bring sparkle close to the face, work with many outfits and do not require sizing like rings. That makes them simple to buy for yourself and much easier to gift.' },
+      { type: 'paragraph', text: 'They are also practical. A pair of diamond studs can be worn with a work outfit, a simple white shirt, a black dress or a wedding guest look. Huggies can be layered with other earrings. Drop earrings can make an evening outfit feel more polished without needing a heavy necklace. Butterfly earrings can add meaning to a birthday, anniversary or bridesmaid gift.' },
+      { type: 'paragraph', text: 'The biggest advantage of lab-grown diamonds is that they make diamond earrings feel more accessible. You still get real diamond beauty, but in a way that can feel more wearable for everyday life.' },
+      { type: 'see-also', text: 'What are lab-grown diamonds?', href: '/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds' },
+    ],
+  },
+  {
+    heading: 'Are Lab-Grown Diamond Earrings Real Diamonds?',
+    content: [
+      { type: 'paragraph', text: 'Yes, lab-grown diamond earrings use real diamonds when the stones are genuine lab-grown diamonds. They are not the same as cubic zirconia, glass, crystal or diamond-look stones. The word "lab-grown" describes the origin of the diamond. It means the diamond was created in a controlled laboratory environment instead of being mined from the earth. It does not mean the diamond is fake.' },
+      { type: 'paragraph', text: 'This matters when buying earrings because many affordable sparkly earrings use simulants. They may look pretty, but they are not diamonds. Lab-grown diamond earrings give you a more genuine diamond jewellery experience while often being more accessible than comparable natural diamond earrings.' },
+      { type: 'see-also', text: 'Are lab-grown diamonds real?', href: '/resources/lab-grown-diamond-guides/are-lab-grown-diamonds-real' },
+    ],
+  },
+  {
+    heading: 'Lab-Grown Diamond Earring Styles Explained',
+    content: [
+      { type: 'paragraph', text: 'The right earring style depends on your outfit, lifestyle and reason for buying. Some earrings are made for daily wear, while others are better for occasions or gifts.' },
+      {
+        type: 'table',
+        headers: ['Earring Style', 'Best For', 'Style Feeling', 'Recommended IWJ Direction'],
+        rows: [
+          ['Stud earrings', 'Everyday wear, first diamond earrings, office looks', 'Simple, classic, safe', 'Cadenza S lab-grown diamond studs, Cadenza M diamond stud earrings'],
+          ['Huggie earrings', 'Ear stacks, second piercings, modern casual styling', 'Clean, layered, easy', 'Amadea Huggie earrings'],
+          ['Drop earrings', 'Weddings, dinners, evening outfits', 'Elegant, polished, dressier', 'Orsola drop earrings, Concetta Long earrings'],
+          ['Butterfly earrings', 'Gifts, birthdays, symbolic jewellery', 'Feminine, meaningful, soft', 'Farfalla butterfly earrings, Alidi Farfalla butterfly earrings'],
+          ['Minimalist earrings', 'Simple daily outfits', 'Quiet, refined, low-effort', 'Laluce minimalist diamond earrings'],
+          ['Bold statement jewellery', 'Parties, evening wear, high-impact looks', 'Sparkly, confident, noticeable', 'Lusso bold statement earrings'],
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'Best Lab-Grown Diamond Earrings for Everyday Wear',
+    content: [
+      { type: 'paragraph', text: 'For everyday wear, choose earrings that feel comfortable, secure and easy to style. You should not have to think too much before wearing them. The best everyday pair should work with casual outfits, workwear and simple evening looks.' },
+      { type: 'paragraph', text: 'Stud earrings are usually the best everyday choice because they sit close to the ear and do not move around much. They are also timeless, which makes them useful if you want one pair that works with almost everything.' },
+      { type: 'paragraph', text: 'Cadenza S lab-grown diamond studs are a strong first choice if you prefer something small, clean and easy to wear daily. Cadenza M diamond stud earrings are better if you want a slightly more visible sparkle while keeping the look classic. Laluce minimalist diamond earrings are ideal if your style is simple and understated.' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '#' },
+    ],
+  },
+  {
+    heading: 'Best Lab-Grown Diamond Earrings for Ear Stacks',
+    content: [
+      { type: 'paragraph', text: 'If you like ear stacks, lab-grown diamond studs and huggies are the easiest pieces to use. A good ear stack needs balance. You do not want every earring to compete for attention. The cleanest approach is to use one main earring and one or two smaller supporting pieces. A small diamond stud with a huggie can look polished without feeling too heavy.' },
+      { type: 'paragraph', text: 'For a simple ear stack, start with Cadenza S lab-grown diamond studs in the first piercing and Amadea Huggie earrings in the second piercing. If you want a more minimal look, add Laluce minimalist diamond earrings. If you prefer a slightly stronger stack, use Cadenza M instead of Cadenza S.' },
+      { type: 'paragraph', text: 'This works well because the sparkle is controlled. The ear looks styled, but not crowded.' },
+      { type: 'see-also', text: 'How to stack earrings', href: '#' },
+    ],
+  },
+  {
+    heading: 'Best Lab-Grown Diamond Earrings for Weddings and Occasions',
+    content: [
+      { type: 'paragraph', text: 'For weddings, dinners and formal events, earrings should feel polished but not overwhelming. The right pair depends on the outfit. Studs are best when the outfit already has detail, such as sequins, embroidery, lace or a bold neckline. Drop earrings work better when the outfit is simple and needs movement. Butterfly earrings can work beautifully with softer, romantic dresses.' },
+      { type: 'paragraph', text: 'For wedding guest styling, Orsola drop earrings are a strong choice because they add elegance and movement without feeling too heavy. Concetta Long earrings can work for a more elongated evening look. Cadenza M diamond stud earrings are better if the dress already has a lot going on. Farfalla butterfly earrings are lovely for feminine or romantic outfits.' },
+      { type: 'see-also', text: 'Wedding guest jewellery guide', href: '#' },
+    ],
+  },
+  {
+    heading: 'Best Lab-Grown Diamond Earrings for Gifts',
+    content: [
+      { type: 'paragraph', text: 'Lab-grown diamond earrings make excellent gifts because they feel thoughtful, beautiful and easier to choose than rings. You do not need to know the person\'s exact ring size, and earrings can suit many wardrobes.' },
+      { type: 'paragraph', text: 'For safe gifting, choose studs. Cadenza S lab-grown diamond studs are simple and classic, while Cadenza M diamond stud earrings feel a little more noticeable. If the gift needs to feel more personal, butterfly earrings are a stronger choice. Farfalla butterfly earrings and Alidi Farfalla butterfly earrings add symbolism, which makes them suitable for birthdays, anniversaries, bridesmaids or meaningful moments.' },
+      { type: 'paragraph', text: 'For someone who loves dressing up, Orsola drop earrings or Lusso bold statement earrings may feel more exciting. If they prefer modern daily jewellery, Amadea Huggie earrings are easier to style.' },
+      { type: 'see-also', text: 'Explore jewellery gifts', href: '/products' },
+    ],
+  },
+  {
+    heading: 'Which Metal Colour Should You Choose?',
+    content: [
+      { type: 'paragraph', text: 'Metal colour changes the whole feeling of lab-grown diamond earrings. The same earring design can feel classic, modern or romantic depending on the finish.' },
+      {
+        type: 'table',
+        headers: ['Metal Colour', 'Best For', 'Style Feeling'],
+        rows: [
+          ['Yellow gold', 'Warm skin tones, classic wardrobes, everyday styling', 'Warm, rich, timeless'],
+          ['White gold or silver tone', 'Cool skin tones, clean outfits, modern styling', 'Bright, crisp, polished'],
+          ['Rose gold', 'Romantic gifts, soft outfits, feminine styling', 'Warm, soft, delicate'],
+        ],
+      },
+      { type: 'paragraph', text: 'Yellow gold is usually the safest choice if the person already wears warm jewellery. White or silver tones work well if they prefer clean, minimal styling. Rose gold is beautiful for gifts because it feels softer and more romantic. For IWantJewels pieces, the combination of 925 sterling silver and 14kt gold plating gives the jewellery a premium look while keeping it in the demi-fine category.' },
+    ],
+  },
+  {
+    heading: 'What Size Lab-Grown Diamond Earrings Should You Buy?',
+    content: [
+      { type: 'paragraph', text: 'The best size depends on how visible you want the earrings to be. Small diamond earrings are better for everyday wear, second piercings and minimalist styling. Medium-sized studs are better if you want the earrings to be noticed without looking too formal. Larger or more detailed earrings are better for parties, weddings and evening looks.' },
+      { type: 'paragraph', text: 'For most first-time buyers, smaller or medium studs are the safest choice. They are easier to wear often and less likely to feel too dressy.' },
+      {
+        type: 'table',
+        headers: ['Buyer Preference', 'Best Choice'],
+        rows: [
+          ['Very simple everyday wear', 'Small studs'],
+          ['Classic daily sparkle', 'Medium studs'],
+          ['Ear stack styling', 'Small studs and huggies'],
+          ['Wedding guest outfits', 'Drops or medium studs'],
+          ['Party looks', 'Drops or bold statement earrings'],
+          ['Meaningful gifts', 'Studs or butterfly earrings'],
+        ],
+      },
+      { type: 'paragraph', text: 'Cadenza S works well for simple daily sparkle. Cadenza M gives a more visible stud look. Orsola is better when you want movement for an occasion. Lusso works when you want the earrings to become the main jewellery moment.' },
+    ],
+  },
+  {
+    heading: 'What Backing or Closure Should You Look For?',
+    content: [
+      { type: 'paragraph', text: 'A beautiful earring still needs to feel secure. The closure matters because it affects comfort and confidence when wearing the earrings. Stud earrings should feel snug but not painful. Huggies should close securely and sit comfortably around the ear. Drop earrings should feel balanced so they do not pull too much.' },
+      { type: 'paragraph', text: 'When buying earrings online, look for product images, side views and clear descriptions. If the earring is meant for daily wear, comfort matters even more than drama. A pair may look beautiful, but if it feels too heavy, sharp or insecure, you will not wear it often. For first-time buyers, simple studs and huggies are usually easier to manage than longer drop earrings.' },
+    ],
+  },
+  {
+    heading: 'Are Lab-Grown Diamond Earrings Good for Sensitive Ears?',
+    content: [
+      { type: 'paragraph', text: 'Lab-grown diamonds themselves are not usually the issue for sensitive ears. Sensitivity is more often related to the metal, plating, finish or earring post. If you have sensitive ears, check what the jewellery is made from. At IWantJewels, the jewellery direction includes 925 sterling silver with 14kt gold plating, which is a strong demi-fine base. For people who usually react to poor-quality fashion jewellery, choosing better materials can make a noticeable difference.' },
+      { type: 'paragraph', text: 'If you have a known allergy, always check the product details before buying. If the wearer has had issues with certain metals before, it is better to choose carefully than to buy only based on appearance.' },
+    ],
+  },
+  {
+    heading: 'Are Lab-Grown Diamond Earrings Good for Everyday Wear?',
+    content: [
+      { type: 'paragraph', text: 'Yes, lab-grown diamond earrings can be excellent for everyday wear, but the style matters. Studs and huggies are usually easiest for daily use because they are comfortable and low-maintenance. Drop earrings can be worn often too, but they are usually better for days when you want a more dressed-up look.' },
+      { type: 'paragraph', text: 'For everyday wear, choose earrings that: feel light enough for regular use, sit comfortably on the ear, match more than one outfit, have a secure closure, are easy to clean and store, and do not feel too formal for your lifestyle.' },
+      { type: 'paragraph', text: 'Cadenza S, Cadenza M, Amadea Huggie and Laluce are the strongest everyday recommendations from IWantJewels.' },
+      { type: 'see-also', text: 'Can you wear lab-grown diamond earrings every day?', href: '#' },
+    ],
+  },
+  {
+    heading: 'How to Style Lab-Grown Diamond Earrings',
+    content: [
+      { type: 'paragraph', text: 'The easiest way to style lab-grown diamond earrings is to match the earring shape to the outfit. Studs work with almost everything. They are ideal for workwear, casual outfits, high necklines and dresses that already have detail. Huggies work well with layered jewellery and relaxed outfits. Drop earrings look best when the neckline gives them space, such as off-shoulder, strapless, V-neck or simple round neck dresses.' },
+      { type: 'paragraph', text: 'Butterfly earrings are better when you want the jewellery to feel soft, feminine or symbolic. Bold statement earrings work best when the outfit is simple and you want the earrings to stand out.' },
+      { type: 'paragraph', text: 'For a black dress, Orsola drop earrings or Lusso bold statement earrings can add sparkle. For a simple white shirt, Cadenza S or Laluce keeps the look polished. For a romantic dress, Farfalla butterfly earrings can feel more personal.' },
+    ],
+  },
+  {
+    heading: 'How Much Should You Spend on Lab-Grown Diamond Earrings?',
+    content: [
+      { type: 'paragraph', text: 'The right amount to spend depends on why you are buying the earrings. If you want a daily pair, it is usually worth choosing quality and comfort over the cheapest option. If you are buying a gift, think about how special the occasion is. If you are buying for a wedding or event, choose a design that can be worn again, not just once.' },
+      { type: 'paragraph', text: 'Lab-grown diamonds usually make it easier to get a premium look at a more accessible price than natural diamond earrings. But price should not be the only factor. A well-designed smaller earring can be more useful than a larger pair that does not match your style.' },
+      { type: 'see-also', text: 'Lab-grown diamond earrings price guide', href: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide' },
+    ],
+  },
+  {
+    heading: 'Product Recommendations from IWantJewels',
+    content: [
+      { type: 'paragraph', text: 'If you are not sure where to start, use this simple guide.' },
+      {
+        type: 'table',
+        headers: ['Product', 'Best For', 'Why It Works'],
+        rows: [
+          ['Cadenza S lab-grown diamond studs', 'First diamond earrings', 'Simple, clean and easy to wear daily'],
+          ['Cadenza M diamond stud earrings', 'Everyday sparkle with more presence', 'Classic but slightly more noticeable'],
+          ['Amadea Huggie earrings', 'Ear stacks and second piercings', 'Modern, wearable and easy to layer'],
+          ['Laluce minimalist diamond earrings', 'Quiet daily styling', 'Simple and easy to match with outfits'],
+          ['Farfalla butterfly earrings', 'Meaningful gifts', 'Butterfly design feels personal and symbolic'],
+          ['Alidi Farfalla butterfly earrings', 'Feminine gift styling', 'A soft choice for birthdays or anniversaries'],
+          ['Orsola drop earrings', 'Weddings and evening outfits', 'Adds movement and elegance'],
+          ['Lusso bold statement earrings', 'Party looks', 'Gives stronger sparkle and impact'],
+        ],
+      },
+    ],
+  },
+  {
+    heading: 'Common Mistakes to Avoid',
+    content: [
+      { type: 'bullet-list', items: [
+        'Choosing earrings only because they look sparkly in a product photo — think about whether you will actually wear them. A simple pair you wear every week is usually more valuable than a dramatic pair that stays in a box.',
+        'Ignoring the metal colour — yellow gold, white or silver tones and rose gold all create a different feeling. Choose the finish that matches the person\'s existing jewellery.',
+        'Buying only by size — bigger is not always better. A smaller earring with a better shape and cleaner design can look more elegant.',
+        'Forgetting the occasion — everyday earrings, wedding guest earrings and gift earrings should not always be the same style. Match the earring to the purpose.',
+      ]},
+    ],
+  },
+  {
+    heading: 'Final Checklist Before Buying Lab-Grown Diamond Earrings',
+    content: [
+      { type: 'paragraph', text: 'Before buying, ask yourself:' },
+      { type: 'bullet-list', items: [
+        'Is this for everyday wear, gifting or an occasion?',
+        'Does the person prefer studs, huggies, drops or statement pieces?',
+        'Is the metal colour right for their wardrobe?',
+        'Will the earrings feel comfortable enough to wear often?',
+        'Are the stones real lab-grown diamonds?',
+        'Does the design feel too plain, too bold or just right?',
+        'Can the earrings be styled with more than one outfit?',
+        'Is there a care guide to help keep them looking good?',
+      ]},
+      { type: 'paragraph', text: 'If you are unsure, start simple. Lab-grown diamond studs are usually the safest first pair because they are timeless, wearable and easy to gift.' },
+    ],
+  },
+]
+
+const faq: V2FAQItem[] = [
+  { question: 'Are lab-grown diamond earrings real diamonds?', answer: 'Yes, lab-grown diamond earrings use real diamonds when the stones are genuine lab-grown diamonds. They are created in a laboratory instead of being mined from the earth.' },
+  { question: 'Are lab-grown diamond earrings worth it?', answer: 'Yes, they are worth it if you want real diamond sparkle in earrings that feel wearable, modern and more accessible than many natural diamond options.' },
+  { question: 'What type of lab-grown diamond earrings should I buy first?', answer: 'Stud earrings are usually the best first pair. They are simple, timeless, easy to wear and suitable for many outfits.' },
+  { question: 'Are lab-grown diamond studs good for everyday wear?', answer: 'Yes, lab-grown diamond studs are one of the best everyday jewellery choices because they are comfortable, classic and easy to style.' },
+  { question: 'Are huggie earrings good for ear stacks?', answer: 'Yes, huggies are excellent for ear stacks. They sit close to the ear and layer well with studs or minimalist earrings.' },
+  { question: 'Are drop earrings better for weddings?', answer: 'Drop earrings are often better for weddings, dinners and evening outfits because they add movement and elegance.' },
+  { question: 'Are butterfly earrings good gifts?', answer: 'Yes, butterfly earrings make thoughtful gifts because the butterfly shape can symbolise transformation, growth, beauty and new beginnings.' },
+  { question: 'What metal colour is best for lab-grown diamond earrings?', answer: 'Yellow gold feels warm and classic, white or silver tones feel clean and modern, and rose gold feels soft and romantic. The best choice depends on the wearer\'s style.' },
+  { question: 'Can you wear lab-grown diamond earrings every day?', answer: 'Yes, you can wear lab-grown diamond earrings every day if the design is comfortable and the jewellery is cared for properly.' },
+  { question: 'How do I care for lab-grown diamond earrings?', answer: 'Store them separately, clean them gently with a soft cloth, avoid harsh chemicals and keep them away from perfume, lotions and strong cleaning products when possible.' },
+]
+
+const cta: V2CTABlock = {
+  heading: 'Lab-Grown Diamond Earrings — Find Your Perfect Pair',
+  body: 'Start with IWantJewels lab-grown diamond earrings if you want jewellery that feels beautiful, wearable and modern. Choose studs for everyday polish, huggies for ear stacks, butterfly earrings for meaningful gifts, drop earrings for occasions or bold statement earrings for party styling.',
+  primaryLabel: 'Shop Lab-Grown Diamond Earrings',
+  primaryHref: '/products?category=Earring',
+  secondaryLabel: 'Explore Jewellery Gifts',
+  secondaryHref: '/products',
+  tertiaryLabel: 'Read the Lab-Grown Diamond Earrings Price Guide',
+  tertiaryHref: '/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide',
+}
+
+export default function Page() {
+  const category = getCategoryBySlug('lab-grown-diamond-guides')
+  const article = getArticleBySlug('lab-grown-diamond-guides', 'lab-grown-diamond-earrings-buying-guide')
+  if (!category || !article) notFound()
+  const relatedArticles = getRelatedArticles('lab-grown-diamond-guides', 'lab-grown-diamond-earrings-buying-guide', 3)
+  return (
+    <ResourceArticleV2Page
+      category={category}
+      article={article}
+      relatedArticles={relatedArticles}
+      heroIntro={heroIntro}
+      quickSummary={quickSummary}
+      content={articleContent}
+      cta={cta}
+      faq={faq}
+    />
+  )
+}

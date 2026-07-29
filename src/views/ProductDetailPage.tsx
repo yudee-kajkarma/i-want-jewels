@@ -13,6 +13,7 @@ import {
     X,
 } from "lucide-react";
 import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
+import { useTranslation } from "react-i18next";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
@@ -372,6 +373,7 @@ export default function ProductDetailPage({
     initialProduct = null,
     initialReviewsData = null,
 }: ProductDetailPageProps) {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const location = useLocation();
     const params = useParams<{
@@ -1032,14 +1034,14 @@ export default function ProductDetailPage({
                                 to="/"
                                 className="transition hover:text-zinc-900"
                             >
-                                Home
+                                {t("productDetail.home")}
                             </Link>{" "}
                             /{" "}
                             <Link
                                 to="/products"
                                 className="transition hover:text-zinc-900"
                             >
-                                Shop
+                                {t("productDetail.shop")}
                             </Link>{" "}
                             /{" "}
                             <span className="text-zinc-900">
@@ -1214,7 +1216,7 @@ export default function ProductDetailPage({
                                 {!isGiftCardProduct ? (
                                     <div className="border-t border-zinc-200 pt-5">
                                         <p className="font-play text-[13px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                            Metal
+                                            {t("productDetail.metal")}
                                         </p>
                                         <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-3">
                                             {product.variants.map((variant) => {
@@ -1288,7 +1290,7 @@ export default function ProductDetailPage({
                                                     }
                                                     className="text-[12px] font-medium uppercase tracking-[0.18em] text-pink-500 underline-offset-4 hover:underline"
                                                 >
-                                                    View Size Guide
+                                                    {t("productDetail.sizeGuide")}
                                                 </button>
                                             </div>
                                         ) : null}
@@ -1299,7 +1301,7 @@ export default function ProductDetailPage({
                                     {variantHasSizes ? (
                                         <div className="mt-5">
                                             <p className="font-play text-[13px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                                Size
+                                                {t("productDetail.size")}
                                                 {selectedVariant.sizeMeasurement
                                                     ? ` (${selectedVariant.sizeMeasurement})`
                                                     : ""}
@@ -1427,7 +1429,7 @@ export default function ProductDetailPage({
                                         <p className="mb-2 font-play text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900">
                                             {isGiftCardProduct
                                                 ? "Quantity (codes)"
-                                                : "Quantity"}
+                                                : t("productDetail.quantity")}
                                         </p>
                                         <div className="flex h-[46px] w-[130px] items-center border border-zinc-800">
                                             <button
@@ -1471,7 +1473,7 @@ export default function ProductDetailPage({
                                                 onClick={handleBuyNow}
                                                 className="h-[50px] bg-zinc-900 px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-zinc-700 sm:text-[13px]"
                                             >
-                                                Buy Now
+                                                {t("productDetail.buyNow")}
                                             </button>
                                         )}
                                         <button
@@ -1483,8 +1485,8 @@ export default function ProductDetailPage({
                                             className="h-[50px] border border-zinc-900 bg-white px-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:bg-zinc-900 hover:text-white disabled:opacity-60 sm:text-[13px]"
                                         >
                                             {isAddingToCart
-                                                ? "Adding..."
-                                                : "Add to Bag"}
+                                                ? t("productDetail.adding")
+                                                : t("productDetail.addCart")}
                                         </button>
                                     </div>
                                 </div>
@@ -1505,7 +1507,7 @@ export default function ProductDetailPage({
                                         aria-expanded={isDetailsOpen}
                                     >
                                         <span className="font-play text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                            Details
+                                            {t("productDetail.details")}
                                         </span>
                                         <ChevronDown
                                             className={`h-5 w-5 text-zinc-600 transition-transform ${
@@ -1527,14 +1529,14 @@ export default function ProductDetailPage({
                                             <div className="space-y-1.5 pb-5 text-[12px] uppercase tracking-[0.14em] text-zinc-600">
                                                 <p>
                                                     <span className="text-zinc-900">
-                                                        SKU:
+                                                        {t("productDetail.sku")}:
                                                     </span>{" "}
                                                     {displayedSku}
                                                 </p>
                                                 {product.style ? (
                                                     <p>
                                                         <span className="text-zinc-900">
-                                                            Style:
+                                                            {t("productDetail.style")}:
                                                         </span>{" "}
                                                         {product.style}
                                                     </p>
@@ -1542,7 +1544,7 @@ export default function ProductDetailPage({
                                                 {product.metal ? (
                                                     <p>
                                                         <span className="text-zinc-900">
-                                                            Metal:
+                                                            {t("productDetail.metal")}:
                                                         </span>{" "}
                                                         {product.metal}
                                                     </p>
@@ -1550,7 +1552,7 @@ export default function ProductDetailPage({
                                                 {product.finish ? (
                                                     <p>
                                                         <span className="text-zinc-900">
-                                                            Finish:
+                                                            {t("productDetail.finish")}:
                                                         </span>{" "}
                                                         {product.finish}
                                                     </p>
@@ -1558,17 +1560,16 @@ export default function ProductDetailPage({
                                                 {displayedDiamondWeight > 0 ? (
                                                     <p>
                                                         <span className="text-zinc-900">
-                                                            Total Diamond
-                                                            Weight:
+                                                            {t("productDetail.diamondWeight")}:
                                                         </span>{" "}
                                                         {displayedDiamondWeight}{" "}
-                                                        carats
+                                                        {t("productDetail.carats")}
                                                     </p>
                                                 ) : null}
                                                 {displayedMeasurement ? (
                                                     <p>
                                                         <span className="text-zinc-900">
-                                                            Measurement:
+                                                            {t("productDetail.measurement")}:
                                                         </span>{" "}
                                                         {displayedMeasurement}
                                                     </p>
@@ -1580,7 +1581,7 @@ export default function ProductDetailPage({
 
                                 <div className="border-t border-zinc-200 pt-5">
                                     <h3 className="font-play text-[15px] font-medium uppercase tracking-[0.18em] text-zinc-900">
-                                        About This Product
+                                        {t("productDetail.aboutProduct")}
                                     </h3>
                                     {product.bulletPoints.length > 0 ? (
                                         <ul className="mt-4 space-y-2.5 text-[14px] leading-7 text-zinc-600">
@@ -1621,7 +1622,7 @@ export default function ProductDetailPage({
                             <section className="mt-16 border-t border-zinc-200 pt-12">
                                 <div className="flex items-center justify-between gap-4">
                                     <h2 className="font-play text-[18px] font-medium uppercase tracking-[0.18em] text-zinc-900 sm:text-[22px]">
-                                        More from {product.collectionName}
+                                        {t("productDetail.moreFrom", { collection: product.collectionName })}
                                     </h2>
                                     <div className="hidden items-center gap-2 sm:flex">
                                         <button
@@ -1677,7 +1678,7 @@ export default function ProductDetailPage({
                             <section className="mt-16 border-t border-zinc-200 pt-12">
                                 <div className="flex items-center justify-between gap-4">
                                     <h2 className="font-play text-[18px] font-medium uppercase tracking-[0.18em] text-zinc-900 sm:text-[22px]">
-                                        You May Also Like
+                                        {t("productDetail.youMayAlsoLike")}
                                     </h2>
                                     <div className="hidden items-center gap-2 sm:flex">
                                         <button
@@ -1958,7 +1959,7 @@ export default function ProductDetailPage({
 
                         <section className="pt-12 font-poppins">
                             <h2 className="font-play text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                                Explore more products by Categories
+                                {t("productDetail.exploreCategories")}
                             </h2>
                             <div className="mt-7 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:gap-5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                                 {categoryCards.map((item, index) => (
@@ -1978,7 +1979,7 @@ export default function ProductDetailPage({
                                             />
                                         </div>
                                         <p className="iwj-category-card-label mt-4 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-[13px]">
-                                            {item.label}
+                                            {t(`productDetail.${item.label.toLowerCase()}`, item.label)}
                                         </p>
                                     </Link>
                                 ))}
@@ -1990,11 +1991,10 @@ export default function ProductDetailPage({
                                 {/* Header — mirrors the resource-page FAQ style */}
                                 <div className="mb-10 text-center">
                                     <p className="text-[12px] font-medium uppercase tracking-[0.26em] text-pink-400">
-                                        Got Questions?
+                                        {t("productDetail.gotQuestions")}
                                     </p>
                                     <h2 className="mt-2 font-play text-[24px] font-semibold text-[#1f2732] md:text-[30px]">
-                                        Frequently Asked Questions for{" "}
-                                        {product.title}
+                                        {t("productDetail.faqFor", { title: product.title })}
                                     </h2>
                                     <div className="mx-auto mt-4 h-px w-16 bg-pink-400" />
                                 </div>
