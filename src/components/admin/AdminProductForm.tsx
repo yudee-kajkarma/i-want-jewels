@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useState } from 'react'
 import { GripVertical, Plus, Star, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import type { AdminVariantName } from '../../types/product'
 import type { ProductAllFilters } from '../../types/product'
 import { getAllProductFilters } from '../../services/productService'
@@ -79,6 +80,7 @@ export default function AdminProductForm({
   onToggleVariantImage,
   onReorderVariantImages,
 }: AdminProductFormProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.productForm' })
   const [dragState, setDragState] = useState<{
     variantId: string
     fromPosition: number
@@ -169,10 +171,11 @@ export default function AdminProductForm({
 
   function renderFilterSelect(
     fieldName: keyof typeof customOptions,
-    label: string,
     options: string[] | undefined,
     currentValue: string,
   ) {
+    const label = t(`fields.${fieldName}`)
+    const labelLower = label.toLowerCase()
     const isCustom = customOptions[fieldName]
     const optionsArray = options ?? []
 
@@ -192,16 +195,16 @@ export default function AdminProductForm({
               }}
               className="flex-1 h-12 rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
             >
-              <option value="">Select {label.toLowerCase()}</option>
+              <option value="">{t('placeholders.selectField', { label: labelLower })}</option>
               {optionsArray.map((option) => (
                 <option key={option} value={option}>
                   {option}
                 </option>
               ))}
               {currentValue && !optionsArray.includes(currentValue) && (
-                <option value={currentValue}>{currentValue} (current)</option>
+                <option value={currentValue}>{t('placeholders.currentValue', { value: currentValue })}</option>
               )}
-              <option value="__add_custom__">+ Add Custom {label.toLowerCase()}</option>
+              <option value="__add_custom__">{t('placeholders.addCustom', { label: labelLower })}</option>
             </select>
           </div>
         ) : (
@@ -210,7 +213,7 @@ export default function AdminProductForm({
               type="text"
               value={currentValue}
               onChange={(event) => onFieldChange(fieldName, event.target.value)}
-              placeholder={`Enter custom ${label.toLowerCase()}`}
+              placeholder={t('placeholders.enterCustom', { label: labelLower })}
               className="flex-1 h-12 rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
               autoFocus
             />
@@ -222,7 +225,7 @@ export default function AdminProductForm({
               }}
               className="px-4 py-2 rounded-2xl border border-[#e7bfd7] text-sm font-semibold text-[#3f1933] transition hover:bg-[#f0d8e8]"
             >
-              Cancel
+              {t('actions.cancel')}
             </button>
           </div>
         )}
@@ -241,11 +244,11 @@ export default function AdminProductForm({
           type="button"
           onClick={onClose}
           disabled={isEditLoading || isSaving}
-          aria-label="Back to products list"
+          aria-label={t('closeAria')}
           className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-60"
         >
           <X className="h-4 w-4" />
-          Cancel
+          {t('actions.cancel')}
         </button>
       </div>
 
@@ -288,7 +291,7 @@ export default function AdminProductForm({
                 aria-current={createStep === 1 ? 'step' : undefined}
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition ${createStep === 1 ? 'bg-[#cc4f8f] text-white' : 'bg-white text-[#7a3a61] hover:bg-[#fbe6f1]'}`}
               >
-                Step 1: Product Details
+                {t('steps.step1')}
               </button>
               <button
                 type="button"
@@ -296,14 +299,14 @@ export default function AdminProductForm({
                 aria-current={createStep === 2 ? 'step' : undefined}
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition ${createStep === 2 ? 'bg-[#cc4f8f] text-white' : 'bg-white text-[#7a3a61] hover:bg-[#fbe6f1]'}`}
               >
-                Step 2: Variants & Images
+                {t('steps.step2')}
               </button>
             </div>
 
             {createStep === 1 ? (
               <div className="grid gap-5 lg:grid-cols-2">
                   <div className="lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Product Type</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('productType.label')}</span>
                     <div className="flex gap-3">
                       {(['PHYSICAL', 'GIFT_CARD'] as const).map((type) => (
                         <button
@@ -316,19 +319,19 @@ export default function AdminProductForm({
                               : 'border-[#e7bfd7] text-[#7a3a61] hover:bg-[#fff2fa]'
                           }`}
                         >
-                          {type === 'PHYSICAL' ? 'Physical Product' : 'Gift Card'}
+                          {type === 'PHYSICAL' ? t('productType.physical') : t('productType.giftCard')}
                         </button>
                       ))}
                     </div>
                     {isGiftCard ? (
                       <p className="mt-2 text-xs text-zinc-500">
-                        Gift cards are digital. Add each amount as a denomination in Step 2. Only one gift card product can exist.
+                        {t('productType.giftCardHint')}
                       </p>
                     ) : null}
                   </div>
 
                 <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Title</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.title')}</span>
                     <input
                       value={form.title}
                       onChange={(event) => onFieldChange('title', event.target.value)}
@@ -338,7 +341,7 @@ export default function AdminProductForm({
                   </label>
 
                   <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Description</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.description')}</span>
                     <textarea
                       value={form.description}
                       onChange={(event) => onFieldChange('description', event.target.value)}
@@ -350,22 +353,22 @@ export default function AdminProductForm({
                   {!isGiftCard ? (
                   <>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Vendor</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.vendor')}</span>
                     <input
                       value={form.vendor}
                       onChange={(event) => onFieldChange('vendor', event.target.value)}
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                   </label>
-                  {renderFilterSelect('category', 'Category', filters?.categories, form.category)}
+                  {renderFilterSelect('category', filters?.categories, form.category)}
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Collection</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.collection')}</span>
                     <input
                       type="text"
                       list="collection-options"
                       value={form.collectionName ?? ''}
                       onChange={(event) => onFieldChange('collectionName', event.target.value)}
-                      placeholder="Pick existing or type a new collection"
+                      placeholder={t('placeholders.collection')}
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                     <datalist id="collection-options">
@@ -374,24 +377,24 @@ export default function AdminProductForm({
                       ))}
                     </datalist>
                     <p className="mt-1 text-xs text-zinc-500">
-                      Pick an existing collection or type a new one. Case and spacing variants merge automatically; leave blank for none.
+                      {t('hints.collection')}
                     </p>
                   </label>
                   <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Tags</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.tags')}</span>
                     <input
                       value={form.tags}
                       onChange={(event) => onFieldChange('tags', event.target.value)}
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
-                      placeholder="Best Seller, Earrings, Diamond"
+                      placeholder={t('placeholders.tags')}
                     />
                   </label>
-                  {renderFilterSelect('stoneType', 'Stone Type', filters?.stoneTypes, form.stoneType)}
-                  {renderFilterSelect('color', 'Color', filters?.colors, form.color)}
-                  {renderFilterSelect('shape', 'Shape', filters?.shapes, form.shape)}
-                  {renderFilterSelect('metal', 'Metal', filters?.metals, form.metal)}
+                  {renderFilterSelect('stoneType', filters?.stoneTypes, form.stoneType)}
+                  {renderFilterSelect('color', filters?.colors, form.color)}
+                  {renderFilterSelect('shape', filters?.shapes, form.shape)}
+                  {renderFilterSelect('metal', filters?.metals, form.metal)}
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Carat</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.carat')}</span>
                     <input
                       type="number"
                       min="0"
@@ -402,7 +405,7 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Total Diamond Weight</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.totalDiamondWeight')}</span>
                     <input
                       type="number"
                       min="0"
@@ -413,7 +416,7 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Origin</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.origin')}</span>
                     <input
                       value={form.origin}
                       onChange={(event) => onFieldChange('origin', event.target.value)}
@@ -421,7 +424,7 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Treatment</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.treatment')}</span>
                     <input
                       value={form.treatment}
                       onChange={(event) => onFieldChange('treatment', event.target.value)}
@@ -429,7 +432,7 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Certificate</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.certificate')}</span>
                     <input
                       value={form.certificate}
                       onChange={(event) => onFieldChange('certificate', event.target.value)}
@@ -437,7 +440,7 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Measurement</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.measurement')}</span>
                     <input
                       value={form.measurement}
                       onChange={(event) => onFieldChange('measurement', event.target.value)}
@@ -445,7 +448,7 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Details</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.details')}</span>
                     <textarea
                       value={form.details}
                       onChange={(event) => onFieldChange('details', event.target.value)}
@@ -453,16 +456,16 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block lg:col-span-2">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Certificate URLs</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.certificateUrls')}</span>
                     <textarea
                       value={form.certificateUrls}
                       onChange={(event) => onFieldChange('certificateUrls', event.target.value)}
                       className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
-                      placeholder="https://example.com/certificate-1.pdf"
+                      placeholder={t('placeholders.certificateUrl')}
                     />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Diamond Pieces</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.diamondPieces')}</span>
                     <input
                       type="number"
                       min="0"
@@ -473,13 +476,13 @@ export default function AdminProductForm({
                     />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Finish</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.finish')}</span>
                     <input
                       type="text"
                       list="finish-options"
                       value={form.finish ?? ''}
                       onChange={(event) => onFieldChange('finish', event.target.value)}
-                      placeholder="Pick or type a finish"
+                      placeholder={t('placeholders.finish')}
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                     <datalist id="finish-options">
@@ -489,13 +492,13 @@ export default function AdminProductForm({
                     </datalist>
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Style</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.style')}</span>
                     <input
                       type="text"
                       list="style-options"
                       value={form.style ?? ''}
                       onChange={(event) => onFieldChange('style', event.target.value)}
-                      placeholder="Pick or type a style"
+                      placeholder={t('placeholders.style')}
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
                     <datalist id="style-options">
@@ -505,7 +508,7 @@ export default function AdminProductForm({
                     </datalist>
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Weight (g)</span>
+                    <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.weight')}</span>
                     <input
                       type="number"
                       min="1"
@@ -514,7 +517,7 @@ export default function AdminProductForm({
                       onChange={(event) => onFieldChange('weight', Number(event.target.value))}
                       className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                     />
-                    <p className="mt-1 text-xs text-zinc-500">Shipping weight incl. packaging.</p>
+                    <p className="mt-1 text-xs text-zinc-500">{t('hints.weight')}</p>
                   </label>
                   <label className="flex items-center gap-3 rounded-2xl border border-[#f0d8e8] px-4 py-3 text-sm font-semibold text-[#3f1933]">
                     <input
@@ -523,7 +526,7 @@ export default function AdminProductForm({
                       onChange={(event) => onFieldChange('hypoallergenic', event.target.checked)}
                       className="h-4 w-4 rounded border-[#e2bdd4] text-[#7a3a61] focus:ring-[#cc4f8f]"
                     />
-                    Hypoallergenic
+                    {t('fields.hypoallergenic')}
                   </label>
                   </>
                   ) : null}
@@ -534,7 +537,7 @@ export default function AdminProductForm({
                       onChange={(event) => onFieldChange('isFeatured', event.target.checked)}
                       className="h-4 w-4 rounded border-[#e2bdd4] text-[#7a3a61] focus:ring-[#cc4f8f]"
                     />
-                    Featured product
+                    {t('fields.featured')}
                   </label>
                   <label className="lg:col-span-2 flex items-center gap-3 rounded-2xl border border-[#f0d8e8] px-4 py-3 text-sm font-semibold text-[#3f1933]">
                     <input
@@ -543,7 +546,7 @@ export default function AdminProductForm({
                       onChange={(event) => onFieldChange('availability', event.target.checked)}
                       className="h-4 w-4 rounded border-[#e2bdd4] text-[#7a3a61] focus:ring-[#cc4f8f]"
                     />
-                    Available for shoppers
+                    {t('fields.available')}
                   </label>
 
                   <div className="lg:col-span-2 overflow-hidden rounded-2xl border border-[#f0d8e8] bg-[#fffafd]">
@@ -553,30 +556,29 @@ export default function AdminProductForm({
                       className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-[#3f1933]"
                       aria-expanded={seoOpen}
                     >
-                      <span>SEO &amp; Content</span>
+                      <span>{t('seo.title')}</span>
                       <span className="text-lg leading-none text-[#a53b79]">{seoOpen ? '−' : '+'}</span>
                     </button>
                     {seoOpen ? (
                       <div className="space-y-4 border-t border-[#f0d8e8] p-4">
                         <label className="block">
-                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">URL Slug</span>
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('seo.urlSlug')}</span>
                           <div className="flex items-center gap-1">
-                            <span className="text-sm text-zinc-400">/products/</span>
+                            <span className="text-sm text-zinc-400">{t('seo.productsPath')}</span>
                             <input
                               value={form.slug ?? ''}
                               onChange={(event) => onFieldChange('slug', event.target.value)}
-                              placeholder="auto-generated from SKU"
+                              placeholder={t('placeholders.slug')}
                               className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                             />
                           </div>
                           <p className="mt-1 text-xs text-zinc-500">
-                            Lowercase letters, numbers and hyphens only. Leave blank to keep the current slug
-                            (or auto-generate from the first variant SKU on create). Changing it breaks the old URL.
+                            {t('hints.slug')}
                           </p>
                         </label>
                         <label className="block">
                           <span className="mb-1 flex items-center justify-between text-sm font-semibold text-[#3f1933]">
-                            <span>Meta Title</span>
+                            <span>{t('seo.metaTitle')}</span>
                             <span className="text-xs font-normal text-zinc-400">{(form.metaTitle ?? '').length}/60</span>
                           </span>
                           <input
@@ -587,7 +589,7 @@ export default function AdminProductForm({
                         </label>
                         <label className="block">
                           <span className="mb-1 flex items-center justify-between text-sm font-semibold text-[#3f1933]">
-                            <span>Meta Description</span>
+                            <span>{t('seo.metaDescription')}</span>
                             <span className="text-xs font-normal text-zinc-400">{(form.metaDescription ?? '').length}/160</span>
                           </span>
                           <textarea
@@ -597,7 +599,7 @@ export default function AdminProductForm({
                           />
                         </label>
                         <label className="block">
-                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">H2 Heading</span>
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('seo.h2Heading')}</span>
                           <input
                             value={form.h2 ?? ''}
                             onChange={(event) => onFieldChange('h2', event.target.value)}
@@ -605,7 +607,7 @@ export default function AdminProductForm({
                           />
                         </label>
                         <label className="block">
-                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Additional SEO Content</span>
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('seo.additionalSeoContent')}</span>
                           <textarea
                             value={form.additionalSeoContent ?? ''}
                             onChange={(event) => onFieldChange('additionalSeoContent', event.target.value)}
@@ -613,25 +615,25 @@ export default function AdminProductForm({
                           />
                         </label>
                         <label className="block">
-                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Bullet Points</span>
+                          <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('seo.bulletPoints')}</span>
                           <textarea
                             value={form.bulletPoints}
                             onChange={(event) => onFieldChange('bulletPoints', event.target.value)}
-                            placeholder="One bullet per line"
+                            placeholder={t('placeholders.bulletPoints')}
                             className="min-h-24 w-full rounded-2xl border border-[#e7bfd7] px-4 py-3 outline-none transition focus:border-[#a53b79]"
                           />
-                          <p className="mt-1 text-xs text-zinc-500">One bullet per line.</p>
+                          <p className="mt-1 text-xs text-zinc-500">{t('hints.bulletPoints')}</p>
                         </label>
                         <div>
                           <div className="flex items-center justify-between">
-                            <span className="text-sm font-semibold text-[#3f1933]">FAQs</span>
+                            <span className="text-sm font-semibold text-[#3f1933]">{t('seo.faqs')}</span>
                             <button
                               type="button"
                               onClick={() => onFieldChange('faqs', [...form.faqs, { question: '', answer: '' }])}
                               className="inline-flex items-center gap-1 rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
                             >
                               <Plus className="h-3 w-3" />
-                              Add FAQ
+                              {t('seo.addFaq')}
                             </button>
                           </div>
                           {form.faqs.length > 0 ? (
@@ -642,7 +644,7 @@ export default function AdminProductForm({
                                     <div className="flex-1 space-y-2">
                                       <input
                                         value={faq.question}
-                                        placeholder="Question"
+                                        placeholder={t('placeholders.question')}
                                         onChange={(event) => {
                                           const next = [...form.faqs]
                                           next[faqIdx] = { ...faq, question: event.target.value }
@@ -652,7 +654,7 @@ export default function AdminProductForm({
                                       />
                                       <textarea
                                         value={faq.answer}
-                                        placeholder="Answer"
+                                        placeholder={t('placeholders.answer')}
                                         onChange={(event) => {
                                           const next = [...form.faqs]
                                           next[faqIdx] = { ...faq, answer: event.target.value }
@@ -673,7 +675,7 @@ export default function AdminProductForm({
                               ))}
                             </div>
                           ) : (
-                            <p className="mt-2 text-xs text-zinc-500">No FAQs yet.</p>
+                            <p className="mt-2 text-xs text-zinc-500">{t('hints.noFaqs')}</p>
                           )}
                         </div>
                       </div>
@@ -686,18 +688,18 @@ export default function AdminProductForm({
               isGiftCard ? (
               <div className="space-y-6">
                 <section className="rounded-[28px] border border-[#f0d8e8] bg-[#fff6fb] p-5">
-                  <h3 className="text-lg font-semibold text-[#3f1933]">Gift Card Design Image</h3>
-                  <p className="mt-1 text-sm text-zinc-500">Upload one design image — it is used for every denomination.</p>
+                  <h3 className="text-lg font-semibold text-[#3f1933]">{t('giftCard.designTitle')}</h3>
+                  <p className="mt-1 text-sm text-zinc-500">{t('giftCard.designDesc')}</p>
                   <div className="mt-4 flex items-center gap-4">
                     {imagePreviewUrls[0] ? (
-                      <img src={imagePreviewUrls[0]} alt="Gift card design" className="h-28 w-44 rounded-2xl border border-[#f0d8e8] object-cover" />
+                      <img src={imagePreviewUrls[0]} alt={t('giftCard.designAlt')} className="h-28 w-44 rounded-2xl border border-[#f0d8e8] object-cover" />
                     ) : (
-                      <div className="flex h-28 w-44 items-center justify-center rounded-2xl border border-dashed border-[#e7bfd7] text-xs text-zinc-400">No image</div>
+                      <div className="flex h-28 w-44 items-center justify-center rounded-2xl border border-dashed border-[#e7bfd7] text-xs text-zinc-400">{t('giftCard.noImage')}</div>
                     )}
                     <div className="flex flex-col gap-2">
                       <label className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white">
                         <Plus className="h-4 w-4" />
-                        {imagePreviewUrls[0] ? 'Replace Image' : 'Upload Image'}
+                        {imagePreviewUrls[0] ? t('giftCard.replaceImage') : t('giftCard.uploadImage')}
                         <input
                           type="file"
                           accept="image/*"
@@ -718,8 +720,8 @@ export default function AdminProductForm({
                 <section className="rounded-[28px] border border-[#f0d8e8] bg-[#fff6fb] p-5">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
-                      <h3 className="text-lg font-semibold text-[#3f1933]">Denominations</h3>
-                      <p className="mt-1 text-sm text-zinc-500">Each amount a customer can buy (e.g. €50, €100).</p>
+                      <h3 className="text-lg font-semibold text-[#3f1933]">{t('giftCard.denominationsTitle')}</h3>
+                      <p className="mt-1 text-sm text-zinc-500">{t('giftCard.denominationsDesc')}</p>
                     </div>
                     <button
                       type="button"
@@ -727,7 +729,7 @@ export default function AdminProductForm({
                       className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white"
                     >
                       <Plus className="h-4 w-4" />
-                      Add Denomination
+                      {t('giftCard.addDenomination')}
                     </button>
                   </div>
 
@@ -735,29 +737,29 @@ export default function AdminProductForm({
                     {form.variants.map((variant, index) => (
                       <div key={variant.id} className="rounded-[24px] border border-[#f0d8e8] bg-white p-4">
                         <div className="mb-4 flex items-center justify-between gap-3">
-                          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a4a75]">Denomination {index + 1}</p>
+                          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a4a75]">{t('giftCard.denomination', { index: index + 1 })}</p>
                           <button
                             type="button"
                             onClick={() => onRemoveVariant(variant.id)}
                             disabled={form.variants.length === 1}
                             className="rounded-full border border-[#e7bfd7] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
                           >
-                            Remove
+                            {t('actions.remove')}
                           </button>
                         </div>
                         <div className="grid gap-4 lg:grid-cols-3">
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Label</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('giftCard.label')}</span>
                             <input
                               value={variant.title}
                               onChange={(event) => onVariantFieldChange(variant.id, 'title', event.target.value)}
-                              placeholder="€50 Gift Card"
+                              placeholder={t('placeholders.giftCardLabel')}
                               className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                               required
                             />
                           </label>
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Amount (€)</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('giftCard.amount')}</span>
                             <input
                               type="number"
                               min="1"
@@ -769,11 +771,11 @@ export default function AdminProductForm({
                             />
                           </label>
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">SKU</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.sku')}</span>
                             <input
                               value={variant.sku}
                               onChange={(event) => onVariantFieldChange(variant.id, 'sku', event.target.value)}
-                              placeholder="GC-50"
+                              placeholder={t('placeholders.giftCardSku')}
                               className="h-12 w-full rounded-2xl border border-[#e7bfd7] px-4 outline-none transition focus:border-[#a53b79]"
                               required
                             />
@@ -789,8 +791,8 @@ export default function AdminProductForm({
                 <section className="rounded-[28px] border border-[#f0d8e8] bg-[#fff6fb] p-5">
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div>
-                      <h3 className="text-lg font-semibold text-[#3f1933]">Variants</h3>
-                      <p className="mt-1 text-sm text-zinc-500">Use only `gold`, `rose gold`, and `silver`. Each variant can upload and manage its own images.</p>
+                      <h3 className="text-lg font-semibold text-[#3f1933]">{t('variants.title')}</h3>
+                      <p className="mt-1 text-sm text-zinc-500">{t('variants.desc')}</p>
                     </div>
                     <button
                       type="button"
@@ -799,7 +801,7 @@ export default function AdminProductForm({
                       className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white disabled:opacity-50"
                     >
                       <Plus className="h-4 w-4" />
-                      Add Variant
+                      {t('variants.addVariant')}
                     </button>
                   </div>
 
@@ -808,8 +810,8 @@ export default function AdminProductForm({
                       <div key={variant.id} className="rounded-[24px] border border-[#f0d8e8] bg-white p-4">
                         <div className="mb-4 flex items-center justify-between gap-3">
                           <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a4a75]">Variant {index + 1}</p>
-                            <p className="mt-1 text-sm text-zinc-500">`imageMapping` is generated outside the variants payload.</p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#9a4a75]">{t('variants.variant', { index: index + 1 })}</p>
+                            <p className="mt-1 text-sm text-zinc-500">{t('variants.imageMappingNote')}</p>
                           </div>
                           <button
                             type="button"
@@ -817,13 +819,13 @@ export default function AdminProductForm({
                             disabled={form.variants.length === 1}
                             className="rounded-full border border-[#e7bfd7] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
                           >
-                            Remove
+                            {t('actions.remove')}
                           </button>
                         </div>
 
                         <div className="grid gap-4 lg:grid-cols-2">
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Variant Name</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('variants.variantName')}</span>
                             <select
                               value={variant.variantName}
                               onChange={(event) => onVariantNameChange(variant.id, event.target.value as AdminVariantName)}
@@ -843,7 +845,7 @@ export default function AdminProductForm({
                             </select>
                           </label>
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Title</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.title')}</span>
                             <input
                               value={variant.title}
                               onChange={(event) => onVariantFieldChange(variant.id, 'title', event.target.value)}
@@ -852,7 +854,7 @@ export default function AdminProductForm({
                             />
                           </label>
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">SKU</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('fields.sku')}</span>
                             <input
                               value={variant.sku}
                               onChange={(event) => onVariantFieldChange(variant.id, 'sku', event.target.value)}
@@ -862,9 +864,9 @@ export default function AdminProductForm({
                           </label>
                           <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#3f1933]">
-                              Stock
+                              {t('variants.stock')}
                               {variant.sizes.length > 0 ? (
-                                <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.1em] text-zinc-500">(managed per size)</span>
+                                <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.1em] text-zinc-500">{t('variants.managedPerSize')}</span>
                               ) : null}
                             </span>
                             <input
@@ -883,7 +885,7 @@ export default function AdminProductForm({
                             />
                           </label>
                           <label className="block lg:col-span-2">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Price</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('variants.price')}</span>
                             <input
                               type="number"
                               min="0"
@@ -898,9 +900,9 @@ export default function AdminProductForm({
                           </label>
                           <label className="block">
                             <span className="mb-2 block text-sm font-semibold text-[#3f1933]">
-                              Size Measurement
+                              {t('variants.sizeMeasurement')}
                               {variant.sizes.length === 0 ? (
-                                <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.1em] text-zinc-500">(add a size first)</span>
+                                <span className="ml-2 text-[10px] font-normal uppercase tracking-[0.1em] text-zinc-500">{t('variants.addSizeFirst')}</span>
                               ) : null}
                             </span>
                             <select
@@ -909,14 +911,14 @@ export default function AdminProductForm({
                               disabled={variant.sizes.length === 0}
                               className={`h-12 w-full rounded-2xl border border-[#e7bfd7] bg-white px-4 outline-none transition focus:border-[#a53b79] ${variant.sizes.length === 0 ? 'cursor-not-allowed bg-zinc-100 text-zinc-500' : ''}`}
                             >
-                              <option value="">— None —</option>
+                              <option value="">{t('variants.none')}</option>
                               {SIZE_MEASUREMENT_OPTIONS.map((opt) => (
                                 <option key={opt} value={opt}>{opt}</option>
                               ))}
                             </select>
                           </label>
                           <label className="block">
-                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">Customs Value (USD)</span>
+                            <span className="mb-2 block text-sm font-semibold text-[#3f1933]">{t('variants.customsValue')}</span>
                             <input
                               type="number"
                               min="0"
@@ -947,8 +949,8 @@ export default function AdminProductForm({
                         <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
                           <div className="flex flex-wrap items-center justify-between gap-3">
                             <div>
-                              <p className="text-sm font-semibold text-[#3f1933]">Sizes for {variant.title || getVariantLabel(variant.variantName)}</p>
-                              <p className="mt-1 text-xs text-zinc-500">Add each size with its own stock. SKU, price, total diamond weight and measurement are optional per size — leave blank to use the variant/product defaults.</p>
+                              <p className="text-sm font-semibold text-[#3f1933]">{t('variants.sizesFor', { name: variant.title || getVariantLabel(variant.variantName) })}</p>
+                              <p className="mt-1 text-xs text-zinc-500">{t('variants.sizesDesc')}</p>
                             </div>
                             <button
                               type="button"
@@ -961,7 +963,7 @@ export default function AdminProductForm({
                               className="inline-flex items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white"
                             >
                               <Plus className="h-4 w-4" />
-                              Add size
+                              {t('variants.addSize')}
                             </button>
                           </div>
                           {variant.sizes.length > 0 && (
@@ -970,7 +972,7 @@ export default function AdminProductForm({
                                 <div key={sizeIdx} className="flex flex-wrap items-end gap-3">
                                   <label className="min-w-[100px] flex-1">
                                     <span className="mb-1 block text-xs font-semibold text-[#3f1933]">
-                                      Size{variant.sizeMeasurement ? ` (${variant.sizeMeasurement})` : ''}
+                                      {t('variants.sizeLabel')}{variant.sizeMeasurement ? ` (${variant.sizeMeasurement})` : ''}
                                     </span>
                                     <input
                                       type="number"
@@ -985,10 +987,10 @@ export default function AdminProductForm({
                                     />
                                   </label>
                                   <label className="min-w-[130px] flex-1">
-                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">SKU</span>
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">{t('fields.sku')}</span>
                                     <input
                                       type="text"
-                                      placeholder="Variant SKU"
+                                      placeholder={t('placeholders.variantSku')}
                                       value={entry.sku ?? ''}
                                       onChange={(event) => {
                                         const raw = event.target.value
@@ -1006,7 +1008,7 @@ export default function AdminProductForm({
                                     />
                                   </label>
                                   <label className="min-w-[80px] flex-1">
-                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Stock</span>
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">{t('variants.stock')}</span>
                                     <input
                                       type="number"
                                       min="0"
@@ -1021,12 +1023,12 @@ export default function AdminProductForm({
                                     />
                                   </label>
                                   <label className="min-w-[90px] flex-1">
-                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Price (€)</span>
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">{t('variants.priceEur')}</span>
                                     <input
                                       type="number"
                                       min="0"
                                       step="0.01"
-                                      placeholder="Base price"
+                                      placeholder={t('placeholders.basePrice')}
                                       value={entry.price?.eur ?? ''}
                                       onChange={(event) => {
                                         const raw = event.target.value
@@ -1044,12 +1046,12 @@ export default function AdminProductForm({
                                     />
                                   </label>
                                   <label className="min-w-[110px] flex-1">
-                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Total Diamond Wt.</span>
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">{t('variants.totalDiamondWt')}</span>
                                     <input
                                       type="number"
                                       min="0"
                                       step="0.01"
-                                      placeholder="Product default"
+                                      placeholder={t('placeholders.productDefault')}
                                       value={entry.totalDiamondWeight ?? ''}
                                       onChange={(event) => {
                                         const raw = event.target.value
@@ -1067,10 +1069,10 @@ export default function AdminProductForm({
                                     />
                                   </label>
                                   <label className="min-w-[120px] flex-1">
-                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">Measurement</span>
+                                    <span className="mb-1 block text-xs font-semibold text-[#3f1933]">{t('fields.measurement')}</span>
                                     <input
                                       type="text"
-                                      placeholder="Product default"
+                                      placeholder={t('placeholders.productDefault')}
                                       value={entry.measurement ?? ''}
                                       onChange={(event) => {
                                         const raw = event.target.value
@@ -1106,12 +1108,12 @@ export default function AdminProductForm({
                         <div className="mt-5 rounded-[22px] border border-[#f0d8e8] bg-[#fff6fb] p-4">
                           <div className="flex flex-wrap items-center justify-between gap-3">
                             <div>
-                              <p className="text-sm font-semibold text-[#3f1933]">Upload Images For {variant.title || getVariantLabel(variant.variantName)}</p>
-                              <p className="mt-1 text-xs text-zinc-500">New uploads are added to the shared gallery and assigned to this variant automatically.</p>
+                              <p className="text-sm font-semibold text-[#3f1933]">{t('variants.uploadImagesFor', { name: variant.title || getVariantLabel(variant.variantName) })}</p>
+                              <p className="mt-1 text-xs text-zinc-500">{t('variants.uploadImagesDesc')}</p>
                             </div>
                             <label className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#e7bfd7] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-white">
                               <Plus className="h-4 w-4" />
-                              Upload Images
+                              {t('variants.uploadImages')}
                               <input
                                 type="file"
                                 accept="image/*"
@@ -1129,7 +1131,7 @@ export default function AdminProductForm({
                             <>
                               {isEditing ? (
                                 <p className="mt-4 text-[11px] uppercase tracking-[0.12em] text-zinc-500">
-                                  Drag a card to reorder images for this variant.
+                                  {t('variants.dragToReorder')}
                                 </p>
                               ) : null}
                               <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -1181,7 +1183,7 @@ export default function AdminProductForm({
                                         {imagePreviewUrls[imageIndex] ? (
                                           <img
                                             src={imagePreviewUrls[imageIndex]}
-                                            alt={form.images[imageIndex]?.name ?? `Variant image ${imageIndex}`}
+                                            alt={form.images[imageIndex]?.name ?? t('variants.variantImageAlt', { index: imageIndex })}
                                             className="h-32 w-full object-cover"
                                           />
                                         ) : null}
@@ -1194,19 +1196,19 @@ export default function AdminProductForm({
                                         {currentPosition === 0 ? (
                                           <span className="pointer-events-none absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-[#cc4f8f] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white shadow-sm">
                                             <Star className="h-3 w-3 fill-white" />
-                                            Thumbnail
+                                            {t('variants.thumbnail')}
                                           </span>
                                         ) : isCover ? (
                                           <span className="pointer-events-none absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-[#3f1933] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white shadow-sm">
                                             <Star className="h-3 w-3 fill-white" />
-                                            Cover{isDefaultCover ? ' (default)' : ''}
+                                            {isDefaultCover ? t('variants.coverDefault') : t('variants.cover')}
                                           </span>
                                         ) : null}
                                       </div>
                                       <div className="space-y-2 px-3 py-3 text-xs text-zinc-600">
                                         <div>
-                                          <span className="font-semibold text-[#3f1933]">Image {imageIndex}</span>
-                                          <p className="mt-1 break-all">{form.images[imageIndex]?.name ?? 'Uploaded image'}</p>
+                                          <span className="font-semibold text-[#3f1933]">{t('variants.imageLabel', { index: imageIndex })}</span>
+                                          <p className="mt-1 break-all">{form.images[imageIndex]?.name ?? t('variants.uploadedImage')}</p>
                                         </div>
                                         <div className="flex flex-wrap gap-2">
                                           {currentPosition !== 0 ? (
@@ -1218,7 +1220,7 @@ export default function AdminProductForm({
                                               className="inline-flex items-center gap-1 rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
                                             >
                                               <Star className="h-3 w-3" />
-                                              Set as thumbnail
+                                              {t('variants.setThumbnail')}
                                             </button>
                                           ) : null}
                                           {canSetCover ? (
@@ -1236,10 +1238,10 @@ export default function AdminProductForm({
                                                   ? 'border-[#3f1933] bg-[#3f1933] text-white hover:bg-[#2c1224]'
                                                   : 'border-[#e7bfd7] text-[#7a3a61] hover:bg-[#fff2fa]'
                                               }`}
-                                              title="Image shown first in the product detail page"
+                                              title={t('variants.setCoverTitle')}
                                             >
                                               <Star className={`h-3 w-3 ${isExplicitCover ? 'fill-white' : ''}`} />
-                                              {isExplicitCover ? 'Cover image ✓' : 'Set as cover image'}
+                                              {isExplicitCover ? t('variants.coverImageCheck') : t('variants.setCoverImage')}
                                             </button>
                                           ) : null}
                                           <button
@@ -1247,7 +1249,7 @@ export default function AdminProductForm({
                                             onClick={() => onToggleVariantImage(variant.id, imageIndex)}
                                             className="rounded-full border border-[#e7bfd7] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
                                           >
-                                            Unassign
+                                            {t('variants.unassign')}
                                           </button>
                                         </div>
                                       </div>
@@ -1257,7 +1259,7 @@ export default function AdminProductForm({
                               </div>
                             </>
                           ) : (
-                            <p className="mt-4 text-sm text-zinc-500">No images assigned yet.</p>
+                            <p className="mt-4 text-sm text-zinc-500">{t('variants.noImagesAssigned')}</p>
                           )}
                         </div>
                       </div>
@@ -1277,7 +1279,7 @@ export default function AdminProductForm({
               disabled={isEditLoading || isSaving}
               className="rounded-full border border-[#e7bfd7] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Cancel
+              {t('actions.cancel')}
             </button>
             {createStep === 2 ? (
               <button
@@ -1286,7 +1288,7 @@ export default function AdminProductForm({
                 disabled={isEditLoading || isSaving}
                 className="rounded-full border border-[#e7bfd7] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Back
+                {t('actions.back')}
               </button>
             ) : null}
             {createStep === 1 && isEditing ? (
@@ -1296,15 +1298,13 @@ export default function AdminProductForm({
                 disabled={isEditLoading || isSaving}
                 className="rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
               >
-                {isSaving ? 'Saving...' : 'Save Changes'}
+                {isSaving ? t('actions.saving') : t('actions.saveChanges')}
               </button>
             ) : null}
             {createStep === 1 ? (
               <button
                 type="button"
                 onClick={() => {
-                  // Defer step switch so this click cannot be transferred to the
-                  // Save button that replaces it in the same position.
                   setTimeout(onGoToStepTwo, 0)
                 }}
                 disabled={isEditLoading || isSaving}
@@ -1314,7 +1314,7 @@ export default function AdminProductForm({
                     : 'bg-[#cc4f8f] text-white hover:bg-[#ad3f78]'
                 }`}
               >
-                Next Step
+                {t('actions.nextStep')}
               </button>
             ) : (
               <button
@@ -1323,7 +1323,7 @@ export default function AdminProductForm({
                 disabled={isSaving}
                 className="rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
               >
-                {isSaving ? 'Saving...' : isEditing ? 'Save Changes' : 'Create Product'}
+                {isSaving ? t('actions.saving') : isEditing ? t('actions.saveChanges') : t('actions.createProduct')}
               </button>
             )}
           </div>

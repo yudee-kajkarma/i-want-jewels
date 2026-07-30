@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -9,10 +10,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'What Are Lab-Grown Diamonds? A Simple Guide Before You Buy | I Want Jewels',
   description:
-    'Lab-grown diamonds are real diamonds created in a controlled laboratory environment. Learn how they are made, how they compare to natural diamonds, and why they work beautifully in everyday jewellery.',
+    'Lab-grown diamonds are real diamonds created in a controlled laboratory environment. Learn how they are made, how they compare to natural diamonds, and why they work beautifully in everyday jewellery.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/lab-grown-diamond-guides/dummy-article-testing', locale),
+  }
 }
 
 // ─── Section 1: Hero Intro ────────────────────────────────────────────────────

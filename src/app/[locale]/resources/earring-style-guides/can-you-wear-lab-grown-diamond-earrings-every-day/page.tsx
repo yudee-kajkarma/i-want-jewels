@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Can You Wear Lab Grown Diamond Earrings Every Day?',
   description:
-    'Learn if lab grown diamond earrings are good for everyday wear, work, sleep, showering, sensitive ears, care, gifts and daily styling.',
+    'Learn if lab grown diamond earrings are good for everyday wear, work, sleep, showering, sensitive ears, care, gifts and daily styling.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day', locale),
+  }
 }
 
 const heroIntro: V2HeroIntro = {

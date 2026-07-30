@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Best Diamond Tennis Bracelet Styles in 2026 – Trending Designs",
     description:
-        "Discover the best tennis bracelet styles in 2026. Explore trending designs, diamond sizes, and how to choose the right style for you.",
-    alternates: {
-        canonical: "/blogs/tennis-bracelet-styles-trends-2026",
-    },
-};
+        "Discover the best tennis bracelet styles in 2026. Explore trending designs, diamond sizes, and how to choose the right style for you."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/tennis-bracelet-styles-trends-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

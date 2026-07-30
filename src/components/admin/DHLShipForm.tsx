@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import type { AdminShippingQuote, AdminShipmentPreviewItem, AdminShippingRateOption, Order } from '../../types/order'
 import {
@@ -11,37 +12,21 @@ import {
 } from '../../services/orderService'
 import { getCountryOptions, getStateOptions } from '../../utils/location'
 
-// ── DHL Express constants ──────────────────────────────────────────────
-const INCOTERM_OPTIONS = [
-  { value: 'DAP', label: 'DAP — Delivered at Place (recipient pays duties)' },
-  { value: 'DDP', label: 'DDP — Delivered Duty Paid (sender pays duties)' },
-  { value: 'DDU', label: 'DDU — Delivered Duty Unpaid' },
-  { value: 'CPT', label: 'CPT — Carriage Paid To' },
-  { value: 'CIP', label: 'CIP — Carriage & Insurance Paid To' },
-  { value: 'EXW', label: 'EXW — Ex Works' },
-  { value: 'FCA', label: 'FCA — Free Carrier' },
-]
+const INCOTERM_VALUES = ['DAP', 'DDP', 'DDU', 'CPT', 'CIP', 'EXW', 'FCA'] as const
 
-const SHIPMENT_TYPE_OPTIONS = [
-  { value: 'commercial', label: 'Commercial (sale)' },
-  { value: 'personal', label: 'Personal (no sale)' },
+const SHIPMENT_TYPE_VALUES = ['commercial', 'personal'] as const
+
+const EXPORT_REASON_VALUES = [
+  'permanent',
+  'gift',
+  'sample',
+  'return',
+  'temporary',
+  'warranty_replacement',
+  'personal_belongings_or_personal_use',
 ] as const
 
-const EXPORT_REASON_OPTIONS = [
-  { value: 'permanent', label: 'Permanent (sold)' },
-  { value: 'gift', label: 'Gift' },
-  { value: 'sample', label: 'Sample' },
-  { value: 'return', label: 'Return' },
-  { value: 'temporary', label: 'Temporary' },
-  { value: 'warranty_replacement', label: 'Warranty replacement' },
-  { value: 'personal_belongings_or_personal_use', label: 'Personal use' },
-]
-
-const DUTIES_PAYMENT_OPTIONS = [
-  { value: 'SENDER', label: 'Sender (my DHL account)' },
-  { value: 'RECIPIENT', label: 'Recipient (pay on delivery)' },
-  { value: 'THIRD_PARTY', label: 'Third Party (enter account #)' },
-]
+const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
@@ -69,6 +54,26 @@ function fmt(n: number) {
 }
 
 export default function DHLShipForm({ order, preview: previewQuote, onBack, onShipped }: Props) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.dhlShipForm' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
+
+  const incotermOptions = useMemo(
+    () => INCOTERM_VALUES.map((value) => ({ value, label: t(`incotermOptions.${value}`) })),
+    [t],
+  )
+  const shipmentTypeOptions = useMemo(
+    () => SHIPMENT_TYPE_VALUES.map((value) => ({ value, label: t(`shipmentTypeOptions.${value}`) })),
+    [t],
+  )
+  const exportReasonOptions = useMemo(
+    () => EXPORT_REASON_VALUES.map((value) => ({ value, label: t(`exportReasonOptions.${value}`) })),
+    [t],
+  )
+  const dutiesPaymentOptions = useMemo(
+    () => DUTIES_PAYMENT_VALUES.map((value) => ({ value, label: t(`dutiesPaymentOptions.${value}`) })),
+    [t],
+  )
+
   const preview = previewQuote.preview
   const validation = previewQuote.validation
 
@@ -89,7 +94,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
       setDhlRates(rates)
       if (rates[0]) setSelectedServiceCode(rates[0].serviceCode)
     } catch {
-      setRatesError('Could not load DHL rates for this route.')
+      setRatesError(t('ratesLoadError'))
     } finally {
       setIsLoadingRates(false)
     }
@@ -126,7 +131,6 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     }))
   )
 
-  // ── DHL-specific form state ──
   const [incoterm, setIncoterm] = useState('DAP')
   const [shipmentType, setShipmentType] = useState<'commercial' | 'personal'>('commercial')
   const [exportReasonType, setExportReasonType] = useState('permanent')
@@ -153,7 +157,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
 
   async function handleSaveReceiver() {
     if (!receiverDraft.street || !receiverDraft.city || !receiverDraft.postalCode || !receiverDraft.country) {
-      setReceiverSaveError('Please fill in all required address fields.')
+      setReceiverSaveError(t('errors.fillRequiredAddress'))
       return
     }
     setIsSavingReceiver(true)
@@ -161,10 +165,10 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     try {
       await updateOrderShippingAddressForAdmin(order.id, receiverDraft)
       setIsEditingReceiver(false)
-      toast.success('Receiver address updated — refreshing rates…')
+      toast.success(t('toast.addressUpdated'))
       void loadDhlRates()
     } catch (err: any) {
-      setReceiverSaveError(err?.response?.data?.message || 'Failed to update address.')
+      setReceiverSaveError(err?.response?.data?.message || t('errors.updateAddressFailed'))
     } finally {
       setIsSavingReceiver(false)
     }
@@ -172,7 +176,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
 
   async function handleSubmit() {
     if (!selectedServiceCode) {
-      toast.error('Please select a DHL product/service.')
+      toast.error(t('errors.selectService'))
       return
     }
     setIsSubmitting(true)
@@ -213,10 +217,10 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         serviceCode: selectedServiceCode,
         dhlOptions,
       })
-      toast.success(`Order ${order.orderNumber} shipped via DHL Express.`)
+      toast.success(t('toast.shipped', { orderNumber: order.orderNumber }))
       onShipped()
     } catch (err: any) {
-      toast.error(err?.response?.data?.message || 'Failed to create DHL shipment.')
+      toast.error(err?.response?.data?.message || t('errors.createShipmentFailed'))
     } finally {
       setIsSubmitting(false)
     }
@@ -225,13 +229,12 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   return (
     <div className="space-y-5 text-sm text-[#4f2040]">
 
-      {/* ── SHIP FROM + DELIVER TO side by side ── */}
       <div className="grid grid-cols-2 gap-4 items-start">
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-              Ship From <span className="ml-1 text-[10px] font-normal text-zinc-400">(read-only)</span>
+              {t('shipFrom')} <span className="ml-1 text-[10px] font-normal text-zinc-400">{t('readOnly')}</span>
             </p>
           </div>
           <div className="px-4 py-3 text-xs leading-6 text-[#694d5f]">
@@ -244,18 +247,18 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 <p>✉ {preview.shipper.email}</p>
               </>
             ) : (
-              <p className="text-zinc-400">Loading…</p>
+              <p className="text-zinc-400">{tCommon('loading')}</p>
             )}
           </div>
         </section>
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5 flex items-center justify-between">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Deliver To</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('deliverTo')}</p>
             {!isEditingReceiver ? (
               <button type="button" onClick={() => setIsEditingReceiver(true)}
                 className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] hover:bg-[#fff2fb]">
-                Edit
+                {tCommon('edit')}
               </button>
             ) : null}
           </div>
@@ -276,27 +279,27 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
               <div className="space-y-2">
                 {(['street', 'city', 'postalCode'] as const).map((field) => (
                   <div key={field} className="flex items-center gap-2">
-                    <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{field} *</label>
+                    <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon(field)} *</label>
                     <input value={receiverDraft[field]}
                       onChange={(e) => setReceiverDraft((p) => ({ ...p, [field]: e.target.value }))}
                       className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                   </div>
                 ))}
                 <div className="flex items-center gap-2">
-                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Country *</label>
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('countryLabel')} *</label>
                   <select value={receiverDraft.country}
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, country: e.target.value, state: '' }))}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-                    <option value="">Select country</option>
+                    <option value="">{tCommon('selectCountry')}</option>
                     {countryOptions.map((c) => <option key={c.code} value={c.code}>{c.name}</option>)}
                   </select>
                 </div>
                 <div className="flex items-center gap-2">
-                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">State</label>
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('stateLabel')}</label>
                   <select value={receiverDraft.state}
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, state: e.target.value }))}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-                    <option value="">Select state</option>
+                    <option value="">{tCommon('selectState')}</option>
                     {stateOptions.map((s) => <option key={s.code} value={s.code}>{s.name}</option>)}
                   </select>
                 </div>
@@ -305,11 +308,11 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                   <button type="button" onClick={() => { setIsEditingReceiver(false); setReceiverSaveError('') }}
                     disabled={isSavingReceiver}
                     className="border border-[#e3bfd6] px-3 py-1 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60">
-                    Cancel
+                    {tCommon('cancel')}
                   </button>
                   <button type="button" onClick={() => void handleSaveReceiver()} disabled={isSavingReceiver}
                     className="border border-[#d24a90] bg-[#d24a90] px-3 py-1 text-[10px] font-semibold text-white hover:bg-[#b83f7d] disabled:opacity-60">
-                    {isSavingReceiver ? 'Saving…' : 'Save'}
+                    {isSavingReceiver ? tCommon('saving') : tCommon('save')}
                   </button>
                 </div>
               </div>
@@ -318,25 +321,24 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </section>
       </div>
 
-      {/* ── CUSTOMS / COMMODITIES (read-only) ── */}
       {commodities.length > 0 ? (
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Customs / Commodities</p>
-            <p className="mt-0.5 text-[10px] text-zinc-400">Only HS codes are editable.</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('customsCommodities')}</p>
+            <p className="mt-0.5 text-[10px] text-zinc-400">{t('onlyHsEditable')}</p>
           </div>
           <div className="overflow-x-auto">
             <table className="min-w-full text-[11px]">
               <thead className="bg-[#fff2fb]">
                 <tr className="text-left text-[#8b5a75]">
-                  <th className="px-3 py-2 font-semibold">#</th>
-                  <th className="px-3 py-2 font-semibold">Description</th>
-                  <th className="px-3 py-2 font-semibold text-right">Qty</th>
-                  <th className="px-3 py-2 font-semibold text-right">Unit €</th>
-                  <th className="px-3 py-2 font-semibold text-right">Weight g</th>
-                  <th className="px-3 py-2 font-semibold">HS Code</th>
-                  <th className="px-3 py-2 font-semibold">Country of Mfr</th>
-                  <th className="px-3 py-2 font-semibold text-right">Customs Value €</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.number')}</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.description')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.qty')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.weightG')}</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.hsCode')}</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.countryOfMfr')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6e3ee]">
@@ -364,103 +366,100 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           </div>
           {preview?.package ? (
             <div className="border-t border-[#efcfe1] px-4 py-2.5 text-[11px] text-[#694d5f]">
-              <span className="font-semibold text-[#4f2040]">Total customs value: </span>
+              <span className="font-semibold text-[#4f2040]">{t('totalCustomsValue')} </span>
               {fmt(preview.package.declaredValueEUR)}
-              <span className="ml-3 font-semibold text-[#4f2040]">Currency: </span>EUR
+              <span className="ml-3 font-semibold text-[#4f2040]">{t('currency')} </span>EUR
             </div>
           ) : null}
         </section>
       ) : null}
 
-      {/* ── CUSTOMS / EXPORT DECLARATION ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Customs Declaration</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('customsDeclaration')}</p>
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Incoterm *</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('incoterm')}</label>
             <select value={incoterm} onChange={(e) => setIncoterm(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {INCOTERM_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {incotermOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Shipment Type</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('shipmentType')}</label>
             <select value={shipmentType} onChange={(e) => setShipmentType(e.target.value as 'commercial' | 'personal')}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {SHIPMENT_TYPE_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {shipmentTypeOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Export Reason</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('exportReason')}</label>
             <select value={exportReasonType} onChange={(e) => setExportReasonType(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {EXPORT_REASON_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {exportReasonOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Invoice Number</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('invoiceNumber')}</label>
             <input value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
           </div>
         </div>
       </section>
 
-      {/* ── PACKAGE DETAILS ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Package Details</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('packageDetails')}</p>
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              Weight (auto-calculated from items)
+              {t('weightAuto')}
             </label>
             <div className="border border-[#e3bfd6] bg-[#f9f0f6] px-3 py-2 text-xs text-[#694d5f]">
-              {preview?.package.totalWeightKg ?? 0} kg
+              {preview?.package.totalWeightKg ?? 0} {tCommon('kg')}
             </div>
           </div>
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              Dimensions (cm)
+              {t('dimensionsCm')}
             </label>
             <div className="flex items-center gap-2">
-              <input type="number" min="1" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder="L"
+              <input type="number" min="1" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder={t('dimensionL')}
                 className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
               <span className="text-zinc-400">×</span>
-              <input type="number" min="1" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder="W"
+              <input type="number" min="1" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder={t('dimensionW')}
                 className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
               <span className="text-zinc-400">×</span>
-              <input type="number" min="1" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder="H"
+              <input type="number" min="1" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder={t('dimensionH')}
                 className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
-              <span className="text-xs text-zinc-400">cm</span>
+              <span className="text-xs text-zinc-400">{tCommon('cm')}</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SERVICE + BREAKDOWN side by side ── */}
       <div className="grid grid-cols-2 gap-4 items-start">
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Select DHL Product</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('selectDhlProduct')}</p>
           </div>
           <div className="px-4 py-3 space-y-3">
             {isLoadingRates ? (
-              <p className="text-[11px] text-zinc-400">Loading available products…</p>
+              <p className="text-[11px] text-zinc-400">{t('loadingProducts')}</p>
             ) : ratesError ? (
               <p className="text-[11px] text-rose-600">{ratesError}</p>
             ) : dhlRates.length === 0 ? (
-              <p className="text-[11px] text-rose-600">No DHL products available for this route.</p>
+              <p className="text-[11px] text-rose-600">{t('noProducts')}</p>
             ) : (
               <select
                 value={selectedServiceCode}
                 onChange={(e) => setSelectedServiceCode(e.target.value)}
                 className="w-full border border-[#e3bfd6] px-3 py-2.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
               >
-                <option value="">— Choose a product —</option>
+                <option value="">{t('chooseProduct')}</option>
                 {dhlRates.map((rate) => (
                   <option key={rate.serviceCode} value={rate.serviceCode}>
                     {rate.serviceName} ({rate.serviceCode})
@@ -473,7 +472,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
               <div className="flex items-center justify-between border border-[#f0dbe8] bg-[#fff8fd] px-3 py-2">
                 <span className="text-[11px] text-[#694d5f]">
                   {selectedRate.deliveryDays
-                    ? <span className="text-zinc-400">~{selectedRate.deliveryDays} days</span>
+                    ? <span className="text-zinc-400">{tCommon('daysApprox', { count: selectedRate.deliveryDays })}</span>
                     : null}
                 </span>
                 <span className="font-mono font-bold text-amber-700">{fmt(selectedRate.price)}</span>
@@ -486,13 +485,13 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           <section className="border border-[#efcfe1] bg-white">
             <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
               <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-                {selectedRate.serviceName} — Charge Breakdown
+                {t('chargeBreakdown', { serviceName: selectedRate.serviceName })}
               </p>
             </div>
             <div className="px-4 py-3 space-y-1 text-[11px] text-[#694d5f]">
               {selectedRate.baseCharge !== undefined ? (
                 <div className="flex justify-between">
-                  <span>Base charge</span>
+                  <span>{t('baseCharge')}</span>
                   <span className="font-mono">{fmt(selectedRate.baseCharge)}</span>
                 </div>
               ) : null}
@@ -504,55 +503,54 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 </div>
               ))}
 
-              {(selectedRate.taxes ?? []).map((t, i) => (
+              {(selectedRate.taxes ?? []).map((tax, i) => (
                 <div key={`dhl-tax-${i}`} className="flex justify-between text-amber-700">
-                  <span>{t.description || t.type}</span>
-                  <span className="font-mono">+{fmt(t.amount)}</span>
+                  <span>{tax.description || tax.type}</span>
+                  <span className="font-mono">+{fmt(tax.amount)}</span>
                 </div>
               ))}
 
               <div className="mt-2 border-t border-[#f0dbe8] pt-2">
                 <div className="flex justify-between font-bold text-[#3d1530] text-xs">
-                  <span>Account rate <span className="text-[9px] font-normal text-[#8b5a75]">(your DHL)</span></span>
+                  <span>{t('accountRate')} <span className="text-[9px] font-normal text-[#8b5a75]">{t('yourDhl')}</span></span>
                   <span className="font-mono text-amber-700">{fmt(selectedRate.price)}</span>
                 </div>
               </div>
 
               {selectedRate.billingWeightKg ? (
                 <div className="flex justify-between pt-1 text-zinc-400">
-                  <span>Billing weight</span>
-                  <span>{selectedRate.billingWeightKg} kg</span>
+                  <span>{t('billingWeight')}</span>
+                  <span>{selectedRate.billingWeightKg} {tCommon('kg')}</span>
                 </div>
               ) : null}
               {selectedRate.deliveryDays ? (
                 <div className="flex justify-between text-zinc-400">
-                  <span>Estimated transit</span>
-                  <span>~{selectedRate.deliveryDays} days</span>
+                  <span>{t('estimatedTransit')}</span>
+                  <span>{tCommon('daysApprox', { count: selectedRate.deliveryDays })}</span>
                 </div>
               ) : null}
             </div>
           </section>
         ) : (
           <div className="flex items-center justify-center border border-dashed border-[#efcfe1] p-8 text-[11px] text-zinc-400">
-            Select a product to see the breakdown
+            {t('selectProductBreakdown')}
           </div>
         )}
       </div>
 
-      {/* ── VALUE-ADDED SERVICES ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Value-Added Services</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('valueAddedServices')}</p>
         </div>
         <div className="grid gap-3 px-4 py-3 sm:grid-cols-2">
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={insuranceEnabled} onChange={(e) => setInsuranceEnabled(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <span className="text-xs text-[#4f2040]">Shipment Insurance (II)</span>
+            <span className="text-xs text-[#4f2040]">{t('shipmentInsurance')}</span>
           </label>
           {insuranceEnabled ? (
             <div className="flex items-center gap-2">
-              <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Insured €</label>
+              <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('insuredEur')}</label>
               <input type="number" min="0" step="0.01" value={insuranceValueEUR}
                 onChange={(e) => setInsuranceValueEUR(e.target.value)}
                 placeholder={(preview?.package.declaredValueEUR ?? 0).toFixed(2)}
@@ -563,36 +561,35 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={saturdayDelivery} onChange={(e) => setSaturdayDelivery(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <span className="text-xs text-[#4f2040]">Saturday Delivery (AA)</span>
+            <span className="text-xs text-[#4f2040]">{t('saturdayDelivery')}</span>
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={paperlessTrade} onChange={(e) => setPaperlessTrade(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <span className="text-xs text-[#4f2040]">Paperless Trade — electronic invoice (WY)</span>
+            <span className="text-xs text-[#4f2040]">{t('paperlessTrade')}</span>
           </label>
         </div>
       </section>
 
-      {/* ── DUTIES PAYMENT (DDP only) ── */}
       {incoterm === 'DDP' ? (
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Billing / Duties Payment</p>
-            <p className="mt-0.5 text-[10px] text-zinc-400">DDP only — sender controls who pays duties &amp; taxes.</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('billingDutiesPayment')}</p>
+            <p className="mt-0.5 text-[10px] text-zinc-400">{t('ddpOnlyNote')}</p>
           </div>
           <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
             <div>
-              <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Bill Duties To</label>
+              <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('billDutiesTo')}</label>
               <select value={dutiesPaymentType} onChange={(e) => setDutiesPaymentType(e.target.value as 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY')}
                 className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-                {DUTIES_PAYMENT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+                {dutiesPaymentOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </select>
             </div>
             {dutiesPaymentType === 'THIRD_PARTY' ? (
               <div>
-                <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Third-Party DHL Account #</label>
+                <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('thirdPartyAccount')}</label>
                 <input value={dutiesAccountNumber} onChange={(e) => setDutiesAccountNumber(e.target.value)}
-                  placeholder="Account number"
+                  placeholder={t('accountNumberPlaceholder')}
                   className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
               </div>
             ) : null}
@@ -600,29 +597,27 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </section>
       ) : null}
 
-      {/* ── NOTIFICATIONS ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Shipment Notifications</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('shipmentNotifications')}</p>
         </div>
         <div className="px-4 py-3 space-y-3">
           <div className="flex items-center gap-2">
             <input type="checkbox" id="dhl-notify-recipient" checked={notifyRecipient} onChange={(e) => setNotifyRecipient(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <label htmlFor="dhl-notify-recipient" className="text-xs text-[#4f2040]">Email recipient on shipment events</label>
+            <label htmlFor="dhl-notify-recipient" className="text-xs text-[#4f2040]">{t('notifyRecipient')}</label>
           </div>
           {notifyRecipient ? (
             <div className="flex items-center gap-2">
-              <label className="w-16 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Email</label>
+              <label className="w-16 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('email')}</label>
               <input value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)}
-                type="email" placeholder="recipient@email.com"
+                type="email" placeholder={t('emailPlaceholder')}
                 className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs outline-none focus:border-[#d24a90]" />
             </div>
           ) : null}
         </div>
       </section>
 
-      {/* ── PRICE & CUSTOMS BREAKDOWN ── */}
       <CustomsBreakdown
         commodities={commodities}
         pkg={preview?.package}
@@ -630,30 +625,28 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         incoterm={incoterm}
       />
 
-      {/* ── VALIDATION BLOCKERS ── */}
       {hasBlockers ? (
         <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">
-          <p className="mb-1 font-semibold">Cannot ship until these are fixed:</p>
+          <p className="mb-1 font-semibold">{t('cannotShipUntilFixed')}</p>
           <ul className="list-inside list-disc space-y-0.5">
             {validation!.issues.map((issue) => <li key={issue}>{issue}</li>)}
           </ul>
         </div>
       ) : null}
 
-      {/* ── FOOTER ── */}
       <div className="flex items-center justify-between gap-3 border-t border-[#efcfe1] pt-4">
         <button type="button" onClick={onBack}
           className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb]">
-          ← Back
+          {t('back')}
         </button>
         <button type="button" onClick={() => void handleSubmit()}
           disabled={isSubmitting || !selectedServiceCode || hasBlockers || isEditingReceiver}
           className="border border-amber-600 bg-amber-600 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-70">
           {isSubmitting
-            ? 'Creating shipment…'
+            ? t('creatingShipment')
             : selectedRate
-              ? `Create Shipment — ${fmt(selectedRate.price)}`
-              : 'Create Shipment'}
+              ? t('createShipmentWithPrice', { price: fmt(selectedRate.price) })
+              : t('createShipment')}
         </button>
       </div>
     </div>
@@ -671,6 +664,9 @@ function CustomsBreakdown({
   isOutsideEU: boolean
   incoterm: string
 }) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.dhlShipForm' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
+
   if (!pkg || !isOutsideEU) return null
 
   const totalCustomsValue = parseFloat(
@@ -681,10 +677,10 @@ function CustomsBreakdown({
     <section className="border border-[#efcfe1] bg-white">
       <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
         <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-          Customs Declaration
+          {t('customsDeclaration')}
         </p>
         <p className="mt-0.5 text-[10px] text-zinc-400">
-          Customs values from product records — sent to DHL as-is
+          {t('customsValuesNote')}
         </p>
       </div>
 
@@ -705,9 +701,9 @@ function CustomsBreakdown({
         <div className="border border-[#f0dbe8] divide-y divide-[#f6e3ee]">
           <div className="flex items-center justify-between px-3 py-2.5 bg-[#fff0f9]">
             <span className="font-bold text-[#3d1530]">
-              Total declared customs value
+              {t('totalDeclaredCustoms')}
               <span className="ml-1.5 text-[9px] font-normal text-zinc-400 uppercase tracking-[0.06em]">
-                sent to DHL
+                {t('sentToDhl')}
               </span>
             </span>
             <span className="font-mono font-bold text-amber-700 text-sm">€{totalCustomsValue.toFixed(2)}</span>
@@ -715,10 +711,10 @@ function CustomsBreakdown({
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-[10px] text-zinc-400">
-          <span><span className="font-semibold text-[#8b5a75]">Incoterm:</span> {incoterm}</span>
-          <span><span className="font-semibold text-[#8b5a75]">Total weight:</span> {pkg.totalWeightKg} kg</span>
-          <span><span className="font-semibold text-[#8b5a75]">Currency:</span> EUR</span>
-          <span className="text-amber-600">Outside EU — import duties apply at destination</span>
+          <span><span className="font-semibold text-[#8b5a75]">{t('incoterm').replace(' *', ':')}</span> {incoterm}</span>
+          <span><span className="font-semibold text-[#8b5a75]">{t('totalWeight')}</span> {pkg.totalWeightKg} {tCommon('kg')}</span>
+          <span><span className="font-semibold text-[#8b5a75]">{t('currencyLabel')}</span> EUR</span>
+          <span className="text-amber-600">{t('outsideEuNote')}</span>
         </div>
       </div>
     </section>

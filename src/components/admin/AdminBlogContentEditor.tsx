@@ -3,7 +3,6 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import {
   Bold,
-  ChevronDown,
   Heading1,
   Heading2,
   Heading3,
@@ -18,6 +17,7 @@ import {
   Underline,
   Undo2,
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 import Placeholder from '@tiptap/extension-placeholder'
 import UnderlineExtension from '@tiptap/extension-underline'
@@ -31,6 +31,7 @@ type Props = {
 }
 
 type HeadingLevel = 1 | 2 | 3
+type HeadingKey = 'paragraph' | 'h1' | 'h2' | 'h3'
 
 function ToolButton({
   icon,
@@ -59,13 +60,16 @@ function ToolButton({
   )
 }
 
-export default function PremiumEditor({
+export default function AdminBlogContentEditor({
   value,
   onChange,
-  placeholder = 'Write your content here...',
+  placeholder,
 }: Props) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.blogContentEditor' })
   const [zoom, setZoom] = useState(100)
-  const [heading, setHeading] = useState('Paragraph')
+  const [heading, setHeading] = useState<HeadingKey>('paragraph')
+
+  const editorPlaceholder = placeholder ?? t('placeholderDefault')
 
   const editor = useEditor({
     immediatelyRender: false,
@@ -77,7 +81,7 @@ export default function PremiumEditor({
       }),
       UnderlineExtension,
       Placeholder.configure({
-        placeholder,
+        placeholder: editorPlaceholder,
       }),
     ],
     content: value,
@@ -85,10 +89,10 @@ export default function PremiumEditor({
     onUpdate: ({ editor }) => {
       onChange(editor.getHTML())
 
-      if (editor.isActive('heading', { level: 1 })) setHeading('H1')
-      else if (editor.isActive('heading', { level: 2 })) setHeading('H2')
-      else if (editor.isActive('heading', { level: 3 })) setHeading('H3')
-      else setHeading('Paragraph')
+      if (editor.isActive('heading', { level: 1 })) setHeading('h1')
+      else if (editor.isActive('heading', { level: 2 })) setHeading('h2')
+      else if (editor.isActive('heading', { level: 3 })) setHeading('h3')
+      else setHeading('paragraph')
     },
   })
 
@@ -107,138 +111,122 @@ export default function PremiumEditor({
 
   return (
     <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
-      {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3">
-
-        {/* <button className="flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-          AI Toolkit examples
-          <ChevronDown size={16} />
-        </button> */}
-
-        {/* Zoom */}
         <div className="ml-2 flex items-center gap-2 rounded-xl border px-2 py-1 bg-white">
-          <button onClick={() => setZoom((p) => Math.max(50, p - 10))}>
+          <button type="button" onClick={() => setZoom((p) => Math.max(50, p - 10))}>
             <Minus size={16} />
           </button>
 
           <span className="min-w-[50px] text-center text-sm">{zoom}%</span>
 
-          <button onClick={() => setZoom((p) => Math.min(200, p + 10))}>
+          <button type="button" onClick={() => setZoom((p) => Math.min(200, p + 10))}>
             <Plus size={16} />
           </button>
         </div>
 
-        {/* Heading Dropdown */}
         <select
           value={heading}
           onChange={(e) => {
-            const val = e.target.value
+            const val = e.target.value as HeadingKey
 
-            if (val === 'H1') applyHeading(1)
-            else if (val === 'H2') applyHeading(2)
-            else if (val === 'H3') applyHeading(3)
+            if (val === 'h1') applyHeading(1)
+            else if (val === 'h2') applyHeading(2)
+            else if (val === 'h3') applyHeading(3)
             else editor.chain().focus().setParagraph().run()
 
             setHeading(val)
           }}
           className="rounded-xl border bg-white px-3 py-2 text-sm outline-none"
         >
-          <option>Paragraph</option>
-          <option>H1</option>
-          <option>H2</option>
-          <option>H3</option>
+          <option value="paragraph">{t('headings.paragraph')}</option>
+          <option value="h1">{t('headings.h1')}</option>
+          <option value="h2">{t('headings.h2')}</option>
+          <option value="h3">{t('headings.h3')}</option>
         </select>
 
-        {/* Buttons */}
         <ToolButton
-          label="Bold"
+          label={t('toolbar.bold')}
           icon={<Bold size={16} />}
           active={editor.isActive('bold')}
           onClick={() => editor.chain().focus().toggleBold().run()}
         />
 
         <ToolButton
-          label="Italic"
+          label={t('toolbar.italic')}
           icon={<Italic size={16} />}
           active={editor.isActive('italic')}
           onClick={() => editor.chain().focus().toggleItalic().run()}
         />
 
         <ToolButton
-          label="Underline"
+          label={t('toolbar.underline')}
           icon={<Underline size={16} />}
           active={editor.isActive('underline')}
           onClick={() => editor.chain().focus().toggleUnderline().run()}
         />
 
         <ToolButton
-          label="Strike"
+          label={t('toolbar.strike')}
           icon={<Strikethrough size={16} />}
           active={editor.isActive('strike')}
           onClick={() => editor.chain().focus().toggleStrike().run()}
         />
 
         <ToolButton
-          label="H1"
+          label={t('toolbar.h1')}
           icon={<Heading1 size={16} />}
           active={editor.isActive('heading', { level: 1 })}
           onClick={() => applyHeading(1)}
         />
 
         <ToolButton
-          label="H2"
+          label={t('toolbar.h2')}
           icon={<Heading2 size={16} />}
           active={editor.isActive('heading', { level: 2 })}
           onClick={() => applyHeading(2)}
         />
 
         <ToolButton
-          label="H3"
+          label={t('toolbar.h3')}
           icon={<Heading3 size={16} />}
           active={editor.isActive('heading', { level: 3 })}
           onClick={() => applyHeading(3)}
         />
 
         <ToolButton
-          label="Bullet"
+          label={t('toolbar.bullet')}
           icon={<List size={16} />}
           active={editor.isActive('bulletList')}
           onClick={() => editor.chain().focus().toggleBulletList().run()}
         />
 
         <ToolButton
-          label="Number"
+          label={t('toolbar.number')}
           icon={<ListOrdered size={16} />}
           active={editor.isActive('orderedList')}
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
         />
 
         <ToolButton
-          label="Quote"
+          label={t('toolbar.quote')}
           icon={<Quote size={16} />}
           active={editor.isActive('blockquote')}
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
         />
 
         <ToolButton
-          label="Undo"
+          label={t('toolbar.undo')}
           icon={<Undo2 size={16} />}
           onClick={() => editor.chain().focus().undo().run()}
         />
 
         <ToolButton
-          label="Redo"
+          label={t('toolbar.redo')}
           icon={<Redo2 size={16} />}
           onClick={() => editor.chain().focus().redo().run()}
         />
-
-        {/* <button className="ml-auto flex items-center gap-2 rounded-xl border px-4 py-2 text-sm hover:bg-slate-100">
-          <Plus size={16} />
-          Custom component
-        </button> */}
       </div>
 
-      {/* Editor */}
       <div className="bg-slate-100 p-8">
         <div
           style={{ zoom: `${zoom}%` }}

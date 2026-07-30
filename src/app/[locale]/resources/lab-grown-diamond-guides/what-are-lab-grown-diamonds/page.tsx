@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'What Are Lab Grown Diamonds? Simple Guide | I Want Jewels',
   description:
-    'Learn what lab grown diamonds are, if they are real, how they compare to natural diamonds, and how to choose lab grown diamond jewellery.',
+    'Learn what lab grown diamonds are, if they are real, how they compare to natural diamonds, and how to choose lab grown diamond jewellery.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

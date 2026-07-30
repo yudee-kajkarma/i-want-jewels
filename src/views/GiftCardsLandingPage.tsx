@@ -7,7 +7,7 @@ import type { Product } from '../types/product'
 import { useTranslation } from 'react-i18next'
 
 export default function GiftCardsLandingPage() {
-  const { t } = useTranslation('giftCards')
+  const { t } = useTranslation('common', { keyPrefix: 'giftCards' })
   const [products, setProducts] = useState<Product[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
 

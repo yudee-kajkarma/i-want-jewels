@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Demi Fine vs Fine Jewellery vs Fashion Jewellery',
   description:
-    'Compare demi fine, fine and fashion jewellery. Learn the difference in materials, price, quality, wearability and gifting value.',
+    'Compare demi fine, fine and fashion jewellery. Learn the difference in materials, price, quality, wearability and gifting value.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

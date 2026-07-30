@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import { getAllProductFilters, getProducts } from '../../../services/productService'
 import type { Product, ProductAllFilters, ProductsApiResult, ProductsFilterState, ProductsPagination } from '../../../types/product'
 import { DEFAULT_CURRENCY } from '../../../utils/price'
@@ -8,7 +9,13 @@ export const dynamic = 'force-dynamic'
 
 const productsPerPage = 9
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Shop Jewellery | I Want Jewels',
   description:
     'Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO.',
@@ -16,8 +23,13 @@ export const metadata: Metadata = {
     title: 'Shop Jewellery | I Want Jewels',
     description:
       'Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO.',
-    type: 'website',
-  },
+    type: 'website'
+}
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/products', locale),
+  }
 }
 
 type PageProps = {

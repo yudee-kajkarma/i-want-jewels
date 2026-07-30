@@ -108,6 +108,8 @@ function PaymentIcon({
 }: {
     type: "visa" | "mastercard" | "rupay" | "amex" | "upi" | "card";
 }) {
+    const { t } = useTranslation();
+
     if (type === "visa") {
         return (
             <svg
@@ -271,7 +273,7 @@ function PaymentIcon({
             viewBox="0 0 72 40"
             className="h-8 w-full"
             role="img"
-            aria-label="Card"
+            aria-label={t("productDetail.paymentCard")}
         >
             <rect
                 x="1"
@@ -1057,7 +1059,7 @@ export default function ProductDetailPage({
                                             type="button"
                                             onClick={() => scrollThumbs("up")}
                                             disabled={thumbScrollState.atTop}
-                                            aria-label="Scroll thumbnails up"
+                                            aria-label={t("productDetail.scrollThumbnailsUp")}
                                             className="hidden h-8 w-full items-center justify-center border border-zinc-200 bg-white text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900 disabled:cursor-not-allowed disabled:opacity-30 lg:flex"
                                         >
                                             <ChevronUp
@@ -1134,7 +1136,7 @@ export default function ProductDetailPage({
                                             type="button"
                                             onClick={() => scrollThumbs("down")}
                                             disabled={thumbScrollState.atBottom}
-                                            aria-label="Scroll thumbnails down"
+                                            aria-label={t("productDetail.scrollThumbnailsDown")}
                                             className="hidden h-8 w-full items-center justify-center border border-zinc-200 bg-white text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900 disabled:cursor-not-allowed disabled:opacity-30 lg:flex"
                                         >
                                             <ChevronDown
@@ -1158,8 +1160,8 @@ export default function ProductDetailPage({
                                             }`}
                                             aria-label={
                                                 wishlistItem
-                                                    ? "Remove from wishlist"
-                                                    : "Add to wishlist"
+                                                    ? t("removeFromWishlist")
+                                                    : t("addToWishlist")
                                             }
                                         >
                                             <Heart
@@ -1630,7 +1632,7 @@ export default function ProductDetailPage({
                                             onClick={() =>
                                                 scrollCollection("left")
                                             }
-                                            aria-label="Scroll collection products left"
+                                            aria-label={t("productDetail.scrollCollectionLeft")}
                                             className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
                                         >
                                             <ChevronLeft
@@ -1643,7 +1645,7 @@ export default function ProductDetailPage({
                                             onClick={() =>
                                                 scrollCollection("right")
                                             }
-                                            aria-label="Scroll collection products right"
+                                            aria-label={t("productDetail.scrollCollectionRight")}
                                             className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
                                         >
                                             <ChevronRight
@@ -1684,7 +1686,7 @@ export default function ProductDetailPage({
                                         <button
                                             type="button"
                                             onClick={() => scrollReco("left")}
-                                            aria-label="Scroll products left"
+                                            aria-label={t("productDetail.scrollProductsLeft")}
                                             className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
                                         >
                                             <ChevronLeft
@@ -1695,7 +1697,7 @@ export default function ProductDetailPage({
                                         <button
                                             type="button"
                                             onClick={() => scrollReco("right")}
-                                            aria-label="Scroll products right"
+                                            aria-label={t("productDetail.scrollProductsRight")}
                                             className="flex h-9 w-9 items-center justify-center border border-zinc-300 text-zinc-700 transition hover:border-zinc-900 hover:text-zinc-900"
                                         >
                                             <ChevronRight
@@ -2072,7 +2074,7 @@ export default function ProductDetailPage({
                             type="button"
                             onClick={() => setIsSizeGuideOpen(false)}
                             className="absolute right-2 top-2 z-20 flex h-9 w-9 items-center justify-center bg-white text-zinc-900 shadow-lg transition hover:scale-105 sm:right-3 sm:top-3 sm:h-10 sm:w-10"
-                            aria-label="Close size guide"
+                            aria-label={t("productDetail.closeSizeGuide")}
                         >
                             <X
                                 className="h-4 w-4 sm:h-5 sm:w-5"

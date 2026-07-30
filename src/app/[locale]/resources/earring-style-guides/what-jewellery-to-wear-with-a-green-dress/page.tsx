@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'What Jewellery to Wear with a Green Dress',
   description:
-    'Choose jewellery for a green dress with gold, silver, rose gold, diamond earrings, wedding guest looks, party styling and outfit ideas.',
+    'Choose jewellery for a green dress with gold, silver, rose gold, diamond earrings, wedding guest looks, party styling and outfit ideas.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress', locale),
+  }
 }
 
 const heroIntro: V2HeroIntro = {

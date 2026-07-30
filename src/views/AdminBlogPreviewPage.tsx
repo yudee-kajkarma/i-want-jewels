@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
+import { useTranslation } from 'react-i18next'
 import BlogDetailPage from './BlogDetailPage'
 import { getAdminBlogBySlug } from '../services/blogService'
 import { getProductBySlug } from '../services/productService'
@@ -13,6 +14,7 @@ type AdminBlogPreviewPageProps = {
 }
 
 export default function AdminBlogPreviewPage({ slug }: AdminBlogPreviewPageProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.blogPreview' })
   const [blogDetail, setBlogDetail] = useState<BlogDetail | null>(null)
   const [relatedProducts, setRelatedProducts] = useState<ProductDetail[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -50,8 +52,8 @@ export default function AdminBlogPreviewPage({ slug }: AdminBlogPreviewPageProps
     } catch {
       setBlogDetail(null)
       setRelatedProducts([])
-      setError('Unable to open this blog preview right now.')
-      toast.error('Unable to open this blog preview right now.')
+      setError(t('loadError'))
+      toast.error(t('loadError'))
     } finally {
       setIsLoading(false)
     }
@@ -60,7 +62,7 @@ export default function AdminBlogPreviewPage({ slug }: AdminBlogPreviewPageProps
   if (isLoading) {
     return (
       <div className="font-poppins min-h-screen bg-white px-4 py-20 text-center text-zinc-600">
-        Loading blog preview...
+        {t('loading')}
       </div>
     )
   }
@@ -68,7 +70,7 @@ export default function AdminBlogPreviewPage({ slug }: AdminBlogPreviewPageProps
   if (!blogDetail) {
     return (
       <div className="font-poppins min-h-screen bg-white px-4 py-20 text-center text-zinc-600">
-        {error || 'Blog not found.'}
+        {error || t('notFound')}
       </div>
     )
   }

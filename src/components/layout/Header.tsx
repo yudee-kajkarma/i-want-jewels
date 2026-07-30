@@ -9,6 +9,7 @@ import {
     PackageSearch,
     Ticket,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "@/lib/router";
 import { useAuth } from "../../context/AuthContext";
 import { useCurrency } from "../../context/CurrencyContext";
@@ -20,27 +21,12 @@ import type { Product } from "../../types/product";
 import brandLogo from "../../assets/logo.svg";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const adminNavLinks = [
-    { label: "Home", to: "/" },
-    { label: "Dashboard", to: "/admin" },
-    { label: "Orders", to: "/admin/orders" },
-    { label: "Gift Cards", to: "/admin/gift-cards" },
-    { label: "Carts", to: "/admin/cart" },
-    { label: "Wishlists", to: "/admin/wishlist" },
-    { label: "Tickets", to: "/admin/tickets" },
-];
-
 const socialLinks = [
     { name: "Instagram", href: "https://www.instagram.com/iwantjewels/" },
     { name: "Facebook", href: "https://www.facebook.com/iwjewels/" },
     { name: "TikTok", href: "https://www.tiktok.com/@iwantjewelsofficial" },
 ];
 
-const animatedSearchTexts = [
-    "Searching for the perfect jewel...",
-    "Find rings, earrings, necklaces...",
-    "Discover timeless sparkle...",
-];
 const animatedCursor = "|";
 const predictiveSearchLimit = 4;
 const predictiveSearchDebounceMs = 350;
@@ -329,6 +315,7 @@ function MiniCurrencySelector({
     currency: CurrencyCode;
     setCurrency: (c: CurrencyCode, options?: { manual?: boolean }) => void;
 }) {
+    const { t } = useTranslation("common", { keyPrefix: "header" });
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement | null>(null);
 
@@ -347,26 +334,35 @@ function MiniCurrencySelector({
         }
 
         function handleEscape(event: KeyboardEvent) {
-            if (event.key === "Escape") setIsOpen(false);
+            if (event.key === 'Escape') setIsOpen(false);
         }
 
-        document.addEventListener("mousedown", handleClickOutside);
-        document.addEventListener("keydown", handleEscape);
+        if (!isOpen) return;
+
+        const timeoutId = window.setTimeout(() => {
+            document.addEventListener('click', handleClickOutside);
+        }, 0);
+
+        document.addEventListener('keydown', handleEscape);
 
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-            document.removeEventListener("keydown", handleEscape);
+            window.clearTimeout(timeoutId);
+            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('keydown', handleEscape);
         };
-    }, []);
+    }, [isOpen]);
 
     return (
-        <div ref={ref} className="relative">
+        <div ref={ref} className="relative z-[100]">
             <button
                 type="button"
-                aria-label="Select currency"
+                aria-label={t("selectCurrency")}
                 aria-haspopup="listbox"
                 aria-expanded={isOpen}
-                onClick={() => setIsOpen((v) => !v)}
+                onClick={(event) => {
+                    event.stopPropagation();
+                    setIsOpen((v) => !v);
+                }}
                 className="flex h-8 items-center gap-1 rounded-full px-1 text-zinc-700 transition hover:text-zinc-900"
             >
                 <img
@@ -380,8 +376,9 @@ function MiniCurrencySelector({
             {isOpen ? (
                 <div
                     role="listbox"
-                    aria-label="Currency options"
-                    className="absolute right-0 top-[calc(100%+10px)] z-50 min-w-[180px] overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-[0_18px_40px_rgba(17,24,39,0.12)]"
+                    aria-label={t("currencyOptions")}
+                    className="absolute right-0 top-[calc(100%+10px)] z-[100] min-w-[180px] overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-[0_18px_40px_rgba(17,24,39,0.12)]"
+                    onClick={(event) => event.stopPropagation()}
                 >
                     {CURRENCY_OPTIONS.map((opt) => (
                         <button
@@ -465,6 +462,7 @@ function HeaderIconButton({
 }
 
 export default function Header() {
+    const { t } = useTranslation("common", { keyPrefix: "header" });
     const accountMenuRef = useRef<HTMLDivElement | null>(null);
     const desktopSearchRef = useRef<HTMLDivElement | null>(null);
     const drawerRef = useRef<HTMLDivElement | null>(null);
@@ -496,13 +494,31 @@ export default function Header() {
         (state) => state.wishlist.wishlist?.items.length ?? 0,
     );
 
+    const adminNavLinks = useMemo(
+        () => [
+            { label: t("home"), to: "/" },
+            { label: t("dashboard"), to: "/admin" },
+            { label: t("orders"), to: "/admin/orders" },
+            { label: t("giftCards"), to: "/admin/gift-cards" },
+            { label: t("carts"), to: "/admin/cart" },
+            { label: t("wishlists"), to: "/admin/wishlist" },
+            { label: t("tickets"), to: "/admin/tickets" },
+        ],
+        [t],
+    );
+
+    const animatedSearchTexts = useMemo(
+        () => [t("searching"), t("findRings"), t("discoverSparkle")],
+        [t],
+    );
+
     const accountLabel = isAuthenticated
-        ? session?.firstName || session?.username || "Account"
-        : "Account";
+        ? session?.firstName || session?.username || t("account")
+        : t("account");
     const accountName =
         session?.firstName && session?.lastName
             ? `${session.firstName} ${session.lastName}`.trim()
-            : session?.firstName || session?.username || "Account";
+            : session?.firstName || session?.username || t("account");
     const isAdmin = session?.role === "ADMIN";
     const brandLink = "/";
 
@@ -527,8 +543,8 @@ export default function Header() {
                 to: buildCategoryHref(category),
             }));
 
-        return [{ label: "All Products", to: "/products" }, ...categoryLinks];
-    }, [visibleShopCategories]);
+        return [{ label: t("allProducts"), to: "/products" }, ...categoryLinks];
+    }, [t, visibleShopCategories]);
 
     const secondaryDrawerLinks = useMemo(() => {
         const giftCategory = visibleShopCategories.find(isGiftCardCategory);
@@ -543,10 +559,10 @@ export default function Header() {
 
         return [
             ...giftCardLink,
-            { label: "Resources", to: "/resources" },
-            { label: "Help", to: "/help" },
+            { label: t("resources"), to: "/resources" },
+            { label: t("help"), to: "/help" },
         ];
-    }, [visibleShopCategories]);
+    }, [t, visibleShopCategories]);
 
     const querySuggestions = useMemo(
         () => buildPredictiveQuerySuggestions(searchTerm, predictiveProducts),
@@ -599,7 +615,7 @@ export default function Header() {
         return () => {
             window.clearInterval(intervalId);
         };
-    }, []);
+    }, [animatedSearchTexts]);
 
     useEffect(() => {
         let isMounted = true;
@@ -831,13 +847,15 @@ export default function Header() {
         "relative inline-flex items-center text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-700 transition hover:text-zinc-950 after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-full after:origin-left after:scale-x-0 after:bg-zinc-950 after:transition-transform after:duration-200 hover:after:scale-x-100";
 
     return (
-        <header className="sticky top-0 z-30  bg-white font-poppins">
-            <div ref={desktopSearchRef} className="relative">
-                <div className="mx-auto flex h-[68px] max-w-[1480px] items-center justify-between gap-4 px-4 lg:h-[76px] lg:px-10">
+        <header className="sticky top-0 z-30 overflow-visible bg-white font-poppins">
+            <div ref={desktopSearchRef} className="relative overflow-visible">
+                <div className="mx-auto flex h-[68px] max-w-[1480px] items-center justify-between gap-4 overflow-visible px-4 lg:h-[76px] lg:px-10">
                     {/* Left cluster */}
                     <div className="flex flex-1 items-center justify-start gap-3 sm:gap-5 lg:gap-8">
                         <HeaderIconButton
-                            label={isDrawerOpen ? "Close menu" : "Open menu"}
+                            label={
+                                isDrawerOpen ? t("closeMenu") : t("openMenu")
+                            }
                             ariaExpanded={isDrawerOpen}
                             onClick={() => setIsDrawerOpen((v) => !v)}
                         >
@@ -845,13 +863,13 @@ export default function Header() {
                         </HeaderIconButton>
                         <nav className="hidden items-center gap-9 lg:flex">
                             <Link to="/products" className={topNavLinkClass}>
-                                SHOP
+                                {t("shop")}
                             </Link>
                             <Link to="/about" className={topNavLinkClass}>
-                                ABOUT
+                                {t("about")}
                             </Link>
                             <Link to="/contact" className={topNavLinkClass}>
-                                CONTACT
+                                {t("contact")}
                             </Link>
                         </nav>
                     </div>
@@ -870,7 +888,7 @@ export default function Header() {
                     </Link>
 
                     {/* Right cluster */}
-                    <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-5">
+                    <div className="relative z-[45] flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-5">
                         <div
                             ref={accountMenuRef}
                             className="relative hidden lg:block"
@@ -909,7 +927,7 @@ export default function Header() {
                                                     className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                 >
                                                     <MapPinHouse className="h-4 w-4" />
-                                                    ADMIN ADDRESS
+                                                    {t("adminAddress")}
                                                 </Link>
                                             ) : (
                                                 <>
@@ -922,7 +940,7 @@ export default function Header() {
                                                         }
                                                         className="mt-3 flex w-full items-center justify-center border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
-                                                        PROFILE
+                                                        {t("profile")}
                                                     </Link>
                                                     <Link
                                                         to="/orders"
@@ -934,7 +952,7 @@ export default function Header() {
                                                         className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         <PackageSearch className="h-4 w-4" />
-                                                        MY ORDERS
+                                                        {t("myOrders")}
                                                     </Link>
                                                     <Link
                                                         to="/payments/history"
@@ -946,7 +964,7 @@ export default function Header() {
                                                         className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         <CreditCard className="h-4 w-4" />
-                                                        PAYMENT HISTORY
+                                                        {t("paymentHistory")}
                                                     </Link>
                                                     <Link
                                                         to="/tickets"
@@ -958,7 +976,7 @@ export default function Header() {
                                                         className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
                                                     >
                                                         <Ticket className="h-4 w-4" />
-                                                        MY TICKETS
+                                                        {t("myTickets")}
                                                     </Link>
                                                 </>
                                             )}
@@ -971,22 +989,20 @@ export default function Header() {
                                                 className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                             >
                                                 <LogOut className="h-4 w-4" />
-                                                LOGOUT
+                                                {t("logout")}
                                             </button>
                                         </>
                                     ) : (
                                         <>
                                             <div className="bg-[#fff7fb] px-4 py-4">
                                                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">
-                                                    Welcome
+                                                    {t("welcome")}
                                                 </p>
                                                 <p className="mt-2 text-base font-bold text-[#17110d]">
-                                                    Login to your account
+                                                    {t("loginToAccount")}
                                                 </p>
                                                 <p className="mt-1 text-sm text-zinc-500">
-                                                    Sign in or create a new
-                                                    account to save wishlist and
-                                                    cart items.
+                                                    {t("loginDescription")}
                                                 </p>
                                             </div>
                                             <div className="mt-3 grid gap-2">
@@ -1001,7 +1017,7 @@ export default function Header() {
                                                     style={{ color: "#ffffff" }}
                                                 >
                                                     <LogIn className="h-4 w-4" />
-                                                    LOGIN
+                                                    {t("login")}
                                                 </Link>
                                                 <Link
                                                     to="/register"
@@ -1012,7 +1028,7 @@ export default function Header() {
                                                     }
                                                     className="flex w-full items-center justify-center border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                                 >
-                                                    REGISTER
+                                                    {t("register")}
                                                 </Link>
                                             </div>
                                         </>
@@ -1022,14 +1038,16 @@ export default function Header() {
                         </div>
 
                         <HeaderIconButton
-                            label="Search"
+                            label={t("search")}
                             ariaExpanded={isSearchOpen}
                             onClick={() => setIsSearchOpen((v) => !v)}
                         >
                             <SearchIcon />
                         </HeaderIconButton>
 
-                        <div className="hidden lg:block">
+                        <LanguageSwitcher />
+
+                        <div className="hidden sm:block">
                             <MiniCurrencySelector
                                 currency={currency}
                                 setCurrency={setCurrency}
@@ -1040,14 +1058,14 @@ export default function Header() {
                             <>
                                 <div className="hidden lg:block">
                                     <HeaderIconButton
-                                        label="Admin Wishlist"
+                                        label={t("adminWishlist")}
                                         to="/admin/wishlist"
                                     >
                                         <HeartIcon />
                                     </HeaderIconButton>
                                 </div>
                                 <HeaderIconButton
-                                    label="Admin Cart"
+                                    label={t("adminCart")}
                                     to="/admin/cart"
                                 >
                                     <BagIcon />
@@ -1057,7 +1075,7 @@ export default function Header() {
                             <>
                                 <div className="hidden lg:block">
                                     <HeaderIconButton
-                                        label="Wishlist"
+                                        label={t("wishlist")}
                                         count={wishlistCount}
                                         to="/wishlist"
                                     >
@@ -1065,7 +1083,7 @@ export default function Header() {
                                     </HeaderIconButton>
                                 </div>
                                 <HeaderIconButton
-                                    label="Cart"
+                                    label={t("cart")}
                                     count={itemCount}
                                     to="/cart"
                                 >
@@ -1077,15 +1095,13 @@ export default function Header() {
                 </div>
 
                 {/* Backdrop overlay for search modal */}
-                <div
-                    aria-hidden={!isSearchOpen}
-                    onClick={() => setIsSearchOpen(false)}
-                    className={`fixed inset-x-0 bottom-0 top-[68px] z-30 bg-black/30 backdrop-blur-[2px] transition-opacity duration-300 lg:top-[76px] ${
-                        isSearchOpen
-                            ? "pointer-events-auto opacity-100"
-                            : "pointer-events-none opacity-0"
-                    }`}
-                />
+                {isSearchOpen ? (
+                    <div
+                        aria-hidden={false}
+                        onClick={() => setIsSearchOpen(false)}
+                        className="pointer-events-auto fixed inset-x-0 bottom-0 top-[68px] z-30 bg-black/30 backdrop-blur-[2px] opacity-100 transition-opacity duration-300 lg:top-[76px]"
+                    />
+                ) : null}
 
                 {/* Floating search modal */}
                 <div
@@ -1116,7 +1132,7 @@ export default function Header() {
                             />
                             <button
                                 type="button"
-                                aria-label="Voice search"
+                                aria-label={t("voiceSearch")}
                                 onClick={handleVoiceSearch}
                                 className={`text-pink-400 transition ${
                                     isVoiceListening
@@ -1131,17 +1147,15 @@ export default function Header() {
                         {searchTerm.trim().length > 0 ? (
                             <div className="mt-2.5 rounded-2xl border border-[#eadfd4] bg-white p-3.5 shadow-[0_18px_50px_rgba(55,31,10,0.10)]">
                                 <p className="text-[13px] font-medium text-zinc-900">
-                                    Search for &quot;
-                                    <span className="text-pink-500">
-                                        {searchTerm.trim()}
-                                    </span>
-                                    &quot;
+                                    {t("searchFor", {
+                                        term: searchTerm.trim(),
+                                    })}
                                 </p>
 
                                 {querySuggestions.length > 0 ? (
                                     <div className="mt-2.5">
                                         <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
-                                            Suggestions
+                                            {t("suggestions")}
                                         </p>
                                         <div className="mt-1.5 flex flex-wrap gap-1.5">
                                             {querySuggestions.map(
@@ -1170,7 +1184,7 @@ export default function Header() {
                                 <div className="mt-3 space-y-1">
                                     {isSearchLoading ? (
                                         <p className="text-[13px] text-zinc-500">
-                                            Searching products...
+                                            {t("searchingProducts")}
                                         </p>
                                     ) : predictiveProducts.length > 0 ? (
                                         predictiveProducts.map((product) => (
@@ -1204,7 +1218,7 @@ export default function Header() {
                                         ))
                                     ) : (
                                         <p className="text-[13px] text-zinc-500">
-                                            No related products found.
+                                            {t("noRelatedProducts")}
                                         </p>
                                     )}
                                 </div>
@@ -1217,7 +1231,7 @@ export default function Header() {
                                         }
                                         className="w-full rounded-full border border-[#e5d7cc] px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.04em] text-[#3c2b20] transition hover:bg-black hover:text-white"
                                     >
-                                        View all results
+                                        {t("viewAllResults")}
                                     </button>
                                 </div>
                             </div>
@@ -1236,18 +1250,18 @@ export default function Header() {
             <aside
                 ref={drawerRef}
                 aria-hidden={!isDrawerOpen}
-                aria-label="Site menu"
+                aria-label={t("menu")}
                 className={`iwj-hamburger-drawer font-poppins ${
                     isDrawerOpen ? "iwj-hamburger-drawer--open" : ""
                 }`}
             >
                 <div className="flex items-center justify-between border-b border-zinc-100 px-6 py-5">
                     <span className="font-play text-[20px] font-bold uppercase tracking-[-0.01em] ">
-                        EXPLORE MORE
+                        {t("exploreMore")}
                     </span>
                     <button
                         type="button"
-                        aria-label="Close menu"
+                        aria-label={t("closeMenu")}
                         onClick={() => setIsDrawerOpen(false)}
                         className="flex h-9 w-9 items-center justify-center rounded-full text-zinc-700 transition hover:bg-zinc-50 hover:text-zinc-950"
                     >
@@ -1266,7 +1280,7 @@ export default function Header() {
                                     transitionDelay: `${isDrawerOpen ? 60 : 0}ms`,
                                 }}
                             >
-                                Shop
+                                {t("shop")}
                             </Link>
                             <Link
                                 to="/about"
@@ -1276,7 +1290,7 @@ export default function Header() {
                                     transitionDelay: `${isDrawerOpen ? 100 : 0}ms`,
                                 }}
                             >
-                                About
+                                {t("about")}
                             </Link>
                             <Link
                                 to="/contact"
@@ -1286,7 +1300,7 @@ export default function Header() {
                                     transitionDelay: `${isDrawerOpen ? 140 : 0}ms`,
                                 }}
                             >
-                                Contact
+                                {t("contact")}
                             </Link>
                         </nav>
                     ) : null}
@@ -1323,7 +1337,7 @@ export default function Header() {
                                             transitionDelay: `${isDrawerOpen ? 80 : 0}ms`,
                                         }}
                                     >
-                                        <span>Products</span>
+                                        <span>{t("products")}</span>
                                         <ChevronIcon
                                             className={`h-3.5 w-3.5 transition-transform duration-300 ${
                                                 isProductsMenuOpen
@@ -1376,7 +1390,7 @@ export default function Header() {
 
                     <div className="mt-8 space-y-3">
                         <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
-                            Account
+                            {t("account")}
                         </p>
                         {isAuthenticated ? (
                             <>
@@ -1393,7 +1407,7 @@ export default function Header() {
                                                 }
                                                 className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
                                             >
-                                                Profile
+                                                {t("profile")}
                                             </Link>
                                             <Link
                                                 to="/orders"
@@ -1404,7 +1418,7 @@ export default function Header() {
                                             >
                                                 <span className="inline-flex items-center gap-2">
                                                     <PackageSearch className="h-4 w-4" />
-                                                    My Orders
+                                                    {t("myOrders")}
                                                 </span>
                                             </Link>
                                             <Link
@@ -1416,7 +1430,7 @@ export default function Header() {
                                             >
                                                 <span className="inline-flex items-center gap-2">
                                                     <Ticket className="h-4 w-4" />
-                                                    Tickets
+                                                    {t("tickets")}
                                                 </span>
                                             </Link>
                                         </>
@@ -1431,7 +1445,7 @@ export default function Header() {
                                         >
                                             <span className="inline-flex items-center gap-2">
                                                 <MapPinHouse className="h-4 w-4" />
-                                                Admin Address
+                                                {t("adminAddress")}
                                             </span>
                                         </Link>
                                     )}
@@ -1445,7 +1459,7 @@ export default function Header() {
                                     >
                                         <span className="inline-flex items-center gap-2">
                                             <LogOut className="h-4 w-4" />
-                                            Logout
+                                            {t("logout")}
                                         </span>
                                     </button>
                                 </div>
@@ -1459,7 +1473,7 @@ export default function Header() {
                                 >
                                     <span className="inline-flex items-center gap-2">
                                         <LogIn className="h-4 w-4" />
-                                        Login
+                                        {t("login")}
                                     </span>
                                 </Link>
                                 <Link
@@ -1467,7 +1481,7 @@ export default function Header() {
                                     onClick={() => setIsDrawerOpen(false)}
                                     className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.14em] text-zinc-800 transition hover:bg-zinc-50"
                                 >
-                                    Register
+                                    {t("register")}
                                 </Link>
                             </div>
                         )}
@@ -1475,7 +1489,7 @@ export default function Header() {
 
                     <div className="mt-8 lg:hidden">
                         <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
-                            Currency
+                            {t("currency")}
                         </p>
                         <div className="mt-3 flex flex-wrap gap-2">
                             {CURRENCY_OPTIONS.map((opt) => {
@@ -1510,7 +1524,7 @@ export default function Header() {
 
                     <div className="mt-8">
                         <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
-                            Follow
+                            {t("follow")}
                         </p>
                         <div className="mt-3 flex items-center gap-3">
                             {socialLinks.map((social) => (

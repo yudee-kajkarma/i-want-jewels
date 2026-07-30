@@ -173,11 +173,12 @@ function InlineFAQItem({
 // ─── CTA Section ─────────────────────────────────────────────────────────────
 
 function CTASection({ cta }: { cta: V2CTABlock }) {
+    const { t } = useTranslation();
     return (
         <section className="border-t border-zinc-100 bg-[#fff7fb] px-6 py-14 lg:px-10 lg:py-16">
             <div className="mx-auto max-w-[1480px] text-center">
                 <p className="text-[11px] font-medium uppercase tracking-[0.26em] text-pink-500">
-                    {t('readyToShop')}
+                    {t('resourceArticleV2.readyToShop')}
                 </p>
                 <h2 className="mt-3 font-play text-[24px] font-semibold text-zinc-900 sm:text-[30px]">
                     {cta.heading}
@@ -223,16 +224,17 @@ function CTASection({ cta }: { cta: V2CTABlock }) {
 // ─── FAQ Section ─────────────────────────────────────────────────────────────
 
 function FAQSection({ items }: { items: V2FAQItem[] }) {
+    const { t } = useTranslation();
     return (
         <section className="border-t border-zinc-100 px-5 py-14 lg:px-10 lg:py-16">
             <div className="mx-auto max-w-[1400px]">
                 {/* Header */}
                 <div className="mb-10 text-center">
                     <p className="text-[12px] font-medium uppercase tracking-[0.26em] text-pink-400">
-                        {t('gotQuestions')}
+                        {t('resourceArticleV2.gotQuestions')}
                     </p>
                     <h2 className="mt-2 font-play text-[28px] font-semibold text-[#1f2732] md:text-[32px]">
-                        {t('faqTitle')}
+                        {t('resourceArticleV2.faqTitle')}
                     </h2>
                     <div className="mx-auto mt-4 h-px w-16 bg-pink-400" />
                 </div>
@@ -255,6 +257,7 @@ function FAQSection({ items }: { items: V2FAQItem[] }) {
 // ─── Block Renderer ───────────────────────────────────────────────────────────
 
 function RenderBlock({ block }: { block: V2ContentBlock }) {
+    const { t } = useTranslation();
     switch (block.type) {
         case "paragraph":
             return (
@@ -352,7 +355,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
             return (
                 <div className="my-4 inline-block bg-[#fef4f9] px-4 py-2 font-poppins text-[13px]">
                     <span className="font-semibold text-[#1f2732]">
-                        {t('seeAlso')}{" "}
+                        {t('resourceArticleV2.seeAlso')}{" "}
                     </span>
                     <Link
                         to={block.href}
@@ -533,7 +536,7 @@ export default function ResourceArticleV2Page({
     faq,
     cta,
 }: Props) {
-    const { t } = useTranslation('resourceArticleV2');
+    const { t } = useTranslation();
     const categoryHref = `/resources/${category.slug}`;
 
     return (
@@ -615,7 +618,7 @@ export default function ResourceArticleV2Page({
                             {/* Left — Quick Summary text */}
                             <div className="flex w-full flex-col justify-start px-0 md:w-1/2 md:pr-10 lg:pr-16">
                                 <h2 className="font-play text-[20px] font-bold text-[#1f2732] lg:text-[22px]">
-                                    {t('quickSummary')}
+                                    {t('resourceArticleV2.quickSummary')}
                                 </h2>
                                 <ul className="mt-5 space-y-3">
                                     {quickSummary.items.map((item, i) => (
@@ -684,17 +687,17 @@ export default function ResourceArticleV2Page({
                             <div className="flex items-end justify-between">
                                 <div>
                                     <p className="text-[11px] font-medium uppercase tracking-[0.26em] text-pink-400">
-                                        {t('continueReading')}
+                                        {t('resourceArticleV2.continueReading')}
                                     </p>
                                     <h2 className="mt-1.5 font-play text-[22px] font-semibold text-[#1f2732] md:text-[26px]">
-                                        {t('moreFrom', { category: category.title })}
+                                        {t('resourceArticleV2.moreFrom', { category: category.title })}
                                     </h2>
                                 </div>
                                 <Link
                                     to={categoryHref}
                                     className="hidden shrink-0 items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-500 transition hover:text-pink-500 sm:flex"
                                 >
-                                    {t('viewAll')}
+                                    {t('resourceArticleV2.viewAll')}
                                     <ArrowRightIcon />
                                 </Link>
                             </div>

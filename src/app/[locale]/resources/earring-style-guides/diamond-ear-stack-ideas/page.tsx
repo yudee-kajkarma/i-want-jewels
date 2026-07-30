@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Diamond Ear Stack Ideas',
   description:
-    'Explore diamond ear stack ideas with studs, huggies, hoops, drops and lab grown diamond earrings for everyday, wedding and party looks.',
+    'Explore diamond ear stack ideas with studs, huggies, hoops, drops and lab grown diamond earrings for everyday, wedding and party looks.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/earring-style-guides/diamond-ear-stack-ideas', locale),
+  }
 }
 
 const heroIntro: V2HeroIntro = {

@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Geometric Earrings vs Hoop Earrings | Which Is Better?",
     description:
-        "Compare geometric earrings vs classic hoop earrings to discover which style suits your wardrobe, lifestyle and occasions. Find the perfect modern jewellery choice.",
-    alternates: {
-        canonical: "/blogs/the-geometric-earrings-vs-classic-hoop-earrings-in-2026",
-    },
-};
+        "Compare geometric earrings vs classic hoop earrings to discover which style suits your wardrobe, lifestyle and occasions. Find the perfect modern jewellery choice."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/the-geometric-earrings-vs-classic-hoop-earrings-in-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

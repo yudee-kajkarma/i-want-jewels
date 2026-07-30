@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Gold Plated vs Solid Gold Jewellery',
   description:
-    'Compare gold-plated and solid gold jewellery. Learn the difference in price, durability, care, everyday wear and gifting value.',
+    'Compare gold-plated and solid gold jewellery. Learn the difference in price, durability, care, everyday wear and gifting value.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

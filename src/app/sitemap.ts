@@ -3,9 +3,8 @@ import { blogLinks } from "@/components/shared/blogList";
 import { resourceArticles, resourceCategories } from "@/data/resources";
 import { getAllProducts, getProductCategories } from "@/services/productService";
 import { categorySlug } from "@/utils/categorySlug";
-import { languages } from "@/i18n/settings";
-
-const BASE_URL = "https://www.iwantjewels.com";
+import { languages, fallbackLng } from "@/i18n/settings";
+import { getAbsoluteLocalizedUrl, getSitemapAlternateLanguages } from "@/i18n/metadata";
 
 export const revalidate = 3600;
 
@@ -25,52 +24,57 @@ const STATIC_ROUTES: Array<{
     { path: "/resources", changeFrequency: "weekly", priority: 0.8 },
 ];
 
-function generateLocalizedEntries(basePath: string, lastModified: Date, changeFrequency: any, priority: number): MetadataRoute.Sitemap {
-    return languages.map((locale) => {
-        const path = basePath === "/" ? "" : basePath;
-        const localePath = `/${locale}${path}`;
-        
-        const alternates = languages.reduce((acc, altLocale) => {
-            acc[altLocale] = `${BASE_URL}/${altLocale}${path}`;
-            return acc;
-        }, {} as Record<string, string>);
-
-        return {
-            url: `${BASE_URL}${localePath}`,
-            lastModified,
-            changeFrequency,
-            priority,
-            alternates: {
-                languages: alternates
-            }
-        };
-    });
+function generateLocalizedEntries(
+    basePath: string,
+    lastModified: Date,
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"],
+    priority: number,
+): MetadataRoute.Sitemap {
+    return languages.map((locale) => ({
+        url: getAbsoluteLocalizedUrl(basePath, locale),
+        lastModified,
+        changeFrequency,
+        priority: locale === fallbackLng ? priority : priority * 0.95,
+        alternates: {
+            languages: getSitemapAlternateLanguages(basePath),
+        },
+    }));
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const lastModified = new Date();
 
-    const staticEntries = STATIC_ROUTES.flatMap((route) => 
-        generateLocalizedEntries(route.path, lastModified, route.changeFrequency, route.priority)
+    const staticEntries = STATIC_ROUTES.flatMap((route) =>
+        generateLocalizedEntries(route.path, lastModified, route.changeFrequency, route.priority),
     );
 
-    const blogEntries = blogLinks.flatMap((blog) => 
-        generateLocalizedEntries(blog.href, lastModified, "monthly", 0.7)
+    const blogEntries = blogLinks.flatMap((blog) =>
+        generateLocalizedEntries(blog.href, lastModified, "monthly", 0.7),
     );
 
-    const resourceCategoryEntries = resourceCategories.flatMap((category) => 
-        generateLocalizedEntries(category.href, lastModified, "weekly", 0.7)
+    const resourceCategoryEntries = resourceCategories.flatMap((category) =>
+        generateLocalizedEntries(category.href, lastModified, "weekly", 0.7),
     );
 
-    const resourceArticleEntries = resourceArticles.flatMap((article) => 
-        generateLocalizedEntries(`/resources/${article.categorySlug}/${article.slug}`, lastModified, "monthly", 0.7)
+    const resourceArticleEntries = resourceArticles.flatMap((article) =>
+        generateLocalizedEntries(
+            `/resources/${article.categorySlug}/${article.slug}`,
+            lastModified,
+            "monthly",
+            0.7,
+        ),
     );
 
     let categoryEntries: MetadataRoute.Sitemap = [];
     try {
         const categories = await getProductCategories();
-        categoryEntries = categories.flatMap((category) => 
-            generateLocalizedEntries(`/category/${categorySlug(category)}`, lastModified, "weekly", 0.9)
+        categoryEntries = categories.flatMap((category) =>
+            generateLocalizedEntries(
+                `/category/${categorySlug(category)}`,
+                lastModified,
+                "weekly",
+                0.9,
+            ),
         );
     } catch (error) {
         console.error("sitemap: failed to load categories", error);
@@ -81,8 +85,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const products = await getAllProducts();
         productEntries = products
             .filter((product) => Boolean(product.slug))
-            .flatMap((product) => 
-                generateLocalizedEntries(`/products/${product.slug}`, lastModified, "weekly", 0.8)
+            .flatMap((product) =>
+                generateLocalizedEntries(
+                    `/products/${product.slug}`,
+                    lastModified,
+                    "weekly",
+                    0.8,
+                ),
             );
     } catch (error) {
         console.error("sitemap: failed to load products", error);

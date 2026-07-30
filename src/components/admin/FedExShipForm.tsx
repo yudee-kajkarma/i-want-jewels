@@ -1,40 +1,36 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import type { AdminShippingQuote, AdminShipmentPreviewItem, AdminShippingRateOption, Order } from '../../types/order'
 import { shipOrderForAdmin, updateOrderShippingAddressForAdmin, getAdminCarrierRatesForOrder, type FedExShipOptions } from '../../services/orderService'
 import { getCountryOptions, getStateOptions } from '../../utils/location'
 
-const PACKAGING_OPTIONS = [
-  { value: 'YOUR_PACKAGING', label: 'Your Packaging' },
-  { value: 'FEDEX_ENVELOPE', label: 'FedEx Envelope' },
-  { value: 'FEDEX_PAK', label: 'FedEx Pak' },
-  { value: 'FEDEX_BOX', label: 'FedEx Box' },
-  { value: 'FEDEX_SMALL_BOX', label: 'FedEx Small Box' },
-  { value: 'FEDEX_MEDIUM_BOX', label: 'FedEx Medium Box' },
-  { value: 'FEDEX_LARGE_BOX', label: 'FedEx Large Box' },
-  { value: 'FEDEX_TUBE', label: 'FedEx Tube' },
-]
+const PACKAGING_VALUES = [
+  'YOUR_PACKAGING',
+  'FEDEX_ENVELOPE',
+  'FEDEX_PAK',
+  'FEDEX_BOX',
+  'FEDEX_SMALL_BOX',
+  'FEDEX_MEDIUM_BOX',
+  'FEDEX_LARGE_BOX',
+  'FEDEX_TUBE',
+] as const
 
-const SIGNATURE_OPTIONS = [
-  { value: 'SERVICE_DEFAULT', label: 'Service Default (no override)' },
-  { value: 'NO_SIGNATURE_REQUIRED', label: 'No Signature Required' },
-  { value: 'INDIRECT', label: 'Indirect Signature' },
-  { value: 'DIRECT_SIGNATURE_REQUIRED', label: 'Direct Signature Required' },
-  { value: 'ADULT_SIGNATURE_REQUIRED', label: 'Adult Signature Required' },
-]
+const SIGNATURE_VALUES = [
+  'SERVICE_DEFAULT',
+  'NO_SIGNATURE_REQUIRED',
+  'INDIRECT',
+  'DIRECT_SIGNATURE_REQUIRED',
+  'ADULT_SIGNATURE_REQUIRED',
+] as const
 
-const DUTIES_PAYMENT_OPTIONS = [
-  { value: 'SENDER', label: 'Sender (my FedEx account)' },
-  { value: 'RECIPIENT', label: 'Recipient (pay on delivery)' },
-  { value: 'THIRD_PARTY', label: 'Third Party (enter account #)' },
-]
+const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
   countryOfManufacture: string
-  // Admin-entered customs value for this line (sent to FedEx as-is).
   customsValueEUR: number
 }
 
@@ -58,6 +54,22 @@ function fmt(n: number) {
 }
 
 export default function FedExShipForm({ order, preview: previewQuote, onBack, onShipped }: Props) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.fedExShipForm' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
+
+  const packagingOptions = useMemo(
+    () => PACKAGING_VALUES.map((value) => ({ value, label: t(`packagingOptions.${value}`) })),
+    [t],
+  )
+  const signatureOptions = useMemo(
+    () => SIGNATURE_VALUES.map((value) => ({ value, label: t(`signatureOptions.${value}`) })),
+    [t],
+  )
+  const dutiesPaymentOptions = useMemo(
+    () => DUTIES_PAYMENT_VALUES.map((value) => ({ value, label: t(`dutiesPaymentOptions.${value}`) })),
+    [t],
+  )
+
   const preview = previewQuote.preview
   const validation = previewQuote.validation
 
@@ -78,7 +90,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
       setFedexRates(rates)
       if (rates[0]) setSelectedServiceCode(rates[0].serviceCode)
     } catch {
-      setRatesError('Could not load FedEx rates for this route.')
+      setRatesError(t('ratesLoadError'))
     } finally {
       setIsLoadingRates(false)
     }
@@ -136,7 +148,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
   async function handleSaveReceiver() {
     if (!receiverDraft.street || !receiverDraft.city || !receiverDraft.postalCode || !receiverDraft.country) {
-      setReceiverSaveError('Please fill in all required address fields.')
+      setReceiverSaveError(t('errors.fillRequiredAddress'))
       return
     }
     setIsSavingReceiver(true)
@@ -144,10 +156,10 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     try {
       await updateOrderShippingAddressForAdmin(order.id, receiverDraft)
       setIsEditingReceiver(false)
-      toast.success('Receiver address updated — refreshing rates…')
+      toast.success(t('toast.addressUpdated'))
       void loadFedexRates()
     } catch (err: any) {
-      setReceiverSaveError(err?.response?.data?.message || 'Failed to update address.')
+      setReceiverSaveError(err?.response?.data?.message || t('errors.updateAddressFailed'))
     } finally {
       setIsSavingReceiver(false)
     }
@@ -155,7 +167,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
   async function handleSubmit() {
     if (!selectedServiceCode) {
-      toast.error('Please select a FedEx service.')
+      toast.error(t('errors.selectService'))
       return
     }
     setIsSubmitting(true)
@@ -184,10 +196,10 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         serviceCode: selectedServiceCode,
         fedExOptions,
       })
-      toast.success(`Order ${order.orderNumber} shipped via FedEx.`)
+      toast.success(t('toast.shipped', { orderNumber: order.orderNumber }))
       onShipped()
     } catch (err: any) {
-      toast.error(err?.response?.data?.message || 'Failed to create FedEx shipment.')
+      toast.error(err?.response?.data?.message || t('errors.createShipmentFailed'))
     } finally {
       setIsSubmitting(false)
     }
@@ -196,13 +208,12 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
   return (
     <div className="space-y-5 text-sm text-[#4f2040]">
 
-      {/* ── SHIP FROM + DELIVER TO side by side ── */}
       <div className="grid grid-cols-2 gap-4 items-start">
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
             <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-              Ship From <span className="ml-1 text-[10px] font-normal text-zinc-400">(read-only)</span>
+              {t('shipFrom')} <span className="ml-1 text-[10px] font-normal text-zinc-400">{t('readOnly')}</span>
             </p>
           </div>
           <div className="px-4 py-3 text-xs leading-6 text-[#694d5f]">
@@ -215,18 +226,18 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                 <p>✉ {preview.shipper.email}</p>
               </>
             ) : (
-              <p className="text-zinc-400">Loading…</p>
+              <p className="text-zinc-400">{tCommon('loading')}</p>
             )}
           </div>
         </section>
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5 flex items-center justify-between">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Deliver To</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('deliverTo')}</p>
             {!isEditingReceiver ? (
               <button type="button" onClick={() => setIsEditingReceiver(true)}
                 className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] hover:bg-[#fff2fb]">
-                Edit
+                {tCommon('edit')}
               </button>
             ) : null}
           </div>
@@ -247,27 +258,27 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
               <div className="space-y-2">
                 {(['street', 'city', 'postalCode'] as const).map((field) => (
                   <div key={field} className="flex items-center gap-2">
-                    <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{field} *</label>
+                    <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon(field)} *</label>
                     <input value={receiverDraft[field]}
                       onChange={(e) => setReceiverDraft((p) => ({ ...p, [field]: e.target.value }))}
                       className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                   </div>
                 ))}
                 <div className="flex items-center gap-2">
-                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Country *</label>
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('countryLabel')} *</label>
                   <select value={receiverDraft.country}
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, country: e.target.value, state: '' }))}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-                    <option value="">Select country</option>
+                    <option value="">{tCommon('selectCountry')}</option>
                     {countryOptions.map((c) => <option key={c.code} value={c.code}>{c.name}</option>)}
                   </select>
                 </div>
                 <div className="flex items-center gap-2">
-                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">State</label>
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('stateLabel')}</label>
                   <select value={receiverDraft.state}
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, state: e.target.value }))}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-                    <option value="">Select state</option>
+                    <option value="">{tCommon('selectState')}</option>
                     {stateOptions.map((s) => <option key={s.code} value={s.code}>{s.name}</option>)}
                   </select>
                 </div>
@@ -276,11 +287,11 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                   <button type="button" onClick={() => { setIsEditingReceiver(false); setReceiverSaveError('') }}
                     disabled={isSavingReceiver}
                     className="border border-[#e3bfd6] px-3 py-1 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60">
-                    Cancel
+                    {tCommon('cancel')}
                   </button>
                   <button type="button" onClick={() => void handleSaveReceiver()} disabled={isSavingReceiver}
                     className="border border-[#d24a90] bg-[#d24a90] px-3 py-1 text-[10px] font-semibold text-white hover:bg-[#b83f7d] disabled:opacity-60">
-                    {isSavingReceiver ? 'Saving…' : 'Save'}
+                    {isSavingReceiver ? tCommon('saving') : tCommon('save')}
                   </button>
                 </div>
               </div>
@@ -289,25 +300,24 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </section>
       </div>
 
-      {/* ── CUSTOMS / COMMODITIES ── */}
       {commodities.length > 0 ? (
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Customs / Commodities</p>
-            <p className="mt-0.5 text-[10px] text-zinc-400">Only HS codes are editable.</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('customsCommodities')}</p>
+            <p className="mt-0.5 text-[10px] text-zinc-400">{t('onlyHsEditable')}</p>
           </div>
           <div className="overflow-x-auto">
             <table className="min-w-full text-[11px]">
               <thead className="bg-[#fff2fb]">
                 <tr className="text-left text-[#8b5a75]">
-                  <th className="px-3 py-2 font-semibold">#</th>
-                  <th className="px-3 py-2 font-semibold">Description</th>
-                  <th className="px-3 py-2 font-semibold text-right">Qty</th>
-                  <th className="px-3 py-2 font-semibold text-right">Unit €</th>
-                  <th className="px-3 py-2 font-semibold text-right">Weight g</th>
-                  <th className="px-3 py-2 font-semibold">HS Code</th>
-                  <th className="px-3 py-2 font-semibold">Country of Mfr</th>
-                  <th className="px-3 py-2 font-semibold text-right">Customs Value €</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.number')}</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.description')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.qty')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.weightG')}</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.hsCode')}</th>
+                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.countryOfMfr')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6e3ee]">
@@ -333,81 +343,79 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
           </div>
           {preview?.package ? (
             <div className="border-t border-[#efcfe1] px-4 py-2.5 text-[11px] text-[#694d5f]">
-              <span className="font-semibold text-[#4f2040]">Total customs value: </span>
+              <span className="font-semibold text-[#4f2040]">{t('totalCustomsValue')} </span>
               {fmt(preview.package.declaredValueEUR)}
-              <span className="ml-3 font-semibold text-[#4f2040]">Incoterm: </span>{preview.package.incoterm}
+              <span className="ml-3 font-semibold text-[#4f2040]">{t('incoterm')} </span>{preview.package.incoterm}
             </div>
           ) : null}
         </section>
       ) : null}
 
-      {/* ── PACKAGE DETAILS ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Package Details</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('packageDetails')}</p>
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Packaging Type</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('packagingType')}</label>
             <select value={packagingType} onChange={(e) => setPackagingType(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {PACKAGING_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {packagingOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              Weight (auto-calculated from items)
+              {t('weightAuto')}
             </label>
             <div className="border border-[#e3bfd6] bg-[#f9f0f6] px-3 py-2 text-xs text-[#694d5f]">
-              {preview?.package.totalWeightKg ?? 0} kg
+              {preview?.package.totalWeightKg ?? 0} {tCommon('kg')}
             </div>
           </div>
           <div className="sm:col-span-2">
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              Dimensions (cm) — only used with Your Packaging
+              {t('dimensionsCm')}
             </label>
             {packagingType !== 'YOUR_PACKAGING' ? (
               <p className="text-[10px] text-amber-600">
-                FedEx already knows the dimensions of its own box types. Custom dimensions are ignored unless you select &quot;Your Packaging&quot;.
+                {t('dimensionsIgnored')}
               </p>
             ) : (
               <div className="flex items-center gap-2">
-                <input type="number" min="0" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder="L"
+                <input type="number" min="0" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder={t('dimensionL')}
                   className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
                 <span className="text-zinc-400">×</span>
-                <input type="number" min="0" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder="W"
+                <input type="number" min="0" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder={t('dimensionW')}
                   className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
                 <span className="text-zinc-400">×</span>
-                <input type="number" min="0" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder="H"
+                <input type="number" min="0" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder={t('dimensionH')}
                   className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
-                <span className="text-xs text-zinc-400">cm</span>
+                <span className="text-xs text-zinc-400">{tCommon('cm')}</span>
               </div>
             )}
           </div>
         </div>
       </section>
 
-      {/* ── SERVICE + BREAKDOWN side by side ── */}
       <div className="grid grid-cols-2 gap-4 items-start">
 
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Select FedEx Service</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('selectFedExService')}</p>
           </div>
           <div className="px-4 py-3 space-y-3">
             {isLoadingRates ? (
-              <p className="text-[11px] text-zinc-400">Loading available services…</p>
+              <p className="text-[11px] text-zinc-400">{t('loadingServices')}</p>
             ) : ratesError ? (
               <p className="text-[11px] text-rose-600">{ratesError}</p>
             ) : fedexRates.length === 0 ? (
-              <p className="text-[11px] text-rose-600">No FedEx services available for this route.</p>
+              <p className="text-[11px] text-rose-600">{t('noServices')}</p>
             ) : (
               <select
                 value={selectedServiceCode}
                 onChange={(e) => setSelectedServiceCode(e.target.value)}
                 className="w-full border border-[#e3bfd6] px-3 py-2.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
               >
-                <option value="">— Choose a service —</option>
+                <option value="">{t('chooseService')}</option>
                 {fedexRates.map((rate) => (
                   <option key={rate.serviceCode} value={rate.serviceCode}>
                     {rate.serviceName}
@@ -420,7 +428,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
               <div className="flex items-center justify-between border border-[#f0dbe8] bg-[#fff8fd] px-3 py-2">
                 <span className="text-[11px] text-[#694d5f]">
                   {selectedRate.deliveryDays
-                    ? <span className="text-zinc-400">~{selectedRate.deliveryDays} days</span>
+                    ? <span className="text-zinc-400">{tCommon('daysApprox', { count: selectedRate.deliveryDays })}</span>
                     : null}
                 </span>
                 <span className="font-mono font-bold text-[#d24a90]">{fmt(selectedRate.price)}</span>
@@ -436,7 +444,6 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
             ? parseFloat((selectedRate.listPrice - selectedRate.price).toFixed(2))
             : null
 
-          // Pair account-side surcharges with list-side by type (FUEL→FUEL, DEMAND→DEMAND)
           const listSurMap = new Map<string, number>()
           ;(selectedRate.listSurcharges ?? []).forEach((s) => {
             listSurMap.set((s.type || s.description || '').toUpperCase(), s.amount)
@@ -450,21 +457,21 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
             <section className="border border-[#efcfe1] bg-white">
               <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-                  {selectedRate.serviceName} — Charge Breakdown
+                  {t('chargeBreakdown', { serviceName: selectedRate.serviceName })}
                 </p>
               </div>
 
               <table className="w-full text-[11px] text-[#694d5f]">
                 <thead className="bg-[#fff2fb] text-left">
                   <tr>
-                    <th className="px-4 py-2 font-bold uppercase tracking-[0.08em] text-[10px] text-[#8b5a75]">Line</th>
-                    <th className="px-4 py-2 text-right font-bold uppercase tracking-[0.08em] text-[10px] text-zinc-500">Public / Walk-in</th>
-                    <th className="px-4 py-2 text-right font-bold uppercase tracking-[0.08em] text-[10px] text-[#d24a90]">Your FedEx</th>
+                    <th className="px-4 py-2 font-bold uppercase tracking-[0.08em] text-[10px] text-[#8b5a75]">{t('breakdownHeaders.line')}</th>
+                    <th className="px-4 py-2 text-right font-bold uppercase tracking-[0.08em] text-[10px] text-zinc-500">{t('breakdownHeaders.publicWalkIn')}</th>
+                    <th className="px-4 py-2 text-right font-bold uppercase tracking-[0.08em] text-[10px] text-[#d24a90]">{t('breakdownHeaders.yourFedEx')}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#f6e3ee]">
                   <tr>
-                    <td className="px-4 py-1.5">Base charge</td>
+                    <td className="px-4 py-1.5">{t('baseCharge')}</td>
                     <td className="px-4 py-1.5 text-right font-mono">
                       {selectedRate.listBaseCharge ? fmt(selectedRate.listBaseCharge) : <span className="text-zinc-400">—</span>}
                     </td>
@@ -479,7 +486,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                   ))}
                   {totalDiscount > 0 ? (
                     <tr className="text-[#4f2040] bg-[#fff8fd]">
-                      <td className="px-4 py-1.5 font-semibold">After discount</td>
+                      <td className="px-4 py-1.5 font-semibold">{t('afterDiscount')}</td>
                       <td className="px-4 py-1.5 text-right font-mono text-zinc-400">—</td>
                       <td className="px-4 py-1.5 text-right font-mono font-semibold">{fmt(afterDiscount)}</td>
                     </tr>
@@ -500,22 +507,22 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                       </tr>
                     )
                   })}
-                  {(selectedRate.taxes ?? []).map((t, i) => {
-                    const listAmount = listTaxMap.get((t.type || t.description || '').toUpperCase())
+                  {(selectedRate.taxes ?? []).map((tax, i) => {
+                    const listAmount = listTaxMap.get((tax.type || tax.description || '').toUpperCase())
                     return (
                       <tr key={`tax-${i}`} className="text-amber-700">
-                        <td className="px-4 py-1.5">{t.description || t.type}</td>
+                        <td className="px-4 py-1.5">{tax.description || tax.type}</td>
                         <td className="px-4 py-1.5 text-right font-mono">
                           {listAmount !== undefined ? `+${fmt(listAmount)}` : <span className="text-zinc-400">—</span>}
                         </td>
-                        <td className="px-4 py-1.5 text-right font-mono">+{fmt(t.amount)}</td>
+                        <td className="px-4 py-1.5 text-right font-mono">+{fmt(tax.amount)}</td>
                       </tr>
                     )
                   })}
                 </tbody>
                 <tfoot className="border-t-2 border-[#efcfe1]">
                   <tr className="font-bold text-[#3d1530] text-xs bg-[#fff0f9]">
-                    <td className="px-4 py-2">Total</td>
+                    <td className="px-4 py-2">{t('total')}</td>
                     <td className="px-4 py-2 text-right font-mono text-zinc-500 line-through">
                       {selectedRate.listPrice ? fmt(selectedRate.listPrice) : '—'}
                     </td>
@@ -523,7 +530,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                   </tr>
                   {savings ? (
                     <tr className="text-emerald-700 text-[11px]">
-                      <td className="px-4 py-1.5">You save</td>
+                      <td className="px-4 py-1.5">{t('youSave')}</td>
                       <td colSpan={2} className="px-4 py-1.5 text-right font-mono font-semibold">−{fmt(savings)}</td>
                     </tr>
                   ) : null}
@@ -532,112 +539,106 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
               {selectedRate.billingWeightKg ? (
                 <div className="border-t border-[#efcfe1] px-4 py-2 text-[10px] text-zinc-400">
-                  Billing weight: <span className="font-semibold text-[#8b5a75]">{selectedRate.billingWeightKg} kg</span>
+                  {t('billingWeight')} <span className="font-semibold text-[#8b5a75]">{selectedRate.billingWeightKg} {tCommon('kg')}</span>
                 </div>
               ) : null}
             </section>
           )
         })() : (
           <div className="flex items-center justify-center border border-dashed border-[#efcfe1] p-8 text-[11px] text-zinc-400">
-            Select a service to see the breakdown
+            {t('selectServiceBreakdown')}
           </div>
         )}
       </div>
 
-      {/* ── SERVICE OPTIONS ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Service Options</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('serviceOptions')}</p>
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Signature Option</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('signatureOption')}</label>
             <select value={signatureOption} onChange={(e) => setSignatureOption(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {SIGNATURE_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {signatureOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div className="flex items-center gap-2 pt-5">
             <input type="checkbox" id="saturday" checked={saturdayDelivery} onChange={(e) => setSaturdayDelivery(e.target.checked)}
               className="h-4 w-4 accent-[#d24a90]" />
-            <label htmlFor="saturday" className="text-xs text-[#4f2040]">Saturday Delivery</label>
+            <label htmlFor="saturday" className="text-xs text-[#4f2040]">{t('saturdayDelivery')}</label>
           </div>
         </div>
       </section>
 
-      {/* ── DUTIES PAYMENT ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Billing / Duties Payment</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('billingDutiesPayment')}</p>
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Bill Duties To</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('billDutiesTo')}</label>
             <select value={dutiesPaymentType} onChange={(e) => setDutiesPaymentType(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
-              {DUTIES_PAYMENT_OPTIONS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              {dutiesPaymentOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           {dutiesPaymentType === 'THIRD_PARTY' ? (
             <div>
-              <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Third Party FedEx Account #</label>
+              <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('thirdPartyAccount')}</label>
               <input value={dutiesAccountNumber} onChange={(e) => setDutiesAccountNumber(e.target.value)}
-                placeholder="Account number"
+                placeholder={t('accountNumberPlaceholder')}
                 className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
             </div>
           ) : null}
         </div>
       </section>
 
-      {/* ── NOTIFICATIONS ── */}
       <section className="border border-[#efcfe1] bg-white">
         <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">Shipment Notifications</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('shipmentNotifications')}</p>
         </div>
         <div className="px-4 py-3 space-y-3">
           <div className="flex items-center gap-2">
             <input type="checkbox" id="notify-recipient" checked={notifyRecipient} onChange={(e) => setNotifyRecipient(e.target.checked)}
               className="h-4 w-4 accent-[#d24a90]" />
-            <label htmlFor="notify-recipient" className="text-xs text-[#4f2040]">Email recipient on shipment, delivery &amp; exceptions</label>
+            <label htmlFor="notify-recipient" className="text-xs text-[#4f2040]">{t('notifyRecipient')}</label>
           </div>
           {notifyRecipient ? (
             <div className="flex items-center gap-2">
-              <label className="w-16 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Email</label>
+              <label className="w-16 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('email')}</label>
               <input value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)}
-                type="email" placeholder="recipient@email.com"
+                type="email" placeholder={t('emailPlaceholder')}
                 className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs outline-none focus:border-[#d24a90]" />
             </div>
           ) : null}
         </div>
       </section>
 
-      {/* ── VALIDATION BLOCKERS ── */}
       {hasBlockers ? (
         <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">
-          <p className="mb-1 font-semibold">Cannot ship until these are fixed:</p>
+          <p className="mb-1 font-semibold">{t('cannotShipUntilFixed')}</p>
           <ul className="list-inside list-disc space-y-0.5">
             {validation!.issues.map((issue) => <li key={issue}>{issue}</li>)}
           </ul>
         </div>
       ) : null}
 
-      {/* ── PRICE & CUSTOMS BREAKDOWN ── */}
       <CustomsBreakdown commodities={commodities} pkg={preview?.package} isOutsideEU={isOutsideEU} />
 
-      {/* ── FOOTER ── */}
       <div className="flex items-center justify-between gap-3 border-t border-[#efcfe1] pt-4">
         <button type="button" onClick={onBack}
           className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb]">
-          ← Back
+          {t('back')}
         </button>
         <button type="button" onClick={() => void handleSubmit()}
           disabled={isSubmitting || !selectedServiceCode || hasBlockers || isEditingReceiver}
           className="border border-[#d24a90] bg-[#d24a90] px-6 py-2.5 text-sm font-bold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70">
           {isSubmitting
-            ? 'Creating shipment…'
+            ? t('creatingShipment')
             : selectedRate
-              ? `Create Shipment — ${fmt(selectedRate.price)}`
-              : 'Create Shipment'}
+              ? t('createShipmentWithPrice', { price: fmt(selectedRate.price) })
+              : t('createShipment')}
         </button>
       </div>
     </div>
@@ -653,6 +654,9 @@ function CustomsBreakdown({
   pkg: import('../../types/order').AdminShipmentPackagePreview | undefined
   isOutsideEU: boolean
 }) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.fedExShipForm' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
+
   if (!pkg || !isOutsideEU) return null
 
   const totalCustomsValue = parseFloat(
@@ -663,10 +667,10 @@ function CustomsBreakdown({
     <section className="border border-[#efcfe1] bg-white">
       <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
         <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-          Customs Declaration
+          {t('customsDeclaration')}
         </p>
         <p className="mt-0.5 text-[10px] text-zinc-400">
-          Customs values from product records — sent to FedEx as-is
+          {t('customsValuesNote')}
         </p>
       </div>
 
@@ -687,9 +691,9 @@ function CustomsBreakdown({
         <div className="border border-[#f0dbe8] divide-y divide-[#f6e3ee]">
           <div className="flex items-center justify-between px-3 py-2.5 bg-[#fff0f9]">
             <span className="font-bold text-[#3d1530]">
-              Total declared customs value
+              {t('totalDeclaredCustoms')}
               <span className="ml-1.5 text-[9px] font-normal text-zinc-400 uppercase tracking-[0.06em]">
-                sent to FedEx
+                {t('sentToFedEx')}
               </span>
             </span>
             <span className="font-mono font-bold text-[#d24a90] text-sm">{fmt(totalCustomsValue)}</span>
@@ -697,10 +701,10 @@ function CustomsBreakdown({
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-[10px] text-zinc-400">
-          <span><span className="font-semibold text-[#8b5a75]">Incoterm:</span> {pkg.incoterm}</span>
-          <span><span className="font-semibold text-[#8b5a75]">Total weight:</span> {pkg.totalWeightKg} kg</span>
-          <span><span className="font-semibold text-[#8b5a75]">Currency:</span> EUR</span>
-          <span className="text-amber-600">Outside EU — import duties apply at destination</span>
+          <span><span className="font-semibold text-[#8b5a75]">{t('incoterm')}</span> {pkg.incoterm}</span>
+          <span><span className="font-semibold text-[#8b5a75]">{t('totalWeight')}</span> {pkg.totalWeightKg} {tCommon('kg')}</span>
+          <span><span className="font-semibold text-[#8b5a75]">{t('currency')}</span> EUR</span>
+          <span className="text-amber-600">{t('outsideEuNote')}</span>
         </div>
       </div>
     </section>

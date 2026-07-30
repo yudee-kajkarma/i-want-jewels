@@ -2,6 +2,8 @@
 
 import { useMemo, useState, type ChangeEvent } from 'react'
 import { Download, FileSpreadsheet, UploadCloud, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import type { TFunction } from 'i18next'
 import type { AdminVariantName } from '../../types/product'
 import type { BulkCreateProductPayload } from '../../services/productService'
 
@@ -252,13 +254,13 @@ function getVariantsFromRow(row: Record<string, unknown>): Array<Record<string, 
   return variants
 }
 
-function parseRows(rows: Record<string, unknown>[]): ParsedRowResult {
+function parseRows(rows: Record<string, unknown>[], t: TFunction): ParsedRowResult {
   const errors: string[] = []
   const groupedProducts = new Map<string, BulkCreateProductPayload>()
 
   rows.forEach((rawRow, rowIndex) => {
     const row = normalizeRow(rawRow)
-    const rowLabel = `Row ${rowIndex + 2}`
+    const rowLabel = t('validation.rowLabel', { row: rowIndex + 2 })
     const variantsSource = getVariantsFromRow(row)
 
     const variants = variantsSource.map((variant, variantIndex) => {
@@ -267,15 +269,21 @@ function parseRows(rows: Record<string, unknown>[]): ParsedRowResult {
       const stock = toNumber(variant.stock)
 
       if (!variantName) {
-        errors.push(`${rowLabel}: variant ${variantIndex + 1} has invalid variant_name. Allowed: ${allowedVariantNames.join(', ')}`)
+        errors.push(
+          t('validation.invalidVariantName', {
+            rowLabel,
+            variantIndex: variantIndex + 1,
+            allowed: allowedVariantNames.join(', '),
+          }),
+        )
       }
 
       if (!Number.isFinite(price) || price <= 0) {
-        errors.push(`${rowLabel}: variant ${variantIndex + 1} price must be greater than zero.`)
+        errors.push(t('validation.variantPrice', { rowLabel, variantIndex: variantIndex + 1 }))
       }
 
       if (!Number.isFinite(stock) || stock < 0) {
-        errors.push(`${rowLabel}: variant ${variantIndex + 1} stock must be zero or greater.`)
+        errors.push(t('validation.variantStock', { rowLabel, variantIndex: variantIndex + 1 }))
       }
 
       return {
@@ -288,13 +296,13 @@ function parseRows(rows: Record<string, unknown>[]): ParsedRowResult {
     })
 
     if (variants.length === 0) {
-      errors.push(`${rowLabel}: at least one variant is required.`)
+      errors.push(t('validation.variantRequired', { rowLabel }))
     }
 
     const carat = toNumber(row.carat)
 
     if (!Number.isFinite(carat) || carat < 0) {
-      errors.push(`${rowLabel}: carat must be a valid number.`)
+      errors.push(t('validation.caratInvalid', { rowLabel }))
     }
 
     const product = {
@@ -331,17 +339,17 @@ function parseRows(rows: Record<string, unknown>[]): ParsedRowResult {
 
     requiredProductFields.forEach((field) => {
       if (!String(product[field]).trim()) {
-        errors.push(`${rowLabel}: ${field} is required.`)
+        errors.push(t('validation.fieldRequired', { rowLabel, field }))
       }
     })
 
     variants.forEach((variant, variantIndex) => {
       if (!variant.title) {
-        errors.push(`${rowLabel}: variant ${variantIndex + 1} title is required.`)
+        errors.push(t('validation.variantTitleRequired', { rowLabel, variantIndex: variantIndex + 1 }))
       }
 
       if (!variant.sku) {
-        errors.push(`${rowLabel}: variant ${variantIndex + 1} sku is required.`)
+        errors.push(t('validation.variantSkuRequired', { rowLabel, variantIndex: variantIndex + 1 }))
       }
     })
 
@@ -434,6 +442,7 @@ export default function AdminProductBulkImportModal({
   onClose,
   onImport,
 }: AdminProductBulkImportModalProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.productBulkImportModal' })
   const [fileName, setFileName] = useState('')
   const [products, setProducts] = useState<BulkCreateProductPayload[]>([])
   const [errors, setErrors] = useState<string[]>([])
@@ -493,16 +502,16 @@ export default function AdminProductBulkImportModal({
       }
 
       if (rows.length === 0) {
-        setErrors(['No rows found in selected file.'])
+        setErrors([t('errors.noRows')])
         return
       }
 
-      const parsedResult = parseRows(rows)
+      const parsedResult = parseRows(rows, t)
 
       setProducts(parsedResult.products)
       setErrors(parsedResult.errors)
     } catch {
-      setErrors(['Unable to parse this file. Use .xlsx, .xls, .csv, or .json with valid columns.'])
+      setErrors([t('errors.parseFailed')])
     } finally {
       setIsParsing(false)
     }
@@ -529,10 +538,10 @@ export default function AdminProductBulkImportModal({
       <div className={`w-full max-w-3xl rounded-[30px] border border-[#f1cde2] bg-white p-6 ${isPageMode ? 'shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8' : 'shadow-[0_30px_80px_rgba(127,31,91,0.32)] sm:p-8'}`}>
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#a3477c]">Bulk Import</p>
-            <h2 className="mt-2 text-2xl font-semibold text-[#3f1933]">Import Products From File</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#a3477c]">{t('badge')}</p>
+            <h2 className="mt-2 text-2xl font-semibold text-[#3f1933]">{t('title')}</h2>
             <p className="mt-2 text-sm text-zinc-600">
-              Upload Excel/CSV/JSON and import products in bulk using <span className="font-semibold">POST /products/bulk-create</span>.
+              {t('subtitle')}
             </p>
           </div>
           {onClose ? (
@@ -540,7 +549,7 @@ export default function AdminProductBulkImportModal({
               type="button"
               onClick={onClose}
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#e8c5db] text-[#7a3a61] transition hover:bg-[#fff2fa]"
-              aria-label="Close bulk import modal"
+              aria-label={t('closeAria')}
             >
               <X className="h-4 w-4" />
             </button>
@@ -550,7 +559,7 @@ export default function AdminProductBulkImportModal({
         <div className="mt-6 rounded-[22px] border border-dashed border-[#d98cbc] bg-[#fff6fb] p-5">
           <label className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-[#7a3a61]">
             <UploadCloud className="h-5 w-5" />
-            <span>Select import file (.xlsx, .xls, .csv, .json)</span>
+            <span>{t('selectFile')}</span>
             <input
               type="file"
               accept=".xlsx,.xls,.csv,.json"
@@ -566,46 +575,42 @@ export default function AdminProductBulkImportModal({
             className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#d78ab9] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#8e3f6d] transition hover:bg-[#fff2fa]"
           >
             <Download className="h-4 w-4" />
-            Download Sample Data
+            {t('downloadSample')}
           </button>
-          {fileName ? <p className="mt-3 text-xs text-zinc-600">Selected: {fileName}</p> : null}
+          {fileName ? <p className="mt-3 text-xs text-zinc-600">{t('selectedFile', { fileName })}</p> : null}
         </div>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
           <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff6fb] p-4">
-            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Valid Products</p>
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.validProducts')}</p>
             <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{products.length}</p>
           </div>
           <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff9fd] p-4">
-            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Validation Errors</p>
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.validationErrors')}</p>
             <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{errors.length}</p>
           </div>
           <div className="rounded-2xl border border-[#f0d3e5] bg-[#fff8fc] p-4">
-            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Variant Name</p>
-            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#4f2040]">gold, rose gold, silver</p>
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.variantName')}</p>
+            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#4f2040]">{t('stats.variantNameValues')}</p>
           </div>
         </div>
 
         {visibleErrors.length > 0 ? (
           <div className="mt-6 rounded-2xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700">
-            <p className="font-semibold">Please fix these issues before import:</p>
+            <p className="font-semibold">{t('errors.fixBeforeImport')}</p>
             <ul className="mt-2 list-disc space-y-1 pl-5">
               {visibleErrors.map((errorMessage) => (
                 <li key={errorMessage}>{errorMessage}</li>
               ))}
             </ul>
-            {errors.length > visibleErrors.length ? <p className="mt-2 text-xs">+ {errors.length - visibleErrors.length} more errors</p> : null}
+            {errors.length > visibleErrors.length ? (
+              <p className="mt-2 text-xs">{t('errors.moreErrors', { count: errors.length - visibleErrors.length })}</p>
+            ) : null}
           </div>
         ) : null}
 
         <div className="mt-6 rounded-2xl border border-[#efe1d5] bg-[#fffdfa] p-4 text-xs leading-6 text-zinc-600">
-          Required columns: title, description, vendor, category, stoneType, color, shape, carat, origin, treatment,
-          certificate, measurement, details and variants. Use one <span className="font-semibold">variants_json</span> column with
-          JSON array or columns like <span className="font-semibold">variant_title_1</span>, <span className="font-semibold">variant_name_1</span>,
-          <span className="font-semibold">variant_sku_1</span>, <span className="font-semibold">variant_price_1</span>, <span className="font-semibold">variant_stock_1</span>.
-          You can also use human-friendly headers like <span className="font-semibold">Product Title</span>, <span className="font-semibold">Stone Type</span>,
-          <span className="font-semibold">Variant Title</span>, <span className="font-semibold">Variant Name</span>, <span className="font-semibold">SKU</span>,
-          <span className="font-semibold">Price</span>, and <span className="font-semibold">Stock</span>.
+          {t('columnsHint')}
         </div>
 
         <div className="mt-8 flex flex-wrap justify-end gap-3">
@@ -615,7 +620,7 @@ export default function AdminProductBulkImportModal({
             disabled={isImporting || isParsing}
             className="rounded-full border border-[#e8c5db] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-60"
           >
-            Cancel
+            {t('cancel')}
           </button>
           <button
             type="button"
@@ -626,7 +631,7 @@ export default function AdminProductBulkImportModal({
             className="inline-flex items-center gap-2 rounded-full bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
           >
             <FileSpreadsheet className="h-4 w-4" />
-            {isImporting ? 'Importing...' : isParsing ? 'Parsing...' : 'Import Products'}
+            {isImporting ? t('importing') : isParsing ? t('parsing') : t('importProducts')}
           </button>
         </div>
       </div>

@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { fallbackLng, languages, cookieName } from './i18n/settings'
+import {
+  getInternalLocalePath,
+  getLocalizedPath,
+  isLegacyEnglishPrefix,
+  localizedLanguages,
+  parseLocalePathname,
+} from './i18n/routing'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
 function getLocale(request: NextRequest): string {
-  // Check cookie first
   if (request.cookies.has(cookieName)) {
     const cookie = request.cookies.get(cookieName)?.value
     if (cookie && languages.includes(cookie)) {
@@ -13,57 +19,63 @@ function getLocale(request: NextRequest): string {
     }
   }
 
-  // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
-  // Use negotiator and intl-localematcher to get best locale
   const languagesList = [...languages]
   const negotiator = new Negotiator({ headers: negotiatorHeaders })
   const requestedLocales = negotiator.languages()
 
   try {
     return matchLocale(requestedLocales, languagesList, fallbackLng)
-  } catch (e) {
+  } catch {
     return fallbackLng
   }
 }
 
+function hasNonEnglishLocalePrefix(pathname: string): boolean {
+  return localizedLanguages.some(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
+  )
+}
+
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  
-  // Exclude static files, public folder, api routes, etc.
+  const search = request.nextUrl.search
+
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
-    pathname.match(/\.(.*)$/) // Excludes all files with an extension (e.g., .svg, .png, .ico, etc.)
+    pathname.match(/\.(.*)$/)
   ) {
     return NextResponse.next()
   }
 
-  // Check if there is any supported locale in the pathname
-  const pathnameIsMissingLocale = languages.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
-
-  // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
-    const locale = getLocale(request)
-
-    // e.g. incoming request is /products
-    // The new URL is now /en/products
-    return NextResponse.redirect(
-      new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}${request.nextUrl.search}`, request.url),
-      308
-    )
+  // 308 redirect legacy English prefixes (/en, /eng, …) to root URLs.
+  if (isLegacyEnglishPrefix(pathname)) {
+    const { pathnameWithoutLocale } = parseLocalePathname(pathname)
+    const target = getLocalizedPath(fallbackLng, pathnameWithoutLocale)
+    return NextResponse.redirect(new URL(`${target}${search}`, request.url), 308)
   }
 
-  // Add the locale to the response header so we can access it if needed
-  const response = NextResponse.next()
-  return response
+  // Non-English locale prefix present — serve as-is.
+  if (hasNonEnglishLocalePrefix(pathname)) {
+    return NextResponse.next()
+  }
+
+  // No locale prefix: English stays at root (internal rewrite), others redirect.
+  const detectedLocale = getLocale(request)
+  const { pathnameWithoutLocale } = parseLocalePathname(pathname)
+
+  if (detectedLocale === fallbackLng) {
+    const internalPath = getInternalLocalePath(fallbackLng, pathnameWithoutLocale)
+    return NextResponse.rewrite(new URL(`${internalPath}${search}`, request.url))
+  }
+
+  const localizedPath = getLocalizedPath(detectedLocale, pathnameWithoutLocale)
+  return NextResponse.redirect(new URL(`${localizedPath}${search}`, request.url), 308)
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
   matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico).*)'],
 }

@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Best Fine Jewellery Gifts for Simple Style | Cadenza S Diamond Stud Earrings",
     description:
-        "Looking for the perfect fine jewellery gift for someone who loves simple style? Discover why the Cadenza S Lab-Grown Diamond Stud Earrings are a timeless, elegant and meaningful gift for every occasion.",
-    alternates: {
-        canonical: "/blogs/simple-jewellery-gifts-in-the-2026",
-    },
-};
+        "Looking for the perfect fine jewellery gift for someone who loves simple style? Discover why the Cadenza S Lab-Grown Diamond Stud Earrings are a timeless, elegant and meaningful gift for every occasion."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/simple-jewellery-gifts-in-the-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

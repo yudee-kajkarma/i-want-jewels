@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,15 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "How to Style Pavé Butterfly Earrings Elegantly | Farfalla Butterfly Earrings",
     description:
-        "Learn how to style pavé butterfly earrings elegantly for weddings, dinners, parties and romantic evenings. Discover why the Farfalla Lab-Grown Diamond Butterfly Earrings are a timeless jewellery choice.",
-    alternates: {
-        canonical:
-            "/blogs/how-to-style-pave-butterfly-earrings-elegantly-in-2026",
-    },
-};
+        "Learn how to style pavé butterfly earrings elegantly for weddings, dinners, parties and romantic evenings. Discover why the Farfalla Lab-Grown Diamond Butterfly Earrings are a timeless jewellery choice."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/how-to-style-pave-butterfly-earrings-elegantly-in-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

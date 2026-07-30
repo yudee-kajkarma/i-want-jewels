@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Best Diamond Stud Earrings for Wedding Guests | Elegant Wedding Guest Jewellery",
     description:
-        "Looking for the best diamond studs for a wedding guest outfit? Discover why the Cadenza M Lab-Grown Diamond Stud Earrings offer the perfect balance of elegance, sparkle and timeless versatility for weddings and beyond.",
-    alternates: {
-        canonical: "/blogs/best-diamond-stud-earrings-for-wedding-guests-in-2026",
-    },
-};
+        "Looking for the best diamond studs for a wedding guest outfit? Discover why the Cadenza M Lab-Grown Diamond Stud Earrings offer the perfect balance of elegance, sparkle and timeless versatility for weddings and beyond."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/best-diamond-stud-earrings-for-wedding-guests-in-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

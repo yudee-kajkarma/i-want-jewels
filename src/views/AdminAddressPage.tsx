@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { Building2, MapPinHouse, Save } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { getAdminAddress, updateAdminAddress } from '../services/userService'
@@ -20,6 +21,7 @@ const initialForm: UpdateAdminAddressPayload = {
 }
 
 export default function AdminAddressPage() {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.address' })
   const [form, setForm] = useState<UpdateAdminAddressPayload>(initialForm)
   const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
@@ -61,7 +63,7 @@ export default function AdminAddressPage() {
           return
         }
 
-        setError('Unable to load admin address right now.')
+        setError(t('errorLoad'))
       } finally {
         if (mounted) {
           setIsLoading(false)
@@ -74,7 +76,7 @@ export default function AdminAddressPage() {
     return () => {
       mounted = false
     }
-  }, [])
+  }, [t])
 
   async function handleSave(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -85,12 +87,12 @@ export default function AdminAddressPage() {
     }
 
     if (!form.street.trim() || !form.city.trim() || !form.state.trim() || !form.postalCode.trim() || !form.country.trim() || !form.addressType.trim()) {
-      setError('Please fill all required address fields before saving.')
+      setError(t('errorFillRequired'))
       return
     }
 
     if (!isValidPostalCode(form.postalCode, form.country)) {
-      setPostalCodeError('Please enter a valid postal code.')
+      setPostalCodeError(t('errorInvalidPostal'))
       return
     }
 
@@ -108,10 +110,10 @@ export default function AdminAddressPage() {
         addressType: form.addressType.trim(),
       })
 
-      toast.success('Admin address updated successfully.')
+      toast.success(t('toastUpdateSuccess'))
     } catch {
-      setError('Unable to update admin address right now. Please try again.')
-      toast.error('Unable to update admin address right now.')
+      setError(t('errorUpdate'))
+      toast.error(t('toastUpdateError'))
     } finally {
       setIsSaving(false)
     }
@@ -137,19 +139,19 @@ export default function AdminAddressPage() {
             <MapPinHouse className="h-5 w-5" />
           </span>
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Admin</p>
-            <h1 className="text-3xl font-extrabold tracking-[-0.04em] text-[#17110d]">Address Settings</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('breadcrumb')}</p>
+            <h1 className="text-3xl font-extrabold tracking-[-0.04em] text-[#17110d]">{t('title')}</h1>
           </div>
         </div>
 
         <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
           {isLoading ? (
-            <p className="text-sm text-zinc-500">Loading admin address...</p>
+            <p className="text-sm text-zinc-500">{t('loading')}</p>
           ) : (
             <form onSubmit={(event) => void handleSave(event)} className="space-y-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">Country</span>
+                  <span className="font-semibold text-[#17110d]">{t('country')}</span>
                   <select
                     value={form.country}
                     onChange={(event) => {
@@ -158,7 +160,7 @@ export default function AdminAddressPage() {
                     }}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
-                    <option value="">Select country</option>
+                    <option value="">{t('selectCountry')}</option>
                     {countryOptions.map((country) => (
                       <option key={country.code} value={country.code}>
                         {country.name}
@@ -168,7 +170,7 @@ export default function AdminAddressPage() {
                 </label>
 
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">State</span>
+                  <span className="font-semibold text-[#17110d]">{t('state')}</span>
                   <select
                     value={form.state}
                     onChange={(event) => {
@@ -176,7 +178,7 @@ export default function AdminAddressPage() {
                     }}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                   >
-                    <option value="">Select state</option>
+                    <option value="">{t('selectState')}</option>
                     {stateOptions.map((state) => (
                       <option key={state.code} value={state.code}>
                         {state.name}
@@ -186,56 +188,56 @@ export default function AdminAddressPage() {
                 </label>
 
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">City</span>
+                  <span className="font-semibold text-[#17110d]">{t('city')}</span>
                   <input
                     value={form.city}
                     onChange={(event) => updateField('city', event.target.value)}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="City"
+                    placeholder={t('city')}
                   />
                 </label>
 
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">House Number</span>
+                  <span className="font-semibold text-[#17110d]">{t('houseNumber')}</span>
                   <input
                     value={form.houseNumber}
                     onChange={(event) => updateField('houseNumber', event.target.value)}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="House Number"
+                    placeholder={t('houseNumber')}
                   />
                 </label>
 
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">Street</span>
+                  <span className="font-semibold text-[#17110d]">{t('street')}</span>
                   <input
                     value={form.street}
                     onChange={(event) => updateField('street', event.target.value)}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="Street"
+                    placeholder={t('street')}
                   />
                 </label>
 
                 <label className="space-y-2 text-sm">
-                  <span className="font-semibold text-[#17110d]">Postal Code</span>
+                  <span className="font-semibold text-[#17110d]">{t('postalCode')}</span>
                   <input
                     value={form.postalCode}
                     onChange={(event) => updateField('postalCode', event.target.value)}
                     className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
-                    placeholder="Postal Code"
+                    placeholder={t('postalCode')}
                   />
                   {postalCodeError ? <p className="text-xs text-rose-700">{postalCodeError}</p> : null}
                 </label>
               </div>
 
               <label className="space-y-2 text-sm">
-                <span className="font-semibold text-[#17110d]">Address Type</span>
+                <span className="font-semibold text-[#17110d]">{t('addressType')}</span>
                 <div className="relative">
                   <Building2 className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
                   <input
                     value={form.addressType}
                     onChange={(event) => updateField('addressType', event.target.value)}
                     className="w-full border border-[#e5d7cc] py-2.5 pl-10 pr-3 outline-none transition focus:border-[#b88a65]"
-                    placeholder="billing, work, shipping..."
+                    placeholder={t('addressTypePlaceholder')}
                   />
                 </div>
               </label>
@@ -253,7 +255,7 @@ export default function AdminAddressPage() {
                   className="inline-flex items-center gap-2 bg-[#111111] px-5 py-3 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
                   <Save className="h-4 w-4" />
-                  {isSaving ? 'UPDATING...' : 'UPDATE ADDRESS'}
+                  {isSaving ? t('updating') : t('updateAddress')}
                 </button>
               </div>
             </form>

@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "White Gold vs Yellow Gold Tennis Bracelet – Which Is Better?",
     description:
-        "Compare white gold vs yellow gold tennis bracelets. Learn the differences, style impact, durability, and which one to choose in 2026.",
-    alternates: {
-        canonical: "/blogs/white-gold-vs-yellow-gold-tennis-bracelet",
-    },
-};
+        "Compare white gold vs yellow gold tennis bracelets. Learn the differences, style impact, durability, and which one to choose in 2026."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/white-gold-vs-yellow-gold-tennis-bracelet', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

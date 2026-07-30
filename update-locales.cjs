@@ -19,7 +19,40 @@ const dictionary = {
     "discoverSparkle": "Discover timeless sparkle...",
     "search": "Search",
     "close": "Close",
-    "menu": "Menu"
+    "menu": "Menu",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "exploreMore": "Explore More",
+    "products": "Products",
+    "welcome": "Welcome",
+    "loginToAccount": "Login to your account",
+    "loginDescription": "Sign in or create a new account to save wishlist and cart items.",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "profile": "Profile",
+    "myOrders": "My Orders",
+    "paymentHistory": "Payment History",
+    "myTickets": "My Tickets",
+    "adminAddress": "Admin Address",
+    "adminWishlist": "Admin Wishlist",
+    "adminCart": "Admin Cart",
+    "wishlist": "Wishlist",
+    "cart": "Cart",
+    "voiceSearch": "Voice search",
+    "searchFor": "Search for \"{{term}}\"",
+    "suggestions": "Suggestions",
+    "searchingProducts": "Searching products...",
+    "noRelatedProducts": "No related products found.",
+    "viewAllResults": "View all results",
+    "selectCurrency": "Select currency",
+    "currencyOptions": "Currency options",
+    "currency": "Currency",
+    "follow": "Follow",
+    "language": "Language"
   },
   "footer": {
     "information": "Information",
@@ -133,7 +166,26 @@ const dictionary = {
     "adjustFilters": "Adjust the selected filter options and apply again to see more pieces.",
     "loadingMore": "Loading more products...",
     "reachedEnd": "You've reached the end",
-    "unableToLoadRightNow": "Unable to load products right now."
+    "unableToLoadRightNow": "Unable to load products right now.",
+    "filterByCollection": "Filter by collection",
+    "openFilters": "Open filters"
+  },
+  "productsFilters": {
+    "productsType": "Products Type",
+    "priceRange": "Price Range",
+    "colors": "Colors",
+    "minPrice": "Min price",
+    "maxPrice": "Max price",
+    "all": "All",
+    "select": "Select {{title}}",
+    "selectedCount": "{{count}} selected",
+    "yellowGold": "Yellow Gold",
+    "roseGold": "Rose Gold",
+    "whiteGold": "White Gold"
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Select language",
+    "languageOptions": "Language options"
   },
   "productDetail": {
     "inStock": "In Stock",
@@ -173,11 +225,21 @@ const dictionary = {
     "rings": "Rings",
     "collection": "Collection",
     "moreFrom": "More from {{collection}}",
-    "youMayAlsoLike": "You May Also Like"
+    "youMayAlsoLike": "You May Also Like",
+    "scrollThumbnailsUp": "Scroll thumbnails up",
+    "scrollThumbnailsDown": "Scroll thumbnails down",
+    "scrollCollectionLeft": "Scroll collection products left",
+    "scrollCollectionRight": "Scroll collection products right",
+    "scrollProductsLeft": "Scroll products left",
+    "scrollProductsRight": "Scroll products right",
+    "closeSizeGuide": "Close size guide",
+    "paymentCard": "Card"
   },
   "exploreOurStore": {
     "title": "Explore Our Store",
-    "viewAll": "View all"
+    "viewAll": "View all",
+    "scrollPrev": "Scroll to previous products",
+    "scrollNext": "Scroll to more products"
   },
   "cart": {
     "title": "Your shopping bag",
@@ -547,6 +609,14 @@ const dictionary = {
     "contactBtn": "Contact Support",
     "homeBtn": "Back to Home"
   },
+  "categoryLanding": {
+    "breadcrumbHome": "Homepage",
+    "piece": "piece",
+    "piece_plural": "pieces",
+    "viewAllFilter": "View All & Filter",
+    "emptyDesc": "New pieces are on their way. Explore the rest of the collection in the meantime.",
+    "shopAll": "Shop All Jewellery"
+  },
   "notFound": {
     "title": "Page Not Found",
     "description": "The page you are looking for doesn't exist or may have been moved. Perhaps one of our collections holds what you were after.",
@@ -741,6 +811,7 @@ const dictionary = {
     "list": {
       "breadcrumb": "Homepage / Blog",
       "title": "Blog",
+      "readArticle": "Read article",
       "emptyTitle": "No blogs found",
       "emptyDesc": "Please check again later."
     },
@@ -826,6 +897,254 @@ const dictionary = {
     "errorTransferFailed": "Unable to transfer this gift card."
   },
   "admin": {
+    "common": {
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "search": "Search",
+      "clear": "Clear",
+      "back": "Back",
+      "save": "Save",
+      "edit": "Edit",
+      "retry": "Retry",
+      "loading": "Loading…",
+      "prev": "Prev",
+      "next": "Next",
+      "saving": "Saving…",
+      "pleaseWait": "Please wait...",
+      "proceed": "Proceed",
+      "selectCountry": "Select country",
+      "selectState": "Select state",
+      "street": "street",
+      "city": "city",
+      "postalCode": "postalCode",
+      "country": "country",
+      "state": "state",
+      "countryLabel": "Country",
+      "stateLabel": "State",
+      "email": "Email",
+      "qty": "Qty",
+      "noImage": "No image",
+      "item": "Item",
+      "default": "Default",
+      "orderItem": "Order item",
+      "daysApprox": "~{{count}} days",
+      "cm": "cm",
+      "kg": "kg"
+    },
+    "orders": {
+      "breadcrumb": "Admin",
+      "title": "All Orders",
+      "subtitle": "Manage every order flow from pending to delivered.",
+      "tabs": {
+        "shipment": "Shipment",
+        "pickup": "Pickup"
+      },
+      "viewMode": {
+        "gridAria": "Show grid view",
+        "gridTitle": "Grid View",
+        "tableAria": "Show table view",
+        "tableTitle": "Table View"
+      },
+      "orderCount": "{{count}} order",
+      "orderCount_plural": "{{count}} orders",
+      "searchPlaceholder": "Search by order number or customer email",
+      "showingResultsFor": "Showing results for",
+      "filters": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "shipped": "Shipped",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled",
+        "all": "All"
+      },
+      "empty": "No orders were found.",
+      "loadError": "Unable to load all orders right now.",
+      "totalRecords": "{{count}} total records",
+      "grid": {
+        "itemsCount": "{{count}} item",
+        "itemsCount_plural": "{{count}} items",
+        "payment": "Payment:",
+        "customerTotal": "Customer total:",
+        "qty": "Qty {{count}}"
+      },
+      "table": {
+        "order": "Order",
+        "date": "Date",
+        "items": "Items",
+        "total": "Total",
+        "orderStatus": "Order Status",
+        "payment": "Payment",
+        "actions": "Actions",
+        "service": "Service",
+        "code": "Code",
+        "price": "Price",
+        "days": "Days",
+        "tag": "Tag",
+        "noRates": "No {{carrier}} rates available."
+      },
+      "pagination": {
+        "pageOf": "Page {{current}} of {{total}}"
+      },
+      "actions": {
+        "confirm": "Confirm",
+        "cancelOrder": "Cancel Order",
+        "ship": "Ship",
+        "downloadLabel": "Download Label",
+        "downloading": "Downloading...",
+        "downloadingEllipsis": "Downloading…",
+        "downloadShipmentLabel": "Download Shipment Label",
+        "cancelShipment": "Cancel Shipment",
+        "reorder": "Re-order"
+      },
+      "actionModal": {
+        "confirmOrder": "Confirm Order",
+        "cancelOrder": "Cancel Order",
+        "shipOrder": "Ship Order",
+        "cancelShipment": "Cancel Shipment",
+        "reorder": "Re-order",
+        "confirmDescription": "This will move the order status to CONFIRMED.",
+        "cancelDescription": "This will cancel the order and move status to CANCELLED.",
+        "shipDescription": "This will move the order status to SHIPPED.",
+        "cancelShipmentDescription": "This will cancel the shipment with the carrier and move the order status to CANCELLED.",
+        "reorderDescription": "This will re-activate the cancelled order and move its status back to CONFIRMED so it can be shipped again.",
+        "orderLabel": "Order: {{orderNumber}}",
+        "fedExShipmentTitle": "FedEx Shipment · {{orderNumber}}",
+        "dhlShipmentTitle": "DHL Shipment · {{orderNumber}}",
+        "dhlShipment": "DHL Shipment",
+        "loadingShipmentDetails": "Loading shipment details…",
+        "unableLoadRates": "Unable to load rates.",
+        "loadingShippingRates": "Loading shipping rates…",
+        "loadingShippingCost": "Loading shipping cost...",
+        "selectCarrier": "Select a carrier to continue",
+        "internationalShipping": "International shipping",
+        "dhlShippingRates": "DHL Shipping Rates",
+        "selected": "Selected:",
+        "shipper": "Shipper",
+        "receiver": "Receiver",
+        "ready": "✓ ready",
+        "checkFields": "⚠ check fields",
+        "packageCustoms": "Package & Customs",
+        "weight": "Weight:",
+        "declared": "Declared:",
+        "incoterm": "Incoterm:",
+        "customs": "Customs:",
+        "customsYes": "Yes – cross-border",
+        "customsNo": "No – domestic / intra-EU",
+        "description": "Description:",
+        "lineItems": "Line items",
+        "lineItemsHeaders": {
+          "number": "#",
+          "title": "Title",
+          "qty": "Qty",
+          "unitEur": "Unit €",
+          "unitG": "Unit g",
+          "mfr": "Mfr",
+          "hsCode": "HS code"
+        },
+        "cannotShipUntilFixed": "Cannot ship until these are fixed:"
+      },
+      "pickup": {
+        "scheduleNew": "Schedule New",
+        "viewPickups": "View Pickups",
+        "selectShippedOrders": "Select {{carrier}} Shipped Orders (no pickup yet)",
+        "clearAll": "Clear all",
+        "selectAll": "Select all ({{count}})",
+        "loadingOrders": "Loading orders…",
+        "noShippedOrders": "No {{carrier}} shipped orders without a pickup.",
+        "ordersSelected": "{{count}} order(s) selected",
+        "ordersSelectedWithCarrier": "{{count}} order(s) selected · {{carrier}}",
+        "backToOrderSelection": "Back to order selection",
+        "dhlPickupDetails": "DHL Pickup Details",
+        "fedExPickupDetails": "FedEx Pickup Details",
+        "pickupDateTime": "Pickup Date & Time *",
+        "closeTime": "Close Time (HH:MM) *",
+        "locationRoom": "Location / Room *",
+        "locationPlaceholder": "e.g. Reception",
+        "locationType": "Location Type *",
+        "locationTypeBusiness": "Business",
+        "locationTypeResidence": "Residence",
+        "remarkOptional": "Remark (optional)",
+        "remarkPlaceholder": "e.g. Ring the bell",
+        "pickupDate": "Pickup Date *",
+        "packageReadyTime": "Package Ready Time *",
+        "customerCloseTime": "Customer Close Time *",
+        "selectBelow": "Select below",
+        "packageLocation": "Package Location",
+        "packageLocationFront": "Front",
+        "packageLocationRear": "Rear",
+        "packageLocationSide": "Side",
+        "packageLocationNone": "None",
+        "remarksOptional": "Remarks (optional)",
+        "chooseTimesThenCheck": "Choose your preferred times, then check FedEx availability",
+        "checking": "Checking…",
+        "selectReadyCloseFirst": "Select ready & close time first",
+        "recheckAvailability": "Re-check FedEx Availability",
+        "checkAvailability": "Check FedEx Availability",
+        "fedExNoDates": "FedEx has no available pickup dates right now.",
+        "fedExAvailable": "FedEx is available — pick a slot below.",
+        "stepPickupDate": "1. Pickup Date",
+        "fedExNotAvailableDate": "FedEx not available on this date",
+        "fedExSlotsHint": "Only FedEx's slots for {{date}} are selectable. Driver needs at least {{hours}}h {{minutes}}m between ready & close. Cut-off: {{cutOff}}.",
+        "stepPackageReadyTime": "2. Package Ready Time",
+        "stepCustomerCloseTime": "3. Customer Close Time",
+        "selectReadyTime": "Select ready time…",
+        "selectCloseTime": "Select close time…",
+        "pickReadyTimeFirst": "Pick ready time first",
+        "pickDateForTimes": "Pick a pickup date to choose ready & close time.",
+        "scheduling": "Scheduling…",
+        "schedulePickup": "Schedule {{carrier}} Pickup",
+        "statusScheduled": "Scheduled",
+        "statusPickedUp": "Picked Up",
+        "statusCancelled": "Cancelled",
+        "loadingPickups": "Loading pickups…",
+        "emptyScheduled": "No scheduled pickups.",
+        "emptyPickedUp": "No picked-up pickups yet.",
+        "emptyCancelled": "No cancelled pickups.",
+        "pickedUpStatus": "PICKED UP",
+        "confirmation": "Confirmation:",
+        "closeAt": "Close {{time}}",
+        "packageCount": "{{count}} package(s) · {{weight}} kg · {{orders}} order(s)",
+        "location": "Location: {{location}} ({{type}})",
+        "pickedUp": "Picked Up",
+        "cancelling": "Cancelling…",
+        "loadingPickupOrders": "Loading orders…",
+        "status": "Status:",
+        "ordersInPickup": "{{count}} order(s) in this pickup",
+        "remark": "Remark: {{remark}}",
+        "noActiveOrders": "No active orders found for this pickup.",
+        "tracking": "Tracking:",
+        "missingOrders": "{{count}} order(s) in this pickup are no longer retrievable (deleted/inactive)."
+      },
+      "errors": {
+        "loadShipmentDetails": "Unable to load shipment details right now.",
+        "updateReceiverAddress": "Failed to update receiver address.",
+        "selectShippingService": "Please select a shipping service.",
+        "actionFailed": "Unable to complete this action. Please try again.",
+        "loadShippedOrders": "Unable to load shipped orders.",
+        "loadPickups": "Unable to load pickups.",
+        "loadPickupDetail": "Unable to load this pickup's orders.",
+        "availabilityCheckFailed": "Availability check failed.",
+        "selectAtLeastOneOrder": "Select at least one order.",
+        "fillDhlFields": "Fill in all required DHL fields.",
+        "fillFedExFields": "Fill in all required FedEx fields.",
+        "schedulePickupFailed": "Failed to schedule pickup.",
+        "cancelPickupFailed": "Failed to cancel pickup.",
+        "markPickupFailed": "Failed to mark pickup as picked up.",
+        "generateLabelUrl": "Unable to generate label URL right now.",
+        "downloadLabel": "Unable to download label right now."
+      },
+      "toast": {
+        "receiverAddressUpdated": "Receiver address updated.",
+        "orderConfirmed": "Order {{orderNumber}} confirmed.",
+        "orderCancelled": "Order {{orderNumber}} cancelled.",
+        "orderShipped": "Order {{orderNumber}} marked as shipped.",
+        "orderReordered": "Order {{orderNumber}} re-ordered — status set to CONFIRMED.",
+        "dhlPickupScheduled": "DHL pickup scheduled ({{confirmationNumber}}) for {{orderCount}} order(s).",
+        "fedExPickupScheduled": "FedEx pickup scheduled ({{confirmationNumber}}) for {{orderCount}} order(s).",
+        "fedExNoDates": "FedEx has no available pickup dates right now.",
+        "labelReady": "Label ready for {{orderNumber}}."
+      }
+    },
     "address": {
       "breadcrumb": "Admin",
       "title": "Address Settings",
@@ -848,20 +1167,919 @@ const dictionary = {
       "errorUpdate": "Unable to update admin address right now. Please try again.",
       "toastUpdateSuccess": "Admin address updated successfully.",
       "toastUpdateError": "Unable to update admin address right now."
+    },
+    "blogPreview": {
+      "loading": "Loading blog preview...",
+      "notFound": "Blog not found.",
+      "loadError": "Unable to open this blog preview right now."
+    },
+    "giftCards": {
+      "breadcrumb": "Admin",
+      "title": "Gift Cards",
+      "searchPlaceholder": "Search recipient / order #",
+      "hint": "Codes are masked — only the first 6 characters are shown. Click a buyer to see the denominations they purchased.",
+      "loading": "Loading gift cards…",
+      "loadError": "Unable to load gift cards right now.",
+      "emptyTitle": "No gift cards purchased yet",
+      "emptySubtitle": "No user has bought or redeemed a gift card so far.",
+      "cards": "Cards",
+      "totalSpent": "Total spent",
+      "table": {
+        "code": "Code",
+        "denomination": "Denomination",
+        "balance": "Balance",
+        "status": "Status",
+        "recipient": "Recipient",
+        "orderNumber": "Order #",
+        "purchased": "Purchased",
+        "expires": "Expires"
+      },
+      "expiryNever": "Never",
+      "expiryExpired": "{{date}} (expired)",
+      "expiryDaysLeft": "{{date}} ({{days}}d)",
+      "pagination": "{{total}} total purchasers · Page {{current}} of {{totalPages}}"
+    },
+    "orderDetail": {
+      "breadcrumb": "Admin Orders",
+      "loading": "Loading order...",
+      "loadError": "Unable to load this admin order detail right now.",
+      "orderNumber": "Order Number",
+      "created": "Created",
+      "updated": "Updated",
+      "refund": "Refund:",
+      "customer": "Customer",
+      "notAvailable": "N/A",
+      "username": "Username:",
+      "returnRequest": "Return Request",
+      "requested": "Requested:",
+      "delivered": "Delivered:",
+      "reason": "Reason:",
+      "adminNote": "Admin note:",
+      "markReturnedHint": "Once the item is physically back in your possession, mark the order as returned.",
+      "markReturnedUpdating": "UPDATING...",
+      "markReturned": "MARK ORDER AS RETURNED",
+      "adminNotePlaceholder": "Optional note (required for reject) — visible to the customer",
+      "approving": "APPROVING...",
+      "approveRefund": "APPROVE & REFUND",
+      "rejecting": "REJECTING...",
+      "reject": "REJECT",
+      "approveHint": "Approving auto-issues a Stripe refund (for ONLINE+PAID orders) and restores stock.",
+      "shippingAddress": "Shipping Address",
+      "noShippingAddress": "No shipping address available.",
+      "carrier": "Carrier:",
+      "tracking": "Tracking:",
+      "trackShipment": "Track Shipment",
+      "items": "Items",
+      "defaultVariant": "Default",
+      "size": "Size {{size}}",
+      "qty": "Qty {{count}}",
+      "giftCardTo": "To: {{email}}",
+      "giftCardDeliveredBuyer": "Delivered to buyer",
+      "issuedGiftCards": "Issued Gift Cards",
+      "value": "Value:",
+      "owner": "Owner:",
+      "recipientEmail": "Recipient email:",
+      "recipient": "Recipient:",
+      "message": "Message:",
+      "status": "Status:",
+      "summary": "Summary",
+      "totalItems": "Total Items",
+      "orderTotal": "Order Total",
+      "giftCard": "Gift Card",
+      "payable": "Payable",
+      "giftCardCode": "Gift Card Code",
+      "shippingCost": "Shipping Cost",
+      "paymentMethod": "Payment Method",
+      "active": "Active",
+      "yes": "Yes",
+      "no": "No",
+      "verifying": "VERIFYING...",
+      "verifyPayment": "VERIFY PAYMENT MANUALLY",
+      "errors": {
+        "addressIncomplete": "Please complete all shipping address fields.",
+        "invalidPostalCode": "Please enter a valid postal code.",
+        "addressUpdate": "Unable to update shipping address right now. Please try again.",
+        "verifyPayment": "Unable to verify payment. Please try again.",
+        "approveReturn": "Unable to approve return.",
+        "rejectNoteRequired": "A note is required to reject a return.",
+        "rejectReturn": "Unable to reject return.",
+        "updateStatus": "Unable to update order status."
+      },
+      "toast": {
+        "addressUpdated": "Shipping address updated successfully.",
+        "addressUpdateError": "Unable to update shipping address right now.",
+        "paymentVerified": "Payment verified successfully.",
+        "returnApproved": "Return approved and refund initiated",
+        "returnRejected": "Return rejected",
+        "markedReturned": "Order marked as RETURNED"
+      }
+    },
+    "cart": {
+      "breadcrumb": "Admin Cart",
+      "title": "Cart Monitor",
+      "searchPlaceholder": "Search by user name or email",
+      "statsUsers": "Users",
+      "statsItems": "Cart Items",
+      "statsTotal": "Combined Total",
+      "emptyNoUsers": "No users found for this search.",
+      "emptySelectUser": "Select a user to inspect their cart.",
+      "emptyNoItems": "No items found in this cart.",
+      "userDetails": "User Details",
+      "cartItems": "Cart Items",
+      "sku": "SKU:",
+      "variant": "Variant:",
+      "added": "Added:",
+      "qty": "Qty: {{count}}",
+      "cartTotal": "Cart Total",
+      "loadUsersError": "Unable to load cart users right now.",
+      "loadCartError": "Unable to load user cart details.",
+      "refresh": "Refresh",
+      "search": "Search",
+      "clear": "Clear"
+    },
+    "wishlist": {
+      "breadcrumb": "Admin Wishlist",
+      "title": "Wishlist Monitor",
+      "searchPlaceholder": "Search by user name or email",
+      "statsUsers": "Users",
+      "statsItems": "Wishlist Items",
+      "statsValue": "Combined Value",
+      "emptyNoUsers": "No users found for this search.",
+      "emptySelectUser": "Select a user to inspect their wishlist.",
+      "emptyNoItems": "No items found in this wishlist.",
+      "userDetails": "User Details",
+      "wishlistItems": "Wishlist Items",
+      "productId": "Product ID:",
+      "added": "Added:",
+      "loadUsersError": "Unable to load wishlist users right now.",
+      "loadWishlistError": "Unable to load user wishlist details.",
+      "refresh": "Refresh",
+      "search": "Search",
+      "clear": "Clear"
+    },
+    "tickets": {
+      "badge": "Admin Support",
+      "title": "Ticket Desk",
+      "subtitle": "Review, reply, escalate, and resolve customer support threads from one panel.",
+      "stats": {
+        "open": "Open",
+        "closed": "Closed",
+        "escalated": "Escalated"
+      },
+      "filters": {
+        "all": "All",
+        "open": "Open",
+        "closed": "Closed"
+      },
+      "empty": {
+        "noTickets": "No tickets found for this filter.",
+        "selectTicket": "Select a ticket to review the conversation and manage support actions."
+      },
+      "list": {
+        "messagesCount": "{{count}} message",
+        "messagesCount_plural": "{{count}} messages",
+        "noMessage": "No message available.",
+        "escalated": "escalated",
+        "pagination": "Page {{current}} of {{total}} · {{records}} total tickets"
+      },
+      "detail": {
+        "updated": "updated {{date}}",
+        "status": "Status",
+        "open": "Open",
+        "close": "Close",
+        "priority": "Priority",
+        "priorityLow": "Low",
+        "priorityMedium": "Medium",
+        "priorityHigh": "High",
+        "priorityUrgent": "Urgent",
+        "escalated": "Escalated",
+        "escalate": "Escalate",
+        "reply": "Reply",
+        "replyPlaceholder": "We're checking with our delivery partner. Will update you shortly.",
+        "sending": "Sending...",
+        "sendReply": "Send Reply"
+      },
+      "status": {
+        "open": "open",
+        "closed": "closed"
+      },
+      "priority": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "urgent": "urgent"
+      },
+      "errors": {
+        "loadTickets": "Unable to load admin tickets right now."
+      },
+      "toast": {
+        "loadTicketsError": "Unable to load admin tickets right now.",
+        "loadDetailError": "Unable to load ticket details right now.",
+        "statusUpdated": "Ticket marked as {{status}}.",
+        "statusUpdateError": "Unable to update ticket status right now.",
+        "priorityUpdated": "Priority changed to {{priority}}.",
+        "priorityUpdateError": "Unable to update ticket priority right now.",
+        "escalateSuccess": "Ticket escalated successfully.",
+        "escalateError": "Unable to escalate ticket right now.",
+        "replyRequired": "Reply message is required.",
+        "replySuccess": "Reply sent successfully.",
+        "replyError": "Unable to send reply right now."
+      }
+    },
+    "blogs": {
+      "badge": "Admin Content",
+      "title": "Blog Manager",
+      "refresh": "Refresh",
+      "addBlog": "Add Blog",
+      "stats": {
+        "total": "Total",
+        "published": "Published",
+        "draft": "Draft"
+      },
+      "tabs": {
+        "all": "All",
+        "draft": "Draft",
+        "published": "Published"
+      },
+      "table": {
+        "title": "Title",
+        "status": "Status",
+        "views": "Views",
+        "author": "Author",
+        "updated": "Updated",
+        "actions": "Actions"
+      },
+      "status": {
+        "draft": "Draft",
+        "published": "Published"
+      },
+      "actions": {
+        "edit": "Edit",
+        "moveToDraft": "Move To Draft",
+        "publish": "Publish",
+        "view": "View",
+        "delete": "Delete"
+      },
+      "empty": "No blogs found.",
+      "deleteModal": {
+        "title": "Delete Blog?",
+        "message": "Are you sure you want to delete {{title}}? This action cannot be undone.",
+        "cancel": "Cancel",
+        "confirmDelete": "Confirm Delete"
+      },
+      "errors": {
+        "load": "Unable to load admin blogs right now.",
+        "productLoad": "Unable to load products for related selection.",
+        "editLoad": "Unable to load this blog for editing.",
+        "validation": "Title, content, and cover image are required.",
+        "save": "Unable to save blog right now.",
+        "status": "Unable to change blog status right now.",
+        "delete": "Unable to delete blog right now.",
+        "coverUpload": "Unable to upload image right now."
+      },
+      "toasts": {
+        "loadError": "Unable to load admin blogs right now.",
+        "productLoadError": "Unable to load products for related selection.",
+        "editLoadError": "Unable to load this blog for editing.",
+        "coverUploadSuccess": "Cover image uploaded successfully.",
+        "coverUploadError": "Unable to upload image right now.",
+        "validationError": "Title, content, and cover image are required.",
+        "updateSuccess": "Blog updated successfully.",
+        "createSuccess": "Blog created successfully.",
+        "saveError": "Unable to save blog right now.",
+        "statusChanged": "Blog moved to {{status}}.",
+        "statusError": "Unable to change blog status right now.",
+        "deleteSuccess": "Blog deleted successfully.",
+        "deleteError": "Unable to delete blog right now."
+      }
+    },
+    "products": {
+      "badge": "Admin Panel",
+      "title": "Product Management",
+      "subtitle": "Review the full catalog, add new products, edit product content, and remove obsolete products.",
+      "showingResults": "Showing Results",
+      "importFile": "Import File",
+      "addProduct": "Add Product",
+      "searchPlaceholder": "Search by SKU, title, vendor, category...",
+      "clearSearchAria": "Clear search",
+      "deleteModal": {
+        "badge": "Delete Product",
+        "title": "Delete this product?",
+        "body": "You are about to permanently delete {{productTitle}}. This action cannot be undone.",
+        "confirm": "Delete Product",
+        "deleting": "Deleting..."
+      },
+      "loadError": "Unable to load products right now.",
+      "deleteError": "Unable to delete this product right now.",
+      "deleteSuccess": "Product deleted successfully."
+    },
+    "productsImport": {
+      "badge": "Admin Panel",
+      "title": "Bulk Product Import",
+      "subtitle": "Upload your Excel/CSV/JSON file, validate variant_name values, and import products in bulk.",
+      "noValidProducts": "No valid products found in selected file.",
+      "importSuccess": "{{count}} product imported successfully.",
+      "importSuccess_plural": "{{count}} products imported successfully.",
+      "importFailed": "Unable to bulk import products right now."
+    },
+    "productForm": {
+      "badge": "Admin Panel",
+      "titles": {
+        "edit": "Edit Product",
+        "create": "Add Product"
+      },
+      "descriptions": {
+        "edit": "Update the selected product and save the changes.",
+        "create": "Add a new product in two steps: details first, then variants and image mapping."
+      },
+      "backToProducts": "← Back to Products",
+      "loading": "Loading product…",
+      "validation": {
+        "titleRequired": "Enter a product title before continuing.",
+        "descriptionRequired": "Enter a product description before continuing.",
+        "categoryRequired": "Enter a category before continuing.",
+        "assignImagesToVariants": "Assign at least one image to every variant.",
+        "uploadGiftCardDesign": "Upload a gift card design image.",
+        "addVariant": "Add at least one variant before creating the product.",
+        "duplicateVariantNames": "Each variant name can only be used once.",
+        "uploadImages": "Upload at least one image before creating the product.",
+        "completeGiftCardDenomination": "Each denomination needs a label, SKU, and an amount greater than zero.",
+        "completeVariant": "Complete each variant with a title, SKU, non-negative stock, and a price greater than zero."
+      },
+      "toast": {
+        "updateSuccess": "Product updated successfully.",
+        "createSuccess": "Product created successfully."
+      },
+      "errors": {
+        "loadEdit": "Unable to open this product for editing.",
+        "saveEdit": "Unable to save changes right now.",
+        "create": "Unable to create product right now."
+      }
+    },
+    "components": {
+      "blogFormModal": {
+        "badge": "Admin Blog",
+        "titles": {
+          "create": "Create Blog",
+          "edit": "Edit Blog"
+        },
+        "close": "Close",
+        "fields": {
+          "title": "Title",
+          "status": "Status",
+          "excerpt": "Excerpt",
+          "coverImageUrl": "Cover Image URL",
+          "uploadCover": "Upload Cover",
+          "tags": "Tags (comma separated)",
+          "relatedProducts": "Related Products",
+          "metaTitle": "Meta Title",
+          "metaDescription": "Meta Description",
+          "blogContent": "Blog Content"
+        },
+        "statusOptions": {
+          "draft": "Draft",
+          "published": "Published"
+        },
+        "placeholders": {
+          "excerpt": "Short summary for blog card and meta usage.",
+          "coverImage": "https://...",
+          "tags": "diamond, gold, rings",
+          "content": "Use Tiptap editor to create rich blog content..."
+        },
+        "relatedProducts": {
+          "selected": "{{count}} selected",
+          "selectProducts": "Select products",
+          "searchPlaceholder": "Search products by title, slug, or vendor",
+          "loading": "Loading products...",
+          "retry": "Retry",
+          "noMatch": "No products match your search.",
+          "noneAvailable": "No products available."
+        },
+        "submit": {
+          "cancel": "Cancel",
+          "create": "Create Blog",
+          "update": "Update Blog"
+        }
+      },
+      "blogContentEditor": {
+        "placeholderDefault": "Write your content here...",
+        "headings": {
+          "paragraph": "Paragraph",
+          "h1": "H1",
+          "h2": "H2",
+          "h3": "H3"
+        },
+        "toolbar": {
+          "bold": "Bold",
+          "italic": "Italic",
+          "underline": "Underline",
+          "strike": "Strike",
+          "h1": "H1",
+          "h2": "H2",
+          "h3": "H3",
+          "bullet": "Bullet",
+          "number": "Number",
+          "quote": "Quote",
+          "undo": "Undo",
+          "redo": "Redo"
+        }
+      },
+      "productsTable": {
+        "title": "All Products",
+        "subtitle": "Fixed-height table with sticky heading and wider data view.",
+        "filter": "Filter",
+        "add": "Add",
+        "refresh": "Refresh",
+        "headers": {
+          "product": "Product",
+          "vendor": "Vendor",
+          "category": "Category",
+          "price": "Price",
+          "stock": "Stock",
+          "status": "Status",
+          "actions": "Actions"
+        },
+        "availability": {
+          "available": "Available",
+          "hidden": "Hidden"
+        },
+        "vendorNa": "N/A",
+        "categoryNa": "N/A",
+        "empty": "No products found.",
+        "noImage": "No Image",
+        "open": "Open",
+        "deleting": "Deleting...",
+        "pageOf": "Page {{current}} of {{total}}",
+        "prev": "Prev",
+        "next": "Next",
+        "aria": {
+          "openProduct": "Open {{title}}",
+          "editProduct": "Edit {{title}}",
+          "deleteProduct": "Delete {{title}}"
+        }
+      },
+      "productFilterModal": {
+        "title": "Filter Products",
+        "subtitle": "Choose filter fields and apply them to the product list.",
+        "close": "Close",
+        "labels": {
+          "category": "Category",
+          "vendor": "Vendor",
+          "stoneType": "Stone Type",
+          "color": "Color",
+          "shape": "Shape",
+          "origin": "Origin",
+          "treatment": "Treatment",
+          "certificate": "Certificate",
+          "measurement": "Measurement",
+          "availability": "Availability",
+          "tag": "Tag",
+          "metal": "Metal",
+          "priceMin": "Price Min ({{symbol}})",
+          "priceMax": "Price Max ({{symbol}})",
+          "carat": "Carat"
+        },
+        "options": {
+          "allCategories": "All Categories",
+          "allVendors": "All Vendors",
+          "allStoneTypes": "All Stone Types",
+          "allColors": "All Colors",
+          "allShapes": "All Shapes",
+          "allOrigins": "All Origins",
+          "allTreatments": "All Treatments",
+          "allCertificates": "All Certificates",
+          "allMeasurements": "All Measurements",
+          "allTags": "All Tags",
+          "allMetals": "All Metals",
+          "all": "All",
+          "available": "Available",
+          "hidden": "Hidden"
+        },
+        "reset": "Reset",
+        "apply": "Apply Filters"
+      },
+      "productForm": {
+        "closeAria": "Back to products list",
+        "steps": {
+          "step1": "Step 1: Product Details",
+          "step2": "Step 2: Variants & Images"
+        },
+        "productType": {
+          "label": "Product Type",
+          "physical": "Physical Product",
+          "giftCard": "Gift Card",
+          "giftCardHint": "Gift cards are digital. Add each amount as a denomination in Step 2. Only one gift card product can exist."
+        },
+        "fields": {
+          "title": "Title",
+          "description": "Description",
+          "vendor": "Vendor",
+          "category": "Category",
+          "collection": "Collection",
+          "tags": "Tags",
+          "stoneType": "Stone Type",
+          "color": "Color",
+          "shape": "Shape",
+          "metal": "Metal",
+          "carat": "Carat",
+          "totalDiamondWeight": "Total Diamond Weight",
+          "origin": "Origin",
+          "treatment": "Treatment",
+          "certificate": "Certificate",
+          "measurement": "Measurement",
+          "details": "Details",
+          "certificateUrls": "Certificate URLs",
+          "diamondPieces": "Diamond Pieces",
+          "finish": "Finish",
+          "style": "Style",
+          "weight": "Weight (g)",
+          "hypoallergenic": "Hypoallergenic",
+          "featured": "Featured product",
+          "available": "Available for shoppers",
+          "sku": "SKU"
+        },
+        "placeholders": {
+          "selectField": "Select {{label}}",
+          "currentValue": "{{value}} (current)",
+          "addCustom": "+ Add Custom {{label}}",
+          "enterCustom": "Enter custom {{label}}",
+          "collection": "Pick existing or type a new collection",
+          "tags": "Best Seller, Earrings, Diamond",
+          "certificateUrl": "https://example.com/certificate-1.pdf",
+          "finish": "Pick or type a finish",
+          "style": "Pick or type a style",
+          "slug": "auto-generated from SKU",
+          "bulletPoints": "One bullet per line",
+          "question": "Question",
+          "answer": "Answer",
+          "giftCardLabel": "€50 Gift Card",
+          "giftCardSku": "GC-50",
+          "variantSku": "Variant SKU",
+          "basePrice": "Base price",
+          "productDefault": "Product default"
+        },
+        "hints": {
+          "collection": "Pick an existing collection or type a new one. Case and spacing variants merge automatically; leave blank for none.",
+          "weight": "Shipping weight incl. packaging.",
+          "slug": "Lowercase letters, numbers and hyphens only. Leave blank to keep the current slug (or auto-generate from the first variant SKU on create). Changing it breaks the old URL.",
+          "bulletPoints": "One bullet per line.",
+          "noFaqs": "No FAQs yet."
+        },
+        "seo": {
+          "title": "SEO & Content",
+          "urlSlug": "URL Slug",
+          "productsPath": "/products/",
+          "metaTitle": "Meta Title",
+          "metaDescription": "Meta Description",
+          "h2Heading": "H2 Heading",
+          "additionalSeoContent": "Additional SEO Content",
+          "bulletPoints": "Bullet Points",
+          "faqs": "FAQs",
+          "addFaq": "Add FAQ"
+        },
+        "giftCard": {
+          "designTitle": "Gift Card Design Image",
+          "designDesc": "Upload one design image — it is used for every denomination.",
+          "designAlt": "Gift card design",
+          "noImage": "No image",
+          "replaceImage": "Replace Image",
+          "uploadImage": "Upload Image",
+          "denominationsTitle": "Denominations",
+          "denominationsDesc": "Each amount a customer can buy (e.g. €50, €100).",
+          "addDenomination": "Add Denomination",
+          "denomination": "Denomination {{index}}",
+          "label": "Label",
+          "amount": "Amount (€)"
+        },
+        "variants": {
+          "title": "Variants",
+          "desc": "Use only `gold`, `rose gold`, and `silver`. Each variant can upload and manage its own images.",
+          "addVariant": "Add Variant",
+          "variant": "Variant {{index}}",
+          "imageMappingNote": "`imageMapping` is generated outside the variants payload.",
+          "variantName": "Variant Name",
+          "stock": "Stock",
+          "managedPerSize": "(managed per size)",
+          "price": "Price",
+          "sizeMeasurement": "Size Measurement",
+          "addSizeFirst": "(add a size first)",
+          "none": "— None —",
+          "customsValue": "Customs Value (USD)",
+          "sizesFor": "Sizes for {{name}}",
+          "sizesDesc": "Add each size with its own stock. SKU, price, total diamond weight and measurement are optional per size — leave blank to use the variant/product defaults.",
+          "addSize": "Add size",
+          "sizeLabel": "Size",
+          "priceEur": "Price (€)",
+          "totalDiamondWt": "Total Diamond Wt.",
+          "uploadImagesFor": "Upload Images For {{name}}",
+          "uploadImagesDesc": "New uploads are added to the shared gallery and assigned to this variant automatically.",
+          "uploadImages": "Upload Images",
+          "dragToReorder": "Drag a card to reorder images for this variant.",
+          "variantImageAlt": "Variant image {{index}}",
+          "thumbnail": "Thumbnail",
+          "cover": "Cover",
+          "coverDefault": "Cover (default)",
+          "imageLabel": "Image {{index}}",
+          "uploadedImage": "Uploaded image",
+          "setThumbnail": "Set as thumbnail",
+          "setCoverTitle": "Image shown first in the product detail page",
+          "coverImageCheck": "Cover image ✓",
+          "setCoverImage": "Set as cover image",
+          "unassign": "Unassign",
+          "noImagesAssigned": "No images assigned yet."
+        },
+        "actions": {
+          "cancel": "Cancel",
+          "remove": "Remove",
+          "back": "Back",
+          "saving": "Saving...",
+          "saveChanges": "Save Changes",
+          "nextStep": "Next Step",
+          "createProduct": "Create Product"
+        }
+      },
+      "productBulkImportModal": {
+        "badge": "Bulk Import",
+        "title": "Import Products From File",
+        "subtitle": "Upload Excel/CSV/JSON and import products in bulk using POST /products/bulk-create.",
+        "closeAria": "Close bulk import modal",
+        "selectFile": "Select import file (.xlsx, .xls, .csv, .json)",
+        "downloadSample": "Download Sample Data",
+        "selectedFile": "Selected: {{fileName}}",
+        "stats": {
+          "validProducts": "Valid Products",
+          "validationErrors": "Validation Errors",
+          "variantName": "Variant Name",
+          "variantNameValues": "gold, rose gold, silver"
+        },
+        "errors": {
+          "noRows": "No rows found in selected file.",
+          "parseFailed": "Unable to parse this file. Use .xlsx, .xls, .csv, or .json with valid columns.",
+          "fixBeforeImport": "Please fix these issues before import:",
+          "moreErrors": "+ {{count}} more errors"
+        },
+        "columnsHint": "Required columns: title, description, vendor, category, stoneType, color, shape, carat, origin, treatment, certificate, measurement, details and variants. Use one variants_json column with JSON array or columns like variant_title_1, variant_name_1, variant_sku_1, variant_price_1, variant_stock_1. You can also use human-friendly headers like Product Title, Stone Type, Variant Title, Variant Name, SKU, Price, and Stock.",
+        "cancel": "Cancel",
+        "importing": "Importing...",
+        "parsing": "Parsing...",
+        "importProducts": "Import Products",
+        "validation": {
+          "rowLabel": "Row {{row}}",
+          "invalidVariantName": "{{rowLabel}}: variant {{variantIndex}} has invalid variant_name. Allowed: {{allowed}}",
+          "variantPrice": "{{rowLabel}}: variant {{variantIndex}} price must be greater than zero.",
+          "variantStock": "{{rowLabel}}: variant {{variantIndex}} stock must be zero or greater.",
+          "variantRequired": "{{rowLabel}}: at least one variant is required.",
+          "caratInvalid": "{{rowLabel}}: carat must be a valid number.",
+          "fieldRequired": "{{rowLabel}}: {{field}} is required.",
+          "variantTitleRequired": "{{rowLabel}}: variant {{variantIndex}} title is required.",
+          "variantSkuRequired": "{{rowLabel}}: variant {{variantIndex}} sku is required."
+        }
+      },
+      "videoUploader": {
+        "heading": "Videos (up to {{max}}, max 50 MB each — MP4, MOV, WebM)",
+        "remove": "Remove",
+        "dismiss": "Dismiss",
+        "uploading": "Uploading… {{progress}}%",
+        "addVideo": "+ Add video",
+        "errors": {
+          "fileTooLarge": "File exceeds 50 MB",
+          "invalidFormat": "Only MP4, MOV, WebM allowed",
+          "s3Status": "S3 returned {{status}}",
+          "network": "Network error during upload",
+          "uploadFailed": "Upload failed"
+        }
+      },
+      "fedExShipForm": {
+        "packagingOptions": {
+          "YOUR_PACKAGING": "Your Packaging",
+          "FEDEX_ENVELOPE": "FedEx Envelope",
+          "FEDEX_PAK": "FedEx Pak",
+          "FEDEX_BOX": "FedEx Box",
+          "FEDEX_SMALL_BOX": "FedEx Small Box",
+          "FEDEX_MEDIUM_BOX": "FedEx Medium Box",
+          "FEDEX_LARGE_BOX": "FedEx Large Box",
+          "FEDEX_TUBE": "FedEx Tube"
+        },
+        "signatureOptions": {
+          "SERVICE_DEFAULT": "Service Default (no override)",
+          "NO_SIGNATURE_REQUIRED": "No Signature Required",
+          "INDIRECT": "Indirect Signature",
+          "DIRECT_SIGNATURE_REQUIRED": "Direct Signature Required",
+          "ADULT_SIGNATURE_REQUIRED": "Adult Signature Required"
+        },
+        "dutiesPaymentOptions": {
+          "SENDER": "Sender (my FedEx account)",
+          "RECIPIENT": "Recipient (pay on delivery)",
+          "THIRD_PARTY": "Third Party (enter account #)"
+        },
+        "shipFrom": "Ship From",
+        "readOnly": "(read-only)",
+        "deliverTo": "Deliver To",
+        "customsCommodities": "Customs / Commodities",
+        "onlyHsEditable": "Only HS codes are editable.",
+        "tableHeaders": {
+          "number": "#",
+          "description": "Description",
+          "qty": "Qty",
+          "unitEur": "Unit €",
+          "weightG": "Weight g",
+          "hsCode": "HS Code",
+          "countryOfMfr": "Country of Mfr",
+          "customsValueEur": "Customs Value €"
+        },
+        "totalCustomsValue": "Total customs value:",
+        "incoterm": "Incoterm:",
+        "packageDetails": "Package Details",
+        "packagingType": "Packaging Type",
+        "weightAuto": "Weight (auto-calculated from items)",
+        "dimensionsCm": "Dimensions (cm) — only used with Your Packaging",
+        "dimensionsIgnored": "FedEx already knows the dimensions of its own box types. Custom dimensions are ignored unless you select \"Your Packaging\".",
+        "dimensionL": "L",
+        "dimensionW": "W",
+        "dimensionH": "H",
+        "selectFedExService": "Select FedEx Service",
+        "loadingServices": "Loading available services…",
+        "ratesLoadError": "Could not load FedEx rates for this route.",
+        "noServices": "No FedEx services available for this route.",
+        "chooseService": "— Choose a service —",
+        "chargeBreakdown": "{{serviceName}} — Charge Breakdown",
+        "breakdownHeaders": {
+          "line": "Line",
+          "publicWalkIn": "Public / Walk-in",
+          "yourFedEx": "Your FedEx"
+        },
+        "baseCharge": "Base charge",
+        "afterDiscount": "After discount",
+        "total": "Total",
+        "youSave": "You save",
+        "billingWeight": "Billing weight:",
+        "selectServiceBreakdown": "Select a service to see the breakdown",
+        "serviceOptions": "Service Options",
+        "signatureOption": "Signature Option",
+        "saturdayDelivery": "Saturday Delivery",
+        "billingDutiesPayment": "Billing / Duties Payment",
+        "billDutiesTo": "Bill Duties To",
+        "thirdPartyAccount": "Third Party FedEx Account #",
+        "accountNumberPlaceholder": "Account number",
+        "shipmentNotifications": "Shipment Notifications",
+        "notifyRecipient": "Email recipient on shipment, delivery & exceptions",
+        "emailPlaceholder": "recipient@email.com",
+        "cannotShipUntilFixed": "Cannot ship until these are fixed:",
+        "customsDeclaration": "Customs Declaration",
+        "customsValuesNote": "Customs values from product records — sent to FedEx as-is",
+        "totalDeclaredCustoms": "Total declared customs value",
+        "sentToFedEx": "sent to FedEx",
+        "totalWeight": "Total weight:",
+        "currency": "Currency:",
+        "outsideEuNote": "Outside EU — import duties apply at destination",
+        "back": "← Back",
+        "creatingShipment": "Creating shipment…",
+        "createShipment": "Create Shipment",
+        "createShipmentWithPrice": "Create Shipment — {{price}}",
+        "errors": {
+          "fillRequiredAddress": "Please fill in all required address fields.",
+          "updateAddressFailed": "Failed to update address.",
+          "selectService": "Please select a FedEx service.",
+          "createShipmentFailed": "Failed to create FedEx shipment."
+        },
+        "toast": {
+          "addressUpdated": "Receiver address updated — refreshing rates…",
+          "shipped": "Order {{orderNumber}} shipped via FedEx."
+        }
+      },
+      "dhlShipForm": {
+        "incotermOptions": {
+          "DAP": "DAP — Delivered at Place (recipient pays duties)",
+          "DDP": "DDP — Delivered Duty Paid (sender pays duties)",
+          "DDU": "DDU — Delivered Duty Unpaid",
+          "CPT": "CPT — Carriage Paid To",
+          "CIP": "CIP — Carriage & Insurance Paid To",
+          "EXW": "EXW — Ex Works",
+          "FCA": "FCA — Free Carrier"
+        },
+        "shipmentTypeOptions": {
+          "commercial": "Commercial (sale)",
+          "personal": "Personal (no sale)"
+        },
+        "exportReasonOptions": {
+          "permanent": "Permanent (sold)",
+          "gift": "Gift",
+          "sample": "Sample",
+          "return": "Return",
+          "temporary": "Temporary",
+          "warranty_replacement": "Warranty replacement",
+          "personal_belongings_or_personal_use": "Personal use"
+        },
+        "dutiesPaymentOptions": {
+          "SENDER": "Sender (my DHL account)",
+          "RECIPIENT": "Recipient (pay on delivery)",
+          "THIRD_PARTY": "Third Party (enter account #)"
+        },
+        "shipFrom": "Ship From",
+        "readOnly": "(read-only)",
+        "deliverTo": "Deliver To",
+        "customsCommodities": "Customs / Commodities",
+        "onlyHsEditable": "Only HS codes are editable.",
+        "tableHeaders": {
+          "number": "#",
+          "description": "Description",
+          "qty": "Qty",
+          "unitEur": "Unit €",
+          "weightG": "Weight g",
+          "hsCode": "HS Code",
+          "countryOfMfr": "Country of Mfr",
+          "customsValueEur": "Customs Value €"
+        },
+        "totalCustomsValue": "Total customs value:",
+        "currency": "Currency:",
+        "customsDeclaration": "Customs Declaration",
+        "incoterm": "Incoterm *",
+        "shipmentType": "Shipment Type",
+        "exportReason": "Export Reason",
+        "invoiceNumber": "Invoice Number",
+        "packageDetails": "Package Details",
+        "weightAuto": "Weight (auto-calculated from items)",
+        "dimensionsCm": "Dimensions (cm)",
+        "dimensionL": "L",
+        "dimensionW": "W",
+        "dimensionH": "H",
+        "selectDhlProduct": "Select DHL Product",
+        "loadingProducts": "Loading available products…",
+        "ratesLoadError": "Could not load DHL rates for this route.",
+        "noProducts": "No DHL products available for this route.",
+        "chooseProduct": "— Choose a product —",
+        "chargeBreakdown": "{{serviceName}} — Charge Breakdown",
+        "baseCharge": "Base charge",
+        "accountRate": "Account rate",
+        "yourDhl": "(your DHL)",
+        "billingWeight": "Billing weight",
+        "estimatedTransit": "Estimated transit",
+        "selectProductBreakdown": "Select a product to see the breakdown",
+        "valueAddedServices": "Value-Added Services",
+        "shipmentInsurance": "Shipment Insurance (II)",
+        "insuredEur": "Insured €",
+        "saturdayDelivery": "Saturday Delivery (AA)",
+        "paperlessTrade": "Paperless Trade — electronic invoice (WY)",
+        "billingDutiesPayment": "Billing / Duties Payment",
+        "ddpOnlyNote": "DDP only — sender controls who pays duties & taxes.",
+        "billDutiesTo": "Bill Duties To",
+        "thirdPartyAccount": "Third-Party DHL Account #",
+        "accountNumberPlaceholder": "Account number",
+        "shipmentNotifications": "Shipment Notifications",
+        "notifyRecipient": "Email recipient on shipment events",
+        "emailPlaceholder": "recipient@email.com",
+        "cannotShipUntilFixed": "Cannot ship until these are fixed:",
+        "customsValuesNote": "Customs values from product records — sent to DHL as-is",
+        "totalDeclaredCustoms": "Total declared customs value",
+        "sentToDhl": "sent to DHL",
+        "totalWeight": "Total weight:",
+        "currencyLabel": "Currency:",
+        "outsideEuNote": "Outside EU — import duties apply at destination",
+        "back": "← Back",
+        "creatingShipment": "Creating shipment…",
+        "createShipment": "Create Shipment",
+        "createShipmentWithPrice": "Create Shipment — {{price}}",
+        "errors": {
+          "fillRequiredAddress": "Please fill in all required address fields.",
+          "updateAddressFailed": "Failed to update address.",
+          "selectService": "Please select a DHL product/service.",
+          "createShipmentFailed": "Failed to create DHL shipment."
+        },
+        "toast": {
+          "addressUpdated": "Receiver address updated — refreshing rates…",
+          "shipped": "Order {{orderNumber}} shipped via DHL Express."
+        }
+      }
     }
   }
 };
 
 const locales = ['en', 'nl', 'de', 'fr', 'it', 'es'];
 
-function deepMerge(target, source) {
-  for (const key of Object.keys(source)) {
-    if (source[key] instanceof Object && key in target) {
-      Object.assign(source[key], deepMerge(target[key], source[key]));
+function isPlainObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+/** Add keys from template only where missing; never overwrite existing translations. */
+function addMissingKeys(template, existing) {
+  if (!isPlainObject(template)) {
+    return existing !== undefined ? existing : template;
+  }
+
+  const result = isPlainObject(existing) ? { ...existing } : {};
+
+  for (const key of Object.keys(template)) {
+    if (isPlainObject(template[key])) {
+      result[key] = addMissingKeys(
+        template[key],
+        isPlainObject(result[key]) ? result[key] : {},
+      );
+    } else if (!(key in result)) {
+      result[key] = template[key];
     }
   }
-  Object.assign(target || {}, source);
-  return target;
+
+  return result;
 }
 
 locales.forEach((locale) => {
@@ -870,9 +2088,8 @@ locales.forEach((locale) => {
     fs.mkdirSync(dir, { recursive: true });
   }
   const filePath = path.join(dir, 'common.json');
-  
+
   if (locale === 'en') {
-    // English is the source of truth, just write it
     fs.writeFileSync(filePath, JSON.stringify(dictionary, null, 2), 'utf8');
   } else {
     let existingData = {};
@@ -883,11 +2100,8 @@ locales.forEach((locale) => {
         console.error(`Error parsing ${filePath}:`, e);
       }
     }
-    
-    // Deep merge: existingData takes precedence, dictionary provides missing keys
-    // We want to add missing keys from dictionary to existingData without overwriting existingData's translations
-    const mergedData = deepMerge(JSON.parse(JSON.stringify(dictionary)), existingData);
-    
+
+    const mergedData = addMissingKeys(dictionary, existingData);
     fs.writeFileSync(filePath, JSON.stringify(mergedData, null, 2), 'utf8');
   }
 });

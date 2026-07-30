@@ -533,7 +533,7 @@ export default function ProductsPage({
                                     onChange={(event) =>
                                         applyCollection(event.target.value)
                                     }
-                                    aria-label="Filter by collection"
+                                    aria-label={t("products.filterByCollection")}
                                     className="ml-auto cursor-pointer border border-zinc-800 bg-white px-5 py-2.5 pr-9 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 outline-none transition hover:bg-zinc-50 focus:border-pink-500 sm:px-6 sm:py-4 sm:pr-10 sm:text-[13px]"
                                 >
                                     <option value="">{t("products.allCollections")}</option>
@@ -559,7 +559,7 @@ export default function ProductsPage({
                     <div className="mb-8 flex items-center justify-between gap-4">
                         <button
                             type="button"
-                            aria-label="Open filters"
+                            aria-label={t("products.openFilters")}
                             onClick={() =>
                                 setIsMobileFiltersOpen(
                                     (currentValue) => !currentValue,

@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Are Lab Grown Diamond Tennis Bracelets a Good Investment?",
     description:
-        "Are lab grown diamond tennis bracelets a good investment? Learn the truth about value, resale, and whether they're worth buying in 2026.",
-    alternates: {
-        canonical: "/blogs/lab-grown-diamond-tennis-bracelet-investment",
-    },
-};
+        "Are lab grown diamond tennis bracelets a good investment? Learn the truth about value, resale, and whether they're worth buying in 2026."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/lab-grown-diamond-tennis-bracelet-investment', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

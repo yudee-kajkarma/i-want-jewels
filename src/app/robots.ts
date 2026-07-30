@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { languages } from "@/i18n/settings";
+import { localizedLanguages } from "@/i18n/routing";
 
 const BASE_URL = "https://www.iwantjewels.com";
 
@@ -19,15 +19,21 @@ const PRIVATE_PATHS = [
     "/payments",
 ];
 
+/** Legacy English prefix paths that 308-redirect to root. */
+const LEGACY_ENGLISH_PREFIXES = ["/en", "/eng", "/english", "/en-us", "/en-gb"];
+
 export default function robots(): MetadataRoute.Robots {
     const disallowRules = Array.from(
         new Set([
             ...PRIVATE_PATHS,
-            ...PRIVATE_PATHS.map((path) => `/*${path}`),
             ...PRIVATE_PATHS.flatMap((path) =>
-                languages.map((locale) => `/${locale}${path}`)
+                localizedLanguages.map((locale) => `/${locale}${path}`),
             ),
-        ])
+            ...LEGACY_ENGLISH_PREFIXES,
+            ...LEGACY_ENGLISH_PREFIXES.flatMap((prefix) =>
+                PRIVATE_PATHS.map((path) => `${prefix}${path}`),
+            ),
+        ]),
     );
 
     return {

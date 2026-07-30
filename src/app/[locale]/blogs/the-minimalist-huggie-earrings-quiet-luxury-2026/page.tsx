@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Minimalist Huggie Earrings | Quiet Luxury Jewellery Trend 2026",
     description:
-        "Discover why minimalist huggie earrings are becoming a defining quiet luxury jewellery trend in 2026. Learn how timeless design, everyday comfort and premium craftsmanship make them a modern wardrobe essential.",
-    alternates: {
-        canonical: "/blogs/the-minimalist-huggie-earrings-quiet-luxury-2026",
-    },
-};
+        "Discover why minimalist huggie earrings are becoming a defining quiet luxury jewellery trend in 2026. Learn how timeless design, everyday comfort and premium craftsmanship make them a modern wardrobe essential."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/the-minimalist-huggie-earrings-quiet-luxury-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

@@ -128,7 +128,7 @@ export default function ExploreOurStore({
                 <button
                     type="button"
                     onClick={() => scrollByDir(-1)}
-                    aria-label="Scroll to previous products"
+                    aria-label={t("exploreOurStore.scrollPrev")}
                     className={`absolute left-0 top-[10rem] z-10 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white text-[#1f2732] shadow-[0_6px_20px_rgba(0,0,0,0.12)] transition hover:bg-[#fff2fa] md:flex ${
                         canLeft ? "opacity-100" : "pointer-events-none opacity-0"
                     }`}
@@ -138,7 +138,7 @@ export default function ExploreOurStore({
                 <button
                     type="button"
                     onClick={() => scrollByDir(1)}
-                    aria-label="Scroll to more products"
+                    aria-label={t("exploreOurStore.scrollNext")}
                     className={`absolute right-0 top-[10rem] z-10 hidden h-10 w-10 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white text-[#1f2732] shadow-[0_6px_20px_rgba(0,0,0,0.12)] transition hover:bg-[#fff2fa] md:flex ${
                         canRight ? "opacity-100" : "pointer-events-none opacity-0"
                     }`}

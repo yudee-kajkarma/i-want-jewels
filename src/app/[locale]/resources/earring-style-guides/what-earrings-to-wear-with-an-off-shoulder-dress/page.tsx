@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'What Earrings to Wear with an Off Shoulder Dress',
   description:
-    'Choose earrings for an off shoulder dress with diamonds, drops, hoops, studs, gold, party looks, wedding guest outfits and evening styling ideas.',
+    'Choose earrings for an off shoulder dress with diamonds, drops, hoops, studs, gold, party looks, wedding guest outfits and evening styling ideas.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

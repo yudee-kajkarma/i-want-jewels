@@ -1,6 +1,7 @@
 'use client'
 
 import { Eye, Pencil, Plus, SlidersHorizontal, Trash2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { Link } from '@/lib/router'
 import { useCurrency } from '../../context/CurrencyContext'
 import type { Product, ProductsPagination } from '../../types/product'
@@ -31,6 +32,8 @@ export default function AdminProductsTable({
   onEdit,
   onDelete,
 }: AdminProductsTableProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.productsTable' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'common' })
   const { currency } = useCurrency()
   const currentPage = pagination?.currentPage ?? 1
   const totalPages = pagination?.totalPages ?? 1
@@ -57,8 +60,8 @@ export default function AdminProductsTable({
     <section className="mt-8 flex h-[720px] flex-col overflow-hidden rounded-[28px] border border-[#f0d7e7] bg-white shadow-[0_20px_60px_rgba(145,48,107,0.10)]">
       <div className="flex items-center justify-between border-b border-[#f3e1ec] px-6 py-5">
         <div>
-          <h2 className="text-lg font-semibold text-[#3f1933]">All Products</h2>
-          <p className="mt-1 text-sm text-zinc-500">Fixed-height table with sticky heading and wider data view.</p>
+          <h2 className="text-lg font-semibold text-[#3f1933]">{t('title')}</h2>
+          <p className="mt-1 text-sm text-zinc-500">{t('subtitle')}</p>
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -67,7 +70,7 @@ export default function AdminProductsTable({
             className="inline-flex items-center gap-2 rounded-full border border-[#e8c5db] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-[#fff2fa]"
           >
             <SlidersHorizontal className="h-4 w-4" />
-            Filter
+            {t('filter')}
           </button>
           <button
             type="button"
@@ -75,14 +78,14 @@ export default function AdminProductsTable({
             className="inline-flex items-center gap-2 rounded-full bg-[#cc4f8f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#ad3f78]"
           >
             <Plus className="h-4 w-4" />
-            Add
+            {t('add')}
           </button>
           <button
             type="button"
             onClick={onRefresh}
             className="rounded-full border border-[#e8c5db] px-4 py-2 text-sm font-semibold text-[#7a3a61] transition hover:bg-[#fff2fa]"
           >
-            Refresh
+            {t('refresh')}
           </button>
         </div>
       </div>
@@ -91,13 +94,13 @@ export default function AdminProductsTable({
         <table className="min-w-[1280px] w-full divide-y divide-[#f2e3ec] text-sm">
           <thead className="bg-[#fff6fb] text-left text-xs font-bold uppercase tracking-[0.12em] text-[#8f4a73]">
             <tr>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-6 py-4">Product</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">Vendor</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">Category</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">Price</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">Stock</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">Status</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4 text-center">Actions</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-6 py-4">{t('headers.product')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.vendor')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.category')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.price')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.stock')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.status')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4 text-center">{t('headers.actions')}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#f6e8f0]">
@@ -140,7 +143,7 @@ export default function AdminProductsTable({
             ) : products.length === 0 ? (
               <tr>
                 <td colSpan={7} className="px-6 py-10 text-center text-zinc-500">
-                  No products found.
+                  {t('empty')}
                 </td>
               </tr>
             ) : (
@@ -153,7 +156,7 @@ export default function AdminProductsTable({
                           <img src={product.primaryImage} alt={product.title} className="h-full w-full object-cover" />
                         ) : (
                           <div className="flex h-full w-full items-center justify-center text-xs font-semibold uppercase tracking-[0.1em] text-[#a66388]">
-                            No Image
+                            {t('noImage')}
                           </div>
                         )}
                       </div>
@@ -165,8 +168,8 @@ export default function AdminProductsTable({
                       </div>
                     </div>
                   </td>
-                  <td className="px-4 py-4 text-zinc-700">{product.vendor || 'N/A'}</td>
-                  <td className="px-4 py-4 text-zinc-700">{product.category || 'N/A'}</td>
+                  <td className="px-4 py-4 text-zinc-700">{product.vendor || t('vendorNa')}</td>
+                  <td className="px-4 py-4 text-zinc-700">{product.category || t('categoryNa')}</td>
                   <td className="px-4 py-4 font-medium text-[#6c2e53]">{formatPrice(product.minPrice, currency)}</td>
                   <td className="px-4 py-4">
                     {product.productType === 'GIFT_CARD' ? (
@@ -182,7 +185,7 @@ export default function AdminProductsTable({
                         product.availability ? 'bg-emerald-50 text-emerald-700' : 'bg-zinc-100 text-zinc-600'
                       }`}
                     >
-                      {product.availability ? 'Available' : 'Hidden'}
+                      {product.availability ? t('availability.available') : t('availability.hidden')}
                     </span>
                   </td>
                   <td className="px-4 py-4 text-center">
@@ -190,29 +193,29 @@ export default function AdminProductsTable({
                       <Link
                         to={`/products/${product.slug || product.id}`}
                         className="inline-flex items-center gap-2 rounded-full border border-[#e8c5db] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
-                        aria-label={`Open ${product.title}`}
+                        aria-label={t('aria.openProduct', { title: product.title })}
                       >
                         <Eye className="h-3.5 w-3.5" />
-                        Open
+                        {t('open')}
                       </Link>
                       <button
                         type="button"
                         onClick={() => onEdit(product.id)}
                         className="inline-flex items-center gap-2 rounded-full border border-[#e8c5db] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
-                        aria-label={`Edit ${product.title}`}
+                        aria-label={t('aria.editProduct', { title: product.title })}
                       >
                         <Pencil className="h-3.5 w-3.5" />
-                        Edit
+                        {tCommon('edit')}
                       </button>
                       <button
                         type="button"
                         onClick={() => onDelete(product)}
                         disabled={isDeleting === product.id}
                         className="inline-flex items-center gap-2 rounded-full bg-[#cc4f8f] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-60"
-                        aria-label={`Delete ${product.title}`}
+                        aria-label={t('aria.deleteProduct', { title: product.title })}
                       >
                         <Trash2 className="h-3.5 w-3.5" />
-                        {isDeleting === product.id ? 'Deleting...' : 'Delete'}
+                        {isDeleting === product.id ? t('deleting') : tCommon('delete')}
                       </button>
                     </div>
                   </td>
@@ -227,8 +230,7 @@ export default function AdminProductsTable({
         <div className="border-t border-[#f3e1ec] px-6 py-4">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-zinc-600">
-              Page <span className="font-semibold text-[#5f2748]">{pagination.currentPage}</span> of{' '}
-              <span className="font-semibold text-[#5f2748]">{pagination.totalPages}</span>
+              {t('pageOf', { current: pagination.currentPage, total: pagination.totalPages })}
             </p>
             <div className="flex items-center gap-2">
               <button
@@ -237,7 +239,7 @@ export default function AdminProductsTable({
                 disabled={isLoading || !pagination.hasPrevPage}
                 className="rounded-full border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
               >
-                Prev
+                {t('prev')}
               </button>
 
               {pageWindow.map((pageNumber) => (
@@ -262,7 +264,7 @@ export default function AdminProductsTable({
                 disabled={isLoading || !pagination.hasNextPage}
                 className="rounded-full border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
               >
-                Next
+                {t('next')}
               </button>
             </div>
           </div>

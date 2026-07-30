@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { RefreshCw, Search, ShoppingBag, Users } from 'lucide-react'
+import { RefreshCw, Search, Users } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -26,6 +27,7 @@ function formatDate(value: string): string {
 }
 
 export default function AdminCartPage() {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.cart' })
   const { currency } = useCurrency()
   const [users, setUsers] = useState<AdminCartUser[]>([])
   const [pagination, setPagination] = useState<CartUsersPagination | null>(null)
@@ -84,8 +86,8 @@ export default function AdminCartPage() {
       setPagination(null)
       setSelectedUserId('')
       setSelectedCart(null)
-      setError('Unable to load cart users right now.')
-      toast.error('Unable to load cart users right now.')
+      setError(t('loadUsersError'))
+      toast.error(t('loadUsersError'))
     } finally {
       setIsUsersLoading(false)
     }
@@ -100,7 +102,7 @@ export default function AdminCartPage() {
       setSelectedUserId(userId)
     } catch {
       setSelectedCart(null)
-      toast.error('Unable to load user cart details.')
+      toast.error(t('loadCartError'))
     } finally {
       setIsCartLoading(false)
     }
@@ -126,8 +128,8 @@ export default function AdminCartPage() {
         <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin Cart</p>
-              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">Cart Monitor</h1>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">{t('breadcrumb')}</p>
+              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">{t('title')}</h1>
             </div>
             <button
               type="button"
@@ -135,7 +137,7 @@ export default function AdminCartPage() {
               className="inline-flex items-center gap-2 border border-[#e8c5db] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
             >
               <RefreshCw className="h-4 w-4" />
-              Refresh
+              {t('refresh')}
             </button>
           </div>
 
@@ -146,7 +148,7 @@ export default function AdminCartPage() {
                 type="search"
                 value={searchInput}
                 onChange={(event) => setSearchInput(event.target.value)}
-                placeholder="Search by user name or email"
+                placeholder={t('searchPlaceholder')}
                 className="w-full border-0 bg-transparent text-sm text-zinc-700 outline-none placeholder:text-zinc-400"
               />
             </label>
@@ -155,29 +157,29 @@ export default function AdminCartPage() {
                 type="submit"
                 className="bg-[#cc4f8f] px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78]"
               >
-                Search
+                {t('search')}
               </button>
               <button
                 type="button"
                 onClick={handleClearSearch}
                 className="border border-[#e8c5db] px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
               >
-                Clear
+                {t('clear')}
               </button>
             </div>
           </form>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Users</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('statsUsers')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{summary.userCount}</p>
             </div>
             <div className="border border-[#f0d3e5] bg-[#fff9fd] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Cart Items</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('statsItems')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{summary.itemCount}</p>
             </div>
             <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Combined Total</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('statsTotal')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{formatPrice(summary.totalAmount, currency)}</p>
             </div>
           </div>
@@ -200,7 +202,7 @@ export default function AdminCartPage() {
 
               {!isUsersLoading && users.length === 0 ? (
                 <div className="border border-dashed border-[#ebcade] bg-white px-5 py-10 text-center text-sm text-[#8a667b]">
-                  No users found for this search.
+                  {t('emptyNoUsers')}
                 </div>
               ) : null}
 
@@ -217,17 +219,17 @@ export default function AdminCartPage() {
                           : 'border-[#f0d7e7] bg-white hover:bg-[#fff7fb]'
                       }`}
                     >
-                      <p className="text-sm font-bold text-[#3f1933]">{user.userName || 'Unknown user'}</p>
+                      <p className="text-sm font-bold text-[#3f1933]">{user.userName || '--'}</p>
                       <p className="mt-1 text-xs text-zinc-500">{user.userEmail || '--'}</p>
                       <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
                         <span className="border border-[#f0d3e5] bg-[#fff9fd] px-3 py-1 font-semibold text-[#7c4564]">
-                          {user.itemCount} items
+                          {t('qty', { count: user.itemCount })}
                         </span>
                         <span className="border border-[#f0d3e5] bg-[#fff9fd] px-3 py-1 font-semibold text-[#7c4564]">
                           {formatPrice(user.totalAmount, currency)}
                         </span>
                       </div>
-                      <p className="mt-2 text-[11px] text-zinc-500">Updated: {formatDate(user.lastUpdated)}</p>
+                      <p className="mt-2 text-[11px] text-zinc-500">{formatDate(user.lastUpdated)}</p>
                     </button>
                   ))}
                 </div>
@@ -257,30 +259,30 @@ export default function AdminCartPage() {
               {!isCartLoading && !selectedCart ? (
                 <div className="flex min-h-[260px] flex-col items-center justify-center border border-dashed border-[#ecd0e1] bg-[#fff9fd] px-6 text-center">
                   <Users className="h-8 w-8 text-[#c36198]" />
-                  <p className="mt-4 text-sm font-semibold text-[#5a2946]">Select a user to inspect their cart.</p>
+                  <p className="mt-4 text-sm font-semibold text-[#5a2946]">{t('emptySelectUser')}</p>
                 </div>
               ) : null}
 
               {!isCartLoading && selectedCart ? (
                 <>
                   <div className="border border-[#edd3e2] bg-[#fff8fc] p-4">
-                    <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">User Details</p>
-                    <h2 className="mt-2 text-xl font-bold text-[#3f1933]">{selectedCart.userDetails.userName || 'Unknown user'}</h2>
+                    <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('userDetails')}</p>
+                    <h2 className="mt-2 text-xl font-bold text-[#3f1933]">{selectedCart.userDetails.userName || '--'}</h2>
                     <p className="mt-1 text-sm text-zinc-600">{selectedCart.userDetails.userEmail || '--'}</p>
-                    <p className="mt-1 text-sm text-zinc-600">{selectedCart.userDetails.userPhone || 'Not provided'}</p>
-                    <p className="mt-3 text-xs text-zinc-500">Last updated: {formatDate(selectedCart.updatedAt)}</p>
+                    <p className="mt-1 text-sm text-zinc-600">{selectedCart.userDetails.userPhone || '--'}</p>
+                    <p className="mt-3 text-xs text-zinc-500">{formatDate(selectedCart.updatedAt)}</p>
                   </div>
 
                   <div className="mt-5 flex items-center justify-between">
-                    <h3 className="text-lg font-bold text-[#3f1933]">Cart Items</h3>
+                    <h3 className="text-lg font-bold text-[#3f1933]">{t('cartItems')}</h3>
                     <span className="border border-[#ecd0e1] bg-[#fff8fc] px-3 py-1 text-xs font-semibold text-[#7b3f61]">
-                      {selectedCart.items.length} items
+                      {t('qty', { count: selectedCart.items.length })}
                     </span>
                   </div>
 
                   {selectedCart.items.length === 0 ? (
                     <div className="mt-4 border border-dashed border-[#ecd0e1] bg-[#fff9fd] px-5 py-10 text-center text-sm text-[#8a667b]">
-                      No items found in this cart.
+                      {t('emptyNoItems')}
                     </div>
                   ) : (
                     <div className="mt-4 space-y-3">
@@ -294,14 +296,20 @@ export default function AdminCartPage() {
                           </div>
 
                           <div className="min-w-0 flex-1">
-                            <p className="truncate text-sm font-semibold text-[#3f1933]">{item.title || 'Untitled product'}</p>
-                            <p className="mt-1 text-xs text-zinc-500">SKU: {item.sku || '--'}</p>
-                            <p className="mt-1 text-xs text-zinc-500">Variant: {item.variantName || '--'}</p>
-                            <p className="mt-1 text-xs text-zinc-500">Added: {formatDate(item.addedAt)}</p>
+                            <p className="truncate text-sm font-semibold text-[#3f1933]">{item.title || '--'}</p>
+                            <p className="mt-1 text-xs text-zinc-500">
+                              {t('sku')} {item.sku || '--'}
+                            </p>
+                            <p className="mt-1 text-xs text-zinc-500">
+                              {t('variant')} {item.variantName || '--'}
+                            </p>
+                            <p className="mt-1 text-xs text-zinc-500">
+                              {t('added')} {formatDate(item.addedAt)}
+                            </p>
                           </div>
 
                           <div className="text-right">
-                            <p className="text-xs font-medium text-zinc-500">Qty: {item.quantity}</p>
+                            <p className="text-xs font-medium text-zinc-500">{t('qty', { count: item.quantity })}</p>
                             <p className="mt-1 text-sm font-bold text-[#7a2f5c]">{formatPrice(item.price, currency)}</p>
                           </div>
                         </article>
@@ -310,7 +318,7 @@ export default function AdminCartPage() {
                   )}
 
                   <div className="mt-4 border border-[#edd3e2] bg-[#fff8fc] p-4">
-                    <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Cart Total</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('cartTotal')}</p>
                     <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">
                       {formatPrice(selectedCart.items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0), currency)}
                     </p>

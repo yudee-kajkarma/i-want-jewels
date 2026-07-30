@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Best Everyday Earrings for Women | Pavé Hoop Diamond Earrings",
     description:
-        "Discover the best everyday earrings for women that effortlessly transition from brunch and work to dinner. Learn why Pavé Hoop Lab-Grown Diamond Earrings are the perfect everyday luxury.",
-    alternates: {
-        canonical: "/blogs/best-everyday-earrings-for-women-2026",
-    },
-};
+        "Discover the best everyday earrings for women that effortlessly transition from brunch and work to dinner. Learn why Pavé Hoop Lab-Grown Diamond Earrings are the perfect everyday luxury."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/best-everyday-earrings-for-women-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

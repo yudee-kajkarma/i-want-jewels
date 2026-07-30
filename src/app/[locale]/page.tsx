@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import HomePage from '../../views/HomePage'
 
 export async function generateMetadata({
@@ -11,9 +12,7 @@ export async function generateMetadata({
     title: { absolute: 'Lab-Grown Diamond Jewellery for Everyday | I Want Jewels' },
     description:
       'Discover lab-grown diamond jewellery from Antwerp, crafted in 925 sterling silver with 14kt gold plating. Shop earrings, necklaces, rings, bracelets and gifts.',
-    alternates: {
-      canonical: `/${locale}`,
-    },
+    alternates: localizedAlternates('/', locale),
   }
 }
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect } from 'react';
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import { initReactI18next } from 'react-i18next';
@@ -21,15 +21,11 @@ if (!i18next.isInitialized) {
 }
 
 export function I18nProvider({ children, locale }: { children: ReactNode; locale: string }) {
-  const [instance, setInstance] = useState(i18next);
-  
   useEffect(() => {
     if (i18next.resolvedLanguage !== locale) {
-      i18next.changeLanguage(locale).then(() => {
-        setInstance({ ...i18next } as any);
-      });
+      void i18next.changeLanguage(locale);
     }
   }, [locale]);
 
-  return <I18nextProvider i18n={instance}>{children}</I18nextProvider>;
+  return <I18nextProvider i18n={i18next}>{children}</I18nextProvider>;
 }

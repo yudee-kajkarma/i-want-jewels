@@ -1,6 +1,7 @@
 'use client'
 
 import { Link } from '@/lib/router'
+import { useTranslation } from 'react-i18next'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import ProductCard from '../components/sections/ProductCard'
@@ -18,6 +19,7 @@ export default function CategoryLandingPage({
   content,
   products,
 }: CategoryLandingPageProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'categoryLanding' })
   const filterHref = `/products?category=${encodeURIComponent(categoryName)}`
 
   return (
@@ -28,7 +30,7 @@ export default function CategoryLandingPage({
         <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
           <div className="mx-auto max-w-[1480px]">
             <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-              Homepage / {content.heading}
+              {t('breadcrumbHome')} / {content.heading}
             </p>
             <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
               {content.heading}
@@ -46,13 +48,13 @@ export default function CategoryLandingPage({
         <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-              {products.length} {products.length === 1 ? 'piece' : 'pieces'}
+              {products.length} {t('piece', { count: products.length })}
             </p>
             <Link
               to={filterHref}
               className="inline-flex h-[42px] items-center border border-zinc-300 px-6 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-900 transition hover:border-zinc-900"
             >
-              View All &amp; Filter
+              {t('viewAllFilter')}
             </Link>
           </div>
 
@@ -70,14 +72,13 @@ export default function CategoryLandingPage({
           ) : (
             <div className="flex flex-col items-center py-16 text-center">
               <p className="text-sm leading-relaxed text-zinc-600">
-                New pieces are on their way. Explore the rest of the collection
-                in the meantime.
+                {t('emptyDesc')}
               </p>
               <Link
                 to="/products"
                 className="mt-6 inline-flex h-[50px] items-center bg-zinc-900 px-8 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-zinc-700"
               >
-                Shop All Jewellery
+                {t('shopAll')}
               </Link>
             </div>
           )}

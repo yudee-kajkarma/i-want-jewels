@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,15 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "What Are Huggie Earrings? | Are Huggie Earrings Comfortable?",
     description:
-        "Discover what huggie earrings are, why they're so comfortable, and why the Amadea Lab-Grown Diamond Huggie Earrings are perfect for everyday wear, work, travel and modern lifestyles.",
-    alternates: {
-        canonical:
-            "/blogs/what-are-huggie-earrings-and-are-they-comfortable-in-2026",
-    },
-};
+        "Discover what huggie earrings are, why they're so comfortable, and why the Amadea Lab-Grown Diamond Huggie Earrings are perfect for everyday wear, work, travel and modern lifestyles."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/what-are-huggie-earrings-and-are-they-comfortable-in-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

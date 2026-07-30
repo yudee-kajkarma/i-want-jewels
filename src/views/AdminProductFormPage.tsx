@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import { useNavigate, useParams } from '@/lib/router'
 import AdminProductForm from '../components/admin/AdminProductForm'
@@ -30,6 +31,7 @@ type AdminProductFormPageProps = {
 }
 
 export default function AdminProductFormPage({ mode }: AdminProductFormPageProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.productForm' })
   const navigate = useNavigate()
   const params = useParams<{ id?: string | string[] }>()
   const editingProductId =
@@ -44,10 +46,8 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
   const [initialVariantIds, setInitialVariantIds] = useState<string[]>([])
 
   const isEditing = mode === 'edit'
-  const panelTitle = isEditing ? 'Edit Product' : 'Add Product'
-  const panelDescription = isEditing
-    ? 'Update the selected product and save the changes.'
-    : 'Add a new product in two steps: details first, then variants and image mapping.'
+  const panelTitle = isEditing ? t('titles.edit') : t('titles.create')
+  const panelDescription = isEditing ? t('descriptions.edit') : t('descriptions.create')
 
   const generatedImageMapping = useMemo(
     () => form.variants.map((variant) => variant.imageIndexes),
@@ -85,7 +85,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
         )
       } catch {
         if (!isMounted) return
-        showOperationError('Unable to open this product for editing.')
+        showOperationError(t('errors.loadEdit'))
       } finally {
         if (isMounted) setIsLoading(false)
       }
@@ -334,15 +334,15 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
 
   function validateCreateStepOne(): string {
     if (!form.title.trim()) {
-      return 'Enter a product title before continuing.'
+      return t('validation.titleRequired')
     }
 
     if (!form.description.trim()) {
-      return 'Enter a product description before continuing.'
+      return t('validation.descriptionRequired')
     }
 
     if (form.productType !== 'GIFT_CARD' && !form.category.trim()) {
-      return 'Enter a category before continuing.'
+      return t('validation.categoryRequired')
     }
 
     return ''
@@ -375,12 +375,12 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
     try {
       if (isEditing && editingProductId) {
         if (!isGiftCard && form.variants.some((variant) => variant.imageIndexes.length === 0)) {
-          showOperationError('Assign at least one image to every variant.')
+          showOperationError(t('validation.assignImagesToVariants'))
           return
         }
 
         if (isGiftCard && form.images.length === 0) {
-          showOperationError('Upload a gift card design image.')
+          showOperationError(t('validation.uploadGiftCardDesign'))
           return
         }
 
@@ -462,8 +462,6 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
-            // Always send videos (even when empty) so the backend can tell
-            // "field omitted, no change" apart from "cleared to []".
             videos: variant.videos ?? [],
           })),
           ...(hasDeletedVariants ? { variantPos: currentVariantIds } : {}),
@@ -483,11 +481,11 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
         }
 
         await updateProduct(editingProductId, payload)
-        showOperationSuccess('Product updated successfully.')
+        showOperationSuccess(t('toast.updateSuccess'))
         navigateBack()
       } else {
         if (form.variants.length === 0) {
-          showOperationError('Add at least one variant before creating the product.')
+          showOperationError(t('validation.addVariant'))
           return
         }
 
@@ -495,7 +493,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
           const duplicateVariantNames = new Set(form.variants.map((variant) => variant.variantName))
 
           if (duplicateVariantNames.size !== form.variants.length) {
-            showOperationError('Each variant name can only be used once.')
+            showOperationError(t('validation.duplicateVariantNames'))
             return
           }
         }
@@ -503,8 +501,8 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
         if (form.images.length === 0) {
           showOperationError(
             isGiftCard
-              ? 'Upload a gift card design image.'
-              : 'Upload at least one image before creating the product.',
+              ? t('validation.uploadGiftCardDesign')
+              : t('validation.uploadImages'),
           )
           return
         }
@@ -520,8 +518,8 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
         if (hasInvalidVariant) {
           showOperationError(
             isGiftCard
-              ? 'Each denomination needs a label, SKU, and an amount greater than zero.'
-              : 'Complete each variant with a title, SKU, non-negative stock, and a price greater than zero.',
+              ? t('validation.completeGiftCardDenomination')
+              : t('validation.completeVariant'),
           )
           return
         }
@@ -531,7 +529,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
           : form.variants.map((variant) => variant.imageIndexes)
 
         if (!isGiftCard && imageMapping.some((indexes) => indexes.length === 0)) {
-          showOperationError('Assign at least one image to every variant.')
+          showOperationError(t('validation.assignImagesToVariants'))
           return
         }
 
@@ -594,8 +592,6 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
               : {}),
             ...(variant.sizeMeasurement ? { sizeMeasurement: variant.sizeMeasurement } : {}),
             ...(typeof variant.customsValueUsd === 'number' ? { customsValueUsd: variant.customsValueUsd } : {}),
-            // Always send videos (even when empty) so the backend can tell
-            // "field omitted, no change" apart from "cleared to []".
             videos: variant.videos ?? [],
           })),
           images: form.images.map((image) => image.file).filter(Boolean) as File[],
@@ -603,11 +599,11 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
         }
 
         await createProduct(payload)
-        showOperationSuccess('Product created successfully.')
+        showOperationSuccess(t('toast.createSuccess'))
         navigateBack()
       }
     } catch {
-      showOperationError(isEditing ? 'Unable to save changes right now.' : 'Unable to create product right now.')
+      showOperationError(isEditing ? t('errors.saveEdit') : t('errors.create'))
     } finally {
       setIsSaving(false)
     }
@@ -619,7 +615,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
       <main>
         <div className="mx-auto max-w-[92rem] px-4 py-8 sm:px-6 lg:px-8">
           <div className="border border-[#f0cbe1] bg-[linear-gradient(135deg,#7e2f63_0%,#b94886_55%,#dc74ad_100%)] px-6 py-8 text-white shadow-[0_30px_80px_rgba(153,45,106,0.28)] sm:px-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#f6d6ea]">Admin Panel</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#f6d6ea]">{t('badge')}</p>
             <div className="mt-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <h1 className="font-serif text-3xl text-[#fff6fd] sm:text-4xl">{panelTitle}</h1>
@@ -631,7 +627,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
                 disabled={isSaving}
                 className="inline-flex w-fit items-center gap-2 border border-[#f6d6ea] bg-white/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#fff4fc] transition hover:bg-white/25 disabled:opacity-60"
               >
-                ← Back to Products
+                {t('backToProducts')}
               </button>
             </div>
           </div>
@@ -644,7 +640,7 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
             {isLoading ? (
               <div className="rounded-[32px] border border-[#f0d0e3] bg-white px-6 py-16 text-center shadow-[0_20px_60px_rgba(127,31,91,0.12)]">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#7a3a61]">
-                  Loading product…
+                  {t('loading')}
                 </p>
               </div>
             ) : (

@@ -20,7 +20,7 @@ type GiftCardsSectionProps = {
 }
 
 export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionProps) {
-  const { t } = useTranslation('giftCardsSection')
+  const { t } = useTranslation('common', { keyPrefix: 'giftCardsSection' })
   const [tab, setTab] = useState<GiftCardTab>('mine')
   const [cards, setCards] = useState<MyGiftCard[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')

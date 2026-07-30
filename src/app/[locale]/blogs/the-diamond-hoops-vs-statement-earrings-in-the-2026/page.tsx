@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Diamond Hoops vs Statement Earrings | Best Luxury Earrings for Evening Events",
     description:
-        "Compare diamond hoops vs statement earrings for evening events. Discover which style suits gala dinners, cocktail parties and formal occasions, and why the Lusso High-Carat Lab-Grown Diamond Earrings are the ultimate luxury choice.",
-    alternates: {
-        canonical: "/blogs/the-diamond-hoops-vs-statement-earrings-in-the-2026",
-    },
-};
+        "Compare diamond hoops vs statement earrings for evening events. Discover which style suits gala dinners, cocktail parties and formal occasions, and why the Lusso High-Carat Lab-Grown Diamond Earrings are the ultimate luxury choice."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/the-diamond-hoops-vs-statement-earrings-in-the-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

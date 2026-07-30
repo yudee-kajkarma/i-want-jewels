@@ -2,6 +2,7 @@
 
 import type { ChangeEvent, Dispatch, FormEvent, SetStateAction } from 'react'
 import { ImagePlus, Loader2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import AdminBlogContentEditor from './AdminBlogContentEditor'
 import type { BlogStatus } from '../../types/blog'
 import type { Product } from '../../types/product'
@@ -65,6 +66,8 @@ export default function AdminBlogFormModal({
   onToggleRelatedProduct,
   currency,
 }: AdminBlogFormModalProps) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.blogFormModal' })
+
   if (!isOpen) {
     return null
   }
@@ -74,9 +77,9 @@ export default function AdminBlogFormModal({
       <div className="mx-auto h-full w-full max-w-[1100px] overflow-y-auto rounded-[28px] border border-[#f1cde2] bg-white p-6 shadow-[0_28px_72px_rgba(0,0,0,0.2)] sm:p-8">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#bf4f90]">Admin Blog</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#bf4f90]">{t('badge')}</p>
             <h2 className="mt-2 text-3xl font-extrabold tracking-[-0.03em] text-[#3f1933]">
-              {isEditMode ? 'Edit Blog' : 'Create Blog'}
+              {isEditMode ? t('titles.edit') : t('titles.create')}
             </h2>
           </div>
           <button
@@ -84,14 +87,14 @@ export default function AdminBlogFormModal({
             onClick={onClose}
             className="rounded-full border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
           >
-            Close
+            {t('close')}
           </button>
         </div>
 
         <form onSubmit={onSubmit} className="mt-6 space-y-5">
           <div className="grid gap-4 lg:grid-cols-2">
             <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Title
+              {t('fields.title')}
               <input
                 type="text"
                 value={form.title}
@@ -102,7 +105,7 @@ export default function AdminBlogFormModal({
             </label>
 
             <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Status
+              {t('fields.status')}
               <select
                 value={form.status}
                 onChange={(event) =>
@@ -110,38 +113,38 @@ export default function AdminBlogFormModal({
                 }
                 className="h-12 w-full rounded-xl border border-[#e9c9dd] px-4 text-sm font-normal text-zinc-700 outline-none focus:border-[#cc4f8f] focus:ring-2 focus:ring-[#ffd5eb]"
               >
-                <option value="draft">Draft</option>
-                <option value="published">Published</option>
+                <option value="draft">{t('statusOptions.draft')}</option>
+                <option value="published">{t('statusOptions.published')}</option>
               </select>
             </label>
           </div>
 
           <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-            Excerpt
+            {t('fields.excerpt')}
             <textarea
               value={form.excerpt}
               onChange={(event) => setForm((currentValue) => ({ ...currentValue, excerpt: event.target.value }))}
               className="min-h-[95px] w-full rounded-xl border border-[#e9c9dd] px-4 py-3 text-sm font-normal text-zinc-700 outline-none focus:border-[#cc4f8f] focus:ring-2 focus:ring-[#ffd5eb]"
-              placeholder="Short summary for blog card and meta usage."
+              placeholder={t('placeholders.excerpt')}
             />
           </label>
 
           <div className="grid gap-4 lg:grid-cols-[1fr_auto]">
             <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Cover Image URL
+              {t('fields.coverImageUrl')}
               <input
                 type="url"
                 value={form.coverImage}
                 onChange={(event) => setForm((currentValue) => ({ ...currentValue, coverImage: event.target.value }))}
                 className="h-12 w-full rounded-xl border border-[#e9c9dd] px-4 text-sm font-normal text-zinc-700 outline-none focus:border-[#cc4f8f] focus:ring-2 focus:ring-[#ffd5eb]"
-                placeholder="https://..."
+                placeholder={t('placeholders.coverImage')}
                 required
               />
             </label>
 
             <label className="inline-flex h-fit cursor-pointer items-center justify-center gap-2 self-end rounded-full border border-[#e8c5db] px-4 py-3 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]">
               {isUploadingImage ? <Loader2 className="h-4 w-4 animate-spin" /> : <ImagePlus className="h-4 w-4" />}
-              Upload Cover
+              {t('fields.uploadCover')}
               <input
                 type="file"
                 accept="image/*"
@@ -154,25 +157,27 @@ export default function AdminBlogFormModal({
 
           <div className="grid gap-4 lg:grid-cols-2">
             <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Tags (comma separated)
+              {t('fields.tags')}
               <input
                 type="text"
                 value={form.tagsInput}
                 onChange={(event) => setForm((currentValue) => ({ ...currentValue, tagsInput: event.target.value }))}
                 className="h-12 w-full rounded-xl border border-[#e9c9dd] px-4 text-sm font-normal text-zinc-700 outline-none focus:border-[#cc4f8f] focus:ring-2 focus:ring-[#ffd5eb]"
-                placeholder="diamond, gold, rings"
+                placeholder={t('placeholders.tags')}
               />
             </label>
 
             <div className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Related Products
+              {t('fields.relatedProducts')}
               <div className="relative">
                 <button
                   type="button"
                   onClick={() => setIsProductDropdownOpen((currentValue) => !currentValue)}
                   className="h-12 w-full rounded-xl border border-[#e9c9dd] bg-white px-4 text-left text-sm font-normal text-zinc-700 outline-none transition hover:bg-[#fff7fc]"
                 >
-                  {form.relatedProductIds.length > 0 ? `${form.relatedProductIds.length} selected` : 'Select products'}
+                  {form.relatedProductIds.length > 0
+                    ? t('relatedProducts.selected', { count: form.relatedProductIds.length })
+                    : t('relatedProducts.selectProducts')}
                 </button>
 
                 {isProductDropdownOpen ? (
@@ -182,7 +187,7 @@ export default function AdminBlogFormModal({
                         type="text"
                         value={productSearchInput}
                         onChange={(event) => setProductSearchInput(event.target.value)}
-                        placeholder="Search products by title, slug, or vendor"
+                        placeholder={t('relatedProducts.searchPlaceholder')}
                         className="h-10 w-full rounded-lg border border-[#e8c5db] px-3 text-xs font-normal text-zinc-700 outline-none focus:border-[#cc4f8f] focus:ring-2 focus:ring-[#ffd5eb]"
                       />
                     </div>
@@ -190,7 +195,7 @@ export default function AdminBlogFormModal({
                     {isProductsLoading ? (
                       <div className="flex items-center gap-2 px-2 py-3 text-xs text-[#7a3a61]">
                         <Loader2 className="h-4 w-4 animate-spin" />
-                        Loading products...
+                        {t('relatedProducts.loading')}
                       </div>
                     ) : null}
 
@@ -202,14 +207,16 @@ export default function AdminBlogFormModal({
                           onClick={onRetryLoadProducts}
                           className="rounded-full border border-[#e8c5db] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] hover:bg-[#fff2fa]"
                         >
-                          Retry
+                          {t('relatedProducts.retry')}
                         </button>
                       </div>
                     ) : null}
 
                     {!isProductsLoading && !productLoadError && filteredProducts.length === 0 ? (
                       <div className="px-2 py-3 text-xs text-zinc-500">
-                        {productSearchInput.trim() ? 'No products match your search.' : 'No products available.'}
+                        {productSearchInput.trim()
+                          ? t('relatedProducts.noMatch')
+                          : t('relatedProducts.noneAvailable')}
                       </div>
                     ) : null}
 
@@ -260,7 +267,7 @@ export default function AdminBlogFormModal({
 
           <div className="grid gap-4 lg:grid-cols-2">
             <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Meta Title
+              {t('fields.metaTitle')}
               <input
                 type="text"
                 value={form.metaTitle}
@@ -270,7 +277,7 @@ export default function AdminBlogFormModal({
             </label>
 
             <label className="space-y-2 text-sm font-semibold text-[#5b3551]">
-              Meta Description
+              {t('fields.metaDescription')}
               <input
                 type="text"
                 value={form.metaDescription}
@@ -283,11 +290,11 @@ export default function AdminBlogFormModal({
           </div>
 
           <div className="space-y-2 text-sm font-semibold text-[#5b3551]">
-            Blog Content
+            {t('fields.blogContent')}
             <AdminBlogContentEditor
               value={form.content}
               onChange={(nextHtml) => setForm((currentValue) => ({ ...currentValue, content: nextHtml }))}
-              placeholder="Use Tiptap editor to create rich blog content..."
+              placeholder={t('placeholders.content')}
             />
           </div>
 
@@ -298,7 +305,7 @@ export default function AdminBlogFormModal({
               disabled={isSaving || isUploadingImage}
               className="rounded-full border border-[#e8c5db] px-5 py-3 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              Cancel
+              {t('submit.cancel')}
             </button>
             <button
               type="submit"
@@ -306,7 +313,7 @@ export default function AdminBlogFormModal({
               className="inline-flex items-center gap-2 rounded-full bg-[#cc4f8f] px-5 py-3 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-              {isEditMode ? 'Update Blog' : 'Create Blog'}
+              {isEditMode ? t('submit.update') : t('submit.create')}
             </button>
           </div>
         </form>

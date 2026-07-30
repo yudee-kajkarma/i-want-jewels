@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { AlertTriangle, MessageSquareText, Sparkles } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -76,6 +77,7 @@ function TicketDetailShimmer() {
 }
 
 export default function AdminTicketsPage() {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.tickets' })
   const [tickets, setTickets] = useState<Ticket[]>([])
   const [pagination, setPagination] = useState<TicketsPagination | null>(null)
   const [statusFilter, setStatusFilter] = useState<TicketStatus | 'all'>('all')
@@ -141,8 +143,8 @@ export default function AdminTicketsPage() {
       setPagination(null)
       setSelectedTicket(null)
       setSelectedTicketId('')
-      setError('Unable to load admin tickets right now.')
-      toast.error('Unable to load admin tickets right now.')
+      setError(t('errors.loadTickets'))
+      toast.error(t('toast.loadTicketsError'))
     } finally {
       if (showLoader) {
         setIsListLoading(false)
@@ -159,7 +161,7 @@ export default function AdminTicketsPage() {
       setSelectedTicketId(ticketId)
     } catch {
       setSelectedTicket(null)
-      toast.error('Unable to load ticket details right now.')
+      toast.error(t('toast.loadDetailError'))
     } finally {
       setIsDetailLoading(false)
     }
@@ -178,10 +180,10 @@ export default function AdminTicketsPage() {
 
     try {
       await updateAdminTicketStatus(selectedTicket.ticketId, { status: nextStatus })
-      toast.success(`Ticket marked as ${nextStatus}.`)
+      toast.success(t('toast.statusUpdated', { status: t(`status.${nextStatus}`) }))
       await refreshCurrentState()
     } catch {
-      toast.error('Unable to update ticket status right now.')
+      toast.error(t('toast.statusUpdateError'))
     } finally {
       setActionLoading(null)
     }
@@ -196,10 +198,10 @@ export default function AdminTicketsPage() {
 
     try {
       await updateAdminTicketPriority(selectedTicket.ticketId, { priority: nextPriority })
-      toast.success(`Priority changed to ${nextPriority}.`)
+      toast.success(t('toast.priorityUpdated', { priority: t(`priority.${nextPriority}`) }))
       await refreshCurrentState()
     } catch {
-      toast.error('Unable to update ticket priority right now.')
+      toast.error(t('toast.priorityUpdateError'))
     } finally {
       setActionLoading(null)
     }
@@ -214,10 +216,10 @@ export default function AdminTicketsPage() {
 
     try {
       await escalateAdminTicket(selectedTicket.ticketId)
-      toast.success('Ticket escalated successfully.')
+      toast.success(t('toast.escalateSuccess'))
       await refreshCurrentState()
     } catch {
-      toast.error('Unable to escalate ticket right now.')
+      toast.error(t('toast.escalateError'))
     } finally {
       setActionLoading(null)
     }
@@ -227,7 +229,7 @@ export default function AdminTicketsPage() {
     event.preventDefault()
 
     if (!selectedTicket || !replyMessage.trim()) {
-      toast.error('Reply message is required.')
+      toast.error(t('toast.replyRequired'))
       return
     }
 
@@ -236,10 +238,10 @@ export default function AdminTicketsPage() {
     try {
       await addAdminTicketMessage(selectedTicket.ticketId, { message: replyMessage.trim() })
       setReplyMessage('')
-      toast.success('Reply sent successfully.')
+      toast.success(t('toast.replySuccess'))
       await refreshCurrentState()
     } catch {
-      toast.error('Unable to send reply right now.')
+      toast.error(t('toast.replyError'))
     } finally {
       setActionLoading(null)
     }
@@ -252,23 +254,23 @@ export default function AdminTicketsPage() {
         <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin Support</p>
-              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">Ticket Desk</h1>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">{t('badge')}</p>
+              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">{t('title')}</h1>
             </div>
-            <p className="text-sm text-[#6f4f65]">Review, reply, escalate, and resolve customer support threads from one panel.</p>
+            <p className="text-sm text-[#6f4f65]">{t('subtitle')}</p>
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Open</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.open')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{ticketSummary.open}</p>
             </div>
             <div className="border border-[#f0d3e5] bg-[#fff9fd] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Closed</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.closed')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{ticketSummary.closed}</p>
             </div>
             <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Escalated</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.escalated')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{ticketSummary.escalated}</p>
             </div>
           </div>
@@ -285,7 +287,7 @@ export default function AdminTicketsPage() {
                     : 'border-[#e8c5db] bg-white text-[#7a3a61] hover:bg-[#fff2fa]'
                 }`}
               >
-                {status}
+                {t(`filters.${status}`)}
               </button>
             ))}
           </div>
@@ -298,7 +300,7 @@ export default function AdminTicketsPage() {
 
               {!isListLoading && tickets.length === 0 ? (
                 <div className="border border-dashed border-[#ebcade] bg-white px-5 py-10 text-center text-sm text-[#8a667b]">
-                  No tickets found for this filter.
+                  {t('empty.noTickets')}
                 </div>
               ) : null}
 
@@ -319,26 +321,30 @@ export default function AdminTicketsPage() {
                         <div>
                           <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{ticket.ticketId}</p>
                           <h2 className="mt-2 text-base font-bold text-[#3f1933]">{ticket.subject}</h2>
-                          <p className="mt-2 text-sm text-zinc-500">{ticket.category} · {ticket.messages.length} messages</p>
+                          <p className="mt-2 text-sm text-zinc-500">
+                            {ticket.category} · {t('list.messagesCount', { count: ticket.messages.length })}
+                          </p>
                         </div>
                         <Sparkles className="h-4 w-4 text-[#c65b96]" />
                       </div>
 
                       <div className="mt-4 flex flex-wrap gap-2">
                         <span className={`inline-flex border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${getStatusClass(ticket.status)}`}>
-                          {ticket.status}
+                          {t(`status.${ticket.status}`)}
                         </span>
                         <span className={`inline-flex border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${getPriorityClass(ticket.priority)}`}>
-                          {ticket.priority}
+                          {t(`priority.${ticket.priority}`)}
                         </span>
                         {ticket.isEscalated ? (
                           <span className="inline-flex border border-rose-200 bg-rose-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-rose-700">
-                            escalated
+                            {t('list.escalated')}
                           </span>
                         ) : null}
                       </div>
 
-                      <p className="mt-4 line-clamp-2 text-sm leading-6 text-zinc-600">{ticket.messages[0]?.message ?? 'No message available.'}</p>
+                      <p className="mt-4 line-clamp-2 text-sm leading-6 text-zinc-600">
+                        {ticket.messages[0]?.message ?? t('list.noMessage')}
+                      </p>
                     </button>
                   ))}
                 </div>
@@ -347,7 +353,11 @@ export default function AdminTicketsPage() {
               {pagination ? (
                 <div className="mt-6 border-t border-[#f0dbe8] pt-4">
                   <p className="text-sm text-zinc-500">
-                    Page {pagination.currentPage} of {pagination.totalPages} · {pagination.totalRecords} total tickets
+                    {t('list.pagination', {
+                      current: pagination.currentPage,
+                      total: pagination.totalPages,
+                      records: pagination.totalRecords,
+                    })}
                   </p>
                   <Pagination
                     pagination={pagination}
@@ -366,7 +376,7 @@ export default function AdminTicketsPage() {
 
               {!isDetailLoading && !selectedTicket ? (
                 <div className="border border-dashed border-[#ebcade] bg-[#fff7fb] px-6 py-12 text-center text-sm text-[#8a667b]">
-                  Select a ticket to review the conversation and manage support actions.
+                  {t('empty.selectTicket')}
                 </div>
               ) : null}
 
@@ -376,15 +386,17 @@ export default function AdminTicketsPage() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{selectedTicket.ticketId}</p>
                       <h2 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#3f1933]">{selectedTicket.subject}</h2>
-                      <p className="mt-2 text-sm text-zinc-500">{selectedTicket.category} · updated {formatTicketDate(selectedTicket.updatedAt)}</p>
+                      <p className="mt-2 text-sm text-zinc-500">
+                        {selectedTicket.category} · {t('detail.updated', { date: formatTicketDate(selectedTicket.updatedAt) })}
+                      </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
                       <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getStatusClass(selectedTicket.status)}`}>
-                        {selectedTicket.status}
+                        {t(`status.${selectedTicket.status}`)}
                       </span>
                       <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getPriorityClass(selectedTicket.priority)}`}>
-                        {selectedTicket.priority}
+                        {t(`priority.${selectedTicket.priority}`)}
                       </span>
                     </div>
                   </div>
@@ -407,7 +419,7 @@ export default function AdminTicketsPage() {
 
                     <aside className="space-y-4 border border-[#f0dbe8] bg-[#fff7fb] p-4">
                       <div className="border border-[#f0dbe8] bg-white p-4">
-                        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">Status</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">{t('detail.status')}</p>
                         <div className="mt-3 flex flex-wrap gap-2">
                           <button
                             type="button"
@@ -415,7 +427,7 @@ export default function AdminTicketsPage() {
                             onClick={() => void handleStatusChange('open')}
                             className="border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
                           >
-                            Open
+                            {t('detail.open')}
                           </button>
                           <button
                             type="button"
@@ -423,24 +435,24 @@ export default function AdminTicketsPage() {
                             onClick={() => void handleStatusChange('closed')}
                             className="border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:opacity-50"
                           >
-                            Close
+                            {t('detail.close')}
                           </button>
                         </div>
                       </div>
 
                       <div className="border border-[#f0dbe8] bg-white p-4">
                         <label className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">
-                          Priority
+                          {t('detail.priority')}
                           <select
                             value={selectedTicket.priority}
                             disabled={actionLoading === 'priority'}
                             onChange={(event) => void handlePriorityChange(event.target.value as TicketPriority)}
                             className="mt-3 h-11 w-full border border-[#e7bfd7] bg-white px-4 text-sm text-[#3f1933] outline-none transition focus:border-[#cc4f8f]"
                           >
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                            <option value="urgent">Urgent</option>
+                            <option value="low">{t('detail.priorityLow')}</option>
+                            <option value="medium">{t('detail.priorityMedium')}</option>
+                            <option value="high">{t('detail.priorityHigh')}</option>
+                            <option value="urgent">{t('detail.priorityUrgent')}</option>
                           </select>
                         </label>
                       </div>
@@ -453,18 +465,18 @@ export default function AdminTicketsPage() {
                           className="inline-flex w-full items-center justify-center gap-2 bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-50"
                         >
                           <AlertTriangle className="h-4 w-4" />
-                          {selectedTicket.isEscalated ? 'Escalated' : 'Escalate'}
+                          {selectedTicket.isEscalated ? t('detail.escalated') : t('detail.escalate')}
                         </button>
                       </div>
 
                       <form className="border border-[#f0dbe8] bg-white p-4" onSubmit={(event) => void handleReplySubmit(event)}>
-                        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">Reply</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#9a4a75]">{t('detail.reply')}</p>
                         <textarea
                           value={replyMessage}
                           onChange={(event) => setReplyMessage(event.target.value)}
                           rows={6}
                           className="mt-3 w-full border border-[#e7bfd7] px-4 py-3 text-sm text-zinc-800 outline-none transition focus:border-[#cc4f8f]"
-                          placeholder="We're checking with our delivery partner. Will update you shortly."
+                          placeholder={t('detail.replyPlaceholder')}
                         />
                         <button
                           type="submit"
@@ -472,7 +484,7 @@ export default function AdminTicketsPage() {
                           className="mt-3 inline-flex w-full items-center justify-center gap-2 bg-[#cc4f8f] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78] disabled:opacity-50"
                         >
                           <MessageSquareText className="h-4 w-4" />
-                          {actionLoading === 'reply' ? 'Sending...' : 'Send Reply'}
+                          {actionLoading === 'reply' ? t('detail.sending') : t('detail.sendReply')}
                         </button>
                       </form>
                     </aside>

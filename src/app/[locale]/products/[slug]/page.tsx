@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { cache } from 'react'
+import { localizedAlternates } from '@/i18n/metadata'
 import { getProductBySlug, getProductReviews, isProductNotFoundError } from '../../../../services/productService'
 import ProductDetailPage from '../../../../views/ProductDetailPage'
 import { formatPrice } from '../../../../utils/price'
@@ -17,12 +18,13 @@ const getInitialProductData = cache(async (slug: string) => {
 
 type ProductPageProps = {
   params: Promise<{
+    locale: string
     slug: string
   }>
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { locale, slug } = await params
 
   try {
     const { product } = await getInitialProductData(slug)
@@ -40,9 +42,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         type: 'website',
         images: image ? [image] : undefined,
       },
-      alternates: {
-        canonical: `/products/${product.slug || product.id}`,
-      },
+      alternates: localizedAlternates(`/products/${product.slug || product.id}`, locale),
       keywords: [product.category, ...product.metals, product.vendor, formatPrice(product.minPrice, 'eur')],
     }
   } catch (error) {

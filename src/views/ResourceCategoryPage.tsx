@@ -69,7 +69,7 @@ function ArrowRightIcon() {
 }
 
 function ArticleCard({ article }: { article: ResourceArticle }) {
-    const { t } = useTranslation('resourceCategory');
+    const { t } = useTranslation('common', { keyPrefix: 'resourceCategory' });
     const href = `/resources/${article.categorySlug}/${article.slug}`;
     return (
         <article className="group border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_12px_32px_rgba(194,110,143,0.1)]">
@@ -133,7 +133,7 @@ export default function ResourceCategoryPage({
     category,
     articles,
 }: ResourceCategoryPageProps) {
-    const { t } = useTranslation('resourceCategory');
+    const { t } = useTranslation('common', { keyPrefix: 'resourceCategory' });
     const otherCategories = resourceCategories.filter(
         (c) => c.slug !== category.slug,
     );

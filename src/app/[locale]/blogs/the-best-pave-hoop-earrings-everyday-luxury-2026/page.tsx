@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Best Pavé Hoop Earrings for Everyday Luxury | Lab-Grown Diamond Earrings",
     description:
-        "Discover why pavé hoop earrings are the perfect everyday luxury jewellery. Learn how the Pavé Hoop Lab-Grown Diamond Earrings combine timeless elegance, continuous sparkle and exceptional versatility.",
-    alternates: {
-        canonical: "/blogs/the-best-pave-hoop-earrings-everyday-luxury-2026",
-    },
-};
+        "Discover why pavé hoop earrings are the perfect everyday luxury jewellery. Learn how the Pavé Hoop Lab-Grown Diamond Earrings combine timeless elegance, continuous sparkle and exceptional versatility."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/the-best-pave-hoop-earrings-everyday-luxury-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import type { Dispatch, SetStateAction } from "react";
+import { useTranslation } from "react-i18next";
 import { useCurrency } from "../../context/CurrencyContext";
 import type {
     Product,
@@ -36,16 +37,6 @@ const colorSwatchMap: Record<string, string> = {
     white: "#f3ecdd",
 };
 
-const colorDisplayNameMap: Record<string, string> = {
-    gold: "Yellow Gold",
-    "yellow gold": "Yellow Gold",
-    "rose gold": "Rose Gold",
-    "rose pink": "Rose Gold",
-    pink: "Rose Gold",
-    silver: "White Gold",
-    "white gold": "White Gold",
-};
-
 function formatFilterLabel(value: string): string {
     return value
         .split(" ")
@@ -55,16 +46,28 @@ function formatFilterLabel(value: string): string {
         .join(" ");
 }
 
+const colorDisplayNameKeys: Record<string, string> = {
+    gold: "productsFilters.yellowGold",
+    "yellow gold": "productsFilters.yellowGold",
+    "rose gold": "productsFilters.roseGold",
+    "rose pink": "productsFilters.roseGold",
+    pink: "productsFilters.roseGold",
+    silver: "productsFilters.whiteGold",
+    "white gold": "productsFilters.whiteGold",
+};
+
 function SingleSelectDropdown({
     title,
     options,
     selectedValue,
     onChange,
+    allLabel,
 }: {
     title: string;
     options: string[];
     selectedValue: string;
     onChange: (value: string) => void;
+    allLabel: string;
 }) {
     if (options.length === 0) {
         return null;
@@ -79,7 +82,7 @@ function SingleSelectDropdown({
                     onChange={(event) => onChange(event.target.value)}
                     className="mt-2 h-11 w-full rounded-xl border border-[#dfd0c3] bg-white px-3 text-sm text-zinc-800 outline-none transition focus:border-[#b88a65]"
                 >
-                    <option value="">All</option>
+                    <option value="">{allLabel}</option>
                     {options.map((value) => (
                         <option key={value} value={value}>
                             {formatFilterLabel(value)}
@@ -96,11 +99,15 @@ function MultiSelectDropdown({
     options,
     selectedValues,
     onToggle,
+    selectLabel,
+    selectedCountLabel,
 }: {
     title: string;
     options: string[];
     selectedValues: string[];
     onToggle: (value: string) => void;
+    selectLabel: string;
+    selectedCountLabel: string;
 }) {
     if (options.length === 0) {
         return null;
@@ -108,8 +115,8 @@ function MultiSelectDropdown({
 
     const selectedLabel =
         selectedValues.length === 0
-            ? `Select ${title.toLowerCase()}`
-            : `${selectedValues.length} selected`;
+            ? selectLabel
+            : selectedCountLabel;
 
     return (
         <section>
@@ -150,6 +157,7 @@ export default function ProductsFilters({
     onResetFilters,
     products = [],
 }: ProductsFiltersProps) {
+    const { t } = useTranslation();
     const showExtendedSections = {
         stoneTypes: (filterOptions?.stoneTypes.length ?? 0) > 1,
         colors: (filterOptions?.colors.length ?? 0) > 1,
@@ -237,7 +245,7 @@ export default function ProductsFilters({
         <aside className="bg-white px-3 py-2 lg:px-4">
             <section className="border-b border-[#e9e1d8] pb-8">
                 <h2 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">
-                    Products Type
+                    {t("productsFilters.productsType")}
                 </h2>
 
                 <div className="mt-7 space-y-4">
@@ -283,7 +291,7 @@ export default function ProductsFilters({
 
             <section className="border-b border-[#e9e1d8] py-8">
                 <h3 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">
-                    Price Range
+                    {t("productsFilters.priceRange")}
                 </h3>
 
                 <div className="mt-7">
@@ -332,11 +340,11 @@ export default function ProductsFilters({
 
                     <div className="mt-4 flex items-center justify-between text-[1.05rem] text-[#161311]">
                         <p>
-                            Min price:{" "}
+                            {t("productsFilters.minPrice")}:{" "}
                             {formatPrice(clampedMinimumPrice, currency)}
                         </p>
                         <p>
-                            Max price:{" "}
+                            {t("productsFilters.maxPrice")}:{" "}
                             {formatPrice(clampedMaximumPrice, currency)}
                         </p>
                     </div>
@@ -345,7 +353,7 @@ export default function ProductsFilters({
 
             <section className="border-b border-[#e9e1d8] py-8">
                 <h3 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">
-                    Colors
+                    {t("productsFilters.colors")}
                 </h3>
 
                 <div className="mt-7 flex flex-wrap gap-3">
@@ -375,9 +383,10 @@ export default function ProductsFilters({
                         };
 
                         const swatchImageSrc = getMetalSwatchImage(colorValue);
-                        const displayLabel =
-                            colorDisplayNameMap[colorValue.toLowerCase()] ??
-                            formatFilterLabel(colorValue);
+                        const metalKey = colorDisplayNameKeys[colorValue.toLowerCase()];
+                        const displayLabel = metalKey
+                            ? t(metalKey)
+                            : formatFilterLabel(colorValue);
 
                         return (
                             <button

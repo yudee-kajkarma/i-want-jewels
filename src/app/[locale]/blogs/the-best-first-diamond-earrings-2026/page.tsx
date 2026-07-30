@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Best First Diamond Earrings to Buy in 2026 | Laluce Lab-Grown Diamond Earrings",
     description:
-        "Looking for your first diamond earrings? Discover how to choose timeless diamond earrings that offer everyday elegance, versatility and lasting value with the Laluce Lab-Grown Diamond Earrings.",
-    alternates: {
-        canonical: "/blogs/the-best-first-diamond-earrings-2026",
-    },
-};
+        "Looking for your first diamond earrings? Discover how to choose timeless diamond earrings that offer everyday elegance, versatility and lasting value with the Laluce Lab-Grown Diamond Earrings."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/the-best-first-diamond-earrings-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

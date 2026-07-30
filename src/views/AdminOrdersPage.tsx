@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown, Package, ChevronDown, ArrowLeft, X, CheckCircle2, AlertCircle, Search } from 'lucide-react'
 import { Link } from '@/lib/router'
@@ -91,56 +92,28 @@ function getPaymentStatusClass(status: string) {
   }
 }
 
-function getActionLabel(type: PendingActionType) {
-  if (type === 'confirm') {
-    return 'Confirm Order'
-  }
-
-  if (type === 'cancel') {
-    return 'Cancel Order'
-  }
-
-  if (type === 'ship') {
-    return 'Ship Order'
-  }
-
-  if (type === 'cancelShipment') {
-    return 'Cancel Shipment'
-  }
-
-  if (type === 'reorder') {
-    return 'Re-order'
-  }
-
-  return ''
-}
-
-function getActionDescription(type: PendingActionType) {
-  if (type === 'confirm') {
-    return 'This will move the order status to CONFIRMED.'
-  }
-
-  if (type === 'cancel') {
-    return 'This will cancel the order and move status to CANCELLED.'
-  }
-
-  if (type === 'ship') {
-    return 'This will move the order status to SHIPPED.'
-  }
-
-  if (type === 'cancelShipment') {
-    return 'This will cancel the shipment with the carrier and move the order status to CANCELLED.'
-  }
-
-  if (type === 'reorder') {
-    return 'This will re-activate the cancelled order and move its status back to CONFIRMED so it can be shipped again.'
-  }
-
-  return ''
-}
-
 export default function AdminOrdersPage() {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.orders' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
   const { currency } = useCurrency()
+
+  function getActionLabel(type: PendingActionType) {
+    if (type === 'confirm') return t('actionModal.confirmOrder')
+    if (type === 'cancel') return t('actionModal.cancelOrder')
+    if (type === 'ship') return t('actionModal.shipOrder')
+    if (type === 'cancelShipment') return t('actionModal.cancelShipment')
+    if (type === 'reorder') return t('actionModal.reorder')
+    return ''
+  }
+
+  function getActionDescription(type: PendingActionType) {
+    if (type === 'confirm') return t('actionModal.confirmDescription')
+    if (type === 'cancel') return t('actionModal.cancelDescription')
+    if (type === 'ship') return t('actionModal.shipDescription')
+    if (type === 'cancelShipment') return t('actionModal.cancelShipmentDescription')
+    if (type === 'reorder') return t('actionModal.reorderDescription')
+    return ''
+  }
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
@@ -237,7 +210,7 @@ export default function AdminOrdersPage() {
       const quote = await getAdminShippingPreviewForOrder(orderId)
       setShippingQuote(quote)
     } catch {
-      setShippingQuoteError('Unable to load shipment details right now.')
+      setShippingQuoteError(t('errors.loadShipmentDetails'))
     } finally {
       setIsLoadingShippingQuote(false)
     }
@@ -252,8 +225,8 @@ export default function AdminOrdersPage() {
 
   const orderCountLabel = useMemo(() => {
     const total = pagination?.totalRecords ?? orders.length
-    return `${total} order${total === 1 ? '' : 's'}`
-  }, [orders.length, pagination?.totalRecords])
+    return t('orderCount', { count: total })
+  }, [orders.length, pagination?.totalRecords, t])
 
 
   async function loadOrders(
@@ -278,7 +251,7 @@ export default function AdminOrdersPage() {
 
       setError('')
     } catch {
-      const message = 'Unable to load all orders right now.'
+      const message = t('loadError')
       setOrders([])
       setPagination(null)
       setError(message)
@@ -360,9 +333,9 @@ export default function AdminOrdersPage() {
       await loadShippingQuote(pendingAction.order.id, { resetSelection: false })
       setIsEditingReceiver(false)
       setReceiverDraft(null)
-      toast.success('Receiver address updated.')
+      toast.success(t('toast.receiverAddressUpdated'))
     } catch (err: any) {
-      const msg = err?.response?.data?.message || 'Failed to update receiver address.'
+      const msg = err?.response?.data?.message || t('errors.updateReceiverAddress')
       setReceiverSaveError(msg)
     } finally {
       setIsSavingReceiver(false)
@@ -417,17 +390,17 @@ export default function AdminOrdersPage() {
     try {
       if (pendingAction.type === 'confirm') {
         await updateOrderStatusForAdmin(pendingAction.order.id, 'CONFIRMED')
-        toast.success(`Order ${pendingAction.order.orderNumber} confirmed.`)
+        toast.success(t('toast.orderConfirmed', { orderNumber: pendingAction.order.orderNumber }))
       }
 
       if (pendingAction.type === 'cancel') {
         await updateOrderStatusForAdmin(pendingAction.order.id, 'CANCELLED')
-        toast.success(`Order ${pendingAction.order.orderNumber} cancelled.`)
+        toast.success(t('toast.orderCancelled', { orderNumber: pendingAction.order.orderNumber }))
       }
 
       if (pendingAction.type === 'ship') {
         if (!selectedServiceCode) {
-          toast.error('Please select a shipping service.')
+          toast.error(t('errors.selectShippingService'))
           return
         }
 
@@ -435,7 +408,7 @@ export default function AdminOrdersPage() {
           carrier: selectedCarrier,
           serviceCode: selectedServiceCode,
         })
-        toast.success(`Order ${pendingAction.order.orderNumber} marked as shipped.`)
+        toast.success(t('toast.orderShipped', { orderNumber: pendingAction.order.orderNumber }))
       }
 
       if (pendingAction.type === 'cancelShipment') {
@@ -445,13 +418,13 @@ export default function AdminOrdersPage() {
 
       if (pendingAction.type === 'reorder') {
         await updateOrderStatusForAdmin(pendingAction.order.id, 'CONFIRMED')
-        toast.success(`Order ${pendingAction.order.orderNumber} re-ordered — status set to CONFIRMED.`)
+        toast.success(t('toast.orderReordered', { orderNumber: pendingAction.order.orderNumber }))
       }
 
       setPendingAction(null)
       await loadOrders(false, currentPage)
     } catch {
-      toast.error('Unable to complete this action. Please try again.')
+      toast.error(t('errors.actionFailed'))
     } finally {
       setIsSubmittingAction(false)
     }
@@ -485,7 +458,7 @@ export default function AdminOrdersPage() {
       const result = await getShippedOrdersForPickup(carrier, search)
       setShippedOrdersForPickup(result.orders)
     } catch {
-      toast.error('Unable to load shipped orders.')
+      toast.error(t('errors.loadShippedOrders'))
     } finally {
       setIsLoadingShippedOrders(false)
     }
@@ -497,7 +470,7 @@ export default function AdminOrdersPage() {
       const result = await getPickupsForAdmin(1, 20, status)
       setPickups(result.data)
     } catch {
-      toast.error('Unable to load pickups.')
+      toast.error(t('errors.loadPickups'))
     } finally {
       setIsLoadingPickups(false)
     }
@@ -519,7 +492,7 @@ export default function AdminOrdersPage() {
       const detail = await getPickupByIdForAdmin(pickupId)
       setPickupDetail(detail)
     } catch {
-      setPickupDetailError('Unable to load this pickup’s orders.')
+      setPickupDetailError(t('errors.loadPickupDetail'))
     } finally {
       setIsLoadingPickupDetail(false)
     }
@@ -558,10 +531,10 @@ export default function AdminOrdersPage() {
       })
       setFedExAvailability(result)
       if (!result.available || result.options.length === 0) {
-        toast.error('FedEx has no available pickup dates right now.')
+        toast.error(t('toast.fedExNoDates'))
       }
     } catch (err: any) {
-      toast.error(err?.response?.data?.message || 'Availability check failed.')
+      toast.error(err?.response?.data?.message || t('errors.availabilityCheckFailed'))
     } finally {
       setIsCheckingAvailability(false)
     }
@@ -569,7 +542,7 @@ export default function AdminOrdersPage() {
 
   async function handleSchedulePickup() {
     if (selectedPickupOrderIds.length === 0) {
-      setPickupFormError('Select at least one order.')
+      setPickupFormError(t('errors.selectAtLeastOneOrder'))
       return
     }
     setPickupFormError('')
@@ -577,7 +550,7 @@ export default function AdminOrdersPage() {
     try {
       if (pickupCarrier === 'DHL') {
         if (!dhlForm.plannedPickupDateAndTime || !dhlForm.closeTime || !dhlForm.location || !dhlForm.locationType) {
-          setPickupFormError('Fill in all required DHL fields.')
+          setPickupFormError(t('errors.fillDhlFields'))
           return
         }
         const result = await scheduleDHLPickupForAdmin({
@@ -588,10 +561,10 @@ export default function AdminOrdersPage() {
           locationType: dhlForm.locationType,
           remark: dhlForm.remark || undefined,
         })
-        toast.success(`DHL pickup scheduled (${result.confirmationNumber}) for ${result.orderCount} order(s).`)
+        toast.success(t('toast.dhlPickupScheduled', { confirmationNumber: result.confirmationNumber, orderCount: result.orderCount }))
       } else {
         if (!fedExForm.plannedPickupDate || !fedExForm.packageReadyTime || !fedExForm.customerCloseTime) {
-          setPickupFormError('Fill in all required FedEx fields.')
+          setPickupFormError(t('errors.fillFedExFields'))
           return
         }
         const result = await scheduleFedExPickupForAdmin({
@@ -602,7 +575,7 @@ export default function AdminOrdersPage() {
           packageLocation: fedExForm.packageLocation || undefined,
           remarks: fedExForm.remarks || undefined,
         })
-        toast.success(`FedEx pickup scheduled (${result.confirmationNumber}) for ${result.orderCount} order(s).`)
+        toast.success(t('toast.fedExPickupScheduled', { confirmationNumber: result.confirmationNumber, orderCount: result.orderCount }))
       }
       setSelectedPickupOrderIds([])
       setPickupStep('select')
@@ -611,7 +584,7 @@ export default function AdminOrdersPage() {
       void loadPickups('SCHEDULED')
       setPickupSubView('list')
     } catch (err: any) {
-      const msg = err?.response?.data?.message || 'Failed to schedule pickup.'
+      const msg = err?.response?.data?.message || t('errors.schedulePickupFailed')
       setPickupFormError(msg)
     } finally {
       setIsSubmittingPickup(false)
@@ -626,7 +599,7 @@ export default function AdminOrdersPage() {
       void loadPickups()
       void loadShippedOrdersForCarrier(pickupCarrier)
     } catch (err: any) {
-      toast.error(err?.response?.data?.message || 'Failed to cancel pickup.')
+      toast.error(err?.response?.data?.message || t('errors.cancelPickupFailed'))
     } finally {
       setCancellingPickupId('')
     }
@@ -639,7 +612,7 @@ export default function AdminOrdersPage() {
       toast.success(msg)
       void loadPickups()
     } catch (err: any) {
-      toast.error(err?.response?.data?.message || 'Failed to mark pickup as picked up.')
+      toast.error(err?.response?.data?.message || t('errors.markPickupFailed'))
     } finally {
       setMarkingPickupId('')
     }
@@ -657,14 +630,14 @@ export default function AdminOrdersPage() {
       const presignedUrl = await getAdminOrderLabelUrl(order.id)
 
       if (!presignedUrl) {
-        toast.error('Unable to generate label URL right now.')
+        toast.error(t('errors.generateLabelUrl'))
         return
       }
 
       window.open(presignedUrl, '_blank', 'noopener,noreferrer')
-      toast.success(`Label ready for ${order.orderNumber}.`)
+      toast.success(t('toast.labelReady', { orderNumber: order.orderNumber }))
     } catch {
-      toast.error('Unable to download label right now.')
+      toast.error(t('errors.downloadLabel'))
     } finally {
       setDownloadingLabelOrderId('')
     }
@@ -699,8 +672,7 @@ export default function AdminOrdersPage() {
       <div className={`border-t border-[#f3e1ec] px-4 py-4 sm:px-6 ${extraClassName}`.trim()}>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-zinc-600">
-            Page <span className="font-semibold text-[#5f2748]">{pagination.currentPage}</span> of{' '}
-            <span className="font-semibold text-[#5f2748]">{pagination.totalPages}</span>
+            {t('pagination.pageOf', { current: pagination.currentPage, total: pagination.totalPages })}
           </p>
           <div className="flex items-center gap-2">
             <button
@@ -711,7 +683,7 @@ export default function AdminOrdersPage() {
               disabled={isLoading || isSubmittingAction || !pagination.hasPrevPage}
               className="border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              Prev
+              {tCommon('prev')}
             </button>
 
             {pageWindow.map((pageNumber) => (
@@ -740,7 +712,7 @@ export default function AdminOrdersPage() {
               disabled={isLoading || isSubmittingAction || !pagination.hasNextPage}
               className="border border-[#e8c5db] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              Next
+              {tCommon('next')}
             </button>
           </div>
         </div>
@@ -761,14 +733,14 @@ export default function AdminOrdersPage() {
               onClick={() => openActionModal('confirm', order)}
               className="border border-[#de5aa1] bg-[#de5aa1] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#bf4f90]"
             >
-              Confirm
+              {t('actions.confirm')}
             </button>
             <button
               type="button"
               onClick={() => openActionModal('cancel', order)}
               className="border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
             >
-              Cancel Order
+              {t('actions.cancelOrder')}
             </button>
           </>
         ) : null}
@@ -780,7 +752,7 @@ export default function AdminOrdersPage() {
             className="inline-flex items-center gap-1 border border-[#d25595] bg-[#fff0f9] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#a43875] transition hover:bg-[#ffe0f2]"
           >
             <Truck className="h-3.5 w-3.5" />
-            Ship
+            {t('actions.ship')}
           </button>
         ) : null}
 
@@ -793,14 +765,14 @@ export default function AdminOrdersPage() {
               className="inline-flex items-center gap-1 border border-[#b56a22] bg-[#fff6e7] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#8f5119] transition hover:bg-[#ffebc8] disabled:cursor-not-allowed disabled:opacity-70"
             >
               <FileDown className="h-3.5 w-3.5" />
-              {downloadingLabelOrderId === order.id ? 'Downloading...' : 'Download Label'}
+              {downloadingLabelOrderId === order.id ? t('actions.downloading') : t('actions.downloadLabel')}
             </button>
             <button
               type="button"
               onClick={() => openActionModal('cancelShipment', order)}
               className="border border-rose-300 bg-rose-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100"
             >
-              Cancel Shipment
+              {t('actions.cancelShipment')}
             </button>
           </>
         ) : null}
@@ -812,7 +784,7 @@ export default function AdminOrdersPage() {
             className="inline-flex items-center gap-1 border border-[#d25595] bg-[#fff0f9] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#a43875] transition hover:bg-[#ffe0f2]"
           >
             <Truck className="h-3.5 w-3.5" />
-            Re-order
+            {t('actions.reorder')}
           </button>
         ) : null}
       </div>
@@ -847,7 +819,7 @@ export default function AdminOrdersPage() {
     if (rates.length === 0) {
       return (
         <div className="border border-dashed border-[#f1d9e7] bg-white p-3 text-xs text-[#7f5d70]">
-          No {carrier} rates available.
+          {t('table.noRates', { carrier })}
         </div>
       )
     }
@@ -857,11 +829,11 @@ export default function AdminOrdersPage() {
         <table className="w-full table-fixed text-left text-xs">
           <thead className="bg-[#fff2fb] text-[#7a3a61]">
             <tr>
-              <th className="px-3 py-2 font-semibold">Service</th>
-              <th className="hidden px-3 py-2 font-semibold md:table-cell">Code</th>
-              <th className="px-3 py-2 font-semibold">Price</th>
-              <th className="px-3 py-2 font-semibold">Days</th>
-              <th className="hidden px-3 py-2 font-semibold md:table-cell">Tag</th>
+              <th className="px-3 py-2 font-semibold">{t('table.service')}</th>
+              <th className="hidden px-3 py-2 font-semibold md:table-cell">{t('table.code')}</th>
+              <th className="px-3 py-2 font-semibold">{t('table.price')}</th>
+              <th className="px-3 py-2 font-semibold">{t('table.days')}</th>
+              <th className="hidden px-3 py-2 font-semibold md:table-cell">{t('table.tag')}</th>
             </tr>
           </thead>
           <tbody>
@@ -900,10 +872,10 @@ export default function AdminOrdersPage() {
         <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin</p>
-              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">All Orders</h1>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">{t('breadcrumb')}</p>
+              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">{t('title')}</h1>
             </div>
-            <p className="text-sm text-[#6f4f65]">Manage every order flow from pending to delivered.</p>
+            <p className="text-sm text-[#6f4f65]">{t('subtitle')}</p>
           </div>
 
           {/* ── Top-level parent tabs: Shipment | Pickup ── */}
@@ -918,7 +890,7 @@ export default function AdminOrdersPage() {
               }`}
             >
               <Truck className={`h-5 w-5 ${viewTab === 'orders' ? 'text-[#d24a90]' : 'text-[#3f1933]'}`} />
-              Shipment
+              {t('tabs.shipment')}
             </button>
             <button
               type="button"
@@ -932,7 +904,7 @@ export default function AdminOrdersPage() {
               }`}
             >
               <Package className={`h-5 w-5 ${viewTab === 'pickups' ? 'text-[#d24a90]' : 'text-[#3f1933]'}`} />
-              Pickup
+              {t('tabs.pickup')}
             </button>
           </div>
 
@@ -948,8 +920,8 @@ export default function AdminOrdersPage() {
                 className={`inline-flex h-9 w-9 items-center justify-center transition ${
                   viewMode === 'grid' ? 'bg-[#d24a90] text-white' : 'text-[#9b3f75] hover:bg-[#fff3fb]'
                 }`}
-                aria-label="Show grid view"
-                title="Grid View"
+                aria-label={t('viewMode.gridAria')}
+                title={t('viewMode.gridTitle')}
               >
                 <LayoutGrid className="h-4 w-4" />
               </button>
@@ -959,8 +931,8 @@ export default function AdminOrdersPage() {
                 className={`inline-flex h-9 w-9 items-center justify-center transition ${
                   viewMode === 'table' ? 'bg-[#d24a90] text-white' : 'text-[#9b3f75] hover:bg-[#fff3fb]'
                 }`}
-                aria-label="Show table view"
-                title="Table View"
+                aria-label={t('viewMode.tableAria')}
+                title={t('viewMode.tableTitle')}
               >
                 <List className="h-4 w-4" />
               </button>
@@ -979,7 +951,7 @@ export default function AdminOrdersPage() {
                   type="text"
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}
-                  placeholder="Search by order number or customer email"
+                  placeholder={t('searchPlaceholder')}
                   className="w-full border border-[#e3bfd6] bg-white py-2.5 pl-9 pr-3 text-sm text-[#4f2040] outline-none transition focus:border-[#d24a90]"
                 />
               </div>
@@ -988,7 +960,7 @@ export default function AdminOrdersPage() {
                   type="submit"
                   className="border border-[#3f1933] bg-[#3f1933] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22]"
                 >
-                  Search
+                  {tCommon('search')}
                 </button>
                 {appliedSearch ? (
                   <button
@@ -996,7 +968,7 @@ export default function AdminOrdersPage() {
                     onClick={handleSearchClear}
                     className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-[#6f4f65] transition hover:bg-[#fff7fb]"
                   >
-                    Clear
+                    {tCommon('clear')}
                   </button>
                 ) : null}
               </div>
@@ -1005,7 +977,7 @@ export default function AdminOrdersPage() {
 
           {viewTab === 'orders' && appliedSearch ? (
             <p className="mt-2 text-xs text-[#7a4f6a]">
-              Showing results for <span className="font-semibold text-[#4f2040]">&ldquo;{appliedSearch}&rdquo;</span>
+              {t('showingResultsFor')} <span className="font-semibold text-[#4f2040]">&ldquo;{appliedSearch}&rdquo;</span>
             </p>
           ) : null}
 
@@ -1023,7 +995,7 @@ export default function AdminOrdersPage() {
   >
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
-        Pending
+        {t('filters.pending')}
       </p>
 
       {selectedStatusFilter === 'PENDING' && (
@@ -1046,7 +1018,7 @@ export default function AdminOrdersPage() {
   >
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
-        Confirmed
+        {t('filters.confirmed')}
       </p>
 
       {selectedStatusFilter === 'CONFIRMED' && (
@@ -1069,7 +1041,7 @@ export default function AdminOrdersPage() {
   >
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
-        Shipped
+        {t('filters.shipped')}
       </p>
 
       {selectedStatusFilter === 'SHIPPED' && (
@@ -1092,7 +1064,7 @@ export default function AdminOrdersPage() {
   >
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
-        Delivered
+        {t('filters.delivered')}
       </p>
 
       {selectedStatusFilter === 'DELIVERED' && (
@@ -1115,7 +1087,7 @@ export default function AdminOrdersPage() {
   >
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
-        Cancelled
+        {t('filters.cancelled')}
       </p>
 
       {selectedStatusFilter === 'CANCELLED' && (
@@ -1138,7 +1110,7 @@ export default function AdminOrdersPage() {
   >
     <div className="flex items-center justify-between gap-2">
       <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#8d5574]">
-        All
+        {t('filters.all')}
       </p>
 
       {selectedStatusFilter === 'ALL' && (
@@ -1156,7 +1128,7 @@ export default function AdminOrdersPage() {
 
           {viewTab === 'orders' && !isLoading && !error && orders.length === 0 ? (
             <div className="mt-6 border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-6 py-10 text-center text-sm text-[#7c5d72]">
-              No orders were found.
+              {t('empty')}
             </div>
           ) : null}
 
@@ -1173,7 +1145,7 @@ export default function AdminOrdersPage() {
                         {order.orderNumber}
                       </Link>
                       <h2 className="mt-2 text-xl font-bold text-[#361128]">
-                        {order.totalItems} item{order.totalItems === 1 ? '' : 's'} · {formatPrice(order.totalAmount, orderCurrency)}
+                        {t('grid.itemsCount', { count: order.totalItems })} · {formatPrice(order.totalAmount, orderCurrency)}
                       </h2>
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
@@ -1182,7 +1154,7 @@ export default function AdminOrdersPage() {
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <BadgeCheck className="h-4 w-4" />
-                          Payment: {order.paymentMethod}
+                          {t('grid.payment')} {order.paymentMethod}
                         </span>
                       </div>
                     </div>
@@ -1204,7 +1176,7 @@ export default function AdminOrdersPage() {
                   <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {order.items.map((item, itemIndex) => {
                       const thumbnail = typeof item?.thumbnail === 'string' ? item.thumbnail.trim() : ''
-                      const itemTitle = typeof item?.title === 'string' && item.title.trim() ? item.title : 'Order item'
+                      const itemTitle = typeof item?.title === 'string' && item.title.trim() ? item.title : tCommon('orderItem')
 
                       return (
                         <div key={`${order.id}-${item?.productId ?? 'product'}-${item?.variantId ?? 'variant'}-${itemIndex}`} className="border border-[#f0dbe8] bg-[#fffbfe] p-3">
@@ -1213,13 +1185,13 @@ export default function AdminOrdersPage() {
                               <img src={thumbnail} alt={itemTitle} className="h-20 w-full object-contain" />
                             ) : (
                               <div className="flex h-20 w-full items-center justify-center text-xs font-semibold uppercase tracking-[0.08em] text-[#8d5574]">
-                                No image
+                                {tCommon('noImage')}
                               </div>
                             )}
                           </div>
                           <p className="mt-2 text-sm font-semibold text-[#351626] line-clamp-2">{itemTitle}</p>
                           <p className="mt-1 text-xs text-zinc-500">
-                            {(item?.variantName || 'Default')} · Qty {item?.quantity ?? 0}
+                            {(item?.variantName || tCommon('default'))} · {t('grid.qty', { count: item?.quantity ?? 0 })}
                           </p>
                         </div>
                       )
@@ -1227,7 +1199,7 @@ export default function AdminOrdersPage() {
                   </div>
 
                   <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#f0dbe8] pt-4">
-                    <div className="text-sm text-zinc-500">Customer total: {formatPrice(order.totalAmount, orderCurrency)}</div>
+                    <div className="text-sm text-zinc-500">{t('grid.customerTotal')} {formatPrice(order.totalAmount, orderCurrency)}</div>
                     {renderOrderActions(order)}
                   </div>
                 </article>
@@ -1242,13 +1214,13 @@ export default function AdminOrdersPage() {
                 <table className="min-w-[980px] w-full text-left text-sm">
                   <thead className="bg-[#fff6fb] text-xs font-bold uppercase tracking-[0.1em] text-[#8f4a73]">
                     <tr>
-                      <th className="px-4 py-3">Order</th>
-                      <th className="px-4 py-3">Date</th>
-                      <th className="px-4 py-3">Items</th>
-                      <th className="px-4 py-3">Total</th>
-                      <th className="px-4 py-3">Order Status</th>
-                      <th className="px-4 py-3">Payment</th>
-                      <th className="px-4 py-3 text-right">Actions</th>
+                      <th className="px-4 py-3">{t('table.order')}</th>
+                      <th className="px-4 py-3">{t('table.date')}</th>
+                      <th className="px-4 py-3">{t('table.items')}</th>
+                      <th className="px-4 py-3">{t('table.total')}</th>
+                      <th className="px-4 py-3">{t('table.orderStatus')}</th>
+                      <th className="px-4 py-3">{t('table.payment')}</th>
+                      <th className="px-4 py-3 text-right">{t('table.actions')}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#f3e3ed]">
@@ -1297,7 +1269,7 @@ export default function AdminOrdersPage() {
 
           {viewTab === 'orders' && pagination ? (
             <p className="mt-4 text-sm text-zinc-500">
-              {pagination.totalRecords} total records
+              {t('totalRecords', { count: pagination.totalRecords })}
             </p>
           ) : null}
 
@@ -1315,7 +1287,7 @@ export default function AdminOrdersPage() {
                       : 'border-transparent text-[#7a4f6a] hover:text-[#3f1933]'
                   }`}
                 >
-                  Schedule New
+                  {t('pickup.scheduleNew')}
                 </button>
                 <button
                   type="button"
@@ -1326,7 +1298,7 @@ export default function AdminOrdersPage() {
                       : 'border-transparent text-[#7a4f6a] hover:text-[#3f1933]'
                   }`}
                 >
-                  View Pickups
+                  {t('pickup.viewPickups')}
                 </button>
               </div>
 
@@ -1365,7 +1337,7 @@ export default function AdminOrdersPage() {
                         type="text"
                         value={pickupSearchInput}
                         onChange={(e) => setPickupSearchInput(e.target.value)}
-                        placeholder="Search by order number or customer email"
+                        placeholder={t('searchPlaceholder')}
                         className="w-full border border-[#e3bfd6] bg-white py-2.5 pl-9 pr-3 text-sm text-[#4f2040] outline-none transition focus:border-[#d24a90]"
                       />
                     </div>
@@ -1374,7 +1346,7 @@ export default function AdminOrdersPage() {
                         type="submit"
                         className="border border-[#3f1933] bg-[#3f1933] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22]"
                       >
-                        Search
+                        {tCommon('search')}
                       </button>
                       {pickupAppliedSearch ? (
                         <button
@@ -1382,7 +1354,7 @@ export default function AdminOrdersPage() {
                           onClick={handlePickupSearchClear}
                           className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-[#6f4f65] transition hover:bg-[#fff7fb]"
                         >
-                          Clear
+                          {tCommon('clear')}
                         </button>
                       ) : null}
                     </div>
@@ -1390,7 +1362,7 @@ export default function AdminOrdersPage() {
 
                   {pickupAppliedSearch ? (
                     <p className="-mt-2 text-xs text-[#7a4f6a]">
-                      Showing results for <span className="font-semibold text-[#4f2040]">&ldquo;{pickupAppliedSearch}&rdquo;</span>
+                      {t('showingResultsFor')} <span className="font-semibold text-[#4f2040]">&ldquo;{pickupAppliedSearch}&rdquo;</span>
                     </p>
                   ) : null}
 
@@ -1398,7 +1370,7 @@ export default function AdminOrdersPage() {
                   <div className="border border-[#f0d7e7] bg-white">
                     <div className="flex items-center justify-between gap-2 border-b border-[#f0d7e7] px-4 py-2.5">
                       <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">
-                        Select {pickupCarrier} Shipped Orders (no pickup yet)
+                        {t('pickup.selectShippedOrders', { carrier: pickupCarrier })}
                       </p>
                       {shippedOrdersForPickup.length > 0 ? (
                         <button
@@ -1412,15 +1384,15 @@ export default function AdminOrdersPage() {
                           }}
                           className="text-[11px] font-semibold text-[#d24a90] hover:underline"
                         >
-                          {selectedPickupOrderIds.length === shippedOrdersForPickup.length ? 'Clear all' : `Select all (${shippedOrdersForPickup.length})`}
+                          {selectedPickupOrderIds.length === shippedOrdersForPickup.length ? t('pickup.clearAll') : t('pickup.selectAll', { count: shippedOrdersForPickup.length })}
                         </button>
                       ) : null}
                     </div>
                     {isLoadingShippedOrders ? (
-                      <div className="px-4 py-6 text-center text-xs text-[#7a4f6a]">Loading orders…</div>
+                      <div className="px-4 py-6 text-center text-xs text-[#7a4f6a]">{t('pickup.loadingOrders')}</div>
                     ) : shippedOrdersForPickup.length === 0 ? (
                       <div className="px-4 py-6 text-center text-xs text-[#7a4f6a]">
-                        No {pickupCarrier} shipped orders without a pickup.
+                        {t('pickup.noShippedOrders', { carrier: pickupCarrier })}
                       </div>
                     ) : (
                       <div className="divide-y divide-[#f6e4ef]">
@@ -1455,12 +1427,12 @@ export default function AdminOrdersPage() {
                                     className="inline-flex items-center gap-1 border border-[#b56a22] bg-[#fff6e7] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#8f5119] transition hover:bg-[#ffebc8] disabled:cursor-not-allowed disabled:opacity-60"
                                   >
                                     <FileDown className="h-3.5 w-3.5" />
-                                    {downloadingLabelOrderId === order.id ? 'Downloading…' : 'Download Shipment Label'}
+                                    {downloadingLabelOrderId === order.id ? t('actions.downloadingEllipsis') : t('actions.downloadShipmentLabel')}
                                   </button>
                                   <div className="flex gap-3 overflow-x-auto pb-2">
                                     {order.items.map((item, idx) => {
                                       const thumb = typeof item?.thumbnail === 'string' ? item.thumbnail.trim() : ''
-                                      const title = (typeof item?.title === 'string' && item.title.trim()) ? item.title : 'Item'
+                                      const title = (typeof item?.title === 'string' && item.title.trim()) ? item.title : tCommon('item')
                                       return (
                                         <div
                                           key={`${order.id}-${item?.productId ?? 'p'}-${idx}`}
@@ -1470,13 +1442,13 @@ export default function AdminOrdersPage() {
                                             <img src={thumb} alt={title} className="h-full w-full object-contain p-1" />
                                           ) : (
                                             <div className="flex h-full w-full items-center justify-center text-[10px] font-semibold uppercase text-[#8d5574]">
-                                              No image
+                                              {tCommon('noImage')}
                                             </div>
                                           )}
                                           <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-black/75 px-2 text-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                                             <p className="line-clamp-3 text-[11px] font-semibold text-white">{title}</p>
                                             <p className="text-[11px] font-bold text-[#ffb3da]">{formatPrice(item.price, orderCurrency)}</p>
-                                            <p className="text-[10px] text-zinc-300">Qty {item?.quantity ?? 1}</p>
+                                            <p className="text-[10px] text-zinc-300">{t('grid.qty', { count: item?.quantity ?? 1 })}</p>
                                           </div>
                                         </div>
                                       )
@@ -1494,7 +1466,7 @@ export default function AdminOrdersPage() {
                   {/* Proceed */}
                   <div className="flex items-center justify-end gap-3">
                     <span className="text-xs text-[#7a4f6a]">
-                      {selectedPickupOrderIds.length} order(s) selected
+                      {t('pickup.ordersSelected', { count: selectedPickupOrderIds.length })}
                     </span>
                     <button
                       type="button"
@@ -1502,7 +1474,7 @@ export default function AdminOrdersPage() {
                       disabled={selectedPickupOrderIds.length === 0}
                       className="border border-[#3f1933] bg-[#3f1933] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22] disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      Proceed
+                      {tCommon('proceed')}
                     </button>
                   </div>
                   </>
@@ -1516,10 +1488,10 @@ export default function AdminOrdersPage() {
                       className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:text-[#d24a90]"
                     >
                       <ArrowLeft className="h-4 w-4" />
-                      Back to order selection
+                      {t('pickup.backToOrderSelection')}
                     </button>
                     <span className="text-xs font-semibold text-[#5c3a50]">
-                      {selectedPickupOrderIds.length} order(s) selected · {pickupCarrier}
+                      {t('pickup.ordersSelectedWithCarrier', { count: selectedPickupOrderIds.length, carrier: pickupCarrier })}
                     </span>
                   </div>
 
@@ -1527,12 +1499,12 @@ export default function AdminOrdersPage() {
                   {pickupCarrier === 'DHL' ? (
                     <div className="border border-[#f0d7e7] bg-white">
                       <div className="border-b border-[#f0d7e7] px-4 py-2.5">
-                        <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">DHL Pickup Details</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">{t('pickup.dhlPickupDetails')}</p>
                       </div>
                       <div className="grid gap-4 p-4 sm:grid-cols-2">
                         <div>
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Pickup Date &amp; Time *
+                            {t('pickup.pickupDateTime')}
                           </label>
                           <input
                             type="datetime-local"
@@ -1543,7 +1515,7 @@ export default function AdminOrdersPage() {
                         </div>
                         <div>
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Close Time (HH:MM) *
+                            {t('pickup.closeTime')}
                           </label>
                           <input
                             type="time"
@@ -1554,38 +1526,38 @@ export default function AdminOrdersPage() {
                         </div>
                         <div>
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Location / Room *
+                            {t('pickup.locationRoom')}
                           </label>
                           <input
                             type="text"
                             value={dhlForm.location}
                             onChange={e => setDhlForm(f => ({ ...f, location: e.target.value }))}
-                            placeholder="e.g. Reception"
+                            placeholder={t('pickup.locationPlaceholder')}
                             className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                           />
                         </div>
                         <div>
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Location Type *
+                            {t('pickup.locationType')}
                           </label>
                           <select
                             value={dhlForm.locationType}
                             onChange={e => setDhlForm(f => ({ ...f, locationType: e.target.value as 'business' | 'residence' }))}
                             className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                           >
-                            <option value="business">Business</option>
-                            <option value="residence">Residence</option>
+                            <option value="business">{t('pickup.locationTypeBusiness')}</option>
+                            <option value="residence">{t('pickup.locationTypeResidence')}</option>
                           </select>
                         </div>
                         <div className="sm:col-span-2">
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Remark (optional)
+                            {t('pickup.remarkOptional')}
                           </label>
                           <input
                             type="text"
                             value={dhlForm.remark}
                             onChange={e => setDhlForm(f => ({ ...f, remark: e.target.value }))}
-                            placeholder="e.g. Ring the bell"
+                            placeholder={t('pickup.remarkPlaceholder')}
                             className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                           />
                         </div>
@@ -1597,23 +1569,22 @@ export default function AdminOrdersPage() {
                   {pickupCarrier === 'FEDEX' ? (
                     <div className="border border-[#f0d7e7] bg-white">
                       <div className="border-b border-[#f0d7e7] px-4 py-2.5">
-                        <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">FedEx Pickup Details</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">{t('pickup.fedExPickupDetails')}</p>
                       </div>
 
-                      {/* Read-only summary — all three auto-update from the
-                          picker below; nothing is selected up here. */}
+                      {/* Read-only summary — all three auto-update from the picker below. */}
                       <div className="grid gap-4 p-4 sm:grid-cols-3">
                         {([
-                          ['Pickup Date *', fedExForm.plannedPickupDate, false],
-                          ['Package Ready Time *', fedExForm.packageReadyTime, true],
-                          ['Customer Close Time *', fedExForm.customerCloseTime, true],
+                          [t('pickup.pickupDate'), fedExForm.plannedPickupDate, false],
+                          [t('pickup.packageReadyTime'), fedExForm.packageReadyTime, true],
+                          [t('pickup.customerCloseTime'), fedExForm.customerCloseTime, true],
                         ] as const).map(([label, value, isTime]) => (
                           <div key={label}>
                             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
                               {label}
                             </label>
                             <div className={`w-full border px-3 py-2 text-xs ${value ? 'border-[#d24a90] bg-[#fff0f9] font-semibold text-[#4f2040]' : 'border-[#e9d3e2] bg-[#faf1f6] text-[#b08aa0]'}`}>
-                              {value ? (isTime ? formatTime12h(value) : value) : 'Select below'}
+                              {value ? (isTime ? formatTime12h(value) : value) : t('pickup.selectBelow')}
                             </div>
                           </div>
                         ))}
@@ -1623,22 +1594,22 @@ export default function AdminOrdersPage() {
                       <div className="grid gap-4 px-4 pb-4 sm:grid-cols-2">
                         <div>
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Package Location
+                            {t('pickup.packageLocation')}
                           </label>
                           <select
                             value={fedExForm.packageLocation}
                             onChange={e => setFedExForm(f => ({ ...f, packageLocation: e.target.value }))}
                             className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                           >
-                            <option value="FRONT">Front</option>
-                            <option value="REAR">Rear</option>
-                            <option value="SIDE">Side</option>
-                            <option value="NONE">None</option>
+                            <option value="FRONT">{t('pickup.packageLocationFront')}</option>
+                            <option value="REAR">{t('pickup.packageLocationRear')}</option>
+                            <option value="SIDE">{t('pickup.packageLocationSide')}</option>
+                            <option value="NONE">{t('pickup.packageLocationNone')}</option>
                           </select>
                         </div>
                         <div>
                           <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            Remarks (optional)
+                            {t('pickup.remarksOptional')}
                           </label>
                           <input
                             type="text"
@@ -1657,12 +1628,12 @@ export default function AdminOrdersPage() {
                           <div className="grid gap-3 sm:grid-cols-2">
                             <div className="sm:col-span-2">
                               <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                Choose your preferred times, then check FedEx availability
+                                {t('pickup.chooseTimesThenCheck')}
                               </p>
                             </div>
                             <div>
                               <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                Package Ready Time
+                                {t('pickup.packageReadyTime').replace(' *', '')}
                               </label>
                               <input
                                 type="time"
@@ -1673,7 +1644,7 @@ export default function AdminOrdersPage() {
                             </div>
                             <div>
                               <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                Customer Close Time
+                                {t('pickup.customerCloseTime').replace(' *', '')}
                               </label>
                               <input
                                 type="time"
@@ -1693,30 +1664,30 @@ export default function AdminOrdersPage() {
                           className="border border-[#3f1933] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:bg-[#fdf4fa] disabled:cursor-not-allowed disabled:opacity-60"
                         >
                           {isCheckingAvailability
-                            ? 'Checking…'
+                            ? t('pickup.checking')
                             : (!fedExForm.packageReadyTime || !fedExForm.customerCloseTime)
-                              ? 'Select ready & close time first'
+                              ? t('pickup.selectReadyCloseFirst')
                               : (fedExAvailability && fedExAvailability.options.length > 0)
-                                ? 'Re-check FedEx Availability'
-                                : 'Check FedEx Availability'}
+                                ? t('pickup.recheckAvailability')
+                                : t('pickup.checkAvailability')}
                         </button>
 
                         {fedExAvailability && fedExAvailability.options.length === 0 ? (
                           <div className="flex items-center gap-2 text-xs font-semibold text-rose-700">
-                            <AlertCircle className="h-4 w-4" /> FedEx has no available pickup dates right now.
+                            <AlertCircle className="h-4 w-4" /> {t('pickup.fedExNoDates')}
                           </div>
                         ) : null}
 
                         {fedExAvailability && fedExAvailability.options.length > 0 ? (
                           <div className="space-y-3 border border-[#efcfe1] bg-[#fff8fd] p-3">
                             <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700">
-                              <CheckCircle2 className="h-4 w-4" /> FedEx is available — pick a slot below.
+                              <CheckCircle2 className="h-4 w-4" /> {t('pickup.fedExAvailable')}
                             </div>
 
                             {/* Step A: pickup date */}
                             <div>
                               <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                1. Pickup Date
+                                {t('pickup.stepPickupDate')}
                               </p>
                               <div className="flex flex-wrap gap-2">
                                 {fedExDateChoices.map(date => {
@@ -1744,7 +1715,7 @@ export default function AdminOrdersPage() {
                                           }
                                         })
                                       }}
-                                      title={isAvailable ? undefined : 'FedEx not available on this date'}
+                                      title={isAvailable ? undefined : t('pickup.fedExNotAvailableDate')}
                                       className={`border-2 px-4 py-2 text-xs font-bold transition ${
                                         isSel
                                           ? 'border-[#3f1933] bg-[#3f1933] text-white'
@@ -1765,19 +1736,24 @@ export default function AdminOrdersPage() {
                             {selectedFedExOption ? (
                               <>
                                 <p className="text-[10px] text-[#8b5a75]">
-                                  Only FedEx&apos;s slots for {selectedFedExOption.pickupDate} are selectable. Driver needs at least {selectedFedExOption.accessTime.hours}h {selectedFedExOption.accessTime.minutes}m between ready &amp; close. Cut-off: {formatTime12h(selectedFedExOption.cutOffTime)}.
+                                  {t('pickup.fedExSlotsHint', {
+                                    date: selectedFedExOption.pickupDate,
+                                    hours: selectedFedExOption.accessTime.hours,
+                                    minutes: selectedFedExOption.accessTime.minutes,
+                                    cutOff: formatTime12h(selectedFedExOption.cutOffTime),
+                                  })}
                                 </p>
                                 <div className="grid gap-3 sm:grid-cols-2">
                                   <div>
                                     <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                      2. Package Ready Time
+                                      {t('pickup.stepPackageReadyTime')}
                                     </label>
                                     <select
                                       value={fedExForm.packageReadyTime}
                                       onChange={e => setFedExForm(f => ({ ...f, packageReadyTime: e.target.value, customerCloseTime: '' }))}
                                       className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                                     >
-                                      <option value="">Select ready time…</option>
+                                      <option value="">{t('pickup.selectReadyTime')}</option>
                                       {selectedFedExOption.readyTimeOptions.map(t => (
                                         <option key={t} value={t}>{formatTime12h(t)}</option>
                                       ))}
@@ -1785,7 +1761,7 @@ export default function AdminOrdersPage() {
                                   </div>
                                   <div>
                                     <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                      3. Customer Close Time
+                                      {t('pickup.stepCustomerCloseTime')}
                                     </label>
                                     <select
                                       value={fedExForm.customerCloseTime}
@@ -1794,7 +1770,7 @@ export default function AdminOrdersPage() {
                                       className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90] disabled:cursor-not-allowed disabled:bg-[#faf1f6]"
                                     >
                                       <option value="">
-                                        {fedExForm.packageReadyTime ? 'Select close time…' : 'Pick ready time first'}
+                                        {fedExForm.packageReadyTime ? t('pickup.selectCloseTime') : t('pickup.pickReadyTimeFirst')}
                                       </option>
                                       {fedExCloseOptions.map(t => (
                                         <option key={t} value={t}>{formatTime12h(t)}</option>
@@ -1804,7 +1780,7 @@ export default function AdminOrdersPage() {
                                 </div>
                               </>
                             ) : (
-                              <p className="text-[10px] text-[#8b5a75]">Pick a pickup date to choose ready &amp; close time.</p>
+                              <p className="text-[10px] text-[#8b5a75]">{t('pickup.pickDateForTimes')}</p>
                             )}
                           </div>
                         ) : null}
@@ -1829,7 +1805,7 @@ export default function AdminOrdersPage() {
                       }
                       className="border border-[#3f1933] bg-[#3f1933] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22] disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      {isSubmittingPickup ? 'Scheduling…' : `Schedule ${pickupCarrier} Pickup`}
+                      {isSubmittingPickup ? t('pickup.scheduling') : t('pickup.schedulePickup', { carrier: pickupCarrier })}
                     </button>
                   </div>
                   </>
@@ -1843,9 +1819,9 @@ export default function AdminOrdersPage() {
                   {/* Status sections: Scheduled · Picked up · Cancelled */}
                   <div className="mb-5 inline-flex border border-[#f0d7e7] bg-white">
                     {([
-                      { key: 'SCHEDULED', label: 'Scheduled' },
-                      { key: 'PICKED_UP', label: 'Picked Up' },
-                      { key: 'CANCELLED', label: 'Cancelled' },
+                      { key: 'SCHEDULED', label: t('pickup.statusScheduled') },
+                      { key: 'PICKED_UP', label: t('pickup.statusPickedUp') },
+                      { key: 'CANCELLED', label: t('pickup.statusCancelled') },
                     ] as const).map(tab => (
                       <button
                         key={tab.key}
@@ -1863,14 +1839,14 @@ export default function AdminOrdersPage() {
                   </div>
 
                   {isLoadingPickups ? (
-                    <div className="py-8 text-center text-xs text-[#7a4f6a]">Loading pickups…</div>
+                    <div className="py-8 text-center text-xs text-[#7a4f6a]">{t('pickup.loadingPickups')}</div>
                   ) : pickups.length === 0 ? (
                     <div className="border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-6 py-10 text-center text-sm text-[#7c5d72]">
                       {pickupStatusFilter === 'SCHEDULED'
-                        ? 'No scheduled pickups.'
+                        ? t('pickup.emptyScheduled')
                         : pickupStatusFilter === 'PICKED_UP'
-                          ? 'No picked-up pickups yet.'
-                          : 'No cancelled pickups.'}
+                          ? t('pickup.emptyPickedUp')
+                          : t('pickup.emptyCancelled')}
                     </div>
                   ) : (
                     <div className="space-y-3">
@@ -1903,20 +1879,20 @@ export default function AdminOrdersPage() {
                                       ? 'border-blue-200 bg-blue-50 text-blue-700'
                                       : 'border-zinc-200 bg-zinc-50 text-zinc-500'
                                 }`}>
-                                  {pickup.status === 'PICKED_UP' ? 'PICKED UP' : pickup.status}
+                                  {pickup.status === 'PICKED_UP' ? t('pickup.pickedUpStatus') : pickup.status}
                                 </span>
                               </div>
                               <p className="text-xs font-semibold text-[#4f2040]">
-                                Confirmation: <span className="font-mono">{pickup.confirmationNumber}</span>
+                                {t('pickup.confirmation')} <span className="font-mono">{pickup.confirmationNumber}</span>
                               </p>
                               <p className="text-xs text-zinc-500">
-                                {pickup.plannedPickupDateAndTime.split('T')[0]} {formatTime12h((pickup.plannedPickupDateAndTime.split('T')[1] ?? '').slice(0, 5))} · Close {formatTime12h(pickup.closeTime)}
+                                {pickup.plannedPickupDateAndTime.split('T')[0]} {formatTime12h((pickup.plannedPickupDateAndTime.split('T')[1] ?? '').slice(0, 5))} · {t('pickup.closeAt', { time: formatTime12h(pickup.closeTime) })}
                               </p>
                               <p className="text-xs text-zinc-500">
-                                {pickup.packageCount} package(s) · {pickup.totalWeightKg} kg · {pickup.orderIds.length} order(s)
+                                {t('pickup.packageCount', { count: pickup.packageCount, weight: pickup.totalWeightKg, orders: pickup.orderIds.length })}
                               </p>
                               <p className="text-xs text-zinc-400">
-                                Location: {pickup.location} ({pickup.locationType})
+                                {t('pickup.location', { location: pickup.location, type: pickup.locationType })}
                               </p>
                             </div>
                             <div className="flex shrink-0 items-center gap-3 sm:flex-col sm:items-end">
@@ -1936,7 +1912,7 @@ export default function AdminOrdersPage() {
                                     className="inline-flex items-center justify-center gap-1 border border-emerald-300 bg-emerald-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-emerald-700 transition hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-60"
                                   >
                                     <CheckCircle2 className="h-3.5 w-3.5" />
-                                    {markingPickupId === pickup.id ? 'Saving…' : 'Picked Up'}
+                                    {markingPickupId === pickup.id ? tCommon('saving') : t('pickup.pickedUp')}
                                   </button>
                                   <button
                                     type="button"
@@ -1948,7 +1924,7 @@ export default function AdminOrdersPage() {
                                     className="inline-flex items-center justify-center gap-1 border border-rose-300 bg-rose-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
                                   >
                                     <X className="h-3.5 w-3.5" />
-                                    {cancellingPickupId === pickup.id ? 'Cancelling…' : 'Cancel'}
+                                    {cancellingPickupId === pickup.id ? t('pickup.cancelling') : tCommon('cancel')}
                                   </button>
                                 </div>
                               ) : null}
@@ -1958,25 +1934,25 @@ export default function AdminOrdersPage() {
                           {expandedPickupId === pickup.id ? (
                             <div className="mt-4 border-t border-dashed border-[#f0d7e7] pt-4">
                               {isLoadingPickupDetail ? (
-                                <div className="py-6 text-center text-xs text-[#7a4f6a]">Loading orders…</div>
+                                <div className="py-6 text-center text-xs text-[#7a4f6a]">{t('pickup.loadingPickupOrders')}</div>
                               ) : pickupDetailError ? (
                                 <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">{pickupDetailError}</div>
                               ) : pickupDetail ? (
                                 <div className="space-y-3">
                                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[#7c5d72]">
                                     <span>
-                                      Status:{' '}
+                                      {t('pickup.status')}{' '}
                                       <span className={`font-bold uppercase tracking-[0.06em] ${pickupDetail.pickup.status === 'SCHEDULED' ? 'text-emerald-700' : 'text-zinc-500'}`}>
                                         {pickupDetail.pickup.status}
                                       </span>
                                     </span>
-                                    <span>{pickupDetail.orderCount} order(s) in this pickup</span>
-                                    {pickupDetail.pickup.remark ? <span>Remark: {pickupDetail.pickup.remark}</span> : null}
+                                    <span>{t('pickup.ordersInPickup', { count: pickupDetail.orderCount })}</span>
+                                    {pickupDetail.pickup.remark ? <span>{t('pickup.remark', { remark: pickupDetail.pickup.remark })}</span> : null}
                                   </div>
 
                                   {pickupDetail.orders.length === 0 ? (
                                     <div className="border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-4 py-6 text-center text-xs text-[#7c5d72]">
-                                      No active orders found for this pickup.
+                                      {t('pickup.noActiveOrders')}
                                     </div>
                                   ) : (
                                     <div className="space-y-2">
@@ -1997,7 +1973,7 @@ export default function AdminOrdersPage() {
                                               </div>
                                               {o.trackingNumber ? (
                                                 <p className="text-[11px] text-zinc-500">
-                                                  Tracking:{' '}
+                                                  {t('pickup.tracking')}{' '}
                                                   {o.trackingUrl ? (
                                                     <a href={o.trackingUrl} target="_blank" rel="noopener noreferrer" className="font-mono text-[#a63f7f] underline">
                                                       {o.trackingNumber}
@@ -2014,7 +1990,7 @@ export default function AdminOrdersPage() {
                                               ) : null}
                                             </div>
                                             <div className="text-xs text-zinc-500 sm:text-right">
-                                              {o.totalItems} item{o.totalItems === 1 ? '' : 's'} · {formatPrice(o.totalAmount, isoToCurrencyCode(o.currency) ?? 'eur')}
+                                              {t('grid.itemsCount', { count: o.totalItems })} · {formatPrice(o.totalAmount, isoToCurrencyCode(o.currency) ?? 'eur')}
                                             </div>
                                           </div>
                                           {o.items.length > 0 ? (
@@ -2036,7 +2012,7 @@ export default function AdminOrdersPage() {
 
                                   {pickupDetail.missingOrderIds.length > 0 ? (
                                     <p className="text-[11px] text-amber-700">
-                                      {pickupDetail.missingOrderIds.length} order(s) in this pickup are no longer retrievable (deleted/inactive).
+                                      {t('pickup.missingOrders', { count: pickupDetail.missingOrderIds.length })}
                                     </p>
                                   ) : null}
                                 </div>
@@ -2062,7 +2038,7 @@ export default function AdminOrdersPage() {
             <div className="w-full max-w-6xl border border-[#efc5df] bg-white shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto">
               <div className="flex items-center justify-between border-b border-[#f0d7e7] px-5 py-3">
                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#a63f7f]">
-                  FedEx Shipment · {pendingAction.order.orderNumber}
+                  {t('actionModal.fedExShipmentTitle', { orderNumber: pendingAction.order.orderNumber })}
                 </p>
                 <button
                   type="button"
@@ -2081,16 +2057,16 @@ export default function AdminOrdersPage() {
                   onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }}
                 />
               ) : isLoadingShippingQuote ? (
-                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">Loading shipment details…</div>
+                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">{t('actionModal.loadingShipmentDetails')}</div>
               ) : (
                 <div className="space-y-3 px-6 py-12 text-center">
-                  <p className="text-sm text-rose-600">{shippingQuoteError || 'Unable to load rates.'}</p>
+                  <p className="text-sm text-rose-600">{shippingQuoteError || t('actionModal.unableLoadRates')}</p>
                   <button
                     type="button"
                     onClick={() => void loadShippingQuote(pendingAction.order.id)}
                     className="border border-[#d24a90] px-4 py-2 text-xs font-bold text-[#d24a90] transition hover:bg-[#fff2fb]"
                   >
-                    Retry
+                    {tCommon('retry')}
                   </button>
                 </div>
               )}
@@ -2099,7 +2075,7 @@ export default function AdminOrdersPage() {
             <div className="w-full max-w-6xl border border-amber-200 bg-white shadow-[0_26px_80px_rgba(180,90,10,0.30)] max-h-[92vh] overflow-y-auto">
               <div className="flex items-center justify-between border-b border-amber-200 px-5 py-3">
                 <p className="text-xs font-bold uppercase tracking-[0.12em] text-amber-700">
-                  DHL Shipment · {pendingAction.order.orderNumber}
+                  {t('actionModal.dhlShipmentTitle', { orderNumber: pendingAction.order.orderNumber })}
                 </p>
                 <button
                   type="button"
@@ -2120,16 +2096,16 @@ export default function AdminOrdersPage() {
                   />
                 </div>
               ) : isLoadingShippingQuote ? (
-                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">Loading shipment details…</div>
+                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">{t('actionModal.loadingShipmentDetails')}</div>
               ) : (
                 <div className="space-y-3 px-6 py-12 text-center">
-                  <p className="text-sm text-rose-600">{shippingQuoteError || 'Unable to load rates.'}</p>
+                  <p className="text-sm text-rose-600">{shippingQuoteError || t('actionModal.unableLoadRates')}</p>
                   <button
                     type="button"
                     onClick={() => void loadShippingQuote(pendingAction.order.id)}
                     className="border border-amber-600 px-4 py-2 text-xs font-bold text-amber-700 transition hover:bg-amber-50"
                   >
-                    Retry
+                    {tCommon('retry')}
                   </button>
                 </div>
               )}
@@ -2149,9 +2125,9 @@ export default function AdminOrdersPage() {
                   className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:text-[#d24a90]"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  Back
+                  {tCommon('back')}
                 </button>
-                <h3 className="text-xl font-bold text-[#3d1530]">DHL Shipment</h3>
+                <h3 className="text-xl font-bold text-[#3d1530]">{t('actionModal.dhlShipment')}</h3>
               </div>
             ) : (
               <>
@@ -2160,14 +2136,14 @@ export default function AdminOrdersPage() {
               </>
             )}
             <p className="mt-3 bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
-              Order: {pendingAction.order.orderNumber}
+              {t('actionModal.orderLabel', { orderNumber: pendingAction.order.orderNumber })}
             </p>
 
             {/* ── Ship: Carrier pick step ── */}
             {pendingAction.type === 'ship' && shipCarrierStep === 'pick' ? (
               <div className="mt-6 space-y-4">
                 {isLoadingShippingQuote ? (
-                  <div className="py-8 text-center text-sm text-[#694d5f]">Loading shipping rates…</div>
+                  <div className="py-8 text-center text-sm text-[#694d5f]">{t('actionModal.loadingShippingRates')}</div>
                 ) : shippingQuoteError ? (
                   <div className="space-y-3 py-4 text-center">
                     <p className="text-sm text-rose-600">{shippingQuoteError}</p>
@@ -2176,12 +2152,12 @@ export default function AdminOrdersPage() {
                       onClick={() => void loadShippingQuote(pendingAction.order.id)}
                       className="border border-[#d24a90] px-4 py-2 text-xs font-bold text-[#d24a90] transition hover:bg-[#fff2fb]"
                     >
-                      Retry
+                      {tCommon('retry')}
                     </button>
                   </div>
                 ) : shippingQuote ? (
                   <>
-                    <p className="text-sm font-semibold text-[#4f2040]">Select a carrier to continue</p>
+                    <p className="text-sm font-semibold text-[#4f2040]">{t('actionModal.selectCarrier')}</p>
                     <div className="grid grid-cols-2 gap-4">
                       {/* FedEx button — rates load inside FedExShipForm */}
                       <button
@@ -2193,7 +2169,7 @@ export default function AdminOrdersPage() {
                         className="flex flex-col items-center gap-3 border-2 border-[#3f1933] bg-white px-6 py-10 text-center transition hover:bg-[#fdf4fa]"
                       >
                         <span className="text-3xl font-extrabold tracking-tight text-[#3f1933]">FedEx</span>
-                        <span className="text-xs text-[#7a4f6a]">International shipping</span>
+                        <span className="text-xs text-[#7a4f6a]">{t('actionModal.internationalShipping')}</span>
                       </button>
                       {/* DHL button — rates load inside DHLShipForm */}
                       <button
@@ -2205,7 +2181,7 @@ export default function AdminOrdersPage() {
                         className="flex flex-col items-center gap-3 border-2 border-amber-600 bg-white px-6 py-10 text-center transition hover:bg-amber-50"
                       >
                         <span className="text-3xl font-extrabold tracking-tight text-amber-700">DHL</span>
-                        <span className="text-xs text-amber-600">International shipping</span>
+                        <span className="text-xs text-amber-600">{t('actionModal.internationalShipping')}</span>
                       </button>
                     </div>
                   </>
@@ -2217,19 +2193,19 @@ export default function AdminOrdersPage() {
             {pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
               <div className="mt-4 space-y-2 border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
                 {isLoadingShippingQuote ? (
-                  <p className="text-sm text-[#694d5f]">Loading shipping cost...</p>
+                  <p className="text-sm text-[#694d5f]">{t('actionModal.loadingShippingCost')}</p>
                 ) : null}
 
                 {!isLoadingShippingQuote && shippingQuote ? (
                   <>
-                    <p className="flex justify-center text-sm font-semibold text-[#4f2040]">DHL Shipping Rates</p>
+                    <p className="flex justify-center text-sm font-semibold text-[#4f2040]">{t('actionModal.dhlShippingRates')}</p>
                     <div className="space-y-2">
                       {renderShippingRateTable('DHL', shippingQuote.rates.DHL)}
                     </div>
 
                     {selectedShippingRate ? (
                       <div className="border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
-                        Selected: <span className="font-semibold text-[#4f2040]">DHL</span> /{' '}
+                        {t('actionModal.selected')} <span className="font-semibold text-[#4f2040]">DHL</span> /{' '}
                         <span className="font-semibold text-[#4f2040]">{selectedShippingRate.serviceCode}</span>
                       </div>
                     ) : null}
@@ -2239,9 +2215,9 @@ export default function AdminOrdersPage() {
                         {/* Shipper */}
                         <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
                           <div className="mb-1 flex items-center justify-between">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Shipper</p>
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.shipper')}</p>
                             <span className={`text-[10px] font-semibold ${shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? 'text-emerald-600' : 'text-rose-600'}`}>
-                              {shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? '✓ ready' : '⚠ check fields'}
+                              {shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? t('actionModal.ready') : t('actionModal.checkFields')}
                             </span>
                           </div>
                           <div className="space-y-0.5">
@@ -2256,13 +2232,13 @@ export default function AdminOrdersPage() {
                         {/* Receiver (editable) */}
                         <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
                           <div className="mb-1 flex items-center justify-between">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Receiver</p>
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.receiver')}</p>
                             <div className="flex items-center gap-2">
                               <span className={`text-[10px] font-semibold ${shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? 'text-emerald-600' : 'text-rose-600'}`}>
-                                {shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? '✓ ready' : '⚠ check fields'}
+                                {shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? t('actionModal.ready') : t('actionModal.checkFields')}
                               </span>
                               {!isEditingReceiver ? (
-                                <button type="button" onClick={startEditReceiver} className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] transition hover:bg-[#fff2fb]">Edit</button>
+                                <button type="button" onClick={startEditReceiver} className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] transition hover:bg-[#fff2fb]">{tCommon('edit')}</button>
                               ) : null}
                             </div>
                           </div>
@@ -2282,7 +2258,7 @@ export default function AdminOrdersPage() {
                             <div className="space-y-1.5">
                               {(['street', 'city', 'postalCode'] as const).map((field) => (
                                 <div key={field} className="flex items-center gap-2">
-                                  <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{field}</label>
+                                    <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon(field)}</label>
                                   <input
                                     value={receiverDraft?.[field] ?? ''}
                                     onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, [field]: e.target.value } : prev)}
@@ -2291,26 +2267,26 @@ export default function AdminOrdersPage() {
                                 </div>
                               ))}
                               <div className="flex items-center gap-2">
-                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">country</label>
+                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('country')}</label>
                                 <select
                                   value={receiverDraft?.country ?? ''}
                                   onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, country: e.target.value, state: '' } : prev)}
                                   className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                                 >
-                                  <option value="">Select country</option>
+                                  <option value="">{tCommon('selectCountry')}</option>
                                   {getCountryOptions().map((c) => (
                                     <option key={c.code} value={c.code}>{c.name}</option>
                                   ))}
                                 </select>
                               </div>
                               <div className="flex items-center gap-2">
-                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">state</label>
+                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('state')}</label>
                                 <select
                                   value={receiverDraft?.state ?? ''}
                                   onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, state: e.target.value } : prev)}
                                   className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
                                 >
-                                  <option value="">Select state</option>
+                                  <option value="">{tCommon('selectState')}</option>
                                   {getStateOptions(receiverDraft?.country ?? '').map((s) => (
                                     <option key={s.code} value={s.code}>{s.name}</option>
                                   ))}
@@ -2318,9 +2294,9 @@ export default function AdminOrdersPage() {
                               </div>
                               {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
                               <div className="flex justify-end gap-2 pt-1">
-                                <button type="button" onClick={cancelEditReceiver} disabled={isSavingReceiver} className="border border-[#e3bfd6] px-2 py-0.5 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60">Cancel</button>
+                                <button type="button" onClick={cancelEditReceiver} disabled={isSavingReceiver} className="border border-[#e3bfd6] px-2 py-0.5 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60">{tCommon('cancel')}</button>
                                 <button type="button" onClick={() => void saveReceiverDraft()} disabled={isSavingReceiver} className="border border-[#d24a90] bg-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-white hover:bg-[#b83f7d] disabled:opacity-60">
-                                  {isSavingReceiver ? 'Saving…' : 'Save'}
+                                  {isSavingReceiver ? tCommon('saving') : tCommon('save')}
                                 </button>
                               </div>
                             </div>
@@ -2329,37 +2305,37 @@ export default function AdminOrdersPage() {
 
                         {/* Package */}
                         <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
-                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Package &amp; Customs</p>
+                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.packageCustoms')}</p>
                           <div className="grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
-                            <p><span className="font-semibold text-[#4f2040]">Weight:</span> {shippingQuote.preview.package.totalWeightKg} kg</p>
-                            <p><span className="font-semibold text-[#4f2040]">Declared:</span> €{shippingQuote.preview.package.declaredValueEUR.toFixed(2)}</p>
-                            <p><span className="font-semibold text-[#4f2040]">Incoterm:</span> {shippingQuote.preview.package.incoterm}</p>
+                            <p><span className="font-semibold text-[#4f2040]">{t('actionModal.weight')}</span> {shippingQuote.preview.package.totalWeightKg} {tCommon('kg')}</p>
+                            <p><span className="font-semibold text-[#4f2040]">{t('actionModal.declared')}</span> €{shippingQuote.preview.package.declaredValueEUR.toFixed(2)}</p>
+                            <p><span className="font-semibold text-[#4f2040]">{t('actionModal.incoterm')}</span> {shippingQuote.preview.package.incoterm}</p>
                             <p>
-                              <span className="font-semibold text-[#4f2040]">Customs:</span>{' '}
+                              <span className="font-semibold text-[#4f2040]">{t('actionModal.customs')}</span>{' '}
                               <span className={shippingQuote.preview.package.isCustomsDeclarable ? 'text-amber-700' : 'text-emerald-700'}>
-                                {shippingQuote.preview.package.isCustomsDeclarable ? 'Yes – cross-border' : 'No – domestic / intra-EU'}
+                                {shippingQuote.preview.package.isCustomsDeclarable ? t('actionModal.customsYes') : t('actionModal.customsNo')}
                               </span>
                             </p>
                             <p className={`sm:col-span-2 ${shippingQuote.validation?.descriptionOk ? '' : 'text-rose-600'}`}>
-                              <span className="font-semibold text-[#4f2040]">Description:</span> {shippingQuote.preview.package.description}
+                              <span className="font-semibold text-[#4f2040]">{t('actionModal.description')}</span> {shippingQuote.preview.package.description}
                             </p>
                           </div>
                         </div>
 
                         {/* Items */}
                         <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
-                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">Line items</p>
+                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.lineItems')}</p>
                           <div className="overflow-x-auto">
                             <table className="min-w-full text-[11px]">
                               <thead>
                                 <tr className="text-left text-[#8b5a75]">
-                                  <th className="pr-2">#</th>
-                                  <th className="pr-2">Title</th>
-                                  <th className="pr-2 text-right">Qty</th>
-                                  <th className="pr-2 text-right">Unit €</th>
-                                  <th className="pr-2 text-right">Unit g</th>
-                                  <th className="pr-2">Mfr</th>
-                                  <th>HS code</th>
+                                  <th className="pr-2">{t('actionModal.lineItemsHeaders.number')}</th>
+                                  <th className="pr-2">{t('actionModal.lineItemsHeaders.title')}</th>
+                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.qty')}</th>
+                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitEur')}</th>
+                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitG')}</th>
+                                  <th className="pr-2">{t('actionModal.lineItemsHeaders.mfr')}</th>
+                                  <th>{t('actionModal.lineItemsHeaders.hsCode')}</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -2383,7 +2359,7 @@ export default function AdminOrdersPage() {
 
                     {shippingQuote.validation && shippingQuote.validation.issues.length > 0 ? (
                       <div className="mt-3 border border-rose-200 bg-rose-50 px-3 py-2 text-xs text-rose-700">
-                        <p className="mb-1 font-semibold">Cannot ship until these are fixed:</p>
+                        <p className="mb-1 font-semibold">{t('actionModal.cannotShipUntilFixed')}</p>
                         <ul className="list-inside list-disc">
                           {shippingQuote.validation.issues.map((issue) => (
                             <li key={issue}>{issue}</li>
@@ -2407,7 +2383,7 @@ export default function AdminOrdersPage() {
                 disabled={isSubmittingAction}
                 className="border border-[#e3bfd6] px-4 py-2 text-sm font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Cancel
+                {tCommon('cancel')}
               </button>
               {!(pendingAction.type === 'ship' && shipCarrierStep === 'pick') ? (
                 <button
@@ -2424,7 +2400,7 @@ export default function AdminOrdersPage() {
                   }
                   className="border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  {isSubmittingAction ? 'Please wait...' : 'Confirm'}
+                  {isSubmittingAction ? tCommon('pleaseWait') : tCommon('confirm')}
                 </button>
               ) : null}
             </div>

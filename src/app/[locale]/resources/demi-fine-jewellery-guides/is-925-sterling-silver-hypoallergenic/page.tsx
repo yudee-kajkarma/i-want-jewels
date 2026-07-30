@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Is 925 Sterling Silver Hypoallergenic?',
   description:
-    'Learn if 925 sterling silver is hypoallergenic, whether it is good for sensitive ears, and how to choose safe demi-fine earrings.',
+    'Learn if 925 sterling silver is hypoallergenic, whether it is good for sensitive ears, and how to choose safe demi-fine earrings.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

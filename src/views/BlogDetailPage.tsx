@@ -30,7 +30,7 @@ export default function BlogDetailPage({
     blogDetail,
     relatedProducts,
 }: BlogDetailPageProps) {
-    const { t } = useTranslation('blog');
+    const { t } = useTranslation();
     const publishedLabel = formatDate(blogDetail.publishedAt);
 
     return (
@@ -41,7 +41,7 @@ export default function BlogDetailPage({
                 <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1100px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            {t('detail.breadcrumb')}
+                            {t('blog.detail.breadcrumb')}
                         </p>
                         <h1 className="mt-3 text-[26px] font-medium leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[34px] lg:text-[44px]">
                             {blogDetail.title}
@@ -49,11 +49,11 @@ export default function BlogDetailPage({
 
                         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] uppercase tracking-[0.18em] text-zinc-500">
                             {publishedLabel ? (
-                                <span>{t('detail.published', { date: publishedLabel })}</span>
+                                <span>{t('blog.detail.published', { date: publishedLabel })}</span>
                             ) : null}
-                            <span>{t('detail.views', { count: blogDetail.views })}</span>
+                            <span>{t('blog.detail.views', { count: blogDetail.views })}</span>
                             {blogDetail.author?.name ? (
-                                <span>{t('detail.byAuthor', { name: blogDetail.author.name })}</span>
+                                <span>{t('blog.detail.byAuthor', { name: blogDetail.author.name })}</span>
                             ) : null}
                         </div>
                     </div>
@@ -78,7 +78,7 @@ export default function BlogDetailPage({
                     {blogDetail.tags.length > 0 ? (
                         <div className="mt-10 flex flex-wrap items-center gap-2 border-t border-zinc-200 pt-6">
                             <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                                {t('detail.tags')}
+                                {t('blog.detail.tags')}
                             </span>
                             {blogDetail.tags.map((tag) => (
                                 <span
@@ -95,7 +95,7 @@ export default function BlogDetailPage({
                 {relatedProducts.length > 0 ? (
                     <section className="mx-auto max-w-[1480px] px-6 py-12 lg:px-10 lg:py-16">
                         <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
-                            {t('detail.relatedProducts')}
+                            {t('blog.detail.relatedProducts')}
                         </h2>
                         <div className="mt-8 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
                             {relatedProducts.slice(0, 4).map((product) => (

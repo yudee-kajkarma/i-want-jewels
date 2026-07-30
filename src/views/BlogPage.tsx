@@ -14,7 +14,7 @@ type BlogPageProps = {
 };
 
 export default function BlogPage({ blogs, pagination }: BlogPageProps) {
-    const { t } = useTranslation('blog');
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     return (
@@ -25,10 +25,10 @@ export default function BlogPage({ blogs, pagination }: BlogPageProps) {
                 <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            {t('list.breadcrumb')}
+                            {t('blog.list.breadcrumb')}
                         </p>
                         <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
-                            {t('list.title')}
+                            {t('blog.list.title')}
                         </h1>
                     </div>
                 </section>
@@ -43,10 +43,10 @@ export default function BlogPage({ blogs, pagination }: BlogPageProps) {
                     {blogs.length === 0 ? (
                         <div className="border border-dashed border-zinc-300 bg-white px-6 py-12 text-center">
                             <h2 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">
-                                {t('list.emptyTitle')}
+                                {t('blog.list.emptyTitle')}
                             </h2>
                             <p className="mt-2 text-[12px] uppercase tracking-[0.16em] text-zinc-500">
-                                {t('list.emptyDesc')}
+                                {t('blog.list.emptyDesc')}
                             </p>
                         </div>
                     ) : null}

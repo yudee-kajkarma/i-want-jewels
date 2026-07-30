@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
+import { useTranslation } from 'react-i18next'
 import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift, Undo2, Check, X } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
@@ -81,6 +82,7 @@ function getReturnStatusClass(status: string) {
 }
 
 export default function AdminOrderDetailPage() {
+    const { t } = useTranslation('common', { keyPrefix: 'admin.orderDetail' })
     const params = useParams<{ orderId?: string | string[] }>()
     const { currency } = useCurrency()
     const orderId = typeof params.orderId === 'string' ? params.orderId : ''
@@ -135,7 +137,7 @@ export default function AdminOrderDetailPage() {
                 }
 
                 setOrder(null)
-                setError('Unable to load this admin order detail right now.')
+                setError(t('loadError'))
             } finally {
                 if (mounted) {
                     setIsLoading(false)
@@ -150,7 +152,7 @@ export default function AdminOrderDetailPage() {
         return () => {
             mounted = false
         }
-    }, [orderId])
+    }, [orderId, t])
 
     function openEditShippingAddress() {
         if (!order) {
@@ -198,12 +200,12 @@ export default function AdminOrderDetailPage() {
         setPostalCodeError('')
 
         if (!payload.street || !payload.city || !payload.state || !payload.postalCode || !payload.country) {
-            setAddressError('Please complete all shipping address fields.')
+            setAddressError(t('errors.addressIncomplete'))
             return
         }
 
         if (!isValidPostalCode(payload.postalCode, payload.country)) {
-            setPostalCodeError('Please enter a valid postal code.')
+            setPostalCodeError(t('errors.invalidPostalCode'))
             return
         }
 
@@ -214,10 +216,10 @@ export default function AdminOrderDetailPage() {
             const refreshedOrder = await getAdminOrderById(order.id)
             setOrder(refreshedOrder)
             setIsEditAddressOpen(false)
-            toast.success('Shipping address updated successfully.')
+            toast.success(t('toast.addressUpdated'))
         } catch {
-            setAddressError('Unable to update shipping address right now. Please try again.')
-            toast.error('Unable to update shipping address right now.')
+            setAddressError(t('errors.addressUpdate'))
+            toast.error(t('toast.addressUpdateError'))
         } finally {
             setIsSavingAddress(false)
         }
@@ -234,10 +236,10 @@ export default function AdminOrderDetailPage() {
             await verifyPaymentStatus(order.sessionId)
             const refreshedOrder = await getAdminOrderById(order.id)
             setOrder(refreshedOrder)
-            toast.success('Payment verified successfully.')
+            toast.success(t('toast.paymentVerified'))
         } catch (error) {
             console.error('Payment verification failed:', error)
-            const errorMessage = error instanceof Error ? error.message : 'Unable to verify payment. Please try again.'
+            const errorMessage = error instanceof Error ? error.message : t('errors.verifyPayment')
             toast.error(errorMessage)
         } finally {
             setIsVerifyingPayment(false)
@@ -250,14 +252,14 @@ export default function AdminOrderDetailPage() {
         setReturnActionError('')
         try {
             await approveOrderReturn(order.id, adminNote.trim() || undefined)
-            toast.success('Return approved and refund initiated')
+            toast.success(t('toast.returnApproved'))
             setAdminNote('')
             const refreshed = await getAdminOrderById(order.id)
             setOrder(refreshed)
         } catch (err) {
             const message =
                 (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
-                'Unable to approve return.'
+                t('errors.approveReturn')
             setReturnActionError(message)
             toast.error(message)
         } finally {
@@ -268,21 +270,21 @@ export default function AdminOrderDetailPage() {
     async function handleRejectReturn() {
         if (!order) return
         if (!adminNote.trim()) {
-            setReturnActionError('A note is required to reject a return.')
+            setReturnActionError(t('errors.rejectNoteRequired'))
             return
         }
         setIsRejectingReturn(true)
         setReturnActionError('')
         try {
             await rejectOrderReturn(order.id, adminNote.trim())
-            toast.success('Return rejected')
+            toast.success(t('toast.returnRejected'))
             setAdminNote('')
             const refreshed = await getAdminOrderById(order.id)
             setOrder(refreshed)
         } catch (err) {
             const message =
                 (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
-                'Unable to reject return.'
+                t('errors.rejectReturn')
             setReturnActionError(message)
             toast.error(message)
         } finally {
@@ -295,13 +297,13 @@ export default function AdminOrderDetailPage() {
         setIsMarkingReturned(true)
         try {
             await updateOrderStatusForAdmin(order.id, 'RETURNED')
-            toast.success('Order marked as RETURNED')
+            toast.success(t('toast.markedReturned'))
             const refreshed = await getAdminOrderById(order.id)
             setOrder(refreshed)
         } catch (err) {
             const message =
                 (err as { response?: { data?: { message?: string } } })?.response?.data?.message ||
-                'Unable to update order status.'
+                t('errors.updateStatus')
             toast.error(message)
         } finally {
             setIsMarkingReturned(false)
@@ -324,12 +326,12 @@ export default function AdminOrderDetailPage() {
             <Header />
             <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
                 <nav className="mb-6 text-sm text-zinc-500">
-                    <Link to="/admin/orders" className="transition hover:text-zinc-900">Admin Orders</Link>
+                    <Link to="/admin/orders" className="transition hover:text-zinc-900">{t('breadcrumb')}</Link>
                     {' / '}
                     <span className="text-zinc-900">{order?.orderNumber || orderId}</span>
                 </nav>
 
-                {isLoading ? <p className="text-sm text-zinc-500">Loading order...</p> : null}
+                {isLoading ? <p className="text-sm text-zinc-500">{t('loading')}</p> : null}
                 {!isLoading && error ? (
                     <div className="border border-rose-200 bg-rose-50 px-5 py-6 text-sm text-rose-700">{error}</div>
                 ) : null}
@@ -339,7 +341,7 @@ export default function AdminOrderDetailPage() {
                         <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
                             <div className="flex flex-wrap items-center justify-between gap-3">
                                 <div>
-                                    <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">Order Number</p>
+                                    <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{t('orderNumber')}</p>
                                     <h1 className="mt-2 text-3xl font-extrabold tracking-[-0.04em] text-[#17110d]">{order.orderNumber}</h1>
                                 </div>
                                 <div className="flex flex-wrap items-center gap-2">
@@ -354,48 +356,48 @@ export default function AdminOrderDetailPage() {
 
                             <div className="grid gap-4 md:grid-cols-2">
                                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
-                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Clock3 className="h-4 w-4" />Created</p>
+                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Clock3 className="h-4 w-4" />{t('created')}</p>
                                     <p>{formatOrderDate(order.createdAt)}</p>
-                                    <p className="mt-2 inline-flex items-center gap-2 font-semibold text-[#17110d]"><BadgeCheck className="h-4 w-4" />Updated</p>
+                                    <p className="mt-2 inline-flex items-center gap-2 font-semibold text-[#17110d]"><BadgeCheck className="h-4 w-4" />{t('updated')}</p>
                                     <p>{formatOrderDate(order.updatedAt)}</p>
-                                    <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">Refund: {order.refundStatus}</p>
+                                    <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">{t('refund')} {order.refundStatus}</p>
                                 </div>
 
                                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
-                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><User className="h-4 w-4" />Customer</p>
+                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><User className="h-4 w-4" />{t('customer')}</p>
                                     <p>{order.customer?.firstName} {order.customer?.lastName}</p>
                                     <p>{order.customer?.email}</p>
-                                    <p>{order.customer?.phoneNumber || 'N/A'}</p>
-                                    <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">Username: {order.customer?.username || 'N/A'}</p>
+                                    <p>{order.customer?.phoneNumber || t('notAvailable')}</p>
+                                    <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">{t('username')} {order.customer?.username || t('notAvailable')}</p>
                                 </div>
                             </div>
 
                             {order.returnStatus && order.returnStatus !== 'NONE' ? (
                                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                                     <div className="flex flex-wrap items-center justify-between gap-2">
-                                        <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Undo2 className="h-4 w-4" />Return Request</p>
+                                        <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Undo2 className="h-4 w-4" />{t('returnRequest')}</p>
                                         <span className={`inline-flex border px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] ${getReturnStatusClass(order.returnStatus)}`}>
                                             {order.returnStatus}
                                         </span>
                                     </div>
                                     <div className="mt-4 grid gap-2 text-sm text-zinc-600 md:grid-cols-2">
                                         {order.returnRequestedAt ? (
-                                            <p>Requested: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
+                                            <p>{t('requested')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
                                         ) : null}
                                         {order.deliveredAt ? (
-                                            <p>Delivered: <span className="font-semibold text-[#17110d]">{formatOrderDate(order.deliveredAt)}</span></p>
+                                            <p>{t('delivered')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.deliveredAt)}</span></p>
                                         ) : null}
                                         {order.returnReason ? (
-                                            <p className="md:col-span-2">Reason: <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>
+                                            <p className="md:col-span-2">{t('reason')} <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>
                                         ) : null}
                                         {order.returnAdminNote ? (
-                                            <p className="md:col-span-2">Admin note: <span className="font-semibold text-[#17110d]">{order.returnAdminNote}</span></p>
+                                            <p className="md:col-span-2">{t('adminNote')} <span className="font-semibold text-[#17110d]">{order.returnAdminNote}</span></p>
                                         ) : null}
                                     </div>
 
                                     {(order.returnStatus === 'APPROVED' || order.returnStatus === 'COMPLETED') && order.orderStatus === 'DELIVERED' ? (
                                         <div className="mt-4 border-t border-[#efe1d5] pt-4">
-                                            <p className="text-sm text-zinc-600">Once the item is physically back in your possession, mark the order as returned.</p>
+                                            <p className="text-sm text-zinc-600">{t('markReturnedHint')}</p>
                                             <button
                                                 type="button"
                                                 onClick={() => void handleMarkAsReturned()}
@@ -403,7 +405,7 @@ export default function AdminOrderDetailPage() {
                                                 className="mt-3 inline-flex w-full items-center justify-center gap-2 border border-violet-200 bg-violet-600 px-4 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-violet-700 disabled:opacity-60"
                                             >
                                                 <Undo2 className="h-4 w-4" />
-                                                {isMarkingReturned ? 'UPDATING...' : 'MARK ORDER AS RETURNED'}
+                                                {isMarkingReturned ? t('markReturnedUpdating') : t('markReturned')}
                                             </button>
                                         </div>
                                     ) : null}
@@ -413,7 +415,7 @@ export default function AdminOrderDetailPage() {
                                             <textarea
                                                 value={adminNote}
                                                 onChange={(event) => setAdminNote(event.target.value)}
-                                                placeholder="Optional note (required for reject) — visible to the customer"
+                                                placeholder={t('adminNotePlaceholder')}
                                                 className="min-h-[70px] w-full border border-[#e7d3c2] bg-white px-3 py-2 text-sm outline-none focus:border-[#17110d]"
                                             />
                                             {returnActionError ? <p className="text-xs text-rose-600">{returnActionError}</p> : null}
@@ -425,7 +427,7 @@ export default function AdminOrderDetailPage() {
                                                     className="inline-flex flex-1 items-center justify-center gap-2 border border-emerald-200 bg-emerald-600 px-4 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-emerald-700 disabled:opacity-60"
                                                 >
                                                     <Check className="h-4 w-4" />
-                                                    {isApprovingReturn ? 'APPROVING...' : 'APPROVE & REFUND'}
+                                                    {isApprovingReturn ? t('approving') : t('approveRefund')}
                                                 </button>
                                                 <button
                                                     type="button"
@@ -434,10 +436,10 @@ export default function AdminOrderDetailPage() {
                                                     className="inline-flex flex-1 items-center justify-center gap-2 border border-rose-200 px-4 py-3 text-sm font-bold tracking-[0.08em] text-rose-700 transition hover:bg-rose-600 hover:text-white disabled:opacity-60"
                                                 >
                                                     <X className="h-4 w-4" />
-                                                    {isRejectingReturn ? 'REJECTING...' : 'REJECT'}
+                                                    {isRejectingReturn ? t('rejecting') : t('reject')}
                                                 </button>
                                             </div>
-                                            <p className="text-xs text-zinc-500">Approving auto-issues a Stripe refund (for ONLINE+PAID orders) and restores stock.</p>
+                                            <p className="text-xs text-zinc-500">{t('approveHint')}</p>
                                         </div>
                                     ) : null}
                                 </div>
@@ -445,7 +447,7 @@ export default function AdminOrderDetailPage() {
 
                             <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
                                 <div className="flex flex-wrap items-center justify-between gap-2">
-                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><MapPinHouse className="h-4 w-4" />Shipping Address</p>
+                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><MapPinHouse className="h-4 w-4" />{t('shippingAddress')}</p>
                                 </div>
                                 {order.shippingAddress ? (
                                     <>
@@ -454,25 +456,25 @@ export default function AdminOrderDetailPage() {
                                         <p>{getCountryName(order.shippingAddress.country)}</p>
                                     </>
                                 ) : (
-                                    <p>No shipping address available.</p>
+                                    <p>{t('noShippingAddress')}</p>
                                 )}
-                                {order.shippingCarrier ? <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">Carrier: {order.shippingCarrier}</p> : null}
-                                {order.trackingNumber ? <p className="text-xs uppercase tracking-[0.1em] text-zinc-500">Tracking: {order.trackingNumber}</p> : null}
+                                {order.shippingCarrier ? <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">{t('carrier')} {order.shippingCarrier}</p> : null}
+                                {order.trackingNumber ? <p className="text-xs uppercase tracking-[0.1em] text-zinc-500">{t('tracking')} {order.trackingNumber}</p> : null}
                                 {order.trackingUrl ? (
-  <a
-    href={order.trackingUrl}
-    target="_blank"
-    rel="noreferrer"
-    className="inline-flex items-center justify-center bg-[#8f2a60] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#74224f]"
-  >
-    Track Shipment
-  </a>
-) : null}
+                                    <a
+                                        href={order.trackingUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center justify-center bg-[#8f2a60] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#74224f]"
+                                    >
+                                        {t('trackShipment')}
+                                    </a>
+                                ) : null}
                             </div>
 
 
                             <div className="border border-[#efe1d5] bg-[#fffdfa] p-4">
-                                <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Package className="h-4 w-4" />Items</p>
+                                <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Package className="h-4 w-4" />{t('items')}</p>
                                 <div className="mt-4 space-y-3">
                                     {order.items.map((item, index) => (
                                         <article key={`${item.productId}-${item.variantId}-${index}`} className="grid gap-3 border border-[#efe1d5] bg-white p-3 sm:grid-cols-[72px_minmax(0,1fr)_auto] sm:items-center">
@@ -482,13 +484,13 @@ export default function AdminOrderDetailPage() {
                                             <div>
                                                 <p className="font-semibold text-[#17110d]">{item.title}</p>
                                                 <p className="text-xs text-zinc-500">
-                                                    {item.variantName || 'Default'}
-                                                    {item.size !== undefined ? ` · Size ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
-                                                    {' · Qty '}{item.quantity}
+                                                    {item.variantName || t('defaultVariant')}
+                                                    {item.size !== undefined ? ` · ${t('size', { size: `${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` })}` : ''}
+                                                    {' · '}{t('qty', { count: item.quantity })}
                                                 </p>
                                                 {item.isGiftCard ? (
                                                     <p className="mt-1 text-xs text-[#8f2a60]">
-                                                        {item.giftCard?.recipientEmail ? `To: ${item.giftCard.recipientEmail}` : 'Delivered to buyer'}
+                                                        {item.giftCard?.recipientEmail ? t('giftCardTo', { email: item.giftCard.recipientEmail }) : t('giftCardDeliveredBuyer')}
                                                     </p>
                                                 ) : null}
                                             </div>
@@ -500,18 +502,18 @@ export default function AdminOrderDetailPage() {
 
                             {order.issuedGiftCards && order.issuedGiftCards.length > 0 ? (
                                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-4">
-                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Gift className="h-4 w-4" />Issued Gift Cards</p>
+                                    <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Gift className="h-4 w-4" />{t('issuedGiftCards')}</p>
                                     <div className="mt-4 grid gap-3 md:grid-cols-2">
                                         {order.issuedGiftCards.map((card) => (
                                             <article key={card.id || card.code} className="border border-[#efe1d5] bg-white p-3 text-sm">
                                                 <p className="font-mono font-bold text-[#17110d]">{card.code}</p>
                                                 <div className="mt-2 space-y-1 text-xs text-zinc-600">
-                                                    <p>Value: <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, orderCurrency)}</span></p>
-                                                    <p>Owner: <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
-                                                    {card.recipientEmail ? <p>Recipient email: <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
-                                                    {card.recipientName ? <p>Recipient: <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
-                                                    {card.message ? <p>Message: <span className="font-semibold text-[#17110d]">{card.message}</span></p> : null}
-                                                    <p>Status: <span className="font-semibold text-[#17110d]">{card.status}</span></p>
+                                                    <p>{t('value')} <span className="font-semibold text-[#17110d]">{formatPrice(card.initialAmount, orderCurrency)}</span></p>
+                                                    <p>{t('owner')} <span className="font-semibold text-[#17110d]">{card.currentOwnerEmail}</span></p>
+                                                    {card.recipientEmail ? <p>{t('recipientEmail')} <span className="font-semibold text-[#17110d]">{card.recipientEmail}</span></p> : null}
+                                                    {card.recipientName ? <p>{t('recipient')} <span className="font-semibold text-[#17110d]">{card.recipientName}</span></p> : null}
+                                                    {card.message ? <p>{t('message')} <span className="font-semibold text-[#17110d]">{card.message}</span></p> : null}
+                                                    <p>{t('status')} <span className="font-semibold text-[#17110d]">{card.status}</span></p>
                                                 </div>
                                             </article>
                                         ))}
@@ -521,29 +523,29 @@ export default function AdminOrderDetailPage() {
                         </section>
 
                         <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-                            <h2 className="text-xl font-bold text-[#17110d]">Summary</h2>
+                            <h2 className="text-xl font-bold text-[#17110d]">{t('summary')}</h2>
                             <div className="mt-5 space-y-3 text-sm text-zinc-600">
                                 <div className="flex items-center justify-between">
-                                    <span>Total Items</span>
+                                    <span>{t('totalItems')}</span>
                                     <span className="font-semibold text-[#17110d]">{order.totalItems}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <span>Order Total</span>
+                                    <span>{t('orderTotal')}</span>
                                     <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span>
                                 </div>
                                 {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
                                     <>
                                         <div className="flex items-center justify-between text-[#1f7a4d]">
-                                            <span>Gift Card</span>
+                                            <span>{t('giftCard')}</span>
                                             <span className="font-semibold">-{formatPrice(order.giftCardDiscount, orderCurrency)}</span>
                                         </div>
                                         <div className="flex items-center justify-between">
-                                            <span>Payable</span>
+                                            <span>{t('payable')}</span>
                                             <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span>
                                         </div>
                                         {order.appliedGiftCardCode ? (
                                             <div className="flex items-center justify-between gap-3">
-                                                <span>Gift Card Code</span>
+                                                <span>{t('giftCardCode')}</span>
                                                 <span className="break-all text-right font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span>
                                             </div>
                                         ) : null}
@@ -551,17 +553,17 @@ export default function AdminOrderDetailPage() {
                                 ) : null}
                                 {typeof order.shippingCost === 'number' ? (
                                     <div className="flex items-center justify-between">
-                                        <span>Shipping Cost</span>
+                                        <span>{t('shippingCost')}</span>
                                         <span className="font-semibold text-[#17110d]">{formatPrice(order.shippingCost, currency)}</span>
                                     </div>
                                 ) : null}
                                 <div className="flex items-center justify-between">
-                                    <span>Payment Method</span>
+                                    <span>{t('paymentMethod')}</span>
                                     <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <span>Active</span>
-                                    <span className="font-semibold text-[#17110d]">{order.isActive ? 'Yes' : 'No'}</span>
+                                    <span>{t('active')}</span>
+                                    <span className="font-semibold text-[#17110d]">{order.isActive ? t('yes') : t('no')}</span>
                                 </div>
                             </div>
 
@@ -573,7 +575,7 @@ export default function AdminOrderDetailPage() {
                                     className="mt-6 inline-flex w-full items-center justify-center gap-2 border border-sky-200 bg-sky-50 px-4 py-3 text-sm font-bold tracking-[0.08em] text-sky-700 transition hover:bg-sky-100 disabled:opacity-60"
                                 >
                                     <CreditCard className="h-4 w-4" />
-                                    {isVerifyingPayment ? 'VERIFYING...' : 'VERIFY PAYMENT MANUALLY'}
+                                    {isVerifyingPayment ? t('verifying') : t('verifyPayment')}
                                 </button>
                             ) : null}
                         </aside>

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { cache } from 'react'
+import { localizedAlternates } from '@/i18n/metadata'
+import { getLocalizedPath } from '@/i18n/routing'
 import { getProductCategories, getProducts } from '../../../../services/productService'
 import { categoryDisplayName, categorySlug, resolveCategoryFromSlug } from '../../../../utils/categorySlug'
 import { getCategoryContent } from '../../../../data/categoryContent'
@@ -12,6 +14,7 @@ const BASE_URL = 'https://www.iwantjewels.com'
 
 type CategoryPageProps = {
   params: Promise<{
+    locale: string
     category: string
   }>
 }
@@ -25,7 +28,7 @@ const resolveCategory = cache(async (slug: string) => {
 })
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const { category: slug } = await params
+  const { locale, category: slug } = await params
   const categoryName = await resolveCategory(slug)
 
   if (!categoryName) {
@@ -33,15 +36,12 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   const content = getCategoryContent(categorySlug(categoryName), categoryDisplayName(categoryName))
+  const path = `/category/${categorySlug(categoryName)}`
 
   return {
-    // Absolute: the content's metaTitle already carries the brand suffix,
-    // which the root layout's title template would otherwise duplicate.
     title: { absolute: content.metaTitle },
     description: content.metaDescription,
-    alternates: {
-      canonical: `/category/${categorySlug(categoryName)}`,
-    },
+    alternates: localizedAlternates(path, locale),
     openGraph: {
       title: content.metaTitle,
       description: content.metaDescription,

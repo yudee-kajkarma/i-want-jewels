@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Gold vs White vs Rose Gold Diamond Earrings',
   description:
-    'Compare gold, white and rose gold lab grown diamond earrings. Choose the best metal colour for everyday wear, gifts, weddings and styling.',
+    'Compare gold, white and rose gold lab grown diamond earrings. Choose the best metal colour for everyday wear, gifts, weddings and styling.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

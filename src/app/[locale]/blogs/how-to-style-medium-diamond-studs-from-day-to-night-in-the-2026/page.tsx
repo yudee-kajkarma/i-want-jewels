@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,15 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "How to Style Medium Diamond Studs From Day to Night | Cadenza M Diamond Stud Earrings",
     description:
-        "Learn how to style medium diamond studs from day to night. Discover timeless outfit ideas and why the Cadenza M Lab-Grown Diamond Stud Earrings are perfect for everyday elegance and evening sophistication.",
-    alternates: {
-        canonical:
-            "/blogs/how-to-style-medium-diamond-studs-from-day-to-night-in-the-2026",
-    },
-};
+        "Learn how to style medium diamond studs from day to night. Discover timeless outfit ideas and why the Cadenza M Lab-Grown Diamond Stud Earrings are perfect for everyday elegance and evening sophistication."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/how-to-style-medium-diamond-studs-from-day-to-night-in-the-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

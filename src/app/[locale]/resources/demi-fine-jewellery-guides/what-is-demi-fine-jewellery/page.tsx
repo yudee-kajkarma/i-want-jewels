@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { localizedAlternates } from '@/i18n/metadata'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
   V2ArticleSection,
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'What Is Demi Fine Jewellery? Simple Guide',
   description:
-    'Learn what demi fine jewellery means, how it compares to fine and fashion jewellery, and how to choose pieces for everyday wear and gifts.',
+    'Learn what demi fine jewellery means, how it compares to fine and fashion jewellery, and how to choose pieces for everyday wear and gifts.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery', locale),
+  }
 }
 
 // ─── Hero Intro ───────────────────────────────────────────────────────────────

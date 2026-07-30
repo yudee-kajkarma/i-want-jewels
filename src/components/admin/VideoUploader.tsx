@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { requestVideoUploadUrl } from '../../services/productService'
 
 type VideoRef = { url: string; key: string }
@@ -35,6 +36,7 @@ function uuid(): string {
 }
 
 export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.components.videoUploader' })
   const inputRef = useRef<HTMLInputElement | null>(null)
   const [uploads, setUploads] = useState<UploadState[]>([])
 
@@ -51,7 +53,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
     if (file.size > MAX_BYTES) {
       setUploads((u) => [
         ...u,
-        { id: uuid(), filename: file.name, progress: 0, error: 'File exceeds 50 MB' },
+        { id: uuid(), filename: file.name, progress: 0, error: t('errors.fileTooLarge') },
       ])
       return
     }
@@ -64,7 +66,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
           id: uuid(),
           filename: file.name,
           progress: 0,
-          error: 'Only MP4, MOV, WebM allowed',
+          error: t('errors.invalidFormat'),
         },
       ])
       return
@@ -92,16 +94,16 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
         }
         xhr.onload = () => {
           if (xhr.status >= 200 && xhr.status < 300) resolve()
-          else reject(new Error(`S3 returned ${xhr.status}`))
+          else reject(new Error(t('errors.s3Status', { status: xhr.status })))
         }
-        xhr.onerror = () => reject(new Error('Network error during upload'))
+        xhr.onerror = () => reject(new Error(t('errors.network')))
         xhr.send(file)
       })
 
       onChange([...videos, { url: publicUrl, key }])
       setUploads((u) => u.filter((x) => x.id !== id))
     } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'Upload failed'
+      const message = err instanceof Error ? err.message : t('errors.uploadFailed')
       patchUpload(id, { error: message })
     }
   }
@@ -126,7 +128,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
   return (
     <div className="space-y-3">
       <div className="text-sm font-semibold text-[#3f1933]">
-        Videos (up to {max}, max 50 MB each — MP4, MOV, WebM)
+        {t('heading', { max })}
       </div>
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
         {videos.map((video) => (
@@ -145,7 +147,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
               onClick={() => handleRemove(video.key)}
               className="self-end text-sm font-semibold text-[#a53b79]"
             >
-              Remove
+              {t('remove')}
             </button>
           </div>
         ))}
@@ -166,7 +168,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
                   onClick={() => handleDismissError(upload.id)}
                   className="self-end text-sm font-semibold text-[#a53b79]"
                 >
-                  Dismiss
+                  {t('dismiss')}
                 </button>
               </>
             ) : (
@@ -177,7 +179,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
                     style={{ width: `${upload.progress}%` }}
                   />
                 </div>
-                <div className="text-xs text-[#3f1933]">Uploading… {upload.progress}%</div>
+                <div className="text-xs text-[#3f1933]">{t('uploading', { progress: upload.progress })}</div>
               </>
             )}
           </div>
@@ -189,7 +191,7 @@ export function VideoUploader({ productId, videos, onChange, max = 3 }: Props) {
             onClick={() => inputRef.current?.click()}
             className="flex h-40 items-center justify-center rounded-2xl border-2 border-dashed border-[#e7bfd7] text-sm font-semibold text-[#a53b79] hover:bg-[#fbeef5]"
           >
-            + Add video
+            {t('addVideo')}
           </button>
         )}
       </div>

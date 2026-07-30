@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Minimalist Jewellery Gifts for Women | Elegant Gift Ideas",
     description:
-        "Looking for minimalist jewellery gifts? Discover why the Amadea Lab-Grown Diamond Huggie Earrings make the perfect timeless gift for women who love understated luxury.",
-    alternates: {
-        canonical: "/blogs/the-minimalist-jewellery-gifts-for-women",
-    },
-};
+        "Looking for minimalist jewellery gifts? Discover why the Amadea Lab-Grown Diamond Huggie Earrings make the perfect timeless gift for women who love understated luxury."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/the-minimalist-jewellery-gifts-for-women', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

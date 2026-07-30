@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "Are Tennis Bracelets Unisex? Can Men Wear Them in 2026?",
     description:
-        "Can men wear tennis bracelets? Discover why tennis bracelets are unisex, styling tips for men, and how to choose the right one in 2026.",
-    alternates: {
-        canonical: "/blogs/are-tennis-bracelets-unisex",
-    },
-};
+        "Can men wear tennis bracelets? Discover why tennis bracelets are unisex, styling tips for men, and how to choose the right one in 2026."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/are-tennis-bracelets-unisex', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

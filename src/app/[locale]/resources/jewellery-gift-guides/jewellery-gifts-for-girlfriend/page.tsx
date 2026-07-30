@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
  import type { Metadata } from 'next'
 import ResourceArticleV2Page from '../../../../../views/ResourceArticleV2Page'
 import type {
@@ -10,10 +11,21 @@ import type {
 import { getCategoryBySlug, getArticleBySlug, getRelatedArticles } from '../../../../../data/resources'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
   title: 'Jewellery Gifts for Girlfriend',
   description:
-    'Choose jewellery gifts for your girlfriend with lab grown diamond earrings, studs, huggies, butterfly earrings, drops and romantic gift ideas.',
+    'Choose jewellery gifts for your girlfriend with lab grown diamond earrings, studs, huggies, butterfly earrings, drops and romantic gift ideas.'
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/resources/jewellery-gift-guides/jewellery-gifts-for-girlfriend', locale),
+  }
 }
 
 const heroIntro: V2HeroIntro = {

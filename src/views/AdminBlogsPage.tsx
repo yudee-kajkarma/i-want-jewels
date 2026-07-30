@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { Eye, FilePenLine, ImagePlus, Loader2, Plus, RefreshCw, Trash2 } from 'lucide-react'
+import { Eye, FilePenLine, Loader2, Plus, RefreshCw, Trash2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import { Link } from '@/lib/router'
 import AdminBlogFormModal, { type AdminBlogFormState } from '../components/admin/AdminBlogFormModal'
@@ -80,6 +81,7 @@ function normalizeFormStatus(status: string | undefined, fallback: BlogStatus): 
 }
 
 export default function AdminBlogsPage() {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.blogs' })
   const { currency } = useCurrency()
   const [blogs, setBlogs] = useState<AdminBlogListItem[]>([])
   const [pagination, setPagination] = useState<BlogPagination | null>(null)
@@ -137,8 +139,8 @@ export default function AdminBlogsPage() {
       setPagination(blogsResponse.pagination)
       setCurrentPage(blogsResponse.pagination.currentPage)
     } catch {
-      setError('Unable to load admin blogs right now.')
-      toast.error('Unable to load admin blogs right now.')
+      setError(t('errors.load'))
+      toast.error(t('toasts.loadError'))
     } finally {
       setIsLoading(false)
     }
@@ -153,8 +155,8 @@ export default function AdminBlogsPage() {
       setProducts(allProducts)
     } catch {
       setProducts([])
-      setProductLoadError('Unable to load products for related selection.')
-      toast.error('Unable to load products for related selection.')
+      setProductLoadError(t('errors.productLoad'))
+      toast.error(t('toasts.productLoadError'))
     } finally {
       setIsProductsLoading(false)
     }
@@ -175,8 +177,8 @@ export default function AdminBlogsPage() {
       setCurrentPage(response.pagination.currentPage)
       setStatusFilter(nextStatusFilter)
     } catch {
-      setError('Unable to load admin blogs right now.')
-      toast.error('Unable to load admin blogs right now.')
+      setError(t('errors.load'))
+      toast.error(t('toasts.loadError'))
     } finally {
       setIsLoading(false)
     }
@@ -220,7 +222,7 @@ export default function AdminBlogsPage() {
       setProductSearchInput('')
       setIsFormOpen(true)
     } catch {
-      toast.error('Unable to load this blog for editing.')
+      toast.error(t('toasts.editLoadError'))
     } finally {
       setActionLoadingId(null)
     }
@@ -275,9 +277,9 @@ export default function AdminBlogsPage() {
     try {
       const uploadedUrl = await uploadBlogImage(file)
       setForm((currentValue) => ({ ...currentValue, coverImage: uploadedUrl }))
-      toast.success('Cover image uploaded successfully.')
+      toast.success(t('toasts.coverUploadSuccess'))
     } catch {
-      toast.error('Unable to upload image right now.')
+      toast.error(t('toasts.coverUploadError'))
     } finally {
       setIsUploadingImage(false)
       event.target.value = ''
@@ -290,7 +292,7 @@ export default function AdminBlogsPage() {
     const payload = buildPayload(form)
 
     if (!payload.title || !payload.content || !payload.coverImage) {
-      toast.error('Title, content, and cover image are required.')
+      toast.error(t('toasts.validationError'))
       return
     }
 
@@ -299,16 +301,16 @@ export default function AdminBlogsPage() {
     try {
       if (editingBlog) {
         await updateAdminBlog(editingBlog.id, payload)
-        toast.success('Blog updated successfully.')
+        toast.success(t('toasts.updateSuccess'))
       } else {
         await createAdminBlog(payload)
-        toast.success('Blog created successfully.')
+        toast.success(t('toasts.createSuccess'))
       }
 
       closeModal()
       await loadBlogs(1)
     } catch {
-      toast.error('Unable to save blog right now.')
+      toast.error(t('toasts.saveError'))
     } finally {
       setIsSaving(false)
     }
@@ -319,10 +321,10 @@ export default function AdminBlogsPage() {
 
     try {
       const nextStatus = await toggleAdminBlogStatus(blog.id)
-      toast.success(`Blog moved to ${nextStatus}.`)
+      toast.success(t('toasts.statusChanged', { status: t(`status.${nextStatus}`) }))
       await loadBlogs(currentPage)
     } catch {
-      toast.error('Unable to change blog status right now.')
+      toast.error(t('toasts.statusError'))
     } finally {
       setActionLoadingId(null)
     }
@@ -337,12 +339,12 @@ export default function AdminBlogsPage() {
 
     try {
       await deleteAdminBlog(blogPendingDelete.id)
-      toast.success('Blog deleted successfully.')
+      toast.success(t('toasts.deleteSuccess'))
       const nextPage = blogs.length === 1 && currentPage > 1 ? currentPage - 1 : currentPage
       await loadBlogs(nextPage)
       setBlogPendingDelete(null)
     } catch {
-      toast.error('Unable to delete blog right now.')
+      toast.error(t('toasts.deleteError'))
     } finally {
       setActionLoadingId(null)
     }
@@ -356,8 +358,8 @@ export default function AdminBlogsPage() {
         <div className="border border-[#f1cde2] bg-white/90 p-6 shadow-[0_22px_62px_rgba(191,82,136,0.14)] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">Admin Content</p>
-              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">Blog Manager</h1>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#bf4f90]">{t('badge')}</p>
+              <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.04em] text-[#3f1933]">{t('title')}</h1>
             </div>
 
             <div className="flex flex-wrap gap-2">
@@ -367,7 +369,7 @@ export default function AdminBlogsPage() {
                 className="inline-flex items-center gap-2 border border-[#e8c5db] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa]"
               >
                 <RefreshCw className="h-4 w-4" />
-                Refresh
+                {t('refresh')}
               </button>
 
               <button
@@ -376,31 +378,31 @@ export default function AdminBlogsPage() {
                 className="inline-flex items-center gap-2 bg-[#cc4f8f] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#ad3f78]"
               >
                 <Plus className="h-4 w-4" />
-                Add Blog
+                {t('addBlog')}
               </button>
             </div>
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Total</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.total')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{pagination?.totalRecords ?? blogs.length}</p>
             </div>
             <div className="border border-[#f0d3e5] bg-[#fff9fd] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Published</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.published')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{blogs.filter((blog) => blog.status === 'published').length}</p>
             </div>
             <div className="border border-[#f0d3e5] bg-[#fff6fb] p-4">
-              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">Draft</p>
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#8d5574]">{t('stats.draft')}</p>
               <p className="mt-2 text-2xl font-extrabold text-[#4f2040]">{blogs.filter((blog) => blog.status === 'draft').length}</p>
             </div>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2">
             {([
-              { label: 'All', value: 'all' },
-              { label: 'Draft', value: 'draft' },
-              { label: 'Published', value: 'published' },
+              { labelKey: 'tabs.all', value: 'all' },
+              { labelKey: 'tabs.draft', value: 'draft' },
+              { labelKey: 'tabs.published', value: 'published' },
             ] as const).map((tab) => (
               <button
                 key={tab.value}
@@ -413,7 +415,7 @@ export default function AdminBlogsPage() {
                     : 'border-[#e8c5db] bg-white text-[#7a3a61] hover:bg-[#fff2fa]'
                 } disabled:cursor-not-allowed disabled:opacity-50`}
               >
-                {tab.label}
+                {t(tab.labelKey)}
               </button>
             ))}
           </div>
@@ -424,12 +426,12 @@ export default function AdminBlogsPage() {
             <table className="min-w-full text-left text-sm">
               <thead className="border-b border-[#f1d8e8] bg-[#fff5fb] text-xs uppercase tracking-[0.09em] text-[#8d5574]">
                 <tr>
-                  <th className="px-4 py-3 font-semibold">Title</th>
-                  <th className="px-4 py-3 font-semibold">Status</th>
-                  <th className="px-4 py-3 font-semibold">Views</th>
-                  <th className="px-4 py-3 font-semibold">Author</th>
-                  <th className="px-4 py-3 font-semibold">Updated</th>
-                  <th className="px-4 py-3 font-semibold">Actions</th>
+                  <th className="px-4 py-3 font-semibold">{t('table.title')}</th>
+                  <th className="px-4 py-3 font-semibold">{t('table.status')}</th>
+                  <th className="px-4 py-3 font-semibold">{t('table.views')}</th>
+                  <th className="px-4 py-3 font-semibold">{t('table.author')}</th>
+                  <th className="px-4 py-3 font-semibold">{t('table.updated')}</th>
+                  <th className="px-4 py-3 font-semibold">{t('table.actions')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -446,7 +448,7 @@ export default function AdminBlogsPage() {
                 {!isLoading && blogs.length === 0 ? (
                   <tr>
                     <td colSpan={6} className="px-4 py-8 text-center text-[#8a667b]">
-                      No blogs found.
+                      {t('empty')}
                     </td>
                   </tr>
                 ) : null}
@@ -466,7 +468,7 @@ export default function AdminBlogsPage() {
                                 : 'border-amber-200 bg-amber-50 text-amber-700'
                             }`}
                           >
-                            {blog.status}
+                            {t(`status.${blog.status}`)}
                           </span>
                         </td>
                         <td className="px-4 py-4 font-semibold text-[#4f2040]">{blog.views}</td>
@@ -481,7 +483,7 @@ export default function AdminBlogsPage() {
                               className="inline-flex items-center gap-1 border border-[#e8c5db] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
                             >
                               {actionLoadingId === blog.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <FilePenLine className="h-3 w-3" />}
-                              Edit
+                              {t('actions.edit')}
                             </button>
 
                             <button
@@ -490,7 +492,7 @@ export default function AdminBlogsPage() {
                               disabled={actionLoadingId === blog.id}
                               className="inline-flex items-center border border-[#e8c5db] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
                             >
-                              {blog.status === 'published' ? 'Move To Draft' : 'Publish'}
+                              {blog.status === 'published' ? t('actions.moveToDraft') : t('actions.publish')}
                             </button>
 
                             <Link
@@ -498,7 +500,7 @@ export default function AdminBlogsPage() {
                               className="inline-flex items-center gap-1 border border-[#d7d8f7] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#4745a8] transition hover:bg-[#f5f5ff]"
                             >
                               <Eye className="h-3 w-3" />
-                              View
+                              {t('actions.view')}
                             </Link>
 
                             <button
@@ -508,7 +510,7 @@ export default function AdminBlogsPage() {
                               className="inline-flex items-center gap-1 border border-rose-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-50"
                             >
                               <Trash2 className="h-3 w-3" />
-                              Delete
+                              {t('actions.delete')}
                             </button>
                           </div>
                         </td>
@@ -560,9 +562,12 @@ export default function AdminBlogsPage() {
       {blogPendingDelete ? (
         <div className="fixed inset-0 z-[130] flex items-center justify-center bg-black/45 px-4 py-6">
           <div className="w-full max-w-[480px] border border-[#f1cde2] bg-white p-6 shadow-[0_28px_72px_rgba(0,0,0,0.2)]">
-            <h3 className="text-xl font-extrabold text-[#3f1933]">Delete Blog?</h3>
+            <h3 className="text-xl font-extrabold text-[#3f1933]">{t('deleteModal.title')}</h3>
             <p className="mt-3 text-sm leading-6 text-[#6d4d61]">
-              Are you sure you want to delete <span className="font-semibold text-[#3f1933]">{blogPendingDelete.title}</span>? This action cannot be undone.
+              {t('deleteModal.message', {
+                title: blogPendingDelete.title,
+                interpolation: { escapeValue: false },
+              })}
             </p>
 
             <div className="mt-6 flex justify-end gap-2">
@@ -572,7 +577,7 @@ export default function AdminBlogsPage() {
                 disabled={Boolean(actionLoadingId)}
                 className="border border-[#e8c5db] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#7a3a61] transition hover:bg-[#fff2fa] disabled:cursor-not-allowed disabled:opacity-50"
               >
-                Cancel
+                {t('deleteModal.cancel')}
               </button>
               <button
                 type="button"
@@ -581,7 +586,7 @@ export default function AdminBlogsPage() {
                 className="inline-flex items-center gap-2 bg-rose-600 px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {actionLoadingId ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-                Confirm Delete
+                {t('deleteModal.confirmDelete')}
               </button>
             </div>
           </div>

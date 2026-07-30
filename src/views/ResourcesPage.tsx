@@ -49,7 +49,7 @@ function BookOpenIcon() {
 }
 
 export default function ResourcesPage() {
-    const { t } = useTranslation('resources');
+    const { t } = useTranslation();
     return (
         <div className="min-h-screen bg-white font-poppins text-zinc-900">
             <Header />
@@ -59,13 +59,13 @@ export default function ResourcesPage() {
                 <section className="border-b border-zinc-200 bg-white px-6 py-12 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1480px]">
                         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-500">
-                            {t('breadcrumb')}
+                            {t('resources.breadcrumb')}
                         </p>
                         <h1 className="mt-3 text-[28px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[36px] lg:text-[44px]">
-                             {t('title')}
+                             {t('resources.title')}
                         </h1>
                         <p className="mt-4 max-w-2xl text-[14px] leading-7 text-zinc-600 sm:text-[15px]">
-                            {t('subtitle')}
+                            {t('resources.subtitle')}
                         </p>
                     </div>
                 </section>
@@ -102,7 +102,7 @@ export default function ResourcesPage() {
                                         {category.description}
                                     </p>
                                     <div className="mt-5 flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition group-hover:text-pink-500">
-                                        <span>{t('browseGuides')}</span>
+                                        <span>{t('resources.browseGuides')}</span>
                                         <ArrowRightIcon />
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@ export default function ResourcesPage() {
                                 <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-white px-3 py-1.5">
                                     <BookOpenIcon />
                                     <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-700">
-                                        {t('articlesCount', { count: blogLinks.length })}
+                                        {t('resources.articlesCount', { count: blogLinks.length })}
                                     </span>
                                 </div>
                             </div>
@@ -136,13 +136,13 @@ export default function ResourcesPage() {
                             {/* Content */}
                             <div className="p-6">
                                 <h2 className="font-play text-[18px] font-semibold leading-snug text-zinc-900 sm:text-[20px]">
-                                    {t('blogTitle')}
+                                    {t('resources.blogTitle')}
                                 </h2>
                                 <p className="mt-2.5 text-[13px] leading-6 text-zinc-600 line-clamp-2">
-                                    {t('blogDesc')}
+                                    {t('resources.blogDesc')}
                                 </p>
                                 <div className="mt-5 flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition group-hover:text-pink-500">
-                                    <span>{t('readArticles')}</span>
+                                    <span>{t('resources.readArticles')}</span>
                                     <ArrowRightIcon />
                                 </div>
                             </div>
@@ -154,26 +154,26 @@ export default function ResourcesPage() {
                 <section className="border-t border-zinc-100 bg-[#fff7fb] px-6 py-14 lg:px-10 lg:py-16">
                     <div className="mx-auto max-w-[1480px] text-center">
                         <p className="text-[11px] font-medium uppercase tracking-[0.26em] text-pink-500">
-                            {t('needHelp')}
+                            {t('resources.needHelp')}
                         </p>
                         <h2 className="mt-3 font-play text-[24px] font-semibold text-zinc-900 sm:text-[30px]">
-                            {t('cantFind')}
+                            {t('resources.cantFind')}
                         </h2>
                         <p className="mx-auto mt-3 max-w-xl text-[14px] leading-7 text-zinc-600">
-                            {t('helpDesc')}
+                            {t('resources.helpDesc')}
                         </p>
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                             <Link
                                 to="/contact"
                                 className="inline-flex items-center gap-2 bg-[#17110d] px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-white transition hover:bg-black"
                             >
-                                {t('contactUs')}
+                                {t('resources.contactUs')}
                             </Link>
                             <Link
                                 to="/faq"
                                 className="inline-flex items-center border border-zinc-800 bg-white px-7 py-3.5 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-800 transition hover:bg-zinc-900 hover:text-white"
                             >
-                                {t('viewFaqs')}
+                                {t('resources.viewFaqs')}
                             </Link>
                         </div>
                     </div>

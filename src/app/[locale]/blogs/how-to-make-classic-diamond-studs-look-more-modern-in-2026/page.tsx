@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/i18n/metadata'
 import React from "react";
 import { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -7,14 +8,22 @@ import DynamicArticle, {
     ArticleSection,
 } from "@/components/shared/DynamicArticle";
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const base = {
     title: "How to Make Classic Diamond Studs Look More Modern | Cadenza M Diamond Stud Earrings",
     description:
-        "Discover how to make classic diamond studs look more modern with timeless styling ideas. Learn why the Cadenza M Lab-Grown Diamond Stud Earrings are the perfect balance of classic elegance and contemporary fashion.",
-    alternates: {
-        canonical: "/blogs/how-to-make-classic-diamond-studs-look-more-modern-in-2026",
-    },
-};
+        "Discover how to make classic diamond studs look more modern with timeless styling ideas. Learn why the Cadenza M Lab-Grown Diamond Stud Earrings are the perfect balance of classic elegance and contemporary fashion."
+} as Metadata
+  return {
+    ...base,
+    alternates: localizedAlternates('/blogs/how-to-make-classic-diamond-studs-look-more-modern-in-2026', locale),
+  }
+}
 
 const articleData: ArticleSection[] = [
     {

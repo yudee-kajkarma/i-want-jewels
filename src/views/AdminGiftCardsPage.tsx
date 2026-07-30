@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ChevronDown, Gift, Search } from 'lucide-react'
+import { ChevronDown, ChevronLeft, ChevronRight, Gift, Search } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import type { TFunction } from 'i18next'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import {
@@ -23,7 +25,36 @@ function statusClass(status: string): string {
   }
 }
 
+function formatExpiry(
+  expiresAt: string | null | undefined,
+  t: TFunction<'common', 'admin.giftCards'>,
+): { text: string; className: string } {
+  if (!expiresAt) return { text: t('expiryNever'), className: 'text-zinc-400' }
+
+  const d = new Date(expiresAt)
+  const daysLeft = Math.ceil((d.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+  const formatted = d.toLocaleDateString()
+
+  if (daysLeft <= 0) {
+    return {
+      text: t('expiryExpired', { date: formatted }),
+      className: 'text-rose-600 font-semibold',
+    }
+  }
+
+  if (daysLeft <= 30) {
+    return {
+      text: t('expiryDaysLeft', { date: formatted, days: daysLeft }),
+      className: daysLeft <= 7 ? 'text-rose-600 font-semibold' : 'text-amber-600',
+    }
+  }
+
+  return { text: formatted, className: 'text-zinc-500' }
+}
+
 export default function AdminGiftCardsPage() {
+  const { t } = useTranslation('common', { keyPrefix: 'admin.giftCards' })
+  const { t: tCommon } = useTranslation('common', { keyPrefix: 'common' })
   const [purchasers, setPurchasers] = useState<AdminPurchaserGroup[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
   const [expanded, setExpanded] = useState<string | null>(null)
@@ -55,17 +86,17 @@ export default function AdminGiftCardsPage() {
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">Admin</p>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('breadcrumb')}</p>
             <h1 className="mt-2 flex items-center gap-3 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">
               <Gift className="h-8 w-8 text-[#a53b79]" />
-              Gift Cards
+              {t('title')}
             </h1>
           </div>
           <form
             onSubmit={(event) => {
               event.preventDefault()
               setPage(1)
-            setSearch(searchInput.trim())
+              setSearch(searchInput.trim())
             }}
             className="flex items-center gap-2"
           >
@@ -74,7 +105,7 @@ export default function AdminGiftCardsPage() {
               <input
                 value={searchInput}
                 onChange={(event) => setSearchInput(event.target.value)}
-                placeholder="Search recipient / order #"
+                placeholder={t('searchPlaceholder')}
                 className="ml-2 w-56 bg-transparent text-sm outline-none"
               />
             </div>
@@ -82,25 +113,23 @@ export default function AdminGiftCardsPage() {
               type="submit"
               className="h-11 bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white"
             >
-              Search
+              {tCommon('search')}
             </button>
           </form>
         </div>
 
-        <p className="mt-4 text-sm text-zinc-500">
-          Codes are masked — only the first 6 characters are shown. Click a buyer to see the denominations they purchased.
-        </p>
+        <p className="mt-4 text-sm text-zinc-500">{t('hint')}</p>
 
         <section className="mt-8 border border-[#eadfd4] bg-white shadow-[0_20px_60px_rgba(55,31,10,0.06)]">
           {status === 'loading' ? (
-            <p className="p-8 text-sm text-zinc-500">Loading gift cards…</p>
+            <p className="p-8 text-sm text-zinc-500">{t('loading')}</p>
           ) : status === 'error' ? (
-            <p className="p-8 text-sm text-rose-600">Unable to load gift cards right now.</p>
+            <p className="p-8 text-sm text-rose-600">{t('loadError')}</p>
           ) : purchasers.length === 0 ? (
             <div className="flex flex-col items-center justify-center px-8 py-16 text-center">
               <Gift className="h-10 w-10 text-zinc-300" />
-              <p className="mt-4 text-base font-semibold text-zinc-700">No gift cards purchased yet</p>
-              <p className="mt-1 text-sm text-zinc-400">No user has bought or redeemed a gift card so far.</p>
+              <p className="mt-4 text-base font-semibold text-zinc-700">{t('emptyTitle')}</p>
+              <p className="mt-1 text-sm text-zinc-400">{t('emptySubtitle')}</p>
             </div>
           ) : (
             <div className="divide-y divide-[#efe1d5]">
@@ -115,17 +144,17 @@ export default function AdminGiftCardsPage() {
                     >
                       <div className="min-w-0">
                         <p className="truncate text-lg font-bold text-[#17110d]">
-                          {group.purchaserName || 'Unknown buyer'}
+                          {group.purchaserName || '—'}
                         </p>
                         <p className="truncate text-sm text-zinc-500">{group.purchaserEmail || '—'}</p>
                       </div>
                       <div className="flex items-center gap-6 text-right">
                         <div>
-                          <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-400">Cards</p>
+                          <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-400">{t('cards')}</p>
                           <p className="text-base font-bold text-[#17110d]">{group.count}</p>
                         </div>
                         <div>
-                          <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-400">Total spent</p>
+                          <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-400">{t('totalSpent')}</p>
                           <p className="text-base font-bold text-[#1f7a4d]">€{group.totalAmount.toFixed(2)}</p>
                         </div>
                         <ChevronDown
@@ -139,28 +168,19 @@ export default function AdminGiftCardsPage() {
                         <table className="w-full min-w-[880px] text-left text-sm">
                           <thead>
                             <tr className="text-[11px] uppercase tracking-[0.14em] text-zinc-400">
-                              <th className="py-2 pr-4">Code</th>
-                              <th className="py-2 pr-4">Denomination</th>
-                              <th className="py-2 pr-4">Balance</th>
-                              <th className="py-2 pr-4">Status</th>
-                              <th className="py-2 pr-4">Recipient</th>
-                              <th className="py-2 pr-4">Order #</th>
-                              <th className="py-2 pr-4">Purchased</th>
-                              <th className="py-2 pr-4">Expires</th>
+                              <th className="py-2 pr-4">{t('table.code')}</th>
+                              <th className="py-2 pr-4">{t('table.denomination')}</th>
+                              <th className="py-2 pr-4">{t('table.balance')}</th>
+                              <th className="py-2 pr-4">{t('table.status')}</th>
+                              <th className="py-2 pr-4">{t('table.recipient')}</th>
+                              <th className="py-2 pr-4">{t('table.orderNumber')}</th>
+                              <th className="py-2 pr-4">{t('table.purchased')}</th>
+                              <th className="py-2 pr-4">{t('table.expires')}</th>
                             </tr>
                           </thead>
                           <tbody>
                             {group.cards.map((card) => {
-                              const expiry = (() => {
-                                if (!card.expiresAt) return { text: 'Never', className: 'text-zinc-400' }
-                                const d = new Date(card.expiresAt)
-                                const daysLeft = Math.ceil((d.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
-                                const formatted = d.toLocaleDateString()
-                                if (daysLeft <= 0) return { text: `${formatted} (expired)`, className: 'text-rose-600 font-semibold' }
-                                if (daysLeft <= 7) return { text: `${formatted} (${daysLeft}d)`, className: 'text-rose-600 font-semibold' }
-                                if (daysLeft <= 30) return { text: `${formatted} (${daysLeft}d)`, className: 'text-amber-600' }
-                                return { text: formatted, className: 'text-zinc-500' }
-                              })()
+                              const expiry = formatExpiry(card.expiresAt, t)
                               return (
                                 <tr key={card.id} className="border-t border-[#f0e5da]">
                                   <td className="py-3 pr-4 font-semibold tracking-[1px] text-[#17110d]">
@@ -199,23 +219,29 @@ export default function AdminGiftCardsPage() {
 
         {pagination && pagination.totalPages > 1 ? (
           <div className="mt-6 flex items-center justify-between text-sm text-zinc-500">
-            <p>{pagination.totalRecords} total purchasers · Page {pagination.currentPage} of {pagination.totalPages}</p>
+            <p>
+              {t('pagination', {
+                total: pagination.totalRecords,
+                current: pagination.currentPage,
+                totalPages: pagination.totalPages,
+              })}
+            </p>
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 disabled={!pagination.hasPrevPage}
                 onClick={() => setPage((p) => p - 1)}
-                className="border border-[#e7d3c2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#17110d] transition hover:bg-[#fff6fb] disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex h-10 items-center justify-center border border-[#e7d3c2] px-3 text-[#17110d] transition hover:bg-[#fff6fb] disabled:cursor-not-allowed disabled:opacity-40"
               >
-                Previous
+                <ChevronLeft className="h-4 w-4" />
               </button>
               <button
                 type="button"
                 disabled={!pagination.hasNextPage}
                 onClick={() => setPage((p) => p + 1)}
-                className="border border-[#e7d3c2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#17110d] transition hover:bg-[#fff6fb] disabled:cursor-not-allowed disabled:opacity-40"
+                className="flex h-10 items-center justify-center border border-[#e7d3c2] px-3 text-[#17110d] transition hover:bg-[#fff6fb] disabled:cursor-not-allowed disabled:opacity-40"
               >
-                Next
+                <ChevronRight className="h-4 w-4" />
               </button>
             </div>
           </div>
