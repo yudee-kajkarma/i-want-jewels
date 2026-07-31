@@ -1,5 +1,6 @@
  https://github.com/caratlogic/i-want-jewels-frontend.git
-  https://github.com/yudee-kajkarma/i-want-jewels.git
+ 
+ https://github.com/yudee-kajkarma/i-want-jewels.git
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
