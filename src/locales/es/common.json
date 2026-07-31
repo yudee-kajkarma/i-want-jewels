@@ -10,7 +10,7 @@
     "giftCards": "Tarjetas de Regalo",
     "carts": "Carritos",
     "wishlists": "Listas de Deseos",
-    "tickets": "Entradas",
+    "tickets": "Tickets",
     "searching": "Buscando la joya perfecta...",
     "findRings": "Encuentra anillos, pendientes, collares...",
     "discoverSparkle": "Descubre un brillo atemporal...",
@@ -230,7 +230,9 @@
     "scrollProductsLeft": "Desplazar productos a la izquierda",
     "scrollProductsRight": "Desplazar productos a la derecha",
     "closeSizeGuide": "Cerrar guía de tallas",
-    "paymentCard": "Tarjeta"
+    "paymentCard": "Tarjeta",
+    "loadError": "No se puede cargar este producto en este momento.",
+    "customerReview": "Reseña del cliente"
   },
   "exploreOurStore": {
     "title": "Explora Nuestra Tienda",
@@ -329,7 +331,9 @@
     "syncing": "Sincronizando tu carrito y el estado del pago...",
     "continueShopping": "SEGUIR COMPRANDO",
     "viewOrders": "VER PEDIDOS",
-    "tryAgain": "INTENTAR EL PAGO DE NUEVO"
+    "tryAgain": "INTENTAR EL PAGO DE NUEVO",
+    "selectShippingAddressError": "Selecciona una dirección de envío antes de realizar tu pedido.",
+    "placeOrderError": "No se puede realizar este pedido en este momento. Inténtalo de nuevo."
   },
   "auth": {
     "loginTitle": "Iniciar Sesión",
@@ -420,7 +424,8 @@
     "resetting": "RESTABLECIENDO...",
     "resetPasswordBtn": "RESTABLECER CONTRASEÑA",
     "backToSignIn": "¿Volver a iniciar sesión?",
-    "loginHere": "Inicia sesión aquí"
+    "loginHere": "Inicia sesión aquí",
+    "sessionExpired": "Tu sesión ha expirado. Has sido desconectado."
   },
   "account": {
     "orders": {

@@ -5,7 +5,7 @@
     "resources": "Hulpmiddelen",
     "help": "Hulp",
     "home": "Homepage",
-    "dashboard": "Gösterge Paneli",
+    "dashboard": "Dashboard",
     "orders": "Bestellingen",
     "giftCards": "Cadeaubonnen",
     "carts": "Winkelwagens",
@@ -65,7 +65,7 @@
     "bracelets": "Armbanden",
     "blog": "Blog",
     "jewelleryGuides": "Sieradengidsen",
-    "allRightsReserved": "©{{year}} Ik wil juwelen. Alle rechten voorbehouden."
+    "allRightsReserved": "©{{year}} I Want Jewels. Alle rechten voorbehouden."
   },
   "common": {
     "shopNow": "Shop nu",
@@ -136,7 +136,7 @@
     "giftFeature4": "Ideaal voor elk speciaal moment",
     "giftFooterNote": "Simpel. Persoonlijk. Altijd gewaardeerd.",
     "shopGiftCards": "Cadeaubonnen",
-    "instagramTitle": "Ik wil juwelen op Instagram"
+    "instagramTitle": "I Want Jewels op Instagram"
   },
   "products": {
     "title": "Alle producten",
@@ -230,7 +230,9 @@
     "scrollProductsLeft": "Scroll producten naar links",
     "scrollProductsRight": "Scroll producten naar rechts",
     "closeSizeGuide": "Maattabel sluiten",
-    "paymentCard": "Kaart"
+    "paymentCard": "Kaart",
+    "loadError": "Kan dit product momenteel niet laden.",
+    "customerReview": "Klantrecensie"
   },
   "exploreOurStore": {
     "title": "Ontdek onze winkel",
@@ -329,7 +331,9 @@
     "syncing": "Uw winkelwagentje en afrekenstatus synchroniseren...",
     "continueShopping": "VERDER WINKELEN",
     "viewOrders": "BEKIJK BESTELLINGEN",
-    "tryAgain": "PROBEER OPNIEUW AFREKENEN"
+    "tryAgain": "PROBEER OPNIEUW AFREKENEN",
+    "selectShippingAddressError": "Selecteer een verzendadres voordat u uw bestelling plaatst.",
+    "placeOrderError": "Kan deze bestelling momenteel niet plaatsen. Probeer het opnieuw."
   },
   "auth": {
     "loginTitle": "Inloggen",
@@ -420,7 +424,8 @@
     "resetting": "RESETTEN...",
     "resetPasswordBtn": "WACHTWOORD RESETTEN",
     "backToSignIn": "Terug naar inloggen?",
-    "loginHere": "Log hier in"
+    "loginHere": "Log hier in",
+    "sessionExpired": "Uw sessie is verlopen. U bent uitgelogd."
   },
   "account": {
     "orders": {

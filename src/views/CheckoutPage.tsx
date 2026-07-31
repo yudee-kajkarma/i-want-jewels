@@ -1,22 +1,49 @@
-'use client'
+"use client";
 
-import { useEffect, useMemo, useState } from 'react'
-import { CreditCard, MapPinHouse, PackageCheck, ShieldCheck, Truck } from 'lucide-react'
-import { Link, useLocation, useNavigate } from '@/lib/router'
-import Footer from '../components/layout/Footer'
-import Header from '../components/layout/Header'
-import { useAuth } from '../context/AuthContext'
-import { useCurrency } from '../context/CurrencyContext'
-import { createOrder } from '../services/orderService'
-import { validateGiftCard, type GiftCardValidation } from '../services/giftCardService'
-import { addCartItem, clearCartItems } from '../services/cartService'
-import { createUserAddress, getUserAddresses, updateUserAddress } from '../services/userService'
-import { fetchCart } from '../store/cartSlice'
-import { useAppDispatch, useAppSelector } from '../store/hooks'
-import type { CheckoutSource, PaymentMethod, SingleCheckoutDraft } from '../types/order'
-import type { UserAddress, UserProfileAddressPayload } from '../types/profile'
-import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
-import { formatPrice, getCurrencyIsoCode, getPriceAmount } from '../utils/price'
+import { useEffect, useMemo, useState } from "react";
+import {
+  CreditCard,
+  MapPinHouse,
+  PackageCheck,
+  ShieldCheck,
+  Truck,
+} from "lucide-react";
+import { Link, useLocation, useNavigate } from "@/lib/router";
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
+import { useAuth } from "../context/AuthContext";
+import { useCurrency } from "../context/CurrencyContext";
+import { createOrder } from "../services/orderService";
+import {
+  validateGiftCard,
+  type GiftCardValidation,
+} from "../services/giftCardService";
+import { addCartItem, clearCartItems } from "../services/cartService";
+import {
+  createUserAddress,
+  getUserAddresses,
+  updateUserAddress,
+} from "../services/userService";
+import { fetchCart } from "../store/cartSlice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import type {
+  CheckoutSource,
+  PaymentMethod,
+  SingleCheckoutDraft,
+} from "../types/order";
+import type { UserAddress, UserProfileAddressPayload } from "../types/profile";
+import {
+  getCountryName,
+  getCountryOptions,
+  getStateName,
+  getStateOptions,
+  isValidPostalCode,
+} from "../utils/location";
+import {
+  formatPrice,
+  getCurrencyIsoCode,
+  getPriceAmount,
+} from "../utils/price";
 import {
   clearSingleCheckoutDraft,
   clearCartRestoreSnapshot,
@@ -26,199 +53,241 @@ import {
   setCartRestoreSnapshot,
   setPendingOrderStatus,
   setSingleCheckoutDraft,
-} from '../utils/checkoutStorage'
-import { useTranslation } from 'react-i18next'
+} from "../utils/checkoutStorage";
+import { useTranslation } from "react-i18next";
 
 type CheckoutLocationState = {
-  source?: CheckoutSource
-  draft?: SingleCheckoutDraft
-}
+  source?: CheckoutSource;
+  draft?: SingleCheckoutDraft;
+};
 
 const EMPTY_ADDRESS_FORM: UserProfileAddressPayload = {
-  houseNumber: '',
-  street: '',
-  city: '',
-  state: '',
-  postalCode: '',
-  country: 'IN',
+  houseNumber: "",
+  street: "",
+  city: "",
+  state: "",
+  postalCode: "",
+  country: "IN",
   isDefault: false,
-  addressType: 'home',
-}
+  addressType: "home",
+};
 
-function buildReturnUrl(result: 'success' | 'cancel', source: CheckoutSource): string {
-  const url = new URL('/checkout/status', window.location.origin)
+function buildReturnUrl(
+  result: "success" | "cancel",
+  source: CheckoutSource,
+): string {
+  const url = new URL("/checkout/status", window.location.origin);
 
-  url.searchParams.set('payment', result)
-  url.searchParams.set('source', source)
+  url.searchParams.set("payment", result);
+  url.searchParams.set("source", source);
 
-  return url.toString()
+  return url.toString();
 }
 
 export default function CheckoutPage() {
-  const { t } = useTranslation()
-  const navigate = useNavigate()
-  const location = useLocation()
-  const dispatch = useAppDispatch()
-  const { session } = useAuth()
-  const { currency, applyAddressCountry } = useCurrency()
-  const cart = useAppSelector((state) => state.cart.cart)
-  const cartStatus = useAppSelector((state) => state.cart.status)
-  const cartMutationStatus = useAppSelector((state) => state.cart.mutationStatus)
-  const locationState = (location.state as CheckoutLocationState | null) ?? null
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('ONLINE')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState('')
-  const [addresses, setAddresses] = useState<UserAddress[]>([])
-  const [selectedAddressId, setSelectedAddressId] = useState('')
-  const [isAddressLoading, setIsAddressLoading] = useState(true)
-  const [isAddressSaving, setIsAddressSaving] = useState(false)
-  const [addressError, setAddressError] = useState('')
-  const [postalCodeError, setPostalCodeError] = useState('')
-  const [isAddressFormOpen, setIsAddressFormOpen] = useState(false)
-  const [editingAddressId, setEditingAddressId] = useState<string | null>(null)
-  const [addressForm, setAddressForm] = useState<UserProfileAddressPayload>(EMPTY_ADDRESS_FORM)
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useAppDispatch();
+  const { session } = useAuth();
+  const { currency, applyAddressCountry } = useCurrency();
+  const cart = useAppSelector((state) => state.cart.cart);
+  const cartStatus = useAppSelector((state) => state.cart.status);
+  const cartMutationStatus = useAppSelector(
+    (state) => state.cart.mutationStatus,
+  );
+  const locationState =
+    (location.state as CheckoutLocationState | null) ?? null;
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("ONLINE");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [addresses, setAddresses] = useState<UserAddress[]>([]);
+  const [selectedAddressId, setSelectedAddressId] = useState("");
+  const [isAddressLoading, setIsAddressLoading] = useState(true);
+  const [isAddressSaving, setIsAddressSaving] = useState(false);
+  const [addressError, setAddressError] = useState("");
+  const [postalCodeError, setPostalCodeError] = useState("");
+  const [isAddressFormOpen, setIsAddressFormOpen] = useState(false);
+  const [editingAddressId, setEditingAddressId] = useState<string | null>(null);
+  const [addressForm, setAddressForm] =
+    useState<UserProfileAddressPayload>(EMPTY_ADDRESS_FORM);
 
   useEffect(() => {
-    if (locationState?.source === 'single' && locationState.draft) {
-      setSingleCheckoutDraft(locationState.draft)
+    if (locationState?.source === "single" && locationState.draft) {
+      setSingleCheckoutDraft(locationState.draft);
     }
-  }, [locationState])
+  }, [locationState]);
 
-  const persistedDraft = useMemo(() => getSingleCheckoutDraft(), [location.key])
-  const countryOptions = useMemo(() => getCountryOptions(), [])
-  const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
-  const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search])
-  const isSingleFromQuery = searchParams.get('source') === 'single'
-  const checkoutSource: CheckoutSource = locationState?.source === 'single' || isSingleFromQuery ? 'single' : 'cart'
-  const singleDraft = checkoutSource === 'single' ? (locationState?.draft ?? persistedDraft) : null
-  const items = checkoutSource === 'single' ? (singleDraft ? [singleDraft.item] : []) : (cart?.items ?? [])
-  const totalItems = items.reduce((total, item) => total + item.quantity, 0)
-  const subtotal = items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0)
-  const isCartLoading = cartStatus === 'loading' || cartMutationStatus === 'loading'
-  const hasGiftCardItems = items.some((item) => item.isGiftCard)
+  const persistedDraft = useMemo(
+    () => getSingleCheckoutDraft(),
+    [location.key],
+  );
+  const countryOptions = useMemo(() => getCountryOptions(), []);
+  const stateOptions = useMemo(
+    () => getStateOptions(addressForm.country),
+    [addressForm.country],
+  );
+  const searchParams = useMemo(
+    () => new URLSearchParams(location.search),
+    [location.search],
+  );
+  const isSingleFromQuery = searchParams.get("source") === "single";
+  const checkoutSource: CheckoutSource =
+    locationState?.source === "single" || isSingleFromQuery ? "single" : "cart";
+  const singleDraft =
+    checkoutSource === "single"
+      ? (locationState?.draft ?? persistedDraft)
+      : null;
+  const items =
+    checkoutSource === "single"
+      ? singleDraft
+        ? [singleDraft.item]
+        : []
+      : (cart?.items ?? []);
+  const totalItems = items.reduce((total, item) => total + item.quantity, 0);
+  const subtotal = items.reduce(
+    (total, item) =>
+      total + getPriceAmount(item.price, currency) * item.quantity,
+    0,
+  );
+  const isCartLoading =
+    cartStatus === "loading" || cartMutationStatus === "loading";
+  const hasGiftCardItems = items.some((item) => item.isGiftCard);
 
-  const [giftCodeInput, setGiftCodeInput] = useState('')
-  const [giftValidation, setGiftValidation] = useState<GiftCardValidation | null>(null)
-  const [giftCheckMessage, setGiftCheckMessage] = useState('')
-  const [isCheckingGift, setIsCheckingGift] = useState(false)
+  const [giftCodeInput, setGiftCodeInput] = useState("");
+  const [giftValidation, setGiftValidation] =
+    useState<GiftCardValidation | null>(null);
+  const [giftCheckMessage, setGiftCheckMessage] = useState("");
+  const [isCheckingGift, setIsCheckingGift] = useState(false);
 
   const appliedGiftDiscount =
     giftValidation?.valid && !hasGiftCardItems
       ? Math.min(giftValidation.redeemableAmount ?? 0, subtotal)
-      : 0
-  const payableTotal = Math.max(0, subtotal - appliedGiftDiscount)
+      : 0;
+  const payableTotal = Math.max(0, subtotal - appliedGiftDiscount);
 
   useEffect(() => {
     // Gift card purchases/redemptions are online-only.
-    if ((hasGiftCardItems || (giftValidation?.valid ?? false)) && paymentMethod !== 'ONLINE') {
-      setPaymentMethod('ONLINE')
+    if (
+      (hasGiftCardItems || (giftValidation?.valid ?? false)) &&
+      paymentMethod !== "ONLINE"
+    ) {
+      setPaymentMethod("ONLINE");
     }
-  }, [hasGiftCardItems, giftValidation, paymentMethod])
+  }, [hasGiftCardItems, giftValidation, paymentMethod]);
 
   async function handleApplyGiftCard() {
-    const code = giftCodeInput.trim()
-    if (!code) return
+    const code = giftCodeInput.trim();
+    if (!code) return;
     if (hasGiftCardItems) {
-      setGiftCheckMessage('A gift card cannot be used to pay for an order that contains gift cards.')
-      return
+      setGiftCheckMessage(
+        "A gift card cannot be used to pay for an order that contains gift cards.",
+      );
+      return;
     }
-    setIsCheckingGift(true)
-    setGiftCheckMessage('')
+    setIsCheckingGift(true);
+    setGiftCheckMessage("");
     try {
-      const result = await validateGiftCard(code)
-      setGiftValidation(result)
+      const result = await validateGiftCard(code);
+      setGiftValidation(result);
       setGiftCheckMessage(
         result.valid
           ? `Applied — ${formatPrice(result.redeemableAmount ?? 0, currency)} available.`
-          : result.reason || 'This gift card cannot be applied.',
-      )
+          : result.reason || "This gift card cannot be applied.",
+      );
     } catch {
-      setGiftValidation(null)
-      setGiftCheckMessage('Unable to validate this gift card right now.')
+      setGiftValidation(null);
+      setGiftCheckMessage("Unable to validate this gift card right now.");
     } finally {
-      setIsCheckingGift(false)
+      setIsCheckingGift(false);
     }
   }
 
   function handleRemoveGiftCard() {
-    setGiftValidation(null)
-    setGiftCodeInput('')
-    setGiftCheckMessage('')
+    setGiftValidation(null);
+    setGiftCodeInput("");
+    setGiftCheckMessage("");
   }
 
   useEffect(() => {
-    if (checkoutSource === 'cart' && !cart && cartStatus === 'idle') {
-      void dispatch(fetchCart())
+    if (checkoutSource === "cart" && !cart && cartStatus === "idle") {
+      void dispatch(fetchCart());
     }
-  }, [cart, cartStatus, checkoutSource, dispatch])
+  }, [cart, cartStatus, checkoutSource, dispatch]);
 
   useEffect(() => {
-    if (checkoutSource === 'cart') {
-      clearSingleCheckoutDraft()
+    if (checkoutSource === "cart") {
+      clearSingleCheckoutDraft();
     }
-  }, [checkoutSource])
+  }, [checkoutSource]);
 
   useEffect(() => {
-    let isMounted = true
+    let isMounted = true;
 
     async function loadAddresses() {
-      setIsAddressLoading(true)
-      setAddressError('')
+      setIsAddressLoading(true);
+      setAddressError("");
 
       try {
-        const nextAddresses = await getUserAddresses()
+        const nextAddresses = await getUserAddresses();
 
         if (!isMounted) {
-          return
+          return;
         }
 
-        setAddresses(nextAddresses)
+        setAddresses(nextAddresses);
 
-        const preferredAddress = nextAddresses.find((address) => address.isDefault) ?? nextAddresses[0]
-        setSelectedAddressId((currentAddressId) => currentAddressId || preferredAddress?.id || '')
+        const preferredAddress =
+          nextAddresses.find((address) => address.isDefault) ??
+          nextAddresses[0];
+        setSelectedAddressId(
+          (currentAddressId) => currentAddressId || preferredAddress?.id || "",
+        );
       } catch {
         if (!isMounted) {
-          return
+          return;
         }
 
-        setAddressError('Unable to load your addresses. Please refresh and try again.')
+        setAddressError(
+          "Unable to load your addresses. Please refresh and try again.",
+        );
       } finally {
         if (isMounted) {
-          setIsAddressLoading(false)
+          setIsAddressLoading(false);
         }
       }
     }
 
-    void loadAddresses()
+    void loadAddresses();
 
     return () => {
-      isMounted = false
-    }
-  }, [])
+      isMounted = false;
+    };
+  }, []);
 
   const selectedAddress = useMemo(
     () => addresses.find((address) => address.id === selectedAddressId) ?? null,
     [addresses, selectedAddressId],
-  )
+  );
 
   // Selecting (or defaulting to) a UK address switches the display to GBP,
   // unless the shopper has made an explicit manual currency choice.
   useEffect(() => {
-    applyAddressCountry(selectedAddress?.country)
-  }, [selectedAddress?.country, applyAddressCountry])
+    applyAddressCountry(selectedAddress?.country);
+  }, [selectedAddress?.country, applyAddressCountry]);
 
   function openAddAddressForm() {
-    setAddressError('')
-    setPostalCodeError('')
-    setEditingAddressId(null)
-    setAddressForm(EMPTY_ADDRESS_FORM)
-    setIsAddressFormOpen(true)
+    setAddressError("");
+    setPostalCodeError("");
+    setEditingAddressId(null);
+    setAddressForm(EMPTY_ADDRESS_FORM);
+    setIsAddressFormOpen(true);
   }
 
   function openEditAddressForm(address: UserAddress) {
-    setAddressError('')
-    setPostalCodeError('')
-    setEditingAddressId(address.id)
+    setAddressError("");
+    setPostalCodeError("");
+    setEditingAddressId(address.id);
     setAddressForm({
       houseNumber: address.houseNumber,
       street: address.street,
@@ -228,75 +297,83 @@ export default function CheckoutPage() {
       country: address.country,
       isDefault: address.isDefault,
       addressType: address.addressType,
-    })
-    setIsAddressFormOpen(true)
+    });
+    setIsAddressFormOpen(true);
   }
 
   async function refreshAddresses(preferredAddressId?: string) {
-    const nextAddresses = await getUserAddresses()
-    setAddresses(nextAddresses)
+    const nextAddresses = await getUserAddresses();
+    setAddresses(nextAddresses);
 
     const preferredAddress =
       nextAddresses.find((address) => address.id === preferredAddressId) ??
       nextAddresses.find((address) => address.isDefault) ??
       nextAddresses[0] ??
-      null
+      null;
 
-    setSelectedAddressId(preferredAddress?.id ?? '')
+    setSelectedAddressId(preferredAddress?.id ?? "");
   }
 
   async function handleSaveAddress() {
     if (isAddressSaving) {
-      return
+      return;
     }
 
     const trimmedPayload: UserProfileAddressPayload = {
-      houseNumber: addressForm.houseNumber?.trim() || '',
+      houseNumber: addressForm.houseNumber?.trim() || "",
       street: addressForm.street.trim(),
       city: addressForm.city.trim(),
       state: addressForm.state.trim(),
       postalCode: addressForm.postalCode.trim(),
-      country: addressForm.country.trim() || 'IN',
+      country: addressForm.country.trim() || "IN",
       isDefault: addressForm.isDefault,
-      addressType: addressForm.addressType.trim() || 'home',
-    }
+      addressType: addressForm.addressType.trim() || "home",
+    };
 
-    setPostalCodeError('')
+    setPostalCodeError("");
 
-    if (!trimmedPayload.street || !trimmedPayload.city || !trimmedPayload.state || !trimmedPayload.postalCode || !trimmedPayload.country) {
-      setAddressError('Please complete all address fields before saving.')
-      return
+    if (
+      !trimmedPayload.street ||
+      !trimmedPayload.city ||
+      !trimmedPayload.state ||
+      !trimmedPayload.postalCode ||
+      !trimmedPayload.country
+    ) {
+      setAddressError("Please complete all address fields before saving.");
+      return;
     }
 
     if (!isValidPostalCode(trimmedPayload.postalCode, trimmedPayload.country)) {
-      setPostalCodeError('Please enter a valid postal code.')
-      return
+      setPostalCodeError("Please enter a valid postal code.");
+      return;
     }
 
-    setIsAddressSaving(true)
-    setAddressError('')
+    setIsAddressSaving(true);
+    setAddressError("");
 
     try {
       if (editingAddressId) {
-        await updateUserAddress(editingAddressId, trimmedPayload)
-        await refreshAddresses(editingAddressId)
+        await updateUserAddress(editingAddressId, trimmedPayload);
+        await refreshAddresses(editingAddressId);
       } else {
-        const createdAddress = await createUserAddress(trimmedPayload)
-        await refreshAddresses(createdAddress.id)
+        const createdAddress = await createUserAddress(trimmedPayload);
+        await refreshAddresses(createdAddress.id);
       }
 
-      setIsAddressFormOpen(false)
+      setIsAddressFormOpen(false);
     } catch {
-      setAddressError('Unable to save this address right now. Please try again.')
+      setAddressError(
+        "Unable to save this address right now. Please try again.",
+      );
     } finally {
-      setIsAddressSaving(false)
+      setIsAddressSaving(false);
     }
   }
 
   async function restoreSingleCheckoutSnapshot() {
-    const snapshot = getCartRestoreSnapshot()
+    const snapshot = getCartRestoreSnapshot();
 
-    await clearCartItems()
+    await clearCartItems();
 
     for (const item of snapshot?.items ?? []) {
       await addCartItem({
@@ -304,86 +381,97 @@ export default function CheckoutPage() {
         variantId: item.variantId,
         quantity: item.quantity,
         ...(item.size !== undefined ? { size: item.size } : {}),
-      })
+      });
     }
 
-    clearCartRestoreSnapshot()
+    clearCartRestoreSnapshot();
   }
 
   async function handlePlaceOrder() {
     if (items.length === 0 || isSubmitting) {
-      return
+      return;
     }
 
     if (!selectedAddressId) {
-      setError('Please select a shipping address before placing your order.')
-      return
+      setError(t("checkout.selectShippingAddressError"));
+      return;
     }
 
-    setIsSubmitting(true)
-    setError('')
-    clearPendingOrderStatus()
+    setIsSubmitting(true);
+    setError("");
+    clearPendingOrderStatus();
 
     try {
-      if (checkoutSource === 'single') {
-        setCartRestoreSnapshot({ items: cart?.items ?? [] })
-        await clearCartItems()
+      if (checkoutSource === "single") {
+        setCartRestoreSnapshot({ items: cart?.items ?? [] });
+        await clearCartItems();
         await addCartItem({
           productId: singleDraft!.item.productId,
           variantId: singleDraft!.item.variantId,
           quantity: singleDraft!.item.quantity,
-          ...(singleDraft!.item.size !== undefined ? { size: singleDraft!.item.size } : {}),
-        })
+          ...(singleDraft!.item.size !== undefined
+            ? { size: singleDraft!.item.size }
+            : {}),
+        });
       } else {
-        clearCartRestoreSnapshot()
+        clearCartRestoreSnapshot();
       }
-      
 
       const effectivePaymentMethod: PaymentMethod =
-        hasGiftCardItems || (giftValidation?.valid ?? false) ? 'ONLINE' : paymentMethod
+        hasGiftCardItems || (giftValidation?.valid ?? false)
+          ? "ONLINE"
+          : paymentMethod;
 
       const result = await createOrder({
         addressId: selectedAddressId,
         paymentMethod: effectivePaymentMethod,
         currency: getCurrencyIsoCode(currency),
-        successUrl: effectivePaymentMethod === 'ONLINE' ? buildReturnUrl('success', checkoutSource) : undefined,
-        cancelUrl: effectivePaymentMethod === 'ONLINE' ? buildReturnUrl('cancel', checkoutSource) : undefined,
+        successUrl:
+          effectivePaymentMethod === "ONLINE"
+            ? buildReturnUrl("success", checkoutSource)
+            : undefined,
+        cancelUrl:
+          effectivePaymentMethod === "ONLINE"
+            ? buildReturnUrl("cancel", checkoutSource)
+            : undefined,
         giftCardCode:
           giftValidation?.valid && !hasGiftCardItems
-            ? giftValidation.code ?? giftCodeInput.trim()
+            ? (giftValidation.code ?? giftCodeInput.trim())
             : undefined,
-      })
+      });
 
       setPendingOrderStatus({
         orderId: result.order.id,
         orderNumber: result.order.orderNumber,
         paymentMethod: effectivePaymentMethod,
         source: checkoutSource,
-      })
+      });
 
-      await dispatch(fetchCart()).unwrap()
+      await dispatch(fetchCart()).unwrap();
 
-      if (effectivePaymentMethod === 'ONLINE') {
+      if (effectivePaymentMethod === "ONLINE") {
         if (result.checkoutSession?.url) {
-          window.location.assign(result.checkoutSession.url)
-          return
+          window.location.assign(result.checkoutSession.url);
+          return;
         }
 
         // No Stripe session → order fully covered by the gift card (€0 due).
-        navigate('/checkout/status?payment=success', { replace: true })
-        return
+        navigate("/checkout/status?payment=success", { replace: true });
+        return;
       }
 
-      navigate('/checkout/status?payment=success', { replace: true })
+      navigate("/checkout/status?payment=success", { replace: true });
     } catch {
-      if (checkoutSource === 'single') {
-        await restoreSingleCheckoutSnapshot().catch(() => undefined)
-        await dispatch(fetchCart()).unwrap().catch(() => undefined)
+      if (checkoutSource === "single") {
+        await restoreSingleCheckoutSnapshot().catch(() => undefined);
+        await dispatch(fetchCart())
+          .unwrap()
+          .catch(() => undefined);
       }
 
-      setError('Unable to place this order right now. Please try again.')
+      setError(t("checkout.placeOrderError"));
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
@@ -393,37 +481,53 @@ export default function CheckoutPage() {
       <main className="mx-auto max-w-[1480px] px-4 py-8 lg:px-8 lg:py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('checkout.title')}</p>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">{t('checkout.reviewTitle')}</h1>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">
+              {t("checkout.title")}
+            </p>
+            <h1 className="mt-2 text-4xl font-extrabold tracking-[-0.05em] text-[#17110d]">
+              {t("checkout.reviewTitle")}
+            </h1>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-500">
-              {t('checkout.reviewDesc')}
+              {t("checkout.reviewDesc")}
             </p>
           </div>
           <Link
-            to={checkoutSource === 'single' ? (singleDraft?.returnPath ?? '/products') : '/cart'}
+            to={
+              checkoutSource === "single"
+                ? (singleDraft?.returnPath ?? "/products")
+                : "/cart"
+            }
             className="border border-[#e2d1c3] px-5 py-3 text-sm font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
           >
-            {checkoutSource === 'single' ? t('checkout.backToProduct') : t('checkout.backToCart')}
+            {checkoutSource === "single"
+              ? t("checkout.backToProduct")
+              : t("checkout.backToCart")}
           </Link>
         </div>
 
         <div className="mt-8 grid gap-8 xl:grid-cols-[1fr_380px]">
           <section className="space-y-6 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            {checkoutSource === 'cart' && isCartLoading ? <p className="text-sm text-zinc-500">{t('checkout.loading')}</p> : null}
+            {checkoutSource === "cart" && isCartLoading ? (
+              <p className="text-sm text-zinc-500">{t("checkout.loading")}</p>
+            ) : null}
 
             {!isCartLoading && items.length === 0 ? (
               <div className="border border-dashed border-[#dbc8b8] bg-[#fffdfa] px-6 py-12 text-center">
-                <h2 className="text-2xl font-bold text-[#17110d]">{t('checkout.nothingToCheckout')}</h2>
+                <h2 className="text-2xl font-bold text-[#17110d]">
+                  {t("checkout.nothingToCheckout")}
+                </h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-500">
-                  {checkoutSource === 'single'
-                    ? t('checkout.goBackSingle')
-                    : t('checkout.goBackCart')}
+                  {checkoutSource === "single"
+                    ? t("checkout.goBackSingle")
+                    : t("checkout.goBackCart")}
                 </p>
                 <Link
-                  to={checkoutSource === 'single' ? '/products' : '/cart'}
+                  to={checkoutSource === "single" ? "/products" : "/cart"}
                   className="mt-6 inline-flex bg-[#111111] px-6 py-3 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b]"
                 >
-                  {checkoutSource === 'single' ? t('checkout.viewProducts') : t('checkout.returnToCart')}
+                  {checkoutSource === "single"
+                    ? t("checkout.viewProducts")
+                    : t("checkout.returnToCart")}
                 </Link>
               </div>
             ) : null}
@@ -433,23 +537,46 @@ export default function CheckoutPage() {
                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                   <div className="flex items-center gap-3 text-[#17110d]">
                     <PackageCheck className="h-5 w-5" />
-                    <h2 className="text-xl font-bold">{t('checkout.orderItems')}</h2>
+                    <h2 className="text-xl font-bold">
+                      {t("checkout.orderItems")}
+                    </h2>
                   </div>
                   <div className="mt-5 space-y-4">
                     {items.map((item) => (
-                      <article key={`${item.productId}-${item.variantId}`} className="grid gap-4 border border-[#efe1d5] bg-white p-4 sm:grid-cols-[92px_minmax(0,1fr)_auto] sm:items-center">
+                      <article
+                        key={`${item.productId}-${item.variantId}`}
+                        className="grid gap-4 border border-[#efe1d5] bg-white p-4 sm:grid-cols-[92px_minmax(0,1fr)_auto] sm:items-center"
+                      >
                         <div className="overflow-hidden bg-[linear-gradient(180deg,#fff5ec_0%,#ffffff_100%)] p-2">
-                          <img src={item.thumbnail} alt={item.title} className="h-20 w-full object-contain" />
+                          <img
+                            src={item.thumbnail}
+                            alt={item.title}
+                            className="h-20 w-full object-contain"
+                          />
                         </div>
                         <div>
-                          <h3 className="text-lg font-bold text-[#17110d]">{item.title}</h3>
+                          <h3 className="text-lg font-bold text-[#17110d]">
+                            {item.title}
+                          </h3>
                           <p className="mt-1 text-sm text-zinc-500">
-                            {item.variantTitle || t('checkout.defaultVariant')}
-                            {item.size !== undefined ? ` · ${t('checkout.size')} ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
+                            {item.variantTitle || t("checkout.defaultVariant")}
+                            {item.size !== undefined
+                              ? ` · ${t("checkout.size")} ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ""}`
+                              : ""}
                           </p>
-                          <p className="mt-1 text-sm text-zinc-500">{t('checkout.quantity', { quantity: item.quantity })}</p>
+                          <p className="mt-1 text-sm text-zinc-500">
+                            {t("checkout.quantity", {
+                              quantity: item.quantity,
+                            })}
+                          </p>
                         </div>
-                        <p className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
+                        <p className="text-lg font-bold text-[#17110d]">
+                          {formatPrice(
+                            getPriceAmount(item.price, currency) *
+                              item.quantity,
+                            currency,
+                          )}
+                        </p>
                       </article>
                     ))}
                   </div>
@@ -457,33 +584,41 @@ export default function CheckoutPage() {
 
                 <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
                   <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
-                      <div className="flex items-center gap-3 text-[#17110d]">
-                        <MapPinHouse className="h-5 w-5" />
-                        <h2 className="text-xl font-bold">{t('checkout.shippingAddress')}</h2>
-                      </div>
+                    <div className="flex items-center gap-3 text-[#17110d]">
+                      <MapPinHouse className="h-5 w-5" />
+                      <h2 className="text-xl font-bold">
+                        {t("checkout.shippingAddress")}
+                      </h2>
+                    </div>
 
-                      <div className="mt-4 flex flex-wrap gap-3">
-                        <button
-                          type="button"
-                          onClick={openAddAddressForm}
-                          className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
-                        >
-                          {t('checkout.addAddress')}
-                        </button>
-                      </div>
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      <button
+                        type="button"
+                        onClick={openAddAddressForm}
+                        className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
+                      >
+                        {t("checkout.addAddress")}
+                      </button>
+                    </div>
 
-                      {isAddressLoading ? <p className="mt-4 text-sm text-zinc-500">{t('checkout.loadingAddresses')}</p> : null}
+                    {isAddressLoading ? (
+                      <p className="mt-4 text-sm text-zinc-500">
+                        {t("checkout.loadingAddresses")}
+                      </p>
+                    ) : null}
 
                     {!isAddressLoading && addresses.length > 0 ? (
                       <div className="mt-4 space-y-3">
                         {addresses.map((address) => {
-                          const isSelected = selectedAddressId === address.id
+                          const isSelected = selectedAddressId === address.id;
 
                           return (
                             <label
                               key={address.id}
                               className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${
-                                isSelected ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'
+                                isSelected
+                                  ? "border-[#17110d] bg-white"
+                                  : "border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]"
                               }`}
                             >
                               <input
@@ -491,59 +626,79 @@ export default function CheckoutPage() {
                                 name="shippingAddress"
                                 value={address.id}
                                 checked={isSelected}
-                                onChange={() => setSelectedAddressId(address.id)}
+                                onChange={() =>
+                                  setSelectedAddressId(address.id)
+                                }
                                 className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
                               />
 
                               <div className="flex-1 text-sm leading-7 text-zinc-600">
-                                <p className="font-semibold text-[#17110d]">{session?.firstName || session?.username}</p>
-                                <p>{[address.houseNumber, address.street].filter(Boolean).join(' ') || address.street}</p>
+                                <p className="font-semibold text-[#17110d]">
+                                  {session?.firstName || session?.username}
+                                </p>
                                 <p>
-                                  {address.city}, {getStateName(address.country, address.state)} {address.postalCode}
+                                  {[address.houseNumber, address.street]
+                                    .filter(Boolean)
+                                    .join(" ") || address.street}
+                                </p>
+                                <p>
+                                  {address.city},{" "}
+                                  {getStateName(address.country, address.state)}{" "}
+                                  {address.postalCode}
                                 </p>
                                 <p>{getCountryName(address.country)}</p>
                                 <div className="mt-2 flex flex-wrap items-center gap-3">
                                   {address.isDefault ? (
-                                    <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">{t('checkout.defaultAddress')}</span>
+                                    <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#8f2a60]">
+                                      {t("checkout.defaultAddress")}
+                                    </span>
                                   ) : null}
                                   <button
                                     type="button"
                                     onClick={(event) => {
-                                      event.preventDefault()
-                                      openEditAddressForm(address)
+                                      event.preventDefault();
+                                      openEditAddressForm(address);
                                     }}
                                     className="border border-[#e2d1c3] px-3 py-1 text-[11px] font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                                   >
-                                    {t('checkout.edit')}
+                                    {t("checkout.edit")}
                                   </button>
                                 </div>
                               </div>
                             </label>
-                          )
+                          );
                         })}
                       </div>
                     ) : null}
 
                     {!isAddressLoading && addresses.length === 0 ? (
                       <div className="mt-5 border border-[#eadfd4] bg-white p-4 text-sm leading-7 text-zinc-600">
-                        {t('checkout.noAddresses')}
+                        {t("checkout.noAddresses")}
                       </div>
                     ) : null}
 
                     {isAddressFormOpen ? (
                       <div className="mt-5 border border-[#eadfd4] bg-white p-4">
-                        <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">{editingAddressId ? t('checkout.editAddressTitle') : t('checkout.addAddressTitle')}</h3>
+                        <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-[#17110d]">
+                          {editingAddressId
+                            ? t("checkout.editAddressTitle")
+                            : t("checkout.addAddressTitle")}
+                        </h3>
                         <div className="mt-4 grid gap-3 sm:grid-cols-2">
                           <select
                             value={addressForm.country}
-                            onChange={(event) => setAddressForm((currentValue) => ({
-                              ...currentValue,
-                              country: event.target.value,
-                              state: '',
-                            }))}
+                            onChange={(event) =>
+                              setAddressForm((currentValue) => ({
+                                ...currentValue,
+                                country: event.target.value,
+                                state: "",
+                              }))
+                            }
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
-                            <option value="">{t('checkout.selectCountry')}</option>
+                            <option value="">
+                              {t("checkout.selectCountry")}
+                            </option>
                             {countryOptions.map((country) => (
                               <option key={country.code} value={country.code}>
                                 {country.name}
@@ -560,7 +715,9 @@ export default function CheckoutPage() {
                             }
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           >
-                            <option value="">{t('checkout.selectState')}</option>
+                            <option value="">
+                              {t("checkout.selectState")}
+                            </option>
                             {stateOptions.map((state) => (
                               <option key={state.code} value={state.code}>
                                 {state.name}
@@ -569,20 +726,35 @@ export default function CheckoutPage() {
                           </select>
                           <input
                             value={addressForm.city}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, city: event.target.value }))}
-                            placeholder={t('checkout.city')}
+                            onChange={(event) =>
+                              setAddressForm((currentValue) => ({
+                                ...currentValue,
+                                city: event.target.value,
+                              }))
+                            }
+                            placeholder={t("checkout.city")}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <input
-                            value={addressForm.houseNumber ?? ''}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, houseNumber: event.target.value }))}
-                            placeholder={t('checkout.houseNumber')}
+                            value={addressForm.houseNumber ?? ""}
+                            onChange={(event) =>
+                              setAddressForm((currentValue) => ({
+                                ...currentValue,
+                                houseNumber: event.target.value,
+                              }))
+                            }
+                            placeholder={t("checkout.houseNumber")}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <input
                             value={addressForm.street}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, street: event.target.value }))}
-                            placeholder={t('checkout.street')}
+                            onChange={(event) =>
+                              setAddressForm((currentValue) => ({
+                                ...currentValue,
+                                street: event.target.value,
+                              }))
+                            }
+                            placeholder={t("checkout.street")}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                           <div>
@@ -590,20 +762,32 @@ export default function CheckoutPage() {
                               value={addressForm.postalCode}
                               onChange={(event) => {
                                 if (postalCodeError) {
-                                  setPostalCodeError('')
+                                  setPostalCodeError("");
                                 }
 
-                                setAddressForm((currentValue) => ({ ...currentValue, postalCode: event.target.value }))
+                                setAddressForm((currentValue) => ({
+                                  ...currentValue,
+                                  postalCode: event.target.value,
+                                }));
                               }}
-                              placeholder={t('checkout.postalCode')}
+                              placeholder={t("checkout.postalCode")}
                               className="w-full border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                             />
-                            {postalCodeError ? <p className="mt-2 text-xs text-rose-700">{postalCodeError}</p> : null}
+                            {postalCodeError ? (
+                              <p className="mt-2 text-xs text-rose-700">
+                                {postalCodeError}
+                              </p>
+                            ) : null}
                           </div>
                           <input
                             value={addressForm.addressType}
-                            onChange={(event) => setAddressForm((currentValue) => ({ ...currentValue, addressType: event.target.value }))}
-                            placeholder={t('checkout.addressType')}
+                            onChange={(event) =>
+                              setAddressForm((currentValue) => ({
+                                ...currentValue,
+                                addressType: event.target.value,
+                              }))
+                            }
+                            placeholder={t("checkout.addressType")}
                             className="border border-[#eadfd4] px-3 py-2 text-sm outline-none focus:border-[#b88a65]"
                           />
                         </div>
@@ -615,44 +799,60 @@ export default function CheckoutPage() {
                             disabled={isAddressSaving}
                             className="bg-[#111111] px-4 py-2 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                           >
-                            {isAddressSaving ? t('checkout.saving') : t('checkout.saveAddress')}
+                            {isAddressSaving
+                              ? t("checkout.saving")
+                              : t("checkout.saveAddress")}
                           </button>
                           <button
                             type="button"
                             onClick={() => setIsAddressFormOpen(false)}
                             className="border border-[#e2d1c3] px-4 py-2 text-xs font-bold tracking-[0.08em] text-[#3c2b20] transition hover:bg-[#111111] hover:text-white"
                           >
-                            {t('checkout.cancel')}
+                            {t("checkout.cancel")}
                           </button>
                         </div>
                       </div>
                     ) : null}
 
-                    {addressError ? <p className="mt-4 text-sm text-rose-600">{addressError}</p> : null}
+                    {addressError ? (
+                      <p className="mt-4 text-sm text-rose-600">
+                        {addressError}
+                      </p>
+                    ) : null}
 
                     {!selectedAddress && !isAddressLoading ? (
-                      <p className="mt-4 text-sm text-zinc-500">{t('checkout.selectAddress')}</p>
+                      <p className="mt-4 text-sm text-zinc-500">
+                        {t("checkout.selectAddress")}
+                      </p>
                     ) : null}
                   </div>
 
                   <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
                     <div className="flex items-center gap-3 text-[#17110d]">
                       <CreditCard className="h-5 w-5" />
-                      <h2 className="text-xl font-bold">{t('checkout.paymentMethod')}</h2>
+                      <h2 className="text-xl font-bold">
+                        {t("checkout.paymentMethod")}
+                      </h2>
                     </div>
                     <div className="mt-5 space-y-3">
-                      <label className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${paymentMethod === 'ONLINE' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`}>
+                      <label
+                        className={`flex cursor-pointer items-start gap-4 border px-4 py-4 transition ${paymentMethod === "ONLINE" ? "border-[#17110d] bg-white" : "border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]"}`}
+                      >
                         <input
                           type="radio"
                           name="paymentMethod"
                           value="ONLINE"
-                          checked={paymentMethod === 'ONLINE'}
-                          onChange={() => setPaymentMethod('ONLINE')}
+                          checked={paymentMethod === "ONLINE"}
+                          onChange={() => setPaymentMethod("ONLINE")}
                           className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
                         />
                         <div>
-                          <p className="font-bold text-[#17110d]">{t('checkout.onlinePayment')}</p>
-                          <p className="mt-1 text-sm leading-6 text-zinc-500">{t('checkout.onlinePaymentDesc')}</p>
+                          <p className="font-bold text-[#17110d]">
+                            {t("checkout.onlinePayment")}
+                          </p>
+                          <p className="mt-1 text-sm leading-6 text-zinc-500">
+                            {t("checkout.onlinePaymentDesc")}
+                          </p>
                         </div>
                       </label>
 
@@ -687,56 +887,78 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                {checkoutSource === 'single' ? (
+                {checkoutSource === "single" ? (
                   <div className="border border-[#f0c4da] bg-[#fff7fb] p-4 text-sm leading-7 text-[#8f2a60]">
-                    {t('checkout.singleCheckoutNote')}
+                    {t("checkout.singleCheckoutNote")}
                   </div>
                 ) : null}
 
-                {error ? <div className="border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">{error}</div> : null}
+                {error ? (
+                  <div className="border border-rose-200 bg-rose-50 px-5 py-4 text-sm text-rose-700">
+                    {error}
+                  </div>
+                ) : null}
               </>
             ) : null}
           </section>
 
           <aside className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('checkout.orderSummary')}</p>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">
+              {t("checkout.orderSummary")}
+            </p>
             <div className="mt-6 space-y-4 text-sm text-zinc-600">
               <div className="flex items-center justify-between">
-                <span>{t('checkout.checkoutType')}</span>
-                <span className="font-semibold text-[#17110d]">{checkoutSource === 'single' ? t('checkout.buyItNow') : t('checkout.cartCheckout')}</span>
+                <span>{t("checkout.checkoutType")}</span>
+                <span className="font-semibold text-[#17110d]">
+                  {checkoutSource === "single"
+                    ? t("checkout.buyItNow")
+                    : t("checkout.cartCheckout")}
+                </span>
               </div>
               <div className="flex items-center justify-between">
-                <span>{t('checkout.items')}</span>
-                <span className="font-semibold text-[#17110d]">{totalItems}</span>
+                <span>{t("checkout.items")}</span>
+                <span className="font-semibold text-[#17110d]">
+                  {totalItems}
+                </span>
               </div>
               <div className="flex items-center justify-between">
-                <span>{t('checkout.subtotal')}</span>
-                <span className="font-semibold text-[#17110d]">{formatPrice(subtotal, currency)}</span>
+                <span>{t("checkout.subtotal")}</span>
+                <span className="font-semibold text-[#17110d]">
+                  {formatPrice(subtotal, currency)}
+                </span>
               </div>
               <div className="flex items-center justify-between">
-                <span>{t('checkout.shipping')}</span>
-                <span className="font-semibold text-[#17110d]">{t('checkout.free')}</span>
+                <span>{t("checkout.shipping")}</span>
+                <span className="font-semibold text-[#17110d]">
+                  {t("checkout.free")}
+                </span>
               </div>
               {appliedGiftDiscount > 0 ? (
                 <div className="flex items-center justify-between text-[#1f7a4d]">
-                  <span>{t('checkout.giftCard')}</span>
-                  <span className="font-semibold">−{formatPrice(appliedGiftDiscount, currency)}</span>
+                  <span>{t("checkout.giftCard")}</span>
+                  <span className="font-semibold">
+                    −{formatPrice(appliedGiftDiscount, currency)}
+                  </span>
                 </div>
               ) : null}
             </div>
 
             {!hasGiftCardItems ? (
               <div className="mt-6 border-t border-[#efe1d5] pt-6">
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">{t('checkout.giftCard')}</p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">
+                  {t("checkout.giftCard")}
+                </p>
                 {giftValidation?.valid ? (
                   <div className="mt-3 flex items-center justify-between gap-3 text-sm">
-                    <span className="font-semibold text-[#17110d]">{giftValidation.code}</span>
+                    <span className="font-semibold text-[#17110d]">
+                      {giftValidation.code}
+                    </span>
                     <button
                       type="button"
                       onClick={handleRemoveGiftCard}
                       className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
                     >
-                      {t('checkout.remove')}
+                      {t("checkout.remove")}
                     </button>
                   </div>
                 ) : (
@@ -745,7 +967,7 @@ export default function CheckoutPage() {
                       type="text"
                       value={giftCodeInput}
                       onChange={(event) => setGiftCodeInput(event.target.value)}
-                      placeholder={t('checkout.enterGiftCard')}
+                      placeholder={t("checkout.enterGiftCard")}
                       className="h-11 flex-1 border border-[#e7d3c2] px-3 text-sm outline-none focus:border-[#17110d]"
                     />
                     <button
@@ -754,12 +976,14 @@ export default function CheckoutPage() {
                       disabled={isCheckingGift || !giftCodeInput.trim()}
                       className="h-11 border border-[#17110d] bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:opacity-90 disabled:opacity-50"
                     >
-                      {isCheckingGift ? '...' : t('checkout.apply')}
+                      {isCheckingGift ? "..." : t("checkout.apply")}
                     </button>
                   </div>
                 )}
                 {giftCheckMessage ? (
-                  <p className={`mt-2 text-xs ${giftValidation?.valid ? 'text-[#1f7a4d]' : 'text-[#b3261e]'}`}>
+                  <p
+                    className={`mt-2 text-xs ${giftValidation?.valid ? "text-[#1f7a4d]" : "text-[#b3261e]"}`}
+                  >
                     {giftCheckMessage}
                   </p>
                 ) : null}
@@ -768,18 +992,22 @@ export default function CheckoutPage() {
 
             <div className="mt-6 border border-[#efe1d5] bg-[#fffdfa] p-4">
               <div className="flex items-start gap-3 text-sm leading-6 text-zinc-500">
-                {paymentMethod === 'ONLINE' ? <ShieldCheck className="mt-0.5 h-4 w-4 text-[#17110d]" /> : <Truck className="mt-0.5 h-4 w-4 text-[#17110d]" />}
+                {paymentMethod === "ONLINE" ? (
+                  <ShieldCheck className="mt-0.5 h-4 w-4 text-[#17110d]" />
+                ) : (
+                  <Truck className="mt-0.5 h-4 w-4 text-[#17110d]" />
+                )}
                 <p>
-                  {paymentMethod === 'ONLINE'
-                    ? t('checkout.stripeNote')
-                    : t('checkout.codNote')}
+                  {paymentMethod === "ONLINE"
+                    ? t("checkout.stripeNote")
+                    : t("checkout.codNote")}
                 </p>
               </div>
             </div>
 
             <div className="mt-6 border-t border-[#efe1d5] pt-6">
               <div className="flex items-center justify-between text-lg font-bold text-[#17110d]">
-                <span>{t('checkout.total')}</span>
+                <span>{t("checkout.total")}</span>
                 <span>{formatPrice(payableTotal, currency)}</span>
               </div>
               <button
@@ -788,7 +1016,11 @@ export default function CheckoutPage() {
                 disabled={items.length === 0 || isSubmitting}
                 className="mt-6 w-full bg-[#111111] px-6 py-4 text-sm font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
               >
-                {isSubmitting ? t('checkout.placingOrder') : paymentMethod === 'ONLINE' ? t('checkout.placeOrderOnline') : t('checkout.placeCodOrder')}
+                {isSubmitting
+                  ? t("checkout.placingOrder")
+                  : paymentMethod === "ONLINE"
+                    ? t("checkout.placeOrderOnline")
+                    : t("checkout.placeCodOrder")}
               </button>
             </div>
           </aside>
@@ -796,5 +1028,5 @@ export default function CheckoutPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

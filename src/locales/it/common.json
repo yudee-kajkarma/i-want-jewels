@@ -230,7 +230,9 @@
     "scrollProductsLeft": "Scorri i prodotti a sinistra",
     "scrollProductsRight": "Scorri i prodotti a destra",
     "closeSizeGuide": "Chiudi guida alle misure",
-    "paymentCard": "Carta"
+    "paymentCard": "Carta",
+    "loadError": "Impossibile caricare questo prodotto al momento.",
+    "customerReview": "Recensione cliente"
   },
   "exploreOurStore": {
     "title": "Esplora il Nostro Negozio",
@@ -329,7 +331,9 @@
     "syncing": "Sincronizzazione del carrello e dello stato di pagamento in corso...",
     "continueShopping": "CONTINUA LO SHOPPING",
     "viewOrders": "VEDI ORDINI",
-    "tryAgain": "RIPROVA IL PAGAMENTO"
+    "tryAgain": "RIPROVA IL PAGAMENTO",
+    "selectShippingAddressError": "Seleziona un indirizzo di spedizione prima di effettuare l'ordine.",
+    "placeOrderError": "Impossibile effettuare questo ordine al momento. Riprova."
   },
   "auth": {
     "loginTitle": "Accedi",
@@ -420,7 +424,8 @@
     "resetting": "REIMPOSTAZIONE IN CORSO...",
     "resetPasswordBtn": "REIMPOSTA PASSWORD",
     "backToSignIn": "Torna all'accesso?",
-    "loginHere": "Accedi qui"
+    "loginHere": "Accedi qui",
+    "sessionExpired": "La tua sessione è scaduta. Sei stato disconnesso."
   },
   "account": {
     "orders": {

@@ -6,13 +6,14 @@ import Header from "../components/layout/Header";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 import { resourceCategories, getArticleCount } from "../data/resources";
 import { useTranslation } from "react-i18next";
+import { useLocalizedArticle, useLocalizedCategory } from "@/hooks/useLocalizedContent";
 
 type ResourceCategoryPageProps = {
     category: ResourceCategory;
     articles: ResourceArticle[];
 };
 
-function formatDate(value: string, slug?: string): string {
+function formatDate(value: string, slug?: string, locale = "en-GB"): string {
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return "";
 
@@ -26,7 +27,7 @@ function formatDate(value: string, slug?: string): string {
     const baseDate = new Date(2026, 5, 29); // 29 June 2026
     baseDate.setDate(baseDate.getDate() + daysOffset);
 
-    return baseDate.toLocaleDateString("en-GB", {
+    return baseDate.toLocaleDateString(locale, {
         day: "2-digit",
         month: "short",
         year: "numeric",
@@ -69,15 +70,17 @@ function ArrowRightIcon() {
 }
 
 function ArticleCard({ article }: { article: ResourceArticle }) {
-    const { t } = useTranslation('common', { keyPrefix: 'resourceCategory' });
+    const { t, i18n } = useTranslation('common', { keyPrefix: 'resourceCategory' });
+    const localized = useLocalizedArticle(article);
     const href = `/resources/${article.categorySlug}/${article.slug}`;
+    const dateLocale = i18n.resolvedLanguage === 'en' ? 'en-GB' : i18n.resolvedLanguage ?? 'en-GB';
     return (
         <article className="group border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_12px_32px_rgba(194,110,143,0.1)]">
             <Link to={href} className="block overflow-hidden">
                 <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">
                     <img
                         src={article.coverImage}
-                        alt={article.title}
+                        alt={localized.title}
                         className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
                     />
                 </div>
@@ -85,27 +88,27 @@ function ArticleCard({ article }: { article: ResourceArticle }) {
             <div className="p-6">
                 {/* Meta */}
                 <div className="flex items-center gap-4 text-[11px] uppercase tracking-[0.18em] text-zinc-500">
-                    <span>{formatDate(article.publishedAt, article.slug)}</span>
+                    <span>{formatDate(article.publishedAt, article.slug, dateLocale)}</span>
                     <span className="flex items-center gap-1.5">
                         <ClockIcon />
-                        {article.readTime}
+                        {localized.readTime}
                     </span>
                 </div>
 
                 {/* Title */}
                 <h2 className="mt-3 font-play text-[17px] font-semibold leading-snug text-zinc-900 transition group-hover:text-pink-500 sm:text-[18px]">
-                    <Link to={href}>{article.title}</Link>
+                    <Link to={href}>{localized.title}</Link>
                 </h2>
 
                 {/* Excerpt */}
                 <p className="mt-2.5 text-[13px] leading-6 text-zinc-600 line-clamp-2">
-                    {article.excerpt}
+                    {localized.excerpt}
                 </p>
 
                 {/* Tags */}
-                {article.tags.length > 0 && (
+                {localized.tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-1.5">
-                        {article.tags.slice(0, 3).map((tag) => (
+                        {localized.tags.slice(0, 3).map((tag) => (
                             <span
                                 key={tag}
                                 className="border border-zinc-200 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-zinc-500"
@@ -129,11 +132,38 @@ function ArticleCard({ article }: { article: ResourceArticle }) {
     );
 }
 
+function OtherCategoryCard({ cat }: { cat: ResourceCategory }) {
+    const { t } = useTranslation('common', { keyPrefix: 'resourceCategory' });
+    const localized = useLocalizedCategory(cat);
+
+    return (
+        <Link
+            to={cat.href}
+            className="group flex flex-col gap-3 border border-[#eadfd4] bg-white p-5 transition hover:border-[#d889ac] hover:shadow-[0_8px_24px_rgba(194,110,143,0.1)]"
+        >
+            <div className="h-[100px] overflow-hidden bg-[#f6f0ea]">
+                <img
+                    src={cat.coverImage}
+                    alt={localized.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                />
+            </div>
+            <p className="font-play text-[13px] font-semibold leading-snug text-zinc-900 transition group-hover:text-pink-500">
+                {localized.title}
+            </p>
+            <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-500">
+                {t('articlesCount', { count: getArticleCount(cat.slug) })}
+            </p>
+        </Link>
+    );
+}
+
 export default function ResourceCategoryPage({
     category,
     articles,
 }: ResourceCategoryPageProps) {
     const { t } = useTranslation('common', { keyPrefix: 'resourceCategory' });
+    const localizedCategory = useLocalizedCategory(category);
     const otherCategories = resourceCategories.filter(
         (c) => c.slug !== category.slug,
     );
@@ -160,13 +190,13 @@ export default function ResourceCategoryPage({
                             >
                                 {t('breadcrumbResources')}
                             </Link>{" "}
-                            / {category.title}
+                            / {localizedCategory.title}
                         </p>
                         <h1 className="mt-3 text-[26px] font-medium uppercase tracking-[0.06em] text-zinc-900 sm:text-[34px] lg:text-[42px]">
-                            {category.title}
+                            {localizedCategory.title}
                         </h1>
                         <p className="mt-4 max-w-2xl text-[14px] leading-7 text-zinc-600 sm:text-[15px]">
-                            {category.description}
+                            {localizedCategory.description}
                         </p>
                         <p className="mt-3 text-[12px] font-medium uppercase tracking-[0.22em] text-zinc-400">
                             {t('articlesCount', { count: articles.length })}
@@ -203,25 +233,7 @@ export default function ResourceCategoryPage({
                             </h2>
                             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                                 {otherCategories.map((cat) => (
-                                    <Link
-                                        key={cat.slug}
-                                        to={cat.href}
-                                        className="group flex flex-col gap-3 border border-[#eadfd4] bg-white p-5 transition hover:border-[#d889ac] hover:shadow-[0_8px_24px_rgba(194,110,143,0.1)]"
-                                    >
-                                        <div className="h-[100px] overflow-hidden bg-[#f6f0ea]">
-                                            <img
-                                                src={cat.coverImage}
-                                                alt={cat.title}
-                                                className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
-                                            />
-                                        </div>
-                                        <p className="font-play text-[13px] font-semibold leading-snug text-zinc-900 transition group-hover:text-pink-500">
-                                            {cat.title}
-                                        </p>
-                                        <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-500">
-                                            {t('articlesCount', { count: getArticleCount(cat.slug) })}
-                                        </p>
-                                    </Link>
+                                    <OtherCategoryCard key={cat.slug} cat={cat} />
                                 ))}
                             </div>
                         </div>

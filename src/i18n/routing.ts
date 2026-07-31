@@ -1,25 +1,38 @@
-import { fallbackLng, languages } from './settings';
+import { fallbackLng, languages } from "./settings";
+
+const BASE_URL = "https://www.iwantjewels.com";
 
 /** Locales that use a URL prefix (all except English). */
-export const localizedLanguages = languages.filter((locale) => locale !== fallbackLng);
+export const localizedLanguages = languages.filter(
+  (locale) => locale !== fallbackLng,
+);
 
 /** Legacy English URL prefixes that must redirect to the root. */
-export const englishUrlPrefixes = ['en', 'eng', 'english', 'en-us', 'en-gb'] as const;
+export const englishUrlPrefixes = [
+  "en",
+  "eng",
+  "english",
+  "en-us",
+  "en-gb",
+] as const;
 
 export function normalizePath(path: string): string {
-  if (!path || path === '') return '/';
-  return path.startsWith('/') ? path : `/${path}`;
+  if (!path || path === "") return "/";
+  return path.startsWith("/") ? path : `/${path}`;
 }
 
 /** Public URL path for a locale + path-without-locale (English has no prefix). */
-export function getLocalizedPath(locale: string, pathWithoutLocale: string): string {
+export function getLocalizedPath(
+  locale: string,
+  pathWithoutLocale: string,
+): string {
   const path = normalizePath(pathWithoutLocale);
 
   if (locale === fallbackLng) {
     return path;
   }
 
-  if (path === '/') {
+  if (path === "/") {
     return `/${locale}`;
   }
 
@@ -35,7 +48,7 @@ export type ParsedLocalePath = {
 export function parseLocalePathname(pathname: string): ParsedLocalePath {
   for (const prefix of englishUrlPrefixes) {
     if (pathname === `/${prefix}`) {
-      return { locale: fallbackLng, pathnameWithoutLocale: '/' };
+      return { locale: fallbackLng, pathnameWithoutLocale: "/" };
     }
     if (pathname.startsWith(`/${prefix}/`)) {
       return {
@@ -47,7 +60,7 @@ export function parseLocalePathname(pathname: string): ParsedLocalePath {
 
   for (const locale of localizedLanguages) {
     if (pathname === `/${locale}`) {
-      return { locale, pathnameWithoutLocale: '/' };
+      return { locale, pathnameWithoutLocale: "/" };
     }
     if (pathname.startsWith(`/${locale}/`)) {
       return {
@@ -67,23 +80,30 @@ export function isLegacyEnglishPrefix(pathname: string): boolean {
   );
 }
 
-/** Build hreflang map including x-default (English root URLs). */
-export function buildAlternateLanguages(pathWithoutLocale: string): Record<string, string> {
+/** Build hreflang map including x-default (English root URLs). Values are absolute URLs. */
+export function buildAlternateLanguages(
+  pathWithoutLocale: string,
+): Record<string, string> {
   const alternates: Record<string, string> = {};
 
   for (const locale of languages) {
-    alternates[locale] = getLocalizedPath(locale, pathWithoutLocale);
+    alternates[locale] =
+      `${BASE_URL}${getLocalizedPath(locale, pathWithoutLocale)}`;
   }
 
-  alternates['x-default'] = getLocalizedPath(fallbackLng, pathWithoutLocale);
+  alternates["x-default"] =
+    `${BASE_URL}${getLocalizedPath(fallbackLng, pathWithoutLocale)}`;
 
   return alternates;
 }
 
 /** Internal Next.js path under `[locale]` (always includes `/en` segment for English). */
-export function getInternalLocalePath(locale: string, pathWithoutLocale: string): string {
+export function getInternalLocalePath(
+  locale: string,
+  pathWithoutLocale: string,
+): string {
   const path = normalizePath(pathWithoutLocale);
-  if (path === '/') {
+  if (path === "/") {
     return `/${locale}`;
   }
   return `/${locale}${path}`;

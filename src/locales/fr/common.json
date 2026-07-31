@@ -10,7 +10,7 @@
     "giftCards": "Cartes cadeaux",
     "carts": "Paniers",
     "wishlists": "Listes de souhaits",
-    "tickets": "Billets",
+    "tickets": "Tickets",
     "searching": "Recherche du bijou parfait...",
     "findRings": "Trouvez des bagues, boucles d'oreilles, colliers...",
     "discoverSparkle": "Découvrez un éclat intemporel...",
@@ -230,7 +230,9 @@
     "scrollProductsLeft": "Faire défiler les produits vers la gauche",
     "scrollProductsRight": "Faire défiler les produits vers la droite",
     "closeSizeGuide": "Fermer le guide des tailles",
-    "paymentCard": "Carte"
+    "paymentCard": "Carte",
+    "loadError": "Impossible de charger ce produit pour le moment.",
+    "customerReview": "Avis client"
   },
   "exploreOurStore": {
     "title": "Explorez notre boutique",
@@ -329,7 +331,9 @@
     "syncing": "Synchronisation de votre panier et de l'état du paiement...",
     "continueShopping": "CONTINUER MES ACHATS",
     "viewOrders": "VOIR LES COMMANDES",
-    "tryAgain": "RÉESSAYER LE PAIEMENT"
+    "tryAgain": "RÉESSAYER LE PAIEMENT",
+    "selectShippingAddressError": "Veuillez sélectionner une adresse de livraison avant de passer votre commande.",
+    "placeOrderError": "Impossible de passer cette commande pour le moment. Veuillez réessayer."
   },
   "auth": {
     "loginTitle": "Connexion",
@@ -420,7 +424,8 @@
     "resetting": "RÉINITIALISATION EN COURS...",
     "resetPasswordBtn": "RÉINITIALISER LE MOT DE PASSE",
     "backToSignIn": "Retour à la connexion ?",
-    "loginHere": "Connectez-vous ici"
+    "loginHere": "Connectez-vous ici",
+    "sessionExpired": "Votre session a expiré. Vous avez été déconnecté."
   },
   "account": {
     "orders": {

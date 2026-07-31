@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { blogLinks, type BlogLink } from "./blogList";
+import { useTranslation } from "react-i18next";
+import { useLocalizedBlogTitle } from "@/hooks/useLocalizedContent";
 
 const SIDEBAR_BLOG_COUNT = 7;
 
@@ -16,6 +18,29 @@ const pickRandom = (list: BlogLink[], count: number): BlogLink[] => {
     return shuffled.slice(0, count);
 };
 
+const SidebarLink = ({ link }: { link: BlogLink }) => {
+    const slug = link.href.replace("/blogs/", "");
+    const title = useLocalizedBlogTitle(slug, link.title);
+
+    return (
+        <Link
+            href={link.href}
+            className="flex items-center justify-between gap-3 py-1 text-slate-700 transition-colors hover:text-[#bb923a] lg:py-1"
+        >
+            <div className="flex items-center gap-4">
+                <span className="hidden h-2 w-2 shrink-0 rounded-full border border-current group-hover:border-[#bb923a] lg:block"></span>
+                <span className="font-poppins text-lg underline underline-offset-4 lg:text-sm lg:font-sans lg:font-semibold lg:tracking-wide lg:no-underline">
+                    {title}
+                </span>
+            </div>
+            <ArrowUpRight
+                className="hidden h-5 w-5 shrink-0 opacity-50 transition-all group-hover:text-[#bb923a] group-hover:opacity-100 lg:block"
+                strokeWidth={1.5}
+            />
+        </Link>
+    );
+};
+
 const BlogSidebar = ({
     className = "w-full lg:w-1/3",
     currentHref,
@@ -23,6 +48,7 @@ const BlogSidebar = ({
     className?: string;
     currentHref?: string;
 }) => {
+    const { t } = useTranslation("blogs-meta");
     const pool = currentHref
         ? blogLinks.filter((link) => link.href !== currentHref)
         : blogLinks;
@@ -41,30 +67,16 @@ const BlogSidebar = ({
     return (
         <div className={className}>
             <div className="bg-[#f7f8fa] p-8 w-full shadow-sm rounded-sm lg:rounded-none">
-                <h3 className="text-4xl lg:text-3xl font-semibold font-play mb-6 text-[#0f172a]">
-                    More Articles
+                <h3 className="mb-6 font-play text-4xl font-semibold text-[#0f172a] lg:text-3xl">
+                    {t("sidebarMoreArticles")}
                 </h3>
-                <ul className="space-y-3 lg:space-y-5 max-h-none lg:max-h-[70vh] lg:overflow-y-auto lg:pr-2">
-                    {links.map((link, idx) => (
+                <ul className="max-h-none space-y-3 lg:max-h-[70vh] lg:space-y-5 lg:overflow-y-auto lg:pr-2">
+                    {links.map((link) => (
                         <li
-                            key={idx}
-                            className="group lg:border-0 border-b border-slate-200 pb-2 lg:pb-0 last:border-0"
+                            key={link.href}
+                            className="group border-b border-slate-200 pb-2 last:border-0 lg:border-0 lg:pb-0"
                         >
-                            <Link
-                                href={link.href}
-                                className="flex items-center justify-between gap-3 text-slate-700 hover:text-[#bb923a] transition-colors py-1 lg:py-1"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <span className="hidden lg:block w-2 h-2 rounded-full border border-current shrink-0 group-hover:border-[#bb923a]"></span>
-                                    <span className="font-poppins text-lg lg:text-sm lg:font-sans lg:font-semibold lg:tracking-wide underline lg:no-underline underline-offset-4">
-                                        {link.title}
-                                    </span>
-                                </div>
-                                <ArrowUpRight
-                                    className="hidden lg:block w-5 h-5 opacity-50 group-hover:opacity-100 group-hover:text-[#bb923a] transition-all shrink-0"
-                                    strokeWidth={1.5}
-                                />
-                            </Link>
+                            <SidebarLink link={link} />
                         </li>
                     ))}
                 </ul>

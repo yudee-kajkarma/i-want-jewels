@@ -1,0 +1,948 @@
+{
+  "categories": {
+    "lab-grown-diamond-guides": {
+      "title": "Im Labor gezüchtete Diamantführungen",
+      "description": "Alles, was Sie über im Labor gezüchtete Diamanten wissen müssen – wie sie hergestellt werden, wie sie im Vergleich zu geförderten Diamanten aussehen und warum sie die kluge, ethische Wahl sind."
+    },
+    "demi-fine-jewellery-guides": {
+      "title": "Leitfäden für Demi-Fine-Schmuck",
+      "description": "Entdecken Sie die Welt des halbfeinen Schmucks – Sterlingsilber, Gold-Vermeil und im Labor gezüchtete Steine, die wunderbar zwischen Mode- und edlem Schmuck passen."
+    },
+    "earring-style-guides": {
+      "title": "Anleitungen zum Ohrring-Styling",
+      "description": "Vom Ear-Stacking bis zur Auswahl des richtigen Ohrrings für Ihre Gesichtsform – unsere Ohrring-Ratgeber helfen Ihnen, Ihren Schmuck selbstbewusst zu tragen."
+    },
+    "occasion-jewellery-guides": {
+      "title": "Hochzeits- und Anlassschmuck",
+      "description": "Ratschläge für Brautschmuck, Geschenkideen zum Jubiläum und wie man das perfekte Stück für jeden Meilenstein im Leben auswählt."
+    },
+    "jewellery-care-guides": {
+      "title": "Schmuckpflege",
+      "description": "Sorgen Sie dafür, dass Ihr Schmuck immer optimal aussieht – mit unseren fachkundigen Pflegeratgebern, die Tipps zur Reinigung, Lagerung und zum alltäglichen Tragen für alle Metall- und Steinarten enthalten."
+    },
+    "jewellery-gift-guides": {
+      "title": "Geschenkführer",
+      "description": "Finden Sie das perfekte Schmuckgeschenk für jeden Anlass, jedes Budget und jede Persönlichkeit – vom Erstkäufer bis zum erfahrenen Schmuckliebhaber."
+    }
+  },
+  "articles": {
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-real": {
+      "title": "Sind im Labor gezüchtete Diamanten echte Diamanten?",
+      "excerpt": "Ja, im Labor gezüchtete Diamanten sind echte Diamanten. Erfahren Sie vor dem Kauf, wie sie im Vergleich zu natürlichen Diamanten, gefälschten Diamanten, Zirkonia und Moissanit abschneiden.",
+      "readTime": "7 Min. gelesen",
+      "tags": [
+        "im Labor gezüchtet",
+        "echte Diamanten",
+        "Ausbildung"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-vs-natural-diamonds": {
+      "title": "Im Labor gezüchtete und natürliche Diamanten: Was ist der Unterschied?",
+      "excerpt": "Vergleichen Sie im Labor gezüchtete und natürliche Diamanten in einfacher Sprache. Informieren Sie sich vor dem Kauf über die Unterschiede in Bezug auf Herkunft, Preis, Glanz, Wert und Verwendungszweck des Schmucks.",
+      "readTime": "8 Min. Lektüre",
+      "tags": [
+        "Vergleich",
+        "natürliche Diamanten",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-worth-it": {
+      "title": "Lohnen sich im Labor gezüchtete Diamanten?",
+      "excerpt": "Finden Sie heraus, ob es sich lohnt, im Labor gezüchtete Diamanten zu kaufen, wie sie im Vergleich zu natürlichen Diamanten abschneiden und wann Schmuck aus im Labor gezüchteten Diamanten sinnvoll ist.",
+      "readTime": "8 Min. Lektüre",
+      "tags": [
+        "es lohnt sich",
+        "Wert",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide": {
+      "title": "Kaufratgeber für im Labor gezüchtete Diamantohrringe",
+      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamantohrringe auswählen, darunter Ohrstecker, Huggies, Tropfen, Metallfarben, Größen, Geschenke und alltägliches Styling.",
+      "readTime": "10 Min. Lektüre",
+      "tags": [
+        "Kaufratgeber",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide": {
+      "title": "Preisführer für im Labor gezüchtete Diamantohrringe",
+      "excerpt": "Erfahren Sie, wie viel im Labor gezüchtete Diamantohrringe kosten, was sich auf den Preis auswirkt und wie Sie Ohrstecker, Huggies, Ohrhänger und Geschenkohrringe auswählen.",
+      "readTime": "9 Min. gelesen",
+      "tags": [
+        "Preisführer",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide": {
+      "title": "Leitfaden für im Labor gezüchtete Diamant-Ohrstecker",
+      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamant-Ohrstecker für den Alltag, als Geschenk, für Ohrstecker, die Metallfarbe, die Größe und das Styling auswählen.",
+      "readTime": "9 Min. gelesen",
+      "tags": [
+        "Ohrstecker",
+        "Alltagskleidung",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide": {
+      "title": "Leitfaden für im Labor gezüchtete Diamant-Ohrhänger",
+      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamantohrringe für Hochzeiten, Partys, Geschenke, Abendoutfits und das Styling für alltägliche Anlässe auswählen.",
+      "readTime": "9 Min. gelesen",
+      "tags": [
+        "Tropfenohrringe",
+        "Gelegenheit",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Leitfaden für im Labor gezüchtete Diamant-Creolen",
+      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamant-Creolen für den Alltag, Ear-Stacks, Geschenke, Partys und modernes Schmuck-Styling auswählen.",
+      "readTime": "9 Min. gelesen",
+      "tags": [
+        "Creolen",
+        "Ohrenstapel",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
+      "title": "Was sind im Labor gezüchtete Diamanten?",
+      "excerpt": "Im Labor gezüchtete Diamanten sind echte Diamanten – chemisch, physikalisch und optisch identisch mit abgebauten Diamanten. Hier erfahren Sie, wie sie erstellt werden und warum sie wichtig sind.",
+      "readTime": "6 Min. gelesen",
+      "tags": [
+        "im Labor gezüchtet",
+        "Diamanten",
+        "Ausbildung"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia": {
+      "title": "Im Labor gezüchtete Diamanten vs. Zirkonia: Was ist der Unterschied?",
+      "excerpt": "Erfahren Sie den Unterschied zwischen im Labor gezüchteten Diamanten und Zirkonia, einschließlich Glanz, Haltbarkeit, Preis, Wert und Verwendung von Schmuck.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "im Labor gezüchtet",
+        "Zirkonia",
+        "Vergleich"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite": {
+      "title": "Im Labor gezüchtete Diamanten vs. Moissanit: Was ist der Unterschied?",
+      "excerpt": "Vergleichen Sie im Labor gezüchtete Diamanten und Moissanit in einfacher Sprache. Erfahren Sie den Unterschied in Bezug auf Glanz, Haltbarkeit, Preis, Wert und Verwendung von Schmuck.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "im Labor gezüchtet",
+        "Moissanit",
+        "Vergleich"
+      ]
+    },
+    "lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings": {
+      "title": "So reinigen Sie im Labor gezüchtete Diamantohrringe",
+      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamantohrringe sicher reinigen, die Vergoldung schützen, Mattheit vermeiden und Ihren Schmuck länger funkeln lassen.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "Pflege",
+        "Reinigung",
+        "im Labor gezüchtet",
+        "Ohrringe"
+      ]
+    },
+    "lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "Können Sie jeden Tag im Labor gezüchtete Diamantohrringe tragen?",
+      "excerpt": "Erfahren Sie, ob im Labor gezüchtete Diamantohrringe für den täglichen Gebrauch geeignet sind, wie Sie Ohrringe für den Alltag auswählen und wie Sie Ohrstecker, Huggies und Tropfen pflegen.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "Alltagskleidung",
+        "Ohrringe",
+        "im Labor gezüchtet",
+        "Pflege"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide": {
+      "title": "Größentabelle für Ohrringe mit im Labor gezüchteten Diamanten: Kleine, mittlere und 1-Karat-Modelle",
+      "excerpt": "Vergleichen Sie die Größen von im Labor gezüchteten Diamantohrringen, von kleinen Ohrsteckern bis hin zu 1-Karat-Modellen. Erfahren Sie, welche Größe für den Alltag, Geschenke und Anlässe am besten geeignet ist.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Größentabelle",
+        "Ohrringe",
+        "im Labor gezüchtet",
+        "Karatgewicht"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings": {
+      "title": "Im Labor gezüchtete Diamantohrringe für Hochzeiten: Leitfaden für Gäste, Brautjungfern und Anlässe",
+      "excerpt": "Wählen Sie im Labor gezüchtete Diamantohrringe für Hochzeiten, Hochzeitsgäste, Brautjungfern, Empfänge, Kleider, Ausschnitte und elegante Anlässe.",
+      "readTime": "14 Min. gelesen",
+      "tags": [
+        "Hochzeiten",
+        "Gelegenheit",
+        "Ohrringe",
+        "im Labor gezüchtet",
+        "Brautjungfer"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it": {
+      "title": "Lohnen sich im Labor gezüchtete Diamantohrringe?",
+      "excerpt": "Finden Sie heraus, ob es sich lohnt, im Labor gezüchtete Diamantohrringe für den Alltag, als Geschenk, für Hochzeiten, Ear Stacks und als Schmuck für besondere Anlässe zu kaufen.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "es lohnt sich",
+        "Wert",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Im Labor gezüchtete Diamantohrringe für Geschenke: Leitfaden für Geburtstage, Jahrestage und Brautjungfern",
+      "excerpt": "Wählen Sie im Labor gezüchtete Diamantohrringe für Geburtstagsgeschenke, Jubiläumsgeschenke, Brautjungfern, romantische Geschenke und alltägliche Schmuckgeschenke.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Geschenke",
+        "Geburtstag",
+        "Jubiläum",
+        "Brautjungfer",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks": {
+      "title": "Im Labor gezüchtete Diamantohrringe für Ear Stacks: Ohrstecker, Huggies und Styling-Guide",
+      "excerpt": "Stellen Sie einen Diamant-Ohrstecker mit im Labor gezüchteten Diamant-Ohrsteckern, Huggies, Creolen und minimalistischen Ohrringen für den Alltag und andere Anlässe zusammen.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Ohrenstapel",
+        "Stollen",
+        "Umarmungen",
+        "Ohrringe",
+        "im Labor gezüchtet",
+        "Styling"
+      ]
+    },
+    "lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings": {
+      "title": "Gold vs. Weiß vs. Roségold: Im Labor gezüchtete Diamantohrringe: Metallfarbratgeber",
+      "excerpt": "Vergleichen Sie Ohrringe mit Labordiamanten aus Gold, Weiß- und Roségold. Wählen Sie die beste Metallfarbe für Alltagskleidung, Geschenke, Hochzeiten und Styling.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Metallfarbe",
+        "Gold",
+        "Roségold",
+        "Weißgold",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "demi-fine-jewellery-guides/what-is-demi-fine-jewellery": {
+      "title": "Was ist halbfeiner Schmuck? Ein praktischer Schmuckratgeber",
+      "excerpt": "Erfahren Sie, was halbfeiner Schmuck bedeutet, wie er im Vergleich zu edlem Schmuck und Modeschmuck abschneidet und wie Sie Stücke für den Alltag und als Geschenk auswählen.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "halbwegs gut",
+        "Schmuckführer",
+        "Materialien",
+        "Ausbildung"
+      ]
+    },
+    "demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery": {
+      "title": "Demi-Fine vs. Feinschmuck vs. Modeschmuck: Was ist der Unterschied?",
+      "excerpt": "Vergleichen Sie halbfeinen, feinen und modischen Schmuck. Erfahren Sie den Unterschied in Bezug auf Materialien, Preis, Qualität, Tragbarkeit und Geschenkwert.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "halbwegs gut",
+        "feiner Schmuck",
+        "Modeschmuck",
+        "Vergleich",
+        "Ausbildung"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear": {
+      "title": "Ist halbfeiner Schmuck gut für den Alltag geeignet?",
+      "excerpt": "Erfahren Sie, ob halbfeiner Schmuck für den Alltag geeignet ist, wie Sie Alltagsstücke auswählen und wie Sie vergoldeten und Sterlingsilberschmuck pflegen.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "Alltagskleidung",
+        "halbwegs gut",
+        "Pflege",
+        "vergoldet",
+        "Sterlingsilber"
+      ]
+    },
+    "demi-fine-jewellery-guides/925-sterling-silver-jewellery-guide": {
+      "title": "Leitfaden für Schmuck aus 925er Sterlingsilber: Bedeutung, Qualität und Pflege",
+      "excerpt": "Erfahren Sie, was 925er-Sterlingsilber bedeutet, warum es in halbfeinem Schmuck verwendet wird und wie man Ohrringe aus Sterlingsilber und vergoldeten Schmuck pflegt.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "925er Sterlingsilber",
+        "Materialien",
+        "halbwegs gut",
+        "Pflege",
+        "Ausbildung"
+      ]
+    },
+    "demi-fine-jewellery-guides/14kt-gold-plated-jewellery-guide": {
+      "title": "Leitfaden für 14-karätig vergoldeten Schmuck: Bedeutung, Qualität und Pflege",
+      "excerpt": "Erfahren Sie, was 14-karätig vergoldeter Schmuck bedeutet, wie er im Vergleich zu massivem Gold aussieht, wie man ihn pflegt und ob er sich für den Alltag eignet.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "14-karätige Vergoldung",
+        "vergoldet",
+        "Materialien",
+        "halbwegs gut",
+        "Pflege"
+      ]
+    },
+    "demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery": {
+      "title": "Vergoldeter und massiver Goldschmuck: Was ist der Unterschied?",
+      "excerpt": "Vergleichen Sie vergoldeten und massiven Goldschmuck. Erfahren Sie den Unterschied in Preis, Haltbarkeit, Pflege, Alltagstauglichkeit und Geschenkwert.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "vergoldet",
+        "massives Gold",
+        "Vergleich",
+        "halbwegs gut",
+        "Materialien"
+      ]
+    },
+    "demi-fine-jewellery-guides/does-gold-plated-jewellery-tarnish": {
+      "title": "Läuft vergoldeter Schmuck an? Leitfaden zur Pflege, zum Tragen und zum Schutz",
+      "excerpt": "Erfahren Sie, ob vergoldeter Schmuck anläuft, warum er seine Farbe ändert, wie man ihn schützt und wie man halbfein vergoldete Ohrringe pflegt.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "trüben",
+        "vergoldet",
+        "Pflege",
+        "halbwegs gut",
+        "Alltagskleidung"
+      ]
+    },
+    "demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery": {
+      "title": "So pflegen Sie vergoldeten Schmuck: Leitfaden zur Reinigung, Lagerung und zum täglichen Tragen",
+      "excerpt": "Erfahren Sie, wie Sie vergoldeten Schmuck pflegen, die 14-Karat-Vergoldung schützen, Anlaufen vermeiden, Ohrringe sicher reinigen und halbfeinen Schmuck aufbewahren.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "Pflege",
+        "vergoldet",
+        "Reinigung",
+        "Lagerung",
+        "halbwegs gut"
+      ]
+    },
+    "demi-fine-jewellery-guides/can-you-shower-with-gold-plated-jewellery": {
+      "title": "Darf man mit vergoldetem Schmuck duschen? Leitfaden zu Wasser, Pflege und täglichem Tragen",
+      "excerpt": "Erfahren Sie, ob Sie mit vergoldetem Schmuck duschen können, wie sich Wasser auf die 14-Karat-Vergoldung auswirkt und wie Sie halbfeine Ohrringe schützen.",
+      "readTime": "10 Min. Lektüre",
+      "tags": [
+        "Dusche",
+        "Wasser",
+        "vergoldet",
+        "Pflege",
+        "halbwegs gut"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic": {
+      "title": "Ist 925er Sterlingsilber hypoallergen? Leitfaden für empfindliche Ohren und Ohrringe",
+      "excerpt": "Erfahren Sie, ob 925er Sterlingsilber hypoallergen ist, ob es für empfindliche Ohren geeignet ist und wie Sie sichere halbfeine Ohrringe auswählen.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "hypoallergen",
+        "925er Sterlingsilber",
+        "empfindliche Ohren",
+        "Ohrringe",
+        "halbwegs gut"
+      ]
+    },
+    "jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Im Labor gezüchtete Diamantohrringe für Geschenke: So wählen Sie das richtige Paar aus",
+      "excerpt": "Wählen Sie im Labor gezüchtete Diamantohrringe als Geschenk für Geburtstage, Jubiläen, Brautjungfern, Hochzeiten, romantische Geschenke und Alltagsschmuck.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke",
+        "Geburtstag",
+        "Jubiläum",
+        "Brautjungfer",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts-for-her": {
+      "title": "Schmuckgeschenke zum Geburtstag für sie: So wählen Sie Ohrringe aus, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke zum Geburtstag mit Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen, Creolen und bedeutungsvollen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geburtstagsgeschenke",
+        "Ohrringe",
+        "im Labor gezüchtet",
+        "Geschenke",
+        "Stollen",
+        "Schmetterlingsohrringe"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts-for-her": {
+      "title": "Jubiläums-Schmuckgeschenke für Sie: Romantische Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke zum Jubiläum mit Ohrringen mit im Labor gezüchteten Diamanten, Schmetterlingsohrringen, Ohrsteckern, Tropfen, Creolen und romantischen Geschenkideen für Sie.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Jubiläumsgeschenke",
+        "romantisch",
+        "Schmetterlingsohrringe",
+        "im Labor gezüchtet",
+        "Ohrringe"
+      ]
+    },
+    "jewellery-gift-guides/bridesmaid-jewellery-gifts": {
+      "title": "Brautjungfern-Schmuckgeschenke: Ohrringe, die Ihre Brautparty am Hochzeitstag und danach tragen kann",
+      "excerpt": "Wählen Sie Brautjungfern-Schmuckgeschenke mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Tropfen, Schmetterlingsohrringen, Huggies und Geschenkideen für die Hochzeit.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke für Brautjungfern",
+        "Hochzeit",
+        "Ohrringe",
+        "im Labor gezüchtet",
+        "Stollen",
+        "Tropfen"
+      ]
+    },
+    "jewellery-gift-guides/romantic-jewellery-gifts-for-her": {
+      "title": "Romantische Schmuckgeschenke für Sie: Bedeutungsvolle Ohrringe, die sie wieder tragen kann",
+      "excerpt": "Wählen Sie romantische Schmuckgeschenke mit Ohrringen mit im Labor gezüchteten Diamanten, Schmetterlingsohrringen, Ohrsteckern, Tropfen, Huggies und bedeutungsvollen Geschenkideen für sie.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "romantische Geschenke",
+        "Schmetterlingsohrringe",
+        "Jubiläum",
+        "Geburtstag",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/wedding-party-jewellery-gifts": {
+      "title": "Schmuckgeschenke für die Hochzeitsfeier: Ohrringe, die sie am Tag und danach tragen können",
+      "excerpt": "Wählen Sie Schmuckgeschenke für die Hochzeitsfeier mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Huggies, Tropfenohrringen, Schmetterlingsohrringen und Geschenkideen für die Hochzeit.",
+      "readTime": "17 Min. gelesen",
+      "tags": [
+        "Hochzeitsfeier",
+        "Brautjungfer",
+        "Trauzeugin",
+        "Hochzeit",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/maid-of-honour-jewellery-gifts": {
+      "title": "Schmuckgeschenke für die Trauzeugin: Bedeutungsvolle Ohrringe für den Hochzeitstag und danach",
+      "excerpt": "Wählen Sie Schmuckgeschenke für die Trauzeugin mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Ohrhängern, Huggies, Schmetterlingsohrringen und Geschenkideen für die Hochzeit.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Trauzeugin",
+        "Hochzeit",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts": {
+      "title": "Schmuckgeschenke zum Jubiläum: Romantische Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke zum Jubiläum mit Ohrringen mit im Labor gezüchteten Diamanten, Schmetterlingsohrringen, Ohrsteckern, Tropfen, Huggies und romantischen Geschenkideen.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Jubiläumsgeschenke",
+        "Schmetterlingsohrringe",
+        "romantisch",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts": {
+      "title": "Schmuckgeschenke zum Geburtstag: Ohrringe, die sie nach ihrem Geburtstag tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke zum Geburtstag mit Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen, Creolen und bedeutungsvollen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Geburtstagsgeschenke",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "sinnvoll",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/graduation-jewellery-gifts": {
+      "title": "Schmuckgeschenke zum Abschluss: Bedeutungsvolle Ohrringe für ein neues Kapitel",
+      "excerpt": "Wählen Sie Schmuckgeschenke für den Schulabschluss mit Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Creolen und bedeutungsvollen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Abschlussgeschenke",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Meilenstein",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-best-friend": {
+      "title": "Schmuckgeschenke für die beste Freundin: Durchdachte Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für Ihre beste Freundin aus Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Creolen und bedeutungsvollen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke für die beste Freundin",
+        "Geburtstag",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-daughter": {
+      "title": "Schmuckgeschenke für die Tochter: Bedeutungsvolle Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für Ihre Tochter aus Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Creolen und bedeutungsvollen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke für Tochter",
+        "Geburtstag",
+        "Abschluss",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-mum": {
+      "title": "Schmuckgeschenke für Mama: Durchdachte Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für Mama mit Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen und bedeutungsvollen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke für Mama",
+        "Geburtstag",
+        "Muttertag",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-sister": {
+      "title": "Schmuckgeschenke für Schwester: Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für Ihre Schwester mit Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Creolen, Tropfen und Geburtstagsgeschenkideen aus im Labor gezüchteten Diamanten.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Schwestergeschenke",
+        "Geburtstag",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-wife": {
+      "title": "Schmuckgeschenke für die Frau: Romantische, bedeutungsvolle Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für Ihre Frau aus Ohrringen mit im Labor gezüchteten Diamanten, Schmetterlingsohrringen, Ohrsteckern, Tropfen, Huggies und romantischen Geschenkideen.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke für die Frau",
+        "romantisch",
+        "Schmetterlingsohrringe",
+        "Jubiläum",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-girlfriend": {
+      "title": "Schmuckgeschenke für die Freundin: Romantische Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für Ihre Freundin aus Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen und romantischen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Geschenke für die Freundin",
+        "romantisch",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-her": {
+      "title": "Schmuckgeschenke für Sie: So wählen Sie Ohrringe aus, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke für sie mit Ohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen, Creolen und romantischen Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Schmuckgeschenke",
+        "Ohrringe",
+        "Geburtstag",
+        "Jubiläum",
+        "romantisch",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-gift-guides/date-night-jewellery-guide": {
+      "title": "Schmuckratgeber für den Date-Abend: Welche Ohrringe Sie zum Abendessen, zu Getränken und zu romantischen Outfits tragen sollten",
+      "excerpt": "Wählen Sie Date-Night-Schmuck mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Tropfen, Creolen, Schmetterlingsohrringen und romantischen Styling-Ideen.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Datum Nacht",
+        "romantisch",
+        "Tropfenohrringe",
+        "Schmetterlingsohrringe",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/how-to-stack-earrings": {
+      "title": "So stapeln Sie Ohrringe: Eine vollständige Anleitung zum Styling von Ear Stacks",
+      "excerpt": "Erfahren Sie, wie Sie Ohrringe mit Ohrsteckern, Huggies, Creolen, Tropfen und im Labor gezüchteten Diamantohrringen für Alltags-, Hochzeits- und Party-Looks kombinieren.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Ohrenstapel",
+        "Ohrring-Styling",
+        "Stollen",
+        "Umarmungen",
+        "Reifen",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/diamond-ear-stack-ideas": {
+      "title": "Diamond Ear Stack-Ideen: Alltags-, Minimalist-, Hochzeits- und Party-Looks",
+      "excerpt": "Entdecken Sie Diamant-Ohrstecker-Ideen mit Ohrsteckern, Huggies, Creolen, Tropfen und im Labor gezüchteten Diamantohrringen für Alltags-, Hochzeits- und Party-Looks.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Diamant-Ohrstecker",
+        "Ear-Stack-Ideen",
+        "Ohrring-Styling",
+        "Stollen",
+        "Umarmungen",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/minimalist-earrings-guide": {
+      "title": "Leitfaden für minimalistische Ohrringe: Einfache Ohrringe für das alltägliche Styling",
+      "excerpt": "Erfahren Sie, wie Sie minimalistische Ohrringe für den Alltag, Arbeitsoutfits, Ear Stacks, Geschenke und das einfache Styling mit im Labor gezüchteten Diamanten auswählen.",
+      "readTime": "12 Min. Lektüre",
+      "tags": [
+        "minimalistische Ohrringe",
+        "Alltagskleidung",
+        "Ohrring-Styling",
+        "Stollen",
+        "Umarmungen",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/stud-vs-huggie-earrings": {
+      "title": "Ohrstecker vs. Huggie-Ohrringe: Welchen Stil sollten Sie wählen?",
+      "excerpt": "Vergleichen Sie Ohrstecker und Huggie-Ohrringe für den Alltag, Ear-Stacks, Geschenke, Arbeitskleidung und das Styling mit im Labor gezüchteten Diamanten.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "Ohrstecker",
+        "Huggie-Ohrringe",
+        "Vergleich",
+        "Ohrring-Styling",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/hoop-vs-huggie-earrings": {
+      "title": "Creolen vs. Huggie-Ohrringe: Welchen Stil sollten Sie wählen?",
+      "excerpt": "Vergleichen Sie Creolen und Huggie-Ohrringe für den Alltag, Ear Stacks, Geschenke, Arbeitskleidung, Partys und das Styling mit im Labor gezüchteten Diamanten.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "Creolen",
+        "Huggie-Ohrringe",
+        "Vergleich",
+        "Ohrring-Styling",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/stud-vs-hoop-earrings": {
+      "title": "Ohrstecker vs. Creolen: Welchen Stil sollten Sie wählen?",
+      "excerpt": "Vergleichen Sie Ohrstecker und Creolen für Alltagskleidung, Geschenke, Arbeitskleidung, Ear Stacks, Hochzeiten, Partys und das Styling mit im Labor gezüchteten Diamanten.",
+      "readTime": "11 Min. Lektüre",
+      "tags": [
+        "Ohrstecker",
+        "Creolen",
+        "Vergleich",
+        "Ohrring-Styling",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/party-earrings-guide": {
+      "title": "Leitfaden für Party-Ohrringe: Welche Ohrringe Sie für Abendlooks, Abendessen und Feiern tragen sollten",
+      "excerpt": "Wählen Sie Party-Ohrringe für schwarze Kleider, Satin-Outfits, Abendessen, Hochzeiten, Geburtstage und Abendlooks mit Styling-Ideen aus im Labor gezüchteten Diamanten.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "Party-Ohrringe",
+        "Abend-Styling",
+        "schwarzes Kleid",
+        "Satin",
+        "im Labor gezüchtet",
+        "auffällige Ohrringe"
+      ]
+    },
+    "earring-style-guides/bold-statement-earrings-guide": {
+      "title": "Leitfaden für auffällige Statement-Ohrringe: So stylen Sie kräftig funkelnde Ohrringe, ohne es zu übertreiben",
+      "excerpt": "Erfahren Sie, wie Sie auffällige Statement-Ohrringe für Partys, schwarze Kleider, Hochzeiten, Abendessen, Geburtstage und Abendoutfits stylen.",
+      "readTime": "13 Min. Lektüre",
+      "tags": [
+        "auffällige Ohrringe",
+        "Statement-Ohrringe",
+        "Party-Styling",
+        "Abend",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-black-dress": {
+      "title": "Welchen Schmuck man zu einem schwarzen Kleid trägt: Ohrringe, Metalle und Styling-Guide",
+      "excerpt": "Wählen Sie Schmuck für ein schwarzes Kleid mit Ohrringen, Diamanten, Gold, Silber, Roségold, Party-Looks, Hochzeiten und Abend-Outfit-Styling.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "schwarzes Kleid",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Party-Ohrringe",
+        "auffällige Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-satin-dress": {
+      "title": "Welchen Schmuck man zu einem Satinkleid tragen sollte: Ohrringe, Metalle und Styling-Guide",
+      "excerpt": "Wählen Sie Schmuck für ein Satinkleid mit Ohrringen, Gold, Silber, Diamanten, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Satinkleid",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Hochzeitsgast",
+        "Tropfenohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress": {
+      "title": "Welchen Schmuck man zu einem Kleid mit V-Ausschnitt trägt: Ohrringe, Halsketten und Styling-Guide",
+      "excerpt": "Wählen Sie Schmuck für ein V-Ausschnitt-Kleid mit Ohrringen, Halsketten, Diamanten, Gold, Party-Looks, Hochzeiten und Styling-Ideen für den Abend.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Kleid mit V-Ausschnitt",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Halskette",
+        "Tropfenohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline": {
+      "title": "Welchen Schmuck man zu einem herzförmigen Ausschnitt trägt: Ohrringe, Halsketten und Styling-Guide",
+      "excerpt": "Wählen Sie Schmuck für ein Kleid mit Herzausschnitt mit Ohrringen, Halsketten, Diamanten, Gold, Looks für Hochzeitsgäste und Party-Styling-Ideen.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "herzförmiger Ausschnitt",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Schmetterlingsohrringe",
+        "Tropfenohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress": {
+      "title": "Welche Ohrringe man zu einem schulterfreien Kleid trägt: Styling-Guide für Hochzeiten, Partys und Abendlooks",
+      "excerpt": "Wählen Sie Ohrringe für ein schulterfreies Kleid mit Diamanten, Tropfen, Creolen, Ohrsteckern, Gold, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "schulterfreies Kleid",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Tropfenohrringe",
+        "auffällige Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings": {
+      "title": "Gold vs. Weiß vs. Roségold: Im Labor gezüchtete Diamantohrringe: Welche Metallfarbe sollten Sie wählen?",
+      "excerpt": "Vergleichen Sie im Labor gezüchtete Diamantohrringe aus Gold, Weiß- und Roségold für Alltagskleidung, Geschenke, Hochzeiten, Partys, Hautton und Outfit-Styling.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "Metallfarbe",
+        "Gold",
+        "Weißgold",
+        "Roségold",
+        "Ohrringe mit im Labor gezüchteten Diamanten",
+        "Ohrring-Styling"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-green-dress": {
+      "title": "Welchen Schmuck man zu einem grünen Kleid trägt: Ohrringe, Metalle und Styling-Guide",
+      "excerpt": "Wählen Sie Schmuck für ein grünes Kleid mit Gold, Silber, Roségold, Diamantohrringen, Looks für Hochzeitsgäste, Party-Styling und Outfit-Ideen.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "grünes Kleid",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Goldschmuck",
+        "Tropfenohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-red-dress": {
+      "title": "Welchen Schmuck man zu einem roten Kleid trägt: Ohrringe, Metalle und Styling-Guide",
+      "excerpt": "Wählen Sie Schmuck für ein rotes Kleid mit Gold, Silber, Roségold, Diamantohrringen, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "rotes Kleid",
+        "Ohrring-Styling",
+        "Outfit-Styling",
+        "Goldschmuck",
+        "Tropfenohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/minimalist-jewellery-styling-guide": {
+      "title": "Minimalistischer Schmuck-Styling-Guide: So stylen Sie einfachen Schmuck für Alltag, Arbeit und Anlässe",
+      "excerpt": "Erfahren Sie, wie Sie minimalistischen Schmuck mit Ohrringen, Ohrsteckern, Huggies, im Labor gezüchteten Diamanten, Arbeitskleidung, Geschenken, Hochzeiten und Alltagsoutfits stylen.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "minimalistischer Schmuck",
+        "Ohrring-Styling",
+        "Alltagskleidung",
+        "Arbeitskleidung",
+        "Stollen",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Leitfaden für im Labor gezüchtete Diamant-Creolen: So wählen und stylen Sie Diamant-Creolen",
+      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamant-Creolen für den Alltag, Partys, Hochzeiten, Geschenke, Ear-Stacks und Outfit-Styling auswählen.",
+      "readTime": "14 Min. gelesen",
+      "tags": [
+        "Creolen",
+        "Ohrringe mit im Labor gezüchteten Diamanten",
+        "Ohrring-Styling",
+        "Ohrenstapel",
+        "Alltagskleidung",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/everyday-lab-grown-diamond-earrings-guide": {
+      "title": "Alltagsohrringe mit im Labor gezüchteten Diamanten: So wählen Sie Ohrringe aus, die Sie täglich tragen können",
+      "excerpt": "Wählen Sie alltägliche, im Labor gezüchtete Diamantohrringe für die Arbeit, Freizeitoutfits, Ear Stacks, Geschenke, Reisen und das tägliche Schmuck-Styling.",
+      "readTime": "15 Minuten gelesen",
+      "tags": [
+        "alltägliche Ohrringe",
+        "Ohrringe mit im Labor gezüchteten Diamanten",
+        "Arbeitskleidung",
+        "Ohrenstapel",
+        "Alltagsschmuck",
+        "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "Können Sie jeden Tag im Labor gezüchtete Diamantohrringe tragen? Leitfaden für tägliches Tragen, Pflege und Styling",
+      "excerpt": "Erfahren Sie, ob im Labor gezüchtete Diamantohrringe für den Alltag, die Arbeit, den Schlaf, das Duschen, empfindliche Ohren, die Pflege, Geschenke und das tägliche Styling geeignet sind.",
+      "readTime": "14 Min. gelesen",
+      "tags": [
+        "alltägliche Ohrringe",
+        "tägliches Tragen",
+        "Ohrringe mit im Labor gezüchteten Diamanten",
+        "Ohrringpflege",
+        "Arbeitskleidung",
+        "im Labor gezüchtet"
+      ]
+    },
+    "lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest": {
+      "title": "Welche Ohrringe man als Hochzeitsgast tragen sollte: Leitfaden zu Kleid, Ausschnitt und Styling",
+      "excerpt": "Wählen Sie Ohrringe, die Sie als Hochzeitsgast tragen möchten, mit im Labor gezüchteten Diamantohrsteckern, Tropfen, Creolen, Schmetterlingsohrringen und Styling-Ideen für jedes Kleid.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Hochzeitsgast",
+        "Ohrring-Styling",
+        "Hochzeitsohrringe",
+        "Tropfenohrringe",
+        "Schmetterlingsohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-care-guides/valentines-day-jewellery-gifts": {
+      "title": "Schmuckgeschenke zum Valentinstag: Romantische Ohrringe, die sie tatsächlich tragen wird",
+      "excerpt": "Wählen Sie Schmuckgeschenke zum Valentinstag mit Ohrringen mit im Labor gezüchteten Diamanten, Schmetterlingsohrringen, Ohrsteckern, Tropfen, Huggies und romantischen Geschenkideen.",
+      "readTime": "17 Min. gelesen",
+      "tags": [
+        "Valentinstag",
+        "romantisch",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "jewellery-care-guides/new-year-jewellery-gifts": {
+      "title": "Schmuckgeschenke zum neuen Jahr: Ohrringe für einen Neuanfang und jede Feier danach",
+      "excerpt": "Wählen Sie Neujahrs-Schmuckgeschenke mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen, Creolen und Geschenkideen für die Party.",
+      "readTime": "17 Min. gelesen",
+      "tags": [
+        "Neujahrsgeschenke",
+        "Partyschmuck",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "occasion-jewellery-guides/new-year-jewellery-gifts": {
+      "title": "Schmuckgeschenke zum neuen Jahr: Ohrringe für einen Neuanfang und jede Feier danach",
+      "excerpt": "Wählen Sie Neujahrs-Schmuckgeschenke mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen, Creolen und Geschenkideen für die Party.",
+      "readTime": "17 Min. gelesen",
+      "tags": [
+        "Neujahrsgeschenke",
+        "Partyschmuck",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "occasion-jewellery-guides/christmas-jewellery-gifts": {
+      "title": "Weihnachtsschmuckgeschenke: Ohrringe, die sie auch über die Feiertage hinaus tragen wird",
+      "excerpt": "Wählen Sie weihnachtliche Schmuckgeschenke mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Huggies, Schmetterlingsohrringen, Tropfen, Creolen und eleganten Geschenkideen.",
+      "readTime": "17 Min. gelesen",
+      "tags": [
+        "Weihnachtsgeschenke",
+        "Urlaub",
+        "Schmetterlingsohrringe",
+        "Stollen",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "occasion-jewellery-guides/wedding-thank-you-jewellery-gifts": {
+      "title": "Schmuckgeschenke als Dankeschön für die Hochzeit: Ohrringe, die sie am Tag und danach tragen können",
+      "excerpt": "Wählen Sie als Dankeschön für Ihre Hochzeit Schmuck aus Ohrringen, Ohrsteckern, Huggies, Tropfenohrringen, Schmetterlingsohrringen und eleganten Geschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "17 Min. gelesen",
+      "tags": [
+        "Hochzeits-Dankeschön",
+        "Brautjungfer",
+        "Trauzeugin",
+        "Hochzeit",
+        "Ohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-bride-jewellery-gifts": {
+      "title": "Schmuckgeschenke für die Mutter der Braut: Elegante Ohrringe für den Hochzeitstag und danach",
+      "excerpt": "Wählen Sie Schmuckgeschenke für die Brautmutter mit Ohrringen, Ohrsteckern, Tropfen, Huggies, Schmetterlingsohrringen und eleganten Hochzeitsgeschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Mutter der Braut",
+        "Hochzeit",
+        "Stollen",
+        "Tropfen",
+        "Schmetterlingsohrringe",
+        "im Labor gezüchtet"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-groom-jewellery-gifts": {
+      "title": "Schmuckgeschenke für die Mutter des Bräutigams: Elegante Ohrringe für den Hochzeitstag und danach",
+      "excerpt": "Wählen Sie Schmuckgeschenke für die Mutter des Bräutigams mit Ohrringen, Ohrsteckern, Tropfen, Huggies, Schmetterlingsohrringen und eleganten Hochzeitsgeschenkideen mit im Labor gezüchteten Diamanten.",
+      "readTime": "16 Min. Lektüre",
+      "tags": [
+        "Mutter des Bräutigams",
+        "Hochzeit",
+        "Stollen",
+        "Tropfen",
+        "Schmetterlingsohrringe",
+        "im Labor gezüchtet"
+      ]
+    }
+  },
+  "readTime": "{{count}} Min. gelesen"
+}

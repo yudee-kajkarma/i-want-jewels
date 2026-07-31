@@ -1,0 +1,948 @@
+{
+  "categories": {
+    "lab-grown-diamond-guides": {
+      "title": "Guide diamantate coltivate in laboratorio",
+      "description": "Tutto quello che devi sapere sui diamanti coltivati ​​in laboratorio: come sono realizzati, come si confrontano con i diamanti estratti e perché rappresentano una scelta intelligente ed etica."
+    },
+    "demi-fine-jewellery-guides": {
+      "title": "Guide alla gioielleria semifine",
+      "description": "Esplora il mondo della gioielleria semi-fine: argento sterling, oro vermeil e pietre coltivate in laboratorio che si inseriscono magnificamente tra costume e alta gioielleria."
+    },
+    "earring-style-guides": {
+      "title": "Guide per lo styling degli orecchini",
+      "description": "Dall'impilamento delle orecchie alla scelta dell'orecchino giusto per la forma del tuo viso, le nostre guide sugli orecchini ti aiutano a indossare i tuoi gioielli con sicurezza."
+    },
+    "occasion-jewellery-guides": {
+      "title": "Gioielli per matrimoni e occasioni",
+      "description": "Consigli sui gioielli da sposa, idee regalo per l'anniversario e come scegliere il pezzo perfetto per ogni momento importante della vita."
+    },
+    "jewellery-care-guides": {
+      "title": "Cura dei gioielli",
+      "description": "Mantieni i tuoi gioielli al meglio con le nostre guide esperte sulla cura che coprono consigli su pulizia, conservazione e uso quotidiano per ogni tipo di metallo e pietra."
+    },
+    "jewellery-gift-guides": {
+      "title": "Guide ai regali",
+      "description": "Trova il regalo di gioielleria perfetto per ogni occasione, budget o personalità: dagli acquirenti alle prime armi agli amanti dei gioielli più esperti."
+    }
+  },
+  "articles": {
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-real": {
+      "title": "I diamanti coltivati ​​in laboratorio sono veri diamanti?",
+      "excerpt": "Sì, i diamanti coltivati ​​in laboratorio sono veri diamanti. Scopri come si confrontano con diamanti naturali, diamanti falsi, zirconi e moissanite prima di acquistare.",
+      "readTime": "7 minuti di lettura",
+      "tags": [
+        "coltivato in laboratorio",
+        "veri diamanti",
+        "istruzione"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-vs-natural-diamonds": {
+      "title": "Diamanti coltivati ​​in laboratorio e diamanti naturali: qual è la differenza?",
+      "excerpt": "Confronta i diamanti coltivati ​​in laboratorio e quelli naturali in un linguaggio semplice. Scopri la differenza in termini di origine, prezzo, brillantezza, valore e utilizzo dei gioielli prima di acquistarli.",
+      "readTime": "8 minuti di lettura",
+      "tags": [
+        "confronto",
+        "diamanti naturali",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-worth-it": {
+      "title": "Vale la pena investire in diamanti coltivati ​​in laboratorio?",
+      "excerpt": "Scopri se vale la pena acquistare diamanti coltivati ​​in laboratorio, come si confrontano con i diamanti naturali e quando ha senso realizzare gioielli con diamanti coltivati ​​in laboratorio.",
+      "readTime": "8 minuti di lettura",
+      "tags": [
+        "ne vale la pena",
+        "valore",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide": {
+      "title": "Guida all'acquisto di orecchini con diamanti coltivati ​​in laboratorio",
+      "excerpt": "Scopri come scegliere orecchini con diamanti coltivati ​​in laboratorio, inclusi orecchini a bottone, orecchini a goccia, colori dei metalli, dimensioni, regali e stile quotidiano.",
+      "readTime": "10 minuti di lettura",
+      "tags": [
+        "guida all'acquisto",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide": {
+      "title": "Guida ai prezzi degli orecchini con diamanti coltivati ​​in laboratorio",
+      "excerpt": "Scopri quanto costano gli orecchini con diamanti coltivati ​​in laboratorio, cosa influenza il prezzo e come scegliere orecchini a bottone, orecchini a goccia, gocce e orecchini regalo.",
+      "readTime": "9 minuti di lettura",
+      "tags": [
+        "guida ai prezzi",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide": {
+      "title": "Guida agli orecchini con diamanti coltivati ​​in laboratorio",
+      "excerpt": "Scopri come scegliere orecchini con diamanti coltivati ​​in laboratorio da indossare ogni giorno, regali, orecchini, colore del metallo, dimensioni e stile.",
+      "readTime": "9 minuti di lettura",
+      "tags": [
+        "orecchini a bottone",
+        "indossare ogni giorno",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide": {
+      "title": "Guida agli orecchini pendenti con diamanti coltivati ​​in laboratorio",
+      "excerpt": "Scopri come scegliere orecchini pendenti con diamanti coltivati ​​in laboratorio per matrimoni, feste, regali, abiti da sera e per le occasioni quotidiane.",
+      "readTime": "9 minuti di lettura",
+      "tags": [
+        "orecchini pendenti",
+        "occasione",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Guida agli orecchini a cerchio con diamanti coltivati ​​in laboratorio",
+      "excerpt": "Scopri come scegliere orecchini a cerchio con diamanti coltivati ​​in laboratorio da indossare tutti i giorni, orecchini, regali, feste e gioielli dallo stile moderno.",
+      "readTime": "9 minuti di lettura",
+      "tags": [
+        "orecchini a cerchio",
+        "pile di orecchie",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
+      "title": "Cosa sono i diamanti coltivati ​​in laboratorio?",
+      "excerpt": "I diamanti coltivati ​​in laboratorio sono veri diamanti: chimicamente, fisicamente e otticamente identici ai diamanti estratti. Ecco come vengono creati e perché sono importanti.",
+      "readTime": "6 minuti di lettura",
+      "tags": [
+        "coltivato in laboratorio",
+        "diamanti",
+        "istruzione"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia": {
+      "title": "Diamanti coltivati ​​in laboratorio e zirconi cubici: qual è la differenza?",
+      "excerpt": "Scopri la differenza tra diamanti coltivati ​​in laboratorio e zirconi cubici, inclusi brillantezza, durata, prezzo, valore e utilizzo dei gioielli.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "coltivato in laboratorio",
+        "zirconi",
+        "confronto"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite": {
+      "title": "Diamanti coltivati ​​in laboratorio vs Moissanite: qual è la differenza?",
+      "excerpt": "Confronta i diamanti coltivati ​​in laboratorio e la moissanite in un linguaggio semplice. Scopri la differenza in termini di brillantezza, durata, prezzo, valore e utilizzo dei gioielli.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "coltivato in laboratorio",
+        "moissanite",
+        "confronto"
+      ]
+    },
+    "lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings": {
+      "title": "Come pulire gli orecchini di diamanti coltivati ​​in laboratorio",
+      "excerpt": "Scopri come pulire in modo sicuro gli orecchini con diamanti coltivati ​​in laboratorio, proteggere la placcatura in oro, evitare l'opacità e mantenere i tuoi gioielli scintillanti più a lungo.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "cura",
+        "pulizia",
+        "coltivato in laboratorio",
+        "orecchini"
+      ]
+    },
+    "lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "Puoi indossare orecchini di diamanti coltivati ​​in laboratorio ogni giorno?",
+      "excerpt": "Scopri se gli orecchini con diamanti coltivati ​​in laboratorio sono adatti per l'uso quotidiano, come scegliere orecchini per tutti i giorni e come prendersi cura di borchie, orecchini e gocce.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "indossare ogni giorno",
+        "orecchini",
+        "coltivato in laboratorio",
+        "cura"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide": {
+      "title": "Guida alle taglie degli orecchini con diamanti coltivati ​​in laboratorio: stili piccolo, medio e da 1 ct",
+      "excerpt": "Confronta le dimensioni degli orecchini con diamanti coltivati ​​in laboratorio, dai piccoli orecchini agli stili da 1 ct. Scopri quale taglia è migliore per l'uso quotidiano, i regali e le occasioni.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "guida alle taglie",
+        "orecchini",
+        "coltivato in laboratorio",
+        "peso in carati"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio per matrimoni: guida per gli ospiti, le damigelle d'onore e le occasioni",
+      "excerpt": "Scegli orecchini con diamanti coltivati ​​in laboratorio per matrimoni, invitati a nozze, damigelle d'onore, ricevimenti, abiti, scollature e styling eleganti per le occasioni.",
+      "readTime": "14 minuti di lettura",
+      "tags": [
+        "matrimoni",
+        "occasione",
+        "orecchini",
+        "coltivato in laboratorio",
+        "damigella d'onore"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it": {
+      "title": "Ne valgono la pena gli orecchini con diamanti coltivati ​​in laboratorio?",
+      "excerpt": "Scopri se vale la pena acquistare orecchini con diamanti coltivati ​​in laboratorio per l'uso quotidiano, regali, matrimoni, orecchini e gioielli per occasioni speciali.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "ne vale la pena",
+        "valore",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio per regali: guida per compleanno, anniversario e damigella d'onore",
+      "excerpt": "Scegli orecchini con diamanti coltivati ​​in laboratorio per regali di compleanno, regali di anniversario, damigelle d'onore, regali romantici e regali di gioielli per tutti i giorni.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "regali",
+        "compleanno",
+        "anniversario",
+        "damigella d'onore",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio per orecchini impilati: borchie, abbracci e guida allo styling",
+      "excerpt": "Costruisci un paio di orecchini con diamanti con borchie di diamanti coltivati ​​in laboratorio, abbracci, cerchi e orecchini minimalisti per lo stile e le occasioni di tutti i giorni.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "pile di orecchie",
+        "borchie",
+        "abbracci",
+        "orecchini",
+        "coltivato in laboratorio",
+        "stile"
+      ]
+    },
+    "lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio in oro, bianco e oro rosa: guida ai colori dei metalli",
+      "excerpt": "Confronta orecchini con diamanti coltivati ​​in laboratorio in oro, oro bianco e rosa. Scegli il miglior colore del metallo per l'uso quotidiano, i regali, i matrimoni e lo styling.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "colore del metallo",
+        "oro",
+        "oro rosa",
+        "oro bianco",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "demi-fine-jewellery-guides/what-is-demi-fine-jewellery": {
+      "title": "Cos'è la gioielleria semifine? Una guida pratica ai gioielli",
+      "excerpt": "Scopri cosa significa la semigioielleria, come si confronta con la gioielleria raffinata e alla moda e come scegliere i pezzi da indossare ogni giorno e da regalare.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "semi-fine",
+        "guida ai gioielli",
+        "materiali",
+        "istruzione"
+      ]
+    },
+    "demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery": {
+      "title": "Gioielleria semi-fine vs Gioielleria raffinata vs Gioielleria alla moda: qual è la differenza?",
+      "excerpt": "Confronta la gioielleria demi fine, quella raffinata e quella alla moda. Scopri la differenza in termini di materiali, prezzo, qualità, vestibilità e valore del regalo.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "semi-fine",
+        "gioielleria raffinata",
+        "gioielli di moda",
+        "confronto",
+        "istruzione"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear": {
+      "title": "I gioielli semi-fini sono adatti per essere indossati tutti i giorni?",
+      "excerpt": "Scopri se la gioielleria semifine è adatta per l'uso quotidiano, come scegliere i pezzi quotidiani e come prendersi cura dei gioielli placcati in oro e in argento sterling.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "indossare ogni giorno",
+        "semi-fine",
+        "cura",
+        "placcato oro",
+        "argento sterling"
+      ]
+    },
+    "demi-fine-jewellery-guides/925-sterling-silver-jewellery-guide": {
+      "title": "Guida ai gioielli in argento sterling 925: significato, qualità e cura",
+      "excerpt": "Scopri cosa significa l'argento sterling 925, perché viene utilizzato nella gioielleria demi fine e come prenderti cura degli orecchini in argento sterling e dei gioielli placcati in oro.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "Argento sterling 925",
+        "materiali",
+        "semi-fine",
+        "cura",
+        "istruzione"
+      ]
+    },
+    "demi-fine-jewellery-guides/14kt-gold-plated-jewellery-guide": {
+      "title": "Guida ai gioielli placcati in oro 14kt: significato, qualità e cura",
+      "excerpt": "Scopri cosa significano i gioielli placcati in oro 14kt, come si confrontano con l'oro massiccio, come prendersene cura e se sono adatti per l'uso quotidiano.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "Placcatura in oro 14kt",
+        "placcato oro",
+        "materiali",
+        "semi-fine",
+        "cura"
+      ]
+    },
+    "demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery": {
+      "title": "Gioielli placcati in oro e gioielli in oro massiccio: qual è la differenza?",
+      "excerpt": "Confronta i gioielli placcati in oro e quelli in oro massiccio. Scopri la differenza in termini di prezzo, durata, cura, usura quotidiana e valore del regalo.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "placcato oro",
+        "oro massiccio",
+        "confronto",
+        "semi-fine",
+        "materiali"
+      ]
+    },
+    "demi-fine-jewellery-guides/does-gold-plated-jewellery-tarnish": {
+      "title": "I gioielli placcati in oro si ossidano? Guida alla cura, all'usura e alla protezione",
+      "excerpt": "Scopri se i gioielli placcati in oro si ossidano, perché cambiano colore, come proteggerli e come prendersi cura degli orecchini semifini placcati in oro.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "appannarsi",
+        "placcato oro",
+        "cura",
+        "semi-fine",
+        "indossare ogni giorno"
+      ]
+    },
+    "demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery": {
+      "title": "Come prendersi cura dei gioielli placcati in oro: guida alla pulizia, alla conservazione e all'uso quotidiano",
+      "excerpt": "Scopri come prenderti cura dei gioielli placcati in oro, proteggere la placcatura in oro 14kt, evitare l'ossidazione, pulire gli orecchini in modo sicuro e conservare i gioielli semi-fini.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "cura",
+        "placcato oro",
+        "pulizia",
+        "magazzinaggio",
+        "semi-fine"
+      ]
+    },
+    "demi-fine-jewellery-guides/can-you-shower-with-gold-plated-jewellery": {
+      "title": "Puoi fare la doccia con gioielli placcati in oro? Guida all'acqua, alla cura e all'uso quotidiano",
+      "excerpt": "Scopri se puoi farti la doccia con gioielli placcati in oro, come l'acqua influisce sulla placcatura in oro 14kt e come proteggere gli orecchini semifini.",
+      "readTime": "10 minuti di lettura",
+      "tags": [
+        "doccia",
+        "acqua",
+        "placcato oro",
+        "cura",
+        "semi-fine"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic": {
+      "title": "L'argento sterling 925 è ipoallergenico? Guida per orecchie e orecchini sensibili",
+      "excerpt": "Scopri se l'argento sterling 925 è ipoallergenico, se è adatto alle orecchie sensibili e come scegliere orecchini semifini sicuri.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "ipoallergenico",
+        "Argento sterling 925",
+        "orecchie sensibili",
+        "orecchini",
+        "semi-fine"
+      ]
+    },
+    "jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio per regali: come scegliere la coppia giusta",
+      "excerpt": "Scegli orecchini con diamanti coltivati ​​in laboratorio come regali per compleanni, anniversari, damigelle d'onore, matrimoni, regali romantici e gioielli di tutti i giorni.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali",
+        "compleanno",
+        "anniversario",
+        "damigella d'onore",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts-for-her": {
+      "title": "Regali di gioielli di compleanno per lei: come scegliere gli orecchini che indosserà effettivamente",
+      "excerpt": "Scegli regali di gioielli per il compleanno con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a farfalla, orecchini a goccia, cerchi e idee regalo significative.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali di compleanno",
+        "orecchini",
+        "coltivato in laboratorio",
+        "regali",
+        "borchie",
+        "orecchini a farfalla"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts-for-her": {
+      "title": "Regali di gioielli per l'anniversario per lei: orecchini romantici che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per l'anniversario con orecchini con diamanti coltivati ​​in laboratorio, orecchini a farfalla, orecchini a bottone, gocce, cerchi e idee regalo romantiche per lei.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali di anniversario",
+        "romantico",
+        "orecchini a farfalla",
+        "coltivato in laboratorio",
+        "orecchini"
+      ]
+    },
+    "jewellery-gift-guides/bridesmaid-jewellery-gifts": {
+      "title": "Regali per la damigella d'onore: orecchini che la tua festa nuziale potrà indossare il giorno del matrimonio e dopo",
+      "excerpt": "Scegli regali di gioielli per damigelle d'onore con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a goccia, orecchini a farfalla, abbracci e idee regalo pronte per il matrimonio.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali della damigella d'onore",
+        "nozze",
+        "orecchini",
+        "coltivato in laboratorio",
+        "borchie",
+        "gocce"
+      ]
+    },
+    "jewellery-gift-guides/romantic-jewellery-gifts-for-her": {
+      "title": "Regali di gioielli romantici per lei: orecchini significativi che potrà indossare di nuovo",
+      "excerpt": "Scegli regali di gioielli romantici con orecchini con diamanti coltivati ​​in laboratorio, orecchini a farfalla, orecchini a bottone, gocce, abbracci e idee regalo significative per lei.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali romantici",
+        "orecchini a farfalla",
+        "anniversario",
+        "compleanno",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/wedding-party-jewellery-gifts": {
+      "title": "Regali di gioielli per feste di matrimonio: orecchini da indossare il giorno e dopo",
+      "excerpt": "Scegli regali di gioielli per la festa di nozze con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a goccia, orecchini a goccia, orecchini a farfalla e idee regalo pronte per il matrimonio.",
+      "readTime": "17 minuti di lettura",
+      "tags": [
+        "festa di matrimonio",
+        "damigella d'onore",
+        "damigella d'onore",
+        "nozze",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/maid-of-honour-jewellery-gifts": {
+      "title": "Regali di gioielli per damigella d'onore: orecchini significativi per il giorno del matrimonio e dopo",
+      "excerpt": "Scegli regali di gioielleria per la damigella d'onore con orecchini con diamanti coltivati ​​in laboratorio, borchie, gocce, abbracci, orecchini a farfalla e idee regalo pronte per il matrimonio.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "damigella d'onore",
+        "nozze",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts": {
+      "title": "Regali di gioielli per l'anniversario: orecchini romantici che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per l'anniversario con orecchini con diamanti coltivati ​​in laboratorio, orecchini a farfalla, orecchini a bottone, gocce, abbracci e idee regalo romantiche.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "regali di anniversario",
+        "orecchini a farfalla",
+        "romantico",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts": {
+      "title": "Regali di gioielli per il compleanno: orecchini che indosserà davvero dopo il suo compleanno",
+      "excerpt": "Scegli regali di gioielli per il compleanno con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a farfalla, orecchini a goccia, cerchi e idee regalo significative.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "regali di compleanno",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "significativo",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/graduation-jewellery-gifts": {
+      "title": "Regali di gioielli per la laurea: orecchini significativi per un nuovo capitolo",
+      "excerpt": "Scegli regali di gioielleria per la laurea con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a farfalla, orecchini a cerchio e idee regalo significative.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "regali di laurea",
+        "orecchini a farfalla",
+        "borchie",
+        "pietra miliare",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-best-friend": {
+      "title": "Regali di gioielli per la migliore amica: orecchini premurosi che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per il tuo migliore amico con orecchini con diamanti coltivati ​​in laboratorio, borchie, abbracci, orecchini a farfalla, cerchi e idee regalo significative.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali del migliore amico",
+        "compleanno",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-daughter": {
+      "title": "Regali di gioielli per la figlia: orecchini significativi che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per tua figlia con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini, orecchini a farfalla, cerchi e idee regalo significative.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali per la figlia",
+        "compleanno",
+        "laurea",
+        "orecchini a farfalla",
+        "borchie",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-mum": {
+      "title": "Regali di gioielli per la mamma: orecchini premurosi che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per la mamma con orecchini con diamanti coltivati ​​in laboratorio, borchie, abbracci, orecchini a farfalla, gocce e idee regalo significative.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali della mamma",
+        "compleanno",
+        "Festa della mamma",
+        "orecchini a farfalla",
+        "borchie",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-sister": {
+      "title": "Regali di gioielli per la sorella: orecchini che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per tua sorella con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini, orecchini a farfalla, cerchi, gocce e idee regalo di compleanno.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali della sorella",
+        "compleanno",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-wife": {
+      "title": "Regali di gioielli per la moglie: orecchini romantici e significativi che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per tua moglie con orecchini con diamanti coltivati ​​in laboratorio, orecchini a farfalla, orecchini a bottone, gocce, abbracci e idee regalo romantiche.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali della moglie",
+        "romantico",
+        "orecchini a farfalla",
+        "anniversario",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-girlfriend": {
+      "title": "Regali di gioielli per la fidanzata: orecchini romantici che indosserà davvero",
+      "excerpt": "Scegli regali di gioielleria per la tua ragazza con orecchini con diamanti coltivati ​​in laboratorio, borchie, abbracci, orecchini a farfalla, gocce e idee regalo romantiche.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "regali della fidanzata",
+        "romantico",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-her": {
+      "title": "Regali di gioielli per lei: come scegliere gli orecchini che indosserà effettivamente",
+      "excerpt": "Scegli gioielli regalo per lei con orecchini con diamanti coltivati ​​in laboratorio, orecchini a bottone, orecchini a farfalla, orecchini a goccia, cerchi e idee regalo romantiche.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "regali di gioielli",
+        "orecchini",
+        "compleanno",
+        "anniversario",
+        "romantico",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/date-night-jewellery-guide": {
+      "title": "Guida ai gioielli per l'appuntamento serale: quali orecchini indossare per cena, drink e abiti romantici",
+      "excerpt": "Scegli gioielli per l'appuntamento serale con orecchini con diamanti coltivati ​​in laboratorio, borchie, gocce, cerchi, orecchini a farfalla e idee di stile romantiche.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "appuntamento notturno",
+        "romantico",
+        "orecchini pendenti",
+        "orecchini a farfalla",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/how-to-stack-earrings": {
+      "title": "Come impilare gli orecchini: una guida completa per lo styling delle orecchie",
+      "excerpt": "Impara come abbinare orecchini con orecchini a bottone, orecchini a cerchio, cerchi, gocce e orecchini con diamanti coltivati ​​in laboratorio per look di tutti i giorni, matrimoni e feste.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "pile di orecchie",
+        "stile degli orecchini",
+        "borchie",
+        "abbracci",
+        "cerchi",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/diamond-ear-stack-ideas": {
+      "title": "Idee per orecchini con diamanti: look quotidiani, minimalisti, per matrimoni e feste",
+      "excerpt": "Esplora idee per orecchini con diamanti con borchie, orecchini a cerchio, cerchi, gocce e orecchini con diamanti coltivati ​​in laboratorio per look di tutti i giorni, matrimoni e feste.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "pile di orecchie di diamanti",
+        "idee per l'impilamento delle orecchie",
+        "stile degli orecchini",
+        "borchie",
+        "abbracci",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/minimalist-earrings-guide": {
+      "title": "Guida agli orecchini minimalisti: orecchini semplici per lo stile quotidiano",
+      "excerpt": "Scopri come scegliere orecchini minimalisti da indossare tutti i giorni, abiti da lavoro, orecchini, regali e semplici acconciature con diamanti coltivati ​​in laboratorio.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "orecchini minimalisti",
+        "indossare ogni giorno",
+        "stile degli orecchini",
+        "borchie",
+        "abbracci",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/stud-vs-huggie-earrings": {
+      "title": "Orecchini a bottone vs Huggie: quale stile scegliere?",
+      "excerpt": "Confronta orecchini a bottone e a forma di abbraccio da indossare tutti i giorni, orecchini, regali, indumenti da lavoro e stili con diamanti coltivati ​​in laboratorio.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "orecchini a bottone",
+        "orecchini abbraccio",
+        "confronto",
+        "stile degli orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/hoop-vs-huggie-earrings": {
+      "title": "Orecchini Hoop vs Huggie: quale stile scegliere?",
+      "excerpt": "Confronta orecchini a cerchio e a forma di abbraccio da indossare tutti i giorni, orecchini, regali, abbigliamento da lavoro, feste e styling con diamanti coltivati ​​in laboratorio.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "orecchini a cerchio",
+        "orecchini abbraccio",
+        "confronto",
+        "stile degli orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/stud-vs-hoop-earrings": {
+      "title": "Orecchini a bottone o a cerchio: quale stile scegliere?",
+      "excerpt": "Confronta orecchini a bottone e a cerchio per l'uso quotidiano, regali, abbigliamento da lavoro, orecchini, matrimoni, feste e styling con diamanti coltivati ​​in laboratorio.",
+      "readTime": "11 minuti di lettura",
+      "tags": [
+        "orecchini a bottone",
+        "orecchini a cerchio",
+        "confronto",
+        "stile degli orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/party-earrings-guide": {
+      "title": "Guida agli orecchini per le feste: quali orecchini indossare per look serali, cene e celebrazioni",
+      "excerpt": "Scegli orecchini da festa per abiti neri, abiti in raso, cene, matrimoni, compleanni e look da sera con idee per lo styling con diamanti coltivati ​​in laboratorio.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "orecchini per feste",
+        "styling serale",
+        "vestito nero",
+        "raso",
+        "coltivato in laboratorio",
+        "orecchini audaci"
+      ]
+    },
+    "earring-style-guides/bold-statement-earrings-guide": {
+      "title": "Guida agli orecchini audaci: come creare uno stile brillante senza strafare",
+      "excerpt": "Impara come abbinare orecchini audaci per feste, abiti neri, matrimoni, cene, compleanni e abiti da sera.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "orecchini audaci",
+        "orecchini di dichiarazione",
+        "stile della festa",
+        "sera",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-black-dress": {
+      "title": "Quali gioielli indossare con un abito nero: orecchini, metalli e guida allo styling",
+      "excerpt": "Scegli gioielli per un abito nero con orecchini, diamanti, oro, argento, oro rosa, look da festa, matrimoni e abiti da sera.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "vestito nero",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "orecchini per feste",
+        "orecchini audaci",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-satin-dress": {
+      "title": "Quali gioielli indossare con un abito di raso: orecchini, metalli e guida allo styling",
+      "excerpt": "Scegli gioielli per un abito di raso con orecchini, oro, argento, diamanti, look da festa, abiti per gli invitati al matrimonio e idee per lo styling da sera.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "abito di raso",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "invitato al matrimonio",
+        "orecchini pendenti",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress": {
+      "title": "Quali gioielli indossare con un abito con scollo a V: orecchini, collane e guida allo styling",
+      "excerpt": "Scegli gioielli per un abito con scollo a V con orecchini, collane, diamanti, oro, look da festa, matrimoni e idee per lo styling da sera.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "abito con scollo a V",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "collana",
+        "orecchini pendenti",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline": {
+      "title": "Quali gioielli indossare con una scollatura a cuore: orecchini, collane e guida allo styling",
+      "excerpt": "Scegli gioielli per un abito con scollo a cuore con orecchini, collane, diamanti, oro, look per gli invitati al matrimonio e idee per lo styling delle feste.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "scollo a cuore",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "orecchini a farfalla",
+        "orecchini pendenti",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress": {
+      "title": "Quali orecchini indossare con un abito con spalle scoperte: guida allo styling per matrimoni, feste e look da sera",
+      "excerpt": "Scegli orecchini per un abito con spalle scoperte con diamanti, gocce, cerchi, borchie, oro, look da festa, abiti per gli invitati al matrimonio e idee per lo styling da sera.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "abito con spalle scoperte",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "orecchini pendenti",
+        "orecchini audaci",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio in oro, bianco e oro rosa: quale colore di metallo dovresti scegliere?",
+      "excerpt": "Confronta orecchini con diamanti coltivati ​​in laboratorio in oro, oro bianco e rosa da indossare ogni giorno, regali, matrimoni, feste, tonalità della pelle e stile dell'outfit.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "colore del metallo",
+        "oro",
+        "oro bianco",
+        "oro rosa",
+        "orecchini con diamanti coltivati ​​in laboratorio",
+        "stile degli orecchini"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-green-dress": {
+      "title": "Quali gioielli indossare con un vestito verde: orecchini, metalli e guida allo styling",
+      "excerpt": "Scegli gioielli per un abito verde con oro, argento, oro rosa, orecchini di diamanti, look per gli invitati al matrimonio, stile per le feste e idee per l'outfit.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "vestito verde",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "gioielli in oro",
+        "orecchini pendenti",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-red-dress": {
+      "title": "Quali gioielli indossare con un vestito rosso: orecchini, metalli e guida allo styling",
+      "excerpt": "Scegli gioielli per un vestito rosso con oro, argento, oro rosa, orecchini di diamanti, look da festa, abiti per gli invitati al matrimonio e idee per lo styling da sera.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "vestito rosso",
+        "stile degli orecchini",
+        "stile dell'outfit",
+        "gioielli in oro",
+        "orecchini pendenti",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/minimalist-jewellery-styling-guide": {
+      "title": "Guida allo styling dei gioielli minimalisti: come abbinare gioielli semplici per tutti i giorni, il lavoro e le occasioni",
+      "excerpt": "Impara come abbinare gioielli minimalisti con orecchini, borchie, orecchini, diamanti coltivati ​​in laboratorio, abiti da lavoro, regali, matrimoni e abiti di tutti i giorni.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "gioielli minimalisti",
+        "stile degli orecchini",
+        "indossare ogni giorno",
+        "indumenti da lavoro",
+        "borchie",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Guida agli orecchini a cerchio con diamanti coltivati ​​in laboratorio: come scegliere e modellare i cerchi con diamanti",
+      "excerpt": "Scopri come scegliere orecchini a cerchio con diamanti coltivati ​​in laboratorio da indossare tutti i giorni, feste, matrimoni, regali, orecchini e stili di outfit.",
+      "readTime": "14 minuti di lettura",
+      "tags": [
+        "orecchini a cerchio",
+        "orecchini con diamanti coltivati ​​in laboratorio",
+        "stile degli orecchini",
+        "pile di orecchie",
+        "indossare ogni giorno",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/everyday-lab-grown-diamond-earrings-guide": {
+      "title": "Orecchini con diamanti coltivati ​​in laboratorio tutti i giorni: come scegliere orecchini da indossare ogni giorno",
+      "excerpt": "Scegli orecchini con diamanti coltivati ​​in laboratorio per il lavoro di tutti i giorni, abiti casual, orecchini, regali, viaggi e gioielli per lo styling quotidiano.",
+      "readTime": "15 minuti di lettura",
+      "tags": [
+        "orecchini di tutti i giorni",
+        "orecchini con diamanti coltivati ​​in laboratorio",
+        "indumenti da lavoro",
+        "pile di orecchie",
+        "gioielli quotidiani",
+        "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "Puoi indossare orecchini di diamanti coltivati ​​in laboratorio ogni giorno? Guida all'uso quotidiano, alla cura e allo styling",
+      "excerpt": "Scopri se gli orecchini con diamanti coltivati ​​in laboratorio sono adatti per l'uso quotidiano, il lavoro, il sonno, la doccia, le orecchie sensibili, la cura, i regali e lo stile quotidiano.",
+      "readTime": "14 minuti di lettura",
+      "tags": [
+        "orecchini di tutti i giorni",
+        "usura quotidiana",
+        "orecchini con diamanti coltivati ​​in laboratorio",
+        "cura degli orecchini",
+        "indumenti da lavoro",
+        "coltivato in laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest": {
+      "title": "Quali orecchini indossare come invitato al matrimonio: abito, scollatura e guida allo styling",
+      "excerpt": "Scegli orecchini da indossare come invitata al matrimonio con borchie di diamanti coltivati ​​in laboratorio, gocce, cerchi, orecchini a farfalla e idee di styling per ogni vestito.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "invitato al matrimonio",
+        "stile degli orecchini",
+        "orecchini da sposa",
+        "orecchini pendenti",
+        "orecchini a farfalla",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-care-guides/valentines-day-jewellery-gifts": {
+      "title": "Regali di gioielli per San Valentino: orecchini romantici che indosserà davvero",
+      "excerpt": "Scegli i regali di gioielli per San Valentino con orecchini con diamanti coltivati ​​in laboratorio, orecchini a farfalla, orecchini a bottone, gocce, abbracci e idee regalo romantiche.",
+      "readTime": "17 minuti di lettura",
+      "tags": [
+        "San Valentino",
+        "romantico",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "jewellery-care-guides/new-year-jewellery-gifts": {
+      "title": "Regali di gioielli per il nuovo anno: orecchini per un nuovo inizio e per ogni celebrazione successiva",
+      "excerpt": "Scegli i regali di gioielli di Capodanno con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a farfalla, orecchini a goccia, cerchi e idee regalo pronte per le feste.",
+      "readTime": "17 minuti di lettura",
+      "tags": [
+        "regali di Capodanno",
+        "gioielli per feste",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/new-year-jewellery-gifts": {
+      "title": "Regali di gioielli per il nuovo anno: orecchini per un nuovo inizio e per ogni celebrazione successiva",
+      "excerpt": "Scegli i regali di gioielli di Capodanno con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a farfalla, orecchini a goccia, cerchi e idee regalo pronte per le feste.",
+      "readTime": "17 minuti di lettura",
+      "tags": [
+        "regali di Capodanno",
+        "gioielli per feste",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/christmas-jewellery-gifts": {
+      "title": "Regali di gioielli di Natale: orecchini che indosserà effettivamente oltre le vacanze",
+      "excerpt": "Scegli i regali di gioielli di Natale con orecchini con diamanti coltivati ​​in laboratorio, borchie, orecchini a farfalla, orecchini a goccia, cerchi ed eleganti idee regalo.",
+      "readTime": "17 minuti di lettura",
+      "tags": [
+        "regali di Natale",
+        "vacanza",
+        "orecchini a farfalla",
+        "borchie",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/wedding-thank-you-jewellery-gifts": {
+      "title": "Regali di gioielli di ringraziamento per matrimoni: orecchini da indossare il giorno e dopo",
+      "excerpt": "Scegli gioielli di ringraziamento per il matrimonio con orecchini con diamanti coltivati ​​in laboratorio, borchie, abbracci, gocce, orecchini a farfalla ed eleganti idee regalo.",
+      "readTime": "17 minuti di lettura",
+      "tags": [
+        "matrimonio grazie",
+        "damigella d'onore",
+        "damigella d'onore",
+        "nozze",
+        "orecchini",
+        "coltivato in laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-bride-jewellery-gifts": {
+      "title": "Gioielli regalo per la mamma della sposa: orecchini eleganti per il giorno del matrimonio e dopo",
+      "excerpt": "Scegli i regali di gioielli per la madre della sposa con orecchini con diamanti coltivati ​​in laboratorio, borchie, gocce, abbracci, orecchini a farfalla ed eleganti idee regalo di nozze.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "madre della sposa",
+        "nozze",
+        "borchie",
+        "gocce",
+        "orecchini a farfalla",
+        "coltivato in laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-groom-jewellery-gifts": {
+      "title": "Gioielli regalo per la mamma dello sposo: orecchini eleganti per il giorno del matrimonio e dopo",
+      "excerpt": "Scegli i regali di gioielli per la madre dello sposo con orecchini con diamanti coltivati ​​in laboratorio, borchie, gocce, abbracci, orecchini a farfalla ed eleganti idee regalo di nozze.",
+      "readTime": "16 minuti di lettura",
+      "tags": [
+        "madre dello sposo",
+        "nozze",
+        "borchie",
+        "gocce",
+        "orecchini a farfalla",
+        "coltivato in laboratorio"
+      ]
+    }
+  },
+  "readTime": "{{count}} min letto"
+}

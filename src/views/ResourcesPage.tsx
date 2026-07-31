@@ -6,6 +6,7 @@ import Header from "../components/layout/Header";
 import { resourceCategories } from "../data/resources";
 import { blogLinks } from "@/components/shared/blogList";
 import { useTranslation } from "react-i18next";
+import { useLocalizedCategory } from "@/hooks/useLocalizedContent";
 
 function ArrowRightIcon() {
     return (
@@ -48,6 +49,40 @@ function BookOpenIcon() {
     );
 }
 
+function CategoryCard({ category, index }: { category: (typeof resourceCategories)[number]; index: number }) {
+    const { t } = useTranslation();
+    const localized = useLocalizedCategory(category);
+
+    return (
+        <Link
+            to={category.href}
+            className="group relative block overflow-hidden border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_18px_40px_rgba(194,110,143,0.12)]"
+            style={{ animationDelay: `${index * 80}ms` }}
+        >
+            <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">
+                <img
+                    src={category.coverImage}
+                    alt={localized.title}
+                    className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+            <div className="p-6">
+                <h2 className="font-play text-[18px] font-semibold leading-snug text-zinc-900 sm:text-[20px]">
+                    {localized.title}
+                </h2>
+                <p className="mt-2.5 text-[13px] leading-6 text-zinc-600 line-clamp-2">
+                    {localized.description}
+                </p>
+                <div className="mt-5 flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition group-hover:text-pink-500">
+                    <span>{t('resources.browseGuides')}</span>
+                    <ArrowRightIcon />
+                </div>
+            </div>
+        </Link>
+    );
+}
+
 export default function ResourcesPage() {
     const { t } = useTranslation();
     return (
@@ -74,39 +109,7 @@ export default function ResourcesPage() {
                 <section className="mx-auto max-w-[1480px] px-6 py-14 lg:px-10 lg:py-20">
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {resourceCategories.map((category, index) => (
-                            <Link
-                                key={category.slug}
-                                to={category.href}
-                                className="group relative block overflow-hidden border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_18px_40px_rgba(194,110,143,0.12)]"
-                                style={{
-                                    animationDelay: `${index * 80}ms`,
-                                }}
-                            >
-                                {/* Cover image */}
-                                <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">
-                                    <img
-                                        src={category.coverImage}
-                                        alt={category.title}
-                                        className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
-                                    />
-                                    {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-6">
-                                    <h2 className="font-play text-[18px] font-semibold leading-snug text-zinc-900 sm:text-[20px]">
-                                        {category.title}
-                                    </h2>
-                                    <p className="mt-2.5 text-[13px] leading-6 text-zinc-600 line-clamp-2">
-                                        {category.description}
-                                    </p>
-                                    <div className="mt-5 flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition group-hover:text-pink-500">
-                                        <span>{t('resources.browseGuides')}</span>
-                                        <ArrowRightIcon />
-                                    </div>
-                                </div>
-                            </Link>
+                            <CategoryCard key={category.slug} category={category} index={index} />
                         ))}
 
                         {/* ── Blog card → redirects to /blogs ───────────────── */}

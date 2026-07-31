@@ -8,6 +8,7 @@ import ExploreOurStore from "@/components/shared/ExploreOurStore";
 import shopPageBanner from "@/assets/banner/hero-banner-3.jpg";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 import { useTranslation } from "react-i18next";
+import { useLocalizedArticle, useLocalizedCategory } from "@/hooks/useLocalizedContent";
 
 // ─── Extended Content Types ───────────────────────────────────────────────────
 
@@ -502,22 +503,23 @@ function RenderSection({
 // ─── Related Article Card ─────────────────────────────────────────────────────
 
 function RelatedCard({ article }: { article: ResourceArticle }) {
+    const localized = useLocalizedArticle(article);
     const href = `/resources/${article.categorySlug}/${article.slug}`;
     return (
         <article className="group">
             <Link to={href} className="block overflow-hidden">
                 <img
                     src={article.coverImage}
-                    alt={article.title}
+                    alt={localized.title}
                     className="h-[200px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                 />
             </Link>
             <div className="pt-4">
                 <h3 className="mt-1 font-play text-[16px] font-semibold leading-snug text-[#1f2732] transition-colors group-hover:text-pink-500 md:text-[17px]">
-                    <Link to={href}>{article.title}</Link>
+                    <Link to={href}>{localized.title}</Link>
                 </h3>
                 <p className="mt-1.5 line-clamp-2 text-[13px] leading-6 text-[#344256]">
-                    {article.excerpt}
+                    {localized.excerpt}
                 </p>
             </div>
         </article>
@@ -537,6 +539,7 @@ export default function ResourceArticleV2Page({
     cta,
 }: Props) {
     const { t } = useTranslation();
+    const localizedCategory = useLocalizedCategory(category);
     const categoryHref = `/resources/${category.slug}`;
 
     return (
@@ -690,7 +693,7 @@ export default function ResourceArticleV2Page({
                                         {t('resourceArticleV2.continueReading')}
                                     </p>
                                     <h2 className="mt-1.5 font-play text-[22px] font-semibold text-[#1f2732] md:text-[26px]">
-                                        {t('resourceArticleV2.moreFrom', { category: category.title })}
+                                        {t('resourceArticleV2.moreFrom', { category: localizedCategory.title })}
                                     </h2>
                                 </div>
                                 <Link

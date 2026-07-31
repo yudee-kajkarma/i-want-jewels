@@ -230,7 +230,9 @@
     "scrollProductsLeft": "Scroll products left",
     "scrollProductsRight": "Scroll products right",
     "closeSizeGuide": "Close size guide",
-    "paymentCard": "Card"
+    "paymentCard": "Card",
+    "loadError": "Unable to load this product right now.",
+    "customerReview": "Customer Review"
   },
   "exploreOurStore": {
     "title": "Explore Our Store",
@@ -329,7 +331,9 @@
     "syncing": "Syncing your cart and checkout state...",
     "continueShopping": "CONTINUE SHOPPING",
     "viewOrders": "VIEW ORDERS",
-    "tryAgain": "TRY CHECKOUT AGAIN"
+    "tryAgain": "TRY CHECKOUT AGAIN",
+    "selectShippingAddressError": "Please select a shipping address before placing your order.",
+    "placeOrderError": "Unable to place this order right now. Please try again."
   },
   "auth": {
     "loginTitle": "Login",
@@ -344,6 +348,7 @@
     "signUp": "Create Account",
     "alreadyHaveAccount": "Already have an account? Sign in",
     "loginFailed": "Login failed. Check your email and password, or create a new account.",
+    "sessionExpired": "Your session has expired. You have been logged out.",
     "loginDesc": "Welcome back to your jewellery account",
     "loginEyebrow": "Account Access",
     "loginAsideTitle": "Sign in and keep your favourites close.",

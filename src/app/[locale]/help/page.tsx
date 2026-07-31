@@ -1,23 +1,15 @@
-import type { Metadata } from 'next'
-import { localizedAlternates } from '@/i18n/metadata'
-import HelpPage from '../../../views/HelpPage'
+import { buildPageMetadata } from "@/i18n/metadata";
+import HelpPage from "../../../views/HelpPage";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
-  const { locale } = await params
-  const base = {
-  title: 'Help | I Want Jewels',
-  description: 'Help center is coming soon. Contact our team for support in the meantime.'
-} as Metadata
-  return {
-    ...base,
-    alternates: localizedAlternates('/help', locale),
-  }
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildPageMetadata(locale, "help", "/help");
 }
 
 export default function Page() {
-  return <HelpPage />
+  return <HelpPage />;
 }

@@ -1,0 +1,948 @@
+{
+  "categories": {
+    "lab-grown-diamond-guides": {
+      "title": "Guides de diamants cultivés en laboratoire",
+      "description": "Tout ce que vous devez savoir sur les diamants synthétiques : comment ils sont fabriqués, comment ils se comparent aux diamants extraits et pourquoi ils constituent un choix intelligent et éthique."
+    },
+    "demi-fine-jewellery-guides": {
+      "title": "Guides des bijoux demi-fins",
+      "description": "Explorez le monde des bijoux demi-fins : argent sterling, vermeil doré et pierres synthétiques qui se situent à merveille entre les bijoux fantaisie et les bijoux raffinés."
+    },
+    "earring-style-guides": {
+      "title": "Guides de style de boucles d'oreilles",
+      "description": "De l'empilement des oreilles au choix de la boucle d'oreille adaptée à la forme de votre visage, nos guides de boucles d'oreilles vous aident à porter vos bijoux en toute confiance."
+    },
+    "occasion-jewellery-guides": {
+      "title": "Bijoux de mariage et d'occasion",
+      "description": "Conseils en matière de bijoux de mariée, idées de cadeaux d'anniversaire et comment choisir la pièce parfaite pour chaque moment marquant de la vie."
+    },
+    "jewellery-care-guides": {
+      "title": "Entretien des bijoux",
+      "description": "Gardez vos bijoux à leur meilleur grâce à nos guides d'entretien experts couvrant le nettoyage, le stockage et les conseils de port quotidien pour chaque type de métal et de pierre."
+    },
+    "jewellery-gift-guides": {
+      "title": "Guides cadeaux",
+      "description": "Trouvez le cadeau de bijoux idéal pour toutes les occasions, tous les budgets ou toutes les personnalités, des nouveaux acheteurs aux amateurs de bijoux chevronnés."
+    }
+  },
+  "articles": {
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-real": {
+      "title": "Les diamants synthétiques sont-ils de vrais diamants ?",
+      "excerpt": "Oui, les diamants synthétiques sont de vrais diamants. Découvrez comment ils se comparent aux diamants naturels, aux faux diamants, à la zircone cubique et à la moissanite avant d'acheter.",
+      "readTime": "7 minutes de lecture",
+      "tags": [
+        "cultivé en laboratoire",
+        "vrais diamants",
+        "éducation"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-vs-natural-diamonds": {
+      "title": "Diamants cultivés en laboratoire ou diamants naturels : quelle est la différence ?",
+      "excerpt": "Comparez les diamants cultivés en laboratoire et naturels dans un langage simple. Apprenez la différence d'origine, de prix, d'éclat, de valeur et d'utilisation des bijoux avant d'acheter.",
+      "readTime": "8 minutes de lecture",
+      "tags": [
+        "comparaison",
+        "diamants naturels",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-worth-it": {
+      "title": "Les diamants cultivés en laboratoire en valent-ils la peine ?",
+      "excerpt": "Découvrez si les diamants de laboratoire valent la peine d'être achetés, comment ils se comparent aux diamants naturels et quand les bijoux en diamants de laboratoire ont du sens.",
+      "readTime": "8 minutes de lecture",
+      "tags": [
+        "cela en vaut la peine",
+        "valeur",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide": {
+      "title": "Guide d'achat de boucles d'oreilles en diamants cultivés en laboratoire",
+      "excerpt": "Apprenez à choisir des boucles d'oreilles en diamants synthétiques, notamment des clous, des câlins, des pendants, des couleurs de métal, des tailles, des cadeaux et un style de tous les jours.",
+      "readTime": "10 minutes de lecture",
+      "tags": [
+        "guide d'achat",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide": {
+      "title": "Guide des prix des boucles d’oreilles en diamants cultivés en laboratoire",
+      "excerpt": "Découvrez combien coûtent les boucles d'oreilles en diamant cultivé en laboratoire, ce qui affecte le prix et comment choisir des clous, des câlins, des gouttes et des boucles d'oreilles cadeaux.",
+      "readTime": "9 minutes de lecture",
+      "tags": [
+        "guide des prix",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide": {
+      "title": "Guide des boucles d'oreilles à tige en diamant cultivé en laboratoire",
+      "excerpt": "Apprenez à choisir des boucles d'oreilles à tige en diamant cultivé en laboratoire pour un usage quotidien, des cadeaux, des boucles d'oreilles, la couleur du métal, la taille et le style.",
+      "readTime": "9 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles",
+        "vêtements de tous les jours",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide": {
+      "title": "Guide des boucles d'oreilles pendantes en diamants cultivés en laboratoire",
+      "excerpt": "Apprenez à choisir des boucles d'oreilles pendantes en diamants cultivés en laboratoire pour les mariages, les fêtes, les cadeaux, les tenues de soirée et les occasions de tous les jours.",
+      "readTime": "9 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles pendantes",
+        "occasion",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Guide des boucles d'oreilles créoles en diamants cultivés en laboratoire",
+      "excerpt": "Apprenez à choisir des boucles d'oreilles créoles en diamants cultivés en laboratoire pour un usage quotidien, des boucles d'oreilles, des cadeaux, des fêtes et des bijoux modernes.",
+      "readTime": "9 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles créoles",
+        "piles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
+      "title": "Que sont les diamants cultivés en laboratoire ?",
+      "excerpt": "Les diamants cultivés en laboratoire sont de vrais diamants – chimiquement, physiquement et optiquement identiques aux diamants extraits. Voici comment ils sont créés et pourquoi ils sont importants.",
+      "readTime": "6 minutes de lecture",
+      "tags": [
+        "cultivé en laboratoire",
+        "diamants",
+        "éducation"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia": {
+      "title": "Diamants cultivés en laboratoire et zircone cubique : quelle est la différence ?",
+      "excerpt": "Apprenez la différence entre les diamants synthétiques et la zircone cubique, notamment l'éclat, la durabilité, le prix, la valeur et l'utilisation des bijoux.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "cultivé en laboratoire",
+        "zircone cubique",
+        "comparaison"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite": {
+      "title": "Diamants de laboratoire et moissanite : quelle est la différence ?",
+      "excerpt": "Comparez les diamants cultivés en laboratoire et la moissanite dans un langage simple. Apprenez la différence en termes d'éclat, de durabilité, de prix, de valeur et d'utilisation des bijoux.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "cultivé en laboratoire",
+        "moissanite",
+        "comparaison"
+      ]
+    },
+    "lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings": {
+      "title": "Comment nettoyer les boucles d'oreilles en diamants cultivés en laboratoire",
+      "excerpt": "Apprenez à nettoyer en toute sécurité les boucles d'oreilles en diamants synthétiques, à protéger le placage en or, à éviter le ternissement et à garder vos bijoux étincelants plus longtemps.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "soins",
+        "nettoyage",
+        "cultivé en laboratoire",
+        "boucles d'oreilles"
+      ]
+    },
+    "lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "Pouvez-vous porter des boucles d’oreilles en diamants synthétiques tous les jours ?",
+      "excerpt": "Découvrez si les boucles d'oreilles en diamant cultivé en laboratoire conviennent à un usage quotidien, comment choisir des boucles d'oreilles quotidiennes et comment entretenir les clous, les câlins et les gouttes.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "vêtements de tous les jours",
+        "boucles d'oreilles",
+        "cultivé en laboratoire",
+        "soins"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide": {
+      "title": "Guide des tailles de boucles d'oreilles en diamant cultivé en laboratoire : styles petit, moyen et 1 carat",
+      "excerpt": "Comparez les tailles de boucles d'oreilles en diamant cultivé en laboratoire, des petits clous aux styles de 1 carat. Découvrez quelle taille convient le mieux au quotidien, aux cadeaux et aux occasions.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "guide des tailles",
+        "boucles d'oreilles",
+        "cultivé en laboratoire",
+        "poids en carats"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings": {
+      "title": "Boucles d'oreilles en diamants cultivés en laboratoire pour les mariages : guide des invités, des demoiselles d'honneur et des occasions",
+      "excerpt": "Choisissez des boucles d'oreilles en diamant cultivé en laboratoire pour les mariages, les invités au mariage, les demoiselles d'honneur, les réceptions, les robes, les décolletés et les styles élégants pour les occasions.",
+      "readTime": "14 minutes de lecture",
+      "tags": [
+        "mariages",
+        "occasion",
+        "boucles d'oreilles",
+        "cultivé en laboratoire",
+        "demoiselle d'honneur"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it": {
+      "title": "Les boucles d’oreilles en diamants cultivés en laboratoire en valent-elles la peine ?",
+      "excerpt": "Découvrez si les boucles d'oreilles en diamants cultivés en laboratoire valent la peine d'être achetées pour un usage quotidien, des cadeaux, des mariages, des boucles d'oreilles et des bijoux de cérémonie.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "cela en vaut la peine",
+        "valeur",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Boucles d'oreilles en diamants cultivés en laboratoire pour cadeaux : guide d'anniversaire, d'anniversaire et de demoiselle d'honneur",
+      "excerpt": "Choisissez des boucles d'oreilles en diamant cultivé en laboratoire pour les cadeaux d'anniversaire, les cadeaux d'anniversaire, les demoiselles d'honneur, les cadeaux romantiques et les bijoux de tous les jours.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "cadeaux",
+        "anniversaire",
+        "anniversaire",
+        "demoiselle d'honneur",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks": {
+      "title": "Boucles d'oreilles en diamants cultivés en laboratoire pour piles d'oreilles : clous, câlins et guide de style",
+      "excerpt": "Construisez une pile d'oreilles en diamant avec des clous, des câlins, des créoles et des boucles d'oreilles minimalistes en diamants cultivés en laboratoire pour un style et des occasions de tous les jours.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "piles d'oreilles",
+        "goujons",
+        "câlins",
+        "boucles d'oreilles",
+        "cultivé en laboratoire",
+        "style"
+      ]
+    },
+    "lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings": {
+      "title": "Boucles d'oreilles en diamants synthétiques or vs blanc vs or rose : guide des couleurs des métaux",
+      "excerpt": "Comparez les boucles d'oreilles en diamants synthétiques en or, en or blanc et en or rose. Choisissez la meilleure couleur de métal pour un usage quotidien, des cadeaux, des mariages et du style.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "couleur métal",
+        "or",
+        "or rose",
+        "or blanc",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "demi-fine-jewellery-guides/what-is-demi-fine-jewellery": {
+      "title": "Qu'est-ce que les bijoux demi-fins ? Un guide pratique des bijoux",
+      "excerpt": "Découvrez ce que signifient les bijoux demi-fins, comment ils se comparent aux bijoux raffinés et tendance, et comment choisir des pièces à porter au quotidien et à offrir en cadeau.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "demi-fine",
+        "guide des bijoux",
+        "matériels",
+        "éducation"
+      ]
+    },
+    "demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery": {
+      "title": "Bijoux demi-fins, bijoux fins et bijoux fantaisie : quelle est la différence ?",
+      "excerpt": "Comparez les bijoux demi-fins, raffinés et fantaisie. Découvrez la différence de matériaux, de prix, de qualité, de portabilité et de valeur de cadeau.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "demi-fine",
+        "bijoux fins",
+        "bijoux de mode",
+        "comparaison",
+        "éducation"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear": {
+      "title": "Les bijoux demi-fins sont-ils bons à porter au quotidien ?",
+      "excerpt": "Découvrez si les bijoux demi-fines conviennent à un usage quotidien, comment choisir des pièces de tous les jours et comment entretenir les bijoux en plaqué or et en argent sterling.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "vêtements de tous les jours",
+        "demi-fine",
+        "soins",
+        "plaqué or",
+        "argent sterling"
+      ]
+    },
+    "demi-fine-jewellery-guides/925-sterling-silver-jewellery-guide": {
+      "title": "Guide des bijoux en argent sterling 925 : signification, qualité et entretien",
+      "excerpt": "Découvrez ce que signifie l'argent sterling 925, pourquoi il est utilisé dans les bijoux demi-fins et comment entretenir les boucles d'oreilles en argent sterling et les bijoux plaqués or.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "argent sterling 925",
+        "matériels",
+        "demi-fine",
+        "soins",
+        "éducation"
+      ]
+    },
+    "demi-fine-jewellery-guides/14kt-gold-plated-jewellery-guide": {
+      "title": "Guide des bijoux plaqués or 14 carats : signification, qualité et entretien",
+      "excerpt": "Découvrez ce que signifient les bijoux plaqués or 14 carats, comment ils se comparent à l'or massif, comment en prendre soin et s'ils peuvent être portés au quotidien.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "Plaqué or 14 carats",
+        "plaqué or",
+        "matériels",
+        "demi-fine",
+        "soins"
+      ]
+    },
+    "demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery": {
+      "title": "Bijoux plaqués or ou bijoux en or massif : quelle est la différence ?",
+      "excerpt": "Comparez les bijoux en plaqué or et en or massif. Découvrez la différence de prix, de durabilité, d'entretien, de port quotidien et de valeur de cadeau.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "plaqué or",
+        "or massif",
+        "comparaison",
+        "demi-fine",
+        "matériels"
+      ]
+    },
+    "demi-fine-jewellery-guides/does-gold-plated-jewellery-tarnish": {
+      "title": "Les bijoux plaqués or ternissent-ils ? Guide d'entretien, de port et de protection",
+      "excerpt": "Découvrez si les bijoux en plaqué or ternissent, pourquoi ils changent de couleur, comment les protéger et comment entretenir les boucles d'oreilles en plaqué or demi-fin.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "ternir",
+        "plaqué or",
+        "soins",
+        "demi-fine",
+        "vêtements de tous les jours"
+      ]
+    },
+    "demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery": {
+      "title": "Comment prendre soin des bijoux plaqués or : guide de nettoyage, de stockage et de port quotidien",
+      "excerpt": "Apprenez à entretenir les bijoux plaqués or, à protéger le placage en or 14 carats, à éviter le ternissement, à nettoyer les boucles d'oreilles en toute sécurité et à ranger les bijoux demi-fins.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "soins",
+        "plaqué or",
+        "nettoyage",
+        "stockage",
+        "demi-fine"
+      ]
+    },
+    "demi-fine-jewellery-guides/can-you-shower-with-gold-plated-jewellery": {
+      "title": "Peut-on se doucher avec des bijoux plaqués or ? Guide de l'eau, des soins et du port quotidien",
+      "excerpt": "Découvrez si vous pouvez vous doucher avec des bijoux en plaqué or, comment l'eau affecte le placage en or 14 carats et comment protéger les boucles d'oreilles demi-fines.",
+      "readTime": "10 minutes de lecture",
+      "tags": [
+        "douche",
+        "eau",
+        "plaqué or",
+        "soins",
+        "demi-fine"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic": {
+      "title": "L'argent sterling 925 est-il hypoallergénique ? Guide des oreilles et boucles d’oreilles sensibles",
+      "excerpt": "Découvrez si l'argent sterling 925 est hypoallergénique, s'il convient aux oreilles sensibles et comment choisir des boucles d'oreilles demi-fines sûres.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "hypoallergénique",
+        "argent sterling 925",
+        "oreilles sensibles",
+        "boucles d'oreilles",
+        "demi-fine"
+      ]
+    },
+    "jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Boucles d'oreilles en diamants cultivés en laboratoire pour cadeaux : comment choisir la bonne paire",
+      "excerpt": "Choisissez des boucles d'oreilles en diamant cultivé en laboratoire comme cadeaux pour les anniversaires, les demoiselles d'honneur, les mariages, les cadeaux romantiques et les bijoux de tous les jours.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux",
+        "anniversaire",
+        "anniversaire",
+        "demoiselle d'honneur",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts-for-her": {
+      "title": "Cadeaux de bijoux d'anniversaire pour elle : comment choisir les boucles d'oreilles qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux d'anniversaire avec des boucles d'oreilles, des clous, des câlins, des boucles d'oreilles papillon, des pendants, des créoles et des idées cadeaux significatives.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux d'anniversaire",
+        "boucles d'oreilles",
+        "cultivé en laboratoire",
+        "cadeaux",
+        "goujons",
+        "boucles d'oreilles papillon"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts-for-her": {
+      "title": "Cadeaux de bijoux d'anniversaire pour elle : des boucles d'oreilles romantiques qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux d'anniversaire avec des boucles d'oreilles en diamants synthétiques, des boucles d'oreilles papillon, des clous, des gouttes, des créoles et des idées de cadeaux romantiques pour elle.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux d'anniversaire",
+        "romantique",
+        "boucles d'oreilles papillon",
+        "cultivé en laboratoire",
+        "boucles d'oreilles"
+      ]
+    },
+    "jewellery-gift-guides/bridesmaid-jewellery-gifts": {
+      "title": "Cadeaux de bijoux de demoiselle d'honneur : des boucles d'oreilles que votre cortège nuptial peut porter le jour du mariage et après",
+      "excerpt": "Choisissez des bijoux de demoiselle d'honneur avec des boucles d'oreilles en diamants synthétiques, des clous, des pendants, des boucles d'oreilles papillon, des câlins et des idées cadeaux prêtes pour le mariage.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux de demoiselle d'honneur",
+        "mariage",
+        "boucles d'oreilles",
+        "cultivé en laboratoire",
+        "goujons",
+        "gouttes"
+      ]
+    },
+    "jewellery-gift-guides/romantic-jewellery-gifts-for-her": {
+      "title": "Cadeaux de bijoux romantiques pour elle : des boucles d'oreilles significatives qu'elle pourra porter à nouveau",
+      "excerpt": "Choisissez des bijoux romantiques avec des boucles d'oreilles en diamants cultivés en laboratoire, des boucles d'oreilles papillon, des clous, des gouttes, des câlins et des idées cadeaux significatives pour elle.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux romantiques",
+        "boucles d'oreilles papillon",
+        "anniversaire",
+        "anniversaire",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/wedding-party-jewellery-gifts": {
+      "title": "Cadeaux de bijoux pour une fête de mariage : des boucles d'oreilles qu'ils peuvent porter le jour même et après",
+      "excerpt": "Choisissez des cadeaux de bijoux de fête de mariage avec des boucles d'oreilles en diamants cultivés en laboratoire, des clous, des câlins, des gouttes, des boucles d'oreilles papillon et des idées cadeaux prêtes pour le mariage.",
+      "readTime": "17 minutes de lecture",
+      "tags": [
+        "fête de mariage",
+        "demoiselle d'honneur",
+        "demoiselle d'honneur",
+        "mariage",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/maid-of-honour-jewellery-gifts": {
+      "title": "Cadeaux de bijoux de demoiselle d'honneur : des boucles d'oreilles significatives pour le jour et après le mariage",
+      "excerpt": "Choisissez des bijoux de demoiselle d'honneur avec des boucles d'oreilles en diamants synthétiques, des clous, des gouttes, des câlins, des boucles d'oreilles papillon et des idées cadeaux prêtes pour le mariage.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "demoiselle d'honneur",
+        "mariage",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts": {
+      "title": "Cadeaux de bijoux d'anniversaire : des boucles d'oreilles romantiques qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux d'anniversaire avec des boucles d'oreilles en diamants cultivés en laboratoire, des boucles d'oreilles papillon, des clous, des gouttes, des câlins et des idées de cadeaux romantiques.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "cadeaux d'anniversaire",
+        "boucles d'oreilles papillon",
+        "romantique",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts": {
+      "title": "Cadeaux de bijoux d'anniversaire : des boucles d'oreilles qu'elle portera réellement après son anniversaire",
+      "excerpt": "Choisissez des bijoux d'anniversaire avec des boucles d'oreilles, des clous, des câlins, des boucles d'oreilles papillon, des pendants, des créoles et des idées cadeaux significatives.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "cadeaux d'anniversaire",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "significatif",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/graduation-jewellery-gifts": {
+      "title": "Cadeaux de bijoux de remise de diplôme : des boucles d'oreilles significatives pour un nouveau chapitre",
+      "excerpt": "Choisissez des bijoux de remise de diplôme avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des créoles et des idées cadeaux significatives.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "cadeaux de remise des diplômes",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "jalon",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-best-friend": {
+      "title": "Cadeaux de bijoux pour sa meilleure amie : des boucles d'oreilles bien pensées qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour votre meilleure amie avec des boucles d'oreilles, des clous, des câlins, des boucles d'oreilles papillon, des créoles et des idées cadeaux significatives.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux de meilleur ami",
+        "anniversaire",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-daughter": {
+      "title": "Cadeaux de bijoux pour fille : des boucles d'oreilles significatives qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour votre fille avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des créoles et des idées cadeaux significatives.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux fille",
+        "anniversaire",
+        "graduation",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-mum": {
+      "title": "Cadeaux de bijoux pour maman : des boucles d'oreilles bien pensées qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour maman avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des gouttes et des idées cadeaux significatives.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux maman",
+        "anniversaire",
+        "fête des Mères",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-sister": {
+      "title": "Cadeaux de bijoux pour une sœur : des boucles d'oreilles qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour votre sœur avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des créoles, des gouttes et des idées de cadeaux d'anniversaire.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux soeur",
+        "anniversaire",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-wife": {
+      "title": "Cadeaux de bijoux pour femme : des boucles d'oreilles romantiques et significatives qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour votre femme avec des boucles d'oreilles en diamants synthétiques, des boucles d'oreilles papillon, des clous, des gouttes, des câlins et des idées de cadeaux romantiques.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux de femme",
+        "romantique",
+        "boucles d'oreilles papillon",
+        "anniversaire",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-girlfriend": {
+      "title": "Cadeaux de bijoux pour petite amie : boucles d'oreilles romantiques qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour votre petite amie avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des gouttes et des idées de cadeaux romantiques.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "cadeaux de petite amie",
+        "romantique",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-her": {
+      "title": "Cadeaux de bijoux pour elle : comment choisir les boucles d'oreilles qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour elle avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des gouttes, des créoles et des idées de cadeaux romantiques.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "cadeaux de bijoux",
+        "boucles d'oreilles",
+        "anniversaire",
+        "anniversaire",
+        "romantique",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-gift-guides/date-night-jewellery-guide": {
+      "title": "Guide des bijoux pour un rendez-vous amoureux : quelles boucles d'oreilles porter pour le dîner, les boissons et les tenues romantiques",
+      "excerpt": "Choisissez des bijoux de soirée avec des boucles d'oreilles en diamants synthétiques, des clous, des gouttes, des créoles, des boucles d'oreilles papillon et des idées de style romantiques.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "rendez-vous amoureux",
+        "romantique",
+        "boucles d'oreilles pendantes",
+        "boucles d'oreilles papillon",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/how-to-stack-earrings": {
+      "title": "Comment empiler des boucles d'oreilles : un guide complet de style pour les piles d'oreilles",
+      "excerpt": "Apprenez à superposer des boucles d'oreilles avec des clous, des câlins, des créoles, des pendants et des boucles d'oreilles en diamants synthétiques pour des looks de tous les jours, de mariage et de fête.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "piles d'oreilles",
+        "style de boucle d'oreille",
+        "goujons",
+        "câlins",
+        "cerceaux",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/diamond-ear-stack-ideas": {
+      "title": "Idées de pile d'oreilles en diamant : looks de tous les jours, minimalistes, de mariage et de fête",
+      "excerpt": "Explorez des idées de piles d'oreilles en diamant avec des clous, des câlins, des créoles, des pendants et des boucles d'oreilles en diamant cultivé en laboratoire pour des looks de tous les jours, de mariage et de fête.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "piles d'oreilles en diamant",
+        "idées de pile d'oreille",
+        "style de boucle d'oreille",
+        "goujons",
+        "câlins",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/minimalist-earrings-guide": {
+      "title": "Guide des boucles d'oreilles minimalistes : des boucles d'oreilles simples pour un style quotidien",
+      "excerpt": "Apprenez à choisir des boucles d'oreilles minimalistes pour un usage quotidien, des tenues de travail, des boucles d'oreilles, des cadeaux et un style simple en diamants cultivés en laboratoire.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles minimalistes",
+        "vêtements de tous les jours",
+        "style de boucle d'oreille",
+        "goujons",
+        "câlins",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/stud-vs-huggie-earrings": {
+      "title": "Boucles d'oreilles Stud ou Huggie : quel style choisir ?",
+      "excerpt": "Comparez les boucles d'oreilles clous et câlins pour un usage quotidien, des boucles d'oreilles, des cadeaux, des vêtements de travail et des diamants cultivés en laboratoire.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles",
+        "boucles d'oreilles câlin",
+        "comparaison",
+        "style de boucle d'oreille",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/hoop-vs-huggie-earrings": {
+      "title": "Boucles d'oreilles créoles ou Huggie : quel style choisir ?",
+      "excerpt": "Comparez les boucles d'oreilles créoles et les boucles d'oreilles huggie pour un usage quotidien, des boucles d'oreilles, des cadeaux, des vêtements de travail, des fêtes et des styles de diamants cultivés en laboratoire.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles créoles",
+        "boucles d'oreilles câlin",
+        "comparaison",
+        "style de boucle d'oreille",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/stud-vs-hoop-earrings": {
+      "title": "Boucles d'oreilles clous ou créoles : quel style choisir ?",
+      "excerpt": "Comparez les boucles d'oreilles à tige et créoles pour un usage quotidien, des cadeaux, des vêtements de travail, des boucles d'oreilles, des mariages, des fêtes et des styles de diamants cultivés en laboratoire.",
+      "readTime": "11 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles",
+        "boucles d'oreilles créoles",
+        "comparaison",
+        "style de boucle d'oreille",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/party-earrings-guide": {
+      "title": "Guide des boucles d'oreilles de fête : quelles boucles d'oreilles porter pour les looks de soirée, les dîners et les célébrations",
+      "excerpt": "Choisissez des boucles d'oreilles de fête pour les robes noires, les tenues en satin, les dîners, les mariages, les anniversaires et les looks de soirée avec des idées de style en diamants cultivés en laboratoire.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles de fête",
+        "style de soirée",
+        "robe noire",
+        "satin",
+        "cultivé en laboratoire",
+        "boucles d'oreilles audacieuses"
+      ]
+    },
+    "earring-style-guides/bold-statement-earrings-guide": {
+      "title": "Guide des boucles d’oreilles audacieuses : comment créer un style brillant sans en faire trop",
+      "excerpt": "Apprenez à créer des boucles d'oreilles audacieuses pour les fêtes, les robes noires, les mariages, les dîners, les anniversaires et les tenues de soirée.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles audacieuses",
+        "boucles d'oreilles tendance",
+        "style de fête",
+        "soirée",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-black-dress": {
+      "title": "Quels bijoux porter avec une robe noire : boucles d'oreilles, métaux et guide de style",
+      "excerpt": "Choisissez des bijoux pour une robe noire avec des boucles d'oreilles, des diamants, de l'or, de l'argent, de l'or rose, des looks de fête, des mariages et des tenues de soirée.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "robe noire",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "boucles d'oreilles de fête",
+        "boucles d'oreilles audacieuses",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-satin-dress": {
+      "title": "Quels bijoux porter avec une robe en satin : boucles d'oreilles, métaux et guide de style",
+      "excerpt": "Choisissez des bijoux pour une robe en satin avec des boucles d'oreilles, de l'or, de l'argent, des diamants, des looks de fête, des tenues d'invités de mariage et des idées de style de soirée.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "robe en satin",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "invité au mariage",
+        "boucles d'oreilles pendantes",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress": {
+      "title": "Quels bijoux porter avec une robe à col en V : boucles d'oreilles, colliers et guide de style",
+      "excerpt": "Choisissez des bijoux pour une robe à col en V avec des boucles d'oreilles, des colliers, des diamants, de l'or, des looks de fête, des mariages et des idées de style de soirée.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "robe à col en V",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "collier",
+        "boucles d'oreilles pendantes",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline": {
+      "title": "Quels bijoux porter avec un décolleté en cœur : boucles d'oreilles, colliers et guide de style",
+      "excerpt": "Choisissez des bijoux pour une robe à décolleté en cœur avec des boucles d'oreilles, des colliers, des diamants, de l'or, des looks d'invités au mariage et des idées de style pour les fêtes.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "décolleté en cœur",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "boucles d'oreilles papillon",
+        "boucles d'oreilles pendantes",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress": {
+      "title": "Quelles boucles d'oreilles porter avec une robe à épaules dénudées : guide de style pour les mariages, les fêtes et les looks de soirée",
+      "excerpt": "Choisissez des boucles d'oreilles pour une robe à épaules dénudées avec des diamants, des gouttes, des créoles, des clous, de l'or, des looks de fête, des tenues d'invités de mariage et des idées de style de soirée.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "robe à épaules dénudées",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "boucles d'oreilles pendantes",
+        "boucles d'oreilles audacieuses",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings": {
+      "title": "Boucles d'oreilles en or, blanc ou or rose avec diamants synthétiques : quelle couleur de métal devriez-vous choisir ?",
+      "excerpt": "Comparez les boucles d'oreilles en or, blanc et rose en diamants synthétiques pour un usage quotidien, des cadeaux, des mariages, des fêtes, le teint et le style de vos tenues.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "couleur métal",
+        "or",
+        "or blanc",
+        "or rose",
+        "boucles d'oreilles en diamants synthétiques",
+        "style de boucle d'oreille"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-green-dress": {
+      "title": "Quels bijoux porter avec une robe verte : boucles d'oreilles, métaux et guide de style",
+      "excerpt": "Choisissez des bijoux pour une robe verte avec de l'or, de l'argent, de l'or rose, des boucles d'oreilles en diamant, des looks d'invités au mariage, des styles de fête et des idées de tenues.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "robe verte",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "bijoux en or",
+        "boucles d'oreilles pendantes",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-red-dress": {
+      "title": "Quels bijoux porter avec une robe rouge : boucles d'oreilles, métaux et guide de style",
+      "excerpt": "Choisissez des bijoux pour une robe rouge avec de l'or, de l'argent, de l'or rose, des boucles d'oreilles en diamant, des looks de fête, des tenues d'invités de mariage et des idées de style de soirée.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "robe rouge",
+        "style de boucle d'oreille",
+        "style de tenue",
+        "bijoux en or",
+        "boucles d'oreilles pendantes",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/minimalist-jewellery-styling-guide": {
+      "title": "Guide de style de bijoux minimalistes : comment créer des bijoux simples pour le quotidien, le travail et les occasions",
+      "excerpt": "Apprenez à créer des bijoux minimalistes avec des boucles d'oreilles, des clous, des câlins, des diamants synthétiques, des vêtements de travail, des cadeaux, des mariages et des tenues de tous les jours.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "bijoux minimalistes",
+        "style de boucle d'oreille",
+        "vêtements de tous les jours",
+        "vêtements de travail",
+        "goujons",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Guide des boucles d'oreilles créoles en diamant cultivé en laboratoire : Comment choisir et styliser les créoles en diamant",
+      "excerpt": "Apprenez à choisir des boucles d'oreilles créoles en diamants cultivés en laboratoire pour un usage quotidien, des fêtes, des mariages, des cadeaux, des boucles d'oreilles et des tenues.",
+      "readTime": "14 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles créoles",
+        "boucles d'oreilles en diamants synthétiques",
+        "style de boucle d'oreille",
+        "piles d'oreilles",
+        "vêtements de tous les jours",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/everyday-lab-grown-diamond-earrings-guide": {
+      "title": "Boucles d'oreilles en diamant cultivées en laboratoire au quotidien : comment choisir des boucles d'oreilles que vous pouvez porter quotidiennement",
+      "excerpt": "Choisissez des boucles d'oreilles en diamant cultivées en laboratoire pour le travail, les tenues décontractées, les boucles d'oreilles, les cadeaux, les voyages et les bijoux quotidiens.",
+      "readTime": "15 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles de tous les jours",
+        "boucles d'oreilles en diamants synthétiques",
+        "vêtements de travail",
+        "piles d'oreilles",
+        "bijoux quotidiens",
+        "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "Pouvez-vous porter des boucles d’oreilles en diamants synthétiques tous les jours ? Guide de port quotidien, d'entretien et de coiffure",
+      "excerpt": "Découvrez si les boucles d'oreilles en diamant cultivé en laboratoire conviennent à un usage quotidien, au travail, au sommeil, à la douche, aux oreilles sensibles, aux soins, aux cadeaux et au style quotidien.",
+      "readTime": "14 minutes de lecture",
+      "tags": [
+        "boucles d'oreilles de tous les jours",
+        "tenue quotidienne",
+        "boucles d'oreilles en diamants synthétiques",
+        "soin des boucles d'oreilles",
+        "vêtements de travail",
+        "cultivé en laboratoire"
+      ]
+    },
+    "lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest": {
+      "title": "Quelles boucles d'oreilles porter en tant qu'invitée au mariage : guide de robe, de décolleté et de style",
+      "excerpt": "Choisissez des boucles d'oreilles à porter en tant qu'invitée au mariage avec des clous, des gouttes, des créoles, des boucles d'oreilles papillon en diamants cultivés en laboratoire et des idées de style pour chaque robe.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "invité au mariage",
+        "style de boucle d'oreille",
+        "boucles d'oreilles de mariage",
+        "boucles d'oreilles pendantes",
+        "boucles d'oreilles papillon",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-care-guides/valentines-day-jewellery-gifts": {
+      "title": "Cadeaux de bijoux pour la Saint-Valentin : des boucles d'oreilles romantiques qu'elle portera réellement",
+      "excerpt": "Choisissez des bijoux pour la Saint-Valentin avec des boucles d'oreilles en diamants synthétiques, des boucles d'oreilles papillon, des clous, des gouttes, des câlins et des idées de cadeaux romantiques.",
+      "readTime": "17 minutes de lecture",
+      "tags": [
+        "Saint Valentin",
+        "romantique",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "jewellery-care-guides/new-year-jewellery-gifts": {
+      "title": "Cadeaux de bijoux pour le Nouvel An : des boucles d'oreilles pour un nouveau départ et chaque célébration qui suit",
+      "excerpt": "Choisissez des bijoux pour le Nouvel An avec des boucles d'oreilles, des clous, des câlins, des boucles d'oreilles papillon, des pendants, des créoles et des idées cadeaux prêtes pour la fête.",
+      "readTime": "17 minutes de lecture",
+      "tags": [
+        "cadeaux du nouvel an",
+        "bijoux de fête",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "occasion-jewellery-guides/new-year-jewellery-gifts": {
+      "title": "Cadeaux de bijoux pour le Nouvel An : des boucles d'oreilles pour un nouveau départ et chaque célébration qui suit",
+      "excerpt": "Choisissez des bijoux pour le Nouvel An avec des boucles d'oreilles, des clous, des câlins, des boucles d'oreilles papillon, des pendants, des créoles et des idées cadeaux prêtes pour la fête.",
+      "readTime": "17 minutes de lecture",
+      "tags": [
+        "cadeaux du nouvel an",
+        "bijoux de fête",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "occasion-jewellery-guides/christmas-jewellery-gifts": {
+      "title": "Cadeaux de bijoux de Noël : des boucles d'oreilles qu'elle portera réellement après les vacances",
+      "excerpt": "Choisissez des bijoux de Noël avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des boucles d'oreilles papillon, des pendants, des créoles et des idées cadeaux élégantes.",
+      "readTime": "17 minutes de lecture",
+      "tags": [
+        "cadeaux de Noël",
+        "vacances",
+        "boucles d'oreilles papillon",
+        "goujons",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "occasion-jewellery-guides/wedding-thank-you-jewellery-gifts": {
+      "title": "Cadeaux de remerciement pour un mariage : des boucles d'oreilles qu'ils peuvent porter le jour même et après",
+      "excerpt": "Choisissez des bijoux de remerciement pour votre mariage avec des boucles d'oreilles en diamants synthétiques, des clous, des câlins, des gouttes, des boucles d'oreilles papillon et des idées cadeaux élégantes.",
+      "readTime": "17 minutes de lecture",
+      "tags": [
+        "merci de mariage",
+        "demoiselle d'honneur",
+        "demoiselle d'honneur",
+        "mariage",
+        "boucles d'oreilles",
+        "cultivé en laboratoire"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-bride-jewellery-gifts": {
+      "title": "Cadeaux de bijoux pour la mère de la mariée : des boucles d'oreilles élégantes pour le jour du mariage et après",
+      "excerpt": "Choisissez des bijoux pour la mère de la mariée avec des boucles d'oreilles en diamants synthétiques, des clous, des gouttes, des câlins, des boucles d'oreilles papillon et des idées de cadeaux de mariage élégantes.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "mère de la mariée",
+        "mariage",
+        "goujons",
+        "gouttes",
+        "boucles d'oreilles papillon",
+        "cultivé en laboratoire"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-groom-jewellery-gifts": {
+      "title": "Cadeaux de bijoux pour la mère du marié : des boucles d'oreilles élégantes pour le jour du mariage et après",
+      "excerpt": "Choisissez des bijoux pour la mère du marié avec des boucles d'oreilles en diamants synthétiques, des clous, des gouttes, des câlins, des boucles d'oreilles papillon et des idées de cadeaux de mariage élégantes.",
+      "readTime": "16 minutes de lecture",
+      "tags": [
+        "mère du marié",
+        "mariage",
+        "goujons",
+        "gouttes",
+        "boucles d'oreilles papillon",
+        "cultivé en laboratoire"
+      ]
+    }
+  },
+  "readTime": "{{count}} min de lecture"
+}

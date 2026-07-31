@@ -230,7 +230,9 @@
     "scrollProductsLeft": "Produkte nach links scrollen",
     "scrollProductsRight": "Produkte nach rechts scrollen",
     "closeSizeGuide": "Größentabelle schließen",
-    "paymentCard": "Karte"
+    "paymentCard": "Karte",
+    "loadError": "Dieses Produkt kann derzeit nicht geladen werden.",
+    "customerReview": "Kundenbewertung"
   },
   "exploreOurStore": {
     "title": "Entdecken Sie unseren Shop",
@@ -329,7 +331,9 @@
     "syncing": "Ihr Warenkorb- und Kassenstatus wird synchronisiert...",
     "continueShopping": "WEITER EINKAUFEN",
     "viewOrders": "BESTELLUNGEN ANZEIGEN",
-    "tryAgain": "KASSE ERNEUT VERSUCHEN"
+    "tryAgain": "KASSE ERNEUT VERSUCHEN",
+    "selectShippingAddressError": "Bitte wählen Sie eine Lieferadresse aus, bevor Sie Ihre Bestellung aufgeben.",
+    "placeOrderError": "Diese Bestellung kann derzeit nicht aufgegeben werden. Bitte versuchen Sie es erneut."
   },
   "auth": {
     "loginTitle": "Anmelden",
@@ -420,7 +424,8 @@
     "resetting": "WIRD ZURÜCKGESETZT...",
     "resetPasswordBtn": "PASSWORT ZURÜCKSETZEN",
     "backToSignIn": "Zurück zur Anmeldung?",
-    "loginHere": "Hier anmelden"
+    "loginHere": "Hier anmelden",
+    "sessionExpired": "Ihre Sitzung ist abgelaufen. Sie wurden abgemeldet."
   },
   "account": {
     "orders": {

@@ -1,0 +1,948 @@
+{
+  "categories": {
+    "lab-grown-diamond-guides": {
+      "title": "Guías de diamantes cultivados en laboratorio",
+      "description": "Todo lo que necesita saber sobre los diamantes cultivados en laboratorio: cómo se fabrican, en qué se diferencian de los diamantes extraídos y por qué son la elección inteligente y ética."
+    },
+    "demi-fine-jewellery-guides": {
+      "title": "Guías de joyería semifina",
+      "description": "Explore el mundo de la joyería semifina: plata de ley, oro vermeil y piedras cultivadas en laboratorio que combinan maravillosamente entre la joyería de fantasía y la joyería fina."
+    },
+    "earring-style-guides": {
+      "title": "Guías de estilo de aretes",
+      "description": "Desde apilar las orejas hasta elegir el arete adecuado para la forma de su rostro, nuestras guías de aretes lo ayudarán a usar sus joyas con confianza."
+    },
+    "occasion-jewellery-guides": {
+      "title": "Joyería para bodas y ocasiones especiales",
+      "description": "Consejos sobre joyería nupcial, ideas para regalos de aniversario y cómo elegir la pieza perfecta para cada momento importante de la vida."
+    },
+    "jewellery-care-guides": {
+      "title": "Cuidado de las joyas",
+      "description": "Mantenga sus joyas con el mejor aspecto con nuestras guías de cuidado de expertos que cubren consejos de limpieza, almacenamiento y uso diario para cada tipo de metal y piedra."
+    },
+    "jewellery-gift-guides": {
+      "title": "Guías de regalos",
+      "description": "Encuentre el regalo de joyería perfecto para cualquier ocasión, presupuesto o personalidad, desde compradores primerizos hasta amantes experimentados de la joyería."
+    }
+  },
+  "articles": {
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-real": {
+      "title": "¿Son los diamantes cultivados en laboratorio diamantes reales?",
+      "excerpt": "Sí, los diamantes cultivados en laboratorio son diamantes reales. Conozca cómo se comparan con los diamantes naturales, los diamantes falsos, la circonita cúbica y la moissanita antes de comprarlos.",
+      "readTime": "7 minutos de lectura",
+      "tags": [
+        "cultivado en laboratorio",
+        "diamantes reales",
+        "educación"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-vs-natural-diamonds": {
+      "title": "Diamantes cultivados en laboratorio versus diamantes naturales: ¿cuál es la diferencia?",
+      "excerpt": "Compare diamantes naturales y cultivados en laboratorio en un lenguaje sencillo. Conozca la diferencia de origen, precio, brillo, valor y uso de las joyas antes de comprarlas.",
+      "readTime": "8 minutos de lectura",
+      "tags": [
+        "comparación",
+        "diamantes naturales",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamonds-worth-it": {
+      "title": "¿Valen la pena los diamantes cultivados en laboratorio?",
+      "excerpt": "Descubra si vale la pena comprar diamantes cultivados en laboratorio, cómo se comparan con los diamantes naturales y cuándo tienen sentido las joyas con diamantes cultivados en laboratorio.",
+      "readTime": "8 minutos de lectura",
+      "tags": [
+        "vale la pena",
+        "valor",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide": {
+      "title": "Guía de compra de aretes de diamantes cultivados en laboratorio",
+      "excerpt": "Aprenda a elegir aretes de diamantes cultivados en laboratorio, incluidos aretes, aros, colgantes, colores de metal, tamaños, regalos y estilos cotidianos.",
+      "readTime": "10 minutos de lectura",
+      "tags": [
+        "guía de compra",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide": {
+      "title": "Guía de precios de aretes de diamantes cultivados en laboratorio",
+      "excerpt": "Conozca cuánto cuestan los aretes de diamantes cultivados en laboratorio, qué afecta el precio y cómo elegir aretes, aros, colgantes y aretes de regalo.",
+      "readTime": "9 minutos de lectura",
+      "tags": [
+        "guía de precios",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide": {
+      "title": "Guía de aretes de diamantes cultivados en laboratorio",
+      "excerpt": "Aprenda a elegir aretes de diamantes cultivados en laboratorio para uso diario, regalos, pendientes, color, tamaño y estilo del metal.",
+      "readTime": "9 minutos de lectura",
+      "tags": [
+        "aretes",
+        "uso diario",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide": {
+      "title": "Guía de aretes colgantes de diamantes cultivados en laboratorio",
+      "excerpt": "Aprenda a elegir aretes colgantes de diamantes cultivados en laboratorio para bodas, fiestas, regalos, trajes de noche y estilismo para ocasiones cotidianas.",
+      "readTime": "9 minutos de lectura",
+      "tags": [
+        "pendientes de gota",
+        "ocasión",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Guía de aretes tipo argolla con diamantes cultivados en laboratorio",
+      "excerpt": "Aprenda a elegir aretes tipo argolla de diamantes cultivados en laboratorio para uso diario, pendientes, regalos, fiestas y estilos de joyería modernos.",
+      "readTime": "9 minutos de lectura",
+      "tags": [
+        "pendientes de aro",
+        "pilas de orejas",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
+      "title": "¿Qué son los diamantes cultivados en laboratorio?",
+      "excerpt": "Los diamantes cultivados en laboratorio son diamantes reales: química, física y ópticamente idénticos a los diamantes extraídos. Así es como se crean y por qué son importantes.",
+      "readTime": "6 minutos de lectura",
+      "tags": [
+        "cultivado en laboratorio",
+        "diamantes",
+        "educación"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia": {
+      "title": "Diamantes cultivados en laboratorio frente a circonita cúbica: ¿cuál es la diferencia?",
+      "excerpt": "Conozca la diferencia entre los diamantes cultivados en laboratorio y la circonita cúbica, incluido el brillo, la durabilidad, el precio, el valor y el uso de joyería.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "cultivado en laboratorio",
+        "circonita cúbica",
+        "comparación"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite": {
+      "title": "Diamantes cultivados en laboratorio frente a moissanita: ¿cuál es la diferencia?",
+      "excerpt": "Compare diamantes cultivados en laboratorio y moissanita en un lenguaje sencillo. Conozca la diferencia en brillo, durabilidad, precio, valor y uso de joyas.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "cultivado en laboratorio",
+        "moissanita",
+        "comparación"
+      ]
+    },
+    "lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings": {
+      "title": "Cómo limpiar aretes de diamantes cultivados en laboratorio",
+      "excerpt": "Aprenda cómo limpiar de forma segura aretes de diamantes cultivados en laboratorio, proteger el baño de oro, evitar la opacidad y mantener sus joyas brillantes por más tiempo.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "cuidado",
+        "limpieza",
+        "cultivado en laboratorio",
+        "pendientes"
+      ]
+    },
+    "lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "¿Se pueden usar aretes de diamantes cultivados en laboratorio todos los días?",
+      "excerpt": "Descubra si los aretes de diamantes cultivados en laboratorio son buenos para el uso diario, cómo elegirlos y cómo cuidar los aretes, los aros y las gotas.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "uso diario",
+        "pendientes",
+        "cultivado en laboratorio",
+        "cuidado"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide": {
+      "title": "Guía de tallas de aretes de diamantes cultivados en laboratorio: estilos pequeño, mediano y de 1 quilate",
+      "excerpt": "Compare tamaños de aretes de diamantes cultivados en laboratorio, desde aretes pequeños hasta estilos de 1 ct. Descubra qué talla es mejor para el uso diario, los regalos y las ocasiones.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "guía de tallas",
+        "pendientes",
+        "cultivado en laboratorio",
+        "peso en quilates"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings": {
+      "title": "Aretes de diamantes cultivados en laboratorio para bodas: guía para invitados, damas de honor y ocasiones",
+      "excerpt": "Elija aretes de diamantes cultivados en laboratorio para bodas, invitados a bodas, damas de honor, recepciones, vestidos, escotes y estilos elegantes para ocasiones.",
+      "readTime": "14 minutos de lectura",
+      "tags": [
+        "bodas",
+        "ocasión",
+        "pendientes",
+        "cultivado en laboratorio",
+        "dama de honor"
+      ]
+    },
+    "lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it": {
+      "title": "¿Valen la pena los aretes de diamantes cultivados en laboratorio?",
+      "excerpt": "Descubra si vale la pena comprar aretes de diamantes cultivados en laboratorio para uso diario, regalos, bodas, pendientes y joyería para ocasiones especiales.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "vale la pena",
+        "valor",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Aretes de diamantes cultivados en laboratorio para regalos: guía de cumpleaños, aniversarios y damas de honor",
+      "excerpt": "Elija aretes de diamantes cultivados en laboratorio para regalos de cumpleaños, regalos de aniversario, damas de honor, regalos románticos y obsequios de joyería cotidianos.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "regalos",
+        "cumpleaños",
+        "aniversario",
+        "dama de honor",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks": {
+      "title": "Aretes de diamantes cultivados en laboratorio para pendientes: aretes, aros y guía de estilo",
+      "excerpt": "Construya una pila de pendientes de diamantes con aretes, aros, aros y aretes minimalistas de diamantes cultivados en laboratorio para el estilo diario y las ocasiones.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "pilas de orejas",
+        "espárragos",
+        "abrazos",
+        "pendientes",
+        "cultivado en laboratorio",
+        "estilo"
+      ]
+    },
+    "lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings": {
+      "title": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa: guía de colores de metal",
+      "excerpt": "Compare aretes de diamantes cultivados en laboratorio de oro, oro blanco y oro rosa. Elija el mejor color de metal para uso diario, regalos, bodas y estilismo.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "color metálico",
+        "oro",
+        "oro rosa",
+        "oro blanco",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "demi-fine-jewellery-guides/what-is-demi-fine-jewellery": {
+      "title": "¿Qué es la joyería semifina? Una guía práctica de joyería",
+      "excerpt": "Aprenda qué significa la joyería semifina, cómo se compara con la joyería fina y de moda, y cómo elegir piezas para uso diario y regalos.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "semifino",
+        "guía de joyería",
+        "materiales",
+        "educación"
+      ]
+    },
+    "demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery": {
+      "title": "Semifina, joyería fina y joyería de moda: ¿cuál es la diferencia?",
+      "excerpt": "Compare joyería semifina, fina y de moda. Conozca la diferencia en materiales, precio, calidad, portabilidad y valor de regalo.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "semifino",
+        "joyería fina",
+        "joyería de moda",
+        "comparación",
+        "educación"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear": {
+      "title": "¿Las joyas semifinas son buenas para el uso diario?",
+      "excerpt": "Descubra si la joyería semifina es buena para el uso diario, cómo elegir piezas diarias y cómo cuidar las joyas chapadas en oro y de plata esterlina.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "uso diario",
+        "semifino",
+        "cuidado",
+        "chapado en oro",
+        "Plata esterlina"
+      ]
+    },
+    "demi-fine-jewellery-guides/925-sterling-silver-jewellery-guide": {
+      "title": "Guía de joyas de plata de ley 925: significado, calidad y cuidado",
+      "excerpt": "Aprenda qué significa la plata de ley 925, por qué se utiliza en joyería demi fina y cómo cuidar los aretes de plata de ley y las joyas chapadas en oro.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "plata de ley 925",
+        "materiales",
+        "semifino",
+        "cuidado",
+        "educación"
+      ]
+    },
+    "demi-fine-jewellery-guides/14kt-gold-plated-jewellery-guide": {
+      "title": "Guía de joyas bañadas en oro de 14 quilates: significado, calidad y cuidado",
+      "excerpt": "Descubra qué significan las joyas chapadas en oro de 14 quilates, en qué se comparan con el oro macizo, cómo cuidarlas y si son buenas para el uso diario.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "Chapado en oro de 14 quilates.",
+        "chapado en oro",
+        "materiales",
+        "semifino",
+        "cuidado"
+      ]
+    },
+    "demi-fine-jewellery-guides/gold-plated-vs-solid-gold-jewellery": {
+      "title": "Joyas chapadas en oro versus joyas de oro macizo: ¿cuál es la diferencia?",
+      "excerpt": "Compare joyas chapadas en oro y de oro macizo. Conozca la diferencia en precio, durabilidad, cuidado, uso diario y valor de regalo.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "chapado en oro",
+        "oro macizo",
+        "comparación",
+        "semifino",
+        "materiales"
+      ]
+    },
+    "demi-fine-jewellery-guides/does-gold-plated-jewellery-tarnish": {
+      "title": "¿Se empañan las joyas chapadas en oro? Guía de cuidado, uso y protección",
+      "excerpt": "Descubra si las joyas bañadas en oro se empañan, por qué cambian de color, cómo protegerlas y cómo cuidar los pendientes semifinos bañados en oro.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "deslustre",
+        "chapado en oro",
+        "cuidado",
+        "semifino",
+        "uso diario"
+      ]
+    },
+    "demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery": {
+      "title": "Cómo cuidar las joyas chapadas en oro: guía de limpieza, almacenamiento y uso diario",
+      "excerpt": "Aprenda cómo cuidar las joyas chapadas en oro, proteger el baño de oro de 14 quilates, evitar el deslustre, limpiar los aretes de forma segura y guardar las joyas semifinas.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "cuidado",
+        "chapado en oro",
+        "limpieza",
+        "almacenamiento",
+        "semifino"
+      ]
+    },
+    "demi-fine-jewellery-guides/can-you-shower-with-gold-plated-jewellery": {
+      "title": "¿Puedes ducharte con joyas chapadas en oro? Guía de agua, cuidado y uso diario",
+      "excerpt": "Descubra si puede ducharse con joyas chapadas en oro, cómo el agua afecta el baño de oro de 14 quilates y cómo proteger los aretes semifinos.",
+      "readTime": "10 minutos de lectura",
+      "tags": [
+        "ducha",
+        "agua",
+        "chapado en oro",
+        "cuidado",
+        "semifino"
+      ]
+    },
+    "demi-fine-jewellery-guides/is-925-sterling-silver-hypoallergenic": {
+      "title": "¿Es la plata de ley 925 hipoalergénica? Guía de orejas y aretes sensibles",
+      "excerpt": "Descubra si la plata de ley 925 es hipoalergénica, si es buena para oídos sensibles y cómo elegir pendientes semifinos seguros.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "hipoalergénico",
+        "plata de ley 925",
+        "oídos sensibles",
+        "pendientes",
+        "semifino"
+      ]
+    },
+    "jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts": {
+      "title": "Aretes de diamantes cultivados en laboratorio para regalos: cómo elegir el par adecuado",
+      "excerpt": "Elija aretes de diamantes cultivados en laboratorio como regalo de cumpleaños, aniversarios, damas de honor, bodas, regalos románticos y joyería de uso diario.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos",
+        "cumpleaños",
+        "aniversario",
+        "dama de honor",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts-for-her": {
+      "title": "Regalos de joyería de cumpleaños para ella: cómo elegir los aretes que realmente usará",
+      "excerpt": "Elija regalos de joyería de cumpleaños con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes, aros e ideas de regalos significativas.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos de cumpleaños",
+        "pendientes",
+        "cultivado en laboratorio",
+        "regalos",
+        "espárragos",
+        "pendientes de mariposa"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts-for-her": {
+      "title": "Regalos de joyería de aniversario para ella: aretes románticos que realmente usará",
+      "excerpt": "Elija regalos de joyería de aniversario con aretes de diamantes cultivados en laboratorio, aretes de mariposa, tachuelas, colgantes, aros e ideas de regalos románticos para ella.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos de aniversario",
+        "romántico",
+        "pendientes de mariposa",
+        "cultivado en laboratorio",
+        "pendientes"
+      ]
+    },
+    "jewellery-gift-guides/bridesmaid-jewellery-gifts": {
+      "title": "Regalos de joyería para damas de honor: aretes que su fiesta nupcial puede usar el día de la boda y después",
+      "excerpt": "Elija regalos de joyería para dama de honor con aretes de diamantes cultivados en laboratorio, tachuelas, colgantes, aretes de mariposa, aros e ideas de regalos listos para la boda.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos de dama de honor",
+        "boda",
+        "pendientes",
+        "cultivado en laboratorio",
+        "espárragos",
+        "gotas"
+      ]
+    },
+    "jewellery-gift-guides/romantic-jewellery-gifts-for-her": {
+      "title": "Regalos románticos de joyería para ella: pendientes significativos que puede volver a usar",
+      "excerpt": "Elija obsequios de joyería románticos con aretes de diamantes cultivados en laboratorio, aretes de mariposa, tachuelas, colgantes, abrazos e ideas de regalos significativas para ella.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos románticos",
+        "pendientes de mariposa",
+        "aniversario",
+        "cumpleaños",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/wedding-party-jewellery-gifts": {
+      "title": "Regalos de joyería para bodas: aretes que pueden usar el día y después",
+      "excerpt": "Elija regalos de joyería para bodas con aretes de diamantes cultivados en laboratorio, tachuelas, aros, colgantes, aretes de mariposa e ideas de regalos listos para la boda.",
+      "readTime": "17 minutos de lectura",
+      "tags": [
+        "fiesta de boda",
+        "dama de honor",
+        "dama de honor",
+        "boda",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/maid-of-honour-jewellery-gifts": {
+      "title": "Regalos de joyería para dama de honor: pendientes significativos para el día de la boda y después",
+      "excerpt": "Elija regalos de joyería para dama de honor con aretes de diamantes cultivados en laboratorio, tachuelas, colgantes, aros, aretes de mariposa e ideas de regalos listos para la boda.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "dama de honor",
+        "boda",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/anniversary-jewellery-gifts": {
+      "title": "Regalos de joyería de aniversario: aretes románticos que realmente usará",
+      "excerpt": "Elija regalos de joyería de aniversario con aretes de diamantes cultivados en laboratorio, aretes de mariposa, tachuelas, colgantes, abrazos e ideas de regalos románticos.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "regalos de aniversario",
+        "pendientes de mariposa",
+        "romántico",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/birthday-jewellery-gifts": {
+      "title": "Regalos de joyería de cumpleaños: aretes que realmente usará después de su cumpleaños",
+      "excerpt": "Elija regalos de joyería de cumpleaños con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes, aros e ideas de regalos significativas.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "regalos de cumpleaños",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "significativo",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/graduation-jewellery-gifts": {
+      "title": "Regalos de joyería de graduación: pendientes significativos para un nuevo capítulo",
+      "excerpt": "Elija regalos de joyería de graduación con aretes, tachuelas, aros, aretes de mariposa, aros de diamantes cultivados en laboratorio e ideas de regalos significativas.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "regalos de graduación",
+        "pendientes de mariposa",
+        "espárragos",
+        "hito",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-best-friend": {
+      "title": "Regalos de joyería para tu mejor amiga: pendientes pensados ​​que ella realmente usará",
+      "excerpt": "Elija regalos de joyería para su mejor amigo con aretes, tachuelas, aros, aretes de mariposa, aros de diamantes cultivados en laboratorio e ideas de regalos significativas.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos para mejores amigos",
+        "cumpleaños",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-daughter": {
+      "title": "Regalos de joyería para hija: aretes significativos que realmente usará",
+      "excerpt": "Elija regalos de joyería para su hija con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, aros e ideas de regalos significativas.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos hija",
+        "cumpleaños",
+        "graduación",
+        "pendientes de mariposa",
+        "espárragos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-mum": {
+      "title": "Regalos de joyería para mamá: pendientes pensados ​​que realmente usará",
+      "excerpt": "Elija regalos de joyería para mamá con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes e ideas de regalos significativas.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos de mamá",
+        "cumpleaños",
+        "dia de la madre",
+        "pendientes de mariposa",
+        "espárragos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-sister": {
+      "title": "Regalos de joyería para hermana: aretes que realmente usará",
+      "excerpt": "Elija regalos de joyería para su hermana con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, aros, colgantes e ideas para regalos de cumpleaños.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos hermana",
+        "cumpleaños",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-wife": {
+      "title": "Regalos de joyería para esposa: aretes románticos y significativos que realmente usará",
+      "excerpt": "Elija regalos de joyería para su esposa con aretes de diamantes cultivados en laboratorio, aretes de mariposa, tachuelas, colgantes, abrazos e ideas de regalos románticos.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos de esposa",
+        "romántico",
+        "pendientes de mariposa",
+        "aniversario",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-girlfriend": {
+      "title": "Regalos de joyería para novia: aretes románticos que realmente usará",
+      "excerpt": "Elija regalos de joyería para su novia con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes e ideas de regalos románticos.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "regalos de novia",
+        "romántico",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/jewellery-gifts-for-her": {
+      "title": "Regalos de joyería para ella: cómo elegir los aretes que realmente usará",
+      "excerpt": "Elija regalos de joyería para ella con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes, aros e ideas de regalos románticos.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "regalos de joyería",
+        "pendientes",
+        "cumpleaños",
+        "aniversario",
+        "romántico",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-gift-guides/date-night-jewellery-guide": {
+      "title": "Guía de joyería para una cita nocturna: qué aretes usar para la cena, las bebidas y los atuendos románticos",
+      "excerpt": "Elija joyas para una cita nocturna con aretes, tachuelas, colgantes, aros, aretes de mariposa de diamantes cultivados en laboratorio e ideas de estilo romántico.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "cita nocturna",
+        "romántico",
+        "pendientes de gota",
+        "pendientes de mariposa",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/how-to-stack-earrings": {
+      "title": "Cómo apilar aretes: una guía completa de estilo para apilar aretes",
+      "excerpt": "Aprenda a combinar aretes con tachuelas, aros, aros, colgantes y aretes de diamantes cultivados en laboratorio para looks cotidianos, de boda y de fiesta.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "pilas de orejas",
+        "estilo de arete",
+        "espárragos",
+        "abrazos",
+        "aros",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/diamond-ear-stack-ideas": {
+      "title": "Ideas para apilar orejas de diamantes: looks cotidianos, minimalistas, para bodas y fiestas",
+      "excerpt": "Explore ideas de apilamiento de pendientes de diamantes con tachuelas, aros, aros, colgantes y aretes de diamantes cultivados en laboratorio para looks cotidianos, de boda y de fiesta.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "pilas de orejas de diamantes",
+        "ideas de pila de orejas",
+        "estilo de arete",
+        "espárragos",
+        "abrazos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/minimalist-earrings-guide": {
+      "title": "Guía de aretes minimalistas: aretes simples para el estilo diario",
+      "excerpt": "Aprenda a elegir aretes minimalistas para el uso diario, trajes de trabajo, pendientes, regalos y un estilo sencillo con diamantes cultivados en laboratorio.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "pendientes minimalistas",
+        "uso diario",
+        "estilo de arete",
+        "espárragos",
+        "abrazos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/stud-vs-huggie-earrings": {
+      "title": "Aretes Stud vs Huggie: ¿Qué estilo debería elegir?",
+      "excerpt": "Compare aretes y aros para uso diario, aros, regalos, ropa de trabajo y estilos con diamantes cultivados en laboratorio.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "aretes",
+        "pendientes abrazados",
+        "comparación",
+        "estilo de arete",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/hoop-vs-huggie-earrings": {
+      "title": "Aretes de aro o aretes Huggie: ¿qué estilo elegir?",
+      "excerpt": "Compare aretes de aro y aros para uso diario, pendientes, regalos, ropa de trabajo, fiestas y estilos con diamantes cultivados en laboratorio.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "pendientes de aro",
+        "pendientes abrazados",
+        "comparación",
+        "estilo de arete",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/stud-vs-hoop-earrings": {
+      "title": "Aretes o aretes de aro: ¿qué estilo debería elegir?",
+      "excerpt": "Compare aretes y aros para uso diario, regalos, ropa de trabajo, pendientes, bodas, fiestas y estilos con diamantes cultivados en laboratorio.",
+      "readTime": "11 minutos de lectura",
+      "tags": [
+        "aretes",
+        "pendientes de aro",
+        "comparación",
+        "estilo de arete",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/party-earrings-guide": {
+      "title": "Guía de aretes de fiesta: qué aretes usar para looks de noche, cenas y celebraciones",
+      "excerpt": "Elija aretes de fiesta para vestidos negros, trajes de satén, cenas, bodas, cumpleaños y looks de noche con ideas de estilo con diamantes cultivados en laboratorio.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "pendientes de fiesta",
+        "peinado de noche",
+        "vestido negro",
+        "satín",
+        "cultivado en laboratorio",
+        "pendientes atrevidos"
+      ]
+    },
+    "earring-style-guides/bold-statement-earrings-guide": {
+      "title": "Guía de aretes llamativos y atrevidos: cómo lucir un brillo intenso sin exagerar",
+      "excerpt": "Aprenda a diseñar aretes llamativos y atrevidos para fiestas, vestidos negros, bodas, cenas, cumpleaños y trajes de noche.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "pendientes atrevidos",
+        "pendientes llamativos",
+        "estilo de fiesta",
+        "noche",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-black-dress": {
+      "title": "Qué joyas llevar con un vestido negro: pendientes, metales y guía de estilo",
+      "excerpt": "Elige joyas para un vestido negro con pendientes, diamantes, oro, plata, oro rosa, looks de fiesta, bodas y estilismos de noche.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "vestido negro",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "pendientes de fiesta",
+        "pendientes atrevidos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-satin-dress": {
+      "title": "Qué joyas llevar con un vestido de satén: pendientes, metales y guía de estilo",
+      "excerpt": "Elige joyas para un vestido de raso con pendientes, oro, plata, diamantes, looks de fiesta, conjuntos de invitadas a una boda e ideas de estilismo para la noche.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "vestido de raso",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "invitado a la boda",
+        "pendientes de gota",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress": {
+      "title": "Qué joyas llevar con un vestido con cuello en V: pendientes, collares y guía de estilo",
+      "excerpt": "Elija joyas para un vestido con cuello en V con aretes, collares, diamantes, oro, looks de fiesta, bodas e ideas de estilismo para la noche.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "vestido con cuello en v",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "collar",
+        "pendientes de gota",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline": {
+      "title": "Qué joyas llevar con escote corazón: pendientes, collares y guía de estilo",
+      "excerpt": "Elige joyas para un vestido con escote corazón con pendientes, collares, diamantes, oro, looks de invitada a la boda e ideas de estilismo para fiestas.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "escote corazón",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "pendientes de mariposa",
+        "pendientes de gota",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress": {
+      "title": "Qué aretes usar con un vestido sin hombros: guía de estilo para bodas, fiestas y looks de noche",
+      "excerpt": "Elija aretes para un vestido con hombros descubiertos con diamantes, gotas, aros, tachuelas, oro, looks de fiesta, conjuntos de invitadas a la boda e ideas de estilismo para la noche.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "vestido con hombros descubiertos",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "pendientes de gota",
+        "pendientes atrevidos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings": {
+      "title": "Pendientes de diamantes cultivados en laboratorio de oro, blanco o rosa: ¿qué color de metal debería elegir?",
+      "excerpt": "Compare aretes de diamantes cultivados en laboratorio de oro, oro blanco y oro rosa para uso diario, regalos, bodas, fiestas, tono de piel y estilo de vestimenta.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "color metálico",
+        "oro",
+        "oro blanco",
+        "oro rosa",
+        "aretes de diamantes cultivados en laboratorio",
+        "estilo de arete"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-green-dress": {
+      "title": "Qué joyas llevar con un vestido verde: pendientes, metales y guía de estilo",
+      "excerpt": "Elige joyas para un vestido verde con oro, plata, oro rosa, pendientes de diamantes, looks de invitada a una boda, estilismo de fiesta e ideas de outfits.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "vestido verde",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "joyas de oro",
+        "pendientes de gota",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/what-jewellery-to-wear-with-a-red-dress": {
+      "title": "Qué joyas llevar con un vestido rojo: pendientes, metales y guía de estilo",
+      "excerpt": "Elige joyas para un vestido rojo con pendientes de oro, plata, oro rosa, diamantes, looks de fiesta, conjuntos de invitadas a una boda e ideas de estilismo para la noche.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "vestido rojo",
+        "estilo de arete",
+        "estilo de vestimenta",
+        "joyas de oro",
+        "pendientes de gota",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/minimalist-jewellery-styling-guide": {
+      "title": "Guía de estilo de joyería minimalista: cómo diseñar joyas sencillas para el día a día, el trabajo y las ocasiones",
+      "excerpt": "Aprenda a diseñar joyas minimalistas con aretes, tachuelas, aros, diamantes cultivados en laboratorio, ropa de trabajo, regalos, bodas y atuendos cotidianos.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "joyas minimalistas",
+        "estilo de arete",
+        "uso diario",
+        "ropa de trabajo",
+        "espárragos",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/lab-grown-diamond-hoop-earrings-guide": {
+      "title": "Guía de aros de diamantes cultivados en laboratorio: cómo elegir y diseñar aros de diamantes",
+      "excerpt": "Aprenda a elegir aretes tipo argolla de diamantes cultivados en laboratorio para el uso diario, fiestas, bodas, regalos, pendientes y estilismo de atuendos.",
+      "readTime": "14 minutos de lectura",
+      "tags": [
+        "pendientes de aro",
+        "aretes de diamantes cultivados en laboratorio",
+        "estilo de arete",
+        "pilas de orejas",
+        "uso diario",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/everyday-lab-grown-diamond-earrings-guide": {
+      "title": "Aretes de diamantes cultivados en laboratorio para todos los días: cómo elegir aretes que pueda usar a diario",
+      "excerpt": "Elija aretes de diamantes cultivados en laboratorio de uso diario para el trabajo, atuendos informales, pendientes, regalos, viajes y estilo de joyería diario.",
+      "readTime": "15 minutos de lectura",
+      "tags": [
+        "pendientes de todos los días",
+        "aretes de diamantes cultivados en laboratorio",
+        "ropa de trabajo",
+        "pilas de orejas",
+        "joyería diaria",
+        "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
+      "title": "¿Se pueden usar aretes de diamantes cultivados en laboratorio todos los días? Guía de uso diario, cuidado y estilo",
+      "excerpt": "Descubra si los aretes de diamantes cultivados en laboratorio son buenos para el uso diario, el trabajo, el sueño, la ducha, los oídos sensibles, el cuidado, los regalos y el estilo diario.",
+      "readTime": "14 minutos de lectura",
+      "tags": [
+        "pendientes de todos los días",
+        "uso diario",
+        "aretes de diamantes cultivados en laboratorio",
+        "cuidado de aretes",
+        "ropa de trabajo",
+        "cultivado en laboratorio"
+      ]
+    },
+    "lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest": {
+      "title": "Qué pendientes llevar como invitada a una boda: vestido, escote y guía de estilismo",
+      "excerpt": "Elija aretes para usar como invitada a la boda con aretes, colgantes, aros, aretes de mariposa con diamantes cultivados en laboratorio e ideas de estilo para cada vestido.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "invitado a la boda",
+        "estilo de arete",
+        "pendientes de boda",
+        "pendientes de gota",
+        "pendientes de mariposa",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-care-guides/valentines-day-jewellery-gifts": {
+      "title": "Regalos de joyería para el día de San Valentín: aretes románticos que realmente usará",
+      "excerpt": "Elija regalos de joyería para el Día de San Valentín con aretes de diamantes cultivados en laboratorio, aretes de mariposa, tachuelas, colgantes, abrazos e ideas de regalos románticos.",
+      "readTime": "17 minutos de lectura",
+      "tags": [
+        "Día de San Valentín",
+        "romántico",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "jewellery-care-guides/new-year-jewellery-gifts": {
+      "title": "Regalos de joyería de Año Nuevo: pendientes para un nuevo comienzo y cada celebración posterior",
+      "excerpt": "Elija regalos de joyería de Año Nuevo con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes, aros e ideas de regalos listos para la fiesta.",
+      "readTime": "17 minutos de lectura",
+      "tags": [
+        "regalos de año nuevo",
+        "joyas de fiesta",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/new-year-jewellery-gifts": {
+      "title": "Regalos de joyería de Año Nuevo: pendientes para un nuevo comienzo y cada celebración posterior",
+      "excerpt": "Elija regalos de joyería de Año Nuevo con aretes de diamantes cultivados en laboratorio, tachuelas, aros, aretes de mariposa, colgantes, aros e ideas de regalos listos para la fiesta.",
+      "readTime": "17 minutos de lectura",
+      "tags": [
+        "regalos de año nuevo",
+        "joyas de fiesta",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/christmas-jewellery-gifts": {
+      "title": "Regalos de joyería de Navidad: pendientes que realmente usará más allá de las vacaciones",
+      "excerpt": "Elija regalos de joyería navideña con aretes, tachuelas, aros, aretes de mariposa, colgantes, aros y elegantes ideas de regalos de diamantes cultivados en laboratorio.",
+      "readTime": "17 minutos de lectura",
+      "tags": [
+        "regalos de navidad",
+        "día festivo",
+        "pendientes de mariposa",
+        "espárragos",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/wedding-thank-you-jewellery-gifts": {
+      "title": "Regalos de joyería de agradecimiento para bodas: aretes que pueden usar el día y después",
+      "excerpt": "Elija obsequios de joyería de agradecimiento para bodas con aretes de diamantes cultivados en laboratorio, tachuelas, aros, colgantes, aretes de mariposa e ideas de regalos elegantes.",
+      "readTime": "17 minutos de lectura",
+      "tags": [
+        "boda gracias",
+        "dama de honor",
+        "dama de honor",
+        "boda",
+        "pendientes",
+        "cultivado en laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-bride-jewellery-gifts": {
+      "title": "Regalos de joyería para la madre de la novia: pendientes elegantes para el día de la boda y después",
+      "excerpt": "Elija regalos de joyería para la madre de la novia con aretes de diamantes cultivados en laboratorio, tachuelas, colgantes, aros, aretes de mariposa e ideas elegantes para regalos de boda.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "madre de la novia",
+        "boda",
+        "espárragos",
+        "gotas",
+        "pendientes de mariposa",
+        "cultivado en laboratorio"
+      ]
+    },
+    "occasion-jewellery-guides/mother-of-the-groom-jewellery-gifts": {
+      "title": "Regalos de joyería para la madre del novio: pendientes elegantes para el día de la boda y después",
+      "excerpt": "Elija regalos de joyería para la madre del novio con aretes de diamantes cultivados en laboratorio, tachuelas, colgantes, aros, aretes de mariposa e ideas elegantes para regalos de boda.",
+      "readTime": "16 minutos de lectura",
+      "tags": [
+        "madre del novio",
+        "boda",
+        "espárragos",
+        "gotas",
+        "pendientes de mariposa",
+        "cultivado en laboratorio"
+      ]
+    }
+  },
+  "readTime": "{{count}} lectura mínima"
+}

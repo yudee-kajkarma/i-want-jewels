@@ -15,6 +15,9 @@ dist/
 .env
 
 *.local
+tree.txt
+fix-imports.cjs
+update-locales.cjs
 
 # Editor directories and files
 .vscode/*
