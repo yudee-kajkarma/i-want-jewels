@@ -109,7 +109,15 @@
     "gold14k": "Oro 14K",
     "sterlingSilver": "Argento Sterling 925",
     "labGrownDiamonds": "Diamanti Coltivati in Laboratorio",
-    "sweatTarnishProof": "Resistente al Sudore e all'Ossidazione"
+    "sweatTarnishProof": "Resistente al Sudore e all'Ossidazione",
+    "gold14kLine1": "Oro",
+    "gold14kLine2": "14K",
+    "sterlingSilverLine1": "Argento",
+    "sterlingSilverLine2": "Sterling 925",
+    "labGrownDiamondsLine1": "Diamanti",
+    "labGrownDiamondsLine2": "da Laboratorio",
+    "sweatTarnishProofLine1": "Resistente",
+    "sweatTarnishProofLine2": "Sudore & Ossid."
   },
   "newsletter": {
     "title": "Unisciti alla Nostra Lista Insider di Gioielleria",
@@ -136,7 +144,11 @@
     "giftFeature4": "Ideale per ogni momento speciale",
     "giftFooterNote": "Semplice. Personale. Sempre apprezzato.",
     "shopGiftCards": "Acquista Buoni Regalo",
-    "instagramTitle": "I Want Jewels su Instagram"
+    "instagramTitle": "I Want Jewels su Instagram",
+    "all": "Tutti",
+    "loadCategoriesError": "Impossibile caricare le collezioni al momento.",
+    "loadProductsError": "Impossibile caricare gli ultimi pezzi al momento.",
+    "loadCollectionError": "Impossibile caricare questa collezione al momento."
   },
   "products": {
     "title": "Tutti i Prodotti",

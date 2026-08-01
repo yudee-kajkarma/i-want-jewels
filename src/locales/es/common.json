@@ -109,7 +109,15 @@
     "gold14k": "Oro de 14K",
     "sterlingSilver": "Plata de Ley 925",
     "labGrownDiamonds": "Diamantes Cultivados en Laboratorio",
-    "sweatTarnishProof": "A Prueba de Sudor y Deslustre"
+    "sweatTarnishProof": "A Prueba de Sudor y Deslustre",
+    "gold14kLine1": "Oro",
+    "gold14kLine2": "14K",
+    "sterlingSilverLine1": "Plata",
+    "sterlingSilverLine2": "Ley 925",
+    "labGrownDiamondsLine1": "Diamantes",
+    "labGrownDiamondsLine2": "de Laboratorio",
+    "sweatTarnishProofLine1": "A Prueba",
+    "sweatTarnishProofLine2": "de Sudor"
   },
   "newsletter": {
     "title": "Únete a Nuestra Lista de Joyería Exclusiva",
@@ -136,7 +144,11 @@
     "giftFeature4": "Ideal para cada momento especial",
     "giftFooterNote": "Simple. Personal. Siempre apreciado.",
     "shopGiftCards": "Comprar Tarjetas de Regalo",
-    "instagramTitle": "I Want Jewels En Instagram"
+    "instagramTitle": "I Want Jewels En Instagram",
+    "all": "Todos",
+    "loadCategoriesError": "No se pueden cargar las colecciones en este momento.",
+    "loadProductsError": "No se pueden cargar las últimas piezas en este momento.",
+    "loadCollectionError": "No se puede cargar esta colección en este momento."
   },
   "products": {
     "title": "Todos los Productos",

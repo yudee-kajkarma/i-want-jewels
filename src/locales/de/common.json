@@ -109,7 +109,15 @@
     "gold14k": "14K Gold",
     "sterlingSilver": "925er Sterlingsilber",
     "labGrownDiamonds": "Im Labor gezüchtete Diamanten",
-    "sweatTarnishProof": "Schweiß- und anlaufbeständig"
+    "sweatTarnishProof": "Schweiß- und anlaufbeständig",
+    "gold14kLine1": "14K",
+    "gold14kLine2": "Gold",
+    "sterlingSilverLine1": "925 Sterling",
+    "sterlingSilverLine2": "Silber",
+    "labGrownDiamondsLine1": "Lab-Grown",
+    "labGrownDiamondsLine2": "Diamanten",
+    "sweatTarnishProofLine1": "Schweiß &",
+    "sweatTarnishProofLine2": "Anlaufbeständig"
   },
   "newsletter": {
     "title": "Treten Sie unserer Schmuck-Insider-Liste bei",
@@ -136,7 +144,11 @@
     "giftFeature4": "Ideal für jeden besonderen Moment",
     "giftFooterNote": "Einfach. Persönlich. Immer willkommen.",
     "shopGiftCards": "Geschenkkarten kaufen",
-    "instagramTitle": "I Want Jewels auf Instagram"
+    "instagramTitle": "I Want Jewels auf Instagram",
+    "all": "Alle",
+    "loadCategoriesError": "Kollektionen können derzeit nicht geladen werden.",
+    "loadProductsError": "Die neuesten Stücke können derzeit nicht geladen werden.",
+    "loadCollectionError": "Diese Kollektion kann derzeit nicht geladen werden."
   },
   "products": {
     "title": "Alle Produkte",

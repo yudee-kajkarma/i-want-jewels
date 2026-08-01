@@ -109,7 +109,15 @@
     "gold14k": "Or 14 carats",
     "sterlingSilver": "Argent Sterling 925",
     "labGrownDiamonds": "Diamants de laboratoire",
-    "sweatTarnishProof": "Résistant à la sueur et au ternissement"
+    "sweatTarnishProof": "Résistant à la sueur et au ternissement",
+    "gold14kLine1": "Or",
+    "gold14kLine2": "14 Carats",
+    "sterlingSilverLine1": "Argent",
+    "sterlingSilverLine2": "Sterling 925",
+    "labGrownDiamondsLine1": "Diamants",
+    "labGrownDiamondsLine2": "de Laboratoire",
+    "sweatTarnishProofLine1": "Résistant",
+    "sweatTarnishProofLine2": "Sueur & Terniss."
   },
   "newsletter": {
     "title": "Rejoignez notre liste privilégiée de bijoux",
@@ -136,7 +144,11 @@
     "giftFeature4": "Idéal pour chaque moment spécial",
     "giftFooterNote": "Simple. Personnel. Toujours apprécié.",
     "shopGiftCards": "Achetez des cartes cadeaux",
-    "instagramTitle": "I Want Jewels sur Instagram"
+    "instagramTitle": "I Want Jewels sur Instagram",
+    "all": "Tous",
+    "loadCategoriesError": "Impossible de charger les collections pour le moment.",
+    "loadProductsError": "Impossible de charger les dernières pièces pour le moment.",
+    "loadCollectionError": "Impossible de charger cette collection pour le moment."
   },
   "products": {
     "title": "Tous les produits",

@@ -109,7 +109,15 @@
     "gold14k": "14K Gold",
     "sterlingSilver": "925 Sterling Silver",
     "labGrownDiamonds": "Lab-Grown Diamonds",
-    "sweatTarnishProof": "Sweat & Tarnish Proof"
+    "sweatTarnishProof": "Sweat & Tarnish Proof",
+    "gold14kLine1": "14K",
+    "gold14kLine2": "Gold",
+    "sterlingSilverLine1": "925 Sterling",
+    "sterlingSilverLine2": "Silver",
+    "labGrownDiamondsLine1": "Lab-Grown",
+    "labGrownDiamondsLine2": "Diamonds",
+    "sweatTarnishProofLine1": "Sweat &",
+    "sweatTarnishProofLine2": "Tarnish Proof"
   },
   "newsletter": {
     "title": "Join Our Jewellery Insider List",
@@ -136,7 +144,11 @@
     "giftFeature4": "Ideal for every special moment",
     "giftFooterNote": "Simple. Personal. Always appreciated.",
     "shopGiftCards": "Shop Gift Cards",
-    "instagramTitle": "I Want Jewels On Instagram"
+    "instagramTitle": "I Want Jewels On Instagram",
+    "all": "All",
+    "loadCategoriesError": "Unable to load collections right now.",
+    "loadProductsError": "Unable to load the latest pieces right now.",
+    "loadCollectionError": "Unable to load this collection right now."
   },
   "products": {
     "title": "All Products",

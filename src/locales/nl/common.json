@@ -109,7 +109,15 @@
     "gold14k": "14 karaat goud",
     "sterlingSilver": "Sterling zilver",
     "labGrownDiamonds": "Lab-gekweekte diamanten",
-    "sweatTarnishProof": "Zweet- en aanslagbestendig"
+    "sweatTarnishProof": "Zweet- en aanslagbestendig",
+    "gold14kLine1": "14K",
+    "gold14kLine2": "Goud",
+    "sterlingSilverLine1": "925 Sterling",
+    "sterlingSilverLine2": "Zilver",
+    "labGrownDiamondsLine1": "Lab-Grown",
+    "labGrownDiamondsLine2": "Diamanten",
+    "sweatTarnishProofLine1": "Zweet &",
+    "sweatTarnishProofLine2": "Aanslagbestendig"
   },
   "newsletter": {
     "title": "Word lid van onze Insider-lijst met sieraden",
@@ -123,7 +131,7 @@
     "noProductsFound": "Geen producten gevonden voor {{category}}",
     "noProductsDescription": "Kies een ander tabblad of open de volledige productpagina om meer resultaten te bekijken.",
     "viewAllNew": "Alle nieuwe stukken bekijken",
-    "shopByCollection": "De persoonlijke map kan niet worden gebruikt als thuismap voor uw album. Gaarne een andere locatie kiezen.",
+    "shopByCollection": "Shop op collectie",
     "noProductsInCollection": "Nog geen producten in deze collectie.",
     "viewAllInCollection": "Alles bekijken in {{collection}}",
     "craftedForElegance": "Gemaakt voor moderne elegantie",
@@ -136,7 +144,11 @@
     "giftFeature4": "Ideaal voor elk speciaal moment",
     "giftFooterNote": "Simpel. Persoonlijk. Altijd gewaardeerd.",
     "shopGiftCards": "Cadeaubonnen",
-    "instagramTitle": "I Want Jewels op Instagram"
+    "instagramTitle": "I Want Jewels op Instagram",
+    "all": "Alles",
+    "loadCategoriesError": "Kan collecties momenteel niet laden.",
+    "loadProductsError": "Kan de nieuwste stukken momenteel niet laden.",
+    "loadCollectionError": "Kan deze collectie momenteel niet laden."
   },
   "products": {
     "title": "Alle producten",
@@ -219,8 +231,8 @@
     "earrings": "Oorbellen",
     "necklaces": "Halskettingen",
     "bracelet": "Armband",
-    "rings": "Hijsring",
-    "collection": "verzameling",
+    "rings": "Ringen",
+    "collection": "Collectie",
     "moreFrom": "Meer van {{collection}}",
     "youMayAlsoLike": "Deze vind je wellicht ook leuk",
     "scrollThumbnailsUp": "Blader door de miniaturen omhoog",
