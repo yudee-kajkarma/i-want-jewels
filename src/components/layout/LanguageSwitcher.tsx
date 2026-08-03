@@ -69,7 +69,18 @@ export default function LanguageSwitcher() {
             <Link
               key={locale}
               href={href}
-              onClick={() => setLocaleCookie(locale)}
+              prefetch={false}
+              onClick={(event) => {
+                if (event.defaultPrevented) return;
+                if (event.button !== 0) return;
+                if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                event.preventDefault();
+                setLocaleCookie(locale);
+                // Full document navigation guarantees the new cookie is used
+                // for the request and bypasses the Router Cache (which would
+                // otherwise serve a prefetch made under the previous locale).
+                window.location.assign(href);
+              }}
               className={`flex w-full items-center gap-2 px-3 py-2.5 text-left text-[13px] tracking-[0.02em] ${
                 isActive
                   ? 'bg-zinc-100 font-medium text-zinc-900'

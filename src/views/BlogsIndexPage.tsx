@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/lib/router";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/layout/Header";
@@ -15,7 +15,7 @@ function BlogCard({ link }: { link: (typeof blogLinks)[number] }) {
 
     return (
         <Link
-            href={link.href}
+            to={link.href}
             className="group relative flex flex-col overflow-hidden border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_18px_40px_rgba(194,110,143,0.12)]"
         >
             <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">

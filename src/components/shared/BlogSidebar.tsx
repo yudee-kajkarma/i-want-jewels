@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/lib/router";
 import { ArrowUpRight } from "lucide-react";
 import { blogLinks, type BlogLink } from "./blogList";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ const SidebarLink = ({ link }: { link: BlogLink }) => {
 
     return (
         <Link
-            href={link.href}
+            to={link.href}
             className="flex items-center justify-between gap-3 py-1 text-slate-700 transition-colors hover:text-[#bb923a] lg:py-1"
         >
             <div className="flex items-center gap-4">

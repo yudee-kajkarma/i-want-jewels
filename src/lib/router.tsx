@@ -8,6 +8,8 @@ import {
   useSearchParams as useNextSearchParams,
 } from 'next/navigation'
 import { useEffect, useMemo, type AnchorHTMLAttributes, type ReactNode } from 'react'
+import { fallbackLng } from '@/i18n/settings'
+import { getLocalizedPath, parseLocalePathname } from '@/i18n/routing'
 
 type NavigateOptions = {
   replace?: boolean
@@ -81,9 +83,34 @@ function buildTargetUrl(target: string, stateKey?: string | null): string {
   return `${url.pathname}${url.search}${url.hash}`
 }
 
+// Only rewrite internal, non-hash paths. Leave protocols, protocol-relative,
+// hash-only, mailto/tel, and already-locale-prefixed paths alone.
+function shouldPrefixLocale(to: string): boolean {
+  if (!to.startsWith('/')) return false
+  if (to.startsWith('//')) return false
+  return true
+}
+
+function withLocalePrefix(to: string, currentLocale: string): string {
+  if (!shouldPrefixLocale(to)) return to
+  const parsed = parseLocalePathname(to)
+  const basePath = parsed.locale ? parsed.pathnameWithoutLocale : to
+  return getLocalizedPath(currentLocale, basePath)
+}
+
+function useCurrentLocale(): string {
+  const pathname = usePathname() ?? '/'
+  return useMemo(() => {
+    const { locale } = parseLocalePathname(pathname)
+    return locale ?? fallbackLng
+  }, [pathname])
+}
+
 export function Link({ to, children, ...props }: LinkComponentProps) {
+  const currentLocale = useCurrentLocale()
+  const href = withLocalePrefix(to, currentLocale)
   return (
-    <NextLink href={to} {...props}>
+    <NextLink href={href} {...props}>
       {children}
     </NextLink>
   )
@@ -91,10 +118,12 @@ export function Link({ to, children, ...props }: LinkComponentProps) {
 
 export function useNavigate() {
   const router = useRouter()
+  const currentLocale = useCurrentLocale()
 
   return (to: string, options?: NavigateOptions) => {
     const stateKey = options?.state ? persistNavigationState(options.state) : null
-    const nextUrl = buildTargetUrl(to, stateKey)
+    const localizedTo = withLocalePrefix(to, currentLocale)
+    const nextUrl = buildTargetUrl(localizedTo, stateKey)
 
     if (options?.replace) {
       router.replace(nextUrl)
