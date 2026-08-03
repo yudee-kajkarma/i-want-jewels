@@ -17,9 +17,8 @@ export function getOptions(
   };
 }
 
-/** Locales for `[locale]` static generation (English uses root URLs, no `/en` prefix). */
+/** Locales for `[locale]` static generation. Empty = all locales render on-demand
+ *  via ISR (keeps the Amplify deploy artifact under the 220 MB limit). */
 export function getLocalizedStaticParams() {
-  return languages
-    .filter((l) => l !== fallbackLng)
-    .map((locale) => ({ locale }));
+  return [];
 }
