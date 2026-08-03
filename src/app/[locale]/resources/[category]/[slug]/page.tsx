@@ -7,19 +7,15 @@ import {
   getCategoryBySlug,
   getRelatedArticles,
 } from "@/data/resources";
-import { getLocalizedStaticParams } from "@/i18n/settings";
-import {
-  getAllResourceArticleParams,
-  loadResourceArticleContent,
-} from "@/content/loadResourceArticle";
+import { loadResourceArticleContent } from "@/content/loadResourceArticle";
 
 type PageParams = { locale: string; category: string; slug: string };
 
+export const dynamicParams = true;
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
-  const articles = await getAllResourceArticleParams();
-  return getLocalizedStaticParams().flatMap(({ locale }) =>
-    articles.map(({ category, slug }) => ({ locale, category, slug })),
-  );
+  return [];
 }
 
 export async function generateMetadata({

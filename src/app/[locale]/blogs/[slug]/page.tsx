@@ -2,16 +2,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { localizedAlternates } from "@/i18n/metadata";
 import BlogArticlePage from "@/views/BlogArticlePage";
-import { getLocalizedStaticParams } from "@/i18n/settings";
-import { getAllBlogSlugs, loadBlogPostContent } from "@/content/loadBlogPost";
+import { loadBlogPostContent } from "@/content/loadBlogPost";
 
 type PageParams = { locale: string; slug: string };
 
+export const dynamicParams = true;
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
-  const slugs = await getAllBlogSlugs();
-  return getLocalizedStaticParams().flatMap(({ locale }) =>
-    slugs.map((slug) => ({ locale, slug })),
-  );
+  return [];
 }
 
 export async function generateMetadata({
