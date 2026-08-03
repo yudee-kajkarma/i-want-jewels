@@ -1,7 +1,7 @@
 import { createInstance, type Resource } from "i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
 import { initReactI18next } from "react-i18next/initReactI18next";
-import { getOptions } from "./settings";
+import { fallbackLng, getOptions } from "./settings";
 
 export const namespaces = [
   "common",
@@ -35,10 +35,19 @@ export async function getTranslation(
     ? namespacesToLoad[0]
     : namespacesToLoad;
 
+  const fullStore = i18nextInstance.services.resourceStore.data as Resource;
+  const trimmedResources: Resource = {};
+  if (fullStore[lng]) trimmedResources[lng] = fullStore[lng];
+  if (lng !== fallbackLng && fullStore[fallbackLng]) {
+    trimmedResources[fallbackLng] = fullStore[fallbackLng];
+  }
+
   return {
     t: i18nextInstance.getFixedT(lng, primaryNs, options.keyPrefix),
     i18n: i18nextInstance,
-    resources: i18nextInstance.services.resourceStore.data as Resource,
+    resources: Object.keys(trimmedResources).length > 0
+      ? trimmedResources
+      : fullStore,
   };
 }
 
