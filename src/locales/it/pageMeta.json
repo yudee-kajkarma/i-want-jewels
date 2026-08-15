@@ -32,12 +32,12 @@
     "twitterDescription": "Centro assistenza in arrivo. Contatta il nostro team per supporto nel frattempo."
   },
   "products": {
-    "title": "Acquista Gioielli | I Want Jewels",
-    "description": "Sfoglia anelli, collane, orecchini e bracciali di I Want Jewels con contenuti prodotto renderizzati lato server per la SEO.",
-    "ogTitle": "Acquista Gioielli | I Want Jewels",
-    "ogDescription": "Sfoglia anelli, collane, orecchini e bracciali di I Want Jewels con contenuti prodotto renderizzati lato server per la SEO.",
-    "twitterTitle": "Acquista Gioielli | I Want Jewels",
-    "twitterDescription": "Sfoglia anelli, collane, orecchini e bracciali di I Want Jewels con contenuti prodotto renderizzati lato server per la SEO."
+    "title": "Acquista Gioielli in Diamanti da Laboratorio | I Want Jewels",
+    "description": "Scopri l'intera collezione I Want Jewels: orecchini, collane, anelli e bracciali in diamanti da laboratorio, realizzati in argento sterling 925 con placcatura oro 14kt.",
+    "ogTitle": "Acquista Gioielli in Diamanti da Laboratorio | I Want Jewels",
+    "ogDescription": "Scopri l'intera collezione I Want Jewels: orecchini, collane, anelli e bracciali in diamanti da laboratorio, realizzati in argento sterling 925 con placcatura oro 14kt.",
+    "twitterTitle": "Acquista Gioielli in Diamanti da Laboratorio | I Want Jewels",
+    "twitterDescription": "Scopri l'intera collezione I Want Jewels: orecchini, collane, anelli e bracciali in diamanti da laboratorio, realizzati in argento sterling 925 con placcatura oro 14kt."
   },
   "blogs": {
     "title": "Blog — Guide Bracciali & Collane Tennis | I Want Jewels",
@@ -105,10 +105,10 @@
   },
   "productDetailFallback": {
     "title": "Dettagli Prodotto | I Want Jewels",
-    "description": "Dettagli prodotto gioielli renderizzati lato server da I Want Jewels.",
+    "description": "Scopri i gioielli in diamanti da laboratorio di I Want Jewels, realizzati in argento sterling 925 con placcatura oro 14kt.",
     "ogTitle": "Dettagli Prodotto | I Want Jewels",
-    "ogDescription": "Dettagli prodotto gioielli renderizzati lato server da I Want Jewels.",
+    "ogDescription": "Scopri i gioielli in diamanti da laboratorio di I Want Jewels, realizzati in argento sterling 925 con placcatura oro 14kt.",
     "twitterTitle": "Dettagli Prodotto | I Want Jewels",
-    "twitterDescription": "Dettagli prodotto gioielli renderizzati lato server da I Want Jewels."
+    "twitterDescription": "Scopri i gioielli in diamanti da laboratorio di I Want Jewels, realizzati in argento sterling 925 con placcatura oro 14kt."
   }
 }

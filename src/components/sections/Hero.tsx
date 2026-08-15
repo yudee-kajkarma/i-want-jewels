@@ -10,6 +10,10 @@ export default function Hero() {
 
     return (
         <section className="relative w-full overflow-hidden bg-white px-5 lg:px-20">
+            {/* The hero artwork carries the headline visually, so the page's H1
+                lives here as text for crawlers and screen readers. */}
+            <h1 className="sr-only">{t("hero.heading")}</h1>
+
             <img
                 src={shopPageBanner.src}
                 alt={t("hero.shopCollectionAlt")}

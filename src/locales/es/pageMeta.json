@@ -32,12 +32,12 @@
     "twitterDescription": "Centro de ayuda próximamente. Contacta con nuestro equipo para soporte mientras tanto."
   },
   "products": {
-    "title": "Comprar Joyería | I Want Jewels",
-    "description": "Explora anillos, collares, pendientes y pulseras de I Want Jewels con contenido de producto renderizado en el servidor para SEO.",
-    "ogTitle": "Comprar Joyería | I Want Jewels",
-    "ogDescription": "Explora anillos, collares, pendientes y pulseras de I Want Jewels con contenido de producto renderizado en el servidor para SEO.",
-    "twitterTitle": "Comprar Joyería | I Want Jewels",
-    "twitterDescription": "Explora anillos, collares, pendientes y pulseras de I Want Jewels con contenido de producto renderizado en el servidor para SEO."
+    "title": "Comprar Joyería con Diamantes de Laboratorio | I Want Jewels",
+    "description": "Explora toda la colección de I Want Jewels: pendientes, collares, anillos y pulseras con diamantes de laboratorio, en plata de ley 925 con baño de oro de 14kt.",
+    "ogTitle": "Comprar Joyería con Diamantes de Laboratorio | I Want Jewels",
+    "ogDescription": "Explora toda la colección de I Want Jewels: pendientes, collares, anillos y pulseras con diamantes de laboratorio, en plata de ley 925 con baño de oro de 14kt.",
+    "twitterTitle": "Comprar Joyería con Diamantes de Laboratorio | I Want Jewels",
+    "twitterDescription": "Explora toda la colección de I Want Jewels: pendientes, collares, anillos y pulseras con diamantes de laboratorio, en plata de ley 925 con baño de oro de 14kt."
   },
   "blogs": {
     "title": "Blog — Guías de Pulseras y Collares Tennis | I Want Jewels",
@@ -105,10 +105,10 @@
   },
   "productDetailFallback": {
     "title": "Detalles del Producto | I Want Jewels",
-    "description": "Detalles de producto de joyería renderizados en el servidor por I Want Jewels.",
+    "description": "Descubre la joyería con diamantes de laboratorio de I Want Jewels, elaborada en plata de ley 925 con baño de oro de 14kt.",
     "ogTitle": "Detalles del Producto | I Want Jewels",
-    "ogDescription": "Detalles de producto de joyería renderizados en el servidor por I Want Jewels.",
+    "ogDescription": "Descubre la joyería con diamantes de laboratorio de I Want Jewels, elaborada en plata de ley 925 con baño de oro de 14kt.",
     "twitterTitle": "Detalles del Producto | I Want Jewels",
-    "twitterDescription": "Detalles de producto de joyería renderizados en el servidor por I Want Jewels."
+    "twitterDescription": "Descubre la joyería con diamantes de laboratorio de I Want Jewels, elaborada en plata de ley 925 con baño de oro de 14kt."
   }
 }

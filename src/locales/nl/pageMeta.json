@@ -32,12 +32,12 @@
     "twitterDescription": "Helpcentrum komt binnenkort. Neem in de tussentijd contact op met ons team voor ondersteuning."
   },
   "products": {
-    "title": "Shop Sieraden | I Want Jewels",
-    "description": "Blader door ringen, kettingen, oorbellen en armbanden van I Want Jewels met server-side productcontent voor SEO.",
-    "ogTitle": "Shop Sieraden | I Want Jewels",
-    "ogDescription": "Blader door ringen, kettingen, oorbellen en armbanden van I Want Jewels met server-side productcontent voor SEO.",
-    "twitterTitle": "Shop Sieraden | I Want Jewels",
-    "twitterDescription": "Blader door ringen, kettingen, oorbellen en armbanden van I Want Jewels met server-side productcontent voor SEO."
+    "title": "Shop Lab-Grown Diamanten Sieraden | I Want Jewels",
+    "description": "Bekijk de volledige collectie van I Want Jewels: lab-grown diamanten oorbellen, kettingen, ringen en armbanden in 925 sterling zilver met 14kt gouden plating.",
+    "ogTitle": "Shop Lab-Grown Diamanten Sieraden | I Want Jewels",
+    "ogDescription": "Bekijk de volledige collectie van I Want Jewels: lab-grown diamanten oorbellen, kettingen, ringen en armbanden in 925 sterling zilver met 14kt gouden plating.",
+    "twitterTitle": "Shop Lab-Grown Diamanten Sieraden | I Want Jewels",
+    "twitterDescription": "Bekijk de volledige collectie van I Want Jewels: lab-grown diamanten oorbellen, kettingen, ringen en armbanden in 925 sterling zilver met 14kt gouden plating."
   },
   "blogs": {
     "title": "Blog — Tennis Armband & Ketting Gidsen | I Want Jewels",
@@ -105,10 +105,10 @@
   },
   "productDetailFallback": {
     "title": "Productdetails | I Want Jewels",
-    "description": "Server-side sieraden productdetails van I Want Jewels.",
+    "description": "Ontdek lab-grown diamanten sieraden van I Want Jewels, vervaardigd in 925 sterling zilver met 14kt gouden plating.",
     "ogTitle": "Productdetails | I Want Jewels",
-    "ogDescription": "Server-side sieraden productdetails van I Want Jewels.",
+    "ogDescription": "Ontdek lab-grown diamanten sieraden van I Want Jewels, vervaardigd in 925 sterling zilver met 14kt gouden plating.",
     "twitterTitle": "Productdetails | I Want Jewels",
-    "twitterDescription": "Server-side sieraden productdetails van I Want Jewels."
+    "twitterDescription": "Ontdek lab-grown diamanten sieraden van I Want Jewels, vervaardigd in 925 sterling zilver met 14kt gouden plating."
   }
 }

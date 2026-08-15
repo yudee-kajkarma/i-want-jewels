@@ -32,12 +32,12 @@
     "twitterDescription": "Centre d'aide bientôt disponible. Contactez notre équipe pour obtenir de l'aide en attendant."
   },
   "products": {
-    "title": "Acheter des Bijoux | I Want Jewels",
-    "description": "Parcourez bagues, colliers, boucles d'oreilles et bracelets de I Want Jewels avec du contenu produit rendu côté serveur pour le SEO.",
-    "ogTitle": "Acheter des Bijoux | I Want Jewels",
-    "ogDescription": "Parcourez bagues, colliers, boucles d'oreilles et bracelets de I Want Jewels avec du contenu produit rendu côté serveur pour le SEO.",
-    "twitterTitle": "Acheter des Bijoux | I Want Jewels",
-    "twitterDescription": "Parcourez bagues, colliers, boucles d'oreilles et bracelets de I Want Jewels avec du contenu produit rendu côté serveur pour le SEO."
+    "title": "Acheter des Bijoux en Diamants de Laboratoire | I Want Jewels",
+    "description": "Découvrez la collection I Want Jewels : boucles d'oreilles, colliers, bagues et bracelets en diamants de laboratoire, en argent sterling 925 avec placage or 14 carats.",
+    "ogTitle": "Acheter des Bijoux en Diamants de Laboratoire | I Want Jewels",
+    "ogDescription": "Découvrez la collection I Want Jewels : boucles d'oreilles, colliers, bagues et bracelets en diamants de laboratoire, en argent sterling 925 avec placage or 14 carats.",
+    "twitterTitle": "Acheter des Bijoux en Diamants de Laboratoire | I Want Jewels",
+    "twitterDescription": "Découvrez la collection I Want Jewels : boucles d'oreilles, colliers, bagues et bracelets en diamants de laboratoire, en argent sterling 925 avec placage or 14 carats."
   },
   "blogs": {
     "title": "Blog — Guides Bracelets & Colliers Tennis | I Want Jewels",
@@ -105,10 +105,10 @@
   },
   "productDetailFallback": {
     "title": "Détails du Produit | I Want Jewels",
-    "description": "Détails produit bijoux rendus côté serveur par I Want Jewels.",
+    "description": "Découvrez les bijoux en diamants de laboratoire d'I Want Jewels, fabriqués en argent sterling 925 avec placage or 14 carats.",
     "ogTitle": "Détails du Produit | I Want Jewels",
-    "ogDescription": "Détails produit bijoux rendus côté serveur par I Want Jewels.",
+    "ogDescription": "Découvrez les bijoux en diamants de laboratoire d'I Want Jewels, fabriqués en argent sterling 925 avec placage or 14 carats.",
     "twitterTitle": "Détails du Produit | I Want Jewels",
-    "twitterDescription": "Détails produit bijoux rendus côté serveur par I Want Jewels."
+    "twitterDescription": "Découvrez les bijoux en diamants de laboratoire d'I Want Jewels, fabriqués en argent sterling 925 avec placage or 14 carats."
   }
 }

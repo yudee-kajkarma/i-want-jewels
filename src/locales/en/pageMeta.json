@@ -32,12 +32,12 @@
     "twitterDescription": "Help center is coming soon. Contact our team for support in the meantime."
   },
   "products": {
-    "title": "Shop Jewellery | I Want Jewels",
-    "description": "Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO.",
-    "ogTitle": "Shop Jewellery | I Want Jewels",
-    "ogDescription": "Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO.",
-    "twitterTitle": "Shop Jewellery | I Want Jewels",
-    "twitterDescription": "Browse rings, necklaces, earrings, and bracelets from I Want Jewels with server-rendered product content built for SEO."
+    "title": "Shop Lab-Grown Diamond Jewellery | I Want Jewels",
+    "description": "Browse the full I Want Jewels collection of lab-grown diamond earrings, necklaces, rings and bracelets, crafted in 925 sterling silver with 14kt gold plating.",
+    "ogTitle": "Shop Lab-Grown Diamond Jewellery | I Want Jewels",
+    "ogDescription": "Browse the full I Want Jewels collection of lab-grown diamond earrings, necklaces, rings and bracelets, crafted in 925 sterling silver with 14kt gold plating.",
+    "twitterTitle": "Shop Lab-Grown Diamond Jewellery | I Want Jewels",
+    "twitterDescription": "Browse the full I Want Jewels collection of lab-grown diamond earrings, necklaces, rings and bracelets, crafted in 925 sterling silver with 14kt gold plating."
   },
   "blogs": {
     "title": "Blog — Tennis Bracelet & Necklace Guides | I Want Jewels",
@@ -105,10 +105,10 @@
   },
   "productDetailFallback": {
     "title": "Product Details | I Want Jewels",
-    "description": "Server-rendered jewellery product details from I Want Jewels.",
+    "description": "Explore lab-grown diamond jewellery from I Want Jewels, crafted in 925 sterling silver with 14kt gold plating.",
     "ogTitle": "Product Details | I Want Jewels",
-    "ogDescription": "Server-rendered jewellery product details from I Want Jewels.",
+    "ogDescription": "Explore lab-grown diamond jewellery from I Want Jewels, crafted in 925 sterling silver with 14kt gold plating.",
     "twitterTitle": "Product Details | I Want Jewels",
-    "twitterDescription": "Server-rendered jewellery product details from I Want Jewels."
+    "twitterDescription": "Explore lab-grown diamond jewellery from I Want Jewels, crafted in 925 sterling silver with 14kt gold plating."
   }
 }
