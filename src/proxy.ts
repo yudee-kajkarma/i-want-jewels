@@ -72,8 +72,15 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(new URL(`${internalPath}${search}`, request.url))
   }
 
+  // 307, not 308: this redirect is derived from the request (cookie /
+  // Accept-Language), so it is per-visitor and must never be cached. A 308 is
+  // stored permanently by the browser, which would pin a visitor to whichever
+  // locale they were first negotiated into — the language switcher could set
+  // the cookie and navigate, but the cached redirect would fire before the
+  // request ever reached the server. The legacy-English redirect above is a
+  // genuinely permanent URL move and correctly stays 308.
   const localizedPath = getLocalizedPath(detectedLocale, pathnameWithoutLocale)
-  return NextResponse.redirect(new URL(`${localizedPath}${search}`, request.url), 308)
+  return NextResponse.redirect(new URL(`${localizedPath}${search}`, request.url), 307)
 }
 
 export const config = {
