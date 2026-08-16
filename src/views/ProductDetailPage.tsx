@@ -1092,8 +1092,8 @@ export default function ProductDetailPage({
                       }`}
                       aria-label={
                         wishlistItem
-                          ? t("removeFromWishlist")
-                          : t("addToWishlist")
+                          ? t("common.removeFromWishlist")
+                          : t("common.addToWishlist")
                       }
                     >
                       <Heart
