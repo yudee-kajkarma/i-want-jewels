@@ -253,7 +253,24 @@
     "closeSizeGuide": "Größentabelle schließen",
     "paymentCard": "Karte",
     "loadError": "Dieses Produkt kann derzeit nicht geladen werden.",
-    "customerReview": "Kundenbewertung"
+    "customerReview": "Kundenbewertung",
+    "feedbackChooseSizeCart": "Bitte wählen Sie eine Größe, bevor Sie den Artikel in den Warenkorb legen.",
+    "feedbackAddToCartError": "Dieser Artikel kann derzeit nicht in den Warenkorb gelegt werden.",
+    "feedbackChooseSizeBuy": "Bitte wählen Sie eine Größe, bevor Sie kaufen.",
+    "feedbackWishlistRemoved": "Artikel von der Wunschliste entfernt.",
+    "feedbackWishlistSaved": "Artikel zur Wunschliste hinzugefügt.",
+    "feedbackWishlistError": "Die Wunschliste kann derzeit nicht aktualisiert werden.",
+    "reviewCommentRequired": "Ein Bewertungstext ist erforderlich.",
+    "reviewUpdated": "Bewertung erfolgreich aktualisiert.",
+    "reviewAdded": "Bewertung erfolgreich hinzugefügt.",
+    "reviewSaveError": "Die Bewertung kann derzeit nicht gespeichert werden.",
+    "reviewDeleted": "Bewertung gelöscht. Sie können jetzt eine neue Bewertung hinzufügen.",
+    "reviewDeleteError": "Die Bewertung kann derzeit nicht gelöscht werden.",
+    "giftRecipientEmailPlaceholder": "E-Mail des Empfängers (optional)",
+    "giftRecipientNamePlaceholder": "Name des Empfängers (optional)",
+    "giftSenderNamePlaceholder": "Ihr Name (optional)",
+    "giftMessagePlaceholder": "Persönliche Nachricht (optional)",
+    "reviewCommentPlaceholder": "Teilen Sie Ihre Erfahrung mit diesem Produkt."
   },
   "exploreOurStore": {
     "title": "Entdecken Sie unseren Shop",
@@ -354,7 +371,17 @@
     "viewOrders": "BESTELLUNGEN ANZEIGEN",
     "tryAgain": "KASSE ERNEUT VERSUCHEN",
     "selectShippingAddressError": "Bitte wählen Sie eine Lieferadresse aus, bevor Sie Ihre Bestellung aufgeben.",
-    "placeOrderError": "Diese Bestellung kann derzeit nicht aufgegeben werden. Bitte versuchen Sie es erneut."
+    "placeOrderError": "Diese Bestellung kann derzeit nicht aufgegeben werden. Bitte versuchen Sie es erneut.",
+    "cashOnDelivery": "Zahlung bei Lieferung",
+    "giftCardNotAllowed": "Eine Geschenkkarte kann nicht zur Bezahlung einer Bestellung verwendet werden, die Geschenkkarten enthält.",
+    "giftCardApplied": "Angewendet — {{amount}} verfügbar.",
+    "giftCardCannotApply": "Diese Geschenkkarte kann nicht angewendet werden.",
+    "giftCardValidateError": "Diese Geschenkkarte kann derzeit nicht überprüft werden.",
+    "addressLoadError": "Ihre Adressen konnten nicht geladen werden. Bitte aktualisieren Sie die Seite und versuchen Sie es erneut.",
+    "addressIncomplete": "Bitte füllen Sie alle Adressfelder aus, bevor Sie speichern.",
+    "postalCodeInvalid": "Bitte geben Sie eine gültige Postleitzahl ein.",
+    "addressSaveError": "Diese Adresse kann derzeit nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+    "syncError": "Der Bestellstatus wurde aktualisiert, aber der Warenkorb muss noch einmal aktualisiert werden."
   },
   "auth": {
     "loginTitle": "Anmelden",
@@ -446,7 +473,12 @@
     "resetPasswordBtn": "PASSWORT ZURÜCKSETZEN",
     "backToSignIn": "Zurück zur Anmeldung?",
     "loginHere": "Hier anmelden",
-    "sessionExpired": "Ihre Sitzung ist abgelaufen. Sie wurden abgemeldet."
+    "sessionExpired": "Ihre Sitzung ist abgelaufen. Sie wurden abgemeldet.",
+    "shellFeatureSecureAccess": "Sicherer Kontozugang",
+    "shellFeatureQuickOtp": "Schnelle OTP-Verifizierung",
+    "shellFeatureSavedLocally": "Nach dem Login lokal gespeichert",
+    "shellContinueShopping": "Weiter einkaufen bei",
+    "shellAllProducts": "allen Produkten"
   },
   "account": {
     "orders": {

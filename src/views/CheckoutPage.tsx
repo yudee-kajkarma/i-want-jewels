@@ -85,7 +85,7 @@ function buildReturnUrl(
 }
 
 export default function CheckoutPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useAppDispatch();
@@ -180,9 +180,7 @@ export default function CheckoutPage() {
     const code = giftCodeInput.trim();
     if (!code) return;
     if (hasGiftCardItems) {
-      setGiftCheckMessage(
-        "A gift card cannot be used to pay for an order that contains gift cards.",
-      );
+      setGiftCheckMessage(t("checkout.giftCardNotAllowed"));
       return;
     }
     setIsCheckingGift(true);
@@ -192,12 +190,12 @@ export default function CheckoutPage() {
       setGiftValidation(result);
       setGiftCheckMessage(
         result.valid
-          ? `Applied — ${formatPrice(result.redeemableAmount ?? 0, currency)} available.`
-          : result.reason || "This gift card cannot be applied.",
+          ? t("checkout.giftCardApplied", { amount: formatPrice(result.redeemableAmount ?? 0, currency) })
+          : result.reason || t("checkout.giftCardCannotApply"),
       );
     } catch {
       setGiftValidation(null);
-      setGiftCheckMessage("Unable to validate this gift card right now.");
+      setGiftCheckMessage(t("checkout.giftCardValidateError"));
     } finally {
       setIsCheckingGift(false);
     }
@@ -248,9 +246,7 @@ export default function CheckoutPage() {
           return;
         }
 
-        setAddressError(
-          "Unable to load your addresses. Please refresh and try again.",
-        );
+        setAddressError(i18n.t("checkout.addressLoadError"));
       } finally {
         if (isMounted) {
           setIsAddressLoading(false);
@@ -263,7 +259,8 @@ export default function CheckoutPage() {
     return () => {
       isMounted = false;
     };
-  }, []);
+    // i18n is a stable instance, so this effect still runs once.
+  }, [i18n]);
 
   const selectedAddress = useMemo(
     () => addresses.find((address) => address.id === selectedAddressId) ?? null,
@@ -339,12 +336,12 @@ export default function CheckoutPage() {
       !trimmedPayload.postalCode ||
       !trimmedPayload.country
     ) {
-      setAddressError("Please complete all address fields before saving.");
+      setAddressError(t("checkout.addressIncomplete"));
       return;
     }
 
     if (!isValidPostalCode(trimmedPayload.postalCode, trimmedPayload.country)) {
-      setPostalCodeError("Please enter a valid postal code.");
+      setPostalCodeError(t("checkout.postalCodeInvalid"));
       return;
     }
 
@@ -362,9 +359,7 @@ export default function CheckoutPage() {
 
       setIsAddressFormOpen(false);
     } catch {
-      setAddressError(
-        "Unable to save this address right now. Please try again.",
-      );
+      setAddressError(t("checkout.addressSaveError"));
     } finally {
       setIsAddressSaving(false);
     }
@@ -873,7 +868,7 @@ export default function CheckoutPage() {
                             className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
                           />
                           <div>
-                            <p className="font-bold text-[#17110d]">Cash on delivery</p>
+                            <p className="font-bold text-[#17110d]">{t("checkout.cashOnDelivery")}</p>
                             <p className="mt-1 text-sm leading-6 text-zinc-500">
                               {giftValidation?.valid
                                 ? 'Not available — a gift card discount has been applied.'

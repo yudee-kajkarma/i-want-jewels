@@ -253,7 +253,24 @@
     "closeSizeGuide": "Close size guide",
     "paymentCard": "Card",
     "loadError": "Unable to load this product right now.",
-    "customerReview": "Customer Review"
+    "customerReview": "Customer Review",
+    "feedbackChooseSizeCart": "Please choose a size before adding to cart.",
+    "feedbackAddToCartError": "Unable to add this item to cart right now.",
+    "feedbackChooseSizeBuy": "Please choose a size before buying.",
+    "feedbackWishlistRemoved": "Item removed from wishlist.",
+    "feedbackWishlistSaved": "Item saved to wishlist.",
+    "feedbackWishlistError": "Unable to update wishlist right now.",
+    "reviewCommentRequired": "Review comment is required.",
+    "reviewUpdated": "Review updated successfully.",
+    "reviewAdded": "Review added successfully.",
+    "reviewSaveError": "Unable to save review right now.",
+    "reviewDeleted": "Review deleted successfully. You can add a new review now.",
+    "reviewDeleteError": "Unable to delete review right now.",
+    "giftRecipientEmailPlaceholder": "Recipient email (optional)",
+    "giftRecipientNamePlaceholder": "Recipient name (optional)",
+    "giftSenderNamePlaceholder": "Your name (optional)",
+    "giftMessagePlaceholder": "Personal message (optional)",
+    "reviewCommentPlaceholder": "Share your experience with this product."
   },
   "exploreOurStore": {
     "title": "Explore Our Store",
@@ -354,7 +371,17 @@
     "viewOrders": "VIEW ORDERS",
     "tryAgain": "TRY CHECKOUT AGAIN",
     "selectShippingAddressError": "Please select a shipping address before placing your order.",
-    "placeOrderError": "Unable to place this order right now. Please try again."
+    "placeOrderError": "Unable to place this order right now. Please try again.",
+    "cashOnDelivery": "Cash on delivery",
+    "giftCardNotAllowed": "A gift card cannot be used to pay for an order that contains gift cards.",
+    "giftCardApplied": "Applied — {{amount}} available.",
+    "giftCardCannotApply": "This gift card cannot be applied.",
+    "giftCardValidateError": "Unable to validate this gift card right now.",
+    "addressLoadError": "Unable to load your addresses. Please refresh and try again.",
+    "addressIncomplete": "Please complete all address fields before saving.",
+    "postalCodeInvalid": "Please enter a valid postal code.",
+    "addressSaveError": "Unable to save this address right now. Please try again.",
+    "syncError": "Order status was updated, but cart synchronization needs another refresh."
   },
   "auth": {
     "loginTitle": "Login",
@@ -446,7 +473,12 @@
     "resetting": "RESETTING...",
     "resetPasswordBtn": "RESET PASSWORD",
     "backToSignIn": "Back to sign in?",
-    "loginHere": "Login here"
+    "loginHere": "Login here",
+    "shellFeatureSecureAccess": "Secure account access",
+    "shellFeatureQuickOtp": "Quick OTP verification",
+    "shellFeatureSavedLocally": "Saved locally after success",
+    "shellContinueShopping": "Continue shopping from",
+    "shellAllProducts": "all products"
   },
   "account": {
     "orders": {

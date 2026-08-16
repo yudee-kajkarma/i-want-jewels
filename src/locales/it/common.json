@@ -258,7 +258,24 @@
     "closeSizeGuide": "Chiudi guida alle misure",
     "paymentCard": "Carta",
     "loadError": "Impossibile caricare questo prodotto al momento.",
-    "customerReview": "Recensione cliente"
+    "customerReview": "Recensione cliente",
+    "feedbackChooseSizeCart": "Scegli una taglia prima di aggiungere al carrello.",
+    "feedbackAddToCartError": "Impossibile aggiungere questo articolo al carrello in questo momento.",
+    "feedbackChooseSizeBuy": "Scegli una taglia prima di acquistare.",
+    "feedbackWishlistRemoved": "Articolo rimosso dalla lista dei desideri.",
+    "feedbackWishlistSaved": "Articolo salvato nella lista dei desideri.",
+    "feedbackWishlistError": "Impossibile aggiornare la lista dei desideri in questo momento.",
+    "reviewCommentRequired": "Il commento della recensione è obbligatorio.",
+    "reviewUpdated": "Recensione aggiornata con successo.",
+    "reviewAdded": "Recensione aggiunta con successo.",
+    "reviewSaveError": "Impossibile salvare la recensione in questo momento.",
+    "reviewDeleted": "Recensione eliminata. Ora puoi aggiungerne una nuova.",
+    "reviewDeleteError": "Impossibile eliminare la recensione in questo momento.",
+    "giftRecipientEmailPlaceholder": "Email del destinatario (facoltativo)",
+    "giftRecipientNamePlaceholder": "Nome del destinatario (facoltativo)",
+    "giftSenderNamePlaceholder": "Il tuo nome (facoltativo)",
+    "giftMessagePlaceholder": "Messaggio personale (facoltativo)",
+    "reviewCommentPlaceholder": "Condividi la tua esperienza con questo prodotto."
   },
   "exploreOurStore": {
     "title": "Esplora il Nostro Negozio",
@@ -359,7 +376,17 @@
     "viewOrders": "VEDI ORDINI",
     "tryAgain": "RIPROVA IL PAGAMENTO",
     "selectShippingAddressError": "Seleziona un indirizzo di spedizione prima di effettuare l'ordine.",
-    "placeOrderError": "Impossibile effettuare questo ordine al momento. Riprova."
+    "placeOrderError": "Impossibile effettuare questo ordine al momento. Riprova.",
+    "cashOnDelivery": "Pagamento alla consegna",
+    "giftCardNotAllowed": "Un buono regalo non può essere usato per pagare un ordine che contiene buoni regalo.",
+    "giftCardApplied": "Applicato — {{amount}} disponibile.",
+    "giftCardCannotApply": "Questo buono regalo non può essere applicato.",
+    "giftCardValidateError": "Impossibile verificare questo buono regalo in questo momento.",
+    "addressLoadError": "Impossibile caricare i tuoi indirizzi. Aggiorna la pagina e riprova.",
+    "addressIncomplete": "Compila tutti i campi dell'indirizzo prima di salvare.",
+    "postalCodeInvalid": "Inserisci un codice postale valido.",
+    "addressSaveError": "Impossibile salvare questo indirizzo in questo momento. Riprova.",
+    "syncError": "Lo stato dell'ordine è stato aggiornato, ma il carrello richiede un altro aggiornamento."
   },
   "auth": {
     "loginTitle": "Accedi",
@@ -451,7 +478,12 @@
     "resetPasswordBtn": "REIMPOSTA PASSWORD",
     "backToSignIn": "Torna all'accesso?",
     "loginHere": "Accedi qui",
-    "sessionExpired": "La tua sessione è scaduta. Sei stato disconnesso."
+    "sessionExpired": "La tua sessione è scaduta. Sei stato disconnesso.",
+    "shellFeatureSecureAccess": "Accesso sicuro all'account",
+    "shellFeatureQuickOtp": "Verifica OTP rapida",
+    "shellFeatureSavedLocally": "Salvato localmente dopo l'accesso",
+    "shellContinueShopping": "Continua i tuoi acquisti da",
+    "shellAllProducts": "tutti i prodotti"
   },
   "account": {
     "orders": {

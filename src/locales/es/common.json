@@ -258,7 +258,24 @@
     "closeSizeGuide": "Cerrar guía de tallas",
     "paymentCard": "Tarjeta",
     "loadError": "No se puede cargar este producto en este momento.",
-    "customerReview": "Reseña del cliente"
+    "customerReview": "Reseña del cliente",
+    "feedbackChooseSizeCart": "Elige una talla antes de añadir al carrito.",
+    "feedbackAddToCartError": "No se pudo añadir este artículo al carrito en este momento.",
+    "feedbackChooseSizeBuy": "Elige una talla antes de comprar.",
+    "feedbackWishlistRemoved": "Artículo eliminado de la lista de deseos.",
+    "feedbackWishlistSaved": "Artículo guardado en la lista de deseos.",
+    "feedbackWishlistError": "No se pudo actualizar la lista de deseos en este momento.",
+    "reviewCommentRequired": "El comentario de la reseña es obligatorio.",
+    "reviewUpdated": "Reseña actualizada correctamente.",
+    "reviewAdded": "Reseña añadida correctamente.",
+    "reviewSaveError": "No se pudo guardar la reseña en este momento.",
+    "reviewDeleted": "Reseña eliminada. Ahora puedes añadir una nueva.",
+    "reviewDeleteError": "No se pudo eliminar la reseña en este momento.",
+    "giftRecipientEmailPlaceholder": "Correo del destinatario (opcional)",
+    "giftRecipientNamePlaceholder": "Nombre del destinatario (opcional)",
+    "giftSenderNamePlaceholder": "Tu nombre (opcional)",
+    "giftMessagePlaceholder": "Mensaje personal (opcional)",
+    "reviewCommentPlaceholder": "Comparte tu experiencia con este producto."
   },
   "exploreOurStore": {
     "title": "Explora Nuestra Tienda",
@@ -359,7 +376,17 @@
     "viewOrders": "VER PEDIDOS",
     "tryAgain": "INTENTAR EL PAGO DE NUEVO",
     "selectShippingAddressError": "Selecciona una dirección de envío antes de realizar tu pedido.",
-    "placeOrderError": "No se puede realizar este pedido en este momento. Inténtalo de nuevo."
+    "placeOrderError": "No se puede realizar este pedido en este momento. Inténtalo de nuevo.",
+    "cashOnDelivery": "Pago contra entrega",
+    "giftCardNotAllowed": "Una tarjeta de regalo no se puede usar para pagar un pedido que contiene tarjetas de regalo.",
+    "giftCardApplied": "Aplicada — {{amount}} disponible.",
+    "giftCardCannotApply": "Esta tarjeta de regalo no se puede aplicar.",
+    "giftCardValidateError": "No se pudo validar esta tarjeta de regalo en este momento.",
+    "addressLoadError": "No se pudieron cargar tus direcciones. Actualiza la página e inténtalo de nuevo.",
+    "addressIncomplete": "Completa todos los campos de la dirección antes de guardar.",
+    "postalCodeInvalid": "Por favor ingresa un código postal válido.",
+    "addressSaveError": "No se pudo guardar esta dirección en este momento. Por favor intenta de nuevo.",
+    "syncError": "El estado del pedido se actualizó, pero el carrito necesita otra actualización."
   },
   "auth": {
     "loginTitle": "Iniciar Sesión",
@@ -451,7 +478,12 @@
     "resetPasswordBtn": "RESTABLECER CONTRASEÑA",
     "backToSignIn": "¿Volver a iniciar sesión?",
     "loginHere": "Inicia sesión aquí",
-    "sessionExpired": "Tu sesión ha expirado. Has sido desconectado."
+    "sessionExpired": "Tu sesión ha expirado. Has sido desconectado.",
+    "shellFeatureSecureAccess": "Acceso seguro a la cuenta",
+    "shellFeatureQuickOtp": "Verificación OTP rápida",
+    "shellFeatureSavedLocally": "Guardado localmente tras el acceso",
+    "shellContinueShopping": "Continúa comprando desde",
+    "shellAllProducts": "todos los productos"
   },
   "account": {
     "orders": {

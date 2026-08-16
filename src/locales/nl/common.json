@@ -253,7 +253,24 @@
     "closeSizeGuide": "Maattabel sluiten",
     "paymentCard": "Kaart",
     "loadError": "Kan dit product momenteel niet laden.",
-    "customerReview": "Klantrecensie"
+    "customerReview": "Klantrecensie",
+    "feedbackChooseSizeCart": "Kies een maat voordat u het aan de winkelwagen toevoegt.",
+    "feedbackAddToCartError": "Kan dit artikel momenteel niet aan de winkelwagen toevoegen.",
+    "feedbackChooseSizeBuy": "Kies een maat voordat u koopt.",
+    "feedbackWishlistRemoved": "Artikel verwijderd uit verlanglijst.",
+    "feedbackWishlistSaved": "Artikel opgeslagen in verlanglijst.",
+    "feedbackWishlistError": "Kan de verlanglijst momenteel niet bijwerken.",
+    "reviewCommentRequired": "Een beoordelingstekst is verplicht.",
+    "reviewUpdated": "Beoordeling bijgewerkt.",
+    "reviewAdded": "Beoordeling toegevoegd.",
+    "reviewSaveError": "Kan de beoordeling momenteel niet opslaan.",
+    "reviewDeleted": "Beoordeling verwijderd. U kunt nu een nieuwe beoordeling toevoegen.",
+    "reviewDeleteError": "Kan de beoordeling momenteel niet verwijderen.",
+    "giftRecipientEmailPlaceholder": "E-mailadres ontvanger (optioneel)",
+    "giftRecipientNamePlaceholder": "Naam ontvanger (optioneel)",
+    "giftSenderNamePlaceholder": "Uw naam (optioneel)",
+    "giftMessagePlaceholder": "Persoonlijk bericht (optioneel)",
+    "reviewCommentPlaceholder": "Deel uw ervaring met dit product."
   },
   "exploreOurStore": {
     "title": "Ontdek onze winkel",
@@ -354,7 +371,17 @@
     "viewOrders": "BEKIJK BESTELLINGEN",
     "tryAgain": "PROBEER OPNIEUW AFREKENEN",
     "selectShippingAddressError": "Selecteer een verzendadres voordat u uw bestelling plaatst.",
-    "placeOrderError": "Kan deze bestelling momenteel niet plaatsen. Probeer het opnieuw."
+    "placeOrderError": "Kan deze bestelling momenteel niet plaatsen. Probeer het opnieuw.",
+    "cashOnDelivery": "Betaling bij levering",
+    "giftCardNotAllowed": "Een cadeaubon kan niet worden gebruikt om een bestelling met cadeaubonnen te betalen.",
+    "giftCardApplied": "Toegepast — {{amount}} beschikbaar.",
+    "giftCardCannotApply": "Deze cadeaubon kan niet worden toegepast.",
+    "giftCardValidateError": "Kan deze cadeaubon momenteel niet valideren.",
+    "addressLoadError": "Kan uw adressen niet laden. Vernieuw de pagina en probeer het opnieuw.",
+    "addressIncomplete": "Vul alle adresvelden in voordat u opslaat.",
+    "postalCodeInvalid": "Voer een geldige postcode in.",
+    "addressSaveError": "Kan dit adres momenteel niet opslaan. Probeer het opnieuw.",
+    "syncError": "De bestelstatus is bijgewerkt, maar de winkelwagen moet nog een keer worden vernieuwd."
   },
   "auth": {
     "loginTitle": "Inloggen",
@@ -446,7 +473,12 @@
     "resetPasswordBtn": "WACHTWOORD RESETTEN",
     "backToSignIn": "Terug naar inloggen?",
     "loginHere": "Log hier in",
-    "sessionExpired": "Uw sessie is verlopen. U bent uitgelogd."
+    "sessionExpired": "Uw sessie is verlopen. U bent uitgelogd.",
+    "shellFeatureSecureAccess": "Veilige accounttoegang",
+    "shellFeatureQuickOtp": "Snelle OTP-verificatie",
+    "shellFeatureSavedLocally": "Lokaal opgeslagen na succes",
+    "shellContinueShopping": "Verder winkelen bij",
+    "shellAllProducts": "alle producten"
   },
   "account": {
     "orders": {

@@ -784,7 +784,7 @@ export default function ProductDetailPage({
           ? selectedVariant.sizes![selectedSizeIndex]?.size
           : undefined;
       if (variantHasSizes && chosenSize === undefined) {
-        setCartFeedback("Please choose a size before adding to cart.");
+        setCartFeedback(t("productDetail.feedbackChooseSizeCart"));
         setIsAddingToCart(false);
         return;
       }
@@ -814,7 +814,7 @@ export default function ProductDetailPage({
           : "Item added to cart successfully.",
       );
     } catch {
-      setCartFeedback("Unable to add this item to cart right now.");
+      setCartFeedback(t("productDetail.feedbackAddToCartError"));
     } finally {
       setIsAddingToCart(false);
     }
@@ -835,7 +835,7 @@ export default function ProductDetailPage({
         ? selectedVariant.sizes![selectedSizeIndex]?.size
         : undefined;
     if (variantHasSizes && chosenSize === undefined) {
-      setCartFeedback("Please choose a size before buying.");
+      setCartFeedback(t("productDetail.feedbackChooseSizeBuy"));
       return;
     }
 
@@ -882,14 +882,14 @@ export default function ProductDetailPage({
     try {
       if (wishlistItem) {
         await dispatch(removeWishlistItem(wishlistItem.id)).unwrap();
-        setWishlistFeedback("Item removed from wishlist.");
+        setWishlistFeedback(t("productDetail.feedbackWishlistRemoved"));
         return;
       }
 
       await dispatch(addToWishlist(product.id)).unwrap();
-      setWishlistFeedback("Item saved to wishlist.");
+      setWishlistFeedback(t("productDetail.feedbackWishlistSaved"));
     } catch {
-      setWishlistFeedback("Unable to update wishlist right now.");
+      setWishlistFeedback(t("productDetail.feedbackWishlistError"));
     } finally {
       setIsUpdatingWishlist(false);
     }
@@ -927,7 +927,7 @@ export default function ProductDetailPage({
     }
 
     if (!reviewForm.comment.trim()) {
-      setReviewFeedback("Review comment is required.");
+      setReviewFeedback(t("productDetail.reviewCommentRequired"));
       return;
     }
 
@@ -940,20 +940,20 @@ export default function ProductDetailPage({
           rating: reviewForm.rating,
           comment: reviewForm.comment.trim(),
         });
-        setReviewFeedback("Review updated successfully.");
+        setReviewFeedback(t("productDetail.reviewUpdated"));
       } else {
         await createProductReview(product.id, {
           rating: reviewForm.rating,
           comment: reviewForm.comment.trim(),
         });
-        setReviewFeedback("Review added successfully.");
+        setReviewFeedback(t("productDetail.reviewAdded"));
       }
 
       await loadReviews(product.id);
       setIsReviewFormOpen(false);
       setReviewForm(initialReviewForm);
     } catch {
-      setReviewFeedback("Unable to save review right now.");
+      setReviewFeedback(t("productDetail.reviewSaveError"));
     } finally {
       setIsSubmittingReview(false);
     }
@@ -972,11 +972,9 @@ export default function ProductDetailPage({
       await loadReviews(product.id);
       setReviewForm(initialReviewForm);
       setIsReviewFormOpen(false);
-      setReviewFeedback(
-        "Review deleted successfully. You can add a new review now.",
-      );
+      setReviewFeedback(t("productDetail.reviewDeleted"));
     } catch {
-      setReviewFeedback("Unable to delete review right now.");
+      setReviewFeedback(t("productDetail.reviewDeleteError"));
     } finally {
       setIsSubmittingReview(false);
     }
@@ -1276,7 +1274,7 @@ export default function ProductDetailPage({
                         type="email"
                         value={giftRecipientEmail}
                         onChange={(e) => setGiftRecipientEmail(e.target.value)}
-                        placeholder="Recipient email (optional)"
+                        placeholder={t("productDetail.giftRecipientEmailPlaceholder")}
                         className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                       />
                       <input
@@ -1285,7 +1283,7 @@ export default function ProductDetailPage({
                         onChange={(event) =>
                           setGiftRecipientName(event.target.value)
                         }
-                        placeholder="Recipient name (optional)"
+                        placeholder={t("productDetail.giftRecipientNamePlaceholder")}
                         className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                       />
                       <input
@@ -1294,13 +1292,13 @@ export default function ProductDetailPage({
                         onChange={(event) =>
                           setGiftSenderName(event.target.value)
                         }
-                        placeholder="Your name (optional)"
+                        placeholder={t("productDetail.giftSenderNamePlaceholder")}
                         className="h-[46px] w-full border border-zinc-300 px-3 text-[13px] outline-none focus:border-zinc-800"
                       />
                       <textarea
                         value={giftMessage}
                         onChange={(event) => setGiftMessage(event.target.value)}
-                        placeholder="Personal message (optional)"
+                        placeholder={t("productDetail.giftMessagePlaceholder")}
                         className="min-h-[80px] w-full border border-zinc-300 px-3 py-2 text-[13px] outline-none focus:border-zinc-800"
                       />
                     </div>
@@ -1673,7 +1671,7 @@ export default function ProductDetailPage({
                                                 }
                                                 rows={5}
                                                 className="mt-2 w-full border border-zinc-300 bg-white px-4 py-3 text-[13px] text-zinc-800 outline-none transition focus:border-zinc-900"
-                                                placeholder="Share your experience with this product."
+                                                placeholder={t("productDetail.reviewCommentPlaceholder")}
                                             />
                                         </label>
                                     </div>
