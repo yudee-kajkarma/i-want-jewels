@@ -1,6 +1,8 @@
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { clientTranslate } from "@/i18n/clientRef";
+import { getLocalizedPath, parseLocalePathname } from "@/i18n/routing";
+import { fallbackLng } from "@/i18n/settings";
 import { resolveApiBaseUrl } from "@/lib/apiBaseUrl";
 import {
   clearStoredAuthSession,
@@ -41,7 +43,13 @@ function handleSessionExpiry(): void {
   toast.error(clientTranslate("auth.sessionExpired"));
   // Give the toast a moment to render before leaving the page.
   window.setTimeout(() => {
-    window.location.href = "/login";
+    // Keep the visitor in the locale they were browsing. A bare "/login" drops
+    // the prefix, and the proxy would then re-derive the locale from
+    // Accept-Language — landing a German-browsing visitor on the English login
+    // page whenever their browser language says otherwise. The URL is the
+    // source of truth for the current locale, same as in lib/router.
+    const { locale } = parseLocalePathname(window.location.pathname);
+    window.location.href = getLocalizedPath(locale ?? fallbackLng, "/login");
   }, 1200);
 }
 
