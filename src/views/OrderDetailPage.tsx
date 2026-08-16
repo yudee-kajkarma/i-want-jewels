@@ -12,16 +12,7 @@ import { cancelOrder, cancelOrderReturnRequest, getOrderById, regenerateOrderPay
 import type { Order } from '../types/order'
 import { formatPrice, getPriceAmount, isoToCurrencyCode } from '../utils/price'
 import { useTranslation } from 'react-i18next'
-
-function formatOrderDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
+import { formatDateTime } from '../utils/formatDate'
 
 function getOrderStatusClass(status: string) {
   switch (status.toLowerCase()) {
@@ -89,7 +80,7 @@ function getReturnStatusClass(status: string): string {
 }
 
 export default function OrderDetailPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const params = useParams<{ orderId?: string | string[] }>()
   const { session } = useAuth()
   const orderId = typeof params.orderId === 'string' ? params.orderId : ''
@@ -307,7 +298,7 @@ export default function OrderDetailPage() {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{order.orderNumber}</p>
                   <h1 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#17110d]">{t('account.orderDetails.title')}</h1>
-                  <p className="mt-3 text-sm text-zinc-500">{t('account.orderDetails.placed', { date: formatOrderDate(order.createdAt) })}</p>
+                  <p className="mt-3 text-sm text-zinc-500">{t('account.orderDetails.placed', { date: formatDateTime(order.createdAt, i18n.language) })}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -477,7 +468,7 @@ export default function OrderDetailPage() {
                   </div>
                   <div className="mt-4 space-y-2 text-sm text-zinc-600">
                     <p>{t('account.orderDetails.items')} <span className="font-semibold text-[#17110d]">{order.totalItems}</span></p>
-                    <p>{t('account.orderDetails.updated')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.updatedAt)}</span></p>
+                    <p>{t('account.orderDetails.updated')} <span className="font-semibold text-[#17110d]">{formatDateTime(order.updatedAt, i18n.language)}</span></p>
                   </div>
                 </div>
 
@@ -523,7 +514,7 @@ export default function OrderDetailPage() {
                             {status}
                           </span>
                           {order.returnRequestedAt ? (
-                            <p>{t('account.orderDetails.requested')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
+                            <p>{t('account.orderDetails.requested')} <span className="font-semibold text-[#17110d]">{formatDateTime(order.returnRequestedAt, i18n.language)}</span></p>
                           ) : null}
                           {order.returnReason ? (
                             <p>{t('account.orderDetails.reason')} <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>

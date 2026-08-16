@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AlertTriangle, MessageSquareText, Sparkles } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -16,16 +17,6 @@ import {
   updateAdminTicketStatus,
 } from '../services/ticketService'
 import type { Ticket, TicketPriority, TicketsPagination, TicketStatus } from '../types/ticket'
-
-function formatTicketDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
 
 function getStatusClass(status: TicketStatus) {
   return status === 'open'
@@ -77,7 +68,7 @@ function TicketDetailShimmer() {
 }
 
 export default function AdminTicketsPage() {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.tickets' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.tickets' })
   const [tickets, setTickets] = useState<Ticket[]>([])
   const [pagination, setPagination] = useState<TicketsPagination | null>(null)
   const [statusFilter, setStatusFilter] = useState<TicketStatus | 'all'>('all')
@@ -387,7 +378,7 @@ export default function AdminTicketsPage() {
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{selectedTicket.ticketId}</p>
                       <h2 className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#3f1933]">{selectedTicket.subject}</h2>
                       <p className="mt-2 text-sm text-zinc-500">
-                        {selectedTicket.category} · {t('detail.updated', { date: formatTicketDate(selectedTicket.updatedAt) })}
+                        {selectedTicket.category} · {t('detail.updated', { date: formatDateTime(selectedTicket.updatedAt, i18n.language) })}
                       </p>
                     </div>
 
@@ -410,7 +401,7 @@ export default function AdminTicketsPage() {
                               <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{message.senderRole}</p>
                               <p className="mt-1 text-sm text-zinc-500">{message.sender}</p>
                             </div>
-                            <p className="text-sm text-zinc-400">{formatTicketDate(message.createdAt)}</p>
+                            <p className="text-sm text-zinc-400">{formatDateTime(message.createdAt, i18n.language)}</p>
                           </div>
                           <p className="mt-4 text-sm leading-7 text-zinc-600">{message.message}</p>
                         </article>

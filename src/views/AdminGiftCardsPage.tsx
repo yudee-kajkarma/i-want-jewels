@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { ChevronDown, ChevronLeft, ChevronRight, Gift, Search } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { formatDate } from '../utils/formatDate'
 import type { TFunction } from 'i18next'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -28,12 +29,13 @@ function statusClass(status: string): string {
 function formatExpiry(
   expiresAt: string | null | undefined,
   t: TFunction<'common', 'admin.giftCards'>,
+  locale: string,
 ): { text: string; className: string } {
   if (!expiresAt) return { text: t('expiryNever'), className: 'text-zinc-400' }
 
   const d = new Date(expiresAt)
   const daysLeft = Math.ceil((d.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
-  const formatted = d.toLocaleDateString()
+  const formatted = formatDate(expiresAt, locale)
 
   if (daysLeft <= 0) {
     return {
@@ -53,7 +55,7 @@ function formatExpiry(
 }
 
 export default function AdminGiftCardsPage() {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.giftCards' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.giftCards' })
   const { t: tCommon } = useTranslation('common', { keyPrefix: 'common' })
   const [purchasers, setPurchasers] = useState<AdminPurchaserGroup[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
@@ -180,7 +182,7 @@ export default function AdminGiftCardsPage() {
                           </thead>
                           <tbody>
                             {group.cards.map((card) => {
-                              const expiry = formatExpiry(card.expiresAt, t)
+                              const expiry = formatExpiry(card.expiresAt, t, i18n.language)
                               return (
                                 <tr key={card.id} className="border-t border-[#f0e5da]">
                                   <td className="py-3 pr-4 font-semibold tracking-[1px] text-[#17110d]">
@@ -200,7 +202,7 @@ export default function AdminGiftCardsPage() {
                                   <td className="py-3 pr-4 text-zinc-600">{card.recipientEmail || '—'}</td>
                                   <td className="py-3 pr-4 text-zinc-600">{card.purchaseOrderNumber || '—'}</td>
                                   <td className="py-3 pr-4 text-zinc-500">
-                                    {new Date(card.createdAt).toLocaleDateString()}
+                                    {formatDate(card.createdAt, i18n.language)}
                                   </td>
                                   <td className={`py-3 pr-4 ${expiry.className}`}>{expiry.text}</td>
                                 </tr>

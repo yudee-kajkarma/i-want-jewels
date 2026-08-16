@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
 import { useTranslation } from "react-i18next";
+import { formatDate } from "../utils/formatDate";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
@@ -307,12 +308,11 @@ function ProductDetailSkeleton() {
 }
 
 function formatReviewDate(value: string, locale: string): string {
-  const dateLocale = locale === "en" ? "en-GB" : locale;
-  return new Intl.DateTimeFormat(dateLocale, {
+  return formatDate(value, locale, {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
-  }).format(new Date(value));
+  });
 }
 
 function getReviewHeadline(comment: string, fallback: string): string {

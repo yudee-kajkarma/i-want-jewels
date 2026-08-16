@@ -9,16 +9,7 @@ import { getPaymentHistory } from '../services/orderService'
 import type { OrdersPagination, PaymentHistoryItem } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
 import { useTranslation } from 'react-i18next'
-
-function formatPaymentDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
+import { formatDateTime } from '../utils/formatDate'
 
 function getPaymentStatusClass(status: string) {
   switch (status.toLowerCase()) {
@@ -44,7 +35,7 @@ function getOrderStatusClass(status: string) {
 }
 
 export default function PaymentHistoryPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [payments, setPayments] = useState<PaymentHistoryItem[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -120,7 +111,7 @@ export default function PaymentHistoryPage() {
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
                           <Clock3 className="h-4 w-4" />
-                          {formatPaymentDate(payment.createdAt)}
+                          {formatDateTime(payment.createdAt, i18n.language)}
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <CreditCard className="h-4 w-4" />
@@ -153,7 +144,7 @@ export default function PaymentHistoryPage() {
                   <div className="mt-5 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
                     <span>{t('account.paymentHistory.amount', { price: formatPrice(payment.amount, paymentCurrency) })}</span>
                     <div className="flex items-center gap-4">
-                      <span>{t('account.paymentHistory.updated', { date: formatPaymentDate(payment.updatedAt) })}</span>
+                      <span>{t('account.paymentHistory.updated', { date: formatDateTime(payment.updatedAt, i18n.language) })}</span>
                       <Link to={`/orders/${payment.orderId}`} className="font-bold text-[#17110d] transition hover:text-pink-500">
                         {t('account.paymentHistory.viewOrder')}
                       </Link>

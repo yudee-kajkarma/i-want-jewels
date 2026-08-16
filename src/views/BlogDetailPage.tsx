@@ -6,32 +6,19 @@ import Header from "../components/layout/Header";
 import type { BlogDetail } from "../types/blog";
 import type { Product } from "../types/product";
 import { useTranslation } from "react-i18next";
+import { formatDate } from "../utils/formatDate";
 
 type BlogDetailPageProps = {
     blogDetail: BlogDetail;
     relatedProducts: Product[];
 };
 
-function formatDate(value: string): string {
-    const date = new Date(value);
-
-    if (Number.isNaN(date.getTime())) {
-        return "";
-    }
-
-    return date.toLocaleDateString("en-US", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-    });
-}
-
 export default function BlogDetailPage({
     blogDetail,
     relatedProducts,
 }: BlogDetailPageProps) {
-    const { t } = useTranslation();
-    const publishedLabel = formatDate(blogDetail.publishedAt);
+    const { t, i18n } = useTranslation();
+    const publishedLabel = formatDate(blogDetail.publishedAt, i18n.language);
 
     return (
         <div className="min-h-screen bg-white text-zinc-900 font-poppins">

@@ -9,16 +9,7 @@ import { getOrders } from '../services/orderService'
 import type { Order, OrdersPagination } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
 import { useTranslation } from 'react-i18next'
-
-function formatOrderDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
+import { formatDateTime } from '../utils/formatDate'
 
 function getOrderStatusClass(status: string) {
   switch (status.toLowerCase()) {
@@ -44,7 +35,7 @@ function getPaymentStatusClass(status: string) {
 }
 
 export default function OrdersPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -120,7 +111,7 @@ export default function OrdersPage() {
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
                           <Clock3 className="h-4 w-4" />
-                          {formatOrderDate(order.createdAt)}
+                          {formatDateTime(order.createdAt, i18n.language)}
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <Package className="h-4 w-4" />

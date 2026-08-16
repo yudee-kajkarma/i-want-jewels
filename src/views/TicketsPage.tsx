@@ -7,22 +7,13 @@ import Header from '../components/layout/Header'
 import { createTicket, getTickets } from '../services/ticketService'
 import type { CreateTicketPayload, Ticket, TicketsPagination } from '../types/ticket'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 
 const initialForm: CreateTicketPayload = {
   subject: '',
   category: 'delivery',
   priority: 'medium',
   message: '',
-}
-
-function formatTicketDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
 }
 
 function getStatusClass(status: string) {
@@ -37,7 +28,7 @@ function getStatusClass(status: string) {
 }
 
 export default function TicketsPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const [tickets, setTickets] = useState<Ticket[]>([])
   const [pagination, setPagination] = useState<TicketsPagination | null>(null)
@@ -155,7 +146,7 @@ export default function TicketsPage() {
 
                     <div className="mt-4 flex flex-col gap-3 border-t border-[#efe1d5] pt-4 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
                       <span>{t('account.tickets.messagesCount', { count: ticket.messages.length })}</span>
-                      <span>{t('account.tickets.updated', { date: formatTicketDate(ticket.updatedAt) })}</span>
+                      <span>{t('account.tickets.updated', { date: formatDateTime(ticket.updatedAt, i18n.language) })}</span>
                     </div>
                   </article>
                 ))}

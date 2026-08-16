@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Eye, FilePenLine, Loader2, Plus, RefreshCw, Trash2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 import { toast } from 'react-hot-toast'
 import { Link } from '@/lib/router'
 import AdminBlogFormModal, { type AdminBlogFormState } from '../components/admin/AdminBlogFormModal'
@@ -33,20 +34,6 @@ const emptyForm: AdminBlogFormState = {
   status: 'draft',
   metaTitle: '',
   metaDescription: '',
-}
-
-function formatDate(value: string): string {
-  if (!value) {
-    return '--'
-  }
-
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
 }
 
 function parseTags(value: string): string[] {
@@ -81,7 +68,7 @@ function normalizeFormStatus(status: string | undefined, fallback: BlogStatus): 
 }
 
 export default function AdminBlogsPage() {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.blogs' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.blogs' })
   const { currency } = useCurrency()
   const [blogs, setBlogs] = useState<AdminBlogListItem[]>([])
   const [pagination, setPagination] = useState<BlogPagination | null>(null)
@@ -473,7 +460,7 @@ export default function AdminBlogsPage() {
                         </td>
                         <td className="px-4 py-4 font-semibold text-[#4f2040]">{blog.views}</td>
                         <td className="px-4 py-4 text-zinc-700">{blog.author}</td>
-                        <td className="px-4 py-4 text-zinc-700">{formatDate(blog.updatedAt)}</td>
+                        <td className="px-4 py-4 text-zinc-700">{formatDateTime(blog.updatedAt, i18n.language, '--')}</td>
                         <td className="px-4 py-4">
                           <div className="flex flex-wrap gap-2">
                             <button

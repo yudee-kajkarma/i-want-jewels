@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift, Undo2, Check, X } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
@@ -27,16 +28,6 @@ const EMPTY_SHIPPING_ADDRESS_FORM: AdminShippingAddressForm = {
     state: '',
     postalCode: '',
     country: 'IN',
-}
-
-function formatOrderDate(value: string) {
-    return new Intl.DateTimeFormat('en-IN', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-    }).format(new Date(value))
 }
 
 function getOrderStatusClass(status: string) {
@@ -82,7 +73,7 @@ function getReturnStatusClass(status: string) {
 }
 
 export default function AdminOrderDetailPage() {
-    const { t } = useTranslation('common', { keyPrefix: 'admin.orderDetail' })
+    const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.orderDetail' })
     const params = useParams<{ orderId?: string | string[] }>()
     const { currency } = useCurrency()
     const orderId = typeof params.orderId === 'string' ? params.orderId : ''
@@ -357,9 +348,9 @@ export default function AdminOrderDetailPage() {
                             <div className="grid gap-4 md:grid-cols-2">
                                 <div className="border border-[#efe1d5] bg-[#fffdfa] p-4 text-sm leading-7 text-zinc-600">
                                     <p className="inline-flex items-center gap-2 font-semibold text-[#17110d]"><Clock3 className="h-4 w-4" />{t('created')}</p>
-                                    <p>{formatOrderDate(order.createdAt)}</p>
+                                    <p>{formatDateTime(order.createdAt, i18n.language)}</p>
                                     <p className="mt-2 inline-flex items-center gap-2 font-semibold text-[#17110d]"><BadgeCheck className="h-4 w-4" />{t('updated')}</p>
-                                    <p>{formatOrderDate(order.updatedAt)}</p>
+                                    <p>{formatDateTime(order.updatedAt, i18n.language)}</p>
                                     <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">{t('refund')} {order.refundStatus}</p>
                                 </div>
 
@@ -382,10 +373,10 @@ export default function AdminOrderDetailPage() {
                                     </div>
                                     <div className="mt-4 grid gap-2 text-sm text-zinc-600 md:grid-cols-2">
                                         {order.returnRequestedAt ? (
-                                            <p>{t('requested')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.returnRequestedAt)}</span></p>
+                                            <p>{t('requested')} <span className="font-semibold text-[#17110d]">{formatDateTime(order.returnRequestedAt, i18n.language)}</span></p>
                                         ) : null}
                                         {order.deliveredAt ? (
-                                            <p>{t('delivered')} <span className="font-semibold text-[#17110d]">{formatOrderDate(order.deliveredAt)}</span></p>
+                                            <p>{t('delivered')} <span className="font-semibold text-[#17110d]">{formatDateTime(order.deliveredAt, i18n.language)}</span></p>
                                         ) : null}
                                         {order.returnReason ? (
                                             <p className="md:col-span-2">{t('reason')} <span className="font-semibold text-[#17110d]">{order.returnReason}</span></p>

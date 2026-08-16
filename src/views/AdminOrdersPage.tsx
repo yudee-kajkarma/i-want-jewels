@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 import { toast } from 'react-hot-toast'
 import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown, Package, ChevronDown, ArrowLeft, X, CheckCircle2, AlertCircle, Search } from 'lucide-react'
 import { Link } from '@/lib/router'
@@ -57,16 +58,6 @@ function formatTime12h(value: string): string {
   return `${String(h12).padStart(2, '0')}:${m} ${period}`
 }
 
-function formatOrderDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
-
 function getOrderStatusClass(status: Order['orderStatus']) {
   switch (status) {
     case 'CONFIRMED':
@@ -93,7 +84,7 @@ function getPaymentStatusClass(status: string) {
 }
 
 export default function AdminOrdersPage() {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.orders' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.orders' })
   const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
   const { currency } = useCurrency()
 
@@ -1150,7 +1141,7 @@ export default function AdminOrdersPage() {
                       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
                         <span className="inline-flex items-center gap-1">
                           <Clock3 className="h-4 w-4" />
-                          {formatOrderDate(order.createdAt)}
+                          {formatDateTime(order.createdAt, i18n.language)}
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <BadgeCheck className="h-4 w-4" />
@@ -1235,7 +1226,7 @@ export default function AdminOrdersPage() {
                           </Link>
                           <p className="mt-1 text-xs text-zinc-500">{order.paymentMethod}</p>
                         </td>
-                        <td className="px-4 py-4 text-zinc-600">{formatOrderDate(order.createdAt)}</td>
+                        <td className="px-4 py-4 text-zinc-600">{formatDateTime(order.createdAt, i18n.language)}</td>
                         <td className="px-4 py-4 text-zinc-600">{order.totalItems}</td>
                         <td className="px-4 py-4 font-semibold text-[#5c1f45]">{formatPrice(order.totalAmount, orderCurrency)}</td>
                         <td className="px-4 py-4">

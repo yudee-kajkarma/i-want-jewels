@@ -7,16 +7,7 @@ import Header from '../components/layout/Header'
 import { addTicketMessage, getTicketById } from '../services/ticketService'
 import type { Ticket } from '../types/ticket'
 import { useTranslation } from 'react-i18next'
-
-function formatTicketDate(value: string) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
+import { formatDateTime } from '../utils/formatDate'
 
 function getStatusClass(status: string) {
   switch (status.toLowerCase()) {
@@ -30,7 +21,7 @@ function getStatusClass(status: string) {
 }
 
 export default function TicketDetailPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const params = useParams<{ ticketId?: string | string[] }>()
   const ticketId = typeof params.ticketId === 'string' ? params.ticketId : ''
   const [ticket, setTicket] = useState<Ticket | null>(null)
@@ -130,7 +121,7 @@ export default function TicketDetailPage() {
                         <p className="text-xs font-bold uppercase tracking-[0.12em] text-zinc-400">{message.senderRole}</p>
                         <p className="mt-1 text-sm text-zinc-500">{message.sender}</p>
                       </div>
-                      <p className="text-sm text-zinc-400">{formatTicketDate(message.createdAt)}</p>
+                      <p className="text-sm text-zinc-400">{formatDateTime(message.createdAt, i18n.language)}</p>
                     </div>
                     <p className="mt-4 text-sm leading-7 text-zinc-600">{message.message}</p>
                   </article>
@@ -167,8 +158,8 @@ export default function TicketDetailPage() {
               </form>
 
               <div className="mt-6 border-t border-[#efe1d5] pt-6 text-sm text-zinc-500">
-                <p>{t('account.ticketDetails.created', { date: formatTicketDate(ticket.createdAt) })}</p>
-                <p className="mt-2">{t('account.ticketDetails.lastUpdated', { date: formatTicketDate(ticket.updatedAt) })}</p>
+                <p>{t('account.ticketDetails.created', { date: formatDateTime(ticket.createdAt, i18n.language) })}</p>
+                <p className="mt-2">{t('account.ticketDetails.lastUpdated', { date: formatDateTime(ticket.updatedAt, i18n.language) })}</p>
               </div>
             </aside>
           </div>

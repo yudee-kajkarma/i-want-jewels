@@ -9,6 +9,7 @@ import {
 } from '../../services/giftCardService'
 import RecipientEmailPicker from './RecipientEmailPicker'
 import { useTranslation } from 'react-i18next'
+import { toDateLocale } from '../../utils/formatDate'
 
 type GiftCardTab = 'mine' | 'transferred'
 
@@ -20,7 +21,7 @@ type GiftCardsSectionProps = {
 }
 
 export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionProps) {
-  const { t } = useTranslation('common', { keyPrefix: 'giftCardsSection' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'giftCardsSection' })
   const [tab, setTab] = useState<GiftCardTab>('mine')
   const [cards, setCards] = useState<MyGiftCard[]>([])
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
@@ -139,7 +140,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
               if (!card.expiresAt) return { label: t('neverExpires'), tone: 'muted' as const }
               const expiry = new Date(card.expiresAt)
               const daysLeft = Math.ceil((expiry.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
-              const formatted = expiry.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+              const formatted = expiry.toLocaleDateString(toDateLocale(i18n.language), { day: '2-digit', month: 'short', year: 'numeric' })
               if (daysLeft <= 0) return { label: t('expiredOn', { date: formatted }), tone: 'expired' as const }
               if (daysLeft <= 7) {
                 return { 
@@ -169,7 +170,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
                     ) : null}
                     {card.createdAt ? (
                       <p className="mt-1 text-xs text-zinc-400">
-                        {t('purchasedOn', { date: new Date(card.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) })}
+                        {t('purchasedOn', { date: new Date(card.createdAt).toLocaleDateString(toDateLocale(i18n.language), { day: '2-digit', month: 'short', year: 'numeric' }) })}
                       </p>
                     ) : null}
                     <p className={`mt-1 text-xs ${expiryClass}`}>{expiryInfo.label}</p>
