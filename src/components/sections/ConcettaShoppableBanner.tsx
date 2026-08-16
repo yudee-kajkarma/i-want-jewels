@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
+import { splitLines } from "@/i18n/splitLines";
 import { useCurrency } from "../../context/CurrencyContext";
 import { getProductBySlug } from "../../services/productService";
 import type { PriceInput } from "../../utils/price";
@@ -296,8 +297,9 @@ export default function ConcettaShoppableBanner() {
 
                     <div className="pointer-events-none absolute left-0 top-0 p-12 xl:p-16">
                         <h2 className="text-[34px] font-medium uppercase leading-[1.18] tracking-[0.16em] text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.28)] xl:text-[42px]">
-                            <span className="block">{t("home.craftedForElegance").split('\n')[0] || "Crafted For"}</span>
-                            <span className="block">{t("home.craftedForElegance").split('\n')[1] || "Modern Elegance"}</span>
+                            {splitLines(t("home.craftedForElegance")).map((line) => (
+                                <span key={line} className="block">{line}</span>
+                            ))}
                         </h2>
                     </div>
 
@@ -321,8 +323,9 @@ export default function ConcettaShoppableBanner() {
 
                     <div className="absolute bottom-5 left-5">
                         <h2 className="text-[18px] font-medium uppercase leading-[1.22] tracking-[0.12em] text-[#2a211c]">
-                            <span className="block">{t("home.craftedForEleganceMobile").split('\n')[0] || "Crafted For Modern"}</span>
-                            <span className="block">{t("home.craftedForEleganceMobile").split('\n')[1] || "Elegance"}</span>
+                            {splitLines(t("home.craftedForElegance")).map((line) => (
+                                <span key={line} className="block">{line}</span>
+                            ))}
                         </h2>
                         <Link
                             to={CONCETTA_COLLECTION_HREF}
