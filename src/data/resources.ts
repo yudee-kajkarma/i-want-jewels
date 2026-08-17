@@ -1073,6 +1073,23 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
+    slug: "what-are-huggie-earrings",
+    categorySlug: "earring-style-guides",
+    title: "What Are Huggie Earrings? Fit, Sizes and Buying Guide",
+    excerpt:
+      "Learn what huggie earrings are, how they differ from hoops and how to choose the right diameter, thickness, closure, material and fit for your ear.",
+    coverImage: "/blog-images/blog-image-66.jpg",
+    publishedAt: "2025-10-14",
+    readTime: "13 min read",
+    tags: [
+      "huggie earrings",
+      "earring sizes",
+      "earring fit",
+      "buying guide",
+      "hoops",
+    ],
+  },
+  {
     slug: "travel-jewellery-guide",
     categorySlug: "earring-style-guides",
     title: "Travel Jewellery Guide: What to Pack and How to Protect It",
