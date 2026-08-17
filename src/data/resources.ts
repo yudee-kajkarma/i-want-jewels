@@ -1073,6 +1073,23 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
+    slug: "travel-jewellery-guide",
+    categorySlug: "earring-style-guides",
+    title: "Travel Jewellery Guide: What to Pack and How to Protect It",
+    excerpt:
+      "Learn what jewellery to pack for a holiday, how to prevent tangles and damage, what to keep in hand luggage, and how to care for pieces while travelling.",
+    coverImage: "/blog-images/blog-image-84.jpg",
+    publishedAt: "2025-10-12",
+    readTime: "12 min read",
+    tags: [
+      "travel jewellery",
+      "packing",
+      "jewellery care",
+      "earrings",
+      "storage",
+    ],
+  },
+  {
     slug: "what-earrings-to-wear-as-a-wedding-guest",
     categorySlug: "lab-grown-diamond-guides",
     title:
