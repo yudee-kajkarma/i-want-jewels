@@ -114,11 +114,11 @@ export const resourceArticles: ResourceArticle[] = [
     categorySlug: "lab-grown-diamond-guides",
     title: "Lab-Grown Diamond Earrings Buying Guide",
     excerpt:
-      "Learn how to choose lab grown diamond earrings, including studs, huggies, drops, metal colours, sizes, gifts and everyday styling.",
-    coverImage: "/blog-images/blog-image-17.jpg",
+      "Learn how to choose lab-grown diamond earrings by style, size, carat weight, metal, setting, closure, comfort and price.",
+    coverImage: "/blog-images/blog-image-83.jpg",
     publishedAt: "2025-03-25",
-    readTime: "10 min read",
-    tags: ["buying guide", "earrings", "lab-grown"],
+    readTime: "12 min read",
+    tags: ["buying guide", "earrings", "lab-grown", "settings", "closures"],
   },
   {
     slug: "lab-grown-diamond-earrings-price-guide",
