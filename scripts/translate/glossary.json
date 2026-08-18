@@ -1,0 +1,804 @@
+{
+  "version": 1,
+  "_comment": "DRAFT. Term SELECTION is data-driven (frequency scan of src/content/en). Every TARGET TRANSLATION below was written from model knowledge and is UNVERIFIED. Set \"reviewed\": true on a term only after a native speaker or the SEO owner confirms it; validate.mjs hard-fails only on reviewed terms and merely warns on the rest. See README > Glossary provenance.",
+  "doNotTranslate": [
+    "I Want Jewels",
+    "Visa",
+    "MasterCard",
+    "RuPay",
+    "Amex",
+    "UPI",
+    "Stripe",
+    "SKU",
+    "GIA",
+    "IGI"
+  ],
+  "terms": [
+    {
+      "en": "stud earrings",
+      "match": [
+        "stud earring",
+        "stud earrings",
+        "diamond stud",
+        "diamond studs"
+      ],
+      "note": "NEVER 'stallion'/'Bolzen'/'perno'. This is the single most frequent term (6,356 hits) and the one MyMemory broke.",
+      "targets": {
+        "nl": {
+          "use": "oorstekers",
+          "assert": "oorsteker"
+        },
+        "de": {
+          "use": "Ohrstecker",
+          "assert": "ohrstecker"
+        },
+        "fr": {
+          "use": "puces d'oreilles",
+          "assert": "puce"
+        },
+        "it": {
+          "use": "orecchini a lobo",
+          "assert": "a lobo"
+        },
+        "es": {
+          "use": "pendientes de botón",
+          "assert": "de botón"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "lab-grown diamond",
+      "match": [
+        "lab-grown",
+        "lab grown",
+        "laboratory-grown"
+      ],
+      "note": "Never 'artificial' or 'fake'. These are real diamonds grown in a lab.",
+      "targets": {
+        "nl": {
+          "use": "labgegroeide diamant",
+          "assert": "lab"
+        },
+        "de": {
+          "use": "im Labor gezüchteter Diamant",
+          "assert": "labor"
+        },
+        "fr": {
+          "use": "diamant de laboratoire",
+          "assert": "laboratoire"
+        },
+        "it": {
+          "use": "diamante da laboratorio",
+          "assert": "laboratorio"
+        },
+        "es": {
+          "use": "diamante de laboratorio",
+          "assert": "laboratorio"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "hoop earrings",
+      "match": [
+        "hoop earring",
+        "hoop earrings",
+        "hoops"
+      ],
+      "targets": {
+        "nl": {
+          "use": "creolen",
+          "assert": "creol"
+        },
+        "de": {
+          "use": "Creolen",
+          "assert": "creol"
+        },
+        "fr": {
+          "use": "créoles",
+          "assert": "créole"
+        },
+        "it": {
+          "use": "orecchini a cerchio",
+          "assert": "cerchio"
+        },
+        "es": {
+          "use": "pendientes de aro",
+          "assert": "aro"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "huggie earrings",
+      "match": [
+        "huggie",
+        "huggies"
+      ],
+      "note": "NEVER 'hug'/'Umarmung'/'abrazo'. A huggie is a small hoop that sits close to the lobe — distinguish from a plain hoop by keeping the size qualifier.",
+      "targets": {
+        "nl": {
+          "use": "kleine creolen (huggies)",
+          "assert": "creol"
+        },
+        "de": {
+          "use": "kleine Creolen (Huggies)",
+          "assert": "creol"
+        },
+        "fr": {
+          "use": "petites créoles (huggies)",
+          "assert": "créole"
+        },
+        "it": {
+          "use": "orecchini a cerchio piccoli (huggie)",
+          "assert": "cerchio"
+        },
+        "es": {
+          "use": "aros pequeños (huggies)",
+          "assert": "aro"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "tennis bracelet",
+      "match": [
+        "tennis bracelet"
+      ],
+      "targets": {
+        "nl": {
+          "use": "tennisarmband",
+          "assert": "tennisarmband"
+        },
+        "de": {
+          "use": "Tennisarmband",
+          "assert": "tennisarmband"
+        },
+        "fr": {
+          "use": "bracelet tennis",
+          "assert": "bracelet tennis"
+        },
+        "it": {
+          "use": "bracciale tennis",
+          "assert": "bracciale tennis"
+        },
+        "es": {
+          "use": "pulsera de tenis",
+          "assert": "pulsera"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "drop earrings",
+      "match": [
+        "drop earring",
+        "drop earrings"
+      ],
+      "targets": {
+        "nl": {
+          "use": "oorhangers",
+          "assert": "oorhanger"
+        },
+        "de": {
+          "use": "Ohrhänger",
+          "assert": "ohrhänger"
+        },
+        "fr": {
+          "use": "boucles d'oreilles pendantes",
+          "assert": "pendante"
+        },
+        "it": {
+          "use": "orecchini pendenti",
+          "assert": "pendenti"
+        },
+        "es": {
+          "use": "pendientes colgantes",
+          "assert": "colgante"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "statement earrings",
+      "match": [
+        "statement earring",
+        "statement earrings"
+      ],
+      "targets": {
+        "nl": {
+          "use": "statement oorbellen",
+          "assert": "statement"
+        },
+        "de": {
+          "use": "Statement-Ohrringe",
+          "assert": "statement"
+        },
+        "fr": {
+          "use": "boucles d'oreilles statement",
+          "assert": "statement"
+        },
+        "it": {
+          "use": "orecchini statement",
+          "assert": "statement"
+        },
+        "es": {
+          "use": "pendientes statement",
+          "assert": "statement"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "ear stack",
+      "match": [
+        "ear stack",
+        "ear stacking",
+        "earring stack"
+      ],
+      "note": "Industry term, generally kept in English across all five markets.",
+      "targets": {
+        "nl": {
+          "use": "ear stack",
+          "assert": "ear stack"
+        },
+        "de": {
+          "use": "Ear Stack",
+          "assert": "ear stack"
+        },
+        "fr": {
+          "use": "ear stack",
+          "assert": "ear stack"
+        },
+        "it": {
+          "use": "ear stack",
+          "assert": "ear stack"
+        },
+        "es": {
+          "use": "ear stack",
+          "assert": "ear stack"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "sterling silver",
+      "match": [
+        "sterling silver",
+        "925 silver"
+      ],
+      "targets": {
+        "nl": {
+          "use": "925 sterling zilver",
+          "assert": "zilver"
+        },
+        "de": {
+          "use": "925 Sterlingsilber",
+          "assert": "silber"
+        },
+        "fr": {
+          "use": "argent sterling 925",
+          "assert": "argent"
+        },
+        "it": {
+          "use": "argento sterling 925",
+          "assert": "argento"
+        },
+        "es": {
+          "use": "plata de ley 925",
+          "assert": "plata"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "demi-fine jewellery",
+      "match": [
+        "demi-fine",
+        "demi fine"
+      ],
+      "note": "Category name — kept in English/French form across all markets.",
+      "targets": {
+        "nl": {
+          "use": "demi-fine sieraden",
+          "assert": "demi-fine"
+        },
+        "de": {
+          "use": "Demi-Fine Schmuck",
+          "assert": "demi-fine"
+        },
+        "fr": {
+          "use": "bijoux demi-fine",
+          "assert": "demi-fine"
+        },
+        "it": {
+          "use": "gioielli demi-fine",
+          "assert": "demi-fine"
+        },
+        "es": {
+          "use": "joyería demi-fine",
+          "assert": "demi-fine"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "pavé",
+      "match": [
+        "pave setting",
+        "pavé",
+        "pave diamond"
+      ],
+      "note": "French term retained in all markets; keep the accent.",
+      "targets": {
+        "nl": {
+          "use": "pavé",
+          "assert": "pavé"
+        },
+        "de": {
+          "use": "Pavé",
+          "assert": "pavé"
+        },
+        "fr": {
+          "use": "pavé",
+          "assert": "pavé"
+        },
+        "it": {
+          "use": "pavé",
+          "assert": "pavé"
+        },
+        "es": {
+          "use": "pavé",
+          "assert": "pavé"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "carat",
+      "match": [
+        "carat",
+        "carats"
+      ],
+      "note": "Weight, not gold purity (that is karat/Karat). Do not conflate.",
+      "targets": {
+        "nl": {
+          "use": "karaat",
+          "assert": "karaat"
+        },
+        "de": {
+          "use": "Karat",
+          "assert": "karat"
+        },
+        "fr": {
+          "use": "carat",
+          "assert": "carat"
+        },
+        "it": {
+          "use": "carato",
+          "assert": "carat"
+        },
+        "es": {
+          "use": "quilate",
+          "assert": "quilate"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "solitaire",
+      "match": [
+        "solitaire"
+      ],
+      "targets": {
+        "nl": {
+          "use": "solitair",
+          "assert": "solitair"
+        },
+        "de": {
+          "use": "Solitär",
+          "assert": "solit"
+        },
+        "fr": {
+          "use": "solitaire",
+          "assert": "solitaire"
+        },
+        "it": {
+          "use": "solitario",
+          "assert": "solitario"
+        },
+        "es": {
+          "use": "solitario",
+          "assert": "solitario"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "halo setting",
+      "match": [
+        "halo setting",
+        "halo design"
+      ],
+      "targets": {
+        "nl": {
+          "use": "halo zetting",
+          "assert": "halo"
+        },
+        "de": {
+          "use": "Halo-Fassung",
+          "assert": "halo"
+        },
+        "fr": {
+          "use": "monture halo",
+          "assert": "halo"
+        },
+        "it": {
+          "use": "montatura halo",
+          "assert": "halo"
+        },
+        "es": {
+          "use": "engaste halo",
+          "assert": "halo"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "bezel setting",
+      "match": [
+        "bezel setting",
+        "bezel-set"
+      ],
+      "targets": {
+        "nl": {
+          "use": "kastzetting",
+          "assert": "kast"
+        },
+        "de": {
+          "use": "Zargenfassung",
+          "assert": "zarge"
+        },
+        "fr": {
+          "use": "serti clos",
+          "assert": "serti clos"
+        },
+        "it": {
+          "use": "castone",
+          "assert": "castone"
+        },
+        "es": {
+          "use": "engaste bisel",
+          "assert": "bisel"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "prong setting",
+      "match": [
+        "prong setting",
+        "prong-set",
+        "claw setting"
+      ],
+      "targets": {
+        "nl": {
+          "use": "chatonzetting",
+          "assert": "chaton"
+        },
+        "de": {
+          "use": "Krappenfassung",
+          "assert": "krappen"
+        },
+        "fr": {
+          "use": "serti à griffes",
+          "assert": "griffe"
+        },
+        "it": {
+          "use": "montatura a griffe",
+          "assert": "griffe"
+        },
+        "es": {
+          "use": "engaste de garras",
+          "assert": "garra"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "gold plated",
+      "match": [
+        "gold plated",
+        "gold-plated"
+      ],
+      "targets": {
+        "nl": {
+          "use": "verguld",
+          "assert": "verguld"
+        },
+        "de": {
+          "use": "vergoldet",
+          "assert": "vergold"
+        },
+        "fr": {
+          "use": "plaqué or",
+          "assert": "plaqué or"
+        },
+        "it": {
+          "use": "placcato oro",
+          "assert": "placcato"
+        },
+        "es": {
+          "use": "chapado en oro",
+          "assert": "chapado"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "vermeil",
+      "match": [
+        "vermeil"
+      ],
+      "targets": {
+        "nl": {
+          "use": "verguld zilver (vermeil)",
+          "assert": "vermeil"
+        },
+        "de": {
+          "use": "Vermeil",
+          "assert": "vermeil"
+        },
+        "fr": {
+          "use": "vermeil",
+          "assert": "vermeil"
+        },
+        "it": {
+          "use": "vermeil",
+          "assert": "vermeil"
+        },
+        "es": {
+          "use": "vermeil",
+          "assert": "vermeil"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "clasp",
+      "match": [
+        "clasp"
+      ],
+      "targets": {
+        "nl": {
+          "use": "sluiting",
+          "assert": "sluiting"
+        },
+        "de": {
+          "use": "Verschluss",
+          "assert": "verschluss"
+        },
+        "fr": {
+          "use": "fermoir",
+          "assert": "fermoir"
+        },
+        "it": {
+          "use": "chiusura",
+          "assert": "chiusur"
+        },
+        "es": {
+          "use": "cierre",
+          "assert": "cierre"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "pendant",
+      "match": [
+        "pendant"
+      ],
+      "targets": {
+        "nl": {
+          "use": "hanger",
+          "assert": "hanger"
+        },
+        "de": {
+          "use": "Anhänger",
+          "assert": "anhänger"
+        },
+        "fr": {
+          "use": "pendentif",
+          "assert": "pendentif"
+        },
+        "it": {
+          "use": "ciondolo",
+          "assert": "ciondol"
+        },
+        "es": {
+          "use": "colgante",
+          "assert": "colgante"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "eternity ring",
+      "match": [
+        "eternity ring",
+        "eternity band"
+      ],
+      "targets": {
+        "nl": {
+          "use": "eternity ring",
+          "assert": "eternity"
+        },
+        "de": {
+          "use": "Memoire-Ring",
+          "assert": "memoire"
+        },
+        "fr": {
+          "use": "bague éternité",
+          "assert": "éternité"
+        },
+        "it": {
+          "use": "anello eternity",
+          "assert": "eternity"
+        },
+        "es": {
+          "use": "anillo eternity",
+          "assert": "eternity"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "birthstone",
+      "match": [
+        "birthstone"
+      ],
+      "targets": {
+        "nl": {
+          "use": "geboortesteen",
+          "assert": "geboortesteen"
+        },
+        "de": {
+          "use": "Geburtsstein",
+          "assert": "geburtsstein"
+        },
+        "fr": {
+          "use": "pierre de naissance",
+          "assert": "pierre de naissance"
+        },
+        "it": {
+          "use": "pietra del mese",
+          "assert": "pietra"
+        },
+        "es": {
+          "use": "piedra de nacimiento",
+          "assert": "piedra"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "signet ring",
+      "match": [
+        "signet ring"
+      ],
+      "targets": {
+        "nl": {
+          "use": "zegelring",
+          "assert": "zegelring"
+        },
+        "de": {
+          "use": "Siegelring",
+          "assert": "siegelring"
+        },
+        "fr": {
+          "use": "chevalière",
+          "assert": "chevalière"
+        },
+        "it": {
+          "use": "anello chevalier",
+          "assert": "chevalier"
+        },
+        "es": {
+          "use": "anillo sello",
+          "assert": "sello"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "anklet",
+      "match": [
+        "anklet"
+      ],
+      "targets": {
+        "nl": {
+          "use": "enkelbandje",
+          "assert": "enkel"
+        },
+        "de": {
+          "use": "Fußkettchen",
+          "assert": "fußkett"
+        },
+        "fr": {
+          "use": "bracelet de cheville",
+          "assert": "cheville"
+        },
+        "it": {
+          "use": "cavigliera",
+          "assert": "caviglier"
+        },
+        "es": {
+          "use": "tobillera",
+          "assert": "tobiller"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "charm",
+      "match": [
+        "charm",
+        "charms"
+      ],
+      "note": "The jewellery component, not 'charm' as in charisma.",
+      "targets": {
+        "nl": {
+          "use": "bedel",
+          "assert": "bedel"
+        },
+        "de": {
+          "use": "Charm",
+          "assert": "charm"
+        },
+        "fr": {
+          "use": "breloque",
+          "assert": "breloque"
+        },
+        "it": {
+          "use": "charm",
+          "assert": "charm"
+        },
+        "es": {
+          "use": "charm",
+          "assert": "charm"
+        }
+      },
+      "reviewed": false
+    },
+    {
+      "en": "choker",
+      "match": [
+        "choker"
+      ],
+      "targets": {
+        "nl": {
+          "use": "choker",
+          "assert": "choker"
+        },
+        "de": {
+          "use": "Choker",
+          "assert": "choker"
+        },
+        "fr": {
+          "use": "ras-de-cou",
+          "assert": "ras-de-cou"
+        },
+        "it": {
+          "use": "girocollo",
+          "assert": "girocollo"
+        },
+        "es": {
+          "use": "gargantilla",
+          "assert": "gargantilla"
+        }
+      },
+      "reviewed": false
+    }
+  ]
+}
