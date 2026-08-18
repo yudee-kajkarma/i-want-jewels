@@ -1,1278 +1,717 @@
 {
   "meta": {
-    "title": "Minimalistischer Schmuck-Styling-Guide",
-    "description": "Erfahren Sie, wie Sie minimalistischen Schmuck mit Ohrringen, Ohrsteckern, Huggies, im Labor gezüchteten Diamanten, Arbeitskleidung, Geschenken, Hochzeiten und Alltagsoutfits stylen."
+    "title": "Minimalistischen Schmuck stylen",
+    "description": "Stylen Sie minimalistischen Schmuck zu Outfits und Ausschnitten. Bauen Sie vielseitige Schmuck-Capsule aus Ohrringen, Ketten, Ringen und Armbändern."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-97.jpg",
-    "title": "Minimalistischer Schmuck-Styling-Guide:",
-    "subtitle": "So stylen Sie einfachen Schmuck für Alltag, Arbeit und Anlässe",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Minimalistischen Schmuck stylen:",
+    "subtitle": "Der vollständige Leitfaden",
     "paragraphs": [
-      "Minimalistischer Schmuck ist schlicht, elegant und oft leicht zu tragen. Es geht nicht darum, Schmuck zu tragen, der verschwindet. Es geht darum, schlichte Stücke zu wählen, die Form, Glanz und Finish verleihen, ohne dass das Outfit schwer wirkt.",
-      "Der beste minimalistische Schmuck hat normalerweise einen klaren Zweck. Ein kleiner Diamantstecker sorgt für dezenten Glanz. Ein Huggie verleiht Form. Ein minimalistischer Ohrring sorgt für ein ruhiges Detail. Ein mittlerer Nieten sorgt für klassischen Glanz. Ein sanfter Tropfen sorgt für Bewegung bei Abendessen und Hochzeiten, ohne zu gewagt zu wirken.",
-      "Bei IWantJewels funktioniert minimalistisches Styling besonders gut mit im Labor gezüchteten Diamantohrringen, da sich selbst kleine Stücke erhaben anfühlen können. Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short und Farfalla können je nach Outfit und Anlass unterschiedliche minimalistische Looks unterstützen."
+      "Beim Styling minimalistischen Schmucks kombinieren Sie wenige, bewusst ausgewählte Schmuckstücke so, dass sie Ihr Outfit ergänzen, statt mit ihm zu konkurrieren.",
+      "Der Schmuck muss nicht unsichtbar sein. Ein Diamant-Ohrstecker, eine schmale Creole, ein Anhänger, Ring oder ein Armband kann dennoch sichtbaren Glanz und klare Formen verleihen. Der minimalistische Effekt entsteht, indem Sie die Anzahl der Blickpunkte begrenzen, verwandte Details wiederholen und visuellen Freiraum zwischen den Schmuckstücken lassen.",
+      "Dieser Leitfaden erklärt, wie Sie eine minimalistische Schmuck-Capsule zusammenstellen, verschiedene Schmuckstücke miteinander kombinieren und Schmuck auf Outfits, Ausschnitte, Frisuren und Metallfarben abstimmen."
     ],
-    "shopLabel": "Kaufen Sie minimalistischen Schmuck",
-    "shopHref": "/products?category=Earring"
+    "shopLabel": "Minimalistischen Schmuck entdecken",
+    "shopHref": "/products"
   },
   "quickSummary": {
     "items": [
-      "Erfahren Sie, wie Sie minimalistischen Schmuck stylen.",
-      "Wählen Sie schlichte Ohrringe für den Alltag.",
-      "Bauen Sie minimalistische Ear-Stacks mit Ohrsteckern, Huggies und kleinen Details.",
-      "Stylen Sie Schmuck mit Hemden, Blazern, schwarzen Kleidern, Satinkleidern und Outfits für Hochzeitsgäste.",
-      "Wählen Sie Schmuck für Arbeitskleidung, Reisen, Abendessen und Geschenke.",
-      "Entscheiden Sie, wann Sie Ohrstecker, Huggies, Creolen oder weiche Tropfen tragen möchten.",
-      "Verstehen Sie, wie die Metallfarbe den minimalistischen Stil verändert.",
-      "Finden Sie Produktempfehlungen von IWantJewels nach Outfit und Anlass.",
-      "Planen Sie Bildblöcke, Produktmodule, CTA-Bereiche und interne Links für diese Seite ein."
+      "Die Formel: ein Blickfang + ein wiederholtes Detail + visueller Freiraum",
+      "Wiederholen Sie Metallfarbe, Diamantform oder Linienführung, um einzelne Schmuckstücke optisch zu verbinden",
+      "Beginnen Sie mit einer Capsule aus drei Schmuckstücken: Ohrringen, einer Kette und einem Detail für Hand oder Handgelenk",
+      "Stimmen Sie die Kette auf den Ausschnitt ab, nicht allgemein auf das Outfit",
+      "Wechseln Sie ein Blickfang-Schmuckstück – nicht mehrere –, um vom Tag zum Abend zu wechseln",
+      "Verschiedene Metalle wirken stimmig, wenn beide Farben mehr als einmal vorkommen"
     ],
-    "image": "/blog-images/blog-image-99.jpg"
+    "image": "/blog-images/blog-image-54.jpg"
   },
   "content": [
     {
-      "heading": "Minimalistischer Schmuckselektor",
+      "heading": "Die Formel für minimalistischen Schmuck",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als wichtigstes Styling-Entscheidungstool."
+          "type": "section-lead",
+          "text": "Ein Blickfang + ein wiederholtes Detail + visueller Freiraum."
         },
         {
-          "type": "table",
-          "headers": [
-            "Stylingbedarf",
-            "Beste minimalistische Schmuckrichtung",
-            "Empfohlene IWJ-Richtung"
-          ],
-          "rows": [
-            [
-              "Alltagsschmuck",
-              "Kleine Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Mehr polierter Alltagsglanz",
-              "Mittlere Stollen",
-              "Cadenza M"
-            ],
-            [
-              "Ruhiger, minimalistischer Stil",
-              "Minimalistische Diamantohrringe",
-              "Laluce"
-            ],
-            [
-              "Minimaler Ohrstapel",
-              "Kleiner Ohrstecker + minimalistischer Ohrring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Schmuck für Arbeitskleidung",
-              "Ohrstecker, Huggies oder minimalistische Ohrringe",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Reiseschmuck",
-              "Sichere Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Schwarzes Kleid-Styling",
-              "Mittlere Noppen, Reifen oder weiche Tropfen",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Styling eines Satinkleides",
-              "Mittlere Ohrstecker oder Ohrhänger",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Styling für Hochzeitsgäste",
-              "Ohrstecker, weiche Tropfen oder Schmetterlingsohrringe",
-              "Cadenza M, Concetta Short, Farfalla"
-            ],
-            [
-              "Minimaler Party-Styling",
-              "Mittlere Ohrstecker, Creolen oder elegante Tropfen",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Verschenkbarer minimalistischer Schmuck",
-              "Ohrstecker, Huggies oder weiche Ohrringe",
-              "Cadenza S, Cadenza M, Laluce"
-            ],
-            [
-              "Romantischer minimalistischer Stil",
-              "Schmetterlingsohrringe oder zarte Tropfen",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Zum Beispiel: Diamant-Ohrstecker als Blickfang, ein kleiner Diamantanhänger als wiederholtes Glitzerdetail und keine zusätzliche große Kette oder auffälligen Ohrringe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine andere Kombination kann einen klaren Anhänger als Blickfang, ein schmales Armband als Wiederholung des Metalls und kleine, zurückhaltende Ohrringe umfassen, die nicht mit der Kette konkurrieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalistisches Styling wird nicht allein durch die Anzahl der Schmuckstücke bestimmt. Drei kleine, nicht aufeinander abgestimmte Schmuckstücke können unruhiger wirken als zwei etwas auffälligere Stücke mit gleicher Form und Oberfläche."
         }
       ]
     },
     {
-      "heading": "Was ist minimalistisches Schmuck-Styling?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistisches Schmuck-Styling bedeutet, Schmuck zu wählen, der sich sauber, ausgewogen und tragbar anfühlt. Die Stücke sind meist kleiner, schlichter oder raffinierter, verleihen dem Outfit aber dennoch den letzten Schliff."
-        },
-        {
-          "type": "paragraph",
-          "text": "Zu den minimalistischen Schmuckstücken gehören im Labor gezüchtete Diamant-Ohrstecker, Huggies, kleine Creolen, minimalistische Ohrringe, zarte Tropfen und weiche symbolische Stücke. Das Design sollte nicht schwer, überladen oder zu trendorientiert wirken."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein minimalistischer Schmuck-Look hat normalerweise Folgendes:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Minimalistisches Styling-Element",
-            "Was es bedeutet"
-          ],
-          "rows": [
-            [
-              "Saubere Form",
-              "Der Schmuck hat ein schlichtes, gut lesbares Design"
-            ],
-            [
-              "Tragbare Größe",
-              "Das Stück funktioniert für mehr als ein Outfit"
-            ],
-            [
-              "Dezenter Glanz",
-              "Der Schmuck verleiht Licht, ohne zu aufdringlich zu wirken"
-            ],
-            [
-              "Ausgewogene Metallfarbe",
-              "Das Finish passt zum Rest des Outfits"
-            ],
-            [
-              "Angenehmes Tragegefühl",
-              "Der Schmuck kann mehrere Stunden lang getragen werden"
-            ],
-            [
-              "Wiederholbares Styling",
-              "Das Stück ist nicht auf einen Anlass beschränkt"
-            ],
-            [
-              "Ein klarer Fokus",
-              "Das Outfit hat nicht allzu viele konkurrierende Schmuckstücke"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Für IWantJewels sollte minimalistisches Styling nicht schlicht wirken. Das Ziel besteht darin, kleinen, im Labor gezüchteten Diamantstücken ein gewolltes, hochwertiges und leicht tragbares Gefühl zu verleihen."
-        },
-        {
-          "type": "see-also",
-          "text": "Was ist halbfeiner Schmuck?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Warum minimalistischer Schmuck für den Alltag geeignet ist",
+      "heading": "Was ist minimalistischer Schmuck?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-101.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Minimalistischer Schmuck eignet sich für den Alltag, da er kein besonderes Outfit erfordert. Es kann zu Hemden, Jeans, Blazern, Strickwaren, Kleidern, Arbeitskleidung, Reiseoutfits und einfachen Abendlooks getragen werden."
+              "text": "Minimalistischer Schmuck zeichnet sich meist durch klare Silhouetten, zurückhaltende Proportionen, wenige dekorative Details, abgestimmte Metalloberflächen, ein oder zwei wiederholte Formen, kontrollierten Glanz und vielseitig kombinierbare Schmuckstücke aus."
             },
             {
               "type": "paragraph",
-              "text": "Kleine, im Labor gezüchtete Diamantohrringe sind besonders nützlich, da sie den Look aufpolieren, ohne dass er zu formell wirkt. Ein kleiner Glitzerpunkt kann einem schlichten Outfit das gewisse Etwas verleihen."
+              "text": "Mögliche Schmuckstücke für einen minimalistischen Look:"
             },
             {
-              "type": "table",
-              "headers": [
-                "Alltags-Styling-Grund",
-                "Warum minimalistischer Schmuck hilft"
-              ],
-              "rows": [
-                [
-                  "Leicht zu wiederholen",
-                  "Funktioniert mit vielen Outfits"
-                ],
-                [
-                  "Bequem",
-                  "Kleinere Ohrringe eignen sich besser für langes Tragen"
-                ],
-                [
-                  "Poliert",
-                  "Verleiht dem Finish ein Finish, ohne schwer auszusehen"
-                ],
-                [
-                  "Arbeitsfreundlich",
-                  "Sieht professionell und sauber aus"
-                ],
-                [
-                  "Reisefreundlich",
-                  "Einfache Stücke lassen sich leichter stylen"
-                ],
-                [
-                  "Stapelbar",
-                  "Funktioniert mit Nieten, Huggies und kleinen Details"
-                ],
-                [
-                  "Geschenkfreundlich",
-                  "Sicherer als sehr auffälliger Schmuck"
-                ],
-                [
-                  "Zeitlos",
-                  "Weniger abhängig von kurzfristigen Trends"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Cadenza S, Laluce und Amadea sind die stärksten IWantJewels-Trends für tägliches minimalistisches Styling. Cadenza M funktioniert, wenn der Käufer einen klareren Look mit mehr sichtbarem Glanz wünscht."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Können Sie jeden Tag im Labor gezüchtete Diamantohrringe tragen?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische Schmuckformel",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die einfachste minimalistische Schmuckformel lautet:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein Glitzerpunkt + ein Formdetail + ein sauberes Finish"
-        },
-        {
-          "type": "paragraph",
-          "text": "Der Glitzerpunkt kann ein Diamantstecker sein. Das Formdetail kann ein Huggie oder ein Reifen sein. Das saubere Finish entsteht dadurch, dass der Rest des Schmucks schlicht gehalten wird."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Styling-Rolle",
-            "Was es tut",
-            "Beste IWJ-Regie"
-          ],
-          "rows": [
-            [
-              "Glitzerpunkt",
-              "Fügt Licht nahe am Gesicht hinzu",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Formdetail",
-              "Fügt Kurve und Struktur hinzu",
-              "Amadea, Pave Hoops"
-            ],
-            [
-              "Weiche Details",
-              "Fügt ruhiges Interesse hinzu",
-              "Laluce"
-            ],
-            [
-              "Romantisches Detail",
-              "Fügt Bedeutung und Weichheit hinzu",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Gelegenheitsbewegung",
-              "Fügt sanfte Länge hinzu",
-              "Orsola, Concetta Short"
-            ],
-            [
-              "Formale Bewegung",
-              "Fügt eine verfeinerte Länge hinzu",
-              "Concetta Long"
-            ],
-            [
-              "Minimale Unterstützung",
-              "Balanciert ein größeres Stück",
-              "Kadenz S, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Halten Sie die Formel für das tägliche Styling einfach. Verwenden Sie für eine Veranstaltung ein etwas stärkeres Stück und halten Sie den Rest sauber."
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische Ohrringe für alltägliche Outfits",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische Ohrringe für den Alltag sollten leicht zu Freizeitoutfits, Arbeitskleidung, schlichten Kleidern und Reiselooks zu tragen sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Der sicherste Ausgangspunkt ist ein kleiner Diamantstecker. Wenn der Käufer einen stilvolleren Look wünscht, fügen Sie ein Huggie hinzu. Wenn sie ruhige Details bevorzugen, wählen Sie einen minimalistischen Ohrring. Wenn sie sich mehr sichtbaren Glanz wünschen, ohne auf Statement-Styling zu setzen, wählen Sie einen mittelgroßen Ohrstecker."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Alltagsoutfit",
-            "Beste minimalistische Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Weißes Hemd und Jeans",
-              "Kleine Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Blazer und Hose",
-              "Mittlere Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Strickwaren",
-              "Ohrstecker oder kleine Reifen",
-              "Kadenz S, Pave Hoops"
-            ],
-            [
-              "Lässiges Kleid",
-              "Kleine Ohrstecker oder minimalistische Ohrringe",
-              "Kadenz S, Laluce"
-            ],
-            [
-              "Reiseoutfit",
-              "Sichere Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Neutrales Outfit",
-              "Minimalistische Ohrringe oder mittelgroße Ohrstecker",
-              "Laluce, Cadenza M"
-            ],
-            [
-              "Wochenend-Outfit",
-              "Huggies oder Reifen",
-              "Amadea, Pave Hoops"
-            ],
-            [
-              "Einfaches Dinner-Outfit",
-              "Mittlere Noppen oder weiche Tropfen",
-              "Kadenz M, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrstecker vs. Huggie-Ohrringe",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistischer Schmuck für Arbeitskleidung",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistischer Schmuck ist eine der besten Optionen für Arbeitskleidung, da er elegant aussieht, ohne abzulenken."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie für die Arbeit Teile, die eng am Ohr anliegen und nicht ziehen, sich zu stark bewegen oder mit professionellen Outfits in Konflikt geraten. Ohrstecker, Huggies und minimalistische Ohrringe sind am stärksten. Reifen können funktionieren, wenn sie verfeinert werden. Tropfen eignen sich besser für das Alltags-Styling als für den Alltag im Büro."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-103.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Workwear-Look",
-                "Beste Schmuckrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Klassisches Bürooutfit",
-                  "Kleine oder mittlere Stollen",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Moderner Bürostil",
-                  "Huggies",
-                  "Amadea"
-                ],
-                [
-                  "Minimale Arbeitskleidung",
-                  "Minimalistische Ohrringe",
-                  "Laluce"
-                ],
-                [
-                  "Kreativer Büro-Look",
-                  "Hoops oder Huggies",
-                  "Pave Hoops, Amadea"
-                ],
-                [
-                  "Blazer-Outfit",
-                  "Mittlere Ohrstecker oder Huggies",
-                  "Kadenz M, Amadea"
-                ],
-                [
-                  "Arbeitsveranstaltung",
-                  "Mittlere Nieten oder raffinierte Creolen",
-                  "Kadenz M, Pave Hoops"
-                ],
-                [
-                  "Outfit für den Alltag",
-                  "Mittlere Noppen oder weiche Tropfen",
-                  "Kadenz M, Orsola"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Diamant-Ohrstecker im Solitär-Stil",
+                "Kleine Creolen (Huggies) oder schmale Creolen",
+                "Schlichte geometrische Ohrringe",
+                "Feine Ketten",
+                "Kleine Anhänger",
+                "Schmale Armbänder",
+                "Schlichte Ringe",
+                "Kurze, zurückhaltende Ohrhänger"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Ohrstecker vs. Creolen",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+          "type": "paragraph",
+          "text": "„Minimalistisch“ beschreibt die Designrichtung. Es garantiert nicht, dass ein Produkt leicht, langlebig, hypoallergen oder für jede Aktivität geeignet ist."
         }
       ]
     },
     {
-      "heading": "Minimalistischer Schmuck für schwarze Kleider",
+      "heading": "Was macht minimalistisches Schmuckstyling erfolgreich?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Ein schwarzes Kleid kann auffälligen Schmuck tragen, aber minimalistischer Schmuck kann dafür sorgen, dass es sauber, raffiniert und teuer wirkt."
+          "type": "subheading",
+          "text": "Ein klarer Blickfang"
         },
         {
           "type": "paragraph",
-          "text": "Für ein detailliertes schwarzes Kleid ist minimalistischer Schmuck meist die bessere Wahl. Zu einem schlichten schwarzen Kleid eignet sich minimalistischer Schmuck, wenn der Käufer dezente Eleganz statt Partyeffekt wünscht."
+          "text": "Wählen Sie den Bereich, den das Auge zuerst wahrnehmen soll. Der Blickfang können Ohrringe sein, die das Gesicht rahmen, ein Anhänger, der sich auf den Ausschnitt bezieht, eine kleine Ringkombination, ein unter dem Ärmel sichtbares Armband oder ein sorgfältig zusammengestellter Ear Stack."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vermeiden Sie, dass Ohrringe, Kette, Ringe und Armband gleich auffällig wirken."
+        },
+        {
+          "type": "subheading",
+          "text": "Wiederholung"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wiederholen Sie ein Detail, um einzelne Schmuckstücke miteinander zu verbinden. Geeignete Details sind Metallfarbe, Diamantform, runde oder kantige Linien, Motiv, Glanzgrad und Textur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Schmuckstücke müssen nicht aus derselben Kollektion stammen, sollten aber einen visuellen Bezug zueinander haben."
+        },
+        {
+          "type": "subheading",
+          "text": "Visueller Freiraum"
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalistisches Styling braucht Bereiche, in denen der Schmuck nicht miteinander konkurriert. Wenn Sie auffällige Ohrringe, eine Kette und mehrere Ringe tragen, halten Sie mindestens einen Bereich ruhiger. Das kann bedeuten, auf ein Armband zu verzichten oder eine Kette ohne zusätzliche dekorative Lagen zu wählen."
+        },
+        {
+          "type": "subheading",
+          "text": "Proportionen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergleichen Sie den Schmuck mit dem Outfit, statt jedes Stück für sich zu beurteilen. Ein sehr kleiner Ohrstecker kann neben einer voluminösen Frisur oder einem stark gemusterten Outfit untergehen. Eine schmale Creole oder ein mittelgroßer Ohrstecker kann dennoch minimalistisch wirken, wenn das Design klar bleibt."
+        }
+      ]
+    },
+    {
+      "heading": "Eine minimalistische Schmuck-Capsule zusammenstellen",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Eine Schmuck-Capsule ist eine kleine Gruppe von Schmuckstücken, die sich zu verschiedenen Kombinationen zusammenstellen lässt. Eine praktische Capsule kann sechs Kategorien umfassen."
         },
         {
           "type": "table",
           "headers": [
-            "Schwarzer Kleidungsstil",
-            "Beste minimalistische Schmuckrichtung",
-            "Produktrichtung"
+            "Capsule-Schmuckstück",
+            "Funktion",
+            "Das sollten Sie prüfen"
           ],
           "rows": [
             [
-              "Schlichtes schwarzes Kleid",
-              "Mittlere Noppen, Reifen oder weiche Tropfen",
-              "Cadenza M, Pave Hoops, Orsola"
+              "Kleine Diamant-Ohrstecker",
+              "Zurückhaltender Glanz",
+              "Durchmesser, Gewicht und Verschluss"
             ],
             [
-              "Detailliertes schwarzes Kleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
+              "Kleine Creolen (Huggies) oder schmale Creolen",
+              "Gebogene Form",
+              "Durchmesser, Stärke und Verschluss"
             ],
             [
-              "Schwarzes Satinkleid",
-              "Mittlere Noppen oder Tropfen",
-              "Kadenz M, Orsola"
+              "Kette mit schlichtem Anhänger",
+              "Detail am Ausschnitt",
+              "Kettenlänge und Maße des Anhängers"
             ],
             [
-              "Schwarzes Kleid mit Stehkragen",
-              "Ohrstecker oder Reifen",
-              "Kadenz M, Pave Hoops"
+              "Feines Armband",
+              "Detail am Handgelenk",
+              "Länge, Verschluss und Verstellbarkeit"
             ],
             [
-              "Schwarzes Arbeitskleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
+              "Schlichter Ring",
+              "Detail an der Hand",
+              "Größe, Breite und Oberfläche"
             ],
             [
-              "Minimales schwarzes Kleid",
-              "Ein sauberer Blickfang",
-              "Cadenza M, Orsola, Pave Hoops"
-            ],
-            [
-              "Schwarzes Abendkleid",
-              "Mittlere Noppen oder weiche Tropfen",
-              "Kadenz M, Orsola"
+              "Optionaler Blickfang",
+              "Variante für Dinner oder besondere Anlässe",
+              "Maße, Gewicht und Kombinierbarkeit mit dem Outfit"
             ]
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Sie müssen nicht die gesamte Capsule auf einmal kaufen. Beginnen Sie mit den Schmuckstücken, die zu Ihren am häufigsten getragenen Outfits passen."
+        },
+        {
+          "type": "subheading",
+          "text": "Eine Starter-Capsule aus drei Schmuckstücken"
+        },
+        {
+          "type": "paragraph",
+          "text": "Für eine kleinere Startkollektion wählen Sie:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Ein Paar zurückhaltende Ohrringe",
+            "Eine schlichte Kette",
+            "Einen Ring oder ein Armband mit abgestimmter Oberfläche"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese drei Schmuckstücke ermöglichen mehrere Kombinationen: nur Ohrringe; Ohrringe und Kette; Ohrringe und Armband; Kette und Ring oder alle drei zusammen, wenn ihre Proportionen ausgewogen bleiben."
+        },
+        {
+          "type": "subheading",
+          "text": "Eine Capsule aus fünf Schmuckstücken"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine vielseitigere Capsule kann kleine Diamant-Ohrstecker, kleine Creolen (Huggies) oder schmale Creolen, einen schlichten Anhänger, ein feines Armband und einen klaren Ring enthalten. Die Ohrringe bieten zwei unterschiedliche Möglichkeiten, das Gesicht zu rahmen, während Anhänger, Armband und Ring je nach Outfit ergänzt oder weggelassen werden können."
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistische Ohrringe und Ketten kombinieren",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Wenn die Ohrringe der Blickfang sind"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie eine zurückhaltende Kette oder lassen Sie den Ausschnitt frei. Das funktioniert mit sichtbaren Diamant-Ohrsteckern, Pavé-Creolen, einem kleinen Ear Stack, geometrischen Ohrringen oder kurzen Ohrhängern."
+        },
+        {
+          "type": "subheading",
+          "text": "Wenn die Kette der Blickfang ist"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tragen Sie kleinere Ohrstecker oder schlichte kleine Creolen (Huggies), damit Gesicht und Ausschnitt nicht um Aufmerksamkeit konkurrieren. Das funktioniert mit einer Kette mit Anhänger, zwei übereinander getragenen Ketten, einer Kette mit erkennbarem Motiv oder einer Kette, die der Form des Ausschnitts folgt."
+        },
+        {
+          "type": "subheading",
+          "text": "Wenn beide Diamanten enthalten"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wiederholen Sie das Diamantdetail, variieren Sie jedoch die Größe. Kombinieren Sie beispielsweise einen auffälligeren Anhänger mit kleineren Diamant-Ohrsteckern, statt an Ohr und Ausschnitt gleich auffällige Schmuckstücke zu tragen."
+        },
+        {
           "type": "see-also",
-          "text": "Welchen Schmuck man zu einem schwarzen Kleid trägt",
+          "text": "Guide für minimalistische Ohrringe",
+          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistische Ketten kombinieren",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Beim Layering minimalistischer Ketten sollte ein sichtbarer Unterschied zwischen den Ketten entstehen. Achten Sie auf Kettenlänge, Größe des Anhängers, Kettenstärke, Metallfarbe, Ausschnitt und darauf, ob sich die Anhänger überlappen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine unkomplizierte Kombination aus zwei Ketten besteht aus einer kürzeren schlichten Kette und einer etwas längeren Kette mit einem Anhänger. Der Längenunterschied sollte groß genug sein, damit die Ketten optisch getrennt bleiben. Allgemeingültige Zentimeterangaben sind unzuverlässig – messen Sie die tatsächlichen Produkte und berücksichtigen Sie Hals und Ausschnitt der Trägerin oder des Trägers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei drei Ketten sollten Sie eine klare Längenabstufung schaffen und mindestens eine Kette ohne Anhänger tragen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vermeiden Sie:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Mehrere Anhänger ähnlicher Größe auf gleicher Höhe",
+            "Mehrere Ketten, die sich sofort verheddern",
+            "Mehrere nicht zusammenpassende Motive",
+            "Schwere und zarte Ketten ohne klaren Bezug"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistische Ringe und Armbänder kombinieren",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Ringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein minimalistischer Ring-Stack kann aus einem schlichten Band mit einem Ring mit Diamantdetail, zwei schmalen Bändern mit unterschiedlichen Texturen, einem Ring an mehreren Fingern oder zwei abgestimmten Ringen an einem Finger bestehen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Variieren Sie entweder die Breite oder die Textur, damit die Ringe nicht versehentlich doppelt wirken. Enthält ein Ring das stärkste Diamantdetail, sollten die anderen Ringe stattdessen Metall, Form oder Textur einbringen, nicht denselben Glanz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prüfen Sie die Ringgröße für jeden Ring einzeln. Mehrere gemeinsam getragene Ringe können anders sitzen als ein einzelner Ring."
+        },
+        {
+          "type": "subheading",
+          "text": "Armbänder"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein einzelnes Armband kann bereits genügend Detail am Handgelenk schaffen, besonders bei langen Ärmeln, einer Uhr oder einem Outfit, das bereits mehrere Schmuckelemente enthält."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beim Layering kombinieren Sie unterschiedliche, aber verwandte Breiten, achten Sie darauf, dass sich die Verschlüsse nicht behindern, vermeiden Sie große Gewichtsunterschiede, lassen Sie genügend Bewegungsfreiheit ohne ständiges Übereinanderliegen der Armbänder und berücksichtigen Sie Farbe und Größe einer Uhr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Uhr kann Teil der Schmuckkombination sein. Stimmen Sie die Oberfläche des Armbands auf das Uhrengehäuse, das Armband oder andere Metalldetails ab."
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistischer Schmuck zu verschiedenen Ausschnitten",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Hoher oder runder Halsausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein hoher Ausschnitt reduziert die sichtbare Haut rund um den Halsbereich. Lassen Sie die Ohrringe für das wichtigste Detail sorgen oder wählen Sie eine Halskette, die deutlich über oder unter dem Ausschnitt sitzt, statt direkt an dessen Rand. Ohrstecker oder kleine Creolen (Huggies) mit klar sichtbarer Kontur eignen sich gut; eine Halskette ist optional."
+        },
+        {
+          "type": "subheading",
+          "text": "V-Ausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Anhänger kann der abwärts gerichteten Linie eines V-Ausschnitts folgen. Wenn der Anhänger im Mittelpunkt steht, wählen Sie zurückhaltende Ohrringe – kleine oder mittelgroße Ohrstecker, eine feine Anhängerkette und einen schlichten Ring oder ein Armband."
+        },
+        {
+          "type": "see-also",
+          "text": "Welcher Schmuck passt zu einem Kleid mit V-Ausschnitt?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Herzausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Herzausschnitt bildet bereits eine geschwungene Blickfangform. Wählen Sie Schmuck, der die Rundung ergänzt, ohne jede freie Fläche zu füllen: einen kleinen Anhänger oder keine Halskette, Ohrstecker, kleine Creolen (Huggies) oder zurückhaltende Ohrhänger sowie ein Armband oder Ring als einzelnes Detail."
+        },
+        {
+          "type": "see-also",
+          "text": "Schmuck für einen Herzausschnitt",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Schulterfreier Ausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schulterfreies Outfit lässt Schultern und Ausschnitt frei. Entscheiden Sie, ob die Ohrringe oder die Halskette das wichtigste Element sein sollen: sichtbare Ohrringe ohne Halskette, ein Anhänger mit zurückhaltenden Ohrsteckern oder ein schlichtes Armband als Ausgleich zum offenen Ausschnitt."
+        },
+        {
+          "type": "see-also",
+          "text": "Welche Ohrringe passen zu einem schulterfreien Kleid?",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistischer Schmuck zu typischen Outfits",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Weißes Hemd und Jeans"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein weißes Hemd bildet eine neutrale Basis für ein kleines Diamantdetail oder eine klare Metallform. Probieren Sie kleine Diamant-Ohrstecker, einen feinen Anhänger und einen Ring oder ein Armband. Ist der Kragen offen, kann der Anhänger zum Blickfang werden. Bei einem höher geschlossenen Hemd sollten die Ohrringe den Akzent setzen."
+        },
+        {
+          "type": "subheading",
+          "text": "Blazer und elegante Stoffhose"
+        },
+        {
+          "type": "paragraph",
+          "text": "Strukturierte Kleidung harmoniert mit Schmuck, der klare Linien aufgreift: ein mittelgroßer Ohrstecker oder geometrischer Ohrring, eine feine Kette, ein schlichter Ring und nur dann ein Armband, wenn es nicht mit einer Uhr konkurriert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei Businesskleidung sollten Sie die Erwartungen am Arbeitsplatz und praktische Faktoren wie die Nutzung von Kopfhörern berücksichtigen, statt von einem passenden Stil für jede Umgebung auszugehen."
+        },
+        {
+          "type": "subheading",
+          "text": "Strickmode"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Struktur der Kleidung kann feinen Schmuck auffangen oder verdecken. Probieren Sie Ohrstecker oder kleine Creolen (Huggies), eine Halskette nur dann, wenn sie deutlich über dem Strick sitzt, sowie einen Ring oder ein Armband als zusätzliches Detail. Vermeiden Sie zarte Ketten, die sich ständig in strukturiertem Stoff verfangen."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Kleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schwarzes Kleid bildet einen starken Kontrast zu warmen und kühlen Metalltönen. Probieren Sie einen sichtbaren Ohrstecker oder eine schmale Creole, einen feinen Anhänger oder einen freien Ausschnitt sowie einen Ring oder ein Armband. Sind die Ohrringe auffälliger, reduzieren Sie die Details an der Halskette."
+        },
+        {
+          "type": "see-also",
+          "text": "Welcher Schmuck passt zu einem schwarzen Kleid?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistischer Schmuck für Satinkleider",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Satin hat bereits Glanz, daher eignet sich minimalistischer Schmuck besonders gut, wenn das Kleid elegant bleiben soll."
+          "type": "subheading",
+          "text": "Satinkleid"
         },
         {
           "type": "paragraph",
-          "text": "Mittlere Nieten sorgen für Glanz, ohne zu viel Bewegung hinzuzufügen. Ohrhänger verleihen einem schlichten Kleid den letzten Schliff. Huggies und minimalistische Ohrringe funktionieren, wenn das Satin-Outfit eher lässig ist oder sich auf Arbeitsveranstaltungen konzentriert."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satin-Kleiderstil",
-            "Beste minimalistische Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Unterkleid aus Satin",
-              "Tropfenohrringe",
-              "Orsola"
-            ],
-            [
-              "Satinkleid mit Stehkragen",
-              "Mittlere Nieten oder Reifen",
-              "Kadenz M, Pave Hoops"
-            ],
-            [
-              "Champagnerfarbenes Satinkleid",
-              "Weiche Tropfen oder Noppen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Errötendes Satinkleid",
-              "Schmetterlingsohrringe oder kurze Tropfen",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Schwarzes Satinkleid",
-              "Mittlere Noppen oder Tropfen",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Grünes Satinkleid",
-              "Tropfen oder Reifen",
-              "Orsola, Pave-Reifen"
-            ],
-            [
-              "Detailliertes Satinkleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ]
-          ]
+          "text": "Satin reflektiert bereits Licht und erzeugt Bewegung. Vermeiden Sie mehrere konkurrierende Schmuckstücke, die den Stoff bedecken. Probieren Sie Diamant-Ohrstecker mit einem feinen Armband, zurückhaltende Ohrhänger ohne Halskette oder einen feinen Anhänger mit kleinen Ohrsteckern."
         },
         {
           "type": "see-also",
-          "text": "Schmuck mit Satinkleid",
+          "text": "Welcher Schmuck passt zu einem Satinkleid?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Gemustertes oder verziertes Outfit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Enthält das Outfit Stickereien, Pailletten, Muster oder andere dekorative Details, reduzieren Sie die Zahl der Schmuck-Blickfänge: kleine Ohrstecker, eine schlichte Kette oder keine Halskette sowie ein zurückhaltender Ring. Minimalistisch bedeutet nicht unsichtbar; Ziel ist, Outfit und Schmuck unterschiedliche visuelle Rollen einzuräumen."
         }
       ]
     },
     {
-      "heading": "Minimalistischer Schmuck für Hochzeitsgast-Outfits",
+      "heading": "Minimalistischer Schmuck zu Frisuren und Brillen",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistischer Schmuck eignet sich hervorragend für Hochzeitsgäste, da er für einen eleganten und respektvollen Look sorgt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein Hochzeitsgast-Outfit sollte nicht zu brautlich oder zu schwer aussehen. Ohrstecker, weiche Tropfenohrringe, Schmetterlingsohrringe und zarte Huggies sind in der Regel sicherer als sehr dramatischer Schmuck, insbesondere wenn das Kleid bereits Spitze, Satin, Druck, Stickerei oder einen starken Ausschnitt hat."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hochzeitsgast-Look",
-                "Beste minimalistische Schmuckrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Schlichtes Hochzeitsgastkleid",
-                  "Tropfenohrringe oder mittelgroße Ohrstecker",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Detailliertes Hochzeitsgastkleid",
-                  "Ohrstecker oder Huggies",
-                  "Kadenz M, Amadea"
-                ],
-                [
-                  "Hochzeitsgastkleid aus Satin",
-                  "Tropfenohrringe",
-                  "Orsola"
-                ],
-                [
-                  "Blumenkleid",
-                  "Schmetterlingsohrringe oder kleine Ohrstecker",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Champagnerkleid",
-                  "Weiche Tropfen oder mittlere Noppen",
-                  "Concetta Short, Cadenza M"
-                ],
-                [
-                  "Kleid in Salbei- oder Mintgrün",
-                  "Schmetterlingsohrringe oder zarte Tropfen",
-                  "Farfalla, Concetta Short"
-                ],
-                [
-                  "Schwarzes Hochzeitsgastkleid",
-                  "Mittlere Noppen oder weiche Tropfen",
-                  "Kadenz M, Orsola"
-                ],
-                [
-                  "Brautjungfern-Styling",
-                  "Kleine Noppen oder zarte Tropfen",
-                  "Cadenza S, Concetta Short"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Hochzeiten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistischer Schmuck für Partys und Abendessen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistischer Partyschmuck soll sich dennoch besonders anfühlen. Der Unterschied besteht darin, dass sauberere Stücke anstelle von schwerem Statement-Schmuck verwendet werden."
-        },
-        {
-          "type": "paragraph",
-          "text": "Mittlere Nieten, Creolen und elegante Tropfen sind die beste Wahl. Wenn das Outfit bereits über Pailletten, Satin, roten Stoff, schwarzen Satin oder einen dramatischen Ausschnitt verfügt, sieht minimalistischer Schmuck möglicherweise eleganter aus als auffällige Ohrringe."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party- oder Dinner-Look",
-            "Beste minimalistische Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Dinner-Outfit",
-              "Mittlere Noppen oder weiche Tropfen",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Cocktailkleid",
-              "Reifen oder mittlere Nieten",
-              "Pave Hoops, Cadenza M"
-            ],
-            [
-              "Schwarzes Partykleid",
-              "Reifen, Nieten oder Tropfen",
-              "Pave Hoops, Cadenza M, Orsola"
-            ],
-            [
-              "Rotes Kleid",
-              "Mittlere Noppen oder Tropfen",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Grünes Kleid",
-              "Tropfen, Reifen oder mittlere Nieten",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Partykleid aus Satin",
-              "Tropfen oder Nieten",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Detailliertes Party-Outfit",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Minimales Partyoutfit",
-              "Reifen oder Tropfen",
-              "Pave Hoops, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistischer Schmuck für Geschenke",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistischer Schmuck ist ein starkes Geschenk, da er leichter zu tragen ist als sehr auffällige oder sehr spezifische Designs."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn Sie sich über den genauen Stil des Empfängers nicht sicher sind, sind Ohrstecker in der Regel am sichersten. Huggies sind gut für jemanden, der modernen Schmuck mag. Minimalistische Ohrringe eignen sich am besten für jemanden mit dezentem Geschmack. Schmetterlingsohrringe sind stärker, wenn das Geschenk bedeutungsvoll oder romantisch wirken soll."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Geschenkbedarf",
-            "Beste minimalistische Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Sicherstes Geschenk",
-              "Kleine oder mittlere Stollen",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Erstes Diamantgeschenk",
-              "Kleine Nieten",
-              "Cadenza S"
-            ],
-            [
-              "Klassisches Glitzergeschenk",
-              "Mittlere Stollen",
-              "Cadenza M"
-            ],
-            [
-              "Modernes Geschenk",
-              "Huggies",
-              "Amadea"
-            ],
-            [
-              "Ruhiges Luxusgeschenk",
-              "Minimalistische Ohrringe",
-              "Laluce"
-            ],
-            [
-              "Romantisches Geschenk",
-              "Schmetterlingsohrringe",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Brautjungferngeschenk",
-              "Kleine Noppen oder zarte Tropfen",
-              "Cadenza S, Concetta Short"
-            ],
-            [
-              "Geburtstagsgeschenk",
-              "Ohrstecker, Schmetterlingsohrringe oder Huggies",
-              "Kadenz M, Farfalla, Amadea"
-            ],
-            [
-              "Jubiläumsgeschenk",
-              "Tropfen- oder Schmetterlingsohrringe",
-              "Orsola, Alidi Farfalla"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe als Geschenk",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische Ear-Stack-Ideen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische Ear-Stacks sollten sich sauber und gewollt anfühlen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Verwenden Sie einen kleinen Glitzerpunkt, ein Formstück und ein ruhiges Detail. Halten Sie die Metallfarbe konsistent, wenn der Käufer möchte, dass der Stapel poliert aussieht."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-107.jpg",
+          "image": "/blog-images/blog-image-46.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Minimalistisches Ear-Stack-Ziel",
-                "Hauptstück",
-                "Stützstück",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Einfacher täglicher Stapel",
-                  "Kleiner Bolzen",
-                  "Huggie",
-                  "Kadenz S + Amadea"
-                ],
-                [
-                  "Weicher minimaler Stapel",
-                  "Kleiner Bolzen",
-                  "Minimalistischer Ohrring",
-                  "Cadenza S + Laluce"
-                ],
-                [
-                  "Stapel polierter Arbeitskleidung",
-                  "Mittlerer Bolzen",
-                  "Huggie",
-                  "Kadenz M + Amadea"
-                ],
-                [
-                  "Ruhiger Luxusstapel",
-                  "Mittlerer Bolzen",
-                  "Minimale Details",
-                  "Kadenz M + Laluce"
-                ],
-                [
-                  "Romantischer Minimalstapel",
-                  "Schmetterlingsohrring",
-                  "Kleiner Bolzen",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Hochzeit minimaler Stapel",
-                  "Sanfter Tropfen",
-                  "Kleiner Bolzen",
-                  "Concetta Short + Cadenza S"
-                ],
-                [
-                  "Abends minimaler Stapel",
-                  "Tropfenohrring",
-                  "Kleiner Bolzen",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Hoop minimaler Stapel",
-                  "Reifen",
-                  "Kleiner Bolzen",
-                  "Pave Hoops + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistischer Schmuck nach Outfittyp",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Dieser Abschnitt soll Käufern helfen, Schmuck basierend auf dem, was sie tragen, auszuwählen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Outfit-Typ",
-            "Beste minimalistische Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Weißes Hemd und Jeans",
-              "Kleine Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Blazer-Outfit",
-              "Mittlere Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Schwarzes Kleid",
-              "Mittlere Noppen, Reifen oder weiche Tropfen",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Satinkleid",
-              "Mittlere Ohrstecker oder Ohrhänger",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Kleid mit V-Ausschnitt",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Herzförmiger Ausschnitt",
-              "Schmetterlingsohrringe oder weiche Tropfen",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Schulterfreies Kleid",
-              "Tropfen, Reifen oder Nieten",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Grünes Kleid",
-              "Tropfen, Creolen oder weiche, romantische Ohrringe",
-              "Orsola, Pave Hoops, Farfalla"
-            ],
-            [
-              "Rotes Kleid",
-              "Mittlere Noppen oder Tropfen",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Arbeitskleidung",
-              "Ohrstecker, Huggies oder minimalistische Ohrringe",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Hochzeitsgast-Outfit",
-              "Tropfen-, Ohrstecker- oder Schmetterlingsohrringe",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Reiseoutfit",
-              "Sichere Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck mit rotem Kleid",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistischer Schmuck von Metal Color",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die Metallfarbe kann das Gefühl minimalistischen Schmucks verändern."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gelbgold fühlt sich warm und klassisch an. Weiß- oder Silbertöne wirken sauber und modern. Roségold fühlt sich weich und romantisch an. Für ein minimalistisches Styling ist meist die Metallfarbe, die der Käufer ohnehin am häufigsten trägt, die einfachste Wahl."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-102.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metallfarbe",
-                "Minimalistische Styling-Stimmung",
-                "Am besten für"
-              ],
-              "rows": [
-                [
-                  "Gelbgold",
-                  "Warm, klassisch und elegant",
-                  "Alltagskleidung, schwarze Kleider, grüne Kleider, Geschenke"
-                ],
-                [
-                  "Weiß- oder Silberton",
-                  "Sauber, hell und modern",
-                  "Arbeitskleidung, minimalistische Outfits, coole Kleiderschränke"
-                ],
-                [
-                  "Roségold",
-                  "Weich, romantisch und feminin",
-                  "Geschenke, Rouge-Outfits, Pastellkleider, romantisches Styling"
-                ],
-                [
-                  "Gemischte Metalle",
-                  "Kreativ und trendorientiert",
-                  "Ear Stacks und lässiges Styling"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Offenes Haar"
             },
             {
               "type": "paragraph",
-              "text": "Bei minimalistischen Ear Stacks ist normalerweise eine Metallfarbe am sichersten. Ein Stapel aus Gelbgold fühlt sich warm an, ein Stapel aus Weiß-/Silbertönen fühlt sich sauber an und ein Stapel aus Roségold fühlt sich weich an."
+              "text": "Kleine Ohrringe können von lockerem Haar teilweise verdeckt werden. Wählen Sie eine klarere, sichtbarere Kontur, wenn die Ohrringe auffallen sollen, und prüfen Sie, ob Creolen, Ohrhänger oder dekorative Kanten im Haar hängen bleiben."
+            },
+            {
+              "type": "subheading",
+              "text": "Zusammengebundenes Haar"
+            },
+            {
+              "type": "paragraph",
+              "text": "Zusammengebundenes Haar gibt das Ohr frei und kann kleinere Ohrringe sichtbarer machen. Ein Ohrstecker, eine kleine Creole (Huggie) oder ein minimalistischer Ear Stack können für ausreichend Detail sorgen, ohne einen größeren Ohrring zu erfordern."
+            },
+            {
+              "type": "subheading",
+              "text": "Kurzes Haar"
+            },
+            {
+              "type": "paragraph",
+              "text": "Kurzes Haar kann Ohr und Ausschnitt sichtbar lassen. Entscheiden Sie, ob die Ohrringe oder die Halskette den Akzent setzen sollen, statt beide gleich stark hervorzuheben."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Brille"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Brille bringt eine weitere Form sowie eine Metall- oder Acetatfarbe ins Gesicht. Berücksichtigen Sie Rahmenfarbe, Rahmendicke, Metalloberfläche, den Abstand zwischen Bügel und Ohrringen sowie die Frage, ob die Ohrringe mit einem dekorativen Rahmen konkurrieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Schmuck muss nicht exakt zur Brille passen, doch seine Proportionen sollten gemeinsam betrachtet werden."
+        }
+      ]
+    },
+    {
+      "heading": "Metallfarben kombinieren",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Minimalistisches Styling mit verschiedenen Metallen funktioniert, wenn der Kontrast wiederholt wird. Zum Beispiel: Ohrringe aus Gelbgold mit einer Uhr aus mehreren Metalltönen, eine Halskette in einem Weißton mit einem Ring, der beide Oberflächen enthält, oder abwechselnde Ringoberflächen, die sich am Ohr wiederholen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vermeiden Sie ein einzelnes kontrastierendes Schmuckstück ohne weitere visuelle Verbindung. Für ein einheitliches Ergebnis wählen Sie die Oberfläche, die bereits Ihre Uhr, Ihr Alltagsring oder Ihre meistgetragene Kette verwendet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bevor Sie sich für ein Produkt in Gelbgold, Weißgold oder Roségold entscheiden, prüfen Sie die aktuellen Varianten auf der Produktseite."
+        },
+        {
           "type": "see-also",
-          "text": "Gold vs. Weiß vs. Roségold, im Labor gezüchtete Diamantohrringe",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Ohrschmuck mit im Labor gezüchteten Diamanten in Gelb-, Weiß- oder Roségold",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Produktpfade von Styling Need",
+      "heading": "Minimalistischer Schmuck vom Tag bis zum Abend",
       "content": [
         {
-          "type": "subheading",
-          "text": "Für den besten minimalistischen Start in den Alltag"
-        },
-        {
           "type": "paragraph",
-          "text": "Wählen Sie die im Labor gezüchteten Diamant-Ohrstecker von Cadenza S. Sie sind dezent, leicht zu tragen und stark wie ein erster minimalistischer Diamantohrring."
+          "text": "Sie müssen nicht jedes Schmuckstück austauschen, um die Wirkung eines Outfits zu verändern."
         },
         {
           "type": "subheading",
-          "text": "Für sichtbareren minimalistischen Glanz"
+          "text": "Tag"
         },
         {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza M Diamant-Ohrstecker. Sie behalten die klare Stollenform bei und sorgen gleichzeitig für mehr Präsenz."
-        },
-        {
-          "type": "subheading",
-          "text": "Für ruhige, minimalistische Details"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie die minimalistischen Diamantohrringe von Laluce. Sie eignen sich am besten für Käufer, die ein dezentes Styling wünschen."
+          "type": "bullet-list",
+          "items": [
+            "Kleine Diamant-Ohrstecker",
+            "Feiner Anhänger",
+            "Schlichter Ring"
+          ]
         },
         {
           "type": "subheading",
-          "text": "Für modernes, minimalistisches Styling"
+          "text": "Abendlich"
         },
         {
-          "type": "paragraph",
-          "text": "Wählen Sie Amadea Huggie-Ohrringe. Sie sorgen für Form, bleiben nah am Ohr und lassen sich leicht stylen."
-        },
-        {
-          "type": "subheading",
-          "text": "Für minimalistische Ear Stacks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza S mit Laluce oder Amadea. Dadurch entsteht ein sauberer Stapel, ohne dass das Ohr überfüllt wirkt."
-        },
-        {
-          "type": "subheading",
-          "text": "Für ein minimalistisches Hochzeitsgäste-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie je nach Detail des Kleides Orsola-Ohrringe, Concetta Short-Ohrringe oder Cadenza M."
-        },
-        {
-          "type": "subheading",
-          "text": "Für romantisches, minimalistisches Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Farfalla-Schmetterlingsohrringe oder Alidi Farfalla-Schmetterlingsohrringe. Diese eignen sich gut für Geschenke, weiche Kleider und bedeutungsvolles Styling."
-        },
-        {
-          "type": "subheading",
-          "text": "Für minimalistisches Party-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza M, Pave Hoops oder Orsola. Diese sorgen für genügend Abendglanz, ohne zu aufdringlich zu wirken."
-        }
-      ]
-    },
-    {
-      "heading": "Produktempfehlungen von IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produkt",
-            "Beste minimalistische Styling-Rolle",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Bestes erstes minimalistisches Stück",
-              "Klein, dezent und leicht täglich zu tragen"
-            ],
-            [
-              "Cadenza M Diamant-Ohrstecker",
-              "Bester sichtbarer minimalistischer Glanz",
-              "Klassische Form mit mehr Präsenz"
-            ],
-            [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Bestes leises Detail",
-              "Weich, dezent und einfach zu stylen"
-            ],
-            [
-              "Amadea Huggie-Ohrringe",
-              "Beste moderne minimalistische Form",
-              "Robust für den täglichen Gebrauch und Ohrstöpsel"
-            ],
-            [
-              "Pave-Reifen",
-              "Beste minimale Rahmenrichtung",
-              "Verleiht Form und bleibt gleichzeitig tragbar"
-            ],
-            [
-              "Orsola-Ohrhänger",
-              "Beste minimalistische Anlassbewegung",
-              "Verleiht Abendessen und Hochzeiten Eleganz"
-            ],
-            [
-              "Concetta Kurze Ohrringe",
-              "Bestes Stück für zarte Anlässe",
-              "Gut für Brautjungfern und sanftes Styling"
-            ],
-            [
-              "Concetta Lange Ohrringe",
-              "Beste formale Minimallinie",
-              "Raffiniert und abendtauglich"
-            ],
-            [
-              "Farfalla Schmetterlingsohrringe",
-              "Bestes romantisches minimalistisches Stück",
-              "Fügt Bedeutung hinzu, ohne schwer zu wirken"
-            ],
-            [
-              "Alidi Farfalla Schmetterlingsohrringe",
-              "Bestes Geschenk-Romantikstück",
-              "Stark für Geburtstage und Jubiläen"
-            ],
-            [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Nicht minimalistisch, aber sinnvoller Kontrast",
-              "Am besten nur, wenn das Outfit einen auffälligen Blickfang braucht"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Ersetzen Sie die Ohrstecker durch einen auffälligeren Ohrring",
+            "Behalten Sie den Anhänger bei oder nehmen Sie ihn ab, wenn die Ohrringe zum Blickfang werden",
+            "Ergänzen Sie ein Armband",
+            "Behalten Sie denselben Ring und dieselbe Metallrichtung bei"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Minimalistischer Schmuck sollte leicht zu tragen, leicht zu wiederholen und leicht zu stylen sein. Beginnen Sie mit Cadenza S für dezentes Glitzern, Cadenza M für klassischen Glanz, Laluce für ruhige Details, Amadea für moderne Formen und Orsola für sanfte Bewegung bei besonderen Anlässen."
+          "text": "Das Austauschen eines Blickfangs erzeugt meist einen klareren Übergang als das Hinzufügen mehrerer zusätzlicher Schmuckstücke."
         }
       ]
     },
     {
-      "heading": "Häufige Fehler beim minimalistischen Styling, die Sie vermeiden sollten",
+      "heading": "Minimalistischer Schmuck und Ear Stacks",
       "content": [
         {
           "type": "paragraph",
-          "text": "Ein häufiger Fehler ist die Annahme, minimalistischer Schmuck müsse unsichtbar sein. Minimalistischer Schmuck kann immer noch funkeln und das Gesicht umrahmen; es überwältigt das Outfit einfach nicht."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, Stücke zu wählen, die zu klein für das Outfit sind. Wenn das Kleid dunkel, satiniert oder optisch stark ist, können sehr kleine Ohrringe verschwinden."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, zu viele kleine Stücke ohne Struktur zu tragen. Sogar minimalistischer Schmuck kann überfüllt wirken, wenn es kein Hauptstück oder klare Balance gibt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler ist das unbeabsichtigte Mischen von Metallen. Gemischte Metalle können stilvoll aussehen, für einen eleganten, minimalistischen Look eignet sich jedoch normalerweise eine Metallfarbe besser."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein fünfter Fehler besteht darin, minimalistischen Schmuck nur für Freizeitkleidung zu verwenden. Minimalistische Ohrstecker, Ohrstecker und Huggies eignen sich auch wunderbar für Hochzeiten, Abendessen und Partys."
-        },
-        {
-          "type": "paragraph",
-          "text": "Schließlich sollten Sie sich nicht für Schmuck entscheiden, nur weil er einfach ist. Es sollte dennoch zum Outfit, zum Ausschnitt, zur Frisur, zum Anlass und zum persönlichen Stil der Trägerin passen."
+          "text": "Ein minimalistischer Ear Stack kann aus zwei abgestuften Ohrsteckern, einem Ohrstecker mit einer kleinen Creole (Huggie), einer schmalen Creole mit einem kleinen Ohrstecker oder drei zurückhaltenden Ohrringen mit wiederholter Metall- oder Diamantform bestehen."
         },
         {
           "type": "see-also",
-          "text": "Pflegeanleitung für vergoldeten Schmuck",
+          "text": "So kombinieren Sie Ohrringe im Ear Stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ideen für einen Diamant-Ear-Stack",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Pflege einer minimalistischen Schmuckauswahl",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Eine kleinere Schmuckauswahl bedeutet oft, dass die Stücke häufiger getragen und angefasst werden. Für bestätigte Stücke aus vergoldetem 925 Sterlingsilber gilt:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Tragen Sie Parfum, Kosmetik und Haarprodukte auf, bevor Sie den Schmuck anlegen",
+            "Legen Sie den Schmuck vor dem Duschen, Schwimmen und Sport ab",
+            "Wischen Sie die Stücke nach dem Tragen vorsichtig ab",
+            "Bewahren Sie die Stücke getrennt auf, um Reibung zu reduzieren",
+            "Schließen Sie feine Ketten zur Aufbewahrung, um Verheddern zu vermeiden",
+            "Vermeiden Sie scheuernde Poliermittel",
+            "Befolgen Sie die Pflegehinweise, die jedem Produkt beiliegen"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "So pflegen Sie vergoldeten Schmuck",
           "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
         }
       ]
     },
     {
-      "heading": "Abschließende Checkliste für minimalistischen Schmuck",
+      "heading": "Häufige Stylingfehler bei minimalistischem Schmuck",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Bevor Sie sich für minimalistischen Schmuck entscheiden, fragen Sie:"
+          "type": "subheading",
+          "text": "Mehrere Blickfänge tragen"
         },
         {
-          "type": "bullet-list",
+          "type": "paragraph",
+          "text": "Sichtbare Ohrringe, mehrere Halsketten, zahlreiche Ringe und gestapelte Armbänder können miteinander konkurrieren. Wählen Sie einen Hauptbereich und halten Sie die übrigen Schmuckstücke zurückhaltender."
+        },
+        {
+          "type": "subheading",
+          "text": "Minimalistisch mit winzig gleichsetzen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein sehr kleines Schmuckstück kann vor einem Outfit, einer Frisur oder einer Brille verschwinden. Berücksichtigen Sie bei der Größenwahl die Proportionen des gesamten Looks."
+        },
+        {
+          "type": "subheading",
+          "text": "Nicht zusammenpassende Details kombinieren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch mehrere kleine Motive können unruhig wirken. Wiederholen Sie eine Form, ein Diamantdetail oder eine Metallfarbe."
+        },
+        {
+          "type": "subheading",
+          "text": "Maße ignorieren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kettenlänge, Anhängermaße, Creolendurchmesser und Ohrringgröße beeinflussen, wie die Stücke miteinander wirken. Verwenden Sie die tatsächlichen Maße und authentische Model-Fotos."
+        },
+        {
+          "type": "subheading",
+          "text": "Metalle zufällig mischen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Verschiedene Metalle können bewusst wirken, wenn sie wiederholt werden. Ein einzelnes kontrastierendes Schmuckstück kann unverbunden aussehen."
+        },
+        {
+          "type": "subheading",
+          "text": "Jedes Schmuckstück für denselben Anlass auswählen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine praktische Schmuckauswahl enthält Stücke, die sich mit mehreren Outfits neu kombinieren lassen, statt eines vollständigen Sets, das immer gemeinsam getragen wird."
+        }
+      ]
+    },
+    {
+      "heading": "Checkliste für das finale Styling",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Fragen Sie sich vor dem Abschluss des Looks:"
+        },
+        {
+          "type": "numbered-list",
           "items": [
-            "Ist das Outfit lässig, Arbeitskleidung, Hochzeitsgast, Abendessen oder Party?",
-            "Möchte ich Glanz, Form, Bewegung oder Weichheit?",
-            "Sollten die Ohrringe oder die Halskette der wichtigste Schmuckmoment sein?",
-            "Werden die Ohrringe in meiner Frisur sichtbar sein?",
-            "Ist das Outfit schlicht oder detailliert?",
-            "Passt die Metallfarbe zu meinem üblichen Schmuck?",
-            "Kann das Stück mit mehr als einem Outfit getragen werden?",
-            "Ist der Schmuck bequem genug für langes Tragen?",
-            "Können die Ohrringe in einem Ear Stack verwendet werden?",
-            "Sind die Materialien klar erklärt?",
-            "Ist das Design schlicht, aber dennoch besonders?",
-            "Wird sich dieser Schmuck nach einer Saison noch tragbar anfühlen?"
+            "Welches Schmuckstück ist der Blickfang?",
+            "Welches Detail verbindet den Schmuck?",
+            "Ist ausreichend visueller Freiraum vorhanden?",
+            "Passt die Halskette zum Ausschnitt?",
+            "Passen die Ohrringe zur Frisur und zur Brille?",
+            "Sind die Schmuckproportionen für das Outfit geeignet?",
+            "Wirkt die Metallkombination bewusst gewählt?",
+            "Bleiben Ketten, Creolen oder Ohrhänger an der Kleidung hängen?",
+            "Kann ein Schmuckstück entfernt werden, damit die Komposition klarer wirkt?",
+            "Sind Materialien und Pflegeanforderungen bekannt?"
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn Sie sich nicht sicher sind, beginnen Sie mit kleinen, im Labor gezüchteten Diamantohrsteckern oder Huggies. Sie sind die am einfachsten zu tragenden minimalistischen Schmuckstücke."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Was ist minimalistischer Schmuck?",
-      "answer": "Minimalistischer Schmuck ist schlichter, schlichter und tragbarer Schmuck, der dem Outfit Glanz verleiht, ohne ihn zu überfordern. Es kann Ohrstecker, Huggies, kleine Creolen, minimalistische Ohrringe und zarte Tropfen umfassen."
+      "question": "Was bedeutet minimalistisches Schmuckstyling?",
+      "answer": "Minimalistisches Schmuckstyling kombiniert eine begrenzte Anzahl an Schmuckstücken mit kontrollierten Proportionen, wiederkehrenden Details und visuellem Freiraum. Der Schmuck ergänzt das Outfit, ohne jeden Bereich zum Blickfang zu machen."
     },
     {
-      "question": "Wie stylt man minimalistischen Schmuck?",
-      "answer": "Gestalten Sie minimalistischen Schmuck, indem Sie einen Glitzerpunkt, ein Formdetail und ein klares Finish wählen. Halten Sie die Teile im Gleichgewicht und vermeiden Sie es, den Look zu überladen."
+      "question": "Wie viele Schmuckstücke gehören zu einem minimalistischen Look?",
+      "answer": "Es gibt keine feste Anzahl. Zwei aufeinander abgestimmte Schmuckstücke können vollständiger wirken als mehrere unverbundene. Wählen Sie einen Blickfang und setzen Sie die übrigen Stücke unterstützend ein."
     },
     {
-      "question": "Eignet sich minimalistischer Schmuck für den Alltag?",
-      "answer": "Ja, minimalistischer Schmuck eignet sich hervorragend für den Alltag, da er zu vielen Outfits passt und sich bei regelmäßiger Verwendung angenehm anfühlt."
+      "question": "Wie stellen Sie eine minimalistische Schmuckauswahl zusammen?",
+      "answer": "Beginnen Sie mit vielseitig tragbaren Kategorien wie kleinen Ohrsteckern, kleinen Creolen (Huggies) oder Creolen, einem Anhänger, einem Armband und einem schlichten Ring. Wählen Sie Stücke, die sich neu kombinieren lassen, statt nur als vollständiges Set getragen zu werden."
     },
     {
-      "question": "Welche Ohrringe eignen sich am besten für minimalistisches Styling?",
-      "answer": "Kleine Diamant-Ohrstecker, mittlere Ohrstecker, Huggies, minimalistische Ohrringe und weiche Tropfen eignen sich am besten für minimalistisches Styling."
+      "question": "Können Sie minimalistische Halsketten kombinieren?",
+      "answer": "Ja. Variieren Sie die Längen und halten Sie mindestens eine Kette optisch schlicht. Achten Sie darauf, dass sich die Anhänger nicht überlagern und die Ketten zum Ausschnitt passen."
     },
     {
-      "question": "Kann man minimalistischen Schmuck zu Hochzeiten tragen?",
-      "answer": "Ja, minimalistischer Schmuck eignet sich hervorragend für Hochzeitsgäste, insbesondere wenn das Outfit bereits Spitze, Satin, Stickereien oder einen starken Ausschnitt aufweist."
+      "question": "Können Sie Metallfarben bei minimalistischem Schmuck kombinieren?",
+      "answer": "Ja. Wiederholen Sie beide Metallfarben an anderer Stelle im Arrangement, damit der Kontrast bewusst wirkt."
     },
     {
-      "question": "Kann man minimalistischen Schmuck auf Partys tragen?",
-      "answer": "Ja, minimalistischer Schmuck kann für Partys geeignet sein, wenn Sie Stücke mit ausreichend Glanz wählen, wie zum Beispiel mittelgroße Ohrstecker, Creolen oder elegante Ohrhänger."
+      "question": "Welcher Schmuck passt zu einem hohen Ausschnitt?",
+      "answer": "Ohrringe können für das wichtigste Detail sorgen. Wenn Sie eine Kette tragen, positionieren Sie sie klar über oder unter dem Ausschnitt statt direkt an dessen Rand."
     },
     {
-      "question": "Ist minimalistischer Schmuck gut für die Arbeit?",
-      "answer": "Ja, minimalistischer Schmuck ist ideal für die Arbeit, weil er Glanz verleiht, ohne abzulenken."
+      "question": "Welcher minimalistische Schmuck passt zu einem V-Ausschnitt?",
+      "answer": "Ein Anhänger kann der V-Form folgen. Wählen Sie zurückhaltende Ohrringe, wenn die Kette im Mittelpunkt steht."
     },
     {
-      "question": "Welcher minimalistische Schmuck eignet sich am besten als Geschenk?",
-      "answer": "Ohrstecker, Huggies und minimalistische Diamantohrringe sind die sichersten Geschenkoptionen, da sie einfach zu tragen und weniger riskant sind als auffälliger Schmuck."
+      "question": "Kann minimalistischer Schmuck zu Abendveranstaltungen getragen werden?",
+      "answer": "Ja. Heben Sie ein Schmuckstück als Blickfang hervor, etwa die Ohrringe, und halten Sie den übrigen Schmuck zurückhaltend."
     },
     {
-      "question": "Kann man mit minimalistischem Schmuck einen Ear Stack bauen?",
-      "answer": "Ja, minimalistischer Schmuck eignet sich perfekt für Ear Stacks. Ein kleiner Ohrstecker mit einem Huggie-Ohrring oder einem minimalistischen Ohrring ergibt einen sauberen Stapel für den Alltag."
+      "question": "Können minimalistische Ohrringe in einem Ear Stack getragen werden?",
+      "answer": "Ja. Kombinieren Sie Schmuckstücke mit ähnlichen Formen oder Oberflächen und prüfen Sie vor dem Tragen die tatsächlichen Maße und Abstände."
     },
     {
-      "question": "Welche IWantJewels-Produkte eignen sich am besten für minimalistisches Styling?",
-      "answer": "Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short und Farfalla sind starke Optionen, je nachdem, ob es sich um einen Alltags-, Arbeits-, Hochzeitsgast-, Romantik- oder Party-Look handelt."
+      "question": "Ist minimalistischer Schmuck immer für den Alltag geeignet?",
+      "answer": "Nein. Die Eignung hängt von den Maßen, dem Gewicht, dem Verschluss, den Materialien, der Oberfläche und den Aktivitäten der Trägerin oder des Trägers ab."
     }
   ],
   "cta": {
-    "heading": "Minimalistischer Schmuck sollte schlicht, elegant und leicht zu tragen sein. Wählen Sie Ohrstecker für klares Funkeln, Huggies für moderne Formen, minimalistische Ohrringe für ruhige Details, Creolen für weiche Struktur und Tropfenohrringe für elegante Bewegung.",
-    "body": "Beginnen Sie mit den halbfeinen, im Labor gezüchteten Diamantohrringen von IWantJewels, wenn Sie minimalistischen Schmuck mit echtem Diamantfunkeln wünschen. Wählen Sie Cadenza S für dezenten Alltagsglanz, Cadenza M für klassischen Glanz, Laluce für ruhiges Styling, Amadea für Huggies, Pave Hoops für Form und Orsola für sanfte Bewegung bei besonderen Anlässen.",
-    "primaryLabel": "Kaufen Sie minimalistischen Schmuck",
-    "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie im Labor gezüchtete Diamantohrringe",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lesen Sie den Leitfaden für minimalistische Ohrringe",
-    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
+    "heading": "Beim Styling mit minimalistischem Schmuck geht es um Klarheit, nicht um strenge Regeln. Wählen Sie einen Blickfang, greifen Sie ein passendes Detail wieder auf und lassen Sie ausreichend visuellen Raum, damit jedes Schmuckstück zur Geltung kommt.",
+    "body": "Entdecken Sie die minimalistischen Schmuckstücke von I Want Jewels und stellen Sie eine Capsule-Garderobe rund um die Outfits zusammen, die Sie am häufigsten tragen. Prüfen Sie auf jeder Produktseite die Maße, Materialien und Oberfläche.",
+    "primaryLabel": "Minimalistischen Schmuck entdecken",
+    "primaryHref": "/products",
+    "secondaryLabel": "Earring-Styles vergleichen",
+    "secondaryHref": "/resources/earring-style-guides/minimalist-earrings-guide",
+    "tertiaryLabel": "Ohrringe mit im Labor gezüchteten Diamanten für jeden Tag",
+    "tertiaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
   }
 }

@@ -1,1425 +1,694 @@
 {
   "meta": {
-    "title": "Guida agli orecchini in grassetto",
-    "description": "Impara come abbinare orecchini audaci con abiti neri, abiti da festa, look da sera, diamanti coltivati in laboratorio, borchie e orecchini."
+    "title": "Orecchini statement audaci: guida allo stile",
+    "description": "Scopra come scegliere e abbinare orecchini statement audaci in base a dimensioni, peso, scollo, acconciatura e outfit, senza appesantire il look."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-7.jpg",
-    "title": "Guida agli orecchini in grassetto:",
-    "subtitle": "Come abbinare orecchini straordinari senza esagerare con il look",
+    "image": "/blog-images/blog-image-42.jpg",
+    "title": "Orecchini statement audaci:",
+    "subtitle": "Come sceglierli e abbinarli",
     "paragraphs": [
-      "Gli orecchini audaci sono per outfit che necessitano di un chiaro momento di gioielleria. Non sono destinati a scomparire nell'outfit. Hanno lo scopo di incorniciare il viso, aggiungere brillantezza e far sembrare un look semplice pronto per la festa.",
-      "Il modo più semplice per abbinare orecchini audaci è mantenere pulito il resto dei gioielli. Un semplice vestito nero, un vestito di raso, un vestito senza spalline, un vestito con spalle scoperte o un elegante look da festa possono portare magnificamente orecchini audaci. Se l'abito ha già paillettes, ricami pesanti, pizzo, tessuto metallico o una scollatura drammatica, borchie medie, gocce o abbracci potrebbero essere migliori.",
-      "Su IWantJewels, gli orecchini Lusso audaci sono la principale direzione del prodotto per questa pagina. Lusso dovrebbe essere abbinato all'orecchino da festa straordinario, soprattutto per abiti da sera semplici, abiti neri, look di compleanno, cene e uno stile sicuro. Cadenza S funziona come il miglior supporto per un auricolare audace, mentre Orsola, Pave Hoops e Cadenza M sono alternative più sicure quando l'outfit ha bisogno di movimento, forma o brillantezza classica invece di un punto focale audace."
+      "Gli orecchini statement audaci sono pensati per avere un ruolo evidente nell'outfit. Il loro impatto può dipendere da dimensioni, forma, movimento, contrasto, quantità di diamanti o da un motivo insolito, non solo dall'essere oversize.",
+      "Il modo più equilibrato di indossare orecchini statement è decidere cosa debba guidare il look. Se gli orecchini sono il punto focale, la collana, l'ear stack e i dettagli dell'outfit possono sostenerli invece di competere per l'attenzione.",
+      "Prima di scegliere un paio, controlli dimensioni complete, peso di ogni orecchino, chiusura e materiali. Questi dettagli sono più utili di parole come \"audace\" o \"leggero\", che possono avere significati diversi a seconda del design."
     ],
-    "shopLabel": "Acquista orecchini audaci",
+    "shopLabel": "Scopra gli orecchini statement",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comprendi quando indossare orecchini audaci",
-      "Crea orecchini audaci con abiti neri, abiti rossi, abiti verdi, abiti in raso e look da festa",
-      "Decidi quando gli orecchini audaci sono migliori di quelli a bottone, a cerchio o a goccia",
-      "Impara come bilanciare orecchini audaci con collane, acconciature e scollature",
-      "Costruisci orecchini audaci con piccole borchie di supporto",
-      "Scegli orecchini audaci per feste di compleanno, cene, matrimoni, eventi serali e regali",
-      "Evita di far sembrare l'outfit troppo affollato",
-      "Trova consigli sui prodotti IWantJewels per outfit e occasione",
-      "Pianifica blocchi di immagini, moduli di prodotto, sezioni CTA e collegamenti interni per questa pagina"
+      "L'impatto nasce da forma, movimento, contrasto o quantità di diamanti, non solo dalle dimensioni",
+      "\"Statement\" e \"a lobo\" non sono opposti: un orecchino a lobo scultoreo può essere entrambe le cose",
+      "Scelga un solo punto focale nella gioielleria e lasci che il resto lo sostenga",
+      "Controlli larghezza, altezza, lunghezza pendente, sporgenza e peso completi di ogni orecchino",
+      "Una collana non è automaticamente sbagliata: decide lo scollo",
+      "Gli orecchini statement possono funzionare di giorno se le specifiche sono adatte al tempo di utilizzo"
     ],
-    "image": "/blog-images/blog-image-81.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Selettore di orecchini in grassetto",
+      "heading": "Lo styling degli orecchini statement in sintesi",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Utilizza questa tabella nella parte superiore della pagina come principale strumento decisionale per lo stile."
-        },
+          "type": "table",
+          "headers": [
+            "Situazione di styling",
+            "Direzione dello stile",
+            "Come bilanciarla"
+          ],
+          "rows": [
+            [
+              "Outfit semplice o minimal",
+              "Una forma, un motivo o una disposizione di diamanti più visibili",
+              "Mantenga discreti la collana e gli altri orecchini"
+            ],
+            [
+              "Outfit ricco di dettagli o decorato",
+              "Un design statement dalle dimensioni controllate",
+              "Eviti di ripetere ogni dettaglio dell'abito"
+            ],
+            [
+              "Scollo aperto",
+              "Gli orecchini possono diventare il gioiello principale",
+              "La collana è facoltativa"
+            ],
+            [
+              "Scollo alto o ricco di dettagli",
+              "Consideri larghezza, lunghezza e possibile contatto con il tessuto",
+              "Di solito, mantenga la collana minimal"
+            ],
+            [
+              "Capelli raccolti",
+              "La maggior parte delle forme resterà visibile",
+              "Scelga in base a dimensioni e comfort"
+            ],
+            [
+              "Capelli sciolti",
+              "Scelga un profilo evidente o una finitura a contrasto",
+              "Non aumenti il peso solo per ottenere visibilità"
+            ],
+            [
+              "Piercing multipli",
+              "Usi un orecchino focale con pezzi di supporto più piccoli",
+              "Controlli la distanza fisica tra i piercing"
+            ],
+            [
+              "Evento lungo",
+              "Dia priorità a peso dichiarato, chiusura e movimento",
+              "Consideri come si sentiranno gli orecchini dopo diverse ore"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Cosa definisce un orecchino statement audace?",
+      "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-83.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Necessità di stile",
-                "Miglior direzione degli orecchini",
-                "Direzione IWJ consigliata"
-              ],
-              "rows": [
-                [
-                  "Look da festa audace",
-                  "Orecchini di grande impatto",
-                  "Lusso"
-                ],
-                [
-                  "Abito nero semplice",
-                  "Orecchini audaci, gocce o cerchi",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Abito da festa in raso",
-                  "Orecchini a goccia o vistosi se l'abito è semplice",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Stile del vestito rosso",
-                  "Gocce o borchie medie; audace solo se l'abito è semplice",
-                  "Orsola, Cadenza M, Lusso"
-                ],
-                [
-                  "Stile abito verde",
-                  "Gocce d'oro, cerchi o orecchini audaci",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Look per una festa di compleanno",
-                  "Orecchini audaci, cerchi o orecchini a farfalla",
-                  "Lusso, Pave Hoops, Farfalla"
-                ],
-                [
-                  "Look per una cena",
-                  "Gocce o borchie medie",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Look formale da sera",
-                  "Gocce lunghe o borchie lucide",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Abito dettagliato",
-                  "Borchie, abbracci o orecchini minimalisti",
-                  "Cadenza M, Amadea, Laluce"
-                ],
-                [
-                  "Stack di orecchie in grassetto",
-                  "Orecchino audace + piccolo bottone",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Alternativa più sicura e audace",
-                  "Orecchini pendenti o cerchi",
-                  "Orsola, Pave Hoops"
-                ],
-                [
-                  "Regalo per gli amanti dei gioielli audaci",
-                  "Orecchini o cerchi audaci",
-                  "Lusso, Pave Hoops"
-                ]
+              "type": "paragraph",
+              "text": "Gli orecchini statement non appartengono a un'unica categoria di prodotto. Un paio può creare impatto visivo grazie a una o più delle seguenti caratteristiche:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Una silhouette più ampia o lunga",
+                "Una forma scultorea o geometrica",
+                "Un motivo riconoscibile",
+                "Più pietre o una disposizione di diamanti più evidente",
+                "Movimento dato da elementi articolati o pendenti",
+                "Un forte contrasto con i capelli o gli abiti di chi li indossa",
+                "Una combinazione insolita di forma, texture o spazio negativo"
               ]
             }
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino a lobo scultoreo e compatto può essere più d'impatto di un orecchino sottile e più lungo. Allo stesso modo, un orecchino a cerchio con pavé può essere il punto focale di un outfit senza essere oversize."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per questo, misure e fotografie sono più utili delle sole etichette del prodotto."
         }
       ]
     },
     {
-      "heading": "Cosa sono gli orecchini audaci?",
+      "heading": "Controlli le misure prima di scegliere",
       "content": [
         {
           "type": "paragraph",
-          "text": "Gli orecchini audaci sono orecchini progettati per essere il principale punto focale di un outfit. Di solito sono più grandi, più visibili, più scintillanti o più designati rispetto agli orecchini a bottone, agli abbracci o agli orecchini minimalisti di tutti i giorni."
+          "text": "Le fotografie dei prodotti non sono sempre mostrate alla stessa scala. Due orecchini possono sembrare simili online, ma avere proporzioni molto diverse una volta indossati."
+        },
+        {
+          "type": "subheading",
+          "text": "Larghezza e altezza complete"
         },
         {
           "type": "paragraph",
-          "text": "Un orecchino audace non ha sempre bisogno di essere oversize. Ha semplicemente bisogno di una presenza sufficiente per guidare lo sguardo. Dovrebbe attirare l'attenzione sul viso e far sembrare l'outfit elegante."
+          "text": "Il profilo completo determina quanto spazio occupa un orecchino intorno all'orecchio. Le misure devono includere l'intero design, non solo la pietra centrale o il motivo."
+        },
+        {
+          "type": "subheading",
+          "text": "Lunghezza del pendente"
         },
         {
           "type": "paragraph",
-          "text": "Per IWantJewels, gli orecchini Lusso audaci dovrebbero essere posizionati come un'opzione di orecchino eccezionale e guidata dalla festa. Non sono gli orecchini di tutti i giorni più sicuri. Sono più forti quando l'outfit è abbastanza semplice da lasciare che gli orecchini diventino il momento principale di scintillio."
+          "text": "Per gli orecchini pendenti, misuri dal piercing o dal punto di chiusura fino alla parte più bassa del design. Questo aiuta a capire se l'orecchino può avvicinarsi alla mascella, allo scollo o al colletto."
         },
         {
-          "type": "table",
-          "headers": [
-            "Qualità degli orecchini audace",
-            "Cosa significa"
-          ],
-          "rows": [
-            [
-              "Chiaro punto focale",
-              "L'orecchino guida il look del gioiello"
-            ],
-            [
-              "Scintillio visibile",
-              "L'orecchino si vede nelle foto e nell'illuminazione serale"
-            ],
-            [
-              "Design più forte",
-              "Più impatto di un semplice stallone o abbraccio"
-            ],
-            [
-              "Dipendente dall'outfit",
-              "Funziona meglio se bilanciato con il vestito"
-            ],
-            [
-              "Gioielli di supporto minimo",
-              "La collana e gli altri pezzi dovrebbero rimanere puliti"
-            ],
-            [
-              "Guidato dall'occasione",
-              "Ideale per feste, cene, compleanni e look da sera"
-            ],
-            [
-              "Stile sicuro",
-              "Funziona quando chi lo indossa vuole che i gioielli vengano notati"
-            ]
-          ]
+          "type": "subheading",
+          "text": "Sporgenza"
         },
         {
-          "type": "see-also",
-          "text": "Guida agli orecchini per le feste",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
+          "type": "paragraph",
+          "text": "La sporgenza indica quanto un orecchino si estende verso l'esterno rispetto all'orecchio. Può influire sull'aspetto laterale di un pezzo scultoreo e sul possibile contatto con capelli o abiti."
+        },
+        {
+          "type": "subheading",
+          "text": "Peso per orecchino"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il peso dovrebbe essere indicato per ogni orecchino, non solo per la coppia. Il comfort personale varia, ma questa misura permette di confrontare correttamente i design."
+        },
+        {
+          "type": "subheading",
+          "text": "Chiusura e farfallina"
+        },
+        {
+          "type": "paragraph",
+          "text": "Controlli se l'orecchino usa un perno con farfallina, una chiusura a cerniera, una chiusura a leva o un altro sistema. La chiusura deve corrispondere sempre al prodotto reale."
+        },
+        {
+          "type": "subheading",
+          "text": "Movimento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino pendente articolato si comporta diversamente da un design rigido. Il movimento può renderlo più evidente, ma può anche aumentare il contatto con capelli, colli o spalle."
         }
       ]
     },
     {
-      "heading": "Quando dovresti indossare orecchini audaci?",
+      "heading": "Come indossare orecchini statement senza appesantire l'outfit",
       "content": [
         {
           "type": "paragraph",
-          "text": "Indossa orecchini audaci quando l'outfit è semplice, pulito o necessita di un punto finale forte."
+          "text": "Inizi scegliendo un unico punto focale principale nella gioielleria."
         },
         {
           "type": "paragraph",
-          "text": "Un semplice abito nero, un abito sottoveste in satin, un abito senza spalline, un abito con spalle scoperte, una tuta elegante o un outfit minimal da festa possono portare bene orecchini audaci. Più l'outfit è pulito, più facile sarà che gli orecchini audaci sembrino intenzionali."
+          "text": "Se gli orecchini hanno una forma decisa, una quantità di diamanti evidente o un movimento importante, lasci che siano loro a guidare il look. Il resto della gioielleria non deve scomparire, ma avere un ruolo di supporto."
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Osservi i dettagli già presenti nell'outfit.",
+            "Decida se debbano attirare più attenzione gli orecchini o lo scollo.",
+            "Aggiunga una collana solo se dà all'outfit qualcosa di cui ha davvero bisogno.",
+            "Mantenga più piccoli i piercing secondari rispetto all'orecchino focale.",
+            "Valuti il look completo alla normale distanza di osservazione."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "L'equilibrio non richiede che ogni outfit sia minimal. Significa evitare diversi punti focali non collegati intorno a viso e scollo."
+        }
+      ]
+    },
+    {
+      "heading": "Gli orecchini statement si possono indossare con una collana?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Non esiste una regola per cui gli orecchini statement debbano essere sempre indossati senza collana. La scelta dipende dallo scollo, dal peso visivo degli orecchini e dalla collana stessa."
         },
         {
           "type": "table",
           "headers": [
-            "Il momento migliore per indossare orecchini audaci",
-            "Perché funziona"
+            "Combinazione di orecchini e outfit",
+            "Indicazioni per la collana"
           ],
           "rows": [
             [
-              "Abito nero semplice",
-              "Gli orecchini audaci diventano la scintilla principale"
+              "Orecchini statement con outfit senza spalline",
+              "Possono funzionare sia senza collana sia con una collana discreta"
             ],
             [
-              "Outfit da sera minimal",
-              "Aggiunge interesse senza bisogno di una collana"
+              "Orecchini statement con scollo a spalle scoperte",
+              "Lasci guidare gli orecchini oppure scelga una collana molto semplice"
             ],
             [
-              "Abito senza spalline",
-              "Incornicia il viso e il décolleté"
+              "Orecchini statement con scollo a V",
+              "Un ciondolo può funzionare se non compete con gli orecchini"
             ],
             [
-              "Abito con spalle scoperte",
-              "Bilancia la linea delle spalle aperte"
+              "Orecchini statement con scollo alto",
+              "Spesso la collana non è necessaria"
             ],
             [
-              "Festa di compleanno",
-              "Crea un momento celebrativo dei gioielli"
+              "Orecchini statement con scollo decorato",
+              "Di solito, eviti di aggiungere un altro elemento importante"
             ],
             [
-              "Cocktail party",
-              "Aggiunge uno stile visibile"
-            ],
-            [
-              "Cena",
-              "Funziona se l'outfit è pulito"
-            ],
-            [
-              "Completo da sera",
-              "Aggiunge sicurezza e lucentezza"
-            ],
-            [
-              "Tuta semplice",
-              "Dona struttura e glamour"
-            ],
-            [
-              "Festa serale di nozze",
-              "Funziona se l'outfit dell'ospite è semplice e non troppo nuziale"
+              "Orecchini statement con girocollo semplice",
+              "Una catena sottile può dare struttura senza diventare un secondo punto focale"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Lusso è la raccomandazione più forte di IWantJewels quando l'acquirente vuole che siano gli orecchini a guidare il look."
+          "text": "Non basi la scelta solo sulla lunghezza dell'orecchino. Anche larghezza, forma, brillantezza e movimento contribuiscono alla sua presenza visiva."
+        }
+      ]
+    },
+    {
+      "heading": "Come abbinare orecchini statement a outfit semplici e ricchi di dettagli",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Outfit semplici"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un outfit semplice lascia spazio a una forma distintiva. Può trattarsi di un abito semplice, una tuta sartoriale, una camicia pulita, una maglia monocromatica o un top da sera essenziale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini non devono necessariamente riprendere la forma dell'outfit. Il contrasto può essere efficace: un orecchino a cerchio curvo può addolcire un look strutturato, mentre un design geometrico può definire un tessuto fluido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con un abito nero, sia i metalli dai toni caldi sia quelli freddi possono creare un contrasto evidente. La scelta finale dovrebbe considerare il tessuto dell'abito, gli altri accessori e le preferenze di chi lo indossa."
         },
         {
           "type": "see-also",
           "text": "Quali gioielli indossare con un abito nero",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Quando dovresti evitare gli orecchini audaci?",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci non sono sempre la scelta migliore. Possono sembrare troppo impegnati quando l'outfit ha già molto da fare."
+          "type": "subheading",
+          "text": "Outfit ricchi di dettagli"
         },
         {
           "type": "paragraph",
-          "text": "Se l'abito ha paillettes, pizzi pesanti, ricami, tessuto metallico, stampe di grandi dimensioni, maniche spettacolari, una scollatura molto dettagliata o una collana forte, gli orecchini audaci possono competere. In questi casi, borchie medie, orecchini a bottone, orecchini minimalisti o gocce eleganti possono sembrare più raffinati."
+          "text": "Paillettes, pizzo, ricami, tessuti metallizzati, stampe e scolli scenografici contengono già molte informazioni visive. Gli orecchini statement possono comunque funzionare, ma la loro forma dovrebbe relazionarsi all'outfit invece di aggiungere semplicemente altri dettagli."
         },
         {
-          "type": "table",
-          "headers": [
-            "Quando evitare orecchini audaci",
-            "Migliore direzione",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Abito in paillettes",
-              "Borchie medie o abbracci",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Abito in pizzo pesante",
-              "Borchie o gocce delicate",
-              "Cadenza M, Concetta Corto"
-            ],
-            [
-              "Abito metallico",
-              "Borchie o orecchini minimalisti",
-              "Cadenza M, Laluce"
-            ],
-            [
-              "Collana forte",
-              "Borchie o abbracci",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Scollatura drammatica",
-              "Borchie, cerchi o semplici gocce",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Abito molto stampato",
-              "Borchie o orecchini minimalisti",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Evento formale e sobrio",
-              "Borchie lucide o lunghe gocce",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Abbigliamento quotidiano",
-              "Borchie, abbracci o orecchini minimalisti",
-              "Cadenza S, Amadea, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guida agli orecchini minimalisti",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci vs borchie, gocce e cerchi",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci sono i migliori quando l'outfit necessita di una forte attenzione ai gioielli. Gli stalloni sono più sicuri. Le gocce aggiungono movimento. I cerchi aggiungono forma. Gli Huggies mantengono lo stile vicino e moderno."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Tipo di orecchini",
-            "Ideale per",
-            "Direzione del prodotto IWJ"
-          ],
-          "rows": [
-            [
-              "Orecchini di grande impatto",
-              "Outfit semplici, look da festa, styling straordinari",
-              "Lusso"
-            ],
-            [
-              "Borchie medie",
-              "Scintillio sicuro, abiti dettagliati, smalto classico",
-              "Cadenza M"
-            ],
-            [
-              "Piccole borchie",
-              "Aspetto minimale e supporto per l'auricolare",
-              "Cadenza S"
-            ],
-            [
-              "Orecchini pendenti",
-              "Movimento, abiti di raso, cene, matrimoni",
-              "Orsola, Concetta Lunga"
-            ],
-            [
-              "Cerchi",
-              "Forma moderna, tute, look semplici da festa",
-              "Pavimentare i cerchi"
-            ],
-            [
-              "Un abbraccio",
-              "Stile moderno e sobrio",
-              "Amedea"
-            ],
-            [
-              "Orecchini minimalisti",
-              "Dettagli silenziosi e abiti dettagliati",
-              "Laluce"
-            ],
-            [
-              "Orecchini a farfalla",
-              "Stile morbido, romantico e significativo",
-              "Farfalla, Alidi Farfalla"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Un profilo pulito invece di diversi motivi in competizione",
+            "Dimensioni controllate vicino a uno scollo molto elaborato",
+            "Un solo colore di metallo ripreso altrove nell'outfit",
+            "Meno movimento quando il tessuto presenta già movimento o frange",
+            "Uno spazio netto tra l'orecchino e l'indumento"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Scegli Lusso quando gli orecchini dovrebbero portare. Scegli Orsola quando l'outfit ha bisogno di movimento. Scegli Pave Hoops quando l'outfit ha bisogno di forma. Scegli Cadenza M quando l'outfit ha già dei dettagli."
+          "text": "L'obiettivo non è evitare automaticamente gli orecchini audaci. È capire dove si trovano già i punti focali."
         },
         {
           "type": "see-also",
-          "text": "Orecchini a bottone o a cerchio",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci con abiti neri",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un abito nero è uno dei migliori outfit per orecchini audaci perché il colore dà al gioiello lo spazio per brillare."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se l'abito nero è semplice, Lusso può diventare il momento clou del gioiello. Se l'abito è in satin, Orsola può aggiungere un movimento elegante. Se l'abito è moderno o a collo alto, Pave Hoops o Cadenza M potrebbero funzionare meglio. Se l'abito nero è ricco di pizzo o dettagliato, mantieni gli orecchini più puliti."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-85.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Stile abito nero",
-                "Miglior direzione degli orecchini",
-                "Direzione del prodotto"
-              ],
-              "rows": [
-                [
-                  "Abito nero semplice",
-                  "Orecchini audaci",
-                  "Lusso"
-                ],
-                [
-                  "Abito in raso nero",
-                  "Orecchini a goccia o vistosi se semplici",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Abito nero con spalle scoperte",
-                  "Orecchini audaci, gocce o cerchi",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Abito nero senza spalline",
-                  "Orecchini o gocce audaci",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Abito nero a collo alto",
-                  "Cerchi o borchie medie",
-                  "Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Abito in pizzo nero",
-                  "Borchie o gocce delicate",
-                  "Cadenza M, Concetta Corto"
-                ],
-                [
-                  "Abito nero in paillettes",
-                  "Borchie o abbracci",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Tuta nera",
-                  "Orecchini o cerchi audaci",
-                  "Lusso, Pave Hoops"
-                ],
-                [
-                  "Abito nero formale",
-                  "Gocce lunghe o borchie lucide",
-                  "Concetta Long, Cadenza M"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini per abiti con spalle scoperte",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci con abiti rossi",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli abiti rossi hanno già una forte energia visiva, quindi gli orecchini audaci devono essere usati con attenzione."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se il vestito rosso è semplice, degli orecchini audaci possono funzionare. Se l'abito rosso è di raso, pizzo, ruche, paillettes o molto dettagliato, Orsola o Cadenza M potrebbero essere più sicuri. Gli orecchini color oro di solito funzionano magnificamente con il rosso perché aggiungono calore."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile abito rosso",
-            "Miglior direzione degli orecchini",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Abito rosso semplice",
-              "Gocce, borchie medie o orecchini audaci",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Abito in raso rosso",
-              "Gocce o borchie medie",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Abito rosso con spalle scoperte",
-              "Gocce, cerchi o orecchini audaci",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Abito in pizzo rosso",
-              "Borchie o gocce delicate",
-              "Cadenza M, Concetta Corto"
-            ],
-            [
-              "Abito rosso in paillettes",
-              "Borchie o abbracci",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Abito bordeaux",
-              "Gocce, gocce lunghe o borchie lucide",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Abito da festa rosso",
-              "Orecchini a goccia o vistosi se semplici",
-              "Orsola, Lusso"
-            ],
-            [
-              "Abito da sera rosso",
-              "Gocce o borchie medie",
-              "Orsola, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gioielli con abito rosso",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci con abiti verdi",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli abiti verdi si abbinano magnificamente con lo scintillio color oro, soprattutto per lo stile da festa e da sera."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lo smeraldo e il verde foresta possono portare orecchini, gocce o cerchi audaci. La salvia e la menta di solito funzionano meglio con orecchini più morbidi come orecchini a farfalla, piccole borchie o gocce corte."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-93.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Stile abito verde",
-                "Miglior direzione degli orecchini",
-                "Direzione del prodotto"
-              ],
-              "rows": [
-                [
-                  "Abito verde smeraldo",
-                  "Orecchini audaci, gocce d'oro o cerchi",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Abito verde bosco",
-                  "Gocce, gocce lunghe o orecchini audaci",
-                  "Orsola, Concetta Long, Lusso"
-                ],
-                [
-                  "Abito in raso verde",
-                  "Gocce o cerchi",
-                  "Orsola, Pave Hoops"
-                ],
-                [
-                  "Abito da festa verde",
-                  "Gocce d'oro, cerchi o orecchini audaci",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Abito verde salvia",
-                  "Orecchini a farfalla o gocce corte",
-                  "Farfalla, Concetta Corto"
-                ],
-                [
-                  "Abito alla menta",
-                  "Piccoli orecchini a borchia o a farfalla",
-                  "Cadenza S, Farfalla"
-                ],
-                [
-                  "Abito olivastro",
-                  "Cerchi, gocce o borchie medie",
-                  "Pave Hoops, Orsola, Cadenza M"
-                ],
-                [
-                  "Abito floreale verde",
-                  "Orecchini a farfalla o piccole borchie",
-                  "Farfalla, Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gioielli con abito verde",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci con abiti in raso",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli abiti in raso riflettono già la luce, quindi gli orecchini audaci funzionano meglio quando il design in raso è semplice."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se l'abito di raso presenta drappeggi, dettagli a cappuccio, ruche o una forte lucentezza, gli orecchini pendenti o quelli a bottone medio potrebbero sembrare più puliti. Se l'abito di raso è semplice e la scollatura è aperta, degli orecchini audaci possono creare un look da festa forte."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile abito in raso",
-            "Miglior direzione degli orecchini",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Abito semplice in raso",
-              "Orecchini o gocce audaci",
-              "Lusso, Orsola"
-            ],
-            [
-              "Abito sottoveste in raso",
-              "Gocce o orecchini audaci",
-              "Orsola, Lusso"
-            ],
-            [
-              "Abito in raso nero",
-              "Gocce, borchie o orecchini audaci se semplici",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Abito in raso rosso",
-              "Gocce o borchie medie",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Abito in raso champagne",
-              "Gocce o gocce brevi",
-              "Orsola, Concetta Corto"
-            ],
-            [
-              "Abito in raso cipria",
-              "Orecchini a farfalla o gocce corte",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "Abito in raso dettagliato",
-              "Borchie o abbracci",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Tuta in raso",
-              "Cerchi, gocce o orecchini audaci",
-              "Pave Hoops, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gioielli con abito in raso",
+          "text": "Quali gioielli indossare con un abito in raso",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         }
       ]
     },
     {
-      "heading": "Orecchini audaci per scollatura",
+      "heading": "Scelga gli orecchini statement in base allo scollo",
       "content": [
         {
           "type": "paragraph",
-          "text": "La scollatura aiuta a decidere se gli orecchini audaci sembreranno equilibrati o troppo pesanti."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci di solito funzionano meglio con scollature aperte, abiti senza spalline, abiti con spalle scoperte, semplici scolli a V e abiti puliti a collo alto. Le scollature dettagliate di solito richiedono orecchini più puliti."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-87.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Scollatura",
-                "Vestibilità audace degli orecchini",
-                "Direzione del prodotto"
-              ],
-              "rows": [
-                [
-                  "Abito senza spalline",
-                  "Eccellente",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Abito con spalle scoperte",
-                  "Eccellente",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Scollo a cuore",
-                  "Forte se l'outfit è semplice",
-                  "Lusso, Farfalla, Orsola"
-                ],
-                [
-                  "Abito con scollo a V",
-                  "Va bene se la collana è minimale",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Abito con scollo quadrato",
-                  "Buono con uno stile controllato",
-                  "Lusso, Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Abito a collo alto",
-                  "Cerchi o borchie potrebbero essere più puliti",
-                  "Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Abito all'americana",
-                  "Utilizzare con attenzione; gocce sottili o borchie potrebbero funzionare meglio",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Collo ad anello",
-                  "Gocce o borchie potrebbero essere migliori",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Scollo dettagliato",
-                  "Evita orecchini audaci",
-                  "Cadenza S, Laluce, Amadea"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gioielli per scollatura a cuore",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci per acconciatura",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "L'acconciatura ha un grande effetto sugli orecchini audaci perché i pezzi audaci hanno bisogno di visibilità."
-        },
-        {
-          "type": "paragraph",
-          "text": "Capelli raccolti all'indietro, code di cavallo eleganti, chignon bassi e capelli corti mostrano chiaramente orecchini audaci. I capelli sciolti possono ancora funzionare, ma gli orecchini hanno bisogno di una presenza sufficiente per essere visibili attraverso i capelli."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Acconciatura",
-                "Miglior direzione degli orecchini",
-                "Direzione del prodotto"
-              ],
-              "rows": [
-                [
-                  "Coda di cavallo elegante",
-                  "Orecchini audaci, cerchi o gocce",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Panino basso",
-                  "Orecchini o gocce audaci",
-                  "Lusso, Orsola, Concetta Long"
-                ],
-                [
-                  "Panino alto",
-                  "Orecchini o cerchi audaci",
-                  "Lusso, Pave Hoops"
-                ],
-                [
-                  "Capelli corti",
-                  "Orecchini audaci, cerchi o gocce",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Capelli sciolti",
-                  "Orecchini audaci o gocce a vista",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Onde morbide",
-                  "Gocce, orecchini a farfalla o orecchini audaci",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "Capelli raccolti a metà",
-                  "Orecchini audaci, a bottone o a farfalla",
-                  "Lusso, Cadenza M, Farfalla"
-                ],
-                [
-                  "Stile intrecciato",
-                  "Gocce, borchie o abbracci",
-                  "Orsola, Cadenza M, Amadea"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci per feste e compleanni",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci sono più resistenti per feste, compleanni e abiti da sera in cui i gioielli dovrebbero farsi notare."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lusso dovrebbe essere posizionato come opzione principale per feste e compleanni quando l'outfit è semplice. Per i compleanni più soft, Farfalla o Orsola potrebbero sembrare più romantici. Per lo stile moderno delle feste, Pave Hoops potrebbe essere una scelta migliore."
+          "text": "Lo scollo influisce sullo spazio fisico intorno agli orecchini."
         },
         {
           "type": "table",
           "headers": [
-            "Tipo di evento",
-            "Miglior direzione degli orecchini",
-            "Direzione del prodotto"
+            "Scollo",
+            "Cosa considerare"
           ],
           "rows": [
             [
-              "Festa di compleanno",
-              "Orecchini audaci, cerchi o orecchini a farfalla",
-              "Lusso, Pave Hoops, Farfalla"
+              "Senza spalline",
+              "Lo spazio aperto permette agli orecchini di diventare protagonisti; decida se serve una collana"
             ],
             [
-              "Cena di compleanno",
-              "Gocce o borchie medie",
-              "Orsola, Cadenza M"
+              "Scollo a spalle scoperte",
+              "Controlli il rapporto tra lunghezza degli orecchini, spalle scoperte e acconciatura"
             ],
             [
-              "Cocktail party",
-              "Orecchini audaci, gocce o cerchi",
-              "Lusso, Orsola, Pave Hoops"
+              "Scollo a cuore",
+              "I design curvi o dalla struttura morbida possono richiamare lo scollo, mentre gli orecchini geometrici possono creare contrasto"
             ],
             [
-              "Cena",
-              "Gocce o borchie lucide",
-              "Orsola, Cadenza M"
+              "Scollo a V",
+              "Consideri se debbano guidare gli orecchini o un ciondolo"
             ],
             [
-              "Completo da sera",
-              "Orecchini o cerchi audaci",
-              "Lusso, Pave Hoops"
+              "Scollo quadrato",
+              "Possono funzionare sia orecchini curvi sia angolari; riprenda o contrasti lo scollo in modo intenzionale"
             ],
             [
-              "Festa festiva",
-              "Orecchini audaci, gocce o cerchi",
-              "Lusso, Orsola, Pave Hoops"
+              "Scollo alto",
+              "Controlli il contatto tra gli orecchini più lunghi e il tessuto"
             ],
             [
-              "Festa in ufficio",
-              "Borchie, abbracci o cerchi raffinati",
-              "Cadenza M, Amadea, Pave Hoops"
+              "Scollo all'americana",
+              "Lo scollo dirige già l'attenzione verso l'alto: valuti quindi l'area completa di viso e spalle"
             ],
             [
-              "Festa di anniversario",
-              "Gocce, orecchini a farfalla o stud",
-              "Orsola, Alidi Farfalla, Cadenza M"
+              "Scollo a drappeggio",
+              "Il tessuto mobile o pieghettato può competere con orecchini lunghi o molto articolati"
+            ],
+            [
+              "Scollatura decorata",
+              "Una larghezza contenuta o un orecchino a lobo statement compatto possono creare un impatto sufficiente"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Regali di gioielli per compleanno",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci per matrimoni ed eventi formali",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci possono funzionare per matrimoni ed eventi formali, ma solo quando l'outfit lo consente."
-        },
-        {
-          "type": "paragraph",
-          "text": "Per gli invitati al matrimonio, gli orecchini audaci non dovrebbero sembrare troppo nuziali o troppo distraenti. Funzionano meglio con semplici abiti neri, semplici abiti di raso, tute moderne e abiti da sposa da sera. Per abiti dettagliati per gli invitati al matrimonio, Cadenza M, Orsola o Concetta Short potrebbero essere più sicuri."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Necessità di eventi formali",
-            "Miglior regia",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Abito da sposa semplice da sera",
-              "Orecchini o gocce audaci",
-              "Lusso, Orsola"
-            ],
-            [
-              "Abito nero per gli invitati al matrimonio",
-              "Gocce, borchie, cerchi o orecchini audaci",
-              "Orsola, Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Cena formale",
-              "Gocce lunghe o borchie lucide",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Matrimonio cocktail",
-              "Gocce, cerchi o orecchini audaci",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Abito da sposa dettagliato",
-              "Borchie o abbracci",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Abito da sposa romantico",
-              "Orecchini a farfalla o morbide gocce",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "Look moderno per gli invitati al matrimonio",
-              "Cerchi o gocce",
-              "Pave Hoops, Orsola"
-            ],
-            [
-              "Evento in cravatta nera",
-              "Gocce lunghe, borchie lucide o orecchini raffinati e audaci",
-              "Concetta Long, Cadenza M, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per matrimoni",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Idee per orecchini in grassetto",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci possono funzionare in una pila di orecchie, ma l'orecchino audace deve essere il pezzo principale."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'orecchino di supporto dovrebbe essere piccolo e pulito. Cadenza S è il perno di supporto più sicuro. Laluce può funzionare se la pila risulta più morbida. Evita di impilare troppi orecchini grandi con Lusso perché il look può rapidamente diventare affollato."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-95.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Tipo di pila in grassetto",
-                "Pezzo principale",
-                "Pezzo di supporto",
-                "Direzione del prodotto"
-              ],
-              "rows": [
-                [
-                  "Pila di feste in grassetto",
-                  "Orecchino audace",
-                  "Piccola borchia",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Pila minima in grassetto",
-                  "Orecchino audace",
-                  "Dettaglio minimalista",
-                  "Lusso+Laluce"
-                ],
-                [
-                  "Stack moderno e audace",
-                  "Orecchino audace",
-                  "Huggie",
-                  "Lusso+Amadea"
-                ],
-                [
-                  "Abito nero in grassetto",
-                  "Orecchino audace",
-                  "Piccola borchia",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Pila di compleanno in grassetto",
-                  "Orecchino audace",
-                  "Piccola borchia",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Stack per feste più sicuro",
-                  "Orecchino a goccia",
-                  "Piccola borchia",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Pila di feste a cerchio",
-                  "Cerchio",
-                  "Piccola borchia",
-                  "Cerchi Pave + Cadenza S"
-                ],
-                [
-                  "Pila formale",
-                  "Caduta lunga",
-                  "Piccola borchia",
-                  "Concetta Long + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per orecchini",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Collana o non collana con orecchini audaci?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Con orecchini audaci, la collana dovrebbe solitamente essere delicata o saltata."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini audaci incorniciano già il viso e creano il focus principale del gioiello. Una collana pesante può far sembrare affollato l'outfit. Se la scollatura sembra vuota, scegli una catena molto semplice. Se la scollatura è senza spalline, con spalle scoperte o a cuore, gli orecchini audaci spesso possono stare da soli."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile audace degli orecchini",
-            "Direzione della collana"
-          ],
-          "rows": [
-            [
-              "Orecchini audaci con abito senza spalline",
-              "Di solito nessuna collana o catena molto delicata"
-            ],
-            [
-              "Orecchini audaci con abito con spalle scoperte",
-              "Di solito nessuna collana"
-            ],
-            [
-              "Orecchini audaci con abito con scollo a V",
-              "Collana delicata solo se necessaria"
-            ],
-            [
-              "Orecchini audaci con abito a collo alto",
-              "Nessuna collana"
-            ],
-            [
-              "Orecchini audaci con abito nero",
-              "Mantieni la scollatura pulita"
-            ],
-            [
-              "Orecchini audaci con abito in raso",
-              "Nessuna collana o catena molto morbida"
-            ],
-            [
-              "Orecchini audaci con outfit da festa",
-              "Lascia che gli orecchini guidino"
-            ],
-            [
-              "Orecchini audaci nell'orecchio",
-              "Evita collane pesanti"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gioielli per abiti con scollo a V",
+          "text": "Quali gioielli indossare con un abito con scollo a V",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini audaci dal colore del metallo",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Il colore del metallo cambia la sensazione degli orecchini audaci."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro giallo è caldo, ricco e pronto per la festa. Il tono bianco o argento risulta pulito, luminoso e formale. L'oro rosa sembra più morbido e romantico, ma gli orecchini audaci in oro rosa dovrebbero essere abbinati con attenzione in modo che non sembrino troppo dolci per l'outfit."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-97.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Colore del metallo",
-                "Momento audace degli orecchini",
-                "I migliori colori per l'outfit"
-              ],
-              "rows": [
-                [
-                  "Oro giallo",
-                  "Caldo, ricco e glamour",
-                  "Nero, rosso, verde, champagne, bordeaux, panna"
-                ],
-                [
-                  "Tono bianco o argento",
-                  "Pulito, luminoso e moderno",
-                  "Nero, blu navy, argento, bianco, grigio, toni freddi"
-                ],
-                [
-                  "Oro rosa",
-                  "Morbido, romantico e femminile",
-                  "Abiti cipria, rosa, champagne, pastello"
-                ],
-                [
-                  "Metalli misti",
-                  "Creativo e orientato alle tendenze",
-                  "Abiti minimal e pile di orecchie"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Per orecchini audaci, l'oro giallo e il bianco/argento sono solitamente i più adatti per lo styling da festa. L'oro rosa è più forte quando il look è morbido, romantico o orientato ai regali."
         },
         {
           "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio in oro, bianco e oro rosa",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Quali orecchini indossare con un abito con spalle scoperte",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         }
       ]
     },
     {
-      "heading": "Percorsi del prodotto in base alle esigenze di stile",
+      "heading": "Scegliere gli orecchini statement in base all'acconciatura",
       "content": [
         {
-          "type": "subheading",
-          "text": "Per il look più forte e audace degli orecchini"
-        },
-        {
           "type": "paragraph",
-          "text": "Scegli gli orecchini di lusso audaci. Sono i migliori quando l'outfit è semplice e gli orecchini dovrebbero diventare il focus principale dei gioielli."
+          "text": "I capelli influenzano la visibilità, ma non dovrebbero essere l'unico motivo per scegliere un orecchino più grande o pesante."
         },
         {
           "type": "subheading",
-          "text": "Per un look audace con il vestito nero"
+          "text": "Capelli raccolti"
         },
         {
           "type": "paragraph",
-          "text": "Scegli Lusso con un semplice abito nero. Se l'abito nero è di raso o formale, anche Orsola o Concetta Long possono funzionare benissimo."
+          "text": "Uno chignon, una coda di cavallo o un'acconciatura fissata lasciano vedere l'orecchino per intero. In questo modo, larghezza, sporgenza e chiusura risultano più evidenti."
         },
         {
           "type": "subheading",
-          "text": "Per uno stack audace"
+          "text": "Capelli corti"
         },
         {
           "type": "paragraph",
-          "text": "Scegli Lusso con Cadenza S. L'orecchino audace guida e la piccola borchia sostiene la pila senza renderla affollata."
+          "text": "Le acconciature più corte possono valorizzare sia gli orecchini a lobo scultorei e compatti sia i modelli più lunghi. Consideri lo spazio tra l'orecchino e la mandibola."
         },
         {
           "type": "subheading",
-          "text": "Per un look da festa più sicuro"
+          "text": "Capelli dietro le orecchie"
         },
         {
           "type": "paragraph",
-          "text": "Scegli gli orecchini a bottone con diamanti Cadenza M quando l'outfit presenta già dettagli forti, paillettes, tessuto metallico o una scollatura drammatica."
+          "text": "Questa soluzione offre visibilità senza richiedere un'acconciatura completamente raccolta. Verifichi se le superfici lavorate o gli elementi mobili possono impigliarsi nei capelli."
         },
         {
           "type": "subheading",
-          "text": "Per un movimento elegante anziché un impatto audace"
+          "text": "Capelli sciolti"
         },
         {
           "type": "paragraph",
-          "text": "Scegli gli orecchini pendenti Orsola. Sono migliori quando l'outfit ha bisogno di movimento piuttosto che di una forma decisa."
-        },
-        {
-          "type": "subheading",
-          "text": "Per una forma moderna anziché un impatto audace"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Pave Hoops. Aggiungono forma visibile e brillano senza sembrare drammatici come gli orecchini audaci."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stile morbido e romantico"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Farfalla, Alidi Farfalla o Concetta Short quando l'outfit è cipria, pastello, floreale, romantico o in morbido raso."
-        },
-        {
-          "type": "subheading",
-          "text": "Per pezzi di supporto minimi"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Cadenza S, Laluce o Amadea come pezzi di supporto per uno stile audace e per le orecchie."
+          "text": "Un profilo definito, un colore del metallo a contrasto o un movimento visibile possono aiutare l'orecchino a rimanere in evidenza. Valuti fotografie che mostrino il design con i capelli sciolti, invece di affidarsi solo alle immagini isolate del prodotto."
         }
       ]
     },
     {
-      "heading": "Consigli sui prodotti da IWantJewels",
+      "heading": "Gli orecchini statement sono adatti al giorno?",
       "content": [
         {
-          "type": "table",
-          "headers": [
-            "Prodotto",
-            "Miglior ruolo di stile audace",
-            "Perché funziona"
-          ],
-          "rows": [
-            [
-              "Orecchini di lusso audaci",
-              "Principale raccomandazione per gli orecchini in grassetto",
-              "La scelta più forte per uno stile da festa eccezionale"
-            ],
-            [
-              "Borchie con diamanti coltivati in laboratorio Cadenza S",
-              "Il miglior perno di supporto",
-              "Bilancia gli orecchini audaci nelle pile di orecchie"
-            ],
-            [
-              "Orecchini a bottone con diamanti Cadenza M",
-              "La migliore alternativa scintillante e sicura",
-              "Funziona quando gli orecchini audaci sembrano troppo"
-            ],
-            [
-              "Orecchini pendenti Orsola",
-              "La migliore alternativa elegante",
-              "Aggiunge movimento invece di impatto audace"
-            ],
-            [
-              "Pavimentare i cerchi",
-              "La migliore alternativa alla forma moderna",
-              "Aggiunge curva e visibilità"
-            ],
-            [
-              "Orecchini Concetta Lunghi",
-              "La migliore alternativa per una serata formale",
-              "Crea una linea lunga e raffinata"
-            ],
-            [
-              "Orecchini corti Concetta",
-              "La migliore alternativa per occasioni soft",
-              "Funziona per lo stile delicato di feste e matrimoni"
-            ],
-            [
-              "Orecchini farfalla Farfalla",
-              "La migliore alternativa romantica",
-              "Forte per outfit morbidi e significativi"
-            ],
-            [
-              "Orecchini farfalla Alidi Farfalla",
-              "La migliore opzione romantica guidata dai regali",
-              "Funziona per compleanni e anniversari"
-            ],
-            [
-              "Orecchini Amadea Huggie",
-              "Il miglior pezzo di supporto discreto",
-              "Utile per abiti e pile dettagliati"
-            ],
-            [
-              "Orecchini minimalisti con diamanti Laluce",
-              "Miglior dettaglio silenzioso",
-              "Aiuta a mantenere equilibrato lo stile audace"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Gli orecchini statement non sono riservati agli eventi serali. Un orecchino a lobo scultoreo e compatto, un piccolo orecchino a cerchio pavé o un design geometrico essenziale possono diventare il punto focale di un outfit da giorno."
         },
         {
           "type": "paragraph",
-          "text": "Scegli Lusso quando l'outfit è semplice e gli orecchini devono essere protagonisti. Scegli Cadenza S come perno di supporto pulito, Orsola quando vuoi movimento, Pave Hoops quando vuoi forma e Cadenza M quando l'outfit ha già abbastanza dettagli."
+          "text": "Per il lavoro o per periodi prolungati, confronti il peso di ogni orecchino, le dimensioni complete, la sicurezza della chiusura, il movimento, le aspettative sul dress code professionale e l'uso con cuffie, telefoni o copricapi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un design non dovrebbe essere descritto come adatto a essere indossato tutto il giorno se le sue specifiche e i test non supportano tale affermazione. Il comfort resta soggettivo."
         }
       ]
     },
     {
-      "heading": "Errori comuni negli orecchini audaci da evitare",
+      "heading": "Orecchini statement per feste, matrimoni ed eventi black tie",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un errore comune è indossare orecchini audaci con un outfit già troppo dettagliato. Paillettes, tessuti metallici, pizzi pesanti, ricami e stampe forti di solito necessitano di orecchini più puliti."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è aggiungere troppi gioielli attorno a orecchini audaci. Se gli orecchini sono già la caratteristica principale, mantieni la collana delicata o saltala."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un terzo errore è scegliere orecchini audaci che competono con la scollatura. Gli abiti senza spalline e con spalle scoperte funzionano bene, ma le scollature dettagliate possono diventare troppo affollate."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è dimenticare l'acconciatura. Gli orecchini audaci stanno meglio quando sono visibili, soprattutto con i capelli raccolti, corti o con onde morbide."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un quinto errore è usare più orecchini grandi in una pila di orecchie. Gli orecchini audaci necessitano di piccoli pezzi di supporto."
-        },
-        {
-          "type": "paragraph",
-          "text": "Infine, non scegliere orecchini audaci solo perché sembrano drammatici. Dovrebbero comunque corrispondere all'outfit, all'evento, alla sicurezza e al comfort di chi lo indossa."
+          "text": "Feste ed eventi serali offrono spesso maggiore libertà di indossare forme visibili, elementi in movimento o una maggiore presenza di diamanti. Prima di scegliere, consideri la location e l'outfit completo, invece di basarsi solo sul nome dell'evento. Un semplice abito da cocktail può consentire un orecchino più importante rispetto a un abito da festa riccamente decorato."
         },
         {
           "type": "see-also",
-          "text": "Guida allo stile dei gioielli minimalisti",
-          "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
+          "text": "Guida agli orecchini da festa",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini statement possono essere indossati a matrimoni ed eventi black tie quando si armonizzano con l'outfit, il dress code e il contesto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le invitate a un matrimonio dovrebbero valutare se il design completa l'outfit senza creare un effetto bridal involontario. Per uno styling black tie, esamini il rapporto tra orecchini, acconciatura, scollatura ed eventuale collana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino lungo non è automaticamente più formale, così come un orecchino a lobo non è automaticamente casual. Materiale, finitura, proporzioni e styling completo determinano il risultato."
         }
       ]
     },
     {
-      "heading": "Lista di controllo finale per gli orecchini in grassetto",
+      "heading": "Orecchini statement a confronto con orecchini a lobo e a cerchio",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "«Orecchino statement» e «orecchino a lobo» non sono concetti opposti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Orecchino a lobo descrive il modo in cui l'orecchino si posiziona sul foro, mentre statement descrive il suo ruolo visivo. Un ampio grappolo di diamanti, una forma scultorea o un motivo distintivo possono essere sia un orecchino a lobo sia un orecchino statement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scelga un orecchino a lobo statement compatto quando desidera dettagli visibili senza una parte pendente lunga. Scelga un orecchino a lobo classico più piccolo quando vuole che sostenga un altro elemento dell'outfit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anche un orecchino a cerchio può essere statement. Orecchino a cerchio indica la struttura curva, mentre statement si riferisce alla sua presenza nell'insieme del look. Un orecchino a cerchio può diventare il punto focale grazie a diametro, larghezza, disposizione dei diamanti, forma, dettagli della superficie, più file o costruzione scultorea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confronti le misure effettive, senza presumere che ogni orecchino a cerchio sia più discreto di un orecchino pendente o a lobo statement."
+        },
+        {
+          "type": "see-also",
+          "text": "Orecchini a lobo o orecchini a cerchio",
+          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini a cerchio con diamanti da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Gli orecchini statement possono essere usati in un ear stack?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Prima di scegliere orecchini audaci, chiedi:"
+          "text": "Sì, purché l'orecchino focale abbia spazio fisico sufficiente e gli elementi di supporto restino secondari. Una struttura semplice per un ear stack è:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "L'outfit è abbastanza semplice per orecchini audaci?",
-            "Ci sono già pizzi, paillettes, tessuto metallico o dettagli pesanti?",
-            "Gli orecchini dovrebbero essere il focus principale dei gioielli?",
-            "La collana dovrebbe essere saltata?",
-            "La scollatura supporta orecchini audaci?",
-            "L'acconciatura mostrerà gli orecchini?",
-            "È per una festa, un compleanno, una cena, un matrimonio o un evento formale?",
-            "Il colore del metallo si abbina all'outfit?",
-            "Gli orecchini sono comodi per l'intero evento?",
-            "Ho bisogno di un perno di supporto per un auricolare?",
-            "Sarebbero meglio gocce, cerchi o borchie?",
-            "Indosserò di nuovo gli orecchini?",
-            "Lo sguardo è sicuro ma comunque equilibrato?"
+            "Un orecchino statement nel foro principale",
+            "Un orecchino a lobo più piccolo o un elemento aderente nel foro successivo",
+            "Un eventuale dettaglio aggiuntivo solo quando la distanza lo consente"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Se non sei sicura, scegli orecchini audaci solo quando l'outfit è semplice. Se l'outfit è già dettagliato, scegli invece Cadenza M, Orsola, Pave Hoops o Amadea."
+          "text": "Controlli la distanza tra i fori, la larghezza di ogni orecchino, la direzione del perno e l'eventuale contatto tra gli elementi vicini. I mock-up del prodotto non dovrebbero sostituire le fotografie della combinazione esatta indossata."
+        },
+        {
+          "type": "see-also",
+          "text": "Come creare un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Idee per un ear stack con diamanti",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Scegliere colore del metallo, materiali e diamanti",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Il colore e la composizione del metallo sono informazioni diverse. «Colore oro» descrive l'aspetto. Non conferma che si tratti di oro massiccio, placcato oro, vermeil o di un altro materiale. Ogni prodotto dovrebbe indicare con precisione il metallo di base e la finitura effettivi."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "I colori dell'oro giallo aggiungono calore",
+            "I colori bianchi o argentati creano un contrasto più freddo",
+            "I colori dell'oro rosa introducono una tonalità rosata più delicata",
+            "I metalli misti possono funzionare quando la combinazione viene ripresa intenzionalmente"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per gli orecchini statement con diamanti da laboratorio, verifichi più della descrizione generale del prodotto. La pagina del prodotto dovrebbe indicare:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Se le pietre sono diamanti da laboratorio",
+            "Il peso totale in carati e se si riferisce alla coppia",
+            "Il numero di pietre",
+            "Le forme delle pietre",
+            "Posizione dei diamanti",
+            "Le misure complete dell'orecchino",
+            "Peso per orecchino",
+            "Metallo e finitura",
+            "Chiusura",
+            "Se l'articolo viene venduto in coppia o come orecchino singolo"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un peso totale maggiore in carati non crea automaticamente un design più visibile. Anche distribuzione delle pietre, montatura, larghezza e contrasto influenzano l'aspetto dell'orecchino."
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini a lobo con diamante da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Errori comuni nello styling degli orecchini statement",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Pensare che gli orecchini statement debbano essere necessariamente grandi"
+            },
+            {
+              "type": "paragraph",
+              "text": "Una forma distintiva o una disposizione compatta di diamanti può creare impatto senza dimensioni estreme."
+            },
+            {
+              "type": "subheading",
+              "text": "Indossare diversi elementi focali non coordinati"
+            },
+            {
+              "type": "paragraph",
+              "text": "Un orecchino importante, una collana pesante, una scollatura decorata e un ear stack complesso possono competere tra loro. Decida quale elemento deve essere protagonista."
+            },
+            {
+              "type": "subheading",
+              "text": "Ignorare le misure complete"
+            },
+            {
+              "type": "paragraph",
+              "text": "Le sole fotografie del prodotto non offrono una scala affidabile. Controlli larghezza, altezza, lunghezza pendente e peso."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Considerare discreto ogni orecchino a lobo o a cerchio"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anche gli orecchini a lobo e a cerchio possono essere design statement. Confronti la loro effettiva presenza visiva."
+        },
+        {
+          "type": "subheading",
+          "text": "Scegliere basandosi solo sul nome dell'occasione"
+        },
+        {
+          "type": "paragraph",
+          "text": "Due outfit da matrimonio, festa o cena possono richiedere orecchini completamente diversi. Consideri tessuto, scollatura e acconciatura."
+        },
+        {
+          "type": "subheading",
+          "text": "Affidarsi ad affermazioni non verificate sul prodotto"
+        },
+        {
+          "type": "paragraph",
+          "text": "I prodotti non dovrebbero essere descritti come leggeri, sicuri, ipoallergenici, adatti alle orecchie sensibili o confortevoli per tutto il giorno senza prove."
+        }
+      ]
+    },
+    {
+      "heading": "Checklist per gli orecchini statement",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Prima di acquistare o creare lo styling di una coppia, si chieda:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Cosa crea l'effetto statement: dimensione, forma, movimento, motivo o presenza di diamanti?",
+            "Quali sono le misure complete?",
+            "Qual è il peso di ciascun orecchino?",
+            "Quale chiusura utilizza?",
+            "Toccherà il colletto, la spalla o la scollatura?",
+            "L'outfit presenta già dettagli importanti?",
+            "Devono essere gli orecchini o la collana a dominare?",
+            "L'acconciatura mostrerà il design per intero?",
+            "C'è spazio sufficiente per un ear stack?",
+            "Metallo, finitura e pietre sono indicati chiaramente?",
+            "Tutte le caratteristiche dichiarate sono supportate dalle specifiche esatte del prodotto?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Cosa sono gli orecchini audaci?",
-      "answer": "Gli orecchini audaci sono orecchini progettati per essere il principale punto focale di un outfit. Di solito sono più visibili, scintillanti o di design rispetto agli orecchini di tutti i giorni."
+      "question": "Cosa rende un orecchino un orecchino statement?",
+      "answer": "Un orecchino diventa un elemento statement quando ha una presenza visiva sufficiente per diventare il punto focale. Questa presenza può derivare da forma, dimensione, movimento, contrasto, disposizione dei diamanti o da un motivo distintivo."
     },
     {
-      "question": "Quando dovrei indossare orecchini audaci?",
-      "answer": "Indossa orecchini audaci con abiti semplici, abiti neri, look da festa, abiti senza spalline, abiti con spalle scoperte, tute eleganti e abiti da sera dove gli orecchini possono condurre."
+      "question": "Gli orecchini statement devono essere grandi?",
+      "answer": "No. Un orecchino a lobo scultoreo e compatto o un orecchino a cerchio distintivo possono farsi notare senza essere sovradimensionati. Le proporzioni complete e il design sono più importanti della sola lunghezza."
     },
     {
-      "question": "Posso indossare orecchini audaci con un vestito nero?",
-      "answer": "Sì, un vestito nero è uno dei migliori outfit per orecchini audaci, soprattutto quando l'abito è semplice."
+      "question": "Posso indossare una collana con gli orecchini statement?",
+      "answer": "Sì. Usi la scollatura e il peso visivo di entrambi gli elementi per decidere. Una collana discreta può funzionare, ma non dovrebbe competere involontariamente con gli orecchini."
     },
     {
-      "question": "Posso indossare orecchini audaci con un vestito rosso?",
-      "answer": "Sì, ma solo se il vestito rosso è semplice. Se l'abito rosso ha una lucentezza satinata, pizzi, paillettes o dettagli forti, gocce o borchie medie potrebbero stare meglio."
+      "question": "Gli orecchini statement si possono indossare al lavoro?",
+      "answer": "Sì, in base a dimensioni, movimento, peso e ambiente di lavoro. Confronti le specifiche esatte e consideri esigenze pratiche come l'uso di cuffie e telefono."
     },
     {
-      "question": "Posso indossare orecchini audaci con un abito di raso?",
-      "answer": "Sì, gli orecchini audaci possono funzionare con un semplice abito di raso. Se l'abito di raso presenta forti drappeggi, arricciature o lucentezza, orecchini pendenti o borchie potrebbero essere più sicuri."
+      "question": "Gli orecchini statement si possono indossare a un matrimonio?",
+      "answer": "Sì, quando rispettano il dress code e completano l'outfit. Le invitate dovrebbero considerare scollatura, tessuto, acconciatura e l'eventuale effetto eccessivamente bridal del design."
     },
     {
-      "question": "Dovrei indossare una collana con orecchini audaci?",
-      "answer": "Di solito, mantieni la collana delicata o saltala. Gli orecchini audaci dovrebbero normalmente essere l'obiettivo principale dei gioielli."
+      "question": "Gli orecchini a lobo possono essere statement?",
+      "answer": "Sì. «Orecchino a lobo» descrive la struttura, mentre «statement» descrive il ruolo visivo dell'orecchino. Gli orecchini a lobo scultorei, a grappolo o con motivo possono tutti funzionare come orecchini statement."
     },
     {
-      "question": "Gli orecchini audaci vanno bene per i matrimoni?",
-      "answer": "Gli orecchini audaci possono funzionare per gli invitati al matrimonio quando l'outfit è semplice e lo stile è equilibrato. Per abiti da sposa dettagliati, borchie o gocce sono generalmente più sicure."
+      "question": "Gli orecchini a cerchio possono essere statement?",
+      "answer": "Sì. Gli orecchini a cerchio possono diventare elementi statement grazie a diametro, larghezza, forma, dettagli della superficie o disposizione dei diamanti."
     },
     {
-      "question": "Gli orecchini audaci possono essere indossati in una pila di orecchie?",
-      "answer": "Sì, ma l'orecchino audace dovrebbe essere il pezzo principale. Abbinalo a una piccola borchia come Cadenza S o a un dettaglio silenzioso e minimalista."
-    },
-    {
-      "question": "Gli orecchini audaci sono buoni regali?",
-      "answer": "Gli orecchini audaci sono buoni regali solo se al destinatario piacciono i gioielli straordinari. Se non sei sicuro, gli orecchini con diamanti o gli abbracci sono più sicuri."
-    },
-    {
-      "question": "Quali orecchini IWantJewels sono i migliori per uno stile audace?",
-      "answer": "Gli orecchini Lusso audaci sono l'opzione IWantJewels più forte per uno stile audace. Cadenza S, Orsola, Pave Hoops e Cadenza M funzionano come pezzi di supporto o alternative."
+      "question": "Gli orecchini statement sono sempre pesanti?",
+      "answer": "No. L'impatto visivo non determina il peso. Controlli il peso dichiarato per ogni orecchino, perché design di dimensioni simili possono avere costruzione e peso diversi."
     }
   ],
   "cta": {
-    "heading": "Gli orecchini audaci funzionano meglio quando l'outfit dà loro spazio.",
-    "body": "Sceglili per abiti da festa semplici, abiti neri, look puliti in raso, serate di compleanno, eventi serali e uno stile sicuro. Mantieni la collana minimale, lascia che gli orecchini incorniciano il viso e usa piccoli pezzi di supporto se stai costruendo una pila di orecchie. Inizia con gli orecchini audaci di IWantJewels Lusso se vuoi che siano gli orecchini a guidare il look. Scegli Cadenza S come borchia di supporto, Orsola per un movimento elegante, Pave Hoops per una forma moderna e Cadenza M quando l'outfit ha bisogno di uno scintillio più sicuro.",
-    "primaryLabel": "Acquista orecchini audaci",
+    "heading": "Gli orecchini statement audaci funzionano al meglio quando il loro ruolo nell'outfit è intenzionale. Lasci che un solo elemento guidi il look gioiello.",
+    "body": "Scopra la collezione I Want Jewels confrontando dimensioni, peso, chiusura, materiali e dettagli dei diamanti. Scelga il design più adatto al Suo outfit e allo stile che desidera, senza affidarsi solo al nome del prodotto.",
+    "primaryLabel": "Acquista orecchini statement",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Esplora gli orecchini da festa",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Leggi la guida agli orecchini per le feste",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "Scopra gli orecchini da festa",
+    "secondaryHref": "/resources/earring-style-guides/party-earrings-guide",
+    "tertiaryLabel": "Guida agli orecchini minimalisti",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
   }
 }

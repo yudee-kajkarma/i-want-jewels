@@ -1,834 +1,729 @@
 {
   "meta": {
-    "title": "Boucles d'oreilles diamant or vs blanc vs or rose",
-    "description": "Comparez les boucles d'oreilles en diamants synthétiques en or, en or blanc et en or rose. Choisissez la meilleure couleur de métal pour un usage quotidien, des cadeaux, des mariages et du style."
+    "title": "Boucles d’oreilles diamant : or jaune, blanc ou rose",
+    "description": "Comparez les boucles d'oreilles en diamant de laboratoire. Couleur, métal, style et entretien : les points à connaître avant de choisir."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-100.jpg",
-    "title": "Boucles d'oreilles en or, blanc et or rose avec diamants cultivés en laboratoire :",
-    "subtitle": "Guide des couleurs du métal",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Or jaune, or blanc ou or rose",
+    "subtitle": "boucles d'oreilles en diamant de laboratoire",
     "paragraphs": [
-      "La couleur du métal de vos boucles d'oreilles en diamants synthétiques change toute la sensation du bijou. Le même design de boucle d'oreille en diamant peut paraître chaleureux et classique en or jaune, épuré et moderne dans les tons blanc ou argenté, et doux et romantique en or rose.",
-      "Cette ressource aide les acheteurs à choisir la meilleure couleur de métal pour les boucles d'oreilles en diamants synthétiques en fonction de leur style personnel, de leur teint, de la couleur de leurs tenues, de l'objectif du cadeau, du style de mariage et de leur tenue de tous les jours. Il guide également les utilisateurs vers les directions de produits IWantJewels telles que Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long et Lusso bold Statement.",
-      "Pour IWantJewels, cette page est importante car de nombreux acheteurs ne se contentent pas de demander « quelles boucles d'oreilles en diamant dois-je acheter ? Ils demandent « dois-je choisir l’or, l’argent, l’or blanc ou l’or rose ? Ce guide aide à répondre à cette décision avant de les envoyer vers des pages de produits ou de collections."
+      "L'or jaune, l'or blanc et l'or rose peuvent entourer le même diamant de laboratoire de trois façons très différentes. L'or jaune crée un contraste chaleureux, l'or blanc une transition plus froide entre le diamant et la monture, et l'or rose un cadre aux nuances rosées.",
+      "Mais la couleur n'est qu'un élément à prendre en compte. Avant de choisir une boucle d'oreille, vérifiez si elle est en or massif ou dans un autre métal recouvert d'une finition couleur or. Une boucle décrite comme « argent sterling 925 plaqué or 14 kt » n'est pas une boucle en or massif 14 carats.",
+      "Le bon choix dépend du style recherché, des bijoux que vous portez déjà, du modèle de la boucle et de sa composition complète."
     ],
-    "shopLabel": "Achetez des boucles d'oreilles en diamants cultivés en laboratoire",
+    "shopLabel": "Comparez les boucles d'oreilles en diamant de laboratoire",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comparez les boucles d'oreilles en or jaune, blanc/argenté et en or rose avec diamants synthétiques",
-      "Choisissez la meilleure couleur de métal pour un usage quotidien",
-      "Choisissez la bonne finition pour les cadeaux, les anniversaires, les anniversaires et les demoiselles d'honneur",
-      "Assortissez les boucles d'oreilles au teint, aux couleurs de votre garde-robe et aux bijoux existants",
-      "Choisissez la couleur du métal pour les tenues des invités de mariage et le style des occasions.",
-      "Comprendre quelles couleurs de métal semblent classiques, modernes, romantiques ou audacieuses",
-      "Trouvez les recommandations de produits IWantJewels par couleur de métal et besoin de style.",
-      "Planifiez les blocs d'images, les modules de produits, les sections CTA et les liens internes pour la page"
+      "Or jaune — chaleur et contraste visibles autour des diamants",
+      "Or blanc ou finition blanche vérifiée — plus froid, pour une continuité avec les pierres incolores",
+      "Or rose — un contraste plus doux aux nuances rosées",
+      "La couleur et la composition du métal sont deux choses différentes",
+      "« Argent sterling 925 avec placage or 14 kt » n'est pas de l'or massif",
+      "La couleur ne permet pas de déterminer si le bijou convient aux oreilles sensibles"
     ],
-    "image": "/blog-images/blog-image-102.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Sélecteur de couleur métal",
+      "heading": "Réponse rapide",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilisez ce tableau en haut de la page comme principal outil de décision."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Si tu veux",
-            "Meilleure couleur de métal",
-            "Sentiment de style",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Boucles d'oreilles classiques de tous les jours",
-              "Or jaune",
-              "Chaleureux, intemporel, facile",
-              "Cadence S, Cadence M"
-            ],
-            [
-              "Un éclat moderne et épuré",
-              "Ton blanc ou argenté",
-              "Brillant, poli, minimal",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Boucles d'oreilles cadeaux romantiques",
-              "Or rose",
-              "Doux, personnel, féminin",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Boucles d'oreilles invités de mariage",
-              "Ton or jaune ou blanc/argent",
-              "Élégant et poli",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Bijoux minimalistes",
-              "Ton blanc/argenté ou or jaune",
-              "Simple et raffiné",
-              "Laluce, Cadenza S."
-            ],
-            [
-              "Style de tenue chaleureuse",
-              "Or jaune",
-              "Riche et classique",
-              "Cadenza M, cerceaux pavés"
-            ],
-            [
-              "Des tenues pastel douces",
-              "Or rose",
-              "Doux et romantique",
-              "Farfalla, Short Concetta"
-            ],
-            [
-              "Style de robe noire",
-              "Or jaune, ton blanc/argent ou éclat audacieux",
-              "Contraste et brillance",
-              "Orsola, Lusso"
-            ],
-            [
-              "Piles d'oreille",
-              "Assortir la couleur du métal existant",
-              "Équilibré et intentionnel",
-              "Cadenza S, Amadea, Laluce"
-            ],
-            [
-              "Style de fête affirmé",
-              "Ton or jaune ou blanc/argent",
-              "Fort et visible",
-              "Lusso, Orsola"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles en or jaune avec diamants cultivés en laboratoire",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles en or jaune avec diamants synthétiques sont chaleureuses, classiques et faciles à porter. Ils constituent l’un des choix les plus sûrs pour les bijoux de tous les jours, car l’or jaune s’adapte bien à de nombreuses garde-robes et carnations."
+          "text": "Choisissez l'or jaune si vous recherchez de la chaleur et un contraste visible autour des diamants. Préférez l'or blanc ou une finition en métal blanc vérifiée pour une monture plus froide, qui se fond davantage avec les diamants incolores ou presque incolores. Optez pour l'or rose si vous souhaitez un contraste plus doux aux nuances rosées."
         },
         {
           "type": "paragraph",
-          "text": "L'or jaune est particulièrement résistant si celui qui le porte possède déjà des bijoux en or. Si quelqu'un porte une montre en or, des bagues en or, des colliers en or ou des accessoires aux tons chauds, les boucles d'oreilles en or jaune sembleront généralement naturelles dans leur collection."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'or jaune se marie également à merveille avec des tenues noires, crème, marron, vertes, rouges, champagne et neutres et chaudes. Cela peut rendre les boucles d’oreilles en diamant plus riches et légèrement plus traditionnelles sans paraître démodées."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour IWantJewels, l'or jaune est une direction forte pour les clous d'oreilles en diamants synthétiques Cadenza S, les boucles d'oreilles en diamant Cadenza M, les boucles d'oreilles Amadea Huggie, les Pave Hoops, les boucles d'oreilles pendantes Orsola et les boucles d'oreilles audacieuses Lusso."
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en or et diamants synthétiques",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles en diamant blanc ou argenté cultivé en laboratoire",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles en diamants synthétiques blancs ou argentés sont épurées, lumineuses et modernes. Ils constituent un bon choix pour les acheteurs qui préfèrent un style minimaliste, des tenues aux tons froids ou des bijoux élégants plutôt que chauds."
-        },
-        {
-          "type": "paragraph",
-          "text": "Cette finition fonctionne particulièrement bien avec les tenues noires, blanches, bleu marine, grises, argentées, bleues et pastel cool. Il convient également aux personnes qui portent déjà des montres en argent, des bagues aux tons blancs ou des bijoux aux finitions plus cool."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles blanches ou argentées peuvent rendre les diamants synthétiques très brillants, car le métal n'ajoute pas de chaleur autour de la pierre. Cela peut être utile pour les tenues minimalistes, le style de bureau, les robes noires et les looks de soirée épurés."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour IWantJewels, le style blanc ou argenté peut bien fonctionner pour Cadenza S, Cadenza M, les boucles d'oreilles minimalistes en diamant Laluce, les Pave Hoops et les boucles d'oreilles pendantes Orsola en fonction de la finition du produit disponible."
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles diamant argent",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles en or rose avec diamants cultivés en laboratoire",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles en or rose avec diamants synthétiques sont douces, romantiques et personnelles. Ils sont particulièrement adaptés aux cadeaux, car l’or rose est souvent plus chaleureux et plus émotionnel que les tons blanc ou argenté."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'or rose se marie à merveille avec le blush, le rose, la crème, le champagne, le vert tendre, le beige, les imprimés floraux et les tenues romantiques. Cela peut également être un bon choix pour les cadeaux d'anniversaire, les cadeaux d'anniversaire, les cadeaux de demoiselle d'honneur et les moments de bijoux significatifs."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'or rose n'est pas toujours l'option la plus sûre si le destinataire ne porte jamais de bijoux roses. Mais lorsque cela convient au style de la personne, cela peut rendre le cadeau plus attentionné."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour IWantJewels, le style en or rose est particulièrement fort pour les boucles d'oreilles papillon, les boucles d'oreilles romantiques et les pièces cadeaux douces. Les boucles d’oreilles papillon Farfalla et les boucles d’oreilles papillon Alidi Farfalla conviennent naturellement à cette direction. Les boucles d'oreilles pendantes Orsola et les boucles d'oreilles Concetta Short peuvent également être romantiques dans une finition rose."
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en or rose et diamants synthétiques",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Meilleure couleur métallique pour un usage quotidien",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Pour un usage quotidien, la meilleure couleur de métal est généralement celle qui correspond aux bijoux que la personne porte déjà le plus souvent."
-        },
-        {
-          "type": "paragraph",
-          "text": "S’ils portent de l’or jaune quotidiennement, choisissez des boucles d’oreilles en or jaune et diamants synthétiques. S'ils portent quotidiennement des pièces argentées ou blanches, choisissez des boucles d'oreilles blanches ou argentées. S’ils aiment les bijoux doux et romantiques et portent souvent des tons roses chauds ou blush, l’or rose peut fonctionner à merveille."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Style quotidien",
-            "Meilleure couleur de métal",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Style classique au quotidien",
-              "Or jaune",
-              "Cadence S, Cadence M"
-            ],
-            [
-              "Style minimaliste au quotidien",
-              "Ton blanc/argenté ou or jaune",
-              "Laluce, Cadenza S."
-            ],
-            [
-              "Style de pile d'oreille moderne",
-              "Associez les boucles d'oreilles existantes",
-              "Amadea, Cadenza S, Laluce"
-            ],
-            [
-              "Style féminin et doux",
-              "Or rose ou or jaune",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Style de travail",
-              "Ton or jaune ou blanc/argent",
-              "Cadenza S, Cadenza M, Amadea"
-            ],
-            [
-              "Style de luxe décontracté",
-              "Créoles ou câlins en or jaune",
-              "Cerceaux pavés, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d’oreilles de tous les jours ne devraient pas être difficiles à coiffer. Le choix quotidien le plus sûr est généralement une couleur métallique qui correspond déjà à la routine du porteur."
-        },
-        {
-          "type": "see-also",
-          "text": "Pouvez-vous porter des boucles d’oreilles en diamants synthétiques tous les jours ?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Meilleure couleur de métal pour les cadeaux",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Pour les cadeaux, la couleur du métal est très importante car elle montre si vous comprenez le style du destinataire."
-        },
-        {
-          "type": "paragraph",
-          "text": "La règle la plus sûre est de vérifier ce qu’ils portent déjà. Si la plupart de leurs bijoux sont en or jaune, choisissez l’or jaune. S'ils portent des bijoux argentés ou blancs, choisissez un ton blanc ou argenté. S’ils aiment les pièces romantiques, douces ou féminines, l’or rose peut être un choix réfléchi."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-104.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Type de cadeau",
-                "Meilleure couleur de métal",
-                "Meilleure direction de boucle d’oreille"
-              ],
-              "rows": [
-                [
-                  "Cadeau d'anniversaire sécurisé",
-                  "Ton or jaune ou blanc/argent",
-                  "Cadence S, Cadence M"
-                ],
-                [
-                  "Cadeau romantique",
-                  "Or rose ou or jaune",
-                  "Farfalla, Orsola"
-                ],
-                [
-                  "Cadeau d'anniversaire",
-                  "Or jaune, or rose ou élégant ton blanc/argenté",
-                  "Cadenza M, Orsola, Farfalla"
-                ],
-                [
-                  "Cadeau de demoiselle d'honneur",
-                  "Associer la robe et la palette de mariage",
-                  "Cadenza S, Short Concetta"
-                ],
-                [
-                  "Cadeau moderne",
-                  "Ton blanc/argenté ou or jaune",
-                  "Amadea, cerceaux pavés"
-                ],
-                [
-                  "Cadeau significatif",
-                  "Or rose ou or jaune",
-                  "Farfalla, Alidi Farfalla"
-                ],
-                [
-                  "Cadeau pour les fêtards",
-                  "Ton or jaune ou blanc/argent",
-                  "Lusso, Orsola"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques à offrir en cadeau",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Meilleure couleur de métal pour les mariages",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les bijoux de mariage doivent correspondre à la tenue, au code vestimentaire et à l'ambiance générale de l'événement."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'or jaune fonctionne à merveille avec les tenues aux tons chauds, les robes champagne, les robes vertes, les robes rouges et les styles de soirée classiques. Les boucles d'oreilles blanches ou argentées s'agencent bien avec des tenues noires, bleu marine, argentées, grises, blanches et aux tons froids. L’or rose est idéal pour les robes pastel, blush, fleuries et romantiques."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Tenue de mariage",
-            "Meilleure couleur de métal",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Robe noire",
-              "Ton or jaune ou blanc/argent",
-              "Orsola, Lusso, Cadenza M"
-            ],
-            [
-              "Robe champagne",
-              "Or jaune",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Robe pastel",
-              "Or rose ou or jaune",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Robe verte",
-              "Or jaune ou or rose",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe marine",
-              "Ton blanc/argenté ou or jaune",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe rouge",
-              "Or jaune",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe fleurie",
-              "Or rose, or jaune ou clous simples",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Robe argentée ou grise",
-              "Ton blanc/argenté",
-              "Laluce, Cadenza M."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour les invités au mariage, les boucles d’oreilles doivent être polies mais pas nuptiales. Si la tenue est simple, choisissez des gouttes ou des paillettes plus visibles. Si la tenue est détaillée, choisissez des clous ou des boucles d'oreilles plus petites."
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour les mariages",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Meilleure couleur de métal par couleur de tenue",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Cette section aide les acheteurs à assortir les boucles d'oreilles à leur garde-robe."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Couleur de la tenue",
-            "Meilleure couleur de métal",
-            "Note de style"
-          ],
-          "rows": [
-            [
-              "Noir",
-              "Or jaune, ton blanc/argent ou éclat audacieux",
-              "Tout fonctionne ; choisir en fonction de l'humeur"
-            ],
-            [
-              "Blanc",
-              "Or jaune pour la chaleur, ton blanc/argenté pour un style épuré",
-              "Gardez-le poli"
-            ],
-            [
-              "Crème ou ivoire",
-              "Or jaune ou or rose",
-              "Les métaux plus chauds semblent plus mous"
-            ],
-            [
-              "Marron ou beige",
-              "Or jaune",
-              "Ajoute de la richesse"
-            ],
-            [
-              "Marine",
-              "Ton blanc/argenté ou or jaune",
-              "Les deux se sentent élégants"
-            ],
-            [
-              "Gris",
-              "Ton blanc/argenté",
-              "Garde l'apparence fraîche et propre"
-            ],
-            [
-              "Rouge",
-              "Or jaune",
-              "Équilibre la chaleur"
-            ],
-            [
-              "Vert",
-              "Or jaune ou or rose",
-              "Ajoute de la chaleur et de la profondeur"
-            ],
-            [
-              "Rose ou blush",
-              "Or rose ou or jaune",
-              "Doux et romantique"
-            ],
-            [
-              "Champagne",
-              "Or jaune",
-              "Correspond parfaitement à la chaleur"
-            ],
-            [
-              "Imprimé fleuri",
-              "Petits clous, or rose ou or jaune",
-              "Évitez de trop compliquer le look"
-            ],
-            [
-              "Tenue en satin",
-              "Gouttes en ton doré ou blanc/argenté",
-              "Ajoute du mouvement et de la brillance"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Quels bijoux porter avec une robe noire",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Meilleure couleur de métal par style de bijouterie",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Différents styles de boucles d'oreilles peuvent être très différents selon la couleur du métal."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-106.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Style de boucle d'oreille",
-                "Or jaune",
-                "Ton blanc/argenté",
-                "Or Rose"
-              ],
-              "rows": [
-                [
-                  "Boucles d'oreilles clous",
-                  "Classique et chaleureux",
-                  "Propre et lumineux",
-                  "Doux et romantique"
-                ],
-                [
-                  "Câlins",
-                  "Quotidien et élégant",
-                  "Moderne et minimal",
-                  "Féminin et doux"
-                ],
-                [
-                  "Cerceaux",
-                  "Riche et poli",
-                  "Élégant et contemporain",
-                  "Doux et ludique"
-                ],
-                [
-                  "Boucles d'oreilles pendantes",
-                  "Élégant et chaleureux",
-                  "Raffiné et lumineux",
-                  "Romantique et délicat"
-                ],
-                [
-                  "Boucles d'oreilles papillon",
-                  "Significatif et chaleureux",
-                  "Plus moderne",
-                  "Le plus romantique"
-                ],
-                [
-                  "Boucles d'oreilles audacieuses",
-                  "Fort et glamour",
-                  "Croustillant et percutant",
-                  "Look plus doux"
-                ],
-                [
-                  "Boucles d'oreilles minimalistes",
-                  "Simplicité chaleureuse",
-                  "Minimalisme épuré",
-                  "Douceur douce"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour les cadeaux classiques, l’or jaune ou le ton blanc/argenté fonctionnent généralement mieux. Pour des cadeaux romantiques, les boucles d’oreilles en or rose et papillon sont une combinaison parfaite. Pour les looks de fête, l’or jaune ou le blanc/argent peuvent sembler plus dramatiques."
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles en diamants synthétiques",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Le teint est-il important lors du choix de la couleur du métal ?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Le teint de la peau peut aider, mais cela ne devrait pas être la seule règle."
-        },
-        {
-          "type": "paragraph",
-          "text": "L’or jaune est souvent magnifique sur les tons chair chauds et neutres. Les tons blancs ou argentés conviennent souvent aux styles aux tons froids. L’or rose peut flatter de nombreuses carnations car il se situe entre les tons roses chauds et doux."
-        },
-        {
-          "type": "paragraph",
-          "text": "Mais le style personnel compte plus que des règles strictes. Une personne à la peau froide peut encore aimer l’or jaune. Une personne à la peau chaude peut toujours préférer l’argent. Le meilleur indice, ce sont les bijoux qu’ils portent déjà."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si vous achetez pour vous-même, choisissez la couleur du métal qui vous fait sentir le plus naturel. Si vous achetez pour offrir, choisissez la couleur du métal que la personne possède déjà."
-        }
-      ]
-    },
-    {
-      "heading": "Pouvez-vous mélanger des boucles d’oreilles en or, en or blanc et en or rose ?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Oui, vous pouvez mélanger des métaux, en particulier dans les piles d'oreilles, mais cela doit paraître intentionnel."
-        },
-        {
-          "type": "paragraph",
-          "text": "Le mélange des métaux fonctionne mieux lorsque les formes des boucles d'oreilles sont équilibrées. Par exemple, un clou d'oreille en or jaune avec un câlin blanc/argenté peut paraître moderne si le reste du bijou est simple. L’or rose peut également être mélangé doucement à l’or jaune, notamment dans un style romantique."
-        },
-        {
-          "type": "paragraph",
-          "text": "Cependant, pour les cadeaux, il est plus sûr de faire correspondre la couleur métallique habituelle du destinataire. Les métaux mixtes conviennent mieux à quelqu'un qui aime déjà le style créatif."
-        },
-        {
-          "type": "see-also",
-          "text": "Comment empiler des boucles d'oreilles",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Parcours de produits par couleur de métal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Utilisez cette section comme guide d’achat pratique."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style classique en or jaune"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Cadenza S pour une brillance subtile au quotidien, Cadenza M pour un éclat classique plus visible, Pave Hoops pour la forme ou Orsola pour un style d'occasion."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style blanc propre ou argenté"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Laluce pour un style minimaliste, Cadenza S pour des clous simples, Cadenza M pour un éclat visible ou Orsola pour un look de soirée raffiné."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style romantique en or rose"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Farfalla ou Alidi Farfalla pour des cadeaux significatifs, Concetta Short pour un style doux pour les occasions, ou Orsola pour des tenues de soirée romantiques."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour les piles d'oreilles"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez une direction métallique pour un look plus propre. Cadenza S avec les boucles d'oreilles Amadea Huggie est une pile solide au quotidien. Ajoutez du Laluce pour une finition plus douce."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour les cadeaux"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Cadenza M pour un cadeau classique en diamant, Farfalla pour un cadeau significatif, Amadea pour un cadeau moderne ou Orsola pour un cadeau d'occasion romantique."
-        }
-      ]
-    },
-    {
-      "heading": "Recommandations de produits d'IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produit",
-            "Meilleure direction de couleur métal",
-            "Idéal pour"
-          ],
-          "rows": [
-            [
-              "Clous d'oreilles en diamants synthétiques Cadenza S",
-              "Or jaune, ton blanc/argenté",
-              "À porter au quotidien, premières boucles d'oreilles en diamant"
-            ],
-            [
-              "Boucles d'oreilles puces diamant Cadenza M",
-              "Or jaune, ton blanc/argenté",
-              "Cadeaux, vêtements de travail, éclat visible au quotidien"
-            ],
-            [
-              "Boucles d'oreilles Amadea Huggie",
-              "Or jaune, ton blanc/argenté",
-              "Piles d'oreille et style moderne"
-            ],
-            [
-              "Boucles d'oreilles diamant minimalistes Laluce",
-              "Ton blanc/argenté, or jaune",
-              "Tenues minimalistes et bijoux discrets au quotidien"
-            ],
-            [
-              "Cerceaux pavés",
-              "Or jaune, ton blanc/argenté",
-              "Style cerceau, éclat décontracté et fêtes"
-            ],
-            [
-              "Boucles d'oreilles papillon Farfalla",
-              "Or rose, or jaune",
-              "Cadeaux significatifs et style romantique"
-            ],
-            [
-              "Boucles d'oreilles papillon Alidi Farfalla",
-              "Or rose, or jaune",
-              "Anniversaires, anniversaires et cadeaux symboliques"
-            ],
-            [
-              "Boucles d'oreilles pendantes Orsola",
-              "Or jaune, ton blanc/argenté, or rose",
-              "Invités de mariage, dîners et tenues de soirée"
-            ],
-            [
-              "Boucles d'oreilles courtes Concetta",
-              "Or rose, or jaune",
-              "Style doux pour les occasions"
-            ],
-            [
-              "Boucles d'oreilles longues Concetta",
-              "Or jaune, ton blanc/argenté",
-              "Looks de soirée formels et raffinés"
-            ],
-            [
-              "Boucles d'oreilles Lusso audacieuses",
-              "Or jaune, ton blanc/argenté",
-              "Look de fête et fort éclat"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez la couleur du métal en fonction de la façon dont les boucles d'oreilles seront portées. Choisissez l'or jaune pour une chaleur classique, les tons blancs ou argentés pour un éclat moderne et épuré et l'or rose pour des cadeaux romantiques ou un style doux."
-        }
-      ]
-    },
-    {
-      "heading": "Erreurs courantes de couleur de métal à éviter",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Une erreur courante consiste à choisir une couleur de métal uniquement parce qu’elle semble belle sur une photo de produit. La meilleure question est de savoir si cela correspond aux vrais bijoux et à la garde-robe de celui qui le porte."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur consiste à acheter de l’or rose à quelqu’un qui ne porte que de l’or jaune ou de l’argent. L’or rose peut être beau, mais il est plus personnel et moins universellement sûr."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une troisième erreur consiste à mélanger trop de couleurs métalliques dans une pile d'oreilles sans plan. Les métaux mélangés peuvent paraître élégants, mais ils doivent être intentionnels."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur consiste à choisir des tons blancs ou argentés alors que toute la garde-robe et la collection de bijoux de la personne sont aux tons chauds. L’or jaune peut être plus facile à porter."
-        },
-        {
-          "type": "paragraph",
-          "text": "Enfin, n'ignorez pas l'occasion. Les boucles d'oreilles de tous les jours, les boucles d'oreilles de mariage et les cadeaux romantiques peuvent nécessiter différents choix de couleurs de métal."
-        },
-        {
-          "type": "see-also",
-          "text": "Guide d'achat de boucles d'oreilles en diamants synthétiques",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Liste de contrôle finale des couleurs du métal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Avant de choisir des boucles d'oreilles en or, blanc/argent ou en or rose avec diamants synthétiques, demandez :"
+          "text": "Ne choisissez pas uniquement d'après le nom de la couleur. Vérifiez :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Quelle couleur de métal la personne porte-t-elle déjà le plus souvent ?",
-            "Est-ce pour un usage quotidien, un cadeau, un mariage ou une fête ?",
-            "La palette de tenues est-elle chaleureuse, cool ou romantique ?",
-            "Les boucles d'oreilles doivent-elles être classiques, modernes ou douces ?",
-            "Les boucles d'oreilles seront-elles portées seules ou en pile d'oreilles ?",
-            "La couleur du métal correspond-elle à celle d'autres bijoux ?",
-            "L'or rose est-il adapté au style de la personne ?",
-            "L’or jaune serait-il plus sûr ?",
-            "Le ton blanc ou argenté semblerait-il plus propre ?",
-            "Les pierres sont-elles de véritables diamants de synthèse ?",
-            "Le design semble-t-il portable au-delà d’une seule tenue ?"
+            "Métal de base",
+            "Si la fabrication est en métal massif ou plaqué",
+            "La pureté de l'or",
+            "La matière exacte du placage",
+            "L'épaisseur du placage, si elle est indiquée",
+            "Les dimensions complètes de la boucle d'oreilles",
+            "Le poids et le fermoir",
+            "Les caractéristiques des diamants",
+            "Si le bijou est vendu à l’unité ou par paire"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Comparatif des boucles d'oreilles en or jaune, blanc et rose",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Caractéristique",
+            "Or jaune",
+            "Or blanc",
+            "Or rose"
+          ],
+          "rows": [
+            [
+              "Couleur visible",
+              "Jaune chaleureux",
+              "Blanc froid ou blanc grisé",
+              "Rose ou cuivré"
+            ],
+            [
+              "Contraste avec les diamants",
+              "Crée une bordure chaleureuse visible",
+              "Peut créer une apparence froide et continue",
+              "Crée un contraste rose doux"
+            ],
+            [
+              "Orientation stylistique",
+              "Chaleureux, traditionnel ou contrasté",
+              "Épuré, neutre ou froid",
+              "Doux, original ou chaleureux"
+            ],
+            [
+              "Harmonie avec la garde-robe",
+              "Écru, marron, vert, rouge, noir et tons chauds neutres",
+              "Noir, blanc, gris, bleu marine et couleurs froides",
+              "Blush, mauve, écru, vert sauge et couleurs douces"
+            ],
+            [
+              "Bijoux déjà portés",
+              "S'accorde avec les bijoux en or jaune",
+              "S'accorde avec les bijoux en métal blanc",
+              "S'accorde avec les bijoux en or rose"
+            ],
+            [
+              "Composition à vérifier",
+              "Or massif ou plaqué or jaune",
+              "Or blanc massif, plaqué or blanc, rhodium ou autre finition",
+              "Or rose massif ou plaqué or rose"
+            ],
+            [
+              "Entretien",
+              "Dépend de l'alliage et de la finition",
+              "Certaines finitions blanches peuvent nécessiter un renouvellement",
+              "Dépend de l'alliage et de la finition"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "En cas de doute, choisissez la couleur du métal que la personne porte déjà. C’est généralement le choix le plus sûr et le plus utile."
+          "text": "Il s'agit d'orientations visuelles, pas de règles fixes. Les trois couleurs s'accordent avec de nombreuses tenues."
+        }
+      ]
+    },
+    {
+      "heading": "La couleur et la composition du métal sont deux choses différentes",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "right",
+          "image": "/blog-images/blog-image-42.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Un bijou peut avoir l'apparence de l'or jaune, blanc ou rose sans être entièrement en or massif."
+            },
+            {
+              "type": "subheading",
+              "text": "Or massif"
+            },
+            {
+              "type": "paragraph",
+              "text": "Les bijoux en or massif utilisent un alliage d'or dans toute la partie métallique. L'or pur est mélangé à d'autres métaux pour ajuster sa couleur, sa résistance et ses propriétés de fabrication. Un alliage d'or 14 carats ou 14 kt contient environ 14 parts d'or sur 24. Il peut aussi porter le poinçon 585, qui correspond à environ 58,5 % d'or. La composition restante de l'alliage contribue à créer la couleur jaune, blanche ou rose."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Argent sterling 925 plaqué or"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'argent sterling plaqué or possède une base en argent sterling recouverte d'une couche superficielle d'alliage d'or. Le poinçon 925 indique un argent sterling contenant 92,5 % d'argent ; il ne signifie pas que toute la boucle est en or. Si le produit est décrit comme « argent sterling 925 avec placage or 14 kt », la mention 14 kt concerne le matériau du placage, et non la boucle entière."
+        },
+        {
+          "type": "subheading",
+          "text": "Finitions de couleur blanche"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une boucle de couleur blanche peut être en :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Or blanc massif",
+            "Or blanc plaqué",
+            "Rhodium plaqué",
+            "Platine",
+            "Palladium",
+            "Argent sterling 925",
+            "Un autre métal blanc"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La couleur seule ne révèle pas la composition. La fiche produit doit indiquer le métal de base et la finition utilisés."
+        },
+        {
+          "type": "subheading",
+          "text": "Finitions couleur or rose"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'or rose doit sa teinte rosée à sa composition, qui inclut généralement du cuivre. Lorsqu'il est utilisé en placage, l'alliage d'or rose ne forme que la couche superficielle sur le métal de base. Vérifiez la composition exacte plutôt que de supposer que toutes les boucles roses utilisent le même alliage."
+        },
+        {
+          "type": "see-also",
+          "text": "Que sont les bijoux demi-fine ?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Que sont les boucles d'oreilles en diamant de laboratoire et or jaune ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les boucles en or jaune entourent les diamants d'une teinte jaune chaleureuse. Elles créent une distinction visible entre le diamant blanc et sa monture, surtout lorsque le modèle laisse apparaître davantage de métal."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'or jaune peut s'associer aux puces d'oreilles en diamant, aux créoles, aux boucles d'oreilles pendantes, aux modèles papillon, aux boucles géométriques et aux ear stacks."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'effet dépend aussi de la quantité de métal visible. Une puce à quatre griffes ne laisse voir qu'une petite quantité d'or jaune, tandis qu'une créole ou un modèle géométrique peut faire de la couleur du métal un élément central de la boucle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choisissez l'or jaune pour son apparence ou parce qu'il s'accorde avec les bijoux que vous possédez déjà — et non parce qu'il conviendrait universellement à une carnation particulière."
+        }
+      ]
+    },
+    {
+      "heading": "Que sont les boucles d'oreilles en diamant de laboratoire et or blanc ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'or blanc est un alliage d'or conçu pour obtenir une couleur blanche ou blanc grisé. Les bijoux en or blanc massif peuvent également recevoir une finition superficielle en rhodium, mais ce n'est pas systématique et doit être vérifié pour chaque produit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une monture blanche peut réduire la démarcation visible entre un diamant incolore ou presque incolore et le métal qui l'entoure. La monture peut ainsi sembler visuellement continue avec les pierres."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles de couleur blanche peuvent convenir si :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Vous portez déjà des bijoux en argent ou en métal blanc",
+            "Vous souhaitez une couleur de monture discrète",
+            "Votre garde-robe comprend du noir, du blanc, du bleu marine, du gris ou des couleurs froides",
+            "Vous voulez que le métal et les diamants semblent davantage liés"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "De l'argent sterling 925 avec une finition blanche ne doit jamais être décrit comme de l'or blanc massif."
+        }
+      ]
+    },
+    {
+      "heading": "Que sont les boucles d'oreilles en diamant de laboratoire et or rose ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'or rose présente une apparence rose ou cuivrée. L'intensité de cette couleur dépend de la composition de l'alliage ou du placage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles en or rose créent un contraste plus visible que l'or blanc, mais souvent plus doux que l'or jaune soutenu. Elles peuvent s'accorder avec le blush, l'écru, le vert sauge, le mauve, le marron et les couleurs douces, sans se limiter à ces styles de garde-robe."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'or rose peut être utilisé pour des montures de puces, des boucles papillon, des modèles pendants courts, des créoles, des designs géométriques et des ear stacks en métaux mélangés. Comme pour les autres couleurs, vérifiez s'il s'agit d'or rose massif ou d'une finition de surface sur un autre métal de base."
+        }
+      ]
+    },
+    {
+      "heading": "La couleur du métal change-t-elle l'apparence du diamant ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La couleur du métal peut modifier le contraste autour d'un diamant, mais elle ne change ni son origine ni ses propriétés fondamentales. Le Gemological Institute of America explique que les diamants de laboratoire ont essentiellement la même composition chimique, la même structure cristalline ainsi que les mêmes propriétés optiques et physiques que les diamants naturels."
+        },
+        {
+          "type": "subheading",
+          "text": "Or jaune"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'or jaune crée un cadre chaleureux autour d'un diamant blanc. L'effet est plus visible lorsque la monture, la créole ou le métal décoratif est clairement apparent."
+        },
+        {
+          "type": "subheading",
+          "text": "Or blanc ou métal blanc"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le métal blanc peut se fondre visuellement avec un diamant incolore ou presque incolore, notamment dans de petites griffes ou des montures de style pavé."
+        },
+        {
+          "type": "subheading",
+          "text": "Or rose"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'or rose ajoute une démarcation rosée. Ce contraste peut rester discret sur une petite puce et devenir plus visible sur des créoles, des modèles pendants ou des boucles géométriques."
+        },
+        {
+          "type": "paragraph",
+          "text": "La taille du diamant, ses proportions, la monture, sa propreté et l'éclairage influencent également ce que l'on voit. Aucune couleur de métal ne rend automatiquement tous les diamants plus scintillants."
+        },
+        {
+          "type": "see-also",
+          "text": "Que sont les diamants de laboratoire ?",
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
+        }
+      ]
+    },
+    {
+      "heading": "Quelle couleur choisir selon le style de boucle ?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Puces d'oreilles en diamant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les puces d'oreilles montrent moins de métal que de nombreuses créoles ou boucles pendantes. La différence entre l'or jaune, blanc et rose peut donc se concentrer autour des griffes, du serti clos ou du panier. Choisissez l'or jaune pour un contour chaleureux, l'or blanc ou un métal blanc vérifié pour une transition plus froide, ou l'or rose pour une bordure aux nuances rosées."
+        },
+        {
+          "type": "paragraph",
+          "text": "Observez également la vue de profil. Une puce peut laisser voir davantage de métal de côté que de face. Le diamètre, la saillie, le panier, le fermoir et le poids total en carats de la puce peuvent davantage modifier son apparence qu'une légère variation de couleur du métal."
+        },
+        {
+          "type": "see-also",
+          "text": "Guide des puces d’oreilles en diamant de laboratoire",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Créoles en diamant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les créoles exposent une plus grande surface métallique que de nombreuses puces d'oreilles, ce qui peut faire de la finition un élément majeur du design. Les créoles en or jaune dessinent un contour courbé et chaleureux. Les créoles en métal blanc paraissent plus froides, tandis que les créoles en or rose ajoutent une forme aux tons rosés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avant de choisir une créole, vérifiez le diamètre extérieur, le diamètre intérieur, la largeur, le poids, le fermoir, le placement des diamants, la présence de diamants uniquement sur le devant ou tout autour de la créole, ainsi que le métal de base et la finition de surface."
+        },
+        {
+          "type": "see-also",
+          "text": "Guide des créoles en diamants de laboratoire",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Boucles d'oreilles pendantes et géométriques"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles d'oreilles pendantes et géométriques peuvent exposer une plus grande surface métallique et bouger lorsqu'elles sont portées. Leur couleur peut donc être plus visible que celle d'une petite monture de puce. L'or jaune peut accentuer le contour du design. Le métal blanc peut garder la structure visible dans des tons plus froids, tandis que l'or rose crée un cadre coloré plus doux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vérifiez la hauteur totale, la largeur, la saillie, le poids fini et le fermoir. Les boucles d'oreilles longues ou géométriques ne doivent pas être recommandées pour un port prolongé sans mesures vérifiées ni informations propres à la personne qui les porte."
+        }
+      ]
+    },
+    {
+      "heading": "Faut-il choisir selon le teint de la peau ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les conseils fondés sur le teint peuvent servir de point de départ, mais ne doivent pas être considérés comme une règle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une personne aux sous-tons chauds peut préférer le métal blanc. Une personne aux sous-tons froids peut préférer l'or jaune. Les vêtements, la couleur des cheveux, les bijoux déjà portés et les préférences personnelles peuvent compter davantage qu'une catégorie de teint simplifiée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour une comparaison plus fiable :"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Observez les bijoux que vous portez déjà.",
+            "Comparez les couleurs à la lumière naturelle.",
+            "Vérifiez l'effet de chaque couleur avec vos vêtements habituels.",
+            "Déterminez si vous préférez l'harmonie ou le contraste."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La couleur que vous associerez le plus facilement à vos bijoux existants sera probablement le choix le plus pertinent."
+        }
+      ]
+    },
+    {
+      "heading": "Associer la couleur du métal à votre garde-robe",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Couleur de la garde-robe",
+            "Or jaune",
+            "Tons blancs ou argentés",
+            "Or rose"
+          ],
+          "rows": [
+            [
+              "Noir",
+              "Contraste chaleureux",
+              "Contraste net",
+              "Contraste plus doux"
+            ],
+            [
+              "Blanc",
+              "Définition chaleureuse",
+              "Apparence ton sur ton et plus froide",
+              "Détail aux tons rosés"
+            ],
+            [
+              "Bleu marine",
+              "Contraste chaleureux",
+              "Harmonie plus froide",
+              "Contraste discret"
+            ],
+            [
+              "Vert",
+              "S'accorde avec de nombreux verts chauds",
+              "Contraste avec les verts froids",
+              "Convient à certains verts sauge et verts discrets"
+            ],
+            [
+              "Rouge ou bordeaux",
+              "Ajoute de la chaleur",
+              "Crée un contraste plus froid",
+              "Adoucit les rouges discrets"
+            ],
+            [
+              "Blush ou mauve",
+              "Contraste chaleureux",
+              "Contraste net",
+              "Harmonie étroite"
+            ],
+            [
+              "Brun ou camel",
+              "Harmonie chaleureuse",
+              "Contraste plus marqué",
+              "Harmonie douce"
+            ],
+            [
+              "Gris",
+              "Contraste chaleureux",
+              "Harmonie ton sur ton",
+              "Contraste aux tons rosés"
+            ],
+            [
+              "Crème",
+              "Harmonie chaleureuse",
+              "Contraste plus froid",
+              "Harmonie douce"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces associations sont des points de départ, pas des contraintes."
+        },
+        {
+          "type": "see-also",
+          "text": "Quels bijoux porter avec une robe verte",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "Quels bijoux porter avec une robe noire",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Tous vos bijoux doivent-ils être de la même couleur de métal ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Non. Assortir chaque pièce peut créer une allure cohérente, mais le mélange des métaux peut aussi sembler réfléchi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour composer un mélange de métaux maîtrisé :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Choisissez une couleur de métal principale",
+            "Répétez-la sur au moins une autre pièce",
+            "Équilibrez les tailles des boucles d'oreilles",
+            "Évitez que chaque pièce soit aussi travaillée",
+            "Utilisez la couleur du diamant comme élément visuel récurrent"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si vous portez déjà une montre en métal blanc et un collier en or jaune, vos boucles d'oreilles peuvent reprendre l'un de ces métaux ou les associer, si le design utilise réellement un mélange de métaux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un produit plaqué d'une seule couleur ne constitue pas un mélange de métaux simplement parce que le métal de base sous-jacent est différent. Le style mixte désigne les couleurs de métal visibles."
+        },
+        {
+          "type": "see-also",
+          "text": "Comment composer un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Choisir la couleur du métal pour offrir",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Lorsque vous achetez des boucles d'oreilles pour quelqu'un d'autre, observez les bijoux que cette personne porte déjà. Vérifiez :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Les boucles d'oreilles visibles sur des photos récentes",
+            "La couleur de sa montre",
+            "La couleur de ses colliers et bracelets",
+            "Si elle mélange les métaux",
+            "Si elle choisit régulièrement une même finition",
+            "Si ses piercings portent généralement des puces d'oreilles, des créoles ou des boucles d'oreilles pendantes"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ne choisissez pas uniquement selon un teint, un âge ou un métier supposés. Si vous ne pouvez pas déterminer ses préférences existantes, optez pour un cadeau polyvalent plutôt que de considérer une couleur de métal comme universellement adaptée."
+        }
+      ]
+    },
+    {
+      "heading": "Boucles d'oreilles en or massif ou plaqué or",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Caractéristique",
+            "Conception en or massif",
+            "Conception plaquée or"
+          ],
+          "rows": [
+            [
+              "Matière principale",
+              "Alliage d'or dans toute la pièce",
+              "Métal de base distinct"
+            ],
+            [
+              "Surface",
+              "Même alliage ou finition supplémentaire",
+              "Couche de surface en alliage d'or"
+            ],
+            [
+              "Description du produit",
+              "Doit indiquer la pureté de l'or",
+              "Doit indiquer le métal de base et le placage"
+            ],
+            [
+              "Poinçon ou marquage",
+              "Dépend du marché et des exigences légales",
+              "Des marquages du métal de base peuvent s'appliquer"
+            ],
+            [
+              "Entretien de la couleur",
+              "Dépend de l'alliage et du traitement de surface",
+              "La couche de surface peut se modifier avec l'usure"
+            ],
+            [
+              "Structure du prix",
+              "Influencée par la teneur en or et le poids fini",
+              "Influencée par le métal de base, le placage, le design et les pierres"
+            ],
+            [
+              "Informations à vérifier",
+              "Pureté de l'or, poids et couleur de l'alliage",
+              "Métal de base, matière du placage, épaisseur et entretien"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Aucune de ces conceptions ne doit être dissimulée derrière un sélecteur de couleur. Vous devez pouvoir consulter toutes les informations sur les matières avant d'ajouter le produit à votre panier."
+        },
+        {
+          "type": "see-also",
+          "text": "Bijoux demi-fine, joaillerie et bijoux fantaisie",
+          "href": "/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "La couleur du métal détermine-t-elle si les boucles conviennent aux oreilles sensibles ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Non. La couleur seule ne permet pas de déterminer si une boucle convient aux oreilles sensibles. Cette compatibilité dépend de :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "La composition complète du métal de base",
+            "La composition de l'alliage",
+            "Le matériau du placage",
+            "L'épaisseur et l'état du placage",
+            "La matière de la tige et du fermoir",
+            "La libération de nickel",
+            "La sensibilité individuelle",
+            "L'état du piercing"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles d'oreilles en or jaune, blanc ou rose ne doivent pas être décrites comme hypoallergéniques sans composition complète ni preuves pertinentes."
+        }
+      ]
+    },
+    {
+      "heading": "Entretien selon la conception",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Les besoins d'entretien dépendent davantage de la conception et de la finition que de la couleur visible, jaune, blanche ou rose. Avant de nettoyer ou de porter les boucles d'oreilles au contact de l'eau, de cosmétiques ou de produits chimiques :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Lisez les instructions d'entretien propres au produit",
+            "Vérifiez si les boucles sont en or massif ou plaquées",
+            "Évitez les nettoyants abrasifs, sauf si le fabricant confirme qu'ils conviennent",
+            "Rangez les pièces séparément pour réduire les contacts avec les surfaces",
+            "Inspectez les tiges, les fermoirs et les systèmes de fermeture",
+            "Suivez les recommandations spécifiques pour la baignade, la douche, le sommeil et l'exercice"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ne supposez pas que tous les produits plaqués or ont la même épaisseur de placage ou la même résistance à l'usure."
+        },
+        {
+          "type": "see-also",
+          "text": "Comment entretenir les bijoux plaqué or",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Checklist pour choisir la couleur du métal",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Avant de choisir une variante de couleur, vérifiez :"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Le produit est-il en or massif ou plaqué ?",
+                "Quel est le métal de base\u0003f",
+                "À quoi s'applique la mention de pureté de l'or ?",
+                "Qu'est-ce qui crée la couleur blanche ?",
+                "Qu'est-ce qui crée la couleur rose ?",
+                "L'épaisseur du placage est-elle indiquée ?",
+                "La tige et le fermoir sont-ils fabriqués dans la même matière ?",
+                "Quelles couleurs de métal sont réellement disponibles pour l'article sélectionné ?",
+                "L'image du produit change-t-elle avec la couleur sélectionnée ?",
+                "Le prix et la disponibilité sont-ils corrects pour cette variante ?",
+                "Les diamants sont-ils des diamants de laboratoire et cela est-il clairement indiqué ?",
+                "Le poids en carats est-il individuel ou total ?",
+                "L'article est-il vendu à l'unité ou par paire ?",
+                "Quelles sont les dimensions en millimètres ?",
+                "Quel est le poids par boucle d'oreille et le poids combiné ?",
+                "Quel fermoir est utilisé ?",
+                "Des images de face, de profil et portées sont-elles disponibles ?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Guide d'achat des boucles d'oreilles en diamant de laboratoire",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Quel est le meilleur choix pour les boucles d'oreilles en diamant, en or ou en or blanc ?",
-      "answer": "Ni l’un ni l’autre n’est automatiquement meilleur. L’or jaune est chaleureux et classique, tandis que les tons blanc ou argenté sont épurés et modernes. Le meilleur choix dépend du style de celle qui le porte et des bijoux existants."
+      "question": "Quelle couleur de métal choisir pour des boucles d'oreilles en diamants de laboratoire ?",
+      "answer": "Choisissez l'or jaune pour un contraste chaleureux, l'or blanc ou une finition en métal blanc pour une transition plus froide, et l'or rose pour un contraste aux tons rosés. Vos bijoux existants et l'effet recherché doivent guider votre choix."
     },
     {
-      "question": "Les boucles d'oreilles en or rose et diamant sont-elles bonnes pour les cadeaux ?",
-      "answer": "Oui, les boucles d’oreilles en or rose et diamants peuvent être de beaux cadeaux car elles sont douces, romantiques et personnelles. Ils sont particulièrement adaptés aux anniversaires, aux anniversaires et aux cadeaux significatifs."
+      "question": "Les diamants de laboratoire paraissent-ils différents dans l'or jaune, blanc et rose ?",
+      "answer": "Le diamant reste identique, mais le métal qui l'entoure modifie le contraste visible. L'or jaune et l'or rose créent des contours colorés, tandis que le métal blanc peut se fondre davantage avec un diamant incolore ou presque incolore."
     },
     {
-      "question": "Quelle couleur de métal convient le mieux aux boucles d'oreilles en diamant de tous les jours ?",
-      "answer": "La meilleure couleur de métal pour les boucles d’oreilles de tous les jours est généralement celle que la personne porte déjà le plus souvent. L'or jaune est classique, le ton blanc ou argenté est moderne et l'or rose est plus doux et plus romantique."
+      "question": "L'or blanc est-il vraiment de l'or ?",
+      "answer": "L'or blanc massif est un alliage d'or. Toutefois, une boucle d'oreille blanche peut aussi être en argent sterling 925, recouverte d'un placage d'or blanc, de rhodium ou d'une autre finition. Consultez la composition complète indiquée pour le produit."
     },
     {
-      "question": "Quelle couleur de métal convient le mieux aux boucles d'oreilles d'invités de mariage ?",
-      "answer": "L'or jaune se marie bien avec les tenues chaudes, les robes champagne et les robes vertes. Les tons blancs ou argentés se marient bien avec les tenues noires, bleu marine, grises et aux tons froids. L'or rose se marie bien avec les robes pastel et romantiques."
+      "question": "De quoi l'or rose est-il composé ?",
+      "answer": "L'or rose est un alliage d'or aux tons rosés, généralement obtenu avec du cuivre. Dans un produit plaqué, l'alliage d'or rose forme une couche de surface sur un métal de base distinct."
     },
     {
-      "question": "Dois-je choisir des boucles d’oreilles en or jaune ou en or rose ?",
-      "answer": "Choisissez l’or jaune pour un look classique plus sûr. Choisissez l’or rose si la personne aime les bijoux doux et romantiques ou si elle porte déjà des pièces dans les tons roses."
+      "question": "Les boucles d'oreilles plaquées or 14 kt sont-elles en or massif ?",
+      "answer": "Non. Une boucle d'oreille plaquée or 14 kt possède une couche de surface en alliage d'or 14 kt sur un autre métal de base. La description du produit doit identifier ce métal de base."
     },
     {
-      "question": "Les boucles d'oreilles blanches ou argentées rendent-elles les diamants plus brillants ?",
-      "answer": "Les montures blanches ou argentées peuvent donner aux diamants un aspect très propre et brillant, car le métal n'ajoute pas de chaleur autour de la pierre."
+      "question": "Quelle couleur de métal convient aux oreilles sensibles ?",
+      "answer": "La couleur seule ne permet pas de déterminer si le bijou convient aux oreilles sensibles. Vérifiez l'alliage complet, le placage, la tige, le fermoir, les informations sur la libération de nickel et la sensibilité de la personne qui le porte."
     },
     {
-      "question": "Puis-je mélanger des boucles d’oreilles en or et en argent dans une pile d’oreilles ?",
-      "answer": "Oui, vous pouvez mélanger des métaux, en particulier dans les piles d'oreilles, mais cela doit paraître intentionnel. Si vous achetez comme cadeau, il est plus sûr de faire correspondre la couleur métallique habituelle de la personne."
+      "question": "Puis-je mélanger des boucles d'oreilles en or jaune, blanc et rose ?",
+      "answer": "Oui. L’association de métaux différents fonctionne lorsqu’une couleur domine et que les autres pièces sont plus discrètes ou reprennent cette couleur ailleurs. Gardez un point focal bien défini."
     },
     {
-      "question": "Quelle couleur de métal convient le mieux à une robe noire ?",
-      "answer": "Les boucles d'oreilles en or jaune, blanc/argent et diamants audacieux peuvent toutes fonctionner avec une robe noire. L'or jaune ajoute de la chaleur, tandis que le ton blanc/argent crée un contraste plus net."
+      "question": "Comment choisir la couleur des boucles d’oreilles à offrir ?",
+      "answer": "Observez la couleur du métal que la personne porte déjà pour ses boucles d’oreilles, colliers, bracelets et montres. Ne choisissez pas uniquement selon l’âge supposé, le teint ou la profession."
     },
     {
-      "question": "Quelle couleur de métal convient le mieux aux boucles d'oreilles papillon ?",
-      "answer": "L'or rose et l'or jaune fonctionnent généralement à merveille avec les boucles d'oreilles papillon car ils soutiennent la sensation douce, significative et féminine du design."
-    },
-    {
-      "question": "Quelle est la couleur de métal la plus sûre pour un cadeau de bijoux ?",
-      "answer": "La couleur métallique la plus sûre est celle que le destinataire porte déjà. Si vous n’êtes pas sûr, l’or jaune ou le ton classique blanc/argent sont généralement plus sûrs que l’or rose."
+      "question": "L’or blanc nécessite-t-il un entretien différent ?",
+      "answer": "Certains bijoux en or blanc ont une finition de surface au rhodium, tandis que d’autres boucles d’oreilles de couleur blanche utilisent des matériaux différents. Suivez les conseils d’entretien correspondant exactement à l’alliage ou à la finition, plutôt que de vous fier au nom de la couleur."
     }
   ],
   "cta": {
-    "heading": "La couleur du métal change la sensation des boucles d’oreilles en diamant cultivé en laboratoire. L'or jaune est chaleureux et classique, les tons blancs ou argentés sont épurés et modernes et l'or rose est doux et romantique. Le meilleur choix dépend de la garde-robe du porteur, des bijoux existants, des couleurs de la tenue et du but du cadeau.",
-    "body": "Commencez par les boucles d'oreilles en diamant cultivé en laboratoire IWantJewels si vous voulez un véritable éclat de diamant dans des modèles demi-fins portables. Choisissez Cadenza S ou Cadenza M pour des boucles d'oreilles classiques de tous les jours, Amadea pour une superposition moderne, Farfalla pour des cadeaux romantiques, Orsola pour le style des invités de mariage et Lusso pour un éclat audacieux en soirée.",
-    "primaryLabel": "Achetez des boucles d'oreilles en diamants cultivés en laboratoire",
+    "heading": "Choisissez l’or jaune pour une chaleur visible, l’or blanc ou une finition en métal blanc vérifiée pour un rendu plus froid, ou l’or rose pour un contraste rosé.",
+    "body": "Vérifiez ensuite la fabrication et les caractéristiques du produit, plutôt que de vous fier uniquement au nom de la couleur.",
+    "primaryLabel": "Comparez les boucles d’oreilles en diamant de laboratoire",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explorez les cadeaux de bijoux",
-    "secondaryHref": "/products",
-    "tertiaryLabel": "Lisez le guide d'achat de boucles d'oreilles en diamants cultivés en laboratoire",
-    "tertiaryHref": "#"
+    "secondaryLabel": "Guide d’achat : boucles d’oreilles diamant de laboratoire",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide",
+    "tertiaryLabel": "Que sont les diamants de laboratoire ?",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
   }
 }

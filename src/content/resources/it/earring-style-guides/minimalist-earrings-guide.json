@@ -1,101 +1,83 @@
 {
   "meta": {
-    "title": "Guida agli orecchini minimalisti",
-    "description": "Scopri come scegliere orecchini minimalisti da indossare tutti i giorni, abiti da lavoro, orecchini, regali e semplici acconciature con diamanti coltivati ​​in laboratorio."
+    "title": "Guida agli orecchini minimalisti: stili e consigli",
+    "description": "Scopra come scegliere orecchini minimalisti. Confronti orecchini a lobo, orecchini a cerchio piccoli (huggie), cerchi sottili e design con diamanti."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-69.jpg",
+    "image": "/blog-images/blog-image-46.jpg",
     "title": "Guida agli orecchini minimalisti:",
-    "subtitle": "Orecchini semplici per lo stile quotidiano",
+    "subtitle": "Stili, dimensioni e come scegliere",
     "paragraphs": [
-      "Gli orecchini minimalisti sono semplici, indossabili e facili da abbinare. Sono progettati per aggiungere eleganza senza prendere il sopravvento sull'outfit. Per molti acquirenti, gli orecchini minimalisti diventano i pezzi più utilizzati nella loro collezione di gioielli perché stanno bene con abiti di tutti i giorni, abiti da ufficio, abiti semplici, look da viaggio, orecchini e styling serali tranquilli.",
-      "I migliori orecchini minimalisti non sono noiosi. Si basano su forma pulita, dimensioni equilibrate, brillantezza discreta e buoni materiali. Un piccolo diamante coltivato in laboratorio, un abbraccio aderente, un morbido orecchino minimalista o un semplice cerchio possono far sembrare un outfit finito senza sembrare pesante.",
-      "Questa risorsa aiuta gli acquirenti a scegliere orecchini minimalisti in base allo stile, all'occasione, all'effetto incorniciatura del viso, al colore del metallo, allo scopo del regalo e all'uso dell'orecchino. Collega inoltre ciascuna direzione stilistica ai pezzi IWantJewels come Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla e Orsola."
+      "Gli orecchini minimalisti si distinguono per forme nitide, proporzioni misurate e dettagli studiati. Possono essere piccoli e discreti, ma le dimensioni da sole non determinano se un orecchino è minimalista. Anche un orecchino a lobo medio, un cerchio sottile o un design geometrico essenziale possono avere un aspetto minimalista, se la forma resta semplice e senza elementi superflui.",
+      "La scelta giusta dipende da più fattori del solo design. Dimensioni, peso, chiusura, metallo, finitura, informazioni sul diamante e uso previsto incidono tutti sulla funzionalità dell'orecchino.",
+      "Questa guida confronta i principali tipi di orecchini minimalisti e spiega cosa verificare prima di acquistare orecchini a lobo con diamanti, huggie, cerchi e altri design essenziali."
     ],
-    "shopLabel": "Acquista orecchini minimalisti",
+    "shopLabel": "Scopra gli orecchini minimalisti",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comprendi cosa sono gli orecchini minimalisti",
-      "Scegli orecchini minimalisti da indossare tutti i giorni, da lavoro e da viaggio",
-      "Confronta borchie, abbracci, cerchi e orecchini di diamanti minimalisti",
-      "Costruisci semplici pile di orecchie con pezzi minimalisti",
-      "Scegli orecchini minimalisti come regalo",
-      "Crea orecchini minimalisti con abiti, camicie, blazer e outfit casual",
-      "Decidi quando scegliere uno scintillio discreto e quando scegliere un orecchino più visibile",
-      "Trova consigli sui prodotti IWantJewels in base alle esigenze di stile",
-      "Pianifica blocchi di immagini, moduli di prodotto, CTA e collegamenti interni per questa pagina"
+      "Brillantezza concentrata — un orecchino a lobo con diamante; verifichi diametro, carati e chiusura",
+      "Forma curva vicina al lobo — un orecchino a cerchio piccoli (huggie); verifichi diametro interno e chiusura",
+      "Profilo più evidente — un orecchino a cerchio sottile; verifichi diametro, peso e chiusura",
+      "Design contemporaneo essenziale — un orecchino a lobo geometrico; verifichi larghezza, altezza e orientamento",
+      "Un leggero movimento — un orecchino pendente corto; verifichi lunghezza, peso e attacco",
+      "«Minimalista» descrive uno stile, non garantisce comfort o vestibilità"
     ],
-    "image": "/blog-images/blog-image-78.jpg"
+    "image": "/blog-images/blog-image-50.jpg"
   },
   "content": [
     {
-      "heading": "Selettore di orecchini minimalista",
+      "heading": "Selettore rapido per orecchini minimalisti",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Utilizza questa tabella nella parte superiore della pagina come principale strumento decisionale."
-        },
         {
           "type": "table",
           "headers": [
-            "Necessità di stile",
-            "Miglior direzione per orecchini minimalisti",
-            "Direzione IWJ consigliata"
+            "Ciò che desidera",
+            "Direzione dello stile",
+            "Cosa verificare prima dell'acquisto"
           ],
           "rows": [
             [
-              "I primi orecchini di tutti i giorni",
-              "Piccoli borchie di diamanti",
-              "Cadenza S"
+              "Brillantezza concentrata",
+              "Orecchino a lobo con diamante",
+              "Diametro frontale, informazioni sui carati e chiusura"
             ],
             [
-              "Scintillio quotidiano più visibile",
-              "Borchie medie",
-              "Cadenza M"
+              "Forma curva vicina al lobo",
+              "Orecchino a cerchio piccoli (huggie)",
+              "Diametro interno, spessore e chiusura"
             ],
             [
-              "Stile minimalista e silenzioso",
-              "Orecchini semplici e minimalisti",
-              "Laluce"
+              "Profilo più evidente",
+              "Orecchino a cerchio sottile",
+              "Diametro, peso e chiusura"
             ],
             [
-              "Look quotidiano moderno",
-              "Un abbraccio",
-              "Amedea Huggie"
+              "Design contemporaneo essenziale",
+              "Orecchino a lobo geometrico",
+              "Larghezza, altezza e orientamento"
             ],
             [
-              "Stack auricolare minimo",
-              "Piccolo perno + orecchino minimalista",
-              "Cadenza S+Laluce"
+              "Un leggero movimento",
+              "Orecchino pendente corto",
+              "Lunghezza del pendente, peso e attacco"
             ],
             [
-              "Gioielli da lavoro",
-              "Piccole borchie o abbracci",
-              "Cadenza S, Amadea"
+              "Dettaglio per un ear stack",
+              "Orecchino a lobo piccolo o huggie",
+              "Distanza tra i piercing e dimensioni"
             ],
             [
-              "Gioielli da viaggio",
-              "Borchie o abbracci sicuri",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Look semplice per una cena",
-              "Borchie medie o gocce morbide",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Look minimal per gli invitati al matrimonio",
-              "Borchie medie o gocce delicate",
-              "Cadenza M, Concetta Corto"
-            ],
-            [
-              "Regalo minimo",
-              "Borchie o orecchini minimalisti",
-              "Cadenza S, Laluce"
+              "Una prima coppia di diamanti minimalisti",
+              "Orecchino a lobo semplice",
+              "Materiali, montatura, informazioni sulla coppia e dimensioni indossate"
             ]
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "«Minimalista» descrive uno stile. Non significa automaticamente che un orecchino sia leggero, confortevole, ipoallergenico, resistente o adatto a ogni piercing."
         }
       ]
     },
@@ -103,971 +85,554 @@
       "heading": "Cosa sono gli orecchini minimalisti?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti sono orecchini dal design pulito e semplice. Di solito evitano dettagli pesanti, forme sovradimensionate o stili eccessivamente drammatici. L'attenzione è rivolta all'equilibrio, al comfort e alla vestibilità quotidiana."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti possono ancora includere diamanti. Un piccolo gioiello con diamante coltivato in laboratorio, un delicato abbraccio o un semplice dettaglio con diamante possono sembrare minimalisti quando il design è raffinato e facile da indossare."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli stili di orecchini minimalisti comuni includono:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile minimalista",
-            "Che aspetto ha",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Piccole borchie",
-              "Scintillio semplice vicino all'orecchio",
-              "Abbigliamento quotidiano e da lavoro"
-            ],
-            [
-              "Borchie medie",
-              "Scintilla classica con maggiore visibilità",
-              "Regali e raffinati outfit quotidiani"
-            ],
-            [
-              "Un abbraccio",
-              "Piccoli cerchi che si trovano vicino all'orecchio",
-              "Stack di orecchie e stile moderno"
-            ],
-            [
-              "Orecchini di diamanti minimalisti",
-              "Scintillio silenzioso con forma pulita",
-              "Gioielli quotidiani discreti"
-            ],
-            [
-              "Piccoli cerchi",
-              "Forma curva semplice",
-              "Outfit casual e look da fine settimana"
-            ],
-            [
-              "Gocce brevi",
-              "Movimento morbido senza drammi pesanti",
-              "Cene e styling per occasioni minimal"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti sono l'ideale quando desideri gioielli che possano essere indossati spesso senza bisogno di un outfit speciale."
-        },
-        {
-          "type": "see-also",
-          "text": "Cos'è la gioielleria semifine?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Perché gli orecchini minimalisti funzionano per l'uso quotidiano",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti funzionano per l'uso quotidiano perché sono facili da ripetere."
-        },
-        {
-          "type": "paragraph",
-          "text": "Di solito non stonano con abiti, scollature, acconciature o altri gioielli. Possono essere indossati con una camicia bianca, un blazer, una maglieria, un abito casual, un vestito nero, un outfit da viaggio o un semplice look da sera."
-        },
-        {
-          "type": "paragraph",
-          "text": "Per IWantJewels, lo stile minimalista quotidiano funziona particolarmente bene con gli orecchini con diamanti coltivati in laboratorio perché anche un piccolo dettaglio di diamanti può rendere il look più raffinato."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Ragione quotidiana",
-            "Perché gli orecchini minimalisti aiutano"
-          ],
-          "rows": [
-            [
-              "Facile da modellare",
-              "Si abbinano a molti outfit"
-            ],
-            [
-              "Confortevole",
-              "I modelli più piccoli sono più facili da indossare a lungo"
-            ],
-            [
-              "Ripetibile",
-              "Non si sentono troppo specifici per l'occasione"
-            ],
-            [
-              "Buono per il lavoro",
-              "Aggiungono smalto senza distrazioni"
-            ],
-            [
-              "Buono per gli stack per le orecchie",
-              "Supportano pezzi più grandi senza affollamento"
-            ],
-            [
-              "Adatto ai regali",
-              "I design semplici sono più facili da scegliere"
-            ],
-            [
-              "Senza tempo",
-              "Meno dipendente dalle tendenze a breve termine"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "La gioielleria semifine è adatta per essere indossata tutti i giorni?",
-          "href": "/resources/demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini a bottone minimalisti",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini a bottone sono lo stile minimalista più classico degli orecchini."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si siedono vicino all'orecchio, si sentono sicuri e funzionano con quasi ogni outfit. I piccoli orecchini con diamanti sono particolarmente utili perché aggiungono brillantezza senza sembrare troppo formali."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini a bottone con diamanti coltivati in laboratorio Cadenza S sono la direzione minimalista più forte per un uso quotidiano discreto. Sono ideali per gli acquirenti che desiderano un semplice diamante scintillante che possa essere indossato ripetutamente."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini a bottone con diamanti Cadenza M sono ideali per gli acquirenti che desiderano comunque una forma minimalista ma preferiscono che lo scintillio sia più visibile. Sono anche più forti per i regali perché si notano di più pur rimanendo classici."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile borchiato",
-            "Ideale per",
-            "Direzione dell'IWJ"
-          ],
-          "rows": [
-            [
-              "Piccole borchie",
-              "Abbigliamento quotidiano, abbigliamento da lavoro, primi orecchini di diamanti",
-              "Cadenza S"
-            ],
-            [
-              "Borchie medie",
-              "Regali, look quotidiani ricercati, abiti semplici",
-              "Cadenza M"
-            ],
-            [
-              "Pila di perni",
-              "Stack auricolari minimi",
-              "Cadenza S+Laluce"
-            ],
-            [
-              "Borchie da lavoro",
-              "Abiti da ufficio e gioielli quotidiani",
-              "Cadenza S o Cadenza M"
-            ],
-            [
-              "Borchie per gli invitati al matrimonio",
-              "Abiti dettagliati e scollature alte",
-              "Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini a bottone con diamanti",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini Huggie minimalisti",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli Huggies sono ideali per uno stile minimalista perché si adattano vicino all'orecchio e aggiungono forma senza sembrare pesanti."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un abbraccio è particolarmente utile quando desideri qualcosa di più elegante di uno stallone ma comunque abbastanza facile da indossare ogni giorno. Gli Huggies funzionano molto bene anche negli orecchini perché creano struttura lasciando spazio a borchie o orecchini minimalisti."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini Amadea Huggie sono la direzione più forte di IWantJewels per lo stile minimalista Huggie. Possono essere indossati da soli per un look pulito o abbinati a Cadenza S per un semplice orecchino con diamanti."
-        },
-        {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-75.jpg",
+          "image": "/blog-images/blog-image-54.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Esigenza di styling Huggie",
-                "Migliore combinazione",
-                "Perché funziona"
-              ],
-              "rows": [
-                [
-                  "Semplice look da abbraccio quotidiano",
-                  "Amedea sola",
-                  "Pulito e moderno"
-                ],
-                [
-                  "Stack auricolare minimo",
-                  "Amadea + Cadenza S",
-                  "Forma più brillantezza"
-                ],
-                [
-                  "Pila di indumenti da lavoro",
-                  "Amedea+Laluce",
-                  "Lucido e sottile"
-                ],
-                [
-                  "Set da abbraccio regalabile",
-                  "Amadea + Cadenza S",
-                  "Regalo semplice in due pezzi"
-                ],
-                [
-                  "Stile del fine settimana",
-                  "Amadea + Pave Cerchi",
-                  "Look più orientato alla forma"
-                ]
+              "type": "paragraph",
+              "text": "Gli orecchini minimalisti sono design che riducono i dettagli visivi non necessari. In genere presentano una silhouette chiara, decorazioni misurate e un unico elemento protagonista riconoscibile."
+            },
+            {
+              "type": "paragraph",
+              "text": "Questo elemento può essere:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Un singolo diamante",
+                "Un cerchio sottile",
+                "Una curva essenziale in metallo",
+                "Un semplice profilo geometrico",
+                "Una breve fila di diamanti",
+                "Una piccola forma simbolica",
+                "Un solo elemento pendente discreto"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Orecchini a bottone o a forma di abbraccio",
-          "href": "#"
+          "type": "paragraph",
+          "text": "Gli orecchini minimalisti non devono scomparire. Possono offrire brillantezza o una forma visibile, mantenendo un design pulito."
         }
       ]
     },
     {
-      "heading": "Orecchini a cerchio minimalisti",
+      "heading": "Cosa rende minimalista un orecchino?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Una silhouette chiara"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il design dovrebbe essere facile da comprendere a colpo d'occhio. Orecchini a lobo rotondi, cerchi sottili, piccoli orecchini a cerchio piccoli (huggie) e forme geometriche semplici creano spesso questo effetto."
+        },
+        {
+          "type": "subheading",
+          "text": "Dettagli controllati"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino minimalista può includere diamanti o elementi decorativi, ma questi dovrebbero valorizzare la forma principale senza competere con essa."
+        },
+        {
+          "type": "subheading",
+          "text": "Dimensioni intenzionali"
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalista non significa sempre minuscolo. Il design può avere una presenza visibile senza diventare molto elaborato o oversize."
+        },
+        {
+          "type": "subheading",
+          "text": "Movimento limitato"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini a lobo e gli orecchini a cerchio piccoli (huggie) restano normalmente abbastanza vicini all'orecchio. Anche un orecchino pendente può apparire minimalista, se il pendente è corto e il design resta essenziale."
+        },
+        {
+          "type": "subheading",
+          "text": "Una finitura discreta"
+        },
+        {
+          "type": "paragraph",
+          "text": "Colore del metallo, montatura e dettagli del diamante dovrebbero armonizzarsi senza introdurre troppi effetti scollegati."
+        }
+      ]
+    },
+    {
+      "heading": "Gli orecchini minimalisti sono sempre piccoli?",
       "content": [
         {
           "type": "paragraph",
-          "text": "I cerchi minimalisti sono cerchi semplici, vicini all'orecchio o piccoli orecchini a cerchio che aggiungono forma senza diventare troppo audaci."
+          "text": "No. Le piccole dimensioni sono comuni nella gioielleria minimalista, ma non ne rappresentano l'elemento distintivo."
         },
         {
           "type": "paragraph",
-          "text": "Sono utili per gli acquirenti che desiderano un po' più di presenza rispetto a uno stallone ma non vogliono un orecchino spettacolare. I cerchi minimalisti funzionano bene con abiti casual, abiti da lavoro, look da fine settimana e abiti semplici."
+          "text": "Un orecchino minuscolo con diversi motivi, colori ed elementi decorativi può non apparire minimalista. Al contrario, può esserlo un cerchio di dimensioni medie, con profilo pulito e pochi dettagli."
         },
         {
           "type": "paragraph",
-          "text": "I Pave Hoops possono funzionare come un'opzione più minimalista e adiacente quando l'acquirente vuole brillare con una forma a cerchio pulita. Se il cerchio è più visibile, il resto dei gioielli dovrebbe rimanere semplice."
+          "text": "Quando confronta le dimensioni, consideri:"
         },
         {
-          "type": "table",
-          "headers": [
-            "Necessità di styling del telaio",
-            "Direzione del prodotto",
-            "Nota di stile"
-          ],
-          "rows": [
-            [
-              "Aspetto semplice del cerchio",
-              "Pavimentare i cerchi",
-              "Lascia che sia la forma del cerchio a guidare"
-            ],
-            [
-              "Pila di orecchie a cerchio",
-              "Cerchi Pave + Cadenza S",
-              "Aggiungi un piccolo punto scintilla"
-            ],
-            [
-              "Abbigliamento casual",
-              "Cerchi Pave + Laluce",
-              "Mantiene il look moderno"
-            ],
-            [
-              "Look minimal da festa",
-              "Pave Hoops + Cadenza M",
-              "Aggiunge brillantezza senza uno stile completo"
-            ],
-            [
-              "Look da lavoro a cerchio",
-              "Direzione del cerchio piccolo",
-              "Mantieni discreti gli altri gioielli"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Larghezza e altezza frontali in millimetri",
+            "Diametro e spessore del cerchio",
+            "Diametro interno dell'huggie",
+            "Lunghezza del pendente",
+            "Peso totale degli orecchini",
+            "Informazioni sui carati del diamante",
+            "Fotografie indossate con una scala realistica"
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Il carato indica il peso del diamante, non le dimensioni complessive dell'orecchino. Due orecchini con informazioni simili sui carati possono avere dimensioni visive diverse per effetto della montatura, della disposizione dei diamanti e del design generale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per gli orecchini a lobo con diamanti, il Gemological Institute of America consiglia di valutare diamanti, montatura, metallo e chiusure, invece di scegliere basandosi soltanto sul peso in carati."
+        },
+        {
           "type": "see-also",
-          "text": "Orecchini a cerchio contro quelli a forma di abbraccio",
-          "href": "#"
+          "text": "Guida alle dimensioni degli orecchini con diamante da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Orecchini di diamanti minimalisti",
+      "heading": "Tipi di orecchini minimalisti",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Gli orecchini di diamanti minimalisti sono ideali quando vuoi un vero scintillio ma non un look da gioiello pesante."
+          "type": "subheading",
+          "text": "Orecchini a lobo minimalisti"
         },
         {
           "type": "paragraph",
-          "text": "La chiave è scegliere forme pulite e proporzioni indossabili. Un orecchino di diamanti minimalista dovrebbe sembrare facile da indossare, non eccessivamente formale. Dovrebbe funzionare con gli outfit di tutti i giorni e risultare comunque abbastanza elegante per una cena o un'occasione semplice."
+          "text": "Gli orecchini a lobo posizionano il design principale direttamente sul lobo. Sono disponibili con diamanti solitari, composizioni di pietre, forme geometriche e piccoli design simbolici."
         },
         {
           "type": "paragraph",
-          "text": "Per IWantJewels, gli orecchini di diamanti minimalisti Laluce rappresentano la direzione di prodotto più forte per questa sezione. Cadenza S funziona anche come un perno di diamante minimalista. Amadea Huggie aggiunge forma, mentre Cadenza M dona uno scintillio più visibile senza sfociare in uno stile audace."
+          "text": "Un orecchino a lobo con diamante in stile solitario crea un unico punto di brillantezza concentrata. Un orecchino a lobo geometrico offre un profilo più pulito e contemporaneo. Una piccola composizione può apparire più decorativa, anche se le dimensioni complessive restano contenute."
         },
         {
-          "type": "table",
-          "headers": [
-            "Necessità di diamanti minimalista",
-            "Miglior direzione dell'IWJ"
-          ],
-          "rows": [
-            [
-              "Piccole scintille quotidiane",
-              "Cadenza S"
-            ],
-            [
-              "Dettaglio minimalista e silenzioso",
-              "Laluce"
-            ],
-            [
-              "Forma minimale moderna",
-              "Amedea Huggie"
-            ],
-            [
-              "Scintillio classico più visibile",
-              "Cadenza M"
-            ],
-            [
-              "Smalto per occasioni minimal",
-              "Orsola o Concetta Corto"
-            ]
+          "type": "paragraph",
+          "text": "Verifichi il diametro dell'orecchino a lobo in millimetri, la lunghezza del perno, il tipo di chiusura, lo stile della montatura e il peso totale dell'orecchino. Controlli inoltre se i carati indicati si riferiscono a un singolo orecchino o alla coppia e se il prodotto viene venduto in coppia o singolarmente."
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini a lobo con diamante da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Orecchini a cerchio piccoli (huggie) minimalisti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino a cerchio piccoli (huggie) è un piccolo cerchio progettato per restare relativamente vicino al lobo. Il suo aspetto dipende in larga misura dal rapporto tra diametro interno e posizione del piercing di chi lo indossa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prima di acquistare orecchini a cerchio piccoli (huggie), verifichi:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Diametro interno",
+            "Diametro esterno",
+            "Spessore del cerchio",
+            "Dimensioni del perno",
+            "Tipo di cerniera e chiusura",
+            "Peso dell'orecchino",
+            "Se gli elementi decorativi sono rivolti in avanti quando indossati"
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Non dia per scontato che ogni orecchino a cerchio piccoli (huggie) aderisca perfettamente a ogni orecchio. Lo spessore del lobo e la distanza tra il piercing e il bordo inferiore del lobo variano."
+        },
+        {
           "type": "see-also",
-          "text": "Guida all'acquisto di orecchini con diamanti coltivati in laboratorio",
-          "href": "#"
+          "text": "Orecchini a lobo o orecchini a cerchio piccoli (huggie)",
+          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Orecchini a cerchio minimalisti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino a cerchio minimalista presenta normalmente un cerchio pulito, uno spessore contenuto e pochi elementi decorativi aggiuntivi. Un cerchio sottile in metallo semplice dà maggiore risalto alla forma. Un cerchio con pavé o diamanti aggiunge brillantezza su parte o su tutta la superficie visibile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verifichi diametro, spessore, peso totale e meccanismo di chiusura del cerchio, numero e posizione dei diamanti, se il cerchio è cavo o pieno e se sono disponibili fotografie reali di profilo e frontali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un cerchio può sembrare piccolo da solo, ma risultare molto più visibile una volta indossato. Per questo le immagini sull'orecchio sono essenziali."
+        },
+        {
+          "type": "see-also",
+          "text": "Orecchini a cerchio o huggie",
+          "href": "/resources/earring-style-guides/hoop-vs-huggie-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Orecchini geometrici minimalisti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini geometrici minimalisti utilizzano linee, curve, esagoni, triangoli o altre forme definite. Possono offrire più carattere visivo rispetto a un orecchino a lobo solitario, mantenendo un aspetto ordinato. Valuti se l'orientamento dell'orecchino è fisso o se può ruotare sul lobo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verifichi larghezza e altezza massime, posizione del perno, direzione prevista della forma quando indossata, simmetria dell'orecchino, disposizione dei diamanti e dimensioni della chiusura. Una vera fotografia sull'orecchio dovrebbe mostrare l'orientamento della forma quando viene indossata."
+        },
+        {
+          "type": "see-also",
+          "text": "Come abbinare gli orecchini geometrici",
+          "href": "/resources/earring-style-guides/how-to-style-geometric-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Orecchini pendenti minimalisti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino pendente può avere un aspetto minimalista se presenta una linea corta e pulita, con pochi dettagli. I pendenti introducono movimento e sono quindi normalmente più visibili degli orecchini a lobo o degli huggie. Un pendente corto può essere adatto se desidera un design discreto ma con una lunghezza più evidente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verifichi la lunghezza totale del pendente, la larghezza nel punto più ampio, il peso dell'orecchino, il tipo di chiusura, l'ampiezza del movimento e se i due orecchini sono identici o volutamente asimmetrici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eviti di definire ogni piccolo pendente un orecchino da tutti i giorni. Peso, movimento, acconciatura e durata d'uso prevista richiedono tutti un'attenta valutazione."
         }
       ]
     },
     {
-      "heading": "Orecchini minimalisti per abiti da lavoro",
+      "heading": "Come scegliere orecchini minimalisti",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti sono una delle migliori scelte di gioielli per l'abbigliamento da lavoro."
+          "type": "subheading",
+          "text": "1. Decida quanto desidera che siano visibili"
         },
         {
           "type": "paragraph",
-          "text": "Fanno sembrare un outfit raffinato senza distrarre. Funzionano con blazer, camicie, maglieria, abiti, outfit neutri e tagli sartoriali puliti."
+          "text": "Gli orecchini minimalisti possono essere discreti, equilibrati o chiaramente visibili."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Discreti: piccoli orecchini a lobo e dettagli molto misurati",
+            "Equilibrati: orecchini a lobo medi, huggie e cerchi sottili",
+            "Visibili: forme più grandi e pulite o pendenti corti con pochi dettagli"
+          ]
         },
         {
           "type": "paragraph",
-          "text": "Per lo stile da ufficio, gli orecchini migliori sono solitamente quelli piccoli, medi, avvolgenti o minimalisti. Lunghe gocce e orecchini audaci possono funzionare per le cene dopo il lavoro, ma di solito non sono la scelta quotidiana più sicura per l'ufficio."
+          "text": "Utilizzi immagini reali sull'orecchio per confrontare questi livelli. Le sole immagini ravvicinate del prodotto non comunicano le dimensioni reali."
         },
+        {
+          "type": "subheading",
+          "text": "2. Confronti le dimensioni effettive"
+        },
+        {
+          "type": "paragraph",
+          "text": "Non si affidi a definizioni come «piccolo» e «medio» senza misure. Questi termini variano tra marchi e prodotti. La pagina del prodotto dovrebbe indicare larghezza, altezza, profondità, diametro del cerchio se pertinente, lunghezza del pendente se pertinente, peso per orecchino, peso totale in carati e relativa distribuzione."
+        },
+        {
+          "type": "subheading",
+          "text": "3. Controlli la chiusura e il retro"
+        },
+        {
+          "type": "paragraph",
+          "text": "La chiusura influisce su come si inserisce l'orecchino, su come rimane posizionato e sulla facilità di utilizzo. Le opzioni più comuni includono chiusure a farfallina, a vite, a cerniera per orecchini a cerchio, a scatto o a leva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Non definisca una chiusura come universalmente migliore. Le persone possono dare priorità diverse alla facilità di utilizzo, allo spessore del perno, al sostegno o alla sicurezza."
+        },
+        {
+          "type": "subheading",
+          "text": "4. Legga la descrizione completa dei materiali"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un prodotto dovrebbe distinguere chiaramente tra metallo di base, placcatura o finitura, tipo di pietra, eventuali rivestimenti aggiuntivi e componenti utilizzati per il perno e il retro."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Want Jewels descrive accuratamente i prodotti come realizzati in argento sterling 925 con placcatura in oro 14kt quando questa specifica è confermata per il singolo prodotto. Non si deve mai usare \"oro massiccio\" per un prodotto placcato oro, né applicare \"ipoallergenico\" a un'intera collezione senza adeguate prove sui materiali."
+        },
+        {
+          "type": "see-also",
+          "text": "Che cosa sono i gioielli demi-fine?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        },
+        {
+          "type": "subheading",
+          "text": "5. Verifichi le informazioni sui diamanti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per gli orecchini con diamante da laboratorio, la pagina prodotto dovrebbe indicare che le pietre sono diamanti da laboratorio, la forma del diamante, il peso totale in carati, se il peso si riferisce a un solo orecchino o alla coppia, il numero di diamanti quando pertinente e qualsiasi informazione sulla classificazione o sulla qualità che il brand possa documentare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eviti affermazioni vaghe come \"diamanti premium\" o \"brillantezza eccezionale\", salvo che siano supportate da specifiche precise."
+        },
+        {
+          "type": "subheading",
+          "text": "6. Consideri i gioielli che già indossa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino minimalista è più facile da abbinare quando la sua finitura si armonizza con i gioielli già indossati. Consideri il colore dell'orologio, la finitura della collana e della catena, i piercing già presenti, gli anelli che indossa più spesso, la montatura degli occhiali e le tonalità di metallo calde o fredde che preferisce. Questo è particolarmente importante quando acquista orecchini minimalisti come regalo."
+        },
+        {
+          "type": "subheading",
+          "text": "7. Controlli la politica su resi e igiene"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini possono essere soggetti a condizioni speciali di reso per motivi igienici. La politica applicabile dovrebbe essere mostrata chiaramente prima dell'acquisto, invece di essere disponibile solo in una pagina generale sui resi."
+        }
+      ]
+    },
+    {
+      "heading": "Come scegliere una finitura metallica",
+      "content": [
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-77.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Look da lavoro",
-                "Miglior direzione degli orecchini",
-                "Direzione del prodotto IWJ"
-              ],
-              "rows": [
-                [
-                  "Completo da ufficio classico",
-                  "Piccole borchie",
-                  "Cadenza S"
-                ],
-                [
-                  "Indumenti da lavoro raffinati",
-                  "Borchie medie",
-                  "Cadenza M"
-                ],
-                [
-                  "Stile ufficio moderno",
-                  "Un abbraccio",
-                  "Amedea Huggie"
-                ],
-                [
-                  "Look da ufficio minimalista",
-                  "Orecchini minimalisti",
-                  "Laluce"
-                ],
-                [
-                  "Abbigliamento da lavoro creativo",
-                  "Cerchi o abbracci",
-                  "Pave Hoops, Amadea"
-                ],
-                [
-                  "Outfit da giorno a cena",
-                  "Borchie medie o gocce morbide",
-                  "Cadenza M, Orsola"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Finitura in oro giallo"
+            },
+            {
+              "type": "paragraph",
+              "text": "Una finitura in oro giallo crea un contrasto caldo intorno alle pietre incolori e può abbinarsi a orologi, catene e anelli dai toni caldi."
+            },
+            {
+              "type": "subheading",
+              "text": "Finitura bianca o color argento"
+            },
+            {
+              "type": "paragraph",
+              "text": "Una finitura bianca o color argento crea meno contrasto cromatico intorno a un diamante incolore e si armonizza con gioielli dalle tonalità argentate."
+            },
+            {
+              "type": "subheading",
+              "text": "Finitura oro rosa"
+            },
+            {
+              "type": "paragraph",
+              "text": "Una finitura in oro rosa introduce una tonalità metallica rosata. Verifichi che il prodotto specifico sia disponibile con questa finitura prima di sceglierlo."
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Puoi indossare orecchini con diamanti coltivati in laboratorio ogni giorno?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini minimalisti per pile di orecchie",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti sono essenziali per creare dei buoni orecchini perché aiutano a bilanciare i pezzi più forti."
+          "type": "subheading",
+          "text": "Metalli misti"
         },
         {
           "type": "paragraph",
-          "text": "Se ogni orecchino in una pila è grande, l'orecchio può sembrare affollato. Gli orecchini minimalisti creano spazio, morbidezza e struttura. Possono supportare abbracci, cerchi, gocce, orecchini a farfalla e pezzi audaci."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Obiettivo Stack dell'orecchio",
-            "Combinazione minimalista",
-            "Perché funziona"
-          ],
-          "rows": [
-            [
-              "Pila semplice di tutti i giorni",
-              "Cadenza S+Amadea",
-              "Borchie scintillanti e forma avvolgente"
-            ],
-            [
-              "Stack minimo morbido",
-              "Cadenza S+Laluce",
-              "Pulito e silenzioso"
-            ],
-            [
-              "Stack bilanciato in tre pezzi",
-              "Cadenza M+Amadea+Laluce",
-              "Borchia principale, forma e dettaglio morbido"
-            ],
-            [
-              "Pila romantica",
-              "Farfalla + Cadenza S",
-              "Guinzagli a farfalla, supporti per borchie"
-            ],
-            [
-              "Pila di feste",
-              "Lusso + Cadenza S",
-              "Cavi per orecchini audaci, il perno mantiene l'equilibrio"
-            ],
-            [
-              "Pila di nozze",
-              "Orsola + Cadenza S",
-              "Cavi di caduta, supporti per borchie"
-            ]
-          ]
+          "text": "Gli orecchini minimalisti possono essere abbinati ad altri colori di metallo. Ripeta entrambe le finiture in qualche punto dell'insieme di gioielli, così che il contrasto risulti intenzionale."
         },
         {
           "type": "see-also",
-          "text": "Come impilare gli orecchini",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini minimalisti per regali",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti sono regali importanti perché sono più facili da scegliere rispetto ai gioielli spettacolari."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se non conosci lo stile esatto del destinatario, di solito sono più sicuri orecchini a bottone minimalisti o orecchini semplici. Funzionano per compleanni, damigelle d'onore, regali di tutti i giorni, primi regali di diamanti, regali di abbigliamento da lavoro e regali di anniversario discreti."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Necessità di regali",
-            "Miglior regia minimalista",
-            "Prodotti IWJ consigliati"
-          ],
-          "rows": [
-            [
-              "Regalo di compleanno sicuro",
-              "Borchie piccole o medie",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Primo regalo di diamanti",
-              "Piccole borchie",
-              "Cadenza S"
-            ],
-            [
-              "Destinatario minimalista",
-              "Orecchini minimalisti",
-              "Laluce"
-            ],
-            [
-              "Regalo moderno",
-              "Un abbraccio",
-              "Amedea"
-            ],
-            [
-              "Regalo della damigella d'onore",
-              "Borchie o gocce delicate",
-              "Cadenza S, Concetta Corto"
-            ],
-            [
-              "Regalo romantico ma discreto",
-              "Gocce morbide o orecchini a farfalla",
-              "Orsola, Farfalla"
-            ],
-            [
-              "Regalo di abbigliamento da lavoro",
-              "Borchie o abbracci",
-              "Cadenza M, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per regali",
-          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini minimalisti per gli invitati al matrimonio",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti possono essere perfetti per gli invitati al matrimonio quando l'outfit ha già dei dettagli."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se l'abito ha ricami, paillettes, pizzo, una scollatura forte o una stampa audace, gli orecchini minimalisti mantengono il look equilibrato. Se l'outfit è molto semplice, potresti volere un pezzo minimalista leggermente più visibile, come borchie medie o gocce morbide."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Abito da sposa",
-            "Miglior direzione per orecchini minimalisti",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Abito dettagliato",
-              "Borchie piccole o medie",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Abito floreale",
-              "Piccoli orecchini a borchia o a farfalla",
-              "Cadenza S, Farfalla"
-            ],
-            [
-              "Abito a collo alto",
-              "Borchie o orecchini minimalisti",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Abito in raso",
-              "Borchie medie o gocce morbide",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Abito pastello",
-              "Morbidi orecchini a borchia o a farfalla",
-              "Cadenza S, Alidi Farfalla"
-            ],
-            [
-              "Abito nero semplice",
-              "Borchie medie o gocce pulite",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Look da damigella d'onore",
-              "Piccole borchie o delicate gocce",
-              "Cadenza S, Concetta Corto"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per matrimoni",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini minimalisti di Outfit",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Questa sezione dovrebbe aiutare gli acquirenti a scegliere gli orecchini in base a ciò che indossano."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Vestito",
-            "Il miglior stile di orecchini minimalista",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Camicia bianca e jeans",
-              "Piccole borchie o abbracci",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Completo blazer",
-              "Borchie medie o abbracci",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Abito nero",
-              "Borchie medie o gocce morbide",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Abito in raso",
-              "Gocce morbide o borchie a vista",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Abito floreale",
-              "Orecchini a farfalla o piccole borchie",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Maglieria",
-              "Borchie o piccoli cerchi",
-              "Cadenza S, Pave Hoops"
-            ],
-            [
-              "Abito minimale",
-              "Huggies, cerchi o borchie pulite",
-              "Amadea, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Abito per invitati al matrimonio",
-              "Orecchini a bottone, a farfalla o a goccia",
-              "Cadenza M, Farfalla, Orsola"
-            ],
-            [
-              "Abito da viaggio",
-              "Borchie o abbracci",
-              "Cadenza S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Quali gioielli indossare con un abito nero",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Punte di colore in metallo per orecchini minimalisti",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Il colore del metallo cambia la sensazione degli orecchini minimalisti."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro giallo è caldo e classico. I toni bianchi o argento sembrano puliti e moderni. L'oro rosa è morbido e romantico. Per uno stile minimalista, di solito è meglio scegliere il colore del metallo che chi lo indossa già utilizza più spesso."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Colore del metallo",
-            "Sensazione minimalista",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Oro giallo",
-              "Caldo, classico, raffinato",
-              "Abbigliamento quotidiano, regali, armadi caldi"
-            ],
-            [
-              "Tono bianco o argento",
-              "Pulito, luminoso, moderno",
-              "Abiti da lavoro, outfit minimali, guardaroba cool"
-            ],
-            [
-              "Oro rosa",
-              "Morbido, romantico, femminile",
-              "Regali, abiti pastello, stile romantico"
-            ],
-            [
-              "Metalli misti",
-              "Creativo e moderno",
-              "Stile e orecchini di tendenza"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Per i regali, non allontanarsi troppo dai gioielli esistenti del destinatario. Se indossano sempre l'oro giallo, scegli l'oro giallo. Se indossano orologi d'argento o gioielli dai toni bianchi, scegli il tono bianco o argento."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio in oro, bianco e oro rosa",
+          "text": "Orecchini con diamanti da laboratorio in oro giallo, bianco o rosa",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Percorsi del prodotto in base alle esigenze di stile",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "Per gli orecchini minimalisti più sicuri"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini con diamanti coltivati in laboratorio Cadenza S. Sono discreti, semplici e facili da indossare ogni giorno."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno scintillio minimalista più visibile"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini a bottone con diamanti Cadenza M. Mantengono la forma pulita dei tacchetti ma aggiungono più presenza."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stile minimalista e silenzioso"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini con diamanti minimalisti Laluce. Sono la direzione di prodotto più forte per gli acquirenti che desiderano gioielli morbidi e sobri."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stile minimalista moderno"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini Amadea Huggie. Danno forma restando aderenti all'orecchio e facili da modellare."
-        },
-        {
-          "type": "subheading",
-          "text": "Per stack auricolari minimalisti"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Cadenza S con Laluce o Amadea. Questo crea uno stack pulito senza che l'orecchio sembri affollato."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stile minimalista per occasioni speciali"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini pendenti Orsola o gli orecchini Corti Concetta quando l'outfit ha bisogno di un po' di movimento ma non di un'affermazione pesante."
-        }
-      ]
-    },
-    {
-      "heading": "Consigli sui prodotti da IWantJewels",
+      "heading": "Orecchini minimalisti e outfit",
       "content": [
         {
           "type": "table",
           "headers": [
-            "Prodotto",
-            "Miglior ruolo minimalista",
-            "Perché funziona"
+            "Stile dell'abbigliamento",
+            "Orecchino minimalista"
           ],
           "rows": [
             [
-              "Borchie con diamanti coltivati in laboratorio Cadenza S",
-              "I migliori primi orecchini minimalisti",
-              "Piccolo, sottile e facile da ripetere"
+              "Camicia bianca o maglia",
+              "Orecchino a lobo piccolo o orecchini a cerchio piccoli (huggie)"
             ],
             [
-              "Orecchini a bottone con diamanti Cadenza M",
-              "Scintillio minimalista più visibile",
-              "Forma classica con una presenza più forte"
+              "Blazer o outfit strutturato",
+              "Orecchino a lobo medio o orecchino geometrico"
             ],
             [
-              "Orecchini minimalisti con diamanti Laluce",
-              "Pezzo minimalista fondamentale",
-              "Morbido, silenzioso e facile da modellare"
+              "Semplice abito nero",
+              "Orecchino a lobo medio, orecchino a cerchio sottile o pendente corto"
             ],
             [
-              "Orecchini Amadea Huggie",
-              "Forma moderna e minimalista",
-              "Resistente per l'uso quotidiano e l'impilamento"
+              "Abito elaborato",
+              "Orecchino a lobo discreto o orecchini a cerchio piccoli (huggie)"
             ],
             [
-              "Pavimentare i cerchi",
-              "Direzione minima del cerchio",
-              "Aggiunge forma rimanendo indossabile"
+              "Scollo aperto",
+              "Orecchino a cerchio, orecchino a lobo visibile o pendente corto"
             ],
             [
-              "Orecchini farfalla Farfalla",
-              "Morbido dettaglio personale",
-              "Romantico ma comunque indossabile"
+              "Collo alto",
+              "Orecchino a lobo o design aderente al lobo"
             ],
             [
-              "Orecchini farfalla Alidi Farfalla",
-              "Direzione regalo significativa",
-              "Femminile e simbolico"
-            ],
-            [
-              "Orecchini pendenti Orsola",
-              "Movimento minimo per le occasioni",
-              "Aggiunge eleganza per cene e matrimoni"
-            ],
-            [
-              "Orecchini corti Concetta",
-              "Direzione di caduta morbida",
-              "Stile delicato per le occasioni"
-            ],
-            [
-              "Orecchini Concetta Lunghi",
-              "Eleganza formale minimale",
-              "Ideale per look da sera raffinati"
-            ],
-            [
-              "Orecchini di lusso audaci",
-              "Contrasto non minimalista, ma utile",
-              "Meglio solo quando il look ha bisogno di un punto focale audace"
+              "Denim casual",
+              "Orecchino a lobo, orecchini a cerchio piccoli (huggie) o orecchino a cerchio stretto"
             ]
           ]
         },
         {
-          "type": "paragraph",
-          "text": "Gli orecchini minimalisti sono i migliori quando sembrano facili da indossare spesso. Inizia con Cadenza S per uno scintillio discreto, Cadenza M per i classici borchie a vista, Laluce per uno stile discreto, Amadea per gli abbracci e Orsola per look delicati da occasione."
+          "type": "see-also",
+          "text": "Come abbinare i gioielli minimalisti",
+          "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
         }
       ]
     },
     {
-      "heading": "Errori comuni negli orecchini minimalisti da evitare",
+      "heading": "Gli orecchini minimalisti possono essere usati in un ear stack?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un errore comune è pensare che minimalista significhi semplice. Un orecchino minimalista può comunque sembrare speciale quando la forma, la finitura e la brillantezza sono giuste."
+          "text": "Sì. Gli orecchini a lobo piccoli, gli orecchini a cerchio piccoli (huggie) e gli orecchini geometrici discreti possono essere elementi principali o di supporto."
         },
         {
           "type": "paragraph",
-          "text": "Un altro errore è scegliere orecchini troppo piccoli per l’uso previsto. Orecchini molto piccoli potrebbero scomparire nelle foto o con i capelli sciolti. Se gli orecchini sono per regali o eventi, potrebbe essere migliore uno a bottone medio."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un terzo errore è mescolare troppi pezzi minimalisti senza struttura. Anche gli orecchini piccoli possono sembrare affollati se la pila dell'orecchio non ha equilibrio."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è ignorare il colore del metallo. I gioielli minimalisti stanno meglio quando il colore del metallo si abbina al resto dell'outfit e dei gioielli."
-        },
-        {
-          "type": "paragraph",
-          "text": "Infine, non scegliere orecchini minimalisti solo per un outfit. I migliori pezzi minimalisti dovrebbero adattarsi all'abbigliamento quotidiano, al lavoro, ai viaggi e alle occasioni semplici."
+          "text": "Prima di abbinarli, controlli la distanza tra i piercing, le dimensioni frontali, i retro degli orecchini, il diametro degli orecchini a cerchio e degli orecchini a cerchio piccoli (huggie), l'eventuale contatto tra gli orecchini vicini e che ogni design rimanga visibile."
         },
         {
           "type": "see-also",
-          "text": "Come impilare gli orecchini",
+          "text": "Come creare un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Idee per un ear stack con diamanti",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Lista di controllo per l'acquisto finale",
+      "heading": "Come prendersi cura degli orecchini minimalisti placcati oro",
       "content": [
         {
           "type": "paragraph",
-          "text": "Prima di scegliere orecchini minimalisti, chiedi:"
+          "text": "Anche i design semplici richiedono cure adeguate, soprattutto se realizzati in argento sterling 925 placcato oro. Per i gioielli in argento sterling 925 con placcatura in oro 14kt, quando la specifica è confermata:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Questi orecchini funzioneranno con più di un outfit?",
-            "Sono abbastanza comodi per essere indossati regolarmente?",
-            "Sono sottili, visibili o una via di mezzo?",
-            "Voglio borchie, abbracci, cerchi o gocce morbide?",
-            "È per l'uso quotidiano, l'abbigliamento da lavoro, i regali o le occasioni?",
-            "Il colore del metallo si abbina ai miei soliti gioielli?",
-            "Gli orecchini possono essere utilizzati in una pila di orecchie?",
-            "Le pietre sono veri diamanti coltivati ​​in laboratorio?",
-            "Il materiale è spiegato chiaramente?",
-            "Gli orecchini sono facili da pulire e riporre?",
-            "Mi piacerà ancora questo design oltre una stagione?"
+            "Applichi profumo, cosmetici e prodotti per capelli prima di indossare gli orecchini",
+            "Tolga gli orecchini prima di fare la doccia, nuotare o allenarsi",
+            "Dopo averli indossati, li pulisca con un panno pulito, morbido e asciutto",
+            "Eviti detergenti abrasivi e prodotti lucidanti destinati ai metalli massicci",
+            "Conservi gli orecchini separatamente per ridurre lo sfregamento",
+            "Segua le istruzioni per la cura fornite con il prodotto specifico"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Come prendersi cura dei gioielli placcati oro",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Checklist per acquistare orecchini minimalisti",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Prima dell'acquisto, verifichi che:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Quali sono le dimensioni esatte?",
+            "Quanto pesa ciascun orecchino?",
+            "Il prodotto viene venduto in coppia o singolarmente?",
+            "Quale chiusura o supporto utilizza?",
+            "Qual è il metallo di base?",
+            "Qual è la placcatura o la finitura?",
+            "Le pietre sono identificate chiaramente?",
+            "Le informazioni sui carati si riferiscono a un orecchino o alla coppia?",
+            "È presente un'immagine realistica indossata?",
+            "L'immagine mostra il davanti e il lato?",
+            "Le dimensioni sono adatte al piercing previsto?",
+            "Di quali cure necessita la finitura?",
+            "Qual è la politica di reso per gli orecchini?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Se non sei sicuro, inizia con semplici borchie di diamanti coltivati in laboratorio o un piccolo abbraccio. Questi sono gli orecchini minimalisti più facili da indossare spesso."
+          "text": "Il design minimalista dovrebbe rendere più chiara la decisione d'acquisto, non sostituire le specifiche del prodotto."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Cosa sono gli orecchini minimalisti?",
-      "answer": "Gli orecchini minimalisti sono orecchini semplici e puliti progettati per uno styling semplice. Di solito hanno forme equilibrate, scintillio discreto e dimensioni indossabili."
+      "question": "Che cosa sono gli orecchini minimalisti?",
+      "answer": "Gli orecchini minimalisti hanno forme pulite, proporzioni equilibrate e decorazioni sobrie. Ne sono esempi gli orecchini a lobo con solitario, gli orecchini a cerchio sottili, gli orecchini a cerchio piccoli (huggie) e i semplici orecchini geometrici."
     },
     {
-      "question": "Gli orecchini minimalisti sono buoni da indossare tutti i giorni?",
-      "answer": "Sì, gli orecchini minimalisti sono eccellenti da indossare tutti i giorni perché sono comodi, facili da abbinare e si abbinano a molti outfit."
+      "question": "Gli orecchini minimalisti sono sempre piccoli?",
+      "answer": "No. Anche un orecchino di dimensioni medie può apparire minimalista quando ha una silhouette definita e decorazioni limitate. La dimensione è solo uno degli elementi del design."
     },
     {
-      "question": "Che tipo di orecchini minimalisti dovrei acquistare per primi?",
-      "answer": "I piccoli orecchini con diamanti coltivati in laboratorio sono solitamente i primi orecchini minimalisti più sicuri perché sono senza tempo e facili da indossare."
+      "question": "Gli orecchini a lobo con diamante sono minimalisti?",
+      "answer": "Gli orecchini a lobo con diamante in stile solitario e dalle forme geometriche pulite possono essere minimalisti. I design più elaborati a grappolo, con montatura halo o a motivo possono apparire più decorativi."
     },
     {
-      "question": "Gli orecchini con diamanti sono minimalisti?",
-      "answer": "Le borchie di diamanti possono essere minimaliste quando il design è semplice e la taglia è indossabile. Le borchie piccole o medie funzionano particolarmente bene."
+      "question": "Che cosa controllare quando si acquistano orecchini a lobo minimalisti?",
+      "answer": "Controlli le dimensioni frontali, il peso, la lunghezza del perno, il retro, la montatura, i materiali, le informazioni sul diamante e se il prodotto viene venduto in coppia."
     },
     {
-      "question": "Gli abbracci sono minimalisti?",
-      "answer": "Gli Huggies possono essere minimalisti quando sono vicini all'orecchio e hanno un design pulito. Sono anche forti per gli stack auricolari."
+      "question": "Che cosa controllare quando si acquistano orecchini a cerchio piccoli (huggie) minimalisti?",
+      "answer": "Controlli i diametri interno ed esterno, lo spessore dell'orecchino a cerchio, le dimensioni del perno, la chiusura, il peso e la posizione del piercing. Gli orecchini a cerchio piccoli (huggie) non vestono ogni orecchio allo stesso modo."
     },
     {
-      "question": "Gli orecchini minimalisti vanno bene per il lavoro?",
-      "answer": "Sì, gli orecchini minimalisti sono ideali per il lavoro perché aggiungono eleganza senza distrarre."
+      "question": "Quale colore di metallo è adatto agli orecchini minimalisti?",
+      "answer": "Le finiture in oro giallo, bianco e rosa possono funzionare tutte. Scelga una finitura che si armonizzi con i gioielli già indossati e verifichi che il prodotto specifico sia disponibile in quella finitura."
     },
     {
-      "question": "Gli orecchini minimalisti sono buoni regali?",
-      "answer": "Sì, gli orecchini minimalisti sono un regalo forte perché sono facili da indossare e meno rischiosi rispetto agli stili audaci o altamente specifici."
+      "question": "Gli orecchini minimalisti possono contenere diamanti da laboratorio?",
+      "answer": "Sì. Gli orecchini a lobo, gli orecchini a cerchio piccoli (huggie), gli orecchini a cerchio e i semplici dettagli con diamanti da laboratorio possono avere un design minimalista."
     },
     {
-      "question": "Gli orecchini minimalisti possono essere indossati ai matrimoni?",
-      "answer": "Sì, gli orecchini minimalisti possono funzionare magnificamente per i matrimoni, soprattutto quando l'abito ha già dei dettagli o chi li indossa preferisce gioielli discreti."
+      "question": "Gli orecchini minimalisti possono essere usati in un ear stack?",
+      "answer": "Sì. Controlli dimensioni, retro e spaziatura di ogni orecchino, così che i gioielli rimangano visibili e non interferiscano tra loro."
     },
     {
-      "question": "Come abbinare gli orecchini minimalisti?",
-      "answer": "Indossali da soli per un look pulito, abbinali a degli abbracci per un look da orecchio o usali per bilanciare un vestito semplice o un completo da lavoro."
+      "question": "Gli orecchini minimalisti sono automaticamente adatti all'uso quotidiano?",
+      "answer": "No. L'idoneità dipende da dimensioni, peso, chiusura, materiali, finitura, conformazione del piercing e attività di chi li indossa, non dalla sola parola \"minimalista\"."
     },
     {
-      "question": "Quali orecchini IWantJewels sono i migliori per uno stile minimalista?",
-      "answer": "Cadenza S, Cadenza M, Laluce e Amadea Huggie sono le opzioni di stile minimalista più forti di IWantJewels."
+      "question": "Gli orecchini minimalisti sono un buon regalo?",
+      "answer": "Possono esserlo, ma chi acquista dovrebbe comunque verificare il colore di metallo preferito dal destinatario, il tipo di piercing, la dimensione abituale degli orecchini ed eventuali sensibilità ai materiali."
     }
   ],
   "cta": {
-    "heading": "Gli orecchini minimalisti sono i pezzi che cerchi ancora e ancora. Sono facili da modellare, comodi da indossare e utili per abiti di tutti i giorni, abiti da lavoro, regali, orecchini e occasioni semplici.",
-    "body": "Inizia con gli orecchini con diamanti semifini coltivati in laboratorio di IWantJewels se desideri gioielli minimalisti con il vero scintillio dei diamanti. Scegli Cadenza S per una delicata lucentezza quotidiana, Cadenza M per borchie più visibili, Laluce per uno styling discreto, Amadea per abbracci e Orsola per un movimento morbido durante le occasioni.",
-    "primaryLabel": "Acquista orecchini minimalisti",
+    "heading": "Gli orecchini minimalisti si distinguono per un design intenzionale, non solo per le dimensioni. Prima di scegliere, confronti silhouette, misure, chiusura, materiali e aspetto realistico indossato.",
+    "body": "Scopra gli orecchini minimalisti con diamante da laboratorio di I Want Jewels e controlli su ogni pagina prodotto dimensioni, peso, chiusura e materiali prima di decidere.",
+    "primaryLabel": "Scopra gli orecchini minimalisti con diamante da laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Esplora gli orecchini a bottone con diamanti coltivati in laboratorio",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Leggi Come impilare gli orecchini",
-    "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
+    "secondaryLabel": "Confronti gli stili di orecchini per ogni giorno",
+    "secondaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide",
+    "tertiaryLabel": "Come abbinare i gioielli minimalisti",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
   }
 }

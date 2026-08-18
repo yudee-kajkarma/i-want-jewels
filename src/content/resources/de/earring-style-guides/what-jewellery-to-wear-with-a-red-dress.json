@@ -1,1032 +1,571 @@
 {
   "meta": {
-    "title": "Welchen Schmuck man zu einem roten Kleid trägt",
-    "description": "Wählen Sie Schmuck für ein rotes Kleid mit Gold, Silber, Roségold, Diamantohrringen, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend."
+    "title": "Welchen Schmuck trägt man zu einem roten Kleid?",
+    "description": "Entdecken Sie Schmuck zum roten Kleid: von Gold- und Silberohrringen bis zu Satin, Hochzeit, Party und jedem Ausschnitt."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-95.jpg",
-    "title": "Welchen Schmuck man zu einem roten Kleid trägt:",
-    "subtitle": "Leitfaden für Ohrringe, Metalle und Styling",
+    "image": "/blog-images/blog-image-54.jpg",
+    "title": "Welcher Schmuck passt",
+    "subtitle": "Zum roten Kleid",
     "paragraphs": [
-      "Ein rotes Kleid setzt bereits ein starkes Statement, daher sollte der Schmuck dem Outfit den letzten Schliff verleihen, ohne ihn zu beeinträchtigen. Welcher Schmuck zu einem roten Kleid am besten passt, hängt in der Regel vom Rotton, dem Stoff des Kleides, dem Ausschnitt und dem Anlass ab.",
-      "Goldschmuck ist eine der stärksten Wahlen zu einem roten Kleid, da er Wärme, Fülle und Abendeleganz verleiht. Diamantohrringe funktionieren auch wunderbar, weil sie das Outfit aufhellen, ohne die Farbstimmung zu verändern. Weißer oder silberfarbener Schmuck kann ein rotes Kleid schärfer und formeller wirken lassen, während Roségold am besten zu sanfteren Rottönen, Rouge-Rottönen und romantischem Styling passt.",
-      "Diese Ressource hilft Käufern bei der Auswahl von Schmuck für rote Kleider nach Farbton, Ausschnitt, Stoff, Veranstaltungsart und Frisur. Es verbindet außerdem jede Styling-Richtung mit IWantJewels-Produkten wie Orsola-Ohrringen, Lusso Bold-Statement-Ohrringen, Cadenza-M-Diamant-Ohrsteckern, Cadenza-S-Ohrsteckern mit im Labor gezüchteten Diamanten, Pave-Creolen, Concetta-Long-Ohrringen, Concetta-Short-Ohrringen, Farfalla-Schmetterlingsohrringen, Alidi-Farfalla-Schmetterlingsohrringen, Amadea-Huggie-Ohrringen und Laluce-Minimalismus-Diamantohrringen."
+      "Ein rotes Kleid setzt bereits einen starken Blickfang. Der Schmuck sollte das Outfit daher ergänzen, nicht mit ihm konkurrieren. Die richtige Wahl hängt vom Rotton, den Details des Kleids, dem Ausschnitt und dem Anlass ab.",
+      "Gelbgoldener Schmuck verleiht leuchtendem Rot sowie Tomaten- und Scharlachrot Wärme. Weißer oder silberfarbener Schmuck schafft einen klareren Kontrast und passt besonders gut zu Kirschrot, Weinrot und Burgunder. Roségold wirkt bei Korallenrot, gedämpften Rottönen und romantischen Outfits sanfter.",
+      "Wählen Sie bei verzierten, paillettenbesetzten oder stark strukturierten Kleidern Ohrstecker oder kleine Creolen (Huggies). Ein schlichtes rotes Kleid verträgt auffälligere Creolen, Ohrhänger oder ein einzelnes Statement-Design. Wenn die Ohrringe den Look bestimmen, halten Sie die Kette dezent oder lassen Sie den Ausschnitt frei."
     ],
-    "shopLabel": "Kaufen Sie Ohrringe für rote Kleider",
+    "shopLabel": "Ohrringe zum roten Kleid entdecken",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Wählen Sie Schmuck zu roten Kleidern.",
-      "Entscheiden Sie, ob Gold, Weiß-/Silberton oder Roségold am besten zu Rot passen.",
-      "Kombinieren Sie die Ohrringe zu leuchtend roten, burgunderroten, weinroten, kirschroten, satinroten und zartroten Kleidern.",
-      "Stylen Sie rote Kleider für Partys, Hochzeiten, Abendessen, Geburtstage und formelle Anlässe.",
-      "Wählen Sie Ohrringe basierend auf Ausschnitt und Frisur.",
-      "Entscheiden Sie sich zwischen Ohrsteckern, Creolen, Tropfenohrringen, Schmetterlingsohrringen und auffälligen Statement-Ohrringen.",
-      "Stellen Sie Ear-Stack-Kombinationen für rote Kleider zusammen.",
-      "Finden Sie Produktempfehlungen von IWantJewels nach rotem Kleidungsstil.",
-      "Planen Sie Bildblöcke, Produktmodule, CTA-Bereiche und interne Links für diese Seite ein."
+      "Die Detailfülle des Kleids zählt mehr als seine Farbe allein",
+      "Gelbgold wärmt Scharlachrot, Tomatenrot, Rostrot und warmes Burgunder",
+      "Weiß oder Silber passt zu Kirschrot, Weinrot, Ochsenblutrot und blaustichigem Rot",
+      "Roségold mildert Korallenrot, gedämpfte und florale Rottöne",
+      "Pailletten, Spitze und Samt verlangen nach Ohrsteckern oder klaren Ohrhängern",
+      "Ein freier Ausschnitt wirkt nicht unfertig – oft ist er die klarere Wahl"
     ],
-    "image": "/blog-images/blog-image-97.jpg"
+    "image": "/blog-images/blog-image-42.jpg"
   },
   "content": [
     {
-      "heading": "Schmuckauswahl für rotes Kleid",
+      "heading": "Kurzer Schmuckratgeber zum roten Kleid",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als wichtigstes Styling-Entscheidungstool."
-        },
         {
           "type": "table",
           "headers": [
-            "Roter Kleidungsstil",
-            "Beste Schmuckrichtung",
-            "Empfohlene IWJ-Richtung"
-          ],
-          "rows": [
-            [
-              "Leuchtend rotes Kleid",
-              "Goldene Ohrstecker, Tropfen oder auffällige Ohrringe",
-              "Cadenza M, Orsola, Lusso"
-            ],
-            [
-              "Burgunderrotes Kleid",
-              "Goldtropfen, lange Tropfen oder mittlere Ohrstecker",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Weinrotes Kleid",
-              "Tropfen, Nieten oder raffinierte Creolen",
-              "Orsola, Cadenza M, Pave Hoops"
-            ],
-            [
-              "Rotes Satinkleid",
-              "Tropfenohrringe oder mittelgroße Ohrstecker",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Rotes Partykleid",
-              "Auffällige Ohrringe, Tropfen oder Creolen",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Rotes Hochzeitsgastkleid",
-              "Tropfen, Ohrstecker oder weiche, romantische Ohrringe",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Detailliertes rotes Kleid",
-              "Ohrstecker oder saubere Umarmungen",
-              "Kadenz M, Kadenz S, Amadea"
-            ],
-            [
-              "Einfaches rotes Kleid",
-              "Ein starker Schmuckschwerpunkt",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Romantisches rotes Kleid",
-              "Schmetterlingsohrringe oder weiche Tropfen",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Roter Ohrenstapel",
-              "Hauptohrring + kleine Stütze",
-              "Orsola + Cadenza S, Lusso + Cadenza S"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Warum rote Kleider ausgewogenen Schmuck brauchen",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-99.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Ein rotes Kleid ist schon kraftvoll. Da es natürlich die Aufmerksamkeit auf sich zieht, sollte der Schmuck das Outfit ergänzen und nicht mit ihm konkurrieren."
-            },
-            {
-              "type": "paragraph",
-              "text": "Ist das rote Kleid schlicht, darf der Schmuck kräftiger sein. Auffällige Ohrringe, Tropfen und Creolen können wunderbar wirken. Wenn das rote Kleid Pailletten, Spitze, Stickereien, Rüschen, metallischen Glanz oder einen dramatischen Ausschnitt hat, sollte der Schmuck in der Regel sauberer sein."
-            },
-            {
-              "type": "paragraph",
-              "text": "Auch Rot verändert sich je nach Stoff. Roter Satin reflektiert Licht, daher eignen sich Hängeohrringe oder mittelgroße Ohrstecker normalerweise besser als zu viele glänzende Accessoires. Mattrote Kleider vertragen stärkeren Schmuck. Burgunderrote und weinrote Kleider wirken edler und formeller, während leuchtend rote Kleider energisch und partytauglich wirken."
-            },
-            {
-              "type": "paragraph",
-              "text": "Die Hauptregel ist einfach: Wählen Sie einen klaren Schmuckschwerpunkt. Wenn die Ohrringe auffällig sind, halten Sie die Halskette minimal oder lassen Sie sie weg. Wenn die Halskette das Hauptstück ist, wählen Sie schlichtere Ohrringe."
-            },
-            {
-              "type": "see-also",
-              "text": "Leitfaden für Party-Ohrringe",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Gold, Silber oder Roségold mit einem roten Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gold ist normalerweise die einfachste Metallfarbe für ein rotes Kleid, da es Wärme und Fülle verleiht. Weißer oder silberfarbener Schmuck kann funktionieren, wenn der Look modern, formell oder schärfer wirken soll. Roségold kann mit sanfteren Rottönen, romantischen Outfits oder Rouge-Rot-Styling kombiniert werden, ist aber meist zarter als Gelbgold."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-101.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metallfarbe",
-                "Gefühl mit roten Kleidern",
-                "Beste rote Kleidertypen"
-              ],
-              "rows": [
-                [
-                  "Gelbgold",
-                  "Warm, reichhaltig, klassisch und für den Abend geeignet",
-                  "Leuchtendes Rot, Burgunderrot, Weinrot, roter Satin, rote Partykleider"
-                ],
-                [
-                  "Weiß- oder Silberton",
-                  "Sauber, scharf, hell und formell",
-                  "Tiefrote, weinrote, kühle rote, formelle rote Kleider"
-                ],
-                [
-                  "Roségold",
-                  "Weich, romantisch und feminin",
-                  "Zartrote, zartrote, romantische rote, florale rote Kleider"
-                ],
-                [
-                  "Gemischte Metalle",
-                  "Modern und kreativ",
-                  "Minimale rote Kleider und Ohrstöpsel"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Für das IWantJewels-Styling ist Gelbgold für Orsola, Lusso, Pave Hoops und Cadenza M mit roten Kleidern am stärksten. Weiße oder silberfarbene Stylings eignen sich gut für Cadenza M, Laluce, Concetta Long und Orsola, wenn das Outfit schlichter wirken soll. Roségold passt besser zu Farfalla, Alidi Farfalla und Concetta Short, wenn der Look romantisch wirken soll."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gold vs. Weiß vs. Roségold, im Labor gezüchtete Diamantohrringe",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein leuchtend rotes Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein leuchtend rotes Kleid wirkt mutig, selbstbewusst und energisch. Der Schmuck sollte poliert, aber nicht chaotisch sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Goldene Ohrringe sind normalerweise die beste Wahl, da sie zur Wärme des Kleides passen. Mittlere Diamant-Ohrstecker sind am sichersten, wenn das Outfit bereits stark ist. Tropfenohrringe sorgen für Eleganz. Auffällige Statement-Ohrringe können wirken, wenn das Kleid schlicht ist und die Ohrringe hervorstechen sollen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Leuchtend roter Kleidungsstil",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
+            "Stil des roten Kleids",
+            "Passende Ohrrichtung",
+            "Metallrichtung",
+            "Halskette"
           ],
           "rows": [
             [
               "Schlichtes leuchtend rotes Kleid",
-              "Auffällige Ohrringe oder Tropfen",
-              "Lusso, Orsola"
+              "Ohrhänger, Creolen oder ein Statement-Paar",
+              "Gelbgold für Wärme oder Weiß für Kontrast",
+              "Optional eine zarte Kette"
             ],
             [
-              "Leuchtend rotes Partykleid",
-              "Creolen, Tropfen oder auffällige Ohrringe",
-              "Pave Hoops, Orsola, Lusso"
+              "Detailreiches oder paillettenbesetztes rotes Kleid",
+              "Ohrstecker oder kleine Creolen (Huggies)",
+              "Wiederholen Sie das Metall der anderen Accessoires",
+              "Meist nicht nötig"
             ],
             [
-              "Leuchtend rotes Satinkleid",
-              "Mittlere Noppen oder Tropfen",
-              "Kadenz M, Orsola"
+              "Burgunder- oder weinrotes Kleid",
+              "Ohrstecker oder elegante Ohrhänger",
+              "Gelbgold für Wärme, Weiß für Kontrast",
+              "Abhängig vom Ausschnitt"
             ],
             [
-              "Leuchtend rotes Kleid mit V-Ausschnitt",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
+              "Rotes Satinkleid",
+              "Ohrstecker oder klare Ohrhänger",
+              "Gelbgold, Weiß oder Roségold",
+              "Halten Sie den Look minimalistisch"
             ],
             [
-              "Leuchtend rotes Kleid mit Stehkragen",
-              "Ohrstecker oder Reifen",
-              "Kadenz M, Pave Hoops"
+              "Rotes Kleid als Hochzeitsgast",
+              "Ohrstecker, Ohrhänger oder mittelgroße Creolen",
+              "Auf Tasche und Schuhe abstimmen",
+              "Dezent bei einem offenen Ausschnitt"
             ],
             [
-              "Detailliertes leuchtend rotes Kleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
+              "Rotes Kleid mit hohem Ausschnitt",
+              "Ohrstecker, Creolen oder auffällige Ohrringe",
+              "Jedes abgestimmte Metall",
+              "Meist darauf verzichten"
             ],
             [
-              "Leuchtend rotes Geburtstagskleid",
-              "Tropfen-, Ohrstecker- oder Schmetterlingsohrringe",
-              "Orsola, Cadenza M, Farfalla"
+              "Schulterfreies rotes Kleid",
+              "Ohrhänger, Creolen oder Statement-Ohrringe",
+              "Nach dem Unterton des Kleids auswählen",
+              "Optional; die Ohrringe dürfen den Look bestimmen"
+            ],
+            [
+              "Rotes Spitzenkleid",
+              "Ohrstecker oder schlichte Ohrhänger",
+              "Ein einheitliches Metall",
+              "Dezent halten"
             ]
           ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck für Kleider mit V-Ausschnitt",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
         }
       ]
     },
     {
-      "heading": "Beste Ohrringe für ein Burgunder- oder Weinkleid",
+      "heading": "Gold- oder Silberschmuck zum roten Kleid?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Burgunderrote und weinrote Kleider wirken tiefer, reicher und formeller als leuchtendes Rot. Sie passen normalerweise wunderbar zu Ohrringen aus Gelbgold, Weiß-/Silbertönen und edlen Diamanten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Tropfenohrringe sind besonders stark, weil sie Glanz und Bewegung verleihen. Concetta Long eignet sich gut für formelle weinfarbene Kleider. Cadenza M ist eine sicherere Option, wenn das Kleid bereits mit Samt, Spitze, Satin oder Details versehen ist."
+          "text": "Sowohl Gold- als auch silberfarbener Schmuck passt zu Rot. Entscheidend sind der Unterton des Kleids und die gewünschte Wirkung – nicht die Regel, dass jedes rote Kleid mit Gold getragen werden muss."
         },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-103.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Burgunderroter/weinroter Kleidungsstil",
-                "Beste Ohrringrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Schlichtes burgunderfarbenes Kleid",
-                  "Tropfen oder auffällige Ohrringe",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Burgunderrotes Satinkleid",
-                  "Drops oder mittlere Stollen",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Weinfarbenes Abendkleid",
-                  "Lange Tropfen oder raffinierte Nieten",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Burgunderrotes Hochzeitsgastkleid",
-                  "Drops oder mittlere Stollen",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Detailliertes burgunderfarbenes Kleid",
-                  "Ohrstecker oder Huggies",
-                  "Kadenz M, Amadea"
-                ],
-                [
-                  "Burgunderrotes Partykleid",
-                  "Creolen, Tropfen oder auffällige Ohrringe",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Burgunderrotes herzförmiges Kleid",
-                  "Tropfen oder romantische Ohrringe",
-                  "Orsola, Farfalla"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Gelbgold zu Rot"
+            },
+            {
+              "type": "paragraph",
+              "text": "Gelbgold ergibt eine warme Kombination. Es passt besonders gut zu Scharlachrot und Tomatenrot, warmem Burgunder, Rost- und Terrakottarot, matten roten Kleidern sowie Abend- und Party-Outfits."
+            },
+            {
+              "type": "paragraph",
+              "text": "Wählen Sie gelbgoldene Ohrringe, wenn der Schmuck warm und präsent wirken soll. Ist das Kleid bereits stark verziert, setzen Sie diese Wärme lieber mit einem kleineren Ohrstecker oder einer zurückhaltenden Creole ein."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Weißer oder silberfarbener Schmuck zu Rot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Weiß- und Silbertöne schaffen einen kühleren, klareren Kontrast. Erwägen Sie sie bei Kirschrot, blaustichigem Rot, Weinrot und Ochsenblutrot, kühlem Burgunder sowie modernen oder minimalistischen Outfits. Ohrringe mit im Labor gezüchteten Diamanten und weißer Fassung bringen Licht ins Gesicht, ohne eine weitere kräftige Farbe einzuführen."
+        },
+        {
+          "type": "subheading",
+          "text": "Roségold zu Rot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségold wirkt sanfter und kontrastiert weniger stark. Es passt zu korallenroten Kleidern, zartem oder gedämpftem Rot, floralen roten Kleidern, romantischen Hochzeitsgast-Outfits sowie Blush- und rosaroten Tönen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prüfen Sie vor der Metallwahl auch die Beschläge an Kleid, Tasche und Schuhen. Wenn Sie ein bereits vorhandenes Metall wiederholen, wirkt das Outfit oft bewusster zusammengestellt."
+        },
+        {
           "type": "see-also",
-          "text": "Schmuck für herzförmigen Ausschnitt",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+          "text": "Ohrschmuck mit im Labor gezüchteten Diamanten in Gelb-, Weiß- oder Roségold",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Beste Ohrringe für ein rotes Satinkleid",
+      "heading": "Welche Ohrringe passen zu einem roten Kleid?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Roter Satin verfügt bereits über Glanz und Farbstärke, daher sollte sich der Schmuck ausgewogen anfühlen."
+          "type": "section-lead",
+          "text": "Die Detailfülle des Kleids ist wichtiger als die Farbe allein."
+        },
+        {
+          "type": "subheading",
+          "text": "Diamant-Ohrstecker"
         },
         {
           "type": "paragraph",
-          "text": "Ohrhänger passen wunderbar zu rotem Satin, weil sie für Bewegung und Eleganz sorgen. Mittlere Nieten sind sicherer, wenn das Kleid stark drapiert, glänzt oder einen dramatischen Ausschnitt hat. Auffällige Statement-Ohrringe wirken nur dann am besten, wenn das Satinkleid schlicht ist und die Ohrringe das Hauptmerkmal sein sollen."
+          "text": "Diamant-Ohrstecker setzen einen konzentrierten Lichtpunkt, ohne eine weitere komplizierte Form hinzuzufügen. Sie eignen sich besonders zu roten Paillettenkleidern, roter Spitze, strukturierten Schultern, detailreichen Ausschnitten, formellen Geschäftsanlässen und Kleidern mit Halskette."
         },
         {
-          "type": "table",
-          "headers": [
-            "Roter Satin-Kleiderstil",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Schlichtes rotes Satinkleid",
-              "Tropfen oder auffällige Ohrringe",
-              "Orsola, Lusso"
-            ],
-            [
-              "Rotes Unterkleid aus Satin",
-              "Tropfenohrringe",
-              "Orsola"
-            ],
-            [
-              "Rotes Satinkleid mit Stehkragen",
-              "Ohrstecker oder Reifen",
-              "Kadenz M, Pave Hoops"
-            ],
-            [
-              "Rotes Satinkleid mit V-Ausschnitt",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Rotes Partykleid aus Satin",
-              "Auffällige Ohrringe, Tropfen oder Creolen",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Rotes Hochzeitsgastkleid aus Satin",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Detailliertes rotes Satinkleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Kleinere Ohrstecker halten das Ergebnis zurückhaltend. Ein auffälligerer Ohrstecker kann hingegen mit einem kräftigen, einfarbigen Rot mithalten."
+        },
+        {
+          "type": "subheading",
+          "text": "Creolen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Creolen bringen Form ins Spiel und lassen ein rotes Outfit moderner wirken. Kleine oder mittelgroße Creolen passen zu Tagesveranstaltungen, Dinnern und modernen Hochzeitsgast-Outfits. Auffälligere Pavé-Creolen können ein schlichtes rotes Kleid oder einen Jumpsuit ergänzen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hat das Kleid Rüschen, eine stark verzierte Schulterpartie oder einen aufwendigen Kragen, achten Sie darauf, dass sich die Creole nicht im Stoff verfängt."
+        },
+        {
+          "type": "subheading",
+          "text": "Ohrhänger"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrhänger bringen eine vertikale Linie und sanfte Bewegung ins Outfit. Sie passen besonders gut zu offenen Ausschnitten, zurückgebundenem Haar und eher schlichten Stoffen. Wählen Sie kürzere Ohrhänger, wenn Sie Bewegung möchten, ohne die Ohrringe zum Mittelpunkt zu machen. Längere Ohrhänger passen besser zu einem schlichten Abendkleid mit ausreichend Raum an Ausschnitt und Schultern."
+        },
+        {
+          "type": "subheading",
+          "text": "Statement-Ohrringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement-Ohrringe können zu Rot funktionieren, brauchen aber optischen Raum. Am wirkungsvollsten sind sie zu schlichten roten Etuikleidern, minimalistischen Slipdresses, einfachen trägerlosen Kleidern, klar geschnittenen roten Jumpsuits und unverzierten Partykleidern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enthält das Kleid bereits Pailletten, Metallstickereien, große Schleifen oder aufwendige Rüschen, können Statement-Ohrringe den Look überladen. Entscheiden Sie sich für einen einzigen Blickfang."
         },
         {
           "type": "see-also",
-          "text": "Schmuck mit Satinkleid",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein rotes Partykleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Zu einem roten Partykleid können kräftigere Ohrringe getragen werden, wenn das Outfit schlicht ist. Der Schlüssel liegt darin, den Look nicht zu laut erscheinen zu lassen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Entscheiden Sie sich für Lusso, wenn die Ohrringe zum Hauptschmuckelement werden sollen. Wählen Sie Orsola, wenn Sie Eleganz und Bewegung wünschen. Wählen Sie Pave Hoops, wenn Sie Form und Glanz wünschen. Wählen Sie Cadenza M, wenn das Kleid bereits Details aufweist und eine saubere Diamantpolitur benötigt."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Roter Partykleid-Stil",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Schlichtes rotes Partykleid",
-              "Mutige Ohrringe",
-              "Lusso"
-            ],
-            [
-              "Rotes Cocktailkleid",
-              "Creolen, Tropfen oder mittlere Nieten",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Rotes Partykleid aus Satin",
-              "Tropfen oder auffällige Ohrringe",
-              "Orsola, Lusso"
-            ],
-            [
-              "Rotes Paillettenkleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Rotes Geburtstagskleid",
-              "Tropfen-, Ohrstecker- oder Schmetterlingsohrringe",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Roter Overall",
-              "Creolen oder auffällige Ohrringe",
-              "Pave Hoops, Lusso"
-            ],
-            [
-              "Formelles rotes Partykleid",
-              "Lange Tropfen oder raffinierte Nieten",
-              "Concetta Long, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für auffällige Statement-Ohrringe",
+          "text": "Auffällige Statement-Ohrringe: Styling-Guide",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Bester Schmuck für ein rotes Hochzeitsgastkleid",
+      "heading": "Schmuck für verschiedene Rottöne",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Ein rotes Hochzeitsgastkleid sollte elegant und respektvoll wirken, nicht zu aufdringlich. Der Schmuck soll das Outfit weicher machen und aufpolieren."
+          "type": "subheading",
+          "text": "Leuchtendes Rot und Scharlachrot"
         },
         {
           "type": "paragraph",
-          "text": "Tropfenohrringe sind eine der besten Optionen, weil sie für Bewegung und Eleganz sorgen. Mittlere Nieten sind besser, wenn das Kleid detailliert oder hell ist. Schmetterlingsohrringe können funktionieren, wenn das rote Kleid eine romantische oder blumige Stimmung hat."
+          "text": "Leuchtendes Rot hat eine starke Präsenz. Klare Diamant-Ohrstecker, polierte Creolen und schlichte Ohrhänger passen gut dazu. Ein Statement-Ohrring ist möglich, wenn das Kleid selbst schlicht ist. Gelbgold verstärkt die Wärme, während eine weiße Fassung einen schärferen Kontrast schafft. Keine Wahl ist automatisch besser – entscheidend sind die Gesamtwirkung und die übrigen Accessoires."
         },
         {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Roter Hochzeitsgast-Kleiderstil",
-                "Beste Schmuckrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Schlichtes rotes Hochzeitsgastkleid",
-                  "Drops oder mittlere Stollen",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Rotes Hochzeitsgastkleid aus Satin",
-                  "Tropfenohrringe",
-                  "Orsola"
-                ],
-                [
-                  "Burgunderrotes Hochzeitsgastkleid",
-                  "Tropfen oder raffinierte Nieten",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Geblümtes rotes Hochzeitsgastkleid",
-                  "Schmetterlingsohrringe oder Ohrstecker",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Rotes Spitzenkleid",
-                  "Ohrstecker oder zarte Tropfen",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Detailliertes rotes Hochzeitsgastkleid",
-                  "Ohrstecker oder Huggies",
-                  "Kadenz M, Amadea"
-                ],
-                [
-                  "Romantisches rotes Hochzeitsgastkleid",
-                  "Schmetterlingsohrringe oder weiche Tropfen",
-                  "Farfalla, Concetta Short"
-                ]
-              ]
-            }
-          ]
+          "type": "subheading",
+          "text": "Burgunder, Weinrot und Ochsenblutrot"
         },
         {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Hochzeiten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
+          "type": "paragraph",
+          "text": "Dunklere Rottöne wirken oft formeller und zurückhaltender als Scharlachrot. Diamant-Ohrstecker und elegante Ohrhänger passen gut zu Dinnern, Winterhochzeiten und Abendveranstaltungen. Gelbgold kann Burgunder Wärme verleihen, während Weiß- oder Silbertöne einen kühleren Kontrast schaffen. Stimmen Sie den Schmuck nicht automatisch mit roten Edelsteinen auf das Kleid ab, es sei denn, Sie wünschen bewusst einen Ton-in-Ton-Look."
+        },
+        {
+          "type": "subheading",
+          "text": "Kirschrot und blaustichiges Rot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kühles Kirschrot harmoniert oft mit weißem oder silberfarbenem Schmuck, besonders in Kombination mit schwarzen, marineblauen oder silbernen Accessoires. Gelbgold ist ebenfalls möglich, wenn Sie einen wärmeren Kontrast wünschen."
+        },
+        {
+          "type": "subheading",
+          "text": "Korallenrot und zartes Rot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Korallenrote und gedämpft rote Kleider passen zu Gelb- oder Roségold. Kleinere Ohrhänger, von Schmetterlingen inspirierte Designs und zarte Ohrstecker unterstützen ein sanfteres Outfit, ohne es zu verspielt wirken zu lassen."
         }
       ]
     },
     {
-      "heading": "Schmuck für rote Kleider von Neckline",
+      "heading": "Schmuck zu verschiedenen Stoffen roter Kleider",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Der Ausschnitt hilft bei der Entscheidung, ob Ohrringe, Halskette oder beides führen sollen."
+          "type": "subheading",
+          "text": "Roter Satin"
         },
         {
           "type": "paragraph",
-          "text": "Offene Ausschnitte können Tropfen oder auffällige Ohrringe tragen. Hohe Ausschnitte funktionieren normalerweise besser mit Nieten oder Creolen. Herzförmige und schulterfreie rote Kleider können mit Tropfen, romantischen Ohrringen oder einem auffälligen Blickfang wunderschön aussehen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Ausschnitt eines roten Kleides",
-            "Beste Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Rotes Kleid mit V-Ausschnitt",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Herzförmiges rotes Kleid",
-              "Tropfen, Schmetterlingsohrringe oder auffällige Ohrringe",
-              "Orsola, Farfalla, Lusso"
-            ],
-            [
-              "Schulterfreies rotes Kleid",
-              "Tropfen, Creolen oder auffällige Ohrringe",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Rotes Kleid mit hohem Ausschnitt",
-              "Ohrstecker oder Reifen",
-              "Kadenz M, Pave Hoops"
-            ],
-            [
-              "Rotes Neckholder-Kleid",
-              "Ohrstecker oder schlanke Tropfen",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Rotes Kleid mit quadratischem Ausschnitt",
-              "Creolen, Tropfen oder mittlere Nieten",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Trägerloses rotes Kleid",
-              "Tropfen oder auffällige Ohrringe",
-              "Orsola, Lusso"
-            ],
-            [
-              "Rotes Kleid mit Wasserfallausschnitt",
-              "Noppen oder weiche Tropfen",
-              "Kadenz M, Orsola"
-            ]
-          ]
+          "text": "Satin reflektiert bereits Licht, daher muss der Schmuck nicht überall Funkeln erzeugen. Wählen Sie einen einzigen Akzent: Ohrringe, Halskette oder Armband. Ohrstecker und klare Ohrhänger sind zuverlässige Optionen. Größere Ohrringe können zu einem schlichten Satin-Slipdress passen; bei Raffungen, Drapierungen, einem Wasserfallausschnitt oder Kristalldetails sollten sie jedoch dezenter ausfallen."
         },
         {
           "type": "see-also",
-          "text": "Ohrringe für schulterfreie Kleider",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+          "text": "Schmuck zu Satin- und Seidenkleidern",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Rote Pailletten oder Metallic-Stoff"
+        },
+        {
+          "type": "paragraph",
+          "text": "Halten Sie den Schmuck zurückhaltend. Kleine Diamant-Ohrringe oder klare Creolen sorgen meist für ausreichend Kontur. Kombinieren Sie ein Paillettenkleid nicht mit großen Ohrringen, einer Statement-Halskette und mehreren weiteren funkelnden Schmuckstücken."
+        },
+        {
+          "type": "subheading",
+          "text": "Rote Spitze"
+        },
+        {
+          "type": "paragraph",
+          "text": "Spitze bringt ihr eigenes Muster und ihre eigene Struktur mit. Ohrstecker oder schlichte Ohrhänger lassen diese Details sichtbar. Sitzt die Spitze nah am Hals, sind Ohrringe meist sinnvoller als eine Halskette."
+        },
+        {
+          "type": "subheading",
+          "text": "Roter Samt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Samt besitzt eine starke visuelle Tiefe und passt zu polierten Ohrsteckern oder eleganten Ohrhängern. Lassen Sie den Stoff die dominierende Struktur bleiben und vermeiden Sie zu viele konkurrierende Oberflächen."
+        },
+        {
+          "type": "subheading",
+          "text": "Schlichter matter Stoff"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schlichtes mattes Kleid lässt Ihnen die größte Freiheit. Creolen, Ohrhänger und Statement-Ohrringe können gleichermaßen funktionieren, da der Stoff weder Licht reflektiert noch mit vielen Oberflächendetails arbeitet."
         }
       ]
     },
     {
-      "heading": "Schmuck für rote Kleider von Frisur",
+      "heading": "Schmuck auf den Ausschnitt abstimmen",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Die Frisur verändert die Sichtbarkeit des Schmucks, insbesondere bei einer kräftigen Kleiderfarbe wie Rot."
+          "type": "subheading",
+          "text": "Rotes Kleid mit V-Ausschnitt"
         },
         {
           "type": "paragraph",
-          "text": "Wenn die Haare offen sind, können sehr kleine Ohrringe verschwinden. Mittlere Stollen, Reifen und Tropfen sehen normalerweise besser aus. Wenn die Haare zurückgebunden sind, können Ohrhänger, Creolen und auffällige Statement-Ohrringe das Gesicht wunderschön umrahmen."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-107.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Frisur",
-                "Beste Schmuckrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Haare runter",
-                  "Mittlere Nieten, Reifen oder Tropfen",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Sanfte Wellen",
-                  "Tropfen, Schmetterlingsohrringe oder sichtbare Ohrstecker",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Glatter Pferdeschwanz",
-                  "Creolen, Tropfen oder auffällige Ohrringe",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Niedriges Brötchen",
-                  "Tropfen, Schmetterlingsohrringe oder auffällige Ohrringe",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "Hohes Brötchen",
-                  "Creolen, Tropfen oder auffällige Ohrringe",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Halbhochgestecktes Haar",
-                  "Ohrstecker, Huggies oder Soft Drops",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "Kurzes Haar",
-                  "Ohrstecker, Creolen oder auffällige Ohrringe",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Halskette oder keine Halskette zum roten Kleid?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die Wahl der Halskette hängt vom Ausschnitt und den Ohrringen ab."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn die Ohrringe auffällig oder lang sind, verzichten Sie auf die Halskette oder wählen Sie eine sehr zarte Kette. Wenn es sich bei den Ohrringen um einfache Ohrstecker handelt, kann eine Halskette besser zur Geltung kommen. Wenn das rote Kleid einen hohen Ausschnitt hat, sind Ohrringe meist wichtiger als eine Halskette. Wenn das Kleid einen tiefen V-Ausschnitt hat, kann eine zarte Halskette mit schlichteren Ohrringen harmonieren."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Auswahl an Ohrringen",
-            "Richtung der Halskette"
-          ],
-          "rows": [
-            [
-              "Mutige Statement-Ohrringe",
-              "Keine Halskette oder sehr zarte Kette"
-            ],
-            [
-              "Lange Ohrhänger",
-              "Keine Halskette oder einfacher Anhänger"
-            ],
-            [
-              "Creolen",
-              "Zarte Halskette oder keine Halskette"
-            ],
-            [
-              "Mittlere Stollen",
-              "Halskette kann besser sichtbar sein"
-            ],
-            [
-              "Kleine Nieten",
-              "Eine Halskette kann den Look bestimmen"
-            ],
-            [
-              "Schmetterlingsohrringe",
-              "Bei Bedarf eine weiche, zarte Halskette"
-            ],
-            [
-              "Huggies",
-              "Eine einfache Halskette kann funktionieren"
-            ],
-            [
-              "Minimalistische Ohrringe",
-              "Eine Halskette kann zum Mittelpunkt werden"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Vermeiden Sie es bei einem roten Kleid, sowohl die Ohrringe als auch die Halskette zu stark zu machen. Rot hat bereits eine visuelle Kraft, sodass ein klarer Schmuckschwerpunkt in der Regel eleganter wirkt."
+          "text": "Ein zarter Anhänger kann die abwärts verlaufende Linie des V-Ausschnitts aufgreifen. Wenn Sie eine Halskette wählen, kombinieren Sie sie mit Ohrsteckern, kleinen Creolen oder dezenten Ohrhängern. Sind die Ohrringe lang oder sehr präsent, lassen Sie den V-Ausschnitt frei."
         },
         {
           "type": "see-also",
-          "text": "Schmuck für Kleider mit V-Ausschnitt",
+          "text": "Welcher Schmuck passt zu einem Kleid mit V-Ausschnitt?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Ear-Stack-Ideen für ein rotes Kleid",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Ein rotes Kleid passt wunderbar zu Ohren-Stacks, wenn der Stack kontrolliert bleibt."
+          "type": "subheading",
+          "text": "Trägerloses oder schulterfreies rotes Kleid"
         },
         {
           "type": "paragraph",
-          "text": "Für leuchtendes Rot und Burgunder wirken goldfarbene Stapel warm und poliert. Bei kühleren Rot- oder Weintönen kann auch ein Weiß-/Silberton edler wirken. Der Stapel sollte aus einem Hauptteil und einem kleineren Stützteil bestehen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Red Dress Stack-Ziel",
-            "Hauptstück",
-            "Stützstück",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Eleganter roter Kleiderstapel",
-              "Tropfenohrring",
-              "Kleiner Bolzen",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Auffälliger roter Party-Stapel",
-              "Mutiger Ohrring",
-              "Kleiner Bolzen",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Moderner roter Stapel",
-              "Reifen",
-              "Kleiner Bolzen",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Klassischer roter Stapel",
-              "Mittlerer Bolzen",
-              "Huggie",
-              "Kadenz M + Amadea"
-            ],
-            [
-              "Minimaler roter Stapel",
-              "Kleiner Bolzen",
-              "Minimalistischer Ohrring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Romantischer roter Stapel",
-              "Schmetterlingsohrring",
-              "Kleiner Bolzen",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Formeller Burgunder-Stapel",
-              "Langer Tropfen",
-              "Kleiner Bolzen",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Zarter roter Hochzeitsstapel",
-              "Kurzer Abstieg",
-              "Kleiner Bolzen",
-              "Concetta Short + Cadenza S"
-            ]
-          ]
+          "text": "Eine offene Schulterpartie lässt Raum für Creolen, Ohrhänger oder Statement-Ohrringe. Sie müssen den Ausschnitt nicht mit einer Kette füllen; Ohrringe allein können das Gesicht rahmen und die klare Schulterlinie bewahren."
         },
         {
           "type": "see-also",
-          "text": "So stapeln Sie Ohrringe",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Produktpfade von Red Dress Styling Need",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "Für die sichersten Ohrringe im roten Kleid"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza M Diamant-Ohrstecker. Sie sorgen für sichtbaren Glanz, ohne dass ein Outfit in kräftigem Rot zu aufdringlich wirkt."
+          "text": "Welche Ohrringe passen zu einem schulterfreien Kleid?",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         },
         {
           "type": "subheading",
-          "text": "Für elegantes rotes Kleid"
+          "text": "Herzausschnitt"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Ohrhänger von Orsola. Sie passen wunderbar zu roten Satin-, Burgunder-, Hochzeitsgast- und Abendkleidern."
-        },
-        {
-          "type": "subheading",
-          "text": "Für auffällige rote Party-Looks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie auffällige Statement-Ohrringe von Lusso, wenn das rote Kleid schlicht ist und die Ohrringe führen sollen."
-        },
-        {
-          "type": "subheading",
-          "text": "Für moderne rote Kleiderform"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Pave Hoops. Sie sind stark für rote Partykleider, rote Jumpsuits, hochgeschlossene rote Kleider und schlichte rote Outfits."
-        },
-        {
-          "type": "subheading",
-          "text": "Für formelles Burgunder-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Concetta Long-Ohrringe, wenn das Outfit eine raffinierte, lange Linie erfordert, insbesondere zu burgunderroten, weinroten oder formellen roten Abendkleidern."
-        },
-        {
-          "type": "subheading",
-          "text": "Für ein romantisches rotes Kleid-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Farfalla-Schmetterlingsohrringe, Alidi Farfalla-Schmetterlingsohrringe oder Concetta Short-Ohrringe. Diese passen gut zu romantischen, floralen, zartroten oder Hochzeitsgast-Looks."
-        }
-      ]
-    },
-    {
-      "heading": "Produktempfehlungen von IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produkt",
-            "Beste Rolle im roten Kleid",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Orsola-Ohrhänger",
-              "Insgesamt der beste Ohrring für ein rotes Kleid",
-              "Sorgt für Bewegung und Glanz"
-            ],
-            [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Stärkste rote Partyoption",
-              "Am besten zu schlichten roten Kleidern"
-            ],
-            [
-              "Cadenza M Diamant-Ohrstecker",
-              "Sicherste Glitzeroption",
-              "Stark, wenn das rote Kleid bereits Details hat"
-            ],
-            [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Stützstück",
-              "Harmoniert Tropfen, Creolen und auffällige Ohrringe"
-            ],
-            [
-              "Pave-Reifen",
-              "Beste moderne Formoption",
-              "Passt gut zu roten Partykleidern und Jumpsuits"
-            ],
-            [
-              "Concetta Lange Ohrringe",
-              "Formales rotes Kleid-Styling",
-              "Erzeugt eine raffinierte Abendlinie"
-            ],
-            [
-              "Concetta Kurze Ohrringe",
-              "Zartes Styling für Hochzeitsgäste",
-              "Funktioniert für romantische und sanftere rote Looks"
-            ],
-            [
-              "Farfalla Schmetterlingsohrringe",
-              "Romantisches rotes Kleid-Styling",
-              "Fügt Weichheit und Bedeutung hinzu"
-            ],
-            [
-              "Alidi Farfalla Schmetterlingsohrringe",
-              "Romantische Option mit Geschenken",
-              "Stark für Geburtstage und zartrote Outfits"
-            ],
-            [
-              "Amadea Huggie-Ohrringe",
-              "Modernes Stützstück",
-              "Funktioniert mit detaillierten Kleidern und Ohrenstapeln"
-            ],
-            [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Weiche Details",
-              "Nützlich zu detaillierten roten Kleidern"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie roten Kleiderschmuck nach Intensität. Wählen Sie Orsola für elegante Bewegungen, Lusso für kräftiges Party-Glanz, Cadenza M für sauberen Diamantschliff, Pave Hoops für moderne Formen und Farfalla oder Concetta Short für sanftere romantische rote Looks."
-        }
-      ]
-    },
-    {
-      "heading": "Häufige Fehler bei rotem Kleiderschmuck, die Sie vermeiden sollten",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein häufiger Fehler besteht darin, zu einem ohnehin schon kräftigen roten Kleid zu viele auffällige Schmuckstücke hinzuzufügen. Rot ist kraftvoll, daher sieht das Styling mit einem klaren Schwerpunkt normalerweise besser aus."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, Ohrringe zu wählen, die zu klein für ein leuchtend rotes oder burgunderrotes Abendkleid sind. Kräftige Farben können sehr kleine Ohrringe überwältigen, insbesondere wenn die Haare offen sind."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, auffällige Ohrringe zu einem sehr detaillierten roten Kleid zu tragen. Wenn das Kleid Pailletten, Spitze, Stickereien, schwere Drapierungen oder einen dramatischen Ausschnitt hat, sehen Nieten oder Huggies möglicherweise eleganter aus."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, für jedes rote Kleid Roségold zu wählen. Roségold passt am besten zu sanfteren, romantischen Rottönen, aber Gelbgold ist normalerweise stärker für leuchtendes Rot, Burgunderrot und Wein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Schließlich sollten Sie den Stoff nicht außer Acht lassen. Roter Satin braucht ausgewogenen Schmuck, da der Stoff bereits glänzt, während mattrote Kleider meist kräftigere Ohrringe tragen können."
+          "text": "Ein kurzer Anhänger kann natürlich oberhalb eines Herzausschnitts sitzen. Alternativ verzichten Sie auf die Kette und wählen romantische Ohrhänger oder elegante Ohrstecker."
         },
         {
           "type": "see-also",
-          "text": "Pflegeanleitung für vergoldeten Schmuck",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+          "text": "Schmuck für einen Herzausschnitt",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Rotes Kleid mit hohem Ausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hohe Ausschnitte lassen normalerweise wenig Raum für eine Kette. Setzen Sie den Schmuckfokus mit Ohrringen. Ohrstecker wirken minimalistisch, während Creolen oder Ohrhänger stärker zur Geltung kommen."
+        },
+        {
+          "type": "subheading",
+          "text": "Rotes One-Shoulder-Kleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Kleid bringt bereits eine asymmetrische Linie mit. Vermeiden Sie daher zu viele zusätzliche Blickpunkte. Ohrringe sowie ein Ring oder Armband reichen oft aus. Achten Sie darauf, dass längere Ohrringe nicht an den Details der Schulter hängen bleiben."
         }
       ]
     },
     {
-      "heading": "Abschließende Checkliste für roten Kleiderschmuck",
+      "heading": "Schmuck für verschiedene Anlässe",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Rotes Kleid für Hochzeitsgäste"
+        },
+        {
+          "type": "paragraph",
+          "text": "Orientieren Sie sich zunächst am genannten Dresscode der Hochzeit und an kulturellen Erwartungen. Als Schmuck sorgen mittelgroße Ohrstecker, dezente Ohrhänger oder elegante Creolen für ausreichend Eleganz, ohne das Outfit zu dominieren. Enthält das Kleid Blumenmuster, Spitze oder einen aufwendig verzierten Ausschnitt, wählen Sie schlichtere Ohrringe. Ein schlichtes rotes Kleid kann auffälligere Ohrhänger oder ein romantisches Motiv tragen."
+        },
+        {
+          "type": "subheading",
+          "text": "Rotes Partykleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schlichtes Partykleid verträgt Pavé-Creolen, Ohrhänger oder ein einzelnes Statement-Design. Ein mit Pailletten besetztes oder metallisch glänzendes Partykleid braucht meist weniger Schmuck."
+        },
+        {
+          "type": "see-also",
+          "text": "Guide zu Party-Ohrringen",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Kleid für Dinner oder Date-Abend"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie Ohrringe, die auch bei abendlicher Beleuchtung sichtbar bleiben und dennoch zur Größe des Outfits passen. Mittelgroße Ohrstecker, kurze Ohrhänger und elegante Creolen sind praktische Optionen. Halten Sie die Kette zurückhaltend, wenn die Ohrringe im Mittelpunkt stehen."
+        },
+        {
+          "type": "see-also",
+          "text": "Ohrringe für den Date-Abend: Was passt?",
+          "href": "/resources/jewellery-gift-guides/date-night-jewellery-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Kleid für Black-Tie oder Gala"
+        },
+        {
+          "type": "paragraph",
+          "text": "Betrachten Sie die gesamte Silhouette, statt einfach die größtmöglichen Ohrringe zu wählen. Lange Ohrhänger können ein schlichtes Abendkleid ergänzen. Strukturierte, verzierte oder asymmetrische Kleider wirken jedoch oft klarer mit Ohrsteckern."
+        },
+        {
+          "type": "subheading",
+          "text": "Rotes Kleid fürs Büro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie Ohrstecker oder kleine Creolen und vermeiden Sie Ohrringe, die sich in Haaren, Kragen oder Headsets verfangen können. Eine zarte Kette passt zu einem schlichten V-Ausschnitt oder Rundhalsausschnitt."
+        }
+      ]
+    },
+    {
+      "heading": "Sollten Sie zu einem roten Kleid eine Kette tragen?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Bevor Sie Schmuck für ein rotes Kleid auswählen, fragen Sie:"
+          "text": "Tragen Sie eine Kette, wenn der Ausschnitt natürlichen Raum dafür bietet und die Ohrringe den Look nicht bereits bestimmen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Kette passt zu Kleidern mit V-Ausschnitt, Rundhalsausschnitt, schlichten trägerlosen Kleidern, einfachen Herzausschnitten und roten Kleidern mit kleinen Ohrsteckern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verzichten Sie auf die Kette, wenn:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Ist der Rotton leuchtendes Rot, Burgunderrot, Weinrot, Kirschrot, sanftes Rot oder Rostrot?",
-            "Ist das Kleid schlicht oder detailliert?",
-            "Ist der Stoff satiniert, mit Spitze, mit Pailletten, mit Blumenmuster, gestrickt oder unifarben?",
-            "Werden meine Haare die Ohrringe verbergen oder zeigen?",
-            "Möchte ich Glanz, Bewegung, Form oder Weichheit?",
-            "Sollten die Ohrringe oder die Halskette der wichtigste Schmuckmoment sein?",
-            "Trage ich eine Halskette oder sollte ich darauf verzichten?",
-            "Passt Gold, Weiß-/Silberton oder Roségold besser zu diesem Rotton?",
-            "Handelt es sich bei dem Anlass um eine Hochzeit, eine Party, ein Abendessen oder eine formelle Veranstaltung?",
-            "Sind die Ohrringe während der gesamten Veranstaltung bequem?",
-            "Ist der Ear Stack mit einem Hauptteil ausbalanciert?",
-            "Kann der Schmuck auch zu anderen Outfits getragen werden?"
+            "das Kleid einen hohen Ausschnitt hat",
+            "der Ausschnitt verziert ist",
+            "die Ohrringe lang oder auffällig sind",
+            "das Kleid ein aufwendig gestaltetes One-Shoulder-Detail hat",
+            "der Stoff stark mit Pailletten besetzt ist",
+            "Sie möchten, dass die Ohrringe der einzige Blickfang sind"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wenn Sie sich nicht sicher sind, wählen Sie goldene Ohrhänger für ein schlichtes rotes oder burgunderfarbenes Kleid, mittelgroße Ohrstecker für ein detailliertes rotes Kleid und auffällige Ohrringe nur, wenn das Outfit sauber genug ist, um den Schmuck hervorzuheben."
+          "text": "Ein freier Ausschnitt wirkt nicht unfertig. Zusammen mit einem ausdrucksstarken roten Kleid und sichtbaren Ohrringen kann er für ein klareres Ergebnis sorgen."
+        }
+      ]
+    },
+    {
+      "heading": "Drei vollständige Schmuckkombinationen für rote Kleider",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-46.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Schlichtes rotes Slipdress"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Kurze oder mittellange Ohrhänger",
+                "Keine Kette oder eine feine Kette",
+                "Ein zurückhaltendes Armband oder ein Ring",
+                "Das Haar hinter den Ohren oder hochgesteckt"
+              ]
+            },
+            {
+              "type": "subheading",
+              "text": "Bordeauxrotes Kleid mit V-Ausschnitt"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Diamant-Ohrstecker oder kurze Ohrhänger",
+                "Zarter Anhänger entlang des Ausschnitts",
+                "Ein einheitliches Metall für Ohrringe und Kette",
+                "Kein zusätzliches Statement-Schmuckstück"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Rotes Paillettenkleid mit hohem Ausschnitt"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Kleine oder mittelgroße Ohrstecker",
+            "Keine Kette",
+            "Ein schlichter Ring",
+            "Das Haar so frisieren, dass die Ohrringe sichtbar bleiben"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Häufige Fehler, die Sie vermeiden sollten",
+      "content": [
+        {
+          "type": "bullet-list",
+          "items": [
+            "Große Ohrringe und eine große Kette gleichzeitig zu tragen",
+            "Jedes Accessoire ausschließlich deshalb zu wählen, weil es rot ist",
+            "Verzierungen und Stoff des Kleides zu ignorieren",
+            "Mehrere Schmuckstile ohne klaren Blickfang zu kombinieren",
+            "Lange Ohrringe zu wählen, die am Ausschnitt oder an der Schulter hängen bleiben",
+            "Winzige Ohrringe zu tragen, die vollständig unter dem Haar verschwinden",
+            "Gold als einziges Metall zu betrachten, das zu Rot passt"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Abschließende Checkliste",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Fragen Sie sich vor der Schmuckauswahl:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Ist das Kleid warmrot, kühlrot, bordeauxrot oder korallfarben?",
+            "Ist der Stoff schlicht, aus Satin, Spitze, Samt oder mit Pailletten besetzt?",
+            "Bietet der Ausschnitt Raum für eine Kette?",
+            "Wird die Frisur die Ohrringe sichtbar lassen?",
+            "Ist das Kleid bereits stark detailreich?",
+            "Sollen die Ohrringe oder die Kette den Look bestimmen?",
+            "Welches Metall ist bereits an Tasche, Schuhen oder Kleid vorhanden?",
+            "Könnten die Ohrringe am Ausschnitt hängen bleiben?",
+            "Passt der Schmuck zum Dresscode der Veranstaltung?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn Sie unsicher sind, beginnen Sie mit Diamant-Ohrsteckern oder schlichten Ohrhängern, greifen Sie im gesamten Outfit ein Metall wieder auf und beschränken Sie den Schmuck auf einen Hauptblickfang."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Welchen Schmuck soll ich zu einem roten Kleid tragen?",
-      "answer": "Der beste Schmuck für ein rotes Kleid hängt von der Farbe und den Details des Kleides ab. Goldschmuck, Diamantohrringe, Ohrhänger, Creolen und mittelgroße Ohrstecker wirken alle gut, wenn sie ausgewogen gestylt werden."
-    },
-    {
-      "question": "Welche Ohrringe passen am besten zu einem roten Kleid?",
-      "answer": "Ohrhänger, mittelgroße Diamantohrstecker, Creolen und auffällige Statement-Ohrringe passen alle zu einem roten Kleid. Wählen Sie Tropfen für Eleganz, Nieten für klares Funkeln, Creolen für Form und auffällige Ohrringe für schlichte Partykleider."
+      "question": "Welcher Schmuck passt am besten zu einem roten Kleid?",
+      "answer": "Diamant-Ohrstecker, Creolen und Ohrhänger können alle zu einem roten Kleid passen. Wählen Sie die Größe passend zu den Details des Kleides: Schlichtere Kleider vertragen auffälligere Ohrringe, während Kleider mit Pailletten, Spitze oder Verzierungen meist besser mit zurückhaltendem Schmuck harmonieren."
     },
     {
       "question": "Passt Goldschmuck zu einem roten Kleid?",
-      "answer": "Ja, Goldschmuck ist eine der besten Wahlen zu einem roten Kleid, denn er verleiht Wärme, Fülle und Abendglanz."
+      "answer": "Ja. Gelbgold ergibt eine warme Kombination mit Scharlachrot, Tomatenrot, Rostrot und vielen Bordeauxtönen. Halten Sie das Design zurückhaltend, wenn das Kleid bereits stark verziert ist."
     },
     {
       "question": "Passt Silberschmuck zu einem roten Kleid?",
-      "answer": "Ja, weißer oder silberfarbener Schmuck kann zu roten Kleidern passen, wenn der Look schärfer, kühler oder formeller wirken soll."
-    },
-    {
-      "question": "Passt Roségold zu einem roten Kleid?",
-      "answer": "Roségold kann mit sanfteren Rottönen, Rouge-Rot-Outfits und romantischen roten Kleidern kombiniert werden. Gelbgold ist normalerweise stärker für leuchtendes Rot, Burgunderrot und Wein."
+      "answer": "Ja. Weiß- und Silbertöne schaffen einen kühleren Kontrast und passen besonders gut zu Kirschrot, Weinrot, Ochsenblutrot und blaustichigen Rottönen."
     },
     {
       "question": "Welche Ohrringe sollte ich zu einem roten Satinkleid tragen?",
-      "answer": "Ein rotes Satinkleid passt gut zu Ohrhängern von Orsola oder Diamantohrsteckern von Cadenza M. Tropfen sorgen für Bewegung, während Nieten für einen klaren Look sorgen."
+      "answer": "Wählen Sie Diamant-Ohrstecker oder schlichte Ohrhänger, wenn der Satin Drapierungen, Raffungen oder einen aufwendigen Ausschnitt aufweist. Auffälligere Ohrringe können zu einem unkomplizierten Satin-Slipdress passen."
     },
     {
-      "question": "Welchen Schmuck soll ich zu einem burgunderroten Kleid tragen?",
-      "answer": "Burgunderfarbene Kleider passen wunderbar zu goldenen Ohrhängern, langen Ohrhängern, mittelgroßen Diamantohrsteckern und edlem Diamantschmuck."
+      "question": "Sollte ich zu einem roten Kleid eine Kette tragen?",
+      "answer": "Eine Kette passt, wenn das Kleid einen offenen Ausschnitt hat und die Ohrringe eher schlicht sind. Verzichten Sie darauf, wenn das Kleid einen hohen oder verzierten Ausschnitt hat oder die Ohrringe bereits den Look bestimmen."
     },
     {
-      "question": "Welchen Schmuck sollten Hochzeitsgäste zum roten Kleid tragen?",
-      "answer": "Hochzeitsgäste können Tropfenohrringe, mittelgroße Ohrstecker, Schmetterlingsohrringe oder zarte Tropfenohrringe zu einem roten Kleid tragen. Die beste Wahl hängt davon ab, ob das Kleid schlicht, aus Satin, Spitze oder detailliert ist."
-    },
-    {
-      "question": "Soll ich eine Halskette zu einem roten Kleid tragen?",
-      "answer": "Das ist möglich, aber wenn die Ohrringe auffällig oder lang sind, lassen Sie die Halskette weg oder halten Sie sie sehr zart. Rote Kleider sehen normalerweise besser aus, wenn sie einen klaren Schmuckschwerpunkt haben."
-    },
-    {
-      "question": "Welche IWantJewels-Ohrringe passen am besten zu einem roten Kleid?",
-      "answer": "Orsola, Lusso, Cadenza M, Pave Hoops, Concetta Long, Farfalla, Alidi Farfalla und Concetta Short sind kräftige rote Kleideroptionen, je nachdem, ob Sie Bewegung, Kühnheit, Glanz, Form oder Weichheit wünschen."
+      "question": "Welcher Schmuck passt zu einem bordeauxroten Kleid?",
+      "answer": "Sowohl Gelbgold- als auch Schmuck in Weißtönen können Bordeaux ergänzen. Wählen Sie je nach Ausschnitt, Stoff und Anlass Diamant-Ohrstecker, kurze Ohrhänger oder elegante längere Ohrhänger."
     }
   ],
   "cta": {
-    "heading": "Ein rotes Kleid hat bereits Wirkung, daher sollte der Schmuck für Ausgewogenheit sorgen. Wählen Sie goldene Tropfen für elegante Bewegung, mittlere Ohrstecker für klares Funkeln, Creolen für eine moderne Form und auffällige Ohrringe, wenn das Kleid schlicht genug ist, um dem Schmuck die Führung zu geben.",
-    "body": "Beginnen Sie mit den halbfeinen, im Labor gezüchteten Diamantohrringen von IWantJewels, wenn Sie roten Kleiderschmuck mit echtem Diamantfunkeln wünschen. Wählen Sie Orsola für elegante Bewegung, Lusso für gewagtes Party-Styling, Cadenza M für klares Glitzern, Pave Hoops für Form, Concetta Long für formelle Burgunder-Looks und Farfalla oder Concetta Short für sanftere romantische Stylings.",
-    "primaryLabel": "Kaufen Sie Ohrringe für rote Kleider",
+    "heading": "Wenn Sie unsicher sind, beginnen Sie mit Diamant-Ohrsteckern oder schlichten Ohrhängern, greifen Sie im gesamten Outfit ein Metall wieder auf und beschränken Sie den Schmuck auf einen Hauptblickfang.",
+    "body": "Prüfen Sie auf jeder Produktseite Maße, Gewicht, Verschluss und Materialien, bevor Sie sich entscheiden.",
+    "primaryLabel": "Ohrringe für rote Kleider kaufen",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie Party-Ohrringe",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lesen Sie den Ratgeber zu Party-Ohrringen",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "Welcher Schmuck passt zu einem grünen Kleid?",
+    "secondaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress",
+    "tertiaryLabel": "Welcher Schmuck passt zum schwarzen Kleid?",
+    "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
   }
 }

@@ -1,249 +1,124 @@
 {
   "meta": {
-    "title": "Cómo apilar aretes: guía para apilar aretes",
-    "description": "Aprenda a combinar aretes con tachuelas, aros, aros, colgantes y aretes de diamantes cultivados en laboratorio para looks cotidianos, de boda y de fiesta."
+    "title": "Cómo combinar pendientes: guía completa de ear stack",
+    "description": "Aprenda a combinar pendientes paso a paso: elija una pieza protagonista, varíe el tamaño, repita un detalle y revise el espacio en dos o tres piercings."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-63.jpg",
-    "title": "Cómo apilar aretes:",
-    "subtitle": "Una guía completa de estilo de apilamiento de orejas",
+    "image": "/blog-images/blog-image-6.jpg",
+    "title": "Cómo combinar pendientes:",
+    "subtitle": "Guía paso a paso para crear un ear stack",
     "paragraphs": [
-      "Apilar pendientes es una de las formas más sencillas de hacer que las joyas parezcan más personales. En lugar de usar un par de aretes, crea una combinación de estilo usando tachuelas, aros, aros, aretes minimalistas, aretes de mariposa, colgantes o una pieza llamativa más fuerte.",
-      "Una buena pila de orejas debe sentirse equilibrada, no abarrotada. Los mejores stacks suelen tener un pendiente principal, un pendiente de apoyo y un detalle más suave. El arete principal crea el foco, el arete de soporte agrega forma y la pieza más pequeña mantiene la pila pulida sin que la oreja se sienta pesada.",
-      "Este recurso ayuda a los compradores a crear pilas de aretes para el uso diario, trajes de trabajo, looks de invitados a bodas, fiestas, regalos y estilos semi-finos modernos. También guía a los usuarios hacia los productos IWantJewels como Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long y los atrevidos aretes Lusso."
+      "Un ear stack es una combinación de pendientes llevados en dos o más piercings. Un buen conjunto no depende de llevar tantos pendientes como sea posible, sino de crear una relación clara entre el tamaño, la forma, el brillo, el metal y el espacio.",
+      "El enfoque más sencillo consiste en elegir un pendiente protagonista, añadir una pieza de apoyo más discreta y dejar suficiente espacio visual para que cada pendiente se vea. Los pendientes de botón, los aros pequeños (huggies) y los pendientes de aro pequeños son una buena base, mientras que los pendientes colgantes o los diseños más decorativos pueden convertirse en el punto focal.",
+      "Esta guía explica cómo combinar pendientes en dos o tres piercings, cómo mezclar distintos estilos y cómo evitar que el conjunto se vea recargado."
     ],
-    "shopLabel": "Comprar aretes tipo pila de orejas",
+    "shopLabel": "Explore los pendientes de diamantes de laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Aprenda a apilar aretes sin que la oreja luzca abarrotada",
-      "Elige los pendientes adecuados para el primer, segundo y tercer piercing",
-      "Mezcle aretes, aros, aros, colgantes y aretes minimalistas.",
-      "Construya orejeras minimalistas para todos los días, para invitados a bodas y fiestas.",
-      "Decide qué pendiente debe ser la pieza principal",
-      "Comprender cómo equilibrar el tamaño, la forma, el brillo y el color del metal.",
-      "Encuentre combinaciones de productos IWantJewels que funcionen juntos",
-      "Planifique bloques de imágenes, módulos de productos, ubicaciones de CTA y enlaces internos para esta página."
+      "Elija un pendiente protagonista",
+      "Añada un pendiente de apoyo más pequeño o discreto",
+      "Repita un elemento: el color del metal, un detalle de diamante o la forma",
+      "Varíe el tamaño para que los pendientes no compitan",
+      "Compruebe el espacio de frente y de perfil",
+      "Pruebe el conjunto con el pelo, las gafas y los auriculares",
+      "Un conjunto de dos piezas puede verse tan intencionado como uno de cuatro"
     ],
-    "image": "/blog-images/blog-image-69.jpg"
+    "image": "/blog-images/blog-image-14.jpg"
   },
   "content": [
     {
-      "heading": "Constructor de pilas de orejas",
+      "heading": "La respuesta breve: ¿cómo se combinan los pendientes?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como principal herramienta de decisión."
+          "text": "Siga esta fórmula básica para crear un ear stack:"
         },
         {
-          "type": "table",
-          "headers": [
-            "Objetivo de pila de orejas",
-            "Pendiente principal",
-            "Pendiente de apoyo",
-            "Mejor dirección IWJ"
-          ],
-          "rows": [
-            [
-              "Pila simple para todos los días",
-              "Semental pequeño",
-              "huggie",
-              "Cadenza S + Amadea Huggie"
-            ],
-            [
-              "Pila diaria más visible",
-              "Semental mediano",
-              "Pendiente huggie o minimalista",
-              "Cadenza M + Amadea o Laluce"
-            ],
-            [
-              "Pila minimalista",
-              "Semental pequeño",
-              "Pendiente minimalista",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Pila de aros moderna",
-              "Aro o abrazo",
-              "Semental pequeño",
-              "Pave Hoops o Amadea + Cadenza S"
-            ],
-            [
-              "Pila romántica",
-              "Pendiente de mariposa",
-              "Semental pequeño",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Pila de invitados a la boda",
-              "Caída o montante medio",
-              "Pequeño semental o abrazo",
-              "Orsola o Cadenza M + Amadea"
-            ],
-            [
-              "Pila de fiesta",
-              "Pendiente llamativo y atrevido",
-              "Pequeño semental o abrazo",
-              "Lusso + Cadenza S o Amadea"
-            ],
-            [
-              "Pila inicial para regalar",
-              "Semental",
-              "huggie",
-              "Cadenza S + Amadea"
-            ],
-            [
-              "Pila de ocasión suave",
-              "Caída corta",
-              "Semental mínimo",
-              "Concetta Short + Cadenza S"
-            ],
-            [
-              "Pila de noche formal",
-              "caída larga",
-              "Semental pequeño",
-              "Concetta Long + Cadenza S"
-            ]
+          "type": "numbered-list",
+          "items": [
+            "Elija un pendiente protagonista.",
+            "Añada un pendiente de apoyo más pequeño o discreto.",
+            "Repita un elemento, como el color del metal, un detalle de diamante o la forma.",
+            "Varíe el tamaño de los pendientes para que no compitan.",
+            "Compruebe el espacio de frente y de perfil.",
+            "Pruebe el conjunto completo con el pelo, las gafas y los auriculares."
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un conjunto de dos piezas puede verse tan intencionado como una combinación de tres o cuatro. El objetivo es lograr equilibrio, no cantidad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta guía de estilo está pensada para piercings cicatrizados. No fuerce una joya en un piercing ni cambie la joya de un piercing en proceso de cicatrización sin la orientación de un profesional cualificado. El ángulo, el espacio y la anatomía de cada piercing varían de una persona a otra. Los profesionales recomiendan que los cambios de joyas durante la cicatrización los realice un piercer cualificado y advierten que un tamaño, peso o estilo inadecuados pueden causar problemas."
         }
       ]
     },
     {
-      "heading": "¿Qué es una pila de orejas?",
+      "heading": "¿Qué es un ear stack?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Una pila de orejas es una combinación de aretes que se usan juntos en uno o más piercings. Puede ser simple, como un arete con un aro, o más detallado, como un arete, un aro, un aro y un arete colgantes juntos."
+          "text": "Un ear stack es una combinación planificada de pendientes llevados en varios piercings. Puede incluir:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Dos pendientes de botón de distinto tamaño",
+            "Un pendiente de botón con un aro pequeño (huggie)",
+            "Un pendiente de aro con un pendiente de botón más pequeño",
+            "Un pendiente protagonista decorativo con una pieza de apoyo discreta",
+            "Tres pendientes pequeños unidos por el metal, la forma o el brillo"
+          ]
         },
         {
           "type": "paragraph",
-          "text": "Los mejores audífonos no parecen aleatorios. Tienen una estructura clara. Una pieza suele liderar la mirada, mientras que las demás la sostienen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Por ejemplo, si usas un arete llamativo como pieza principal, el resto del conjunto debe ser más pequeño. Si usa un arete pequeño como pieza principal, puede agregar un arete abrazado o minimalista para darle forma. Si usa un arete colgante, generalmente debería ser el centro de atención porque agrega longitud y movimiento."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los pendientes funcionan especialmente bien con joyería semifina porque las piezas pequeñas aún pueden parecer elevadas. Los aretes, aros y aretes minimalistas con diamantes cultivados en laboratorio añaden brillo sin hacer que la oreja parezca demasiado pesada."
+          "text": "Los pendientes no tienen que combinar exactamente. Necesitan un elemento visual en común que haga que el conjunto parezca intencionado."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para aros",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+          "text": "Ideas para un ear stack de diamantes",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "La fórmula simple para apilar aretes",
+      "heading": "Las cuatro partes de un ear stack equilibrado",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "La forma más sencilla de construir un auricular es:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Pieza principal + pieza de forma + detalle suave"
-        },
-        {
-          "type": "paragraph",
-          "text": "La pieza principal es el arete que la gente nota primero. La pieza con forma agrega estructura, como un aro o un aro. El detalle suave añade un pequeño brillo o equilibrio sin competir."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Rol de pila",
-            "Qué hace",
-            "Mejor dirección de producto IWJ"
-          ],
-          "rows": [
-            [
-              "pieza principal",
-              "Crea el enfoque",
-              "Cadenza M, Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "pieza de forma",
-              "Agrega curva o estructura",
-              "Amadea Huggie, Pave Hoops"
-            ],
-            [
-              "Detalle suave",
-              "Agrega un brillo sutil",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Detalle romántico",
-              "Agrega significado",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "pieza de ocasión",
-              "Agrega movimiento",
-              "Orsola, Concetta Corta, Concetta Larga"
-            ],
-            [
-              "pieza de fiesta",
-              "Agrega impacto",
-              "lusso"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para el uso diario, mantén la pieza principal pequeña o mediana. Para los looks de invitadas a la boda, elige un punto focal elegante. Para las fiestas, destaque un arete atrevido y mantenga simples los aretes de soporte."
-        }
-      ]
-    },
-    {
-      "heading": "Guía de primer, segundo y tercer piercing",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Cada posición de perforación tiene una función diferente en una pila de orejas."
-        },
-        {
-          "type": "paragraph",
-          "text": "El primer piercing suele llevar el pendiente principal. El segundo piercing sostiene al primero. El tercer piercing o lóbulo superior suele ser más pequeño, más suave y minimalista."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-71.jpg",
+          "image": "/blog-images/blog-image-22.jpg",
           "content": [
             {
               "type": "table",
               "headers": [
-                "Posición de perforación",
-                "Mejor tipo de pendiente",
-                "Dirección de Producto IWJ"
+                "Elemento",
+                "Función",
+                "Pendiente posible"
               ],
               "rows": [
                 [
-                  "primer piercing",
-                  "Arete principal, de aro, de gota o llamativo",
-                  "Cadenza M, Pave Hoops, Orsola, Lusso"
+                  "Pieza protagonista",
+                  "Atrae la mayor parte de la atención",
+                  "Pendiente de botón mediano, pendiente de aro, pendiente colgante o pendiente decorativo"
                 ],
                 [
-                  "Segundo piercing",
-                  "Pendiente pequeño, huggie o minimalista",
-                  "Cadenza S, Amadea, Laluce"
+                  "Pieza de apoyo",
+                  "Conecta el pendiente protagonista con el resto del conjunto",
+                  "Aro pequeño (huggie), pendiente de aro pequeño o pendiente de botón más pequeño"
                 ],
                 [
-                  "Tercer piercing",
-                  "Pequeña tachuela o detalle sutil",
-                  "Cadenza S, Laluce"
+                  "Detalle final",
+                  "Añade un último punto discreto",
+                  "Pendiente de botón pequeño o pendiente minimalista"
                 ],
                 [
-                  "perforación única",
-                  "Stud, aro o gota medianos",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "múltiples perforaciones",
-                  "Mezcla de una pieza principal con soporte más pequeño",
-                  "Cadenza S, Amadea, Laluce, Cadenza M"
+                  "Espacio visual",
+                  "Mantiene los pendientes separados visualmente",
+                  "Espacio natural entre los piercings"
                 ]
               ]
             }
@@ -251,823 +126,429 @@
         },
         {
           "type": "paragraph",
-          "text": "Si solo tienes un piercing, elige el estilo de arete que le dé el efecto que deseas. Si tienes dos o más piercings, evita que todos los aretes sean del mismo tamaño. Una pila se ve mejor cuando hay una clara diferencia de tamaño."
+          "text": "No todos los conjuntos necesitan los cuatro componentes. Con dos piercings, las piezas protagonista y de apoyo pueden ser suficientes."
         }
       ]
     },
     {
-      "heading": "Cómo apilar aretes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes son los aretes más fáciles de apilar porque se colocan cerca de la oreja y no ocupan mucho espacio."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un perno pequeño funciona bien en un segundo o tercer piercing. Un pendiente mediano puede ser el pendiente principal del primer piercing. Si eres nuevo en el apilamiento de aretes, comienza con tachuelas antes de agregar aros, aros o colgantes."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los pernos de diamante cultivados en laboratorio Cadenza S son útiles porque pueden funcionar como pieza principal en una pila mínima o como pieza de apoyo en una pila más detallada. Los aretes de diamantes Cadenza M son mejores cuando quieres que el perno sea el foco principal."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Meta de pila de sementales",
-            "Combinación de productos",
-            "Por qué funciona"
-          ],
-          "rows": [
-            [
-              "Pila de montantes simples",
-              "Cadenza S + Laluce",
-              "Suave y minimalista"
-            ],
-            [
-              "Pila de diamantes clásica",
-              "Cadenza M + Cadenza S",
-              "Brillo visible con equilibrio."
-            ],
-            [
-              "Pila pulida de todos los días",
-              "Cadenza S + Amadea",
-              "Pendientes brillantes con forma de huggie"
-            ],
-            [
-              "Pila de sementales regalables",
-              "Cadenza M + Laluce",
-              "Clásico con detalles suaves"
-            ],
-            [
-              "Pila de sementales para invitados a la boda",
-              "Cadenza M + Amadea",
-              "Brillo más estructura"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Cómo apilar aros y abrazos",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aros y aros le dan forma a una pila de orejas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un aro se coloca cerca de la oreja y suele ser más fácil de apilar que un aro más grande. Un aro crea más visibilidad y puede convertirse en la pieza principal. Si vas a apilar aros y abrazos, mantén el resto de la oreja simple para que las formas no compitan."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes Amadea Huggie son resistentes para los estilos cotidianos porque añaden forma sin sentirse pesados. Los Pave Hoops son mejores cuando quieres que la forma del aro sea más visible."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Portería de aro/huggie stack",
-            "Combinación de productos",
-            "Nota de estilo"
-          ],
-          "rows": [
-            [
-              "Pila de abrazos diarios",
-              "Amadea + Cadenza S",
-              "Fácil y ponible"
-            ],
-            [
-              "Pila de aros más visible",
-              "Pave Aros + Cadenza S",
-              "Hoop lidera la mirada"
-            ],
-            [
-              "Pila mínima de abrazos",
-              "Amadea + Laluce",
-              "Suave y moderno"
-            ],
-            [
-              "Pila de aros de fiesta",
-              "Pave Aros + Cadenza M",
-              "Más brillo y forma"
-            ],
-            [
-              "Pila de formas mixtas",
-              "Amadea + Cadenza M + Laluce",
-              "Equilibrado si el espacio lo permite"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de aro versus aros",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Cómo apilar aretes colgantes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes colgantes se pueden usar en una pila de orejas, pero generalmente deben ser la pieza principal."
-        },
-        {
-          "type": "paragraph",
-          "text": "Debido a que los aretes colgantes añaden longitud y movimiento, naturalmente llaman la atención. Si los combinas con otros aretes grandes, la pila puede sentirse abarrotada. El mejor enfoque es usar un arete colgante en el primer piercing y mantener el segundo o tercer piercing simple."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los pendientes colgantes de Orsola son ideales para looks de invitadas de boda, cenas y trajes de noche. Los aretes cortos Concetta funcionan bien para un estilo más suave para ocasiones especiales. Los pendientes largos Concetta son mejores para looks de noche formales o alargados."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objetivo de pila de caída",
-            "Pendiente principal",
-            "Pendiente de soporte"
-          ],
-          "rows": [
-            [
-              "Pila de boda elegante",
-              "Úrsola",
-              "Cadenza S"
-            ],
-            [
-              "Pila de ocasión suave",
-              "Concetta Corto",
-              "laluce"
-            ],
-            [
-              "Pila de noche formal",
-              "Concetta Long",
-              "Cadenza S"
-            ],
-            [
-              "Pila romántica",
-              "Orsola o Concetta Corta",
-              "Farfalla o Cadenza S"
-            ],
-            [
-              "Pila de caída mínima",
-              "Úrsola",
-              "Sin aretes adicionales ni un pequeño perno"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de aretes colgantes con diamantes cultivados en laboratorio",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Cómo apilar aretes llamativos",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes llamativos generalmente deben liderar todo el look."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si un arete llamativo es atrevido, grande o brillante, el resto de la pila debe ser muy simple. Esto mantiene la apariencia intencional en lugar de abrumadora."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los llamativos pendientes Lusso son ideales para fiestas, looks de noche y conjuntos sencillos en los que las joyas deben destacar. Combínalos con aretes Cadenza S o Amadea Huggie si tienes varios piercings. Evite combinarlos con otro aro grande, un arete largo o un arete de mariposa detallado, a menos que el estilo sea intencionalmente dramático."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objetivo de la pila de declaraciones",
-            "Pendiente principal",
-            "Pendiente de soporte"
-          ],
-          "rows": [
-            [
-              "Pila de fiesta",
-              "lusso",
-              "Cadenza S"
-            ],
-            [
-              "Pila de noche audaz",
-              "lusso",
-              "amadea"
-            ],
-            [
-              "Pila de vestido negro simple",
-              "lusso",
-              "Cadenza S o sin pendiente extra"
-            ],
-            [
-              "Estilo de recepción",
-              "lusso",
-              "laluce"
-            ],
-            [
-              "Aspecto de alto impacto",
-              "lusso",
-              "Mantenga el resto al mínimo"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de pendientes de fiesta",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas cotidianas para apilar orejas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los auriculares de uso diario deben resultar cómodos, ligeros y fáciles de repetir."
-        },
-        {
-          "type": "paragraph",
-          "text": "No necesitas muchos pendientes para un buen apilamiento diario. Un pequeño semental con un abrazo puede ser suficiente. La pila debería funcionar con camisas, prendas de punto, vestidos informales, blazers, conjuntos de viaje y estilos de fin de semana."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Pila diaria",
-            "Combinación de productos",
-            "Por qué funciona"
-          ],
-          "rows": [
-            [
-              "Pila diaria simple",
-              "Cadenza S + Amadea",
-              "Limpio, equilibrado y fácil."
-            ],
-            [
-              "Pila diaria más visible",
-              "Cadenza M + Amadea",
-              "Más brillo sin dejar de ser portátil"
-            ],
-            [
-              "Pila diaria mínima",
-              "Cadenza S + Laluce",
-              "Suave y silencioso"
-            ],
-            [
-              "Pila diaria de aro",
-              "Pave Aros + Cadenza S",
-              "Añade forma y brillo."
-            ],
-            [
-              "Pila diaria femenina",
-              "Farfalla + Cadenza S",
-              "Agrega significado sin sentirse pesado"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas minimalistas para apilar orejas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Las orejeras minimalistas deben sentirse limpias, suaves y no demasiado decoradas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Utilice aretes más pequeños, de formas simples y de un color de metal. Evite mezclar demasiados diseños fuertes. El apilamiento mínimo funciona bien para ropa de trabajo, atuendos neutros, estilos de lujo tranquilos y personas que prefieren joyas sutiles."
-        },
-        {
-          "type": "paragraph",
-          "text": "Una pila minimalista podría incluir:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Posición",
-            "Dirección del pendiente",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "primer piercing",
-              "Pequeño perno de diamante",
-              "Cadenza S"
-            ],
-            [
-              "Segundo piercing",
-              "Pendiente minimalista",
-              "laluce"
-            ],
-            [
-              "Abrazo opcional",
-              "Pequeño abrazo ajustado",
-              "amadea"
-            ],
-            [
-              "Actualización principal opcional",
-              "Semental mediano",
-              "CadenzaM"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza S con Laluce es la dirección más suave. Cadenza S con Amadea se siente un poco más estilizada. Cadenza M con Laluce brinda un brillo más visible mientras se mantiene limpio."
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de pendientes minimalistas",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas para apilar orejas de invitados a la boda",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Las orejeras para invitadas a la boda deben resultar elegantes, no recargadas."
-        },
-        {
-          "type": "paragraph",
-          "text": "El conjunto debe guiar la pila. Si el vestido tiene detalles, elige tachuelas y pequeños abrazos. Si el outfit es sencillo, un pendiente colgante puede convertirse en la pieza principal. Si el look es romántico, los aretes de mariposa pueden agregar una sensación más suave."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-73.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look de invitada de boda",
-                "Dirección de la pila de orejas",
-                "Combinación de productos"
-              ],
-              "rows": [
-                [
-                  "vestido detallado",
-                  "Semental + abrazo",
-                  "Cadenza M + Amadea"
-                ],
-                [
-                  "vestido sencillo de raso",
-                  "Gota + montante pequeño",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "vestido romantico",
-                  "Mariposa + semental pequeño",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "vestido negro",
-                  "Pendiente caído o atrevido + soporte simple",
-                  "Orsola o Lusso + Cadenza S"
-                ],
-                [
-                  "Mono moderno",
-                  "Aro + perno",
-                  "Pave Aros + Cadenza S"
-                ],
-                [
-                  "Traje pastel suave",
-                  "Mariposa + detalle minimalista",
-                  "Alidi Farfalla + Laluce"
-                ],
-                [
-                  "traje de noche formal",
-                  "Caída larga + montante pequeño",
-                  "Concetta Long + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para bodas",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas para apilar orejas para fiestas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aros de fiesta pueden ser más atrevidos que los de todos los días, pero aun así necesitan equilibrio."
-        },
-        {
-          "type": "paragraph",
-          "text": "La regla de fiesta más sencilla es: elige un arete fuerte y mantén el resto simple. Esto permite que la pieza principal se destaque sin que la oreja luzca desordenada."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objetivo de pila de grupo",
-            "Combinación de productos",
-            "Nota de estilo"
-          ],
-          "rows": [
-            [
-              "Pila de brillo atrevido",
-              "Lusso + Cadenza S",
-              "Deja que Lusso lidere"
-            ],
-            [
-              "Pila de fiesta elegante",
-              "Orsola + Cadenza S",
-              "Añade movimiento sin demasiado peso."
-            ],
-            [
-              "Pila de aros moderna",
-              "Pave Aros + Laluce",
-              "Bueno con trajes elegantes."
-            ],
-            [
-              "Pila de vestido negro",
-              "Lusso u Orsola + Cadenza S",
-              "Fuerte contraste"
-            ],
-            [
-              "Pila de cena a fiesta",
-              "Cadenza M + Amadea",
-              "Pulido pero ponible"
-            ],
-            [
-              "Pila de recepción formal",
-              "Concetta Long + Cadenza S",
-              "Refinado y alargado"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de pendientes de fiesta",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas para apilar orejas para regalar",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una pila de orejas puede ser un regalo bien pensado porque le brinda al destinatario una combinación de estilos ya preparada."
-        },
-        {
-          "type": "paragraph",
-          "text": "En lugar de regalar solo un par de aretes, puedes elegir dos piezas que combinen. Esto es útil para cumpleaños, damas de honor, aniversarios, obsequios importantes y amantes de la joyería moderna."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de regalo",
-            "Combinación de pila de orejas",
-            "Mejor para"
-          ],
-          "rows": [
-            [
-              "Pila de inicio segura",
-              "Cadenza S + Amadea",
-              "Primer regalo de pila de orejas"
-            ],
-            [
-              "Pila de brillo clásica",
-              "Cadenza M + Amadea",
-              "Regalo de diamantes más visible"
-            ],
-            [
-              "Pila de regalo minimalista",
-              "Cadenza S + Laluce",
-              "Amantes de la joyería tranquila"
-            ],
-            [
-              "Pila de regalo romántico",
-              "Farfalla + Cadenza S",
-              "Regalo de cumpleaños o aniversario"
-            ],
-            [
-              "Pila de dama de honor",
-              "Cadenza S + Concetta Corto",
-              "Regalo relacionado con la boda"
-            ],
-            [
-              "Pila de regalos de fiesta",
-              "Lusso + Cadenza S",
-              "Alguien a quien le encanta disfrazarse"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para regalar",
-          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Consejos para el color y el equilibrio del metal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una oreja pulida generalmente luce mejor cuando el color del metal parece intencionado."
-        },
-        {
-          "type": "paragraph",
-          "text": "La opción más sencilla es mantener un color de metal en toda la pila. El oro amarillo se siente cálido y clásico. Los tonos blancos o plateados se sienten limpios y modernos. El oro rosa se siente suave y romántico. Los metales mixtos pueden funcionar, pero deben lucir planificados."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Dirección del metal",
-            "Mejor para",
-            "Sensación de estilo"
-          ],
-          "rows": [
-            [
-              "Pila de oro amarillo",
-              "Estilo cotidiano, outfits abrigados, amantes de las joyas clásicas.",
-              "Cálido, pulido, fácil"
-            ],
-            [
-              "Pila blanca o plateada",
-              "Conjuntos minimalistas, guardarropas en tonos fríos",
-              "Limpio, moderno, luminoso."
-            ],
-            [
-              "Pila de oro rosa",
-              "Looks románticos, regalos, outfits suaves.",
-              "Femenino, gentil, personal."
-            ],
-            [
-              "Pila de metales mixtos",
-              "Estilo creativo y looks de tendencia",
-              "Moderno y juguetón"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "El equilibrio también depende del tamaño. Si un arete es grande, el resto debe ser más pequeño. Si todas las piezas son pequeñas, puedes utilizar variaciones de forma para mantener la pila interesante."
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa",
-          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Rutas del producto por objetivo de estilo",
+      "heading": "Cómo crear un ear stack paso a paso",
       "content": [
         {
           "type": "subheading",
-          "text": "Para una primera pila de orejas"
+          "text": "1. Cuente sus piercings cicatrizados"
         },
         {
           "type": "paragraph",
-          "text": "Elija aretes de diamantes cultivados en laboratorio Cadenza S con aretes Amadea Huggie. Esto crea una pila limpia y equilibrada que es fácil de usar."
+          "text": "Empiece por el número y la distribución de sus piercings cicatrizados. No dé por hecho que el primer, segundo o tercer piercing siempre tiene el mismo espacio. Observe la distancia entre cada piercing, si forman una línea recta o curva, cuánto lóbulo queda visible alrededor de cada pendiente, si los pendientes de aro o los aros pequeños (huggies) se mantienen independientes sin tocarse y hacia dónde apuntan naturalmente los pendientes de botón."
         },
         {
           "type": "subheading",
-          "text": "Para una pila minimalista"
+          "text": "2. Elija un pendiente protagonista"
         },
         {
           "type": "paragraph",
-          "text": "Elija Cadenza S con los aretes minimalistas de diamantes Laluce. Añade Amadea si el usuario quiere más forma."
+          "text": "El pendiente protagonista debe ser la pieza que atraiga más atención. Puede ser el pendiente más grande, pero también una pieza más pequeña con una forma distintiva o un detalle de diamante más llamativo. Algunas opciones son un pendiente de botón de diamante mediano, un pendiente de aro pavé, un pendiente geométrico, un diseño de mariposa, un pendiente colgante o un pendiente decorativo llamativo."
         },
         {
           "type": "subheading",
-          "text": "Para una pila diaria más visible"
+          "text": "3. Decida dónde colocar el peso visual"
         },
         {
           "type": "paragraph",
-          "text": "Elige Cadenza M con los pendientes Amadea Huggie. Esto aporta más brillo y, al mismo tiempo, resulta práctico para el estilo diario."
+          "text": "Muchas personas colocan el pendiente más llamativo en el piercing inferior del lóbulo, pero es una opción de estilo, no una regla fija. Un piercing inferior suele poder llevar la pieza protagonista, con piezas progresivamente más discretas por encima. Sin embargo, un aro pequeño (huggie) en el segundo piercing o un pendiente de botón distintivo en la parte superior del lóbulo también puede convertirse en el foco si el espacio funciona."
         },
         {
           "type": "subheading",
-          "text": "Para una pila romántica"
+          "text": "4. Varíe el tamaño"
         },
         {
           "type": "paragraph",
-          "text": "Elija los aretes de mariposa Farfalla con Cadenza S. Funcionan bien para atuendos suaves, regalos de cumpleaños y estilos simbólicos."
+          "text": "Llevar varios pendientes exactamente del mismo tamaño puede hacer que el conjunto parezca plano o recargado. Introduzca una diferencia visible entre las piezas protagonista y de apoyo: por ejemplo, un pendiente de botón mediano con otro pequeño, un aro pequeño (huggie) con un pendiente de botón solitario pequeño, un pendiente de aro pequeño con un detalle de diamante discreto o un pendiente decorativo con un pendiente de botón liso como apoyo."
         },
         {
           "type": "subheading",
-          "text": "Para una pila de invitados a la boda"
+          "text": "5. Repita un elemento visual"
         },
         {
           "type": "paragraph",
-          "text": "Elige los pendientes colgantes de Orsola con Cadenza S si el conjunto es sencillo. Elige Cadenza M con Amadea si el outfit ya tiene detalle."
+          "text": "Repetir un detalle ayuda a que pendientes diferentes parezcan parte de la misma composición. Puede repetir el mismo color de metal, detalles de diamantes de talla brillante, formas redondeadas, líneas geométricas, un color concreto o un nivel de brillo similar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un principio útil es repetir un elemento y variar otro. Dos pendientes pueden compartir el mismo acabado metálico y tener formas distintas, o compartir un detalle de diamante redondo y diferir en tamaño."
         },
         {
           "type": "subheading",
-          "text": "Para una pila de fiesta"
+          "text": "6. Compruebe el espacio"
         },
         {
           "type": "paragraph",
-          "text": "Elija los atrevidos aretes Lusso con Cadenza S o Amadea. Mantenga el resto de la oreja simple para que Lusso pueda liderar."
-        }
-      ]
-    },
-    {
-      "heading": "Recomendaciones de productos de IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Producto",
-            "Mejor papel de pila de orejas",
-            "Por qué funciona"
-          ],
-          "rows": [
-            [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "Pequeño punto de brillo",
-              "Funciona en primeros, segundos o piercings de apoyo."
-            ],
-            [
-              "aretes Cadenza M con diamantes",
-              "perno principal",
-              "Brillo más visible para pilas diarias o de ocasión."
-            ],
-            [
-              "Pendientes Amadea Huggie",
-              "Forma y equilibrio",
-              "Abrazadera fuerte para apilar."
-            ],
-            [
-              "Pendientes minimalistas de diamantes Laluce",
-              "Detalle suave",
-              "Mantiene las pilas limpias y sutiles"
-            ],
-            [
-              "Aros de pavimentación",
-              "Pieza principal del aro",
-              "Añade forma y brillo."
-            ],
-            [
-              "Pendientes mariposa Farfalla",
-              "pieza focal personal",
-              "Añade significado y detalles femeninos."
-            ],
-            [
-              "Pendientes de mariposa Alidi Farfalla",
-              "pieza focal romántica",
-              "Fuerte para regalos y peinado suave."
-            ],
-            [
-              "aretes colgantes de Orsola",
-              "Ocasión pieza principal",
-              "Añade movimiento para bodas y cenas."
-            ],
-            [
-              "Pendientes cortos Concetta",
-              "Pieza de caída suave",
-              "Funciona para pilas de ocasiones delicadas."
-            ],
-            [
-              "Pendientes largos Concetta",
-              "Pieza caída formal",
-              "Crea una línea más larga y refinada."
-            ],
-            [
-              "Pendientes llamativos Lusso",
-              "Pieza focal de fiesta",
-              "Mejor cuando el resto de la pila es simple"
-            ]
-          ]
+          "text": "Cada pendiente debe tener espacio suficiente para reconocerse de forma independiente. Puede haber demasiada proximidad cuando dos pendientes de aro se superponen, un pendiente de botón grande cubre el piercing vecino, un pendiente colgante se engancha bajo un aro pequeño (huggie), los bordes decorativos se tocan durante el día o los cierres compiten detrás de la oreja."
         },
         {
           "type": "paragraph",
-          "text": "Construya su auricular alrededor de una pieza principal. Comience con Cadenza S y Amadea para un look sencillo para el día a día, Cadenza M y Amadea para un brillo más visible, Farfalla y Cadenza S para un look romántico, o Lusso y Cadenza S para un estilo de fiesta."
-        }
-      ]
-    },
-    {
-      "heading": "Errores comunes que se deben evitar al apilar aretes",
-      "content": [
+          "text": "Consulte las medidas del producto y las fotografías reales sobre la oreja, en lugar de basarse solo en imágenes de producto en primer plano. No existe una medida en milímetros que funcione para todas las orejas."
+        },
         {
-          "type": "paragraph",
-          "text": "Un error común es usar demasiados aretes grandes juntos. Una buena pila necesita una pieza principal, no tres piezas luchando por llamar la atención."
+          "type": "subheading",
+          "text": "7. Pruebe el conjunto en situaciones reales"
         },
         {
           "type": "paragraph",
-          "text": "Otro error es ignorar el espaciado. Si los aretes tienen demasiado tamaño o forma, la pila puede parecer abarrotada."
+          "text": "Una combinación puede verse equilibrada en el espejo y comportarse de otra manera durante el día. Compruebe cómo interactúan los pendientes con el pelo suelto y recogido, las gafas, los auriculares y los intrauriculares, los cuellos altos y las bufandas, el uso del teléfono y el movimiento al caminar."
         },
         {
           "type": "paragraph",
-          "text": "Un tercer error es mezclar demasiados estilos. Un arete de mariposa, un aro, una gota larga y un arete llamativo juntos pueden resultar confusos a menos que la apariencia sea intencionalmente dramática."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es olvidar la comodidad. Si la pila tira, se engancha en el cabello o se siente pesada, no tendrá un aspecto normal."
-        },
-        {
-          "type": "paragraph",
-          "text": "Por último, no elijas pendientes sólo porque quedan bien por separado. Deberían verse bien juntos."
+          "text": "Si los pendientes se tocan, tiran, giran demasiado o se enganchan repetidamente, cambie la combinación o la posición."
         },
         {
           "type": "see-also",
-          "text": "Guía de tallas de aretes de diamantes cultivados en laboratorio",
+          "text": "Guía de tallas de pendientes de diamante de laboratorio",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Lista de verificación final de la pila de orejas",
+      "heading": "Cómo combinar pendientes en dos piercings",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Con dos piercings, cree contraste entre los pendientes manteniendo un elemento en común."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendiente de botón y aro pequeño (huggie)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente de botón aporta un punto concentrado de brillo, mientras que un aro pequeño (huggie) añade una forma curva. Mantenga el mismo acabado metálico para crear una combinación sencilla o use detalles de diamante relacionados para unir las piezas."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendiente de botón mediano y pendiente de botón pequeño"
+        },
+        {
+          "type": "paragraph",
+          "text": "Elija dos pendientes de botón con una diferencia clara de tamaño. El más grande puede actuar como pieza protagonista, mientras que el pequeño crea un acabado más discreto."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendiente de aro y pendiente de botón"
+        },
+        {
+          "type": "paragraph",
+          "text": "Deje que el pendiente de aro cree el contorno y el movimiento. Use un pendiente de botón más pequeño como apoyo para que ambos pendientes sigan siendo visibles."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendiente decorativo y pendiente de botón liso"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando el pendiente protagonista tiene una forma distintiva, combínelo con un pendiente de botón discreto. Evite añadir otra pieza con el mismo nivel de detalle."
+        },
+        {
+          "type": "see-also",
+          "text": "Pendientes de botón frente a aros pequeños (huggies)",
+          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Cómo combinar pendientes en tres piercings",
       "content": [
         {
           "type": "paragraph",
-          "text": "Antes de construir un auricular, pregunte:"
+          "text": "Un conjunto de tres piercings puede seguir esta estructura:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿Cuantos piercings tengo?",
-            "¿Qué pendiente es la pieza principal?",
-            "¿Qué pendiente añade forma?",
-            "¿Qué pieza añade detalles suaves?",
-            "¿Los pendientes tienen un tamaño equilibrado?",
-            "¿Es cómoda la pila?",
-            "¿El color del metal parece intencionado?",
-            "¿La pila funcionará con mi peinado?",
-            "¿El look es para el día a día, para una boda, una fiesta o un regalo?",
-            "¿Puedo usar la pila con más de un conjunto?",
-            "¿Los aretes son fáciles de limpiar y guardar?",
-            "¿La pila se siente pulida en lugar de abarrotada?"
+            "Pieza protagonista: el pendiente más llamativo",
+            "Pieza puente: conecta el pendiente protagonista con el detalle superior",
+            "Pieza final: el pendiente más pequeño o discreto"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si no está seguro, comience con un semental pequeño y un abrazo. Esa es la pila de aretes más fácil de construir."
+          "text": "Un ejemplo es un pendiente de botón mediano, un aro pequeño (huggie) y un pendiente de botón más pequeño. Otra opción es un pendiente de aro, un pendiente de botón solitario y un detalle minimalista en la parte superior del lóbulo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evite llenar automáticamente cada posición de brillo. Una forma de metal liso entre dos piezas con diamantes puede ofrecer al ojo un punto de descanso."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si el tercer piercing está muy cerca del segundo, consulte las medidas reales de los pendientes antes de comprar. Una fotografía pequeña del producto no muestra cuánto espacio ocupará el pendiente en su oreja."
+        }
+      ]
+    },
+    {
+      "heading": "Cómo combinar distintos tipos de pendientes",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Pendientes de botón"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de botón aportan un punto concentrado de luz sin añadir otro contorno circular. Pueden utilizarse como pendiente protagonista o como pieza de apoyo más pequeña, según su tamaño."
+        },
+        {
+          "type": "subheading",
+          "text": "Aros pequeños (huggies)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los aros pequeños (huggies) aportan forma sin separarse del lóbulo. Su idoneidad depende del diámetro interior, el cierre, la posición del piercing y la anatomía de cada persona. Ningún aro pequeño (huggie) resulta automáticamente cómodo o adecuado para todos los piercings: compare sus medidas con la ubicación prevista."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes de aro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de aro crean un contorno más marcado y pueden ocupar más espacio visual que los pendientes de botón. Cuando el pendiente de aro sea la pieza protagonista, use pendientes más pequeños como apoyo."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes colgantes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente colgante suele convertirse en la pieza protagonista porque sobresale del lóbulo y aporta movimiento. Combínelo con uno o dos pendientes de botón discretos, en lugar de otro pendiente de aro o colgante grande."
+        },
+        {
+          "type": "subheading",
+          "text": "Formas decorativas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes con forma de mariposa, floral o geométrica aportan personalidad a un ear stack. Repita su metal o detalle de diamantes en otra pieza, pero evite combinar varios motivos sin relación en la misma oreja."
+        },
+        {
+          "type": "see-also",
+          "text": "Pendientes de aro vs. aros pequeños (huggies)",
+          "href": "/resources/earring-style-guides/hoop-vs-huggie-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo combinar pendientes de mariposa",
+          "href": "/resources/earring-style-guides/how-to-style-butterfly-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "¿Se pueden mezclar metales en un ear stack?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sí. Un ear stack con metales mezclados puede parecer intencionado cuando se repite el contraste."
+        },
+        {
+          "type": "paragraph",
+          "text": "En lugar de usar un único pendiente blanco o plateado entre varias piezas de oro amarillo, repita ambos acabados en el ear stack o utilice una pieza de transición que contenga tonos relacionados."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para un resultado más discreto, mantenga un solo color de metal y cree variedad mediante el tamaño y la forma."
+        },
+        {
+          "type": "see-also",
+          "text": "Pendientes con diamantes de laboratorio en oro amarillo, blanco y rosa",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "¿Deben tener ambas orejas el mismo ear stack?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Pueden ser iguales, pero no es necesario."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una disposición simétrica utiliza los mismos pendientes en posiciones equivalentes de ambas orejas. El resultado es más tradicional y uniforme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una disposición asimétrica puede incluir un ear stack de tres piezas en una oreja y un pendiente de botón o aro pequeño (huggie) más sencillo en la otra. Para mantener la armonía, repita al menos un elemento en ambas orejas, como el acabado del metal, la forma del diamante o el diseño protagonista."
+        },
+        {
+          "type": "paragraph",
+          "text": "La asimetría debe parecer deliberada, no accidental."
+        }
+      ]
+    },
+    {
+      "heading": "Errores habituales al crear un ear stack",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Convertir cada pendiente en una pieza protagonista"
+        },
+        {
+          "type": "paragraph",
+          "text": "Varias piezas grandes y muy detalladas pueden competir entre sí. Seleccione un pendiente protagonista y haga que el resto sea progresivamente más discreto."
+        },
+        {
+          "type": "subheading",
+          "text": "Elegir basándose solo en las fotografías del producto"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los primeros planos del producto son útiles para mostrar los detalles, pero pueden hacer que los pendientes pequeños parezcan mucho más grandes. Compruebe las medidas en milímetros y las fotografías con el pendiente puesto."
+        },
+        {
+          "type": "subheading",
+          "text": "Dar por universales las posiciones de los piercings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dos personas pueden tener una separación, unos ángulos y una superficie de lóbulo aprovechable diferentes. Una combinación mostrada en una modelo puede quedar de otra manera en otra persona."
+        },
+        {
+          "type": "subheading",
+          "text": "Ignorar los cierres y las partes traseras de los pendientes"
+        },
+        {
+          "type": "paragraph",
+          "text": "La falta de espacio puede producirse detrás de la oreja, además de en la parte frontal. Compruebe que los postes, los cierres de mariposa y los cierres de los pendientes de aro no interfieran con los pendientes cercanos."
+        },
+        {
+          "type": "subheading",
+          "text": "Mezclar demasiadas ideas sin relación"
+        },
+        {
+          "type": "paragraph",
+          "text": "Combinar diferentes metales, formas, tamaños y motivos al mismo tiempo puede hacer que el ear stack pierda su estructura. Repita uno o dos elementos en toda la disposición."
+        },
+        {
+          "type": "subheading",
+          "text": "Olvidar el uso diario"
+        },
+        {
+          "type": "paragraph",
+          "text": "El pelo, las gafas, la ropa y los auriculares pueden cambiar cómo se siente y se mueve un ear stack. Pruebe la combinación completa antes de considerarla adecuada para el uso diario."
+        }
+      ]
+    },
+    {
+      "heading": "Cómo cuidar los pendientes de un ear stack",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Varios pendientes pueden acumular cosméticos, productos capilares y aceites naturales, especialmente cuando las piezas quedan juntas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siga las instrucciones de cuidado incluidas con cada producto. Para pendientes de plata de ley 925 con chapado en oro de 14 kt:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Manipule los pendientes con las manos limpias y secas.",
+            "Evite el contacto directo con perfumes, lociones y laca.",
+            "Quíteselos antes de ducharse, nadar o hacer ejercicio.",
+            "Límpielos suavemente después de usarlos.",
+            "Guarde las piezas por separado para reducir la fricción y los arañazos.",
+            "No utilice productos químicos agresivos ni cepillos abrasivos."
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo limpiar pendientes de diamante de laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Lista final para su ear stack",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-38.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Antes de usar o comprar una combinación, pregúntese:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "¿Se han curado por completo todos los piercings previstos?",
+                "¿Qué pendiente será la pieza protagonista?",
+                "¿Hay una diferencia de tamaño apreciable?",
+                "¿Qué elemento conecta los pendientes?",
+                "¿Se puede ver cada pieza por separado?",
+                "¿He comprobado las medidas reales?",
+                "¿Hay suficiente espacio para los cierres y las partes traseras?",
+                "¿El ear stack rozará con mi pelo o mis gafas?",
+                "¿La simetría o asimetría parece intencionada?",
+                "¿Se puede llevar cada pendiente por separado?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si la combinación parece recargada, retire una pieza antes de cambiar todos los pendientes. Un ear stack más sencillo suele facilitar que se aprecie mejor el diseño protagonista."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Cómo se apilan los aretes?",
-      "answer": "Comience con un arete principal, luego agregue un arete de soporte y un detalle más pequeño si tiene suficientes piercings. Mantenga los tamaños equilibrados para que la oreja no parezca abarrotada."
+      "question": "¿Cómo combinar pendientes en un ear stack?",
+      "answer": "Elija un pendiente protagonista y añada una o dos piezas más discretas. Varíe sus tamaños, repita un elemento común y compruebe que cada pendiente tenga suficiente espacio visible."
     },
     {
-      "question": "¿Qué pendientes son mejores para apilar?",
-      "answer": "Los tachuelas, los aros, los aros pequeños y los aretes minimalistas son los mejores para apilar. Los pendientes colgantes y llamativos pueden funcionar, pero normalmente deben ser la pieza principal."
+      "question": "¿Cómo combinar pendientes con dos piercings?",
+      "answer": "Use una combinación como un pendiente de botón con un aro pequeño (huggie), un pendiente de botón mediano con otro más pequeño o un pendiente de aro con un pendiente de botón discreto como apoyo. Una pieza debe destacar visualmente más que la otra."
     },
     {
-      "question": "¿Cómo se combinan aretes con dos piercings?",
-      "answer": "Utilice un arete principal en el primer piercing y un perno o aro más pequeño en el segundo piercing. Una combinación simple es un pendiente de diamantes con un aro."
+      "question": "¿Cómo combinar pendientes con tres piercings?",
+      "answer": "Utilice una pieza protagonista, una pieza de transición y un pequeño detalle final. Adapte las posiciones a la separación de sus piercings y a la anatomía de su oreja."
     },
     {
-      "question": "¿Cómo se apilan aretes con tres piercings?",
-      "answer": "Utilice el arete más grande o más visible en el primer piercing, un arete pequeño o huggie en el segundo y un arete pequeño o minimalista en el tercero."
+      "question": "¿Debe colocarse el pendiente más grande en el primer piercing?",
+      "answer": "A menudo sí, pero no es obligatorio. Use la posición que proporcione suficiente espacio al pendiente protagonista y produzca la disposición más equilibrada."
     },
     {
-      "question": "¿Puedes apilar aretes colgantes?",
-      "answer": "Sí, pero el pendiente normalmente debe ser la pieza principal. Mantenga los otros aretes pequeños para que la pila no parezca abarrotada."
+      "question": "¿Se pueden mezclar pendientes de botón, aros pequeños (huggies) y pendientes de aro?",
+      "answer": "Sí. Variar las formas puede crear interés visual. Conéctelas mediante el color del metal, el detalle del diamante u otro elemento repetido."
     },
     {
-      "question": "¿Puedes apilar aretes llamativos?",
-      "answer": "Sí, pero mantén el resto de la pila al mínimo. Un pendiente llamativo debe liderar el look."
+      "question": "¿Son adecuados los aros pequeños (huggies) para un ear stack?",
+      "answer": "Los aros pequeños (huggies) pueden funcionar muy bien porque aportan una forma curva cerca del lóbulo. Su idoneidad depende de sus dimensiones, el cierre, la posición del piercing y la anatomía de cada persona."
     },
     {
-      "question": "¿Los abrazos son buenos para las orejeras?",
-      "answer": "Sí, los huggies son uno de los mejores aretes para apilar porque agregan forma y se colocan cerca de la oreja."
+      "question": "¿Se pueden mezclar metales en un ear stack?",
+      "answer": "Sí. Repita ambos colores de metal o utilice una pieza de transición para que la combinación parezca intencionada. Para un resultado más uniforme, use un solo metal en todo el conjunto."
     },
     {
-      "question": "¿Deben coincidir todos los aretes de una pila?",
-      "answer": "No es necesario que coincidan exactamente, pero deben sentirse equilibrados. Combinar el color del metal es la forma más fácil de hacer que una pila luzca pulida."
+      "question": "¿Deben combinar ambas orejas?",
+      "answer": "Pueden combinar o llevar un estilo asimétrico. En un ear stack asimétrico, repita un metal, una piedra o una forma en ambas orejas para conectar la disposición."
     },
     {
-      "question": "¿Cuál es el audífono diario más fácil?",
-      "answer": "Un pequeño pendiente de diamante con un aro es el aro más fácil de usar para todos los días porque es cómodo, equilibrado y fácil de peinar."
+      "question": "¿Se pueden incluir pendientes colgantes en un ear stack?",
+      "answer": "Sí. Trate el pendiente colgante como la pieza protagonista y use pendientes de botón más pequeños o aros pequeños (huggies) discretos en los piercings cercanos."
     },
     {
-      "question": "¿Puedo regalar un juego de auriculares?",
-      "answer": "Sí, un juego de auriculares puede ser un buen regalo. Una combinación de semental y abrazo suele ser el punto de partida más seguro."
+      "question": "¿Se pueden combinar pendientes en un piercing en proceso de curación?",
+      "answer": "No cambie ni fuerce la joya de un piercing en proceso de curación con fines de estilo. Consulte a un profesional cualificado antes de cambiar su tamaño, estilo o posición."
     }
   ],
   "cta": {
-    "heading": "Apilar aretes tiene que ver con el equilibrio. Elija una pieza principal, agregue una forma de soporte y mantenga suaves los detalles más pequeños. Los mejores auriculares se sienten intencionados, cómodos y fáciles de usar.",
-    "body": "Comience con los aretes de diamantes semifinos cultivados en laboratorio de IWantJewels si desea piezas apilables con brillo de diamante real. Elija Cadenza S y Amadea para una combinación sencilla para el día a día, Cadenza M para un brillo más visible, Laluce para detalles minimalistas, Farfalla para significado, Orsola para ocasiones y Lusso para impacto de fiesta.",
-    "primaryLabel": "Comprar aretes tipo pila de orejas",
+    "heading": "¿Preparada para crear su ear stack? Empiece con un pendiente protagonista y una pieza de apoyo más discreta; después, añada más detalles solo cuando el espacio lo permita.",
+    "body": "Descubra los pendientes de diamante de laboratorio de I Want Jewels y consulte en cada página de producto sus dimensiones, peso, cierre y si se venden por pares o como pendiente individual antes de combinar varias piezas en la misma oreja.",
+    "primaryLabel": "Explore los pendientes de diamantes de laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explorar los aretes Huggie",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lea aretes de diamantes cultivados en laboratorio para pilas de orejas",
-    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+    "secondaryLabel": "Ideas para un ear stack de diamantes",
+    "secondaryHref": "/resources/earring-style-guides/diamond-ear-stack-ideas",
+    "tertiaryLabel": "Guía de tallas de pendientes de diamante de laboratorio",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
   }
 }

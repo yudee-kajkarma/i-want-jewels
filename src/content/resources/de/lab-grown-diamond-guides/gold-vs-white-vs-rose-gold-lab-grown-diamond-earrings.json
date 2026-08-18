@@ -1,834 +1,729 @@
 {
   "meta": {
-    "title": "Gold vs. Weiß vs. Roségold-Diamantohrringe",
-    "description": "Vergleichen Sie Ohrringe mit Labordiamanten aus Gold, Weiß- und Roségold. Wählen Sie die beste Metallfarbe für Alltagskleidung, Geschenke, Hochzeiten und Styling."
+    "title": "Diamant-Ohrringe: Gelb-, Weiß- oder Roségold?",
+    "description": "Vergleichen Sie Ohrringe mit im Labor gezüchteten Diamanten in Gelb-, Weiß- und Roségold. Erfahren Sie mehr über Farbe, Material und Pflege."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-100.jpg",
-    "title": "Gold vs. Weiß vs. Roségold, im Labor gezüchtete Diamantohrringe:",
-    "subtitle": "Farbführer für Metall",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Gelbgold vs. Weißgold vs. Roségold",
+    "subtitle": "Ohrringe mit im Labor gezüchteten Diamanten",
     "paragraphs": [
-      "Die Metallfarbe Ihrer im Labor gezüchteten Diamantohrringe verändert das gesamte Erscheinungsbild des Schmucks. Das gleiche Diamantohrring-Design kann in Gelbgold warm und klassisch, in Weiß- oder Silbertönen schlicht und modern und in Roségold sanft und romantisch aussehen.",
-      "Diese Ressource hilft Käufern bei der Auswahl der besten Metallfarbe für im Labor gezüchtete Diamantohrringe basierend auf persönlichem Stil, Hautton, Outfitfarben, Geschenkzweck, Hochzeitsstyling und Alltagskleidung. Es führt Benutzer auch zu den Produktrichtungen von IWantJewels wie Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long und Lusso Bold Statement-Ohrringe.",
-      "Für IWantJewels ist diese Seite wichtig, da viele Käufer nicht nur fragen: „Welche Diamantohrringe soll ich kaufen?“ Sie fragen: „Soll ich Gold, Silber, Weißgold oder Roségold wählen?“ Dieser Leitfaden hilft bei der Beantwortung dieser Entscheidung, bevor sie an Produkt- oder Kollektionsseiten weitergeleitet werden."
+      "Gelbgold, Weißgold und Roségold können denselben im Labor gezüchteten Diamanten mit drei deutlich unterschiedlichen Farbeffekten umgeben. Gelbgold erzeugt einen warmen Kontrast, Weißgold einen kühleren Übergang zwischen Diamant und Fassung, während Roségold einen roséfarbenen Rahmen schafft.",
+      "Doch die Farbe ist nur ein Teil der Entscheidung. Prüfen Sie vor dem Kauf, ob der Ohrring aus massivem Gold oder aus einem anderen Grundmetall mit einer goldfarbenen Oberflächenbeschichtung besteht. Ein Ohrring mit der Bezeichnung „14kt goldplattiertes 925 Sterlingsilber“ ist kein Ohrring aus massivem 14-Karat-Gold.",
+      "Die richtige Wahl hängt von dem gewünschten Look, Ihrem vorhandenen Schmuck, dem Ohrringdesign und dem vollständigen Produktaufbau ab."
     ],
-    "shopLabel": "Kaufen Sie im Labor gezüchtete Diamantohrringe",
+    "shopLabel": "Ohrringe mit im Labor gezüchteten Diamanten vergleichen",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Vergleichen Sie Ohrringe mit im Labor gezüchteten Diamanten aus Gelbgold, Weiß-/Silberton und Roségold",
-      "Wählen Sie die beste Metallfarbe für den Alltag",
-      "Wählen Sie das richtige Finish für Geschenke, Geburtstage, Jubiläen und Brautjungfern",
-      "Passen Sie die Ohrringe an den Hautton, die Farben Ihrer Garderobe und den vorhandenen Schmuck an",
-      "Wählen Sie die Metallfarbe für Hochzeitsgast-Outfits und Anlass-Styling",
-      "Finden Sie heraus, welche Metallfarben sich klassisch, modern, romantisch oder kräftig anfühlen",
-      "Finden Sie Produktempfehlungen von IWantJewels nach Metallfarbe und Stylingbedarf",
-      "Planen Sie Bildblöcke, Produktmodule, CTA-Abschnitte und interne Links für die Seite ein"
+      "Gelbgold – sichtbare Wärme und Kontrast rund um die Diamanten",
+      "Weißgold oder eine geprüfte weiße Oberfläche – kühler und farblich durchgängiger mit farblosen Steinen",
+      "Roségold – ein sanfter roséfarbener Kontrast",
+      "Metallfarbe und Metallaufbau sind nicht dasselbe",
+      "„925 Sterlingsilber mit 14kt-Goldplattierung“ ist kein Massivgold",
+      "Die Farbe sagt nichts darüber aus, ob der Schmuck für empfindliche Ohren geeignet ist"
     ],
-    "image": "/blog-images/blog-image-102.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Farbauswahl für Metall",
+      "heading": "Kurzantwort",
       "content": [
         {
           "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als wichtigste Entscheidungshilfe."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Wenn Sie möchten",
-            "Beste Metallfarbe",
-            "Stilgefühl",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Klassische Alltagsohrringe",
-              "Gelbgold",
-              "Warm, zeitlos, einfach",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Sauberer, moderner Glanz",
-              "Weiß- oder Silberton",
-              "Hell, poliert, minimalistisch",
-              "Kadenz S, Laluce"
-            ],
-            [
-              "Romantische Geschenkohrringe",
-              "Roségold",
-              "Weich, persönlich, feminin",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Ohrringe für Hochzeitsgäste",
-              "Gelbgold- oder Weiß-/Silberton",
-              "Elegant und poliert",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Minimalistischer Schmuck",
-              "Weiß-/Silberton oder Gelbgold",
-              "Einfach und raffiniert",
-              "Laluce, Cadenza S"
-            ],
-            [
-              "Warmes Outfit-Styling",
-              "Gelbgold",
-              "Reichhaltig und klassisch",
-              "Kadenz M, Pave Hoops"
-            ],
-            [
-              "Sanfte Pastell-Outfits",
-              "Roségold",
-              "Sanft und romantisch",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Schwarzes Kleid-Styling",
-              "Gelbgold, Weiß-/Silberton oder kräftiges Glitzern",
-              "Kontrast und Glanz",
-              "Orsola, Lusso"
-            ],
-            [
-              "Ohrenstapel",
-              "Passen Sie die vorhandene Metallfarbe an",
-              "Ausgewogen und zielstrebig",
-              "Cadenza S, Amadea, Laluce"
-            ],
-            [
-              "Statement-Party-Styling",
-              "Gelbgold- oder Weiß-/Silberton",
-              "Stark und sichtbar",
-              "Lusso, Orsola"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Ohrringe mit im Labor gezüchteten Diamanten aus Gelbgold",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Im Labor gezüchtete Diamantohrringe aus Gelbgold fühlen sich warm, klassisch und leicht zu tragen an. Sie gehören zu den sichersten Optionen für alltäglichen Schmuck, da Gelbgold zu vielen Kleidungsstücken und Hauttönen passt."
+          "text": "Wählen Sie Gelbgold, wenn Sie sichtbare Wärme und Kontrast rund um die Diamanten bevorzugen. Entscheiden Sie sich für Weißgold oder eine geprüfte Oberfläche aus weißem Metall, wenn die Fassung kühler wirken und sich stärker mit farblosen oder nahezu farblosen Diamanten verbinden soll. Wählen Sie Roségold für einen sanfteren roséfarbenen Kontrast."
         },
         {
           "type": "paragraph",
-          "text": "Besonders stark wirkt Gelbgold, wenn der Träger bereits Goldschmuck besitzt. Wenn jemand eine goldene Uhr, goldene Ringe, goldene Halsketten oder Accessoires in warmen Farbtönen trägt, wirken Gelbgold-Ohrringe in seiner Sammlung normalerweise natürlich."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gelbgold passt auch wunderbar zu schwarzen, cremefarbenen, braunen, grünen, roten, Champagner- und warmen neutralen Outfits. Dadurch wirken Diamantohrringe reicher und etwas traditioneller, ohne altmodisch zu wirken."
-        },
-        {
-          "type": "paragraph",
-          "text": "Für IWantJewels ist Gelbgold eine starke Richtung für Cadenza S-Ohrstecker mit im Labor gezüchteten Diamanten, Cadenza M-Diamant-Ohrstecker, Amadea Huggie-Ohrringe, Pave Creolen, Orsola-Ohrhänger und Lusso-Statement-Ohrringe."
-        },
-        {
-          "type": "see-also",
-          "text": "Goldohrringe mit im Labor gezüchteten Diamanten",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Weiße oder silberfarbene Ohrringe mit im Labor gezüchteten Diamanten",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Weiße oder silberfarbene, im Labor gezüchtete Diamantohrringe wirken sauber, hell und modern. Sie sind eine gute Wahl für Käufer, die minimalistisches Styling, coole Outfits oder Schmuck bevorzugen, der sich eher frisch als warm anfühlt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Dieses Finish passt besonders gut zu schwarzen, weißen, marineblauen, grauen, silbernen, blauen und coolen Pastell-Outfits. Es passt auch zu Leuten, die bereits silberne Uhren, weiß getönte Ringe oder coolere Schmuckausführungen tragen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Weiße oder silberfarbene Ohrringe können im Labor gezüchtete Diamanten sehr hell aussehen lassen, da das Metall keine Wärme um den Stein herum erzeugt. Dies kann für minimalistische Outfits, Büro-Styling, schwarze Kleider und klare Abendlooks nützlich sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Bei IWantJewels kann das weiße oder silberfarbene Styling je nach verfügbarer Produktausführung gut für Cadenza S, Cadenza M, minimalistische Diamantohrringe von Laluce, Pave Hoops und Orsola-Tropfenohrringe funktionieren."
-        },
-        {
-          "type": "see-also",
-          "text": "Silberne Diamantohrringe",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Ohrringe mit im Labor gezüchteten Diamanten aus Roségold",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Im Labor gezüchtete Diamantohrringe aus Roségold wirken weich, romantisch und persönlich. Als Geschenk eignen sie sich besonders gut, denn Roségold fühlt sich oft wärmer und emotionaler an als Weiß- oder Silbertöne."
-        },
-        {
-          "type": "paragraph",
-          "text": "Roségold passt wunderbar zu Rouge, Rosa, Creme, Champagner, sanftem Grün, Beige, Blumendrucken und romantischen Outfits. Es kann auch eine gute Wahl für Geburtstagsgeschenke, Jubiläumsgeschenke, Brautjungferngeschenke und bedeutungsvolle Schmuckmomente sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Roségold ist nicht immer die sicherste Option, wenn der Beschenkte nie roséfarbenen Schmuck trägt. Aber wenn es zum Stil der Person passt, kann es dafür sorgen, dass sich das Geschenk aufmerksamer anfühlt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Für IWantJewels ist das Roségold-Styling besonders stark bei Schmetterlingsohrringen, romantischen Ohrhängern und weichen Geschenkstücken. Farfalla-Schmetterlingsohrringe und Alidi-Farfalla-Schmetterlingsohrringe passen natürlich in diese Richtung. Orsola-Ohrhänger und Concetta Short-Ohrringe können auch in einer rosafarbenen Ausführung romantisch wirken."
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrringe mit im Labor gezüchteten Diamanten aus Roségold",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Metallfarbe für den Alltag",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Für den täglichen Gebrauch ist die beste Metallfarbe meist diejenige, die zu dem Schmuck passt, den die Person ohnehin schon am häufigsten trägt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn sie täglich Gelbgold tragen, entscheiden Sie sich für im Labor gezüchtete Diamantohrringe aus Gelbgold. Wenn sie täglich silberne oder weißfarbene Stücke tragen, wählen Sie weiße oder silberfarbene Ohrringe. Wenn sie sanften, romantischen Schmuck mögen und oft warme Rosa- oder Rougetöne tragen, kann Roségold wunderbar funktionieren."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Täglicher Stil",
-            "Beste Metallfarbe",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Klassischer Alltagsstil",
-              "Gelbgold",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Minimaler Alltagsstil",
-              "Weiß-/Silberton oder Gelbgold",
-              "Laluce, Cadenza S"
-            ],
-            [
-              "Moderner Ear-Stack-Stil",
-              "Passend zu vorhandenen Ohrringen",
-              "Amadea, Cadenza S, Laluce"
-            ],
-            [
-              "Weicher, femininer Stil",
-              "Roségold oder Gelbgold",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Workwear-Stil",
-              "Gelbgold- oder Weiß-/Silberton",
-              "Kadenz S, Kadenz M, Amadea"
-            ],
-            [
-              "Lässiger Luxusstil",
-              "Creolen oder Huggies aus Gelbgold",
-              "Pave Hoops, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Alltägliche Ohrringe sollten nicht schwer zu stylen sein. Die sicherste Wahl für den Alltag ist normalerweise eine Metallfarbe, die bereits zum Alltag des Trägers passt."
-        },
-        {
-          "type": "see-also",
-          "text": "Können Sie jeden Tag im Labor gezüchtete Diamantohrringe tragen?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Metallfarbe für Geschenke",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bei Geschenken ist die Metallfarbe sehr wichtig, denn sie zeigt, ob man den Stil des Empfängers versteht."
-        },
-        {
-          "type": "paragraph",
-          "text": "Die sicherste Regel ist, zu überprüfen, was sie bereits tragen. Wenn der Großteil ihres Schmucks aus Gelbgold besteht, entscheiden Sie sich für Gelbgold. Wenn sie silbernen oder weißen Schmuck tragen, wählen Sie Weiß oder Silber. Wenn sie romantische, weiche oder feminine Stücke mögen, ist Roségold möglicherweise eine durchdachte Wahl."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-104.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Geschenktyp",
-                "Beste Metallfarbe",
-                "Beste Ohrringrichtung"
-              ],
-              "rows": [
-                [
-                  "Sicheres Geburtstagsgeschenk",
-                  "Gelbgold- oder Weiß-/Silberton",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Romantisches Geschenk",
-                  "Roségold oder Gelbgold",
-                  "Farfalla, Orsola"
-                ],
-                [
-                  "Jubiläumsgeschenk",
-                  "Gelbgold, Roségold oder eleganter Weiß-/Silberton",
-                  "Cadenza M, Orsola, Farfalla"
-                ],
-                [
-                  "Brautjungferngeschenk",
-                  "Passen Sie das Kleid und die Hochzeitspalette an",
-                  "Cadenza S, Concetta Short"
-                ],
-                [
-                  "Modernes Geschenk",
-                  "Weiß-/Silberton oder Gelbgold",
-                  "Amadea, Pave Hoops"
-                ],
-                [
-                  "Sinnvolles Geschenk",
-                  "Roségold oder Gelbgold",
-                  "Farfalla, Alidi Farfalla"
-                ],
-                [
-                  "Geschenk für Partyliebhaber",
-                  "Gelbgold- oder Weiß-/Silberton",
-                  "Lusso, Orsola"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe zum Verschenken",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Metallfarbe für Hochzeiten",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Hochzeitsschmuck sollte zum Outfit, zur Kleiderordnung und zur Gesamtstimmung der Veranstaltung passen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gelbgold passt wunderbar zu Outfits in warmen Tönen, Champagnerkleidern, grünen Kleidern, roten Kleidern und zum klassischen Abend-Styling. Weiße oder silberfarbene Ohrringe passen gut zu schwarzen, marineblauen, silbernen, grauen, weißen und kühlen Outfits. Roségold passt wunderbar zu Kleidern in Pastell-, Rouge-, Blumen- und Romantiktönen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Hochzeitsoutfit",
-            "Beste Metallfarbe",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Schwarzes Kleid",
-              "Gelbgold- oder Weiß-/Silberton",
-              "Orsola, Lusso, Cadenza M"
-            ],
-            [
-              "Champagnerkleid",
-              "Gelbgold",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Pastellkleid",
-              "Roségold oder Gelbgold",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Grünes Kleid",
-              "Gelbgold oder Roségold",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Marineblaues Kleid",
-              "Weiß-/Silberton oder Gelbgold",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Rotes Kleid",
-              "Gelbgold",
-              "Kadenz M, Orsola"
-            ],
-            [
-              "Blumenkleid",
-              "Roségold, Gelbgold oder einfache Ohrstecker",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Silbernes oder graues Kleid",
-              "Weiß/Silberton",
-              "Laluce, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Für Hochzeitsgäste sollten sich die Ohrringe poliert, aber nicht brautlich anfühlen. Wenn das Outfit schlicht ist, wählen Sie Tropfen oder sichtbareres Glitzern. Wenn das Outfit detailliert ist, wählen Sie Ohrstecker oder kleinere Ohrringe."
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Hochzeiten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Metallfarbe nach Outfitfarbe",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Dieser Abschnitt hilft Käufern dabei, Ohrringe an ihre Garderobe anzupassen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Outfitfarbe",
-            "Beste Metallfarbe",
-            "Styling-Hinweis"
-          ],
-          "rows": [
-            [
-              "Schwarz",
-              "Gelbgold, Weiß-/Silberton oder kräftiges Glitzern",
-              "Alle Arbeit; Wählen Sie je nach Stimmung"
-            ],
-            [
-              "Weiß",
-              "Gelbgold für Wärme, Weiß-/Silberton für klares Styling",
-              "Halten Sie es auf Hochglanz"
-            ],
-            [
-              "Creme oder Elfenbein",
-              "Gelbgold oder Roségold",
-              "Wärmere Metalle fühlen sich weicher an"
-            ],
-            [
-              "Braun oder Beige",
-              "Gelbgold",
-              "Fügt Reichtum hinzu"
-            ],
-            [
-              "Marine",
-              "Weiß-/Silberton oder Gelbgold",
-              "Beide fühlen sich elegant an"
-            ],
-            [
-              "Grau",
-              "Weiß/Silberton",
-              "Hält den Look kühl und sauber"
-            ],
-            [
-              "Rot",
-              "Gelbgold",
-              "Gleicht Wärme aus"
-            ],
-            [
-              "Grün",
-              "Gelbgold oder Roségold",
-              "Fügt Wärme und Tiefe hinzu"
-            ],
-            [
-              "Rosa oder Rouge",
-              "Roségold oder Gelbgold",
-              "Sanft und romantisch"
-            ],
-            [
-              "Champagner",
-              "Gelbgold",
-              "Passt wunderbar zur Wärme"
-            ],
-            [
-              "Blumendruck",
-              "Kleine Ohrstecker, Roségold oder Gelbgold",
-              "Vermeiden Sie es, den Look zu komplizieren"
-            ],
-            [
-              "Satin-Outfit",
-              "Tropfen in Gold- oder Weiß-/Silberton",
-              "Sorgt für Bewegung und Glanz"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Welchen Schmuck trägt man zu einem schwarzen Kleid?",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Metallfarbe nach Schmuckstil",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Je nach Metallfarbe können sich unterschiedliche Ohrringstile sehr unterschiedlich anfühlen."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-106.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Ohrring-Stil",
-                "Gelbgold",
-                "Weiß / Silberton",
-                "Roségold"
-              ],
-              "rows": [
-                [
-                  "Ohrstecker",
-                  "Klassisch und warm",
-                  "Sauber und hell",
-                  "Sanft und romantisch"
-                ],
-                [
-                  "Huggies",
-                  "Alltäglich und stilvoll",
-                  "Modern und minimalistisch",
-                  "Feminin und sanft"
-                ],
-                [
-                  "Reifen",
-                  "Reichhaltig und poliert",
-                  "Schlank und zeitgemäß",
-                  "Weich und verspielt"
-                ],
-                [
-                  "Tropfenohrringe",
-                  "Elegant und warm",
-                  "Raffiniert und hell",
-                  "Romantisch und zart"
-                ],
-                [
-                  "Schmetterlingsohrringe",
-                  "Sinnvoll und warm",
-                  "Moderner",
-                  "Am romantischsten"
-                ],
-                [
-                  "Mutige Statement-Ohrringe",
-                  "Stark und glamourös",
-                  "Knackig und wirkungsvoll",
-                  "Weicherer Statement-Look"
-                ],
-                [
-                  "Minimalistische Ohrringe",
-                  "Warme Einfachheit",
-                  "Sauberer Minimalismus",
-                  "Sanfte Weichheit"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Für klassische Geschenke eignet sich normalerweise der Gelbgold- oder Weiß-/Silberton am besten. Für romantische Geschenke sind Roségold- und Schmetterlingsohrringe eine starke Kombination. Für Party-Looks können Gelbgold- oder Weiß-/Silbertöne dramatischer wirken."
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Ohrstecker mit im Labor gezüchteten Diamanten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Spielt der Hautton bei der Wahl der Metallfarbe eine Rolle?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Der Hautton kann hilfreich sein, sollte aber nicht die einzige Regel sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gelbgold sieht auf warmen und neutralen Hauttönen oft wunderschön aus. Weiß- oder Silbertöne passen oft zu kühl getönten Stylings. Roségold kann vielen Hauttönen schmeicheln, da es zwischen warmen und sanften Rosatönen liegt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Aber der persönliche Stil zählt mehr als strenge Regeln. Jemand mit kühler Haut mag Gelbgold vielleicht immer noch lieben. Jemand mit warmer Haut mag trotzdem Silber bevorzugen. Der beste Hinweis ist der Schmuck, den sie bereits tragen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn Sie es für sich selbst kaufen, wählen Sie die Metallfarbe, die für Sie am natürlichsten ist. Wenn Sie es als Geschenk kaufen, wählen Sie die Metallfarbe, die die Person bereits besitzt."
-        }
-      ]
-    },
-    {
-      "heading": "Können Ohrringe aus Gold, Weiß- und Roségold kombiniert werden?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ja, Sie können Metalle mischen, insbesondere in Ear-Stacks, aber es sollte gewollt aussehen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Das Mischen von Metallen funktioniert am besten, wenn die Ohrringformen ausgewogen sind. Beispielsweise kann ein Ohrstecker aus Gelbgold mit einem weiß/silbernen Huggie modern wirken, wenn der Rest des Schmucks schlicht ist. Besonders im romantischen Styling lässt sich Roségold auch dezent mit Gelbgold mischen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Bei Geschenken ist es jedoch sicherer, die übliche Metallfarbe des Empfängers anzupassen. Gemischte Metalle sind besser für jemanden, der bereits kreatives Styling mag."
-        },
-        {
-          "type": "see-also",
-          "text": "So stapeln Sie Ohrringe",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Produktpfade von Metal Color",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Nutzen Sie diesen Abschnitt als praktischen Einkaufsführer."
-        },
-        {
-          "type": "subheading",
-          "text": "Für klassisches Gelbgold-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza S für dezenten Alltagsglanz, Cadenza M für sichtbareren klassischen Glanz, Pave Hoops für Form oder Orsola für Anlass-Styling."
-        },
-        {
-          "type": "subheading",
-          "text": "Für ein klares Styling in Weiß oder Silber"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Laluce für minimalistisches Styling, Cadenza S für schlichte Nieten, Cadenza M für sichtbares Glitzern oder Orsola für einen eleganten Abendlook."
-        },
-        {
-          "type": "subheading",
-          "text": "Für ein romantisches Roségold-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Farfalla oder Alidi Farfalla für bedeutungsvolle Geschenke, Concetta Short für weiches Anlass-Styling oder Orsola für romantische Abendoutfits."
-        },
-        {
-          "type": "subheading",
-          "text": "Für Ear Stacks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie eine Metallrichtung für ein klareres Aussehen. Cadenza S mit Amadea Huggie-Ohrringen ist ein starker Begleiter für den Alltag. Für ein weicheres Finish Laluce hinzufügen."
-        },
-        {
-          "type": "subheading",
-          "text": "Für Geschenke"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza M für ein klassisches Diamantgeschenk, Farfalla für ein bedeutungsvolles Geschenk, Amadea für ein modernes Geschenk oder Orsola für ein romantisches Geschenk für einen besonderen Anlass."
-        }
-      ]
-    },
-    {
-      "heading": "Produktempfehlungen von IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produkt",
-            "Beste Metallfarbrichtung",
-            "Am besten für"
-          ],
-          "rows": [
-            [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Gelbgold, Weiß-/Silberton",
-              "Alltagskleidung, erste Diamantohrringe"
-            ],
-            [
-              "Cadenza M Diamant-Ohrstecker",
-              "Gelbgold, Weiß-/Silberton",
-              "Geschenke, Arbeitskleidung, sichtbarer täglicher Glanz"
-            ],
-            [
-              "Amadea Huggie-Ohrringe",
-              "Gelbgold, Weiß-/Silberton",
-              "Ear Stacks und modernes Styling"
-            ],
-            [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Weiß-/Silberton, Gelbgold",
-              "Minimalistische Outfits und ruhiger Alltagsschmuck"
-            ],
-            [
-              "Pave-Reifen",
-              "Gelbgold, Weiß-/Silberton",
-              "Hoop-Styling, lässiger Glanz und Partys"
-            ],
-            [
-              "Farfalla Schmetterlingsohrringe",
-              "Roségold, Gelbgold",
-              "Sinnvolle Geschenke und romantisches Styling"
-            ],
-            [
-              "Alidi Farfalla Schmetterlingsohrringe",
-              "Roségold, Gelbgold",
-              "Geburtstage, Jubiläen und symbolische Geschenke"
-            ],
-            [
-              "Orsola-Ohrhänger",
-              "Gelbgold, Weiß-/Silberton, Roségold",
-              "Hochzeitsgäste, Abendessen und Abendoutfits"
-            ],
-            [
-              "Concetta Kurze Ohrringe",
-              "Roségold, Gelbgold",
-              "Sanfter Anlass-Styling"
-            ],
-            [
-              "Concetta Lange Ohrringe",
-              "Gelbgold, Weiß-/Silberton",
-              "Formelle und raffinierte Abendlooks"
-            ],
-            [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Gelbgold, Weiß-/Silberton",
-              "Party-Looks und starker Glanz"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie die Metallfarbe entsprechend der Art und Weise, wie die Ohrringe getragen werden sollen. Wählen Sie Gelbgold für klassische Wärme, Weiß- oder Silbertöne für klares, modernes Funkeln und Roségold für romantische Geschenke oder sanftes Styling."
-        }
-      ]
-    },
-    {
-      "heading": "Häufige Fehler bei der Metallfarbe, die Sie vermeiden sollten",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein häufiger Fehler besteht darin, eine Metallfarbe nur zu wählen, weil sie auf einem Produktfoto gut aussieht. Die bessere Frage ist, ob es zum echten Schmuck und zur Garderobe des Trägers passt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, Roségold für jemanden zu kaufen, der nur Gelbgold oder Silber trägt. Roségold kann schön sein, aber es ist persönlicher und weniger allgemein sicher."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, ohne Plan zu viele Metallfarben in einem Ear Stack zu mischen. Gemischte Metalle können stilvoll aussehen, sollten sich aber gewollt anfühlen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, Weiß- oder Silbertöne zu wählen, wenn die gesamte Garderobe und Schmuckkollektion der Person in warmen Tönen gehalten ist. Gelbgold ist für sie möglicherweise einfacher zu tragen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Schließlich sollten Sie den Anlass nicht außer Acht lassen. Alltägliche Ohrringe, Hochzeitsohrringe und romantische Geschenke erfordern möglicherweise eine andere Metallfarbenauswahl."
-        },
-        {
-          "type": "see-also",
-          "text": "Kaufratgeber für im Labor gezüchtete Diamantohrringe",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Abschließende Checkliste für die Metallfarbe",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bevor Sie sich für goldene, weiß-/silberfarbene oder roségoldene Diamantohrringe entscheiden, fragen Sie:"
+          "text": "Wählen Sie nicht allein nach der Farbbezeichnung. Prüfen Sie:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Welche Metallfarbe trägt die Person bereits am häufigsten?",
-            "Ist das für den Alltag, ein Geschenk, eine Hochzeit oder eine Party?",
-            "Fühlt sich die Outfit-Palette warm, kühl oder romantisch an?",
-            "Sollen sich die Ohrringe klassisch, modern oder weich anfühlen?",
-            "Werden die Ohrringe einzeln oder in einem Ear Stack getragen?",
-            "Passt die Metallfarbe zu anderem Schmuck?",
-            "Passt Roségold zum Stil der Person?",
-            "Wäre Gelbgold sicherer?",
-            "Würden sich Weiß- oder Silbertöne sauberer anfühlen?",
-            "Sind die Steine ​​echte, im Labor gezüchtete Diamanten?",
-            "Fühlt sich das Design über ein Outfit hinaus tragbar an?"
+            "Grundmetall",
+            "Ob der Aufbau massiv oder plattiert ist",
+            "Goldreinheit",
+            "Genaues Material der Plattierung",
+            "Stärke der Plattierung, sofern angegeben",
+            "Die vollständigen Maße des Ohrrings",
+            "Gewicht und Verschluss",
+            "Diamantspezifikationen",
+            "Ob das Produkt einzeln oder als Paar verkauft wird"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Vergleich von Ohrringen mit gelben, weißen und roséfarbenen Diamanten",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Eigenschaft",
+            "Gelbgold",
+            "Weißgold",
+            "Roségold"
+          ],
+          "rows": [
+            [
+              "Sichtbare Farbe",
+              "Warmes Gelb",
+              "Kühles Weiß oder Grauweiß",
+              "Rosa oder kupferfarben"
+            ],
+            [
+              "Kontrast zu Diamanten",
+              "Schafft einen sichtbaren warmen Rand",
+              "Kann einen durchgängigen kühlen Eindruck erzeugen",
+              "Schafft einen sanften roséfarbenen Kontrast"
+            ],
+            [
+              "Stylingrichtung",
+              "Warm, klassisch oder kontrastreich",
+              "Klar, neutral oder kühl",
+              "Sanft, ausdrucksstark oder warm"
+            ],
+            [
+              "Abstimmung mit der Garderobe",
+              "Creme, Braun, Grün, Rot, Schwarz und warme Neutraltöne",
+              "Schwarz, Weiß, Grau, Marineblau und kühle Farben",
+              "Blush, Mauve, Creme, Salbeigrün und gedeckte Farben"
+            ],
+            [
+              "Vorhandener Schmuck",
+              "Passt zu Schmuckstücken aus Gelbgold",
+              "Passt zu Schmuck aus weißen Metallen",
+              "Passt zu Schmuckstücken aus Roségold"
+            ],
+            [
+              "Zu prüfender Aufbau",
+              "Massivgold oder Gelbgoldplattierung",
+              "Massives Weißgold, Weißgoldplattierung, Rhodium oder eine andere Oberfläche",
+              "Massives Roségold oder Roségoldplattierung"
+            ],
+            [
+              "Pflege",
+              "Hängt von Legierung und Oberfläche ab",
+              "Manche weißen Oberflächen müssen erneuert werden",
+              "Hängt von Legierung und Oberfläche ab"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wenn Sie unsicher sind, wählen Sie die Metallfarbe, die die Person bereits trägt. Das ist normalerweise die sicherste und nützlichste Wahl."
+          "text": "Dies sind Stilrichtungen, keine festen Regeln. Alle drei Farben lassen sich mit einer großen Auswahl an Outfits kombinieren."
+        }
+      ]
+    },
+    {
+      "heading": "Metallfarbe und Metallaufbau sind nicht dasselbe",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "right",
+          "image": "/blog-images/blog-image-42.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Ein Produkt kann wie Gelbgold, Weißgold oder Roségold aussehen, ohne vollständig aus massivem Gold zu bestehen."
+            },
+            {
+              "type": "subheading",
+              "text": "Massives Gold"
+            },
+            {
+              "type": "paragraph",
+              "text": "Schmuck aus massivem Gold besteht beim Metallbestandteil durchgehend aus einer Goldlegierung. Reines Gold wird mit anderen Metallen gemischt, um Farbe, Festigkeit und Verarbeitungseigenschaften anzupassen. Eine 14-Karat- oder 14kt-Goldlegierung enthält ungefähr 14 von 24 Teilen Gold. Sie kann auch mit 585 gekennzeichnet sein, was etwa 58,5 % Gold entspricht. Die übrige Legierungszusammensetzung sorgt für die gelbe, weiße oder roséfarbene Ausprägung."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Vergoldetes 925 Sterlingsilber"
+        },
+        {
+          "type": "paragraph",
+          "text": "Goldplattiertes 925 Sterlingsilber besitzt einen Kern aus Sterlingsilber und eine oberflächliche Schicht aus einer Goldlegierung. Die Kennzeichnung 925 steht für Sterlingsilber mit 92,5 % Silber; sie bedeutet nicht, dass der gesamte Ohrring aus Gold besteht. Wird das Produkt als „925 Sterlingsilber mit 14kt-Goldplattierung“ beschrieben, bezieht sich die Angabe 14kt auf das Material der Plattierung, nicht auf den gesamten Ohrring."
+        },
+        {
+          "type": "subheading",
+          "text": "Oberflächen in Weiß"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Ohrring mit weißer Farbe kann aus Folgendem bestehen:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Massivem Weißgold",
+            "Weißgoldplattierung",
+            "Rhodiumplattierung",
+            "Platin",
+            "Palladium",
+            "925 Sterlingsilber",
+            "Einer anderen Oberfläche aus weißem Metall"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Farbe allein verrät nichts über den Aufbau. Auf der Produktseite müssen das tatsächliche Grundmetall und die Oberfläche angegeben sein."
+        },
+        {
+          "type": "subheading",
+          "text": "Oberflächen in Roségold"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségold erhält seinen roséfarbenen Ton durch seine Legierungszusammensetzung, an der häufig Kupfer beteiligt ist. Bei einer Plattierung bildet die Roségoldlegierung nur die oberste Schicht über dem Grundmetall. Die genaue Zusammensetzung sollte geprüft werden, statt davon auszugehen, dass jeder roséfarbene Ohrring dieselbe Legierung verwendet."
+        },
+        {
+          "type": "see-also",
+          "text": "Was ist Demi-Fine Schmuck?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Was sind Ohrringe mit im Labor gezüchteten Diamanten aus Gelbgold?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Gelbgoldene Ohrringe umgeben die Diamanten mit einer warmen gelben Farbe. Dadurch entsteht ein sichtbarer Unterschied zwischen dem weißen Diamanten und seiner Fassung, besonders wenn mehr Metall zu sehen ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gelbgold passt zu Ohrsteckern mit Diamanten, Creolen, Ohrhängern, Schmetterlingsdesigns, geometrischen Ohrringen und Ear Stacks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Effekt hängt auch davon ab, wie viel Metall sichtbar ist. Ein Ohrstecker mit vier Krappen zeigt möglicherweise nur wenig Gelbgold, während eine Creole oder ein geometrisches Design die Metallfarbe zu einem wichtigen Teil des Ohrrings macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie Gelbgold, weil Ihnen sein Aussehen gefällt oder weil es zu Ihrem vorhandenen Schmuck passt – nicht, weil es grundsätzlich für einen bestimmten Hautton geeignet wäre."
+        }
+      ]
+    },
+    {
+      "heading": "Was sind Ohrringe mit im Labor gezüchteten Diamanten aus Weißgold?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Weißgold ist eine Goldlegierung, die für eine weiße oder grauweiße Farbe entwickelt wurde. Schmuck aus massivem Weißgold kann zusätzlich eine Rhodiumoberfläche besitzen, dies ist jedoch nicht immer der Fall und muss für das jeweilige Produkt geprüft werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine weiße Fassung kann die sichtbare Farbgrenze zwischen einem farblosen oder nahezu farblosen Diamanten und dem umgebenden Metall verringern. Dadurch kann die Fassung optisch durchgängig mit den Steinen wirken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrringe in Weiß eignen sich, wenn:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Sie bereits Schmuck aus Silber oder weißem Metall tragen",
+            "Die Fassungsfarbe zurückhaltend bleiben soll",
+            "Ihre Garderobe Schwarz, Weiß, Marineblau, Grau oder kühle Farben umfasst",
+            "Metall und Diamanten optisch stärker miteinander verschmelzen sollen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "925 Sterlingsilber mit weißer Oberfläche darf niemals als massives Weißgold bezeichnet werden."
+        }
+      ]
+    },
+    {
+      "heading": "Was sind Ohrringe mit im Labor gezüchteten Diamanten aus Roségold?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Roségold wirkt rosa oder kupferfarben. Die Intensität dieses Farbtons hängt von der Zusammensetzung der Legierung oder Plattierung ab."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségoldene Ohrringe erzeugen einen auffälligeren Farbkontrast als Weißgold, wirken jedoch oft sanfter als kräftiges Gelbgold. Sie lassen sich mit Blush, Creme, Salbeigrün, Mauve, Braun und gedeckten Farben kombinieren, sind aber nicht auf diese Garderoben beschränkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségold kann bei Ohrsteckern, Schmetterlingsohrringen, kurzen Ohrhängern, Creolen, geometrischen Designs und Ear Stacks verwendet werden. Wie bei den anderen Farben sollten Sie prüfen, ob das Produkt aus massivem Roségold besteht oder eine roségoldene Oberfläche über einem anderen Grundmetall besitzt."
+        }
+      ]
+    },
+    {
+      "heading": "Verändert die Metallfarbe die Wirkung des Diamanten?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Die Metallfarbe kann den Kontrast rund um einen Diamanten beeinflussen, verändert jedoch weder seine Herkunft noch seine grundlegenden Eigenschaften. Das Gemological Institute of America erklärt, dass im Labor gezüchtete Diamanten im Wesentlichen dieselbe chemische Zusammensetzung, Kristallstruktur sowie optischen und physikalischen Eigenschaften wie natürliche Diamanten besitzen."
+        },
+        {
+          "type": "subheading",
+          "text": "Gelbgold"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gelbgold bildet einen warmen Rahmen um einen weißen Diamanten. Der Effekt fällt stärker auf, wenn die Fassung, Creole oder das dekorative Metall deutlich sichtbar ist."
+        },
+        {
+          "type": "subheading",
+          "text": "Weißgold oder weißes Metall"
+        },
+        {
+          "type": "paragraph",
+          "text": "Weißes Metall kann optisch mit einem farblosen oder nahezu farblosen Diamanten verschmelzen, besonders bei kleineren Krappen oder Fassungen im Pavé-Stil."
+        },
+        {
+          "type": "subheading",
+          "text": "Roségold"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségold ergänzt einen roséfarbenen Rand. Bei einem kleinen Ohrstecker kann dieser Kontrast dezent wirken, während er bei Creolen, Ohrhängern oder geometrischen Ohrringen stärker sichtbar ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch Diamantschliff, Proportionen, Fassung, Sauberkeit und Licht beeinflussen den sichtbaren Eindruck. Keine Metallfarbe lässt jeden Diamanten automatisch stärker funkeln."
+        },
+        {
+          "type": "see-also",
+          "text": "Was sind im Labor gezüchtete Diamanten?",
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
+        }
+      ]
+    },
+    {
+      "heading": "Welche Farbe passt zu welchem Ohrringstil?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Diamant-Ohrstecker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrstecker zeigen weniger Metall als viele Creolen oder Ohrhänger. Der Unterschied zwischen Gelb-, Weiß- und Roségold konzentriert sich daher möglicherweise auf Krappen, Zarge oder Chaton. Wählen Sie Gelbgold für einen warmen Umriss, Weißgold oder geprüftes weißes Metall für einen kühleren Übergang oder Roségold für einen roséfarbenen Rand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prüfen Sie auch die Seitenansicht. Ein Ohrstecker kann von der Seite mehr Metall zeigen als von vorn. Durchmesser, Tiefe, Krappenfassung, Verschluss und Gesamtgewicht in Karat können die Optik stärker beeinflussen als eine kleine Änderung der Metallfarbe."
+        },
+        {
+          "type": "see-also",
+          "text": "Ratgeber zu Ohrsteckern mit im Labor gezüchteten Diamanten",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Diamant-Creolen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Creolen zeigen mehr Metallfläche als viele Ohrstecker, sodass die Oberfläche zu einem wichtigen Teil des Designs werden kann. Gelbgold-Creolen erzeugen eine warme, geschwungene Kontur. Weißmetall-Creolen wirken kühler, während Roségold eine rosafarbene Form ergänzt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bevor Sie eine Creole auswählen, prüfen Sie Außendurchmesser, Innendurchmesser, Breite, Gewicht, Verschluss, Diamantenbesatz, ob die Diamanten nur vorn sitzen oder sich um die Creole ziehen, sowie Grundmetall und Oberflächenfinish."
+        },
+        {
+          "type": "see-also",
+          "text": "Ratgeber für Creolen mit im Labor gezüchteten Diamanten",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Ohrhänger und geometrische Ohrringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrhänger und geometrische Ohrringe können eine größere Metallfläche zeigen und sich beim Tragen bewegen. Ihre Farbe kann daher auffälliger sein als die Farbe einer kleinen Ohrsteckerfassung. Gelbgold kann die Kontur des Designs betonen. Weißmetall hält die sichtbare Struktur kühler, während Roségold einen weicheren farbigen Rahmen erzeugt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prüfen Sie die gesamte Höhe, Breite, Tiefe, das fertige Gewicht und den Verschluss. Lange oder geometrische Ohrringe sollten ohne geprüfte Maße und trägerspezifische Informationen nicht für längeres Tragen empfohlen werden."
+        }
+      ]
+    },
+    {
+      "heading": "Sollten Sie nach Ihrem Hautton auswählen?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Ratschläge zum Hautton können als Orientierung dienen, sollten aber nicht als feste Regel gelten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Menschen mit warmem Unterton können Weißmetall bevorzugen. Menschen mit kühlem Unterton können Gelbgold bevorzugen. Kleidung, Haarfarbe, vorhandener Schmuck und persönliche Vorlieben können wichtiger sein als eine vereinfachte Hauttonkategorie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein zuverlässigerer Vergleich ist:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Sehen Sie sich den Schmuck an, den Sie bereits tragen.",
+            "Vergleichen Sie die Farben bei natürlichem Licht.",
+            "Prüfen Sie, wie jede Farbe neben Ihrer üblichen Kleidung wirkt.",
+            "Entscheiden Sie, ob Sie lieber abstimmen oder Kontraste setzen."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Farbe, die Sie voraussichtlich am häufigsten mit Ihrem vorhandenen Schmuck kombinieren, ist möglicherweise die sinnvollere Wahl."
+        }
+      ]
+    },
+    {
+      "heading": "Metallfarbe auf Ihre Garderobe abstimmen",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Garderobenfarbe",
+            "Gelbgold",
+            "Weiß- oder Silbertöne",
+            "Roségold"
+          ],
+          "rows": [
+            [
+              "Schwarz",
+              "Warmer Kontrast",
+              "Klarer Kontrast",
+              "Sanfter Kontrast"
+            ],
+            [
+              "Weiß",
+              "Warme Definition",
+              "Ton-in-Ton, kühler Look",
+              "Rosafarbener Akzent"
+            ],
+            [
+              "Marineblau",
+              "Warmer Kontrast",
+              "Kühlere Abstimmung",
+              "Gedämpfter Kontrast"
+            ],
+            [
+              "Grün",
+              "Passt zu vielen warmen Grüntönen",
+              "Kontrastiert mit kühlen Grüntönen",
+              "Passt zu manchen Salbei- und gedämpften Grüntönen"
+            ],
+            [
+              "Rot oder Burgunder",
+              "Bringt Wärme",
+              "Erzeugt einen kühleren Kontrast",
+              "Kann gedämpfte Rottöne weicher wirken lassen"
+            ],
+            [
+              "Blush oder Mauve",
+              "Warmer Kontrast",
+              "Klarer Kontrast",
+              "Eng abgestimmt"
+            ],
+            [
+              "Braun oder Camel",
+              "Warme Abstimmung",
+              "Schärferer Kontrast",
+              "Weiche Abstimmung"
+            ],
+            [
+              "Grau",
+              "Warmer Kontrast",
+              "Ton-in-Ton-Abstimmung",
+              "Rosafarbener Kontrast"
+            ],
+            [
+              "Creme",
+              "Warme Abstimmung",
+              "Kühlerer Kontrast",
+              "Weiche Abstimmung"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Kombinationen dienen als Ausgangspunkt, nicht als Einschränkung."
+        },
+        {
+          "type": "see-also",
+          "text": "Welcher Schmuck passt zu einem grünen Kleid?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "Welcher Schmuck passt zu einem schwarzen Kleid?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Sollte Ihr gesamter Schmuck dieselbe Metallfarbe haben?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nein. Wenn jedes Schmuckstück zusammenpasst, entsteht ein einheitlicher Look. Aber auch die Kombination verschiedener Metalle kann bewusst gestaltet wirken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für eine ausgewogene Kombination verschiedener Metalle:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Wählen Sie eine Hauptmetallfarbe.",
+            "Wiederholen Sie sie in mindestens einem weiteren Schmuckstück.",
+            "Halten Sie die Größen der Ohrringe ausgewogen.",
+            "Vermeiden Sie, jedes Schmuckstück gleich detailreich zu gestalten.",
+            "Verwenden Sie die Diamantfarbe als wiederkehrendes Gestaltungselement."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn Sie bereits eine Uhr aus Weißmetall und eine Gelbgoldkette tragen, können Ihre Ohrringe entweder eines der Metalle aufgreifen oder beide enthalten, sofern das Design tatsächlich verschiedene Metalle kombiniert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein einfarbig vergoldetes Produkt ist nicht allein deshalb aus verschiedenen Metallen, weil das darunterliegende Grundmetall anders ist. Beim Styling mit verschiedenen Metallen geht es um sichtbare Metallfarben."
+        },
+        {
+          "type": "see-also",
+          "text": "So kombinieren Sie Ohrringe im Ear Stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Eine Metallfarbe als Geschenk auswählen",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Wenn Sie Ohrringe für jemand anderen kaufen, achten Sie darauf, was die Person bereits trägt. Prüfen Sie:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Ohrringe auf aktuellen Fotos",
+            "Uhrenfarbe",
+            "Farbe von Kette und Armband",
+            "Ob verschiedene Metalle kombiniert werden",
+            "Ob immer wieder dasselbe Finish gewählt wird",
+            "Ob die Piercings meist Ohrstecker, Creolen oder Ohrhänger tragen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie nicht ausschließlich nach vermutetem Hautton, Alter oder Beruf. Wenn sich die vorhandenen Vorlieben nicht feststellen lassen, wählen Sie eine flexible Geschenkoption, statt eine Metallfarbe als grundsätzlich passend anzusehen."
+        }
+      ]
+    },
+    {
+      "heading": "Ohrringe aus massivem Gold oder vergoldete Ohrringe",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Eigenschaft",
+            "Konstruktion aus massivem Gold",
+            "Vergoldete Konstruktion"
+          ],
+          "rows": [
+            [
+              "Kernmaterial",
+              "Durchgehend Goldlegierung",
+              "Separates Grundmetall"
+            ],
+            [
+              "Oberfläche",
+              "Dieselbe Legierung oder zusätzliches Finish",
+              "Oberflächenschicht aus Goldlegierung"
+            ],
+            [
+              "Produktbeschreibung",
+              "Sollte den Goldgehalt nennen",
+              "Sollte Grundmetall und Vergoldung nennen"
+            ],
+            [
+              "Punze oder Kennzeichnung",
+              "Abhängig von Markt und gesetzlichen Anforderungen",
+              "Kennzeichnungen des Grundmetalls können erforderlich sein"
+            ],
+            [
+              "Farberhalt",
+              "Abhängig von Legierung und Oberflächenbehandlung",
+              "Die Oberflächenschicht kann sich durch das Tragen verändern"
+            ],
+            [
+              "Preisstruktur",
+              "Beeinflusst durch Goldgehalt und fertiges Gewicht",
+              "Beeinflusst durch Grundmetall, Vergoldung, Design und Steine"
+            ],
+            [
+              "Zu prüfende Angaben",
+              "Goldgehalt, Gewicht und Legierungsfarbe",
+              "Grundmetall, Vergoldungsmaterial, Schichtdicke und Pflege"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Keine der beiden Konstruktionen sollte hinter einer Farbauswahl verborgen werden. Vor dem Hinzufügen zum Warenkorb sollten Sie alle Materialangaben vollständig sehen können."
+        },
+        {
+          "type": "see-also",
+          "text": "Demi-Fine Schmuck, hochwertiger Schmuck und Modeschmuck",
+          "href": "/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Bestimmt die Metallfarbe, ob Ohrringe für empfindliche Ohren geeignet sind?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nein. Die Farbe allein sagt nicht aus, ob ein Ohrring für empfindliche Ohren geeignet ist. Die Eignung hängt ab von:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Vollständiger Zusammensetzung des Grundmetalls",
+            "Zusammensetzung der Legierung",
+            "Material der Beschichtung",
+            "Dicke und Zustand der Vergoldung",
+            "Material von Stift und Verschluss",
+            "Nickelabgabe",
+            "Individueller Empfindlichkeit",
+            "Zustand des Piercings"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gelbgold-, Weißgold- und Roségoldohrringe sollten ohne vollständige Materialangaben und entsprechende Nachweise nicht als hypoallergen beschrieben werden."
+        }
+      ]
+    },
+    {
+      "heading": "Pflege je nach Konstruktion",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Die Pflegeanforderungen hängen stärker von Konstruktion und Finish ab als davon, ob die sichtbare Farbe gelb, weiß oder rosé ist. Bevor Sie die Ohrringe reinigen oder mit Wasser, Kosmetik oder Chemikalien tragen:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Lesen Sie die produktspezifischen Pflegehinweise.",
+            "Prüfen Sie, ob die Ohrringe massiv oder vergoldet sind.",
+            "Vermeiden Sie scheuernde Reiniger, sofern der Hersteller ihre Eignung nicht bestätigt.",
+            "Bewahren Sie Schmuckstücke getrennt auf, um Oberflächenkontakt zu verringern.",
+            "Kontrollieren Sie Stifte, Verschlüsse und Schließen.",
+            "Befolgen Sie die speziellen Hinweise für Schwimmen, Duschen, Schlafen und Sport."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gehen Sie nicht davon aus, dass jedes vergoldete Produkt dieselbe Schichtdicke oder dieselben Trageeigenschaften hat."
+        },
+        {
+          "type": "see-also",
+          "text": "So pflegen Sie vergoldeten Schmuck",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Checkliste zur Auswahl der Metallfarbe",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Bevor Sie eine Farbvariante auswählen, prüfen Sie:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Ist das Produkt aus massivem Gold oder vergoldet?",
+                "Was ist das Grundmetall?",
+                "Worauf bezieht sich die Angabe zum Goldgehalt?",
+                "Was erzeugt die weiße Farbe?",
+                "Was erzeugt die roséfarbene Farbe?",
+                "Ist die Schichtdicke der Vergoldung angegeben?",
+                "Bestehen Stift und Verschluss aus demselben Material?",
+                "Welche Metallfarben sind für den ausgewählten Artikel tatsächlich verfügbar?",
+                "Ändert sich das Produktbild mit der ausgewählten Farbe?",
+                "Sind Preis und Verfügbarkeit für diese Variante korrekt?",
+                "Sind die Diamanten im Labor gezüchtet und eindeutig ausgewiesen?",
+                "Bezieht sich das Karatgewicht auf einen einzelnen Diamanten oder auf das Gesamtgewicht?",
+                "Wird der Artikel einzeln oder als Paar verkauft?",
+                "Wie lauten die Maße in Millimetern?",
+                "Wie hoch ist das Gewicht pro Ohrring und zusammen?",
+                "Welcher Verschluss wird verwendet?",
+                "Sind Bilder von vorn, von der Seite und am Ohr verfügbar?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Kaufratgeber für Ohrschmuck mit im Labor gezüchteten Diamanten",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Was ist besser für Diamantohrringe, Gold oder Weißgold?",
-      "answer": "Beides ist nicht automatisch besser. Gelbgold wirkt warm und klassisch, während Weiß- oder Silbertöne klar und modern wirken. Die beste Wahl hängt vom Stil der Trägerin und dem vorhandenen Schmuck ab."
+      "question": "Welche Metallfarbe sollte ich für Ohrringe mit im Labor gezüchteten Diamanten wählen?",
+      "answer": "Wählen Sie Gelbgold für einen warmen Kontrast, Weißgold oder ein Finish aus Weißmetall für einen kühleren Übergang und Roségold für einen rosafarbenen Kontrast. Ihr vorhandener Schmuck und Ihre bevorzugte Optik sollten die Entscheidung bestimmen."
     },
     {
-      "question": "Sind Roségold-Diamantohrringe gut als Geschenk geeignet?",
-      "answer": "Ja, Diamantohrringe aus Roségold können wunderschöne Geschenke sein, weil sie sich weich, romantisch und persönlich anfühlen. Sie sind besonders stark für Geburtstage, Jubiläen und bedeutungsvolle Geschenke."
+      "question": "Sehen im Labor gezüchtete Diamanten in Gelb-, Weiß- und Roségold unterschiedlich aus?",
+      "answer": "Der Diamant bleibt derselbe, aber das umgebende Metall verändert den sichtbaren Kontrast. Gelb- und Roségold erzeugen farbige Ränder, während Weißmetall sich enger an einen farblosen oder nahezu farblosen Diamanten anfügen kann."
     },
     {
-      "question": "Welche Metallfarbe eignet sich am besten für alltägliche Diamantohrringe?",
-      "answer": "Die beste Metallfarbe für alltägliche Ohrringe ist in der Regel diejenige, die die Person bereits am häufigsten trägt. Gelbgold ist klassisch, Weiß- oder Silbertöne sind modern und Roségold ist sanfter und romantischer."
+      "question": "Ist Weißgold tatsächlich Gold?",
+      "answer": "Massives Weißgold ist eine Goldlegierung. Ein weißfarbener Ohrring kann jedoch stattdessen aus 925 Sterlingsilber bestehen oder eine Weißgold-, Rhodium- oder andere Beschichtung haben. Prüfen Sie die vollständigen Materialangaben des Produkts."
     },
     {
-      "question": "Welche Metallfarbe eignet sich am besten für Ohrringe für Hochzeitsgäste?",
-      "answer": "Gelbgold passt gut zu warmen Outfits, Champagnerkleidern und grünen Kleidern. Weiß- oder Silbertöne passen gut zu schwarzen, marineblauen, grauen und kühlen Outfits. Roségold passt gut zu pastellfarbenen und romantischen Kleidern."
+      "question": "Woraus besteht Roségold?",
+      "answer": "Roségold ist eine Goldlegierung mit roséfarbenem Ton, der üblicherweise durch Kupfer entsteht. Bei einem vergoldeten Produkt bildet die Roségoldlegierung eine Oberflächenschicht über einem separaten Grundmetall."
     },
     {
-      "question": "Soll ich Ohrringe aus Gelbgold oder Roségold wählen?",
-      "answer": "Wählen Sie Gelbgold für einen sichereren klassischen Look. Wählen Sie Roségold, wenn die Person sanften, romantischen Schmuck mag oder bereits rosafarbene Stücke trägt."
+      "question": "Sind 14-karätig vergoldete Ohrringe aus massivem Gold?",
+      "answer": "Nein. Ein 14-karätig vergoldeter Ohrring hat eine Oberflächenschicht aus 14-karätiger Goldlegierung über einem anderen Grundmetall. Die Produktbeschreibung sollte dieses Grundmetall nennen."
     },
     {
-      "question": "Lassen weiße oder silberfarbene Ohrringe Diamanten heller aussehen?",
-      "answer": "Weiße oder silberfarbene Fassungen können Diamanten sehr sauber und leuchtend erscheinen lassen, da das Metall keine Wärme um den Stein herum erzeugt."
+      "question": "Welche Metallfarbe eignet sich für empfindliche Ohren?",
+      "answer": "Die Farbe allein lässt keine Aussage über die Eignung für empfindliche Ohren zu. Prüfen Sie die vollständige Legierung, Vergoldung, den Stift, den Verschluss, Angaben zur Nickelabgabe und die individuelle Empfindlichkeit der tragenden Person."
     },
     {
-      "question": "Kann ich Gold- und Silberohrringe in einem Ear Stack kombinieren?",
-      "answer": "Ja, Sie können Metalle mischen, insbesondere in Ear-Stacks, aber es sollte gewollt aussehen. Beim Kauf als Geschenk ist es sicherer, die übliche Metallfarbe der Person anzupassen."
+      "question": "Kann ich Ohrringe in Gelb-, Weiß- und Roségold kombinieren?",
+      "answer": "Ja. Ein Mix aus verschiedenen Metallfarben kann funktionieren, wenn eine Farbe dominiert und die anderen Schmuckstücke kleiner sind oder an anderer Stelle wieder aufgegriffen werden. Setzen Sie einen klaren Blickfang."
     },
     {
-      "question": "Welche Metallfarbe passt am besten zu einem schwarzen Kleid?",
-      "answer": "Gelbgold-, Weiß-/Silbertöne und auffällige Diamantohrringe passen alle zu einem schwarzen Kleid. Gelbgold sorgt für Wärme, während der Weiß-/Silberton einen klareren Kontrast schafft."
+      "question": "Wie wähle ich die Ohrringfarbe als Geschenk aus?",
+      "answer": "Achten Sie darauf, welche Metallfarbe die beschenkte Person bereits bei Ohrringen, Halsketten, Armbändern und Uhren trägt. Vermeiden Sie eine Auswahl allein aufgrund des vermuteten Alters, Hauttons oder Berufs."
     },
     {
-      "question": "Welche Metallfarbe eignet sich am besten für Schmetterlingsohrringe?",
-      "answer": "Roségold und Gelbgold eignen sich normalerweise hervorragend für Schmetterlingsohrringe, da sie das weiche, bedeutungsvolle und feminine Gefühl des Designs unterstützen."
-    },
-    {
-      "question": "Was ist die sicherste Metallfarbe für ein Schmuckgeschenk?",
-      "answer": "Die sicherste Metallfarbe ist die, die der Beschenkte bereits trägt. Wenn Sie sich nicht sicher sind, ist Gelbgold oder der klassische Weiß-/Silberton normalerweise sicherer als Roségold."
+      "question": "Benötigt Weißgold eine besondere Pflege?",
+      "answer": "Mancher Weißgoldschmuck hat eine Rhodiumbeschichtung, während andere Ohrringe in Weiß unterschiedliche Materialien verwenden. Befolgen Sie die Pflegehinweise für die jeweilige Legierung oder Oberfläche, statt sich allein auf die Farbbezeichnung zu verlassen."
     }
   ],
   "cta": {
-    "heading": "Die Metallfarbe verändert die Haptik von im Labor gezüchteten Diamantohrringen. Gelbgold ist warm und klassisch, Weiß- oder Silbertöne sind klar und modern und Roségold ist sanft und romantisch. Die beste Wahl hängt von der Garderobe des Trägers, dem vorhandenen Schmuck, den Outfitfarben und dem Zweck des Geschenks ab.",
-    "body": "Beginnen Sie mit im Labor gezüchteten Diamantohrringen von IWantJewels, wenn Sie echtes Diamantfunkeln in tragbaren halbfeinen Designs wünschen. Wählen Sie Cadenza S oder Cadenza M für klassische Ohrringe für den Alltag, Amadea für moderne Kombinationen, Farfalla für romantische Geschenke, Orsola für das Styling für Hochzeitsgäste und Lusso für auffälligen Glanz am Abend.",
-    "primaryLabel": "Kaufen Sie im Labor gezüchtete Diamantohrringe",
+    "heading": "Wählen Sie Gelbgold für sichtbare Wärme, Weißgold oder eine geprüfte Oberfläche aus weißem Metall für eine kühlere Optik oder Roségold als Kontrast mit roséfarbenem Ton.",
+    "body": "Prüfen Sie anschließend die Verarbeitung und Produktspezifikationen, statt sich allein auf die Farbbezeichnung zu verlassen.",
+    "primaryLabel": "Ohrringe mit im Labor gezüchteten Diamanten vergleichen",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie Schmuckgeschenke",
-    "secondaryHref": "/products",
-    "tertiaryLabel": "Lesen Sie den Kaufratgeber für im Labor gezüchtete Diamantohrringe",
-    "tertiaryHref": "#"
+    "secondaryLabel": "Kaufratgeber für im Labor gezüchtete Diamantohrringe",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide",
+    "tertiaryLabel": "Was sind im Labor gezüchtete Diamanten?",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
   }
 }

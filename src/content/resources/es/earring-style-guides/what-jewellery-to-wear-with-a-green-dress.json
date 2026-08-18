@@ -1,173 +1,472 @@
 {
   "meta": {
     "title": "Qué joyas llevar con un vestido verde",
-    "description": "Elige joyas para un vestido verde con oro, plata, oro rosa, pendientes de diamantes, looks de invitada a una boda, estilismo de fiesta e ideas de outfits."
+    "description": "Elija joyas para vestidos verde esmeralda, salvia, oliva, menta y bosque. Compare metales, pendientes y collares según el tejido y la ocasión."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-93.jpg",
-    "title": "Qué joyas llevar con un vestido verde:",
-    "subtitle": "Pendientes, metales y guía de estilo",
+    "image": "/blog-images/blog-image-42.jpg",
+    "title": "Qué joyas llevar",
+    "subtitle": "con un vestido verde",
     "paragraphs": [
-      "Un vestido verde puede lucir rico, suave, romántico o moderno según el tono. El verde esmeralda se siente atrevido y listo para la noche. El verde salvia se siente suave y elegante. El verde oliva se siente cálido y terroso. El verde menta se siente fresco y ligero. Como el verde tiene tantos estados de ánimo, las joyas deben elegirse en función del tono exacto, la tela del vestido y la ocasión.",
-      "Las joyas de oro suelen ser una de las opciones más fuertes con un vestido verde porque aportan calidez y riqueza. Los aretes de diamantes también funcionan maravillosamente porque añaden brillo a la tela verde. Las joyas blancas o plateadas pueden hacer que el verde parezca más limpio y moderno, mientras que el oro rosa combina mejor con verdes más suaves como el salvia, la menta y el verde pastel.",
-      "Este recurso ayuda a los compradores a elegir joyas para vestidos verdes por tono de color, escote, tela, tipo de evento y peinado. También conecta cada dirección de estilo con los productos IWantJewels, como aretes colgantes Orsola, aros Pave Hoops, aretes de diamantes Cadenza M, aretes de diamantes cultivados en laboratorio Cadenza S, aretes atrevidos Lusso, aretes de mariposa Farfalla, aretes de mariposa Alidi Farfalla, aretes cortos Concetta, aretes largos Concetta, aretes Amadea Huggie y aretes de diamantes minimalistas Laluce."
+      "Las joyas que lleve con un vestido verde deben elegirse según el tono exacto de verde, su subtono, el tejido y la cantidad de detalles del conjunto. El verde esmeralda y el verde bosque admiten contrastes visibles, mientras que el salvia y el menta suelen combinar mejor con joyas más discretas. El oliva tiene subtonos amarillos o marrones más cálidos, y el verde azulado contiene más azul.",
+      "Los tonos de oro amarillo aportan calidez, mientras que los blancos o plateados crean un contraste más frío y los tonos de oro rosa suavizan los verdes apagados. Ninguna de estas opciones es universal. Observe el vestido con luz natural y determine si su verde es cálido, frío o neutro antes de elegir el metal."
     ],
-    "shopLabel": "Comprar aretes para vestidos verdes",
+    "shopLabel": "Explore los pendientes de diamantes de laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Elige joyas para vestidos verdes.",
-      "Decide si el dorado, el tono blanco/plateado o el dorado rosa combinan mejor con el verde.",
-      "Combina aretes con vestidos verde esmeralda, salvia, oliva, menta, bosque y satén.",
-      "Diseña vestidos verdes para bodas, fiestas, cenas, cumpleaños y eventos formales.",
-      "Elige pendientes según el escote y el peinado.",
-      "Decide entre aretes, aros, colgantes, aretes de mariposa y aretes atrevidos.",
-      "Crea combinaciones de orejas para vestidos verdes.",
-      "Encuentre recomendaciones de productos IWantJewels por estilo de vestido verde.",
-      "Planifique bloques de imágenes, módulos de productos, secciones de CTA y enlaces internos para esta página."
+      "Identifique primero el subtono: verde cálido, frío o neutro",
+      "El esmeralda, oliva, botella y bosque combinan con oro amarillo",
+      "El menta, verde azulado, pino y esmeralda frío combinan con tonos blancos o plateados",
+      "El oro rosa suaviza el salvia, el menta y el oliva apagado",
+      "Los verdes oscuros pueden ocultar los pendientes muy pequeños, especialmente con el pelo suelto",
+      "El satén, las lentejuelas y el encaje piden siluetas de pendientes más limpias"
     ],
-    "image": "/blog-images/blog-image-95.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Selector de joyas de vestido verde",
+      "heading": "Respuesta rápida",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como herramienta principal para tomar decisiones de estilo."
+          "text": "Con un vestido verde esmeralda, botella o bosque, considere pendientes colgantes en oro amarillo, pendientes de botón con diamantes en tonos blancos o plateados, pendientes de aro o un diseño geométrico definido. Para el salvia y el menta, elija pendientes de botón discretos, pendientes colgantes cortos o pendientes con motivos, en un metal que combine con el subtono del vestido. El oliva suele coordinar con tonos cálidos de oro amarillo, mientras que los tonos plateados pueden crear un contraste intencionado."
         },
+        {
+          "type": "paragraph",
+          "text": "Si el vestido es sencillo, los pendientes pueden aportar más forma o movimiento. Si tiene brillo satinado, lentejuelas, encaje, bordados o un estampado llamativo, elija pendientes más depurados. Haga que los pendientes o el collar sean el foco principal de las joyas."
+        }
+      ]
+    },
+    {
+      "heading": "Selector de joyas para vestidos verdes",
+      "content": [
         {
           "type": "table",
           "headers": [
-            "Estilo de vestido verde",
-            "Mejor Dirección de Joyería",
-            "Dirección IWJ recomendada"
+            "Vestido verde",
+            "Tipo de pendiente",
+            "Orientación del metal"
           ],
           "rows": [
             [
-              "vestido verde esmeralda",
-              "Gotas de oro, aros o aretes atrevidos",
-              "Orsola, Pave Aros, Lusso"
+              "Verde esmeralda",
+              "Pendientes colgantes, de aro, de botón o geométricos",
+              "Oro amarillo para aportar calidez; blanco o plateado para crear contraste"
             ],
             [
-              "vestido verde salvia",
-              "Pendientes suaves con forma de gota, tachuelas o mariposas",
-              "Concetta Short, Cadenza S, Farfalla"
+              "Verde salvia",
+              "Pendientes de botón, colgantes cortos o con forma de mariposa",
+              "Oro amarillo, oro rosa o blanco o plateado según el subtono"
             ],
             [
-              "vestido verde oliva",
-              "Aros, tachuelas medianas o gotas de oro",
-              "Pave Hoops, Cadenza M, Orsola"
+              "Verde oliva",
+              "Pendientes de aro, de botón o colgantes",
+              "Oro amarillo para coordinar; plateado para contrastar"
             ],
             [
-              "vestido verde menta",
-              "Aretes de oro rosa, tono blanco/plateado o diamantes suaves",
-              "Farfalla, Cadenza S, Laluce"
+              "Verde menta",
+              "Pendientes de botón pequeños, colgantes cortos o aros discretos",
+              "Blanco o plateado, oro rosa u oro amarillo delicado"
             ],
             [
-              "vestido verde bosque",
-              "Gotas de oro, gotas largas o pendientes atrevidos",
-              "Orsola, Concetta Long, Lusso"
+              "Verde bosque",
+              "Pendientes colgantes, pendientes de botón visibles o pendientes protagonistas",
+              "Oro amarillo o blanco o plateado"
             ],
             [
-              "Vestido raso verde",
-              "Pendientes colgantes o tachuelas medianas",
-              "Orsola, Cadenza M."
+              "Verde botella",
+              "Pendientes colgantes, de aro o de botón con diamantes",
+              "Oro cálido o contraste blanco o plateado frío"
             ],
             [
-              "Vestido de invitada de boda verde",
-              "Pendientes tipo gota, tachuelas o románticos",
-              "Orsola, Cadenza M, Farfalla"
+              "Verde azulado",
+              "Pendientes de botón, colgantes o geométricos",
+              "Blanco o plateado, u oro amarillo"
             ],
             [
-              "vestido de fiesta verde",
-              "Pendientes de aro, colgantes o llamativos",
-              "Pave Aros, Orsola, Lusso"
+              "Verde lima",
+              "Pendientes de botón depurados o aros discretos",
+              "Elija un metal neutro y mantenga la silueta sencilla"
             ],
             [
-              "Vestido verde detallado",
-              "Sementales o abrazos limpios",
-              "Cadenza M, Cadenza S, Amadea"
+              "Satén verde",
+              "Pendientes colgantes, de botón o geométricos",
+              "Combine el subtono y controle el brillo adicional"
             ],
             [
-              "Pila de oreja verde",
-              "Pendiente principal + soporte pequeño",
-              "Orsola + Cadenza S, Pave Hoops + Cadenza S"
+              "Vestido verde con detalles",
+              "Pendientes de botón sencillos",
+              "Mantenga discretos el metal y la forma"
+            ],
+            [
+              "Vestido verde sencillo",
+              "Pendientes colgantes, de aro o un diseño protagonista",
+              "Elija según el subtono y la ocasión"
             ]
           ]
         }
       ]
     },
     {
-      "heading": "Por qué los vestidos verdes combinan bien con las joyas",
+      "heading": "Empiece por el subtono del verde",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-97.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "El verde es un color fuerte en joyería porque combina bien con la calidez y el brillo. El oro hace que el verde se sienta rico y pulido. Los pendientes de diamantes alegran el conjunto. Las joyas blancas o plateadas pueden hacer que el verde parezca más limpio y formal. El oro rosa suaviza los verdes más claros y funciona bien para un estilo romántico."
+              "text": "Los nombres de los colores no siempre revelan cómo se verá un vestido. Dos vestidos etiquetados como esmeralda pueden contener distintas cantidades de azul o amarillo."
+            },
+            {
+              "type": "subheading",
+              "text": "Verde cálido"
             },
             {
               "type": "paragraph",
-              "text": "La mejor joyería depende del tono verde. El verde esmeralda y el verde bosque pueden soportar joyas más fuertes. La salvia y la menta suelen verse mejor con aretes más suaves. El verde oliva combina mejor con tonos metálicos cálidos. Los vestidos de satén verde necesitan equilibrio porque la tela ya refleja la luz."
-            },
-            {
-              "type": "paragraph",
-              "text": "La regla principal es simple: si el vestido verde es atrevido y sencillo, las joyas pueden ser más fuertes. Si el vestido ya tiene detalles, estampados, lentejuelas, encaje o drapeados pesados, elige aretes más limpios."
-            },
-            {
-              "type": "see-also",
-              "text": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa",
-              "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+              "text": "Los verdes cálidos contienen subtonos amarillos, marrones u oliva perceptibles: oliva, musgo, caqui, aguacate, algunos verdes bosque y el verde amarillento. Los tonos de oro amarillo suelen coordinar con estos subtonos. El oro rosa puede funcionar con verdes cálidos apagados o suaves. Los tonos blancos o plateados también sirven si busca un contraste más marcado."
             }
           ]
+        },
+        {
+          "type": "subheading",
+          "text": "Verde frío"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los verdes fríos contienen más azul o gris: verde azulado, azul verdoso, menta, algunos verdes esmeralda, salvia frío y pino oscuro. Las joyas blancas o plateadas pueden repetir esa cualidad fría. El oro amarillo crea un contraste más cálido, no una combinación tonal directa."
+        },
+        {
+          "type": "subheading",
+          "text": "Verde neutro o mixto"
+        },
+        {
+          "type": "paragraph",
+          "text": "Algunos vestidos se sitúan entre los tonos cálidos y fríos. En ese caso, fíjese en las joyas que ya lleva, los herrajes del vestido, los zapatos, el bolso u otros accesorios para decidir el metal."
         }
       ]
     },
     {
-      "heading": "Dorado, plateado o dorado rosa con un vestido verde",
+      "heading": "Oro, plata u oro rosa con un vestido verde",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "El dorado suele ser el color metálico más sencillo con un vestido verde, especialmente con tonos esmeralda, oliva, bosque y verde cálido. Las joyas blancas o plateadas funcionan mejor cuando el vestido verde se siente fresco, formal o moderno. El oro rosa es más fuerte con tonos verdes más suaves como el salvia, la menta y el verde pastel."
-        },
         {
           "type": "table",
           "headers": [
-            "Color metálico",
-            "Sensación con vestidos verdes",
-            "Los mejores tonos verdes"
+            "Color del metal",
+            "Efecto con verde",
+            "Tonos verdes que puede considerar"
           ],
           "rows": [
             [
-              "oro amarillo",
-              "Cálido, rico, clásico y listo para la noche.",
-              "Esmeralda, oliva, bosque, salvia, verde oscuro."
+              "Oro amarillo",
+              "Aporta calidez y contraste",
+              "Esmeralda, oliva, musgo, botella y bosque"
             ],
             [
-              "Tono blanco o plateado",
-              "Limpio, luminoso, moderno y formal.",
-              "Menta, verde frío, verde azulado, verde intenso"
+              "Blanco o plateado",
+              "Crea un contraste más frío y limpio",
+              "Menta, verde azulado, pino, azul verdoso y esmeralda frío"
             ],
             [
-              "oro rosa",
-              "Suave, romántica y femenina.",
-              "Salvia, menta, verde pastel, oliva suave"
+              "Oro rosa",
+              "Crea una transición más suave",
+              "Salvia, menta, oliva apagado y verde pastel"
             ],
             [
-              "metales mixtos",
-              "Moderno y creativo",
-              "Vestidos minimalistas y pendientes verdes"
+              "Metales combinados",
+              "Aporta contraste sin decantarse por una temperatura",
+              "Vestidos verdes sencillos con pocos adornos"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para el estilo IWantJewels, el oro amarillo es más fuerte para Orsola, Pave Hoops y Lusso con vestidos verdes. El oro rosa es más fuerte para Farfalla, Alidi Farfalla y Concetta Short con conjuntos verdes más suaves. El estilo blanco o plateado funciona bien para Cadenza M, Laluce y Concetta Long cuando el look debe parecer limpio y formal."
+          "text": "El color del metal es solo una parte de la decisión. Un pendiente grande de oro amarillo y un pendiente de botón pequeño del mismo metal producirán resultados muy distintos. Considere la forma, las dimensiones y el movimiento, además del color."
+        },
+        {
+          "type": "see-also",
+          "text": "Pendientes con diamantes de laboratorio en oro amarillo, blanco y rosa",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Joyas según el tono de verde",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Verde esmeralda"
+        },
+        {
+          "type": "paragraph",
+          "text": "El verde esmeralda tiene suficiente profundidad de color para admitir joyas llamativas, pero también importa la confección del vestido. Con un vestido esmeralda sencillo, considere pendientes colgantes, pendientes de aro medianos, diseños geométricos, pendientes de botón con diamantes visibles o un único diseño protagonista. Si el vestido esmeralda tiene lentejuelas, abalorios, encaje o un escote dramático, opte por pendientes de botón o un diseño colgante discreto."
+        },
+        {
+          "type": "paragraph",
+          "text": "El oro amarillo crea un contraste cálido con el esmeralda. Los tonos blancos o plateados producen un efecto más frío y marcado. El oro rosa puede funcionar cuando el esmeralda es apagado o cuando ya aparecen accesorios de oro rosa en el conjunto."
+        },
+        {
+          "type": "subheading",
+          "text": "Verde salvia"
+        },
+        {
+          "type": "paragraph",
+          "text": "El salvia es un verde apagado que suele incluir subtonos grises, amarillos o azules. Por eso, no debe combinarse automáticamente con un único metal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para un vestido salvia romántico o floral, considere pendientes colgantes cortos, pendientes con forma de mariposa o pendientes de botón discretos. En un vestido salvia de satén liso o de corte sastre, los pendientes de aro o geométricos pueden aportar un aire más contemporáneo. Un vestido salvia con encaje, bordados o un escote elaborado suele necesitar pendientes más pequeños."
+        },
+        {
+          "type": "subheading",
+          "text": "Verde oliva"
+        },
+        {
+          "type": "paragraph",
+          "text": "El oliva contiene subtonos amarillos o marrones y suele coordinar con colores de metal cálidos. Los pendientes de aro aportan una curva definida, mientras que los colgantes pueden dar al vestido oliva un aire más apropiado para una ocasión especial. Los pendientes de botón funcionan cuando el vestido tiene detalles utilitarios, botones, estampados o herrajes visibles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si el vestido tiene una hebilla, cremallera o botones metálicos, considere si las joyas deben coordinar con esos herrajes."
+        },
+        {
+          "type": "subheading",
+          "text": "Verde menta"
+        },
+        {
+          "type": "paragraph",
+          "text": "El menta es claro y suele ser frío, aunque algunos vestidos menta contienen más amarillo. Los pendientes de botón pequeños, los colgantes cortos y los aros discretos mantienen las joyas proporcionadas a la luminosidad del color. Las formas de mariposa o flor pueden funcionar con conjuntos suaves, mientras que los pendientes geométricos aportan contraste a un vestido menta minimalista."
+        },
+        {
+          "type": "subheading",
+          "text": "Verde bosque y botella"
+        },
+        {
+          "type": "paragraph",
+          "text": "El verde bosque y el botella crean un fondo más profundo para las joyas. Los pendientes pequeños pueden verse menos, sobre todo con el pelo largo o con iluminación nocturna. Considere un diseño de botón, colgante, aro o geométrico definido, con suficiente anchura visible o movimiento para destacar. Esto no significa que los pendientes deban ser grandes."
+        },
+        {
+          "type": "subheading",
+          "text": "Verde azulado y azul verdoso"
+        },
+        {
+          "type": "paragraph",
+          "text": "El verde azulado se sitúa entre el azul y el verde, por lo que puede combinar tanto con joyas frías como cálidas. Los tonos blancos o plateados repiten su lado más frío. El oro amarillo crea contraste y puede hacer que el componente verde parezca más cálido. El oro rosa funciona con verdes azulados más suaves o apagados. Como el verde azulado ya tiene un color intenso, use una silueta sencilla si el vestido también tiene brillo, estampado o adornos."
+        }
+      ]
+    },
+    {
+      "heading": "Combine las joyas con el tejido del vestido",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Satén o seda verde"
+        },
+        {
+          "type": "paragraph",
+          "text": "El satén y la seda reflejan la luz y crean pliegues visibles. Un vestido de satén verde sencillo admite pendientes colgantes o geométricos, mientras que un vestido fruncido, con escote drapeado o adornado suele necesitar pendientes de botón o colgantes más cortos."
+        },
+        {
+          "type": "see-also",
+          "text": "Joyas para llevar con vestidos de satén y seda",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Terciopelo verde"
+        },
+        {
+          "type": "paragraph",
+          "text": "El terciopelo absorbe y refleja la luz de forma distinta según la dirección del pelo y la iluminación. Los pendientes de botón con diamantes definidos, los colgantes o las formas metálicas limpias pueden destacar sobre la profundidad del tejido. No dé por hecho que el terciopelo siempre requiere pendientes grandes: el escote y el peinado también determinan la escala."
+        },
+        {
+          "type": "subheading",
+          "text": "Encaje verde"
+        },
+        {
+          "type": "paragraph",
+          "text": "El encaje ya aporta dibujo y textura. Use pendientes de botón o colgantes discretos, especialmente cuando el encaje rodee el cuello o los hombros. Compruebe que los pendientes y las pulseras no tengan engastes o bordes elevados que puedan engancharse en el tejido."
+        },
+        {
+          "type": "subheading",
+          "text": "Lentejuelas o tejido metálico verde"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las lentejuelas crean múltiples superficies reflectantes. Elija pendientes de botón depurados o una silueta geométrica discreta, en lugar de añadir varias piezas de joyería igualmente visibles."
+        },
+        {
+          "type": "subheading",
+          "text": "Tejido verde floral o estampado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Coordine la joyería con un elemento del estampado en lugar de intentar combinar todos los colores. Elija pendientes sencillos cuando el estampado sea grande o tenga mucho contraste."
+        }
+      ]
+    },
+    {
+      "heading": "Pendientes para llevar con un vestido verde",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Pendientes de botón"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de botón combinan con vestidos elaborados, escotes altos y conjuntos en los que el collar debe ser el protagonista. Su visibilidad depende del diámetro, la disposición de las piedras y cuánto sobresalen de la oreja. Un pendiente de botón pequeño aporta un brillo discreto. Uno más grande o agrupado puede seguir destacando sobre un tejido verde oscuro sin añadir el movimiento de un pendiente colgante."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes colgantes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes colgantes aportan una línea vertical y movimiento. Combinan con vestidos sencillos de color esmeralda, verde bosque, verde botella o satén, especialmente cuando el escote es abierto. Compruebe la longitud total, el ancho, el peso y el cierre, en lugar de basarse solo en las fotografías de la modelo."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes de aro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de aro crean un contorno moderno y pueden combinar con vestidos verde oliva, esmeralda, verde azulado y vestidos de fiesta sencillos. La idoneidad depende del diámetro exterior, el diámetro interior, el grosor, el peso y el cierre. No clasifique un pendiente que no sea circular como pendiente de aro o aros pequeños (huggies) sin confirmar su estructura."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes de mariposa y flor"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes con motivos pueden complementar vestidos verde salvia, menta y verdes con estampado floral. Si los pendientes ya tienen una forma reconocible, mantenga el collar discreto."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes geométricos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes geométricos contrastan con los tejidos verdes suaves o fluidos. Pueden combinar con vestidos minimalistas, sastrería, satén y siluetas modernas tipo corsé."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes protagonistas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un diseño protagonista funciona cuando el vestido verde es lo bastante sencillo para dejarle espacio. Con encaje, lentejuelas, bordados, estampados o un escote muy estructurado, elija un pendiente más discreto."
+        },
+        {
+          "type": "see-also",
+          "text": "Pendientes statement atrevidos: guía de estilo",
+          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Combine la joyería con el escote y el peinado",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Escote del vestido verde",
+            "Orientación para las joyas"
+          ],
+          "rows": [
+            [
+              "Escote en V",
+              "Pendientes colgantes o de botón; el colgante puede seguir la forma de la V"
+            ],
+            [
+              "Corazón",
+              "Pendientes de botón, colgantes cortos o pendientes con motivos"
+            ],
+            [
+              "Bardot",
+              "Pendientes colgantes, de aro o un pendiente protagonista si el vestido es sencillo"
+            ],
+            [
+              "Palabra de honor",
+              "Pendientes colgantes, de aro, de botón visibles o un collar"
+            ],
+            [
+              "Cuello alto",
+              "Pendientes de botón, de aro o geométricos; normalmente sin collar"
+            ],
+            [
+              "Halter",
+              "Pendientes de botón o colgantes de longitud moderada; normalmente sin collar"
+            ],
+            [
+              "Escote cuadrado",
+              "Pendientes de botón, colgantes o de aro; collar corto si hay espacio"
+            ],
+            [
+              "Escote drapeado",
+              "Pendientes de botón o colgantes cortos; evite un collar que se enganche en los pliegues"
+            ],
+            [
+              "Un solo hombro",
+              "Pendientes de botón o una única silueta clara; mantenga el collar discreto"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Llevar el pelo recogido deja más oreja al descubierto y puede favorecer los pendientes colgantes, de aro o geométricos. El pelo suelto puede cubrir parcialmente los diseños pequeños. Tenga en cuenta el ancho visible del pendiente, la longitud total, la textura del cabello, los bordes del engaste, el cierre, la posición del piercing y si el estilo seguirá siendo visible en las fotografías."
+        },
+        {
+          "type": "paragraph",
+          "text": "No dé por hecho que un pendiente más pesado o grande será adecuado simplemente porque lleva el pelo suelto."
+        },
+        {
+          "type": "see-also",
+          "text": "Qué joyas llevar con un vestido de escote en V",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "Joyas para un escote corazón",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        }
+      ]
+    },
+    {
+      "heading": "Joyería según la ocasión",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Vestido verde para una boda"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para una boda, elija la joyería teniendo en cuenta el lugar, la formalidad, los detalles del vestido y la hora del día."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "El verde esmeralda admite pendientes colgantes o de botón definidos",
+            "El verde salvia puede combinar con pendientes colgantes cortos, de botón o con motivos",
+            "El verde oliva puede combinar con pendientes de aro o colgantes",
+            "El verde menta puede combinar con pendientes de botón discretos o colgantes cortos",
+            "Un vestido verde de satén requiere equilibrio, porque el tejido ya refleja la luz",
+            "Un vestido estampado o de encaje suele necesitar pendientes más depurados"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "No trate todos los vestidos verdes de invitada de boda como si fueran formales. Una ceremonia urbana, una boda de día en un jardín y una recepción nocturna pueden requerir distintos niveles de visibilidad de la joyería."
+        },
+        {
+          "type": "subheading",
+          "text": "Vestido verde de fiesta"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un vestido verde de fiesta sencillo admite pendientes colgantes, de aro, geométricos o un diseño protagonista. Un vestido de fiesta con lentejuelas, acabado metálico o muchos adornos suele necesitar pendientes de botón. Si los pendientes son el centro de atención, prescinda del collar o elija una cadena fina. Si el collar es el protagonista, opte por pendientes más pequeños."
         },
         {
           "type": "see-also",
@@ -177,977 +476,136 @@
       ]
     },
     {
-      "heading": "Los mejores aretes para un vestido verde esmeralda",
+      "heading": "¿Collar o sin collar?",
       "content": [
         {
           "type": "paragraph",
-          "text": "El verde esmeralda es rico, atrevido y listo para la noche. Por lo general, luce mejor con joyas de oro, diamantes brillantes y aretes que tengan suficiente presencia para equilibrar la fuerza del color."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los pendientes colgantes funcionan muy bien porque añaden movimiento y elegancia. Los aros añaden una forma moderna. Los aretes atrevidos y llamativos pueden funcionar cuando el vestido esmeralda es simple. Las tachuelas medianas quedan mejor cuando el vestido ya tiene detalle."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de vestido verde esmeralda",
-            "Mejor dirección de aretes",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "vestido esmeralda sencillo",
-              "Pendientes colgantes o atrevidos",
-              "Orsola, Lusso"
-            ],
-            [
-              "Vestido satén esmeralda",
-              "Pendientes colgantes o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "vestido de fiesta esmeralda",
-              "Aros, colgantes o pendientes atrevidos",
-              "Pave Aros, Orsola, Lusso"
-            ],
-            [
-              "Vestido de invitada de boda esmeralda",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Vestido esmeralda detallado",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "vestido formal esmeralda",
-              "Caídas largas o tachuelas refinadas",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Vestido esmeralda con escote en pico",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Joyas para vestidos con cuello en V",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Los mejores pendientes para un vestido verde salvia",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El verde salvia se siente suave, elegante y discreto. Por lo general, funciona mejor con joyas más suaves que con piezas llamativas muy pesadas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes de oro rosa, oro amarillo y delicados diamantes combinan a la perfección con la salvia. Los aretes de mariposa pueden hacer que la salvia se sienta romántica, mientras que los pequeños pernos y las delicadas gotas mantienen la apariencia limpia. Para bodas y estilismo de damas de honor, Cadenza S, Concetta Short y Farfalla son especialmente fuertes."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-99.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Estilo de vestido verde salvia",
-                "Mejor dirección de aretes",
-                "Dirección de producto"
-              ],
-              "rows": [
-                [
-                  "Vestido de invitada de boda salvia",
-                  "Gotas suaves o tachuelas medianas",
-                  "Concetta Short, Cadenza M"
-                ],
-                [
-                  "vestido de dama de honor salvia",
-                  "Pequeños tachuelas o gotas delicadas",
-                  "Cadenza S, Concetta Corto"
-                ],
-                [
-                  "Vestido de raso salvia",
-                  "Aretes colgantes o tachuelas suaves",
-                  "Orsola, Cadenza S."
-                ],
-                [
-                  "Vestido salvia romántico",
-                  "Pendientes de mariposa",
-                  "Farfalla, Alidi Farfalla"
-                ],
-                [
-                  "Vestido floral salvia",
-                  "Pendientes de mariposa o tachuelas pequeñas",
-                  "Farfalla, Cadenza S."
-                ],
-                [
-                  "vestido de fiesta salvia",
-                  "Gotas o aros",
-                  "Orsola, pavimenta aros"
-                ],
-                [
-                  "Vestido minimalista salvia",
-                  "Studs o aretes minimalistas",
-                  "Cadenza S, Laluce"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de pendientes minimalistas",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Los mejores aretes para un vestido verde oliva",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El verde oliva se siente cálido, terroso y elegante. Por lo general, combina mejor con el oro amarillo porque el oro resalta la calidez del verde."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aros funcionan especialmente bien con el olivo porque le dan forma y brillo. Las tachuelas medianas son buenas para un look limpio todos los días o para la cena. Los aretes colgantes funcionan cuando el vestido verde oliva es más elegante o está listo para un evento."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de vestido verde oliva",
-            "Mejor dirección de aretes",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "vestido casual verde oliva",
-              "Aros o abrazos",
-              "Pave Aros, Amadea"
-            ],
-            [
-              "Vestido de cena verde oliva",
-              "Studs o gotas medianas",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Vestido de raso verde oliva",
-              "Gotas o aros",
-              "Orsola, pavimenta aros"
-            ],
-            [
-              "Vestido de fiesta verde oliva",
-              "Aros o aretes atrevidos",
-              "Pave Aros, Lusso"
-            ],
-            [
-              "Vestido de invitada de boda verde oliva",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Vestido verde oliva detallado",
-              "Sementales o abrazos",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Vestido minimalista oliva",
-              "Aros o montantes limpios",
-              "Pave Aros, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de aro versus aretes Huggie",
-          "href": "/resources/earring-style-guides/hoop-vs-huggie-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Los mejores aretes para un vestido verde menta",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El verde menta se siente fresco, ligero y juvenil. Por lo general, luce mejor con joyas más suaves, de tono blanco/plateado, oro rosa u oro amarillo delicado."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los tachuelas pequeñas, los aretes minimalistas, los aretes de mariposa y las gotas delicadas combinan bien con la menta. Los aretes muy atrevidos pueden dominar el color menta a menos que el vestido sea sencillo y el evento esté centrado en la fiesta."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de vestido verde menta",
-            "Mejor dirección de aretes",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Vestido de invitada de boda color menta",
-              "Gotas suaves o tachuelas pequeñas",
-              "Concetta Short, Cadenza S"
-            ],
-            [
-              "Vestido de dama de honor color menta",
-              "Pendientes pequeños o pendientes delicados",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Vestido de raso menta",
-              "Gotas suaves o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Vestido romántico color menta",
-              "Pendientes de mariposa",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "vestido de fiesta menta",
-              "Aros o gotas suaves",
-              "Pave Aros, Orsola"
-            ],
-            [
-              "Vestido minimalista menta",
-              "Pendientes o tachuelas minimalistas",
-              "Laluce, Cadenza S."
-            ],
-            [
-              "Vestido floral menta",
-              "Pendientes de mariposa o tachuelas pequeñas",
-              "Farfalla, Cadenza S."
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Joyas para escote corazón",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
-        }
-      ]
-    },
-    {
-      "heading": "Los mejores pendientes para un vestido de satén verde",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El satén verde ya tiene brillo y fuerza de color, por lo que las joyas deben aportar equilibrio."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes colgantes suelen ser la opción más fuerte porque agregan movimiento y combinan con el flujo del satén. Las tachuelas medianas son más seguras cuando el vestido de satén ya tiene un escote espectacular o una caída fuerte. Los aros funcionan bien para una apariencia moderna de satén verde. Los aretes atrevidos y llamativos funcionan mejor cuando el vestido es sencillo."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de vestido de satén verde",
-            "Mejor dirección de aretes",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Vestido satén esmeralda",
-              "Gotas o aros de oro",
-              "Orsola, pavimenta aros"
-            ],
-            [
-              "Vestido de raso salvia",
-              "Gotas suaves o tachuelas",
-              "Concetta Short, Cadenza S"
-            ],
-            [
-              "Vestido de raso verde oliva",
-              "Gotas o aros",
-              "Orsola, pavimenta aros"
-            ],
-            [
-              "Vestido de raso menta",
-              "Gotas suaves o tachuelas medianas",
-              "Concetta Short, Cadenza M"
-            ],
-            [
-              "Vestido lencero de raso verde",
-              "Pendientes colgantes",
-              "Úrsola"
-            ],
-            [
-              "Vestido de raso verde con cuello alto",
-              "Studs o aros",
-              "Cadenza M, Pave Aros"
-            ],
-            [
-              "Vestido de fiesta de raso verde",
-              "Gotas, aros o aretes atrevidos",
-              "Orsola, Pave Aros, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Joyas con vestido de raso",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Joyas para vestidos de invitadas de boda verdes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El verde es un hermoso color para invitadas a una boda porque puede resultar elegante sin parecer nupcial. Las joyas deben coincidir con el tono de la sombra."
-        },
-        {
-          "type": "paragraph",
-          "text": "El verde esmeralda puede llevar gotas de oro o tachuelas de diamantes medianas. La salvia y la menta combinan mejor con aretes más suaves, diseños de mariposas o gotas delicadas. El olivo combina bien con aros o gotas de oro. Si el vestido tiene estampados o detalles, mantén los aretes más limpios."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-101.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Vestido de invitada de boda verde",
-                "Mejor Dirección de Joyería",
-                "Dirección de producto"
-              ],
-              "rows": [
-                [
-                  "Vestido de invitada de boda esmeralda",
-                  "Gotas de oro o tachuelas medianas",
-                  "Orsola, Cadenza M."
-                ],
-                [
-                  "Vestido de invitada de boda salvia",
-                  "Pendientes de gotas suaves o de mariposa",
-                  "Concetta Short, Farfalla"
-                ],
-                [
-                  "Vestido de invitada de boda verde oliva",
-                  "Aros o gotas de oro",
-                  "Pave Aros, Orsola"
-                ],
-                [
-                  "Vestido de invitada de boda color menta",
-                  "Pequeños tachuelas o gotas delicadas",
-                  "Cadenza S, Concetta Corto"
-                ],
-                [
-                  "Vestido de invitada de novia de raso verde",
-                  "Pendientes colgantes",
-                  "Úrsola"
-                ],
-                [
-                  "Vestido de invitada de boda floral verde",
-                  "Pendientes o tachuelas de mariposa",
-                  "Farfalla, Cadenza S."
-                ],
-                [
-                  "Vestido de invitada de boda verde detallado",
-                  "Sementales o abrazos",
-                  "Cadenza M, Amadea"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio para bodas",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Joyas para vestidos de fiesta verdes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los vestidos de fiesta verdes pueden llevar pendientes más fuertes, sobre todo en color esmeralda, verde bosque o verde satinado."
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige Lusso si los pendientes deben convertirse en el protagonista principal. Elige Orsola si quieres un movimiento elegante. Elija Pave Hoops si desea una forma moderna. Elige Cadenza M si el vestido verde ya tiene detalles y necesita un brillo limpio."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de vestido de fiesta verde",
-            "Mejor Dirección de Joyería",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "vestido de fiesta verde sencillo",
-              "Pendientes o gotas llamativos",
-              "Lusso, Orsola"
-            ],
-            [
-              "vestido de fiesta esmeralda",
-              "Aros, colgantes o pendientes atrevidos",
-              "Pave Aros, Orsola, Lusso"
-            ],
-            [
-              "Vestido de fiesta de raso verde",
-              "Gotas o aros",
-              "Orsola, pavimenta aros"
-            ],
-            [
-              "Vestido de fiesta verde bosque",
-              "Pendientes largos o atrevidos",
-              "Concetta Long, Lusso"
-            ],
-            [
-              "Vestido verde lentejuelas",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "vestido verde de cumpleaños",
-              "Pendientes, gotas o tachuelas de mariposa",
-              "Farfalla, Orsola, Cadenza M."
-            ],
-            [
-              "Vestido cóctel verde",
-              "Aros, gotas o tachuelas medianas",
-              "Pave Hoops, Orsola, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de aretes llamativos y atrevidos",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Joyas para vestidos verdes por escote",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El escote ayuda a decidir si deben llevar unos pendientes, un collar o ambos."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Vestido Verde Escote",
-            "Mejor Dirección de Joyería",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "vestido verde escote pico",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Vestido verde cariño",
-              "Pendientes de mariposa o gotas suaves",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "Vestido verde hombros descubiertos",
-              "Gotas, aros o aretes atrevidos",
-              "Orsola, Pave Aros, Lusso"
-            ],
-            [
-              "Vestido verde cuello alto",
-              "Studs o aros",
-              "Cadenza M, Pave Aros"
-            ],
-            [
-              "Vestido verde halter",
-              "Studs o gotas delgadas",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Vestido verde con escote cuadrado",
-              "Aros, gotas o tachuelas medianas",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Vestido verde sin tirantes",
-              "Pendientes colgantes o atrevidos",
-              "Orsola, Lusso"
-            ],
-            [
-              "Vestido verde cuello vuelto",
-              "Tacos o gotas suaves",
-              "Cadenza M, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes para vestidos con hombros descubiertos",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Joyas para vestidos verdes por peinado",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El peinado cambia la visibilidad de los aretes, especialmente con un color fuerte como el verde."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si el cabello está suelto, las tachuelas, aros y gotas medianas suelen verse mejor. Si el cabello está recogido hacia atrás, los aretes colgantes, los aros y los aretes atrevidos pueden enmarcar maravillosamente el rostro. Los peinados suaves combinan bien con aretes de mariposa y gotas delicadas."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-103.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Peinado",
-                "Mejor Dirección de Joyería",
-                "Dirección de producto"
-              ],
-              "rows": [
-                [
-                  "Cabello suelto",
-                  "Tachuelas, aros o gotas medianas",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Ondas suaves",
-                  "Gotas, aretes de mariposa o tachuelas visibles",
-                  "Orsola, Farfalla, Cadenza M."
-                ],
-                [
-                  "Cola de caballo elegante",
-                  "Aros, colgantes o pendientes atrevidos",
-                  "Pave Aros, Orsola, Lusso"
-                ],
-                [
-                  "moño bajo",
-                  "Gotas, pendientes de mariposa o pendientes atrevidos",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "moño alto",
-                  "Aros, colgantes o pendientes atrevidos",
-                  "Pave Aros, Orsola, Lusso"
-                ],
-                [
-                  "pelo medio recogido",
-                  "Pendientes, abrazos o gotas suaves",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "pelo corto",
-                  "Aretes, aros o aretes atrevidos",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "¿Con collar o sin collar con un vestido verde?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "La decisión sobre el collar depende del escote del vestido y de la elección de los pendientes."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si los aretes son atrevidos o largos, omite el collar o elige una cadena muy delicada. Si los aretes son simples tachuelas, un collar puede volverse más visible. Si el vestido verde tiene escote alto, los pendientes suelen importar más que un collar. Si el vestido tiene un escote en V profundo, un collar delicado puede funcionar con aretes más limpios."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Elección de aretes",
-            "Dirección del collar"
-          ],
-          "rows": [
-            [
-              "Pendientes atrevidos",
-              "Sin collar ni cadena muy delicada."
-            ],
-            [
-              "Pendientes largos",
-              "Sin collar ni colgante simple"
-            ],
-            [
-              "Pendientes de aro",
-              "Collar delicado o sin collar"
-            ],
-            [
-              "Tacos medianos",
-              "El collar puede ser más visible"
-            ],
-            [
-              "Sementales pequeños",
-              "El collar puede liderar el look."
-            ],
-            [
-              "Pendientes de mariposa",
-              "Collar suave y delicado si es necesario."
-            ],
-            [
-              "abrazos",
-              "Un collar simple puede funcionar"
-            ],
-            [
-              "Pendientes minimalistas",
-              "El collar puede convertirse en el punto focal"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para un vestido verde, evita que tanto los aretes como el collar sean demasiado pesados. El verde ya tiene fuerza visual, por lo que un punto focal de joyería claro suele verse mejor."
-        },
-        {
-          "type": "see-also",
-          "text": "Joyas para vestidos con cuello en V",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas para apilar orejas de vestido verde",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un vestido verde queda bien con pendientes si el color del metal y el pendiente principal se eligen con cuidado."
-        },
-        {
-          "type": "paragraph",
-          "text": "Para el verde esmeralda y el verde bosque, las orejeras en tonos dorados se sienten ricas y listas para la noche. Para salvia y menta, el oro rosa o las pilas de tonos blanco/plateado más suaves pueden resultar más delicadas. La pila debe tener una pieza principal y una pieza de soporte más pequeña."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objetivo de pila de vestido verde",
-            "Pieza principal",
-            "Pieza de soporte",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Pila de vestido verde elegante",
-              "Pendiente de gota",
-              "Semental pequeño",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Pila de esmeraldas atrevidas",
-              "Pendiente atrevido",
-              "Semental pequeño",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Pila verde moderna",
-              "aro",
-              "Semental pequeño",
-              "Pave Aros + Cadenza S"
-            ],
-            [
-              "Pila verde clásica",
-              "Semental mediano",
-              "huggie",
-              "Cadenza M + Amadea"
-            ],
-            [
-              "Pila mínima de salvia",
-              "Semental pequeño",
-              "Pendiente minimalista",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Pila verde romántica",
-              "Pendiente de mariposa",
-              "Semental pequeño",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Pila verde bosque formal",
-              "caída larga",
-              "Semental pequeño",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Pila de menta delicada",
-              "Caída corta",
-              "Semental pequeño",
-              "Concetta Short + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Cómo apilar aretes",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Ideas para apilar orejas de diamantes",
-          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio para aros",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Rutas de producto de Green Dress Styling Need",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "Para los pendientes de vestir verdes más seguros"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija los aretes de diamantes Cadenza M. Añaden un brillo visible sin competir con el tono verde."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un elegante movimiento de vestido verde"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige los pendientes colgantes de Orsola. Quedan muy bien con vestidos esmeralda, satinados, de invitada de boda y de noche."
-        },
-        {
-          "type": "subheading",
-          "text": "Para la forma moderna del vestido verde"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija Pave Hoops. Son fuertes para vestidos de fiesta verde oliva, verde esmeralda y trajes verdes sencillos."
-        },
-        {
-          "type": "subheading",
-          "text": "Para looks atrevidos esmeralda o verde bosque"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija aretes atrevidos de Lusso cuando el vestido verde sea simple y los aretes deben llevar."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un peinado romántico con salvia o menta"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige los pendientes de mariposa Farfalla, los pendientes de mariposa Alidi Farfalla o los pendientes cortos Concetta. Combinan bien con trajes de invitados a una boda salvia, menta, verde pastel y románticos."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo formal de vestido verde"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija los pendientes Concetta Long cuando el conjunto necesite una línea larga y refinada, especialmente con vestidos verde bosque, verde esmeralda o vestidos formales de satén."
-        }
-      ]
-    },
-    {
-      "heading": "Recomendaciones de productos de IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Producto",
-            "Mejor papel vestido verde",
-            "Por qué funciona"
-          ],
-          "rows": [
-            [
-              "aretes colgantes de Orsola",
-              "El mejor pendiente de vestido verde en general",
-              "Añade movimiento y brillo."
-            ],
-            [
-              "Aros de pavimentación",
-              "La mejor opción de forma moderna.",
-              "Combina bien con vestidos verde oliva, esmeralda y de fiesta."
-            ],
-            [
-              "aretes Cadenza M con diamantes",
-              "La opción de brillo más segura",
-              "Fuerte cuando el vestido verde ya tiene detalle"
-            ],
-            [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "pieza de soporte",
-              "Equilibra gotas, aros y aretes atrevidos"
-            ],
-            [
-              "Pendientes llamativos Lusso",
-              "Opción esmeralda/fiesta más fuerte",
-              "Mejor con vestidos verdes sencillos."
-            ],
-            [
-              "Pendientes mariposa Farfalla",
-              "Estilo romántico de vestido verde",
-              "Funciona bien con salvia, menta y verduras suaves."
-            ],
-            [
-              "Pendientes de mariposa Alidi Farfalla",
-              "Opción romántica con regalos",
-              "Fuerte para cumpleaños y vestidos verdes suaves."
-            ],
-            [
-              "Pendientes cortos Concetta",
-              "Estilismo delicado para invitadas de boda",
-              "Funciona para looks salvia, menta y dama de honor."
-            ],
-            [
-              "Pendientes largos Concetta",
-              "Estilo de vestido verde formal",
-              "Crea una línea de noche refinada."
-            ],
-            [
-              "Pendientes Amadea Huggie",
-              "Pieza de soporte moderna",
-              "Funciona con vestidos detallados y orejeras."
-            ],
-            [
-              "Pendientes minimalistas de diamantes Laluce",
-              "Detalle suave",
-              "Útil con trajes menta, salvia y detallados."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija joyas de vestir verdes por tono. Elija Orsola para un movimiento elegante, Pave Hoops para una forma moderna, Cadenza M para un brillo limpio, Lusso para un estilo esmeralda atrevido y Farfalla o Concetta Short para looks más suaves en color salvia y menta."
-        }
-      ]
-    },
-    {
-      "heading": "Errores comunes que se deben evitar en la joyería de vestir verde",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un error común es tratar todos los vestidos verdes por igual. La esmeralda, la salvia, la oliva y la menta necesitan diferentes estilos de joyería."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es elegir joyas demasiado frescas para un vestido verde cálido. El verde oliva, el esmeralda y el verde bosque suelen quedar mejor con el oro amarillo que con un estilo muy gélido."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un tercer error es llevar pendientes atrevidos con un vestido verde muy detallado. Si el vestido tiene lentejuelas, encaje, bordados o un estampado fuerte, las tachuelas o los abrazos pueden verse más pulidos."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es elegir pendientes demasiado pequeños para un vestido de noche verde oscuro. El verde esmeralda y el verde bosque pueden dominar visualmente los aretes pequeños, especialmente cuando el cabello está suelto."
-        },
-        {
-          "type": "paragraph",
-          "text": "Por último, no ignores la tela. El satén verde necesita joyas equilibradas porque la tela ya tiene brillo, mientras que los vestidos verde mate suelen tener un brillo más fuerte."
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de cuidado de joyas chapadas en oro",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Lista de verificación final de joyería para vestidos verdes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Antes de elegir joyas para un vestido verde, pregunta:"
+          "text": "Lleve collar cuando el escote deje un espacio claro para colocarlo."
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿El tono de verde es esmeralda, salvia, oliva, menta, bosque o pastel?",
-            "¿El vestido es simple o detallado?",
-            "¿La tela es de satén, encaje, lentejuelas, floral, de punto o lisa?",
-            "¿Mi cabello ocultará o mostrará los aretes?",
-            "¿Quiero brillo, movimiento, forma o suavidad?",
-            "¿Los pendientes o el collar deberían ser el momento principal de la joyería?",
-            "¿Llevo collar o debería omitirlo?",
-            "¿El dorado, el tono blanco/plateado o el oro rosa combinan mejor con este tono?",
-            "¿La ocasión es una boda, fiesta, cena o evento formal?",
-            "¿Los aretes son cómodos para todo el evento?",
-            "¿Está el auricular equilibrado con una pieza principal?",
-            "¿Se pueden volver a usar las joyas con otros conjuntos?"
+            "Un escote en V puede combinar con un colgante que siga la forma de la V",
+            "Un escote cuadrado admite un collar más corto, colocado dentro del espacio abierto",
+            "Un vestido palabra de honor puede combinar con un collar o con pendientes visibles",
+            "Un vestido de cuello alto o halter normalmente no necesita collar",
+            "Un escote drapeado suele verse más limpio sin collar",
+            "Un escote elaborado o con cuentas puede aportar ya suficiente decoración"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si no está seguro, elija aretes colgantes de oro para el verde esmeralda o el verde bosque, tachuelas medianas para vestidos verdes detallados y aretes de mariposa o gotas delicadas para el verde salvia y menta."
+          "text": "El collar no debe golpear ni engancharse repetidamente en el borde del vestido."
+        }
+      ]
+    },
+    {
+      "heading": "¿Puede llevar un ear stack con un vestido verde?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sí. Use un pendiente principal y una o dos piezas pequeñas de apoyo. Algunas combinaciones posibles son:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Pendiente colgante con un pendiente de botón pequeño",
+            "Pendiente de aro con un pendiente de botón discreto en el segundo lóbulo",
+            "Pendiente de mariposa con un pendiente de botón de diamante sencillo",
+            "Pendiente geométrico con una pieza más pequeña de metal liso",
+            "Pendiente de botón mediano con otro más pequeño de apoyo"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Mantenga relacionados el acabado del metal y los detalles de diamante, pero no haga que todas las piezas tengan exactamente el mismo tamaño."
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo crear un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Lista de comprobación de joyería para un vestido verde",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Antes de elegir la joyería, confirme:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "El tono exacto de verde",
+                "Si el subtono es cálido, frío o neutro",
+                "El tejido del vestido",
+                "Si el vestido es sencillo o elaborado",
+                "El escote",
+                "El peinado",
+                "Si los pendientes o el collar deben ser los protagonistas",
+                "La altura, el ancho y la proyección del pendiente en milímetros",
+                "El peso de cada pendiente y el peso combinado",
+                "Cierre",
+                "El metal base y el acabado completos",
+                "El tipo de piedra",
+                "Peso en quilates individual y total",
+                "Si el producto se vende por unidad o en pareja",
+                "Si los engastes o los bordes pueden engancharse en el vestido o el cabello"
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Qué joyas debo usar con un vestido verde?",
-      "answer": "La mejor joya para un vestido verde depende del tono. Las joyas de oro combinan bien con la esmeralda, el oliva y el verde bosque. Las joyas más suaves combinan mejor con salvia, menta y verde pastel."
+      "question": "¿Qué joyería debo llevar con un vestido verde?",
+      "answer": "Elija la joyería según el subtono del verde, el tejido y los detalles del vestido. El oro amarillo aporta calidez, los tonos blancos o plateados crean un contraste más frío y el oro rosa puede suavizar los verdes apagados."
     },
     {
-      "question": "¿Qué pendientes quedan mejor con un vestido verde?",
-      "answer": "Los aretes colgantes, los aros, los aretes de diamantes medianos, los aretes de mariposa y los aretes llamativos pueden combinar con un vestido verde. Elija según el tono, la tela y la ocasión."
+      "question": "¿Qué pendientes combinan con un vestido verde?",
+      "answer": "Los pendientes de botón favorecen los vestidos verdes elaborados, mientras que los pendientes colgantes, de aro y geométricos pueden combinar con conjuntos más sencillos. Los pendientes con motivos complementan los vestidos verde salvia, menta o con estampado floral."
     },
     {
-      "question": "¿Las joyas de oro combinan con un vestido verde?",
-      "answer": "Sí, las joyas de oro son una de las mejores opciones con un vestido verde porque añaden calidez, riqueza y brillo."
+      "question": "¿Combina la joyería dorada con un vestido verde?",
+      "answer": "Los tonos de oro amarillo pueden aportar calidez a los verdes esmeralda, oliva, botella y bosque. Compruebe el subtono del vestido en lugar de asumir que todos los verdes requieren oro."
     },
     {
-      "question": "¿Las joyas de plata combinan con un vestido verde?",
-      "answer": "Sí, las joyas blancas o plateadas pueden combinar bien con tonos verdes fríos, tonos verde marino, vestidos verdes formales y conjuntos modernos."
+      "question": "¿Combina la joyería plateada con un vestido verde?",
+      "answer": "La joyería blanca o de tono plateado puede crear un contraste limpio con el menta, el verde azulado, el verde pino y los tonos esmeralda más fríos. También puede contrastar deliberadamente con un verde más cálido."
     },
     {
-      "question": "¿El oro rosa combina con un vestido verde?",
-      "answer": "El oro rosa combina mejor con tonos verdes más suaves como salvia, menta, verde pastel y oliva suave."
+      "question": "¿Combina la joyería de oro rosa con un vestido verde?",
+      "answer": "Los tonos de oro rosa pueden suavizar el verde salvia, menta, pastel y oliva apagado. El resultado depende del subtono del vestido y del color del resto de los accesorios."
     },
     {
-      "question": "¿Qué pendientes debo usar con un vestido verde esmeralda?",
-      "answer": "Los vestidos de color verde esmeralda combinan bien con aretes colgantes de oro, aros, tachuelas de diamantes medianos o aretes llamativos y atrevidos."
+      "question": "¿Qué pendientes debo llevar con un vestido verde esmeralda?",
+      "answer": "Considere pendientes colgantes, de aro, de botón visibles o geométricos. Elija pendientes de botón más depurados cuando el vestido esmeralda tenga lentejuelas, encaje, bordados o un escote elaborado."
     },
     {
-      "question": "¿Qué joyas debo usar con un vestido verde salvia?",
-      "answer": "Los vestidos verde salvia lucen hermosos con gotas suaves, pequeños pendientes de diamantes, aretes de mariposa, oro rosa o delicadas joyas de oro amarillo."
+      "question": "¿Qué joyería combina con un vestido verde salvia?",
+      "answer": "El verde salvia puede combinar con oro amarillo, oro rosa o tonos blancos y plateados, según su subtono. Los pendientes de botón, los colgantes cortos y los pendientes con motivos discretos pueden complementar este color apagado."
     },
     {
-      "question": "¿Qué joyas debo usar con un vestido de raso verde?",
-      "answer": "Los vestidos de satén verde combinan bien con aretes colgantes o tachuelas de diamantes medianas. Las gotas añaden movimiento, mientras que las tachuelas mantienen el look limpio."
-    },
-    {
-      "question": "¿Qué joyas deben llevar las invitadas a una boda con un vestido verde?",
-      "answer": "Las invitadas a la boda pueden usar pendientes colgantes, tachuelas medianas, pendientes de mariposa o pendientes delicados con vestidos verdes. La mejor elección depende de si el vestido es esmeralda, salvia, oliva o menta."
-    },
-    {
-      "question": "¿Qué pendientes de IWantJewels quedan mejor con un vestido verde?",
-      "answer": "Orsola, Pave Hoops, Cadenza M, Lusso, Farfalla, Alidi Farfalla, Concetta Short y Concetta Long son opciones de vestidos verdes fuertes dependiendo de si quieres movimiento, forma, brillo, audacia o suavidad."
+      "question": "¿Qué joyería combina con un vestido verde de satén?",
+      "answer": "Un vestido verde de satén sencillo admite pendientes colgantes o geométricos. Elija pendientes de botón o colgantes más cortos si el vestido tiene frunces, drapeados marcados, escote drapeado o adornos."
     }
   ],
   "cta": {
-    "heading": "Un vestido verde puede resultar rico, romántico, terroso o fresco según el tono. Elija gotas de oro para esmeralda y verde bosque, aretes suaves para salvia y menta, aros para atuendos verdes modernos y aretes atrevidos cuando el vestido verde es lo suficientemente simple como para dejar que las joyas lideren.",
-    "body": "Comience con los aretes de diamantes semifinos cultivados en laboratorio de IWantJewels si desea joyas de vestir verdes con brillo de diamantes reales. Elija Orsola para un movimiento elegante, Pave Hoops para una forma moderna, Cadenza M para un brillo limpio, Lusso para un estilo de fiesta atrevido y Farfalla o Concetta Short para looks verdes más suaves y románticos.",
-    "primaryLabel": "Comprar aretes para vestidos verdes",
+    "heading": "Empiece por el subtono del verde y después tenga en cuenta el tejido, el escote y el nivel de detalle. Elija un único punto focal de joyería y mantenga el resto de las piezas como complemento.",
+    "body": "Compruebe las medidas exactas del producto, el peso, los materiales, el cierre y la unidad de venta antes de comprar.",
+    "primaryLabel": "Explore los pendientes de diamantes de laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explorar aretes colgantes",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lee la Guía de Pendientes de Fiesta",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "Qué joyería llevar con un vestido rojo",
+    "secondaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress",
+    "tertiaryLabel": "Qué joyas llevar con un vestido negro",
+    "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
   }
 }

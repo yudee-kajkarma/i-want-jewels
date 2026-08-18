@@ -1,1405 +1,458 @@
 {
   "meta": {
-    "title": "Party Earrings Guide for Women",
-    "description": "Choose party earrings with lab grown diamond studs, drops, hoops, bold earrings, butterfly earrings and styling ideas for dresses."
+    "title": "Party Earrings Guide: What to Wear to Every Event",
+    "description": "Choose earrings for cocktail parties, formal dinners, galas, birthdays and black-tie events. Compare studs, hoops, drops and bolder styles."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-77.jpg",
+    "image": "/blog-images/blog-image-50.jpg",
     "title": "Party Earrings Guide:",
-    "subtitle": "What Earrings to Wear for Parties, Dinners & Evening Outfits",
+    "subtitle": "What Earrings to Wear for Every Event",
     "paragraphs": [
-      "Party earrings should make an outfit feel finished, confident and occasion-ready. The best pair depends on the outfit, not only the event. A simple black dress can carry bold earrings. A satin dress usually looks beautiful with drops or polished studs. A red dress needs balanced sparkle. A green dress works well with gold drops or hoops. A detailed sequin outfit usually needs cleaner earrings so the look does not feel too busy.",
-      "For party styling, earrings often matter more than necklaces because they frame the face, show in photos and work with many necklines. If the earrings are bold, the necklace should usually stay minimal or be skipped. If the earrings are simple studs, the rest of the jewellery can be slightly more visible.",
-      "At IWantJewels, Lusso bold statement earrings, Orsola drop earrings, Pave Hoops, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Concetta Long earrings, Concetta Short earrings, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings, Amadea Huggie earrings and Laluce minimalist diamond earrings all support different party styling needs."
+      "Choosing party earrings is easier when you start with the event and the outfit rather than selecting the most noticeable pair automatically. A cocktail party, birthday dinner, office celebration and black-tie gala do not call for the same level of formality.",
+      "The outfit matters as much as the invitation. A plain dress can carry earrings with a stronger silhouette, while sequins, embroidery, metallic fabric or an elaborate neckline usually benefit from a simpler earring.",
+      "Studs create a concentrated point of light. Hoops add a curved shape. Drop earrings introduce length and movement. Butterfly and geometric earrings add a recognisable design. Bold earrings become the main jewellery feature. The right direction depends on what the rest of the outfit is already doing."
     ],
-    "shopLabel": "Shop Party Earrings",
+    "shopLabel": "Explore Party Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Choose earrings for parties, dinners, birthdays, date nights and evening outfits.",
-      "Decide between bold earrings, drop earrings, hoops, studs, butterfly earrings and huggies.",
-      "Match party earrings to black, red, green, champagne, silver, navy and satin outfits.",
-      "Choose earrings by neckline, hairstyle and dress detail.",
-      "Understand when to wear bold earrings and when to keep jewellery simple.",
-      "Build party ear stack ideas.",
-      "Choose party earrings by metal colour.",
-      "Find IWantJewels product recommendations by outfit and occasion."
+      "Cocktail party — drops, hoops or geometric earrings, depending on the dress",
+      "Formal dinner — studs or restrained drops for definition without dominance",
+      "Gala or black tie — elongated drops, more visible studs or one focal earring",
+      "Plain outfit gives the earrings more presence; sequins and lace need a cleaner shape",
+      "A necklace is optional, not compulsory",
+      "Check dimensions, weight, closure and whether the listing is a pair or a single earring"
     ],
-    "image": "/blog-images/blog-image-18.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Party Earring Selector",
+      "heading": "Quick answer",
       "content": [
         {
           "type": "paragraph",
-          "text": "Use this table as the main styling decision tool."
+          "text": "For a cocktail party, consider drops, hoops or geometric earrings, depending on the dress. For a formal dinner, studs or restrained drops can add definition without making the jewellery dominate. For a gala or black-tie event, elongated drops, more visible studs or a single bold earring can match the formality of the setting."
         },
         {
+          "type": "paragraph",
+          "text": "If the outfit is plain, the earrings can have more presence. If it contains sequins, metallic fabric, lace, strong prints or a detailed neckline, choose a cleaner shape. Before buying, check the earring dimensions, weight, closure, materials and whether the listing refers to one earring or a pair."
+        }
+      ]
+    },
+    {
+      "heading": "Party earring selector",
+      "content": [
+        {
           "type": "table",
-          "headers": [
-            "Party Styling Need",
-            "Best Earring Direction",
-            "Recommended IWJ Direction"
-          ],
+          "headers": ["Event or outfit", "Earring direction", "Why it works"],
           "rows": [
-            [
-              "Bold party look",
-              "Bold statement earrings",
-              "Lusso"
-            ],
-            [
-              "Elegant party outfit",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Modern party styling",
-              "Hoops",
-              "Pave Hoops"
-            ],
-            [
-              "Safe party sparkle",
-              "Medium diamond studs",
-              "Cadenza M"
-            ],
-            [
-              "Minimal party jewellery",
-              "Small studs or minimalist earrings",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Black dress party look",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Red dress party look",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Green dress party look",
-              "Gold drops or hoops",
-              "Orsola, Pave Hoops"
-            ],
-            [
-              "Satin party dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Sequin party outfit",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Birthday party look",
-              "Hoops, drops, butterfly earrings or bold earrings",
-              "Pave Hoops, Orsola, Farfalla, Lusso"
-            ],
-            [
-              "Party ear stack",
-              "Bold/drop/hoop + small stud",
-              "Lusso + Cadenza S, Orsola + Cadenza S, Pave Hoops + Cadenza S"
-            ]
+            ["Cocktail party", "Drops, hoops or geometric earrings", "Adds definition without requiring black-tie formality"],
+            ["Formal dinner", "Studs or restrained drops", "Keeps the overall look controlled"],
+            ["Birthday party", "Hoops, butterfly earrings, drops or a bolder pair", "Can reflect the wearer's personal style"],
+            ["Office party", "Studs, smaller hoops or a clean geometric design", "Creates a polished transition from workwear"],
+            ["Christmas party", "Pavé hoops, drops or a bolder design", "Works with festive fabrics when the outfit remains balanced"],
+            ["New Year celebration", "Hoops, drops or bold earrings", "Provides a more visible evening finish"],
+            ["Gala or awards evening", "Elongated drops, larger studs or one focal earring", "Matches a higher level of formality"],
+            ["Black-tie event", "Drops or a balanced statement design", "Frames the face alongside formal clothing"],
+            ["Simple black dress", "Hoops, drops, geometric or bold earrings", "The simple colour gives the earrings visual space"],
+            ["Sequin or metallic dress", "Studs or clean, restrained drops", "Avoids competing reflective details"],
+            ["Satin dress", "Drops or medium-scale studs", "Adds structure while the fabric supplies shine"],
+            ["Tailored jumpsuit", "Hoops or geometric earrings", "Complements the clean lines of the outfit"]
           ]
         }
       ]
     },
     {
-      "heading": "What Earrings Should You Wear to a Party?",
+      "heading": "Start with the formality of the event",
       "content": [
         {
-          "type": "paragraph",
-          "text": "The best party earrings depend on how much detail the outfit already has. If the outfit is simple, the earrings can be stronger. If the outfit has sequins, metallic fabric, heavy satin, lace, embroidery or a dramatic neckline, cleaner earrings usually look better."
-        },
-        {
-          "type": "paragraph",
-          "text": "Party earrings should also suit the event. A birthday dinner may suit drops or butterfly earrings. A cocktail party may suit hoops or bold earrings. A formal evening party may suit long drops or polished studs. A casual party may only need huggies, small hoops or medium studs."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "What to Check First",
-            "Why It Matters"
-          ],
-          "rows": [
-            [
-              "Outfit detail",
-              "Simple outfits can carry stronger earrings"
-            ],
-            [
-              "Dress colour",
-              "Helps choose gold, white/silver tone or rose gold"
-            ],
-            [
-              "Fabric shine",
-              "Satin, sequins and metallic fabrics need balanced jewellery"
-            ],
-            [
-              "Neckline",
-              "Decides whether drops, hoops or studs work best"
-            ],
-            [
-              "Hairstyle",
-              "Earrings should be visible in photos"
-            ],
-            [
-              "Event type",
-              "Birthday, dinner, cocktail and formal parties need different styling"
-            ],
-            [
-              "Necklace choice",
-              "Bold earrings usually need a quiet neckline"
-            ],
-            [
-              "Comfort",
-              "Party earrings should feel secure for the full event"
-            ]
+          "type": "grid-layout",
+          "imagePosition": "right",
+          "image": "/blog-images/blog-image-42.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "\"Party\" can describe anything from dinner at a friend's home to a black-tie fundraiser. The invitation, venue, time and dress code should therefore guide the first decision."
+            },
+            {
+              "type": "paragraph",
+              "text": "Informal birthday gatherings and house parties allow more flexibility. Hoops, butterfly earrings, geometric shapes and smaller drops can all work, depending on the outfit."
+            },
+            {
+              "type": "paragraph",
+              "text": "Cocktail events sit between informal and formal dressing. They often suit earrings with a visible silhouette, but the jewellery does not need to resemble gala jewellery."
+            }
           ]
         },
         {
           "type": "paragraph",
-          "text": "For IWantJewels, party styling should guide shoppers from outfit type to earring style first, then from earring style to product."
+          "text": "Formal dinners usually call for more restraint than a dance party. Studs and narrower drops can create a deliberate finish without making the outfit appear more formal than the occasion."
+        },
+        {
+          "type": "paragraph",
+          "text": "Galas, awards nights and black-tie events support a greater sense of scale. Longer drops, more visible diamond arrangements or one focal pair can work when the dress and hairstyle give the earrings enough space."
+        }
+      ]
+    },
+    {
+      "heading": "Studs, hoops, drops or bolder earrings?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Each earring type changes the structure of a party outfit differently."
+        },
+        {
+          "type": "table",
+          "headers": ["Earring type", "Visual effect", "Consider it when", "Check before buying"],
+          "rows": [
+            ["Studs", "Concentrated detail close to the lobe", "The dress already contains strong detail", "Face-up diameter, post and backing"],
+            ["Hoops", "Creates a curved outline", "The outfit is sleek, modern or tailored", "Diameter, thickness, weight and closure"],
+            ["Drop earrings", "Adds length and movement", "The dress has an open or simple neckline", "Full drop length, articulation and weight"],
+            ["Butterfly earrings", "Adds a recognisable motif", "The outfit is romantic, floral or softly structured", "Overall width, motif orientation and backing"],
+            ["Geometric earrings", "Adds clean visual structure", "The outfit is minimal or tailored", "Width, projection from the ear and closure"],
+            ["Bold earrings", "Becomes the main jewellery feature", "The outfit is simple enough to support one focal point", "Dimensions, weight and balance"],
+            ["Ear stack", "Creates layered detail", "Multiple piercings are available", "Spacing, post placement and combined scale"]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Studs are not limited to daytime dressing. A more visible stud can work for dinner, a cocktail event or a formal occasion, particularly when the dress already contains sequins, draping or embroidery."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoops generally feel less formal than long drops, although material, scale and diamond placement can change that impression. They work particularly well with jumpsuits, tailored dresses and simple black outfits."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drop earrings create movement and are often a natural option for dinners, receptions and galas. However, full length and articulation should be checked because two drop earrings can look very different in a close-up product photograph."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bold earrings should lead the jewellery look. When they are used, other pieces should usually become quieter."
+        },
+        {
+          "type": "see-also",
+          "text": "Bold statement earrings: styling guide",
+          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Earrings for a cocktail party",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Cocktail-party earrings should create enough definition for an evening outfit without automatically adopting the scale of black-tie jewellery."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drops work when the dress needs movement. Hoops work with tailored or modern clothing. Geometric earrings can complement clean lines, while a bolder pair can work with a plain cocktail dress."
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider the fabric before deciding. A simple crepe, silk or matte dress can support a stronger earring. Sequins, metallic threads, heavy lace or an elaborate neckline generally require less competition."
+        },
+        {
+          "type": "paragraph",
+          "text": "A cocktail dress with a plain neckline can also work without a necklace, allowing the earrings to frame the face. If a necklace is already part of the outfit, reduce the scale of the earrings."
+        }
+      ]
+    },
+    {
+      "heading": "Earrings for a formal dinner",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A formal dinner is usually about polish rather than maximum visual impact. The earrings should support the outfit during seated conversation, dining and photographs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Studs are useful when the dress contains a high neckline, decorative collar, print or strong fabric texture. Restrained drops add length to a plain dress without taking over the whole outfit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Longer earrings may work for a formal dinner when the clothing is simple and the venue is particularly formal. Check whether the earrings come into contact with the neckline when seated or turning the head."
+        },
+        {
+          "type": "paragraph",
+          "text": "If the event falls between business and social dress, smaller hoops, studs or a clean geometric design may be easier to coordinate with tailoring."
+        }
+      ]
+    },
+    {
+      "heading": "Earrings for galas and black-tie events",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Black-tie and gala dressing can support a more formal earring, but scale should still be balanced against the gown."
+        },
+        {
+          "type": "paragraph",
+          "text": "An open neckline, strapless gown or off-shoulder dress can provide space for elongated drops or a more visible design. A high-neck gown may look cleaner with studs, shorter drops or a vertical earring that does not compete with the neckline."
+        },
+        {
+          "type": "paragraph",
+          "text": "A heavily embellished gown rarely needs equally elaborate jewellery. Diamond studs or a narrower drop can provide contrast against sequins, beading or metallic embroidery."
+        },
+        {
+          "type": "paragraph",
+          "text": "If the earrings are intended as the main jewellery feature, consider leaving the necklace out. This keeps attention around the face and avoids crowding the neckline."
+        }
+      ]
+    },
+    {
+      "heading": "Earrings for birthdays, office and Christmas parties",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Birthday parties and celebrations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Birthday-party earrings can reflect more of the wearer's personality because the dress code is often flexible."
+        },
+        {
+          "type": "paragraph",
+          "text": "Butterfly earrings can add a recognisable motif to romantic, floral or softly coloured outfits. Hoops can suit tailored dresses, jumpsuits and modern separates. Drops can add movement to a dinner or evening celebration."
+        },
+        {
+          "type": "paragraph",
+          "text": "A bolder pair may work when the birthday outfit is plain and the wearer wants the earrings to be noticed. If the outfit already contains decorative elements, choose a more contained silhouette. The size of the event also matters — a birthday dinner may call for less scale than a venue with dancing, stage lighting or a more formal dress code."
+        },
+        {
+          "type": "see-also",
+          "text": "How to style butterfly earrings",
+          "href": "/resources/earring-style-guides/how-to-style-butterfly-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Office and Christmas parties"
+        },
+        {
+          "type": "paragraph",
+          "text": "An office party can move directly from a working day into an evening event. The earring should therefore fit the actual setting rather than relying on a general \"day-to-night\" claim."
+        },
+        {
+          "type": "paragraph",
+          "text": "Studs, smaller hoops and clean geometric earrings can work with blazers, tailored dresses and structured separates. For a dedicated evening venue, a drop or more visible hoop may be appropriate if the rest of the outfit remains controlled."
+        },
+        {
+          "type": "paragraph",
+          "text": "Christmas-party outfits frequently include velvet, satin, metallic fabric, sequins or jewel colours. When the fabric already reflects light, choose earrings with a clear outline rather than competing detail. If the outfit is plain black, navy, burgundy or dark green, the earrings can carry more of the visual interest."
+        }
+      ]
+    },
+    {
+      "heading": "Match the earrings to the outfit",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Simple black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A black dress provides a neutral background and can carry hoops, drops, geometric earrings or one focal pair. The neckline and fabric should decide the final scale."
         },
         {
           "type": "see-also",
           "text": "What jewellery to wear with a black dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for Party Outfits",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "The best party earrings are usually bold earrings, drop earrings, hoops, medium studs or clean ear stacks."
+          "type": "subheading",
+          "text": "Satin dress"
         },
         {
           "type": "paragraph",
-          "text": "Bold earrings work when the outfit is simple and the earrings should lead. Drop earrings work when the outfit needs elegance and movement. Hoops work when the look should feel modern. Studs work when the outfit already has strong detail. Butterfly earrings work for softer birthday, romantic or feminine party looks."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Earring Type",
-            "Best Party Use",
-            "IWJ Product Direction"
-          ],
-          "rows": [
-            [
-              "Bold earrings",
-              "Simple dresses, black outfits, statement party looks",
-              "Lusso"
-            ],
-            [
-              "Drop earrings",
-              "Satin dresses, dinners, elegant outfits",
-              "Orsola"
-            ],
-            [
-              "Long drops",
-              "Formal evening parties",
-              "Concetta Long"
-            ],
-            [
-              "Short drops",
-              "Soft party styling",
-              "Concetta Short"
-            ],
-            [
-              "Hoops",
-              "Modern party outfits and jumpsuits",
-              "Pave Hoops"
-            ],
-            [
-              "Medium studs",
-              "Safe sparkle for detailed outfits",
-              "Cadenza M"
-            ],
-            [
-              "Small studs",
-              "Minimal looks and ear stack support",
-              "Cadenza S"
-            ],
-            [
-              "Butterfly earrings",
-              "Romantic birthdays and soft party outfits",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Huggies",
-              "Understated modern party looks",
-              "Amadea"
-            ],
-            [
-              "Minimalist earrings",
-              "Detailed outfits and quiet styling",
-              "Laluce"
-            ]
-          ]
+          "text": "Satin already reflects light. Drops can echo the movement of the material, while studs can balance draping, ruching or a detailed cowl neckline."
         },
         {
           "type": "see-also",
-          "text": "Lab-grown diamond earrings",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings for Parties",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-81.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Bold earrings are best when the outfit is simple enough to let the jewellery become the main focus."
-            },
-            {
-              "type": "paragraph",
-              "text": "Lusso bold statement earrings are the strongest IWantJewels direction for party looks. They work especially well with simple black dresses, sleek jumpsuits, minimal evening outfits, birthday outfits and party looks where the earrings should create the main sparkle moment."
-            },
-            {
-              "type": "paragraph",
-              "text": "Bold earrings should usually be paired with a clean neckline, simple necklace or no necklace. If the outfit already has sequins, heavy print or a dramatic neckline, medium studs or drop earrings may be better."
-            }
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Bold Party Look",
-            "Best Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple black dress",
-              "Bold earrings",
-              "Lusso"
-            ],
-            [
-              "Minimal evening outfit",
-              "Bold earrings",
-              "Lusso"
-            ],
-            [
-              "Birthday party dress",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Sleek jumpsuit",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Strapless party dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Off-shoulder party dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Bold ear stack",
-              "Bold earring + small stud",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Safer bold alternative",
-              "Drop earrings",
-              "Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "What jewellery to wear with a black dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Drop Earrings for Parties",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-83.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Drop earrings are ideal for parties when the outfit needs movement, polish and elegance."
-            },
-            {
-              "type": "paragraph",
-              "text": "Orsola drop earrings are the strongest party drop direction because they can work with satin dresses, black dresses, red dresses, green dresses and dinner outfits. Concetta Long is better for formal evening parties. Concetta Short works for softer birthday outfits, romantic party looks and delicate styling."
-            }
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party Drop Need",
-            "Best Drop Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Elegant party outfit",
-              "Medium drops",
-              "Orsola"
-            ],
-            [
-              "Satin party dress",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Formal evening party",
-              "Long drops",
-              "Concetta Long"
-            ],
-            [
-              "Soft birthday party look",
-              "Short drops",
-              "Concetta Short"
-            ],
-            [
-              "Black party dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Red party dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Green party dress",
-              "Gold drops or hoops",
-              "Orsola, Pave Hoops"
-            ],
-            [
-              "Drop ear stack",
-              "Drop + small stud",
-              "Orsola + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond drop earrings guide",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Hoop Earrings for Parties",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Hoop earrings are strong for parties when the outfit needs visible shape rather than vertical movement."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pave Hoops are the main IWantJewels hoop direction for party styling. They work well with simple dresses, black outfits, green dresses, jumpsuits, high-neck outfits and modern birthday looks. Hoops are also useful in ear stacks when paired with small studs."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party Hoop Need",
-            "Best Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Modern party look",
-              "Hoops",
-              "Pave Hoops"
-            ],
-            [
-              "Party jumpsuit",
-              "Hoops",
-              "Pave Hoops"
-            ],
-            [
-              "Black dress party look",
-              "Hoops, drops or bold earrings",
-              "Pave Hoops, Orsola, Lusso"
-            ],
-            [
-              "Green party dress",
-              "Gold hoops or drops",
-              "Pave Hoops, Orsola"
-            ],
-            [
-              "High-neck party outfit",
-              "Hoops or studs",
-              "Pave Hoops, Cadenza M"
-            ],
-            [
-              "Birthday party look",
-              "Hoops or butterfly earrings",
-              "Pave Hoops, Farfalla"
-            ],
-            [
-              "Hoop ear stack",
-              "Hoop + small stud",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "If hoops feel too strong",
-              "Huggies or studs",
-              "Amadea, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond hoop earrings guide",
-          "href": "/resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Stud Earrings for Parties",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Stud earrings are the safest party choice when the outfit already has detail."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the dress has sequins, metallic fabric, lace, embroidery, heavy print, bold colour or dramatic shape, Cadenza M diamond stud earrings can add polish without overcrowding the look. Cadenza S is better for minimal styling or ear stack support."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party Stud Need",
-            "Best Product Direction",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Safe party sparkle",
-              "Cadenza M",
-              "Polished but not too heavy"
-            ],
-            [
-              "Detailed dress styling",
-              "Cadenza M",
-              "Balances sequins, lace and prints"
-            ],
-            [
-              "Minimal party look",
-              "Cadenza S",
-              "Subtle and clean"
-            ],
-            [
-              "Ear stack support",
-              "Cadenza S",
-              "Works with drops, hoops and bold earrings"
-            ],
-            [
-              "Work-to-party styling",
-              "Cadenza M",
-              "Easy to wear before and after the event"
-            ],
-            [
-              "Party gift",
-              "Cadenza M",
-              "Safe and reusable"
-            ],
-            [
-              "If bold earrings feel too much",
-              "Cadenza M",
-              "Keeps sparkle controlled"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond stud earrings guide",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Butterfly Earrings for Soft Party Looks",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-85.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Butterfly earrings are a strong choice when the party look should feel soft, romantic or meaningful rather than bold."
-            },
-            {
-              "type": "paragraph",
-              "text": "They work especially well for birthdays, anniversaries, date nights, pastel outfits, blush dresses, champagne dresses, floral dresses and soft satin looks. Farfalla and Alidi Farfalla are the strongest IWantJewels products for this direction."
-            }
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Soft Party Look",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Birthday party outfit",
-              "Butterfly earrings or hoops",
-              "Farfalla, Pave Hoops"
-            ],
-            [
-              "Romantic dinner party",
-              "Butterfly earrings or drops",
-              "Farfalla, Orsola"
-            ],
-            [
-              "Blush party dress",
-              "Butterfly earrings",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Champagne party dress",
-              "Butterfly earrings or drops",
-              "Farfalla, Orsola"
-            ],
-            [
-              "Floral party outfit",
-              "Butterfly earrings or small studs",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Soft satin outfit",
-              "Butterfly earrings or short drops",
-              "Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Meaningful party gift",
-              "Butterfly earrings",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Butterfly ear stack",
-              "Butterfly + small stud",
-              "Farfalla + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Birthday jewellery gifts",
-          "href": "/resources/jewellery-gift-guides/birthday-jewellery-gifts-for-her"
-        }
-      ]
-    },
-    {
-      "heading": "Party Earrings by Dress Colour",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Dress colour is one of the easiest ways to choose party earrings."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-64.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Dress Colour",
-                "Best Party Earrings",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Black",
-                  "Bold earrings, drops, hoops or studs",
-                  "Lusso, Orsola, Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Red",
-                  "Drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Burgundy",
-                  "Drops, long drops or polished studs",
-                  "Orsola, Concetta Long, Cadenza M"
-                ],
-                [
-                  "Green",
-                  "Gold drops, hoops or studs",
-                  "Orsola, Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Emerald",
-                  "Gold drops, hoops or bold earrings",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Champagne",
-                  "Gold drops, short drops or butterfly earrings",
-                  "Orsola, Concetta Short, Farfalla"
-                ],
-                [
-                  "Blush",
-                  "Butterfly earrings or short drops",
-                  "Farfalla, Alidi Farfalla, Concetta Short"
-                ],
-                [
-                  "Silver",
-                  "White/silver-tone studs or long drops",
-                  "Cadenza M, Concetta Long"
-                ],
-                [
-                  "Navy",
-                  "Studs, hoops or refined drops",
-                  "Cadenza M, Pave Hoops, Concetta Long"
-                ],
-                [
-                  "White",
-                  "Hoops, studs or drops",
-                  "Pave Hoops, Cadenza M, Orsola"
-                ],
-                [
-                  "Floral",
-                  "Butterfly earrings or small studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Metallic",
-                  "Studs, huggies or minimalist earrings",
-                  "Cadenza M, Amadea, Laluce"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "What jewellery to wear with a red dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Party Earrings by Dress Fabric",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Fabric changes how much jewellery the outfit can carry."
-        },
-        {
-          "type": "paragraph",
-          "text": "Satin already reflects light, so drops or medium studs often work best. Sequins and metallic fabrics usually need cleaner earrings. Plain crepe, jersey or matte fabrics can carry bold earrings, hoops or drops more easily."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Dress Fabric",
-            "Best Party Earrings",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Satin",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Sequin",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Velvet",
-              "Drops, long drops or studs",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Metallic fabric",
-              "Studs or minimalist earrings",
-              "Cadenza M, Laluce"
-            ],
-            [
-              "Lace",
-              "Studs or delicate drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Plain crepe",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Floral fabric",
-              "Butterfly earrings or studs",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Chiffon",
-              "Butterfly earrings, short drops or studs",
-              "Farfalla, Concetta Short, Cadenza S"
-            ],
-            [
-              "Knit party outfit",
-              "Hoops, studs or huggies",
-              "Pave Hoops, Cadenza M, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery with satin dress",
+          "text": "What jewellery to wear with a satin dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Sequin or metallic outfit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sequins and metallic fabrics already create multiple points of reflected light. Studs or clean drops usually keep the look more balanced than jewellery with several competing shapes."
+        },
+        {
+          "type": "subheading",
+          "text": "Tailored jumpsuit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoops and geometric earrings can reinforce the clean structure of a jumpsuit. Drops can create contrast if the neckline is open and the overall design is minimal."
+        },
+        {
+          "type": "subheading",
+          "text": "Lace, print or embroidery"
+        },
+        {
+          "type": "paragraph",
+          "text": "Detailed fabric usually benefits from a simpler earring. Look for one clear shape instead of several decorative elements."
         }
       ]
     },
     {
-      "heading": "Party Earrings by Neckline",
+      "heading": "Consider the neckline and hairstyle",
       "content": [
         {
           "type": "paragraph",
-          "text": "The neckline helps decide whether earrings should be long, bold, curved or simple."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Neckline",
-                "Best Party Earrings",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "V-neck dress",
-                  "Drop earrings or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Sweetheart neckline",
-                  "Drops, butterfly earrings or bold earrings",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "Off-shoulder dress",
-                  "Drops, hoops or bold earrings",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Strapless dress",
-                  "Bold earrings or drops",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "High-neck dress",
-                  "Studs or hoops",
-                  "Cadenza M, Pave Hoops"
-                ],
-                [
-                  "Halter dress",
-                  "Studs or slim drops",
-                  "Cadenza M, Concetta Long"
-                ],
-                [
-                  "Square-neck dress",
-                  "Hoops, studs or soft drops",
-                  "Pave Hoops, Cadenza M, Concetta Short"
-                ],
-                [
-                  "Cowl-neck dress",
-                  "Studs or soft drops",
-                  "Cadenza M, Orsola"
-                ],
-                [
-                  "Detailed neckline",
-                  "Studs, huggies or minimalist earrings",
-                  "Cadenza M, Amadea, Laluce"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for sweetheart neckline",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
-        }
-      ]
-    },
-    {
-      "heading": "Party Earrings by Hairstyle",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Hairstyle changes how visible the earrings are."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the hair is down, tiny earrings can disappear. Medium studs, hoops, drops and bold earrings show better. If the hair is pulled back, drops, hoops, bold earrings and butterfly earrings can frame the face beautifully."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-91.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hairstyle",
-                "Best Party Earrings",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Hair down",
-                  "Medium studs, hoops or drops",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Soft waves",
-                  "Drops, butterfly earrings or visible studs",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Half-up hair",
-                  "Studs, huggies or butterfly earrings",
-                  "Cadenza M, Amadea, Farfalla"
-                ],
-                [
-                  "Sleek ponytail",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Low bun",
-                  "Drops, butterfly earrings or long drops",
-                  "Orsola, Farfalla, Concetta Long"
-                ],
-                [
-                  "High bun",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Short hair",
-                  "Studs, hoops, drops or bold earrings",
-                  "Cadenza M, Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Braided style",
-                  "Studs, huggies or visible drops",
-                  "Cadenza M, Amadea, Orsola"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Party Earrings by Event Type",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Different party types need different earring moods."
+          "text": "An open neckline gives longer or wider earrings more room. A detailed neckline reduces that space."
         },
         {
           "type": "table",
-          "headers": [
-            "Event Type",
-            "Best Party Earring Direction",
-            "Product Direction"
-          ],
+          "headers": ["Neckline or hairstyle", "Direction to consider"],
           "rows": [
-            [
-              "Birthday party",
-              "Hoops, butterfly earrings, drops or bold earrings",
-              "Pave Hoops, Farfalla, Orsola, Lusso"
-            ],
-            [
-              "Birthday dinner",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Cocktail party",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Dinner party",
-              "Medium studs or drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Date night",
-              "Drops, butterfly earrings or studs",
-              "Orsola, Farfalla, Cadenza M"
-            ],
-            [
-              "Office party",
-              "Studs, huggies or refined hoops",
-              "Cadenza M, Amadea, Pave Hoops"
-            ],
-            [
-              "Formal evening party",
-              "Long drops or polished studs",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Club or night-out look",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Holiday party",
-              "Drops, hoops, studs or bold earrings",
-              "Orsola, Pave Hoops, Cadenza M, Lusso"
-            ],
-            [
-              "Anniversary party",
-              "Drops, butterfly earrings or studs",
-              "Orsola, Alidi Farfalla, Cadenza M"
-            ]
+            ["Strapless dress", "Drops, hoops or a focal earring"],
+            ["Off-shoulder dress", "Drops or an earring with visible width"],
+            ["V-neck dress", "Drops, hoops or studs depending on the necklace"],
+            ["High-neck dress", "Studs, shorter drops or clean geometric earrings"],
+            ["Detailed neckline", "Studs or restrained drops"],
+            ["Hair tied back", "Shows shape, length and articulation clearly"],
+            ["Short hair", "Allows studs, hoops, drops and geometric shapes to remain visible"],
+            ["Hair worn down", "Requires enough outline to remain visible through the hair"],
+            ["Soft waves", "Works with drops, hoops or motif earrings depending on volume"]
           ]
         },
         {
-          "type": "see-also",
-          "text": "Anniversary jewellery gifts",
-          "href": "/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her"
+          "type": "paragraph",
+          "text": "Do not choose an earring solely from a face-shape rule. Hairstyle, neckline, earlobe position and the dimensions of the actual pair are often more useful."
         }
       ]
     },
     {
-      "heading": "Party Ear Stack Ideas",
+      "heading": "Choose a metal colour",
       "content": [
         {
           "type": "paragraph",
-          "text": "Party ear stacks should have one clear main piece. The support earrings should be smaller, cleaner and easier to balance."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party Stack Type",
-            "Main Piece",
-            "Support Piece",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Bold party stack",
-              "Bold earring",
-              "Small stud",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Elegant party stack",
-              "Drop earring",
-              "Small stud",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Hoop party stack",
-              "Hoop",
-              "Small stud",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Classic sparkle stack",
-              "Medium stud",
-              "Small stud",
-              "Cadenza M + Cadenza S"
-            ],
-            [
-              "Formal party stack",
-              "Long drop",
-              "Small stud",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Soft party stack",
-              "Short drop",
-              "Small stud",
-              "Concetta Short + Cadenza S"
-            ],
-            [
-              "Romantic party stack",
-              "Butterfly earring",
-              "Small stud",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Minimal party stack",
-              "Small stud",
-              "Minimalist detail",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Modern party stack",
-              "Huggie",
-              "Small stud",
-              "Amadea + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond earrings for ear stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Necklace or No Necklace with Party Earrings?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The necklace depends on the earrings and the neckline."
+          "text": "Metal colour should normally connect with jewellery already worn elsewhere in the outfit."
         },
         {
           "type": "paragraph",
-          "text": "If the earrings are bold, long or very sparkly, the necklace should usually be delicate or skipped. If the earrings are studs or huggies, the necklace can become more visible. With party outfits, one strong jewellery focus usually looks more expensive than too many competing pieces."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Earring Choice",
-            "Necklace Direction"
-          ],
-          "rows": [
-            [
-              "Bold earrings",
-              "Skip necklace or wear a very delicate chain"
-            ],
-            [
-              "Long drops",
-              "Usually skip the necklace"
-            ],
-            [
-              "Medium drops",
-              "Delicate chain or no necklace"
-            ],
-            [
-              "Medium studs",
-              "Necklace can work"
-            ],
-            [
-              "Small studs",
-              "Necklace can lead the look"
-            ],
-            [
-              "Butterfly earrings",
-              "Soft delicate necklace if needed"
-            ],
-            [
-              "Hoops",
-              "Delicate necklace or no necklace"
-            ],
-            [
-              "Huggies",
-              "Simple necklace can work"
-            ],
-            [
-              "Minimalist earrings",
-              "Necklace can become the focal point"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for V-neck dresses",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Party Earrings by Metal Colour",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Metal colour changes the mood of party jewellery."
+          "text": "Yellow-gold tone adds warmth and can work with black, burgundy, cream, red, green and warm neutrals. White or silver tone creates a cooler appearance and works with black, navy, grey, white and silver details. Rose-gold tone has a softer appearance and may work with blush, champagne and muted colours."
         },
         {
           "type": "paragraph",
-          "text": "Yellow gold feels warm, rich and party-ready. White or silver tone feels clean, bright and modern. Rose gold feels soft, romantic and feminine. Mixed metals can work for creative ear stacks, but one metal colour is easier for a polished party outfit."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-93.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metal Colour",
-                "Party Mood",
-                "Best Outfit Colours"
-              ],
-              "rows": [
-                [
-                  "Yellow gold",
-                  "Warm, rich and glamorous",
-                  "Black, red, green, champagne, burgundy, cream"
-                ],
-                [
-                  "White or silver tone",
-                  "Clean, bright and modern",
-                  "Black, navy, silver, white, grey, cool tones"
-                ],
-                [
-                  "Rose gold",
-                  "Soft, romantic and feminine",
-                  "Blush, pink, champagne, pastel outfits"
-                ],
-                [
-                  "Mixed metals",
-                  "Creative and trend-led",
-                  "Minimal outfits and ear stacks"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For gifts or repeat wear, choose the metal colour the person already wears most often."
+          "text": "These are styling directions, not fixed colour rules. If the wearer consistently chooses one metal colour, matching that preference is usually more useful than following a skin-tone formula."
         },
         {
           "type": "see-also",
           "text": "Gold vs white vs rose gold lab-grown diamond earrings",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Product Pathways by Party Styling Need",
+      "heading": "Should you wear a necklace with party earrings?",
       "content": [
         {
-          "type": "subheading",
-          "text": "For the Boldest Party Earrings"
+          "type": "section-lead",
+          "text": "A necklace is optional, not compulsory."
         },
         {
           "type": "paragraph",
-          "text": "Choose Lusso bold statement earrings. They are strongest when the outfit is simple and the earrings should become the main jewellery focus."
-        },
-        {
-          "type": "subheading",
-          "text": "For Elegant Party Movement"
+          "text": "If the earrings have a strong shape or longer drop, leaving the neckline clear can prevent the jewellery from competing. If the earrings are studs, a necklace can add another point of detail without crowding the face."
         },
         {
           "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They work beautifully with satin dresses, dinner outfits, black dresses, red dresses and green dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Modern Party Shape"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Pave Hoops. They add visible shape and sparkle for modern party outfits, jumpsuits, black dresses and green dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Safe Party Sparkle"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings. They are strong when the outfit is detailed, sparkly or already visually powerful."
-        },
-        {
-          "type": "subheading",
-          "text": "For Minimal Party Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza S, Amadea or Laluce. These work well with detailed dresses, high necklines, sequins and understated party looks."
-        },
-        {
-          "type": "subheading",
-          "text": "For Romantic Birthday or Date-Night Parties"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings, Alidi Farfalla butterfly earrings or Concetta Short earrings. These work well with blush, champagne, pastel, floral and soft satin outfits."
-        },
-        {
-          "type": "subheading",
-          "text": "For Formal Evening Parties"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Long earrings or Cadenza M. Concetta Long creates a refined long line, while Cadenza M keeps the look classic and balanced."
-        },
-        {
-          "type": "subheading",
-          "text": "For Party Ear Stacks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso with Cadenza S for bold styling, Orsola with Cadenza S for elegance, or Pave Hoops with Cadenza S for a modern stack."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Party Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Lusso bold statement earrings",
-              "Best bold party earring",
-              "Strongest choice when the outfit is simple"
-            ],
-            [
-              "Orsola drop earrings",
-              "Best elegant party earring",
-              "Adds movement and polish"
-            ],
-            [
-              "Pave Hoops",
-              "Best modern party shape",
-              "Adds curve, sparkle and visibility"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Best safe party sparkle",
-              "Works when the outfit already has detail"
-            ],
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Best support stud",
-              "Balances bold earrings, drops and hoops in stacks"
-            ],
-            [
-              "Concetta Long earrings",
-              "Best formal party earring",
-              "Creates a refined evening line"
-            ],
-            [
-              "Concetta Short earrings",
-              "Best soft party drop",
-              "Works for blush, champagne and romantic outfits"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Best romantic party earring",
-              "Soft, meaningful and feminine"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Best gift-led romantic option",
-              "Strong for birthday and anniversary parties"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Best understated modern option",
-              "Works with detailed outfits and stacks"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Best quiet party detail",
-              "Useful for minimal and detailed outfits"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose party earrings by outfit strength. Pick Lusso when the outfit is simple and needs bold sparkle, Orsola for elegant movement, Pave Hoops for modern shape, Cadenza M for safe sparkle, Farfalla for soft romantic looks and Cadenza S as the easiest support piece for party ear stacks."
-        }
-      ]
-    },
-    {
-      "heading": "Common Party Earring Mistakes to Avoid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "One common mistake is wearing bold earrings with an outfit that is already very detailed. If the dress has sequins, metallic fabric, lace, embroidery or a dramatic neckline, studs, huggies or clean drops may look better."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is choosing earrings that are too small for the outfit. Black, red, green and satin party outfits can overpower tiny earrings, especially when the hair is down."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is wearing a heavy necklace with bold or long earrings. If the earrings are the main focus, keep the necklace minimal or skip it."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is ignoring hairstyle. Party earrings should be visible in photos, so choose enough size or movement if the hair is down."
-        },
-        {
-          "type": "paragraph",
-          "text": "A fifth mistake is choosing earrings only for one night. The best party earrings should also work for future dinners, birthdays, weddings or evening outfits."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not ignore comfort. Party earrings should feel secure enough for dinner, photos, dancing and several hours of wear."
-        },
-        {
-          "type": "see-also",
-          "text": "Can you wear lab-grown diamond earrings every day?",
-          "href": "/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Final Party Earring Checklist",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Before choosing party earrings, ask:"
+          "text": "Consider the dress before adding both:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Is the outfit simple or detailed?",
-            "What colour is the outfit?",
-            "Is the fabric satin, sequin, velvet, lace, metallic or plain?",
-            "What neckline does the outfit have?",
-            "Will the hair be up, down or half-up?",
-            "Is the party casual, birthday, dinner, cocktail, formal or night-out style?",
-            "Do I want bold sparkle, movement, shape or subtle polish?",
-            "Should the earrings or necklace be the main jewellery focus?",
-            "Does the metal colour match the outfit?",
-            "Are the earrings comfortable for the full event?",
-            "Can the earrings be worn again after the party?",
-            "Would an ear stack make the look more polished?",
-            "Are the earrings too much for the outfit?",
-            "Are the earrings visible enough for the hairstyle?"
+            "Strapless or off-shoulder dress: earrings may work alone",
+            "V-neck dress: a restrained necklace can follow the neckline",
+            "High-neck dress: a necklace is often unnecessary",
+            "Detailed neckline: keep both earrings and necklace controlled",
+            "Plain dress: choose either a focal earring or a necklace as the leading piece"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Can you wear an ear stack to a party?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Yes, provided the stack has one clear hierarchy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose one main earring and use smaller supporting pieces. A hoop, drop, butterfly or geometric earring can lead the stack, while a small stud adds secondary detail."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avoid placing several equally large earrings close together. Check the space between piercings, the orientation of each design and whether the backs interfere with one another."
+        },
+        {
+          "type": "see-also",
+          "text": "How to stack earrings",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Diamond ear stack ideas",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "What to check before choosing party earrings",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Party styling should not replace product verification. Check:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Full height and width in millimetres",
+                "Weight per earring or per pair",
+                "Closure and backing type",
+                "Post length where available",
+                "Base metal and finish",
+                "Plating description",
+                "Stone type and number of stones",
+                "Individual and total carat weight",
+                "Whether the listing is for one earring or a pair",
+                "Whether the photographed variant matches the selected option",
+                "Return conditions for earrings",
+                "Front, side and on-ear photographs"
+              ]
+            }
           ]
         },
         {
           "type": "paragraph",
-          "text": "If you are unsure, choose Cadenza M for safe sparkle, Orsola for elegant movement, Pave Hoops for modern shape, Lusso for a simple outfit that needs bold impact, and Cadenza S as a support stud for party ear stacks."
+          "text": "An earring cannot be described as suitable for several hours merely from its appearance. Weight, proportions, closure, piercing position and the wearer all affect the experience."
+        }
+      ]
+    },
+    {
+      "heading": "Choose the earrings after choosing their role",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The most useful question is not simply, \"Which earrings are most noticeable?\" It is, \"What does this outfit still need?\""
+        },
+        {
+          "type": "paragraph",
+          "text": "A detailed dress may need one clean point of light. A plain cocktail dress may benefit from hoops, drops or a geometric design. A formal gown can support a longer or more visible pair when the neckline gives it enough space."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose the event, examine the outfit and then verify the specifications of the earrings themselves. Once those decisions are made, the product choice becomes much clearer."
         }
       ]
     }
@@ -1407,53 +460,53 @@
   "faq": [
     {
       "question": "What earrings should I wear to a party?",
-      "answer": "The best party earrings depend on the outfit. Bold earrings work with simple outfits, drop earrings work with satin and elegant dresses, hoops work with modern looks, and studs work with detailed outfits."
+      "answer": "Choose according to the event and the outfit. Studs work with detailed dresses, hoops complement modern outfits, drops add movement, and a bolder earring can lead a simple look."
     },
     {
-      "question": "Are diamond studs good for parties?",
-      "answer": "Yes, diamond studs are good for parties when the outfit already has detail, sequins, lace or a strong neckline. They add sparkle without making the look too busy."
+      "question": "What earrings should I wear to a cocktail party?",
+      "answer": "Drops, hoops and geometric earrings can all work for cocktail parties. Use the fabric, neckline and amount of decoration in the dress to determine the scale."
     },
     {
-      "question": "Are drop earrings good for parties?",
-      "answer": "Yes, drop earrings are excellent for parties because they add movement and polish, especially with satin dresses, black dresses, red dresses and dinner outfits."
+      "question": "What earrings should I wear to a formal dinner?",
+      "answer": "Studs and restrained drop earrings can support a formal-dinner outfit without dominating it. Longer earrings may work when the dress and neckline are simple."
     },
     {
-      "question": "Are hoop earrings good for parties?",
-      "answer": "Yes, hoop earrings are good for parties when the look needs shape and sparkle. They work well with modern dresses, jumpsuits and simple outfits."
+      "question": "What earrings work for a black-tie event?",
+      "answer": "Elongated drops, more visible studs or one balanced focal earring can work. If the gown is heavily embellished, choose a cleaner silhouette."
     },
     {
-      "question": "When should I wear bold party earrings?",
-      "answer": "Wear bold party earrings when the outfit is simple enough to let the earrings become the main jewellery focus."
+      "question": "Can I wear studs to a party?",
+      "answer": "Yes. Studs can be particularly effective with sequins, metallic fabric, lace, prints and detailed necklines because they add light without introducing another large shape."
     },
     {
-      "question": "What earrings should I wear with a black party dress?",
-      "answer": "A black party dress can work with bold earrings, drop earrings, hoops or medium diamond studs depending on the dress detail and neckline."
-    },
-    {
-      "question": "What earrings should I wear with a red party dress?",
-      "answer": "A red party dress usually works best with drop earrings or medium diamond studs. If the dress is simple, bold earrings can also work."
-    },
-    {
-      "question": "What earrings should I wear with a green party dress?",
-      "answer": "A green party dress works well with gold drop earrings, hoops or medium diamond studs."
+      "question": "Can I wear hoops to a formal event?",
+      "answer": "Hoops can work when their size, finish and diamond placement suit the dress code. Smaller or pavé-style hoops generally feel more controlled than very large hoops."
     },
     {
       "question": "Should I wear a necklace with party earrings?",
-      "answer": "If the earrings are bold or long, keep the necklace delicate or skip it. If the earrings are small studs, the necklace can be more visible."
+      "answer": "Not necessarily. If the earrings have strong scale or length, they may work better without a necklace. Studs generally leave more room for a necklace."
     },
     {
-      "question": "What IWantJewels earrings are best for parties?",
-      "answer": "Lusso, Orsola, Pave Hoops, Cadenza M, Cadenza S, Concetta Long, Concetta Short, Farfalla, Amadea and Laluce are strong party earring options depending on the outfit."
+      "question": "What earrings should I wear with a sequin dress?",
+      "answer": "Choose studs or clean, restrained drops. Sequins already reflect light, so the earrings do not need several additional decorative elements."
+    },
+    {
+      "question": "Are lab-grown diamond earrings suitable for parties?",
+      "answer": "They can be used for party styling when their shape, measurements, closure and materials suit the wearer and the event. Lab-grown describes the origin of the diamonds, not the earring style."
+    },
+    {
+      "question": "How do I choose earrings for a long event?",
+      "answer": "Review the exact weight, dimensions, closure and post design. The wearer's piercing placement and sensitivity also matter, so no pair should be described as universally suitable for extended wear."
     }
   ],
   "cta": {
-    "heading": "Party earrings should make the outfit feel complete without making it look overcrowded. Choose bold earrings for simple outfits, drops for elegant movement, hoops for modern shape, studs for safe sparkle, butterfly earrings for romantic styling and huggies or minimalist earrings for detailed looks.",
-    "body": "Start with IWantJewels demi-fine lab-grown diamond earrings if you want party jewellery with real diamond sparkle. Choose Lusso for bold impact, Orsola for elegant movement, Pave Hoops for shape, Cadenza M for safe sparkle, Farfalla for soft birthday styling and Cadenza S as the perfect support stud for party ear stacks.",
-    "primaryLabel": "Shop Party Earrings",
+    "heading": "Choose the event, examine the outfit, then verify the specifications of the earrings themselves.",
+    "body": "Explore I Want Jewels earrings for parties, dinners and formal events, and check each product page for its dimensions, weight, closure and materials before deciding.",
+    "primaryLabel": "Explore Party Earrings",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Lab-Grown Diamond Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Bold Statement Earrings Guide",
-    "tertiaryHref": "/resources/earring-style-guides/bold-statement-earrings-guide"
+    "secondaryLabel": "Bold Statement Earrings Guide",
+    "secondaryHref": "/resources/earring-style-guides/bold-statement-earrings-guide",
+    "tertiaryLabel": "How to Stack Earrings",
+    "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
   }
 }

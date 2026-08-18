@@ -1,1425 +1,607 @@
 {
   "meta": {
-    "title": "Bold Statement Earrings Guide",
-    "description": "Learn how to style bold statement earrings with black dresses, party outfits, evening looks, lab grown diamonds, studs and ear stacks."
+    "title": "Bold Statement Earrings: Styling Guide",
+    "description": "Learn how to choose and style bold statement earrings by size, weight, neckline, hairstyle and outfit detail, without making your look feel crowded."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-7.jpg",
-    "title": "Bold Statement Earrings Guide:",
-    "subtitle": "How to Style Standout Earrings Without Overdoing the Look",
+    "image": "/blog-images/blog-image-42.jpg",
+    "title": "Bold Statement Earrings:",
+    "subtitle": "How to Choose and Style Them",
     "paragraphs": [
-      "Bold statement earrings are for outfits that need one clear jewellery moment. They are not meant to disappear into the outfit. They are meant to frame the face, add sparkle and make a simple look feel party-ready.",
-      "The easiest way to style bold earrings is to keep the rest of the jewellery clean. A simple black dress, satin outfit, strapless dress, off-shoulder dress or sleek party look can carry bold earrings beautifully. If the dress already has sequins, heavy embroidery, lace, metallic fabric or a dramatic neckline, medium studs, drops or huggies may be better.",
-      "At IWantJewels, Lusso bold statement earrings are the main product direction for this page. Lusso should be styled as the standout party earring, especially for simple evening outfits, black dresses, birthday looks, dinner parties and confident styling. Cadenza S works as the best support stud for a bold ear stack, while Orsola, Pave Hoops and Cadenza M are safer alternatives when the outfit needs movement, shape or classic sparkle instead of a bold focal point."
+      "Bold statement earrings are designed to play a noticeable role in an outfit. Their impact may come from scale, shape, movement, contrast, diamond coverage or an unusual motif — not simply from being oversized.",
+      "The most balanced way to wear statement earrings is to decide what should lead the look. If the earrings are the focal point, the necklace, ear stack and outfit details can support them instead of competing for attention.",
+      "Before choosing a pair, check the complete dimensions, weight per earring, fastening and materials. These details are more helpful than relying on words such as \"bold\" or \"lightweight\", which can mean different things across different designs."
     ],
-    "shopLabel": "Shop Bold Statement Earrings",
+    "shopLabel": "Explore Statement Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Understand when to wear bold statement earrings",
-      "Style bold earrings with black dresses, red dresses, green dresses, satin outfits and party looks",
-      "Decide when bold earrings are better than studs, hoops or drops",
-      "Learn how to balance bold earrings with necklaces, hairstyles and necklines",
-      "Build bold earring ear stacks with small support studs",
-      "Choose bold earrings for birthday parties, dinners, weddings, evening events and gifts",
-      "Avoid making the outfit look crowded",
-      "Find IWantJewels product recommendations by outfit and occasion",
-      "Plan image blocks, product modules, CTA sections and internal links for this page"
+      "Impact comes from shape, movement, contrast or diamond coverage — not size alone",
+      "\"Statement\" and \"stud\" are not opposites: a sculptural stud can be both",
+      "Choose one jewellery focal point and let the rest support it",
+      "Check complete width, height, drop, projection and weight per earring",
+      "A necklace is not automatically wrong — the neckline decides",
+      "Statement earrings can work during the day when the specifications suit the wear time"
     ],
-    "image": "/blog-images/blog-image-81.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Bold Statement Earring Selector",
+      "heading": "Statement earring styling at a glance",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Use this table near the top of the page as the main styling decision tool."
-        },
+          "type": "table",
+          "headers": ["Styling situation", "Earring direction", "How to balance it"],
+          "rows": [
+            ["Plain or minimal outfit", "A more visible shape, motif or diamond arrangement", "Keep the necklace and other earrings restrained"],
+            ["Detailed or embellished outfit", "A statement design with controlled dimensions", "Avoid repeating every detail in the dress"],
+            ["Open neckline", "Earrings can become the main jewellery feature", "A necklace is optional"],
+            ["High or detailed neckline", "Consider width, length and possible contact with the fabric", "Usually keep the necklace minimal"],
+            ["Hair worn up", "Most shapes will remain visible", "Choose according to scale and comfort"],
+            ["Hair worn down", "Select a visible outline or contrasting finish", "Do not increase weight simply for visibility"],
+            ["Multiple piercings", "Use one focal earring with smaller supporting pieces", "Check the physical spacing between piercings"],
+            ["Long event", "Prioritise stated weight, fastening and movement", "Consider how the earrings feel over several hours"]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What counts as a bold statement earring?",
+      "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-83.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Styling Need",
-                "Best Earring Direction",
-                "Recommended IWJ Direction"
-              ],
-              "rows": [
-                [
-                  "Bold party look",
-                  "Bold statement earrings",
-                  "Lusso"
-                ],
-                [
-                  "Simple black dress",
-                  "Bold earrings, drops or hoops",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Satin party dress",
-                  "Drops or bold earrings if dress is simple",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Red dress styling",
-                  "Drops or medium studs; bold only if dress is simple",
-                  "Orsola, Cadenza M, Lusso"
-                ],
-                [
-                  "Green dress styling",
-                  "Gold drops, hoops or bold earrings",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Birthday party look",
-                  "Bold earrings, hoops or butterfly earrings",
-                  "Lusso, Pave Hoops, Farfalla"
-                ],
-                [
-                  "Dinner party look",
-                  "Drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Formal evening look",
-                  "Long drops or polished studs",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Detailed outfit",
-                  "Studs, huggies or minimalist earrings",
-                  "Cadenza M, Amadea, Laluce"
-                ],
-                [
-                  "Bold ear stack",
-                  "Bold earring + small stud",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Safer bold alternative",
-                  "Drop earrings or hoops",
-                  "Orsola, Pave Hoops"
-                ],
-                [
-                  "Gift for bold jewellery lover",
-                  "Bold earrings or hoops",
-                  "Lusso, Pave Hoops"
-                ]
+              "type": "paragraph",
+              "text": "Statement earrings are not one fixed product category. A pair may create visual impact through one or more of the following features:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "A wider or longer silhouette",
+                "A sculptural or geometric shape",
+                "A recognisable motif",
+                "Multiple stones or a more visible diamond arrangement",
+                "Movement from articulated or drop elements",
+                "Strong contrast against the wearer's hair or clothing",
+                "An unusual combination of shape, texture or negative space"
               ]
             }
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "A compact sculptural stud can make more of a statement than a thin, longer earring. Likewise, a pavé hoop can function as the focal point of an outfit without being an oversized hoop."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is why measurements and photographs are more useful than product labels alone."
         }
       ]
     },
     {
-      "heading": "What Are Bold Statement Earrings?",
+      "heading": "Check the measurements before choosing",
       "content": [
         {
           "type": "paragraph",
-          "text": "Bold statement earrings are earrings designed to be the main jewellery focus of an outfit. They are usually larger, more visible, more sparkly or more design-led than everyday studs, huggies or minimalist earrings."
+          "text": "Product photographs are not always shown at the same scale. Two earrings can appear similarly sized online while having very different proportions when worn."
+        },
+        {
+          "type": "subheading",
+          "text": "Complete width and height"
         },
         {
           "type": "paragraph",
-          "text": "A bold earring does not always need to be oversized. It simply needs enough presence to lead the look. It should draw attention toward the face and make the outfit feel styled."
+          "text": "The complete outline determines how much space an earring occupies around the ear. Measurements should include the entire design, not only the central stone or motif."
+        },
+        {
+          "type": "subheading",
+          "text": "Drop length"
         },
         {
           "type": "paragraph",
-          "text": "For IWantJewels, Lusso bold statement earrings should be positioned as a party-led, standout earring option. They are not the safest everyday earring. They are strongest when the outfit is simple enough to let the earrings become the main sparkle moment."
+          "text": "For drop earrings, measure from the piercing or fastening point to the lowest part of the design. This helps determine whether the earring may approach the jawline, neckline or collar."
         },
         {
-          "type": "table",
-          "headers": [
-            "Bold Earring Quality",
-            "What It Means"
-          ],
-          "rows": [
-            [
-              "Clear focal point",
-              "The earring leads the jewellery look"
-            ],
-            [
-              "Visible sparkle",
-              "The earring shows in photos and evening lighting"
-            ],
-            [
-              "Stronger design",
-              "More impact than a simple stud or huggie"
-            ],
-            [
-              "Outfit-dependent",
-              "Works best when balanced with the dress"
-            ],
-            [
-              "Minimal support jewellery",
-              "Necklace and other pieces should stay clean"
-            ],
-            [
-              "Occasion-led",
-              "Best for parties, dinners, birthdays and evening looks"
-            ],
-            [
-              "Confidence styling",
-              "Works when the wearer wants jewellery to be noticed"
-            ]
-          ]
+          "type": "subheading",
+          "text": "Projection"
         },
         {
-          "type": "see-also",
-          "text": "Party earrings guide",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
+          "type": "paragraph",
+          "text": "Projection describes how far an earring extends away from the ear. This can affect how a sculptural piece appears from the side and whether it may catch against hair or clothing."
+        },
+        {
+          "type": "subheading",
+          "text": "Weight per earring"
+        },
+        {
+          "type": "paragraph",
+          "text": "Weight should be stated per earring rather than only as a combined pair. Personal comfort varies, but the measurement allows shoppers to compare designs properly."
+        },
+        {
+          "type": "subheading",
+          "text": "Fastening and backing"
+        },
+        {
+          "type": "paragraph",
+          "text": "Check whether the earring uses a post and butterfly back, hinged closure, lever back or another fastening. The closure should always match the actual product."
+        },
+        {
+          "type": "subheading",
+          "text": "Movement"
+        },
+        {
+          "type": "paragraph",
+          "text": "An articulated drop behaves differently from a rigid design. Movement can make an earring more noticeable, but it may also increase contact with hair, collars or shoulders."
         }
       ]
     },
     {
-      "heading": "When Should You Wear Bold Earrings?",
+      "heading": "How to wear statement earrings without making the outfit feel crowded",
       "content": [
         {
           "type": "paragraph",
-          "text": "Wear bold earrings when the outfit is simple, clean or needs a strong finishing point."
+          "text": "Start by choosing one primary jewellery focal point."
         },
         {
           "type": "paragraph",
-          "text": "A plain black dress, satin slip dress, strapless dress, off-shoulder dress, sleek jumpsuit or minimal party outfit can carry bold earrings well. The cleaner the outfit, the easier it is for bold earrings to look intentional."
+          "text": "If the earrings contain a strong shape, visible diamond coverage or substantial movement, allow them to lead. The rest of the jewellery does not need to disappear, but it should have a supporting role."
         },
         {
-          "type": "table",
-          "headers": [
-            "Best Time to Wear Bold Earrings",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Simple black dress",
-              "Bold earrings become the main sparkle"
-            ],
-            [
-              "Minimal evening outfit",
-              "Adds interest without needing a necklace"
-            ],
-            [
-              "Strapless dress",
-              "Frames the face and neckline"
-            ],
-            [
-              "Off-shoulder dress",
-              "Balances the open shoulder line"
-            ],
-            [
-              "Birthday party",
-              "Creates a celebratory jewellery moment"
-            ],
-            [
-              "Cocktail party",
-              "Adds visible styling"
-            ],
-            [
-              "Dinner party",
-              "Works if the outfit is clean"
-            ],
-            [
-              "Night-out outfit",
-              "Adds confidence and shine"
-            ],
-            [
-              "Simple jumpsuit",
-              "Gives structure and glamour"
-            ],
-            [
-              "Wedding evening party",
-              "Works if guest outfit is simple and not too bridal"
-            ]
+          "type": "numbered-list",
+          "items": [
+            "Look at the outfit's existing detail.",
+            "Decide whether the earrings or neckline should attract more attention.",
+            "Add a necklace only if it gives the outfit something it genuinely needs.",
+            "Keep secondary piercings smaller than the focal earring.",
+            "Review the complete look from normal viewing distance."
           ]
         },
         {
           "type": "paragraph",
-          "text": "Lusso is the strongest IWantJewels recommendation when the shopper wants the earrings to lead the look."
+          "text": "Balance does not require every outfit to be minimal. It means avoiding several unrelated focal points around the face and neckline."
+        }
+      ]
+    },
+    {
+      "heading": "Should statement earrings be worn with a necklace?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is no rule that statement earrings must always be worn without a necklace. The decision depends on the neckline, the visual weight of the earrings and the necklace itself."
+        },
+        {
+          "type": "table",
+          "headers": ["Earring and outfit combination", "Necklace direction"],
+          "rows": [
+            ["Statement earrings with a strapless outfit", "No necklace or a restrained necklace can both work"],
+            ["Statement earrings with an off-shoulder neckline", "Let the earrings lead, or use a very simple necklace"],
+            ["Statement earrings with a V-neck", "A pendant may work if it does not compete with the earrings"],
+            ["Statement earrings with a high neckline", "A necklace is often unnecessary"],
+            ["Statement earrings with an embellished neckline", "Usually avoid adding another prominent feature"],
+            ["Statement earrings with a plain crew neck", "A fine chain may add structure without becoming a second focal point"]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Do not base the decision only on the earring's length. Width, shape, sparkle and movement also contribute to its visual presence."
+        }
+      ]
+    },
+    {
+      "heading": "Styling statement earrings with simple and detailed outfits",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Simple outfits"
+        },
+        {
+          "type": "paragraph",
+          "text": "A simple outfit provides room for a distinctive earring shape. This might include a plain dress, tailored jumpsuit, clean shirt, monochrome knit or uncomplicated evening top."
+        },
+        {
+          "type": "paragraph",
+          "text": "The earrings do not necessarily need to match the outfit's shape. Contrast can be effective: a curved hoop can soften a structured outfit, while a geometric design can add definition to a flowing fabric."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a black dress, both warm and cool metal colours can create visible contrast. The final choice should consider the dress fabric, other accessories and the wearer's preference."
         },
         {
           "type": "see-also",
           "text": "What jewellery to wear with a black dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "When Should You Avoid Bold Earrings?",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Bold earrings are not always the best choice. They can look too busy when the outfit already has a lot going on."
+          "type": "subheading",
+          "text": "Detailed outfits"
         },
         {
           "type": "paragraph",
-          "text": "If the dress has sequins, heavy lace, embroidery, metallic fabric, large prints, dramatic sleeves, a very detailed neckline or a strong necklace, bold earrings may compete. In those cases, medium studs, huggies, minimalist earrings or elegant drops may look more polished."
+          "text": "Sequins, lace, embroidery, metallic fabric, prints and dramatic necklines already contain visual information. Statement earrings can still work, but their shape should relate to the outfit rather than simply adding more detail."
         },
         {
-          "type": "table",
-          "headers": [
-            "When to Avoid Bold Earrings",
-            "Better Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Sequin dress",
-              "Medium studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Heavy lace dress",
-              "Studs or delicate drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Metallic outfit",
-              "Studs or minimalist earrings",
-              "Cadenza M, Laluce"
-            ],
-            [
-              "Strong necklace",
-              "Studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Dramatic neckline",
-              "Studs, hoops or simple drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Very printed dress",
-              "Studs or minimalist earrings",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Formal understated event",
-              "Polished studs or long drops",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Everyday outfit",
-              "Studs, huggies or minimalist earrings",
-              "Cadenza S, Amadea, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Minimalist earrings guide",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings vs Studs, Drops and Hoops",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bold earrings are best when the outfit needs a strong jewellery focus. Studs are safer. Drops add movement. Hoops add shape. Huggies keep the styling close and modern."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Earring Type",
-            "Best For",
-            "IWJ Product Direction"
-          ],
-          "rows": [
-            [
-              "Bold statement earrings",
-              "Simple outfits, party looks, standout styling",
-              "Lusso"
-            ],
-            [
-              "Medium studs",
-              "Safe sparkle, detailed outfits, classic polish",
-              "Cadenza M"
-            ],
-            [
-              "Small studs",
-              "Minimal looks and ear stack support",
-              "Cadenza S"
-            ],
-            [
-              "Drop earrings",
-              "Movement, satin dresses, dinners, weddings",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Hoops",
-              "Modern shape, jumpsuits, simple party looks",
-              "Pave Hoops"
-            ],
-            [
-              "Huggies",
-              "Understated modern styling",
-              "Amadea"
-            ],
-            [
-              "Minimalist earrings",
-              "Quiet detail and detailed outfits",
-              "Laluce"
-            ],
-            [
-              "Butterfly earrings",
-              "Soft, romantic and meaningful styling",
-              "Farfalla, Alidi Farfalla"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "A clean outline instead of several competing motifs",
+            "Controlled dimensions near a highly detailed neckline",
+            "One metal colour repeated elsewhere in the outfit",
+            "Less movement when the fabric already has movement or fringe",
+            "A clear space between the earring and the garment"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Choose Lusso when the earrings should lead. Choose Orsola when the outfit needs movement. Choose Pave Hoops when the outfit needs shape. Choose Cadenza M when the outfit already has detail."
+          "text": "The aim is not to avoid bold earrings automatically. It is to understand where the existing focal points are."
         },
         {
           "type": "see-also",
-          "text": "Stud vs hoop earrings",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings with Black Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A black dress is one of the best outfits for bold earrings because the colour gives the jewellery space to shine."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the black dress is simple, Lusso can become the main jewellery moment. If the dress is satin, Orsola may add elegant movement. If the dress is modern or high-neck, Pave Hoops or Cadenza M may work better. If the black dress is lace-heavy or detailed, keep the earrings cleaner."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-85.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Black Dress Style",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Simple black dress",
-                  "Bold earrings",
-                  "Lusso"
-                ],
-                [
-                  "Black satin dress",
-                  "Drops or bold earrings if simple",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Black off-shoulder dress",
-                  "Bold earrings, drops or hoops",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Black strapless dress",
-                  "Bold earrings or drops",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Black high-neck dress",
-                  "Hoops or medium studs",
-                  "Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Black lace dress",
-                  "Studs or delicate drops",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Black sequin dress",
-                  "Studs or huggies",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Black jumpsuit",
-                  "Bold earrings or hoops",
-                  "Lusso, Pave Hoops"
-                ],
-                [
-                  "Formal black dress",
-                  "Long drops or polished studs",
-                  "Concetta Long, Cadenza M"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Earrings for off-shoulder dresses",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings with Red Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Red dresses already have strong visual energy, so bold earrings need to be used carefully."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the red dress is simple, bold earrings can work. If the red dress is satin, lace, ruched, sequinned or heavily detailed, Orsola or Cadenza M may be safer. Gold-tone earrings usually work beautifully with red because they add warmth."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Red Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple red dress",
-              "Drops, medium studs or bold earrings",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Red satin dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Red off-shoulder dress",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Red lace dress",
-              "Studs or delicate drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Red sequin dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Burgundy dress",
-              "Drops, long drops or polished studs",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Red party dress",
-              "Drops or bold earrings if simple",
-              "Orsola, Lusso"
-            ],
-            [
-              "Red dinner dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery with red dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings with Green Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Green dresses pair beautifully with gold-tone sparkle, especially for party and evening styling."
-        },
-        {
-          "type": "paragraph",
-          "text": "Emerald and forest green can carry bold earrings, drops or hoops. Sage and mint usually work better with softer earrings such as butterfly earrings, small studs or short drops."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-93.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Green Dress Style",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Emerald green dress",
-                  "Bold earrings, gold drops or hoops",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Forest green dress",
-                  "Drops, long drops or bold earrings",
-                  "Orsola, Concetta Long, Lusso"
-                ],
-                [
-                  "Green satin dress",
-                  "Drops or hoops",
-                  "Orsola, Pave Hoops"
-                ],
-                [
-                  "Green party dress",
-                  "Gold drops, hoops or bold earrings",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Sage green dress",
-                  "Butterfly earrings or short drops",
-                  "Farfalla, Concetta Short"
-                ],
-                [
-                  "Mint dress",
-                  "Small studs or butterfly earrings",
-                  "Cadenza S, Farfalla"
-                ],
-                [
-                  "Olive dress",
-                  "Hoops, drops or medium studs",
-                  "Pave Hoops, Orsola, Cadenza M"
-                ],
-                [
-                  "Green floral dress",
-                  "Butterfly earrings or small studs",
-                  "Farfalla, Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery with green dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings with Satin Outfits",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Satin outfits already reflect light, so bold earrings work best when the satin design is simple."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the satin dress has draping, cowl details, ruching or strong shine, drop earrings or medium studs may look cleaner. If the satin dress is plain and the neckline is open, bold earrings can create a strong party look."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satin Outfit Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple satin dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Satin slip dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Black satin dress",
-              "Drops, studs or bold earrings if simple",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Red satin dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Champagne satin dress",
-              "Drops or short drops",
-              "Orsola, Concetta Short"
-            ],
-            [
-              "Blush satin dress",
-              "Butterfly earrings or short drops",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Detailed satin dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Satin jumpsuit",
-              "Hoops, drops or bold earrings",
-              "Pave Hoops, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery with satin dress",
+          "text": "What jewellery to wear with a satin dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         }
       ]
     },
     {
-      "heading": "Bold Earrings by Neckline",
+      "heading": "Choose statement earrings by neckline",
       "content": [
         {
           "type": "paragraph",
-          "text": "The neckline helps decide whether bold earrings will feel balanced or too heavy."
-        },
-        {
-          "type": "paragraph",
-          "text": "Bold earrings usually work best with open necklines, strapless dresses, off-shoulder dresses, simple V-necks and clean high-neck outfits. Detailed necklines usually need cleaner earrings."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-87.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Neckline",
-                "Bold Earring Fit",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Strapless dress",
-                  "Excellent",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Off-shoulder dress",
-                  "Excellent",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Sweetheart neckline",
-                  "Strong if outfit is simple",
-                  "Lusso, Farfalla, Orsola"
-                ],
-                [
-                  "V-neck dress",
-                  "Good if necklace is minimal",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Square-neck dress",
-                  "Good with controlled styling",
-                  "Lusso, Pave Hoops, Cadenza M"
-                ],
-                [
-                  "High-neck dress",
-                  "Hoops or studs may be cleaner",
-                  "Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Halter dress",
-                  "Use carefully; slim drops or studs may work better",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Cowl neck",
-                  "Drops or studs may be better",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Detailed neckline",
-                  "Avoid bold earrings",
-                  "Cadenza S, Laluce, Amadea"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for sweetheart neckline",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings by Hairstyle",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Hairstyle has a big effect on bold earrings because bold pieces need visibility."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pulled-back hair, sleek ponytails, low buns and short hair show bold earrings clearly. Hair down can still work, but the earrings need enough presence to show through the hair."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hairstyle",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Sleek ponytail",
-                  "Bold earrings, hoops or drops",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Low bun",
-                  "Bold earrings or drops",
-                  "Lusso, Orsola, Concetta Long"
-                ],
-                [
-                  "High bun",
-                  "Bold earrings or hoops",
-                  "Lusso, Pave Hoops"
-                ],
-                [
-                  "Short hair",
-                  "Bold earrings, hoops or drops",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Hair down",
-                  "Bold earrings or visible drops",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Soft waves",
-                  "Drops, butterfly earrings or bold earrings",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "Half-up hair",
-                  "Bold earrings, studs or butterfly earrings",
-                  "Lusso, Cadenza M, Farfalla"
-                ],
-                [
-                  "Braided style",
-                  "Drops, studs or huggies",
-                  "Orsola, Cadenza M, Amadea"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings for Parties and Birthdays",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bold earrings are strongest for parties, birthdays and evening outfits where the jewellery should be noticed."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lusso should be positioned as the main party and birthday option when the outfit is simple. For softer birthdays, Farfalla or Orsola may feel more romantic. For modern party styling, Pave Hoops may be a better choice."
+          "text": "The neckline affects the physical space surrounding the earrings."
         },
         {
           "type": "table",
-          "headers": [
-            "Event Type",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
+          "headers": ["Neckline", "What to consider"],
           "rows": [
-            [
-              "Birthday party",
-              "Bold earrings, hoops or butterfly earrings",
-              "Lusso, Pave Hoops, Farfalla"
-            ],
-            [
-              "Birthday dinner",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Cocktail party",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Dinner party",
-              "Drops or polished studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Night-out outfit",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Holiday party",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Office party",
-              "Studs, huggies or refined hoops",
-              "Cadenza M, Amadea, Pave Hoops"
-            ],
-            [
-              "Anniversary party",
-              "Drops, butterfly earrings or studs",
-              "Orsola, Alidi Farfalla, Cadenza M"
-            ]
+            ["Strapless", "Open space allows the earrings to become prominent; decide whether a necklace is needed"],
+            ["Off-shoulder", "Check the relationship between earring length, exposed shoulders and hairstyle"],
+            ["Sweetheart", "Curved or softly structured designs may echo the neckline, while geometric earrings can create contrast"],
+            ["V-neck", "Consider whether the earrings or a pendant should lead"],
+            ["Square neck", "Both curved and angular earrings can work; repeat or contrast the neckline deliberately"],
+            ["High neck", "Check for contact between longer earrings and the fabric"],
+            ["Halter", "The neckline already directs attention upwards, so assess the complete face-and-shoulder area"],
+            ["Cowl neck", "Moving or folded fabric may compete with long or highly articulated earrings"],
+            ["Embellished neckline", "Controlled width or a compact statement stud may provide sufficient impact"]
           ]
         },
         {
           "type": "see-also",
-          "text": "Birthday jewellery gifts",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings for Weddings and Formal Events",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bold earrings can work for weddings and formal events, but only when the outfit allows them."
-        },
-        {
-          "type": "paragraph",
-          "text": "For wedding guests, bold earrings should not look too bridal or too distracting. They work best with simple black dresses, simple satin dresses, modern jumpsuits and evening wedding outfits. For detailed wedding guest dresses, Cadenza M, Orsola or Concetta Short may be safer."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Formal Event Need",
-            "Best Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple evening wedding outfit",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Black wedding guest dress",
-              "Drops, studs, hoops or bold earrings",
-              "Orsola, Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Formal dinner",
-              "Long drops or polished studs",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Cocktail wedding",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Detailed wedding outfit",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Romantic wedding outfit",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Modern wedding guest look",
-              "Hoops or drops",
-              "Pave Hoops, Orsola"
-            ],
-            [
-              "Black-tie event",
-              "Long drops, polished studs or refined bold earrings",
-              "Concetta Long, Cadenza M, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond earrings for weddings",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earring Ear Stack Ideas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bold earrings can work in an ear stack, but the bold earring must be the main piece."
-        },
-        {
-          "type": "paragraph",
-          "text": "The support earring should be small and clean. Cadenza S is the safest support stud. Laluce can work if the stack should feel softer. Avoid stacking too many large earrings with Lusso because the look can quickly become crowded."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-95.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Bold Stack Type",
-                "Main Piece",
-                "Support Piece",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Bold party stack",
-                  "Bold earring",
-                  "Small stud",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Minimal bold stack",
-                  "Bold earring",
-                  "Minimalist detail",
-                  "Lusso + Laluce"
-                ],
-                [
-                  "Modern bold stack",
-                  "Bold earring",
-                  "Huggie",
-                  "Lusso + Amadea"
-                ],
-                [
-                  "Black dress bold stack",
-                  "Bold earring",
-                  "Small stud",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Birthday bold stack",
-                  "Bold earring",
-                  "Small stud",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Safer party stack",
-                  "Drop earring",
-                  "Small stud",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Hoop party stack",
-                  "Hoop",
-                  "Small stud",
-                  "Pave Hoops + Cadenza S"
-                ],
-                [
-                  "Formal stack",
-                  "Long drop",
-                  "Small stud",
-                  "Concetta Long + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond earrings for ear stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Necklace or No Necklace with Bold Earrings?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "With bold earrings, the necklace should usually be delicate or skipped."
-        },
-        {
-          "type": "paragraph",
-          "text": "Bold earrings already frame the face and create the main jewellery focus. A heavy necklace can make the outfit look crowded. If the neckline feels empty, choose a very simple chain. If the neckline is strapless, off-shoulder or sweetheart, bold earrings can often stand alone."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Bold Earring Styling",
-            "Necklace Direction"
-          ],
-          "rows": [
-            [
-              "Bold earrings with strapless dress",
-              "Usually no necklace or very delicate chain"
-            ],
-            [
-              "Bold earrings with off-shoulder dress",
-              "Usually no necklace"
-            ],
-            [
-              "Bold earrings with V-neck dress",
-              "Delicate necklace only if needed"
-            ],
-            [
-              "Bold earrings with high-neck dress",
-              "No necklace"
-            ],
-            [
-              "Bold earrings with black dress",
-              "Keep neckline clean"
-            ],
-            [
-              "Bold earrings with satin dress",
-              "No necklace or very soft chain"
-            ],
-            [
-              "Bold earrings with party outfit",
-              "Let earrings lead"
-            ],
-            [
-              "Bold earrings in ear stack",
-              "Avoid heavy necklace"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for V-neck dresses",
+          "text": "What jewellery to wear with a V-neck dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Bold Earrings by Metal Colour",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Metal colour changes the feeling of bold earrings."
-        },
-        {
-          "type": "paragraph",
-          "text": "Yellow gold feels warm, rich and party-ready. White or silver tone feels clean, bright and formal. Rose gold feels softer and more romantic, but bold earrings in rose gold should be styled carefully so they do not look too sweet for the outfit."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-97.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metal Colour",
-                "Bold Earring Mood",
-                "Best Outfit Colours"
-              ],
-              "rows": [
-                [
-                  "Yellow gold",
-                  "Warm, rich and glamorous",
-                  "Black, red, green, champagne, burgundy, cream"
-                ],
-                [
-                  "White or silver tone",
-                  "Clean, bright and modern",
-                  "Black, navy, silver, white, grey, cool tones"
-                ],
-                [
-                  "Rose gold",
-                  "Soft, romantic and feminine",
-                  "Blush, pink, champagne, pastel outfits"
-                ],
-                [
-                  "Mixed metals",
-                  "Creative and trend-led",
-                  "Minimal outfits and ear stacks"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For bold earrings, yellow gold and white/silver tone are usually easiest for party styling. Rose gold is strongest when the look is soft, romantic or gift-led."
         },
         {
           "type": "see-also",
-          "text": "Gold vs white vs rose gold lab-grown diamond earrings",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "What earrings to wear with an off-shoulder dress",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         }
       ]
     },
     {
-      "heading": "Product Pathways by Styling Need",
+      "heading": "Choose statement earrings by hairstyle",
       "content": [
         {
-          "type": "subheading",
-          "text": "For the Strongest Bold Earring Look"
-        },
-        {
           "type": "paragraph",
-          "text": "Choose Lusso bold statement earrings. They are best when the outfit is simple and the earrings should become the main jewellery focus."
+          "text": "Hair affects visibility, but it should not be used as the only reason to select a larger or heavier earring."
         },
         {
           "type": "subheading",
-          "text": "For a Bold Black Dress Look"
+          "text": "Hair worn up"
         },
         {
           "type": "paragraph",
-          "text": "Choose Lusso with a simple black dress. If the black dress is satin or formal, Orsola or Concetta Long can also work beautifully."
+          "text": "A bun, ponytail or pinned style exposes the complete earring. This makes width, projection and the fastening more noticeable."
         },
         {
           "type": "subheading",
-          "text": "For a Bold Ear Stack"
+          "text": "Short hair"
         },
         {
           "type": "paragraph",
-          "text": "Choose Lusso with Cadenza S. The bold earring leads, and the small stud supports the stack without making it crowded."
+          "text": "Shorter hairstyles can show both compact sculptural studs and longer designs clearly. Consider the space between the earring and the jawline."
         },
         {
           "type": "subheading",
-          "text": "For a Safer Party Look"
+          "text": "Hair tucked behind the ears"
         },
         {
           "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings when the outfit already has strong detail, sequins, metallic fabric or a dramatic neckline."
+          "text": "This provides visibility without requiring a fully pinned hairstyle. Check whether textured surfaces or moving components may catch in the hair."
         },
         {
           "type": "subheading",
-          "text": "For Elegant Movement Instead of Bold Impact"
+          "text": "Hair worn down"
         },
         {
           "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They are better when the outfit needs movement rather than a strong statement shape."
-        },
-        {
-          "type": "subheading",
-          "text": "For Modern Shape Instead of Bold Impact"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Pave Hoops. They add visible shape and sparkle without feeling as dramatic as bold earrings."
-        },
-        {
-          "type": "subheading",
-          "text": "For Soft Romantic Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla, Alidi Farfalla or Concetta Short when the outfit is blush, pastel, floral, romantic or soft satin."
-        },
-        {
-          "type": "subheading",
-          "text": "For Minimal Support Pieces"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza S, Laluce or Amadea as support pieces for bold styling and ear stacks."
+          "text": "A defined outline, contrasting metal colour or visible movement may help the earring remain noticeable. Review photographs showing the design with hair down rather than relying only on isolated product images."
         }
       ]
     },
     {
-      "heading": "Product Recommendations from IWantJewels",
+      "heading": "Can statement earrings work during the day?",
       "content": [
         {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Bold Styling Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Lusso bold statement earrings",
-              "Main bold earring recommendation",
-              "Strongest choice for standout party styling"
-            ],
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Best support stud",
-              "Balances bold earrings in ear stacks"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Best safe sparkle alternative",
-              "Works when bold earrings feel too much"
-            ],
-            [
-              "Orsola drop earrings",
-              "Best elegant alternative",
-              "Adds movement instead of bold impact"
-            ],
-            [
-              "Pave Hoops",
-              "Best modern shape alternative",
-              "Adds curve and visibility"
-            ],
-            [
-              "Concetta Long earrings",
-              "Best formal evening alternative",
-              "Creates a refined long line"
-            ],
-            [
-              "Concetta Short earrings",
-              "Best soft occasion alternative",
-              "Works for delicate party and wedding styling"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Best romantic alternative",
-              "Strong for soft, meaningful outfits"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Best gift-led romantic option",
-              "Works for birthdays and anniversaries"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Best understated support piece",
-              "Useful for detailed outfits and stacks"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Best quiet detail",
-              "Helps keep bold styling balanced"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Statement earrings are not limited to evening events. A compact sculptural stud, small pavé hoop or controlled geometric design may function as the focal point of a daytime outfit."
         },
         {
           "type": "paragraph",
-          "text": "Choose Lusso when the outfit is simple and the earrings should lead. Choose Cadenza S as the clean support stud, Orsola when you want movement, Pave Hoops when you want shape, and Cadenza M when the outfit already has enough detail."
+          "text": "For work or longer periods of wear, compare the weight per earring, complete dimensions, fastening security, movement, workplace dress expectations, and use with headphones, telephones or head coverings."
+        },
+        {
+          "type": "paragraph",
+          "text": "A design should not be described as suitable for all-day wear unless its specifications and testing support that statement. Comfort remains personal."
         }
       ]
     },
     {
-      "heading": "Common Bold Earring Mistakes to Avoid",
+      "heading": "Statement earrings for parties, weddings and black-tie events",
       "content": [
         {
           "type": "paragraph",
-          "text": "One common mistake is wearing bold earrings with an outfit that is already too detailed. Sequins, metallic fabrics, heavy lace, embroidery and strong prints usually need cleaner earrings."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is adding too much jewellery around bold earrings. If the earrings are already the main feature, keep the necklace delicate or skip it."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is choosing bold earrings that compete with the neckline. Strapless and off-shoulder outfits work well, but detailed necklines can become too crowded."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is forgetting hairstyle. Bold earrings look best when they are visible, especially with pulled-back hair, short hair or soft waves."
-        },
-        {
-          "type": "paragraph",
-          "text": "A fifth mistake is using multiple large earrings in one ear stack. Bold earrings need small support pieces."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not choose bold earrings only because they look dramatic. They should still match the outfit, event, wearer's confidence and comfort."
+          "text": "Parties and evening events often provide more freedom to use visible shapes, movement or diamond coverage. Before choosing, consider the venue and the full outfit rather than using the event name alone. A simple cocktail dress may allow a more prominent earring than an intricately embellished party dress."
         },
         {
           "type": "see-also",
-          "text": "Minimalist jewellery styling guide",
-          "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
+          "text": "Party earrings guide",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement earrings can be worn for weddings and black-tie events when they work with the outfit, dress code and setting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wedding guests should consider whether the design complements the outfit without introducing an unintended bridal effect. For black-tie styling, examine the relationship between the earrings, hairstyle, neckline and any necklace."
+        },
+        {
+          "type": "paragraph",
+          "text": "A long earring is not automatically more formal, and a stud is not automatically casual. Material, finish, proportion and the complete styling determine the result."
         }
       ]
     },
     {
-      "heading": "Final Bold Earring Checklist",
+      "heading": "Statement earrings versus studs and hoops",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "\"Statement earring\" and \"stud\" are not opposites."
+        },
+        {
+          "type": "paragraph",
+          "text": "A stud describes how an earring sits at the piercing, while statement describes its visual role. A wide diamond cluster, sculptural form or distinctive motif can be both a stud and a statement earring."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose a compact statement stud when you want visible detail without a long drop. Choose a smaller classic stud when you want the earring to support another part of the outfit."
+        },
+        {
+          "type": "paragraph",
+          "text": "A hoop can also be a statement earring. Hoop refers to the curved construction, while statement refers to its prominence in the complete look. A hoop may become a focal point through its diameter, width, diamond placement, shape, surface detail, multiple rows or sculptural construction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compare actual measurements rather than assuming every hoop is more restrained than a statement drop or stud."
+        },
+        {
+          "type": "see-also",
+          "text": "Stud vs hoop earrings",
+          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamond hoop earrings guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Can statement earrings be used in an ear stack?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Before choosing bold statement earrings, ask:"
+          "text": "Yes, provided the focal earring has enough physical space and the supporting pieces remain secondary. A simple ear-stack structure is:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Is the outfit simple enough for bold earrings?",
-            "Is there already lace, sequins, metallic fabric or heavy detail?",
-            "Should the earrings be the main jewellery focus?",
-            "Should the necklace be skipped?",
-            "Does the neckline support bold earrings?",
-            "Will the hairstyle show the earrings?",
-            "Is this for a party, birthday, dinner, wedding or formal event?",
-            "Does the metal colour match the outfit?",
-            "Are the earrings comfortable for the full event?",
-            "Do I need a support stud for an ear stack?",
-            "Would drops, hoops or studs be better?",
-            "Will I wear the earrings again?",
-            "Is the look confident but still balanced?"
+            "One statement earring in the main piercing",
+            "One smaller stud or close-fitting piece in the next piercing",
+            "Optional additional detail only when the spacing allows it"
           ]
         },
         {
           "type": "paragraph",
-          "text": "If you are unsure, choose bold earrings only when the outfit is simple. If the outfit is already detailed, choose Cadenza M, Orsola, Pave Hoops or Amadea instead."
+          "text": "Check the distance between piercings, the width of every earring, post direction and whether neighbouring pieces touch. Product mock-ups should not replace photographs of the exact combination being worn."
+        },
+        {
+          "type": "see-also",
+          "text": "How to stack earrings",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Diamond ear stack ideas",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Choosing metal colour, materials and diamonds",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Metal colour and metal composition are different pieces of information. \"Gold tone\" describes appearance. It does not confirm solid gold, gold plating, vermeil or another material. Every product should state its actual base metal and finish accurately."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Yellow gold colours add warmth",
+            "White or silver colours create cooler contrast",
+            "Rose gold colours introduce a softer pink tone",
+            "Mixed metals can work when the combination is repeated intentionally"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For lab-grown diamond statement earrings, verify more than the general product description. The product page should state:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Whether the stones are lab-grown diamonds",
+            "Total carat weight and whether it refers to the pair",
+            "Number of stones",
+            "Stone shapes",
+            "Diamond placement",
+            "Complete earring measurements",
+            "Weight per earring",
+            "Metal and finish",
+            "Fastening",
+            "Whether the listing is sold as a pair or single earring"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "A larger total carat weight does not automatically create a more visible design. Stone distribution, setting, width and contrast also affect how the earring appears."
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamond stud earrings guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Common statement-earring styling mistakes",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Assuming statement earrings must be oversized"
+            },
+            {
+              "type": "paragraph",
+              "text": "A distinctive shape or compact diamond arrangement can create impact without extreme dimensions."
+            },
+            {
+              "type": "subheading",
+              "text": "Wearing several unrelated focal pieces"
+            },
+            {
+              "type": "paragraph",
+              "text": "A prominent earring, heavy necklace, embellished neckline and complex ear stack can compete. Decide which element should lead."
+            },
+            {
+              "type": "subheading",
+              "text": "Ignoring complete measurements"
+            },
+            {
+              "type": "paragraph",
+              "text": "Product photographs alone do not provide reliable scale. Check width, height, drop and weight."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Treating every stud or hoop as understated"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studs and hoops can also be statement designs. Compare their actual visual presence."
+        },
+        {
+          "type": "subheading",
+          "text": "Choosing by occasion name alone"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two wedding, party or dinner outfits may require entirely different earrings. Consider the fabric, neckline and hairstyle."
+        },
+        {
+          "type": "subheading",
+          "text": "Relying on unverified product claims"
+        },
+        {
+          "type": "paragraph",
+          "text": "Products should not be described as lightweight, secure, hypoallergenic, suitable for sensitive ears or comfortable for all-day use without evidence."
+        }
+      ]
+    },
+    {
+      "heading": "Statement earring checklist",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before purchasing or styling a pair, ask:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "What creates the statement: size, shape, movement, motif or diamond coverage?",
+            "What are the complete measurements?",
+            "What is the weight per earring?",
+            "What fastening does it use?",
+            "Will it touch the collar, shoulder or neckline?",
+            "Does the outfit already contain strong detail?",
+            "Should the earrings or necklace lead?",
+            "Will the hairstyle show the complete design?",
+            "Is there enough room for an ear stack?",
+            "Are the metal, finish and stones clearly identified?",
+            "Are all product claims supported by the exact product specifications?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "What are bold statement earrings?",
-      "answer": "Bold statement earrings are earrings designed to be the main jewellery focus of an outfit. They are usually more visible, sparkly or design-led than everyday earrings."
+      "question": "What makes an earring a statement earring?",
+      "answer": "An earring becomes a statement piece when it has enough visual presence to become a focal point. That presence may come from shape, size, movement, contrast, diamond placement or a distinctive motif."
     },
     {
-      "question": "When should I wear bold earrings?",
-      "answer": "Wear bold earrings with simple outfits, black dresses, party looks, strapless dresses, off-shoulder dresses, sleek jumpsuits and evening outfits where the earrings can lead."
+      "question": "Do statement earrings have to be large?",
+      "answer": "No. A compact sculptural stud or distinctive hoop can make a statement without being oversized. Complete proportions and design are more important than length alone."
     },
     {
-      "question": "Can I wear bold earrings with a black dress?",
-      "answer": "Yes, a black dress is one of the best outfits for bold earrings, especially when the dress is simple."
+      "question": "Can I wear a necklace with statement earrings?",
+      "answer": "Yes. Use the neckline and visual weight of both pieces to decide. A restrained necklace can work, but it should not compete unintentionally with the earrings."
     },
     {
-      "question": "Can I wear bold earrings with a red dress?",
-      "answer": "Yes, but only if the red dress is simple. If the red dress has satin shine, lace, sequins or strong detail, drops or medium studs may look better."
+      "question": "Can statement earrings be worn to work?",
+      "answer": "They can, depending on their dimensions, movement, weight and the workplace. Compare the exact specifications and consider practical requirements such as headphones and telephone use."
     },
     {
-      "question": "Can I wear bold earrings with a satin dress?",
-      "answer": "Yes, bold earrings can work with a simple satin dress. If the satin dress has strong draping, ruching or shine, drop earrings or studs may be safer."
+      "question": "Can statement earrings be worn to a wedding?",
+      "answer": "Yes, when they suit the dress code and complement the outfit. Wedding guests should consider the neckline, fabric, hairstyle and whether the design appears overly bridal."
     },
     {
-      "question": "Should I wear a necklace with bold earrings?",
-      "answer": "Usually, keep the necklace delicate or skip it. Bold earrings should normally be the main jewellery focus."
+      "question": "Can studs be statement earrings?",
+      "answer": "Yes. \"Stud\" describes the construction, while \"statement\" describes the earring's visual role. Sculptural, cluster and motif studs can all function as statement earrings."
     },
     {
-      "question": "Are bold earrings good for weddings?",
-      "answer": "Bold earrings can work for wedding guests when the outfit is simple and the styling is balanced. For detailed wedding outfits, studs or drops are usually safer."
+      "question": "Can hoops be statement earrings?",
+      "answer": "Yes. Hoops may become statement pieces through their diameter, width, shape, surface detail or diamond placement."
     },
     {
-      "question": "Can bold earrings be worn in an ear stack?",
-      "answer": "Yes, but the bold earring should be the main piece. Pair it with a small stud such as Cadenza S or a quiet minimalist detail."
-    },
-    {
-      "question": "Are bold earrings good gifts?",
-      "answer": "Bold earrings are good gifts only if the recipient likes standout jewellery. If you are unsure, diamond studs or huggies are safer."
-    },
-    {
-      "question": "What IWantJewels earrings are best for bold styling?",
-      "answer": "Lusso bold statement earrings are the strongest IWantJewels option for bold styling. Cadenza S, Orsola, Pave Hoops and Cadenza M work as support pieces or alternatives."
+      "question": "Are statement earrings always heavy?",
+      "answer": "No. Visual impact does not establish weight. Check the published weight per earring because similarly sized designs can have different construction and weight."
     }
   ],
   "cta": {
-    "heading": "Bold statement earrings work best when the outfit gives them space.",
-    "body": "Choose them for simple party dresses, black outfits, clean satin looks, birthday nights, evening events and confident styling. Keep the necklace minimal, let the earrings frame the face and use small support pieces if you are building an ear stack. Start with IWantJewels Lusso bold statement earrings if you want the earrings to lead the look. Choose Cadenza S as the support stud, Orsola for elegant movement, Pave Hoops for modern shape and Cadenza M when the outfit needs safer sparkle.",
-    "primaryLabel": "Shop Bold Statement Earrings",
+    "heading": "Bold statement earrings work most successfully when their role in the outfit is intentional. Let one element lead the jewellery look.",
+    "body": "Browse the I Want Jewels collection by comparing dimensions, weight, fastening, materials and diamond details. Choose the design that suits your outfit and intended styling rather than relying on the product name alone.",
+    "primaryLabel": "Shop Statement Earrings",
     "primaryHref": "/products?category=Earring",
     "secondaryLabel": "Explore Party Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Party Earrings Guide",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryHref": "/resources/earring-style-guides/party-earrings-guide",
+    "tertiaryLabel": "Minimalist Earrings Guide",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
   }
 }

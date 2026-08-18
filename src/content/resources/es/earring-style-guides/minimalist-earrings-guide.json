@@ -1,101 +1,83 @@
 {
   "meta": {
-    "title": "Guía de pendientes minimalistas",
-    "description": "Aprenda a elegir aretes minimalistas para el uso diario, trajes de trabajo, pendientes, regalos y un estilo sencillo con diamantes cultivados en laboratorio."
+    "title": "Guía de pendientes minimalistas: estilos y consejos",
+    "description": "Elija pendientes minimalistas por estilo, tamaño, metal y brillo. Compare pendientes de botón, aros pequeños (huggies), aros finos y diamantes sutiles."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-69.jpg",
+    "image": "/blog-images/blog-image-46.jpg",
     "title": "Guía de pendientes minimalistas:",
-    "subtitle": "Pendientes sencillos para el estilo diario",
+    "subtitle": "Estilos, tamaños y cómo elegir",
     "paragraphs": [
-      "Los pendientes minimalistas son sencillos, ponibles y fáciles de peinar. Están diseñados para añadir brillo sin apoderarse del conjunto. Para muchos compradores, los pendientes minimalistas se convierten en las piezas más utilizadas de su colección de joyas porque combinan con ropa de diario, trajes de oficina, vestidos sencillos, looks de viaje, pendientes y estilismos nocturnos tranquilos.",
-      "Los mejores pendientes minimalistas no son aburridos. Se basan en formas limpias, tamaños equilibrados, brillos sutiles y buenos materiales. Un pequeño pendiente de diamante cultivado en laboratorio, un aro ajustado, un arete suave y minimalista o un aro simple pueden hacer que un conjunto parezca terminado sin parecer pesado.",
-      "Este recurso ayuda a los compradores a elegir aretes minimalistas por estilo, ocasión, efecto que enmarca la cara, color del metal, propósito de regalo y uso de la oreja. También conecta cada dirección de estilo con piezas de IWantJewels como Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla y Orsola."
+      "Los pendientes minimalistas utilizan formas claras, proporciones equilibradas y detalles cuidadosamente controlados. Pueden ser pequeños y sutiles, pero el tamaño por sí solo no determina si un pendiente es minimalista. Un pendiente de botón mediano, un pendiente de aro fino o un diseño geométrico limpio también pueden tener un aspecto minimalista cuando su forma es sencilla y despejada.",
+      "La elección adecuada depende de algo más que del diseño. Las dimensiones, el peso, el cierre, el metal, el acabado, la información sobre el diamante y el uso previsto influyen en si un pendiente será adecuado para usted.",
+      "Esta guía compara los principales tipos de pendientes minimalistas y explica qué debe comprobar antes de comprar pendientes de botón de diamante minimalistas, aros pequeños (huggies), pendientes de aro y otros diseños sencillos."
     ],
-    "shopLabel": "Comprar pendientes minimalistas",
+    "shopLabel": "Descubra los pendientes minimalistas",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Entiende qué son los pendientes minimalistas",
-      "Elija aretes minimalistas para uso diario, ropa de trabajo y viajes.",
-      "Compara aretes, aros, aros y aretes de diamantes minimalistas",
-      "Construye orejeras sencillas con piezas minimalistas",
-      "Elige pendientes minimalistas como regalo",
-      "Pendientes de estilo minimalista con vestidos, camisas, blazers y conjuntos casuales.",
-      "Decide cuándo elegir un brillo sutil y cuándo elegir un arete más visible",
-      "Encuentre recomendaciones de productos IWantJewels según sus necesidades de estilo",
-      "Planifique bloques de imágenes, módulos de productos, CTA y enlaces internos para esta página"
+      "Brillo concentrado: un pendiente de botón con diamante; compruebe el diámetro, los quilates y el cierre trasero",
+      "Forma curva cerca del lóbulo: un aro pequeño (huggie); compruebe el diámetro interior y el cierre",
+      "Contorno más visible: un pendiente de aro fino; compruebe el diámetro, el peso y el cierre",
+      "Diseño geométrico contemporáneo y limpio: un pendiente de botón geométrico; compruebe el ancho, la altura y la orientación",
+      "Un movimiento sutil: un pendiente colgante corto; compruebe la longitud, el peso y la sujeción",
+      "«Minimalista» describe un estilo, no garantiza comodidad ni ajuste"
     ],
-    "image": "/blog-images/blog-image-78.jpg"
+    "image": "/blog-images/blog-image-50.jpg"
   },
   "content": [
     {
-      "heading": "Selector de pendientes minimalistas",
+      "heading": "Selector rápido de pendientes minimalistas",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como principal herramienta de decisión."
-        },
         {
           "type": "table",
           "headers": [
-            "Necesidad de estilo",
-            "Mejor dirección de aretes minimalistas",
-            "Dirección IWJ recomendada"
+            "Lo que busca",
+            "Tipo de pendiente",
+            "Qué comprobar antes de comprar"
           ],
           "rows": [
             [
-              "Primeros pendientes cotidianos",
-              "Pequeños pendientes de diamantes",
-              "Cadenza S"
+              "Brillo concentrado",
+              "Pendiente de botón con diamante",
+              "Diámetro frontal, información sobre los quilates y cierre trasero"
             ],
             [
-              "Brillo diario más visible",
-              "Tacos medianos",
-              "CadenzaM"
+              "Forma curva cerca del lóbulo",
+              "Aro pequeño (huggie)",
+              "Diámetro interior, grosor y cierre"
             ],
             [
-              "Estilo minimalista tranquilo",
-              "Pendientes minimalistas sencillos",
-              "laluce"
+              "Contorno más visible",
+              "Pendiente de aro fino",
+              "Diámetro, peso y cierre"
             ],
             [
-              "Aspecto diario moderno",
-              "abrazos",
-              "Amadea Huggie"
+              "Diseño geométrico contemporáneo y limpio",
+              "Pendiente de botón geométrico",
+              "Ancho, altura y orientación"
             ],
             [
-              "Pila de oreja mínima",
-              "Semental pequeño + pendiente minimalista",
-              "Cadenza S + Laluce"
+              "Un movimiento sutil",
+              "Pendiente colgante corto",
+              "Longitud del colgante, peso y sujeción"
             ],
             [
-              "Joyas para ropa de trabajo",
-              "Sementales pequeños o abrazos",
-              "Cadenza S, Amadea"
+              "Detalle complementario para un ear stack",
+              "Pendiente de botón pequeño o aro pequeño (huggie)",
+              "Distancia entre perforaciones y dimensiones"
             ],
             [
-              "Joyas de viaje",
-              "Sementales o abrazos seguros",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Look de cena sencillo",
-              "Tacos medianos o gotas suaves",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Look minimalista de invitada de boda",
-              "Tachuelas medianas o gotas delicadas",
-              "Cadenza M, Concetta Corto"
-            ],
-            [
-              "Regalo mínimo",
-              "Studs o aretes minimalistas",
-              "Cadenza S, Laluce"
+              "Un primer par de pendientes con diamantes minimalistas",
+              "Pendiente de botón sencillo",
+              "Materiales, engaste, información del par y escala sobre la oreja"
             ]
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "«Minimalista» describe un estilo. No significa automáticamente que un pendiente sea ligero, cómodo, hipoalergénico, resistente o adecuado para todas las perforaciones."
         }
       ]
     },
@@ -103,917 +85,500 @@
       "heading": "¿Qué son los pendientes minimalistas?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Los pendientes minimalistas son unos pendientes con un diseño limpio y sencillo. Por lo general, evitan los detalles pesados, las formas demasiado grandes o los estilos demasiado dramáticos. La atención se centra en el equilibrio, la comodidad y la portabilidad diaria."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas aún pueden incluir diamantes. Un pequeño pendiente de diamante creado en laboratorio, un delicado aro o un simple detalle de diamante pueden parecer minimalistas cuando el diseño es refinado y fácil de usar."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los estilos de aretes minimalistas comunes incluyen:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo minimalista",
-            "Cómo se ve",
-            "Mejor para"
-          ],
-          "rows": [
-            [
-              "Sementales pequeños",
-              "Brillo simple cerca de la oreja.",
-              "Ropa de diario y ropa de trabajo."
-            ],
-            [
-              "Tacos medianos",
-              "Brillo clásico con más visibilidad.",
-              "Regalos y elegantes outfits diarios."
-            ],
-            [
-              "abrazos",
-              "Pequeños aros que se colocan cerca de la oreja.",
-              "Pendientes y estilo moderno"
-            ],
-            [
-              "Pendientes minimalistas de diamantes",
-              "Brillo silencioso con forma limpia.",
-              "Joyas sutiles para el día a día"
-            ],
-            [
-              "Aros pequeños",
-              "Forma curva sencilla",
-              "Conjuntos casuales y looks de fin de semana."
-            ],
-            [
-              "Gotas cortas",
-              "Movimiento suave sin mucho drama.",
-              "Cenas y estilismo para ocasiones mínimas."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas son mejores cuando quieres joyas que se puedan usar con frecuencia sin necesidad de un atuendo especial."
-        },
-        {
-          "type": "see-also",
-          "text": "¿Qué es la joyería semifina?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Por qué los aretes minimalistas funcionan para el uso diario",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas funcionan para el uso diario porque son fáciles de repetir."
-        },
-        {
-          "type": "paragraph",
-          "text": "No suelen desentonar con outfits, escotes, peinados u otras joyas. Se pueden usar con una camisa blanca, una chaqueta, prendas de punto, un vestido informal, un vestido negro, un traje de viaje o un sencillo look de noche."
-        },
-        {
-          "type": "paragraph",
-          "text": "Para IWantJewels, el estilo diario minimalista funciona especialmente bien con aretes de diamantes cultivados en laboratorio porque incluso un pequeño detalle de diamante puede hacer que la apariencia se sienta más pulida."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Razón cotidiana",
-            "Por qué ayudan los pendientes minimalistas"
-          ],
-          "rows": [
-            [
-              "Fácil de peinar",
-              "Combinan con muchos conjuntos."
-            ],
-            [
-              "Cómodo",
-              "Los diseños más pequeños son más fáciles de usar durante mucho tiempo."
-            ],
-            [
-              "repetible",
-              "No se sienten demasiado específicos de la ocasión."
-            ],
-            [
-              "Bueno para el trabajo",
-              "Añaden esmalte sin distracciones."
-            ],
-            [
-              "Bueno para audífonos",
-              "Soportan piezas de mayor tamaño sin apiñamiento"
-            ],
-            [
-              "Apto para regalos",
-              "Los diseños simples son más fáciles de elegir."
-            ],
-            [
-              "Atemporal",
-              "Menos dependiente de las tendencias a corto plazo"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "¿Las joyas semifinas son buenas para el uso diario?",
-          "href": "/resources/demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes minimalistas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes son el estilo de arete minimalista más clásico."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se ajustan cerca de la oreja, se sienten seguros y combinan con casi cualquier vestimenta. Los pequeños pendientes de diamantes son especialmente útiles porque añaden brillo sin parecer demasiado formales."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes de diamantes cultivados en laboratorio Cadenza S son la dirección minimalista más fuerte para un uso diario sutil. Son ideales para compradores que desean un brillo de diamante simple que se pueda usar repetidamente."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes de diamantes Cadenza M son mejores para los compradores que aún desean una forma minimalista pero prefieren que el brillo sea más visible. También son más fuertes para los regalos porque se sienten más notorios y al mismo tiempo siguen siendo clásicos."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de perno prisionero",
-            "Mejor para",
-            "Dirección IWJ"
-          ],
-          "rows": [
-            [
-              "Sementales pequeños",
-              "Ropa diaria, ropa de trabajo, primeros aretes de diamantes.",
-              "Cadenza S"
-            ],
-            [
-              "Tacos medianos",
-              "Regalos, looks diarios refinados, vestidos sencillos.",
-              "CadenzaM"
-            ],
-            [
-              "Pila de montantes",
-              "Pilas de orejas mínimas",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Tachuelas para ropa de trabajo",
-              "Trajes de oficina y joyería diaria.",
-              "Cadenza S o Cadenza M"
-            ],
-            [
-              "Pendientes de invitada de boda",
-              "Conjuntos detallados y escotes altos.",
-              "CadenzaM"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes Huggie minimalistas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los Huggies son ideales para un estilo minimalista porque se colocan cerca de la oreja y añaden forma sin sentirse pesados."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un huggie es especialmente útil cuando quieres algo más estilizado que un pendiente pero que sea lo suficientemente fácil para el uso diario. Los Huggies también funcionan muy bien en las orejeras porque crean estructura y dejan espacio para aretes o aretes minimalistas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes Amadea Huggie son la dirección más fuerte de IWantJewels para un estilo huggie minimalista. Se pueden usar solos para una apariencia limpia o combinados con Cadenza S para una simple pila de pendientes de diamantes."
-        },
-        {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-75.jpg",
+          "image": "/blog-images/blog-image-54.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Necesidad de estilo Huggie",
-                "Mejor combinación",
-                "Por qué funciona"
-              ],
-              "rows": [
-                [
-                  "Sencillo look de abrazo diario",
-                  "amadea sola",
-                  "Limpio y moderno"
-                ],
-                [
-                  "Pila de oreja mínima",
-                  "Amadea + Cadenza S",
-                  "Forma más brillo"
-                ],
-                [
-                  "Pila de abrazos de ropa de trabajo",
-                  "Amadea + Laluce",
-                  "Pulido y sutil"
-                ],
-                [
-                  "Conjunto de abrazos para regalar",
-                  "Amadea + Cadenza S",
-                  "Regalo fácil de dos piezas"
-                ],
-                [
-                  "Estilo de fin de semana",
-                  "Amadea + Pave Aros",
-                  "Aspecto más moldeado"
-                ]
+              "type": "paragraph",
+              "text": "Los pendientes minimalistas son diseños que reducen los detalles visuales innecesarios. Por lo general, utilizan una silueta clara, una decoración contenida y un único elemento focal reconocible."
+            },
+            {
+              "type": "paragraph",
+              "text": "Ese elemento puede ser:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Un solo diamante",
+                "Un pendiente de aro estrecho",
+                "Una curva limpia de metal",
+                "Un contorno geométrico sencillo",
+                "Una línea corta de diamantes",
+                "Una pequeña forma simbólica",
+                "Un único elemento colgante discreto"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Aretes versus aretes huggie",
-          "href": "#"
+          "type": "paragraph",
+          "text": "Los pendientes minimalistas no tienen por qué pasar desapercibidos. También pueden aportar un brillo o una forma visibles sin perder un diseño limpio."
         }
       ]
     },
     {
-      "heading": "Pendientes de aro minimalistas",
+      "heading": "¿Qué hace que un pendiente parezca minimalista?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Una silueta clara"
+        },
+        {
+          "type": "paragraph",
+          "text": "El diseño debe entenderse fácilmente de un vistazo. Los pendientes de botón redondos, los pendientes de aro estrechos, los aros pequeños (huggies) y las formas geométricas sencillas suelen crear este efecto."
+        },
+        {
+          "type": "subheading",
+          "text": "Detalles controlados"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente minimalista puede incluir diamantes o elementos decorativos, pero estos deben reforzar la forma principal en lugar de competir con ella."
+        },
+        {
+          "type": "subheading",
+          "text": "Escala intencionada"
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalista no siempre significa pequeño. El diseño puede tener una presencia visible sin resultar muy ornamentado o excesivamente grande."
+        },
+        {
+          "type": "subheading",
+          "text": "Movimiento limitado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de botón y los aros pequeños (huggies) normalmente permanecen relativamente cerca de la oreja. Un pendiente colgante también puede parecer minimalista cuando es corto y el diseño no resulta recargado."
+        },
+        {
+          "type": "subheading",
+          "text": "Un acabado discreto"
+        },
+        {
+          "type": "paragraph",
+          "text": "El color del metal, el engaste y los detalles del diamante deben combinarse sin introducir varios efectos inconexos."
+        }
+      ]
+    },
+    {
+      "heading": "¿Son siempre pequeños los pendientes minimalistas?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aros minimalistas son aros sencillos que se ajustan a la oreja o pequeños aretes estilo aro que añaden forma sin volverse demasiado atrevidos."
+          "text": "No. El tamaño pequeño es habitual en la joyería minimalista, pero no es su característica definitoria."
         },
         {
           "type": "paragraph",
-          "text": "Son útiles para los compradores que desean un poco más de presencia que un pendiente pero no quieren un arete espectacular. Los aros minimalistas combinan bien con atuendos informales, ropa de trabajo, looks de fin de semana y vestidos sencillos."
+          "text": "Un pendiente diminuto con varios motivos, colores y elementos decorativos puede no parecer minimalista. En cambio, un pendiente de aro mediano con un contorno limpio y pocos detalles sí puede serlo."
         },
         {
           "type": "paragraph",
-          "text": "Pave Hoops puede funcionar como una opción minimalista con más estilo cuando el comprador quiere brillar con una forma de aro limpia. Si el aro es más visible, el resto de las joyas deben seguir siendo sencillas."
+          "text": "Al comparar tamaños, fíjese en:"
         },
         {
-          "type": "table",
-          "headers": [
-            "Necesidad de estilo de aro",
-            "Dirección de producto",
-            "Nota de estilo"
-          ],
-          "rows": [
-            [
-              "Aspecto de aro simple",
-              "Aros de pavimentación",
-              "Deja que la forma del aro lidere"
-            ],
-            [
-              "Pila de orejas de aro",
-              "Pave Aros + Cadenza S",
-              "Añade un pequeño punto de brillo."
-            ],
-            [
-              "traje informal",
-              "Pave Aros + Laluce",
-              "Mantiene el aspecto moderno"
-            ],
-            [
-              "Aspecto minimalista de fiesta",
-              "Pave Aros + Cadenza M",
-              "Agrega brillo sin un estilo llamativo"
-            ],
-            [
-              "Look de aro de ropa de trabajo",
-              "Dirección de aro pequeño",
-              "Mantenga otras joyas sutiles"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Ancho y altura frontales en milímetros",
+            "Diámetro y grosor del pendiente de aro",
+            "Diámetro interior del aro pequeño (huggie)",
+            "Longitud del pendiente colgante",
+            "Peso total de los pendientes",
+            "Información sobre los quilates del diamante",
+            "Fotografías sobre la oreja tomadas a una escala realista"
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Los quilates describen el peso del diamante, no las dimensiones completas del pendiente. Dos pendientes con información similar sobre los quilates pueden tener tamaños visuales distintos debido a su engaste, la distribución de los diamantes y el diseño general."
+        },
+        {
+          "type": "paragraph",
+          "text": "En el caso concreto de los pendientes de botón con diamantes, el Gemological Institute of America recomienda valorar los diamantes, el engaste, el metal y los cierres traseros, en lugar de elegir únicamente por el peso en quilates."
+        },
+        {
           "type": "see-also",
-          "text": "Pendientes de aro versus aros",
-          "href": "#"
+          "text": "Guía de tallas de pendientes de diamante de laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Pendientes minimalistas de diamantes",
+      "heading": "Tipos de pendientes minimalistas",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Los pendientes de diamantes minimalistas son ideales cuando quieres un brillo real pero sin un aspecto de joyería pesada."
+          "type": "subheading",
+          "text": "Pendientes de botón minimalistas"
         },
         {
           "type": "paragraph",
-          "text": "La clave es elegir formas limpias y proporciones ponibles. Un arete de diamantes minimalista debe resultar fácil de usar, no demasiado formal. Debería funcionar con la ropa de todos los días y aún así lucir lo suficientemente elegante para una cena o una ocasión sencilla."
+          "text": "Los pendientes de botón sitúan el diseño principal directamente sobre el lóbulo. Están disponibles como diamantes solitarios, conjuntos, formas geométricas y pequeños diseños simbólicos."
         },
         {
           "type": "paragraph",
-          "text": "Para IWantJewels, los aretes de diamantes minimalistas de Laluce son la dirección de producto más sólida para esta sección. Cadenza S también funciona como un pendiente de diamante minimalista. Amadea Huggie añade forma, mientras que Cadenza M aporta un brillo más visible sin caer en un estilo atrevido."
+          "text": "Un pendiente de botón con diamante de estilo solitario crea un único punto de brillo concentrado. Un pendiente de botón geométrico ofrece un contorno más limpio y contemporáneo. Un pequeño conjunto puede parecer más decorativo, aunque sus dimensiones generales sigan siendo contenidas."
         },
         {
-          "type": "table",
-          "headers": [
-            "Necesidad de diamante minimalista",
-            "Mejor dirección IWJ"
-          ],
-          "rows": [
-            [
-              "Pequeño brillo cotidiano",
-              "Cadenza S"
-            ],
-            [
-              "Detalle minimalista y silencioso",
-              "laluce"
-            ],
-            [
-              "Forma minimalista moderna",
-              "Amadea Huggie"
-            ],
-            [
-              "Brillo clásico más visible",
-              "CadenzaM"
-            ],
-            [
-              "Pulido de ocasión mínima",
-              "Orsola o Concetta Corta"
-            ]
+          "type": "paragraph",
+          "text": "Compruebe el diámetro del pendiente de botón en milímetros, la longitud del poste, el tipo de cierre trasero, el estilo de engaste y el peso total del pendiente. Confirme también si los quilates indicados corresponden a cada pendiente o al par, y si el producto se vende como par o como pendiente individual."
+        },
+        {
+          "type": "see-also",
+          "text": "Guía de pendientes de botón de diamante de laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Aros pequeños (huggies) minimalistas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un aro pequeño (huggie) está diseñado para quedar relativamente cerca del lóbulo. Su aspecto depende en gran medida de la relación entre el diámetro interior y la posición de la perforación de quien lo lleva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes de comprar aros pequeños (huggies), compruebe:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Diámetro interior",
+            "Diámetro exterior",
+            "Grosor del pendiente de aro",
+            "Dimensiones del poste",
+            "Tipo de bisagra y cierre",
+            "Peso del pendiente",
+            "Si los elementos decorativos quedan orientados hacia delante al llevarlos"
           ]
         },
         {
+          "type": "paragraph",
+          "text": "No dé por hecho que todos los aros pequeños (huggies) quedarán ajustados en cualquier oreja. El grosor del lóbulo y la distancia entre la perforación y el borde inferior del lóbulo varían."
+        },
+        {
           "type": "see-also",
-          "text": "Guía de compra de aretes de diamantes cultivados en laboratorio",
-          "href": "#"
+          "text": "Pendientes de botón frente a aros pequeños (huggies)",
+          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes de aro minimalistas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente de aro minimalista suele utilizar un círculo limpio, un grosor contenido y pocos elementos decorativos adicionales. Un pendiente de aro estrecho de metal liso da más protagonismo a la forma. Un pendiente de aro con pavé o diamantes aporta brillo en parte o en toda la superficie visible."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe el diámetro del pendiente de aro, el grosor, el peso total, el mecanismo de cierre, el número y la colocación de los diamantes, si el aro es hueco o macizo y si hay fotografías reales de perfil y de frente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente de aro puede parecer pequeño por separado, pero resultar mucho más visible al llevarlo puesto. Por eso, las imágenes sobre la oreja son esenciales."
+        },
+        {
+          "type": "see-also",
+          "text": "Pendientes de aro vs. aros pequeños (huggies)",
+          "href": "/resources/earring-style-guides/hoop-vs-huggie-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes geométricos minimalistas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes geométricos minimalistas utilizan líneas, curvas, hexágonos, triángulos u otras formas controladas y sencillas. Pueden aportar más carácter visual que un pendiente de botón solitario sin perder un aspecto despejado. Considere si la orientación del pendiente es fija o si puede girar sobre el lóbulo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe el ancho y la altura máximos, la posición del poste, la dirección en la que está diseñado para colocarse, si el pendiente es simétrico, la ubicación de los diamantes y el tamaño del cierre trasero. Una fotografía auténtica sobre la oreja debe mostrar cómo queda orientada la forma al llevarla puesta."
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo combinar pendientes geométricos",
+          "href": "/resources/earring-style-guides/how-to-style-geometric-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes colgantes minimalistas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente colgante puede seguir pareciendo minimalista cuando utiliza una línea corta y limpia y una decoración limitada. Los diseños colgantes aportan movimiento, por lo que normalmente resultan más llamativos que los pendientes de botón o los aros pequeños (huggies). Un pendiente colgante corto puede ser adecuado si busca un diseño discreto con una longitud más visible."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe la longitud total del colgante, el ancho en el punto más amplio, el peso del pendiente, el tipo de cierre, el grado de movimiento y si ambos pendientes son idénticos o intencionadamente asimétricos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evite describir cualquier pendiente colgante pequeño como un pendiente para todos los días. Deben tenerse en cuenta el peso, el movimiento, el peinado y el tiempo previsto de uso."
         }
       ]
     },
     {
-      "heading": "Pendientes minimalistas para ropa laboral",
+      "heading": "Cómo elegir pendientes minimalistas",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Los pendientes minimalistas son una de las mejores opciones de joyería para la ropa de trabajo."
+          "type": "subheading",
+          "text": "1. Decida cuánto quiere que se vean"
         },
         {
           "type": "paragraph",
-          "text": "Hacen que un conjunto se sienta elegante sin distraer. Trabajan con blazers, camisas, prendas de punto, vestidos, conjuntos neutros y sastrería limpia."
+          "text": "Los pendientes minimalistas pueden ser sutiles, equilibrados o claramente visibles."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Sutiles: pendientes de botón pequeños y detalles muy discretos",
+            "Equilibrados: pendientes de botón medianos, aros pequeños (huggies) y pendientes de aro estrechos",
+            "Visibles: formas limpias más grandes o pendientes colgantes cortos con decoración limitada"
+          ]
         },
         {
           "type": "paragraph",
-          "text": "Para el estilo de oficina, los mejores aretes suelen ser los aretes pequeños, medianos, huggies o minimalistas. Los pendientes largos y llamativos pueden funcionar para las cenas después del trabajo, pero no suelen ser la opción diaria más segura para la oficina."
+          "text": "Utilice imágenes reales sobre la oreja para comparar estos niveles. Las fotografías de producto en primer plano no comunican la escala por sí solas."
         },
+        {
+          "type": "subheading",
+          "text": "2. Compare las dimensiones reales"
+        },
+        {
+          "type": "paragraph",
+          "text": "No se base en términos como «pequeño» y «mediano» sin consultar las medidas. Estos términos varían según la marca y el producto. La página del producto debe indicar el ancho, la altura, la profundidad, el diámetro del pendiente de aro cuando corresponda, la longitud del colgante cuando corresponda, el peso de cada pendiente y el peso total en quilates, además de cómo se distribuye."
+        },
+        {
+          "type": "subheading",
+          "text": "3. Compruebe el cierre y el cierre trasero"
+        },
+        {
+          "type": "paragraph",
+          "text": "El cierre influye en cómo se coloca el pendiente, cómo queda y lo fácil que resulta manejarlo. Las opciones habituales incluyen cierres de presión o tipo mariposa, cierres de rosca, cierres articulados para pendientes de aro, cierres de pestaña o de clic y cierres de palanca."
+        },
+        {
+          "type": "paragraph",
+          "text": "No califique un cierre como universalmente superior. Cada persona puede dar prioridad de forma distinta a la facilidad de manejo, el grosor del poste, la sujeción o la seguridad."
+        },
+        {
+          "type": "subheading",
+          "text": "4. Lea la descripción completa de los materiales"
+        },
+        {
+          "type": "paragraph",
+          "text": "El producto debe distinguir claramente entre el metal base, el chapado o acabado, el tipo de piedra, los recubrimientos adicionales y los componentes utilizados en el poste y el cierre trasero."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los productos de I Want Jewels deben describirse con precisión como plata de ley 925 con chapado en oro de 14 kt cuando esta especificación esté confirmada para el producto concreto. Nunca debe utilizarse «oro macizo» cuando el producto esté chapado en oro, ni debe aplicarse «hipoalergénico» a toda una colección sin pruebas adecuadas sobre los materiales."
+        },
+        {
+          "type": "see-also",
+          "text": "¿Qué es la joyería demi-fine?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        },
+        {
+          "type": "subheading",
+          "text": "5. Confirme la información sobre los diamantes"
+        },
+        {
+          "type": "paragraph",
+          "text": "En los pendientes con diamantes de laboratorio, la página del producto debe indicar que las piedras son diamantes de laboratorio, la forma del diamante, el peso total en quilates, si este peso corresponde a un pendiente o a la pareja, el número de diamantes cuando proceda y cualquier información de graduación o calidad que la marca pueda demostrar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evite afirmaciones vagas como «diamantes premium» o «brillo excepcional» si no están respaldadas por especificaciones concretas."
+        },
+        {
+          "type": "subheading",
+          "text": "6. Tenga en cuenta las joyas que ya lleva la persona"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente minimalista es más fácil de combinar cuando su acabado se relaciona con las joyas que ya se llevan. Considere el color del reloj, el acabado del collar y la cadena, los piercings existentes, los anillos que se usan con frecuencia, las monturas de las gafas y la preferencia por tonos metálicos cálidos o fríos. Esto es especialmente importante al comprar pendientes minimalistas para regalar."
+        },
+        {
+          "type": "subheading",
+          "text": "7. Compruebe la política de devoluciones e higiene"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes pueden estar sujetos a condiciones especiales de devolución por motivos de higiene. La política aplicable debe mostrarse claramente antes de la compra, en lugar de aparecer únicamente en una página general de devoluciones."
+        }
+      ]
+    },
+    {
+      "heading": "Cómo elegir un acabado metálico",
+      "content": [
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-77.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Look de ropa de trabajo",
-                "Mejor dirección de aretes",
-                "Dirección de Producto IWJ"
-              ],
-              "rows": [
-                [
-                  "traje de oficina clásico",
-                  "Sementales pequeños",
-                  "Cadenza S"
-                ],
-                [
-                  "ropa de trabajo pulida",
-                  "Tacos medianos",
-                  "CadenzaM"
-                ],
-                [
-                  "Estilo de oficina moderno",
-                  "abrazos",
-                  "Amadea Huggie"
-                ],
-                [
-                  "Aspecto de oficina minimalista",
-                  "Pendientes minimalistas",
-                  "laluce"
-                ],
-                [
-                  "Ropa de trabajo creativa",
-                  "Aros o abrazos",
-                  "Pave Aros, Amadea"
-                ],
-                [
-                  "Traje del día a la cena",
-                  "Tacos medianos o gotas suaves",
-                  "Cadenza M, Orsola"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Acabado en oro amarillo"
+            },
+            {
+              "type": "paragraph",
+              "text": "El acabado en oro amarillo crea un contraste cálido alrededor de las piedras incoloras y combina con relojes, cadenas y anillos de tonos cálidos."
+            },
+            {
+              "type": "subheading",
+              "text": "Acabado blanco o en tono plateado"
+            },
+            {
+              "type": "paragraph",
+              "text": "El acabado blanco o plateado crea menos contraste de color alrededor de un diamante incoloro y combina con joyas de tonos plateados."
+            },
+            {
+              "type": "subheading",
+              "text": "Acabado en oro rosa"
+            },
+            {
+              "type": "paragraph",
+              "text": "El acabado en oro rosa aporta un tono metálico rosado. Confirme que el producto concreto está disponible con este acabado antes de elegirlo."
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "¿Puedes usar aretes de diamantes cultivados en laboratorio todos los días?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes minimalistas para pilas de orejas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas son esenciales para unas buenas orejeras porque ayudan a equilibrar las piezas más fuertes."
+          "type": "subheading",
+          "text": "Metales combinados"
         },
         {
           "type": "paragraph",
-          "text": "Si todos los aretes de una pila son grandes, la oreja puede verse abarrotada. Los pendientes minimalistas crean espacio, suavidad y estructura. Pueden admitir aros, aros, colgantes, aretes de mariposa y piezas atrevidas."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objetivo de pila de orejas",
-            "Combinación minimalista",
-            "Por qué funciona"
-          ],
-          "rows": [
-            [
-              "Pila simple para todos los días",
-              "Cadenza S + Amadea",
-              "Brillo de tachuelas y forma abrazable."
-            ],
-            [
-              "Pila mínima suave",
-              "Cadenza S + Laluce",
-              "Limpio y silencioso"
-            ],
-            [
-              "Pila equilibrada de tres piezas",
-              "Cadenza M + Amadea + Laluce",
-              "Taco principal, forma y detalle suave."
-            ],
-            [
-              "Pila romántica",
-              "Farfalla + Cadenza S",
-              "Cables de mariposa, soportes para pernos"
-            ],
-            [
-              "Pila de fiesta",
-              "Lusso + Cadenza S",
-              "Pendientes atrevidos, el perno mantiene el equilibrio"
-            ],
-            [
-              "pila de boda",
-              "Orsola + Cadenza S",
-              "Cables de caída, soportes para pernos"
-            ]
-          ]
+          "text": "Los pendientes minimalistas pueden combinarse con otros colores metálicos. Repita ambos acabados en algún punto del conjunto de joyas para que el contraste parezca intencionado."
         },
         {
           "type": "see-also",
-          "text": "Cómo apilar aretes",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes Minimalistas para Regalos",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas son excelentes regalos porque son más fáciles de elegir que las joyas llamativas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si no conoce el estilo exacto del destinatario, los aretes minimalistas o los aretes simples suelen ser más seguros. Funcionan para cumpleaños, damas de honor, obsequios cotidianos, obsequios de primeros diamantes, obsequios de ropa de trabajo y obsequios de aniversario discretos."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Necesidad de regalo",
-            "Mejor dirección minimalista",
-            "Productos IWJ recomendados"
-          ],
-          "rows": [
-            [
-              "Regalo de cumpleaños seguro",
-              "Tacos pequeños o medianos",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Primer regalo de diamantes",
-              "Sementales pequeños",
-              "Cadenza S"
-            ],
-            [
-              "Destinatario minimalista",
-              "Pendientes minimalistas",
-              "laluce"
-            ],
-            [
-              "regalo moderno",
-              "abrazos",
-              "amadea"
-            ],
-            [
-              "regalo de dama de honor",
-              "Pendientes o gotas delicadas",
-              "Cadenza S, Concetta Corto"
-            ],
-            [
-              "Regalo romántico pero sutil",
-              "Pendientes de gotas suaves o de mariposa",
-              "Orsola, Farfalla"
-            ],
-            [
-              "Regalo ropa de trabajo",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para regalar",
-          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes minimalistas para invitadas a boda",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los pendientes minimalistas pueden ser perfectos para invitadas a una boda cuando el outfit ya tiene detalle."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si el vestido tiene bordados, lentejuelas, encaje, un escote marcado o un estampado atrevido, los pendientes minimalistas mantienen el look equilibrado. Si el outfit es muy sencillo, quizás quieras una pieza minimalista un poco más visible, como tachuelas medianas o caídas suaves."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "traje de boda",
-            "Mejor dirección de aretes minimalistas",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "vestido detallado",
-              "Tacos pequeños o medianos",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Vestido de flores",
-              "Pendientes pequeños o de mariposa",
-              "Cadenza S, Farfalla"
-            ],
-            [
-              "Vestido de cuello alto",
-              "Studs o aretes minimalistas",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Vestido de raso",
-              "Tacos medianos o gotas suaves",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "traje pastel",
-              "Aretes suaves o aretes de mariposa",
-              "Cadenza S, Alidi Farfalla"
-            ],
-            [
-              "vestido negro sencillo",
-              "Tacos medianos o gotas limpias",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "mirada de dama de honor",
-              "Pequeños tachuelas o gotas delicadas",
-              "Cadenza S, Concetta Corto"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para bodas",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes minimalistas por outfit",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Esta sección debería ayudar a los compradores a elegir aretes según lo que usan."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "traje",
-            "El mejor estilo de arete minimalista",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Camisa blanca y jeans",
-              "Sementales pequeños o abrazos",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "traje de chaqueta",
-              "Sementales medianos o abrazos",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "vestido negro",
-              "Tacos medianos o gotas suaves",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Vestido de raso",
-              "Gotas suaves o tachuelas visibles",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Vestido de flores",
-              "Pendientes de mariposa o tachuelas pequeñas",
-              "Farfalla, Cadenza S."
-            ],
-            [
-              "Prendas de punto",
-              "Tachuelas o aros pequeños",
-              "Cadenza S, Pave Aros"
-            ],
-            [
-              "vestido minimalista",
-              "Huggies, aros o tachuelas limpias",
-              "Amadea, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Traje de invitada de boda",
-              "Aretes, aretes de mariposa o colgantes",
-              "Cadenza M, Farfalla, Orsola"
-            ],
-            [
-              "traje de viaje",
-              "Sementales o abrazos",
-              "Cadenza S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Qué joyas llevar con un vestido negro",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Consejos de color metálico para aretes minimalistas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El color del metal cambia la sensación de los aretes minimalistas."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro amarillo se siente cálido y clásico. Los tonos blancos o plateados se sienten limpios y modernos. El oro rosa se siente suave y romántico. Para un estilo minimalista, normalmente es mejor elegir el color de metal que el usuario ya usa con más frecuencia."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Color metálico",
-            "Sensación minimalista",
-            "Mejor para"
-          ],
-          "rows": [
-            [
-              "oro amarillo",
-              "Cálido, clásico, pulido",
-              "Ropa diaria, regalos, armarios cálidos."
-            ],
-            [
-              "Tono blanco o plateado",
-              "Limpio, luminoso, moderno.",
-              "Ropa de trabajo, outfits minimalistas, guardarropas geniales"
-            ],
-            [
-              "oro rosa",
-              "Suave, romántica, femenina.",
-              "Regalos, outfits en colores pastel, estilismo romántico."
-            ],
-            [
-              "metales mixtos",
-              "Creativo y moderno",
-              "Estilo y orejeras de tendencia"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para los regalos, no se aleje demasiado de las joyas existentes del destinatario. Si siempre visten oro amarillo, elige oro amarillo. Si usan relojes plateados o joyas en tonos blancos, elige el tono blanco o plateado."
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa",
+          "text": "Pendientes con diamantes de laboratorio en oro amarillo, blanco y rosa",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Rutas de producto según la necesidad de estilo",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "Para los pendientes minimalistas más seguros"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija aretes de diamantes cultivados en laboratorio Cadenza S. Son sutiles, sencillos y fáciles de usar todos los días."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un brillo minimalista más visible"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija los aretes de diamantes Cadenza M. Mantienen la forma limpia del montante pero añaden más presencia."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo minimalista y silencioso"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija los pendientes de diamantes minimalistas de Laluce. Son la dirección de producto más sólida para los compradores que desean joyas suaves y discretas."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo minimalista moderno"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige los pendientes Amadea Huggie. Dan forma sin dejar de permanecer cerca de la oreja y son fáciles de peinar."
-        },
-        {
-          "type": "subheading",
-          "text": "Para audífonos minimalistas"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige Cadenza S con Laluce o Amadea. Esto crea una pila limpia sin que la oreja parezca abarrotada."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo minimalista en ocasiones"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija los aretes colgantes Orsola o los aretes cortos Concetta cuando el conjunto necesite un poco de movimiento pero no demasiado llamativo."
-        }
-      ]
-    },
-    {
-      "heading": "Recomendaciones de productos de IWantJewels",
+      "heading": "Pendientes minimalistas y conjuntos",
       "content": [
         {
           "type": "table",
           "headers": [
-            "Producto",
-            "Mejor papel minimalista",
-            "Por qué funciona"
+            "Estilo de ropa",
+            "Opción de pendiente minimalista"
           ],
           "rows": [
             [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "Los mejores primeros pendientes minimalistas",
-              "Pequeño, sutil y fácil de repetir"
+              "Camisa blanca o punto",
+              "Pendiente de botón pequeño o aro pequeño (huggie)"
             ],
             [
-              "aretes Cadenza M con diamantes",
-              "Brillo minimalista más visible",
-              "Forma clásica con mayor presencia."
+              "Blazer o conjunto estructurado",
+              "Pendiente de botón mediano o pendiente geométrico"
             ],
             [
-              "Pendientes minimalistas de diamantes Laluce",
-              "Pieza minimalista central.",
-              "Suave, silencioso y fácil de peinar"
+              "Vestido negro sencillo",
+              "Pendiente de botón mediano, pendiente de aro fino o pendiente colgante corto"
             ],
             [
-              "Pendientes Amadea Huggie",
-              "Forma minimalista moderna",
-              "Fuerte para uso diario y apilamiento."
+              "Vestido con detalles",
+              "Pendiente de botón discreto o aro pequeño (huggie)"
             ],
             [
-              "Aros de pavimentación",
-              "Dirección mínima del aro",
-              "Añade forma sin dejar de ser portátil."
+              "Escote abierto",
+              "Pendiente de aro, pendiente de botón visible o pendiente colgante corto"
             ],
             [
-              "Pendientes mariposa Farfalla",
-              "Detalle personal suave",
-              "Romántico pero aún ponible"
+              "Cuello alto",
+              "Pendiente de botón o diseño pegado al lóbulo"
             ],
             [
-              "Pendientes de mariposa Alidi Farfalla",
-              "Dirección de regalo significativa",
-              "Femenino y simbólico"
-            ],
-            [
-              "aretes colgantes de Orsola",
-              "Movimiento de ocasión mínimo",
-              "Añade elegancia para cenas y bodas."
-            ],
-            [
-              "Pendientes cortos Concetta",
-              "Dirección de caída suave",
-              "Estilo delicado para ocasiones especiales"
-            ],
-            [
-              "Pendientes largos Concetta",
-              "Elegancia minimalista formal",
-              "Lo mejor para looks de noche refinados"
-            ],
-            [
-              "Pendientes llamativos Lusso",
-              "Contraste no minimalista, pero útil.",
-              "Mejor solo cuando el look necesita un punto focal audaz"
+              "Denim informal",
+              "Pendiente de botón, aro pequeño (huggie) o pendiente de aro estrecho"
             ]
           ]
         },
         {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas son mejores cuando resultan fáciles de usar con frecuencia. Comience con Cadenza S para un brillo sutil, Cadenza M para tachuelas visibles clásicas, Laluce para un estilo tranquilo, Amadea para abrazos y Orsola para looks suaves para ocasiones especiales."
+          "type": "see-also",
+          "text": "Cómo combinar joyería minimalista",
+          "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
         }
       ]
     },
     {
-      "heading": "Errores comunes que se deben evitar en los aretes minimalistas",
+      "heading": "¿Se pueden usar pendientes minimalistas en un ear stack?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un error común es pensar que minimalista significa sencillo. Un arete minimalista aún puede resultar especial cuando la forma, el acabado y el brillo son los correctos."
+          "text": "Sí. Los pendientes de botón pequeños, los aros pequeños (huggies) y los pendientes geométricos discretos pueden actuar como piezas protagonistas o de apoyo."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es elegir pendientes demasiado pequeños para el uso previsto. Los aretes muy pequeños pueden desaparecer en las fotos o con el cabello suelto. Si los aretes son para regalos o eventos, puede ser mejor un perno mediano."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un tercer error es mezclar demasiadas piezas minimalistas y sin estructura. Incluso los pendientes pequeños pueden parecer abarrotados si la pila de pendientes no tiene equilibrio."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es ignorar el color del metal. Las joyas minimalistas lucen mejor cuando el color del metal combina con el resto del conjunto y las joyas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Por último, no elijas pendientes minimalistas solo para un outfit. Las mejores piezas minimalistas deberían funcionar en el uso diario, en el trabajo, en viajes y en ocasiones sencillas."
+          "text": "Antes de combinarlos, compruebe la distancia entre los piercings, las dimensiones frontales, los cierres traseros, el diámetro de los pendientes de aro y los aros pequeños (huggies), si los pendientes contiguos se tocan y si cada diseño sigue siendo visible."
         },
         {
           "type": "see-also",
-          "text": "Cómo apilar aretes",
+          "text": "Cómo crear un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ideas para un ear stack de diamantes",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Lista de verificación de compra final",
+      "heading": "Cuidado de los pendientes minimalistas chapados en oro",
       "content": [
         {
           "type": "paragraph",
-          "text": "Antes de elegir unos pendientes minimalistas, pregunta:"
+          "text": "Los diseños sencillos también requieren un cuidado adecuado, especialmente cuando están hechos de plata de ley 925 chapada en oro. Para las piezas confirmadas de plata de ley 925 con chapado en oro de 14 kt:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿Estos pendientes funcionarán con más de un conjunto?",
-            "¿Son lo suficientemente cómodos para usarlos regularmente?",
-            "¿Son sutiles, visibles o algo intermedio?",
-            "¿Quiero aretes, aros, aros o gotas suaves?",
-            "¿Es esto para uso diario, ropa de trabajo, regalos u ocasiones?",
-            "¿El color del metal coincide con mis joyas habituales?",
-            "¿Se pueden usar los aretes en una pila de orejas?",
-            "¿Las piedras son diamantes auténticos cultivados en laboratorio?",
-            "¿Está claramente explicado el material?",
-            "¿Los aretes son fáciles de limpiar y guardar?",
-            "¿Me seguirá gustando este diseño más allá de una temporada?"
+            "Aplique el perfume, los cosméticos y los productos capilares antes de ponerse los pendientes",
+            "Quítese los pendientes antes de ducharse, nadar o hacer ejercicio",
+            "Límpielos con un paño limpio, suave y seco después de usarlos",
+            "Evite los limpiadores abrasivos y los productos de pulido destinados a metales macizos",
+            "Guarde los pendientes por separado para reducir la fricción",
+            "Siga las instrucciones de cuidado proporcionadas con el producto concreto"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo cuidar la joyería chapada en oro",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Lista de comprobación para comprar pendientes minimalistas",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Antes de comprar, confirme:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "¿Cuáles son las dimensiones exactas?",
+            "¿Cuánto pesa cada pendiente?",
+            "¿Se vende el producto en pareja o por unidad?",
+            "¿Qué cierre o sujeción utiliza?",
+            "¿Cuál es el metal base?",
+            "¿Cuál es el chapado o acabado?",
+            "¿Están las piedras claramente identificadas?",
+            "¿La información sobre los quilates corresponde a un pendiente o a la pareja?",
+            "¿Hay una imagen real del pendiente puesto?",
+            "¿La imagen muestra la parte frontal y lateral?",
+            "¿Las dimensiones se adaptan al piercing previsto?",
+            "¿Qué cuidados requiere el acabado?",
+            "¿Cuál es la política de devolución de los pendientes?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si no está seguro, comience con simples aretes de diamantes cultivados en laboratorio o un pequeño abrazo. Estos son los aretes minimalistas más fáciles de usar con frecuencia."
+          "text": "El diseño minimalista debe facilitar la decisión de compra, no sustituir las especificaciones del producto."
         }
       ]
     }
@@ -1021,53 +586,53 @@
   "faq": [
     {
       "question": "¿Qué son los pendientes minimalistas?",
-      "answer": "Los aretes minimalistas son aretes simples y limpios diseñados para facilitar el peinado. Suelen tener formas equilibradas, un brillo sutil y un tamaño ponible."
+      "answer": "Los pendientes minimalistas utilizan formas limpias, proporciones contenidas y una decoración controlada. Algunos ejemplos son los pendientes de botón solitarios, los pendientes de aro estrechos, los aros pequeños (huggies) y los pendientes geométricos sencillos."
     },
     {
-      "question": "¿Los aretes minimalistas son buenos para el uso diario?",
-      "answer": "Sí, los aretes minimalistas son excelentes para el uso diario porque son cómodos, fáciles de peinar y combinan con muchos conjuntos."
+      "question": "¿Los pendientes minimalistas son siempre pequeños?",
+      "answer": "No. Un pendiente de tamaño mediano también puede parecer minimalista cuando tiene una silueta clara y una decoración limitada. El tamaño es solo una parte del diseño."
     },
     {
-      "question": "¿Qué tipo de pendientes minimalistas debo comprar primero?",
-      "answer": "Los pequeños aretes de diamantes cultivados en laboratorio suelen ser los primeros aretes minimalistas más seguros porque son atemporales y fáciles de usar."
+      "question": "¿Los pendientes de botón con diamantes se consideran minimalistas?",
+      "answer": "Los pendientes de botón con diamantes de estilo solitario y los diseños geométricos depurados pueden ser minimalistas. Los diseños más elaborados de tipo cluster, halo o con motivos pueden parecer más decorativos."
     },
     {
-      "question": "¿Son minimalistas los pendientes de diamantes?",
-      "answer": "Los pendientes de diamantes pueden ser minimalistas cuando el diseño es simple y el tamaño es usable. Los montantes pequeños o medianos funcionan especialmente bien."
+      "question": "¿Qué debo comprobar al comprar pendientes de botón minimalistas?",
+      "answer": "Compruebe las dimensiones frontales, el peso, la longitud del poste, el cierre trasero, el engaste, los materiales, la información sobre los diamantes y si el producto se vende en pareja."
     },
     {
-      "question": "¿Son minimalistas los abrazos?",
-      "answer": "Los Huggies pueden ser minimalistas cuando se colocan cerca de la oreja y tienen un diseño limpio. También son fuertes para las orejeras."
+      "question": "¿Qué debo comprobar al comprar aros pequeños (huggies) minimalistas?",
+      "answer": "Compruebe los diámetros interior y exterior, el grosor del aro, las dimensiones del poste, el cierre, el peso y la posición del piercing. Los aros pequeños (huggies) no se adaptan igual a todas las orejas."
     },
     {
-      "question": "¿Los aretes minimalistas son buenos para el trabajo?",
-      "answer": "Sí, los aretes minimalistas son ideales para el trabajo porque agregan brillo sin distraer."
+      "question": "¿Qué color metálico es adecuado para los pendientes minimalistas?",
+      "answer": "Los acabados en oro amarillo, blanco y rosa pueden funcionar. Elija un acabado que combine con las joyas que la persona ya utiliza y confirme que el producto concreto está disponible con ese acabado."
     },
     {
-      "question": "¿Los pendientes minimalistas son buenos regalos?",
-      "answer": "Sí, los aretes minimalistas son buenos regalos porque son fáciles de usar y menos riesgosos que los estilos atrevidos o muy específicos."
+      "question": "¿Los pendientes minimalistas pueden incluir diamantes de laboratorio?",
+      "answer": "Sí. Los pendientes de botón, aros pequeños (huggies), pendientes de aro y sencillos detalles con diamantes de laboratorio pueden tener un diseño minimalista."
     },
     {
-      "question": "¿Se pueden usar aretes minimalistas en las bodas?",
-      "answer": "Sí, los aretes minimalistas pueden funcionar maravillosamente para bodas, especialmente cuando el atuendo ya tiene detalles o quien los usa prefiere joyas sutiles."
+      "question": "¿Se pueden usar pendientes minimalistas en un ear stack?",
+      "answer": "Sí. Compruebe el tamaño, el cierre trasero y el espacio de cada pendiente para que las piezas sigan siendo visibles y no interfieran entre sí."
     },
     {
-      "question": "¿Cómo se combinan los aretes minimalistas?",
-      "answer": "Úselos solos para una apariencia limpia, combínelos con aros para las orejas o úselos para equilibrar un vestido simple o un conjunto de ropa de trabajo."
+      "question": "¿Los pendientes minimalistas son automáticamente adecuados para llevar a diario?",
+      "answer": "No. La adecuación depende de las dimensiones, el peso, el cierre, los materiales, el acabado, la anatomía del piercing y las actividades de quien los lleva, no solo de la palabra «minimalista»."
     },
     {
-      "question": "¿Qué aretes IWantJewels son mejores para un estilo minimalista?",
-      "answer": "Cadenza S, Cadenza M, Laluce y Amadea Huggie son las opciones de estilo minimalista más potentes de IWantJewels."
+      "question": "¿Son los pendientes minimalistas un buen regalo?",
+      "answer": "Pueden serlo, pero quien compra debe comprobar también el color metálico preferido de la persona destinataria, el tipo de piercing, el tamaño habitual de sus pendientes y cualquier sensibilidad a los materiales."
     }
   ],
   "cta": {
-    "heading": "Los aretes minimalistas son las piezas que buscas una y otra vez. Son fáciles de peinar, cómodos de usar y útiles en atuendos cotidianos, ropa de trabajo, regalos, pendientes y ocasiones sencillas.",
-    "body": "Comience con los aretes semifinos de diamantes cultivados en laboratorio de IWantJewels si desea joyas minimalistas con brillo de diamantes reales. Elija Cadenza S para un brillo sutil diario, Cadenza M para tachuelas más visibles, Laluce para un estilo tranquilo, Amadea para abrazos y Orsola para un movimiento suave en ocasiones.",
-    "primaryLabel": "Comprar pendientes minimalistas",
+    "heading": "Los pendientes minimalistas se definen por un diseño intencionado, no solo por su tamaño. Compare la silueta, las medidas, el cierre, el material y el aspecto real una vez puestos antes de elegir.",
+    "body": "Descubra los pendientes minimalistas con diamantes de laboratorio de I Want Jewels y consulte en cada página de producto sus dimensiones, peso, cierre y materiales antes de decidirse.",
+    "primaryLabel": "Descubra los pendientes minimalistas con diamantes de laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore los aretes de diamantes cultivados en laboratorio",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lea cómo apilar aretes",
-    "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
+    "secondaryLabel": "Compare estilos de pendientes para diario",
+    "secondaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide",
+    "tertiaryLabel": "Cómo combinar joyería minimalista",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
   }
 }

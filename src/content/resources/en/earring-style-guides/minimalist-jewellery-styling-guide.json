@@ -1,1278 +1,689 @@
 {
   "meta": {
-    "title": "Minimalist Jewellery Styling Guide",
-    "description": "Learn how to style minimalist jewellery with earrings, studs, huggies, lab grown diamonds, workwear, gifts, weddings and everyday outfits."
+    "title": "How to Style Minimalist Jewellery",
+    "description": "Learn how to style minimalist jewellery with outfits, necklines and other pieces. Build a versatile capsule using earrings, necklaces, rings and bracelets."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-97.jpg",
-    "title": "Minimalist Jewellery Styling Guide:",
-    "subtitle": "How to Style Simple Jewellery for Everyday, Work & Occasions",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "How to Style Minimalist Jewellery:",
+    "subtitle": "A Complete Guide",
     "paragraphs": [
-      "Minimalist jewellery is simple, polished and easy to wear often. It is not about wearing jewellery that disappears. It is about choosing clean pieces that add shape, sparkle and finish without making the outfit feel heavy.",
-      "The best minimalist jewellery usually has one clear purpose. A small diamond stud adds subtle sparkle. A huggie adds shape. A minimalist earring adds quiet detail. A medium stud adds classic polish. A soft drop adds movement for dinners and weddings without becoming too bold.",
-      "At IWantJewels, minimalist styling works especially well with lab-grown diamond earrings because even small pieces can feel elevated. Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short and Farfalla can all support different minimalist looks depending on the outfit and occasion."
+      "Minimalist jewellery styling is the practice of combining a small number of considered pieces so that they complement your outfit rather than compete with it.",
+      "The jewellery does not have to be invisible. A diamond stud, slim hoop, pendant, ring or bracelet can still provide visible sparkle and shape. The minimalist effect comes from controlling the number of focal points, repeating related details and leaving visual space between pieces.",
+      "This guide explains how to build a minimalist jewellery capsule, layer different pieces and coordinate jewellery with outfits, necklines, hairstyles and metal colours."
     ],
-    "shopLabel": "Shop Minimalist Jewellery",
-    "shopHref": "/products?category=Earring"
+    "shopLabel": "Explore Minimalist Jewellery",
+    "shopHref": "/products"
   },
   "quickSummary": {
     "items": [
-      "Understand how to style minimalist jewellery.",
-      "Choose simple earrings for everyday wear.",
-      "Build minimalist ear stacks with studs, huggies and small details.",
-      "Style jewellery with shirts, blazers, black dresses, satin dresses and wedding guest outfits.",
-      "Choose jewellery for workwear, travel, dinners and gifts.",
-      "Decide when to wear studs, huggies, hoops or soft drops.",
-      "Understand how metal colour changes minimalist styling.",
-      "Find IWantJewels product recommendations by outfit and occasion.",
-      "Plan image blocks, product modules, CTA sections and internal links for this page."
+      "The formula: one focal point + one repeated detail + visual space",
+      "Repeat metal colour, diamond shape or line to connect separate pieces",
+      "Start with a three-piece capsule: earrings, a necklace and one hand or wrist detail",
+      "Match the necklace to the neckline, not to the outfit in general",
+      "Change one focal piece — not several — to move from day to evening",
+      "Mixed metals work when both colours appear more than once"
     ],
-    "image": "/blog-images/blog-image-99.jpg"
+    "image": "/blog-images/blog-image-54.jpg"
   },
   "content": [
     {
-      "heading": "Minimalist Jewellery Selector",
+      "heading": "The minimalist jewellery formula",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Use this table near the top of the page as the main styling decision tool."
+          "type": "section-lead",
+          "text": "One focal point + one repeated detail + visual space."
         },
         {
-          "type": "table",
-          "headers": [
-            "Styling Need",
-            "Best Minimalist Jewellery Direction",
-            "Recommended IWJ Direction"
-          ],
-          "rows": [
-            [
-              "Everyday jewellery",
-              "Small studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "More polished everyday sparkle",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Quiet minimalist styling",
-              "Minimalist diamond earrings",
-              "Laluce"
-            ],
-            [
-              "Minimal ear stack",
-              "Small stud + minimalist earring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Workwear jewellery",
-              "Studs, huggies or minimalist earrings",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Travel jewellery",
-              "Secure studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Black dress styling",
-              "Medium studs, hoops or soft drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Satin dress styling",
-              "Medium studs or drop earrings",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Wedding guest styling",
-              "Studs, soft drops or butterfly earrings",
-              "Cadenza M, Concetta Short, Farfalla"
-            ],
-            [
-              "Minimal party styling",
-              "Medium studs, hoops or elegant drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Giftable minimalist jewellery",
-              "Studs, huggies or soft earrings",
-              "Cadenza S, Cadenza M, Laluce"
-            ],
-            [
-              "Romantic minimalist styling",
-              "Butterfly earrings or delicate drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "For example: diamond studs as the focal point, a small diamond pendant repeating the sparkle, and no additional large necklace or decorative earrings."
+        },
+        {
+          "type": "paragraph",
+          "text": "Another combination might use a clean pendant as the focal point, a narrow bracelet repeating the metal, and small, restrained earrings that do not compete with the necklace."
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalist styling is not determined by the number of pieces alone. Three small but unrelated items can look busier than two slightly more visible pieces that share the same shape and finish."
         }
       ]
     },
     {
-      "heading": "What Is Minimalist Jewellery Styling?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalist jewellery styling means choosing jewellery that feels clean, balanced and wearable. The pieces are usually smaller, simpler or more refined, but they still add polish to the outfit."
-        },
-        {
-          "type": "paragraph",
-          "text": "Minimalist jewellery can include lab-grown diamond studs, huggies, small hoops, minimalist earrings, delicate drops and soft symbolic pieces. The design should not feel heavy, crowded or too trend-led."
-        },
-        {
-          "type": "paragraph",
-          "text": "A minimalist jewellery look usually has:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Minimalist Styling Element",
-            "What It Means"
-          ],
-          "rows": [
-            [
-              "Clean shape",
-              "The jewellery has a simple, easy-to-read design"
-            ],
-            [
-              "Wearable size",
-              "The piece works for more than one outfit"
-            ],
-            [
-              "Subtle sparkle",
-              "The jewellery adds light without overpowering"
-            ],
-            [
-              "Balanced metal colour",
-              "The finish works with the rest of the outfit"
-            ],
-            [
-              "Comfortable feel",
-              "The jewellery can be worn for several hours"
-            ],
-            [
-              "Repeatable styling",
-              "The piece is not limited to one occasion"
-            ],
-            [
-              "One clear focus",
-              "The outfit does not have too many competing jewellery pieces"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For IWantJewels, minimalist styling should not feel plain. The goal is to make small lab-grown diamond pieces feel intentional, premium and easy to wear often."
-        },
-        {
-          "type": "see-also",
-          "text": "What Is Demi-Fine Jewellery?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Why Minimalist Jewellery Works for Everyday Wear",
+      "heading": "What is minimalist jewellery?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-101.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Minimalist jewellery works for everyday wear because it does not demand a special outfit. It can be worn with shirts, jeans, blazers, knitwear, dresses, workwear, travel outfits and simple evening looks."
+              "text": "Minimalist jewellery normally uses clear silhouettes, restrained proportions, limited decorative detail, coordinated metal finishes, one or two repeated shapes, controlled sparkle, and pieces that can be combined in several ways."
             },
             {
               "type": "paragraph",
-              "text": "Small lab-grown diamond earrings are especially useful because they add polish without making the look feel too formal. A tiny sparkle point can make a simple outfit feel finished."
+              "text": "Possible minimalist pieces include:"
             },
             {
-              "type": "table",
-              "headers": [
-                "Everyday Styling Reason",
-                "Why Minimalist Jewellery Helps"
-              ],
-              "rows": [
-                [
-                  "Easy to repeat",
-                  "Works with many outfits"
-                ],
-                [
-                  "Comfortable",
-                  "Smaller earrings are easier for long wear"
-                ],
-                [
-                  "Polished",
-                  "Adds finish without looking heavy"
-                ],
-                [
-                  "Work-friendly",
-                  "Looks professional and clean"
-                ],
-                [
-                  "Travel-friendly",
-                  "Simple pieces are easier to style"
-                ],
-                [
-                  "Stackable",
-                  "Works with studs, huggies and small details"
-                ],
-                [
-                  "Gift-friendly",
-                  "Safer than very bold jewellery"
-                ],
-                [
-                  "Timeless",
-                  "Less dependent on short-term trends"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Cadenza S, Laluce and Amadea are the strongest IWantJewels directions for daily minimalist styling. Cadenza M works when the shopper wants a cleaner look with more visible sparkle."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Can You Wear Lab-Grown Diamond Earrings Every Day?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery Formula",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The easiest minimalist jewellery formula is:"
-        },
-        {
-          "type": "paragraph",
-          "text": "One sparkle point + one shape detail + one clean finish"
-        },
-        {
-          "type": "paragraph",
-          "text": "The sparkle point can be a diamond stud. The shape detail can be a huggie or hoop. The clean finish comes from keeping the rest of the jewellery simple."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Styling Role",
-            "What It Does",
-            "Best IWJ Direction"
-          ],
-          "rows": [
-            [
-              "Sparkle point",
-              "Adds light close to the face",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Shape detail",
-              "Adds curve and structure",
-              "Amadea, Pave Hoops"
-            ],
-            [
-              "Soft detail",
-              "Adds quiet interest",
-              "Laluce"
-            ],
-            [
-              "Romantic detail",
-              "Adds meaning and softness",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Occasion movement",
-              "Adds gentle length",
-              "Orsola, Concetta Short"
-            ],
-            [
-              "Formal movement",
-              "Adds refined length",
-              "Concetta Long"
-            ],
-            [
-              "Minimal support",
-              "Balances a larger piece",
-              "Cadenza S, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For daily styling, keep the formula simple. For an event, use one slightly stronger piece and keep the rest clean."
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Earrings for Everyday Outfits",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Everyday minimalist earrings should be easy to wear with casual outfits, workwear, simple dresses and travel looks."
-        },
-        {
-          "type": "paragraph",
-          "text": "The safest starting point is a small diamond stud. If the shopper wants a more styled look, add a huggie. If they prefer quiet detail, choose a minimalist earring. If they want more visible sparkle without moving into statement styling, choose a medium stud."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Everyday Outfit",
-            "Best Minimalist Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "White shirt and jeans",
-              "Small studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Blazer and trousers",
-              "Medium studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Knitwear",
-              "Studs or small hoops",
-              "Cadenza S, Pave Hoops"
-            ],
-            [
-              "Casual dress",
-              "Small studs or minimalist earrings",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Travel outfit",
-              "Secure studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Neutral outfit",
-              "Minimalist earrings or medium studs",
-              "Laluce, Cadenza M"
-            ],
-            [
-              "Weekend outfit",
-              "Huggies or hoops",
-              "Amadea, Pave Hoops"
-            ],
-            [
-              "Simple dinner outfit",
-              "Medium studs or soft drops",
-              "Cadenza M, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Stud vs Huggie Earrings",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery for Workwear",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalist jewellery is one of the best choices for workwear because it looks polished without being distracting."
-        },
-        {
-          "type": "paragraph",
-          "text": "For work, choose pieces that sit close to the ear and do not pull, move too much or clash with professional outfits. Studs, huggies and minimalist earrings are strongest. Hoops can work if they are refined. Drops are better for day-to-dinner styling rather than everyday office wear."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-103.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Workwear Look",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Classic office outfit",
-                  "Small or medium studs",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Modern office styling",
-                  "Huggies",
-                  "Amadea"
-                ],
-                [
-                  "Minimal workwear",
-                  "Minimalist earrings",
-                  "Laluce"
-                ],
-                [
-                  "Creative office look",
-                  "Hoops or huggies",
-                  "Pave Hoops, Amadea"
-                ],
-                [
-                  "Blazer outfit",
-                  "Medium studs or huggies",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Work event",
-                  "Medium studs or refined hoops",
-                  "Cadenza M, Pave Hoops"
-                ],
-                [
-                  "Day-to-dinner outfit",
-                  "Medium studs or soft drops",
-                  "Cadenza M, Orsola"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Solitaire-style diamond studs",
+                "Huggies or narrow hoops",
+                "Simple geometric earrings",
+                "Fine chains",
+                "Small pendants",
+                "Narrow bracelets",
+                "Clean rings",
+                "Short, restrained drop earrings"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Stud vs Hoop Earrings",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+          "type": "paragraph",
+          "text": "\"Minimalist\" describes the design direction. It does not guarantee that a product is lightweight, durable, hypoallergenic or suitable for every activity."
         }
       ]
     },
     {
-      "heading": "Minimalist Jewellery for Black Dresses",
+      "heading": "What makes minimalist jewellery styling work?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "A clear focal point"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose the area you want the eye to notice first. The focal point could be earrings framing the face, a pendant relating to the neckline, a small arrangement of rings, a bracelet visible below a sleeve, or one carefully constructed ear stack."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avoid making the earrings, necklace, rings and bracelet equally prominent."
+        },
+        {
+          "type": "subheading",
+          "text": "Repetition"
+        },
+        {
+          "type": "paragraph",
+          "text": "Repeat one detail to connect separate pieces. Useful details to repeat include metal colour, diamond shape, rounded or angular lines, motif, level of sparkle and texture."
+        },
+        {
+          "type": "paragraph",
+          "text": "The pieces do not need to come from the same collection, but they should have a visual relationship."
+        },
+        {
+          "type": "subheading",
+          "text": "Visual space"
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalist styling needs areas where the jewellery is not competing. If you wear visible earrings, a necklace and several rings, keep at least one area quieter. This may mean omitting a bracelet or choosing a necklace without additional decorative layers."
+        },
+        {
+          "type": "subheading",
+          "text": "Proportion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compare the jewellery with the outfit rather than judging each piece by itself. A very small stud may disappear beside a high-volume hairstyle or strongly patterned outfit. A narrow hoop or medium stud can still be minimalist when its design remains clean."
+        }
+      ]
+    },
+    {
+      "heading": "Build a minimalist jewellery capsule",
       "content": [
         {
           "type": "paragraph",
-          "text": "A black dress can carry bold jewellery, but minimalist jewellery can make it feel clean, refined and expensive."
-        },
-        {
-          "type": "paragraph",
-          "text": "For a detailed black dress, minimalist jewellery is usually the better choice. For a simple black dress, minimalist jewellery works when the shopper wants understated elegance instead of party impact."
+          "text": "A jewellery capsule is a small group of pieces that can be combined into several arrangements. A practical capsule might contain six categories."
         },
         {
           "type": "table",
-          "headers": [
-            "Black Dress Style",
-            "Best Minimalist Jewellery Direction",
-            "Product Direction"
-          ],
+          "headers": ["Capsule piece", "Role", "What to check"],
           "rows": [
-            [
-              "Simple black dress",
-              "Medium studs, hoops or soft drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Detailed black dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Black satin dress",
-              "Medium studs or drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "High-neck black dress",
-              "Studs or hoops",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Black work event dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Minimal black dress",
-              "One clean focal piece",
-              "Cadenza M, Orsola, Pave Hoops"
-            ],
-            [
-              "Black dinner dress",
-              "Medium studs or soft drops",
-              "Cadenza M, Orsola"
-            ]
+            ["Small diamond studs", "Restrained sparkle", "Diameter, weight and backing"],
+            ["Huggies or narrow hoops", "Curved shape", "Diameter, thickness and closure"],
+            ["Simple pendant necklace", "Neckline detail", "Chain length and pendant dimensions"],
+            ["Fine bracelet", "Wrist detail", "Length, fastening and adjustability"],
+            ["Clean ring", "Hand detail", "Size, width and finish"],
+            ["Optional focal piece", "Dinner or occasion variation", "Dimensions, weight and outfit compatibility"]
           ]
         },
         {
+          "type": "paragraph",
+          "text": "You do not need to purchase the entire capsule at once. Begin with the pieces that suit your most frequently worn outfits."
+        },
+        {
+          "type": "subheading",
+          "text": "A three-piece starter capsule"
+        },
+        {
+          "type": "paragraph",
+          "text": "For a smaller starting collection, choose:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "One pair of restrained earrings",
+            "One simple necklace",
+            "One ring or bracelet in a coordinating finish"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "These three pieces can create several combinations: earrings alone; earrings and necklace; earrings and bracelet; necklace and ring; or all three together when their proportions remain balanced."
+        },
+        {
+          "type": "subheading",
+          "text": "A five-piece capsule"
+        },
+        {
+          "type": "paragraph",
+          "text": "A more flexible capsule might include small diamond studs, huggies or slim hoops, a simple pendant, a fine bracelet and a clean ring. The earrings provide two different face-framing options, while the pendant, bracelet and ring can be added or removed according to the outfit."
+        }
+      ]
+    },
+    {
+      "heading": "How to combine minimalist earrings and necklaces",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "When the earrings are the focal point"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose a restrained necklace or leave the neckline bare. This works when wearing visible diamond studs, pavé hoops, a small ear stack, geometric earrings or short drop earrings."
+        },
+        {
+          "type": "subheading",
+          "text": "When the necklace is the focal point"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use smaller studs or simple huggies so that the face and neckline are not competing for attention. This works with a pendant necklace, a layered two-chain arrangement, a necklace with a recognisable motif, or a necklace that follows the shape of the neckline."
+        },
+        {
+          "type": "subheading",
+          "text": "When both contain diamonds"
+        },
+        {
+          "type": "paragraph",
+          "text": "Repeat the diamond detail but vary the scale. For example, use a more visible pendant with smaller diamond studs rather than equally prominent pieces at the ear and neckline."
+        },
+        {
           "type": "see-also",
-          "text": "What Jewellery to Wear with a Black Dress",
+          "text": "Minimalist earrings guide",
+          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "How to layer minimalist necklaces",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Minimalist necklace layering should create a visible difference between the chains. Consider chain length, pendant size, chain thickness, metal colour, the neckline, and whether the pendants overlap."
+        },
+        {
+          "type": "paragraph",
+          "text": "A straightforward two-chain arrangement uses a shorter plain chain and a slightly longer chain with one pendant. The length difference should be sufficient to keep the chains visually separate. Universal centimetre recommendations are unreliable — measure the actual products and consider the wearer's neck and neckline."
+        },
+        {
+          "type": "paragraph",
+          "text": "For three necklaces, introduce a clear progression in length and keep at least one chain free of a pendant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avoid combining:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Several pendants of similar size at the same length",
+            "Multiple chains that tangle immediately",
+            "Several unrelated motifs",
+            "Heavy and delicate chains without a clear relationship"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "How to stack minimalist rings and bracelets",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Rings"
+        },
+        {
+          "type": "paragraph",
+          "text": "A minimalist ring stack can contain one plain band with one diamond-detail ring, two narrow bands with different textures, one ring on several fingers, or two coordinated rings on one finger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vary either the width or texture so that the rings do not look accidentally duplicated. If one ring contains the strongest diamond detail, let the other rings provide metal, shape or texture rather than equal sparkle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Check ring sizing individually. Several rings worn together can fit differently from one ring worn alone."
+        },
+        {
+          "type": "subheading",
+          "text": "Bracelets"
+        },
+        {
+          "type": "paragraph",
+          "text": "A single bracelet can provide enough wrist detail, particularly with long sleeves, a watch or an outfit that already contains several jewellery elements."
+        },
+        {
+          "type": "paragraph",
+          "text": "When layering, combine different but related widths, check whether the clasps interfere, avoid excessive difference in weight, leave enough movement without allowing the bracelets to continually overlap, and consider the colour and size of a watch."
+        },
+        {
+          "type": "paragraph",
+          "text": "A watch can act as part of the jewellery arrangement. Coordinate the bracelet's finish with the watch case, strap or other metal detail."
+        }
+      ]
+    },
+    {
+      "heading": "Minimalist jewellery with different necklines",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "High or crew neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "A high neckline reduces the amount of visible skin around the necklace area. Let earrings provide the main detail, or use a necklace that sits clearly above or below the neckline rather than directly on its edge. Studs or huggies with a clean visible outline work well, and a necklace is optional."
+        },
+        {
+          "type": "subheading",
+          "text": "V-neck"
+        },
+        {
+          "type": "paragraph",
+          "text": "A pendant can follow the downward direction of a V-neck. If the pendant is the focal point, use restrained earrings — small or medium studs, a fine pendant necklace and one clean ring or bracelet."
+        },
+        {
+          "type": "see-also",
+          "text": "What jewellery to wear with a V-neck dress",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Sweetheart neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "A sweetheart neckline already creates a curved focal shape. Choose jewellery that complements the curve without filling every open area: a small pendant or no necklace, studs, huggies or restrained drop earrings, and one bracelet or ring detail."
+        },
+        {
+          "type": "see-also",
+          "text": "Jewellery for a sweetheart neckline",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Off-shoulder neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "An off-shoulder outfit leaves the shoulders and neckline open. Choose whether the earrings or necklace will be the primary feature: visible earrings with no necklace, a pendant with restrained studs, or one clean bracelet to balance the open neckline."
+        },
+        {
+          "type": "see-also",
+          "text": "What earrings to wear with an off-shoulder dress",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Minimalist jewellery with common outfits",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "White shirt and jeans"
+        },
+        {
+          "type": "paragraph",
+          "text": "A white shirt creates a neutral base for a small diamond detail or clean metal shape. Try small diamond studs, a fine pendant and one ring or bracelet. If the shirt is open at the collar, the pendant can become the focal point. If buttoned higher, let the earrings lead."
+        },
+        {
+          "type": "subheading",
+          "text": "Blazer and tailored trousers"
+        },
+        {
+          "type": "paragraph",
+          "text": "Structured clothing works well with jewellery that repeats clean lines: a medium stud or geometric earring, a fine chain, a clean ring, and a bracelet only if it does not compete with a watch."
+        },
+        {
+          "type": "paragraph",
+          "text": "For workwear, check workplace expectations and practical factors such as headphone use rather than assuming one style suits every environment."
+        },
+        {
+          "type": "subheading",
+          "text": "Knitwear"
+        },
+        {
+          "type": "paragraph",
+          "text": "Texture in the clothing can catch or obscure fine jewellery. Try studs or huggies, a necklace only when it sits clearly above the knit, and a ring or bracelet for additional detail. Avoid delicate chains that continually catch on textured fabric."
+        },
+        {
+          "type": "subheading",
+          "text": "Black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A black dress provides strong contrast for both warm and cool metal finishes. Try a visible stud or narrow hoop, a fine pendant or bare neckline, and one ring or bracelet. If the earrings are more visible, reduce the necklace detail."
+        },
+        {
+          "type": "see-also",
+          "text": "What jewellery to wear with a black dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery for Satin Dresses",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Satin already has shine, so minimalist jewellery works especially well when the dress should stay elegant."
+          "type": "subheading",
+          "text": "Satin dress"
         },
         {
           "type": "paragraph",
-          "text": "Medium studs add sparkle without adding too much movement. Drop earrings add polish when the dress is simple. Huggies and minimalist earrings work when the satin outfit is more casual or work-event focused."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satin Dress Style",
-            "Best Minimalist Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Satin slip dress",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Satin high-neck dress",
-              "Medium studs or hoops",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Champagne satin dress",
-              "Soft drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Blush satin dress",
-              "Butterfly earrings or short drops",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Black satin dress",
-              "Medium studs or drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Green satin dress",
-              "Drops or hoops",
-              "Orsola, Pave Hoops"
-            ],
-            [
-              "Detailed satin dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ]
-          ]
+          "text": "Satin already reflects light and creates movement. Avoid covering it with several competing pieces. Try diamond studs with a fine bracelet, restrained drop earrings with no necklace, or a fine pendant with small studs."
         },
         {
           "type": "see-also",
-          "text": "Jewellery with Satin Dress",
+          "text": "What jewellery to wear with a satin dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Patterned or embellished outfit"
+        },
+        {
+          "type": "paragraph",
+          "text": "When the outfit contains embroidery, sequins, prints or other decorative details, reduce the number of jewellery focal points: small studs, a plain chain or no necklace, and one restrained ring. Minimalist does not mean invisible; the goal is to let the outfit and jewellery occupy different visual roles."
         }
       ]
     },
     {
-      "heading": "Minimalist Jewellery for Wedding Guest Outfits",
+      "heading": "Minimalist jewellery with hairstyles and glasses",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalist jewellery works beautifully for wedding guests because it keeps the look elegant and respectful."
-        },
-        {
-          "type": "paragraph",
-          "text": "A wedding guest outfit should not look too bridal or overly heavy. Studs, soft drops, butterfly earrings and delicate huggies are usually safer than very dramatic jewellery, especially if the dress already has lace, satin, print, embroidery or a strong neckline."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Wedding Guest Look",
-                "Best Minimalist Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Simple wedding guest dress",
-                  "Drop earrings or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Detailed wedding guest dress",
-                  "Studs or huggies",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Satin wedding guest dress",
-                  "Drop earrings",
-                  "Orsola"
-                ],
-                [
-                  "Floral dress",
-                  "Butterfly earrings or small studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Champagne dress",
-                  "Soft drops or medium studs",
-                  "Concetta Short, Cadenza M"
-                ],
-                [
-                  "Sage or mint dress",
-                  "Butterfly earrings or delicate drops",
-                  "Farfalla, Concetta Short"
-                ],
-                [
-                  "Black wedding guest dress",
-                  "Medium studs or soft drops",
-                  "Cadenza M, Orsola"
-                ],
-                [
-                  "Bridesmaid styling",
-                  "Small studs or delicate drops",
-                  "Cadenza S, Concetta Short"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Weddings",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery for Parties and Dinners",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalist party jewellery should still feel special. The difference is that it uses cleaner pieces instead of heavy statement jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "Medium studs, hoops and elegant drops are the strongest choices. If the outfit already has sequins, satin, red fabric, black satin or a dramatic neckline, minimalist jewellery may look more polished than bold earrings."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party or Dinner Look",
-            "Best Minimalist Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Dinner outfit",
-              "Medium studs or soft drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Cocktail dress",
-              "Hoops or medium studs",
-              "Pave Hoops, Cadenza M"
-            ],
-            [
-              "Black party dress",
-              "Hoops, studs or drops",
-              "Pave Hoops, Cadenza M, Orsola"
-            ],
-            [
-              "Red dress",
-              "Medium studs or drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Green dress",
-              "Drops, hoops or medium studs",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Satin party dress",
-              "Drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Detailed party outfit",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Minimal party outfit",
-              "Hoops or drops",
-              "Pave Hoops, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Party Earrings Guide",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery for Gifts",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalist jewellery makes strong gifts because it is easier to wear than very bold or highly specific designs."
-        },
-        {
-          "type": "paragraph",
-          "text": "If you are unsure of the recipient's exact style, studs are usually safest. Huggies are good for someone who likes modern jewellery. Minimalist earrings are best for someone with understated taste. Butterfly earrings are stronger when the gift should feel meaningful or romantic."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Gift Need",
-            "Best Minimalist Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Safest gift",
-              "Small or medium studs",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "First diamond gift",
-              "Small studs",
-              "Cadenza S"
-            ],
-            [
-              "Classic sparkle gift",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Modern gift",
-              "Huggies",
-              "Amadea"
-            ],
-            [
-              "Quiet luxury gift",
-              "Minimalist earrings",
-              "Laluce"
-            ],
-            [
-              "Romantic gift",
-              "Butterfly earrings",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Bridesmaid gift",
-              "Small studs or delicate drops",
-              "Cadenza S, Concetta Short"
-            ],
-            [
-              "Birthday gift",
-              "Studs, butterfly earrings or huggies",
-              "Cadenza M, Farfalla, Amadea"
-            ],
-            [
-              "Anniversary gift",
-              "Drops or butterfly earrings",
-              "Orsola, Alidi Farfalla"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Gifts",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Ear Stack Ideas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalist ear stacks should feel clean and intentional."
-        },
-        {
-          "type": "paragraph",
-          "text": "Use one small sparkle point, one shape piece and one quiet detail. Keep the metal colour consistent if the shopper wants the stack to look polished."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-107.jpg",
+          "image": "/blog-images/blog-image-46.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Minimalist Ear Stack Goal",
-                "Main Piece",
-                "Support Piece",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Simple daily stack",
-                  "Small stud",
-                  "Huggie",
-                  "Cadenza S + Amadea"
-                ],
-                [
-                  "Soft minimal stack",
-                  "Small stud",
-                  "Minimalist earring",
-                  "Cadenza S + Laluce"
-                ],
-                [
-                  "Polished workwear stack",
-                  "Medium stud",
-                  "Huggie",
-                  "Cadenza M + Amadea"
-                ],
-                [
-                  "Quiet luxury stack",
-                  "Medium stud",
-                  "Minimal detail",
-                  "Cadenza M + Laluce"
-                ],
-                [
-                  "Romantic minimal stack",
-                  "Butterfly earring",
-                  "Small stud",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Wedding minimal stack",
-                  "Soft drop",
-                  "Small stud",
-                  "Concetta Short + Cadenza S"
-                ],
-                [
-                  "Evening minimal stack",
-                  "Drop earring",
-                  "Small stud",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Hoop minimal stack",
-                  "Hoop",
-                  "Small stud",
-                  "Pave Hoops + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery by Outfit Type",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "This section should help shoppers choose jewellery based on what they are wearing."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Outfit Type",
-            "Best Minimalist Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "White shirt and jeans",
-              "Small studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Blazer outfit",
-              "Medium studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Black dress",
-              "Medium studs, hoops or soft drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Satin dress",
-              "Medium studs or drop earrings",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "V-neck dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Sweetheart neckline",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Off-shoulder dress",
-              "Drops, hoops or studs",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Green dress",
-              "Drops, hoops or soft romantic earrings",
-              "Orsola, Pave Hoops, Farfalla"
-            ],
-            [
-              "Red dress",
-              "Medium studs or drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Workwear",
-              "Studs, huggies or minimalist earrings",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Wedding guest outfit",
-              "Drops, studs or butterfly earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Travel outfit",
-              "Secure studs or huggies",
-              "Cadenza S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery with Red Dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalist Jewellery by Metal Colour",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Metal colour can change the feeling of minimalist jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "Yellow gold feels warm and classic. White or silver tone feels clean and modern. Rose gold feels soft and romantic. For minimalist styling, the easiest choice is usually the metal colour the shopper already wears most often."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-102.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metal Colour",
-                "Minimalist Styling Mood",
-                "Best For"
-              ],
-              "rows": [
-                [
-                  "Yellow gold",
-                  "Warm, classic and polished",
-                  "Everyday wear, black dresses, green dresses, gifts"
-                ],
-                [
-                  "White or silver tone",
-                  "Clean, bright and modern",
-                  "Workwear, minimal outfits, cool wardrobes"
-                ],
-                [
-                  "Rose gold",
-                  "Soft, romantic and feminine",
-                  "Gifts, blush outfits, pastel dresses, romantic styling"
-                ],
-                [
-                  "Mixed metals",
-                  "Creative and trend-led",
-                  "Ear stacks and casual styling"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Hair worn down"
             },
             {
               "type": "paragraph",
-              "text": "For minimalist ear stacks, one metal colour is usually safest. A yellow gold stack feels warm, a white/silver-tone stack feels clean, and a rose gold stack feels soft."
+              "text": "Small earrings may be partially hidden by loose hair. Consider a cleaner, more visible outline if you want the earrings to remain noticeable, and check whether hoops, drops or decorative edges catch in the hair."
+            },
+            {
+              "type": "subheading",
+              "text": "Hair tied back"
+            },
+            {
+              "type": "paragraph",
+              "text": "Tied-back hair exposes the ear and can make smaller earrings more visible. A stud, huggie or minimalist ear stack may provide sufficient detail without requiring a larger earring."
+            },
+            {
+              "type": "subheading",
+              "text": "Short hair"
+            },
+            {
+              "type": "paragraph",
+              "text": "Short hair can leave both the ear and neckline visible. Decide whether the earrings or necklace will lead rather than making both equally prominent."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Glasses"
+        },
+        {
+          "type": "paragraph",
+          "text": "Glasses introduce another shape and metal or acetate colour around the face. Consider the frame colour, frame thickness, metal finish, distance between the frame arm and earrings, and whether the earrings compete with a decorative frame."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jewellery does not need to match the glasses exactly, but their proportions should be considered together."
+        }
+      ]
+    },
+    {
+      "heading": "How to mix metal colours",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Mixed-metal minimalist styling works when the contrast is repeated. For example: yellow-gold earrings with a mixed-metal watch, a white-toned necklace with a ring containing both finishes, or alternating ring finishes repeated at the ear."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avoid adding one isolated contrasting piece without another visual connection. For a uniform result, choose the finish already used by your watch, everyday ring or most frequently worn chain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before deciding on a product in a yellow, white or rose-gold finish, confirm its current variants on the product page."
+        },
+        {
           "type": "see-also",
-          "text": "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Gold vs white vs rose gold lab-grown diamond earrings",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Product Pathways by Styling Need",
+      "heading": "A minimalist day-to-evening transition",
       "content": [
         {
-          "type": "subheading",
-          "text": "For the Best Everyday Minimalist Start"
-        },
-        {
           "type": "paragraph",
-          "text": "Choose Cadenza S lab-grown diamond studs. They are subtle, easy to wear and strong as a first minimalist diamond earring."
+          "text": "You do not need to replace every jewellery piece to change the effect of an outfit."
         },
         {
           "type": "subheading",
-          "text": "For More Visible Minimalist Sparkle"
+          "text": "Day"
         },
         {
-          "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings. They keep the clean stud shape while adding more presence."
-        },
-        {
-          "type": "subheading",
-          "text": "For Quiet Minimalist Detail"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Laluce minimalist diamond earrings. They are best for shoppers who want understated styling."
+          "type": "bullet-list",
+          "items": [
+            "Small diamond studs",
+            "Fine pendant",
+            "Clean ring"
+          ]
         },
         {
           "type": "subheading",
-          "text": "For Modern Minimalist Styling"
+          "text": "Evening"
         },
         {
-          "type": "paragraph",
-          "text": "Choose Amadea Huggie earrings. They add shape while staying close to the ear and easy to style."
-        },
-        {
-          "type": "subheading",
-          "text": "For Minimalist Ear Stacks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza S with Laluce or Amadea. This creates a clean stack without making the ear look crowded."
-        },
-        {
-          "type": "subheading",
-          "text": "For Minimalist Wedding Guest Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Orsola drop earrings, Concetta Short earrings or Cadenza M depending on the dress detail."
-        },
-        {
-          "type": "subheading",
-          "text": "For Romantic Minimalist Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings or Alidi Farfalla butterfly earrings. These work well for gifts, soft dresses and meaningful styling."
-        },
-        {
-          "type": "subheading",
-          "text": "For Minimalist Party Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza M, Pave Hoops or Orsola. These add enough evening polish without becoming too bold."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Minimalist Styling Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Best first minimalist piece",
-              "Small, subtle and easy to wear daily"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Best visible minimalist sparkle",
-              "Classic shape with more presence"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Best quiet detail",
-              "Soft, understated and easy to style"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Best modern minimalist shape",
-              "Strong for daily wear and ear stacks"
-            ],
-            [
-              "Pave Hoops",
-              "Best minimal hoop direction",
-              "Adds shape while staying wearable"
-            ],
-            [
-              "Orsola drop earrings",
-              "Best minimalist occasion movement",
-              "Adds elegance for dinners and weddings"
-            ],
-            [
-              "Concetta Short earrings",
-              "Best delicate occasion piece",
-              "Good for bridesmaids and soft styling"
-            ],
-            [
-              "Concetta Long earrings",
-              "Best formal minimal line",
-              "Refined and evening-ready"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Best romantic minimalist piece",
-              "Adds meaning without feeling heavy"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Best gift-led romantic piece",
-              "Strong for birthdays and anniversaries"
-            ],
-            [
-              "Lusso bold statement earrings",
-              "Not minimalist, but useful contrast",
-              "Best only when the outfit needs one bold focal point"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Replace the studs with a more visible earring",
+            "Keep the pendant, or remove it if the earrings become the focal point",
+            "Add one bracelet",
+            "Retain the same ring and metal direction"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Minimalist jewellery should be easy to wear, easy to repeat and easy to style. Start with Cadenza S for subtle sparkle, Cadenza M for classic polish, Laluce for quiet detail, Amadea for modern shape and Orsola for soft occasion movement."
+          "text": "Changing one focal piece usually creates a clearer transition than adding several extra pieces."
         }
       ]
     },
     {
-      "heading": "Common Minimalist Styling Mistakes to Avoid",
+      "heading": "Minimalist jewellery and ear stacks",
       "content": [
         {
           "type": "paragraph",
-          "text": "One common mistake is thinking minimalist jewellery has to be invisible. Minimalist jewellery can still sparkle and frame the face; it simply does not overpower the outfit."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is choosing pieces that are too tiny for the outfit. If the dress is dark, satin or visually strong, very small earrings may disappear."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is wearing too many small pieces without structure. Even minimalist jewellery can look crowded if there is no main piece or clear balance."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is mixing metals without intention. Mixed metals can look stylish, but one metal colour is usually easier for a polished minimalist look."
-        },
-        {
-          "type": "paragraph",
-          "text": "A fifth mistake is using minimalist jewellery only for casual wear. Minimalist studs, drops and huggies can also work beautifully for weddings, dinners and parties."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not choose jewellery only because it is simple. It should still suit the outfit, neckline, hairstyle, occasion and wearer's personal style."
+          "text": "A minimalist ear stack can use two graduated studs, a stud with a huggie, a narrow hoop with a small stud, or three restrained earrings with a repeated metal or diamond shape."
         },
         {
           "type": "see-also",
-          "text": "Gold-Plated Jewellery Care Guide",
+          "text": "How to stack earrings",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Diamond ear stack ideas",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Caring for a minimalist jewellery capsule",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A smaller capsule often means the pieces are worn and handled more frequently. For confirmed gold-plated sterling silver pieces:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Apply perfume, cosmetics and hair products before putting on jewellery",
+            "Remove jewellery before showering, swimming and exercise",
+            "Wipe pieces gently after wear",
+            "Store pieces separately to reduce friction",
+            "Keep fine chains fastened during storage to reduce tangling",
+            "Avoid abrasive polishing products",
+            "Follow the care instructions supplied with each product"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "How to care for gold-plated jewellery",
           "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
         }
       ]
     },
     {
-      "heading": "Final Minimalist Jewellery Checklist",
+      "heading": "Common minimalist jewellery styling mistakes",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Before choosing minimalist jewellery, ask:"
+          "type": "subheading",
+          "text": "Wearing several focal pieces"
         },
         {
-          "type": "bullet-list",
+          "type": "paragraph",
+          "text": "Visible earrings, several necklaces, multiple rings and stacked bracelets can compete. Choose one main area and make the remaining pieces quieter."
+        },
+        {
+          "type": "subheading",
+          "text": "Assuming minimalist means tiny"
+        },
+        {
+          "type": "paragraph",
+          "text": "A very small piece may disappear against an outfit, hairstyle or glasses. Use the proportions of the complete look when choosing size."
+        },
+        {
+          "type": "subheading",
+          "text": "Combining unrelated details"
+        },
+        {
+          "type": "paragraph",
+          "text": "Several small motifs can still look busy. Repeat a shape, diamond detail or metal colour."
+        },
+        {
+          "type": "subheading",
+          "text": "Ignoring measurements"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chain length, pendant dimensions, hoop diameter and earring size affect how pieces interact. Use actual measurements and genuine model photographs."
+        },
+        {
+          "type": "subheading",
+          "text": "Mixing metals accidentally"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mixed metals can look intentional when repeated. One isolated contrasting piece may look disconnected."
+        },
+        {
+          "type": "subheading",
+          "text": "Choosing every piece for the same occasion"
+        },
+        {
+          "type": "paragraph",
+          "text": "A useful capsule contains pieces that can be recombined across several outfits rather than one complete set that is always worn together."
+        }
+      ]
+    },
+    {
+      "heading": "Final styling checklist",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before finishing the look, ask:"
+        },
+        {
+          "type": "numbered-list",
           "items": [
-            "Is the outfit casual, workwear, wedding guest, dinner or party?",
-            "Do I want sparkle, shape, movement or softness?",
-            "Should the earrings or necklace be the main jewellery moment?",
-            "Will my hairstyle show the earrings?",
-            "Is the outfit simple or detailed?",
-            "Does the metal colour match my usual jewellery?",
-            "Can the piece be worn with more than one outfit?",
-            "Is the jewellery comfortable enough for long wear?",
-            "Can the earrings be used in an ear stack?",
-            "Are the materials clearly explained?",
-            "Is the design simple but still special?",
-            "Will this jewellery still feel wearable after one season?"
+            "Which piece is the focal point?",
+            "What detail connects the jewellery?",
+            "Is there enough visual space?",
+            "Does the necklace relate to the neckline?",
+            "Do the earrings work with the hairstyle and glasses?",
+            "Are the jewellery proportions suitable for the outfit?",
+            "Does the metal combination look intentional?",
+            "Are any chains, hoops or drops catching on clothing?",
+            "Can one piece be removed to make the composition clearer?",
+            "Are the materials and care requirements understood?"
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "If you are unsure, start with small lab-grown diamond studs or huggies. They are the easiest minimalist jewellery pieces to wear often."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "What is minimalist jewellery?",
-      "answer": "Minimalist jewellery is simple, clean and wearable jewellery designed to add polish without overpowering the outfit. It can include studs, huggies, small hoops, minimalist earrings and delicate drops."
+      "question": "What is minimalist jewellery styling?",
+      "answer": "Minimalist jewellery styling combines a limited number of pieces using controlled proportions, repeated details and visual space. The jewellery complements the outfit without making every area a focal point."
     },
     {
-      "question": "How do you style minimalist jewellery?",
-      "answer": "Style minimalist jewellery by choosing one sparkle point, one shape detail and one clean finish. Keep the pieces balanced and avoid overcrowding the look."
+      "question": "How many pieces should be in a minimalist jewellery look?",
+      "answer": "There is no fixed number. Two coordinated pieces can look more complete than several unrelated ones. Select one focal point and use the remaining pieces as support."
     },
     {
-      "question": "Is minimalist jewellery good for everyday wear?",
-      "answer": "Yes, minimalist jewellery is excellent for everyday wear because it works with many outfits and feels comfortable for regular use."
+      "question": "How do you build a minimalist jewellery capsule?",
+      "answer": "Begin with frequently usable categories such as small studs, huggies or hoops, a pendant, a bracelet and a clean ring. Choose pieces that can be recombined rather than worn only as one complete set."
     },
     {
-      "question": "What earrings are best for minimalist styling?",
-      "answer": "Small diamond studs, medium studs, huggies, minimalist earrings and soft drops are best for minimalist styling."
+      "question": "Can you layer minimalist necklaces?",
+      "answer": "Yes. Vary their lengths and keep at least one chain visually simple. Check that pendants do not overlap and that the chains suit the neckline."
     },
     {
-      "question": "Can minimalist jewellery be worn to weddings?",
-      "answer": "Yes, minimalist jewellery works beautifully for wedding guests, especially when the outfit already has lace, satin, embroidery or a strong neckline."
+      "question": "Can you mix metal colours in minimalist jewellery?",
+      "answer": "Yes. Repeat both metal colours somewhere in the arrangement so that the contrast appears intentional."
     },
     {
-      "question": "Can minimalist jewellery be worn to parties?",
-      "answer": "Yes, minimalist jewellery can work for parties when you choose pieces with enough polish, such as medium studs, hoops or elegant drop earrings."
+      "question": "What jewellery works with a high neckline?",
+      "answer": "Earrings can provide the primary detail. If wearing a necklace, position it clearly above or below the neckline rather than directly on its edge."
     },
     {
-      "question": "Is minimalist jewellery good for work?",
-      "answer": "Yes, minimalist jewellery is ideal for work because it adds polish without being distracting."
+      "question": "What minimalist jewellery works with a V-neck?",
+      "answer": "A pendant can follow the V shape. Use restrained earrings if the necklace is the focal point."
     },
     {
-      "question": "What minimalist jewellery is best for gifts?",
-      "answer": "Studs, huggies and minimalist diamond earrings are the safest gift choices because they are easy to wear and less risky than bold jewellery."
+      "question": "Can minimalist jewellery be worn for evening events?",
+      "answer": "Yes. Increase the visibility of one focal piece, such as the earrings, while keeping the remaining jewellery restrained."
     },
     {
-      "question": "Can you build an ear stack with minimalist jewellery?",
-      "answer": "Yes, minimalist jewellery is perfect for ear stacks. A small stud with a huggie or minimalist earring creates a clean everyday stack."
+      "question": "Can minimalist earrings be used in an ear stack?",
+      "answer": "Yes. Use pieces with related shapes or finishes and check the actual dimensions and spacing before combining them."
     },
     {
-      "question": "What IWantJewels products are best for minimalist styling?",
-      "answer": "Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short and Farfalla are strong options depending on whether the look is everyday, workwear, wedding guest, romantic or party-focused."
+      "question": "Is minimalist jewellery always suitable for everyday wear?",
+      "answer": "No. Suitability depends on the product's dimensions, weight, closure, materials, finish and the wearer's activities."
     }
   ],
   "cta": {
-    "heading": "Minimalist jewellery should feel simple, polished and easy to wear often. Choose studs for clean sparkle, huggies for modern shape, minimalist earrings for quiet detail, hoops for soft structure and drop earrings for elegant movement.",
-    "body": "Start with IWantJewels demi-fine lab-grown diamond earrings if you want minimalist jewellery with real diamond sparkle. Choose Cadenza S for subtle everyday shine, Cadenza M for classic polish, Laluce for quiet styling, Amadea for huggies, Pave Hoops for shape and Orsola for soft occasion movement.",
-    "primaryLabel": "Shop Minimalist Jewellery",
-    "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Lab-Grown Diamond Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Minimalist Earrings Guide",
-    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
+    "heading": "Minimalist jewellery styling is about clarity rather than strict rules. Select one focal point, repeat a related detail and leave enough visual space for every piece to be recognised.",
+    "body": "Explore I Want Jewels minimalist pieces and build a capsule around the outfits you wear most often, checking each product page for its dimensions, materials and finish.",
+    "primaryLabel": "Explore Minimalist Jewellery",
+    "primaryHref": "/products",
+    "secondaryLabel": "Compare Minimalist Earring Styles",
+    "secondaryHref": "/resources/earring-style-guides/minimalist-earrings-guide",
+    "tertiaryLabel": "Everyday Lab-Grown Diamond Earrings",
+    "tertiaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
   }
 }

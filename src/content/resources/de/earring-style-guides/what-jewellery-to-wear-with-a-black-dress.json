@@ -1,518 +1,482 @@
 {
   "meta": {
-    "title": "Welchen Schmuck man zu einem schwarzen Kleid trägt",
-    "description": "Wählen Sie Schmuck für ein schwarzes Kleid mit Ohrringen, Diamanten, Gold, Silber, Roségold, Party-Looks, Hochzeiten und Abend-Outfit-Styling."
+    "title": "Welcher Schmuck passt zum schwarzen Kleid?",
+    "description": "Wählen Sie Ohrringe, Ketten und Metallfarben passend zu Ausschnitt, Stoff und Anlass. Vergleichen Sie Ohrstecker, Creolen, Ohrhänger und Statement-Designs."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-53.jpg",
-    "title": "Welchen Schmuck man zu einem schwarzen Kleid trägt:",
-    "subtitle": "Leitfaden für Ohrringe, Metalle und Styling",
+    "image": "/blog-images/blog-image-54.jpg",
+    "title": "Welcher Schmuck passt",
+    "subtitle": "zum schwarzen Kleid",
     "paragraphs": [
-      "Ein schwarzes Kleid ist eines der am einfachsten mit Schmuck zu kombinierenden Outfits, da es Glitzer, Metallfarben und Diamantdetails einen klaren Hintergrund verleiht. Mit den richtigen Ohrringen kann ein schwarzes Kleid elegant, romantisch, modern, minimalistisch oder partytauglich wirken.",
-      "Der beste Schmuck für ein schwarzes Kleid hängt vom Kleidungsstil ab. Zu einem schlichten schwarzen Kleid können auffällige Statement-Ohrringe, Ohrhänger oder Creolen getragen werden. Ein detailliertes schwarzes Kleid sieht mit Nieten oder schlichten Huggies normalerweise besser aus. Ein schwarzes Kleid aus Satin harmoniert wunderbar mit Bewegungen, während ein schwarzes Kleid mit hohem Ausschnitt oft besser zu Ohrsteckern oder Creolen passt als zu langen Kleidern.",
-      "Diese Ressource hilft Käufern bei der Auswahl von Schmuck für ein schwarzes Kleid nach Anlass, Ausschnitt, Frisur, Metallfarbe und Glanzgrad. Es verbindet auch jede Styling-Richtung mit IWantJewels-Produkten wie den auffälligen Statement-Ohrringen von Lusso, den Tropfenohrringen von Orsola, den Pave Hoops, den Diamant-Ohrsteckern von Cadenza M, den im Labor gezüchteten Diamant-Ohrsteckern von Cadenza S, den Ohrringen von Amadea Huggie, den minimalistischen Diamantohrringen von Laluce, den Schmetterlingsohrringen von Farfalla und den langen Ohrringen von Concetta."
+      "Ein schwarzes Kleid lässt sich mit Schmuck in Gelbgold, Weiß- oder Silberfarbe, Roségold oder mehreren Metallfarben stylen. Die richtige Wahl hängt weniger von der Farbe Schwarz ab als von Ausschnitt, Stoff, Detailgrad und Anlass des Kleids.",
+      "Legen Sie zunächst fest, welcher Teil des Looks zum Blickfang werden soll. Ein schlichtes schwarzes Kleid lässt Raum für auffällige Ohrringe oder eine Kette, während ein Kleid mit Pailletten, Spitze oder Verzierungen bereits genügend visuelle Details enthalten kann.",
+      "Nachdem Sie eine Styling-Richtung gewählt haben, prüfen Sie die tatsächlichen Maße, das Gewicht, den Verschluss, die Materialien und die Oberfläche des Schmucks. Produktbezeichnungen wie „minimalistisch“, „Statement“ oder „Anlass-Ohrringe“ ersetzen keine vollständigen Angaben."
     ],
-    "shopLabel": "Kaufen Sie Ohrringe für ein schwarzes Kleid",
+    "shopLabel": "Ohrringe entdecken",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Wählen Sie den besten Schmuck für ein schwarzes Kleid.",
-      "Entscheiden Sie sich zwischen Ohrsteckern, Creolen, Tropfenohrringen, Huggies, Schmetterlingsohrringen und auffälligen Statement-Ohrringen.",
-      "Kombinieren Sie die Ohrringe mit schwarzem Satin, schlichten schwarzen, hochgeschlossenen, trägerlosen Kleidern und Partykleidern.",
-      "Wählen Sie goldenen, weiß-/silberfarbenen oder roségoldenen Schmuck zu einem schwarzen Kleid.",
-      "Stylen Sie Schmuck für Partys, Hochzeiten, Abendessen, Geburtstage und Abendveranstaltungen.",
-      "Wählen Sie die passenden Ohrringe je nach Ausschnitt und Frisur.",
-      "Stellen Sie Ear-Stack-Kombinationen für schwarze Kleider zusammen.",
-      "Finden Sie Produktempfehlungen von IWantJewels nach Outfit und Anlass.",
-      "Planen Sie Bildblöcke, Produktmodule, CTA-Bereiche und interne Links für diese Seite ein."
+      "Schlichtes schwarzes Kleid – Raum für einen klaren Blickfang",
+      "Detailreiches schwarzes Kleid – kompakte Ohrstecker oder zurückhaltender Schmuck",
+      "Gelbgold wärmt; Weiß oder Silber kühlt; Roségold wirkt sanfter",
+      "Metallfarbe ist nicht Metallzusammensetzung – prüfen Sie das Grundmetall separat",
+      "Der Ausschnitt bestimmt die Kette, nicht die Kleiderfarbe",
+      "Anlass, Stoff und Frisur sind wichtiger als das Wort „schwarz“"
     ],
-    "image": "/blog-images/blog-image-13.jpg"
+    "image": "/blog-images/blog-image-42.jpg"
   },
   "content": [
     {
-      "heading": "Schmuckauswahl für schwarzes Kleid",
+      "heading": "Kurzantwort",
       "content": [
         {
           "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als wichtigstes Styling-Entscheidungstool."
+          "text": "Bei einem schlichten schwarzen Kleid können Sie einen klaren Blickfang wählen, etwa Ohrhänger, Creolen, ein Statement-Design oder eine Kette. Bei einem detailreichen schwarzen Kleid sorgen kompakte Ohrstecker, geometrische Ohrringe oder zurückhaltender Schmuck für ausreichend Kontrast."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gelbgold erzeugt einen wärmeren Kontrast zu Schwarz, während Weiß- oder Silbertöne kühler wirken. Roségold bringt einen sanfteren Rosaton ein. Keine Variante ist grundsätzlich besser – wählen Sie passend zum Outfit, zu anderem Schmuck und zu Ihren persönlichen Vorlieben."
         },
         {
           "type": "table",
           "headers": [
-            "Schwarzer Kleidungsstil",
-            "Beste Schmuckrichtung",
-            "Empfohlene IWJ-Richtung"
+            "Stil des schwarzen Kleids",
+            "Passende Schmuckrichtung",
+            "Das sollten Sie prüfen"
           ],
           "rows": [
             [
               "Schlichtes schwarzes Kleid",
-              "Auffällige Ohrringe, Tropfen oder Creolen",
-              "Lusso, Orsola, Pave Hoops"
+              "Ein auffälliger Ohrring oder eine Kette",
+              "Größe, Ausschnitt und gewünschter Blickfang"
             ],
             [
               "Schwarzes Satinkleid",
-              "Tropfenohrringe oder sichtbare Ohrstecker",
-              "Orsola, Cadenza M"
+              "Ohrstecker, Creolen oder dezente Ohrhänger",
+              "Glanz, Fall und Bewegung des Stoffes"
             ],
             [
-              "Schwarzes Kleid mit Stehkragen",
-              "Ohrstecker, Creolen oder auffällige Ohrringe",
-              "Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Trägerloses schwarzes Kleid",
-              "Tropfen- oder auffällige Statement-Ohrringe",
-              "Orsola, Lusso"
+              "Schwarzes Kleid mit hochgeschlossenem Ausschnitt",
+              "Ohrringe statt einer auffälligen Kette",
+              "Kontakt mit Ausschnitt und Haaren"
             ],
             [
               "Schulterfreies schwarzes Kleid",
-              "Tropfen, Creolen oder auffällige Ohrringe",
-              "Orsola, Pave Hoops, Lusso"
+              "Ohrringe, Kette oder eine abgestimmte Kombination",
+              "Offener Ausschnitt und Abstände"
             ],
             [
-              "Detailliertes schwarzes Kleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Kadenz S, Amadea"
+              "Schwarzes Off-Shoulder-Kleid",
+              "Ohrhänger, Creolen, Statement-Ohrringe oder eine zurückhaltende Kette",
+              "Schulterlinie und Länge der Ohrringe"
             ],
             [
-              "Schwarzer Overall",
-              "Creolen, Huggies oder auffällige Ohrringe",
-              "Pave Hoops, Amadea, Lusso"
-            ],
-            [
-              "Schwarzes Abendkleid",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Schwarzes Partykleid",
-              "Auffällige Ohrringe oder Creolen",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Minimales schwarzes Kleid",
-              "Ein starker Schmuckschwerpunkt",
-              "Lusso, Orsola, Pave Hoops"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Warum sich schwarze Kleider einfach mit Schmuck kombinieren lassen",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-85.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Schwarze Kleider lassen sich leicht stylen, da Schwarz für einen Kontrast zum Schmuck sorgt. Diamanten wirken heller, Gold wirkt wärmer, Silbertöne wirken sauberer und auffällige Ohrringe können hervorstechen, ohne mit dem Outfit zu konkurrieren."
-            },
-            {
-              "type": "paragraph",
-              "text": "Auch bei einem schwarzen Kleid können Sie die Stimmung des Looks bestimmen. Goldschmuck kann dem Outfit einen warmen und klassischen Touch verleihen. Weißer oder silberfarbener Schmuck sorgt für ein schlichtes und modernes Erscheinungsbild. Roségold kann den Look mildern. Im Labor gezüchtete Diamantohrringe können für Glanz sorgen, ohne dass schweres Zubehör erforderlich ist."
-            },
-            {
-              "type": "paragraph",
-              "text": "Die Hauptregel ist das Gleichgewicht. Ist das schwarze Kleid schlicht, darf der Schmuck kräftiger sein. Wenn das Kleid Details aufweist, sollte der Schmuck sauberer sein. Wenn der Ausschnitt offen ist, können Tropfen oder auffällige Ohrringe wunderbar funktionieren. Wenn der Ausschnitt hoch ist, wirken Nieten oder Creolen oft ausgewogener."
-            },
-            {
-              "type": "see-also",
-              "text": "Leitfaden für Party-Ohrringe",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            },
-            {
-              "type": "see-also",
-              "text": "Leitfaden für auffällige Statement-Ohrringe",
-              "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein schlichtes schwarzes Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein schlichtes schwarzes Kleid ist das beste Outfit für stärkeren Schmuck, da das Kleid den Ohrringen Raum gibt, hervorzustechen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Hier sind die auffälligen Statement-Ohrringe von Lusso, die Ohrhänger von Orsola und die Pave-Creolen am stärksten. Wenn Sie möchten, dass die Ohrringe zum Hauptaugenmerk des Schmucks werden, entscheiden Sie sich für Lusso. Wenn Sie Bewegung und Eleganz wünschen, wählen Sie Orsola. Wenn Sie Form und modernen Glanz wünschen, entscheiden Sie sich für Pave Hoops."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Styling-Ziel",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Starker Party-Look",
-              "Mutige Statement-Ohrringe",
-              "Lusso"
-            ],
-            [
-              "Eleganter Abendlook",
-              "Tropfenohrringe",
-              "Orsola"
-            ],
-            [
-              "Moderne Form",
-              "Reifen",
-              "Pave-Reifen"
-            ],
-            [
-              "Klassischer Glanz",
-              "Mittlere Stollen",
-              "Cadenza M"
-            ],
-            [
-              "Minimaler Stil eines schwarzen Kleides",
-              "Ein zentraler Ohrring",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Ausgewogener Ohrstapel",
-              "Hauptohrring + kleiner Ohrstecker",
-              "Lusso + Cadenza S, Orsola + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "divider"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein satinschwarzes Kleid",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-87.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "Ein satinschwarzes Kleid hat bereits Glanz, daher sollte der Schmuck Glanz verleihen, ohne dass das Ganze zu schwer wirkt."
-            },
-            {
-              "type": "paragraph",
-              "text": "Tropfenohrringe passen besonders gut zu Satin, da sie für Bewegung sorgen und das Licht auf natürliche Weise einfangen. Mittlere Nieten sind besser, wenn das Satinkleid bereits einen dramatischen Ausschnitt oder eine starke Form hat. Auffällige Statement-Ohrringe können funktionieren, wenn das Satinkleid schlicht und der Rest des Schmucks minimalistisch ist."
-            },
-            {
-              "type": "see-also",
-              "text": "Leitfaden für Party-Ohrringe",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            }
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satinschwarzer Kleidungsstil",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Unterkleid aus Satin",
-              "Tropfenohrringe",
-              "Orsola"
-            ],
-            [
-              "Schwarzes Midikleid aus Satin",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Schwarzes Satinkleid mit Stehkragen",
-              "Ohrstecker oder Reifen",
-              "Kadenz M, Pave Hoops"
-            ],
-            [
-              "Trägerloses Kleid aus Satin in Schwarz",
-              "Tropfen oder auffällige Ohrringe",
-              "Orsola, Lusso"
-            ],
-            [
-              "Schwarzes Partykleid aus Satin",
-              "Auffällige Ohrringe oder Tropfen",
-              "Lusso, Orsola"
-            ],
-            [
-              "Satinschwarzer Overall",
-              "Creolen oder auffällige Ohrringe",
-              "Pave Hoops, Lusso"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein hochgeschlossenes schwarzes Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein hochgeschlossenes schwarzes Kleid passt normalerweise besser zu Ohrringen, die eng am Ohr anliegen oder Form verleihen, ohne zu viel Länge hinzuzufügen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ohrstecker, Creolen und auffällige Ohrringe können alle funktionieren. Lange Tropfen können manchmal mit dem Ausschnitt konkurrieren, es sei denn, das Kleid ist sehr schlicht und der Tropfen ist raffiniert."
-        },
-        {
-          "type": "paragraph",
-          "text": "Die Diamant-Ohrstecker von Cadenza M sind robust und sorgen für einen klaren High-Neck-Look. Pave Hoops verleihen Form. Die auffälligen Statement-Ohrringe von Lusso funktionieren, wenn das Kleid schlicht ist und die Ohrringe das Outfit hervorheben sollen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Schwarzes Kleid mit Stehkragen",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Schlichtes Kleid mit Stehkragen",
-              "Auffällige Ohrringe oder Creolen",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Detailliertes Kleid mit Stehkragen",
-              "Stollen",
-              "Cadenza M, Cadenza S"
-            ],
-            [
-              "Stehkragen vom Büro bis zum Abend",
-              "Mittlere Stollen",
-              "Cadenza M"
-            ],
-            [
-              "Minimalistisches Kleid mit Stehkragen",
-              "Creolen oder auffällige Ohrringe",
-              "Pave Hoops, Lusso"
-            ],
-            [
-              "Formelles Kleid mit Stehkragen",
-              "Ohrstecker oder raffinierte Tropfen",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Strickkleid mit Stehkragen",
-              "Ohrstecker oder Reifen",
-              "Kadenz S, Pave Hoops"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrstecker vs. Creolen",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für minimalistische Ohrringe",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein trägerloses schwarzes Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein trägerloses schwarzes Kleid bietet Ohrringen mehr Platz, da der Ausschnitt offen ist. Dies macht es zu einem der besten Kleidungsstile für Tropfen, auffällige Statement-Ohrringe und stärkeren Glanz."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn Sie einen dramatischen Party-Look wünschen, wählen Sie Lusso. Wenn Sie elegante Bewegung wünschen, wählen Sie Orsola. Wenn Sie einen raffinierteren, formellen Look wünschen, kann Concetta Long wunderbar funktionieren. Wenn Sie eine sicherere Glitzeroption wünschen, wählen Sie Cadenza M."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Trägerloser schwarzer Kleid-Look",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Party-Look",
-              "Mutige Statement-Ohrringe",
-              "Lusso"
-            ],
-            [
-              "Eleganter Dinner-Look",
-              "Tropfenohrringe",
-              "Orsola"
-            ],
-            [
-              "Formeller Abendlook",
-              "Lange Tropfen",
-              "Concetta Long"
-            ],
-            [
-              "Minimales Glitzern",
-              "Mittlere Stollen",
-              "Cadenza M"
-            ],
-            [
-              "Romantischer Look",
-              "Tropfen- oder Schmetterlingsohrringe",
-              "Orsola, Farfalla"
-            ],
-            [
-              "Ear-Stack-Look",
-              "Drop oder Bold + kleiner Noppen",
-              "Orsola + Cadenza S, Lusso + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für auffällige Statement-Ohrringe",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für im Labor gezüchtete Diamant-Ohrhänger",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Beste Ohrringe für ein detailliertes schwarzes Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Wenn ein schwarzes Kleid bereits Pailletten, Spitze, Stickereien, Rüschen, metallische Details oder einen dramatischen Ausschnitt aufweist, sollten Ohrringe normalerweise sauberer sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Hier sind Ohrstecker, Huggies und minimalistische Ohrringe besser als auffällige Stücke. Ziel ist es, dass das Kleid das optische Hauptdetail bleibt, während der Schmuck für den letzten Schliff sorgt."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Detaillierter schwarzer Kleidertyp",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Schwarzes Paillettenkleid",
-              "Ohrstecker oder saubere Umarmungen",
-              "Kadenz M, Amadea"
+              "Schwarzes Kleid mit V-Ausschnitt",
+              "Ohrringe mit oder ohne Anhänger",
+              "Ob der Anhänger dem Ausschnitt folgt"
             ],
             [
               "Schwarzes Spitzenkleid",
-              "Noppen oder weiche Tropfen",
-              "Cadenza M, Concetta Short"
+              "Kompakter oder zurückhaltender Schmuck",
+              "Musterdichte und Details am Ausschnitt"
             ],
             [
-              "Besticktes schwarzes Kleid",
-              "Stollen",
-              "Cadenza S, Cadenza M"
+              "Schwarzes Paillettenkleid",
+              "Definierter, aber zurückhaltender Schmuck",
+              "Vorhandener Glanz und Verzierungen"
             ],
             [
-              "Metallisches schwarzes Kleid",
-              "Minimalistische Ohrringe oder Ohrstecker",
-              "Laluce, Cadenza M"
+              "Schwarzes Arbeitskleid",
+              "Ohrstecker, kompakte Creolen oder geometrische Ohrringe",
+              "Praktikabilität am Arbeitsplatz"
             ],
             [
-              "Schwarzes Kleid mit Rüschen",
-              "Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Bedrucktes schwarzes Kleid",
-              "Ohrstecker oder kleine Reifen",
-              "Kadenz S, Pave Hoops"
+              "Schwarzes Abendkleid",
+              "Ohrstecker, Ohrhänger, Creolen oder Statement-Ohrringe",
+              "Dresscode, Stoff und Frisur"
             ]
           ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für minimalistische Ohrringe",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrstecker vs. Huggie-Ohrringe",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrstecker vs. Creolen",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
         }
       ]
     },
     {
-      "heading": "Gold vs. Silber vs. Roségoldschmuck mit einem schwarzen Kleid",
+      "heading": "Beginnen Sie mit dem Kleid, nicht mit dem Schmuck",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein schwarzes Kleid passt zu fast jeder Metallfarbe, aber jedes Finish erzeugt eine andere Stimmung."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gelbgold verleiht Wärme und Fülle. Weiß- oder Silbertöne wirken sauber, scharf und modern. Roségold macht das schwarze Kleid weicher und macht den Look romantischer."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Metallfarbe",
-                "Gefühl mit einem schwarzen Kleid",
-                "Am besten für"
-              ],
-              "rows": [
-                [
-                  "Gelbgold",
-                  "Warm, reichhaltig und klassisch",
-                  "Partys, Abendessen, mutiges Styling"
-                ],
-                [
-                  "Weiß- oder Silberton",
-                  "Sauber, hell und modern",
-                  "Minimale Looks, formelles Styling, coole Outfits"
-                ],
-                [
-                  "Roségold",
-                  "Weich, romantisch und feminin",
-                  "Verabredungen, Geburtstage, sanfteres Styling"
-                ],
-                [
-                  "Gemischte Metalle",
-                  "Modern und kreativ",
-                  "Ear Stacks und trendige Looks"
-                ]
-              ]
+              "type": "paragraph",
+              "text": "Bevor Sie den Schmuck auswählen, betrachten Sie vier Merkmale des Kleids."
+            },
+            {
+              "type": "subheading",
+              "text": "Der Ausschnitt"
             },
             {
               "type": "paragraph",
-              "text": "Für die meisten schwarzen Party-Looks wirken Gelbgold oder Weiß/Silber am kräftigsten. Roségold eignet sich besser, wenn der Look sanfter oder romantischer wirken soll."
+              "text": "Der Ausschnitt bestimmt, wie viel visueller und körperlicher Raum für Ohrringe und Ketten vorhanden ist. Ein hochgeschlossener Ausschnitt stellt andere Anforderungen als ein schulterfreies oder tief ausgeschnittenes Kleid mit V-Ausschnitt."
+            },
+            {
+              "type": "subheading",
+              "text": "Der Stoff"
+            },
+            {
+              "type": "paragraph",
+              "text": "Satin, Samt, Spitze, Pailletten, Krepp und Strick reflektieren Licht und bewegen sich unterschiedlich. Schmuck, der zu schlichtem Krepp passt, kann mit Paillettenstoff konkurrieren."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Der Detailgrad"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rüschen, Stickereien, Metallfäden, Spitze, Perlen und dekorative Knöpfe bilden bereits Blickfänge. Der Schmuck muss nicht jedes Detail wiederholen."
+        },
+        {
+          "type": "subheading",
+          "text": "Der Anlass"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schwarzes Arbeitskleid, Cocktailkleid und formelles Abendkleid können alle schwarz sein, erfüllen aber unterschiedliche Zwecke. Wählen Sie den Schmuck passend zum Anlass und nicht allein zur Farbe."
+        }
+      ]
+    },
+    {
+      "heading": "Gold-, Silber- oder Roségoldschmuck zum schwarzen Kleid",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Schwarz kann einen sichtbaren Kontrast zu mehreren Metallfarben bilden. Deshalb gibt es keine einzige richtige Antwort."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Metallfarbe",
+            "Wirkung auf Schwarz",
+            "Styling-Überlegungen"
+          ],
+          "rows": [
+            [
+              "Gelbgold",
+              "Warmer Kontrast",
+              "Mit Accessoires in warmen Farben abstimmen oder bewusst als Hauptkontrast einsetzen"
+            ],
+            [
+              "Weiß- oder Silberfarbe",
+              "Kühlerer, tonaler Kontrast",
+              "Passt zu silbernen Beschlägen, kühlen Accessoires oder einem monochromen Styling"
+            ],
+            [
+              "Roségold",
+              "Sanfter Rosakontrast",
+              "Prüfen Sie, ob andere Accessoires warme oder rosafarbene Töne enthalten"
+            ],
+            [
+              "Metallmix",
+              "Bewusst variierter Kontrast",
+              "Wiederholen Sie mehr als eine Metallfarbe an anderer Stelle, damit die Kombination gewollt wirkt"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Metallfarbe und Metallzusammensetzung sind nicht dasselbe. „Goldfarbe“ sagt nicht aus, ob ein Produkt aus massivem Gold, vergoldetem Silber, Vermeil oder einem anderen Material besteht. Ebenso beweist „Silberfarbe“ nicht, dass ein Produkt aus 925 Sterlingsilber gefertigt ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auf jeder Produktseite sollten Grundmetall, Feingehalt, sofern relevant, Beschichtung oder Oberfläche, Karat der Beschichtung, sofern relevant, Steinart, vollständige Maße, Gewicht und Verschluss separat angegeben sein."
+        },
+        {
           "type": "see-also",
-          "text": "Gold vs. Weiß vs. Roségold, im Labor gezüchtete Diamantohrringe",
+          "text": "Ohrschmuck mit im Labor gezüchteten Diamanten in Gelb-, Weiß- oder Roségold",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Welche Ohrringe passen zu einem schwarzen Kleid?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Ohrstecker, Creolen, Ohrhänger, Motive, geometrische Ohrringe und Statement-Designs können alle zu einem schwarzen Kleid passen. Wählen Sie entsprechend der Struktur des Kleids und der Rolle, die Ihre Ohrringe übernehmen sollen."
+        },
+        {
+          "type": "subheading",
+          "text": "Ohrstecker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrstecker setzen einen kompakten Detailpunkt am Ohr. Sie eignen sich zu Spitze, Pailletten, hochgeschlossenen Ausschnitten oder auffälligen Ketten. Ein Ohrstecker muss nicht optisch minimalistisch sein – Cluster-, Motiv- und geometrische Ohrstecker können ebenfalls zum Blickfang werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei mit Diamanten besetzten Ohrsteckern sollten Sie die vollständige Breite und Höhe, das Gesamtgewicht in Karat, den Bezug des Karatgewichts auf das Paar, Anzahl und Form der Steine, das Gewicht je Ohrring sowie Stift und Verschluss prüfen."
+        },
+        {
+          "type": "subheading",
+          "text": "Creolen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Creolen erzeugen eine geschwungene Kontur. Ihre Wirkung hängt von Durchmesser, Stärke, Profil und Diamantenposition ab. Eine kompakte Creole kann ein Arbeits- oder Tagesoutfit ergänzen, während eine breitere oder mit Diamanten besetzte Creole zu einem schlichten schwarzen Kleid stärker hervortritt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prüfen Sie Außendurchmesser, Innendurchmesser, Breite, Gewicht und Verschluss. Gehen Sie nicht davon aus, dass jede kleine Creole ein Huggie ist."
+        },
+        {
+          "type": "subheading",
+          "text": "Ohrhänger"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrhänger bilden unterhalb des Ohrläppchens eine vertikale Linie. Manche sind starr, andere enthalten bewegliche Glieder. Ohrhänger können besonders gut zu schulterfreien, schulterbetonten, herzförmigen und schlichten Kleidern mit V-Ausschnitt passen. Ihre vollständige Länge sollte jedoch im Verhältnis zu Kieferlinie, Schulter und Ausschnitt geprüft werden."
+        },
+        {
+          "type": "subheading",
+          "text": "Statement-Ohrringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement beschreibt die visuelle Wirkung eines Ohrrings, nicht seine Konstruktion. Eine Creole, ein Ohrstecker oder ein Ohrhänger kann zum Statement-Ohrring werden. Ein schlichtes schwarzes Kleid bietet möglicherweise Raum für ein auffälliges Design, doch Statement-Ohrringe sind nicht automatisch die richtige Wahl. Prüfen Sie, wie Breite, Länge, Bewegung und Diamantenbesatz mit Frisur und Ausschnitt zusammenspielen."
+        },
+        {
+          "type": "see-also",
+          "text": "Auffällige Statement-Ohrringe: Styling-Guide",
+          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Schmetterlings- und Motivohrringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Motivohrringe können einem ansonsten schlichten Outfit eine erkennbare Form geben. Ob sie passen, hängt von Größe und Design ab – nicht nur von der Symbolik des Motivs. Enthält das schwarze Kleid bereits florale, Spitzen- oder Stickdetails, vergleichen Sie das Motiv sorgfältig, damit die Designs nicht miteinander konkurrieren."
+        },
+        {
+          "type": "subheading",
+          "text": "Geometrische Ohrringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Geometrische Ohrringe können einem weich fallenden Kleid Struktur verleihen oder die klaren Linien eines maßgeschneiderten schwarzen Outfits fortführen. Fotos sollten das vollständige Design von vorne und von der Seite zeigen."
+        },
+        {
+          "type": "see-also",
+          "text": "Geometrische Ohrringe stylen",
+          "href": "/resources/earring-style-guides/how-to-style-geometric-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Welche Kette passt zu einem schwarzen Kleid?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Die Wahl der Kette hängt vor allem vom Ausschnitt und von den Ohrringen ab."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Ausschnitt des schwarzen Kleids",
+            "Empfehlung für die Halskette"
+          ],
+          "rows": [
+            [
+              "Schulterfrei",
+              "Anhänger, halsnahe Kette, zarte Kette oder keine Kette"
+            ],
+            [
+              "Herzausschnitt",
+              "Ein Anhänger oder eine geschwungene Kette kann dem offenen Ausschnitt folgen"
+            ],
+            [
+              "V-Ausschnitt",
+              "Ein Anhänger kann die V-Form aufnehmen, wenn seine Länge in den verfügbaren Raum passt"
+            ],
+            [
+              "Karreeausschnitt",
+              "Eine kürzere Kette kann die horizontale Linie aufgreifen, während ein Anhänger Kontrast schafft"
+            ],
+            [
+              "Runder Ausschnitt",
+              "Je nach Tiefe können mehrere Kettenlängen funktionieren"
+            ],
+            [
+              "Hoher Ausschnitt",
+              "Eine Kette kann unnötig sein; die Ohrringe dürfen stärker hervortreten"
+            ],
+            [
+              "Neckholder",
+              "Oft ist es leichter, den Fokus auf Ohrringe zu legen, da der Ausschnitt bereits klare Linien enthält"
+            ],
+            [
+              "Cowl-Neck",
+              "Vermeiden Sie Ketten, die sich im gefalteten Stoff verlieren oder verfangen"
+            ],
+            [
+              "Verzierter Ausschnitt",
+              "Eine Kette kann unnötige Konkurrenz schaffen"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Es gibt keinen allgemeinen Grund, bei auffälligen Ohrringen auf eine Kette zu verzichten. Betrachten Sie die visuelle Wirkung beider Schmuckstücke gemeinsam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine zarte Kette kann zu größeren Ohrringen passen, während kompakte Ohrstecker Raum für eine auffälligere Kette lassen. Ziel ist ein klares Verhältnis zwischen den Schmuckstücken statt einer festen Regel."
+        }
+      ]
+    },
+    {
+      "heading": "Armbänder und Ringe zum schwarzen Kleid",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Armbänder"
+        },
+        {
+          "type": "paragraph",
+          "text": "Armbänder sind bei ärmellosen, kurzärmeligen oder dreiviertelärmeligen Kleidern besser sichtbar. Bei langen Ärmeln sollten Sie prüfen, ob das Armband an Bündchen oder dekorativem Stoff hängen bleibt. Ein Armband kann sinnvoll sein, wenn der Ausschnitt detailreich ist und Sie keine Kette ergänzen möchten."
+        },
+        {
+          "type": "subheading",
+          "text": "Ringe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ringe werden vom Halsausschnitt weniger beeinflusst und eignen sich daher, um Details hinzuzufügen, ohne den Bereich um das Gesicht zu überladen. Berücksichtigen Sie vorhandene Verlobungs- oder Eheringe, die an anderer Stelle verwendeten Metallfarben, die Steinformen, einen möglichen Ring-Stack sowie den Kontakt mit empfindlichem Stoff."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sie müssen nicht jedes Schmuckstück exakt abstimmen. Die Wiederholung eines oder zweier visueller Elemente kann bereits für genügend Einheitlichkeit sorgen."
+        }
+      ]
+    },
+    {
+      "heading": "Schmuck für verschiedene schwarze Kleiderstoffe",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Schwarzes Satinkleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Satin reflektiert bereits Licht und kann Drapierungen, Raffungen oder einen Wasserfallkragen aufweisen. Ohrringe mit kontrollierter Bewegung, Creolen oder Ohrstecker können je nach Kleiderstruktur passen. Ein schlichtes Satinkleid mit Trägern lässt Raum für auffälligere Ohrringe. Ein stark drapiertes Satinkleid erfordert möglicherweise weniger konkurrierende Details."
+        },
+        {
+          "type": "see-also",
+          "text": "Welcher Schmuck passt zu einem Satinkleid?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Samtkleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Samt absorbiert mehr Licht und erzeugt eine dichte visuelle Textur. Poliertes Metall oder mit Diamanten besetzter Schmuck kann Kontraste schaffen, doch auch die Größenverhältnisse sind wichtig. Prüfen Sie, ob Ohrringe oder Armbänder am Stoff hängen bleiben könnten."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Spitzenkleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Spitze enthält wiederkehrende Muster und offene Flächen. Kompakte Ohrstecker, klare Creolen oder ein dezenter Ohrhänger können den Stoff ergänzen, ohne zu viele Formen zu wiederholen. Ein größerer Ohrring kann dennoch funktionieren, wenn Platzierung der Spitze und Ausschnitt schlicht bleiben."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Paillettenkleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pailletten erzeugen bereits reflektiertes Licht auf dem gesamten Kleid. Ziehen Sie Schmuck mit klarer Kontur in Betracht, statt automatisch weitere Steinflächen hinzuzufügen. Die Ohrringe müssen nicht unauffällig sein, doch der Gesamtlook sollte nicht von mehreren unzusammenhängenden Glitzerquellen abhängen."
+        },
+        {
+          "type": "subheading",
+          "text": "Crêpe oder schlichter Webstoff"
+        },
+        {
+          "type": "paragraph",
+          "text": "Schlichte Stoffe lassen möglicherweise mehr Raum für einen besonderen Ohrring, eine Kette oder ein Armband. Hier kann ein einzelner Schmuckfokus eine deutliche Wirkung erzielen."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Strickkleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Achten Sie auf Kragen, Rollkragen, Schals und strukturiertes Garn. Längere Ohrringe, offene Fassungen und hervorstehende Elemente können mit dem Stoff in Kontakt kommen."
+        }
+      ]
+    },
+    {
+      "heading": "Schmuck für ein schwarzes Kleid nach Ausschnitt",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Schwarzes Kleid mit hohem Ausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein hoher Ausschnitt reduziert den verfügbaren visuellen Raum für eine Kette. Ohrstecker, Creolen, geometrische Ohrringe oder ein gezielt eingesetztes Statement-Design können daher zum wichtigsten Schmuckelement werden. Lange Ohrringe sind nicht automatisch ungeeignet, doch prüfen Sie, ob sie den Ausschnitt oder Kragen berühren."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes trägerloses Kleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein trägerloses Kleid schafft offenen Raum um Hals und Schultern. Sie können Ohrringe, eine Kette oder beides tragen, sofern die Schmuckstücke klar aufeinander abgestimmt sind. Sind die Ohrringe sehr auffällig, kann eine zurückhaltende Kette genügen. Bei kompakten Ohrsteckern darf die Kette stärker in den Vordergrund treten."
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes schulterfreies Kleid"
+        },
+        {
+          "type": "paragraph",
+          "text": "Betrachten Sie die gesamte horizontale Linie über den Schultern. Ohrhänger, Creolen und Statement-Ohrringe können passen, doch ihre Breite und Länge sollten sich auf den offenen Ausschnitt beziehen."
+        },
+        {
+          "type": "see-also",
+          "text": "Welche Ohrringe passen zu einem schulterfreien Kleid?",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Kleid mit V-Ausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Entscheiden Sie, ob ein Anhänger dem Ausschnitt folgen oder die Ohrringe den Schwerpunkt bilden sollen. Vermeiden Sie es, einen Anhänger direkt an der Kleiderkante zu platzieren, sofern dies nicht beabsichtigt ist."
+        },
+        {
+          "type": "see-also",
+          "text": "Welcher Schmuck passt zu einem Kleid mit V-Ausschnitt?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Schwarzes Kleid mit Herzausschnitt"
+        },
+        {
+          "type": "paragraph",
+          "text": "Geschwungener Schmuck kann die Ausschnittform aufgreifen, während kantiger Schmuck einen bewussten Kontrast schafft. Berücksichtigen Sie den verfügbaren offenen Raum, bevor Sie sowohl eine Kette als auch lange Ohrringe wählen."
+        },
+        {
+          "type": "see-also",
+          "text": "Schmuck für einen Herzausschnitt",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
         }
       ]
     },
@@ -520,615 +484,300 @@
       "heading": "Schmuck für ein schwarzes Kleid nach Anlass",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Der Anlass sollte bestimmen, wie stark der Schmuck sein sollte."
-        },
-        {
-          "type": "paragraph",
-          "text": "Eine Geburtstagsfeier kann mehr Glanz ausstrahlen. Der Look eines Hochzeitsgastes sollte elegant und nicht zu brautlich wirken. Ein Dinner-Outfit braucht vielleicht eher Glanz als Drama. Für eine formelle Veranstaltung sind möglicherweise raffinierte Tropfen oder klassische Diamantohrstecker erforderlich."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Anlass",
-            "Beste Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Party",
-              "Auffällige Ohrringe, Creolen oder Tropfen",
-              "Lusso, Pave Hoops, Orsola"
-            ],
-            [
-              "Geburtstagsessen",
-              "Mittlere Ohrstecker, Tropfen- oder Schmetterlingsohrringe",
-              "Cadenza M, Orsola, Farfalla"
-            ],
-            [
-              "Hochzeitsgast",
-              "Tropfen, Nieten oder raffinierte Creolen",
-              "Orsola, Cadenza M, Pave Hoops"
-            ],
-            [
-              "Abendempfang",
-              "Auffällige Ohrringe oder lange Tropfen",
-              "Lusso, Concetta Long"
-            ],
-            [
-              "Jubiläumsessen",
-              "Tropfen oder romantische Ohrringe",
-              "Orsola, Farfalla"
-            ],
-            [
-              "Formelles Abendessen",
-              "Raffinierte Tropfen oder klassische Nieten",
-              "Concetta Long, Orsola, Cadenza M"
-            ],
-            [
-              "Arbeitsveranstaltung",
-              "Ohrstecker, Huggies oder kleine Creolen",
-              "Cadenza M, Amadea, Pave Hoops"
-            ],
-            [
-              "Cocktailparty",
-              "Creolen, Tropfen oder kräftiges Glitzern",
-              "Pave Hoops, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Hochzeiten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Schmuck für ein schwarzes Kleid von Frisur",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die Frisur verändert die Sichtbarkeit Ihres Schmucks."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn Ihr Haar offen ist, können sehr kleine Ohrringe verschwinden. Mittlere Stollen, Reifen und Tropfen sehen normalerweise besser aus. Wenn Ihr Haar zurückgebunden ist, können auffällige Ohrringe, Tropfen und Creolen das Gesicht wunderschön umrahmen."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-91.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Frisur",
-                "Beste Schmuckrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Haare runter",
-                  "Mittlere Nieten, Reifen oder Tropfen",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Sanfte Wellen",
-                  "Tropfen, Schmetterlingsohrringe oder sichtbare Ohrstecker",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Glatter Pferdeschwanz",
-                  "Creolen, Tropfen oder auffällige Ohrringe",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Niedriges Brötchen",
-                  "Tropfen oder auffällige Ohrringe",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Hohes Brötchen",
-                  "Creolen oder auffällige Ohrringe",
-                  "Pave Hoops, Lusso"
-                ],
-                [
-                  "Halbhochgestecktes Haar",
-                  "Ohrstecker, Huggies oder Soft Drops",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "Kurzes Haar",
-                  "Ohrstecker, Creolen oder auffällige Ohrringe",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Schmuck für ein schwarzes Kleid von Neckline",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Der Ausschnitt ist einer der wichtigsten Styling-Hinweise."
-        },
-        {
-          "type": "paragraph",
-          "text": "Offene Ausschnitte können Tropfen und auffällige Ohrringe tragen. Hohe Ausschnitte funktionieren normalerweise besser mit Nieten oder Creolen. One-Shoulder-Outfits benötigen oft einen klaren Blickfang, damit der Schmuck nicht den Ausschnitt stört."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Ausschnitt",
-            "Beste Schmuckrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Trägerlos",
-              "Tropfen- oder auffällige Statement-Ohrringe",
-              "Orsola, Lusso"
-            ],
-            [
-              "Schatz",
-              "Sanfte Tropfen, Schmetterlingsohrringe oder kräftiges Glitzern",
-              "Orsola, Farfalla, Lusso"
-            ],
-            [
-              "V-Ausschnitt",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Schulterfrei",
-              "Tropfen, Creolen oder auffällige Ohrringe",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Stehkragen",
-              "Ohrstecker, Creolen oder auffällige Ohrringe",
-              "Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Halfter",
-              "Ohrstecker oder schlanke Tropfen",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Quadratischer Hals",
-              "Creolen, Tropfen oder mittlere Nieten",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Eine Schulter",
-              "Ohrstecker, Tropfen oder ein starker Blickfang",
-              "Cadenza M, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck für Kleider mit V-Ausschnitt",
-          "href": "#"
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck für herzförmigen Ausschnitt",
-          "href": "#"
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrringe für schulterfreie Kleider",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Halskette oder keine Halskette zum schwarzen Kleid?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die Entscheidung für eine Halskette hängt von den Ohrringen und dem Ausschnitt ab."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn die Ohrringe auffällig sind, ist es meist die sicherste Wahl, keine Halskette oder eine sehr zarte Halskette zu wählen. Wenn es sich bei den Ohrringen um einfache Ohrstecker handelt, kann eine Halskette besser zur Geltung kommen. Wenn der Ausschnitt hoch ist, verzichten Sie auf eine Halskette und verwenden Sie stattdessen Ohrringe. Wenn der Ausschnitt offen ist, können Sie entweder eine Halskette oder stärkere Ohrringe wählen, aber nicht immer beides."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Auswahl an Ohrringen",
-            "Richtung der Halskette"
-          ],
-          "rows": [
-            [
-              "Mutige Statement-Ohrringe",
-              "Keine Halskette oder sehr zarte Kette"
-            ],
-            [
-              "Lange Ohrhänger",
-              "Keine Halskette oder einfacher Anhänger"
-            ],
-            [
-              "Creolen",
-              "Zarte Kette oder keine Halskette"
-            ],
-            [
-              "Mittlere Stollen",
-              "Halskette kann besser sichtbar sein"
-            ],
-            [
-              "Kleine Nieten",
-              "Eine Halskette kann den Look bestimmen"
-            ],
-            [
-              "Schmetterlingsohrringe",
-              "Bei Bedarf eine weiche, zarte Halskette"
-            ],
-            [
-              "Huggies",
-              "Die Halskette kann einfach oder mittelschwer sein"
-            ],
-            [
-              "Minimalistische Ohrringe",
-              "Eine Halskette kann zum Mittelpunkt werden"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn beim IWantJewels-Styling Lusso der Hauptohrring ist, überlassen Sie Lusso die Führung. Wenn Cadenza S oder Cadenza M der Ohrring ist, kann der Träger einfacher eine Halskette hinzufügen."
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für auffällige Statement-Ohrringe",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Ear-Stack-Ideen für ein schwarzes Kleid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein schwarzes Kleid passt wunderbar zu Ear-Stacks, da das Outfit normalerweise schlicht genug ist, um den Stack sichtbar zu machen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Der beste Ansatz besteht darin, einen Hauptohrring und ein kleineres Stützstück zu wählen. Wenn das Hauptstück Lusso, Orsola oder Pave Hoops ist, halten Sie das Stützstück klein. Wenn das Hauptstück Cadenza M ist, können Sie ein kuscheliges oder minimalistisches Detail hinzufügen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Black Dress Stack-Ziel",
-            "Hauptstück",
-            "Stützstück",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Mutiger Party-Stack",
-              "Mutiger Ohrring",
-              "Kleiner Bolzen",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Eleganter schwarzer Kleiderstapel",
-              "Tropfenohrring",
-              "Kleiner Bolzen",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Moderner Reifenstapel",
-              "Reifen",
-              "Kleiner Bolzen",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Klassischer Glitzerstapel",
-              "Mittlerer Bolzen",
-              "Huggie",
-              "Kadenz M + Amadea"
-            ],
-            [
-              "Minimaler Stapel schwarzer Kleider",
-              "Kleiner Bolzen",
-              "Minimalistischer Ohrring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Romantischer schwarzer Kleiderstapel",
-              "Schmetterlingsohrring",
-              "Kleiner Bolzen",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Formeller Stapel schwarzer Kleider",
-              "Langer Tropfen",
-              "Kleiner Bolzen",
-              "Concetta Long + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "So stapeln Sie Ohrringe",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Diamond Ear Stack-Ideen",
-          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Produktpfade von Black Dress Styling Need",
-      "content": [
-        {
           "type": "subheading",
-          "text": "Für den stärksten Black-Dress-Look"
+          "text": "Arbeits- oder Businesslook"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie die markanten Statement-Ohrringe von Lusso. Sie eignen sich am besten für ein schlichtes schwarzes Kleid, ein schwarzes Partykleid oder einen minimalistischen Overall, wohin die Ohrringe führen sollen."
+          "text": "Ziehen Sie Ohrstecker, kompakte Creolen oder zurückhaltende geometrische Ohrringe in Betracht. Prüfen Sie praktische Anforderungen im Zusammenhang mit Headsets, Telefonen und der Kleiderordnung am Arbeitsplatz."
         },
         {
           "type": "subheading",
-          "text": "Für elegante Bewegung"
+          "text": "Date-Abend"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Ohrhänger von Orsola. Sie passen wunderbar zu schwarzen Satinkleidern, trägerlosen schwarzen Kleidern und Dinner-Outfits."
-        },
-        {
-          "type": "subheading",
-          "text": "Für moderne Form"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Pave Hoops. Sie sind stark für schwarze Jumpsuits, hochgeschlossene schwarze Kleider, lässiges Party-Styling und elegante Frisuren."
-        },
-        {
-          "type": "subheading",
-          "text": "Für klassischen Glanz"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza M Diamant-Ohrstecker. Sie eignen sich am besten, wenn das schwarze Kleid bereits Details aufweist oder wenn die Trägerin einen sauberen Diamantschliff wünscht."
-        },
-        {
-          "type": "subheading",
-          "text": "Für subtile Unterstützung"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie die im Labor gezüchteten Diamant-Ohrstecker von Cadenza S. Sie eignen sich perfekt als unterstützender Ohrring in Ear-Stacks für schwarze Kleider."
-        },
-        {
-          "type": "subheading",
-          "text": "Für ein romantisches schwarzes Kleid-Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Farfalla-Schmetterlingsohrringe oder Alidi Farfalla-Schmetterlingsohrringe, wenn der Look weicher und persönlicher wirken soll."
-        }
-      ]
-    },
-    {
-      "heading": "Produktempfehlungen von IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produkt",
-            "Beste Rolle im schwarzen Kleid",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Der stärkste Blickfang im schwarzen Kleid",
-              "Am besten für schlichte schwarze Kleider und Party-Looks"
-            ],
-            [
-              "Orsola-Ohrhänger",
-              "Elegantes Uhrwerk",
-              "Verleiht dem Haar Länge, Glanz und Abendglanz"
-            ],
-            [
-              "Pave-Reifen",
-              "Moderne Form",
-              "Verleiht Schwung und sichtbaren Glanz"
-            ],
-            [
-              "Cadenza M Diamant-Ohrstecker",
-              "Klassischer Glanz",
-              "Am besten für detaillierte Kleider oder sicherere Eleganz"
-            ],
-            [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Stützstück",
-              "Passend zu auffälligen Ohrringen, Tropfen und Creolen"
-            ],
-            [
-              "Amadea Huggie-Ohrringe",
-              "Modernes Stützstück",
-              "Stark für Arbeitsveranstaltungen und Ear Stacks"
-            ],
-            [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Weiche Details",
-              "Gut für minimale Stapel und detaillierte Kleider"
-            ],
-            [
-              "Farfalla Schmetterlingsohrringe",
-              "Romantischer Stil",
-              "Fügt Weichheit und Bedeutung hinzu"
-            ],
-            [
-              "Alidi Farfalla Schmetterlingsohrringe",
-              "Geschenkorientiertes, romantisches Styling",
-              "Gut für Geburtstage und dezente schwarze Kleider-Looks"
-            ],
-            [
-              "Concetta Kurze Ohrringe",
-              "Zartes Styling für den Anlass",
-              "Soft-Drop-Option"
-            ],
-            [
-              "Concetta Lange Ohrringe",
-              "Formelles Abend-Styling",
-              "Raffiniert, länglich und poliert"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Schmuck für ein schwarzes Kleid basierend auf den Details des Kleides. Wählen Sie Lusso für kräftiges Funkeln, Orsola für Bewegung, Pave Hoops für Form, Cadenza M für klassischen Glanz und Cadenza S oder Laluce als Stützteile in einem Ear Stack."
-        }
-      ]
-    },
-    {
-      "heading": "Häufige Fehler bei schwarzem Schmuck, die Sie vermeiden sollten",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein häufiger Fehler besteht darin, zu viele starke Teile auf einmal zu tragen. Ein schwarzes Kleid kann auffälligen Schmuck tragen, aber der Look sollte dennoch einen klaren Schwerpunkt haben."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, auffällige Ohrringe mit einer schweren Halskette zu kombinieren. Wenn die Ohrringe stark sind, sollte die Halskette normalerweise minimal oder übersprungen sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, winzige Ohrringe zu wählen, wenn die Haare offen sind. Wenn die Ohrringe zu klein sind, können sie verschwinden."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, auffällige Ohrringe zu einem sehr detaillierten schwarzen Kleid zu tragen. In diesem Fall sehen Nieten oder Huggies möglicherweise raffinierter aus."
-        },
-        {
-          "type": "paragraph",
-          "text": "Schließlich sollten Sie sich nicht für Schmuck entscheiden, nur weil er funkelt. Denken Sie an Ausschnitt, Frisur, Kleiderstoff, Anlass und Komfort."
+          "text": "Ein schwarzes Kleid für einen Date-Abend kann mit Ohrsteckern, Creolen, Ohrhängern, Motiven oder Statement-Ohrringen kombiniert werden. Veranstaltungsort, Kleiderdetails und Frisur sollten die Stilrichtung bestimmen."
         },
         {
           "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
+          "text": "Ohrringe für den Date-Abend: Was passt?",
+          "href": "/resources/jewellery-gift-guides/date-night-jewellery-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Party"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schlichtes Partykleid lässt möglicherweise Raum für einen auffälligeren Ohrring oder eine Kette. Pailletten- und verzierte Kleider enthalten womöglich bereits das wichtigste visuelle Highlight."
+        },
+        {
+          "type": "see-also",
+          "text": "Guide zu Party-Ohrringen",
           "href": "/resources/earring-style-guides/party-earrings-guide"
         },
         {
-          "type": "see-also",
-          "text": "Leitfaden für auffällige Statement-Ohrringe",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+          "type": "subheading",
+          "text": "Hochzeitsgast"
         },
         {
-          "type": "see-also",
-          "text": "Leitfaden für minimalistische Ohrringe",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+          "type": "paragraph",
+          "text": "Bei schwarzer Hochzeitsgastkleidung sollten Sie zunächst die Kleiderordnung des Brautpaars und kulturelle Erwartungen prüfen. Anschließend können Sie den Schmuck nach Formalität, Ausschnitt und Stoff auswählen. Gehen Sie nicht davon aus, dass jede Hochzeit lange Ohrhänger oder Statement-Diamanten erfordert."
         },
         {
-          "type": "see-also",
-          "text": "Pflegeanleitung für vergoldeten Schmuck",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+          "type": "subheading",
+          "text": "Formeller Anlass oder Black-Tie-Event"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein formeller Look kann Ohrstecker, Ohrhänger, Creolen oder Statement-Ohrringe umfassen. Verarbeitung und Proportionen sind wichtiger als die Bezeichnung der Kategorie. Prüfen Sie vor der Wahl von Ohrringen für einen längeren Anlass die tatsächlichen Maße, den Verschluss, die Beweglichkeit und das Gewicht."
         }
       ]
     },
     {
-      "heading": "Abschließende Checkliste für schwarzen Kleiderschmuck",
+      "heading": "Schmuck passend zur Frisur auswählen",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Nach oben gestecktes Haar"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine Hochsteckfrisur zeigt den gesamten Ohrring einschließlich Breite, Ausladung und Verschluss."
+        },
+        {
+          "type": "subheading",
+          "text": "Haare hinter die Ohren gesteckt"
+        },
+        {
+          "type": "paragraph",
+          "text": "So kann der Ohrring sichtbar bleiben und zugleich etwas Weichheit um das Gesicht bewahren. Prüfen Sie, ob strukturierte Oberflächen im Haar hängen bleiben."
+        },
+        {
+          "type": "subheading",
+          "text": "Offenes Haar"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine klare Kontur oder eine kontrastierende Metallfarbe kann dazu beitragen, dass der Ohrring sichtbar bleibt. Erhöhen Sie das Gewicht nicht allein, um die Haarabdeckung auszugleichen."
+        },
+        {
+          "type": "subheading",
+          "text": "Kurzes Haar"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sowohl kompakte als auch längere Ohrringe können sichtbar bleiben. Berücksichtigen Sie das Verhältnis zwischen Ohrring und Kieferlinie."
+        }
+      ]
+    },
+    {
+      "heading": "Einen Ear Stack zu einem schwarzen Kleid zusammenstellen",
       "content": [
         {
           "type": "paragraph",
-          "text": "Bevor Sie Schmuck für ein schwarzes Kleid auswählen, fragen Sie:"
+          "text": "Ein schwarzes Kleid kann einen neutralen Hintergrund für einen Ear Stack bieten, doch auch der Stack sollte eine Hierarchie haben. Eine einfache Struktur ist:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Ist das Kleid schlicht oder detailliert?",
-            "Ist der Stoff Satin, Spitze, Pailletten, Strick oder unifarben?",
-            "Ist der Ausschnitt trägerlos, hoch, V-Ausschnitt, quadratisch oder schulterfrei?",
-            "Werden meine Haare die Ohrringe verbergen oder zeigen?",
-            "Möchte ich Glanz, Form, Bewegung oder Weichheit?",
-            "Sollten die Ohrringe der Hauptschmuck-Moment sein?",
-            "Trage ich eine Halskette oder sollte ich darauf verzichten?",
-            "Passt die Metallfarbe zum Look?",
-            "Handelt es sich bei dem Anlass um eine Party, Hochzeit, ein Abendessen oder eine Arbeitsveranstaltung?",
-            "Sind die Ohrringe bequem genug für die gesamte Veranstaltung?",
-            "Kann der Schmuck auch zu anderen Outfits getragen werden?",
-            "Ist der Ear Stack mit einem Hauptteil ausbalanciert?"
+            "Ein Hauptohrring",
+            "Ein kleinerer ergänzender Ohrstecker oder ein eng anliegendes Schmuckstück",
+            "Ein optionales drittes Schmuckstück nur, wenn der Abstand der Piercings dies zulässt"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wenn das schwarze Kleid schlicht ist, wählen Sie stärkere Ohrringe. Wenn das Kleid detailliert ist, wählen Sie klarere Ohrringe."
+          "text": "Prüfen Sie die vollständigen Maße und Abstände der konkreten Produkte. Zwei Ohrringe, die auf einzelnen Produktfotos getrennt erscheinen, können beim gemeinsamen Tragen überlappen."
+        },
+        {
+          "type": "see-also",
+          "text": "So kombinieren Sie Ohrringe im Ear Stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ideen für einen Diamant-Ear-Stack",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Schmuck mit im Labor gezüchteten Diamanten zu einem schwarzen Kleid",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Schmuck mit im Labor gezüchteten Diamanten kann sich deutlich von Schwarz abheben, doch allein die Herkunft der Diamanten bestimmt nicht die Qualität des fertigen Schmuckstücks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei Ohrringen sollten Sie prüfen:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Anzahl der Diamanten",
+            "Die Formen der Steine",
+            "Gesamtgewicht in Karat",
+            "Ob sich das Gewicht auf das Paar bezieht",
+            "Die Platzierung der Steine",
+            "Die vollständigen Maße",
+            "Gewicht je Ohrring",
+            "Verschluss",
+            "Metall und Oberfläche",
+            "Ob es sich um ein Paar oder einen einzelnen Ohrring handelt"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei Ketten sollten Sie zusätzlich Kettenlänge, Anhängermaße und prüfen, ob die Kette enthalten ist."
+        }
+      ]
+    },
+    {
+      "heading": "Häufige Schmuckfehler beim schwarzen Kleid",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-46.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Nur nach der Metallfarbe auswählen"
+            },
+            {
+              "type": "paragraph",
+              "text": "Gold-, Silber- und Roségoldfarben können zu Schwarz passen. Kleiderstruktur und Schmuckproportionen sind oft wichtiger."
+            },
+            {
+              "type": "subheading",
+              "text": "Jedes schwarze Kleid gleich behandeln"
+            },
+            {
+              "type": "paragraph",
+              "text": "Ein schlichtes Crêpekleid und ein mit Pailletten besetztes Spitzenkleid erfordern unterschiedliche Entscheidungen, obwohl beide schwarz sind."
+            },
+            {
+              "type": "subheading",
+              "text": "Mehrere konkurrierende Blickfänge hinzufügen"
+            },
+            {
+              "type": "paragraph",
+              "text": "Auffällige Ohrringe, eine markante Kette und ein verzierter Ausschnitt können miteinander konkurrieren. Entscheiden Sie, welcher Bereich im Vordergrund stehen soll."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Schmuckmaße ignorieren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotos verwenden unterschiedliche Bildausschnitte und Zoomstufen. Vergleichen Sie die tatsächlichen Maße und Bilder am Körper."
+        },
+        {
+          "type": "subheading",
+          "text": "Jeden kleinen Ohrring als Huggie bezeichnen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kleine Creolen (Huggies) sind Creolen, die so gestaltet sind, dass sie eng am Ohrläppchen anliegen. Ein kompakter Ohrstecker oder geometrischer Ohrring ist nicht automatisch eine kleine Creole (Huggie)."
+        },
+        {
+          "type": "subheading",
+          "text": "Annehmen, dass Statement-Ohrringe immer schwer sind"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement beschreibt die visuelle Wirkung, nicht das Gewicht. Prüfen Sie das Gewicht pro Ohrring."
+        },
+        {
+          "type": "subheading",
+          "text": "Metallfarbe mit Materialzusammensetzung verwechseln"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein goldfarbenes Produkt besteht nicht automatisch aus massivem Gold. Prüfen Sie das Grundmetall und die Beschichtung."
+        }
+      ]
+    },
+    {
+      "heading": "Checkliste für Schmuck zum schwarzen Kleid",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Bevor Sie Ihren Schmuck auswählen, fragen Sie sich:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Ist das Kleid schlicht oder detailreich?",
+            "Welcher Stoff wurde verwendet?",
+            "Wie sieht der Ausschnitt aus?",
+            "Was sind Anlass und Kleiderordnung?",
+            "Sollen die Ohrringe oder die Halskette den Ton angeben?",
+            "Ist ein Armband bei dieser Ärmellänge sichtbar?",
+            "Welche Metallfarben erscheinen bereits an Schuhen, Tasche oder Kleiderverschlüssen?",
+            "Wie groß sind die vollständigen Maße des Schmucks?",
+            "Wie viel wiegt jeder Ohrring?",
+            "Welcher Verschluss wird verwendet?",
+            "Sind Metall und Beschichtung korrekt angegeben?",
+            "Sind die Diamantdetails vollständig?",
+            "Wird der Schmuck das Kleid, Haar, die Schulter oder den Kragen berühren?",
+            "Lässt sich der Schmuck auch zu anderen Outfits tragen?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Welchen Schmuck soll ich zu einem schwarzen Kleid tragen?",
-      "answer": "Der beste Schmuck für ein schwarzes Kleid hängt vom Kleidungsstil ab. Schlichte schwarze Kleider passen gut zu auffälligen Ohrringen, Tropfen oder Creolen. Detaillierte schwarze Kleider sehen in der Regel mit Nieten oder schlichten Huggies besser aus."
+      "question": "Welchen Schmuck sollte ich zu einem schwarzen Kleid tragen?",
+      "answer": "Schmuck in Gelbgold, Weiß- oder Silberfarbe, Roségold und aus gemischten Metallen kann jeweils passen. Wählen Sie passend zu Ausschnitt, Stoff, Details und Anlass des Kleides."
     },
     {
-      "question": "Welche Ohrringe passen am besten zu einem schwarzen Kleid?",
-      "answer": "Ohrhänger, Creolen, mittelgroße Diamantohrstecker und auffällige Statement-Ohrringe passen gut zu einem schwarzen Kleid. Wählen Sie je nach Ausschnitt, Frisur und Anlass."
+      "question": "Passt Gold- oder Silberschmuck besser zu einem schwarzen Kleid?",
+      "answer": "Keine Variante ist grundsätzlich besser. Gelbgold erzeugt einen wärmeren Kontrast, während Weiß- oder Silberfarben kühler wirken. Stimmen Sie die Wahl auf andere Accessoires und Ihre persönlichen Vorlieben ab."
     },
     {
-      "question": "Kann ich Goldschmuck zu einem schwarzen Kleid tragen?",
-      "answer": "Ja, Goldschmuck passt wunderbar zu einem schwarzen Kleid, weil er für Wärme und Kontrast sorgt."
+      "question": "Welche Ohrringe sollte ich zu einem schwarzen Kleid tragen?",
+      "answer": "Ohrstecker, Creolen, Ohrhänger, Motive, geometrische Ohrringe und Statement-Designs können jeweils passen. Die richtige Wahl hängt von Ausschnitt, Stoff, Frisur und gewünschtem Blickfang ab."
     },
     {
-      "question": "Kann ich Silberschmuck zu einem schwarzen Kleid tragen?",
-      "answer": "Ja, silberner oder weißfarbener Schmuck passt gut zu einem schwarzen Kleid, wenn Sie einen klaren, modernen und hellen Look wünschen."
+      "question": "Kann ich zu einem schwarzen Kleid Statement-Ohrringe tragen?",
+      "answer": "Ja. Ein schlichtes schwarzes Kleid lässt Raum für auffällige Ohrringe. Achten Sie auf Größe, Gewicht und das Zusammenspiel mit dem Ausschnitt."
     },
     {
-      "question": "Passt Roségold zu einem schwarzen Kleid?",
-      "answer": "Roségold kann mit einem schwarzen Kleid kombiniert werden, wenn der Look weicher, romantischer oder femininer wirken soll."
+      "question": "Sollte ich zu einem schwarzen Kleid eine Kette tragen?",
+      "answer": "Eine Kette kann passend sein, wenn sie mit dem Ausschnitt harmoniert. Schulterfreie Kleider sowie Modelle mit Herz- oder V-Ausschnitt bieten möglicherweise Platz dafür, während hochgeschlossene oder verzierte Ausschnitte nicht unbedingt eine Kette benötigen."
     },
     {
-      "question": "Welche Ohrringe sollte ich zu einem schlichten schwarzen Kleid tragen?",
-      "answer": "Zu einem einfachen schwarzen Kleid können auffällige Statement-Ohrringe, Ohrhänger oder Creolen getragen werden, da das Outfit dem Schmuck Raum gibt, hervorzustechen."
+      "question": "Welcher Schmuck passt zu einem hochgeschlossenen schwarzen Kleid?",
+      "answer": "Ohrstecker, Creolen, geometrische Ohrringe oder ein zurückhaltendes Statement-Design können passen, da der Ausschnitt weniger visuellen Raum für eine Kette lässt."
     },
     {
-      "question": "Welche Ohrringe sollte ich zu einem detaillierten schwarzen Kleid tragen?",
-      "answer": "Wählen Sie Ohrstecker, Huggies oder minimalistische Ohrringe, wenn das schwarze Kleid Pailletten, Spitze, Stickereien, Rüschen oder einen dramatischen Ausschnitt hat."
+      "question": "Kann ich roségoldenen Schmuck zu einem schwarzen Kleid tragen?",
+      "answer": "Ja. Roségold sorgt für einen weicheren rosa Kontrast zu Schwarz. Prüfen Sie die tatsächliche Metallzusammensetzung unabhängig von der Farbe."
     },
     {
-      "question": "Sollte ich eine Halskette mit auffälligen Ohrringen und einem schwarzen Kleid tragen?",
-      "answer": "Normalerweise nicht, oder nur eine sehr zarte Halskette. Auffällige Ohrringe sehen am besten aus, wenn sie den Look bestimmen dürfen."
+      "question": "Welcher Schmuck passt zu einem schwarzen Paillettenkleid?",
+      "answer": "Wählen Sie Schmuck mit klarer Kontur und zurückhaltendem Steinbesatz. Die Pailletten reflektieren bereits Licht – betrachten Sie daher das komplette Outfit, bevor Sie weiteren Glanz hinzufügen."
     },
     {
-      "question": "Welchen Schmuck sollte ich zu einem schwarzen Satinkleid tragen?",
-      "answer": "Ohrhänger oder mittelgroße Ohrstecker passen gut zu einem schwarzen Satinkleid. Tropfen sorgen für Bewegung, während Nieten das Styling schlicht halten."
-    },
-    {
-      "question": "Welche IWantJewels-Ohrringe passen am besten zu einem schwarzen Kleid?",
-      "answer": "Lusso, Orsola, Pave Hoops, Cadenza M und Concetta Long sind starke schwarze Kleideroptionen, je nachdem, ob Sie kräftiges Glitzern, Bewegung, Form oder klassischen Glanz wünschen."
+      "question": "Kann ich zu einem schwarzen Kleid verschiedene Metalle kombinieren?",
+      "answer": "Ja. Eine Kombination verschiedener Metalle kann stimmig wirken, wenn sie bewusst zusammengestellt ist. Greifen Sie die Metallfarben bei Ohrringen, Ringen, Armbändern oder Beschlägen von Accessoires erneut auf."
     }
   ],
   "cta": {
-    "heading": "Ein schwarzes Kleid verleiht Schmuck den perfekten Hintergrund. Wählen Sie auffällige Statement-Ohrringe, wenn das Kleid schlicht ist, Ohrhänger, wenn Sie Bewegung wünschen, Creolen, wenn Sie Form wünschen, und Ohrstecker, wenn das Kleid bereits Details aufweist.",
-    "body": "Beginnen Sie mit den halbfeinen, im Labor gezüchteten Diamantohrringen von IWantJewels, wenn Sie schwarzen Kleiderschmuck mit echtem Diamantfunkeln wünschen. Wählen Sie Lusso für einen kräftigen Abendeffekt, Orsola für elegante Bewegungen, Pave Hoops für eine moderne Form, Cadenza M für klassischen Glanz und Cadenza S oder Laluce als Stützteile in einem Ear Stack.",
-    "primaryLabel": "Kaufen Sie Ohrringe für ein schwarzes Kleid",
+    "heading": "Ein schwarzes Kleid erfordert weder eine bestimmte Metallfarbe noch eine bestimmte Ohrringart. Am zuverlässigsten entscheiden Sie, indem Sie Ausschnitt, Stoff, Details, Anlass und den gewünschten Blickfang berücksichtigen.",
+    "body": "Sobald die Stilrichtung feststeht, vergleichen Sie Maße, Materialien, Gewicht und Verschluss. Das führt zu einem sinnvolleren Ergebnis, als anzunehmen, ein Produkt passe zu jedem schwarzen Kleid.",
+    "primaryLabel": "Schmuck für ein schwarzes Kleid entdecken",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie Party-Ohrringe",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lesen Sie den Ratgeber zu Party-Ohrringen",
+    "secondaryLabel": "Ratgeber für auffällige Statement-Ohrringe",
+    "secondaryHref": "/resources/earring-style-guides/bold-statement-earrings-guide",
+    "tertiaryLabel": "Ratgeber für Party-Ohrringe",
     "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
   }
 }

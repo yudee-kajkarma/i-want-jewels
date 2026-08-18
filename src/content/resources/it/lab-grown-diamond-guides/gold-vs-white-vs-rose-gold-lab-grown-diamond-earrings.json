@@ -1,834 +1,729 @@
 {
   "meta": {
-    "title": "Orecchini con diamanti in oro vs bianco vs oro rosa",
-    "description": "Confronta orecchini con diamanti coltivati ​​in laboratorio in oro, oro bianco e rosa. Scegli il miglior colore del metallo per l'uso quotidiano, i regali, i matrimoni e lo styling."
+    "title": "Orecchini con diamanti: oro giallo, bianco o rosa",
+    "description": "Confronti gli orecchini con diamante da laboratorio in oro giallo, bianco e rosa: colore, struttura, stile e cura."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-100.jpg",
-    "title": "Orecchini con diamanti coltivati in laboratorio in oro, bianco e oro rosa:",
-    "subtitle": "Guida ai colori dei metalli",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Oro giallo, bianco o rosa",
+    "subtitle": "Orecchini con diamante da laboratorio",
     "paragraphs": [
-      "Il colore del metallo dei tuoi orecchini con diamanti coltivati in laboratorio cambia l'intera sensazione dei gioielli. Lo stesso design degli orecchini con diamanti può apparire caldo e classico in oro giallo, pulito e moderno nei toni bianco o argento e morbido e romantico in oro rosa.",
-      "Questa risorsa aiuta gli acquirenti a scegliere il colore del metallo migliore per gli orecchini con diamanti coltivati in laboratorio in base allo stile personale, al tono della pelle, ai colori degli abiti, allo scopo del regalo, allo stile del matrimonio e all'abbigliamento quotidiano. Guida inoltre gli utenti verso le indicazioni sui prodotti IWantJewels come Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long e gli orecchini in grassetto Lusso.",
-      "Per IWantJewels, questa pagina è importante perché molti acquirenti non si chiedono solo \"quali orecchini di diamanti dovrei comprare?\" Chiedono \"devo scegliere oro, argento, oro bianco o oro rosa?\" Questa guida aiuta a rispondere a tale decisione prima di inviarli alle pagine dei prodotti o delle collezioni."
+      "Oro giallo, bianco e rosa possono circondare lo stesso diamante da laboratorio creando tre effetti cromatici distinti. L'oro giallo offre un contrasto caldo, l'oro bianco una transizione più fredda tra diamante e montatura, mentre l'oro rosa aggiunge una cornice rosata.",
+      "Ma il colore è solo una parte della scelta. Prima di acquistare un orecchino, verifichi se è realizzato in oro massiccio o in un altro metallo di base con una finitura superficiale color oro. Un orecchino descritto come \"argento sterling 925 placcato oro 14kt\" non è un orecchino in oro massiccio da 14 carati.",
+      "La scelta giusta dipende dal look che desidera, dai gioielli che già indossa, dal design dell'orecchino e dalla struttura completa del prodotto."
     ],
-    "shopLabel": "Acquista orecchini con diamanti coltivati in laboratorio",
+    "shopLabel": "Confronto tra orecchini con diamante da laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Confronta orecchini con diamanti coltivati in laboratorio in oro giallo, tonalità bianco/argento e oro rosa",
-      "Scegli il miglior colore del metallo da indossare ogni giorno",
-      "Scegli la finitura giusta per regali, compleanni, anniversari e damigelle",
-      "Abbina gli orecchini al tono della pelle, ai colori del guardaroba e ai gioielli esistenti",
-      "Scegli il colore del metallo per gli abiti degli invitati al matrimonio e lo stile delle occasioni",
-      "Scopri quali colori metallici sembrano classici, moderni, romantici o audaci",
-      "Trova consigli sui prodotti IWantJewels in base al colore del metallo e alle esigenze di stile",
-      "Pianifica blocchi di immagini, moduli di prodotto, sezioni CTA e collegamenti interni per la pagina"
+      "Oro giallo — calore visibile e contrasto intorno ai diamanti",
+      "Oro bianco o finitura bianca verificata — più fredda e continua con le pietre incolori",
+      "Oro rosa — un contrasto rosato più delicato",
+      "Il colore e la struttura del metallo non sono la stessa cosa",
+      "\"Argento sterling 925 con placcatura in oro 14kt\" non significa oro massiccio",
+      "Il colore non stabilisce se il gioiello è adatto a chi ha la pelle sensibile"
     ],
-    "image": "/blog-images/blog-image-102.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Selettore colore metallo",
+      "heading": "In breve",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilizza questa tabella nella parte superiore della pagina come principale strumento decisionale."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Se vuoi",
-            "Miglior colore del metallo",
-            "Sensazione di stile",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Orecchini classici per tutti i giorni",
-              "Oro giallo",
-              "Caldo, senza tempo, facile",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Scintillio pulito e moderno",
-              "Tono bianco o argento",
-              "Luminoso, raffinato, minimale",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Orecchini regalo romantici",
-              "Oro rosa",
-              "Morbido, personale, femminile",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Orecchini per invitati al matrimonio",
-              "Tonalità giallo oro o bianco/argento",
-              "Elegante e raffinato",
-              "Orsola, Concetta Lunga"
-            ],
-            [
-              "Gioielli minimalisti",
-              "Tonalità bianco/argento o giallo oro",
-              "Semplice e raffinato",
-              "Laluce, Cadenza S"
-            ],
-            [
-              "Stile di abbigliamento caldo",
-              "Oro giallo",
-              "Ricco e classico",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Abiti dai tenui colori pastello",
-              "Oro rosa",
-              "Delicato e romantico",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "Stile abito nero",
-              "Oro giallo, tonalità bianco/argento o brillantezza audace",
-              "Contrasto e lucentezza",
-              "Orsola, Lusso"
-            ],
-            [
-              "Stack di orecchie",
-              "Abbina il colore del metallo esistente",
-              "Equilibrato e intenzionale",
-              "Cadenza S, Amadea, Laluce"
-            ],
-            [
-              "Stile da festa di tendenza",
-              "Tonalità giallo oro o bianco/argento",
-              "Forte e visibile",
-              "Lusso, Orsola"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini con diamanti coltivati in laboratorio in oro giallo",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini in oro giallo con diamanti coltivati in laboratorio sono caldi, classici e facili da indossare. Sono una delle scelte più sicure per i gioielli di tutti i giorni perché l'oro giallo funziona bene con molti guardaroba e tonalità della pelle."
+          "text": "Scelga l'oro giallo se desidera calore visibile e contrasto intorno ai diamanti. Scelga l'oro bianco o una finitura in metallo bianco verificata se desidera una montatura più fredda e in armonia con diamanti incolori o quasi incolori. Scelga l'oro rosa per un contrasto rosato più delicato."
         },
         {
           "type": "paragraph",
-          "text": "L'oro giallo è particolarmente forte se chi lo indossa possiede già gioielli d'oro. Se qualcuno indossa un orologio d'oro, anelli d'oro, collane d'oro o accessori dai toni caldi, gli orecchini in oro giallo di solito si sentiranno naturali nella sua collezione."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro giallo si abbina magnificamente anche con abiti neri, crema, marroni, verdi, rossi, champagne e caldi neutri. Può far sembrare gli orecchini di diamanti più ricchi e leggermente più tradizionali senza sembrare antiquati."
-        },
-        {
-          "type": "paragraph",
-          "text": "Per IWantJewels, l'oro giallo è una direzione forte per gli orecchini a bottone con diamanti coltivati in laboratorio Cadenza S, gli orecchini a bottone con diamanti Cadenza M, gli orecchini Amadea Huggie, i Pave Hoops, gli orecchini pendenti Orsola e gli orecchini di tendenza Lusso."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini in oro con diamanti coltivati in laboratorio",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini con diamanti coltivati in laboratorio in tonalità bianca o argento",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini con diamanti coltivati in laboratorio bianchi o color argento sono puliti, luminosi e moderni. Sono una buona scelta per gli acquirenti che preferiscono uno stile minimale, abiti dai toni freddi o gioielli che risultano freschi piuttosto che caldi."
-        },
-        {
-          "type": "paragraph",
-          "text": "Questa finitura funziona particolarmente bene con abiti neri, bianchi, blu scuro, grigi, argento, blu e colori pastello. È adatto anche a chi già indossa orologi in argento, anelli dai toni bianchi o gioielli con finiture più cool."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini bianchi o color argento possono far sembrare molto luminosi i diamanti coltivati in laboratorio perché il metallo non aggiunge calore attorno alla pietra. Questo può essere utile per abiti minimalisti, styling da ufficio, abiti neri e look da sera puliti."
-        },
-        {
-          "type": "paragraph",
-          "text": "Per IWantJewels, lo stile bianco o argento può funzionare bene per gli orecchini con diamanti minimalisti Cadenza S, Cadenza M, Laluce, Pave Hoops e Orsola a seconda della finitura del prodotto disponibile."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini in argento con diamanti",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Orecchini con diamanti coltivati in laboratorio in oro rosa",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini con diamanti coltivati in laboratorio in oro rosa sono morbidi, romantici e personali. Sono particolarmente forti per i regali perché l’oro rosa spesso sembra più caldo ed emozionante rispetto ai toni bianco o argento."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro rosa funziona magnificamente con cipria, rosa, crema, champagne, verde tenue, beige, stampe floreali e abiti romantici. Può anche essere una buona scelta per regali di compleanno, regali di anniversario, regali per damigelle d'onore e momenti di gioielleria significativi."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro rosa non è sempre l'opzione più sicura se il destinatario non indossa mai gioielli nei toni del rosa. Ma quando si adatta allo stile della persona, il regalo può sembrare più premuroso."
-        },
-        {
-          "type": "paragraph",
-          "text": "Per IWantJewels, lo stile oro rosa è particolarmente forte per gli orecchini a farfalla, i romantici orecchini pendenti e i morbidi pezzi da regalo. Gli orecchini a farfalla Farfalla e gli orecchini a farfalla Alidi Farfalla si adattano perfettamente a questa direzione. Anche gli orecchini pendenti Orsola e gli orecchini corti Concetta possono sembrare romantici con una finitura nei toni del rosa."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini in oro rosa con diamanti coltivati in laboratorio",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Il miglior colore del metallo per l'uso quotidiano",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Per l'uso quotidiano, il miglior colore del metallo è solitamente quello che si abbina ai gioielli che la persona già indossa più spesso."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se indossano l'oro giallo tutti i giorni, scegli orecchini con diamanti coltivati in laboratorio in oro giallo. Se indossano quotidianamente pezzi argentati o dai toni bianchi, scegli orecchini bianchi o argentati. Se amano i gioielli delicati e romantici e spesso indossano tonalità calde di rosa o cipria, l’oro rosa può funzionare magnificamente."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile quotidiano",
-            "Miglior colore del metallo",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Stile classico quotidiano",
-              "Oro giallo",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Stile minimale quotidiano",
-              "Tonalità bianco/argento o giallo oro",
-              "Laluce, Cadenza S"
-            ],
-            [
-              "Stile moderno",
-              "Abbina gli orecchini esistenti",
-              "Amadea, Cadenza S, Laluce"
-            ],
-            [
-              "Stile femminile morbido",
-              "Oro rosa o oro giallo",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Stile abbigliamento da lavoro",
-              "Tonalità giallo oro o bianco/argento",
-              "Cadenza S, Cadenza M, Amadea"
-            ],
-            [
-              "Stile casual di lusso",
-              "Cerchi o abbracci in oro giallo",
-              "Pave Hoops, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini per tutti i giorni non dovrebbero essere difficili da abbinare. La scelta quotidiana più sicura è solitamente un colore metallico che già si adatta alla routine di chi lo indossa."
-        },
-        {
-          "type": "see-also",
-          "text": "Puoi indossare orecchini con diamanti coltivati in laboratorio ogni giorno?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Il miglior colore del metallo per i regali",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Per i regali, il colore del metallo è molto importante perché dimostra se capisci lo stile del destinatario."
-        },
-        {
-          "type": "paragraph",
-          "text": "La regola più sicura è controllare cosa già indossano. Se la maggior parte dei loro gioielli sono in oro giallo, scegli l'oro giallo. Se indossano gioielli argentati o dai toni bianchi, scegli i toni bianchi o argentati. Se a loro piacciono i pezzi romantici, morbidi o femminili, l’oro rosa può essere una scelta ponderata."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-104.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Tipo di regalo",
-                "Miglior colore del metallo",
-                "Miglior direzione degli orecchini"
-              ],
-              "rows": [
-                [
-                  "Regalo di compleanno sicuro",
-                  "Tonalità giallo oro o bianco/argento",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Regalo romantico",
-                  "Oro rosa o oro giallo",
-                  "Farfalla, Orsola"
-                ],
-                [
-                  "Regalo di anniversario",
-                  "Oro giallo, oro rosa o eleganti tonalità bianco/argento",
-                  "Cadenza M, Orsola, Farfalla"
-                ],
-                [
-                  "Regalo della damigella d'onore",
-                  "Abbina l'abito e la tavolozza del matrimonio",
-                  "Cadenza S, Concetta Corto"
-                ],
-                [
-                  "Regalo moderno",
-                  "Tonalità bianco/argento o giallo oro",
-                  "Amadea, Pave Hoops"
-                ],
-                [
-                  "Regalo significativo",
-                  "Oro rosa o oro giallo",
-                  "Farfalla, Alidi Farfalla"
-                ],
-                [
-                  "Regalo per gli amanti delle feste",
-                  "Tonalità giallo oro o bianco/argento",
-                  "Lusso, Orsola"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per regali",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Il miglior colore del metallo per i matrimoni",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "I gioielli nuziali devono abbinarsi all'outfit, al codice di abbigliamento e all'atmosfera generale dell'evento."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro giallo funziona magnificamente per abiti dai toni caldi, abiti champagne, abiti verdi, abiti rossi e stile classico da sera. Gli orecchini bianchi o argentati stanno bene con abiti neri, blu scuro, argento, grigi, bianchi e dai toni freddi. L'oro rosa è adorabile per abiti pastello, cipria, floreali e romantici."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Abito da sposa",
-            "Miglior colore del metallo",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Abito nero",
-              "Tonalità giallo oro o bianco/argento",
-              "Orsola, Lusso, Cadenza M"
-            ],
-            [
-              "Abito color champagne",
-              "Oro giallo",
-              "Orsola, Concetta Lunga"
-            ],
-            [
-              "Abito pastello",
-              "Oro rosa o oro giallo",
-              "Farfalla, Alidi Farfalla, Concetta Corto"
-            ],
-            [
-              "Vestito verde",
-              "Oro giallo o oro rosa",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Abito blu scuro",
-              "Tonalità bianco/argento o giallo oro",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Vestito rosso",
-              "Oro giallo",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Abito floreale",
-              "Oro rosa, oro giallo o semplici borchie",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Abito argento o grigio",
-              "Tono bianco/argento",
-              "Laluce, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Per gli invitati al matrimonio, gli orecchini dovrebbero sembrare lucidi ma non nuziali. Se l'outfit è semplice, scegli gocce o scintillii più visibili. Se l'outfit è dettagliato, scegli orecchini a borchia o più piccoli."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per matrimoni",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Miglior colore del metallo in base al colore dell'outfit",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Questa sezione aiuta gli acquirenti ad abbinare gli orecchini al proprio guardaroba."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Colore dell'abito",
-            "Miglior colore del metallo",
-            "Nota di stile"
-          ],
-          "rows": [
-            [
-              "Nero",
-              "Oro giallo, tonalità bianco/argento o brillantezza audace",
-              "Tutto funziona; scegli in base all'umore"
-            ],
-            [
-              "Bianco",
-              "Oro giallo per calore, tonalità bianco/argento per uno stile pulito",
-              "Mantienilo lucido"
-            ],
-            [
-              "Crema o avorio",
-              "Oro giallo o oro rosa",
-              "I metalli più caldi risultano più morbidi"
-            ],
-            [
-              "Marrone o beige",
-              "Oro giallo",
-              "Aggiunge ricchezza"
-            ],
-            [
-              "Marina",
-              "Tonalità bianco/argento o giallo oro",
-              "Entrambi si sentono eleganti"
-            ],
-            [
-              "Grigio",
-              "Tono bianco/argento",
-              "Mantiene l'aspetto fresco e pulito"
-            ],
-            [
-              "Rosso",
-              "Oro giallo",
-              "Bilancia il calore"
-            ],
-            [
-              "Verde",
-              "Oro giallo o oro rosa",
-              "Aggiunge calore e profondità"
-            ],
-            [
-              "Rosa o cipria",
-              "Oro rosa o oro giallo",
-              "Morbido e romantico"
-            ],
-            [
-              "spumante",
-              "Oro giallo",
-              "Si abbina magnificamente al calore"
-            ],
-            [
-              "Stampa floreale",
-              "Piccole borchie, oro rosa o oro giallo",
-              "Evita di complicare eccessivamente il look"
-            ],
-            [
-              "Completo in raso",
-              "Gocce in tonalità oro o bianco/argento",
-              "Aggiunge movimento e lucentezza"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Quali gioielli indossare con un abito nero",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Miglior colore del metallo per stile di gioielleria",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Diversi stili di orecchini possono sembrare molto diversi a seconda del colore del metallo."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-106.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Stile orecchino",
-                "Oro giallo",
-                "Tono bianco/argento",
-                "Oro rosa"
-              ],
-              "rows": [
-                [
-                  "Orecchini a bottone",
-                  "Classico e caldo",
-                  "Pulito e luminoso",
-                  "Morbido e romantico"
-                ],
-                [
-                  "Un abbraccio",
-                  "Quotidiano ed elegante",
-                  "Moderno e minimale",
-                  "Femminile e gentile"
-                ],
-                [
-                  "Cerchi",
-                  "Ricco e raffinato",
-                  "Elegante e contemporaneo",
-                  "Morbido e giocoso"
-                ],
-                [
-                  "Orecchini pendenti",
-                  "Elegante e caldo",
-                  "Raffinato e luminoso",
-                  "Romantico e delicato"
-                ],
-                [
-                  "Orecchini a farfalla",
-                  "Significativo e caldo",
-                  "Più moderno",
-                  "Molto romantico"
-                ],
-                [
-                  "Orecchini di grande impatto",
-                  "Forte e glamour",
-                  "Fresco e di grande impatto",
-                  "Aspetto più morbido"
-                ],
-                [
-                  "Orecchini minimalisti",
-                  "Calda semplicità",
-                  "Minimalismo pulito",
-                  "Morbidezza delicata"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Per i regali classici, la tonalità oro giallo o bianco/argento di solito funziona meglio. Per regali romantici, gli orecchini in oro rosa e farfalla sono una combinazione forte. Per i look da festa, il tono giallo oro o bianco/argento può sembrare più drammatico."
-        },
-        {
-          "type": "see-also",
-          "text": "Guida agli orecchini con diamanti coltivati in laboratorio",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Il tono della pelle è importante quando si sceglie il colore del metallo?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Il tono della pelle può aiutare, ma non dovrebbe essere l’unica regola."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'oro giallo ha spesso un bell'aspetto su tonalità della pelle calde e neutre. I toni bianchi o argento spesso si adattano allo stile dai toni freddi. L’oro rosa può lusingare molte tonalità della pelle perché si colloca tra i toni rosa caldi e tenui."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ma lo stile personale conta più delle regole rigide. Qualcuno con la pelle fresca potrebbe ancora amare l'oro giallo. Qualcuno con la pelle calda potrebbe comunque preferire l'argento. L'indizio migliore sono i gioielli che già indossano."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se acquisti per te, scegli il colore del metallo che ti fa sentire più naturale. Se lo acquisti come regalo, scegli il colore del metallo che la persona già possiede."
-        }
-      ]
-    },
-    {
-      "heading": "Puoi mescolare orecchini in oro, bianco e oro rosa?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Sì, puoi mescolare i metalli, soprattutto negli orecchini, ma dovrebbe sembrare intenzionale."
-        },
-        {
-          "type": "paragraph",
-          "text": "Mescolare i metalli funziona meglio quando le forme degli orecchini sono bilanciate. Ad esempio, un perno in oro giallo con un abbraccio bianco/argento può sembrare moderno se il resto dei gioielli è semplice. L’oro rosa può anche essere mescolato delicatamente con l’oro giallo, soprattutto nello stile romantico."
-        },
-        {
-          "type": "paragraph",
-          "text": "Tuttavia, per i regali, è più sicuro abbinare il colore del metallo abituale del destinatario. I metalli misti sono migliori per chi già ama lo stile creativo."
-        },
-        {
-          "type": "see-also",
-          "text": "Come impilare gli orecchini",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Percorsi del prodotto per colore del metallo",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Utilizza questa sezione come una pratica guida allo shopping."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stile classico in oro giallo"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Cadenza S per una delicata brillantezza quotidiana, Cadenza M per uno scintillio classico più visibile, Pave Hoops per la forma o Orsola per lo styling da occasione."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno styling bianco pulito o tonalità argento"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Laluce per uno stile minimalista, Cadenza S per borchie semplici, Cadenza M per uno scintillio visibile o Orsola per un look da sera raffinato."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno styling romantico in oro rosa"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Farfalla o Alidi Farfalla per regali significativi, Concetta Short per uno stile soft da occasione o Orsola per romantici outfit da sera."
-        },
-        {
-          "type": "subheading",
-          "text": "Per pile di orecchie"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli una direzione del metallo per un aspetto più pulito. Cadenza S con orecchini Amadea Huggie è un forte stack quotidiano. Aggiungi Laluce per una finitura più morbida."
-        },
-        {
-          "type": "subheading",
-          "text": "Per i regali"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Cadenza M per un regalo classico con diamanti, Farfalla per un regalo significativo, Amadea per un regalo moderno o Orsola per un regalo romantico per un'occasione."
-        }
-      ]
-    },
-    {
-      "heading": "Consigli sui prodotti da IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Prodotto",
-            "Miglior direzione del colore metallico",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Borchie con diamanti coltivati in laboratorio Cadenza S",
-              "Oro giallo, tono bianco/argento",
-              "Da indossare tutti i giorni, i primi orecchini di diamanti"
-            ],
-            [
-              "Orecchini a bottone con diamanti Cadenza M",
-              "Oro giallo, tono bianco/argento",
-              "Regali, abbigliamento da lavoro, visibile scintillio quotidiano"
-            ],
-            [
-              "Orecchini Amadea Huggie",
-              "Oro giallo, tono bianco/argento",
-              "Stack di orecchie e stile moderno"
-            ],
-            [
-              "Orecchini minimalisti con diamanti Laluce",
-              "Tonalità bianco/argento, oro giallo",
-              "Abiti minimalisti e gioielli quotidiani tranquilli"
-            ],
-            [
-              "Pavimentare i cerchi",
-              "Oro giallo, tono bianco/argento",
-              "Stile a cerchio, brillantezza casual e feste"
-            ],
-            [
-              "Orecchini farfalla Farfalla",
-              "Oro rosa, oro giallo",
-              "Regali significativi e stile romantico"
-            ],
-            [
-              "Orecchini farfalla Alidi Farfalla",
-              "Oro rosa, oro giallo",
-              "Compleanni, anniversari e regali simbolici"
-            ],
-            [
-              "Orecchini pendenti Orsola",
-              "Oro giallo, tono bianco/argento, oro rosa",
-              "Invitati di nozze, cene e abiti da sera"
-            ],
-            [
-              "Orecchini corti Concetta",
-              "Oro rosa, oro giallo",
-              "Stile morbido per le occasioni"
-            ],
-            [
-              "Orecchini Concetta Lunghi",
-              "Oro giallo, tono bianco/argento",
-              "Look da sera formali e raffinati"
-            ],
-            [
-              "Orecchini di lusso audaci",
-              "Oro giallo, tono bianco/argento",
-              "Look da festa e forte brillantezza"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli il colore del metallo in base al modo in cui verranno indossati gli orecchini. Scegli l'oro giallo per un calore classico, i toni bianco o argento per uno scintillio pulito e moderno e l'oro rosa per regali romantici o uno stile morbido."
-        }
-      ]
-    },
-    {
-      "heading": "Errori comuni relativi ai colori dei metalli da evitare",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un errore comune è scegliere il colore del metallo solo perché sta bene nella foto del prodotto. La domanda migliore è se corrisponde ai veri gioielli e al guardaroba di chi lo indossa."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è acquistare oro rosa per qualcuno che indossa solo oro giallo o argento. L’oro rosa può essere bello, ma è più personale e meno sicuro per tutti."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un terzo errore è mescolare troppi colori metallici in un auricolare senza un piano. I metalli misti possono sembrare eleganti, ma dovrebbero sembrare intenzionali."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è scegliere i toni del bianco o dell'argento quando l'intero guardaroba e la collezione di gioielli della persona sono dai toni caldi. L'oro giallo può essere più facile da indossare per loro."
-        },
-        {
-          "type": "paragraph",
-          "text": "Infine, non ignorare l'occasione. Orecchini di tutti i giorni, orecchini nuziali e regali romantici possono richiedere diverse scelte di colore del metallo."
-        },
-        {
-          "type": "see-also",
-          "text": "Guida all'acquisto di orecchini con diamanti coltivati in laboratorio",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Lista di controllo finale del colore del metallo",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Prima di scegliere orecchini con diamanti coltivati in laboratorio in oro, tonalità bianco/argento o oro rosa, chiedi:"
+          "text": "Non scelga basandosi solo sul nome del colore. Verifichi:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Quale colore di metallo indossa già più spesso la persona?",
-            "È da indossare tutti i giorni, un regalo, un matrimonio o una festa?",
-            "La tavolozza degli outfit è calda, fresca o romantica?",
-            "Gli orecchini dovrebbero essere classici, moderni o morbidi?",
-            "Gli orecchini saranno indossati da soli o in una pila di orecchini?",
-            "Il colore del metallo si abbina ad altri gioielli?",
-            "L'oro rosa è appropriato per lo stile della persona?",
-            "L’oro giallo sarebbe più sicuro?",
-            "Il tono bianco o argento sembrerebbe più pulito?",
-            "Le pietre sono veri diamanti coltivati ​​in laboratorio?",
-            "Il design sembra indossabile oltre un outfit?"
+            "Metallo di base",
+            "Se la struttura è massiccia o placcata",
+            "La purezza dell'oro",
+            "Il materiale esatto della placcatura",
+            "Lo spessore della placcatura, quando disponibile",
+            "Le misure complete dell'orecchino",
+            "Peso e chiusura",
+            "Specifiche del diamante",
+            "Se il prodotto è venduto singolarmente o in coppia"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Confronto tra orecchini in oro giallo, bianco e rosa",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Caratteristica",
+            "Oro giallo",
+            "Oro bianco",
+            "Oro rosa"
+          ],
+          "rows": [
+            [
+              "Colore visibile",
+              "Giallo caldo",
+              "Bianco freddo o bianco-grigio",
+              "Rosa o ramato"
+            ],
+            [
+              "Contrasto con i diamanti",
+              "Crea un bordo caldo visibile",
+              "Può creare un effetto freddo più continuo",
+              "Crea un contrasto rosato delicato"
+            ],
+            [
+              "Direzione dello stile",
+              "Caldo, tradizionale o ad alto contrasto",
+              "Pulito, neutro o più freddo",
+              "Delicato, distintivo o caldo"
+            ],
+            [
+              "Abbinamento con il guardaroba",
+              "Crema, marrone, verde, rosso, nero e tonalità calde",
+              "Nero, bianco, grigio, blu navy e colori freddi",
+              "Rosa cipria, malva, crema, salvia e tonalità tenui"
+            ],
+            [
+              "Gioielli già posseduti",
+              "Si abbina ai gioielli in oro giallo",
+              "Si abbina ai gioielli in metallo bianco",
+              "Si abbina ai gioielli in oro rosa"
+            ],
+            [
+              "Struttura da verificare",
+              "Oro massiccio o placcatura in oro giallo",
+              "Oro bianco massiccio, placcatura in oro bianco, rodio o altra finitura",
+              "Oro rosa massiccio o placcatura in oro rosa"
+            ],
+            [
+              "Manutenzione",
+              "Dipende dalla lega e dalla finitura",
+              "Alcune finiture bianche possono richiedere un nuovo trattamento",
+              "Dipende dalla lega e dalla finitura"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Se non sei sicuro, scegli il colore del metallo che la persona già indossa. Questa è solitamente la scelta più sicura e utile."
+          "text": "Sono indicazioni visive, non regole fisse. Tutti e tre i colori possono essere abbinati a un'ampia varietà di outfit."
+        }
+      ]
+    },
+    {
+      "heading": "Il colore e la struttura del metallo non sono la stessa cosa",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "right",
+          "image": "/blog-images/blog-image-42.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Un gioiello può avere l'aspetto dell'oro giallo, bianco o rosa senza essere realizzato interamente in oro massiccio."
+            },
+            {
+              "type": "subheading",
+              "text": "Oro massiccio"
+            },
+            {
+              "type": "paragraph",
+              "text": "I gioielli in oro massiccio utilizzano una lega d'oro in tutta la componente metallica. L'oro puro viene miscelato con altri metalli per modificarne colore, resistenza e lavorabilità. Una lega d'oro da 14 carati o 14kt contiene circa 14 parti d'oro su 24. Può essere indicata anche con il marchio 585, che rappresenta circa il 58,5% di oro. La composizione restante della lega contribuisce a creare il colore giallo, bianco o rosa."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Argento sterling 925 placcato oro"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'argento sterling placcato oro ha una base in argento sterling con uno strato superficiale di lega d'oro. Il marchio 925 indica argento sterling contenente il 92,5% di argento; non significa che l'intero orecchino sia in oro. Se il prodotto è descritto come \"argento sterling 925 con placcatura in oro 14kt\", la dicitura 14kt si riferisce al materiale della placcatura, non all'intero orecchino."
+        },
+        {
+          "type": "subheading",
+          "text": "Finiture color bianco"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino color bianco può essere realizzato in:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Oro bianco massiccio",
+            "Placcatura in oro bianco",
+            "Placcatura in rodio",
+            "Platino",
+            "Palladio",
+            "Argento sterling 925",
+            "Un'altra finitura in metallo bianco"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il solo colore non rivela la struttura. La pagina del prodotto deve indicare il metallo di base e la finitura effettivi."
+        },
+        {
+          "type": "subheading",
+          "text": "Finiture color oro rosa"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'oro rosa ottiene la sua tonalità rosata dalla composizione della lega, che comunemente include il rame. Quando viene applicata come placcatura, la lega di oro rosa forma solo lo strato superficiale sul metallo di base. È opportuno verificare la composizione esatta, senza presumere che ogni orecchino rosa utilizzi la stessa lega."
+        },
+        {
+          "type": "see-also",
+          "text": "Che cosa sono i gioielli demi-fine?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Cosa sono gli orecchini con diamante da laboratorio in oro giallo?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini in oro giallo circondano i diamanti con un colore giallo caldo. Questo crea una distinzione visibile tra il diamante bianco e la sua montatura, soprattutto quando il design lascia vedere più metallo."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'oro giallo si abbina a orecchini a lobo con diamante, orecchini a cerchio, orecchini pendenti, design a farfalla, orecchini geometrici ed ear stack."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'effetto dipende anche dalla quantità di metallo visibile. Un orecchino a lobo con quattro griffe può mostrare solo una piccola quantità di oro giallo, mentre un orecchino a cerchio o un design geometrico può rendere il colore del metallo una parte importante del gioiello."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scelga l'oro giallo perché ne apprezza l'aspetto o perché si abbina ai gioielli che già possiede, non perché sia universalmente adatto a una particolare tonalità di pelle."
+        }
+      ]
+    },
+    {
+      "heading": "Cosa sono gli orecchini con diamante da laboratorio in oro bianco?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'oro bianco è una lega d'oro studiata per ottenere un colore bianco o bianco-grigio. I gioielli in oro bianco massiccio possono avere anche una finitura superficiale in rodio, ma non è sempre così e va verificato per ogni prodotto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una montatura bianca può ridurre il confine cromatico visibile tra un diamante incolore o quasi incolore e il metallo che lo circonda. La montatura può così apparire visivamente continua con le pietre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini color bianco possono essere adatti quando:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Indossa già gioielli in argento o metallo bianco",
+            "Desidera mantenere discreto il colore della montatura",
+            "Il suo guardaroba include nero, bianco, blu navy, grigio o colori freddi",
+            "Desidera che metallo e diamanti appaiano più armoniosi"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "L'argento sterling 925 con finitura bianca non deve mai essere descritto come oro bianco massiccio."
+        }
+      ]
+    },
+    {
+      "heading": "Cosa sono gli orecchini con diamante da laboratorio in oro rosa?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "L'oro rosa ha un aspetto rosa o ramato. L'intensità del colore dipende dalla composizione della lega o della placcatura."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini in oro rosa creano un contrasto più evidente dell'oro bianco, ma spesso più delicato dell'oro giallo intenso. Possono abbinarsi a rosa cipria, crema, salvia, malva, marrone e colori tenui, senza essere limitati a questi guardaroba."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'oro rosa può essere utilizzato in montature per orecchini a lobo, orecchini a farfalla, pendenti corti, orecchini a cerchio, design geometrici ed ear stack in metalli misti. Come per gli altri colori, verifichi se il prodotto è in oro rosa massiccio o presenta una finitura superficiale in oro rosa su un altro metallo di base."
+        }
+      ]
+    },
+    {
+      "heading": "Il colore del metallo cambia l'aspetto del diamante?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Il colore del metallo può influire sul contrasto intorno a un diamante, ma non ne cambia l'origine o le proprietà intrinseche. Il Gemological Institute of America spiega che i diamanti da laboratorio hanno essenzialmente la stessa composizione chimica, struttura cristallina e proprietà ottiche e fisiche dei diamanti naturali."
+        },
+        {
+          "type": "subheading",
+          "text": "Oro giallo"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'oro giallo crea una cornice calda intorno a un diamante bianco. L'effetto è più evidente quando la montatura, l'orecchino a cerchio o il metallo decorativo sono chiaramente visibili."
+        },
+        {
+          "type": "subheading",
+          "text": "Oro bianco o metallo bianco"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il metallo bianco può fondersi visivamente con un diamante incolore o quasi incolore, in particolare nelle griffe più piccole o nelle montature in stile pavé."
+        },
+        {
+          "type": "subheading",
+          "text": "Oro rosa"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'oro rosa aggiunge un bordo rosato. Il contrasto può essere discreto in una piccola montatura per orecchino a lobo e più visibile in orecchini a cerchio, pendenti o geometrici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anche il taglio, le proporzioni, la montatura, la pulizia e l'illuminazione del diamante influenzano ciò che si vede. Nessun colore del metallo rende automaticamente più brillante ogni diamante."
+        },
+        {
+          "type": "see-also",
+          "text": "Cosa sono i diamanti da laboratorio?",
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
+        }
+      ]
+    },
+    {
+      "heading": "Quale colore si abbina a ogni stile di orecchino?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Orecchini a lobo con diamanti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini a lobo mostrano meno metallo rispetto a molti orecchini a cerchio o pendenti, quindi la differenza tra oro giallo, bianco e rosa può concentrarsi intorno alle griffe, al castone o alla gabbia. Scelga l'oro giallo per un contorno caldo, l'oro bianco o un metallo bianco verificato per una transizione più fredda, oppure l'oro rosa per un bordo rosato."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controlli anche la vista laterale. Un orecchino a lobo può mostrare più metallo di lato che frontalmente. Il diametro, la sporgenza, la gabbietta, la chiusura posteriore e il peso totale in carati possono influire sull'aspetto più di una lieve variazione del colore del metallo."
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini a lobo con diamante da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Orecchini a cerchio con diamanti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini a cerchio espongono più superficie metallica rispetto a molti orecchini a lobo, quindi la finitura può diventare una parte importante del design. Gli orecchini a cerchio in oro giallo creano un contorno curvo e caldo. Quelli in metallo bianco appaiono più freddi, mentre quelli in oro rosa aggiungono una forma dalle tonalità rosate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prima di scegliere un orecchino a cerchio, verifichi il diametro esterno, il diametro interno, la larghezza, il peso, la chiusura, la posizione dei diamanti, se i diamanti sono presenti solo sul davanti o proseguono lungo tutto il cerchio, oltre al metallo di base e alla finitura superficiale."
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini a cerchio con diamanti da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Orecchini pendenti e geometrici"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini pendenti e geometrici possono esporre una superficie metallica più ampia e muoversi mentre vengono indossati. Il loro colore può quindi risultare più evidente rispetto a quello della piccola montatura di un orecchino a lobo. L'oro giallo può enfatizzare il contorno del design. Il metallo bianco mantiene più fredda la struttura visibile, mentre l'oro rosa crea una cornice dalle tonalità più delicate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controlli l'altezza complessiva, la larghezza, la sporgenza, il peso a prodotto finito e la chiusura. Gli orecchini lunghi o geometrici non dovrebbero essere consigliati per un uso prolungato senza misure verificate e informazioni specifiche sulla persona che li indosserà."
+        }
+      ]
+    },
+    {
+      "heading": "Dovrebbe scegliere in base al sottotono della pelle?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "I consigli basati sul sottotono della pelle possono essere usati come punto di partenza, ma non devono essere considerati una regola."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chi ha un sottotono caldo può comunque preferire il metallo bianco. Chi ha un sottotono freddo può preferire l'oro giallo. Abbigliamento, colore dei capelli, gioielli che già indossa e preferenze personali possono contare più di una semplice categoria di sottotono della pelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un confronto più affidabile consiste nel:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Osservare i gioielli che indossa già.",
+            "Confrontare i colori alla luce naturale.",
+            "Verificare l'aspetto di ogni colore accanto ai suoi abiti abituali.",
+            "Decidere se preferisce armonia o contrasto."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il colore che abbinerà più facilmente ai gioielli che già possiede può essere la scelta più utile."
+        }
+      ]
+    },
+    {
+      "heading": "Abbini il colore del metallo al guardaroba",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Colore del guardaroba",
+            "Oro giallo",
+            "Tonalità bianca o argentata",
+            "Oro rosa"
+          ],
+          "rows": [
+            [
+              "Nero",
+              "Contrasto caldo",
+              "Contrasto netto",
+              "Contrasto più delicato"
+            ],
+            [
+              "Bianco",
+              "Definizione calda",
+              "Aspetto coordinato e più freddo",
+              "Dettaglio dalle tonalità rosate"
+            ],
+            [
+              "Blu navy",
+              "Contrasto caldo",
+              "Armonia più fredda",
+              "Contrasto attenuato"
+            ],
+            [
+              "Verde",
+              "Si abbina a molti verdi caldi",
+              "Crea contrasto con i verdi freddi",
+              "Sta bene con alcuni verdi salvia e attenuati"
+            ],
+            [
+              "Rosso o bordeaux",
+              "Aggiunge calore",
+              "Crea un contrasto più freddo",
+              "Può attenuare i rossi smorzati"
+            ],
+            [
+              "Rosa cipria o malva",
+              "Contrasto caldo",
+              "Contrasto netto",
+              "Perfettamente coordinato"
+            ],
+            [
+              "Marrone o cammello",
+              "Armonia calda",
+              "Contrasto più deciso",
+              "Armonia delicata"
+            ],
+            [
+              "Grigio",
+              "Contrasto caldo",
+              "Armonia tonale",
+              "Contrasto dalle tonalità rosate"
+            ],
+            [
+              "Crema",
+              "Armonia calda",
+              "Contrasto più freddo",
+              "Armonia delicata"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Questi abbinamenti sono punti di partenza, non restrizioni."
+        },
+        {
+          "type": "see-also",
+          "text": "Quali gioielli indossare con un vestito verde",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "Quali gioielli indossare con un abito nero",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Tutti i gioielli devono avere lo stesso colore del metallo?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "No. Abbinare ogni gioiello può creare un look uniforme, ma anche i metalli misti possono sembrare una scelta intenzionale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per una combinazione controllata di metalli misti:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Scelga un colore principale per il metallo",
+            "Ripeta quel colore in almeno un altro gioiello",
+            "Mantenga equilibrate le dimensioni degli orecchini",
+            "Eviti che ogni gioiello abbia lo stesso livello di dettaglio",
+            "Usi il colore del diamante come elemento visivo ricorrente"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se indossa già un orologio in metallo bianco e una collana in oro giallo, gli orecchini possono riprendere uno dei due metalli oppure includerli entrambi, se il design utilizza davvero metalli misti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un prodotto placcato in un solo colore non è in metallo misto soltanto perché il metallo di base sottostante è diverso. Lo stile con metalli misti si riferisce ai colori del metallo visibili."
+        },
+        {
+          "type": "see-also",
+          "text": "Come creare un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Scegliere il colore del metallo per un regalo",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Quando acquista orecchini per un'altra persona, osservi ciò che indossa già. Controlli:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Gli orecchini nelle fotografie recenti",
+            "Il colore dell'orologio",
+            "Il colore di collane e bracciali",
+            "Se abbina metalli diversi",
+            "Se sceglie regolarmente una determinata finitura",
+            "Se nei piercing indossa di solito orecchini a lobo, a cerchio o pendenti"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Non scelga basandosi soltanto sul sottotono della pelle, sull'età o sul lavoro che presume abbia. Se non è possibile stabilire le sue preferenze, scelga un regalo versatile invece di considerare un colore del metallo universalmente adatto."
+        }
+      ]
+    },
+    {
+      "heading": "Orecchini in oro massiccio e placcati oro",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Caratteristica",
+            "Struttura in oro massiccio",
+            "Struttura placcata oro"
+          ],
+          "rows": [
+            [
+              "Materiale principale",
+              "Lega d'oro su tutta la struttura",
+              "Metallo di base separato"
+            ],
+            [
+              "Superficie",
+              "La stessa lega o una finitura aggiuntiva",
+              "Strato superficiale in lega d'oro"
+            ],
+            [
+              "Descrizione del prodotto",
+              "Dovrebbe indicare la purezza dell'oro",
+              "Dovrebbe indicare il metallo di base e la placcatura"
+            ],
+            [
+              "Punzone o marchio",
+              "Dipende dal mercato e dai requisiti di legge",
+              "Possono essere richiesti i marchi del metallo di base"
+            ],
+            [
+              "Mantenimento del colore",
+              "Dipende dalla lega e dal trattamento superficiale",
+              "Lo strato superficiale può modificarsi con l'usura"
+            ],
+            [
+              "Struttura del prezzo",
+              "Influenzata dal contenuto d'oro e dal peso a prodotto finito",
+              "Influenzata dal metallo di base, dalla placcatura, dal design e dalle pietre"
+            ],
+            [
+              "Informazioni da verificare",
+              "Purezza dell'oro, peso e colore della lega",
+              "Metallo di base, materiale e spessore della placcatura, istruzioni per la cura"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Nessuna delle due strutture dovrebbe essere nascosta dietro un selettore del colore. Prima di aggiungere il prodotto al carrello, chi acquista dovrebbe poter consultare tutte le informazioni sui materiali."
+        },
+        {
+          "type": "see-also",
+          "text": "Gioielli demi-fine, alta gioielleria e gioielli fashion",
+          "href": "/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Il colore del metallo determina l'idoneità per le orecchie sensibili?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "No. Il colore da solo non può determinare se un orecchino sia adatto alle orecchie sensibili. L'idoneità dipende da:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Composizione completa del metallo di base",
+            "Composizione della lega",
+            "Materiale della placcatura",
+            "Spessore e condizioni della placcatura",
+            "Materiale del perno e della chiusura posteriore",
+            "Rilascio di nichel",
+            "Sensibilità individuale",
+            "Condizioni del piercing"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli orecchini in oro giallo, bianco e rosa non dovrebbero essere descritti come ipoallergenici senza una composizione completa e prove pertinenti."
+        }
+      ]
+    },
+    {
+      "heading": "Considerazioni sulla cura in base alla struttura",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le esigenze di cura dipendono più dalla struttura e dalla finitura che dal fatto che il colore visibile sia giallo, bianco o rosa. Prima di pulire o indossare gli orecchini vicino ad acqua, cosmetici o sostanze chimiche:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Legga le istruzioni specifiche per la cura del prodotto",
+            "Verifichi se gli orecchini sono in oro massiccio o placcati",
+            "Eviti detergenti abrasivi, salvo conferma della loro idoneità da parte del produttore",
+            "Conservi i gioielli separatamente per ridurre il contatto tra le superfici",
+            "Controlli perni, chiusure posteriori e sistemi di chiusura",
+            "Segua le indicazioni specifiche per nuoto, doccia, sonno e attività fisica"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Non presuma che ogni prodotto placcato oro abbia lo stesso spessore di placcatura o le stesse caratteristiche di usura."
+        },
+        {
+          "type": "see-also",
+          "text": "Come prendersi cura dei gioielli placcati oro",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Checklist per scegliere il colore del metallo",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Prima di scegliere una variante di colore, verifichi:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Il prodotto è in oro massiccio o placcato?",
+                "Qual è il metallo di base?",
+                "A cosa si riferisce la descrizione della purezza dell'oro?",
+                "Che cosa crea il colore bianco?",
+                "Che cosa crea il colore rosa?",
+                "È indicato lo spessore della placcatura?",
+                "Il perno e la chiusura posteriore sono realizzati con lo stesso materiale?",
+                "Quali colori del metallo sono effettivamente disponibili per l'articolo selezionato?",
+                "L'immagine del prodotto cambia con il colore selezionato?",
+                "Prezzo e disponibilità sono corretti per quella variante?",
+                "I diamanti sono diamanti da laboratorio e sono indicati chiaramente?",
+                "Il peso in carati è individuale o totale?",
+                "L'articolo è venduto singolarmente o in coppia?",
+                "Quali sono le misure in millimetri?",
+                "Qual è il peso per orecchino e quello complessivo?",
+                "Quale chiusura viene utilizzata?",
+                "Sono disponibili immagini frontali, laterali e indossate?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Guida all'acquisto di orecchini con diamante da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Quale è meglio per gli orecchini con diamanti, oro o oro bianco?",
-      "answer": "Nessuno dei due è automaticamente migliore. L’oro giallo è caldo e classico, mentre i toni bianco o argento sono puliti e moderni. La scelta migliore dipende dallo stile di chi lo indossa e dai gioielli esistenti."
+      "question": "Quale colore del metallo scegliere per gli orecchini con diamanti da laboratorio?",
+      "answer": "Scelga l'oro giallo per un contrasto caldo, l'oro bianco o una finitura in metallo bianco per un effetto più freddo e l'oro rosa per un contrasto dalle tonalità rosate. La scelta dovrebbe basarsi sui gioielli che già indossa e sull'aspetto che preferisce."
     },
     {
-      "question": "Gli orecchini con diamanti in oro rosa sono buoni come regalo?",
-      "answer": "Sì, gli orecchini con diamanti in oro rosa possono essere bellissimi regali perché sono morbidi, romantici e personali. Sono particolarmente forti per compleanni, anniversari e regali significativi."
+      "question": "I diamanti da laboratorio hanno un aspetto diverso con l'oro giallo, bianco e rosa?",
+      "answer": "Il diamante rimane lo stesso, ma il metallo circostante cambia il contrasto visibile. L'oro giallo e quello rosa creano bordi colorati, mentre il metallo bianco può armonizzarsi maggiormente con un diamante incolore o quasi incolore."
     },
     {
-      "question": "Quale colore del metallo è il migliore per gli orecchini di diamanti di tutti i giorni?",
-      "answer": "Il miglior colore del metallo per gli orecchini di tutti i giorni è solitamente quello che la persona indossa già più spesso. L'oro giallo è classico, il tono bianco o argento è moderno e l'oro rosa è più morbido e romantico."
+      "question": "L'oro bianco è davvero oro?",
+      "answer": "L'oro bianco massiccio è una lega d'oro. Tuttavia, un orecchino di colore bianco può essere realizzato in argento sterling 925, con placcatura in oro bianco, rodio o un'altra finitura. Controlli la specifica completa dei materiali del prodotto."
     },
     {
-      "question": "Quale colore del metallo è il migliore per gli orecchini degli invitati al matrimonio?",
-      "answer": "L'oro giallo funziona bene con abiti caldi, abiti champagne e abiti verdi. I toni bianco o argento funzionano bene con abiti neri, blu scuro, grigi e dai toni freddi. L'oro rosa funziona bene con abiti pastello e romantici."
+      "question": "Di che cosa è fatto l'oro rosa?",
+      "answer": "L'oro rosa è una lega d'oro dalle tonalità rosate, generalmente ottenute usando il rame. In un prodotto placcato, la lega d'oro rosa forma uno strato superficiale sopra un metallo di base separato."
     },
     {
-      "question": "Dovrei scegliere orecchini in oro giallo o oro rosa?",
-      "answer": "Scegli l'oro giallo per un look classico più sicuro. Scegli l'oro rosa se alla persona piacciono i gioielli morbidi e romantici o indossa già pezzi nei toni del rosa."
+      "question": "Gli orecchini placcati in oro 14 kt sono in oro massiccio?",
+      "answer": "No. Un orecchino placcato in oro 14 kt ha uno strato superficiale in lega d'oro 14 kt sopra un altro metallo di base. La descrizione del prodotto dovrebbe indicare tale metallo di base."
     },
     {
-      "question": "Gli orecchini bianchi o argentati fanno sembrare i diamanti più luminosi?",
-      "answer": "Le montature bianche o argentate possono far sembrare i diamanti molto puliti e luminosi perché il metallo non aggiunge calore attorno alla pietra."
+      "question": "Quale colore del metallo è adatto alle orecchie sensibili?",
+      "answer": "Il colore da solo non consente di stabilire l'idoneità per le orecchie sensibili. Controlli la lega completa, la placcatura, il perno, la chiusura posteriore, le informazioni sul rilascio di nichel e la sensibilità individuale di chi li indosserà."
     },
     {
-      "question": "Posso mescolare orecchini d'oro e d'argento in una pila di orecchini?",
-      "answer": "Sì, puoi mescolare i metalli, soprattutto negli orecchini, ma dovrebbe sembrare intenzionale. Se si acquista come regalo, è più sicuro abbinare il colore del metallo abituale della persona."
+      "question": "Posso abbinare orecchini in oro giallo, bianco e rosa?",
+      "answer": "Sì. Abbinare metalli di colori diversi può funzionare quando uno prevale e gli altri gioielli sono più piccoli o riprendono lo stesso colore in altri punti. Mantenga un unico punto focale ben definito."
     },
     {
-      "question": "Quale colore di metallo è il migliore per un vestito nero?",
-      "answer": "Orecchini in oro giallo, bianco/argento e audaci diamanti possono funzionare tutti con un abito nero. L'oro giallo aggiunge calore, mentre il tono bianco/argento crea un contrasto più pulito."
+      "question": "Come scegliere il colore degli orecchini da regalare?",
+      "answer": "Osservi il colore del metallo che la persona indossa già in orecchini, collane, bracciali e orologi. Eviti di scegliere basandosi solo sull'età presunta, sul tono della pelle o sull'occupazione."
     },
     {
-      "question": "Quale colore del metallo è il migliore per gli orecchini a farfalla?",
-      "answer": "L'oro rosa e l'oro giallo di solito funzionano magnificamente per gli orecchini a farfalla perché supportano la sensazione morbida, significativa e femminile del design."
-    },
-    {
-      "question": "Qual è il colore del metallo più sicuro per un regalo di gioielleria?",
-      "answer": "Il colore del metallo più sicuro è quello già indossato dal destinatario. Se non sei sicuro, l'oro giallo o il classico tono bianco/argento sono solitamente più sicuri dell'oro rosa."
+      "question": "L'oro bianco richiede cure diverse?",
+      "answer": "Alcuni gioielli in oro bianco hanno una finitura superficiale in rodio, mentre altri orecchini di colore bianco sono realizzati con materiali diversi. Segua le istruzioni per la cura della lega o della finitura specifica, senza basarsi solo sul nome del colore."
     }
   ],
   "cta": {
-    "heading": "Il colore del metallo cambia la sensazione degli orecchini con diamanti coltivati in laboratorio. L'oro giallo è caldo e classico, i toni bianco o argento sono puliti e moderni e l'oro rosa è morbido e romantico. La scelta migliore dipende dal guardaroba di chi lo indossa, dai gioielli esistenti, dai colori dell'outfit e dallo scopo del regalo.",
-    "body": "Inizia con gli orecchini con diamanti coltivati in laboratorio di IWantJewels se vuoi che i veri diamanti scintillino in design semi-fini indossabili. Scegli Cadenza S o Cadenza M per orecchini classici di tutti i giorni, Amadea per abbinamenti moderni, Farfalla per regali romantici, Orsola per lo stile degli invitati al matrimonio e Lusso per un audace scintillio serale.",
-    "primaryLabel": "Acquista orecchini con diamanti coltivati in laboratorio",
+    "heading": "Scelga l'oro giallo per un calore evidente, l'oro bianco o una finitura in metallo bianco verificata per un aspetto più freddo, oppure l'oro rosa per un contrasto dalle sfumature rosate.",
+    "body": "Verifichi poi la costruzione e le specifiche del prodotto, senza basarsi solo sul nome del colore.",
+    "primaryLabel": "Confronta gli orecchini con diamante da laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Esplora i regali di gioielli",
-    "secondaryHref": "/products",
-    "tertiaryLabel": "Leggi la guida all'acquisto di orecchini con diamanti coltivati in laboratorio",
-    "tertiaryHref": "#"
+    "secondaryLabel": "Guida all'acquisto di orecchini con diamanti da laboratorio",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide",
+    "tertiaryLabel": "Cosa sono i diamanti da laboratorio?",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
   }
 }

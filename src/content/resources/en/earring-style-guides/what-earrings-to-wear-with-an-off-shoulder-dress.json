@@ -1,1158 +1,642 @@
 {
   "meta": {
-    "title": "What Earrings to Wear with an Off Shoulder Dress",
-    "description": "Choose earrings for an off shoulder dress with diamonds, drops, hoops, studs, gold, party looks, wedding guest outfits and evening styling ideas."
+    "title": "What Earrings to Wear with an Off-Shoulder Dress",
+    "description": "Choose earrings for an off-shoulder dress by earring size, neckline width, hairstyle, fabric and occasion. Compare studs, hoops, drops and statement styles."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-89.jpg",
-    "title": "What Earrings to Wear with an Off-Shoulder Dress:",
-    "subtitle": "Styling Guide for Weddings, Parties & Evening Looks",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "What Earrings to Wear",
+    "subtitle": "with an Off-Shoulder Dress",
     "paragraphs": [
-      "An off-shoulder dress naturally opens the neckline and draws attention to the shoulders, collarbone and face. Because the neckline is already open, earrings become one of the most important jewellery choices. The right pair can make the outfit feel elegant, romantic, modern or party-ready without needing heavy jewellery around the neck.",
-      "Drop earrings are one of the strongest choices for off-shoulder dresses because they frame the face and add movement. Bold statement earrings work beautifully when the dress is simple and the earrings should lead the look. Hoops add modern shape, while medium diamond studs keep the styling clean when the dress already has detail. Butterfly earrings are especially strong for romantic off-shoulder dresses, wedding guest outfits and soft evening looks.",
-      "This resource helps shoppers choose earrings for off-shoulder dresses by dress style, occasion, hairstyle, fabric, metal colour and sparkle level. It also connects each styling direction to IWantJewels products such as Orsola drop earrings, Lusso bold statement earrings, Pave Hoops, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings, Concetta Short earrings, Concetta Long earrings, Amadea Huggie earrings and Laluce minimalist diamond earrings."
+      "Studs, hoops, drops, motifs and statement earrings can all be worn with an off-shoulder dress. The right choice depends on the dress's neckline shape, sleeve detail, fabric and the physical space between the earring and shoulder.",
+      "An off-shoulder neckline exposes more of the shoulders and upper chest, but that does not automatically mean long earrings are required. A compact sculptural stud may provide enough detail, while long drops may work when their complete length and movement do not cause repeated contact with the shoulder or dress.",
+      "Before selecting earrings, check their complete height, width, projection, weight per earring and fastening. Then compare those dimensions with the exact dress while it is being worn."
     ],
-    "shopLabel": "Shop Earrings for Off-Shoulder Dresses",
+    "shopLabel": "Explore Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Choose earrings for off-shoulder dresses.",
-      "Decide between drops, hoops, studs, butterfly earrings and bold statement earrings.",
-      "Style off-shoulder dresses for weddings, parties, dinners, birthdays and formal events.",
-      "Match earrings to black, satin, romantic, detailed and simple off-shoulder dresses.",
-      "Choose earrings based on hairstyle and neckline openness.",
-      "Decide whether to wear a necklace with an off-shoulder dress.",
-      "Choose gold, white/silver tone or rose gold jewellery.",
-      "Build off-shoulder dress ear stack combinations.",
-      "Find IWantJewels product recommendations by styling need.",
-      "Plan image blocks, product modules, CTA sections and internal links for this page."
+      "Shoulder clearance decides more than the earring category does",
+      "\"Off-shoulder\" covers straight, Bardot, sweetheart, draped and ruffled necklines",
+      "Puff sleeves and ruffles can rise towards the ears during movement",
+      "Open shoulders do not require statement earrings — studs can be just as deliberate",
+      "Test long earrings while turning the head, sitting and walking",
+      "A necklace is optional in both directions"
     ],
-    "image": "/blog-images/blog-image-84.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Off-Shoulder Dress Earring Selector",
+      "heading": "Quick answer",
       "content": [
         {
           "type": "paragraph",
-          "text": "Use this table near the top of the page as the main styling decision tool."
+          "text": "For a plain off-shoulder dress, consider studs, hoops, drops or a more prominent earring. For a dress with ruffles, lace, sequins, embroidery or voluminous sleeves, choose earrings with a clear outline and dimensions that do not compete or physically interfere with the dress."
+        },
+        {
+          "type": "paragraph",
+          "text": "Long earrings should be tested while turning the head, sitting and moving. If they repeatedly touch the shoulder or neckline, consider a shorter drop, hoop or stud."
         },
         {
           "type": "table",
-          "headers": [
-            "Off-Shoulder Dress Style",
-            "Best Earring Direction",
-            "Recommended IWJ Direction"
-          ],
+          "headers": ["Off-shoulder dress style", "Earring direction to consider", "What to check"],
           "rows": [
-            [
-              "Simple off-shoulder dress",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Black off-shoulder dress",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Satin off-shoulder dress",
-              "Drop earrings or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Romantic off-shoulder dress",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Wedding guest off-shoulder dress",
-              "Drops, studs or romantic earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Party off-shoulder dress",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Detailed off-shoulder dress",
-              "Studs or clean huggies",
-              "Cadenza M, Cadenza S, Amadea"
-            ],
-            [
-              "Formal off-shoulder dress",
-              "Long drops or refined studs",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Minimal off-shoulder dress",
-              "One strong jewellery focal point",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Off-shoulder ear stack",
-              "Main earring + small support",
-              "Orsola + Cadenza S, Lusso + Cadenza S"
-            ]
+            ["Plain straight neckline", "Studs, hoops, drops or statement earrings", "Intended focal point and shoulder clearance"],
+            ["Bardot or fold-over neckline", "Studs, hoops or controlled drops", "Contact with folded fabric"],
+            ["Sweetheart off-shoulder neckline", "Studs, motifs, hoops or drops", "Relationship with the curved neckline"],
+            ["Satin off-shoulder dress", "Studs, hoops or measured drops", "Fabric shine, draping and movement"],
+            ["Ruffled off-shoulder dress", "Studs or earrings with controlled width", "Competition with ruffles"],
+            ["Puff-sleeve off-shoulder dress", "Compact studs, hoops or narrow drops", "Contact with sleeves"],
+            ["Lace or embroidered dress", "Studs, hoops or clean geometric shapes", "Pattern density"],
+            ["Sequinned off-shoulder dress", "Defined earrings with controlled stone coverage", "Existing reflected light"],
+            ["Wedding guest dress", "Studs, drops, hoops or motifs", "Dress code, fabric and hairstyle"],
+            ["Minimal evening dress", "One clear earring focal point", "Dimensions, weight and fastening"]
           ]
         }
       ]
     },
     {
-      "heading": "Why Off-Shoulder Dresses Work So Well with Earrings",
+      "heading": "Understand the off-shoulder neckline",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "\"Off-shoulder\" describes several different dress structures."
+        },
+        {
+          "type": "subheading",
+          "text": "Straight off-shoulder neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "A straight neckline creates a horizontal line across the chest and shoulders. Curved hoops can contrast with that line, while drops can add a vertical direction. Studs can also work when the dress or sleeves already provide enough visual detail."
+        },
+        {
+          "type": "subheading",
+          "text": "Bardot or fold-over neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Bardot neckline usually includes a folded or layered band of fabric around the shoulders. The added fabric increases the chance of contact with longer or wider earrings. Check the earring while turning the head and raising the shoulders."
+        },
+        {
+          "type": "subheading",
+          "text": "Sweetheart off-shoulder neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "This combines an open shoulder line with a curved centre neckline. Earrings can echo the curves through hoops or rounded motifs, or provide contrast through geometric shapes."
+        },
+        {
+          "type": "see-also",
+          "text": "Jewellery for a sweetheart neckline",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Draped or cowl off-shoulder neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "Draped fabric already creates movement and asymmetrical folds. Consider earrings with controlled movement so they do not compete physically or visually with the neckline."
+        },
+        {
+          "type": "subheading",
+          "text": "Ruffled off-shoulder neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ruffles introduce width and texture around the shoulders. A wide earring may overlap with the ruffles, while long earrings may catch against them. Compact studs, defined hoops or narrow drops may be easier to position."
+        },
+        {
+          "type": "subheading",
+          "text": "Puff-sleeve off-shoulder dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Puff sleeves occupy space around the upper arms and sometimes rise towards the ears when the wearer moves. Compare the earring's complete drop and width with the highest point of the sleeve."
+        }
+      ]
+    },
+    {
+      "heading": "Measure shoulder clearance before choosing long earrings",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-93.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Off-shoulder dresses leave the neckline open, so the jewellery around the face becomes more important. Earrings help fill the styling space without covering the collarbone or competing with the dress shape."
+              "text": "The distance between the piercing and shoulder varies between wearers. Earring measurements should therefore be compared with the person and dress — not only with a model photograph."
+            },
+            {
+              "type": "subheading",
+              "text": "Complete drop"
             },
             {
               "type": "paragraph",
-              "text": "This neckline is especially good for drop earrings, statement earrings and hoops because there is visual room around the shoulders. A drop earring can add elegance and movement. A bold earring can become the main jewellery feature. Hoops can add modern shape. Studs can keep the look clean if the dress already has detail."
+              "text": "Measure from the piercing or fastening point to the lowest part of the earring. Do not measure only the decorative component."
+            },
+            {
+              "type": "subheading",
+              "text": "Complete width"
             },
             {
               "type": "paragraph",
-              "text": "The main rule is balance. If the dress is simple, the earrings can be stronger. If the dress has lace, sequins, embroidery, ruffles or strong fabric detail, choose cleaner earrings. If the earrings are bold, keep the necklace minimal or skip it."
-            },
-            {
-              "type": "see-also",
-              "text": "Party Earrings Guide",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for an Off-Shoulder Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The best earrings for an off-shoulder dress are usually drop earrings, bold statement earrings, hoops, medium studs or butterfly earrings."
-        },
-        {
-          "type": "paragraph",
-          "text": "Drop earrings work because they frame the face and add length. Bold statement earrings work because the open neckline gives them space. Hoops work when the look should feel modern. Medium studs work when the dress is detailed. Butterfly earrings work when the outfit should feel soft, romantic or meaningful."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Styling Goal",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Elegant movement",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Formal long line",
-              "Long drops",
-              "Concetta Long"
-            ],
-            [
-              "Strong party look",
-              "Bold statement earrings",
-              "Lusso"
-            ],
-            [
-              "Modern shape",
-              "Hoops",
-              "Pave Hoops"
-            ],
-            [
-              "Classic sparkle",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Subtle support",
-              "Small studs",
-              "Cadenza S"
-            ],
-            [
-              "Romantic softness",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Minimal ear stack",
-              "Stud + huggie",
-              "Cadenza S + Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "divider"
-        }
-      ]
-    },
-    {
-      "heading": "Necklace or Earrings with an Off-Shoulder Dress?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "An off-shoulder dress can work with a necklace, earrings or both, but earrings are usually the safer focal point."
-        },
-        {
-          "type": "paragraph",
-          "text": "Because the neckline already shows the collarbone and shoulders, heavy necklaces can sometimes make the look feel crowded. If you choose bold earrings or long drops, skip the necklace or choose a very delicate chain. If you choose small studs, a necklace can become more visible."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Jewellery Choice",
-            "Best When",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Drop earrings only",
-              "Dress is simple, satin or evening-ready",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Bold earrings only",
-              "Dress is minimal and party-ready",
-              "Lusso"
-            ],
-            [
-              "Hoops only",
-              "Look should feel modern",
-              "Pave Hoops"
-            ],
-            [
-              "Medium studs + delicate necklace",
-              "Dress is detailed or neckline needs soft balance",
-              "Cadenza M"
-            ],
-            [
-              "Small studs + necklace",
-              "Necklace should lead the look",
-              "Cadenza S"
-            ],
-            [
-              "Butterfly earrings only",
-              "Look should feel romantic",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Huggies + necklace",
-              "Casual or work-event styling",
-              "Amadea"
-            ],
-            [
-              "Minimalist earrings + necklace",
-              "Clean, understated look",
-              "Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Minimalist Earrings Guide",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings for Simple Off-Shoulder Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Simple off-shoulder dresses are the easiest to style because they give jewellery space to stand out."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is where Orsola, Lusso and Pave Hoops are strongest. Choose Orsola for movement, Lusso for a bold party look, and Pave Hoops for modern shape. If the dress is simple but the wearer prefers clean sparkle, Cadenza M is a safer choice."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-95.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Simple Off-Shoulder Dress Style",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Plain black off-shoulder dress",
-                  "Bold earrings or drops",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Minimal white off-shoulder dress",
-                  "Drops or hoops",
-                  "Orsola, Pave Hoops"
-                ],
-                [
-                  "Simple satin off-shoulder dress",
-                  "Drops or bold earrings",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Minimal cocktail dress",
-                  "Bold earrings, hoops or drops",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Simple evening dress",
-                  "Long drops or medium studs",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Plain party dress",
-                  "Bold statement earrings",
-                  "Lusso"
-                ]
-              ]
+              "text": "A wide earring may touch hair, ruffles, sleeves or a raised shoulder even when its length appears suitable."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Projection"
+        },
+        {
+          "type": "paragraph",
+          "text": "Projection describes how far the earring extends away from the ear. Sculptural earrings may occupy more space from the side than their front photograph suggests."
+        },
+        {
+          "type": "subheading",
+          "text": "Movement"
+        },
+        {
+          "type": "paragraph",
+          "text": "An articulated earring can travel beyond its static measurements. Test the piece while the wearer turns their head, walks and sits."
+        },
+        {
+          "type": "subheading",
+          "text": "Weight per earring"
+        },
+        {
+          "type": "paragraph",
+          "text": "Weight should be published per earring. Visual size does not reliably indicate weight."
+        },
+        {
+          "type": "subheading",
+          "text": "Fastening"
+        },
+        {
+          "type": "paragraph",
+          "text": "Confirm whether the product uses a post and back, hinged hoop closure, lever back or another system. The fastening should match the exact product."
+        }
+      ]
+    },
+    {
+      "heading": "Which earrings work with an off-shoulder dress?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Stud earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stud earrings provide a compact profile and may be useful when the dress has ruffles, puff sleeves, lace, sequins, embroidery, a prominent necklace or strong fabric texture."
+        },
+        {
+          "type": "paragraph",
+          "text": "A stud does not have to be visually minimal. Cluster, motif and geometric studs can become a focal point while remaining close to the ear."
+        },
+        {
+          "type": "paragraph",
+          "text": "For diamond-set studs, verify the complete width and height, stone count, stone shape, total carat weight, whether carat weight refers to the pair, weight per earring, post and backing, and pair or single-earring status."
+        },
+        {
+          "type": "subheading",
+          "text": "Hoop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoops create a curved outline that can contrast with a straight neckline or repeat the curves of a sweetheart neckline. Their effect depends on the external diameter, internal diameter, width, profile, stone placement, weight and fastening."
+        },
+        {
+          "type": "paragraph",
+          "text": "A hoop can be compact or prominent. Do not assume every small earring is a huggie, and do not classify geometric earrings as hoops simply because they sit near the ear."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wider hoops should be checked against puff sleeves and ruffles. A hoop that appears well clear of the shoulder when standing still may make contact when the wearer turns their head."
+        },
+        {
+          "type": "subheading",
+          "text": "Drop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Drop earrings can introduce a vertical line between the ears and exposed shoulders. However, their suitability depends on physical clearance rather than a general styling rule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Check whether the earring ends above the shoulder, touches the shoulder only during movement, contacts the dress fabric, catches against hair, contains rigid or articulated elements, and remains comfortable for the intended wear duration."
+        },
+        {
+          "type": "paragraph",
+          "text": "A short drop may work when a longer design reaches the shoulder. A rigid drop may behave differently from an articulated design with the same static length."
+        },
+        {
+          "type": "subheading",
+          "text": "Statement earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "An uncomplicated off-shoulder dress can provide space for a focal earring, but statement earrings do not need to be oversized or heavy. Statement describes the earring's role in the outfit — a stud, hoop, drop, motif or geometric design can all become statement earrings."
+        },
+        {
+          "type": "paragraph",
+          "text": "If the earrings are the focal point, keep the necklace in a supporting role, avoid several large earrings in an ear stack, check the dress for ruffles, sleeves and embellishment, verify the earring's dimensions and weight, and review the outfit from normal viewing distance."
+        },
+        {
           "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
+          "text": "Bold statement earrings: styling guide",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Butterfly, motif and geometric earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Motif earrings can add a recognisable design to an off-shoulder outfit. Their suitability depends on complete dimensions and how the motif relates to any pattern already present in the dress. A floral dress does not automatically require floral or butterfly earrings — repeating too many similar motifs can make the styling feel crowded."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geometric earrings can contrast with curved necklines or continue the structure of a straight Bardot neckline."
         }
       ]
     },
     {
-      "heading": "Earrings for Black Off-Shoulder Dresses",
+      "heading": "Should you wear a necklace with an off-shoulder dress?",
       "content": [
         {
           "type": "paragraph",
-          "text": "A black off-shoulder dress is one of the strongest outfits for statement jewellery because it combines an open neckline with a dark background."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the dress is simple, Lusso bold statement earrings can become the main jewellery moment. Orsola drop earrings are better for elegant movement. Pave Hoops work well for a modern party look. Cadenza M is better if the dress has detail or the wearer wants classic sparkle."
+          "text": "An off-shoulder dress can be worn with earrings, a necklace or both. Exposed shoulders do not create a requirement to leave the neck bare, nor do they require a necklace."
         },
         {
           "type": "table",
-          "headers": [
-            "Black Off-Shoulder Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
+          "headers": ["Earring direction", "Necklace direction"],
           "rows": [
-            [
-              "Simple black off-shoulder dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Black satin off-shoulder dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Black party off-shoulder dress",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Black wedding guest off-shoulder dress",
-              "Drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Detailed black off-shoulder dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Formal black off-shoulder dress",
-              "Long drops or classic studs",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Romantic black off-shoulder look",
-              "Butterfly earrings or drops",
-              "Farfalla, Orsola"
-            ]
+            ["Compact studs", "Necklace can take a more noticeable role"],
+            ["Small hoops", "A pendant, short chain or no necklace may work"],
+            ["Diamond-set hoops", "Use a restrained necklace or let the earrings lead"],
+            ["Long drops", "Fine necklace, short necklace or no necklace"],
+            ["Statement earrings", "Minimal necklace or no necklace"],
+            ["Motif earrings", "Coordinate carefully with any pendant motif"],
+            ["Ear stack", "Keep the necklace related in metal colour or detail"]
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Also consider the dress structure:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "A straight neckline may work with a short chain or pendant",
+            "A sweetheart neckline may work with a curved necklace or pendant",
+            "A fold-over Bardot neckline may already contain enough horizontal detail",
+            "A ruffled neckline may not need additional jewellery across the neck",
+            "A highly embellished neckline may work more clearly without a necklace"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Earrings by dress fabric and colour",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "A simple off-shoulder dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A simple dress provides room for several earring types. Instead of automatically choosing the largest design, decide whether you want compact diamond detail, a curved hoop shape, vertical movement, a recognisable motif, a geometric focal point or a more prominent statement design. Then verify that the earrings fit the available shoulder clearance."
+        },
+        {
+          "type": "paragraph",
+          "text": "A simple dress can also support a necklace-led look with smaller earrings."
+        },
+        {
+          "type": "subheading",
+          "text": "Black off-shoulder dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Black can provide contrast for several metal colours and diamond-set designs, but dress fabric and structure still matter. A plain black off-shoulder dress may work with studs, hoops, drops or statement earrings. A sequinned, lace or satin black dress may require different proportions."
+        },
+        {
           "type": "see-also",
-          "text": "What Jewellery to Wear with a Black Dress",
+          "text": "What jewellery to wear with a black dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings for Satin Off-Shoulder Dresses",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Satin off-shoulder dresses already have shine, so the earrings should add polish without making the look too heavy."
+          "type": "subheading",
+          "text": "Satin off-shoulder dress"
         },
         {
           "type": "paragraph",
-          "text": "Drop earrings are usually the strongest option because they add movement and follow the soft feeling of satin. Medium studs are better when the satin dress has strong colour, draping or detail. Bold earrings can work if the satin dress is simple and the jewellery should lead."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satin Off-Shoulder Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Black satin off-shoulder dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Champagne satin off-shoulder dress",
-              "Gold drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Blush satin off-shoulder dress",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Green satin off-shoulder dress",
-              "Gold drops or hoops",
-              "Orsola, Pave Hoops"
-            ],
-            [
-              "Red satin off-shoulder dress",
-              "Medium studs, drops or bold earrings",
-              "Cadenza M, Orsola, Lusso"
-            ],
-            [
-              "Satin wedding guest off-shoulder dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Satin party off-shoulder dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ]
-          ]
+          "text": "Satin reflects light and may include ruching or draping. Earrings with substantial stone coverage are not automatically required. Consider studs when the satin has strong draping, hoops when a curved outline suits the dress, drops when there is sufficient shoulder clearance, a focal earring when the dress itself is uncomplicated, and no necklace when the neckline already has folds or ruching."
         },
         {
           "type": "see-also",
-          "text": "Jewellery with Satin Dress",
+          "text": "Jewellery to wear with satin & silk dresses",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Ruffled, lace, sequinned and embroidered dresses"
+        },
+        {
+          "type": "paragraph",
+          "text": "For a ruffled dress, check the highest point of the ruffle while the dress is being worn — long or wide earrings may make repeated contact with the fabric. Lace already contains repeated patterns, so choose an earring with a clear outline rather than automatically repeating the lace motif."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sequins create reflected light across the garment. Earrings can still be visible, but consider whether additional diamond coverage adds useful contrast. For embroidery, check whether it includes metal thread, stones, beads or a recognisable motif, and coordinate rather than duplicate every element."
         }
       ]
     },
     {
-      "heading": "Earrings for Romantic Off-Shoulder Dresses",
+      "heading": "Earrings by occasion",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Romantic off-shoulder dresses usually work best with soft, feminine jewellery."
+          "type": "subheading",
+          "text": "An off-shoulder wedding guest dress"
         },
         {
           "type": "paragraph",
-          "text": "Butterfly earrings are especially strong because they add meaning and softness. Soft drops work well when the dress needs gentle movement. Medium studs are better when the dress already has floral detail, lace, embroidery or a strong colour."
+          "text": "Wedding guests should first check the dress code and any cultural expectations around colour and formality. Possible directions include studs with a necklace, drops without a prominent necklace, hoops with a restrained necklace, butterfly or motif earrings, geometric earrings, or a controlled statement design."
         },
         {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-97.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Romantic Off-Shoulder Dress Style",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Blush off-shoulder dress",
-                  "Butterfly earrings or soft drops",
-                  "Farfalla, Orsola"
-                ],
-                [
-                  "Floral off-shoulder dress",
-                  "Butterfly earrings or studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Lace off-shoulder dress",
-                  "Studs or delicate drops",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Champagne off-shoulder dress",
-                  "Gold drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Pastel off-shoulder dress",
-                  "Butterfly earrings or short drops",
-                  "Alidi Farfalla, Concetta Short"
-                ],
-                [
-                  "Soft wedding guest dress",
-                  "Drops or romantic earrings",
-                  "Orsola, Farfalla"
-                ],
-                [
-                  "Birthday off-shoulder dress",
-                  "Butterfly earrings or medium studs",
-                  "Alidi Farfalla, Cadenza M"
-                ]
-              ]
-            }
-          ]
+          "type": "paragraph",
+          "text": "Avoid assuming that wedding-guest earrings must be long, diamond-heavy or romantic in style. The dress fabric, venue and wearer's preferences remain important."
+        },
+        {
+          "type": "subheading",
+          "text": "Parties and date nights"
+        },
+        {
+          "type": "paragraph",
+          "text": "A plain off-shoulder party dress can support more visible earrings. An embellished cocktail dress may already contain the primary focal point. For date nights, also consider the venue, duration and practical requirements involving coats, scarves and travel."
         },
         {
           "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Gifts",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings for Wedding Guest Off-Shoulder Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Wedding guest off-shoulder dresses should feel elegant, polished and comfortable for long wear."
-        },
-        {
-          "type": "paragraph",
-          "text": "Drop earrings are one of the strongest choices because they frame the face while keeping the neckline open. Medium studs are better if the dress already has lace, embroidery, florals or prints. Butterfly earrings work well for romantic wedding guest looks, especially with soft colours."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Wedding Guest Off-Shoulder Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple wedding guest off-shoulder",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Satin wedding guest off-shoulder",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Floral off-shoulder dress",
-              "Butterfly earrings or studs",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Lace off-shoulder dress",
-              "Studs or delicate drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Champagne off-shoulder dress",
-              "Gold drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Pastel off-shoulder dress",
-              "Butterfly earrings or soft drops",
-              "Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Black off-shoulder wedding guest dress",
-              "Drops or studs",
-              "Orsola, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Weddings",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings for Party Off-Shoulder Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A party off-shoulder dress can carry stronger earrings because the neckline gives jewellery room to stand out."
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso if the earrings should become the main feature. Choose Orsola for movement and elegance. Choose Pave Hoops for shape and shine. Choose Cadenza M if the dress already has detail and needs clean sparkle."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party Off-Shoulder Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple party off-shoulder",
-              "Bold earrings",
-              "Lusso"
-            ],
-            [
-              "Satin party off-shoulder",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Black party off-shoulder",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Sequin off-shoulder dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Cocktail off-shoulder dress",
-              "Hoops, drops or medium studs",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Birthday off-shoulder dress",
-              "Drops, studs or butterfly earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Formal party off-shoulder",
-              "Long drops or bold earrings",
-              "Concetta Long, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Party Earrings Guide",
+          "text": "Party earrings guide",
           "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings for Detailed Off-Shoulder Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If an off-shoulder dress already has sequins, lace, embroidery, crystals, floral detail, ruffles or metallic fabric, the earrings should usually stay cleaner."
-        },
-        {
-          "type": "paragraph",
-          "text": "Studs, huggies and minimalist earrings are the safest choices because they add polish without competing with the dress. If the dress needs a little movement, choose delicate drops rather than bold statement earrings."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Detailed Off-Shoulder Dress Type",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Sequin off-shoulder dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Lace off-shoulder dress",
-              "Studs or delicate drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Embroidered off-shoulder dress",
-              "Studs",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Metallic off-shoulder dress",
-              "Minimalist earrings or studs",
-              "Laluce, Cadenza M"
-            ],
-            [
-              "Ruffled off-shoulder dress",
-              "Studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Floral off-shoulder dress",
-              "Butterfly earrings or studs",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Crystal-detail off-shoulder dress",
-              "Studs",
-              "Cadenza M"
-            ]
-          ]
         },
         {
           "type": "see-also",
-          "text": "Stud vs Huggie Earrings",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
+          "text": "Date night earrings: what to wear",
+          "href": "/resources/jewellery-gift-guides/date-night-jewellery-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Formal off-shoulder dresses"
+        },
+        {
+          "type": "paragraph",
+          "text": "Formal styling can include studs, hoops, drops or statement earrings. The category name does not establish formality. Check the materials, finish, dimensions, diamond placement, weight, fastening, relationship with the hairstyle, shoulder clearance and dress code."
+        },
+        {
+          "type": "paragraph",
+          "text": "Long earrings are not automatically more formal, and studs are not automatically casual."
         }
       ]
     },
     {
-      "heading": "Earrings for Off-Shoulder Dresses by Hairstyle",
+      "heading": "Choosing earrings by hairstyle",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Hairstyle is very important with an off-shoulder dress because the neckline leaves the face and shoulders open."
+          "type": "subheading",
+          "text": "Hair worn up"
         },
         {
           "type": "paragraph",
-          "text": "If the hair is down, choose earrings visible enough to show. Medium studs, hoops and drops usually work better than tiny earrings. If the hair is pulled back, drops, bold earrings and hoops can frame the face beautifully."
+          "text": "An updo shows the complete earring and increases the importance of its width, projection and backing."
         },
         {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-99.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hairstyle",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Hair down",
-                  "Medium studs, hoops or drops",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Soft waves",
-                  "Drops, butterfly earrings or visible studs",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Sleek ponytail",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Low bun",
-                  "Drops, butterfly earrings or bold earrings",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "High bun",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Half-up hair",
-                  "Studs, huggies or soft drops",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "Short hair",
-                  "Studs, hoops or bold earrings",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
+          "type": "subheading",
+          "text": "Hair tucked behind the ears"
+        },
+        {
+          "type": "paragraph",
+          "text": "This can expose the earring while retaining hair around the face. Check whether textured or articulated designs catch against the hair."
+        },
+        {
+          "type": "subheading",
+          "text": "Hair worn down"
+        },
+        {
+          "type": "paragraph",
+          "text": "A defined outline or contrasting metal colour may increase visibility. Do not select a heavier earring merely because the hair covers part of it."
+        },
+        {
+          "type": "subheading",
+          "text": "Hair swept to one side"
+        },
+        {
+          "type": "paragraph",
+          "text": "This creates asymmetrical visibility. If wearing matching earrings, check how the more exposed earring relates to the shoulder line."
+        },
+        {
+          "type": "subheading",
+          "text": "Short hair"
+        },
+        {
+          "type": "paragraph",
+          "text": "Both compact and longer designs may remain visible. Compare the earring length with the jawline and shoulder."
         }
       ]
     },
     {
-      "heading": "Gold vs Silver vs Rose Gold with Off-Shoulder Dresses",
+      "heading": "Gold, silver or rose gold with an off-shoulder dress",
       "content": [
         {
           "type": "paragraph",
-          "text": "Metal colour changes the mood of an off-shoulder dress."
+          "text": "The neckline does not determine metal colour. Choose according to the dress colour, dress hardware or embellishment, bag and shoe hardware, existing rings or bracelets, other jewellery, and personal preference."
         },
         {
           "type": "paragraph",
-          "text": "Yellow gold feels warm, classic and polished. White or silver tone feels clean, bright and modern. Rose gold feels soft, romantic and feminine. Because off-shoulder dresses expose more skin and neckline space, the metal colour can strongly affect the full look."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Metal Colour",
-            "Feeling with Off-Shoulder Dresses",
-            "Best Dress Colours"
-          ],
-          "rows": [
-            [
-              "Yellow gold",
-              "Warm, classic and rich",
-              "Black, champagne, green, red, cream"
-            ],
-            [
-              "White or silver tone",
-              "Clean, bright and formal",
-              "Navy, black, grey, silver, cool pastels"
-            ],
-            [
-              "Rose gold",
-              "Soft, romantic and feminine",
-              "Blush, pink, champagne, soft green"
-            ],
-            [
-              "Mixed metals",
-              "Creative and modern",
-              "Minimal off-shoulder outfits and ear stacks"
-            ]
-          ]
+          "text": "Yellow-gold colours create warmer contrast. White or silver colours create a cooler appearance. Rose-gold colours introduce a softer pink tone."
         },
         {
           "type": "paragraph",
-          "text": "For romantic off-shoulder dresses, rose gold or yellow gold can work beautifully. For formal off-shoulder dresses, white/silver tone or yellow gold usually feels more refined."
+          "text": "Metal colour and metal composition are different. Product pages must separately identify the base metal, fineness and finish."
         },
         {
           "type": "see-also",
-          "text": "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings",
+          "text": "Gold vs white vs rose gold lab-grown diamond earrings",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Off-Shoulder Dress Ear Stack Ideas",
+      "heading": "Building an ear stack",
       "content": [
         {
           "type": "paragraph",
-          "text": "An off-shoulder dress works well with ear stacks because the neckline gives earrings space to show."
+          "text": "An off-shoulder dress can make the ears more visible, but the stack should still have a hierarchy. A simple structure is one main earring, one smaller support stud or close-fitting piece, and an optional third earring when spacing allows it."
         },
         {
           "type": "paragraph",
-          "text": "The best stack has one clear main piece and one smaller support piece. If the main earring is a drop, hoop or bold statement earring, keep the support earring small. If the main earring is a medium stud, you can add a huggie or minimalist earring."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Off-Shoulder Stack Goal",
-            "Main Piece",
-            "Support Piece",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Elegant off-shoulder stack",
-              "Drop earring",
-              "Small stud",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Bold off-shoulder stack",
-              "Bold earring",
-              "Small stud",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Modern off-shoulder stack",
-              "Hoop",
-              "Small stud",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Classic off-shoulder stack",
-              "Medium stud",
-              "Huggie",
-              "Cadenza M + Amadea"
-            ],
-            [
-              "Minimal off-shoulder stack",
-              "Small stud",
-              "Minimalist earring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Romantic off-shoulder stack",
-              "Butterfly earring",
-              "Small stud",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Formal off-shoulder stack",
-              "Long drop",
-              "Small stud",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Delicate off-shoulder stack",
-              "Short drop",
-              "Small stud",
-              "Concetta Short + Cadenza S"
-            ]
-          ]
+          "text": "Check the distance between piercings, the width of each earring, post direction, whether neighbouring pieces touch, the combined visual weight, and the relationship with the necklace."
         },
         {
           "type": "see-also",
-          "text": "How to Stack Earrings",
+          "text": "How to stack earrings",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Product Pathways by Off-Shoulder Styling Need",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "For the Safest Off-Shoulder Dress Earrings"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings. They add visible sparkle without making the neckline feel crowded."
-        },
-        {
-          "type": "subheading",
-          "text": "For Elegant Movement"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They work beautifully with off-shoulder dresses because they frame the face and keep the neckline open."
-        },
-        {
-          "type": "subheading",
-          "text": "For Romantic Off-Shoulder Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings or Alidi Farfalla butterfly earrings. These are best for blush, champagne, pastel, floral or romantic off-shoulder dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Delicate Wedding Guest Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Short earrings. They add soft movement without feeling too bold."
-        },
-        {
-          "type": "subheading",
-          "text": "For Formal Off-Shoulder Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Long earrings. They create a refined long line for formal off-shoulder dresses and evening events."
-        },
-        {
-          "type": "subheading",
-          "text": "For Modern Off-Shoulder Shape"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Pave Hoops. They work well with black off-shoulder dresses, satin off-shoulder dresses, jumpsuits and party looks."
-        },
-        {
-          "type": "subheading",
-          "text": "For Bold Off-Shoulder Party Looks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso bold statement earrings when the off-shoulder dress is simple and the earrings should lead."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Off-Shoulder Dress Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Orsola drop earrings",
-              "Best overall off-shoulder earring",
-              "Adds movement while keeping the neckline open"
-            ],
-            [
-              "Lusso bold statement earrings",
-              "Strongest party off-shoulder option",
-              "Best with simple off-shoulder dresses"
-            ],
-            [
-              "Pave Hoops",
-              "Modern off-shoulder shape",
-              "Adds curve and visible shine"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Safest sparkle option",
-              "Works when the dress already has detail"
-            ],
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Support piece",
-              "Balances drops, hoops and bold earrings"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Romantic off-shoulder styling",
-              "Adds softness and meaning"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Gift-led romantic option",
-              "Strong for birthdays and soft off-shoulder looks"
-            ],
-            [
-              "Concetta Short earrings",
-              "Delicate occasion styling",
-              "Good for wedding guest and bridesmaid looks"
-            ],
-            [
-              "Concetta Long earrings",
-              "Formal off-shoulder styling",
-              "Creates a refined longer line"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Modern support piece",
-              "Works with detailed dresses and ear stacks"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Soft detail",
-              "Useful with detailed off-shoulder outfits"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose off-shoulder dress earrings by mood. Pick Orsola for movement, Lusso for bold party sparkle, Pave Hoops for modern shape, Cadenza M for clean sparkle, Farfalla for romance and Concetta Short for delicate wedding guest styling."
-        }
-      ]
-    },
-    {
-      "heading": "Common Off-Shoulder Jewellery Mistakes to Avoid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "One common mistake is overcrowding the neckline. Off-shoulder dresses already create an open neckline, so heavy earrings and a heavy necklace together can feel too much."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is choosing earrings that are too tiny for the hairstyle. If hair is down or thick, very small earrings may disappear."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is wearing bold earrings with a heavily detailed off-shoulder dress. In that case, studs, huggies or delicate drops may look more polished."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is ignoring the shoulder line. Earrings should frame the face and complement the openness of the dress, not compete with it."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not choose jewellery only by sparkle. Think about dress detail, fabric, hairstyle, metal colour, occasion and comfort."
         },
         {
           "type": "see-also",
-          "text": "Gold-Plated Jewellery Care Guide",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+          "text": "Diamond ear stack ideas",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Final Off-Shoulder Earring Checklist",
+      "heading": "Common off-shoulder earring mistakes",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Before choosing earrings for an off-shoulder dress, ask:"
-        },
-        {
-          "type": "bullet-list",
-          "items": [
-            "Is the off-shoulder dress simple or detailed?",
-            "Is the look romantic, formal, minimal or party-ready?",
-            "Is the fabric satin, lace, sequin, floral or plain?",
-            "Will my hair hide or show the earrings?",
-            "Do I want sparkle, movement, shape or softness?",
-            "Should the earrings or necklace be the main jewellery moment?",
-            "Am I wearing a necklace, or should I skip it?",
-            "Does the metal colour work with the dress colour?",
-            "Is the occasion a wedding, party, dinner or formal event?",
-            "Are the earrings comfortable for the full event?",
-            "Is the ear stack balanced with one main piece?",
-            "Can the jewellery be worn again with other outfits?"
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Choosing long earrings without checking shoulder clearance"
+            },
+            {
+              "type": "paragraph",
+              "text": "Measure the complete drop and test movement with the exact dress."
+            },
+            {
+              "type": "subheading",
+              "text": "Assuming open shoulders require statement earrings"
+            },
+            {
+              "type": "paragraph",
+              "text": "Studs and compact hoops can also create an intentional look."
+            },
+            {
+              "type": "subheading",
+              "text": "Ignoring ruffles and sleeves"
+            },
+            {
+              "type": "paragraph",
+              "text": "Puff sleeves and ruffles may rise towards the earrings during movement."
+            }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Wearing several competing focal pieces"
+        },
+        {
           "type": "paragraph",
-          "text": "If you are unsure, choose drop earrings for a simple off-shoulder dress, medium studs for a detailed off-shoulder dress and butterfly earrings for a romantic off-shoulder look."
+          "text": "Large earrings, a prominent necklace and an embellished neckline can compete."
+        },
+        {
+          "type": "subheading",
+          "text": "Choosing from product photographs alone"
+        },
+        {
+          "type": "paragraph",
+          "text": "Images use different zoom levels and model proportions. Compare published measurements."
+        },
+        {
+          "type": "subheading",
+          "text": "Calling every compact earring a huggie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Huggies are hoop-style earrings designed to sit close to the earlobe. A compact geometric stud is not automatically a huggie."
+        },
+        {
+          "type": "subheading",
+          "text": "Assuming statement earrings are always heavy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Visual presence does not determine weight. Check the published weight per earring."
+        }
+      ]
+    },
+    {
+      "heading": "Off-shoulder earring checklist",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before selecting a pair, ask:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Is the neckline straight, sweetheart, folded, draped or ruffled?",
+            "Does the dress have puff sleeves?",
+            "What is the distance from the piercing to the shoulder?",
+            "What is the earring's complete drop?",
+            "What is its complete width?",
+            "How far does it project from the ear?",
+            "Is it rigid or articulated?",
+            "What is the weight per earring?",
+            "What fastening does it use?",
+            "Will it touch the shoulder, sleeve, ruffle or hair?",
+            "Should the earrings or necklace lead?",
+            "What detail is already present in the dress?",
+            "How will the hair be worn?",
+            "Are the metal and finish accurately identified?",
+            "Are all diamond details complete?",
+            "Is the listing for a pair or single earring?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "What earrings should I wear with an off-shoulder dress?",
-      "answer": "Drop earrings, hoops, bold statement earrings, medium studs and butterfly earrings can all work with an off-shoulder dress. Choose based on dress detail, hairstyle and occasion."
+      "question": "What earrings work with an off-shoulder dress?",
+      "answer": "Studs, hoops, drops, motifs, geometric earrings and statement designs can all work. Choose according to the dress detail, sleeve construction, hairstyle and shoulder clearance."
     },
     {
-      "question": "Are drop earrings good with an off-shoulder dress?",
-      "answer": "Yes, drop earrings are one of the best choices for off-shoulder dresses because they frame the face and keep the neckline open."
+      "question": "Can I wear drop earrings with an off-shoulder dress?",
+      "answer": "Yes. Measure the complete earring drop and test whether it touches the shoulder, dress or sleeves while moving."
     },
     {
-      "question": "Can I wear bold earrings with an off-shoulder dress?",
-      "answer": "Yes, bold earrings work beautifully with a simple off-shoulder dress. If the dress has heavy detail, studs or huggies may be better."
+      "question": "Can I wear hoop earrings with an off-shoulder dress?",
+      "answer": "Yes. Check the hoop's diameter, width and projection, particularly when the dress has ruffles or puff sleeves."
+    },
+    {
+      "question": "Can studs be worn with an off-shoulder dress?",
+      "answer": "Yes. Studs can work when the dress is detailed, a necklace is being worn or a compact earring profile is preferred."
+    },
+    {
+      "question": "Can I wear statement earrings with an off-shoulder dress?",
+      "answer": "Yes. A simple dress may leave room for a focal earring. Check its dimensions, weight and relationship with any necklace."
     },
     {
       "question": "Should I wear a necklace with an off-shoulder dress?",
-      "answer": "You can, but if the earrings are bold or long, it is usually better to skip the necklace or wear a very delicate chain."
+      "answer": "A necklace is optional. Smaller earrings can leave room for a more visible necklace, while long or statement earrings may work more clearly with a restrained necklace or none."
     },
     {
-      "question": "What earrings should I wear with a black off-shoulder dress?",
-      "answer": "A black off-shoulder dress works well with Lusso bold statement earrings, Orsola drop earrings, Pave Hoops or Cadenza M diamond studs depending on the dress detail."
+      "question": "What earrings should a wedding guest wear with an off-shoulder dress?",
+      "answer": "Studs, hoops, drops, motifs or a controlled statement design may work. Choose according to the dress code, fabric, hairstyle and complete earring measurements."
     },
     {
-      "question": "What earrings should I wear with a satin off-shoulder dress?",
-      "answer": "Drop earrings or medium diamond studs work well with satin off-shoulder dresses. Drops add movement, while studs keep the styling clean."
+      "question": "Can I wear long earrings if my hair is down?",
+      "answer": "Yes, but check whether the earrings catch in the hair and whether they remain visible. Do not select extra weight merely for visibility."
     },
     {
-      "question": "What earrings should wedding guests wear with an off-shoulder dress?",
-      "answer": "Wedding guests can wear drop earrings, medium studs, butterfly earrings or delicate drops with off-shoulder dresses. The best choice depends on dress colour and detail."
-    },
-    {
-      "question": "Are butterfly earrings good with an off-shoulder dress?",
-      "answer": "Yes, butterfly earrings work well with romantic off-shoulder dresses, especially blush, champagne, pastel, floral and soft wedding guest looks."
-    },
-    {
-      "question": "What hairstyle works best with earrings and an off-shoulder dress?",
-      "answer": "Sleek ponytails, low buns, half-up hair and soft waves all work well. If hair is down, choose earrings visible enough to show."
-    },
-    {
-      "question": "What IWantJewels earrings are best with an off-shoulder dress?",
-      "answer": "Orsola, Lusso, Pave Hoops, Cadenza M, Farfalla, Alidi Farfalla, Concetta Short and Concetta Long are strong off-shoulder dress options depending on whether you want movement, bold sparkle, shape, romance or clean sparkle."
+      "question": "Should earrings touch the shoulders?",
+      "answer": "Repeated contact may affect movement and wearability. Test the exact earrings and dress while turning the head, sitting and walking."
     }
   ],
   "cta": {
-    "heading": "An off-shoulder dress gives earrings space to shine. Choose drop earrings when you want movement, bold statement earrings when the dress is simple, hoops when you want modern shape, medium studs when the outfit has detail, and butterfly earrings when the look should feel romantic.",
-    "body": "Start with IWantJewels demi-fine lab-grown diamond earrings if you want off-shoulder dress jewellery with real diamond sparkle. Choose Orsola for elegant movement, Lusso for bold evening impact, Pave Hoops for shape, Cadenza M for clean sparkle, Farfalla for romantic softness and Concetta Short for delicate occasion styling.",
-    "primaryLabel": "Shop Earrings for Off-Shoulder Dresses",
+    "heading": "An off-shoulder dress provides visible space around the shoulders and face, but it does not require one particular earring type.",
+    "body": "The most reliable choice comes from measuring the earrings, checking shoulder clearance and considering the dress's sleeves, fabric and detail.",
+    "primaryLabel": "Explore Earrings for Off-Shoulder Dresses",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Drop Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Party Earrings Guide",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "Jewellery for a Sweetheart Neckline",
+    "secondaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline",
+    "tertiaryLabel": "What Jewellery to Wear with a Black Dress",
+    "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
   }
 }
