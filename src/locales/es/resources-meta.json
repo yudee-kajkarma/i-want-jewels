@@ -107,9 +107,9 @@
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "¿Qué son los diamantes cultivados en laboratorio?",
-      "excerpt": "Los diamantes cultivados en laboratorio son diamantes reales: química, física y ópticamente idénticos a los diamantes extraídos. Así es como se crean y por qué son importantes.",
-      "readTime": "6 minutos de lectura",
+      "title": "¿Qué son los diamantes de laboratorio? Guía clara",
+      "excerpt": "Descubra qué son los diamantes de laboratorio, cómo se crean mediante CVD y HPHT, en qué se diferencian de los extraídos y qué debe comprobar al comprar.",
+      "readTime": "13 minutos de lectura",
       "tags": [
         "cultivado en laboratorio",
         "diamantes",
@@ -941,6 +941,66 @@
         "gotas",
         "pendientes de mariposa",
         "cultivado en laboratorio"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Guía de joyería de viaje: embalaje, almacenamiento y cuidado",
+      "excerpt": "Aprenda qué joyas empacar para unas vacaciones, cómo evitar enredos y daños, qué llevar en el equipaje de mano y cómo cuidar las piezas mientras viaja.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "joyería de viaje",
+        "equipaje",
+        "cuidado de joyas",
+        "aretes",
+        "almacenamiento"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "¿Qué son los pendientes Huggie? Ajuste, tallas y cierres",
+      "excerpt": "Aprenda qué son los aretes huggie, en qué se diferencian de los aros y cómo elegir el diámetro, el grosor, el cierre, el material y el ajuste correctos para su oreja.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "aretes huggie",
+        "tallas de aretes",
+        "ajuste",
+        "guía de compra",
+        "aros"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "Cómo combinar aretes Huggie: guía completa",
+      "excerpt": "Aprenda a combinar aretes tipo huggie solos, con aretes de botón y en aros equilibrados. Combina su tamaño, detalles de metal y diamantes con atuendos y ocasiones.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "aretes huggie",
+        "estilo de aretes",
+        "pilas de orejas",
+        "colores de metal",
+        "aretes de botón"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "Cómo combinar aretes de mariposa",
+      "excerpt": "Aprende a combinar aretes de mariposa con ropa informal, vestidos, collares y pilas de orejas. Compara los diseños sencillos, de diamantes y pavé.",
+      "readTime": "13 minutos de lectura",
+      "tags": [
+        "aretes de mariposa",
+        "estilo de aretes",
+        "joyería con motivo",
+        "escotes",
+        "pilas de orejas"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "Cómo combinar aretes geométricos",
+      "excerpt": "Aprende a combinar aretes geométricos con ropa de trabajo, looks informales, vestidos y atuendos de noche, con consejos de tamaño, escotes y joyería.",
+      "readTime": "12 minutos de lectura",
+      "tags": [
+        "aretes geométricos",
+        "estilo de aretes",
+        "ropa de trabajo",
+        "escotes",
+        "colores de metal"
       ]
     }
   },

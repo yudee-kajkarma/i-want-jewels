@@ -107,9 +107,9 @@
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "Wat zijn in het laboratorium gekweekte diamanten?",
-      "excerpt": "In het laboratorium gekweekte diamanten zijn echte diamanten – chemisch, fysiek en optisch identiek aan gedolven diamanten. Hier leest u hoe ze worden gemaakt en waarom ze ertoe doen.",
-      "readTime": "6 minuten lezen",
+      "title": "Wat zijn labgegroeide diamanten? Heldere uitleg",
+      "excerpt": "Ontdek wat labgegroeide diamanten zijn, hoe CVD- en HPHT-diamanten ontstaan en hoe ze verschillen van mijndiamanten.",
+      "readTime": "13 minuten lezen",
       "tags": [
         "in het laboratorium gekweekt",
         "diamanten",
@@ -941,6 +941,66 @@
         "druppels",
         "vlinder oorbellen",
         "in het laboratorium gekweekt"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Gids voor reissieraden: verpakking, opslag en onderhoud",
+      "excerpt": "Ontdek welke sieraden u mee moet nemen op vakantie, hoe u klitten en beschadigingen kunt voorkomen, wat u in de handbagage moet bewaren en hoe u de sieraden tijdens het reizen moet verzorgen.",
+      "readTime": "12 minuten lezen",
+      "tags": [
+        "reissieraden",
+        "inpakken",
+        "sieradenonderhoud",
+        "oorbellen",
+        "opbergen"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "Wat zijn Huggie-oorbellen? Pasvorm, maten en sluitingen",
+      "excerpt": "Ontdek wat Huggie-oorbellen zijn, hoe ze verschillen van oorringen en hoe je de juiste diameter, dikte, sluiting, materiaal en pasvorm voor jouw oor kiest.",
+      "readTime": "13 minuten lezen",
+      "tags": [
+        "huggie-oorbellen",
+        "oorbelmaten",
+        "pasvorm",
+        "koopgids",
+        "creolen"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "Huggie-oorbellen stylen: complete gids",
+      "excerpt": "Leer hoe je Huggie-oorbellen alleen kunt stylen, met oorknopjes en in uitgebalanceerde oorstapels. Zorg ervoor dat de maat, het metaal en de diamantdetails passen bij outfits en gelegenheden.",
+      "readTime": "12 minuten lezen",
+      "tags": [
+        "huggie-oorbellen",
+        "oorbellen stylen",
+        "oorstapels",
+        "metaalkleuren",
+        "oorknopjes"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "Vlinderoorbellen stylen: de complete gids",
+      "excerpt": "Leer hoe je vlinderoorbellen combineert met casual outfits, jurken, kettingen en oorstapels. Vergelijk eenvoudige, diamanten en pavé-ontwerpen.",
+      "readTime": "13 minuten lezen",
+      "tags": [
+        "vlinderoorbellen",
+        "oorbellen stylen",
+        "motiefsieraden",
+        "halslijnen",
+        "oorstapels"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "Geometrische oorbellen stylen",
+      "excerpt": "Leer hoe je geometrische oorbellen combineert met werkkleding, casual outfits, jurken en avondlooks, met advies over maat, halslijnen en sieraden.",
+      "readTime": "12 minuten lezen",
+      "tags": [
+        "geometrische oorbellen",
+        "oorbellen stylen",
+        "werkkleding",
+        "halslijnen",
+        "metaalkleuren"
       ]
     }
   },

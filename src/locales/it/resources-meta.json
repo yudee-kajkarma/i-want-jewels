@@ -107,9 +107,9 @@
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "Cosa sono i diamanti coltivati ​​in laboratorio?",
-      "excerpt": "I diamanti coltivati ​​in laboratorio sono veri diamanti: chimicamente, fisicamente e otticamente identici ai diamanti estratti. Ecco come vengono creati e perché sono importanti.",
-      "readTime": "6 minuti di lettura",
+      "title": "Cosa sono i diamanti da laboratorio? Guida chiara",
+      "excerpt": "Scopra cosa sono i diamanti da laboratorio, come si producono con CVD e HPHT, come si confrontano con quelli estratti e cosa verificare.",
+      "readTime": "13 minuti di lettura",
       "tags": [
         "coltivato in laboratorio",
         "diamanti",
@@ -941,6 +941,66 @@
         "gocce",
         "orecchini a farfalla",
         "coltivato in laboratorio"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Guida ai gioielli da viaggio: imballaggio, conservazione e cura",
+      "excerpt": "Scopri quali gioielli mettere in valigia per una vacanza, come evitare grovigli e danni, cosa tenere nel bagaglio a mano e come prendersene cura durante il viaggio.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "gioielli da viaggio",
+        "valigia",
+        "cura dei gioielli",
+        "orecchini",
+        "conservazione"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "Cosa sono gli orecchini Huggie? Vestibilità, taglie e chiusure",
+      "excerpt": "Scopri cosa sono gli orecchini Huggie, come differiscono dai cerchi e come scegliere il diametro, lo spessore, la chiusura, il materiale e la vestibilità giusti per il tuo orecchio.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "orecchini huggie",
+        "misure orecchini",
+        "vestibilità",
+        "guida all'acquisto",
+        "orecchini a cerchio"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "Come abbinare gli orecchini Huggie: guida completa",
+      "excerpt": "Impara come abbinare gli orecchini Huggie da soli, con orecchini a bottone e in pile bilanciate. Abbina le loro dimensioni, i dettagli in metallo e diamanti agli outfit e alle occasioni.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "orecchini huggie",
+        "styling orecchini",
+        "ear stack",
+        "colori del metallo",
+        "orecchini a bottone"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "Come abbinare gli orecchini a farfalla",
+      "excerpt": "Scopri come abbinare gli orecchini a farfalla con outfit casual, abiti, collane ed ear stack. Confronta i modelli semplici, con diamanti e pavé.",
+      "readTime": "13 minuti di lettura",
+      "tags": [
+        "orecchini a farfalla",
+        "styling orecchini",
+        "gioielli con motivo",
+        "scollature",
+        "ear stack"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "Come abbinare gli orecchini geometrici",
+      "excerpt": "Scopri come abbinare gli orecchini geometrici con abiti da lavoro, look casual, vestiti e outfit da sera, con consigli su misura, scollature e gioielli.",
+      "readTime": "12 minuti di lettura",
+      "tags": [
+        "orecchini geometrici",
+        "styling orecchini",
+        "abbigliamento da lavoro",
+        "scollature",
+        "colori del metallo"
       ]
     }
   },

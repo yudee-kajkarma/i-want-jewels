@@ -107,23 +107,26 @@
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "What Are Lab-Grown Diamonds?",
-      "excerpt": "Lab-grown diamonds are real diamonds — chemically, physically, and optically identical to mined diamonds. Here is how they are created and why they matter.",
-      "readTime": "6 min read",
+      "title": "What Are Lab-Grown Diamonds? A Clear Guide",
+      "excerpt": "Learn what lab-grown diamonds are, how CVD and HPHT diamonds are created, how they compare with mined diamonds and what buyers should check.",
+      "readTime": "13 min read",
       "tags": [
         "lab-grown",
         "diamonds",
-        "education"
+        "education",
+        "HPHT",
+        "CVD"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia": {
       "title": "Lab-Grown Diamonds vs Cubic Zirconia: What Is the Difference?",
-      "excerpt": "Learn the difference between lab grown diamonds and cubic zirconia, including sparkle, durability, price, value and jewellery use.",
+      "excerpt": "Compare lab-grown diamonds and cubic zirconia by material, sparkle, durability, price and everyday wear to decide which stone suits you.",
       "readTime": "12 min read",
       "tags": [
         "lab-grown",
         "cubic zirconia",
-        "comparison"
+        "comparison",
+        "simulants"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite": {
@@ -941,6 +944,66 @@
         "drops",
         "butterfly earrings",
         "lab-grown"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Travel Jewellery Guide: Packing, Storage & Care",
+      "excerpt": "Learn what jewellery to pack for a holiday, how to prevent tangles and damage, what to keep in hand luggage, and how to care for pieces while travelling.",
+      "readTime": "12 min read",
+      "tags": [
+        "travel jewellery",
+        "packing",
+        "jewellery care",
+        "earrings",
+        "storage"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "What Are Huggie Earrings? Fit, Sizes & Closures",
+      "excerpt": "Learn what huggie earrings are, how they differ from hoops and how to choose the right diameter, thickness, closure, material and fit for your ear.",
+      "readTime": "13 min read",
+      "tags": [
+        "huggie earrings",
+        "earring sizes",
+        "earring fit",
+        "buying guide",
+        "hoops"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "How to Style Huggie Earrings: Complete Guide",
+      "excerpt": "Learn how to style huggie earrings alone, with studs and in balanced ear stacks. Match their size, metal and diamond detail to outfits and occasions.",
+      "readTime": "12 min read",
+      "tags": [
+        "huggie earrings",
+        "earring styling",
+        "ear stacks",
+        "metal colours",
+        "studs"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "How to Style Butterfly Earrings",
+      "excerpt": "Learn how to style butterfly earrings with casual outfits, dresses, necklaces and ear stacks. Compare simple, diamond and pavé butterfly designs.",
+      "readTime": "13 min read",
+      "tags": [
+        "butterfly earrings",
+        "earring styling",
+        "motif jewellery",
+        "necklines",
+        "ear stacks"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "How to Style Geometric Earrings",
+      "excerpt": "Learn how to style geometric earrings with workwear, casual outfits, dresses and evening looks, including advice on size, necklines and other jewellery.",
+      "readTime": "12 min read",
+      "tags": [
+        "geometric earrings",
+        "earring styling",
+        "workwear",
+        "necklines",
+        "metal colours"
       ]
     }
   },

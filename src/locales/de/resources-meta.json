@@ -107,9 +107,9 @@
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "Was sind im Labor gezüchtete Diamanten?",
-      "excerpt": "Im Labor gezüchtete Diamanten sind echte Diamanten – chemisch, physikalisch und optisch identisch mit abgebauten Diamanten. Hier erfahren Sie, wie sie erstellt werden und warum sie wichtig sind.",
-      "readTime": "6 Min. gelesen",
+      "title": "Was sind im Labor gezüchtete Diamanten? Klar erklärt",
+      "excerpt": "Erfahren Sie, wie im Labor gezüchtete Diamanten entstehen, wie CVD und HPHT sich von Minendiamanten unterscheiden und worauf Sie beim Kauf achten.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "im Labor gezüchtet",
         "Diamanten",
@@ -941,6 +941,66 @@
         "Tropfen",
         "Schmetterlingsohrringe",
         "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Reiseführer für Schmuck: Verpackung, Lagerung und Pflege",
+      "excerpt": "Erfahren Sie, welchen Schmuck Sie für den Urlaub einpacken sollten, wie Sie Verwicklungen und Beschädigungen vermeiden, was Sie im Handgepäck aufbewahren sollten und wie Sie auf Reisen auf die Schmuckstücke achten.",
+      "readTime": "12 Min. gelesen",
+      "tags": [
+        "Reiseschmuck",
+        "Packen",
+        "Schmuckpflege",
+        "Ohrringe",
+        "Aufbewahrung"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "Was sind Huggie-Ohrringe? Passform, Größen und Verschlüsse",
+      "excerpt": "Erfahren Sie, was Huggie-Ohrringe sind, wie sie sich von Creolen unterscheiden und wie Sie den richtigen Durchmesser, die richtige Dicke, den richtigen Verschluss, das richtige Material und die richtige Passform für Ihr Ohr auswählen.",
+      "readTime": "13 Min. gelesen",
+      "tags": [
+        "Huggie-Ohrringe",
+        "Ohrringgrößen",
+        "Passform",
+        "Kaufratgeber",
+        "Creolen"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "So stylen Sie Huggie-Ohrringe: Komplette Anleitung",
+      "excerpt": "Erfahren Sie, wie Sie Huggie-Ohrringe einzeln, mit Ohrsteckern und in ausgewogenen Ohrstapeln stylen. Passen Sie Größe, Metall- und Diamantdetails an Outfits und Anlässe an.",
+      "readTime": "12 Min. gelesen",
+      "tags": [
+        "Huggie-Ohrringe",
+        "Ohrring-Styling",
+        "Ear-Stacks",
+        "Metallfarben",
+        "Ohrstecker"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "Schmetterling-Ohrringe stylen: Der komplette Guide",
+      "excerpt": "Erfahren Sie, wie Sie Schmetterling-Ohrringe zu Alltagsoutfits, Kleidern, Halsketten und Ear-Stacks stylen. Vergleichen Sie schlichte, Diamant- und Pavé-Designs.",
+      "readTime": "13 Min. gelesen",
+      "tags": [
+        "Schmetterling-Ohrringe",
+        "Ohrring-Styling",
+        "Motivschmuck",
+        "Ausschnitte",
+        "Ear-Stacks"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "Geometrische Ohrringe stylen",
+      "excerpt": "Erfahren Sie, wie Sie geometrische Ohrringe zu Business-Looks, Alltagsoutfits, Kleidern und Abendlooks stylen – mit Hinweisen zu Größe, Ausschnitt und Schmuck.",
+      "readTime": "12 Min. gelesen",
+      "tags": [
+        "geometrische Ohrringe",
+        "Ohrring-Styling",
+        "Businesskleidung",
+        "Ausschnitte",
+        "Metallfarben"
       ]
     }
   },

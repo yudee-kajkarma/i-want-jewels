@@ -167,24 +167,24 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-are-lab-grown-diamonds",
     categorySlug: "lab-grown-diamond-guides",
-    title: "What Are Lab-Grown Diamonds?",
+    title: "What Are Lab-Grown Diamonds? A Clear Guide",
     excerpt:
-      "Lab-grown diamonds are real diamonds — chemically, physically, and optically identical to mined diamonds. Here is how they are created and why they matter.",
-    coverImage: "/blog-images/blog-image-2.jpg",
+      "Learn what lab-grown diamonds are, how CVD and HPHT diamonds are created, how they compare with mined diamonds and what buyers should check.",
+    coverImage: "/blog-images/blog-image-60.jpg",
     publishedAt: "2025-03-10",
-    readTime: "6 min read",
-    tags: ["lab-grown", "diamonds", "education"],
+    readTime: "13 min read",
+    tags: ["lab-grown", "diamonds", "education", "HPHT", "CVD"],
   },
   {
     slug: "lab-grown-diamonds-vs-cubic-zirconia",
     categorySlug: "lab-grown-diamond-guides",
     title: "Lab-Grown Diamonds vs Cubic Zirconia: What Is the Difference?",
     excerpt:
-      "Learn the difference between lab grown diamonds and cubic zirconia, including sparkle, durability, price, value and jewellery use.",
-    coverImage: "/blog-images/blog-image-115.png",
+      "Compare lab-grown diamonds and cubic zirconia by material, sparkle, durability, price and everyday wear to decide which stone suits you.",
+    coverImage: "/blog-images/blog-image-61.jpg",
     publishedAt: "2025-04-15",
     readTime: "12 min read",
-    tags: ["lab-grown", "cubic zirconia", "comparison"],
+    tags: ["lab-grown", "cubic zirconia", "comparison", "simulants"],
   },
   {
     slug: "lab-grown-diamonds-vs-moissanite",

@@ -107,9 +107,9 @@
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "Que sont les diamants cultivés en laboratoire ?",
-      "excerpt": "Les diamants cultivés en laboratoire sont de vrais diamants – chimiquement, physiquement et optiquement identiques aux diamants extraits. Voici comment ils sont créés et pourquoi ils sont importants.",
-      "readTime": "6 minutes de lecture",
+      "title": "Que sont les diamants de laboratoire ? Guide clair",
+      "excerpt": "Découvrez les diamants de laboratoire, leur création par CVD et HPHT, leurs différences avec les diamants naturels et les points à vérifier avant l’achat.",
+      "readTime": "13 minutes de lecture",
       "tags": [
         "cultivé en laboratoire",
         "diamants",
@@ -941,6 +941,66 @@
         "gouttes",
         "boucles d'oreilles papillon",
         "cultivé en laboratoire"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Guide des bijoux de voyage : emballage, stockage et entretien",
+      "excerpt": "Découvrez quels bijoux emporter pour des vacances, comment éviter les enchevêtrements et les dommages, ce qu'il faut garder dans un bagage à main et comment prendre soin des pièces en voyage.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "bijoux de voyage",
+        "bagages",
+        "entretien des bijoux",
+        "boucles d'oreilles",
+        "rangement"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "Que sont les boucles d’oreilles Huggie ? Coupe, tailles et fermetures",
+      "excerpt": "Découvrez ce que sont les boucles d'oreilles huggie, en quoi elles diffèrent des créoles et comment choisir le bon diamètre, l'épaisseur, la fermeture, le matériau et l'ajustement pour votre oreille.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "boucles huggie",
+        "tailles de boucles",
+        "ajustement",
+        "guide d'achat",
+        "créoles"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "Comment porter des boucles d'oreilles Huggie : guide complet",
+      "excerpt": "Apprenez à porter des boucles d'oreilles huggie seules, avec des clous et des piles d'oreilles équilibrées. Assortissez leur taille, leurs détails en métal et en diamant aux tenues et aux occasions.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "boucles huggie",
+        "style de boucles",
+        "piles d'oreilles",
+        "couleurs de métal",
+        "clous d'oreilles"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "Comment porter des boucles d'oreilles papillon",
+      "excerpt": "Apprenez à porter des boucles d'oreilles papillon avec des tenues décontractées, des robes, des colliers et des piles d'oreilles. Comparez les modèles simples, diamant et pavé.",
+      "readTime": "13 minutes de lecture",
+      "tags": [
+        "boucles papillon",
+        "style de boucles",
+        "bijoux à motif",
+        "encolures",
+        "piles d'oreilles"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "Comment porter des boucles d'oreilles géométriques",
+      "excerpt": "Apprenez à porter des boucles d'oreilles géométriques avec des tenues de travail, décontractées, des robes et des looks du soir : taille, encolures et bijoux.",
+      "readTime": "12 minutes de lecture",
+      "tags": [
+        "boucles géométriques",
+        "style de boucles",
+        "tenues de travail",
+        "encolures",
+        "couleurs de métal"
       ]
     }
   },
