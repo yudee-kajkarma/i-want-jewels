@@ -13,6 +13,8 @@ out/
 build/
 dist/
 .env
+.env*
+!.env.example
 
 *.local
 tree.txt
