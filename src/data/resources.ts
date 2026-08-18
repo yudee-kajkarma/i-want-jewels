@@ -1073,6 +1073,23 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
+    slug: "how-to-style-geometric-earrings",
+    categorySlug: "earring-style-guides",
+    title: "How to Style Geometric Earrings",
+    excerpt:
+      "Learn how to style geometric earrings with workwear, casual outfits, dresses and evening looks, including advice on size, necklines and other jewellery.",
+    coverImage: "/blog-images/blog-image-62.jpg",
+    publishedAt: "2025-10-20",
+    readTime: "12 min read",
+    tags: [
+      "geometric earrings",
+      "earring styling",
+      "workwear",
+      "necklines",
+      "metal colours",
+    ],
+  },
+  {
     slug: "how-to-style-butterfly-earrings",
     categorySlug: "earring-style-guides",
     title: "How to Style Butterfly Earrings",
