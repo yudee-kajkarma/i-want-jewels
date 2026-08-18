@@ -1073,6 +1073,23 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
+    slug: "how-to-style-butterfly-earrings",
+    categorySlug: "earring-style-guides",
+    title: "How to Style Butterfly Earrings",
+    excerpt:
+      "Learn how to style butterfly earrings with casual outfits, dresses, necklaces and ear stacks. Compare simple, diamond and pavé butterfly designs.",
+    coverImage: "/blog-images/blog-image-68.jpg",
+    publishedAt: "2025-10-18",
+    readTime: "13 min read",
+    tags: [
+      "butterfly earrings",
+      "earring styling",
+      "motif jewellery",
+      "necklines",
+      "ear stacks",
+    ],
+  },
+  {
     slug: "how-to-style-huggie-earrings",
     categorySlug: "earring-style-guides",
     title: "How to Style Huggie Earrings",
