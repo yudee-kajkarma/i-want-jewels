@@ -1073,6 +1073,23 @@ export const resourceArticles: ResourceArticle[] = [
     ],
   },
   {
+    slug: "how-to-style-huggie-earrings",
+    categorySlug: "earring-style-guides",
+    title: "How to Style Huggie Earrings",
+    excerpt:
+      "Learn how to style huggie earrings alone, with studs and in balanced ear stacks. Match their size, metal and diamond detail to outfits and occasions.",
+    coverImage: "/blog-images/blog-image-78.jpg",
+    publishedAt: "2025-10-16",
+    readTime: "12 min read",
+    tags: [
+      "huggie earrings",
+      "earring styling",
+      "ear stacks",
+      "metal colours",
+      "studs",
+    ],
+  },
+  {
     slug: "what-are-huggie-earrings",
     categorySlug: "earring-style-guides",
     title: "What Are Huggie Earrings? Fit, Sizes and Buying Guide",
