@@ -191,11 +191,11 @@ export const resourceArticles: ResourceArticle[] = [
     categorySlug: "lab-grown-diamond-guides",
     title: "Lab-Grown Diamonds vs Moissanite: What Is the Difference?",
     excerpt:
-      "Compare lab grown diamonds and moissanite in simple language. Learn the difference in sparkle, durability, price, value and jewellery use.",
-    coverImage: "/blog-images/blog-image-19.jpg",
+      "Compare lab-grown diamonds and moissanite by material, sparkle, hardness, price and everyday wear to choose the right stone for you.",
+    coverImage: "/blog-images/blog-image-81.jpg",
     publishedAt: "2025-04-20",
     readTime: "13 min read",
-    tags: ["lab-grown", "moissanite", "comparison"],
+    tags: ["lab-grown", "moissanite", "comparison", "simulants"],
   },
   {
     slug: "how-to-clean-lab-grown-diamond-earrings",
