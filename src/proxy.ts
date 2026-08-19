@@ -39,6 +39,24 @@ function hasNonEnglishLocalePrefix(pathname: string): boolean {
   )
 }
 
+/**
+ * Mark a response as depending on the locale cookie.
+ *
+ * An unprefixed URL like `/` serves different content per visitor: English is
+ * rewritten in place, every other locale is redirected. Without `Vary`, a cache
+ * may store the English copy of `/` from a first, cookie-less visit and replay
+ * it afterwards — the request never reaches this proxy, so the cookie is never
+ * read and the visitor is stuck in English. Sub-paths appeared to work only
+ * because they were not in the cache yet.
+ *
+ * Appended rather than assigned: Next.js adds its own `Vary` entries for RSC
+ * navigation, and overwriting them would break client-side routing.
+ */
+function varyOnLocaleCookie(response: NextResponse): NextResponse {
+  response.headers.append('Vary', 'Cookie')
+  return response
+}
+
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   const search = request.nextUrl.search
@@ -69,7 +87,9 @@ export function proxy(request: NextRequest) {
 
   if (detectedLocale === fallbackLng) {
     const internalPath = getInternalLocalePath(fallbackLng, pathnameWithoutLocale)
-    return NextResponse.rewrite(new URL(`${internalPath}${search}`, request.url))
+    return varyOnLocaleCookie(
+      NextResponse.rewrite(new URL(`${internalPath}${search}`, request.url)),
+    )
   }
 
   // 307, not 308: this redirect is derived from the request (cookie /
@@ -80,7 +100,9 @@ export function proxy(request: NextRequest) {
   // request ever reached the server. The legacy-English redirect above is a
   // genuinely permanent URL move and correctly stays 308.
   const localizedPath = getLocalizedPath(detectedLocale, pathnameWithoutLocale)
-  return NextResponse.redirect(new URL(`${localizedPath}${search}`, request.url), 307)
+  return varyOnLocaleCookie(
+    NextResponse.redirect(new URL(`${localizedPath}${search}`, request.url), 307),
+  )
 }
 
 export const config = {
