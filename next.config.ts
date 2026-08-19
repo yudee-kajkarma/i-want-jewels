@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import { buildRedirects } from './src/data/redirects'
 
 const allowedDevOrigins =
   process.env.ALLOWED_DEV_ORIGINS?.split(',')
@@ -17,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+  },
+  // SEO migration: permanent (308) redirects for retired blog and resource URLs.
+  // Table lives in src/data/redirects.ts — see docs/seo-migration-tracker.md §2 and §3.
+  async redirects() {
+    return buildRedirects()
   },
 }
 

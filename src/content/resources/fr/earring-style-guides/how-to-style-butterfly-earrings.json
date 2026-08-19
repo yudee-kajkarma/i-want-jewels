@@ -1,35 +1,35 @@
 {
   "meta": {
-    "title": "Comment porter des boucles d'oreilles papillon",
-    "description": "Apprenez à porter des boucles d'oreilles papillon avec des tenues décontractées, des robes, des colliers et des piles d'oreilles. Comparez les modèles simples, diamant et pavé."
+    "title": "Comment porter des boucles d’oreilles papillon",
+    "description": "Comment porter des boucles d’oreilles papillon avec tenues décontractées, robes, colliers et ear stack. Comparez les modèles simples, diamant et pavé."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-68.jpg",
-    "title": "Comment porter des boucles d'oreilles papillon",
-    "subtitle": "Tenues, encolures, piles d'oreilles et couleurs de métal",
+    "title": "Comment porter des boucles d’oreilles papillon",
+    "subtitle": "Tenues, encolures, ear stacks et couleurs de métal",
     "paragraphs": [
-      "Les boucles d'oreilles papillon peuvent se porter comme un motif discret, comme point de mire serti de diamants ou comme élément d'accompagnement dans une pile d'oreilles. Tout dépend des dimensions, de la structure et du détail de surface du bijou, et non du simple fait qu'il adopte une forme de papillon.",
-      "Un petit clou papillon forme un motif compact orienté vers l'avant. Un papillon en diamant plus large couvre davantage le lobe et peut devenir la pièce principale. Un pendant papillon apporte de la longueur et du mouvement, tandis qu'un modèle serti pavé répartit les diamants sur les ailes.",
-      "Pour un résultat équilibré, décidez si les boucles d'oreilles papillon doivent mener la tenue ou l'accompagner. Si elles ont une silhouette large ou une couverture importante en diamants, gardez le collier et les autres boucles d'oreilles discrets. Si le papillon est petit et simple, un autre bijou peut prendre un rôle plus visible."
+      "Les boucles d’oreilles papillon peuvent être portées comme un motif discret, un point focal serti de diamants ou un élément secondaire dans un ear stack. La bonne approche dépend de leurs dimensions, de leur structure et de leurs détails de surface, pas seulement de leur forme papillon.",
+      "Une petite puce d’oreille papillon crée un motif compact, visible de face. Un papillon plus large serti de diamants couvre davantage le lobe et peut devenir la pièce maîtresse. Un modèle pendant ajoute de la longueur ou du mouvement, tandis qu’un modèle pavé répartit les diamants sur les ailes.",
+      "Pour un look équilibré, déterminez si les boucles d’oreilles papillon doivent dominer ou accompagner votre tenue. Si elles ont une silhouette large ou une importante couverture de diamants, choisissez un collier et d’autres boucles d’oreilles discrets. Si le papillon est petit et simple, un autre bijou peut jouer un rôle plus visible."
     ],
-    "shopLabel": "Découvrir les boucles d'oreilles en diamants de laboratoire",
+    "shopLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Décidez si le papillon doit mener le look ou l'accompagner",
-      "Choisissez selon la largeur, la hauteur et la profondeur totales, pas le carat",
-      "Gardez les autres bijoux discrets si les ailes sont larges ou serties",
-      "Évitez de cumuler plusieurs motifs naturels concurrents",
-      "Fiez-vous aux dimensions plutôt qu'aux mots « simple » et « pavé »",
-      "Aucun modèle papillon n'appartient à une tranche d'âge",
-      "Vérifiez le profil latéral, pas seulement la photo de face"
+      "Déterminez si le papillon doit dominer le look ou l’accompagner",
+      "Basez-vous sur la largeur, la hauteur et la projection totales, pas sur le poids en carats",
+      "Restez discrète avec les autres bijoux si les ailes sont larges ou serties de diamants",
+      "Évitez d’empiler plusieurs motifs inspirés de la nature qui se concurrencent",
+      "Utilisez les dimensions plutôt que les termes « simple » et « pavé »",
+      "Aucun modèle papillon n’est réservé à une tranche d’âge",
+      "Observez le profil de côté, pas seulement la photo de face"
     ],
     "image": "/blog-images/blog-image-82.jpg"
   },
   "content": [
     {
-      "heading": "Le style papillon en un coup d'œil",
+      "heading": "Le style des boucles d’oreilles papillon en bref",
       "content": [
         {
           "type": "grid-layout",
@@ -38,210 +38,254 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Objectif de style", "Orientation du papillon", "Bijoux d'accompagnement"],
+              "headers": [
+                "Objectif de style",
+                "Orientation du style des boucles d’oreilles papillon",
+                "Bijoux complémentaires"
+              ],
               "rows": [
-                ["Motif discret", "Petit clou papillon", "Collier fin ou aucun collier"],
-                ["Diamant en vedette", "Papillon serti de diamants", "Bijoux d'accompagnement minimalistes"],
-                ["Pile à deux piercings", "Clou papillon avec un solitaire plus petit", "Laisser un espace visible entre les sertissages"],
-                ["Style du soir", "Papillon plus visible ou serti", "Collier ou bracelet discret"],
-                ["Robe détaillée", "Papillon plus petit et plus épuré", "Éviter les motifs concurrents"],
-                ["Tenue unie", "Papillon plus large ou plus détaillé", "Laisser les boucles d'oreilles mener"],
-                ["Mélange de métaux", "Papillon dans une seule couleur de métal", "Répéter cette couleur ailleurs"],
-                ["Cadeau symbolique", "Motif papillon nettement défini", "Limiter les autres motifs"],
-                ["Style asymétrique", "Papillon d'un côté, forme apparentée de l'autre", "Répéter le métal ou le détail en diamant"],
-                ["Tenue à fleurs", "Proportions de papillon maîtrisées", "Éviter de cumuler les motifs naturels"]
+                [
+                  "Motif discret",
+                  "Petite puce d’oreille papillon",
+                  "Collier délicat ou pas de collier"
+                ],
+                [
+                  "Style centré sur les diamants",
+                  "Papillon serti de diamants",
+                  "Bijoux secondaires discrets"
+                ],
+                [
+                  "Stack à deux piercings",
+                  "Puce papillon avec un petit solitaire",
+                  "Laissez un espace visible entre les sertis"
+                ],
+                [
+                  "Style du soir",
+                  "Papillon plus visible ou serti de diamants",
+                  "Collier ou bracelet discret"
+                ],
+                [
+                  "Robe travaillée",
+                  "Modèle papillon plus petit et épuré",
+                  "Évitez les motifs concurrents"
+                ],
+                [
+                  "Tenue sobre",
+                  "Papillon plus large ou plus détaillé",
+                  "Laissez les boucles d’oreilles dominer"
+                ],
+                [
+                  "Style avec plusieurs métaux",
+                  "Papillon dans une couleur de métal",
+                  "Répétez cette couleur ailleurs"
+                ],
+                [
+                  "Style cadeau symbolique",
+                  "Motif papillon clairement défini",
+                  "Limitez les autres motifs"
+                ],
+                [
+                  "Style asymétrique",
+                  "Papillon d’un côté, forme associée de l’autre",
+                  "Répétez le métal ou les détails en diamant"
+                ],
+                [
+                  "Tenue fleurie",
+                  "Proportions maîtrisées du papillon",
+                  "Évitez de combiner trop de motifs naturels"
+                ]
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Ce sont des orientations, non des règles universelles. La largeur, la hauteur, le poids, la profondeur et la position sur l'oreille déterminent l'effet réel."
+          "text": "Il s’agit de pistes de style, pas de règles universelles. La largeur, la hauteur, le poids, la projection et la position de la boucle sur l’oreille déterminent son impact visuel réel."
         }
       ]
     },
     {
-      "heading": "Commencez par le type de boucle d'oreille papillon",
+      "heading": "Commencez par le type de boucles d’oreilles papillon",
       "content": [
         {
           "type": "section-lead",
-          "text": "Les boucles d'oreilles papillon existent en plusieurs structures. Chacune demande une approche différente."
+          "text": "Les boucles d’oreilles papillon existent dans plusieurs structures. Chacune demande une approche différente."
         },
         {
           "type": "subheading",
-          "text": "Clous papillon"
+          "text": "Puces d’oreilles papillon"
         },
         {
           "type": "paragraph",
-          "text": "Les clous papillon se posent à l'avant du lobe avec une tige et un fermoir. Leur présence dépend de la taille du motif complet, et pas uniquement des diamants qu'il contient."
+          "text": "Les puces d’oreilles papillon se placent sur l’avant du lobe à l’aide d’une tige et d’un fermoir. Leur présence visuelle dépend de la taille du motif complet, pas seulement des diamants qu’il contient."
         },
         {
           "type": "paragraph",
-          "text": "Un petit clou papillon peut servir d'élément d'accompagnement. Un clou à ailes plus grand couvre une part importante du lobe et fonctionne mieux comme boucle principale."
+          "text": "Une petite puce papillon peut jouer un rôle secondaire. Une puce aux ailes plus larges peut couvrir une partie importante du lobe et mieux fonctionner comme boucle d’oreilles focale."
         },
         {
           "type": "subheading",
-          "text": "Pendants papillon"
+          "text": "Boucles d’oreilles papillon pendantes"
         },
         {
           "type": "paragraph",
-          "text": "Un pendant papillon place tout ou partie du motif sous le lobe. Il peut être fixe ou articulé pour permettre le mouvement. Vérifiez la longueur totale, la largeur maximale, le poids et l'articulation avant d'en faire une boucle d'occasion."
+          "text": "Une boucle papillon pendante place une partie ou la totalité du motif sous le lobe. Elle peut comporter un pendant fixe ou des éléments articulés qui permettent le mouvement. Vérifiez la longueur totale, la largeur maximale, le poids et l’articulation avant de la considérer comme une boucle de cérémonie."
         },
         {
           "type": "subheading",
-          "text": "Papillons simples"
+          "text": "Boucles d’oreilles papillon simples"
         },
         {
           "type": "paragraph",
-          "text": "Un modèle simple repose surtout sur le contour, le métal poli ou un nombre limité de pierres. « Simple » ne veut pas forcément dire petit, léger ou adapté à toutes les situations."
+          "text": "Un modèle papillon simple repose principalement sur le contour, le métal poli ou un nombre limité de pierres. « Simple » ne signifie pas nécessairement petit, léger ou adapté à toutes les situations."
         },
         {
           "type": "subheading",
-          "text": "Papillons diamant ou pavé"
+          "text": "Boucles d’oreilles papillon en diamant ou pavé"
         },
         {
           "type": "paragraph",
-          "text": "Les papillons en diamant placent des pierres sur une partie ou la totalité du motif. Le terme « pavé » ne s'applique que lorsque le sertissage utilise réellement de nombreuses petites pierres maintenues serrées dans la surface, et non dès qu'un modèle comporte plusieurs diamants."
+          "text": "Les boucles d’oreilles papillon en diamant répartissent les diamants sur une partie ou la totalité du motif. Le terme « pavé » s’applique uniquement lorsque le serti utilise réellement plusieurs petites pierres rapprochées dans la surface, et non simplement parce que le modèle contient plusieurs diamants."
         },
         {
           "type": "subheading",
-          "text": "Papillons sculpturaux"
+          "text": "Boucles d’oreilles papillon sculpturales"
         },
         {
           "type": "paragraph",
-          "text": "Un modèle sculptural peut présenter des ailes courbes, ouvertes ou tridimensionnelles. La profondeur devient alors déterminante, car un papillon en trois dimensions paraît souvent plus présent qu'un motif plat aux dimensions de face similaires."
+          "text": "Un modèle sculptural peut présenter des ailes courbes, ajourées ou en volume. La projection depuis le lobe devient particulièrement importante, car un papillon en trois dimensions peut sembler plus imposant qu’un motif plat aux dimensions de face similaires."
         }
       ]
     },
     {
-      "heading": "Comparez les dimensions complètes",
+      "heading": "Comparez les dimensions totales du papillon",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les boucles d'oreilles papillon ne se choisissent pas au seul poids en carats. Vérifiez :"
+          "text": "Les boucles d’oreilles papillon ne peuvent pas être choisies correctement à partir du seul poids en carats. Vérifiez :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "La largeur totale d'une aile à l'autre",
-            "La hauteur totale",
-            "La profondeur du sertissage",
-            "La longueur totale s'il s'agit d'un pendant",
-            "Le poids par boucle d'oreille",
-            "La longueur et l'épaisseur de la tige",
-            "Le type de fermoir",
+            "Largeur totale d’une aile à l’autre",
+            "Hauteur totale",
+            "Projection ou profondeur du serti",
+            "Longueur totale du pendant, le cas échéant",
+            "Poids de chaque boucle",
+            "Longueur et épaisseur de la tige",
+            "Type de fermoir",
             "Le nombre de diamants",
-            "Le poids total des diamants",
-            "La composition du métal",
-            "La finition",
-            "Si le modèle forme une paire symétrique",
-            "Si le produit est vendu à l'unité ou par paire"
+            "Le poids total en diamants",
+            "Composition du métal",
+            "Finition",
+            "Si le modèle forme une paire assortie",
+            "Si le produit est vendu à l’unité ou par paire"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un papillon large encadre le lobe horizontalement. Un modèle plus haut crée un effet plus vertical. Un sertissage profond reste visible de profil même lorsque les dimensions de face paraissent mesurées."
+          "text": "Un papillon large peut encadrer le lobe horizontalement. Un modèle plus haut peut créer une apparence plus verticale. Un serti profond peut être visible de côté, même lorsque les dimensions de face semblent discrètes."
         },
         {
           "type": "paragraph",
-          "text": "Les pages produit devraient présenter des images de face, de profil et portées afin que l'échelle réelle soit compréhensible."
+          "text": "Les pages produit devraient inclure des images de face, de côté et portées pour permettre de comprendre l’échelle réelle."
         },
         {
           "type": "see-also",
-          "text": "Guide des tailles de boucles d'oreilles en diamant",
+          "text": "Guide des tailles de boucles d’oreilles en diamant de laboratoire",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Porter des boucles d'oreilles papillon seules",
+      "heading": "Comment porter des boucles d’oreilles papillon seules",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les boucles d'oreilles papillon se portent sans autre bijou d'oreille, surtout lorsque le motif possède assez de largeur, de diamants ou de relief pour servir de point de mire. Les porter seules fonctionne quand :"
+          "text": "Les boucles d’oreilles papillon peuvent se porter sans autres boucles, surtout si le motif présente suffisamment de largeur, de diamants ou de détails structurels pour servir de point focal. Les porter seules fonctionne lorsque :"
         },
         {
           "type": "bullet-list",
           "items": [
             "Les ailes couvrent une zone visible du lobe.",
-            "Le produit contient plusieurs diamants.",
+            "Le modèle contient plusieurs diamants.",
             "La silhouette est sculpturale ou asymétrique.",
-            "La tenue comporte déjà un collier ou un bracelet.",
-            "La personne a un seul piercing au lobe.",
-            "Le motif doit rester clairement reconnaissable."
+            "La tenue comprend déjà un collier ou un bracelet.",
+            "Vous n’avez qu’un piercing au lobe.",
+            "Le motif doit être immédiatement reconnaissable."
           ]
         },
         {
           "type": "paragraph",
-          "text": "Une paire symétrique crée de l'équilibre. Si les papillons sont orientés différemment, la page produit devrait montrer comment la boucle droite et la boucle gauche sont censées se placer."
+          "text": "Une paire assortie crée une symétrie. Si les papillons sont orientés dans des directions différentes, la page produit doit montrer comment les boucles droite et gauche sont censées se placer."
         },
         {
           "type": "paragraph",
-          "text": "Quand les boucles d'oreilles sont l'élément principal, évitez d'ajouter plusieurs autres motifs inspirés de la nature. Une boucle papillon, un collier fleuri et un bracelet feuille entrent en concurrence, sauf si la collection a été conçue comme un ensemble coordonné."
+          "text": "Lorsque les boucles d’oreilles sont la pièce maîtresse, évitez d’ajouter plusieurs motifs inspirés de la nature en même temps. Une boucle papillon, un collier fleuri et un bracelet feuille peuvent se concurrencer, sauf si la collection a été conçue comme un ensemble coordonné."
         }
       ]
     },
     {
-      "heading": "Porter de petits clous papillon",
+      "heading": "Comment porter de petites puces d’oreilles papillon",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les petits clous papillon introduisent une forme reconnaissable sans que tout le bijou tourne autour du motif. Ils s'associent avec :"
+          "text": "Les petites puces d’oreilles papillon introduisent une forme reconnaissable sans imposer que tout le look repose sur ce motif. Elles peuvent s’associer à :"
         },
         {
           "type": "bullet-list",
           "items": [
             "Un pendentif simple",
             "Une chaîne fine",
-            "Un petit clou en diamant dans un autre piercing",
-            "Un huggie en métal uni",
+            "Une petite puce en diamant sur un autre piercing",
+            "Une petite créole (huggie) en métal uni",
             "Un bracelet discret",
-            "Une bague de la même couleur de métal"
+            "Une bague dans la même couleur de métal"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si le clou papillon possède des ailes détaillées, gardez la boucle d'accompagnement géométriquement simple. Le motif reste ainsi lisible au lieu de se perdre parmi des formes aussi complexes."
+          "text": "Si la puce papillon présente des ailes détaillées, gardez la boucle d’accompagnement géométriquement simple. Le motif restera ainsi lisible au lieu de se fondre dans un ensemble de formes tout aussi complexes."
         }
       ]
     },
     {
-      "heading": "Porter des papillons en diamant",
+      "heading": "Comment porter des boucles d’oreilles papillon en diamant",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les papillons en diamant combinent déjà forme et détail de surface. Décidez quelle caractéristique doit se remarquer en premier."
+          "text": "Les boucles d’oreilles papillon en diamant associent déjà forme et détails de surface. Déterminez quel élément doit attirer le plus l’attention."
         },
         {
           "type": "paragraph",
-          "text": "Si la silhouette prime, choisissez un modèle aux ailes nettement dessinées et ne l'entourez pas de plusieurs autres motifs. Si la couverture en diamants prime, gardez le reste des bijoux discret. Un simple clou en diamant ou un huggie en métal uni accompagne le look sans le concurrencer."
+          "text": "Si la silhouette est l’atout principal, choisissez un modèle aux ailes bien définies et évitez de l’entourer de plusieurs autres motifs. Si la couverture de diamants est au centre de l’attention, restez discrète avec les autres bijoux. Une petite puce en diamant ou une petite créole (huggie) en métal uni peut compléter le look sans le concurrencer."
         },
         {
           "type": "paragraph",
-          "text": "Vérifiez si :"
+          "text": "Vérifiez si\u001f:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Les diamants couvrent toute l'aile ou seulement certaines zones.",
-            "Les pierres sont surtout visibles de face.",
+            "Les diamants couvrent toute la surface des ailes ou seulement certaines zones.",
+            "Les pierres sont principalement visibles de face.",
             "Le poids total en carats concerne la paire.",
-            "Les deux ailes présentent la même disposition de pierres.",
+            "Les ailes présentent des répartitions de diamants assorties.",
             "Le motif reste reconnaissable à distance normale."
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un poids total en carats plus élevé ne signifie pas nécessairement que le papillon paraîtra plus grand. La répartition des pierres, le sertissage et les dimensions complètes déterminent l'apparence."
+          "text": "Un poids total en carats plus élevé ne signifie pas nécessairement que le papillon semblera plus grand. La répartition des pierres, le serti et les dimensions totales du motif déterminent son apparence."
         }
       ]
     },
     {
-      "heading": "Papillon simple ou pavé",
+      "heading": "Boucles d’oreilles papillon simples ou pavées",
       "content": [
         {
           "type": "section-lead",
-          "text": "Aucune des deux options n'est meilleure en soi."
+          "text": "Aucun des deux styles n’est universellement meilleur."
         },
         {
           "type": "grid-layout",
@@ -250,143 +294,171 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Critère", "Papillons simples", "Papillons pavés"],
+              "headers": [
+                "Caractéristique",
+                "Boucles d’oreilles papillon simples",
+                "Boucles d’oreilles papillon pavées"
+              ],
               "rows": [
-                ["Élément visuel principal", "Contour, métal et forme du motif", "Motif plus surface de petites pierres"],
-                ["Détail de surface", "Faible à modéré", "Plus élevé"],
-                ["Rôle dans le style", "Motif d'accompagnement ou point de mire discret", "Devient plus volontiers le point de mire"],
-                ["Association de bijoux", "Supporte un collier plus visible", "Préfère un entourage plus simple"],
-                ["Association de tenue", "Quand la tenue demande un petit motif", "Quand il reste de la place pour plus de diamants"],
-                ["Informations à vérifier", "Dimensions, métal et finition", "Dimensions, nombre de pierres, sertissage et carat total"]
+                [
+                  "Élément visuel principal",
+                  "Contour, métal et forme du motif",
+                  "Motif et champ de petites pierres"
+                ],
+                [
+                  "Détails de surface",
+                  "Faibles à modérés",
+                  "Supérieure"
+                ],
+                [
+                  "Rôle dans le style",
+                  "Motif secondaire ou point focal discret",
+                  "A plus de chances de devenir le point focal"
+                ],
+                [
+                  "Association avec les bijoux",
+                  "Peut accompagner un collier plus visible",
+                  "S’accorde généralement avec des bijoux environnants plus simples"
+                ],
+                [
+                  "Association avec la tenue",
+                  "Convient lorsque la tenue appelle un petit motif",
+                  "Convient lorsque la tenue peut accueillir davantage de détails en diamant"
+                ],
+                [
+                  "Informations à vérifier",
+                  "Dimensions, métal et finition",
+                  "Dimensions, nombre de pierres, serti et poids total en carats"
+                ]
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un papillon simple peut tout de même être grand ou sculptural. Un papillon pavé peut rester compact. Choisissez d'après les caractéristiques complètes plutôt qu'en supposant que simple signifie discret et pavé signifie habillé."
+          "text": "Un papillon simple peut être grand ou sculptural. Un papillon pavé peut rester relativement compact. Choisissez selon les spécifications complètes, sans supposer que simple signifie discret ou pavé signifie formel."
         }
       ]
     },
     {
-      "heading": "Les papillons font-ils trop jeune ?",
+      "heading": "Les boucles d’oreilles papillon sont-elles trop jeunes ?",
       "content": [
         {
           "type": "section-lead",
-          "text": "Les boucles d'oreilles papillon ne sont réservées à aucune tranche d'âge."
+          "text": "Les boucles d’oreilles papillon ne sont pas réservées à une tranche d’âge particulière."
         },
         {
           "type": "paragraph",
-          "text": "Leur allure dépend du modèle : proportions, matériaux, couverture en diamants et façon de les porter. Un petit papillon coloré ou d'allure enfantine crée un effet ludique. Un papillon en métal structuré, un clou en diamant discret ou des ailes géométriquement définies produisent un résultat tout autre. Le motif est le même, le style ne l'est pas."
+          "text": "Le rendu dépend du design, de ses proportions, des matériaux, de la couverture en diamants et de la façon dont le bijou est porté. Un petit papillon coloré ou façon dessin animé peut créer un style ludique. Un papillon métallique structuré, une puce d'oreilles sertie de diamants avec retenue ou des ailes aux lignes géométriques peuvent produire un effet totalement différent. Même s'ils reprennent le même motif, ces modèles ne doivent pas être considérés comme un seul et même style."
         },
         {
           "type": "paragraph",
-          "text": "Le résultat dépend des dimensions du motif, de la finition du métal, de la couverture en diamants, de la couleur, du type de sertissage, de la texture, des autres bijoux, de la tenue et des préférences personnelles."
+          "text": "Le résultat dépend des dimensions du motif, de la finition du métal, de la couverture en diamants, de la couleur, du style de serti, de la texture de surface, des autres bijoux, de la tenue et de vos préférences."
         },
         {
           "type": "paragraph",
-          "text": "Pour une interprétation plus sobre, privilégiez des papillons avec :"
+          "text": "Pour une interprétation plus sobre, choisissez des boucles d'oreilles papillon avec\u0010"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Des ailes nettement dessinées",
+            "Des ailes aux contours bien définis",
             "Une largeur et une hauteur maîtrisées",
             "Une seule couleur de métal",
-            "Un usage limité de pierres colorées",
-            "Un placement des diamants vérifié",
+            "Un usage limité des pierres colorées",
+            "Un sertissage des diamants vérifié",
             "Une paire droite et gauche assortie",
             "Un collier simple ou aucun collier",
-            "Peu de motifs alentour"
+            "Peu de motifs autour"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les papillons pavés ou sertis de diamants plus grands peuvent devenir la pièce maîtresse. Les petits clous papillon s'utilisent comme détail d'accompagnement à côté d'un huggie uni, d'une créole ou d'un solitaire, à condition de laisser assez d'espace."
+          "text": "Les papillons plus grands en pavé ou sertis de diamants peuvent devenir la pièce maîtresse de vos bijoux. Les petites puces d'oreilles papillon peuvent servir de détail complémentaire à côté d'une petite créole (huggie), d'une créole ou d'une puce solitaire, à condition que l'oreille dispose de suffisamment d'espace."
         },
         {
           "type": "paragraph",
-          "text": "Évitez de porter plusieurs motifs symboliques aussi visibles en même temps. De grandes boucles papillon associées à un collier papillon, un bracelet fleuri et plusieurs clous à motifs donnent vite une impression de surcharge. Si les boucles doivent mener, gardez le reste des bijoux calme."
+          "text": "Évitez d'associer plusieurs motifs symboliques aussi imposants les uns que les autres. De grandes boucles d'oreilles papillon portées avec un collier papillon, un bracelet floral et plusieurs puces ornées de motifs peuvent donner une impression d'ensemble chargé. Si les boucles d'oreilles doivent attirer l'attention, gardez les autres bijoux discrets."
         },
         {
           "type": "paragraph",
-          "text": "L'information la plus utile n'est pas de savoir si les boucles sont décrites comme jeunes ou mûres. Vérifiez la largeur, la hauteur, la profondeur, le poids, la tige, le fermoir, les matériaux et les photos portées. Les bonnes boucles papillon sont celles dont le design et les proportions correspondent au style de la personne, pas à une catégorie d'âge."
+          "text": "Les informations les plus utiles à l'achat ne concernent pas le fait que les boucles d'oreilles soient décrites comme jeunes ou matures. Vérifiez leur largeur, leur hauteur, leur projection, leur poids, leur tige, leur fermoir, leurs matériaux et les photos portées. Les bonnes boucles d'oreilles papillon sont celles dont le design et les proportions correspondent au style personnel de la personne qui les porte, et non à une catégorie d'âge."
         }
       ]
     },
     {
-      "heading": "Porter des papillons dans une pile d'oreilles",
+      "heading": "Comment porter des boucles d'oreilles papillon dans un ear stack",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les boucles papillon fonctionnent généralement soit comme motif principal, soit comme petit symbole d'accompagnement. Une disposition possible est :"
+          "text": "Les boucles d'oreilles papillon fonctionnent généralement mieux comme motif principal ou comme petit symbole complémentaire. Voici une disposition possible :"
         },
         {
           "type": "numbered-list",
           "items": [
-            "Premier lobe : clou papillon",
-            "Deuxième lobe : solitaire plus petit",
-            "Autre piercing cicatrisé : huggie discret, si l'espacement le permet"
+            "Premier trou : puce d'oreilles papillon",
+            "Deuxième trou : puce solitaire plus petite",
+            "Perçage supplémentaire cicatrisé : petite créole (huggie) discrète, si l'espace le permet"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Une autre disposition est :"
+          "text": "Autre disposition possible :"
         },
         {
           "type": "numbered-list",
           "items": [
-            "Premier lobe : créole unie ou sertie de diamants",
-            "Deuxième lobe : petit clou papillon",
-            "Autre piercing cicatrisé : petit détail géométrique ou en diamant"
+            "Premier trou : créole simple ou sertie de diamants",
+            "Deuxième trou : petite puce d'oreilles papillon",
+            "Perçage supplémentaire cicatrisé : détail géométrique ou serti de diamants plus petit"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Évitez de placer un autre motif large juste à côté du papillon si les deux sertissages se touchent ou se masquent."
+          "text": "Évitez de placer un autre motif large juste à côté du papillon si les deux sertis se touchent ou se masquent."
         },
         {
           "type": "see-also",
-          "text": "Comment empiler des boucles d'oreilles",
+          "text": "Comment composer un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         },
         {
           "type": "see-also",
-          "text": "Idées de piles d'oreilles en diamant",
+          "text": "Idées d'ear stack en diamant",
           "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Peut-on associer les papillons aux créoles ou aux huggies ?",
+      "heading": "Les boucles d'oreilles papillon peuvent-elles être associées à des créoles ou à des petites créoles (huggies) ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Oui. Les créoles et les huggies apportent des formes courbes qui contrastent avec les ailes du papillon. Les associations possibles comprennent :"
+          "text": "Oui. Les créoles et les petites créoles (huggies) apportent des lignes courbes qui contrastent avec les ailes du papillon. Voici quelques associations possibles :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Clou papillon avec huggie en métal uni",
+            "Puce d'oreilles papillon avec petite créole (huggie) en métal uni",
             "Petit papillon avec créole fine sertie de diamants",
-            "Papillon en diamant avec créole unie",
-            "Papillon aux ailes ouvertes avec huggie discret",
-            "Motif papillon au premier lobe et petite créole au-dessus"
+            "Papillon serti de diamants avec créole unie",
+            "Papillon aux ailes ouvertes avec petite créole (huggie) discrète",
+            "Motif papillon au premier trou et petite créole au-dessus"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Utilisez le papillon comme motif principal et laissez la créole ou le huggie apporter la forme. N'ajoutez pas plusieurs autres modèles symboliques à la même oreille, sauf si la combinaison est volontairement coordonnée."
+          "text": "Utilisez le papillon comme motif principal et laissez la créole ou la petite créole (huggie) apporter la forme. Évitez d'ajouter plusieurs autres motifs symboliques à la même oreille, sauf si l'ensemble est volontairement coordonné."
         },
         {
           "type": "see-also",
-          "text": "Comment porter des boucles d'oreilles huggie",
+          "text": "Comment porter des petites créoles (huggies)",
           "href": "/resources/earring-style-guides/how-to-style-huggie-earrings"
         }
       ]
     },
     {
-      "heading": "Quel collier avec des boucles d'oreilles papillon ?",
+      "heading": "Quel collier porter avec des boucles d'oreilles papillon ?",
       "content": [
         {
           "type": "paragraph",
@@ -394,48 +466,69 @@
         },
         {
           "type": "table",
-          "headers": ["Boucle d'oreille papillon", "Orientation du collier"],
+          "headers": [
+            "Boucle d’oreille papillon",
+            "Choix du collier"
+          ],
           "rows": [
-            ["Petit clou papillon simple", "Un pendentif ou un collier plus visible convient"],
-            ["Clou papillon plus large", "Chaîne fine ou aucun collier"],
-            ["Papillon pavé de diamants", "Pendentif discret ou aucun collier"],
-            ["Pendant papillon", "Généralement un collier simple"],
-            ["Papillon en pile d'oreilles", "Laisser la pile d'oreilles mener"],
-            ["Papillon avec tenue détaillée", "Garder le collier minimal"]
+            [
+              "Petite puce d'oreilles papillon simple",
+              "Un pendentif ou un collier plus visible peut convenir"
+            ],
+            [
+              "Puce d'oreilles papillon plus large",
+              "Chaîne fine ou pas de collier"
+            ],
+            [
+              "Papillon en pavé de diamants",
+              "Pendentif discret ou aucun collier"
+            ],
+            [
+              "Papillon pendant",
+              "Portez généralement un collier simple"
+            ],
+            [
+              "Ear stack papillon",
+              "Laissez l'ear stack attirer l'attention"
+            ],
+            [
+              "Papillon avec une tenue détaillée",
+              "Gardez le collier minimaliste"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un collier papillon n'a pas à accompagner des boucles papillon. Répéter le même motif peut sembler coordonné, mais devient trop littéral si les deux pièces sont grandes. Si vous portez les deux, laissez une seule pièce dominer."
+          "text": "Un collier papillon ne doit pas forcément être porté avec des boucles d'oreilles papillon. Répéter le même motif peut créer un ensemble harmonieux, mais aussi devenir trop littéral si les deux pièces sont imposantes. Si vous associez un collier et des boucles d'oreilles papillon, donnez à l'une des pièces une présence visuelle plus forte."
         }
       ]
     },
     {
-      "heading": "Porter des papillons selon la tenue",
+      "heading": "Comment porter des boucles d'oreilles papillon selon la tenue",
       "content": [
         {
           "type": "subheading",
-          "text": "Tenues de tous les jours"
+          "text": "Tenues du quotidien"
         },
         {
           "type": "paragraph",
-          "text": "Avec un jean, une maille, une chemise ou d'autres vêtements simples, les boucles papillon apportent un design reconnaissable sans nécessiter d'accessoires supplémentaires. Essayez de petits clous papillon avec une chemise simple, un papillon en métal uni avec de la maille, un papillon en diamant avec une tenue monochrome, ou un clou papillon accompagné d'une seule boucle discrète."
+          "text": "Avec un jean, de la maille, une chemise ou d'autres vêtements simples, les boucles d'oreilles papillon peuvent apporter un motif reconnaissable sans nécessiter de nombreux accessoires. Essayez de petites puces d'oreilles papillon avec une chemise simple, un papillon en métal uni avec une maille, un papillon serti de diamants avec une tenue monochrome ou une puce papillon avec une seule boucle d'oreilles complémentaire discrète."
         },
         {
           "type": "paragraph",
-          "text": "Une boucle d'oreille ne convient au quotidien qu'une fois son poids, la profondeur du sertissage, la tige et les matériaux pris en compte."
+          "text": "Une boucle d'oreilles ne convient au quotidien qu'après avoir pris en compte son poids, la projection du serti, la tige et les matériaux."
         },
         {
           "type": "subheading",
-          "text": "Le travail"
+          "text": "Travail"
         },
         {
           "type": "paragraph",
-          "text": "Les attentes varient d'un lieu de travail à l'autre. Raisonnez en termes d'échelle et de complexité plutôt que de considérer toute boucle papillon comme adaptée au bureau. Choisissez un motif proportionné, évitez une pile d'oreilles surchargée, accordez le métal à une montre, une bague ou un collier, et vérifiez si le sertissage dépasse nettement du lobe."
+          "text": "Les attentes au travail varient. Fiez-vous donc à l'échelle et à la complexité du design plutôt que de considérer toutes les boucles d'oreilles papillon comme adaptées au bureau. Choisissez un motif proportionné, évitez un ear stack surchargé, coordonnez le métal avec une montre, une bague ou un collier, et vérifiez si le serti dépasse nettement du lobe."
         },
         {
           "type": "paragraph",
-          "text": "Un papillon plus large ou très serti se remarque davantage avec les cheveux attachés. Reste à savoir si cela convient au contexte, ce qui relève du choix personnel et de l'entreprise."
+          "text": "Un papillon plus large ou riche en diamants peut être plus visible avec les cheveux attachés. La question de savoir si cela convient au travail dépend de vos préférences et de l'organisation."
         },
         {
           "type": "subheading",
@@ -443,16 +536,16 @@
         },
         {
           "type": "paragraph",
-          "text": "Une robe noire crée un contraste qui rend la silhouette du papillon plus lisible. Avec une robe noire simple, un papillon en diamant peut devenir la pièce principale. Avec de la dentelle noire, des paillettes, un tissu métallisé ou une encolure très travaillée, un papillon plus petit ou un clou plus épuré apporte un meilleur équilibre."
+          "text": "Une robe noire crée un contraste qui peut rendre la silhouette du papillon plus visible. Avec une robe noire simple, un papillon serti de diamants peut devenir la pièce maîtresse. Avec de la dentelle noire, des sequins, un tissu métallisé ou un décolleté très travaillé, un papillon plus petit ou une puce aux lignes épurées peut offrir un meilleur équilibre."
         },
         {
           "type": "bullet-list",
           "items": [
-            "Papillons de couleur or jaune pour un contraste chaud",
-            "Modèles blancs ou argentés pour un effet monochrome plus froid",
-            "Papillons en diamant quand la robe est simple",
-            "Motifs plus petits quand la robe est déjà très détaillée",
-            "Aucun collier quand les ailes couvrent une large surface"
+            "Boucles d'oreilles papillon couleur or jaune pour un contraste chaleureux",
+            "Modèles blancs ou couleur argent pour un effet monochrome plus froid",
+            "Papillons sertis de diamants lorsque la robe est simple",
+            "Motifs plus petits lorsque la robe est déjà très détaillée",
+            "Aucun collier lorsque les boucles d'oreilles couvrent largement les ailes"
           ]
         },
         {
@@ -461,71 +554,98 @@
         },
         {
           "type": "paragraph",
-          "text": "Les boucles papillon accompagnent bien les vêtements fleuris, mais cumuler les motifs naturels alourdit le résultat. Associez un grand imprimé floral à un papillon plus petit, un imprimé discret à un motif moyen, une tenue pastel unie à un papillon en diamant plus visible, et des volants ou de la dentelle à des dimensions maîtrisées."
+          "text": "Les boucles d'oreilles papillon peuvent compléter une tenue fleurie, mais l'association de trop nombreux motifs inspirés de la nature peut donner une impression de surcharge. Portez un grand imprimé floral avec un papillon plus petit, un petit imprimé discret avec un motif moyen, une tenue pastel unie avec un papillon serti de diamants ou plus visible, et des dimensions maîtrisées avec des volants et de la dentelle."
         },
         {
           "type": "subheading",
-          "text": "Une robe en satin"
+          "text": "Une robe satinée"
         },
         {
           "type": "paragraph",
-          "text": "Le satin réfléchit déjà la lumière. Un papillon en diamant fonctionne quand la robe a une coupe simple et une encolure sobre. Si la robe comporte du drapé, des fronces, un col bénitier ou beaucoup d'ornements, choisissez un modèle plus petit."
+          "text": "Le satin réfléchit déjà la lumière. Un papillon serti de diamants peut convenir lorsque la robe a une coupe simple et un décolleté discret. Si la robe satinée comporte des drapés, des fronces, un col bénitier ou des ornements importants, envisagez un modèle papillon plus petit."
         },
         {
           "type": "subheading",
-          "text": "En tant qu'invitée de mariage"
+          "text": "Tenues pour une cérémonie de mariage"
         },
         {
           "type": "paragraph",
-          "text": "Un petit papillon complète une robe fleurie ou détaillée. Un papillon en diamant plus visible convient à une robe simple ou à une combinaison lorsque les boucles doivent mener. Tenez compte des détails de la robe, de l'encolure, de la coiffure, du poids des boucles, du degré de formalité, du risque d'un rendu trop nuptial et des autres motifs de la tenue."
+          "text": "Un petit papillon peut compléter une robe fleurie ou détaillée. Un papillon serti de diamants plus visible peut convenir avec une robe simple ou une combinaison si les boucles d'oreilles doivent attirer l'attention. Tenez compte des détails de la robe, du décolleté, de la coiffure, du poids des boucles d'oreilles, du niveau de formalité de l'événement, de leur éventuel aspect nuptial et des autres motifs de la tenue."
         },
         {
           "type": "see-also",
-          "text": "Quels bijoux avec une robe noire",
+          "text": "Quels bijoux porter avec une robe noire",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
         },
         {
           "type": "see-also",
-          "text": "Quels bijoux avec une robe en satin",
+          "text": "Quels bijoux porter avec une robe satinée",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         },
         {
           "type": "see-also",
-          "text": "Guide des boucles d'oreilles en diamant au quotidien",
+          "text": "Guide des boucles d'oreilles en diamants de laboratoire pour tous les jours",
           "href": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
         }
       ]
     },
     {
-      "heading": "L'influence de l'encolure",
+      "heading": "Comment le décolleté influence le choix des boucles d'oreilles papillon",
       "content": [
         {
           "type": "table",
-          "headers": ["Encolure", "Orientation du papillon"],
+          "headers": [
+            "Encolure",
+            "Orientation du style papillon"
+          ],
           "rows": [
-            ["Col en V", "Clous papillon avec un pendentif discret"],
-            ["Décolleté cœur", "Laisser des papillons visibles encadrer l'ouverture"],
-            ["Bustier", "Un papillon large ou un pendant peut mener"],
-            ["Épaules dénudées", "Un modèle plus visible équilibre la ligne d'épaule ouverte"],
-            ["Col montant", "Un clou papillon paraît plus net qu'un long pendant"],
-            ["Col bénitier", "Garder papillon et collier discrets"],
-            ["Encolure travaillée", "Choisir un papillon plus petit, sans collier concurrent"],
-            ["Col carré", "Un clou ou un modèle moyen convient"]
+            [
+              "Col en V",
+              "Des puces d'oreilles papillon avec un pendentif discret peuvent convenir"
+            ],
+            [
+              "Cœur",
+              "Laissez les boucles d'oreilles papillon visibles encadrer le décolleté ouvert"
+            ],
+            [
+              "Bustier",
+              "Un papillon plus large ou pendant peut attirer l'attention"
+            ],
+            [
+              "Épaules dénudées",
+              "Un papillon plus visible peut équilibrer la ligne d'épaules dégagées"
+            ],
+            [
+              "Col montant",
+              "Un papillon de type puce peut être plus épuré qu'un modèle pendant long"
+            ],
+            [
+              "Col bénitier",
+              "Gardez le papillon et le collier discrets"
+            ],
+            [
+              "Décolleté travaillé",
+              "Choisissez un papillon plus petit et évitez un collier qui lui ferait concurrence"
+            ],
+            [
+              "Encolure carrée",
+              "Un modèle papillon en puce ou de taille moyenne peut convenir"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Ce sont des points de départ visuels. Les dimensions complètes et la coupe de la robe déterminent le résultat final."
+          "text": "Il s'agit de points de départ visuels. Les dimensions complètes de la boucle d'oreilles et la construction de la robe déterminent toujours le résultat final."
         },
         {
           "type": "see-also",
-          "text": "Quels bijoux avec un décolleté cœur",
+          "text": "Quels bijoux porter avec un décolleté cœur",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
         }
       ]
     },
     {
-      "heading": "L'influence de la coiffure",
+      "heading": "Comment la coiffure influence le choix des boucles d'oreilles papillon",
       "content": [
         {
           "type": "grid-layout",
@@ -534,126 +654,150 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Coiffure", "Effet"],
+              "headers": [
+                "Coiffure",
+                "Effet stylistique"
+              ],
               "rows": [
-                ["Cheveux glissés derrière les oreilles", "Montre tout le contour des ailes"],
-                ["Chignon bas", "Rend les papillons larges bien visibles"],
-                ["Queue de cheval", "Dégage le motif et l'espace alentour"],
-                ["Cheveux courts", "Montre le modèle de face et de profil"],
-                ["Cheveux détachés", "Peuvent masquer en partie les petits papillons"],
-                ["Ondulations souples", "Complètent la courbe des ailes"],
-                ["Demi-queue", "Montre les boucles sans dégager entièrement l'oreille"]
+                [
+                  "Cheveux derrière les oreilles",
+                  "Montre tout le contour des ailes"
+                ],
+                [
+                  "Chignon bas",
+                  "Rend les boucles d'oreilles papillon plus larges clairement visibles"
+                ],
+                [
+                  "Queue-de-cheval",
+                  "Dégage le motif et l'espace autour"
+                ],
+                [
+                  "Cheveux courts",
+                  "Montre le design de face et de côté"
+                ],
+                [
+                  "Cheveux détachés",
+                  "Peut masquer partiellement les petits papillons"
+                ],
+                [
+                  "Ondulations souples",
+                  "Peut compléter la silhouette courbe des ailes"
+                ],
+                [
+                  "Cheveux semi-attachés",
+                  "Montre les boucles d'oreilles sans dégager entièrement l'oreille"
+                ]
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si les boucles disparaissent sous les cheveux, ne passez pas automatiquement à un modèle plus lourd. Comparez d'abord les dimensions et regardez des photos portées."
+          "text": "Si les boucles d'oreilles disparaissent sous les cheveux, ne choisissez pas automatiquement un modèle plus imposant. Comparez d'abord les dimensions et consultez les photos portées."
         }
       ]
     },
     {
-      "heading": "Le papillon selon la couleur du métal",
+      "heading": "Comment porter des boucles d'oreilles papillon selon la couleur du métal",
       "content": [
         {
           "type": "subheading",
-          "text": "Papillons de couleur or jaune"
+          "text": "Papillons couleur or jaune"
         },
         {
           "type": "paragraph",
-          "text": "Les papillons de couleur or jaune apportent un contraste chaud. Ils s'accordent au noir, à la crème, au vert, au bordeaux, au brun et aux tons neutres."
+          "text": "Les boucles d'oreilles papillon couleur or jaune créent un contraste chaleureux. Elles peuvent s'accorder avec des tenues noires, crème, vertes, bordeaux, brunes et neutres."
         },
         {
           "type": "subheading",
-          "text": "Papillons blancs ou argentés"
+          "text": "Papillons blancs ou couleur argent"
         },
         {
           "type": "paragraph",
-          "text": "Les modèles blancs ou argentés donnent un rendu plus froid et lumineux et s'accordent au noir, au blanc, au bleu marine, au gris et aux teintes froides."
+          "text": "Les modèles blancs ou couleur argent créent un effet plus froid et lumineux. Ils peuvent s'accorder avec des vêtements noirs, blancs, bleu marine, gris et aux tons froids."
         },
         {
           "type": "subheading",
-          "text": "Papillons or rose"
+          "text": "Papillons couleur or rose"
         },
         {
           "type": "paragraph",
-          "text": "Les papillons de couleur or rose créent un effet métallique chaud plus doux et s'accordent à la crème, au champagne, au rose poudré et aux tons neutres."
+          "text": "Les papillons couleur or rose créent un effet de métal chaud plus doux. Ils peuvent s'accorder avec des vêtements crème, champagne, blush et neutres."
         },
         {
           "type": "paragraph",
-          "text": "Or jaune, or blanc, argent et or rose ne sont pas des termes de matériau interchangeables. Vérifiez le métal de base et la finition indiqués pour chaque produit."
+          "text": "L'or jaune, l'or blanc, l'argent et l'or rose ne sont pas des termes interchangeables pour désigner les matériaux. Vérifiez le métal de base et la finition indiqués pour chaque produit."
         },
         {
           "type": "see-also",
-          "text": "Or jaune, or blanc ou or rose pour les boucles en diamant",
+          "text": "Boucles d’oreilles en diamants de laboratoire : or jaune, blanc ou rose",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Les erreurs à éviter",
+      "heading": "Erreurs de style avec les boucles d'oreilles papillon",
       "content": [
         {
           "type": "subheading",
-          "text": "Choisir d'après le seul motif"
+          "text": "Choisir uniquement en fonction du motif"
         },
         {
           "type": "paragraph",
-          "text": "La forme du papillon ne dit rien de sa largeur, de son poids, de sa profondeur ni de son fermoir."
+          "text": "La forme papillon ne révèle ni sa largeur, ni son poids, ni sa projection, ni son système de fermeture."
         },
         {
           "type": "subheading",
-          "text": "Cumuler des motifs concurrents"
+          "text": "Associer plusieurs motifs concurrents"
         },
         {
           "type": "paragraph",
-          "text": "Papillons, fleurs, feuilles et cœurs se concurrencent lorsqu'ils sont tous aussi visibles."
+          "text": "Papillons, fleurs, feuilles et cœurs peuvent se concurrencer lorsqu'ils sont tous aussi présents."
         },
         {
           "type": "subheading",
-          "text": "Croire que le pavé est réservé aux occasions"
+          "text": "Penser que le pavé est réservé aux occasions"
         },
         {
           "type": "paragraph",
-          "text": "Un papillon pavé compact peut rester visuellement mesuré. Fiez-vous aux dimensions plutôt qu'aux étiquettes."
+          "text": "Un papillon pavé compact peut rester visuellement maîtrisé. Fiez-vous aux dimensions plutôt qu'aux appellations."
         },
         {
           "type": "subheading",
-          "text": "Croire que simple veut dire adapté au quotidien"
+          "text": "Penser que le style simple convient forcément au quotidien"
         },
         {
           "type": "paragraph",
-          "text": "Un modèle simple peut malgré tout être grand ou lourd."
+          "text": "Un design simple peut tout de même être imposant ou lourd."
         },
         {
           "type": "subheading",
-          "text": "Ignorer le profil latéral"
+          "text": "Négliger le profil latéral"
         },
         {
           "type": "paragraph",
-          "text": "Un papillon peut dépasser du lobe davantage que ne le laisse penser la photo de face."
+          "text": "Un papillon peut s'éloigner davantage du lobe que ne le laisse penser sa photo de face."
         },
         {
           "type": "subheading",
-          "text": "Porter un grand motif dans chaque piercing"
+          "text": "Porter un motif imposant dans chaque piercing"
         },
         {
           "type": "paragraph",
-          "text": "Utilisez des pièces d'accompagnement plus petites et gardez un espacement physique."
+          "text": "Choisissez de plus petites pièces pour accompagner le motif et gardez un espacement physique."
         },
         {
           "type": "subheading",
-          "text": "Faire des affirmations liées à l'âge"
+          "text": "Faire des affirmations fondées sur l'âge"
         },
         {
           "type": "paragraph",
-          "text": "Les boucles papillon ne sont réservées ni aux clientes jeunes ni aux clientes plus âgées."
+          "text": "Les boucles d'oreilles papillon ne sont pas réservées aux personnes plus jeunes ou plus âgées."
         }
       ]
     },
     {
-      "heading": "Check-list du style papillon",
+      "heading": "Checklist pour bien porter des boucles d'oreilles papillon",
       "content": [
         {
           "type": "grid-layout",
@@ -662,22 +806,22 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Avant de finaliser le look, demandez-vous :"
+              "text": "Avant de finaliser votre style, demandez-vous :"
             },
             {
               "type": "bullet-list",
               "items": [
                 "Quelles sont la largeur et la hauteur totales ?",
-                "Jusqu'où le sertissage dépasse-t-il ?",
-                "Quel est le poids par boucle d'oreille ?",
-                "Le papillon est-il la pièce principale ?",
-                "La tenue contient-elle déjà d'autres motifs ?",
-                "Le sertissage est-il décrit avec précision ?",
-                "Le collier entre-t-il en concurrence avec les boucles ?",
-                "La coiffure laissera-t-elle voir les ailes entières ?",
-                "Y a-t-il assez de place dans la pile d'oreilles ?",
+                "De combien la monture ressort-elle ?",
+                "Quel est le poids de chaque boucle d'oreille\u001f?",
+                "Le papillon est-il la pièce phare ?",
+                "La tenue comporte-t-elle déjà d'autres motifs ?",
+                "Le serti du diamant est-il décrit avec précision ?",
+                "Le collier concurrence-t-il les boucles d'oreilles ?",
+                "La coiffure laissera-t-elle voir les ailes dans leur intégralité ?",
+                "Y a-t-il suffisamment de place dans l'ear stack ?",
                 "Le métal et la finition sont-ils vérifiés ?",
-                "Le carat total concerne-t-il une boucle ou la paire ?"
+                "Le poids total en carat est-il indiqué pour une boucle d'oreille ou pour la paire ?"
               ]
             }
           ]
@@ -685,19 +829,19 @@
       ]
     },
     {
-      "heading": "En résumé",
+      "heading": "Réponse finale",
       "content": [
         {
           "type": "paragraph",
-          "text": "Portez les boucles papillon selon leurs proportions et leur niveau de détail. Faites d'un papillon large ou serti le point de mire, ou utilisez un petit clou papillon comme motif d'accompagnement."
+          "text": "Portez vos boucles d'oreilles papillon en fonction de leurs proportions et de leurs détails. Faites d'un papillon plus large ou serti de diamants la pièce phare, ou utilisez une petite puce d'oreille papillon comme motif secondaire."
         },
         {
           "type": "paragraph",
-          "text": "Gardez les bijoux alentour discrets quand les ailes sont grandes ou fortement serties. Avec un modèle plus petit, un collier, une créole ou un huggie peut prendre un rôle plus visible."
+          "text": "Maîtrisez les bijoux qui l'entourent lorsque les ailes sont imposantes ou largement couvertes de diamants. Avec un modèle plus petit, un collier, des créoles ou de petites créoles (huggies) peuvent jouer un rôle plus visible."
         },
         {
           "type": "paragraph",
-          "text": "La forme papillon n'appartient ni à une tranche d'âge ni à une occasion. Son style dépend du modèle, des mesures, des matériaux et de l'équilibre de l'ensemble."
+          "text": "La forme papillon n'est réservée ni à une tranche d'âge ni à une occasion particulière. Son style dépend du design, des dimensions, des matériaux et de l'équilibre de la silhouette dans son ensemble."
         }
       ]
     }
@@ -705,45 +849,45 @@
   "faq": [
     {
       "question": "Comment porter des boucles d'oreilles papillon ?",
-      "answer": "Elles se portent comme motif principal ou comme détail d'accompagnement plus discret. Associez-les à des bijoux plus simples lorsque les ailes sont larges ou fortement serties de diamants."
+      "answer": "Les boucles d'oreilles papillon peuvent constituer le motif principal ou un détail secondaire plus discret. Associez-les à des bijoux plus simples lorsque les ailes sont larges ou fortement serties de diamants."
     },
     {
       "question": "Les boucles d'oreilles papillon font-elles trop jeune ?",
-      "answer": "Non. Leur allure dépend des proportions, des matériaux, de la couleur, de la couverture en diamants et de la façon de les porter, pas de l'âge. Un papillon sobre en métal ou en diamant produit un effet très différent d'un modèle coloré ou surdimensionné."
+      "answer": "Non. Leur apparence dépend des proportions, des matériaux, de la couleur, de la couverture de diamants et du style, pas de l'âge de la personne qui les porte. Un papillon discret en métal ou serti de diamants peut produire un effet très différent d'un modèle fantaisie coloré ou surdimensionné."
     },
     {
-      "question": "Peut-on porter des boucles papillon tous les jours ?",
-      "answer": "Elles peuvent convenir à un usage régulier lorsque leur poids, leur profondeur, leur tige, leur fermoir, leurs matériaux et leur entretien conviennent à la personne."
+      "question": "Les boucles d'oreilles papillon peuvent-elles se porter tous les jours ?",
+      "answer": "Elles peuvent convenir au port régulier lorsque leur poids, leur projection, leur tige, leur fermoir, leurs matériaux et leurs exigences d'entretien correspondent à la personne qui les porte."
     },
     {
-      "question": "Peut-on porter des boucles papillon au travail ?",
-      "answer": "Elles peuvent convenir lorsque les dimensions et le niveau de détail du modèle s'accordent au lieu de travail et au style souhaité."
+      "question": "Les boucles d'oreilles papillon peuvent-elles se porter au travail ?",
+      "answer": "Elles peuvent convenir lorsque les dimensions et les détails du design s'accordent avec le lieu de travail et le style de la personne qui les porte."
     },
     {
-      "question": "Quel collier porter avec des boucles papillon ?",
-      "answer": "Choisissez un collier discret quand les boucles papillon sont très visibles. Un collier plus présent fonctionne avec un petit clou papillon plus simple."
+      "question": "Quel collier porter avec des boucles d'oreilles papillon ?",
+      "answer": "Choisissez un collier discret lorsque les boucles d'oreilles papillon sont imposantes. Un collier plus visible peut convenir avec une petite puce d'oreille papillon plus simple."
     },
     {
-      "question": "Peut-on intégrer un papillon à une pile d'oreilles ?",
-      "answer": "Oui. Utilisez le papillon comme motif principal ou comme petit élément d'accompagnement et veillez à ce que les boucles voisines ne le recouvrent pas."
+      "question": "Les boucles d'oreilles papillon peuvent-elles intégrer un ear stack ?",
+      "answer": "Oui. Faites du papillon le motif phare ou un petit élément secondaire, en veillant à ce que les boucles d'oreilles voisines ne le chevauchent pas."
     },
     {
-      "question": "Quelle différence entre papillon simple et papillon pavé ?",
-      "answer": "Les modèles simples reposent surtout sur le contour et le métal, tandis que les modèles pavés utilisent une surface de petites pierres serrées. Les dimensions complètes déterminent malgré tout lequel paraîtra le plus présent."
+      "question": "Quelle est la différence entre des boucles d'oreilles papillon simples et pavées ?",
+      "answer": "Les modèles simples reposent principalement sur le contour et le métal, tandis que les modèles pavés utilisent une surface de petites pierres serties les unes près des autres. Les dimensions totales déterminent tout de même lequel paraît le plus imposant."
     },
     {
-      "question": "Quelle couleur de métal choisir ?",
-      "answer": "Les finitions jaune, blanche, argentée et rose fonctionnent toutes. Choisissez d'après le matériau vérifié, les couleurs de la tenue et les autres bijoux plutôt que selon une règle universelle."
+      "question": "Quelle couleur de métal associer aux boucles d'oreilles papillon ?",
+      "answer": "Les finitions jaunes, blanches, argentées et rosées peuvent toutes convenir. Choisissez en fonction du matériau vérifié, des couleurs de votre tenue et de vos autres bijoux, plutôt que d'une règle universelle."
     }
   ],
   "cta": {
-    "heading": "Choisissez vos boucles d'oreilles papillon selon leurs proportions et leur détail de surface. Laissez un papillon large ou serti mener le look, ou utilisez un petit clou comme motif d'accompagnement avec des bijoux plus simples.",
-    "body": "Parcourez les boucles d'oreilles demi-fines en diamants de laboratoire d'I Want Jewels et vérifiez sur chaque page produit la largeur, la hauteur, la profondeur, le poids, le fermoir et les informations sur les diamants avant de décider si le modèle doit mener ou accompagner votre tenue.",
-    "primaryLabel": "Découvrir les boucles d'oreilles en diamants de laboratoire",
+    "heading": "Portez vos boucles d'oreilles papillon en fonction de leurs proportions et des détails de leur surface. Laissez un papillon plus large ou serti de diamants donner le ton, ou utilisez une plus petite puce d'oreille comme motif secondaire avec des bijoux plus simples.",
+    "body": "Découvrez les boucles d'oreilles en diamant de laboratoire demi-fine de I Want Jewels et consultez, sur chaque fiche produit, la largeur, la hauteur, la projection, le poids, le fermoir et les informations détaillées sur les diamants avant de décider si le modèle doit être la pièce phare ou accompagner votre tenue.",
+    "primaryLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Comment empiler des boucles d'oreilles",
+    "secondaryLabel": "Comment composer un ear stack",
     "secondaryHref": "/resources/earring-style-guides/how-to-stack-earrings",
-    "tertiaryLabel": "Quels bijoux avec une robe noire",
+    "tertiaryLabel": "Quels bijoux porter avec une robe noire ?",
     "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
   }
 }

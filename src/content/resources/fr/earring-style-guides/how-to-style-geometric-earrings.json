@@ -1,29 +1,29 @@
 {
   "meta": {
-    "title": "Comment porter des boucles d'oreilles géométriques",
-    "description": "Apprenez à porter des boucles d'oreilles géométriques avec des tenues de travail, décontractées, des robes et des looks du soir : taille, encolures et bijoux."
+    "title": "Comment porter des boucles d’oreilles géométriques",
+    "description": "Découvrez comment porter des boucles d’oreilles géométriques au travail, au quotidien et en soirée, selon leur taille, votre encolure et vos bijoux."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-62.jpg",
-    "title": "Comment porter des boucles d'oreilles géométriques",
-    "subtitle": "Un guide pratique des tenues, des tailles, des encolures et des associations de bijoux",
+    "title": "Comment porter des boucles d’oreilles géométriques",
+    "subtitle": "Guide pratique des tenues, tailles, encolures et associations de bijoux",
     "paragraphs": [
-      "Les boucles d'oreilles géométriques utilisent des lignes nettes, des angles, des courbes ou des formes répétées pour créer un bijou plus structuré. Elles peuvent être aussi discrètes qu'une petite barre ou un clou à cadre ouvert, ou aussi visibles qu'un grand pendant anguleux.",
-      "La façon la plus simple de les porter consiste à équilibrer leur taille et leur complexité avec la tenue. Les petites boucles géométriques s'accordent au tailoring, à la maille, aux vêtements imprimés et aux bijoux superposés. Les modèles plus grands ou sculpturaux se lisent mieux avec des vêtements simples, des encolures dégagées et peu d'accessoires concurrents.",
-      "Géométrique ne veut pas automatiquement dire surdimensionné ou audacieux. Le bon style dépend de la forme, de l'échelle, de la finition du métal et du niveau de détail déjà présent dans la tenue."
+      "Les boucles d’oreilles géométriques s’appuient sur des lignes définies, des angles, des courbes ou des formes répétées pour structurer votre style de bijoux. Elles peuvent être discrètes, comme une petite barre ou une puce d’oreille à monture ouverte, ou plus visibles, comme une grande boucle pendante angulaire.",
+      "Pour porter facilement des boucles d’oreilles géométriques, équilibrez leur taille et leur complexité avec votre tenue. Les petits modèles géométriques s’accordent avec le tailleur, la maille, les vêtements imprimés et les bijoux superposés. Les créations plus grandes ou sculpturales ressortent généralement mieux avec des vêtements simples, des encolures dégagées et moins d’accessoires concurrents.",
+      "Géométrique ne signifie pas forcément imposant ou audacieux. Le style adapté dépend de la forme, de la taille, de la finition du métal et du niveau de détail déjà présent dans votre tenue."
     ],
-    "shopLabel": "Découvrir les boucles d'oreilles en diamants de laboratoire",
+    "shopLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Adaptez la taille de la boucle au niveau de détail du vêtement",
-      "Petits clous et cadres ouverts pour le travail et les imprimés",
-      "Réservez les modèles sculpturaux aux tenues unies qui laissent de la place",
-      "Renoncez au collier marquant quand les boucles mènent déjà",
+      "Adaptez la taille des boucles au niveau de détail des vêtements",
+      "Associez les petites puces et les montures ouvertes aux tenues de travail et aux imprimés",
+      "Réservez les grands modèles sculpturaux aux tenues simples et dégagées",
+      "Évitez le collier statement lorsque les boucles attirent déjà l’attention",
       "Répétez un métal déjà présent sur le sac, la ceinture ou les chaussures",
-      "Géométrique ne signifie pas automatiquement surdimensionné",
-      "Vérifiez les dimensions réelles et le poids avant d'acheter"
+      "Géométrique ne signifie pas forcément imposant ou audacieux",
+      "Vérifiez les dimensions et le poids avant de choisir"
     ],
     "image": "/blog-images/blog-image-71.jpg"
   },
@@ -33,25 +33,25 @@
       "content": [
         {
           "type": "section-lead",
-          "text": "Pour un résultat simple, associez les boucles géométriques à des silhouettes nettes : chemise blanche, blazer ajusté, robe monochrome, maille unie ou combinaison sobre."
+          "text": "Pour un look simple, associez des boucles d’oreilles géométriques à des silhouettes épurées, comme une chemise blanche, un blazer ajusté, une robe monochrome, une maille unie ou une combinaison simple."
         },
         {
           "type": "paragraph",
-          "text": "Portez de petits clous géométriques ou des cadres ouverts avec les tenues de travail et les imprimés. Choisissez des boucles anguleuses moyennes lorsque le bijou doit rester visible sans devenir l'unique point de mire. Réservez les modèles sculpturaux plus grands aux tenues unies, où les boucles disposent d'assez d'espace pour mener."
+          "text": "Portez de petites puces géométriques ou des boucles à monture ouverte avec vos tenues de travail et vos vêtements imprimés. Choisissez des boucles angulaires moyennes si vous souhaitez que les bijoux restent visibles sans devenir l’unique point focal. Réservez les grandes créations sculpturales aux tenues simples, afin qu’elles disposent de suffisamment d’espace pour s’imposer."
         },
         {
           "type": "paragraph",
-          "text": "Si les boucles sont déjà très présentes, laissez de côté le collier marquant et préférez une bague simple, un bracelet ou un petit clou d'accompagnement."
+          "text": "Si vos boucles sont déjà très présentes visuellement, évitez le collier statement et préférez une bague simple, un bracelet ou une petite puce en complément."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles en diamants de laboratoire",
+          "text": "Boucles d'oreilles en diamant de laboratoire",
           "href": "/products?category=Earring"
         }
       ]
     },
     {
-      "heading": "Sélecteur de style géométrique",
+      "heading": "Guide de style des boucles d’oreilles géométriques",
       "content": [
         {
           "type": "grid-layout",
@@ -60,15 +60,47 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Type de boucle", "S'accorde bien avec", "Équilibre des bijoux"],
+              "headers": [
+                "Style de boucles",
+                "À associer avec",
+                "Équilibre des bijoux"
+              ],
               "rows": [
-                ["Petit clou géométrique", "Tenues de travail, hauts imprimés, maille et piles d'oreilles", "Se porte avec un collier délicat"],
-                ["Boucle linéaire ou barre", "Chemises, blazers, cols en V et robes minimalistes", "Garder les autres formes simples"],
-                ["Boucle à cadre ouvert", "Tenues monochromes, looks jour-soir et encolures nettes", "Chaîne fine ou aucun collier"],
-                ["Boucle anguleuse moyenne", "Robes, tailoring, dîners et cheveux relevés", "Garder le collier secondaire"],
-                ["Créole géométrique", "Tenues décontractées, combinaisons et tailoring contemporain", "Associer à des clous ou une chaîne fine"],
-                ["Boucle géométrique sculpturale", "Robes unies, tenues noires et looks du soir", "Généralement sans collier marquant"],
-                ["Boucle géométrique en diamant", "Travail, dîners et tenues habillées", "Laisser le diamant apporter l'éclat"]
+                [
+                  "Petite puce géométrique",
+                  "Tenues de travail, hauts imprimés, maille et ear stacks",
+                  "Peut s’associer à un collier délicat"
+                ],
+                [
+                  "Boucle linéaire ou en forme de barre",
+                  "Chemises, blazers, cols en V et robes minimalistes",
+                  "Gardez les autres formes simples"
+                ],
+                [
+                  "Boucle à monture ouverte",
+                  "Tenues monochromes, looks du bureau au soir et encolures épurées",
+                  "Choisissez une chaîne fine ou aucun collier"
+                ],
+                [
+                  "Boucle angulaire moyenne",
+                  "Robes, tailleurs, tenues de dîner et cheveux relevés",
+                  "Gardez le collier au second plan"
+                ],
+                [
+                  "Créole géométrique",
+                  "Tenues décontractées, combinaisons et tailleurs contemporains",
+                  "Associez-la à des puces ou à une chaîne délicate"
+                ],
+                [
+                  "Boucle d’oreille géométrique sculpturale",
+                  "Robes simples, tenues noires et looks de soirée",
+                  "Évitez généralement le collier statement"
+                ],
+                [
+                  "Boucle d’oreille géométrique sertie de diamants",
+                  "Tenues de travail, dîners et occasions formelles",
+                  "Laissez les diamants apporter l’éclat"
+                ]
               ]
             }
           ]
@@ -76,75 +108,75 @@
       ]
     },
     {
-      "heading": "Commencez par la taille",
+      "heading": "Commencez par la taille des boucles",
       "content": [
         {
           "type": "section-lead",
-          "text": "La forme attire l'attention, mais c'est la taille qui détermine l'influence des boucles sur la tenue."
+          "text": "La forme peut attirer l’attention, mais la taille détermine l’impact des boucles sur la tenue."
         },
         {
           "type": "subheading",
-          "text": "Petites boucles géométriques"
+          "text": "Petites boucles d’oreilles géométriques"
         },
         {
           "type": "paragraph",
-          "text": "Les petites barres, carrés, triangles et clous à cadre ouvert s'intègrent facilement à une garde-robe existante. Ils apportent de la structure sans exiger que le reste de la tenue reste totalement uni. Ils fonctionnent particulièrement bien avec :"
+          "text": "Les petites barres, carrés, triangles et puces à monture ouverte s’intègrent facilement à une garde-robe existante. Elles structurent la silhouette sans vous obliger à porter une tenue entièrement sobre. Elles s’accordent particulièrement bien avec :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Les chemises à col",
-            "Les vestes ajustées",
-            "La maille fine",
-            "Les blouses imprimées",
-            "Les robes de travail",
-            "Plusieurs piercings",
-            "Les colliers délicats"
+            "Chemises à col",
+            "Vestes ajustées",
+            "Des mailles fines",
+            "Blouses imprimées",
+            "Robes de travail",
+            "Piercings multiples",
+            "Colliers délicats"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les petits modèles peuvent aussi servir de boucles d'accompagnement dans une pile d'oreilles."
+          "text": "Les petits modèles peuvent aussi servir de boucles complémentaires dans un ear stack."
         },
         {
           "type": "subheading",
-          "text": "Boucles géométriques moyennes"
+          "text": "Boucles d’oreilles géométriques moyennes"
         },
         {
           "type": "paragraph",
-          "text": "Un modèle moyen offre plus de visibilité autour du visage tout en restant adaptable. Il fonctionne avec des robes unies, du tailoring, des combinaisons et des tenues smart-casual. Cette taille est utile quand un petit clou disparaît sous les cheveux mais qu'une grande boucle marquante serait excessive."
+          "text": "Un modèle moyen apporte davantage de présence autour du visage tout en restant facile à porter. Il s’accorde avec les robes simples, les tailleurs, les combinaisons et les tenues chic décontractées. Cette taille est idéale lorsqu’une petite puce disparaît dans les cheveux, mais qu’une grande boucle statement semblerait excessive."
         },
         {
           "type": "subheading",
-          "text": "Boucles géométriques grandes ou sculpturales"
+          "text": "Grandes boucles d’oreilles géométriques ou sculpturales"
         },
         {
           "type": "paragraph",
-          "text": "Les grandes boucles géométriques créent un point de mire net. Associez-les à des vêtements qui laissent au dessin assez d'espace visuel. Les bonnes combinaisons comprennent :"
+          "text": "Les grandes boucles géométriques créent un point focal évident. Portez-les avec des vêtements qui leur laissent suffisamment d’espace visuel. Parmi les associations réussies :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Les robes noires unies",
-            "Les combinaisons monochromes",
-            "Les robes du soir sans ornement",
-            "Les tenues bustier ou à épaules dénudées",
-            "Les robes à col montant sans collier",
-            "Le tailoring simple dans des tons neutres"
+            "Robes noires simples",
+            "Combinaisons monochromes",
+            "Robes de soirée sans ornements",
+            "Tenues bustier ou épaules dénudées",
+            "Robes à col montant sans collier",
+            "Tailleurs simples dans des tons neutres"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Évitez d'associer en même temps de grandes boucles, un collier orné, une encolure ornementée et un tissu très imprimé."
+          "text": "Évitez d’associer simultanément de grandes boucles à un collier travaillé, une encolure ornée et un tissu très imprimé."
         }
       ]
     },
     {
-      "heading": "Équilibrer les boucles et la tenue",
+      "heading": "Équilibrez les boucles avec la tenue",
       "content": [
         {
           "type": "paragraph",
-          "text": "Une règle utile consiste à comparer le niveau de détail des boucles avec celui du vêtement."
+          "text": "Une règle utile consiste à comparer le niveau de détail des boucles à celui des vêtements."
         },
         {
           "type": "subheading",
@@ -152,112 +184,112 @@
         },
         {
           "type": "paragraph",
-          "text": "Une robe unie, une chemise blanche, un blazer noir ou une tenue monochrome supporte une forme géométrique plus visible. Les boucles apportent de la définition sans concurrencer les imprimés, les ornements ou les tissus décoratifs."
+          "text": "Une robe unie, une chemise blanche, un blazer noir ou une tenue monochrome peut accueillir une forme géométrique plus visible. Les boucles structurent le look sans entrer en concurrence avec les imprimés, les ornements ou les tissus décoratifs."
         },
         {
           "type": "subheading",
-          "text": "Tenue détaillée et boucles plus épurées"
+          "text": "Tenue détaillée et boucles épurées"
         },
         {
           "type": "paragraph",
-          "text": "Si le vêtement comporte des paillettes, des broderies, des volants, un grand imprimé floral ou une encolure ornementée, choisissez une boucle géométrique plus petite. Elle peut encore apporter une ligne contemporaine, sans devenir un motif supplémentaire sans lien."
+          "text": "Si vos vêtements comportent des sequins, des broderies, des volants, un grand imprimé floral ou une encolure travaillée, choisissez une boucle géométrique plus petite. Elle peut apporter une ligne contemporaine, sans devenir un motif supplémentaire qui ne s’accorde pas au reste."
         },
         {
           "type": "subheading",
-          "text": "Vêtement structuré et boucles structurées"
+          "text": "Vêtements structurés et boucles structurées"
         },
         {
           "type": "paragraph",
-          "text": "Le tailoring s'accorde naturellement aux bijoux géométriques, car les deux jouent sur des lignes nettes et la proportion. Les formes n'ont pourtant pas besoin de correspondre exactement : un blazer à col carré n'exige pas des boucles carrées."
+          "text": "Le tailleur s’accorde naturellement avec les bijoux géométriques, car tous deux reposent sur des lignes définies et des proportions. Les formes n’ont toutefois pas besoin d’être identiques. Un blazer à encolure carrée n’exige pas des boucles carrées."
         },
         {
           "type": "paragraph",
-          "text": "Choisissez un lien — lignes nettes, métal répété ou niveau de structure comparable — sans rendre chaque détail identique."
+          "text": "Choisissez un seul lien, comme des lignes nettes, un métal répété ou un niveau de structure similaire, sans rendre chaque détail identique."
         }
       ]
     },
     {
-      "heading": "Les boucles géométriques au travail",
+      "heading": "Comment porter des boucles d’oreilles géométriques au travail",
       "content": [
         {
           "type": "paragraph",
-          "text": "Pour les tenues professionnelles, choisissez une taille qui reste visible sans gêner les cols, les casques audio ou les cheveux. Les petits clous, les formes linéaires courtes et les cadres ouverts discrets s'accordent à :"
+          "text": "Pour une tenue professionnelle, choisissez une taille visible sans gêner les cols, les casques ou les cheveux. Les petites puces, les modèles linéaires courts et les boucles à monture ouverte discrètes s’accordent avec :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Des blazers ajustés",
-            "Des chemises blanches ou bleu pâle",
-            "Des pantalons noirs",
-            "De la maille neutre",
-            "Des robes de travail",
-            "Des tailleurs-pantalons contemporains"
+            "Des blazers structurés",
+            "Chemises blanches ou bleu pâle",
+            "Pantalons noirs",
+            "Mailles neutres",
+            "Robes de travail",
+            "Pantalons de tailleur contemporains"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Une finition or jaune réchauffe le bleu marine, la crème, le camel et le tailoring brun. Une finition blanche ou argentée crée un contraste plus net avec le noir, le gris, le bleu et le blanc."
+          "text": "Une finition or jaune réchauffe les tailleurs bleu marine, crème, camel et marron. Une finition blanche ou argentée crée un contraste plus net avec le noir, le gris, le bleu et le blanc."
         },
         {
           "type": "paragraph",
-          "text": "Si la boucle a une forme marquée, gardez le collier délicat. Une chaîne fine ou un pendentif simple suffit généralement."
+          "text": "Si la boucle possède une forme distinctive, gardez le collier délicat. Une chaîne fine ou un pendentif simple suffit généralement."
         },
         {
           "type": "see-also",
-          "text": "Guide des boucles d'oreilles en diamant au quotidien",
+          "text": "Guide des boucles d'oreilles en diamants de laboratoire pour tous les jours",
           "href": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Les boucles géométriques au quotidien",
+      "heading": "Comment porter des boucles d’oreilles géométriques au quotidien",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les boucles géométriques ne sont pas réservées aux tenues habillées. Les modèles petits et moyens apportent de la structure aux tenues détendues. Essayez-les avec :"
+          "text": "Les boucles d’oreilles géométriques ne sont pas réservées aux tenues habillées. Les petits et moyens modèles structurent les looks décontractés. Essayez-les avec :"
         },
         {
           "type": "bullet-list",
           "items": [
             "Un jean et une chemise blanche",
             "Un T-shirt uni et un blazer",
-            "De la maille fine et un pantalon",
+            "Une maille fine et un pantalon",
             "Une robe midi simple",
             "Une chemise en lin",
-            "Un ensemble monochrome",
+            "Un ensemble monochrome coordonné",
             "Une combinaison épurée"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Pour une tenue décontractée, n'ajoutez pas trop de pièces coordonnées. Les boucles doivent rendre le vêtement plus abouti sans transformer le look en styling de cérémonie."
+          "text": "Avec une tenue décontractée, évitez d’ajouter trop de pièces assorties. Les boucles doivent donner davantage de présence aux vêtements sans transformer le look en tenue de cérémonie."
         }
       ]
     },
     {
-      "heading": "Boucles géométriques et tenues minimalistes",
+      "heading": "Boucles d’oreilles géométriques et tenues minimalistes",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les vêtements minimalistes offrent aux bijoux géométriques un fond clair. Le noir, le blanc, le gris, le bleu marine, la crème et le beige laissent la silhouette des boucles bien lisible. Les combinaisons minimalistes les plus réussies utilisent souvent :"
+          "text": "Les vêtements minimalistes offrent un arrière-plan net aux bijoux géométriques. Le noir, le blanc, le gris, le bleu marine, le crème et le beige permettent à leur silhouette de rester visible. Les associations minimalistes les plus réussies reposent souvent sur :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Une seule forme remarquable",
-            "Une seule finition de métal",
-            "Peu d'ornements",
-            "Des lignes de vêtement nettes",
-            "Un nombre restreint d'accessoires"
+            "Une forme qui se remarque",
+            "Une finition de métal",
+            "Peu d’ornements",
+            "Des lignes vestimentaires épurées",
+            "Un nombre limité d’accessoires"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Cela ne veut pas dire que la tenue doit être sans couleur. Une robe rouge, verte ou bleue toute simple constitue également un fond efficace tant que le tissu et l'encolure restent sobres."
+          "text": "La tenue ne doit pas forcément être sans couleur. Une robe simple rouge, verte ou bleue peut aussi servir de base efficace si le tissu et l’encolure restent sobres."
         },
         {
           "type": "see-also",
-          "text": "Guide du style de bijoux minimalistes",
+          "text": "Guide du style minimaliste",
           "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
         },
         {
@@ -268,7 +300,7 @@
       ]
     },
     {
-      "heading": "Porter des boucles géométriques avec une robe",
+      "heading": "Comment porter des boucles d’oreilles géométriques avec une robe",
       "content": [
         {
           "type": "subheading",
@@ -276,7 +308,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Une robe unie offre la plus grande liberté. Des boucles moyennes, à cadre ouvert ou sculpturales peuvent devenir le principal détail de bijou."
+          "text": "Une robe unie vous offre la plus grande liberté. Des boucles moyennes, à monture ouverte ou sculpturales peuvent devenir le détail principal de vos bijoux."
         },
         {
           "type": "subheading",
@@ -284,15 +316,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Choisissez un modèle plus petit au contour net. Évitez les boucles qui introduisent un second motif compliqué à côté du tissu."
+          "text": "Choisissez un modèle plus petit au contour net. Évitez les boucles qui introduisent un autre motif complexe à côté de l’imprimé du tissu."
         },
         {
           "type": "subheading",
-          "text": "Robe en satin"
+          "text": "Robe satinée"
         },
         {
           "type": "paragraph",
-          "text": "Le satin réfléchit déjà la lumière. Optez pour une silhouette géométrique sobre et n'ajoutez pas d'éclat supplémentaire via plusieurs autres accessoires."
+          "text": "Le satin réfléchit déjà la lumière. Choisissez une silhouette géométrique simple et évitez d’ajouter de l’éclat avec plusieurs autres accessoires."
         },
         {
           "type": "subheading",
@@ -300,7 +332,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Le noir offre un fond puissant aux modèles géométriques en or jaune, en ton blanc et en diamant. Choisissez l'échelle en fonction de l'encolure et du niveau de détail de la robe."
+          "text": "Le noir offre un arrière-plan fort aux créations géométriques or jaune, aux finitions blanches et aux modèles sertis de diamants. Adaptez la taille à l’encolure et au niveau de détail de la robe."
         },
         {
           "type": "subheading",
@@ -308,25 +340,25 @@
         },
         {
           "type": "paragraph",
-          "text": "Une robe de couleur unie fonctionne avec des boucles géométriques lorsque la forme accompagne la tenue au lieu de la concurrencer. Répétez le métal dans un autre accessoire ou laissez les boucles se suffire à elles-mêmes."
+          "text": "Une robe unie peut s’accorder avec des boucles géométriques si leur forme complète la tenue sans lui faire concurrence. Répétez le métal sur un autre accessoire ou laissez les boucles se suffire à elles-mêmes."
         },
         {
           "type": "subheading",
-          "text": "Robe du soir"
+          "text": "Robe de soirée"
         },
         {
           "type": "paragraph",
-          "text": "Des boucles géométriques moyennes ou sculpturales constituent une alternative aux pendants classiques. Si la robe a une encolure sobre, les boucles peuvent mener. Si elle comporte des paillettes ou des cristaux, choisissez une forme plus épurée."
+          "text": "Des boucles géométriques moyennes ou sculpturales peuvent remplacer les boucles pendantes traditionnelles. Si la robe possède une encolure simple, laissez les boucles attirer l’attention. Si elle comporte des sequins ou des détails en cristal, choisissez une forme plus épurée."
         },
         {
           "type": "see-also",
-          "text": "Quels bijoux avec une robe noire",
+          "text": "Quels bijoux porter avec une robe noire",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
         }
       ]
     },
     {
-      "heading": "Accorder les boucles à l'encolure",
+      "heading": "Adaptez les boucles d’oreilles géométriques à l’encolure",
       "content": [
         {
           "type": "subheading",
@@ -334,7 +366,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Une encolure haute laisse peu de place au collier, ce qui rend les boucles plus importantes. Choisissez un modèle visible sous les cheveux et évitez les boucles qui s'accrochent à la maille épaisse."
+          "text": "Une encolure montante laisse généralement peu de place à un collier, ce qui rend les boucles d'oreilles plus importantes. Choisissez un modèle visible sous les cheveux et évitez les boucles qui s'accrochent aux mailles épaisses."
         },
         {
           "type": "subheading",
@@ -342,7 +374,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Un col en V supporte un pendentif délicat avec de petites boucles géométriques. Si les boucles sont grandes ou anguleuses, laissez l'encolure dégagée."
+          "text": "Une encolure en V peut accueillir un pendentif délicat avec de petites boucles d'oreilles géométriques. Si les boucles sont grandes ou anguleuses, laissez l'encolure dégagée."
         },
         {
           "type": "subheading",
@@ -350,15 +382,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Les boucles géométriques petites et moyennes s'accordent bien à un col rond. Une chaîne courte peut s'ajouter si elle ne concurrence pas les boucles."
+          "text": "Les boucles d'oreilles géométriques petites et moyennes s'accordent bien avec un col rond. Vous pouvez ajouter une chaîne courte si elle ne concurrence pas les boucles."
         },
         {
           "type": "subheading",
-          "text": "Bustier ou épaules dénudées"
+          "text": "Encolure bustier ou épaules dénudées"
         },
         {
           "type": "paragraph",
-          "text": "Une ligne d'épaule dégagée laisse de la place à une boucle plus visible. Les modèles anguleux moyens ou sculpturaux fonctionnent particulièrement bien, mais vérifiez leur longueur réelle par rapport à l'épaule."
+          "text": "Une ligne d'épaules dégagée laisse davantage de place à des boucles d'oreilles visibles. Les modèles anguleux ou sculpturaux de taille moyenne peuvent être particulièrement adaptés, mais vérifiez leur longueur réelle par rapport aux épaules."
         },
         {
           "type": "subheading",
@@ -366,7 +398,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Choisissez de petits clous, barres ou cadres ouverts qui ne s'accrochent pas au col. Si la chemise est imprimée, préférez un modèle plus simple."
+          "text": "Choisissez de petites puces d'oreilles, des barres ou des boucles à structure ouverte qui ne s'accrochent pas au col. Si la chemise est à motifs, préférez un modèle plus sobre."
         }
       ]
     },
@@ -375,19 +407,19 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La finition du métal peut relier les boucles au vêtement, au sac, aux chaussures ou aux autres bijoux."
+          "text": "La finition du métal peut créer un lien entre les boucles d'oreilles et les vêtements, le sac, les chaussures ou les autres bijoux."
         },
         {
           "type": "subheading",
-          "text": "Boucles géométriques en or jaune"
+          "text": "Boucles d'oreilles géométriques en or jaune"
         },
         {
           "type": "paragraph",
-          "text": "L'or jaune réchauffe le noir, la crème, le camel, le brun, le bleu marine, l'olive et le rouge."
+          "text": "L'or jaune apporte de la chaleur au noir, à l'écru, au camel, au marron, au bleu marine, à l'olive et au rouge."
         },
         {
           "type": "subheading",
-          "text": "Boucles géométriques blanches ou argentées"
+          "text": "Boucles d'oreilles géométriques blanches ou argentées"
         },
         {
           "type": "paragraph",
@@ -395,25 +427,25 @@
         },
         {
           "type": "subheading",
-          "text": "Boucles géométriques en or rose"
+          "text": "Boucles d'oreilles géométriques en or rose"
         },
         {
           "type": "paragraph",
-          "text": "L'or rose donne un résultat plus doux avec le rose poudré, le mauve, le gris clair, la crème, le corail et le rouge atténué."
+          "text": "L'or rose crée un résultat plus doux avec le blush, le mauve, le gris clair, l'écru, le corail et le rouge sourd."
         },
         {
           "type": "paragraph",
-          "text": "Ce sont des orientations et non des règles de couleur strictes. L'approche la plus cohérente consiste souvent à répéter le métal déjà présent sur le sac, la ceinture ou les chaussures."
+          "text": "Il s'agit de conseils de style, pas de règles strictes de couleur. L'approche la plus cohérente consiste souvent à reprendre le métal déjà présent sur le sac, la ceinture ou les chaussures."
         },
         {
           "type": "see-also",
-          "text": "Or jaune, or blanc ou or rose pour les boucles en diamant",
+          "text": "Boucles d’oreilles en diamants de laboratoire : or jaune, blanc ou rose",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Boucles géométriques et coiffure",
+      "heading": "Associer des boucles d'oreilles géométriques à différentes coiffures",
       "content": [
         {
           "type": "grid-layout",
@@ -426,15 +458,15 @@
             },
             {
               "type": "paragraph",
-              "text": "Un chignon, une queue de cheval ou un attaché dégage entièrement la forme de la boucle. C'est particulièrement utile pour les cadres ouverts, les formes linéaires et les modèles sculpturaux."
+              "text": "Un chignon, une coiffure relevée ou une queue-de-cheval dévoile toute la forme de la boucle. C'est particulièrement adapté aux modèles à structure ouverte, linéaires et sculpturaux."
             },
             {
               "type": "subheading",
-              "text": "Cheveux glissés derrière les oreilles"
+              "text": "Cheveux derrière les oreilles"
             },
             {
               "type": "paragraph",
-              "text": "Glisser un côté ou les deux derrière l'oreille rend les boucles moyennes visibles sans changer toute la coiffure."
+              "text": "Glisser un ou deux côtés derrière l'oreille peut rendre des boucles moyennes visibles sans changer toute la coiffure."
             },
             {
               "type": "subheading",
@@ -442,7 +474,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Choisissez des boucles suffisamment longues ou contrastées pour rester visibles. Les petits clous peuvent disparaître sous une chevelure épaisse ou longue."
+              "text": "Choisissez des boucles suffisamment longues ou contrastées pour rester visibles. De petites puces d'oreilles peuvent disparaître sous des cheveux épais ou longs."
             },
             {
               "type": "subheading",
@@ -450,142 +482,166 @@
             },
             {
               "type": "paragraph",
-              "text": "Les coupes courtes dégagent naturellement l'oreille. Les modèles petits comme sculpturaux fonctionnent : choisissez l'échelle selon la tenue plutôt que de supposer qu'il faut de grandes boucles."
+              "text": "Les coiffures courtes dégagent naturellement l'oreille. Les modèles petits comme sculpturaux peuvent convenir : adaptez leur taille à la tenue plutôt que de supposer que de grandes boucles sont nécessaires."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "La coiffure doit montrer le dessin fidèlement sans imposer une taille de boucle qui ne convient pas au reste de la tenue."
+          "text": "La coiffure doit montrer fidèlement le modèle, sans vous imposer une taille de boucle qui ne convient pas au reste de la tenue."
         }
       ]
     },
     {
-      "heading": "Peut-on porter un collier avec des boucles géométriques ?",
+      "heading": "Peut-on porter des boucles d'oreilles géométriques avec un collier ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Oui, mais le collier ne doit pas concurrencer l'élément le plus fort des boucles."
+          "text": "Oui, mais le collier ne doit pas concurrencer l'élément le plus marquant des boucles d'oreilles."
         },
         {
           "type": "table",
-          "headers": ["Boucle géométrique", "Orientation du collier"],
+          "headers": [
+            "Boucle d'oreille géométrique",
+            "Choix du collier"
+          ],
           "rows": [
-            ["Petit clou ou barre", "Pendentif fin ou chaîne courte"],
-            ["Petit modèle à cadre ouvert", "Chaîne délicate ou aucun collier"],
-            ["Modèle anguleux moyen", "Pendentif simple"],
-            ["Créole géométrique", "Chaîne fine ou collier court"],
-            ["Grand modèle sculptural", "Généralement aucun collier"],
-            ["Boucle géométrique en diamant", "Chaîne en métal uni ou aucun collier"],
-            ["Pile d'oreilles géométrique", "Garder le collier visuellement discret"]
+            [
+              "Petite puce d'oreille ou barre",
+              "Pendentif fin ou chaîne courte"
+            ],
+            [
+              "Petit modèle à structure ouverte",
+              "Chaîne délicate ou aucun collier"
+            ],
+            [
+              "Modèle anguleux de taille moyenne",
+              "Pendentif simple"
+            ],
+            [
+              "Créole géométrique",
+              "Chaîne fine ou collier court"
+            ],
+            [
+              "Grand modèle sculptural",
+              "Généralement sans collier"
+            ],
+            [
+              "Boucle d'oreille géométrique en diamant",
+              "Chaîne en métal sobre ou aucun collier"
+            ],
+            [
+              "Ear stack géométrique",
+              "Privilégiez un collier visuellement discret"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Évitez de combiner plusieurs grandes formes, sauf si un style volontairement maximaliste est recherché."
+          "text": "Évitez d'associer plusieurs formes imposantes, sauf si vous recherchez délibérément un style maximaliste."
         }
       ]
     },
     {
-      "heading": "Construire une pile d'oreilles géométrique",
+      "heading": "Comment composer un ear stack géométrique",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilisez une forme principale et des boucles d'accompagnement plus petites. Les combinaisons possibles comprennent :"
+          "text": "Choisissez une forme principale et de petites boucles d'accompagnement. Voici quelques associations possibles :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Boucle à cadre ouvert avec un petit clou en diamant",
-            "Créole géométrique avec un solitaire simple",
-            "Boucle anguleuse principale avec un clou barre court",
-            "Petit clou géométrique avec un huggie discret",
-            "Boucle géométrique ton blanc avec de petits clous assortis"
+            "Boucle d'oreille à structure ouverte avec une petite puce en diamant",
+            "Créole géométrique avec une simple puce solitaire",
+            "Boucle principale anguleuse avec une petite puce barre",
+            "Petite puce géométrique avec une petite créole (huggie) discrète",
+            "Boucle d'oreille géométrique blanche avec de petites puces assorties"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Toutes les boucles n'ont pas besoin d'être géométriques. Répéter le métal ou le détail en diamant crée déjà assez de lien."
+          "text": "Toutes les boucles d'oreilles ne doivent pas être géométriques. Reprendre le métal ou le détail en diamant suffit à créer une cohérence."
         },
         {
           "type": "see-also",
-          "text": "Comment empiler des boucles d'oreilles",
+          "text": "Comment composer un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         },
         {
           "type": "see-also",
-          "text": "Comment porter des boucles d'oreilles huggie",
+          "text": "Comment porter des petites créoles (huggies)",
           "href": "/resources/earring-style-guides/how-to-style-huggie-earrings"
         }
       ]
     },
     {
-      "heading": "Les boucles géométriques conviennent-elles à tous les visages ?",
+      "heading": "Les boucles d'oreilles géométriques conviennent-elles à toutes les formes de visage ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les tableaux par forme de visage sont une aide facultative, pas une règle stricte. Les boucles géométriques n'ont pas à « corriger » ni à dissimuler la forme d'un visage."
+          "text": "Les tableaux de formes de visage sont des indications facultatives, pas des règles strictes. Les boucles d'oreilles géométriques n'ont pas à « corriger » ou à dissimuler la forme du visage."
         },
         {
           "type": "paragraph",
-          "text": "Décidez plutôt de l'effet visuel recherché :"
+          "text": "Déterminez plutôt l'effet visuel recherché :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Les modèles linéaires longs créent une ligne verticale.",
-            "Les formes larges créent plus de présence horizontale.",
+            "Les modèles linéaires et longs créent une ligne verticale.",
+            "Les formes larges renforcent la présence horizontale.",
             "Les formes géométriques courbes paraissent plus douces.",
             "Les formes anguleuses créent une définition plus marquée.",
-            "Les petits clous concentrent l'effet autour de l'oreille."
+            "Les petites puces concentrent l'effet autour de l'oreille."
           ]
         },
         {
           "type": "paragraph",
-          "text": "L'échelle réelle, la coiffure et la préférence personnelle comptent davantage que de ranger chaque personne dans une catégorie de visage. Des photos portées originales seront plus utiles que des règles générales."
+          "text": "La taille réelle, la coiffure et vos préférences comptent davantage que le fait de classer chaque personne dans une forme de visage. Des photos originales portées seront plus utiles que des règles génériques."
         }
       ]
     },
     {
-      "heading": "Du jour au soir",
+      "heading": "Associations de boucles d'oreilles géométriques du jour au soir",
       "content": [
         {
           "type": "subheading",
-          "text": "Du bureau au dîner"
+          "text": "Du travail au dîner"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Boucles à cadre ouvert petites ou moyennes",
+            "Petites ou moyennes boucles à structure ouverte",
             "Blazer ajusté et pantalon",
             "Collier fin pendant la journée",
-            "Retirer le blazer pour le soir",
-            "Garder les mêmes boucles"
+            "Retirez le blazer le soir",
+            "Gardez les mêmes boucles d'oreilles"
           ]
         },
         {
           "type": "subheading",
-          "text": "Du décontracté au smart-casual"
+          "text": "Du décontracté au casual chic"
         },
         {
           "type": "bullet-list",
           "items": [
             "Petites boucles anguleuses",
             "Chemise blanche et jean",
-            "Ajouter une veste structurée et une bague simple",
-            "Garder le collier minimal"
+            "Ajoutez une veste structurée et une bague simple",
+            "Gardez le collier minimaliste"
           ]
         },
         {
           "type": "subheading",
-          "text": "Tenue du soir minimaliste"
+          "text": "Tenue de soirée minimaliste"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Boucles géométriques moyennes ou sculpturales",
-            "Robe unie noire, bleu marine ou rouge",
-            "Aucun collier marquant",
+            "Boucles d'oreilles géométriques moyennes ou sculpturales",
+            "Robe noire, bleu marine ou rouge sobre",
+            "Pas de collier statement",
             "Un bracelet ou une bague discrets",
             "Cheveux glissés derrière l'oreille"
           ]
@@ -593,30 +649,30 @@
       ]
     },
     {
-      "heading": "Erreurs de style fréquentes",
+      "heading": "Erreurs de style courantes",
       "content": [
         {
           "type": "bullet-list",
           "items": [
-            "Traiter toute boucle géométrique comme une boucle marquante",
-            "Porter de grandes boucles géométriques avec une tenue très imprimée",
-            "Accorder chaque bijou à la même forme",
-            "Associer de grandes boucles à un collier tout aussi grand",
+            "Considérer chaque boucle d'oreille géométrique comme une boucle statement",
+            "Porter de grandes boucles géométriques avec une tenue très chargée en motifs",
+            "Assortir chaque bijou à la même forme",
+            "Associer de grandes boucles d'oreilles à un collier tout aussi imposant",
             "Ne pas vérifier si les boucles s'accrochent au col ou à l'épaule",
-            "Choisir des boucles qui disparaissent totalement sous les cheveux",
-            "Qualifier une boucle de confortable sans poids vérifié ni essai",
-            "Utiliser « intemporel » ou « investissement » à la place d'informations pratiques"
+            "Choisir des boucles qui disparaissent complètement sous les cheveux",
+            "Affirmer qu'une boucle est confortable sans vérifier son poids ni effectuer d'essai porté",
+            "Employer « intemporel » ou « investissement » à la place d'informations pratiques"
           ]
         },
         {
           "type": "see-also",
-          "text": "Guide des boucles d'oreilles marquantes",
+          "text": "Guide des boucles d'oreilles statement audacieuses",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Check-list finale",
+      "heading": "Checklist finale des boucles d'oreilles géométriques",
       "content": [
         {
           "type": "grid-layout",
@@ -625,70 +681,70 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Avant de choisir la tenue, demandez-vous :"
+              "text": "Avant de choisir votre tenue, demandez-vous :"
             },
             {
               "type": "bullet-list",
               "items": [
                 "La boucle est-elle petite, moyenne ou sculpturale ?",
-                "La forme est-elle anguleuse, courbe, linéaire ou à cadre ouvert ?",
-                "La tenue est-elle unie ou très détaillée ?",
-                "La coiffure montrera-t-elle le dessin complet ?",
-                "La boucle dégage-t-elle bien le col et l'épaule ?",
-                "Un collier est-il vraiment nécessaire ?",
+                "Sa forme est-elle anguleuse, courbe, linéaire ou à structure ouverte ?",
+                "La tenue est-elle sobre ou très travaillée ?",
+                "La coiffure laissera-t-elle voir le modèle en entier ?",
+                "La boucle ne touche-t-elle ni le col ni l'épaule ?",
+                "Un collier est-il nécessaire ?",
                 "Quel métal est déjà présent dans la tenue ?",
                 "La boucle convient-elle à l'occasion ?",
-                "Ai-je une forme principale ou plusieurs formes concurrentes ?",
-                "Ai-je vérifié les dimensions et le poids réels du produit ?"
+                "Utilisez-vous une forme principale ou plusieurs formes qui se concurrencent ?",
+                "Avez-vous vérifié les dimensions et le poids réels du produit ?"
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "En cas d'hésitation, commencez par une boucle géométrique moyenne, une silhouette de tenue nette et une seule finition de métal."
+          "text": "En cas d'hésitation, commencez par une boucle d'oreille géométrique moyenne, une silhouette épurée et une finition métallique cohérente."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Quelles tenues s'accordent aux boucles géométriques ?",
-      "answer": "Elles s'accordent au tailoring, aux chemises, à la maille, aux tenues monochromes, aux combinaisons et aux robes sobres. Adaptez la taille de la boucle au niveau de détail du vêtement."
+      "question": "Avec quelles tenues porter des boucles d'oreilles géométriques ?",
+      "answer": "Les boucles d'oreilles géométriques s'accordent avec les tailleurs, les chemises, les mailles, les tenues monochromes, les combinaisons et les robes épurées. Adaptez leur taille au niveau de détail des vêtements."
     },
     {
-      "question": "Peut-on porter des boucles géométriques tous les jours ?",
-      "answer": "Les petits clous, barres et cadres ouverts conviennent à un usage régulier. Vérifiez les dimensions réelles, le poids, la fermeture et les instructions d'entretien avant de considérer une paire précise comme adaptée au port fréquent."
+      "question": "Peut-on porter des boucles d'oreilles géométriques tous les jours ?",
+      "answer": "Les petites puces d'oreilles, les barres et les modèles à structure ouverte peuvent convenir au quotidien. Vérifiez les dimensions, le poids, le fermoir et les conseils d'entretien du produit avant de considérer une paire comme adaptée à un port fréquent."
     },
     {
-      "question": "Les boucles géométriques conviennent-elles au travail ?",
-      "answer": "Oui. Les modèles petits ou moyens accompagnent blazers, chemises, maille et robes de travail. Évitez les modèles qui s'accrochent au col, aux cheveux ou aux casques audio."
+      "question": "Les boucles d'oreilles géométriques conviennent-elles au travail ?",
+      "answer": "Oui. Les modèles petits ou moyens s'accordent avec les blazers, les chemises, les mailles et les robes de travail. Évitez les modèles qui s'accrochent aux cols, aux cheveux ou aux casques."
     },
     {
-      "question": "Peut-on les porter avec des vêtements imprimés ?",
-      "answer": "Oui, mais choisissez un modèle plus épuré et plus petit pour que les boucles n'ajoutent pas un motif concurrent."
+      "question": "Peut-on porter des boucles d'oreilles géométriques avec des vêtements à motifs ?",
+      "answer": "Oui, mais choisissez un modèle plus épuré et plus petit afin que les boucles n'ajoutent pas un autre motif concurrent."
     },
     {
-      "question": "Faut-il porter un collier avec des boucles géométriques ?",
-      "answer": "Un collier délicat fonctionne avec de petites boucles géométriques. Les modèles plus grands ou sculpturaux se lisent généralement mieux sans collier marquant."
+      "question": "Faut-il porter un collier avec des boucles d'oreilles géométriques ?",
+      "answer": "Un collier délicat peut convenir à de petites boucles d'oreilles géométriques. Les modèles plus grands ou sculpturaux sont généralement plus nets sans collier imposant."
     },
     {
-      "question": "Peut-on les intégrer à une pile d'oreilles ?",
-      "answer": "Oui. Utilisez une boucle géométrique principale et accompagnez-la de clous, barres ou huggies plus petits. Répétez le métal ou le détail en diamant plutôt que de donner la même forme à chaque boucle."
+      "question": "Peut-on intégrer des boucles d'oreilles géométriques dans un ear stack ?",
+      "answer": "Oui. Utilisez une boucle d'oreille géométrique principale et accompagnez-la de petites puces d'oreilles, de barres ou de petites créoles (huggies). Reprenez le métal ou le détail en diamant plutôt que de donner la même forme à chaque boucle."
     },
     {
-      "question": "Boucles géométriques et boucles marquantes, est-ce pareil ?",
-      "answer": "Non. Géométrique décrit la forme et la construction du modèle. Une boucle géométrique peut être très petite et discrète, ou assez grande pour jouer le rôle d'une pièce marquante."
+      "question": "Les boucles d'oreilles géométriques sont-elles des boucles statement ?",
+      "answer": "Non. Géométrique décrit la forme et la construction du modèle. Une boucle d'oreille géométrique peut être très petite et discrète, ou suffisamment grande pour devenir une pièce statement."
     }
   ],
   "cta": {
-    "heading": "Équilibrez la taille et la complexité de la boucle avec la tenue. Les petits clous et cadres ouverts conviennent au travail et aux imprimés, tandis que les modèles sculpturaux plus grands demandent une tenue unie et assez d'espace pour mener.",
-    "body": "Parcourez les boucles d'oreilles demi-fines en diamants de laboratoire d'I Want Jewels et vérifiez sur chaque page produit les dimensions, le poids, la fermeture et la finition avant de choisir l'échelle qui convient à votre tenue.",
-    "primaryLabel": "Découvrir les boucles d'oreilles en diamants de laboratoire",
+    "heading": "Équilibrez la taille et la complexité de la boucle avec la tenue. Les petites puces et les structures ouvertes conviennent aux tenues de travail et aux imprimés, tandis que les grands modèles sculpturaux nécessitent une tenue sobre et suffisamment d'espace pour s'imposer.",
+    "body": "Découvrez les boucles d'oreilles demi-fine en diamant de laboratoire I Want Jewels et consultez chaque fiche produit pour vérifier les dimensions, le poids, le fermoir et la finition indiqués avant de choisir la taille de modèle géométrique adaptée à votre tenue.",
+    "primaryLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Guide du style de bijoux minimalistes",
+    "secondaryLabel": "Guide du style avec bijoux minimalistes",
     "secondaryHref": "/resources/earring-style-guides/minimalist-jewellery-styling-guide",
-    "tertiaryLabel": "Comment empiler des boucles d'oreilles",
+    "tertiaryLabel": "Comment composer un ear stack",
     "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
   }
 }

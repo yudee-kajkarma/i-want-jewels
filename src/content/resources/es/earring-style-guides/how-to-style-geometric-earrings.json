@@ -1,29 +1,29 @@
 {
   "meta": {
-    "title": "Cómo combinar aretes geométricos",
-    "description": "Aprende a combinar aretes geométricos con ropa de trabajo, looks informales, vestidos y atuendos de noche, con consejos de tamaño, escotes y joyería."
+    "title": "Cómo combinar pendientes geométricos",
+    "description": "Aprenda a combinar pendientes geométricos con looks de oficina, informales, vestidos y conjuntos de noche, según tamaño, escote y otras joyas."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-62.jpg",
-    "title": "Cómo combinar aretes geométricos",
-    "subtitle": "Una guía práctica de atuendos, tamaños, escotes y combinaciones de joyería",
+    "title": "Cómo combinar pendientes geométricos",
+    "subtitle": "Guía práctica sobre conjuntos, tamaños, escotes y combinaciones de joyas",
     "paragraphs": [
-      "Los aretes geométricos utilizan líneas definidas, ángulos, curvas o formas repetidas para crear un look de joyería más estructurado. Pueden ser tan discretos como una barra pequeña o un arete de marco abierto, o tan visibles como un colgante angular grande.",
-      "La forma más sencilla de combinarlos es equilibrar su tamaño y complejidad con el atuendo. Los aretes geométricos pequeños funcionan con sastrería, punto, ropa estampada y joyería superpuesta. Los diseños más grandes o escultóricos suelen leerse mejor con ropa sencilla, escotes despejados y menos accesorios que compitan.",
-      "Geométrico no significa automáticamente grande ni llamativo. El estilo adecuado depende de la forma, la escala y el acabado del metal del arete, así como del nivel de detalle que ya tenga el atuendo."
+      "Los pendientes geométricos utilizan líneas definidas, ángulos, curvas o formas repetidas para crear un look de joyería más estructurado. Pueden ser tan discretos como un pequeño barrote o unos pendientes de botón de montura abierta, o tan visibles como unos grandes pendientes colgantes angulares.",
+      "La forma más sencilla de combinar pendientes geométricos es equilibrar su tamaño y complejidad con el conjunto. Los pendientes geométricos pequeños funcionan con sastrería, prendas de punto, ropa estampada y joyas superpuestas. Los diseños más grandes o escultóricos suelen verse mejor con prendas sencillas, escotes abiertos y menos accesorios que compitan por la atención.",
+      "Geométrico no significa necesariamente grande o llamativo. La combinación adecuada depende de la forma, la escala, el acabado del metal y la cantidad de detalles que ya tenga el conjunto."
     ],
-    "shopLabel": "Explora los aretes de diamantes cultivados en laboratorio",
+    "shopLabel": "Explore los pendientes de diamantes de laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Ajusta el tamaño del arete al nivel de detalle de la ropa",
-      "Usa aretes de botón pequeños y marcos abiertos con ropa de trabajo y estampados",
-      "Reserva los diseños escultóricos para atuendos lisos con espacio",
-      "Prescinde del collar llamativo cuando los aretes ya lideran",
-      "Repite un metal que ya esté en el bolso, el cinturón o los zapatos",
-      "Geométrico no equivale automáticamente a grande o llamativo",
-      "Comprueba las medidas y el peso reales antes de comprar"
+      "Adapte el tamaño de los pendientes a la cantidad de detalles de la ropa",
+      "Use pendientes de botón pequeños y monturas abiertas con ropa de oficina y estampados",
+      "Reserve los diseños escultóricos grandes para conjuntos sencillos y con espacio visual",
+      "Prescinda del collar statement cuando los pendientes ya sean los protagonistas",
+      "Repita un metal que ya aparezca en el bolso, el cinturón o los zapatos",
+      "Geométrico no significa necesariamente grande o llamativo",
+      "Compruebe las dimensiones y el peso reales antes de decidirse"
     ],
     "image": "/blog-images/blog-image-71.jpg"
   },
@@ -33,25 +33,25 @@
       "content": [
         {
           "type": "section-lead",
-          "text": "Para un resultado sencillo, combina los aretes geométricos con siluetas limpias: camisa blanca, blazer entallado, vestido monocromo, punto liso o mono sobrio."
+          "text": "Para un look sencillo, combine pendientes geométricos con siluetas depuradas, como una camisa blanca, una americana sastre, un vestido monocromático, un jersey liso o un mono sencillo."
         },
         {
           "type": "paragraph",
-          "text": "Usa aretes de botón geométricos pequeños o de marco abierto con ropa de trabajo y atuendos estampados. Elige aretes angulares medianos cuando quieras que la joyería siga siendo visible sin convertirse en el único punto focal. Reserva los diseños escultóricos más grandes para atuendos lisos, donde los aretes tienen espacio suficiente para liderar."
+          "text": "Use pendientes de botón geométricos pequeños o pendientes de montura abierta con ropa de oficina y conjuntos estampados. Elija pendientes angulares medianos cuando quiera que las joyas sean visibles sin convertirse en el único foco de atención. Reserve los diseños escultóricos grandes para conjuntos sencillos en los que tengan espacio suficiente para destacar."
         },
         {
           "type": "paragraph",
-          "text": "Si los aretes ya son visualmente fuertes, prescinde del collar llamativo y usa en su lugar un anillo sencillo, una pulsera o un arete de botón pequeño de apoyo."
+          "text": "Si los pendientes ya tienen mucha presencia visual, prescinda del collar statement y opte por un anillo sencillo, una pulsera o un pequeño pendiente de apoyo."
         },
         {
           "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio",
+          "text": "Pendientes de diamantes de laboratorio",
           "href": "/products?category=Earring"
         }
       ]
     },
     {
-      "heading": "Selector de estilo geométrico",
+      "heading": "Selector para combinar pendientes geométricos",
       "content": [
         {
           "type": "grid-layout",
@@ -60,15 +60,47 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Tipo de arete", "Combina bien con", "Equilibrio de joyería"],
+              "headers": [
+                "Estilo de pendiente",
+                "Combina bien con",
+                "Equilibrio de joyas"
+              ],
               "rows": [
-                ["Arete de botón geométrico pequeño", "Ropa de trabajo, tops estampados, punto y pilas de orejas", "Admite un collar delicado"],
-                ["Arete lineal o de barra", "Camisas, blazers, cuellos en V y vestidos minimalistas", "Mantener las demás formas sencillas"],
-                ["Arete de marco abierto", "Atuendos monocromos, looks de día a noche y escotes limpios", "Cadena fina o ningún collar"],
-                ["Arete angular mediano", "Vestidos, sastrería, cenas y cabello recogido", "Mantener el collar en segundo plano"],
-                ["Aro geométrico", "Atuendos informales, monos y sastrería contemporánea", "Combinar con aretes de botón o cadena delicada"],
-                ["Arete geométrico escultórico", "Vestidos lisos, atuendos negros y looks de noche", "Normalmente sin collar llamativo"],
-                ["Arete geométrico de diamantes", "Trabajo, cenas y atuendos formales", "Dejar que el detalle de diamante aporte el brillo"]
+                [
+                  "Pendiente de botón geométrico pequeño",
+                  "Ropa de oficina, tops estampados, prendas de punto y ear stacks",
+                  "Puede llevarse con un collar delicado"
+                ],
+                [
+                  "Pendiente lineal o de barrote",
+                  "Camisas, americanas, escotes en V y vestidos minimalistas",
+                  "Mantenga sencillas las demás formas"
+                ],
+                [
+                  "Pendiente de montura abierta",
+                  "Conjuntos monocromáticos, looks de oficina a noche y escotes depurados",
+                  "Use una cadena fina o ningún collar"
+                ],
+                [
+                  "Pendiente angular mediano",
+                  "Vestidos, sastrería, conjuntos de cena y cabello recogido",
+                  "Mantenga el collar en segundo plano"
+                ],
+                [
+                  "Pendiente de aro geométrico",
+                  "Conjuntos informales, monos y sastrería contemporánea",
+                  "Combínelo con pendientes de botón o una cadena delicada"
+                ],
+                [
+                  "Pendiente geométrico escultórico",
+                  "Vestidos lisos, conjuntos negros y looks de noche",
+                  "Normalmente, prescinda del collar statement"
+                ],
+                [
+                  "Pendiente geométrico de diamante",
+                  "Ropa de oficina, cenas y conjuntos formales",
+                  "Deje que el detalle de diamante aporte el brillo"
+                ]
               ]
             }
           ]
@@ -76,184 +108,184 @@
       ]
     },
     {
-      "heading": "Empieza por el tamaño del arete",
+      "heading": "Empiece por el tamaño del pendiente",
       "content": [
         {
           "type": "section-lead",
-          "text": "La forma llama la atención, pero el tamaño determina cuánto afectan los aretes al atuendo."
+          "text": "La forma puede atraer la atención, pero el tamaño determina cuánto afectan los pendientes al conjunto."
         },
         {
           "type": "subheading",
-          "text": "Aretes geométricos pequeños"
+          "text": "Pendientes geométricos pequeños"
         },
         {
           "type": "paragraph",
-          "text": "Las barras, cuadrados, triángulos y marcos abiertos pequeños se integran fácilmente en un armario existente. Aportan estructura sin exigir que el resto del atuendo sea completamente liso. Funcionan especialmente bien con:"
+          "text": "Los barrotes, cuadrados, triángulos y pendientes de botón de montura abierta pequeños son fáciles de incorporar a un armario ya formado. Aportan estructura sin exigir que el resto del conjunto sea completamente liso. Funcionan especialmente bien con:"
         },
         {
           "type": "bullet-list",
           "items": [
             "Camisas con cuello",
-            "Chaquetas entalladas",
-            "Punto fino",
+            "Chaquetas sastre",
+            "Prendas finas de punto",
             "Blusas estampadas",
-            "Vestidos de trabajo",
-            "Varias perforaciones",
+            "Vestidos de oficina",
+            "Varios piercings",
             "Collares delicados"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Los diseños pequeños también pueden actuar como aretes de apoyo en una pila de orejas."
+          "text": "Los diseños pequeños también pueden actuar como pendientes de apoyo en un ear stack."
         },
         {
           "type": "subheading",
-          "text": "Aretes geométricos medianos"
+          "text": "Pendientes geométricos medianos"
         },
         {
           "type": "paragraph",
-          "text": "Un diseño mediano ofrece mayor visibilidad alrededor del rostro sin dejar de ser adaptable. Funciona con vestidos lisos, sastrería, monos y atuendos smart-casual. Este tamaño resulta útil cuando un arete pequeño desaparece bajo el cabello pero un arete llamativo grande resultaría excesivo."
+          "text": "Un diseño mediano aporta más visibilidad alrededor del rostro sin dejar de ser versátil. Puede combinarse con vestidos lisos, sastrería, monos y conjuntos smart casual. Este tamaño resulta útil cuando un pendiente de botón pequeño desaparece bajo el cabello, pero uno grande y llamativo resulta excesivo."
         },
         {
           "type": "subheading",
-          "text": "Aretes geométricos grandes o escultóricos"
+          "text": "Pendientes geométricos grandes o escultóricos"
         },
         {
           "type": "paragraph",
-          "text": "Los aretes geométricos grandes crean un punto focal claro. Combínalos con ropa que dé al diseño espacio visual suficiente. Buenas combinaciones incluyen:"
+          "text": "Los pendientes geométricos grandes crean un foco de atención claro. Combínelos con prendas que les den suficiente espacio visual. Algunas buenas opciones son:"
         },
         {
           "type": "bullet-list",
           "items": [
             "Vestidos negros lisos",
-            "Monos monocromos",
+            "Monos monocromáticos",
             "Vestidos de noche sin adornos",
-            "Atuendos palabra de honor o con hombros descubiertos",
+            "Conjuntos palabra de honor o con hombros descubiertos",
             "Vestidos de cuello alto sin collar",
             "Sastrería sencilla en colores neutros"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Evita combinar a la vez aretes grandes con un collar recargado, un escote adornado y un tejido muy estampado."
+          "text": "Evite combinar a la vez pendientes grandes con un collar recargado, un escote adornado y un tejido muy estampado."
         }
       ]
     },
     {
-      "heading": "Equilibra los aretes con el atuendo",
+      "heading": "Equilibre los pendientes con el conjunto",
       "content": [
         {
           "type": "paragraph",
-          "text": "Una regla útil es comparar el nivel de detalle de los aretes con el de la ropa."
+          "text": "Una regla útil para combinar joyas es comparar el nivel de detalle de los pendientes con la cantidad de detalles de la ropa."
         },
         {
           "type": "subheading",
-          "text": "Atuendo sencillo y aretes visibles"
+          "text": "Conjunto sencillo y pendientes visibles"
         },
         {
           "type": "paragraph",
-          "text": "Un vestido liso, una camisa blanca, un blazer negro o un atuendo monocromo admiten una forma geométrica más visible. Los aretes aportan definición sin competir con estampados, adornos o tejidos decorativos."
+          "text": "Un vestido liso, una camisa blanca, una americana negra o un conjunto monocromático pueden admitir una forma geométrica más visible. Los pendientes aportan definición sin competir con estampados, adornos o tejidos decorativos."
         },
         {
           "type": "subheading",
-          "text": "Atuendo recargado y aretes más limpios"
+          "text": "Conjunto detallado y pendientes depurados"
         },
         {
           "type": "paragraph",
-          "text": "Si la ropa incluye lentejuelas, bordados, volantes, un estampado floral grande o un escote recargado, elige un arete geométrico más pequeño. Puede seguir aportando una línea contemporánea, pero no debe convertirse en otro patrón sin relación."
+          "text": "Si la ropa incluye lentejuelas, bordados, volantes, un estampado floral grande o un escote recargado, elija un pendiente geométrico más pequeño. El pendiente puede seguir aportando una línea contemporánea, pero no debería convertirse en otro estampado independiente."
         },
         {
           "type": "subheading",
-          "text": "Ropa estructurada y aretes estructurados"
+          "text": "Ropa estructurada y pendientes estructurados"
         },
         {
           "type": "paragraph",
-          "text": "La sastrería encaja de forma natural con la joyería geométrica porque ambas usan líneas definidas y proporción. Aun así, las formas no tienen que coincidir exactamente: un blazer con escote cuadrado no exige aretes cuadrados."
+          "text": "La sastrería combina de forma natural con la joyería geométrica porque ambas utilizan líneas definidas y proporción. Sin embargo, las formas no tienen que coincidir exactamente. Una americana de escote cuadrado no exige unos pendientes cuadrados."
         },
         {
           "type": "paragraph",
-          "text": "Elige una conexión —líneas limpias, un metal repetido o un nivel similar de estructura— sin hacer que cada detalle sea idéntico."
+          "text": "Elija un punto de conexión —como unas líneas depuradas, un metal repetido o un nivel de estructura similar— sin hacer idéntico cada detalle."
         }
       ]
     },
     {
-      "heading": "Aretes geométricos para el trabajo",
+      "heading": "Cómo combinar pendientes geométricos para ir a la oficina",
       "content": [
         {
           "type": "paragraph",
-          "text": "Para atuendos profesionales, usa un tamaño que siga siendo visible pero no interfiera con cuellos, auriculares o cabello. Los aretes de botón pequeños, los diseños lineales cortos y los marcos abiertos discretos funcionan con:"
+          "text": "Para conjuntos profesionales, elija un tamaño que sea visible, pero que no interfiera con cuellos, auriculares ni cabello. Los pendientes de botón pequeños, los diseños lineales cortos y los pendientes de montura abierta discretos combinan con:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Blazers entallados",
-            "Camisas blancas o azul claro",
+            "Blazers de corte sastre",
+            "Camisas blancas o azul pálido",
             "Pantalones negros",
-            "Punto en tonos neutros",
-            "Vestidos de trabajo",
+            "Prendas de punto neutras",
+            "Vestidos de oficina",
             "Trajes de pantalón contemporáneos"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un acabado en oro amarillo aporta calidez al azul marino, el crema, el camel y la sastrería marrón. Un acabado blanco o plateado crea un contraste más limpio con negro, gris, azul y blanco."
+          "text": "El acabado en oro amarillo aporta calidez a la sastrería azul marino, crema, camel y marrón. El acabado blanco o plateado crea un contraste más limpio con el negro, gris, azul y blanco."
         },
         {
           "type": "paragraph",
-          "text": "Si el arete tiene una forma marcada, mantén el collar delicado. Una cadena fina o un colgante sencillo suelen bastar."
+          "text": "Si el pendiente tiene una forma distintiva, mantenga el collar delicado. Normalmente basta con una cadena fina o un colgante sencillo."
         },
         {
           "type": "see-also",
-          "text": "Guía de aretes de diamantes para el día a día",
+          "text": "Guía de pendientes de diamante de laboratorio para cada día",
           "href": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Aretes geométricos en clave informal",
+      "heading": "Cómo combinar pendientes geométricos en looks informales",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aretes geométricos no tienen por qué reservarse a la ropa formal. Los diseños pequeños y medianos aportan estructura a atuendos relajados. Pruébalos con:"
+          "text": "Los pendientes geométricos no tienen por qué reservarse para la ropa formal. Los diseños pequeños y medianos aportan estructura a los conjuntos relajados. Pruébelos con:"
         },
         {
           "type": "bullet-list",
           "items": [
             "Vaqueros y camisa blanca",
-            "Camiseta lisa y blazer",
-            "Punto fino y pantalón",
-            "Un vestido midi sencillo",
-            "Una camisa de lino",
-            "Un conjunto monocromo",
-            "Un mono de líneas limpias"
+            "Camiseta lisa y americana",
+            "Prendas de punto fino y pantalones",
+            "Vestido midi sencillo",
+            "Camisa de lino",
+            "Conjunto coordinado monocromático",
+            "Mono depurado"
           ]
         },
         {
           "type": "paragraph",
-          "text": "En un atuendo informal, evita añadir demasiadas piezas coordinadas. Los aretes deben hacer que la ropa parezca más cuidada sin convertir el look en estilismo de ceremonia."
+          "text": "En un conjunto informal, evite añadir demasiadas piezas coordinadas. Los pendientes deberían hacer que la ropa parezca más cuidada sin convertir el look en un estilismo de ocasión formal."
         }
       ]
     },
     {
-      "heading": "Aretes geométricos con atuendos minimalistas",
+      "heading": "Pendientes geométricos con conjuntos minimalistas",
       "content": [
         {
           "type": "paragraph",
-          "text": "La ropa minimalista da a la joyería geométrica un fondo claro. Negro, blanco, gris, azul marino, crema y beige permiten que la silueta de los aretes siga siendo visible. Las combinaciones minimalistas más logradas suelen usar:"
+          "text": "La ropa minimalista ofrece un fondo despejado para la joyería geométrica. El negro, blanco, gris, azul marino, crema y beige permiten que la silueta de los pendientes siga siendo visible. Las combinaciones minimalistas más efectivas suelen incluir:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Una forma destacada",
-            "Un solo acabado de metal",
-            "Pocos adornos",
-            "Líneas de ropa limpias",
+            "Una forma llamativa",
+            "Un acabado de metal",
+            "Adornos limitados",
+            "Líneas limpias en la ropa",
             "Un número contenido de accesorios"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Esto no significa que el atuendo deba carecer de color. Un vestido rojo, verde o azul sencillo también funciona como fondo eficaz mientras el tejido y el escote se mantengan sobrios."
+          "text": "Esto no significa que el conjunto tenga que ser neutro. Un vestido sencillo rojo, verde o azul también puede ofrecer un fondo eficaz cuando el tejido y el escote son depurados."
         },
         {
           "type": "see-also",
@@ -262,13 +294,13 @@
         },
         {
           "type": "see-also",
-          "text": "Guía de aretes minimalistas",
+          "text": "Guía de pendientes minimalistas",
           "href": "/resources/earring-style-guides/minimalist-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Aretes geométricos con vestidos",
+      "heading": "Cómo llevar pendientes geométricos con vestidos",
       "content": [
         {
           "type": "subheading",
@@ -276,7 +308,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Un vestido liso ofrece la mayor libertad. Los aretes medianos, de marco abierto o escultóricos pueden convertirse en el detalle principal de joyería."
+          "text": "Un vestido liso ofrece la mayor flexibilidad. Los pendientes medianos, de montura abierta o escultóricos pueden convertirse en el detalle principal de joyería."
         },
         {
           "type": "subheading",
@@ -284,7 +316,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Usa un diseño más pequeño de contorno claro. Evita aretes que introduzcan otro patrón complicado junto al tejido."
+          "text": "Use un diseño más pequeño y de contorno definido. Evite elegir pendientes que introduzcan otro estampado complejo junto al tejido."
         },
         {
           "type": "subheading",
@@ -292,7 +324,7 @@
         },
         {
           "type": "paragraph",
-          "text": "El satén ya refleja la luz. Elige una silueta geométrica sencilla y evita añadir brillo a través de varios accesorios más."
+          "text": "El satén ya refleja la luz. Elija una silueta geométrica sencilla y evite añadir brillo mediante varios accesorios más."
         },
         {
           "type": "subheading",
@@ -300,7 +332,7 @@
         },
         {
           "type": "paragraph",
-          "text": "El negro ofrece un fondo potente para diseños geométricos en oro amarillo, tono blanco y diamantes. Elige la escala según el escote y el nivel de detalle del vestido."
+          "text": "El negro proporciona un fondo potente para los diseños geométricos en oro amarillo, acabado blanco y diamante. Elija la escala según el escote y el nivel de detalle del vestido."
         },
         {
           "type": "subheading",
@@ -308,7 +340,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Un vestido de color liso funciona con aretes geométricos cuando la forma acompaña al atuendo en lugar de competir con él. Repite el metal en otro accesorio o deja que los aretes actúen solos."
+          "text": "Un vestido de color liso puede combinar con pendientes geométricos cuando la forma acompaña al conjunto en lugar de competir con él. Repita el metal en otro accesorio o deje que los pendientes destaquen por sí solos."
         },
         {
           "type": "subheading",
@@ -316,7 +348,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Los aretes geométricos medianos o escultóricos son una alternativa a los colgantes clásicos. Si el vestido tiene un escote sobrio, los aretes pueden liderar. Si incluye lentejuelas o cristales, elige una forma más limpia."
+          "text": "Los pendientes geométricos medianos o escultóricos pueden ser una alternativa a los pendientes colgantes tradicionales. Si el vestido tiene un escote liso, los pendientes pueden llevar el protagonismo. Si incluye lentejuelas o detalles de cristal, elija una forma más depurada."
         },
         {
           "type": "see-also",
@@ -326,7 +358,7 @@
       ]
     },
     {
-      "heading": "Ajusta los aretes al escote",
+      "heading": "Adapte los pendientes geométricos al escote",
       "content": [
         {
           "type": "subheading",
@@ -334,15 +366,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Un escote alto suele dejar poco espacio para el collar, por lo que los aretes ganan importancia. Elige un diseño visible bajo el cabello y evita aretes que se enganchen en el punto grueso."
+          "text": "Un escote alto suele dejar poco espacio para un collar, por lo que los pendientes cobran mayor importancia. Elija un diseño visible bajo el cabello y evite los pendientes que se enganchen con los tejidos de punto gruesos."
         },
         {
           "type": "subheading",
-          "text": "Cuello en V"
+          "text": "Escote en V"
         },
         {
           "type": "paragraph",
-          "text": "Un cuello en V admite un colgante delicado con aretes geométricos pequeños. Si los aretes son grandes o angulares, deja el escote despejado."
+          "text": "Un escote de pico admite un colgante delicado con pendientes de botón geométricos pequeños. Si los pendientes son grandes o angulosos, deje el escote despejado."
         },
         {
           "type": "subheading",
@@ -350,15 +382,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Los aretes geométricos pequeños y medianos funcionan bien con un cuello redondo. Puede añadirse una cadena corta si no compite con los aretes."
+          "text": "Los pendientes geométricos pequeños y medianos combinan bien con un cuello redondo. Puede añadir una cadena corta si no compite con los pendientes."
         },
         {
           "type": "subheading",
-          "text": "Palabra de honor u hombros descubiertos"
+          "text": "Escote palabra de honor o descubierto de hombros"
         },
         {
           "type": "paragraph",
-          "text": "Una línea de hombro despejada deja espacio para un arete más visible. Los diseños angulares medianos o escultóricos funcionan especialmente bien, pero comprueba su longitud real respecto al hombro."
+          "text": "Un escote que deja los hombros al descubierto ofrece espacio para unos pendientes más visibles. Los diseños angulosos o escultóricos medianos pueden funcionar especialmente bien, pero compruebe su longitud real en relación con el hombro."
         },
         {
           "type": "subheading",
@@ -366,54 +398,54 @@
         },
         {
           "type": "paragraph",
-          "text": "Elige aretes de botón pequeños, barras o marcos abiertos que no se enganchen en el cuello. Si la camisa es estampada, opta por un diseño más sencillo."
+          "text": "Elija pendientes de botón pequeños, barras o diseños de aro abierto que no se enganchen con el cuello. Si la camisa tiene estampado, opte por un diseño más sencillo."
         }
       ]
     },
     {
-      "heading": "Elige el acabado del metal",
+      "heading": "Elija el acabado del metal",
       "content": [
         {
           "type": "paragraph",
-          "text": "El acabado del metal puede conectar los aretes con la ropa, el bolso, los zapatos u otras joyas."
+          "text": "El acabado del metal puede conectar los pendientes con la ropa, el bolso, los zapatos u otras joyas."
         },
         {
           "type": "subheading",
-          "text": "Aretes geométricos en oro amarillo"
+          "text": "Pendientes geométricos de oro amarillo"
         },
         {
           "type": "paragraph",
-          "text": "El oro amarillo aporta calidez al negro, el crema, el camel, el marrón, el azul marino, el oliva y el rojo."
+          "text": "El oro amarillo aporta calidez al negro, crema, camel, marrón, azul marino, verde oliva y rojo."
         },
         {
           "type": "subheading",
-          "text": "Aretes geométricos blancos o plateados"
+          "text": "Pendientes geométricos blancos o de tono plateado"
         },
         {
           "type": "paragraph",
-          "text": "Los tonos blancos y plateados crean un contraste limpio con negro, blanco, gris, azul marino, azul, burdeos y verde frío."
+          "text": "Los tonos blancos y plateados crean un contraste limpio con el negro, blanco, gris, azul marino, azul, burdeos y verde frío."
         },
         {
           "type": "subheading",
-          "text": "Aretes geométricos en oro rosa"
+          "text": "Pendientes geométricos de oro rosa"
         },
         {
           "type": "paragraph",
-          "text": "El oro rosa da un resultado más suave con rosa empolvado, malva, gris claro, crema, coral y rojo apagado."
+          "text": "El oro rosa crea un resultado más suave con el rosa empolvado, malva, gris claro, crema, coral y rojo apagado."
         },
         {
           "type": "paragraph",
-          "text": "Son direcciones de estilo, no reglas de color estrictas. El enfoque más coherente suele ser repetir el metal que ya aparece en el bolso, el cinturón o los zapatos."
+          "text": "Estas son pautas de estilo, no reglas estrictas de color. A menudo, el enfoque más coherente consiste en repetir el metal que ya aparece en el bolso, el cinturón o los zapatos."
         },
         {
           "type": "see-also",
-          "text": "Oro amarillo, blanco o rosa en aretes de diamantes",
+          "text": "Pendientes con diamantes de laboratorio en oro amarillo, blanco y rosa",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Aretes geométricos y peinado",
+      "heading": "Combine pendientes geométricos con distintos peinados",
       "content": [
         {
           "type": "grid-layout",
@@ -426,7 +458,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Un recogido, un moño o una cola de caballo dejan a la vista la forma completa del arete. Resulta especialmente útil para marcos abiertos, diseños lineales y piezas escultóricas."
+              "text": "Un recogido, moño o coleta deja al descubierto toda la forma del pendiente. Esto resulta útil para diseños de aro abierto, lineales y escultóricos."
             },
             {
               "type": "subheading",
@@ -434,189 +466,213 @@
             },
             {
               "type": "paragraph",
-              "text": "Colocar uno o ambos lados detrás de la oreja hace visibles los aretes medianos sin cambiar todo el peinado."
+              "text": "Recoger uno o ambos lados del cabello detrás de la oreja puede hacer visibles unos pendientes medianos sin cambiar por completo el peinado."
             },
             {
               "type": "subheading",
-              "text": "Cabello suelto"
+              "text": "Pelo suelto"
             },
             {
               "type": "paragraph",
-              "text": "Elige aretes con longitud o contraste suficientes para seguir siendo visibles. Los aretes de botón pequeños pueden desaparecer bajo el cabello grueso o largo."
+              "text": "Elija pendientes con suficiente longitud o contraste para que sigan siendo visibles. Los pendientes de botón pequeños pueden desaparecer bajo un cabello grueso o largo."
             },
             {
               "type": "subheading",
-              "text": "Cabello corto"
+              "text": "Pelo corto"
             },
             {
               "type": "paragraph",
-              "text": "Los cortes cortos dejan la oreja despejada de forma natural. Funcionan tanto los diseños pequeños como los escultóricos: elige la escala según el atuendo en lugar de dar por hecho que hacen falta aretes grandes."
+              "text": "Los peinados cortos dejan la oreja al descubierto de forma natural. Tanto los diseños pequeños como los escultóricos pueden funcionar; base la escala en el conjunto, sin dar por hecho que necesita pendientes grandes."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "El peinado debe mostrar el diseño con fidelidad sin forzar un tamaño de arete que no encaje con el resto del atuendo."
+          "text": "El peinado debe mostrar el diseño con claridad, sin obligarle a elegir un tamaño de pendiente que no encaje con el resto del conjunto."
         }
       ]
     },
     {
-      "heading": "¿Se pueden llevar aretes geométricos con collar?",
+      "heading": "¿Se pueden llevar pendientes geométricos con un collar?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Sí, pero el collar no debe competir con el rasgo más fuerte de los aretes."
+          "text": "Sí, pero el collar no debe competir con el rasgo más llamativo de los pendientes."
         },
         {
           "type": "table",
-          "headers": ["Arete geométrico", "Dirección del collar"],
+          "headers": [
+            "Pendiente geométrico",
+            "Orientación para el collar"
+          ],
           "rows": [
-            ["Arete de botón o barra pequeños", "Colgante fino o cadena corta"],
-            ["Marco abierto pequeño", "Cadena delicada o ningún collar"],
-            ["Diseño angular mediano", "Colgante sencillo"],
-            ["Aro geométrico", "Cadena fina o collar corto"],
-            ["Diseño escultórico grande", "Normalmente ningún collar"],
-            ["Arete geométrico de diamantes", "Cadena de metal liso o ningún collar"],
-            ["Pila de orejas geométrica", "Mantener el collar visualmente contenido"]
+            [
+              "Pendiente de botón pequeño o barra",
+              "Colgante fino o cadena corta"
+            ],
+            [
+              "Diseño pequeño de aro abierto",
+              "Cadena delicada o ningún collar"
+            ],
+            [
+              "Diseño angular mediano",
+              "Colgante sencillo"
+            ],
+            [
+              "Pendiente de aro geométrico",
+              "Cadena fina o collar corto"
+            ],
+            [
+              "Diseño escultórico grande",
+              "Normalmente, sin collar"
+            ],
+            [
+              "Pendiente geométrico de diamante",
+              "Cadena de metal lisa o ningún collar"
+            ],
+            [
+              "Ear stack geométrico",
+              "Mantenga el collar visualmente discreto"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Evita combinar varias formas grandes salvo que el objetivo sea un estilismo deliberadamente maximalista."
+          "text": "Evite combinar varias formas grandes, salvo que busque deliberadamente un estilo maximalista."
         }
       ]
     },
     {
-      "heading": "Cómo construir una pila de orejas geométrica",
+      "heading": "Cómo crear un ear stack geométrico",
       "content": [
         {
           "type": "paragraph",
-          "text": "Usa una forma principal y aretes de apoyo más pequeños. Algunas combinaciones posibles:"
+          "text": "Utilice una forma principal y pendientes de apoyo más pequeños. Algunas combinaciones posibles son:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Arete de marco abierto con un arete de botón pequeño de diamante",
-            "Aro geométrico con un solitario sencillo",
-            "Arete angular principal con un arete de barra corto",
-            "Arete geométrico pequeño con un huggie discreto",
-            "Arete geométrico en tono blanco con aretes de botón pequeños a juego"
+            "Pendiente de aro abierto con un pendiente de botón pequeño de diamante",
+            "Pendiente de aro geométrico con un pendiente de botón solitario sencillo",
+            "Pendiente principal angular con un pendiente de botón de barra corta",
+            "Pendiente de botón geométrico pequeño con un aro pequeño (huggie) discreto",
+            "Pendiente geométrico de tono blanco con pendientes de botón pequeños a juego"
           ]
         },
         {
           "type": "paragraph",
-          "text": "No todos los aretes tienen que ser geométricos. Repetir el metal o el detalle de diamante ya crea suficiente conexión."
+          "text": "No todos los pendientes tienen que ser geométricos. Repetir el metal o el detalle de diamante puede crear suficiente conexión."
         },
         {
           "type": "see-also",
-          "text": "Cómo apilar aretes",
+          "text": "Cómo crear un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         },
         {
           "type": "see-also",
-          "text": "Cómo combinar aretes huggie",
+          "text": "Cómo combinar aros pequeños (huggies)",
           "href": "/resources/earring-style-guides/how-to-style-huggie-earrings"
         }
       ]
     },
     {
-      "heading": "¿Los aretes geométricos favorecen a todos los rostros?",
+      "heading": "¿Los pendientes geométricos favorecen a todas las formas de rostro?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las tablas por forma de rostro son una orientación opcional, no una regla estricta. Los aretes geométricos no tienen que «corregir» ni disimular la forma de la cara."
+          "text": "Las guías según la forma del rostro son orientativas, no reglas estrictas. Los pendientes geométricos no tienen que «corregir» ni disimular la forma del rostro."
         },
         {
           "type": "paragraph",
-          "text": "Decide en su lugar qué efecto visual buscas:"
+          "text": "En su lugar, decida qué efecto visual busca:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Los diseños lineales largos crean una línea vertical.",
-            "Las formas anchas aportan más presencia horizontal.",
+            "Los diseños lineales alargados crean una línea vertical.",
+            "Las formas más anchas aportan mayor presencia horizontal.",
             "Las formas geométricas curvas resultan más suaves.",
-            "Las formas angulares crean una definición más marcada.",
-            "Los aretes de botón pequeños concentran el efecto alrededor de la oreja."
+            "Las formas angulosas crean una definición más marcada.",
+            "Los pendientes de botón pequeños concentran el efecto alrededor de la oreja."
           ]
         },
         {
           "type": "paragraph",
-          "text": "La escala real, el peinado y la preferencia personal importan más que asignar a cada persona una categoría de rostro. Las fotografías propias puestas resultan más útiles que las reglas genéricas."
+          "text": "La escala real, el peinado y las preferencias personales importan más que encasillar a cada persona en una categoría de forma del rostro. Unas fotografías originales probándose las joyas serán más útiles que las reglas genéricas."
         }
       ]
     },
     {
-      "heading": "Del día a la noche",
+      "heading": "Combinaciones de pendientes geométricos del día a la noche",
       "content": [
         {
           "type": "subheading",
-          "text": "De la oficina a la cena"
+          "text": "Del trabajo a la cena"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Aretes de marco abierto pequeños o medianos",
-            "Blazer entallado y pantalón",
+            "Pendientes de aro abierto pequeños o medianos",
+            "Americana y pantalón de corte sastre",
             "Collar fino durante el día",
-            "Quitarse el blazer para la noche",
-            "Mantener los mismos aretes"
+            "Quítese la americana por la noche",
+            "Mantenga los mismos pendientes"
           ]
         },
         {
           "type": "subheading",
-          "text": "De informal a smart-casual"
+          "text": "De informal a informal elegante"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Aretes angulares pequeños",
+            "Pendientes angulosos pequeños",
             "Camisa blanca y vaqueros",
-            "Añadir una chaqueta estructurada y un anillo sencillo",
-            "Mantener el collar al mínimo"
+            "Añada una chaqueta estructurada y un anillo sencillo",
+            "Mantenga el collar minimalista"
           ]
         },
         {
           "type": "subheading",
-          "text": "Atuendo de noche minimalista"
+          "text": "Conjunto de noche minimalista"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Aretes geométricos medianos o escultóricos",
-            "Vestido liso negro, azul marino o rojo",
-            "Ningún collar llamativo",
-            "Una pulsera o un anillo discretos",
+            "Pendientes geométricos medianos o escultóricos",
+            "Vestido negro, azul marino o rojo liso",
+            "Sin collar statement",
+            "Una pulsera o un anillo discreto",
             "Cabello recogido detrás de la oreja"
           ]
         }
       ]
     },
     {
-      "heading": "Errores de estilo frecuentes",
+      "heading": "Errores de estilo habituales",
       "content": [
         {
           "type": "bullet-list",
           "items": [
-            "Tratar cualquier arete geométrico como un arete llamativo",
-            "Llevar aretes geométricos grandes con un atuendo muy estampado",
-            "Hacer coincidir cada joya con la misma forma",
-            "Combinar aretes grandes con un collar igual de grande",
-            "No comprobar si los aretes se enganchan en el cuello o el hombro",
-            "Elegir aretes que desaparecen por completo bajo el cabello",
-            "Calificar un arete de cómodo sin peso verificado ni prueba de uso",
-            "Usar «atemporal» o «inversión» en lugar de información práctica"
+            "Tratar todos los pendientes geométricos como pendientes statement",
+            "Llevar pendientes geométricos extragrandes con un conjunto muy estampado",
+            "Combinar cada joya con la misma forma",
+            "Combinar pendientes grandes con un collar igualmente grande",
+            "Ignorar si los pendientes se enganchan con el cuello o el hombro",
+            "Elegir pendientes que desaparecen por completo bajo el cabello",
+            "Afirmar que un pendiente es cómodo sin comprobar su peso ni probarlo",
+            "Usar «atemporal» o «de inversión» como sustitutos de la información práctica"
           ]
         },
         {
           "type": "see-also",
-          "text": "Guía de aretes llamativos",
+          "text": "Guía de pendientes statement llamativos",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Lista de comprobación final",
+      "heading": "Lista de comprobación final para pendientes geométricos",
       "content": [
         {
           "type": "grid-layout",
@@ -625,70 +681,70 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Antes de elegir el atuendo, pregúntate:"
+              "text": "Antes de elegir el conjunto, pregúntese:"
             },
             {
               "type": "bullet-list",
               "items": [
-                "¿El arete es pequeño, mediano o escultórico?",
-                "¿La forma es angular, curva, lineal o de marco abierto?",
-                "¿El atuendo es liso o muy recargado?",
+                "¿El pendiente es pequeño, mediano o escultórico?",
+                "¿La forma es angular, curva, lineal o de aro abierto?",
+                "¿El conjunto es liso o tiene muchos detalles?",
                 "¿El peinado mostrará el diseño completo?",
-                "¿El arete queda libre del cuello y del hombro?",
-                "¿Hace falta realmente un collar?",
-                "¿Qué metal aparece ya en el atuendo?",
-                "¿El arete es adecuado para la ocasión?",
-                "¿Uso una forma principal o varias que compiten?",
-                "¿He comprobado las medidas y el peso reales del producto?"
+                "¿El pendiente deja libre el cuello y el hombro?",
+                "¿Es necesario llevar collar?",
+                "¿Qué metal aparece ya en el conjunto?",
+                "¿El pendiente es adecuado para la ocasión?",
+                "¿Estoy usando una forma principal o varias formas que compiten?",
+                "¿He comprobado las dimensiones y el peso reales del producto?"
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Ante la duda, empieza por un arete geométrico mediano, una silueta de atuendo limpia y un único acabado de metal."
+          "text": "Si tiene dudas, empiece con un pendiente geométrico mediano, una silueta limpia y un único acabado de metal coherente."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Qué atuendos funcionan con aretes geométricos?",
-      "answer": "Funcionan con sastrería, camisas, punto, atuendos monocromos, monos y vestidos sencillos. Ajusta el tamaño del arete al nivel de detalle de la ropa."
+      "question": "¿Con qué conjuntos combinan los pendientes geométricos?",
+      "answer": "Los pendientes geométricos combinan con prendas de sastrería, camisas, tejidos de punto, conjuntos monocromáticos, monos y vestidos sencillos. Adapte el tamaño del pendiente a la cantidad de detalles de la ropa."
     },
     {
-      "question": "¿Se pueden llevar aretes geométricos a diario?",
-      "answer": "Los aretes de botón, barras y marcos abiertos pequeños se adaptan al uso habitual. Comprueba las medidas reales, el peso, el cierre y las instrucciones de cuidado antes de considerar un par concreto apto para uso frecuente."
+      "question": "¿Se pueden llevar pendientes geométricos a diario?",
+      "answer": "Los pendientes de botón, barras y diseños de aro abierto más pequeños pueden funcionar en el día a día. Compruebe las dimensiones, el peso, el cierre y las instrucciones de cuidado reales del producto antes de considerar adecuado un par concreto para llevarlo con frecuencia."
     },
     {
-      "question": "¿Son adecuados los aretes geométricos para el trabajo?",
-      "answer": "Sí. Los diseños pequeños o medianos acompañan blazers, camisas, punto y vestidos de trabajo. Evita diseños que se enganchen en cuellos, cabello o auriculares."
+      "question": "¿Son adecuados los pendientes geométricos para el trabajo?",
+      "answer": "Sí. Los diseños pequeños o medianos pueden complementar americanas, camisas, tejidos de punto y vestidos de trabajo. Evite los diseños que se enganchen con cuellos, cabello o auriculares."
     },
     {
-      "question": "¿Se pueden llevar con ropa estampada?",
-      "answer": "Sí, pero elige un diseño más limpio y pequeño para que los aretes no introduzcan otro patrón que compita."
+      "question": "¿Se pueden llevar pendientes geométricos con ropa estampada?",
+      "answer": "Sí, pero elija un diseño más limpio y pequeño para que los pendientes no introduzcan otro estampado que compita."
     },
     {
-      "question": "¿Debería llevar collar con aretes geométricos?",
-      "answer": "Un collar delicado funciona con aretes geométricos pequeños. Los aretes más grandes o escultóricos suelen leerse mejor sin un collar destacado."
+      "question": "¿Debería llevar collar con pendientes geométricos?",
+      "answer": "Un collar delicado puede funcionar con pendientes geométricos pequeños. Los pendientes grandes o escultóricos suelen verse más claros sin un collar llamativo."
     },
     {
-      "question": "¿Se pueden usar en una pila de orejas?",
-      "answer": "Sí. Usa un arete geométrico principal y acompáñalo con aretes de botón, barras o huggies más pequeños. Repite el metal o el detalle de diamante en lugar de dar la misma forma a cada arete."
+      "question": "¿Se pueden usar pendientes geométricos en un ear stack?",
+      "answer": "Sí. Use un pendiente geométrico principal y acompáñelo con pendientes de botón, barras o aros pequeños (huggies). Repita el metal o el detalle de diamante, en lugar de hacer que todos los pendientes tengan la misma forma."
     },
     {
-      "question": "¿Son lo mismo los aretes geométricos y los llamativos?",
-      "answer": "No. Geométrico describe la forma y la construcción del diseño. Un arete geométrico puede ser muy pequeño y discreto, o lo bastante grande para funcionar como pieza llamativa."
+      "question": "¿Son lo mismo los pendientes geométricos y los pendientes statement?",
+      "answer": "No. Geométrico describe la forma y la construcción del diseño. Un pendiente geométrico puede ser muy pequeño y discreto o lo bastante grande para funcionar como una pieza statement."
     }
   ],
   "cta": {
-    "heading": "Equilibra el tamaño y la complejidad del arete con el atuendo. Los aretes de botón pequeños y los marcos abiertos encajan con la ropa de trabajo y los estampados, mientras que los diseños escultóricos más grandes necesitan un atuendo liso y espacio para liderar.",
-    "body": "Explora los aretes demi-fine de I Want Jewels con diamantes cultivados en laboratorio y revisa en cada página de producto las medidas, el peso, el cierre y el acabado antes de decidir qué escala encaja con tu atuendo.",
-    "primaryLabel": "Explora los aretes de diamantes cultivados en laboratorio",
+    "heading": "Equilibre el tamaño y la complejidad del pendiente con el conjunto. Los pendientes de botón pequeños y los aros abiertos combinan con ropa de trabajo y estampados, mientras que los diseños escultóricos grandes necesitan un conjunto liso y espacio suficiente para destacar.",
+    "body": "Descubra los pendientes de diamante de laboratorio de joyería demi-fine de I Want Jewels y consulte en cada ficha de producto sus dimensiones, peso, cierre y acabado indicados antes de decidir qué escala de diseño geométrico combina con su conjunto.",
+    "primaryLabel": "Explore los pendientes de diamantes de laboratorio",
     "primaryHref": "/products?category=Earring",
     "secondaryLabel": "Guía de estilo de joyería minimalista",
     "secondaryHref": "/resources/earring-style-guides/minimalist-jewellery-styling-guide",
-    "tertiaryLabel": "Cómo apilar aretes",
+    "tertiaryLabel": "Cómo combinar pendientes",
     "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
   }
 }

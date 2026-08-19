@@ -1,51 +1,51 @@
 {
   "meta": {
     "title": "Geometrische Ohrringe stylen",
-    "description": "Erfahren Sie, wie Sie geometrische Ohrringe zu Business-Looks, Alltagsoutfits, Kleidern und Abendlooks stylen – mit Hinweisen zu Größe, Ausschnitt und Schmuck."
+    "description": "Geometrische Ohrringe zu Business-, Freizeit- und Abendlooks kombinieren – mit Tipps zu Größe, Ausschnitt und Schmuck."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-62.jpg",
-    "title": "So stylen Sie geometrische Ohrringe",
-    "subtitle": "Ein praktischer Leitfaden zu Outfits, Größen, Ausschnitten und Schmuckkombinationen",
+    "title": "Geometrische Ohrringe stylen",
+    "subtitle": "Praktischer Guide zu Outfits, Größen, Ausschnitten und Schmuckkombinationen",
     "paragraphs": [
-      "Geometrische Ohrringe arbeiten mit klaren Linien, Winkeln, Rundungen oder wiederholten Formen und erzeugen so einen strukturierteren Schmucklook. Sie können so zurückhaltend sein wie ein schmaler Stab oder ein offener Rahmenstecker – oder so präsent wie ein großer kantiger Hänger.",
-      "Am einfachsten stylen Sie geometrische Ohrringe, indem Sie Größe und Komplexität gegen das Outfit abwägen. Kleine geometrische Ohrringe passen zu Tailoring, Strick, gemusterter Kleidung und geschichtetem Schmuck. Größere oder skulpturale Entwürfe wirken meist klarer zu schlichter Kleidung, offenen Ausschnitten und wenigen konkurrierenden Accessoires.",
-      "Geometrisch bedeutet nicht automatisch übergroß oder auffällig. Das richtige Styling hängt von Form, Maßstab und Metalloberfläche des Ohrrings sowie vom Detailgrad des Outfits ab."
+      "Geometrische Ohrringe arbeiten mit klaren Linien, Winkeln, Kurven oder wiederkehrenden Formen und schaffen einen strukturierten Schmucklook. Sie können so zurückhaltend wie ein kleiner Stab oder ein Ohrstecker mit offenem Rahmen sein – oder so präsent wie ein großer, kantiger Ohrhänger.",
+      "Am einfachsten stylen Sie geometrische Ohrringe, indem Sie ihre Größe und Komplexität auf das Outfit abstimmen. Kleine geometrische Ohrringe passen zu Tailoring, Strick, gemusterter Kleidung und übereinander getragenem Schmuck. Größere oder skulpturale Designs wirken meist klarer zu schlichter Kleidung, offenen Ausschnitten und weniger konkurrierenden Accessoires.",
+      "Geometrisch bedeutet nicht automatisch übergroß oder auffällig. Das passende Styling hängt von Form, Größe, Metallfinish und dem Detailgrad des Outfits ab."
     ],
     "shopLabel": "Im Labor gezüchtete Diamantohrringe entdecken",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Stimmen Sie die Größe des Ohrrings auf den Detailgrad der Kleidung ab",
-      "Kleine Stecker und offene Rahmen passen zu Business-Looks und Mustern",
-      "Größere skulpturale Entwürfe brauchen ein schlichtes Outfit mit Raum",
-      "Verzichten Sie auf die auffällige Kette, wenn die Ohrringe führen",
-      "Wiederholen Sie ein Metall, das in Tasche, Gürtel oder Schuhen vorkommt",
-      "Geometrisch heißt nicht automatisch übergroß oder auffällig",
+      "Stimmen Sie die Größe der Ohrringe auf den Detailgrad der Kleidung ab",
+      "Tragen Sie kleine Ohrstecker und offene Rahmen zu Businesskleidung und Mustern",
+      "Heben Sie größere, skulpturale Designs für schlichte Outfits mit Freiraum auf",
+      "Verzichten Sie auf eine Statement-Kette, wenn die Ohrringe bereits im Mittelpunkt stehen",
+      "Greifen Sie ein Metall aus Tasche, Gürtel oder Schuhen erneut auf",
+      "Geometrisch bedeutet nicht automatisch übergroß oder auffällig",
       "Prüfen Sie vor dem Kauf die tatsächlichen Maße und das Gewicht"
     ],
     "image": "/blog-images/blog-image-71.jpg"
   },
   "content": [
     {
-      "heading": "Schnelle Antwort",
+      "heading": "Kurzantwort",
       "content": [
         {
           "type": "section-lead",
-          "text": "Für einen unkomplizierten Look kombinieren Sie geometrische Ohrringe mit klaren Silhouetten wie einer weißen Bluse, einem tailliertem Blazer, einem monochromen Kleid, einem schlichten Strickteil oder einem einfachen Jumpsuit."
+          "text": "Für einen unkomplizierten Look kombinieren Sie geometrische Ohrringe mit klaren Silhouetten wie einem weißen Hemd, einem taillierten Blazer, einem monochromen Kleid, schlichtem Strick oder einem einfachen Jumpsuit."
         },
         {
           "type": "paragraph",
-          "text": "Tragen Sie kleinere geometrische Stecker oder offene Rahmenformen zu Business-Kleidung und gemusterten Outfits. Wählen Sie mittelgroße kantige Ohrringe, wenn der Schmuck sichtbar bleiben soll, ohne der einzige Blickfang zu werden. Größere skulpturale Entwürfe bleiben schlichten Outfits vorbehalten, in denen die Ohrringe genug Raum haben."
+          "text": "Kombinieren Sie kleinere geometrische Ohrstecker oder Ohrringe mit offenem Rahmen mit Businesskleidung und gemusterten Outfits. Wählen Sie mittelgroße, kantige Ohrringe, wenn der Schmuck sichtbar bleiben soll, ohne zum einzigen Blickfang zu werden. Größere, skulpturale Designs passen zu schlichten Outfits, in denen sie genügend Raum haben, um den Look anzuführen."
         },
         {
           "type": "paragraph",
-          "text": "Sind die Ohrringe bereits sehr präsent, lassen Sie die auffällige Halskette weg und greifen Sie stattdessen zu einem schlichten Ring, Armband oder kleinen begleitenden Stecker."
+          "text": "Wenn die Ohrringe bereits sehr präsent sind, verzichten Sie auf die Statement-Kette und tragen Sie stattdessen einen schlichten Ring, ein Armband oder einen kleinen ergänzenden Ohrstecker."
         },
         {
           "type": "see-also",
-          "text": "Ohrringe mit im Labor gezüchteten Diamanten",
+          "text": "Diamant-Ohrstecker aus dem Labor",
           "href": "/products?category=Earring"
         }
       ]
@@ -60,15 +60,47 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Ohrringform", "Passt gut zu", "Schmuckbalance"],
+              "headers": [
+                "Ohrringstil",
+                "Passt gut zu",
+                "Schmuckbalance"
+              ],
               "rows": [
-                ["Kleiner geometrischer Stecker", "Business-Looks, gemusterte Oberteile, Strick und Ear-Stacks", "Verträgt eine zarte Halskette"],
-                ["Stab- oder Linienohrring", "Blusen, Blazer, V-Ausschnitte und minimalistische Kleider", "Andere Formen schlicht halten"],
-                ["Offener Rahmenohrring", "Monochrome Outfits, Tag-zu-Abend-Looks und klare Ausschnitte", "Feine Kette oder gar keine"],
-                ["Mittelgroßer kantiger Ohrring", "Kleider, Tailoring, Dinner-Outfits und hochgestecktes Haar", "Halskette zweitrangig halten"],
-                ["Geometrische Creole", "Legere Outfits, Jumpsuits und modernes Tailoring", "Mit Steckern oder zarter Kette kombinieren"],
-                ["Skulpturaler geometrischer Ohrring", "Schlichte Kleider, schwarze Outfits und Abendlooks", "Meist ohne auffällige Halskette"],
-                ["Geometrischer Diamantohrring", "Business, Dinner und festliche Outfits", "Das Diamantdetail für den Glanz sorgen lassen"]
+                [
+                  "Kleiner geometrischer Ohrstecker",
+                  "Businesskleidung, gemusterten Oberteilen, Strick und Ear Stacks",
+                  "Kann mit einer zarten Kette getragen werden"
+                ],
+                [
+                  "Linearer Ohrring oder Stabohrring",
+                  "Hemden, Blazern, V-Ausschnitten und minimalistischen Kleidern",
+                  "Halten Sie andere Formen schlicht"
+                ],
+                [
+                  "Ohrring mit offenem Rahmen",
+                  "Monochromen Outfits, Looks vom Büro bis zum Abend und klaren Ausschnitten",
+                  "Tragen Sie eine feine Kette oder verzichten Sie auf eine Kette"
+                ],
+                [
+                  "Mittelgroßer, kantiger Ohrring",
+                  "Kleidern, Tailoring, Dinner-Outfits und hochgestecktem Haar",
+                  "Die Kette sollte im Hintergrund bleiben"
+                ],
+                [
+                  "Geometrische Creole",
+                  "Freizeitlooks, Jumpsuits und modernem Tailoring",
+                  "Mit Ohrsteckern oder einer zarten Kette kombinieren"
+                ],
+                [
+                  "Skulpturaler geometrischer Ohrring",
+                  "Schlichten Kleidern, schwarzen Outfits und Abendlooks",
+                  "Meist auf eine Statement-Kette verzichten"
+                ],
+                [
+                  "Geometrischer Diamantohrring",
+                  "Businesskleidung, Dinner-Outfits und formeller Kleidung",
+                  "Lassen Sie die Diamantdetails für den Glanz sorgen"
+                ]
               ]
             }
           ]
@@ -76,11 +108,11 @@
       ]
     },
     {
-      "heading": "Beginnen Sie mit der Größe",
+      "heading": "Beginnen Sie mit der Größe des Ohrrings",
       "content": [
         {
           "type": "section-lead",
-          "text": "Die Form zieht die Aufmerksamkeit an, doch die Größe bestimmt, wie stark die Ohrringe das Outfit prägen."
+          "text": "Die Form kann Aufmerksamkeit auf sich ziehen, doch die Größe bestimmt, wie stark die Ohrringe das Outfit beeinflussen."
         },
         {
           "type": "subheading",
@@ -88,23 +120,23 @@
         },
         {
           "type": "paragraph",
-          "text": "Kleine Stäbe, Quadrate, Dreiecke und offene Rahmenstecker lassen sich leicht in eine bestehende Garderobe einfügen. Sie geben Struktur, ohne dass der Rest des Outfits völlig schlicht bleiben muss. Besonders gut passen sie zu:"
+          "text": "Kleine Stäbe, Quadrate, Dreiecke und Ohrstecker mit offenem Rahmen lassen sich leicht in eine bestehende Garderobe integrieren. Sie verleihen Struktur, ohne dass der restliche Look vollkommen schlicht sein muss. Besonders gut passen sie zu:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Hemdblusen mit Kragen",
+            "Hemden mit Kragen",
             "Taillierten Jacken",
             "Feinem Strick",
-            "Bedruckten Blusen",
-            "Business-Kleidern",
-            "Mehreren Piercings",
-            "Zarten Halsketten"
+            "Gemusterten Blusen",
+            "Businesskleidern",
+            "Mehrere Piercings",
+            "Zarten Ketten"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Kleine Entwürfe können außerdem als begleitende Ohrringe in einem Ear-Stack dienen."
+          "text": "Kleine Designs können in einem Ear Stack auch als ergänzende Ohrringe dienen."
         },
         {
           "type": "subheading",
@@ -112,7 +144,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ein mittleres Design ist rund um das Gesicht deutlicher sichtbar und bleibt dabei vielseitig. Es passt zu schlichten Kleidern, Tailoring, Jumpsuits und Smart-Casual-Outfits. Diese Größe hilft, wenn ein kleiner Stecker unter dem Haar verschwindet, ein großer Statement-Ohrring aber zu viel wäre."
+          "text": "Ein mittelgroßes Design ist im Gesicht deutlich sichtbar und bleibt dennoch vielseitig. Es passt zu schlichten Kleidern, Tailoring, Jumpsuits und gepflegten Freizeitlooks. Diese Größe ist ideal, wenn ein kleiner Ohrstecker unter dem Haar verschwindet, ein großer Statement-Ohrring jedoch zu viel wäre."
         },
         {
           "type": "subheading",
@@ -120,7 +152,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Größere geometrische Ohrringe setzen einen klaren Blickfang. Kombinieren Sie sie mit Kleidung, die dem Entwurf genug visuellen Raum lässt. Gute Kombinationen sind:"
+          "text": "Größere geometrische Ohrringe setzen einen klaren Blickfang. Kombinieren Sie sie mit Kleidung, die dem Design genügend visuellen Raum lässt. Gute Kombinationen sind:"
         },
         {
           "type": "bullet-list",
@@ -129,38 +161,38 @@
             "Monochrome Jumpsuits",
             "Unverzierte Abendkleider",
             "Trägerlose oder schulterfreie Outfits",
-            "Hochgeschlossene Kleider ohne Halskette",
+            "Hochgeschlossene Kleider ohne Kette",
             "Schlichtes Tailoring in neutralen Farben"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Vermeiden Sie es, große Ohrringe gleichzeitig mit einer verzierten Halskette, einem besetzten Ausschnitt und stark gemustertem Stoff zu tragen."
+          "text": "Vermeiden Sie es, große Ohrringe gleichzeitig mit einer opulenten Kette, einem verzierten Ausschnitt und stark gemustertem Stoff zu kombinieren."
         }
       ]
     },
     {
-      "heading": "Ohrringe und Outfit gegeneinander abwägen",
+      "heading": "Stimmen Sie die Ohrringe auf das Outfit ab",
       "content": [
         {
           "type": "paragraph",
-          "text": "Eine nützliche Regel ist, den Detailgrad der Ohrringe mit dem Detailgrad der Kleidung zu vergleichen."
+          "text": "Eine hilfreiche Stylingregel ist, den Detailgrad der Ohrringe mit dem Detailgrad der Kleidung zu vergleichen."
         },
         {
           "type": "subheading",
-          "text": "Schlichtes Outfit und sichtbare Ohrringe"
+          "text": "Schlichtes Outfit und auffällige Ohrringe"
         },
         {
           "type": "paragraph",
-          "text": "Ein schlichtes Kleid, eine weiße Bluse, ein schwarzer Blazer oder ein monochromes Outfit trägt eine deutlichere geometrische Form. Die Ohrringe bringen Definition, ohne mit Drucken, Verzierungen oder dekorativen Stoffen zu konkurrieren."
+          "text": "Ein schlichtes Kleid, ein weißes Hemd, ein schwarzer Blazer oder ein monochromes Outfit verträgt eine auffälligere geometrische Form. Die Ohrringe geben dem Look Definition, ohne mit Mustern, Verzierungen oder dekorativen Stoffen zu konkurrieren."
         },
         {
           "type": "subheading",
-          "text": "Detailreiches Outfit und klarere Ohrringe"
+          "text": "Detailreiches Outfit und schlichtere Ohrringe"
         },
         {
           "type": "paragraph",
-          "text": "Enthält die Kleidung Pailletten, Stickerei, Rüschen, einen großen Blumendruck oder einen aufwendigen Ausschnitt, wählen Sie einen kleineren geometrischen Ohrring. Er darf weiterhin eine moderne Linie setzen, sollte aber kein weiteres, unverbundenes Muster werden."
+          "text": "Wenn die Kleidung Pailletten, Stickereien, Volants, ein großes Blumenmuster oder einen opulenten Ausschnitt hat, wählen Sie einen kleineren geometrischen Ohrring. Er kann weiterhin eine moderne Linie setzen, sollte aber nicht zu einem weiteren, unverbundenen Muster werden."
         },
         {
           "type": "subheading",
@@ -168,69 +200,69 @@
         },
         {
           "type": "paragraph",
-          "text": "Tailoring harmoniert von Natur aus mit geometrischem Schmuck, weil beide mit klaren Linien und Proportionen arbeiten. Die Formen müssen sich jedoch nicht exakt entsprechen. Ein Blazer mit eckigem Ausschnitt verlangt keine eckigen Ohrringe."
+          "text": "Tailoring passt naturgemäß zu geometrischem Schmuck, da beides mit klaren Linien und Proportionen arbeitet. Die Formen müssen jedoch nicht exakt übereinstimmen. Ein Blazer mit eckigem Ausschnitt verlangt keine quadratischen Ohrringe."
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie eine Verbindung – etwa klare Linien, ein wiederholtes Metall oder einen ähnlichen Grad an Struktur – ohne jedes Detail identisch zu machen."
+          "text": "Wählen Sie eine Verbindung – etwa klare Linien, ein wiederkehrendes Metall oder einen ähnlichen Strukturgrad –, ohne jedes Detail identisch zu gestalten."
         }
       ]
     },
     {
-      "heading": "Geometrische Ohrringe im Beruf",
+      "heading": "Geometrische Ohrringe fürs Büro stylen",
       "content": [
         {
           "type": "paragraph",
-          "text": "Für berufliche Outfits wählen Sie eine Größe, die sichtbar bleibt, aber nicht mit Kragen, Headset oder Haar in Konflikt gerät. Kleine Stecker, kurze Linienformen und zurückhaltende offene Rahmen passen zu:"
+          "text": "Bei professionellen Outfits sollte die Größe sichtbar bleiben, aber Kragen, Headsets oder Haare nicht stören. Kleine Ohrstecker, kurze lineare Designs und zurückhaltende Ohrringe mit offenem Rahmen passen zu:"
         },
         {
           "type": "bullet-list",
           "items": [
             "Taillierten Blazern",
-            "Weißen oder hellblauen Hemdblusen",
+            "Weißen oder hellblauen Hemden",
             "Schwarzen Hosen",
             "Neutralem Strick",
-            "Business-Kleidern",
+            "Businesskleidern",
             "Modernen Hosenanzügen"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Eine Gelbgoldoberfläche wärmt Marine, Creme, Camel und braunes Tailoring. Eine weiße oder silberfarbene Oberfläche schafft einen klareren Kontrast zu Schwarz, Grau, Blau und Weiß."
+          "text": "Ein Gelbgold-Finish wärmt Tailoring in Navy, Creme, Camel und Braun. Ein Weiß- oder Silberfinish schafft einen klareren Kontrast zu Schwarz, Grau, Blau und Weiß."
         },
         {
           "type": "paragraph",
-          "text": "Hat der Ohrring eine markante Form, halten Sie die Halskette zart. Eine feine Kette oder ein schlichter Anhänger genügt meist."
+          "text": "Hat der Ohrring eine besondere Form, halten Sie die Kette zart. Eine feine Kette oder ein schlichter Anhänger genügt meist."
         },
         {
           "type": "see-also",
-          "text": "Ratgeber für alltägliche Diamantohrringe",
+          "text": "Ratgeber für im Labor gezüchtete Diamantohrringe im Alltag",
           "href": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Geometrische Ohrringe leger tragen",
+      "heading": "Geometrische Ohrringe im Alltag stylen",
       "content": [
         {
           "type": "paragraph",
-          "text": "Geometrische Ohrringe müssen nicht der festlichen Garderobe vorbehalten bleiben. Kleinere und mittlere Entwürfe geben auch entspannten Outfits Struktur. Probieren Sie sie zu:"
+          "text": "Geometrische Ohrringe sind nicht nur formeller Kleidung vorbehalten. Kleinere und mittelgroße Designs geben entspannten Outfits Struktur. Probieren Sie sie zu:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Jeans und weißer Bluse",
-            "Schlichtem T-Shirt und Blazer",
-            "Feinem Strick und Hose",
+            "Jeans und einem weißen Hemd",
+            "Einem schlichten T-Shirt und Blazer",
+            "Feinem Strick und einer Hose",
             "Einem einfachen Midikleid",
             "Einem Leinenhemd",
-            "Einem monochromen Co-ord-Set",
-            "Einem klaren Jumpsuit"
+            "Einem monochromen Co-ord",
+            "Einem klar geschnittenen Jumpsuit"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Fügen Sie bei legeren Outfits nicht zu viele abgestimmte Teile hinzu. Die Ohrringe sollen die Kleidung durchdachter wirken lassen, ohne den Look in festliches Anlass-Styling zu verwandeln."
+          "text": "Vermeiden Sie bei einem Freizeitlook zu viele aufeinander abgestimmte Elemente. Die Ohrringe sollen die Kleidung durchdachter wirken lassen, ohne den Look in ein festliches Styling zu verwandeln."
         }
       ]
     },
@@ -239,36 +271,36 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Minimalistische Kleidung gibt geometrischem Schmuck einen klaren Hintergrund. Schwarz, Weiß, Grau, Marine, Creme und Beige lassen die Silhouette der Ohrringe sichtbar bleiben. Die stärksten minimalistischen Kombinationen nutzen oft:"
+          "text": "Minimalistische Kleidung bietet geometrischem Schmuck einen klaren Hintergrund. Schwarz, Weiß, Grau, Navy, Creme und Beige lassen die Silhouette der Ohrringe sichtbar bleiben. Besonders stimmige minimalistische Kombinationen setzen oft auf:"
         },
         {
           "type": "bullet-list",
           "items": [
             "Eine auffällige Form",
-            "Eine Metalloberfläche",
+            "Ein Metallfinish",
             "Wenig Verzierung",
-            "Klare Schnittlinien",
-            "Eine begrenzte Anzahl Accessoires"
+            "Klare Linien in der Kleidung",
+            "Eine zurückhaltende Anzahl an Accessoires"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Das Outfit muss deshalb nicht farblos sein. Auch ein schlichtes rotes, grünes oder blaues Kleid bildet einen wirkungsvollen Hintergrund, solange Stoff und Ausschnitt unkompliziert bleiben."
+          "text": "Das bedeutet nicht, dass das Outfit farblos sein muss. Auch ein schlichtes rotes, grünes oder blaues Kleid kann einen wirkungsvollen Hintergrund bilden, wenn Stoff und Ausschnitt unkompliziert bleiben."
         },
         {
           "type": "see-also",
-          "text": "Ratgeber für minimalistisches Schmuck-Styling",
+          "text": "Ratgeber für minimalistisches Schmuckstyling",
           "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
         },
         {
           "type": "see-also",
-          "text": "Ratgeber für minimalistische Ohrringe",
+          "text": "Guide für minimalistische Ohrringe",
           "href": "/resources/earring-style-guides/minimalist-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Geometrische Ohrringe zu Kleidern",
+      "heading": "Geometrische Ohrringe zu Kleidern tragen",
       "content": [
         {
           "type": "subheading",
@@ -276,7 +308,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ein schlichtes Kleid gibt Ihnen die größte Freiheit. Mittlere, offene oder skulpturale Ohrringe können zum wichtigsten Schmuckdetail werden."
+          "text": "Ein schlichtes Kleid bietet die größte Flexibilität. Mittelgroße, offene oder skulpturale Ohrringe können zum wichtigsten Schmuckdetail werden."
         },
         {
           "type": "subheading",
@@ -292,7 +324,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Satin reflektiert bereits Licht. Wählen Sie eine unkomplizierte geometrische Silhouette und verzichten Sie darauf, über mehrere weitere Accessoires zusätzlichen Glanz hinzuzufügen."
+          "text": "Satin reflektiert bereits Licht. Wählen Sie eine unkomplizierte geometrische Silhouette und verzichten Sie darauf, durch mehrere weitere Accessoires zusätzlichen Glanz hinzuzufügen."
         },
         {
           "type": "subheading",
@@ -300,7 +332,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Schwarz bildet einen starken Hintergrund für gelbgoldene, weißtonige und diamantbesetzte geometrische Entwürfe. Richten Sie den Maßstab nach Ausschnitt und Detailgrad des Kleides."
+          "text": "Schwarz bildet einen starken Hintergrund für geometrische Designs in Gelbgold, Weißton und mit Diamanten. Wählen Sie die Größe passend zum Ausschnitt und zum Detailgrad des Kleides."
         },
         {
           "type": "subheading",
@@ -308,7 +340,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ein unifarbenes Kleid funktioniert mit geometrischen Ohrringen, wenn die Form das Outfit unterstützt statt mit ihm zu konkurrieren. Wiederholen Sie das Metall in einem weiteren Accessoire oder lassen Sie die Ohrringe für sich stehen."
+          "text": "Ein Kleid in einer Blockfarbe kann zu geometrischen Ohrringen passen, wenn die Form das Outfit ergänzt statt mit ihm zu konkurrieren. Greifen Sie das Metall in einem weiteren Accessoire auf oder lassen Sie die Ohrringe für sich wirken."
         },
         {
           "type": "subheading",
@@ -316,25 +348,25 @@
         },
         {
           "type": "paragraph",
-          "text": "Mittlere oder skulpturale geometrische Ohrringe sind eine Alternative zu klassischen Hängern. Hat das Kleid einen schlichten Ausschnitt, dürfen die Ohrringe führen. Enthält es Pailletten oder Kristalldetails, wählen Sie eine klarere Form."
+          "text": "Mittelgroße oder skulpturale geometrische Ohrringe bieten eine Alternative zu klassischen Ohrhängern. Bei einem schlichten Ausschnitt können die Ohrringe den Look anführen. Enthält das Kleid Pailletten oder Kristalldetails, wählen Sie eine klarere Form."
         },
         {
           "type": "see-also",
-          "text": "Welcher Schmuck zum schwarzen Kleid",
+          "text": "Welcher Schmuck passt zu einem schwarzen Kleid?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
         }
       ]
     },
     {
-      "heading": "Den Ohrring auf den Ausschnitt abstimmen",
+      "heading": "Geometrische Ohrringe auf den Ausschnitt abstimmen",
       "content": [
         {
           "type": "subheading",
-          "text": "Hoher Ausschnitt oder Rollkragen"
+          "text": "Hochgeschlossener Ausschnitt oder Rollkragen"
         },
         {
           "type": "paragraph",
-          "text": "Ein hoher Ausschnitt lässt meist wenig Platz für eine Halskette, wodurch die Ohrringe wichtiger werden. Wählen Sie ein Design, das unter dem Haar sichtbar bleibt, und vermeiden Sie Ohrringe, die sich an dickem Strick verfangen."
+          "text": "Ein hoher Halsausschnitt lässt meist nur wenig Platz für eine Halskette, wodurch Ohrringe wichtiger werden. Wählen Sie ein Design, das unter dem Haar sichtbar bleibt, und vermeiden Sie Ohrringe, die an dicker Strickkleidung hängen bleiben."
         },
         {
           "type": "subheading",
@@ -342,15 +374,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Ein V-Ausschnitt verträgt einen zarten Anhänger zu kleineren geometrischen Ohrringen. Sind die Ohrringe groß oder kantig, lassen Sie den Ausschnitt frei."
+          "text": "Ein V-Ausschnitt lässt sich mit einem zarten Anhänger und kleineren geometrischen Ohrringen kombinieren. Sind die Ohrringe groß oder kantig, sollte der Ausschnitt frei bleiben."
         },
         {
           "type": "subheading",
-          "text": "Runder Ausschnitt"
+          "text": "Rundhalsausschnitt"
         },
         {
           "type": "paragraph",
-          "text": "Kleine und mittlere geometrische Ohrringe passen gut zu einem runden Ausschnitt. Eine kurze Kette lässt sich ergänzen, sofern sie nicht mit den Ohrringen konkurriert."
+          "text": "Kleine und mittelgroße geometrische Ohrringe passen gut zu einem Rundhalsausschnitt. Eine kurze Kette kann ergänzt werden, sofern sie nicht mit den Ohrringen konkurriert."
         },
         {
           "type": "subheading",
@@ -358,7 +390,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Eine offene Schulterlinie schafft Raum für einen auffälligeren Ohrring. Mittelgroße kantige oder skulpturale Entwürfe wirken hier besonders gut – prüfen Sie jedoch ihre tatsächliche Länge im Verhältnis zur Schulter."
+          "text": "Eine offene Schulterpartie bietet Platz für einen auffälligeren Ohrring. Mittelgroße, kantige oder skulpturale Designs können besonders gut wirken. Prüfen Sie jedoch ihre tatsächliche Länge im Verhältnis zur Schulter."
         },
         {
           "type": "subheading",
@@ -366,54 +398,54 @@
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie kleine Stecker, Stäbe oder offene Rahmen, die sich nicht am Kragen verfangen. Ist das Hemd gemustert, greifen Sie zu einem schlichteren Design."
+          "text": "Wählen Sie kleine Ohrstecker, Stäbchen oder offene Rahmendesigns, die nicht am Kragen hängen bleiben. Ist das Hemd gemustert, empfiehlt sich ein schlichteres Design."
         }
       ]
     },
     {
-      "heading": "Die Metalloberfläche wählen",
+      "heading": "Wählen Sie die Metalloptik",
       "content": [
         {
           "type": "paragraph",
-          "text": "Die Metalloberfläche kann die Ohrringe mit Kleidung, Tasche, Schuhen oder anderem Schmuck verbinden."
+          "text": "Die Metalloptik kann eine Verbindung zwischen den Ohrringen und Ihrer Kleidung, Tasche, Ihren Schuhen oder anderem Schmuck schaffen."
         },
         {
           "type": "subheading",
-          "text": "Gelbgoldene geometrische Ohrringe"
+          "text": "Geometrische Ohrringe aus Gelbgold"
         },
         {
           "type": "paragraph",
-          "text": "Gelbgold bringt Wärme zu Schwarz, Creme, Camel, Braun, Marine, Oliv und Rot."
+          "text": "Gelbgold kann Schwarz, Creme, Camel, Braun, Marineblau, Oliv und Rot Wärme verleihen."
         },
         {
           "type": "subheading",
-          "text": "Weiß- oder silberfarbene geometrische Ohrringe"
+          "text": "Geometrische Ohrringe in Weiß- oder Silberoptik"
         },
         {
           "type": "paragraph",
-          "text": "Weiß- und Silbertöne schaffen einen klaren Kontrast zu Schwarz, Weiß, Grau, Marine, Blau, Bordeaux und kühlem Grün."
+          "text": "Weiß- und Silbertöne können einen klaren Kontrast zu Schwarz, Weiß, Grau, Marineblau, Blau, Burgunderrot und kühlen Grüntönen bilden."
         },
         {
           "type": "subheading",
-          "text": "Roségoldene geometrische Ohrringe"
+          "text": "Geometrische Ohrringe aus Roségold"
         },
         {
           "type": "paragraph",
-          "text": "Roségold erzeugt ein weicheres Ergebnis zu Blush, Mauve, sanftem Grau, Creme, Koralle und gedämpftem Rot."
+          "text": "Roségold kann mit Blush, Mauve, Hellgrau, Creme, Koralle und gedecktem Rot besonders weich wirken."
         },
         {
           "type": "paragraph",
-          "text": "Das sind Styling-Richtungen und keine strengen Farbregeln. Am stimmigsten wirkt es meist, das Metall zu wiederholen, das bereits an Tasche, Gürtel oder Schuhen vorkommt."
+          "text": "Diese Empfehlungen dienen dem Styling und sind keine strengen Farbvorgaben. Am stimmigsten ist es oft, die Metalloptik von Tasche, Gürtel oder Schuhen aufzugreifen."
         },
         {
           "type": "see-also",
-          "text": "Gelbgold, Weißgold oder Roségold bei Diamantohrringen",
+          "text": "Ohrschmuck mit im Labor gezüchteten Diamanten in Gelb-, Weiß- oder Roségold",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Geometrische Ohrringe und Frisur",
+      "heading": "Stylen Sie geometrische Ohrringe mit verschiedenen Frisuren",
       "content": [
         {
           "type": "grid-layout",
@@ -422,11 +454,11 @@
           "content": [
             {
               "type": "subheading",
-              "text": "Hochgestecktes Haar"
+              "text": "Nach oben gestecktes Haar"
             },
             {
               "type": "paragraph",
-              "text": "Hochsteckfrisur, Dutt oder Pferdeschwanz legen die gesamte Ohrringform frei. Das ist besonders nützlich für offene Rahmen, Linienformen und skulpturale Entwürfe."
+              "text": "Eine Hochsteckfrisur, ein Dutt oder ein Pferdeschwanz zeigt die vollständige Form des Ohrrings. Das eignet sich besonders für offene Rahmen-, lineare und skulpturale Designs."
             },
             {
               "type": "subheading",
@@ -434,7 +466,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Eine oder beide Seiten hinter das Ohr zu stecken macht mittelgroße Ohrringe sichtbar, ohne die gesamte Frisur zu ändern."
+              "text": "Wenn Sie eine oder beide Seiten hinter das Ohr stecken, können mittelgroße Ohrringe sichtbar werden, ohne dass Sie die gesamte Frisur verändern müssen."
             },
             {
               "type": "subheading",
@@ -442,7 +474,7 @@
             },
             {
               "type": "paragraph",
-              "text": "Wählen Sie Ohrringe mit genug Länge oder Kontrast, damit sie sichtbar bleiben. Kleine Stecker können unter dichtem oder langem Haar verschwinden."
+              "text": "Wählen Sie Ohrringe mit ausreichend Länge oder Kontrast, damit sie sichtbar bleiben. Kleine Ohrstecker können unter dichtem oder langem Haar verschwinden."
             },
             {
               "type": "subheading",
@@ -450,71 +482,95 @@
             },
             {
               "type": "paragraph",
-              "text": "Kurze Frisuren legen das Ohr ohnehin frei. Sowohl kleine als auch skulpturale Entwürfe funktionieren – richten Sie den Maßstab nach dem Outfit, statt größere Ohrringe für nötig zu halten."
+              "text": "Kurze Frisuren geben das Ohr ganz natürlich frei. Sowohl kleine als auch skulpturale Designs können funktionieren. Orientieren Sie sich bei der Größe daher am Outfit, statt automatisch größere Ohrringe zu wählen."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Die Frisur sollte das Design korrekt zeigen, ohne eine Ohrringgröße zu erzwingen, die zum übrigen Outfit nicht passt."
+          "text": "Die Frisur sollte das Design unverfälscht zeigen, ohne dass Sie eine Ohrringgröße wählen müssen, die zum restlichen Outfit nicht passt."
         }
       ]
     },
     {
-      "heading": "Lassen sich geometrische Ohrringe mit einer Halskette tragen?",
+      "heading": "Können geometrische Ohrringe mit einer Halskette getragen werden?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Ja, aber die Halskette sollte nicht mit dem stärksten Merkmal der Ohrringe konkurrieren."
+          "text": "Ja, aber die Halskette sollte nicht mit dem auffälligsten Merkmal der Ohrringe konkurrieren."
         },
         {
           "type": "table",
-          "headers": ["Geometrischer Ohrring", "Richtung für die Halskette"],
+          "headers": [
+            "Geometrischer Ohrring",
+            "Empfehlung für die Halskette"
+          ],
           "rows": [
-            ["Kleiner Stecker oder Stab", "Feiner Anhänger oder kurze Kette"],
-            ["Kleiner offener Rahmen", "Zarte Kette oder gar keine"],
-            ["Mittelgroßes kantiges Design", "Schlichter Anhänger"],
-            ["Geometrische Creole", "Feine Kette oder kurze Halskette"],
-            ["Großes skulpturales Design", "Meist keine Halskette"],
-            ["Geometrischer Diamantohrring", "Schlichte Metallkette oder gar keine"],
-            ["Geometrischer Ear-Stack", "Halskette optisch zurückhaltend halten"]
+            [
+              "Kleiner Ohrstecker oder Stäbchen",
+              "Zarter Anhänger oder kurze Kette"
+            ],
+            [
+              "Kleines offenes Rahmendesign",
+              "Zarte Kette oder keine Halskette"
+            ],
+            [
+              "Mittelgroßes, kantiges Design",
+              "Schlichter Anhänger"
+            ],
+            [
+              "Geometrische Creole",
+              "Feine Kette oder kurze Halskette"
+            ],
+            [
+              "Großes skulpturales Design",
+              "Meist keine Kette"
+            ],
+            [
+              "Geometrischer Diamantohrring",
+              "Schlichte Metallkette oder keine Halskette"
+            ],
+            [
+              "Geometrischer Ear Stack",
+              "Halten Sie die Halskette optisch zurückhaltend"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Vermeiden Sie es, mehrere große Formen zu kombinieren, sofern nicht bewusst maximalistisches Styling das Ziel ist."
+          "text": "Vermeiden Sie mehrere große Formen gleichzeitig, außer ein bewusst maximalistisches Styling ist das Ziel."
         }
       ]
     },
     {
-      "heading": "Einen geometrischen Ear-Stack aufbauen",
+      "heading": "So bauen Sie einen geometrischen Ear Stack auf",
       "content": [
         {
           "type": "paragraph",
-          "text": "Verwenden Sie eine führende Form und kleinere begleitende Ohrringe. Mögliche Kombinationen sind:"
+          "text": "Wählen Sie eine Hauptform und kleinere ergänzende Ohrringe. Mögliche Kombinationen sind:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Offener Rahmenohrring mit kleinem Diamant-Stecker",
-            "Geometrische Creole mit schlichtem Solitär-Stecker",
-            "Kantiger Hauptohrring mit kurzem Stab-Stecker",
-            "Kleiner geometrischer Stecker mit zurückhaltendem Huggie",
-            "Weißtoniger geometrischer Ohrring mit passenden kleinen Steckern"
+            "Ohrring mit offenem Rahmen und kleiner Diamant-Ohrstecker",
+            "Geometrische Creole mit schlichtem Solitär-Ohrstecker",
+            "Kantiger Hauptohrring mit kurzem Stäbchen-Ohrstecker",
+            "Kleiner geometrischer Ohrstecker mit einer zurückhaltenden kleinen Creole (Huggie)",
+            "Geometrischer Ohrring in Weißoptik mit passenden kleinen Ohrsteckern"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Nicht jeder Ohrring muss geometrisch sein. Ein wiederholtes Metall oder Diamantdetail schafft bereits genug Verbindung."
+          "text": "Nicht jeder Ohrring muss geometrisch sein. Eine wiederkehrende Metalloptik oder ein wiederkehrendes Diamantdetail kann bereits für genügend Verbindung sorgen."
         },
         {
           "type": "see-also",
-          "text": "So stapeln Sie Ohrringe",
+          "text": "So kombinieren Sie Ohrringe im Ear Stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         },
         {
           "type": "see-also",
-          "text": "So stylen Sie Huggie-Ohrringe",
+          "text": "So stylen Sie kleine Creolen (Huggies)",
           "href": "/resources/earring-style-guides/how-to-style-huggie-earrings"
         }
       ]
@@ -524,30 +580,30 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Gesichtsform-Tabellen sind optionale Orientierung, keine festen Regeln. Geometrische Ohrringe müssen die Gesichtsform weder „korrigieren“ noch kaschieren."
+          "text": "Gesichtsformtabellen dienen nur als Orientierung und sind keine strengen Regeln. Geometrische Ohrringe müssen die Gesichtsform nicht „korrigieren“ oder kaschieren."
         },
         {
           "type": "paragraph",
-          "text": "Entscheiden Sie stattdessen, welche Wirkung Sie erzielen möchten:"
+          "text": "Entscheiden Sie stattdessen, welchen visuellen Effekt Sie erzielen möchten:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Längere Linienformen erzeugen eine vertikale Linie.",
+            "Längere, lineare Designs erzeugen eine vertikale Linie.",
             "Breitere Formen schaffen mehr horizontale Präsenz.",
-            "Gerundete geometrische Formen wirken weicher.",
-            "Kantige Formen erzeugen stärkere Definition.",
-            "Kleine Stecker konzentrieren die Wirkung rund ums Ohr."
+            "Gebogene geometrische Formen wirken weicher.",
+            "Kantige Formen sorgen für eine stärkere Definition.",
+            "Kleine Ohrstecker konzentrieren den Effekt auf den Bereich um das Ohr."
           ]
         },
         {
           "type": "paragraph",
-          "text": "Tatsächlicher Maßstab, Frisur und persönliche Vorliebe zählen mehr, als jede Person einer Gesichtsform-Kategorie zuzuordnen. Eigene Trageaufnahmen helfen mehr als allgemeine Regeln."
+          "text": "Die tatsächliche Größe, die Frisur und Ihre persönlichen Vorlieben sind wichtiger, als jede Person einer einzigen Gesichtsform zuzuordnen. Eigene Anprobefotos sind hilfreicher als allgemeine Regeln."
         }
       ]
     },
     {
-      "heading": "Vom Tag zum Abend",
+      "heading": "Geometrische Ohrringkombinationen von morgens bis abends",
       "content": [
         {
           "type": "subheading",
@@ -556,24 +612,24 @@
         {
           "type": "bullet-list",
           "items": [
-            "Kleine oder mittlere offene Rahmenohrringe",
+            "Kleine oder mittelgroße Ohrringe mit offenem Rahmen",
             "Taillierter Blazer und Hose",
             "Tagsüber eine feine Halskette",
-            "Für den Abend den Blazer ablegen",
-            "Dieselben Ohrringe behalten"
+            "Legen Sie den Blazer am Abend ab",
+            "Behalten Sie dieselben Ohrringe"
           ]
         },
         {
           "type": "subheading",
-          "text": "Von leger zu Smart Casual"
+          "text": "Von leger zu elegant-leger"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Kleine kantige Ohrringe",
-            "Weiße Bluse und Jeans",
-            "Strukturierte Jacke und schlichten Ring ergänzen",
-            "Halskette minimal halten"
+            "Kleine, kantige Ohrringe",
+            "Weißes Hemd und Jeans",
+            "Ergänzen Sie eine strukturierte Jacke und einen schlichten Ring",
+            "Halten Sie die Halskette minimalistisch"
           ]
         },
         {
@@ -583,40 +639,40 @@
         {
           "type": "bullet-list",
           "items": [
-            "Mittlere oder skulpturale geometrische Ohrringe",
-            "Schlichtes schwarzes, marineblaues oder rotes Kleid",
-            "Keine auffällige Halskette",
+            "Mittelgroße oder skulpturale geometrische Ohrringe",
+            "Schwarzes, marineblaues oder rotes Kleid",
+            "Keine auffällige Statement-Halskette",
             "Ein zurückhaltendes Armband oder ein Ring",
-            "Haare hinter das Ohr gesteckt"
+            "Haar hinter das Ohr gesteckt"
           ]
         }
       ]
     },
     {
-      "heading": "Typische Styling-Fehler",
+      "heading": "Häufige Stylingfehler",
       "content": [
         {
           "type": "bullet-list",
           "items": [
-            "Jeden geometrischen Ohrring als Statement-Ohrring behandeln",
-            "Übergroße geometrische Ohrringe zu stark gemusterten Outfits tragen",
-            "Jedes Schmuckstück auf dieselbe Form abstimmen",
-            "Große Ohrringe mit einer ebenso großen Halskette kombinieren",
-            "Nicht prüfen, ob die Ohrringe sich an Kragen oder Schulter verfangen",
-            "Ohrringe wählen, die vollständig unter dem Haar verschwinden",
-            "Einen Ohrring als bequem bezeichnen, ohne belegtes Gewicht und Trageprobe",
-            "„Zeitlos“ oder „Investition“ als Ersatz für praktische Informationen verwenden"
+            "Jeden geometrischen Ohrring als Statement-Ohrring zu behandeln",
+            "Übergroße geometrische Ohrringe zu einem stark gemusterten Outfit zu tragen",
+            "Jedes Schmuckstück auf dieselbe Form abzustimmen",
+            "Große Ohrringe mit einer ebenso großen Halskette zu kombinieren",
+            "Zu ignorieren, ob die Ohrringe am Kragen oder an der Schulter hängen bleiben",
+            "Ohrringe auszuwählen, die vollständig unter dem Haar verschwinden",
+            "Einen Ohrring als bequem zu bezeichnen, ohne Gewicht und Tragekomfort geprüft zu haben",
+            "„Zeitlos“ oder „Investment“ als Ersatz für praktische Informationen zu verwenden"
           ]
         },
         {
           "type": "see-also",
-          "text": "Ratgeber für auffällige Statement-Ohrringe",
+          "text": "Leitfaden für auffällige Statement-Ohrringe",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Abschließende Checkliste",
+      "heading": "Checkliste für geometrische Ohrringe",
       "content": [
         {
           "type": "grid-layout",
@@ -625,28 +681,28 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Fragen Sie sich, bevor Sie das Outfit festlegen:"
+              "text": "Bevor Sie das Outfit auswählen, fragen Sie sich:"
             },
             {
               "type": "bullet-list",
               "items": [
                 "Ist der Ohrring klein, mittelgroß oder skulptural?",
-                "Ist die Form kantig, gerundet, linear oder offen?",
+                "Ist die Form kantig, gebogen, linear oder offen gerahmt?",
                 "Ist das Outfit schlicht oder sehr detailreich?",
                 "Zeigt die Frisur das vollständige Design?",
-                "Bleibt der Ohrring frei von Kragen und Schulter?",
-                "Ist eine Halskette überhaupt nötig?",
-                "Welches Metall kommt im Outfit bereits vor?",
+                "Reicht der Ohrring über Kragen und Schulter hinaus?",
+                "Ist eine Halskette notwendig?",
+                "Welche Metalloptik ist im Outfit bereits vorhanden?",
                 "Passt der Ohrring zum Anlass?",
-                "Nutze ich eine führende Form oder mehrere konkurrierende?",
-                "Habe ich die tatsächlichen Maße und das Gewicht geprüft?"
+                "Verwende ich eine Hauptform oder mehrere konkurrierende Formen?",
+                "Habe ich die tatsächlichen Produktmaße und das Gewicht geprüft?"
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Im Zweifel beginnen Sie mit einem mittelgroßen geometrischen Ohrring, einer klaren Outfit-Silhouette und einer einheitlichen Metallfarbe."
+          "text": "Wenn Sie unsicher sind, beginnen Sie mit einem mittelgroßen geometrischen Ohrring, einer klaren Outfit-Silhouette und einer einheitlichen Metalloptik."
         }
       ]
     }
@@ -654,41 +710,41 @@
   "faq": [
     {
       "question": "Welche Outfits passen zu geometrischen Ohrringen?",
-      "answer": "Geometrische Ohrringe passen zu Tailoring, Hemdblusen, Strick, monochromen Outfits, Jumpsuits und unkomplizierten Kleidern. Stimmen Sie die Größe des Ohrrings auf den Detailgrad der Kleidung ab."
+      "answer": "Geometrische Ohrringe passen zu Tailoring, Hemden, Strickkleidung, monochromen Outfits, Jumpsuits und schlichten Kleidern. Stimmen Sie die Größe des Ohrrings auf den Detailgrad der Kleidung ab."
     },
     {
-      "question": "Kann man geometrische Ohrringe täglich tragen?",
-      "answer": "Kleinere Stecker, Stäbe und offene Rahmen eignen sich für den regelmäßigen Gebrauch. Prüfen Sie Maße, Gewicht, Verschluss und Pflegehinweise des Produkts, bevor Sie ein bestimmtes Paar als alltagstauglich einstufen."
+      "question": "Können geometrische Ohrringe jeden Tag getragen werden?",
+      "answer": "Kleinere Ohrstecker, Stäbchen und offene Rahmendesigns eignen sich für regelmäßiges Styling. Prüfen Sie die tatsächlichen Maße, das Gewicht, den Verschluss und die Pflegehinweise des Produkts, bevor Sie ein bestimmtes Paar häufig tragen."
     },
     {
-      "question": "Sind geometrische Ohrringe für den Beruf geeignet?",
-      "answer": "Ja. Kleine oder mittlere Entwürfe ergänzen Blazer, Hemdblusen, Strick und Business-Kleider. Vermeiden Sie Designs, die sich an Kragen, Haar oder Headset verfangen."
+      "question": "Sind geometrische Ohrringe fürs Büro geeignet?",
+      "answer": "Ja. Kleine oder mittelgroße Designs können Blazer, Hemden, Strickkleidung und Businesskleider ergänzen. Vermeiden Sie Designs, die an Kragen, Haaren oder Headsets hängen bleiben."
     },
     {
-      "question": "Passen geometrische Ohrringe zu gemusterter Kleidung?",
-      "answer": "Ja, wählen Sie aber ein klareres, kleineres Design, damit die Ohrringe kein weiteres konkurrierendes Muster einführen."
+      "question": "Können geometrische Ohrringe zu gemusterter Kleidung getragen werden?",
+      "answer": "Ja, aber wählen Sie ein klareres, kleineres Design, damit die Ohrringe kein weiteres konkurrierendes Muster hinzufügen."
     },
     {
-      "question": "Sollte ich eine Halskette zu geometrischen Ohrringen tragen?",
-      "answer": "Eine zarte Halskette passt zu kleineren geometrischen Ohrringen. Größere oder skulpturale Ohrringe wirken meist klarer ohne auffällige Kette."
+      "question": "Sollte ich zu geometrischen Ohrringen eine Halskette tragen?",
+      "answer": "Eine zarte Halskette kann zu kleineren geometrischen Ohrringen passen. Größere oder skulpturale Ohrringe wirken meist klarer ohne auffällige Halskette."
     },
     {
-      "question": "Kann man geometrische Ohrringe im Ear-Stack tragen?",
-      "answer": "Ja. Verwenden Sie einen führenden geometrischen Ohrring und ergänzen Sie ihn mit kleineren Steckern, Stäben oder Huggies. Wiederholen Sie Metall oder Diamantdetail, statt jeden Ohrring gleich zu formen."
+      "question": "Können geometrische Ohrringe in einem Ear Stack getragen werden?",
+      "answer": "Ja. Verwenden Sie einen geometrischen Hauptohrring und ergänzen Sie ihn mit kleineren Ohrsteckern, Stäbchen oder kleinen Creolen (Huggies). Greifen Sie die Metalloptik oder das Diamantdetail auf, statt jeden Ohrring in derselben Form zu wählen."
     },
     {
       "question": "Sind geometrische Ohrringe dasselbe wie Statement-Ohrringe?",
-      "answer": "Nein. Geometrisch beschreibt Form und Aufbau des Designs. Ein geometrischer Ohrring kann sehr klein und zurückhaltend sein oder groß genug, um als Statement-Stück zu wirken."
+      "answer": "Nein. Geometrisch beschreibt die Form und Konstruktion des Designs. Ein geometrischer Ohrring kann sehr klein und zurückhaltend sein oder groß genug, um als auffälliges Schmuckstück zu wirken."
     }
   ],
   "cta": {
-    "heading": "Wägen Sie Größe und Komplexität des Ohrrings gegen das Outfit ab. Kleine Stecker und offene Rahmen passen zu Business-Looks und Mustern, während größere skulpturale Entwürfe ein schlichtes Outfit und genug Raum brauchen.",
-    "body": "Entdecken Sie die Demi-Fine-Ohrringe von I Want Jewels mit im Labor gezüchteten Diamanten und prüfen Sie auf jeder Produktseite Maße, Gewicht, Verschluss und Oberfläche, bevor Sie sich für einen Maßstab entscheiden.",
+    "heading": "Stimmen Sie Größe und Komplexität des Ohrrings auf das Outfit ab. Kleine Ohrstecker und offene Rahmen passen zu Businesskleidung und Mustern, während größere skulpturale Designs ein schlichtes Outfit und genügend Raum brauchen, um im Mittelpunkt zu stehen.",
+    "body": "Entdecken Sie geometrische Ohrringe aus Demi-Fine Schmuck mit im Labor gezüchteten Diamanten von I Want Jewels. Prüfen Sie auf jeder Produktseite die angegebenen Maße, das Gewicht, den Verschluss und die Metalloptik, bevor Sie entscheiden, welche Größe des geometrischen Designs zu Ihrem Outfit passt.",
     "primaryLabel": "Im Labor gezüchtete Diamantohrringe entdecken",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Ratgeber für minimalistisches Schmuck-Styling",
+    "secondaryLabel": "Guide für minimalistisches Schmuckstyling",
     "secondaryHref": "/resources/earring-style-guides/minimalist-jewellery-styling-guide",
-    "tertiaryLabel": "So stapeln Sie Ohrringe",
+    "tertiaryLabel": "So kombinieren Sie Ohrringe zu einem Stack",
     "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
   }
 }

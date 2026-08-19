@@ -45,7 +45,7 @@
           "assert": "de botón"
         }
       },
-      "reviewed": false
+      "reviewed": true
     },
     {
       "en": "lab-grown diamond",
@@ -77,7 +77,7 @@
           "assert": "laboratorio"
         }
       },
-      "reviewed": false
+      "reviewed": true
     },
     {
       "en": "hoop earrings",
@@ -108,7 +108,7 @@
           "assert": "aro"
         }
       },
-      "reviewed": false
+      "reviewed": true
     },
     {
       "en": "huggie earrings",
@@ -139,7 +139,7 @@
           "assert": "aro"
         }
       },
-      "reviewed": false
+      "reviewed": true
     },
     {
       "en": "tennis bracelet",
@@ -260,7 +260,7 @@
           "assert": "ear stack"
         }
       },
-      "reviewed": false
+      "reviewed": true
     },
     {
       "en": "sterling silver",
@@ -523,15 +523,15 @@
         },
         "fr": {
           "use": "plaqué or",
-          "assert": "plaqué or"
+          "assert": "plaqu"
         },
         "it": {
           "use": "placcato oro",
-          "assert": "placcato"
+          "assert": "placcat"
         },
         "es": {
           "use": "chapado en oro",
-          "assert": "chapado"
+          "assert": "chapad"
         }
       },
       "reviewed": false

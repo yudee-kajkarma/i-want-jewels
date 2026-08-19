@@ -1,77 +1,77 @@
 {
   "meta": {
-    "title": "Demi Fine versus joyería fina versus joyería de moda",
-    "description": "Compare joyería semifina, fina y de moda. Conozca la diferencia en materiales, precio, calidad, portabilidad y valor de regalo."
+    "title": "Joyería demi-fine, fina y de moda",
+    "description": "Compare la joyería demi-fine, fina y de moda: materiales, precio, calidad, uso y valor para regalar."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-77.jpg",
-    "title": "Semifina vs joyería fina vs joyería de moda:",
+    "title": "Joyería demi-fine, fina y de moda:",
     "subtitle": "¿Cuál es la diferencia?",
     "paragraphs": [
-      "Las joyas a menudo se describen como bisutería, joyería semifina o joyería fina, pero muchos compradores no están completamente seguros de lo que significan estos términos. La diferencia suele reducirse a los materiales, el precio, la durabilidad, la calidad del diseño, el tipo de piedra y cómo se debe usar la joya.",
-      "La joyería de moda suele estar hecha para tendencias y estilismos a corto plazo. La joyería fina suele estar elaborada con metales preciosos macizos y piedras preciosas de mayor valor. La joyería semifina se sitúa entre ambos. Ofrece a los compradores una sensación más elevada que la joyería de moda, pero suele ser más accesible y fácil de usar que la joyería fina tradicional.",
-      "Este recurso le ayuda a comparar las tres categorías en un lenguaje sencillo, comprender dónde encaja IWantJewels y elegir el tipo de joyería adecuado para el uso diario, regalos, bodas, pendientes y estilos para ocasiones especiales."
+      "La joyería suele clasificarse como joyería de moda, joyería demi-fine o joyería fina, pero muchos compradores no tienen claro qué significan estos términos. La diferencia suele estar en los materiales, el precio, la durabilidad, la calidad del diseño, el tipo de piedra y la forma de llevar cada joya.",
+      "La joyería de moda suele diseñarse para seguir tendencias y crear looks de corta duración. La joyería fina suele elaborarse con metales preciosos macizos y piedras de mayor valor. La joyería demi-fine se sitúa entre ambas: ofrece una sensación más refinada que la joyería de moda, pero suele ser más accesible y fácil de llevar que la joyería fina tradicional.",
+      "Esta guía le ayuda a comparar las tres categorías con un lenguaje sencillo, entender dónde encaja IWantJewels y elegir el tipo de joyería adecuado para el día a día, regalos, bodas, ear stacks y looks de ocasión."
     ],
-    "shopLabel": "Comprar joyería semifina",
+    "shopLabel": "Comprar joyería demi-fine",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comprenda la diferencia entre joyería de moda, semifina y fina",
-      "Compara materiales, precio, durabilidad y calidad de joyería.",
-      "Sepa cuándo la joyería semifina tiene más sentido que la joyería de moda",
-      "Sepa cuándo la joyería fina puede seguir siendo la mejor opción",
-      "Comprenda por qué los diamantes cultivados en laboratorio funcionan bien en joyería semifina",
-      "Elija joyas para uso diario, regalos, bodas, fiestas y pendientes.",
-      "Encuentre recomendaciones de productos IWantJewels según su propósito de compra",
-      "Planifique enlaces internos, bloques de productos, módulos de imágenes y secciones de CTA para esta página de recursos"
+      "Entienda la diferencia entre joyería de moda, demi-fine y fina",
+      "Compare materiales, precio, durabilidad y calidad de la joyería",
+      "Descubra cuándo la joyería demi-fine tiene más sentido que la de moda",
+      "Descubra cuándo la joyería fina puede ser la mejor opción",
+      "Entender por qué los diamantes de laboratorio funcionan bien en la joyería demi-fine",
+      "Elija joyas para el día a día, regalos, bodas, fiestas y ear stacks",
+      "Encuentre recomendaciones de IWantJewels según su objetivo de compra",
+      "Planifique enlaces internos, bloques de producto, módulos de imagen y secciones CTA para esta página"
     ],
     "image": "/blog-images/blog-image-34.jpg"
   },
   "content": [
     {
-      "heading": "Comparación de categorías de joyería",
+      "heading": "Comparativa de categorías de joyería",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como principal herramienta de comparación."
+          "text": "Utilice esta tabla cerca del principio de la página como herramienta principal de comparación."
         },
         {
           "type": "table",
           "headers": [
             "Tipo de joyería",
-            "Materiales típicos",
-            "Mejor para",
+            "Materiales habituales",
+            "Ideal para",
             "Ventaja principal",
-            "Limitación principal"
+            "Principal limitación"
           ],
           "rows": [
             [
               "Joyería de moda",
-              "Metales comunes, acabados chapados, piedras de imitación, cristales, circonita cúbica.",
-              "Estilismo de tendencia, outfits únicos, complementos low cost.",
-              "Muy accesible y orientado a las tendencias.",
-              "Puede desgastarse más rápido y sentirse menos premium"
+              "Metales comunes, acabados chapados, piedras de imitación, cristales y circonita cúbica",
+              "Looks de tendencia, conjuntos puntuales y accesorios económicos",
+              "Muy accesible y orientada a las tendencias",
+              "Puede desgastarse antes y parecer menos sofisticada"
             ],
             [
-              "Joyas semifinas",
-              "Plata de ley, baño de oro, plata bañada en oro, diamantes cultivados en laboratorio, piedras semipreciosas",
-              "Joyas para el día a día, regalos, pendientes, estilo para ocasiones especiales.",
-              "Más elevada que la joyería de moda y más accesible que la joyería fina",
-              "Necesita un cuidado adecuado, especialmente los acabados enchapados."
+              "Joyería demi-fine",
+              "Plata de ley 925, chapado en oro, vermeil, diamantes de laboratorio y piedras semipreciosas",
+              "Joyería para el día a día, regalos, ear stacks y looks de ocasión",
+              "Más sofisticada que la joyería de moda y más accesible que la joyería fina",
+              "Requiere cuidados adecuados, especialmente en los acabados chapados"
             ],
             [
-              "joyería fina",
-              "Oro macizo, platino, diamantes naturales, piedras preciosas.",
-              "Piezas tradicionales, regalos de lujo, joyería fina tradicional.",
-              "Máximo valor material y atractivo de lujo a largo plazo.",
-              "Generalmente es más caro y, a veces, menos flexible para el estilo de moda."
+              "Joyería fina",
+              "Oro macizo, platino, diamantes naturales y piedras preciosas",
+              "Joyas heredables, regalos de lujo y joyería fina tradicional",
+              "Mayor valor material y atractivo de lujo a largo plazo",
+              "Suele ser más cara y a veces menos flexible para seguir tendencias"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "La joyería semifina es el término medio. No se trata de bisutería barata, pero tampoco siempre se trata de joyería fina de oro macizo o platino. Está hecho para compradores que desean joyas que se sientan pulidas, regalables y ponibles sin necesariamente entrar en los precios de lujo tradicionales."
+          "text": "La joyería demi-fine es el punto intermedio. No es bisutería barata, pero tampoco siempre está hecha de oro macizo o platino. Está pensada para quienes buscan joyas cuidadas, fáciles de regalar y de llevar, sin entrar siempre en los precios del lujo tradicional."
         }
       ]
     },
@@ -80,49 +80,49 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La joyería de moda suele estar hecha para un estilo que sigue las tendencias. Puede ser divertido, asequible y fácil de comprar, especialmente cuando quieres una pieza para un conjunto, una temporada o un evento."
+          "text": "La joyería de moda suele crearse para looks inspirados en las tendencias. Puede ser divertida, económica y fácil de comprar, especialmente cuando busca una joya para un conjunto, una temporada o un evento concretos."
         },
         {
           "type": "paragraph",
-          "text": "En la joyería de moda se utilizan a menudo materiales más económicos, como metales comunes, piedras de imitación, cristales, circonitas o baños ligeros. Algunas piezas pueden verse hermosas en las fotografías, pero es posible que no siempre se mantengan bien con el uso regular."
+          "text": "La joyería de moda suele utilizar materiales económicos, como metales comunes, piedras de imitación, cristales, circonita cúbica o chapados ligeros. Algunas piezas pueden verse preciosas en fotografías, pero no siempre resisten bien el uso habitual."
         },
         {
           "type": "paragraph",
-          "text": "Este tipo de joyería es útil cuando quieres experimentar con las tendencias. Por ejemplo, si desea un pendiente grande y colorido para una fiesta o una pieza muy específica de tendencia, la bisutería puede tener sentido."
+          "text": "Este tipo de joyería resulta útil para experimentar con las tendencias. Por ejemplo, si quiere unos pendientes grandes y coloridos para una fiesta o una pieza muy marcada por una tendencia concreta, la joyería de moda puede ser una buena opción."
         },
         {
           "type": "paragraph",
-          "text": "La limitación es que la joyería de moda puede no parecer tan premium, significativa o duradera. Puede que tampoco sea la mejor opción para regalos importantes o piezas cotidianas que quieras usar repetidamente."
+          "text": "La limitación es que la joyería de moda puede parecer menos sofisticada, especial o duradera. Tampoco siempre es la mejor elección para regalos importantes o piezas de uso diario que quiera llevar repetidamente."
         },
         {
           "type": "see-also",
-          "text": "Diamantes cultivados en laboratorio versus circonita cúbica",
+          "text": "Diamantes de laboratorio frente a circonita cúbica",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia"
         }
       ]
     },
     {
-      "heading": "¿Qué es la joyería semifina?",
+      "heading": "¿Qué es la joyería demi-fine?",
       "content": [
         {
           "type": "paragraph",
-          "text": "La joyería semifina se sitúa entre la bisutería y la joyería fina."
+          "text": "La joyería demi-fine se sitúa entre la joyería de moda y la joyería fina."
         },
         {
           "type": "paragraph",
-          "text": "Suele estar elaborado con mejores materiales que la bisutería, como plata de ley, baño de oro, plata vermeil, diamantes cultivados en laboratorio o piedras semipreciosas. Está diseñado para parecer más elevado y más duradero que la bisutería de bajo costo, pero más accesible que la joyería fina tradicional."
+          "text": "Suele elaborarse con mejores materiales que la joyería de moda, como plata de ley 925, chapado en oro, vermeil, diamantes de laboratorio o piedras semipreciosas. Está diseñada para sentirse más sofisticada y durar más que la bisutería económica, pero ser más accesible que la joyería fina tradicional."
         },
         {
           "type": "paragraph",
-          "text": "En IWantJewels, las joyas semifinas se fabrican con diamantes cultivados en laboratorio, plata de ley 925 y baño de oro de 14 quilates. Esto le da a la joyería un brillo de diamante real, una base de plata de calidad y un cálido acabado dorado, al mismo tiempo que mantiene las piezas ponibles para el estilo diario, regalos y ocasiones."
+          "text": "En IWantJewels, la joyería demi-fine gira en torno a los diamantes de laboratorio, la plata de ley 925 y el chapado en oro de 14 kt. Esta combinación aporta el brillo real del diamante, una base de plata de calidad y un cálido acabado dorado, manteniendo las piezas ponibles a diario y adecuadas para regalos y ocasiones especiales."
         },
         {
           "type": "paragraph",
-          "text": "La joyería semifina es especialmente útil para los aretes porque los aretes a menudo se compran para usarlos en la vida real. Es posible que desees aretes para el trabajo, aros para las orejas, colgantes para bodas y piezas más atrevidas para fiestas. La joyería semifina hace que ese tipo de colección sea más fácil de crear."
+          "text": "La joyería demi-fine resulta especialmente útil en los pendientes, ya que suelen comprarse para llevarlos en la vida real. Puede querer pendientes de botón para el trabajo, aros pequeños (huggies) para un ear stack, pendientes colgantes para bodas y piezas más llamativas para fiestas. La joyería demi-fine facilita crear una colección así."
         },
         {
           "type": "see-also",
-          "text": "¿Qué es la joyería semifina?",
+          "text": "¿Qué es la joyería demi-fine?",
           "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
         }
       ]
@@ -132,33 +132,33 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "La joyería fina suele estar hecha de metales preciosos macizos, como oro macizo, platino o, en ocasiones, aleaciones de alto valor. A menudo incluye diamantes naturales, piedras preciosas o materiales de mayor valor."
+          "text": "La joyería fina suele elaborarse con metales preciosos macizos, como oro macizo, platino o, en ocasiones, aleaciones de gran valor. A menudo incluye diamantes naturales, piedras preciosas u otros materiales de alto valor."
         },
         {
           "type": "paragraph",
-          "text": "La joyería fina se elige comúnmente para anillos de compromiso, joyas tradicionales, regalos de lujo, compras importantes y piezas destinadas a durar generaciones. Transmite una sensación de lujo más tradicional y normalmente tiene un precio más alto."
+          "text": "La joyería fina se elige habitualmente para anillos de compromiso, joyas heredables, regalos de lujo, compras importantes y piezas pensadas para durar generaciones. Transmite una sensación de lujo más tradicional y suele tener un precio más elevado."
         },
         {
           "type": "paragraph",
-          "text": "La joyería fina puede ser hermosa y significativa, pero no siempre es la opción más práctica para cada compra. Si alguien quiere varios aretes cotidianos, diseños de tendencia, piezas para regalar u opciones de aros, la joyería fina puede volverse costosa muy rápidamente."
+          "text": "La joyería fina puede ser preciosa y especial, pero no siempre es la opción más práctica para todas las compras. Si alguien quiere varios pendientes para el día a día, diseños de tendencia, piezas fáciles de regalar u opciones para un ear stack, la joyería fina puede encarecerse rápidamente."
         },
         {
           "type": "paragraph",
-          "text": "Aquí es donde las joyas semifinas pueden resultar útiles. Ofrece a los compradores una apariencia más elevada que la joyería de moda sin necesidad de que cada pieza sea una inversión importante en joyería fina."
+          "text": "Aquí es donde la joyería demi-fine puede ser útil. Ofrece un aspecto y una sensación más refinados que la joyería de moda, sin exigir que cada pieza sea una gran inversión en joyería fina."
         },
         {
           "type": "see-also",
-          "text": "Joyas chapadas en oro versus joyas de oro macizo",
+          "text": "Joyería chapada en oro frente a joyería de oro macizo",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Materiales comparados",
+      "heading": "Comparativa de materiales",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los materiales son una de las mayores diferencias entre la moda, la semifina y la joyería fina."
+          "text": "Los materiales son una de las mayores diferencias entre la joyería de moda, demi-fine y fina."
         },
         {
           "type": "grid-layout",
@@ -170,39 +170,39 @@
               "headers": [
                 "Característica",
                 "Joyería de moda",
-                "Joyería semifina",
+                "Joyería demi-fine",
                 "Joyería fina"
               ],
               "rows": [
                 [
-                  "metales comunes",
-                  "A menudo metal base o aleación de bajo costo.",
-                  "A menudo, plata esterlina, plata vermeil o metal precioso chapado.",
-                  "Oro macizo, platino o metal precioso de primera calidad."
+                  "Metal base",
+                  "A menudo, metal común o aleación económica",
+                  "A menudo, plata de ley 925, vermeil o metal precioso chapado",
+                  "Oro macizo, platino o metal precioso de primera calidad"
                 ],
                 [
-                  "Tipo de piedra",
-                  "Imitación de piedras, cristales, circonitas.",
-                  "Diamantes cultivados en laboratorio, piedras semipreciosas, piedras de calidad.",
-                  "Diamantes naturales, piedras preciosas, piedras de alto valor."
+                  "El tipo de piedra",
+                  "Piedras de imitación, cristales y circonita cúbica",
+                  "Diamantes de laboratorio, piedras semipreciosas y piedras de calidad",
+                  "Diamantes naturales, piedras preciosas y piedras de gran valor"
                 ],
                 [
-                  "terminar",
-                  "A menudo chapado o recubierto",
-                  "Mejor emplatado o vermeil según marca",
-                  "Acabado de metal precioso sólido"
+                  "Acabado",
+                  "A menudo, chapado o revestido",
+                  "Mejor chapado o vermeil, según la marca",
+                  "Acabado en metal precioso macizo"
                 ],
                 [
-                  "Usabilidad",
-                  "Bueno para un peinado ocasional",
-                  "Bueno para uso regular con cuidado.",
-                  "Fuerte para uso a largo plazo"
+                  "Facilidad de uso",
+                  "Adecuada para looks ocasionales",
+                  "Adecuada para llevar con frecuencia si se cuida",
+                  "Resistente para llevar durante mucho tiempo"
                 ],
                 [
-                  "Cuidado necesario",
-                  "Puede ser sensible al agua y a los productos químicos.",
-                  "Necesita cuidados adecuados, especialmente enchapado.",
-                  "Todavía necesita cuidados, pero los metales sólidos son más duraderos."
+                  "Cuidados necesarios",
+                  "Puede ser sensible al agua y a los productos químicos",
+                  "Requiere cuidados adecuados, especialmente el chapado",
+                  "También requiere cuidados, aunque los metales macizos son más duraderos"
                 ]
               ]
             }
@@ -210,274 +210,274 @@
         },
         {
           "type": "paragraph",
-          "text": "En IWantJewels, el material importante son los diamantes cultivados en laboratorio, la plata de ley 925 y el baño de oro de 14 quilates. Esa combinación ayuda a separar las joyas de las piezas de moda básicas y, al mismo tiempo, las mantiene más accesibles que las joyas de oro macizo y diamantes."
+          "text": "En IWantJewels, la historia de materiales se centra en los diamantes de laboratorio, la plata de ley 925 y el chapado en oro de 14 kt. Esta combinación diferencia las joyas de las piezas básicas de moda y las mantiene más accesibles que la joyería de diamantes en oro macizo."
         },
         {
           "type": "see-also",
-          "text": "joyas de plata de ley 925",
+          "text": "Joyería de plata de ley 925",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Precio y valor comparados",
+      "heading": "Comparativa de precio y valor",
       "content": [
         {
           "type": "paragraph",
-          "text": "El precio es otra diferencia importante entre estas categorías de joyas."
+          "text": "El precio es otra diferencia importante entre estas categorías de joyería."
         },
         {
           "type": "paragraph",
-          "text": "La bisutería suele ser la opción más económica. La joyería fina suele ser la opción más cara. La joyería semifina se sitúa en el medio y ofrece una sensación más premium que la joyería de moda sin alcanzar siempre los precios de la joyería fina."
+          "text": "La joyería de moda suele ser la opción más económica. La joyería fina suele ser la más cara. La joyería demi-fine queda en el punto intermedio y ofrece una sensación más premium que la joyería de moda sin alcanzar siempre los precios de la joyería fina."
         },
         {
           "type": "table",
           "headers": [
             "Prioridad del comprador",
             "Mejor categoría",
-            "¿Por qué?"
+            "Por qué"
           ],
           "rows": [
             [
-              "Precio más bajo posible",
+              "Precio mínimo posible",
               "Joyería de moda",
-              "Lo mejor para un peinado temporal"
+              "Ideal para looks temporales"
             ],
             [
-              "Mejores materiales sin precios de joyería fina",
-              "Joyas semifinas",
-              "Fuerte equilibrio entre calidad y accesibilidad."
+              "Mejores materiales sin el precio de la joyería fina",
+              "Joyería demi-fine",
+              "Gran equilibrio entre calidad y accesibilidad"
             ],
             [
-              "Valor de reliquia a largo plazo",
-              "joyería fina",
-              "Metales preciosos macizos y materiales de lujo tradicionales."
+              "Valor heredable a largo plazo",
+              "Joyería fina",
+              "Metales preciosos macizos y materiales de lujo tradicionales"
             ],
             [
-              "Brillo de diamante cotidiano",
-              "Joyas semifinas",
+              "Brillo de diamante para el día a día",
+              "Joyería demi-fine",
               "Más ponible y accesible"
             ],
             [
-              "Experimentación de tendencias",
-              "Joyería de moda o semifina",
-              "Depende de la calidad y el presupuesto."
+              "Experimentar con tendencias",
+              "Joyería de moda o demi-fine",
+              "Depende de la calidad y el presupuesto"
             ],
             [
-              "Regalo significativo",
-              "Joyería semifina o fina",
-              "Depende de la ocasión y la relación."
+              "Regalo con significado",
+              "Joyería demi-fine o fina",
+              "Depende de la ocasión y la relación"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Una buena compra de joyas no siempre es la más cara. Es la pieza que coincide con el propósito. En el caso de los pendientes de uso diario, las joyas semifinas pueden tener una mejor relación calidad-precio que las joyas finas si el comprador quiere algo ponible y accesible. Para la compra de una reliquia familiar, las joyas finas pueden ser mejores."
+          "text": "Una buena compra de joyería no siempre es la más cara: es la pieza que encaja con el objetivo. Para unos pendientes de uso diario, la joyería demi-fine puede ofrecer más valor que la fina si busca algo ponible y accesible. Para una joya heredable, la joyería fina puede ser mejor opción."
         },
         {
           "type": "see-also",
-          "text": "Guía de precios de aretes de diamantes cultivados en laboratorio",
+          "text": "Guía de precios de pendientes de diamante de laboratorio",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Comparación de uso diario",
+      "heading": "Comparativa para el día a día",
       "content": [
         {
           "type": "paragraph",
-          "text": "Para el uso diario, la comodidad y la repetibilidad importan más que el dramatismo."
+          "text": "Para llevar joyas a diario, la comodidad y la posibilidad de repetir son más importantes que el impacto visual."
         },
         {
           "type": "paragraph",
-          "text": "La joyería de moda puede funcionar para un estilo informal, pero no siempre resiste bien el uso frecuente. La joyería fina puede funcionar maravillosamente todos los días, pero puede resultar demasiado cara para los compradores que desean múltiples estilos. Las joyas semifinas a menudo se encuentran en la mejor posición práctica para las piezas de todos los días."
+          "text": "La joyería de moda puede funcionar para looks informales, pero no siempre resiste bien el uso frecuente. La joyería fina puede llevarse a diario, aunque puede resultar demasiado cara para quienes quieren varios estilos. La joyería demi-fine suele ocupar la posición más práctica para las piezas de uso diario."
         },
         {
           "type": "table",
           "headers": [
             "Necesidad diaria",
             "Joyería de moda",
-            "Joyería semifina",
+            "Joyería demi-fine",
             "Joyería fina"
           ],
           "rows": [
             [
-              "Sementales diarios",
-              "Bueno para uso de bajo costo",
-              "Fuerte elección",
-              "Fuerte pero más caro"
+              "Pendientes de botón diarios",
+              "Buena opción económica",
+              "Opción muy recomendable",
+              "Resistentes, pero más caros"
             ],
             [
-              "Huggies y orejeras",
-              "Bueno para las tendencias",
-              "elección muy fuerte",
-              "Hermoso pero costoso de construir."
+              "Aros pequeños (huggies) y ear stacks",
+              "Buenos para seguir tendencias",
+              "Opción excelente",
+              "Bonitos, pero costosos de combinar"
             ],
             [
-              "Joyas para ropa de trabajo",
-              "puede trabajar",
-              "Fuerte elección",
-              "Fuerte elección"
+              "Joyería para el trabajo",
+              "Puede funcionar",
+              "Buena elección",
+              "Buena elección"
             ],
             [
-              "Múltiples estilos",
-              "Fácil de comprar pero de menor calidad.",
-              "Fuerte equilibrio",
-              "mas caro"
+              "Varios estilos",
+              "Fácil de comprar, pero de menor calidad",
+              "Buen equilibrio",
+              "Más caro"
             ],
             [
-              "Brillo cotidiano",
-              "Puede utilizar piedras de imitación.",
-              "Los diamantes cultivados en laboratorio pueden funcionar bien",
-              "Los diamantes naturales pueden funcionar bien"
+              "Brillo para cada día",
+              "Puede utilizar piedras de imitación",
+              "Los diamantes de laboratorio pueden ser una buena opción",
+              "Los diamantes naturales pueden ser una buena opción"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para IWantJewels, las opciones semifinas de todos los días incluyen aretes de diamantes cultivados en laboratorio Cadenza S, aretes de diamantes Cadenza M, aretes Amadea Huggie y aretes de diamantes minimalistas Laluce."
+          "text": "En IWantJewels, las opciones demi-fine para el día a día incluyen los pendientes de botón de diamante de laboratorio Cadenza S, los pendientes de botón de diamante Cadenza M, los aros pequeños (huggies) Amadea y los pendientes de diamante minimalistas Laluce."
         },
         {
           "type": "see-also",
-          "text": "¿Puedes usar aretes de diamantes cultivados en laboratorio todos los días?",
+          "text": "¿Puede llevar pendientes de botón con diamantes de laboratorio a diario?",
           "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
         }
       ]
     },
     {
-      "heading": "Comparación de regalos",
+      "heading": "Comparativa para regalar",
       "content": [
         {
           "type": "paragraph",
-          "text": "Para regalar, las joyas deben sentirse pensadas y ponibles."
+          "text": "Al regalar joyas, deben transmitir atención al detalle y poder llevarse con facilidad."
         },
         {
           "type": "paragraph",
-          "text": "La joyería de moda puede funcionar para regalos casuales, pero puede que no parezca lo suficientemente especial para cumpleaños, aniversarios, damas de honor u ocasiones románticas. La joyería fina puede parecer muy especial, pero también puede parecer cara o demasiado formal. Las joyas semifinas suelen ofrecer el mejor equilibrio."
+          "text": "La joyería de moda puede funcionar como regalo informal, pero quizá no resulte lo bastante especial para cumpleaños, aniversarios, regalos para damas de honor u ocasiones románticas. La joyería fina puede ser muy especial, aunque también parecer cara o demasiado formal. La joyería demi-fine suele ofrecer el mejor equilibrio."
         },
         {
           "type": "table",
           "headers": [
             "Tipo de regalo",
             "Mejor categoría de joyería",
-            "¿Por qué?"
+            "Por qué"
           ],
           "rows": [
             [
-              "Pequeño regalo informal",
-              "Moda o semifina",
-              "Depende del presupuesto y la ocasión."
+              "Regalo informal pequeño",
+              "Joyería de moda o demi-fine",
+              "Depende del presupuesto y la ocasión"
             ],
             [
-              "regalo de cumpleaños",
-              "Joyas semifinas",
-              "Se siente pensativo pero ponible."
+              "Regalo de cumpleaños",
+              "Joyería demi-fine",
+              "Transmite atención y resulta fácil de llevar"
             ],
             [
-              "regalo de aniversario",
-              "Joyería semifina o fina",
-              "Depende de qué tan formal deba sentirse el regalo."
+              "Regalo de aniversario",
+              "Joyería demi-fine o fina",
+              "Depende del grado de formalidad que deba tener el regalo"
             ],
             [
-              "regalo de dama de honor",
-              "Joyas semifinas",
-              "Hermoso, ponible y más fácil de repetir."
+              "Regalo para dama de honor",
+              "Joyería demi-fine",
+              "Bonita, fácil de llevar y sencilla de repetir"
             ],
             [
-              "regalo romantico",
-              "Joyería semifina o fina",
-              "Depende de la relación y el presupuesto."
+              "Regalo romántico",
+              "Joyería demi-fine o fina",
+              "Depende de la relación y el presupuesto"
             ],
             [
               "Regalo llamativo",
-              "Joyas semifinas",
-              "Permite un diseño más sólido sin precios de joyería fina"
+              "Joyería demi-fine",
+              "Permite un diseño más marcado sin el precio de la joyería fina"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para IWantJewels, los aretes de diamantes Cadenza M funcionan bien como un regalo clásico seguro. Los pendientes de mariposa Farfalla y los pendientes de mariposa Alidi Farfalla son más fuertes cuando el regalo necesita significado. Los aretes colgantes de Orsola son mejores para regalos románticos o para ocasiones especiales. Los pendientes Amadea Huggie son ideales para quienes gustan de la joyería moderna."
+          "text": "En IWantJewels, los pendientes de botón de diamante Cadenza M son un regalo clásico y seguro. Los pendientes de mariposa Farfalla y los pendientes de mariposa Alidi Farfalla son mejores cuando el regalo debe tener un significado especial. Los pendientes colgantes Orsola encajan mejor con regalos románticos o para ocasiones especiales. Los aros pequeños (huggies) Amadea son ideales para quien prefiere la joyería moderna."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para regalar",
+          "text": "Pendientes de diamante de laboratorio para regalar",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
         }
       ]
     },
     {
-      "heading": "Comparación de bodas y ocasiones",
+      "heading": "Comparativa para bodas y ocasiones especiales",
       "content": [
         {
           "type": "paragraph",
-          "text": "Para bodas y ocasiones especiales, la mejor categoría de joyería depende del rol y del atuendo."
+          "text": "En bodas y ocasiones especiales, la mejor categoría de joyería depende del papel que desempeñe y del conjunto."
         },
         {
           "type": "paragraph",
-          "text": "La joyería de moda puede funcionar para looks de fiesta únicos, pero a veces puede parecer menos refinada. La joyería fina funciona muy bien para eventos formales, pero puede resultar costosa si el comprador quiere piezas para varias ocasiones. Las joyas semifinas dan un aspecto pulido que aún se puede volver a usar."
+          "text": "La joyería de moda puede funcionar para looks de fiesta puntuales, aunque a veces resulta menos refinada. La joyería fina queda perfecta en eventos formales, pero puede ser cara si se quieren varias piezas para distintas ocasiones. La joyería demi-fine ofrece un acabado cuidado que también puede volver a llevarse."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad de ocasión",
+            "Necesidad para la ocasión",
             "Mejor categoría",
-            "Mejor dirección IWJ"
+            "Mejor opción de IWJ"
           ],
           "rows": [
             [
-              "Traje de invitada de boda",
-              "Joyas semifinas",
+              "Conjunto para invitada de boda",
+              "Joyería demi-fine",
               "Orsola, Cadenza M, Farfalla"
             ],
             [
-              "Joyas de dama de honor",
-              "Joyas semifinas",
+              "Joyería para dama de honor",
+              "Joyería demi-fine",
               "Cadenza S, Cadenza M, Concetta Short"
             ],
             [
-              "Cena nocturna",
-              "Joyería semifina o fina",
+              "Cena de noche",
+              "Joyería demi-fine o fina",
               "Orsola, Concetta Long"
             ],
             [
-              "look de fiesta",
-              "Bisutería semifina o de moda",
-              "Lusso, Pave Aros"
+              "Look de fiesta",
+              "Joyería demi-fine o de moda",
+              "Lusso, Pave Hoops"
             ],
             [
-              "traje de corbata negra",
-              "Joyería semifina o fina",
+              "Conjunto de etiqueta",
+              "Joyería demi-fine o fina",
               "Concetta Long, Lusso"
             ],
             [
-              "Noche de cita romántica",
-              "Joyas semifinas",
+              "Cita romántica por la noche",
+              "Joyería demi-fine",
               "Orsola, Farfalla, Alidi Farfalla"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Los aretes semifinos de diamantes cultivados en laboratorio funcionan bien para ocasiones especiales porque pueden agregar brillo y brillo sin que parezcan joyas que solo se usan una vez."
+          "text": "Los pendientes de diamante de laboratorio demi-fine funcionan muy bien en ocasiones especiales porque aportan brillo y un acabado cuidado sin parecer joyas que solo se pueden llevar una vez."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para bodas",
+          "text": "Pendientes de diamante de laboratorio para bodas",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
         }
       ]
     },
     {
-      "heading": "Comparación de pilas de orejas",
+      "heading": "Comparativa de ear stack",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las orejeras son uno de los casos de uso más potentes de la joyería semifina."
+          "text": "Los ear stacks son uno de los usos más interesantes de la joyería demi-fine."
         },
         {
           "type": "paragraph",
-          "text": "Construir un arete con joyería fina puede resultar costoso rápidamente. Construir una oreja con bisutería puede ser asequible, pero es posible que las piezas no se sientan tan elevadas. La joyería semifina ofrece un fuerte punto medio porque los compradores pueden combinar tachuelas, aros, aros y aretes minimalistas de una manera más refinada."
+          "text": "Crear un ear stack con joyería fina puede encarecerse rápidamente. Con joyería de moda resulta más económico, pero las piezas pueden parecer menos sofisticadas. La joyería demi-fine ofrece un punto intermedio muy equilibrado, ya que permite combinar pendientes de botón, aros pequeños (huggies), pendientes de aro y pendientes minimalistas de forma más cuidada."
         },
         {
           "type": "grid-layout",
@@ -487,35 +487,35 @@
             {
               "type": "table",
               "headers": [
-                "Necesidad de pila de orejas",
+                "Necesidad del ear stack",
                 "Mejor categoría",
-                "¿Por qué?"
+                "Por qué"
               ],
               "rows": [
                 [
-                  "Primera pila de orejas",
-                  "Joyas semifinas",
-                  "Mejor calidad y aún accesible."
+                  "Primer ear stack",
+                  "Joyería demi-fine",
+                  "Mejor calidad y sigue siendo accesible"
                 ],
                 [
-                  "Pila de tendencias",
-                  "Moda o semifina",
-                  "Depende de cuánto tiempo quieras usarlo."
+                  "Ear stack de tendencia",
+                  "Joyería de moda o demi-fine",
+                  "Depende de cuánto tiempo quiera llevarlo"
                 ],
                 [
-                  "Pila de oreja de diamante",
-                  "Joyas semifinas",
-                  "Los diamantes cultivados en laboratorio lo hacen más accesible"
+                  "Ear stack de diamantes",
+                  "Joyería demi-fine",
+                  "Los diamantes de laboratorio lo hacen más accesible"
                 ],
                 [
-                  "Pila de orejas de lujo",
-                  "joyería fina",
-                  "Lo mejor para estilos de oro macizo o reliquia familiar"
+                  "Ear stack de lujo",
+                  "Joyería fina",
+                  "Mejor para oro macizo o un estilo de joya heredada"
                 ],
                 [
-                  "Pila de orejas para regalar",
-                  "Joyas semifinas",
-                  "Combinaciones bien pensadas y fáciles de crear"
+                  "Ear stack para regalar",
+                  "Joyería demi-fine",
+                  "Permite crear combinaciones especiales con facilidad"
                 ]
               ]
             }
@@ -523,52 +523,52 @@
         },
         {
           "type": "paragraph",
-          "text": "Para IWantJewels, una simple pila de pendientes podría incluir aretes de diamantes cultivados en laboratorio Cadenza S con aretes Amadea Huggie. Una pila más suave podría agregar aretes de diamantes minimalistas Laluce. Una pila más visible podría usar Cadenza M como montante principal."
+          "text": "En IWantJewels, un ear stack sencillo puede incluir los pendientes de botón de diamante de laboratorio Cadenza S con los aros pequeños (huggies) Amadea. Para un stack más delicado, añada los pendientes de diamante minimalistas Laluce. Para un stack más visible, use Cadenza M como pendiente principal."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para aros",
+          "text": "Pendientes de diamante de laboratorio para ear stacks",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
         }
       ]
     },
     {
-      "heading": "¿Cuándo debería elegir joyería de moda?",
+      "heading": "¿Cuándo elegir joyería de moda?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Elija bisutería cuando desee un accesorio de bajo coste para una tendencia a corto plazo, un conjunto único o un estilo experimental que quizás no use con frecuencia."
+          "text": "Elija joyería de moda cuando busque un accesorio económico para una tendencia pasajera, un conjunto puntual o un estilo experimental que quizá no lleve a menudo."
         },
         {
           "type": "paragraph",
-          "text": "La joyería de moda puede ser útil para colores llamativos, tendencias de temporada, looks de disfraces o piezas que no esperas conservar por mucho tiempo. No siempre es una mala elección. Simplemente tiene un propósito diferente."
+          "text": "La joyería de moda puede ser útil para colores atrevidos, tendencias de temporada, looks de disfraz o piezas que no espera conservar mucho tiempo. No siempre es una mala elección: simplemente cumple otra función."
         },
         {
           "type": "paragraph",
-          "text": "La limitación es que la joyería de moda puede no parecer de primera calidad, duradera o significativa. Puede que tampoco sea la mejor opción para regalos importantes o piezas cotidianas que quieras usar repetidamente."
+          "text": "La desventaja es que la joyería de moda puede parecer menos sofisticada, resistente o especial. Tampoco siempre es la mejor opción para regalos importantes o piezas de uso diario que quiera llevar repetidamente."
         }
       ]
     },
     {
-      "heading": "¿Cuándo debería elegir joyería semifina?",
+      "heading": "¿Cuándo elegir joyería demi-fine?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Elija joyería semifina cuando quiera algo más elevado que la joyería de moda, pero más accesible y ponible que la joyería fina tradicional."
+          "text": "Elija joyería demi-fine cuando busque algo más sofisticado que la joyería de moda, pero más accesible y fácil de llevar que la joyería fina tradicional."
         },
         {
           "type": "paragraph",
-          "text": "La joyería semifina es especialmente fuerte para:"
+          "text": "La joyería demi-fine es especialmente adecuada para:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Pendientes de todos los días",
-            "Aretes de diamantes cultivados en laboratorio",
-            "Huggies y orejeras",
-            "regalos de cumpleaños",
-            "Regalos de dama de honor",
-            "Joyas para invitadas de boda",
+            "Pendientes para cada día",
+            "Pendientes de botón con diamantes de laboratorio",
+            "Aros pequeños (huggies) y ear stacks",
+            "Regalos de cumpleaños",
+            "Regalos para damas de honor",
+            "Joyería para invitadas de boda",
             "Regalos de aniversario",
             "Pendientes de fiesta",
             "Colecciones de joyería moderna"
@@ -576,33 +576,33 @@
         },
         {
           "type": "paragraph",
-          "text": "Para IWantJewels, la joyería semifina es la principal posición de la marca. Las piezas están diseñadas para ofrecer el brillo de diamantes cultivados en laboratorio, mejores materiales y un estilo moderno en joyas que realmente se pueden usar."
+          "text": "En IWantJewels, la joyería demi-fine es la principal categoría de la marca. Las piezas están diseñadas para ofrecer el brillo de los diamantes de laboratorio, mejores materiales y un estilo moderno en joyas que realmente puedan llevarse."
         }
       ]
     },
     {
-      "heading": "¿Cuándo debería elegir joyería fina?",
+      "heading": "¿Cuándo elegir joyería fina?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Elija joyería fina cuando desee metales preciosos sólidos, lujo tradicional, valor de reliquia o una pieza importante."
+          "text": "Elija joyería fina cuando busque metales preciosos macizos, lujo tradicional, valor como herencia o una pieza para un hito importante."
         },
         {
           "type": "paragraph",
-          "text": "La joyería fina suele ser mejor para anillos de compromiso, collares tradicionales, piezas de inversión de oro macizo, obsequios de aniversario importantes o joyas destinadas a durar generaciones."
+          "text": "La joyería fina suele ser mejor para anillos de compromiso, collares para heredar, piezas de inversión en oro macizo, regalos de aniversario importantes o joyas pensadas para pasar de generación en generación."
         },
         {
           "type": "paragraph",
-          "text": "No siempre es necesario para cada compra. Muchos compradores no necesitan que cada par de aretes sean de oro macizo o del nivel de una reliquia familiar. Para estilos cotidianos, regalos y piezas de tendencia, la joyería semifina puede ser la opción más práctica."
+          "text": "No siempre es necesaria en cada compra. Muchas personas no necesitan que todos sus pendientes sean de oro macizo o tengan valor de herencia. Para el día a día, los regalos y las piezas que siguen las tendencias, la joyería demi-fine puede ser una opción más práctica."
         }
       ]
     },
     {
-      "heading": "Rutas del producto según la necesidad del comprador",
+      "heading": "Rutas de producto según sus necesidades",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta sección como una guía práctica de compras."
+          "text": "Utilice esta sección como guía práctica de compra."
         },
         {
           "type": "subheading",
@@ -610,47 +610,47 @@
         },
         {
           "type": "paragraph",
-          "text": "Elija tachuelas semifinas. Los aretes de diamantes cultivados en laboratorio Cadenza S son una primera pieza sólida porque son simples, ponibles y no demasiado atrevidos."
+          "text": "Elija pendientes de botón demi-fine. Los pendientes de botón de diamante de laboratorio Cadenza S son una primera pieza excelente porque son sencillos, fáciles de llevar y no demasiado llamativos."
         },
         {
           "type": "subheading",
-          "text": "Para pendientes de todos los días"
+          "text": "Para pendientes de uso diario"
         },
         {
           "type": "paragraph",
-          "text": "Elija Cadenza S, Cadenza M, los pendientes Amadea Huggie o los pendientes minimalistas de diamantes Laluce. Estas piezas son fáciles de repetir y combinan con muchos conjuntos."
+          "text": "Elija Cadenza S, Cadenza M, los aros pequeños (huggies) Amadea o los pendientes de diamante minimalistas Laluce. Son piezas fáciles de repetir y combinan con muchos conjuntos."
         },
         {
           "type": "subheading",
-          "text": "Para regalos"
+          "text": "Para regalar"
         },
         {
           "type": "paragraph",
-          "text": "Elija Cadenza M para un regalo de diamantes clásico, Farfalla para un regalo significativo, Amadea para un regalo moderno u Orsola para un regalo romántico."
+          "text": "Elija Cadenza M para un regalo clásico con diamantes, Farfalla para un regalo con significado, Amadea para un regalo moderno u Orsola para un regalo romántico."
         },
         {
           "type": "subheading",
-          "text": "Para joyería de invitados de boda."
+          "text": "Para joyería de invitada de boda"
         },
         {
           "type": "paragraph",
-          "text": "Elige Cadenza M para conjuntos detallados, los pendientes colgantes Orsola para vestidos sencillos o los pendientes de mariposa Farfalla para un estilo suave y romántico."
+          "text": "Elija Cadenza M con conjuntos elaborados, los pendientes colgantes Orsola con vestidos sencillos o los pendientes de mariposa Farfalla para un estilo romántico y delicado."
         },
         {
           "type": "subheading",
-          "text": "Para pilas de orejas"
+          "text": "Para crear un ear stack"
         },
         {
           "type": "paragraph",
-          "text": "Elige Cadenza S con aretes Amadea Huggie para una combinación impecable. Agregue aretes de diamantes minimalistas Laluce para una apariencia en capas más suave."
+          "text": "Elija Cadenza S con los aros pequeños (huggies) Amadea para crear un stack limpio. Añada los pendientes de diamante minimalistas Laluce para un efecto de capas más delicado."
         },
         {
           "type": "subheading",
-          "text": "Para estilismo de fiesta"
+          "text": "Para looks de fiesta"
         },
         {
           "type": "paragraph",
-          "text": "Elige los atrevidos pendientes Lusso si las joyas quieren destacar, o los Pave Hoops si quieres brillar con una forma de aro más moderna."
+          "text": "Elija los pendientes statement atrevidos Lusso si quiere que la joyería destaque, o Pave Hoops si busca brillo con una forma de aro más moderna."
         }
       ]
     },
@@ -661,182 +661,182 @@
           "type": "table",
           "headers": [
             "Producto",
-            "Mejor rol en la categoría de joyería",
-            "Mejor para"
+            "Función de la mejor categoría de joyería",
+            "Ideal para"
           ],
           "rows": [
             [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "Básico semifino para el día a día.",
-              "Primeros pendientes de diamantes, ropa de trabajo, brillo sutil"
+              "Pendientes de botón de diamantes de laboratorio Cadenza S",
+              "Básico demi-fine para cada día",
+              "Primeros pendientes de diamante, looks de oficina y brillo sutil"
             ],
             [
-              "aretes Cadenza M con diamantes",
-              "Regalo clásico semifino",
-              "Brillo diario visible y regalos seguros"
+              "Pendientes de botón de diamantes Cadenza M",
+              "Regalo clásico demi-fine",
+              "Brillo diario visible y un regalo fácil de acertar"
             ],
             [
-              "Pendientes Amadea Huggie",
-              "Pieza de apilamiento semifina",
-              "Pilas de orejas, segundos piercings, estilo moderno."
+              "Pendientes de aro pequeño (huggies) Amadea",
+              "Pieza demi-fine para combinar",
+              "Ear stacks, segundos agujeros y estilo moderno"
             ],
             [
-              "Pendientes minimalistas de diamantes Laluce",
-              "Pieza minimalista semifina.",
-              "Joyas diarias silenciosas"
+              "Pendientes de diamantes minimalistas Laluce",
+              "Pieza demi-fine minimalista",
+              "Joyería discreta para cada día"
             ],
             [
-              "Aros de pavimentación",
-              "Estilo de aro semifino",
-              "Brillo informal y estilo listo para la fiesta."
+              "Pave Hoops",
+              "Pendientes de aro demi-fine",
+              "Brillo informal y estilo preparado para fiestas"
             ],
             [
               "Pendientes mariposa Farfalla",
-              "Regalo significativo semifino",
-              "Cumpleaños, hitos y regalos románticos"
+              "Regalo demi-fine con significado",
+              "Cumpleaños, hitos importantes y regalos románticos"
             ],
             [
-              "Pendientes de mariposa Alidi Farfalla",
-              "Regalo simbólico semifino",
-              "Estilo femenino y regalos personales."
+              "Pendientes mariposa Alidi Farfalla",
+              "Regalo demi-fine simbólico",
+              "Estilo femenino y regalos personales"
             ],
             [
-              "aretes colgantes de Orsola",
-              "Pendiente de ocasión semifino",
-              "Bodas, cenas y trajes de noche."
+              "Pendientes colgantes Orsola",
+              "Pendiente demi-fine para ocasiones especiales",
+              "Bodas, cenas y conjuntos de noche"
             ],
             [
-              "Pendientes cortos Concetta",
-              "Gota delicada semifina",
-              "Damas de honor y looks de ocasión suaves"
+              "Pendientes Concetta Short",
+              "Pendiente demi-fine colgante y delicado",
+              "Damas de honor y looks delicados para ocasiones especiales"
             ],
             [
-              "Pendientes largos Concetta",
-              "Pendiente formal semifino",
-              "Veladas formales y estilismo refinado"
+              "Pendientes Concetta Long",
+              "Pendiente demi-fine formal",
+              "Noches formales y estilo refinado"
             ],
             [
-              "Pendientes llamativos Lusso",
-              "Pieza semifina y llamativa",
-              "Fiestas y outfits de alto impacto"
+              "Pendientes statement llamativos Lusso",
+              "Pieza demi-fine statement",
+              "Fiestas y conjuntos de gran impacto"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "La joyería semifina es la mejor opción cuando desea mejores materiales que la joyería de moda sin convertir cada compra en una inversión en joyería fina. Comience con aretes para el uso diario, aros para apilar, aretes de mariposa para regalos, colgantes para bodas y aretes atrevidos para fiestas."
+          "text": "La joyería demi-fine es la mejor opción cuando quiere mejores materiales que la joyería de moda sin convertir cada compra en una inversión en joyería fina. Empiece con pendientes de botón para el día a día, aros pequeños (huggies) para crear stacks, pendientes de mariposa para regalar, pendientes colgantes para bodas y pendientes statement atrevidos para fiestas."
         }
       ]
     },
     {
-      "heading": "Errores comunes a evitar",
+      "heading": "Errores frecuentes que conviene evitar",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un error común es asumir que la joyería de moda, la joyería semifina y la joyería fina son iguales porque todas pueden lucir brillantes en las fotos. El material y la construcción marcan una gran diferencia."
+          "text": "Un error frecuente es pensar que la joyería de moda, la joyería demi-fine y la joyería fina son iguales porque todas pueden brillar en las fotos. Los materiales y la construcción marcan una gran diferencia."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es esperar que la joyería de moda se comporte como joyería fina. Las joyas de moda de bajo costo pueden ser útiles, pero es posible que no estén diseñadas para un uso prolongado."
+          "text": "Otro error es esperar que la joyería de moda se comporte como la joyería fina. La joyería de tendencia económica puede ser útil, pero quizá no esté fabricada para llevarse durante mucho tiempo."
         },
         {
           "type": "paragraph",
-          "text": "Un tercer error es tratar las joyas semifinas exactamente como si fueran joyas finas de oro macizo. Las piezas chapadas en oro y de plata esterlina aún necesitan un cuidado adecuado."
+          "text": "Un tercer error es tratar la joyería demi-fine exactamente igual que la joyería fina de oro macizo. Las piezas chapadas en oro y de plata de ley 925 también necesitan cuidados adecuados."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es pensar que la joyería fina es siempre la mejor opción. Puede que sea mejor para piezas tradicionales, pero las joyas semifinas pueden ser más prácticas para el estilo diario, regalos y pendientes."
+          "text": "Otro error es pensar que la joyería fina siempre es la mejor opción. Puede ser la mejor para piezas de herencia, pero la joyería demi-fine puede resultar más práctica para el día a día, los regalos y los ear stacks."
         },
         {
           "type": "paragraph",
-          "text": "Por último, no elijas sólo por el precio. Elija según el propósito, los materiales, la comodidad, la facilidad de uso y la frecuencia con la que se utilizará la pieza."
+          "text": "Por último, no elija basándose únicamente en el precio. Tenga en cuenta el uso, los materiales, la comodidad, la facilidad para llevar la pieza y la frecuencia con la que la utilizará."
         },
         {
           "type": "see-also",
-          "text": "Cómo limpiar aretes de diamantes cultivados en laboratorio",
+          "text": "Cómo limpiar pendientes de diamante de laboratorio",
           "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Lista de verificación de compra final",
+      "heading": "Lista de comprobación final para comprar",
       "content": [
         {
           "type": "paragraph",
-          "text": "Antes de elegir entre joyería de moda, semifina y fina, pregunte:"
+          "text": "Antes de elegir entre joyería de moda, demi-fine y fina, pregúntese:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿Esto es para uso diario, para regalar, para estilizar o para comprar una reliquia familiar?",
-            "¿Quiero una pieza de tendencia o algo más duradero?",
-            "¿Están los materiales claramente explicados?",
-            "¿Las joyas están hechas con diamantes auténticos cultivados en laboratorio o con piedras de imitación?",
-            "¿El metal se adapta al uso normal?",
-            "¿La pieza necesitará cuidados especiales?",
-            "¿El precio coincide con la calidad del material?",
-            "¿El destinatario realmente usará este estilo?",
-            "¿Esta pieza está destinada a usarse una vez o repetidamente?",
-            "¿Las joyas parecen lo suficientemente especiales para ese propósito?"
+            "¿Es para llevar a diario, regalar, crear un look o comprar una joya para heredar?",
+            "¿Prefiere una pieza de tendencia o algo más duradero?",
+            "¿Se explican claramente los materiales?",
+            "¿La joya está elaborada con diamantes de laboratorio reales o piedras de imitación?",
+            "¿El metal es adecuado para llevarlo con frecuencia?",
+            "¿La pieza necesita cuidados especiales?",
+            "¿El precio se corresponde con la calidad de los materiales?",
+            "¿La persona que la reciba llevará realmente este estilo?",
+            "¿Esta pieza está pensada para llevarla una vez o repetidamente?",
+            "¿La joya resulta lo bastante especial para la ocasión?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para la mayoría de aretes cotidianos, regalos y necesidades de estilo moderno, la joyería semifina es una buena opción intermedia."
+          "text": "Para la mayoría de los pendientes de uso diario, los regalos y las necesidades de estilo actual, la joyería demi-fine es una excelente opción intermedia."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Cuál es la diferencia entre joyería semifina y fina?",
-      "answer": "La joyería fina suele utilizar metales preciosos macizos, como oro macizo o platino, y piedras de mayor valor. La joyería semifina utiliza mejores materiales que la joyería de moda, como plata esterlina, baño de oro o diamantes cultivados en laboratorio, pero suele ser más accesible que la joyería fina."
+      "question": "¿Cuál es la diferencia entre la joyería demi-fine y la joyería fina?",
+      "answer": "La joyería fina suele utilizar metales preciosos macizos, como el oro macizo o el platino, y piedras de mayor valor. La joyería demi-fine emplea materiales de mayor calidad que la joyería de moda, como plata de ley 925, piezas chapadas en oro o diamantes de laboratorio, pero suele ser más accesible que la joyería fina."
     },
     {
-      "question": "¿Cuál es la diferencia entre bisutería semifina y de moda?",
-      "answer": "La joyería de moda suele ser más económica y más orientada a las tendencias. La joyería semifina utiliza mejores materiales y se siente más elevada, lo que la hace más resistente para el uso diario y para regalos."
+      "question": "¿Cuál es la diferencia entre la joyería demi-fine y la joyería de moda?",
+      "answer": "La joyería de moda suele tener un precio más bajo y estar más orientada a las tendencias. La joyería demi-fine utiliza mejores materiales y ofrece un acabado más sofisticado, por lo que resulta más adecuada para el uso diario y los regalos."
     },
     {
-      "question": "¿Las joyas semifinas son joyas reales?",
-      "answer": "Sí, las joyas semifinas son auténticas joyas. Se sitúa entre la bisutería y la joyería fina tradicional."
+      "question": "¿La joyería demi-fine es joyería auténtica?",
+      "answer": "Sí, la joyería demi-fine es joyería auténtica. Se sitúa entre la joyería de moda y la joyería fina tradicional."
     },
     {
-      "question": "¿Las joyas semifinas son de buena calidad?",
-      "answer": "La joyería semifina puede ser de buena calidad cuando se utilizan materiales resistentes, buen acabado y construcción adecuada. IWantJewels utiliza diamantes cultivados en laboratorio, plata de ley 925 y baño de oro de 14 quilates."
+      "question": "¿La joyería demi-fine es de buena calidad?",
+      "answer": "La joyería demi-fine puede ser de buena calidad cuando utiliza materiales resistentes, buenos acabados y una construcción adecuada. IWantJewels utiliza diamantes de laboratorio, plata de ley 925 y baño de oro de 14 kt."
     },
     {
-      "question": "¿Es mala la bisutería?",
-      "answer": "La bisutería no está nada mal. Es útil para tendencias y estilismos low cost. Es simplemente diferente de la joyería fina y semifina."
+      "question": "¿La joyería de moda es mala?",
+      "answer": "La joyería de moda no es mala. Es útil para seguir tendencias y crear looks a bajo coste. Simplemente es diferente de la joyería demi-fine y la joyería fina."
     },
     {
-      "question": "¿La joyería fina es siempre mejor?",
-      "answer": "No siempre. La joyería fina es mejor para compras de oro macizo, reliquias familiares y lujo. Las joyas semifinas pueden ser mejores para el estilo diario, regalos y pendientes."
+      "question": "¿La joyería fina siempre es mejor?",
+      "answer": "No siempre. La joyería fina es la mejor opción para comprar oro macizo, piezas para heredar y artículos de lujo. La joyería demi-fine puede ser más adecuada para looks diarios, regalos y ear stacks."
     },
     {
-      "question": "¿Las joyas semifinas son buenas para el uso diario?",
-      "answer": "Sí, la joyería semifina puede ser buena para el uso diario cuando el diseño es cómodo y la pieza se cuida adecuadamente."
+      "question": "¿La joyería demi-fine es adecuada para el uso diario?",
+      "answer": "Sí, la joyería demi-fine puede ser adecuada para el uso diario cuando el diseño resulta cómodo y la pieza recibe los cuidados necesarios."
     },
     {
-      "question": "¿Las joyas semifinas son buenas para regalar?",
-      "answer": "Sí, la joyería semifina es excelente para regalar porque parece más especial que la joyería de moda, pero suele ser más fácil de elegir que la joyería fina tradicional."
+      "question": "¿La joyería demi-fine es adecuada para regalar?",
+      "answer": "Sí, la joyería demi-fine es excelente para regalar, porque resulta más especial que la joyería de moda y suele ser más fácil de elegir que la joyería fina tradicional."
     },
     {
-      "question": "¿Se empañan las joyas semifinas?",
-      "answer": "Depende del material y de la rutina de cuidados. Las joyas de plata de ley y chapadas en oro deben protegerse de la humedad, los perfumes, los productos químicos agresivos y el almacenamiento brusco."
+      "question": "¿La joyería demi-fine se ennegrece?",
+      "answer": "Depende del material y de la rutina de cuidados. La plata de ley 925 y la joyería chapada en oro deben protegerse de la humedad, el perfume, los productos químicos agresivos y un almacenamiento inadecuado."
     },
     {
-      "question": "¿Qué tipo de joyería debo elegir?",
-      "answer": "Elija joyería de moda para tendencias a corto plazo, joyería semifina para piezas elevadas y ponibles y joyería fina para compras tradicionales o de lujo."
+      "question": "¿Qué tipo de joyería debería elegir?",
+      "answer": "Elija joyería de moda para tendencias pasajeras, joyería demi-fine para piezas sofisticadas y fáciles de llevar, y joyería fina para compras de lujo tradicionales o piezas para heredar."
     }
   ],
   "cta": {
-    "heading": "La bisutería, la bisutería y la joyería fina tienen su lugar. La mejor opción depende del motivo de la compra. La joyería de moda es útil para las tendencias, la joyería fina es ideal para el lujo tradicional y la joyería semifina es el punto medio para el uso diario, los regalos y el estilo moderno.",
-    "body": "Comience con las joyas de diamantes semifinas cultivadas en laboratorio de IWantJewels si desea un brillo de diamante real en diseños portátiles. Elija Cadenza S para un brillo sutil todos los días, Cadenza M para regalos clásicos, Amadea para pendientes, Farfalla para regalos significativos, Orsola para estilismo de invitada a una boda y Lusso para looks atrevidos de fiesta.",
-    "primaryLabel": "Comprar joyería semifina",
+    "heading": "La joyería de moda, la joyería demi-fine y la joyería fina tienen su lugar. La mejor elección depende del motivo de la compra. La joyería de moda es útil para seguir tendencias, la joyería fina es ideal para piezas de lujo para heredar y la joyería demi-fine es el término medio perfecto para el uso diario, los regalos y los looks actuales.",
+    "body": "Empiece con la joyería demi-fine con diamantes de laboratorio de IWantJewels si busca el brillo de un diamante auténtico en diseños fáciles de llevar. Elija Cadenza S para un brillo sutil diario, Cadenza M para regalos clásicos, Amadea para ear stacks, Farfalla para regalos con significado, Orsola para looks de invitada de boda y Lusso para looks de fiesta más atrevidos.",
+    "primaryLabel": "Comprar joyería demi-fine",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explora los aretes de diamantes cultivados en laboratorio",
+    "secondaryLabel": "Explore los pendientes de diamantes de laboratorio",
     "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lea ¿Qué es la joyería semifina?",
+    "tertiaryLabel": "Lea ¿Qué es la joyería demi-fine?",
     "tertiaryHref": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
   }
 }

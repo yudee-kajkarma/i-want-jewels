@@ -1,35 +1,35 @@
 {
   "meta": {
     "title": "Come abbinare gli orecchini a farfalla",
-    "description": "Scopri come abbinare gli orecchini a farfalla con outfit casual, abiti, collane ed ear stack. Confronta i modelli semplici, con diamanti e pavé."
+    "description": "Scopra come abbinare gli orecchini a farfalla a look casual, abiti, collane ed ear stack. Confronti modelli semplici, con diamanti e pavé."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-68.jpg",
     "title": "Come abbinare gli orecchini a farfalla",
-    "subtitle": "Outfit, scollature, ear stack e colori del metallo",
+    "subtitle": "Outfit, scollature, ear stack e colori dei metalli",
     "paragraphs": [
-      "Gli orecchini a farfalla si possono portare come motivo discreto, come punto focale di diamanti o come elemento di accompagnamento in un ear stack. L'approccio giusto dipende dalle dimensioni, dalla struttura e dal dettaglio di superficie del gioiello, non dal semplice fatto che utilizzi una forma a farfalla.",
-      "Un piccolo orecchino a bottone con farfalla crea un motivo compatto rivolto in avanti. Una farfalla di diamanti più ampia copre una parte maggiore del lobo e può diventare il gioiello principale. Una farfalla pendente aggiunge lunghezza e movimento, mentre un modello con montatura pavé distribuisce i diamanti sulle ali.",
-      "Per un risultato equilibrato, decidi se gli orecchini a farfalla debbano guidare l'outfit o accompagnarlo. Se hanno una silhouette ampia o una copertura di diamanti importante, mantieni collana e altri orecchini discreti. Se la farfalla è piccola e semplice, un altro gioiello può assumere un ruolo più visibile."
+      "Gli orecchini a farfalla possono essere un motivo discreto, il punto focale con diamanti o un elemento di supporto in un ear stack. L'approccio giusto dipende da dimensioni, struttura e dettagli della superficie, non solo dalla forma a farfalla.",
+      "Un piccolo orecchino a lobo a forma di farfalla crea un motivo compatto rivolto in avanti. Una farfalla più ampia con diamanti copre maggiormente il lobo e può diventare il gioiello principale. Un orecchino pendente a farfalla aggiunge lunghezza o movimento, mentre un modello pavé distribuisce i diamanti sulle ali.",
+      "Per un look equilibrato, decida se gli orecchini a farfalla devono dominare o sostenere l'outfit. Se hanno una silhouette ampia o una notevole copertura di diamanti, scelga con discrezione collana e altri orecchini. Se la farfalla è piccola e semplice, un altro gioiello può avere un ruolo più visibile."
     ],
-    "shopLabel": "Scopri gli orecchini con diamanti da laboratorio",
+    "shopLabel": "Scopra gli orecchini con diamanti da laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Decidi se la farfalla debba guidare il look o accompagnarlo",
-      "Scegli in base a larghezza, altezza e profondità totali, non ai carati",
-      "Mantieni discreti gli altri gioielli se le ali sono ampie o incastonate",
-      "Evita di accumulare più motivi naturali in concorrenza tra loro",
-      "Affidati alle misure invece che alle etichette «semplice» e «pavé»",
-      "Nessun modello a farfalla appartiene a una fascia d'età",
-      "Controlla il profilo laterale, non solo la fotografia frontale"
+      "Decida se la farfalla deve dominare o sostenere il look",
+      "Valuti larghezza, altezza e sporgenza complessive, non solo il peso in carati",
+      "Scelga gli altri gioielli con discrezione se le ali sono ampie o con diamanti",
+      "Eviti di sovrapporre più motivi naturali in contrasto",
+      "Valuti le dimensioni, non solo le definizioni \"semplice\" e \"pavé\"",
+      "Nessun modello a farfalla appartiene a una sola fascia d'età",
+      "Controlli il profilo laterale, non solo la foto frontale"
     ],
     "image": "/blog-images/blog-image-82.jpg"
   },
   "content": [
     {
-      "heading": "Lo stile farfalla in breve",
+      "heading": "Gli orecchini a farfalla in breve",
       "content": [
         {
           "type": "grid-layout",
@@ -38,210 +38,254 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Obiettivo di stile", "Direzione della farfalla", "Gioielli di accompagnamento"],
+              "headers": [
+                "Obiettivo dello styling",
+                "Stile degli orecchini a farfalla",
+                "Gioielli di supporto"
+              ],
               "rows": [
-                ["Motivo discreto", "Piccolo orecchino a bottone con farfalla", "Collana sottile o nessuna collana"],
-                ["Diamante protagonista", "Farfalla incastonata di diamanti", "Gioielli di accompagnamento minimi"],
-                ["Stack a due fori", "Farfalla con un solitario più piccolo", "Lasciare spazio visibile tra le montature"],
-                ["Stile serale", "Farfalla più visibile o incastonata", "Collana o bracciale discreti"],
-                ["Abito ricco di dettagli", "Farfalla più piccola e pulita", "Evitare motivi in concorrenza"],
-                ["Outfit essenziale", "Farfalla più ampia o più dettagliata", "Lasciare guidare gli orecchini"],
-                ["Mix di metalli", "Farfalla in un solo colore di metallo", "Ripetere quel colore altrove"],
-                ["Regalo simbolico", "Motivo a farfalla ben definito", "Limitare gli altri motivi"],
-                ["Stile asimmetrico", "Farfalla da un lato, forma affine dall'altro", "Ripetere il metallo o il dettaglio di diamante"],
-                ["Outfit floreale", "Proporzioni della farfalla contenute", "Evitare troppi motivi naturali insieme"]
+                [
+                  "Motivo discreto",
+                  "Piccolo orecchino a lobo a farfalla",
+                  "Collana delicata o nessuna collana"
+                ],
+                [
+                  "Look incentrato sui diamanti",
+                  "Farfalla con diamanti",
+                  "Gioielli di supporto minimal"
+                ],
+                [
+                  "Ear stack su due fori",
+                  "Orecchino a lobo a farfalla con solitario più piccolo",
+                  "Lasci spazio visibile tra le montature"
+                ],
+                [
+                  "Stile da sera",
+                  "Farfalla più visibile o con diamanti",
+                  "Collana o bracciale discreti"
+                ],
+                [
+                  "Abito elaborato",
+                  "Farfalla più piccola e lineare",
+                  "Eviti motivi in contrasto"
+                ],
+                [
+                  "Outfit semplice",
+                  "Farfalla più ampia o dettagliata",
+                  "Lasci che siano gli orecchini a dominare"
+                ],
+                [
+                  "Stile con metalli misti",
+                  "Farfalla in un solo colore di metallo",
+                  "Ripeta quel colore altrove"
+                ],
+                [
+                  "Stile per un regalo simbolico",
+                  "Motivo a farfalla chiaramente definito",
+                  "Limiti gli altri motivi"
+                ],
+                [
+                  "Styling asimmetrico",
+                  "Farfalla da un lato, forma coordinata dall'altro",
+                  "Riprenda il metallo o i dettagli con diamanti"
+                ],
+                [
+                  "Outfit floreale",
+                  "Proporzioni controllate della farfalla",
+                  "Eviti di combinare troppi motivi naturali"
+                ]
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Sono indicazioni di stile, non regole universali. Larghezza, altezza, peso, profondità e posizione sull'orecchio determinano l'effetto reale."
+          "text": "Queste sono indicazioni di stile, non regole universali. Larghezza, altezza, peso, sporgenza e posizione dell'orecchino determinano il suo reale impatto visivo."
         }
       ]
     },
     {
-      "heading": "Parti dal tipo di orecchino a farfalla",
+      "heading": "Inizi dal tipo di orecchino a farfalla",
       "content": [
         {
           "type": "section-lead",
-          "text": "Gli orecchini a farfalla esistono in diverse strutture e ognuna richiede un approccio differente."
+          "text": "Gli orecchini a farfalla sono disponibili in diverse strutture. Ognuna richiede un approccio diverso allo styling."
         },
         {
           "type": "subheading",
-          "text": "Farfalle a bottone"
+          "text": "Orecchini a lobo a farfalla"
         },
         {
           "type": "paragraph",
-          "text": "Le farfalle a bottone si appoggiano sulla parte anteriore del lobo con perno e chiusura. La loro presenza dipende dalle dimensioni del motivo completo, non solo dai diamanti che contiene."
+          "text": "Gli orecchini a lobo a farfalla si posizionano sul davanti del lobo tramite perno e chiusura. La loro presenza visiva dipende dalle dimensioni del motivo completo, non soltanto dai diamanti."
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla a bottone piccola può fare da elemento di accompagnamento. Una farfalla con ali più grandi copre una parte importante del lobo e funziona meglio come orecchino principale."
+          "text": "Un piccolo orecchino a lobo a farfalla può essere un elemento di supporto. Un modello più grande con ali ampie può coprire una parte significativa del lobo e funzionare meglio come orecchino focale."
         },
         {
           "type": "subheading",
-          "text": "Farfalle pendenti"
+          "text": "Orecchini pendenti a farfalla"
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla pendente colloca in tutto o in parte il motivo sotto il lobo. Può essere fissa o snodata per consentire il movimento. Verifica lunghezza totale, larghezza massima, peso e snodo prima di considerarla un orecchino da cerimonia."
+          "text": "Un orecchino pendente a farfalla porta parte o tutto il motivo sotto il lobo. Può avere un pendente fisso o componenti articolati che consentono il movimento. Prima di considerarlo un orecchino da occasione, verifichi lunghezza completa, larghezza massima, peso e articolazione."
         },
         {
           "type": "subheading",
-          "text": "Farfalle semplici"
+          "text": "Orecchini a farfalla semplici"
         },
         {
           "type": "paragraph",
-          "text": "Un modello semplice si basa soprattutto sul contorno, sul metallo lucido o su un numero limitato di pietre. «Semplice» non significa necessariamente piccolo, leggero o adatto a ogni situazione."
+          "text": "Un modello a farfalla semplice si basa soprattutto sul contorno, sul metallo lucido o su un numero limitato di pietre. \"Semplice\" non significa necessariamente piccolo, leggero o adatto a ogni situazione."
         },
         {
           "type": "subheading",
-          "text": "Farfalle con diamanti o pavé"
+          "text": "Orecchini a farfalla con diamanti o pavé"
         },
         {
           "type": "paragraph",
-          "text": "Le farfalle con diamanti collocano le pietre su una parte o sull'intero motivo. Il termine «pavé» si applica solo quando la montatura utilizza davvero molte pietre piccole tenute vicine nella superficie, non semplicemente perché un modello contiene più diamanti."
+          "text": "Gli orecchini a farfalla con diamanti distribuiscono le pietre su parte o su tutto il motivo. Il termine \"pavé\" si applica solo quando la montatura utilizza realmente più pietre piccole, ravvicinate sulla superficie, non semplicemente perché il modello contiene diversi diamanti."
         },
         {
           "type": "subheading",
-          "text": "Farfalle scultoree"
+          "text": "Orecchini a farfalla scultorei"
         },
         {
           "type": "paragraph",
-          "text": "Un modello scultoreo può avere ali curve, aperte o tridimensionali. La profondità diventa allora particolarmente importante, perché una farfalla tridimensionale appare spesso più presente di un motivo piatto con dimensioni frontali simili."
+          "text": "Un modello scultoreo può avere ali curve, aperte o tridimensionali. La sporgenza dal lobo diventa particolarmente importante, perché una farfalla tridimensionale può apparire più evidente di un motivo piatto con dimensioni frontali simili."
         }
       ]
     },
     {
-      "heading": "Confronta le dimensioni complete",
+      "heading": "Confronti le dimensioni complete della farfalla",
       "content": [
         {
           "type": "paragraph",
-          "text": "Gli orecchini a farfalla non si valutano solo dal peso in carati. Verifica:"
+          "text": "Gli orecchini a farfalla non si possono abbinare correttamente basandosi solo sul peso in carati. Verifichi:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "La larghezza totale da ala ad ala",
-            "L'altezza totale",
-            "La profondità della montatura",
-            "La lunghezza totale nel caso dei pendenti",
-            "Il peso per orecchino",
+            "Larghezza completa da ala ad ala",
+            "Altezza completa",
+            "Sporgenza o profondità della montatura",
+            "Lunghezza totale del pendente, se presente",
+            "Peso per orecchino",
             "Lunghezza e spessore del perno",
-            "Il tipo di chiusura",
-            "Il numero di diamanti",
-            "Il peso totale dei diamanti",
-            "La composizione del metallo",
-            "La finitura",
-            "Se il modello forma un paio speculare",
-            "Se il prodotto è venduto singolarmente o in coppia"
+            "Tipo di chiusura",
+            "Numero di diamanti",
+            "Peso totale dei diamanti",
+            "Composizione del metallo",
+            "Finitura",
+            "Se il modello forma una coppia coordinata",
+            "Se il prodotto è venduto come un singolo orecchino o come coppia"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla ampia incornicia il lobo in orizzontale. Un modello più alto crea un effetto più verticale. Una montatura profonda può vedersi di lato anche quando le dimensioni frontali sembrano contenute."
+          "text": "Una farfalla ampia può incorniciare il lobo in orizzontale. Un modello più alto crea un effetto maggiormente verticale. Una montatura profonda può essere visibile di lato anche quando le dimensioni frontali sembrano contenute."
         },
         {
           "type": "paragraph",
-          "text": "Le pagine prodotto dovrebbero includere immagini frontali, laterali e indossate, così da rendere comprensibile la scala reale."
+          "text": "Le pagine prodotto dovrebbero includere immagini frontali, laterali e indossate, così da mostrare la scala reale."
         },
         {
           "type": "see-also",
-          "text": "Guida alle misure degli orecchini con diamanti",
+          "text": "Guida alle dimensioni degli orecchini con diamante da laboratorio",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Indossare le farfalle da sole",
+      "heading": "Come indossare gli orecchini a farfalla da soli",
       "content": [
         {
           "type": "paragraph",
-          "text": "Gli orecchini a farfalla si possono portare senza altri orecchini, soprattutto quando il motivo ha larghezza, copertura di diamanti o rilievo sufficienti per fare da punto focale. Indossarli da soli funziona quando:"
+          "text": "Gli orecchini a farfalla possono essere indossati senza altri orecchini, soprattutto quando hanno ampiezza, diamanti o dettagli strutturali sufficienti per fungere da punto focale. Indossarli da soli funziona quando:"
         },
         {
           "type": "bullet-list",
           "items": [
             "Le ali coprono un'area visibile del lobo.",
-            "Il prodotto contiene più diamanti.",
+            "Il modello contiene più diamanti.",
             "La silhouette è scultorea o asimmetrica.",
-            "L'outfit comprende già una collana o un bracciale.",
+            "L'outfit include già una collana o un bracciale.",
             "Si ha un solo foro al lobo.",
-            "Il motivo deve restare chiaramente riconoscibile."
+            "Il motivo deve essere chiaramente riconoscibile."
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un paio speculare crea equilibrio. Se le farfalle sono rivolte in direzioni diverse, la pagina prodotto dovrebbe mostrare come vanno posizionati l'orecchino destro e quello sinistro."
+          "text": "Una coppia coordinata crea simmetria. Se le farfalle sono rivolte in direzioni diverse, la pagina prodotto dovrebbe mostrare come posizionare l'orecchino destro e quello sinistro."
         },
         {
           "type": "paragraph",
-          "text": "Quando gli orecchini sono l'elemento principale, evita di aggiungere più motivi ispirati alla natura. Un orecchino a farfalla, una collana floreale e un bracciale a foglie entrano in concorrenza, a meno che la collezione non sia stata pensata come parure coordinata."
+          "text": "Quando gli orecchini sono l'elemento principale, eviti di aggiungere contemporaneamente diversi motivi ispirati alla natura. Un orecchino a farfalla, una collana floreale e un bracciale con foglie possono entrare in contrasto, a meno che la collezione non sia stata progettata come set coordinato."
         }
       ]
     },
     {
-      "heading": "Abbinare farfalle a bottone piccole",
+      "heading": "Come abbinare i piccoli orecchini a lobo a farfalla",
       "content": [
         {
           "type": "paragraph",
-          "text": "Le farfalle a bottone piccole introducono una forma riconoscibile senza che tutto il gioiello ruoti attorno al motivo. Si possono abbinare a:"
+          "text": "I piccoli orecchini a lobo a farfalla introducono una forma riconoscibile senza richiedere che l'intero look ruoti attorno al motivo. Possono essere abbinati a:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Un pendente semplice",
+            "Un ciondolo semplice",
             "Una catena sottile",
-            "Un piccolo orecchino a bottone con diamante in un altro foro",
-            "Un huggie in metallo liscio",
+            "Un piccolo orecchino con diamante su un altro foro",
+            "Un orecchino a cerchio piccoli (huggie) in metallo semplice",
             "Un bracciale discreto",
             "Un anello nello stesso colore di metallo"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Se la farfalla a bottone ha ali molto lavorate, mantieni geometricamente semplice l'orecchino di accompagnamento. Il motivo resta così leggibile invece di perdersi tra forme altrettanto complesse."
+          "text": "Se l'orecchino a lobo a farfalla ha ali dettagliate, mantenga l'orecchino di supporto geometricamente semplice. In questo modo il motivo resta leggibile invece di perdersi in una collezione di forme altrettanto complesse."
         }
       ]
     },
     {
-      "heading": "Abbinare farfalle con diamanti",
+      "heading": "Come abbinare gli orecchini a farfalla con diamanti",
       "content": [
         {
           "type": "paragraph",
-          "text": "Le farfalle con diamanti uniscono già forma e dettaglio di superficie. Decidi quale caratteristica debba risaltare di più."
+          "text": "Gli orecchini a farfalla con diamanti combinano già forma e dettagli superficiali. Decida quale elemento deve risultare più evidente."
         },
         {
           "type": "paragraph",
-          "text": "Se conta soprattutto la silhouette, scegli un modello con ali ben definite e non circondarlo di altri motivi. Se conta la copertura di diamanti, mantieni discreto il resto dei gioielli. Un semplice orecchino a bottone con diamante o un huggie in metallo liscio accompagnano senza competere."
+          "text": "Se la silhouette è l'attrazione principale, scelga un modello con ali ben definite ed eviti di circondarlo con altri motivi. Se il punto focale è la copertura di diamanti, mantenga discreti gli altri gioielli. Un semplice orecchino con diamante o un orecchino a cerchio piccoli (huggie) in metallo semplice può sostenere il look senza competere."
         },
         {
           "type": "paragraph",
-          "text": "Verifica se:"
+          "text": "Verifichi se:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "I diamanti coprono le ali intere o solo alcune zone.",
-            "Le pietre si vedono soprattutto frontalmente.",
-            "Il peso totale in carati si riferisce al paio.",
-            "Entrambe le ali hanno la stessa disposizione di pietre.",
-            "Il motivo resta riconoscibile a distanza normale."
+            "I diamanti coprono tutte le ali o solo alcune zone.",
+            "Le pietre sono visibili soprattutto frontalmente.",
+            "Il peso totale in carati si riferisce alla coppia.",
+            "Le ali presentano disposizioni di diamanti coordinate.",
+            "Il motivo resta riconoscibile a una normale distanza di osservazione."
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un peso totale in carati più alto non significa necessariamente che la farfalla sembrerà più grande. Distribuzione delle pietre, montatura e dimensioni complete ne determinano l'aspetto."
+          "text": "Un peso totale in carati maggiore non significa necessariamente che la farfalla apparirà più grande. Distribuzione delle pietre, montatura e dimensioni complete del motivo ne determinano l'aspetto."
         }
       ]
     },
     {
-      "heading": "Farfalla semplice o pavé",
+      "heading": "Orecchini a farfalla semplici o pavé",
       "content": [
         {
           "type": "section-lead",
-          "text": "Nessuna delle due soluzioni è migliore in assoluto."
+          "text": "Nessuno dei due stili è universalmente migliore."
         },
         {
           "type": "grid-layout",
@@ -250,21 +294,49 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Caratteristica", "Farfalle semplici", "Farfalle pavé"],
+              "headers": [
+                "Caratteristica",
+                "Orecchini a farfalla semplici",
+                "Orecchini a farfalla pavé"
+              ],
               "rows": [
-                ["Elemento visivo principale", "Contorno, metallo e forma del motivo", "Motivo più una superficie di pietre piccole"],
-                ["Dettaglio di superficie", "Da basso a moderato", "Più alto"],
-                ["Ruolo nello stile", "Motivo di accompagnamento o punto focale discreto", "Più facilmente diventa il punto focale"],
-                ["Abbinamento con i gioielli", "Regge una collana più visibile", "Di solito preferisce un contorno più semplice"],
-                ["Abbinamento con l'outfit", "Quando l'outfit chiede un motivo piccolo", "Quando resta spazio per più dettaglio di diamanti"],
-                ["Informazioni da verificare", "Misure, metallo e finitura", "Misure, numero di pietre, montatura e carati totali"]
+                [
+                  "Elemento visivo principale",
+                  "Contorno, metallo e forma del motivo",
+                  "Motivo più superficie di piccole pietre"
+                ],
+                [
+                  "Dettagli della superficie",
+                  "Da pochi a moderati",
+                  "Maggiore"
+                ],
+                [
+                  "Ruolo nello styling",
+                  "Motivo di supporto o punto focale discreto",
+                  "Più probabile che diventi il punto focale"
+                ],
+                [
+                  "Abbinamento con altri gioielli",
+                  "Può sostenere una collana più visibile",
+                  "Di solito valorizza gioielli circostanti più semplici"
+                ],
+                [
+                  "Abbinamento con l'outfit",
+                  "Funziona quando l'outfit richiede un piccolo motivo",
+                  "Funziona quando l'outfit lascia spazio a più dettagli con diamanti"
+                ],
+                [
+                  "Informazioni da verificare",
+                  "Dimensioni, metallo e finitura",
+                  "Dimensioni, numero di pietre, montatura e peso totale in carati"
+                ]
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla semplice può comunque essere grande o scultorea. Una farfalla pavé può risultare compatta. Scegli in base alle specifiche complete invece di dare per scontato che semplice significhi discreto e pavé significhi formale."
+          "text": "Una farfalla semplice può essere comunque grande o scultorea. Una farfalla pavé può essere relativamente compatta. Scelga in base alle specifiche complete, senza presumere che semplice significhi discreto o pavé significhi formale."
         }
       ]
     },
@@ -273,60 +345,60 @@
       "content": [
         {
           "type": "section-lead",
-          "text": "Gli orecchini a farfalla non sono legati ad alcuna fascia d'età."
+          "text": "Gli orecchini a farfalla non sono limitati a una particolare fascia d'età."
         },
         {
           "type": "paragraph",
-          "text": "Il loro aspetto dipende dal singolo modello: proporzioni, materiali, copertura di diamanti e modo di indossarli. Una farfalla piccola, colorata o dal tratto fumettistico risulta giocosa. Una farfalla in metallo strutturata, un discreto orecchino a bottone con diamante o ali dalla geometria definita producono un effetto completamente diverso. Condividono il motivo, ma non sono lo stesso stile."
+          "text": "Il loro aspetto dipende dal design, dalle proporzioni, dai materiali, dalla quantità di diamanti, dallo styling e dal modo in cui vengono indossati. Una piccola farfalla colorata o in stile cartoon può creare un look giocoso. Una farfalla in metallo dalla struttura definita, un orecchino a lobo con diamante discreto o un design con ali geometriche ben delineate possono creare un effetto completamente diverso. Anche se condividono lo stesso motivo, non dovrebbero essere considerati lo stesso stile."
         },
         {
           "type": "paragraph",
-          "text": "Il risultato dipende dalle dimensioni del motivo, dalla finitura del metallo, dalla copertura di diamanti, dal colore, dal tipo di montatura, dalla texture, dagli altri gioielli, dall'outfit e dalle preferenze personali."
+          "text": "Il risultato dipende dalle dimensioni del motivo, dalla finitura del metallo, dalla quantità di diamanti, dal colore, dallo stile della montatura, dalla texture della superficie, dagli altri gioielli, dall'outfit e dalle preferenze personali."
         },
         {
           "type": "paragraph",
-          "text": "Per un'interpretazione più sobria, cerca farfalle con:"
+          "text": "Per un'interpretazione più discreta, consideri orecchini a forma di farfalla con:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Forme delle ali ben definite",
-            "Larghezza e altezza contenute",
+            "Ali dalle forme ben definite",
+            "Larghezza e altezza proporzionate",
             "Un solo colore di metallo",
             "Uso limitato di pietre colorate",
             "Posizionamento dei diamanti verificato",
-            "Un paio destro e sinistro abbinato",
+            "Una coppia coordinata destra e sinistra",
             "Una collana semplice o nessuna collana",
-            "Pochi motivi intorno"
+            "Motivi circostanti ridotti al minimo"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Le farfalle pavé o con diamanti più grandi possono diventare il gioiello principale. Le farfalle a bottone piccole funzionano come dettaglio di accompagnamento accanto a un huggie liscio, a un orecchino a cerchio o a un solitario, purché resti spazio sufficiente."
+          "text": "Farfalle più grandi con pavé o diamanti possono diventare il gioiello protagonista. Gli orecchini a lobo a forma di farfalla più piccoli possono essere usati come dettaglio secondario accanto a orecchini a cerchio piccoli (huggie), orecchini a cerchio o a un orecchino a lobo solitario, purché ci sia spazio sufficiente."
         },
         {
           "type": "paragraph",
-          "text": "Evita di indossare più motivi simbolici altrettanto visibili nello stesso momento. Grandi orecchini a farfalla con collana a farfalla, bracciale floreale e diversi orecchini a motivo possono far sembrare il look sovraccarico. Se gli orecchini devono guidare, mantieni sobri i gioielli circostanti."
+          "text": "Eviti di abbinare contemporaneamente diversi motivi simbolici altrettanto vistosi. Grandi orecchini a forma di farfalla con una collana a farfalla, un bracciale floreale e diversi orecchini a lobo con motivi possono rendere il look complessivo affollato. Se gli orecchini devono essere protagonisti, mantenga discreti i gioielli circostanti."
         },
         {
           "type": "paragraph",
-          "text": "L'informazione più utile non è se gli orecchini vengano descritti come giovanili o maturi. Verifica larghezza, altezza, profondità, peso, perno, chiusura, materiali e fotografie indossate. Gli orecchini a farfalla giusti sono quelli il cui design e le cui proporzioni si adattano allo stile personale, non a una categoria di età."
+          "text": "Le informazioni più utili per l'acquisto non riguardano il fatto che gli orecchini siano descritti come giovani o maturi. Verifichi larghezza, altezza, sporgenza, peso, perno, chiusura, materiali e fotografie indossate. Gli orecchini a forma di farfalla giusti sono quelli il cui design e le cui proporzioni si adattano allo stile personale di chi li indossa, non a una categoria d'età."
         }
       ]
     },
     {
-      "heading": "Indossare le farfalle in un ear stack",
+      "heading": "Come indossare gli orecchini a forma di farfalla in un ear stack",
       "content": [
         {
           "type": "paragraph",
-          "text": "Gli orecchini a farfalla funzionano di solito o come motivo principale o come piccolo simbolo di accompagnamento. Una disposizione possibile è:"
+          "text": "Gli orecchini a forma di farfalla funzionano generalmente meglio come motivo protagonista o come piccolo simbolo di supporto. Una possibile disposizione è:"
         },
         {
           "type": "numbered-list",
           "items": [
-            "Primo lobo: farfalla a bottone",
-            "Secondo lobo: solitario più piccolo",
-            "Altro foro cicatrizzato: huggie discreto, se lo spazio lo consente"
+            "Primo foro: orecchino a lobo a forma di farfalla",
+            "Secondo foro: orecchino a lobo solitario più piccolo",
+            "Foro aggiuntivo già guarito: orecchino a cerchio piccoli (huggie) discreto, se lo spazio lo consente"
           ]
         },
         {
@@ -336,106 +408,127 @@
         {
           "type": "numbered-list",
           "items": [
-            "Primo lobo: orecchino a cerchio liscio o con diamanti",
-            "Secondo lobo: piccola farfalla a bottone",
-            "Altro foro cicatrizzato: dettaglio geometrico o di diamante più piccolo"
+            "Primo foro: orecchino a cerchio semplice o con diamanti",
+            "Secondo foro: piccolo orecchino a lobo a forma di farfalla",
+            "Foro aggiuntivo già guarito: dettaglio geometrico o con diamanti più piccolo"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Evita di collocare un altro motivo ampio proprio accanto alla farfalla se le due montature si toccano o si coprono."
+          "text": "Eviti di posizionare un altro motivo ampio direttamente accanto alla farfalla se le due montature si toccano o si coprono a vicenda."
         },
         {
           "type": "see-also",
-          "text": "Come impilare gli orecchini",
+          "text": "Come creare un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         },
         {
           "type": "see-also",
-          "text": "Idee per ear stack con diamanti",
+          "text": "Idee per un ear stack con diamanti",
           "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Si possono abbinare farfalle e cerchi o huggie?",
+      "heading": "Gli orecchini a forma di farfalla si possono abbinare a orecchini a cerchio o a cerchio piccoli (huggie)?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Sì. Gli orecchini a cerchio e gli huggie portano forme curve che contrastano con le ali della farfalla. Alcune combinazioni possibili:"
+          "text": "Sì. Gli orecchini a cerchio e gli orecchini a cerchio piccoli (huggie) offrono forme curve che possono creare contrasto con le ali della farfalla. Possibili abbinamenti:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Farfalla a bottone con huggie in metallo liscio",
-            "Farfalla piccola con cerchio sottile di diamanti",
-            "Farfalla di diamanti con cerchio liscio",
-            "Farfalla ad ali aperte con huggie discreto",
-            "Motivo a farfalla nel primo lobo e piccolo cerchio sopra"
+            "Orecchino a lobo a forma di farfalla con orecchino a cerchio piccoli (huggie) in metallo semplice",
+            "Piccola farfalla con orecchino a cerchio sottile con diamanti",
+            "Farfalla con diamanti e orecchino a cerchio semplice",
+            "Farfalla con ali aperte e orecchino a cerchio piccoli (huggie) discreto",
+            "Motivo a forma di farfalla nel primo foro e piccolo orecchino a cerchio sopra"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Usa la farfalla come motivo principale e lascia che il cerchio o l'huggie diano la forma. Non aggiungere altri modelli simbolici nello stesso orecchio, a meno che la combinazione non sia volutamente coordinata."
+          "text": "Usi la farfalla come motivo principale e lasci che l'orecchino a cerchio o a cerchio piccoli (huggie) aggiunga forma. Eviti di inserire altri simboli nello stesso orecchio, a meno che l'abbinamento non sia volutamente coordinato."
         },
         {
           "type": "see-also",
-          "text": "Come abbinare gli orecchini huggie",
+          "text": "Come abbinare gli orecchini a cerchio piccoli (huggie)",
           "href": "/resources/earring-style-guides/how-to-style-huggie-earrings"
         }
       ]
     },
     {
-      "heading": "Quale collana con gli orecchini a farfalla?",
+      "heading": "Quale collana si abbina agli orecchini a forma di farfalla?",
       "content": [
         {
           "type": "paragraph",
-          "text": "La scelta della collana dipende da quanto sono visibili gli orecchini."
+          "text": "La scelta della collana dipende da quanto sono vistosi gli orecchini."
         },
         {
           "type": "table",
-          "headers": ["Orecchino a farfalla", "Direzione della collana"],
+          "headers": [
+            "Orecchino a farfalla",
+            "Indicazioni per la collana"
+          ],
           "rows": [
-            ["Farfalla a bottone piccola e semplice", "Va bene un pendente o una collana più visibile"],
-            ["Farfalla a bottone più ampia", "Catena sottile o nessuna collana"],
-            ["Farfalla pavé di diamanti", "Pendente discreto o nessuna collana"],
-            ["Farfalla pendente", "Di norma una collana semplice"],
-            ["Farfalla in un ear stack", "Lasciare guidare l'ear stack"],
-            ["Farfalla con outfit elaborato", "Mantenere la collana minima"]
+            [
+              "Piccolo orecchino a lobo semplice a forma di farfalla",
+              "Un ciondolo o una collana più vistosa possono funzionare"
+            ],
+            [
+              "Orecchino a lobo a forma di farfalla più ampio",
+              "Catena sottile o nessuna collana"
+            ],
+            [
+              "Farfalla con diamanti e pavé",
+              "Ciondolo discreto o nessuna collana"
+            ],
+            [
+              "Farfalla pendente",
+              "Di solito si abbina a una collana semplice"
+            ],
+            [
+              "Ear stack con orecchini a farfalla",
+              "Lasci che sia l'ear stack a guidare il look"
+            ],
+            [
+              "Farfalla con outfit ricco di dettagli",
+              "Mantenga la collana minimal"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Una collana a farfalla non deve per forza accompagnare orecchini a farfalla. Ripetere lo stesso motivo può risultare coordinato, ma diventa troppo letterale se entrambi i pezzi sono grandi. Se li indossi insieme, lascia che solo uno abbia maggiore presenza."
+          "text": "Non è necessario indossare una collana a farfalla con orecchini a forma di farfalla. Ripetere lo stesso motivo può creare armonia, ma può anche risultare troppo letterale se entrambi i gioielli sono grandi. Se abbina collana e orecchini a farfalla, lasci che uno dei due abbia maggiore presenza visiva."
         }
       ]
     },
     {
-      "heading": "Abbinare le farfalle secondo l'outfit",
+      "heading": "Come abbinare gli orecchini a forma di farfalla all'outfit",
       "content": [
         {
           "type": "subheading",
-          "text": "Abbigliamento quotidiano"
+          "text": "Outfit quotidiani"
         },
         {
           "type": "paragraph",
-          "text": "Con denim, maglieria, camicie e altri capi semplici, gli orecchini a farfalla portano un design riconoscibile senza bisogno di altri accessori. Prova farfalle a bottone piccole con una camicia semplice, una farfalla in metallo liscio con la maglieria, una farfalla di diamanti con un outfit monocromo o una farfalla a bottone con un solo orecchino di accompagnamento discreto."
+          "text": "Con denim, maglieria, camicie e altri capi semplici, gli orecchini a forma di farfalla possono introdurre un design riconoscibile senza richiedere molti accessori aggiuntivi. Provi piccoli orecchini a lobo a forma di farfalla con una camicia semplice, una farfalla in metallo semplice con la maglieria, una farfalla con diamanti con un outfit monocromatico o un orecchino a lobo a forma di farfalla con un solo orecchino secondario discreto."
         },
         {
           "type": "paragraph",
-          "text": "Un orecchino risulta adatto all'uso quotidiano solo dopo aver considerato peso, profondità della montatura, perno e materiali."
+          "text": "Un orecchino è adatto all'uso quotidiano solo dopo aver valutato peso, sporgenza della montatura, perno e materiali."
         },
         {
           "type": "subheading",
-          "text": "Il lavoro"
+          "text": "Lavoro"
         },
         {
           "type": "paragraph",
-          "text": "Le aspettative variano da un ambiente all'altro. Ragiona in termini di scala e complessità invece di considerare ogni farfalla adatta all'ufficio. Scegli un motivo proporzionato, evita un ear stack sovraccarico, coordina il metallo con orologio, anello o collana e verifica quanto la montatura sporge dal lobo."
+          "text": "Le aspettative sul luogo di lavoro variano: valuti quindi dimensioni e complessità del design, senza considerare automaticamente ogni orecchino a forma di farfalla adatto all'ufficio. Scelga un motivo proporzionato, eviti un ear stack affollato, abbini il metallo a orologio, anello o collana e verifichi se la montatura sporge molto dal lobo."
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla più ampia o molto incastonata si nota di più con i capelli raccolti. Se sia adatta o meno è una questione personale e organizzativa."
+          "text": "Una farfalla più ampia o ricca di diamanti può risultare più visibile con i capelli raccolti. La sua adeguatezza sul luogo di lavoro dipende da considerazioni personali e organizzative."
         },
         {
           "type": "subheading",
@@ -443,16 +536,16 @@
         },
         {
           "type": "paragraph",
-          "text": "Un abito nero crea contrasto e rende più leggibile la silhouette della farfalla. Con un abito nero semplice, una farfalla di diamanti può diventare il gioiello principale. Con pizzo nero, paillettes, tessuti metallizzati o una scollatura molto lavorata, una farfalla più piccola o un orecchino più pulito danno un equilibrio migliore."
+          "text": "Un abito nero crea contrasto e può rendere più visibile la silhouette della farfalla. Con un semplice abito nero, una farfalla con diamanti può diventare il gioiello protagonista. Con pizzo nero, paillettes, tessuti metallici o una scollatura molto elaborata, una farfalla più piccola o un orecchino a lobo più essenziale può creare un equilibrio migliore."
         },
         {
           "type": "bullet-list",
           "items": [
-            "Farfalle color oro giallo per un contrasto caldo",
-            "Modelli bianchi o argentati per un effetto monocromo più freddo",
-            "Farfalle di diamanti quando l'abito è semplice",
-            "Motivi più piccoli quando l'abito ha già molti dettagli",
-            "Nessuna collana quando le ali coprono molta superficie"
+            "Orecchini a forma di farfalla color oro giallo per un contrasto caldo",
+            "Design bianchi o color argento per un effetto monocromatico più freddo",
+            "Farfalle con diamanti quando l'abito è semplice",
+            "Motivi più piccoli quando l'abito è già ricco di dettagli",
+            "Nessuna collana quando gli orecchini hanno ali molto ampie"
           ]
         },
         {
@@ -461,7 +554,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Gli orecchini a farfalla accompagnano bene i capi floreali, ma accumulare motivi naturali può appesantire il risultato. Abbina una stampa floreale grande a una farfalla più piccola, una stampa discreta a un motivo medio, un outfit pastello essenziale a una farfalla di diamanti più visibile e volant o pizzo a dimensioni contenute."
+          "text": "Gli orecchini a forma di farfalla possono valorizzare un abbigliamento floreale, ma combinare troppi motivi ispirati alla natura può rendere il look affollato. Abbini una stampa floreale ampia a una farfalla più piccola, una stampa discreta a un motivo di medie dimensioni, un outfit pastello semplice a una farfalla con diamanti o più vistosa e dimensioni controllate degli orecchini a volant e pizzo."
         },
         {
           "type": "subheading",
@@ -469,63 +562,90 @@
         },
         {
           "type": "paragraph",
-          "text": "Il raso riflette già la luce. Una farfalla di diamanti funziona quando l'abito ha una linea semplice e una scollatura sobria. Se l'abito presenta drappeggi, arricciature, scollo a cascata o molte decorazioni, scegli un modello più piccolo."
+          "text": "Il raso riflette già la luce. Una farfalla con diamanti può funzionare quando l'abito ha una linea semplice e una scollatura discreta. Se l'abito in raso presenta drappeggi, arricciature, scollo a cappuccio o decorazioni importanti, consideri un design a farfalla più piccolo."
         },
         {
           "type": "subheading",
-          "text": "Come invitata a un matrimonio"
+          "text": "Outfit da invitata a un matrimonio"
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla piccola completa un abito floreale o molto lavorato. Una farfalla di diamanti più visibile funziona con un abito semplice o una tuta quando gli orecchini devono guidare. Considera i dettagli dell'abito, la scollatura, l'acconciatura, il peso degli orecchini, la formalità dell'evento, il rischio di un effetto troppo nuziale e gli altri motivi dell'outfit."
+          "text": "Una farfalla piccola può valorizzare un abito floreale o ricco di dettagli. Una farfalla con diamanti più vistosa può funzionare con un abito semplice o una tuta, quando gli orecchini devono essere protagonisti. Consideri i dettagli dell'abito, la scollatura, l'acconciatura, il peso degli orecchini, la formalità dell'evento, l'eventuale effetto da sposa dei gioielli e gli altri motivi presenti nell'outfit."
         },
         {
           "type": "see-also",
-          "text": "Quali gioielli con un abito nero",
+          "text": "Quali gioielli indossare con un abito nero",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
         },
         {
           "type": "see-also",
-          "text": "Quali gioielli con un abito in raso",
+          "text": "Quali gioielli indossare con un abito in raso",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         },
         {
           "type": "see-also",
-          "text": "Guida agli orecchini con diamanti per tutti i giorni",
+          "text": "Guida agli orecchini con diamanti da laboratorio per tutti i giorni",
           "href": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Come incide la scollatura",
+      "heading": "Come la scollatura influenza gli orecchini a forma di farfalla",
       "content": [
         {
           "type": "table",
-          "headers": ["Scollatura", "Direzione della farfalla"],
+          "headers": [
+            "Scollo",
+            "Direzione dello styling della farfalla"
+          ],
           "rows": [
-            ["Scollo a V", "Farfalle a bottone con un pendente discreto"],
-            ["Scollo a cuore", "Lasciare che farfalle visibili incorniciino l'apertura"],
-            ["Senza spalline", "Una farfalla ampia o pendente può guidare"],
-            ["Spalle scoperte", "Un modello più visibile bilancia la linea aperta delle spalle"],
-            ["Collo alto", "Una farfalla a bottone risulta più pulita di un pendente lungo"],
-            ["Scollo a cascata", "Mantenere farfalla e collana discrete"],
-            ["Scollatura elaborata", "Scegliere una farfalla più piccola ed evitare collane in concorrenza"],
-            ["Scollo quadrato", "Funziona una farfalla a bottone o di misura media"]
+            [
+              "Scollo a V",
+              "Gli orecchini a lobo a forma di farfalla con un ciondolo discreto possono funzionare"
+            ],
+            [
+              "Scollo a cuore",
+              "Lasci che gli orecchini a forma di farfalla visibili incornicino la scollatura aperta"
+            ],
+            [
+              "Senza spalline",
+              "Una farfalla più ampia o pendente può essere protagonista"
+            ],
+            [
+              "Scollo a spalle scoperte",
+              "Un design a farfalla più vistoso può bilanciare la linea delle spalle scoperte"
+            ],
+            [
+              "Scollo alto",
+              "Una farfalla in stile orecchino a lobo può risultare più essenziale di un pendente lungo"
+            ],
+            [
+              "Scollo a drappeggio",
+              "Mantenga discreti la farfalla e la collana"
+            ],
+            [
+              "Scollatura elaborata",
+              "Scelga una farfalla più piccola ed eviti una collana in competizione"
+            ],
+            [
+              "Scollo quadrato",
+              "Un design a farfalla a lobo o di medie dimensioni può funzionare"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Sono punti di partenza visivi. Le dimensioni complete e il taglio dell'abito determinano il risultato finale."
+          "text": "Questi sono punti di partenza visivi. A determinare il risultato finale sono comunque le dimensioni complete dell'orecchino e la struttura dell'abito."
         },
         {
           "type": "see-also",
-          "text": "Quali gioielli con uno scollo a cuore",
+          "text": "Quali gioielli indossare con una scollatura a cuore",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
         }
       ]
     },
     {
-      "heading": "Come incide l'acconciatura",
+      "heading": "Come l'acconciatura influenza gli orecchini a forma di farfalla",
       "content": [
         {
           "type": "grid-layout",
@@ -534,27 +654,51 @@
           "content": [
             {
               "type": "table",
-              "headers": ["Acconciatura", "Effetto"],
+              "headers": [
+                "Acconciatura",
+                "Effetto dello stile"
+              ],
               "rows": [
-                ["Capelli dietro le orecchie", "Mostra tutto il contorno delle ali"],
-                ["Chignon basso", "Rende ben visibili le farfalle più ampie"],
-                ["Coda di cavallo", "Libera il motivo e lo spazio circostante"],
-                ["Capelli corti", "Mostra il modello di fronte e di profilo"],
-                ["Capelli sciolti", "Possono coprire in parte le farfalle piccole"],
-                ["Onde morbide", "Accompagnano la curva delle ali"],
-                ["Semiraccolto", "Mostra gli orecchini senza scoprire del tutto l'orecchio"]
+                [
+                  "Capelli dietro le orecchie",
+                  "Mostra l'intero profilo delle ali"
+                ],
+                [
+                  "Chignon basso",
+                  "Rende chiaramente visibili gli orecchini a forma di farfalla più ampi"
+                ],
+                [
+                  "Coda di cavallo",
+                  "Lascia visibili il motivo e lo spazio circostante"
+                ],
+                [
+                  "Capelli corti",
+                  "Mostra il design da angolazioni frontali e laterali"
+                ],
+                [
+                  "Capelli sciolti",
+                  "Può nascondere parzialmente le farfalle più piccole"
+                ],
+                [
+                  "Onde morbide",
+                  "Può valorizzare la silhouette curva delle ali"
+                ],
+                [
+                  "Capelli semiraccolti",
+                  "Mostra gli orecchini senza lasciare completamente scoperto l'orecchio"
+                ]
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Se gli orecchini spariscono sotto i capelli, non passare automaticamente a un modello più pesante. Confronta prima le misure e guarda fotografie indossate."
+          "text": "Se gli orecchini scompaiono sotto i capelli, non scelga automaticamente un design più pesante. Confronti prima le dimensioni e utilizzi le fotografie con gli orecchini indossati."
         }
       ]
     },
     {
-      "heading": "La farfalla secondo il colore del metallo",
+      "heading": "Come abbinare gli orecchini a forma di farfalla in base al colore del metallo",
       "content": [
         {
           "type": "subheading",
@@ -562,69 +706,69 @@
         },
         {
           "type": "paragraph",
-          "text": "Le farfalle color oro giallo creano un contrasto caldo. Si abbinano a nero, crema, verde, bordeaux, marrone e toni neutri."
+          "text": "Gli orecchini a forma di farfalla color oro giallo creano un contrasto caldo. Possono armonizzarsi con outfit neri, color crema, verdi, bordeaux, marroni e neutri."
         },
         {
           "type": "subheading",
-          "text": "Farfalle bianche o argentate"
+          "text": "Farfalle bianche o color argento"
         },
         {
           "type": "paragraph",
-          "text": "I modelli bianchi o argentati danno un effetto più freddo e luminoso e si abbinano a nero, bianco, blu navy, grigio e tonalità fredde."
+          "text": "I design bianchi o color argento creano un effetto più freddo e luminoso e possono abbinarsi a capi neri, bianchi, blu navy, grigi e dalle tonalità fredde."
         },
         {
           "type": "subheading",
-          "text": "Farfalle in oro rosa"
+          "text": "Farfalle color oro rosa"
         },
         {
           "type": "paragraph",
-          "text": "Le farfalle color oro rosa creano un effetto metallico caldo più morbido e si abbinano a crema, champagne, rosa cipria e toni neutri."
+          "text": "Le farfalle color oro rosa creano un effetto più delicato e caldo e possono abbinarsi a capi color crema, champagne, cipria e neutri."
         },
         {
           "type": "paragraph",
-          "text": "Oro giallo, oro bianco, argento e oro rosa non sono termini di materiale intercambiabili. Verifica il metallo di base e la finitura indicati per ogni prodotto."
+          "text": "Oro giallo, oro bianco, argento e oro rosa non sono termini intercambiabili per indicare i materiali. Verifichi il metallo di base e la finitura effettivamente indicati per ogni prodotto."
         },
         {
           "type": "see-also",
-          "text": "Oro giallo, bianco o rosa per gli orecchini con diamanti",
+          "text": "Orecchini con diamanti da laboratorio in oro giallo, bianco o rosa",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Errori da evitare",
+      "heading": "Errori nello styling degli orecchini a forma di farfalla",
       "content": [
         {
           "type": "subheading",
-          "text": "Scegliere solo per il motivo"
+          "text": "Scegliere basandosi solo sul motivo"
         },
         {
           "type": "paragraph",
-          "text": "La forma a farfalla non dice nulla su larghezza, peso, profondità o chiusura."
+          "text": "La forma a farfalla non indica larghezza, peso, sporgenza o tipo di chiusura."
         },
         {
           "type": "subheading",
-          "text": "Accumulare motivi in concorrenza"
+          "text": "Usare diversi motivi in competizione"
         },
         {
           "type": "paragraph",
-          "text": "Farfalle, fiori, foglie e cuori competono quando risultano tutti ugualmente visibili."
+          "text": "Farfalle, fiori, foglie e cuori possono entrare in competizione quando hanno tutti la stessa importanza visiva."
         },
         {
           "type": "subheading",
-          "text": "Pensare che il pavé sia solo da cerimonia"
+          "text": "Pensare che il pavé sia adatto solo alle occasioni"
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla pavé compatta può risultare visivamente misurata. Affidati alle misure invece che alle etichette."
+          "text": "Una farfalla compatta in pavé può risultare visivamente equilibrata. Si considerino le dimensioni, non le definizioni."
         },
         {
           "type": "subheading",
-          "text": "Pensare che semplice significhi adatto al quotidiano"
+          "text": "Pensare che un design semplice sia adatto all'uso quotidiano"
         },
         {
           "type": "paragraph",
-          "text": "Un modello semplice può comunque essere grande o pesante."
+          "text": "Anche un design semplice può essere grande o pesante."
         },
         {
           "type": "subheading",
@@ -632,28 +776,28 @@
         },
         {
           "type": "paragraph",
-          "text": "Una farfalla può sporgere dal lobo più di quanto lasci intuire la foto frontale."
+          "text": "Una farfalla può sporgere dal lobo più di quanto suggerisca la fotografia frontale."
         },
         {
           "type": "subheading",
-          "text": "Portare un motivo grande in ogni foro"
+          "text": "Indossare un motivo grande in ogni foro"
         },
         {
           "type": "paragraph",
-          "text": "Usa pezzi di accompagnamento più piccoli e mantieni la distanza fisica."
+          "text": "Si scelgano gioielli di supporto più piccoli e si mantenga una distanza fisica adeguata."
         },
         {
           "type": "subheading",
-          "text": "Fare affermazioni legate all'età"
+          "text": "Fare affermazioni basate sull'età"
         },
         {
           "type": "paragraph",
-          "text": "Gli orecchini a farfalla non sono riservati né alle clienti più giovani né a quelle più mature."
+          "text": "Gli orecchini a farfalla non sono riservati alle clienti più giovani o più mature."
         }
       ]
     },
     {
-      "heading": "Lista di controllo",
+      "heading": "Checklist per abbinare gli orecchini a farfalla",
       "content": [
         {
           "type": "grid-layout",
@@ -662,22 +806,22 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Prima di chiudere il look, chiediti:"
+              "text": "Prima di finalizzare il look, si chieda:"
             },
             {
               "type": "bullet-list",
               "items": [
-                "Quali sono larghezza e altezza totali?",
+                "Quali sono larghezza e altezza complessive?",
                 "Quanto sporge la montatura?",
-                "Quanto pesa ciascun orecchino?",
-                "La farfalla è il pezzo principale?",
+                "Qual è il peso di ciascun orecchino?",
+                "La farfalla è il pezzo protagonista?",
                 "L'outfit contiene già altri motivi?",
-                "La montatura dei diamanti è descritta con precisione?",
-                "La collana entra in concorrenza con gli orecchini?",
-                "L'acconciatura mostrerà le ali intere?",
+                "La montatura dei diamanti è descritta accuratamente?",
+                "La collana entra in competizione con gli orecchini?",
+                "L'acconciatura mostrerà entrambe le ali per intero?",
                 "C'è spazio sufficiente nell'ear stack?",
-                "Metallo e finitura sono verificati?",
-                "I carati totali si riferiscono a un orecchino o al paio?"
+                "Il metallo e la finitura sono verificati?",
+                "Il peso totale in carati è indicato per un orecchino o per la coppia?"
               ]
             }
           ]
@@ -685,65 +829,65 @@
       ]
     },
     {
-      "heading": "In sintesi",
+      "heading": "Risposta finale",
       "content": [
         {
           "type": "paragraph",
-          "text": "Abbina gli orecchini a farfalla in base alle loro proporzioni e al loro livello di dettaglio. Indossa una farfalla più ampia o incastonata come punto focale, oppure usa una farfalla a bottone piccola come motivo di accompagnamento."
+          "text": "Si abbinino gli orecchini a farfalla in base a proporzioni e dettagli. Una farfalla più larga o con diamanti può essere il punto focale, mentre una farfalla più piccola può diventare un motivo di supporto."
         },
         {
           "type": "paragraph",
-          "text": "Mantieni sobri i gioielli circostanti quando le ali hanno dimensioni o copertura di diamanti importanti. Con un modello più piccolo, una collana, un cerchio o un huggie possono assumere un ruolo più visibile."
+          "text": "Si mantengano discreti gli altri gioielli quando le ali sono grandi o riccamente ricoperte di diamanti. Con un design più piccolo, una collana, degli orecchini a cerchio o degli orecchini a cerchio piccoli (huggie) possono avere un ruolo più evidente."
         },
         {
           "type": "paragraph",
-          "text": "La forma a farfalla non appartiene a una fascia d'età né a una specifica occasione. Il suo stile dipende dal singolo modello, dalle misure, dai materiali e dall'equilibrio dell'insieme."
+          "text": "La forma a farfalla non appartiene a una sola fascia d'età o occasione. Il suo stile dipende dal design, dalle misure, dai materiali e dall'equilibrio dell'insieme."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Come si abbinano gli orecchini a farfalla?",
-      "answer": "Si possono portare come motivo principale o come dettaglio di accompagnamento più piccolo. Abbinali a gioielli più semplici quando le ali sono ampie o riccamente incastonate di diamanti."
+      "question": "Come abbinare gli orecchini a farfalla?",
+      "answer": "Gli orecchini a farfalla possono essere il motivo principale o un dettaglio di supporto più discreto. Li si abbini a gioielli più semplici quando le ali sono larghe o riccamente decorate con diamanti."
     },
     {
       "question": "Gli orecchini a farfalla sono troppo giovanili?",
-      "answer": "No. Il loro aspetto dipende da proporzioni, materiali, colore, copertura di diamanti e modo di indossarli, non dall'età. Una farfalla sobria in metallo o diamanti produce un effetto molto diverso da un modello colorato o sovradimensionato."
+      "answer": "No. Il loro aspetto dipende da proporzioni, materiali, colore, quantità di diamanti e stile, non dall'età di chi li indossa. Una farfalla discreta in metallo o diamanti può creare un effetto diverso da un design colorato o vistoso."
     },
     {
-      "question": "Si possono indossare gli orecchini a farfalla ogni giorno?",
-      "answer": "Possono essere valutati per l'uso abituale quando peso, profondità, perno, chiusura, materiali e cura si adattano a chi li porta."
+      "question": "Gli orecchini a farfalla possono essere indossati ogni giorno?",
+      "answer": "Possono essere adatti all'uso regolare quando peso, sporgenza, perno, chiusura, materiali e requisiti di cura sono adeguati a chi li indossa."
     },
     {
-      "question": "Si possono indossare gli orecchini a farfalla al lavoro?",
-      "answer": "Possono essere valutati quando le dimensioni e il livello di dettaglio del modello si adattano all'ambiente di lavoro e allo stile preferito."
+      "question": "Gli orecchini a farfalla si possono indossare al lavoro?",
+      "answer": "Possono essere adatti quando dimensioni e dettagli del design si accordano con l'ambiente di lavoro e lo stile personale."
     },
     {
       "question": "Quale collana indossare con gli orecchini a farfalla?",
-      "answer": "Scegli una collana discreta quando gli orecchini a farfalla sono molto visibili. Una collana più presente funziona con una farfalla a bottone piccola e semplice."
+      "answer": "Si scelga una collana discreta quando gli orecchini a farfalla sono protagonisti. Una collana più evidente può funzionare con una farfalla più piccola e semplice."
     },
     {
-      "question": "Si possono usare le farfalle in un ear stack?",
-      "answer": "Sì. Usa la farfalla come motivo principale o come piccolo elemento di accompagnamento e assicurati che gli orecchini vicini non la coprano."
+      "question": "Gli orecchini a farfalla possono entrare in un ear stack?",
+      "answer": "Sì. Si usi la farfalla come motivo focale o piccolo elemento di supporto, assicurandosi che gli orecchini circostanti non la coprano."
     },
     {
-      "question": "Che differenza c'è tra farfalle semplici e pavé?",
-      "answer": "I modelli semplici si basano soprattutto su contorno e metallo, mentre quelli pavé usano una superficie di pietre piccole ravvicinate. Le dimensioni complete restano comunque decisive per capire quale risulti più presente."
+      "question": "Qual è la differenza tra orecchini a farfalla semplici e in pavé?",
+      "answer": "I design semplici si basano soprattutto sul contorno e sul metallo, mentre quelli in pavé usano una superficie di pietre piccole e ravvicinate. Sono comunque le dimensioni complessive a determinare quale risulti più vistoso."
     },
     {
-      "question": "Quale colore di metallo si abbina meglio?",
-      "answer": "Le finiture gialla, bianca, argentata e rosa funzionano tutte. Scegli in base al materiale verificato, ai colori dell'outfit e agli altri gioielli invece che a una regola universale."
+      "question": "Quale colore di metallo si abbina agli orecchini a farfalla?",
+      "answer": "Le finiture gialle, bianche, argentate e rosa possono funzionare. Si scelga in base al materiale verificato, ai colori dell'outfit e agli altri gioielli, non secondo una regola universale."
     }
   ],
   "cta": {
-    "heading": "Abbina gli orecchini a farfalla per proporzioni e dettaglio di superficie. Lascia guidare il look a una farfalla ampia o incastonata, oppure usa una farfalla a bottone piccola come motivo di accompagnamento con gioielli più semplici.",
-    "body": "Scopri gli orecchini demi-fine di I Want Jewels con diamanti da laboratorio e verifica su ogni pagina prodotto larghezza, altezza, profondità, peso, chiusura e informazioni sui diamanti prima di decidere se il modello debba guidare o accompagnare il tuo outfit.",
-    "primaryLabel": "Scopri gli orecchini con diamanti da laboratorio",
+    "heading": "Si abbinino gli orecchini a farfalla in base a proporzioni e dettagli della superficie. Una farfalla più larga o con diamanti può guidare il look, mentre una più piccola può diventare un motivo di supporto accanto a gioielli più semplici.",
+    "body": "Scopra gli orecchini demi-fine con diamante da laboratorio di I Want Jewels e consulti ogni scheda prodotto per verificare larghezza, altezza, sporgenza, peso, chiusura e informazioni sui diamanti prima di decidere se il design debba essere protagonista o di supporto all'outfit.",
+    "primaryLabel": "Scopra gli orecchini con diamanti da laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Come impilare gli orecchini",
+    "secondaryLabel": "Come creare un ear stack di orecchini",
     "secondaryHref": "/resources/earring-style-guides/how-to-stack-earrings",
-    "tertiaryLabel": "Quali gioielli con un abito nero",
+    "tertiaryLabel": "Quali gioielli indossare con un abito nero",
     "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
   }
 }

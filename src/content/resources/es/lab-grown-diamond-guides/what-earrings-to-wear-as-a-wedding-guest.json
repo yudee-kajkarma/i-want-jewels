@@ -1,113 +1,113 @@
 {
   "meta": {
-    "title": "Qué pendientes llevar como invitada a una boda",
-    "description": "Elija aretes para usar como invitada a la boda con aretes, colgantes, aros, aretes de mariposa con diamantes cultivados en laboratorio e ideas de estilo para cada vestido."
+    "title": "Qué pendientes llevar como invitada de boda",
+    "description": "Elija pendientes para una boda: pendientes de botón con diamante de laboratorio, colgantes, aros, mariposas e ideas para cada vestido."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-105.jpg",
-    "title": "Qué pendientes llevar como invitada a una boda:",
-    "subtitle": "Guía de vestido, escote y estilismo",
+    "title": "Qué pendientes llevar como invitada de boda:",
+    "subtitle": "Guía de vestido, escote y estilo",
     "paragraphs": [
-      "Elegir unos pendientes como invitada a una boda es una cuestión de equilibrio. Los aretes deben hacer que el atuendo se sienta pulido, pero no deben dominar el vestido ni verse demasiado nupcial. La mejor elección depende del color del vestido, la tela, el escote, el peinado y lo formal que se sienta la boda.",
-      "Los pendientes colgantes suelen ser los mejores cuando el outfit necesita movimiento y elegancia. Los tachuelas de diamantes son más seguros cuando el vestido ya tiene detalles. Los aretes de mariposa combinan a la perfección con atuendos románticos, florales, ruborizados, salvia, menta y pasteles. Los aros combinan con looks modernos de invitadas de boda, vestidos sencillos y monos. Los huggies y los aretes minimalistas son ideales cuando el atuendo es detallado o sobrio.",
-      "En IWantJewels, los aretes colgantes Orsola, los aretes de diamantes Cadenza M, los aretes de diamantes cultivados en laboratorio Cadenza S, los aretes cortos Concetta, los aretes largos Concetta, los aretes de mariposa Farfalla, los aretes de mariposa Alidi Farfalla, los aros Pave, los aretes Amadea Huggie, los aretes de diamantes minimalistas Laluce y los atrevidos aretes Lusso funcionan para las diferentes necesidades de aretes de las invitadas a la boda."
+      "Elegir pendientes como invitada de boda consiste en encontrar el equilibrio. Deben realzar el conjunto sin eclipsar el vestido ni parecer demasiado nupciales. La mejor opción depende del color y tejido del vestido, el escote, el peinado y la formalidad de la boda.",
+      "Los pendientes colgantes suelen ser ideales cuando el conjunto necesita movimiento y elegancia. Los pendientes de botón con diamantes son la opción más segura si el vestido ya tiene detalles. Los pendientes mariposa combinan especialmente bien con looks románticos, florales, rosa empolvado, verde salvia, menta y tonos pastel. Los pendientes de aro favorecen los looks modernos, los vestidos sencillos y los monos. Los aros pequeños (huggies) y los pendientes minimalistas son ideales cuando el conjunto es elaborado o discreto.",
+      "En IWantJewels, los pendientes colgantes Orsola, los pendientes de botón con diamantes Cadenza M, los pendientes de botón con diamante de laboratorio Cadenza S, los pendientes Concetta Short, Concetta Long, los pendientes mariposa Farfalla, los pendientes mariposa Alidi Farfalla, Pave Hoops, los pendientes Amadea Huggie, los pendientes minimalistas con diamantes Laluce y los pendientes statement Lusso responden a distintas necesidades para invitadas de boda."
     ],
-    "shopLabel": "Comprar pendientes para invitadas de boda",
+    "shopLabel": "Comprar pendientes para invitada de boda",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Elige unos pendientes para lucir como invitada a la boda.",
-      "Decide entre aretes, colgantes, aros, mariposas, huggies y aretes minimalistas.",
-      "Combina aretes con vestidos de raso, encaje, florales, negros, verdes, rojos, champán, rubor y pasteles.",
-      "Elige pendientes por escote, peinado, código de vestimenta y temporada.",
-      "Comprenda cuándo los aretes deben ser simples o más visibles.",
-      "Cree ideas para apilar orejas para invitados a la boda.",
-      "Elija el color del metal de los aretes para los trajes de boda.",
-      "Encuentre recomendaciones de productos IWantJewels por tipo de vestido y estilo de evento.",
-      "Planifique bloques de imágenes, módulos de productos, secciones de CTA y enlaces internos para esta página."
+      "Elija pendientes para llevar como invitada de boda.",
+      "Decida entre pendientes de botón, colgantes, de aro, mariposa, aros pequeños (huggies) y pendientes minimalistas.",
+      "Combine los pendientes con vestidos de satén, encaje, flores, negros, verdes, rojos, champán, rosa empolvado y tonos pastel.",
+      "Elija pendientes según el escote, el peinado, el código de vestimenta y la estación.",
+      "Descubra cuándo convienen unos pendientes sencillos o más visibles.",
+      "Cree ideas de ear stack para invitadas de boda.",
+      "Elija el color del metal según el conjunto de boda.",
+      "Encuentre recomendaciones de IWantJewels según el vestido y el estilo del evento.",
+      "Planifique bloques de imágenes, módulos de producto, CTA y enlaces internos para esta página."
     ],
     "image": "/blog-images/blog-image-107.jpg"
   },
   "content": [
     {
-      "heading": "Selector de pendientes para invitadas de boda",
+      "heading": "Selector de pendientes para invitada de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como principal herramienta de decisión."
+          "text": "Utilice esta tabla cerca del inicio de la página como herramienta principal de decisión."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad de invitados a la boda",
-            "Mejor dirección de aretes",
-            "Dirección IWJ recomendada"
+            "Necesidad de la invitada",
+            "Mejor elección de pendientes",
+            "Propuesta recomendada de IWJ"
           ],
           "rows": [
             [
-              "Pendientes para invitadas de boda más seguros",
-              "Pendientes de diamantes medianos",
-              "CadenzaM"
+              "Pendientes más seguros para una boda",
+              "Pendientes de botón medianos con diamante",
+              "Cadenza M"
             ],
             [
-              "Pendientes minimalistas para invitadas de boda",
-              "Pendientes pequeños o minimalistas",
+              "Pendientes minimalistas para una boda",
+              "Pendientes de botón pequeños o pendientes minimalistas",
               "Cadenza S, Laluce"
             ],
             [
-              "Pendientes elegantes para invitadas de boda",
+              "Pendientes elegantes para una boda",
               "Pendientes colgantes",
-              "Úrsola"
+              "Orsola"
             ],
             [
-              "Pendientes románticos suaves",
-              "Pendientes de mariposa o gotas cortas",
+              "Pendientes románticos y delicados",
+              "Pendientes de mariposa o pendientes colgantes cortos",
               "Farfalla, Alidi Farfalla, Concetta Short"
             ],
             [
-              "Pendientes formales para invitadas de boda",
-              "Gotas largas o tachuelas pulidas",
+              "Pendientes para bodas formales",
+              "Pendientes colgantes largos o pendientes de botón pulidos",
               "Concetta Long, Cadenza M"
             ],
             [
-              "Pendientes modernos para invitadas de boda",
-              "Aros o abrazos",
-              "Pave Aros, Amadea"
+              "Pendientes modernos para una boda",
+              "Pendientes de aro o aros pequeños (huggies)",
+              "Pave Hoops, Amadea"
             ],
             [
-              "Pendientes de vestido de raso",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
+              "Pendientes para vestido de satén",
+              "Pendientes colgantes o pendientes de botón medianos",
+              "Orsola, Cadenza M"
             ],
             [
-              "Pendientes de vestido florales",
-              "Pendientes de mariposa o tachuelas pequeñas",
-              "Farfalla, Cadenza S."
+              "Pendientes para vestido floral",
+              "Pendientes de mariposa o pendientes de botón pequeños",
+              "Farfalla, Cadenza S"
             ],
             [
-              "Pendientes de vestir negros",
-              "Gotas, tachuelas, aros o aretes atrevidos",
+              "Pendientes para vestido negro",
+              "Pendientes colgantes, pendientes de botón, pendientes de aro o pendientes llamativos",
               "Orsola, Cadenza M, Pave Hoops, Lusso"
             ],
             [
-              "Pendientes de vestido verde",
-              "Gotas, aros o tachuelas de oro",
+              "Pendientes para vestido verde",
+              "Colgantes, aros o pendientes de botón dorados",
               "Orsola, Pave Hoops, Cadenza M"
             ],
             [
-              "Pendientes de vestido rojo",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
+              "Pendientes para vestido rojo",
+              "Pendientes colgantes o pendientes de botón medianos",
+              "Orsola, Cadenza M"
             ],
             [
-              "Pendientes de vestido color champán o rubor",
-              "Gotas suaves, aretes o tachuelas de mariposa",
+              "Pendientes para vestido champán o rosa empolvado",
+              "Colgantes delicados, pendientes mariposa o de botón",
               "Concetta Short, Farfalla, Cadenza M"
             ],
             [
-              "Pila de orejas para invitadas de boda",
-              "Gota + montante pequeño o montante + abrazo",
+              "Ear stack para invitada de boda",
+              "Colgante + pendiente de botón pequeño o botón + aro pequeño (huggie)",
               "Orsola + Cadenza S, Cadenza S + Amadea"
             ]
           ]
@@ -115,15 +115,15 @@
       ]
     },
     {
-      "heading": "Cómo elegir pendientes como invitada a una boda",
+      "heading": "Cómo elegir pendientes como invitada de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "La forma más sencilla de elegir pendientes de invitada de boda es empezar por el vestido, no por las joyas. El vestido decide cuánto brillo, longitud, forma o suavidad deben tener los pendientes."
+          "text": "La forma más sencilla de elegir pendientes para una boda es empezar por el vestido, no por las joyas. El vestido determina cuánto brillo, longitud, forma o delicadeza deben aportar los pendientes."
         },
         {
           "type": "paragraph",
-          "text": "Si el vestido es sencillo, los pendientes pueden ser más visibles. Si el vestido tiene encaje, lentejuelas, bordados, estampados o drapeados dramáticos, los aretes generalmente deben estar más limpios. Si el escote es abierto, los pendientes colgantes pueden enmarcar maravillosamente el rostro. Si el escote es alto, las tachuelas, los aros o los aros suelen verse mejor."
+          "text": "Si el vestido es sencillo, los pendientes pueden destacar más. Si tiene encaje, lentejuelas, bordados, estampados o drapeados llamativos, normalmente convienen unos pendientes más limpios. Con un escote abierto, los pendientes colgantes enmarcan el rostro con elegancia. Con un escote alto, suelen funcionar mejor los pendientes de botón, los aros pequeños (huggies) o los pendientes de aro."
         },
         {
           "type": "grid-layout",
@@ -134,28 +134,28 @@
               "type": "table",
               "headers": [
                 "Qué comprobar primero",
-                "Por qué es importante"
+                "Por qué importa"
               ],
               "rows": [
                 [
                   "Color del vestido",
-                  "Ayuda a elegir el tono dorado, blanco/plateado u oro rosa."
+                  "Ayuda a elegir entre dorado, blanco/plateado u oro rosa"
                 ],
                 [
-                  "Tela de vestir",
-                  "El satén, el encaje, las flores y las lentejuelas necesitan un equilibrio diferente en los pendientes."
+                  "Tejido del vestido",
+                  "El satén, el encaje, las flores y las lentejuelas necesitan un equilibrio distinto"
                 ],
                 [
                   "Escote del vestido",
-                  "Decide si las gotas, las tachuelas o los aros lucen mejor"
+                  "Determina si quedan mejor colgantes, botones o aros"
                 ],
                 [
                   "Peinado",
-                  "Los pendientes deben ser visibles"
+                  "Los pendientes deben verse"
                 ],
                 [
-                  "Formalidad de boda",
-                  "Las bodas formales pueden llevar pendientes más pulidos"
+                  "Formalidad de la boda",
+                  "Las bodas formales admiten pendientes más pulidos"
                 ],
                 [
                   "Comodidad",
@@ -163,95 +163,95 @@
                 ],
                 [
                   "Elección del collar",
-                  "Pendientes y collar no deben competir."
+                  "Los pendientes y el collar no deben competir"
                 ],
                 [
-                  "Valor de reaprovechamiento",
-                  "Unos buenos pendientes también deberían funcionar después de la boda."
+                  "Valor para volver a llevarlo",
+                  "Unos buenos pendientes deben seguir funcionando después de la boda"
                 ]
               ]
             },
             {
               "type": "paragraph",
-              "text": "Para IWantJewels, el mejor camino para los invitados a la boda es guiar a los compradores desde el tipo de vestido hasta el tipo de arete, y luego desde el tipo de arete hasta el producto."
+              "text": "En IWantJewels, el mejor recorrido para una invitada de boda guía desde el tipo de vestido al tipo de pendiente, y después del tipo de pendiente al producto."
             }
           ]
         },
         {
           "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio para bodas",
+          "text": "Pendientes de diamante de laboratorio para bodas",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
         }
       ]
     },
     {
-      "heading": "Los mejores pendientes para invitadas a una boda",
+      "heading": "Los mejores pendientes para invitadas de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los mejores pendientes para invitadas a una boda suelen ser los de diamantes, los pendientes colgantes, los pendientes de mariposa, los aros refinados, los huggies o los pendientes minimalistas."
+          "text": "Los mejores pendientes para invitadas de boda suelen ser pendientes de botón con diamantes, pendientes colgantes, pendientes mariposa, pendientes de aro refinados, aros pequeños (huggies) o pendientes minimalistas."
         },
         {
           "type": "paragraph",
-          "text": "Los montantes son los más seguros. Las gotas son las más elegantes. Los pendientes de mariposa son de lo más románticos. Los aros son modernos. Los Huggies son discretos. Los pendientes minimalistas quedan mejor cuando el vestido ya tiene detalles."
+          "text": "Los pendientes de botón son la opción más segura. Los colgantes, la más elegante. Los pendientes mariposa, los más románticos. Los aros aportan modernidad. Los aros pequeños (huggies) son discretos. Los pendientes minimalistas son ideales cuando el vestido ya tiene detalles."
         },
         {
           "type": "table",
           "headers": [
             "Tipo de pendiente",
-            "Mejor uso para invitados de boda",
-            "Dirección de Producto IWJ"
+            "Mejor uso para invitada de boda",
+            "Guía de productos de IWJ"
           ],
           "rows": [
             [
-              "Tacos medianos",
-              "Brillo seguro para la mayoría de los vestidos.",
-              "CadenzaM"
+              "Pendientes de botón medianos",
+              "Brillo seguro para la mayoría de vestidos",
+              "Cadenza M"
             ],
             [
-              "Sementales pequeños",
-              "Aspecto minimalista y soporte para auriculares",
+              "Pendientes de botón pequeños",
+              "Looks minimalistas y apoyo para ear stack",
               "Cadenza S"
             ],
             [
               "Pendientes colgantes",
-              "Vestidos de raso, escotes abiertos y outfits elegantes",
-              "Úrsola"
+              "Vestidos de satén, escotes abiertos y conjuntos elegantes",
+              "Orsola"
             ],
             [
-              "Gotas cortas",
-              "Estilismo suave y delicado para invitadas de boda",
-              "Concetta Corto"
+              "Pendientes colgantes cortos",
+              "Estilo delicado y romántico para invitadas",
+              "Concetta Short"
             ],
             [
-              "Gotas largas",
-              "Trajes formales para invitadas de boda",
+              "Pendientes colgantes largos",
+              "Conjuntos formales para invitadas",
               "Concetta Long"
             ],
             [
               "Pendientes de mariposa",
-              "Vestidos románticos, florales, ruborizados, salvia y pasteles.",
+              "Vestidos románticos, florales, rosa empolvado, verde salvia y pastel",
               "Farfalla, Alidi Farfalla"
             ],
             [
-              "Aros",
-              "Vestidos modernos, monos y outfits sencillos.",
-              "Aros de pavimentación"
+              "Pendientes de aro",
+              "Vestidos modernos, monos y conjuntos sencillos",
+              "Pave Hoops"
             ],
             [
-              "abrazos",
-              "Conjuntos detallados y estilo discreto.",
-              "amadea"
+              "Aros pequeños (huggies)",
+              "Conjuntos elaborados y estilo discreto",
+              "Amadea"
             ],
             [
               "Pendientes minimalistas",
-              "Detalles silenciosos y estilo limpio",
-              "laluce"
+              "Detalle sutil y estilo depurado",
+              "Laluce"
             ],
             [
               "Pendientes atrevidos",
-              "Solo vestidos de noche sencillos.",
-              "lusso"
+              "Solo vestidos de noche sencillos",
+              "Lusso"
             ]
           ]
         },
@@ -261,78 +261,78 @@
       ]
     },
     {
-      "heading": "Pendientes para Invitadas a la Boda",
+      "heading": "Pendientes de botón para invitadas de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aretes son la opción más segura para las invitadas a la boda porque añaden brillo sin competir con el vestido."
+          "text": "Los pendientes de botón son la opción más segura para una invitada de boda porque aportan brillo sin competir con el vestido."
         },
         {
           "type": "paragraph",
-          "text": "Los aretes de diamantes Cadenza M son mejores cuando el atuendo necesita un pulido visible. Los aretes de diamantes cultivados en laboratorio Cadenza S son mejores para atuendos minimalistas, segundos piercings o soporte para las orejas. Las tachuelas son especialmente útiles cuando el vestido tiene encaje, lentejuelas, bordados, estampados florales, escote alto o colores fuertes."
+          "text": "Los pendientes de botón con diamantes Cadenza M son ideales cuando el conjunto necesita un acabado visible y pulido. Los pendientes de botón con diamante de laboratorio Cadenza S son mejores para looks minimalistas, segundos agujeros o composiciones ear stack. Los pendientes de botón resultan especialmente útiles con vestidos de encaje, lentejuelas, bordados, estampados florales, escotes altos o colores intensos."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad de semental invitado a la boda",
-            "Mejor dirección de producto",
+            "Necesidad de pendientes de botón",
+            "Mejor opción de producto",
             "Por qué funciona"
           ],
           "rows": [
             [
-              "El brillo de las invitadas de boda más seguras",
-              "CadenzaM",
-              "Pulido pero no abrumador"
+              "Brillo seguro para invitadas",
+              "Cadenza M",
+              "Pulido sin resultar excesivo"
             ],
             [
-              "Look minimalista de invitada de boda",
+              "Look minimalista para invitada",
               "Cadenza S",
               "Sutil y limpio"
             ],
             [
-              "Estilo de vestido detallado",
+              "Estilo para vestidos elaborados",
               "Cadenza M o Cadenza S",
-              "Mantiene el conjunto equilibrado"
+              "Mantiene el equilibrio del conjunto"
             ],
             [
-              "Soporte para auriculares",
+              "Ideal para un ear stack",
               "Cadenza S",
-              "Funciona con gotas, aros y aretes de mariposa."
+              "Combina con colgantes, aros y pendientes mariposa"
             ],
             [
-              "Aspecto formal pero sencillo.",
-              "CadenzaM",
+              "Look formal pero sencillo",
+              "Cadenza M",
               "Clásico y elegante"
             ],
             [
-              "Estilo del trabajo a la boda",
-              "CadenzaM",
-              "Fácil de usar antes y después del evento."
+              "Del trabajo a la boda",
+              "Cadenza M",
+              "Fáciles de llevar antes y después del evento"
             ],
             [
-              "Pendientes para invitadas de boda para regalar",
-              "CadenzaM",
-              "Seguro y reutilizable"
+              "Pendientes para regalar a una invitada",
+              "Cadenza M",
+              "Seguros y reutilizables"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "¿Se pueden usar aretes de diamantes cultivados en laboratorio todos los días?",
+          "text": "¿Pendientes de botón con diamante de laboratorio a diario?",
           "href": "/resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
         }
       ]
     },
     {
-      "heading": "Pendientes colgantes para invitadas a la boda",
+      "heading": "Pendientes colgantes para invitadas de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los pendientes colgantes son una de las opciones más sólidas para las invitadas a una boda porque añaden movimiento y elegancia cerca del rostro."
+          "text": "Los pendientes colgantes son una de las mejores opciones para invitadas de boda porque aportan movimiento y elegancia junto al rostro."
         },
         {
           "type": "paragraph",
-          "text": "Orsola es el pendiente para invitadas de boda más resistente y polivalente. Concetta Short es mejor para conjuntos más suaves y estilos delicados. Concetta Long es mejor para bodas formales de noche, trajes de etiqueta y vestidos largos."
+          "text": "Orsola es el pendiente colgante más versátil para una boda. Concetta Short es mejor para conjuntos delicados y estilos suaves. Concetta Long funciona mejor en bodas de noche formales, looks de etiqueta y vestidos largos."
         },
         {
           "type": "grid-layout",
@@ -342,49 +342,49 @@
             {
               "type": "table",
               "headers": [
-                "Necesidad de entrega de invitados a la boda",
-                "Mejor dirección de caída",
-                "Dirección de producto"
+                "Necesidad de pendientes colgantes",
+                "Mejor estilo de pendientes colgantes",
+                "Orientación de producto"
               ],
               "rows": [
                 [
-                  "El mejor regalo completo para invitados a una boda",
-                  "Caída media",
-                  "Úrsola"
+                  "El mejor colgante versátil para invitadas",
+                  "Colgante mediano",
+                  "Orsola"
                 ],
                 [
-                  "Estilismo suave para invitadas de boda",
-                  "Caída corta",
-                  "Concetta Corto"
+                  "Estilo delicado para invitadas",
+                  "Pendiente colgante corto",
+                  "Concetta Short"
                 ],
                 [
-                  "Boda formal por la noche",
-                  "caída larga",
+                  "Boda formal de noche",
+                  "Pendiente colgante largo",
                   "Concetta Long"
                 ],
                 [
-                  "Estilo de vestido de satén",
-                  "Caída media",
-                  "Úrsola"
+                  "Estilo para vestido de satén",
+                  "Colgante mediano",
+                  "Orsola"
                 ],
                 [
-                  "Estilo de vestido con cuello en V",
+                  "Estilo para vestido de escote en V",
                   "Pendientes colgantes",
-                  "Úrsola"
+                  "Orsola"
                 ],
                 [
-                  "Estilo de vestido con hombros descubiertos",
+                  "Estilo para vestido con hombros descubiertos",
                   "Pendientes colgantes",
-                  "Úrsola"
+                  "Orsola"
                 ],
                 [
-                  "Estilo de vestido champán",
-                  "Gotas suaves o gotas medianas",
+                  "Look con vestido color champán",
+                  "Colgantes delicados o medianos",
                   "Concetta Short, Orsola"
                 ],
                 [
-                  "Estilo de vestido negro",
-                  "Gotas o gotas largas",
+                  "Estilo para vestido negro",
+                  "Colgantes o colgantes largos",
                   "Orsola, Concetta Long"
                 ]
               ]
@@ -393,62 +393,62 @@
         },
         {
           "type": "see-also",
-          "text": "Joyas con vestido de raso",
+          "text": "Joyería para vestido de satén",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         }
       ]
     },
     {
-      "heading": "Pendientes de Mariposa para Invitadas de Boda",
+      "heading": "Pendientes mariposa para invitadas de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aretes de mariposa son una hermosa opción para invitadas a la boda cuando el atuendo se siente suave, romántico o femenino."
+          "text": "Los pendientes mariposa son una opción preciosa cuando el conjunto resulta delicado, romántico o femenino."
         },
         {
           "type": "paragraph",
-          "text": "Quedan especialmente bien con vestidos color rubor, vestidos champán, vestidos salvia, vestidos color menta, estampados florales, colores pastel, escotes en forma de corazón y peinados suaves. Farfalla y Alidi Farfalla son las direcciones de producto más sólidas para este estilo."
+          "text": "Combinan especialmente bien con vestidos rosa empolvado, champán, verde salvia y menta, estampados florales, tonos pastel, escotes corazón y peinados suaves. Farfalla y Alidi Farfalla son las mejores opciones de producto para este estilo."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad de invitados a la boda de mariposas",
-            "Mejor dirección",
-            "Dirección de producto"
+            "Necesidad de pendientes mariposa",
+            "Mejor elección",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "Traje de invitada de boda romántica",
+              "Conjunto romántico para invitada",
               "Pendientes de mariposa",
-              "farfalla"
+              "Farfalla"
             ],
             [
-              "Estilo de vestido rubor",
+              "Look con vestido rosa empolvado",
               "Pendientes de mariposa",
               "Farfalla, Alidi Farfalla"
             ],
             [
-              "Estilo de vestido salvia",
-              "Pendientes de mariposa o gotas cortas",
-              "Farfalla, Concetta Corto"
+              "Look con vestido verde salvia",
+              "Pendientes de mariposa o pendientes colgantes cortos",
+              "Farfalla, Concetta Short"
             ],
             [
-              "Estilo de vestido floral",
-              "Pendientes de mariposa o tachuelas pequeñas",
-              "Farfalla, Cadenza S."
+              "Estilo para vestido floral",
+              "Pendientes de mariposa o pendientes de botón pequeños",
+              "Farfalla, Cadenza S"
             ],
             [
-              "Estilo de vestido en colores pastel",
+              "Estilo para vestido pastel",
               "Pendientes de mariposa",
               "Alidi Farfalla, Farfalla"
             ],
             [
-              "Orejeras suaves para invitadas de boda",
-              "Mariposa + semental pequeño",
+              "Ear stack suave para invitada",
+              "Mariposa + pendiente de botón pequeño",
               "Farfalla + Cadenza S"
             ],
             [
-              "Estilo de regalo de boda significativo",
+              "Estilo para regalar joyas con significado",
               "Pendientes de mariposa",
               "Alidi Farfalla"
             ]
@@ -456,127 +456,127 @@
         },
         {
           "type": "see-also",
-          "text": "Joyas para escote corazón",
+          "text": "Joyería para escote corazón",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
         }
       ]
     },
     {
-      "heading": "Pendientes de Aro para Invitadas de Boda",
+      "heading": "Pendientes de aro para invitadas de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aretes de aro pueden funcionar maravillosamente para los invitados a la boda cuando el atuendo es moderno, simple o con formas."
+          "text": "Los pendientes de aro pueden quedar preciosos en una boda cuando el conjunto es moderno, sencillo o se basa en sus formas."
         },
         {
           "type": "paragraph",
-          "text": "Pave Hoops queda más fuerte con vestidos negros, vestidos verdes, monos, vestidos sencillos de satén y trajes de boda urbanos. Los aros suelen ser mejores para un estilo moderno que para un estilo muy romántico. Si el vestido tiene muchos encajes, flores o muchos detalles, los aretes o aretes de mariposa pueden funcionar mejor."
+          "text": "Pave Hoops combina especialmente bien con vestidos negros, verdes y de satén sencillo, monos y looks para bodas urbanas. Los aros suelen funcionar mejor en estilos modernos que en conjuntos muy románticos. Si el vestido tiene mucho encaje, flores o detalles, pueden quedar mejor los pendientes de botón o los pendientes mariposa."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad de invitados de boda de aro",
-            "Mejor dirección",
-            "Dirección de producto"
+            "Necesidad de pendientes de aro",
+            "Mejor elección",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "Traje de invitada de boda moderno",
-              "Aros",
-              "Aros de pavimentación"
+              "Conjunto moderno para invitada",
+              "Pendientes de aro",
+              "Pave Hoops"
             ],
             [
-              "vestido negro sencillo",
-              "Aros, colgantes o pendientes atrevidos",
-              "Pave Aros, Orsola, Lusso"
+              "Vestido negro sencillo",
+              "Pendientes de aro, colgantes o atrevidos",
+              "Pave Hoops, Orsola, Lusso"
             ],
             [
-              "vestido verde",
-              "Aros o gotas en tono dorado",
-              "Pave Aros, Orsola"
+              "Vestido verde",
+              "Aros o colgantes dorados",
+              "Pave Hoops, Orsola"
             ],
             [
               "Mono",
-              "Aros",
-              "Aros de pavimentación"
+              "Pendientes de aro",
+              "Pave Hoops"
             ],
             [
               "Vestido de cuello alto",
-              "Aros o tachuelas",
-              "Pave Aros, Cadenza M"
+              "Pendientes de aro o pendientes de botón",
+              "Pave Hoops, Cadenza M"
             ],
             [
-              "Pila de orejas de aro",
-              "Aro + perno pequeño",
-              "Pave Aros + Cadenza S"
+              "Ear stack con aros",
+              "Pendiente de aro + pendiente pequeño",
+              "Pave Hoops + Cadenza S"
             ],
             [
-              "Si los aros se sienten demasiado visibles",
-              "Abrazos o sementales",
-              "Amadea, Cadenza M."
+              "Si los pendientes de aro parecen demasiado llamativos",
+              "Aros pequeños (huggies) o pendientes de botón",
+              "Amadea, Cadenza M"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Guía de aretes tipo argolla con diamantes cultivados en laboratorio",
+          "text": "Guía de pendientes de aro con diamantes de laboratorio",
           "href": "/resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Huggies y pendientes minimalistas para invitadas a la boda",
+      "heading": "Aros pequeños (huggies) y pendientes minimalistas para invitadas",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los huggies y los aretes minimalistas funcionan bien cuando el vestido ya tiene detalles o cuando la invitada prefiere un estilo sobrio."
+          "text": "Los aros pequeños (huggies) y los pendientes minimalistas funcionan bien cuando el vestido ya tiene detalles o cuando se prefiere un estilo discreto."
         },
         {
           "type": "paragraph",
-          "text": "Los pendientes Amadea Huggie son resistentes para looks modernos y minimalistas de invitadas a una boda. Los aretes de diamantes minimalistas de Laluce funcionan cuando el look debe permanecer tranquilo. Estas opciones también son útiles para las invitadas a la boda que desean aretes que puedan volver a usar todos los días."
+          "text": "Los pendientes Amadea Huggie son ideales para looks modernos y minimalistas de invitada. Los pendientes minimalistas con diamantes Laluce funcionan cuando se busca un resultado discreto. También son útiles para quienes quieren llevar los pendientes a diario después de la boda."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad mínima de invitados a la boda",
-            "Mejor dirección",
-            "Dirección de producto"
+            "Necesidad de estilo minimalista",
+            "Mejor elección",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "Conjunto detallado de invitada de boda",
-              "Huggies, tachuelas o pendientes minimalistas",
+              "Conjunto elaborado para invitada",
+              "Aros pequeños (huggies), pendientes de botón o minimalistas",
               "Amadea, Cadenza M, Laluce"
             ],
             [
-              "Estilo de boda minimalista",
-              "Pendientes pequeños o minimalistas",
+              "Estilo minimalista para boda",
+              "Pendientes de botón pequeños o pendientes minimalistas",
               "Cadenza S, Laluce"
             ],
             [
-              "Aspecto moderno y discreto.",
-              "abrazos",
-              "amadea"
+              "Look moderno y discreto",
+              "Aros pequeños (huggies)",
+              "Amadea"
             ],
             [
               "Vestido de cuello alto",
-              "Sementales o abrazos",
+              "Pendientes de botón o aros pequeños (huggies)",
               "Cadenza M, Amadea"
             ],
             [
-              "Look de ropa de trabajo a boda",
-              "Sementales medianos o abrazos",
+              "Del trabajo a la boda",
+              "Pendientes de botón medianos o aros pequeños (huggies)",
               "Cadenza M, Amadea"
             ],
             [
-              "Pila de oreja mínima",
-              "Semental pequeño + abrazo",
+              "Ear stack minimalista",
+              "Pendiente de botón pequeño + aro pequeño (huggie)",
               "Cadenza S + Amadea"
             ],
             [
-              "Detalle suave y silencioso",
+              "Detalle delicado y sutil",
               "Pendientes minimalistas",
-              "laluce"
+              "Laluce"
             ]
           ]
         },
@@ -588,7 +588,7 @@
       ]
     },
     {
-      "heading": "Pendientes por color de vestido de invitada de boda",
+      "heading": "Pendientes según el color del vestido",
       "content": [
         {
           "type": "paragraph",
@@ -603,69 +603,69 @@
               "type": "table",
               "headers": [
                 "Color del vestido",
-                "Mejores Pendientes",
-                "Dirección de producto"
+                "Mejores pendientes",
+                "Orientación de producto"
               ],
               "rows": [
                 [
-                  "negro",
-                  "Gotas, tachuelas, aros o aretes atrevidos",
+                  "Negro",
+                  "Pendientes colgantes, pendientes de botón, pendientes de aro o pendientes llamativos",
                   "Orsola, Cadenza M, Pave Hoops, Lusso"
                 ],
                 [
                   "Verde",
-                  "Gotas, aros o tachuelas de oro",
+                  "Colgantes, aros o pendientes de botón dorados",
                   "Orsola, Pave Hoops, Cadenza M"
                 ],
                 [
-                  "sabio",
-                  "Pendientes de mariposa, gotas cortas o tachuelas pequeñas",
+                  "Verde salvia",
+                  "Pendientes de mariposa, pendientes colgantes cortos o pendientes de botón pequeños",
                   "Farfalla, Concetta Short, Cadenza S"
                 ],
                 [
-                  "menta",
-                  "Pendientes pequeños o de mariposa",
+                  "Menta",
+                  "Pendientes de botón pequeños o pendientes de mariposa",
                   "Cadenza S, Farfalla"
                 ],
                 [
-                  "rojo",
-                  "Gotas o tachuelas medianas",
-                  "Orsola, Cadenza M."
+                  "Rojo",
+                  "Pendientes colgantes o pendientes de botón medianos",
+                  "Orsola, Cadenza M"
                 ],
                 [
-                  "Borgoña",
-                  "Gotas, gotas largas o tachuelas pulidas",
-                  "Orsola, Concetta Long, Cadenza M."
+                  "Burdeos",
+                  "Colgantes, colgantes largos o pendientes de botón pulidos",
+                  "Orsola, Concetta Long, Cadenza M"
                 ],
                 [
-                  "champán",
-                  "Gotas de oro, gotas cortas o tachuelas",
+                  "Champán",
+                  "Colgantes dorados, colgantes cortos o pendientes de botón",
                   "Orsola, Concetta Short, Cadenza M"
                 ],
                 [
-                  "rubor",
-                  "Pendientes de mariposa o gotas delicadas",
+                  "Rosa empolvado",
+                  "Pendientes mariposa o pendientes colgantes delicados",
                   "Farfalla, Alidi Farfalla, Concetta Short"
                 ],
                 [
-                  "Marina",
-                  "Studs o gotas refinadas",
+                  "Azul marino",
+                  "Pendientes de botón o pendientes colgantes refinados",
                   "Cadenza M, Concetta Long"
                 ],
                 [
-                  "pasteles",
-                  "Pendientes de mariposa, tachuelas pequeñas o gotas cortas",
+                  "Pastel",
+                  "Pendientes mariposa, pendientes de botón pequeños o colgantes cortos",
                   "Farfalla, Cadenza S, Concetta Short"
                 ],
                 [
-                  "Plata",
-                  "Tachuelas blancas/plateadas o gotas largas",
+                  "Plateado",
+                  "Pendientes de botón o colgantes largos en tono blanco/plateado",
                   "Cadenza M, Concetta Long"
                 ],
                 [
-                  "flores",
-                  "Pendientes de mariposa o tachuelas pequeñas",
-                  "Farfalla, Cadenza S."
+                  "Floral",
+                  "Pendientes de mariposa o pendientes de botón pequeños",
+                  "Farfalla, Cadenza S"
                 ]
               ]
             }
@@ -673,86 +673,86 @@
         },
         {
           "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa",
+          "text": "Pendientes de diamantes de laboratorio en oro amarillo, blanco o rosa",
           "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Pendientes de tela para vestido de invitada de boda",
+      "heading": "Pendientes según el tejido del vestido de invitada",
       "content": [
         {
           "type": "paragraph",
-          "text": "La tela puede decidir si los pendientes deben ser simples o más visibles."
+          "text": "El tejido puede determinar si los pendientes deben ser sencillos o más visibles."
         },
         {
           "type": "paragraph",
-          "text": "El satén ya refleja la luz, por lo que las gotas o las tachuelas limpias funcionan mejor. Los encajes y las lentejuelas suelen necesitar pendientes más sencillos. Las telas florales combinan bien con aretes de mariposa o tachuelas pequeñas. Los vestidos sencillos pueden llevar pendientes más fuertes."
+          "text": "El satén ya refleja la luz, por lo que los pendientes colgantes o los pendientes de botón de líneas limpias funcionan mejor. El encaje y las lentejuelas suelen requerir pendientes más sencillos. Los tejidos florales combinan bien con pendientes de mariposa o pendientes de botón pequeños. Los vestidos lisos admiten pendientes más llamativos."
         },
         {
           "type": "table",
           "headers": [
-            "Tela de vestir",
-            "Mejores Pendientes",
-            "Dirección de producto"
+            "Tejido del vestido",
+            "Mejores pendientes",
+            "Orientación de producto"
           ],
           "rows": [
             [
               "Satén",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
+              "Pendientes colgantes o pendientes de botón medianos",
+              "Orsola, Cadenza M"
             ],
             [
-              "encaje",
-              "Pendientes o gotas delicadas",
-              "Cadenza M, Concetta Corto"
+              "Encaje",
+              "Pendientes de botón o colgantes delicados",
+              "Cadenza M, Concetta Short"
             ],
             [
-              "gasa",
-              "Pendientes de mariposa, gotas suaves o tachuelas",
+              "Chifón",
+              "Pendientes de mariposa, colgantes suaves o pendientes de botón",
               "Farfalla, Concetta Short, Cadenza S"
             ],
             [
               "Terciopelo",
-              "Gotas, tachuelas o gotas largas",
+              "Pendientes colgantes, de botón o colgantes largos",
               "Orsola, Cadenza M, Concetta Long"
             ],
             [
               "Lentejuelas",
-              "Sementales o abrazos",
+              "Pendientes de botón o aros pequeños (huggies)",
               "Cadenza M, Amadea"
             ],
             [
-              "flores",
-              "Pendientes de mariposa o tachuelas pequeñas",
-              "Farfalla, Cadenza S."
+              "Floral",
+              "Pendientes de mariposa o pendientes de botón pequeños",
+              "Farfalla, Cadenza S"
             ],
             [
-              "crepé liso",
-              "Gotas, aros o tachuelas medianas",
+              "Crepé liso",
+              "Pendientes colgantes, de aro o de botón medianos",
               "Orsola, Pave Hoops, Cadenza M"
             ],
             [
-              "Tela metalizada",
-              "Studs o aretes minimalistas",
+              "Tejido metalizado",
+              "Pendientes de botón o pendientes minimalistas",
               "Cadenza M, Laluce"
             ],
             [
-              "tul",
-              "Tacos suaves o gotas delicadas",
-              "Cadenza S, Concetta Corto"
+              "Tul",
+              "Pendientes de botón suaves o colgantes delicados",
+              "Cadenza S, Concetta Short"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Joyas para vestidos con cuello en V",
+          "text": "Joyería para vestidos de escote en V",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
         }
       ]
     },
     {
-      "heading": "Pendientes por Escote",
+      "heading": "Pendientes según el escote",
       "content": [
         {
           "type": "paragraph",
@@ -767,53 +767,53 @@
               "type": "table",
               "headers": [
                 "Escote",
-                "Mejores Pendientes",
-                "Dirección de producto"
+                "Mejores pendientes",
+                "Orientación de producto"
               ],
               "rows": [
                 [
-                  "vestido con cuello en V",
-                  "Pendientes colgantes o tachuelas medianas",
-                  "Orsola, Cadenza M."
+                  "Vestido de escote en V",
+                  "Pendientes colgantes o pendientes de botón medianos",
+                  "Orsola, Cadenza M"
                 ],
                 [
                   "Escote corazón",
-                  "Pendientes de mariposa o gotas suaves",
-                  "Farfalla, Concetta Corto"
+                  "Pendientes de mariposa o pendientes colgantes delicados",
+                  "Farfalla, Concetta Short"
                 ],
                 [
-                  "vestido con hombros descubiertos",
-                  "Gotas, aros o tachuelas pulidas",
+                  "Vestido con hombros descubiertos",
+                  "Pendientes colgantes, de aro o de botón pulidos",
                   "Orsola, Pave Hoops, Cadenza M"
                 ],
                 [
-                  "vestido sin tirantes",
-                  "Gotas o tachuelas medianas",
-                  "Orsola, Cadenza M."
+                  "Vestido palabra de honor",
+                  "Pendientes colgantes o pendientes de botón medianos",
+                  "Orsola, Cadenza M"
                 ],
                 [
                   "Vestido de cuello alto",
-                  "Pendientes, abrazos o aros",
-                  "Cadenza M, Amadea, Pave Aros"
+                  "Pendientes de botón, aros pequeños (huggies) o pendientes de aro",
+                  "Cadenza M, Amadea, Pave Hoops"
                 ],
                 [
                   "Vestido halter",
-                  "Studs o gotas delgadas",
+                  "Pendientes de botón o pendientes colgantes finos",
                   "Cadenza M, Concetta Long"
                 ],
                 [
-                  "Vestido con cuello cuadrado",
-                  "Aros, tachuelas o gotas suaves",
-                  "Pave Hoops, Cadenza M, Concetta Corto"
+                  "Vestido de escote cuadrado",
+                  "Pendientes de aro, de botón o colgantes suaves",
+                  "Pave Hoops, Cadenza M, Concetta Short"
                 ],
                 [
-                  "Vestido con cuello vuelto",
-                  "Tacos o gotas suaves",
+                  "Vestido de cuello drapeado",
+                  "Pendientes de botón o pendientes colgantes delicados",
                   "Cadenza M, Orsola"
                 ],
                 [
-                  "Escote detallado",
-                  "Pendientes pequeños o minimalistas",
+                  "Escote elaborado",
+                  "Pendientes de botón pequeños o pendientes minimalistas",
                   "Cadenza S, Laluce"
                 ]
               ]
@@ -822,64 +822,64 @@
         },
         {
           "type": "see-also",
-          "text": "Pendientes para vestidos con hombros descubiertos",
+          "text": "Pendientes para vestidos de hombros descubiertos",
           "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         }
       ]
     },
     {
-      "heading": "Pendientes por peinado",
+      "heading": "Pendientes según el peinado",
       "content": [
         {
           "type": "paragraph",
-          "text": "El peinado afecta la visibilidad. Los aretes pequeños pueden desaparecer cuando el cabello está suelto, mientras que el cabello recogido hacia atrás hace que los aretes se noten más."
+          "text": "El peinado afecta a la visibilidad. Los pendientes diminutos pueden perderse con el pelo suelto, mientras que el pelo recogido hace que destaquen más."
         },
         {
           "type": "table",
           "headers": [
             "Peinado",
-            "Mejores Pendientes",
-            "Dirección de producto"
+            "Mejores pendientes",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "Cabello suelto",
-              "Tachuelas, aros o gotas medianas",
+              "Pelo suelto",
+              "Pendientes de botón medianos, de aro o colgantes",
               "Cadenza M, Pave Hoops, Orsola"
             ],
             [
               "Ondas suaves",
-              "Gotas, aretes de mariposa o tachuelas visibles",
-              "Orsola, Farfalla, Cadenza M."
+              "Pendientes colgantes, de mariposa o de botón visibles",
+              "Orsola, Farfalla, Cadenza M"
             ],
             [
-              "pelo medio recogido",
-              "Aretes, abrazos o aretes de mariposa",
+              "Pelo semirrecogido",
+              "Pendientes de botón, aros pequeños (huggies) o pendientes de mariposa",
               "Cadenza M, Amadea, Farfalla"
             ],
             [
-              "Cola de caballo elegante",
-              "Gotas, aros o tachuelas pulidas",
+              "Cola de caballo pulida",
+              "Pendientes colgantes, de aro o de botón pulidos",
               "Orsola, Pave Hoops, Cadenza M"
             ],
             [
-              "moño bajo",
-              "Gotas, pendientes de mariposa o gotas largas",
-              "Orsola, Farfalla y Concetta Long"
+              "Moño bajo",
+              "Pendientes colgantes, pendientes de mariposa o pendientes colgantes largos",
+              "Orsola, Farfalla, Concetta Long"
             ],
             [
-              "moño alto",
-              "Pendientes de aro, colgantes o llamativos",
-              "Pave Aros, Orsola, Lusso"
+              "Moño alto",
+              "Pendientes de aro, pendientes colgantes o pendientes statement",
+              "Pave Hoops, Orsola, Lusso"
             ],
             [
-              "pelo corto",
-              "Tachuelas, aros o gotas",
+              "Pelo corto",
+              "Pendientes de botón, pendientes de aro o pendientes colgantes",
               "Cadenza M, Pave Hoops, Orsola"
             ],
             [
-              "Estilo trenzado",
-              "Tachuelas, abrazos o gotas visibles",
+              "Peinado trenzado",
+              "Pendientes de botón, aros pequeños (huggies) o colgantes visibles",
               "Cadenza M, Amadea, Orsola"
             ]
           ]
@@ -887,333 +887,333 @@
       ]
     },
     {
-      "heading": "Pendientes según el código de vestimenta de novia",
+      "heading": "Pendientes según el código de vestimenta de la boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "El código de vestimenta debe guiar qué tan pulidos o atrevidos pueden ser los aretes."
+          "text": "El código de vestimenta debe orientar cuánto de sofisticados o llamativos pueden ser los pendientes."
         },
         {
           "type": "table",
           "headers": [
-            "Código de vestimenta de boda",
-            "Mejor dirección de aretes",
-            "Dirección de producto"
+            "Código de vestimenta de la boda",
+            "Mejor elección de pendientes",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "boda informal",
-              "Studs, huggies o aros pequeños",
-              "Cadenza S, Amadea, Pave Aros"
+              "Boda informal",
+              "Pendientes de botón, aros pequeños (huggies) o pendientes de aro pequeños",
+              "Cadenza S, Amadea, Pave Hoops"
             ],
             [
               "Boda en el jardín",
-              "Pendientes de mariposa o gotas suaves",
-              "Farfalla, Concetta Corto"
+              "Pendientes de mariposa o pendientes colgantes delicados",
+              "Farfalla, Concetta Short"
             ],
             [
-              "Boda cóctel",
-              "Gotas, aros o tachuelas medianas",
+              "Boda de cóctel",
+              "Pendientes colgantes, de aro o de botón medianos",
               "Orsola, Pave Hoops, Cadenza M"
             ],
             [
-              "boda formal",
-              "Gotas largas o tachuelas pulidas",
+              "Boda formal",
+              "Pendientes colgantes largos o pendientes de botón pulidos",
               "Concetta Long, Cadenza M"
             ],
             [
-              "Boda de gala",
-              "Pendientes largos, elegantes tachuelas o pendientes refinados y llamativos",
+              "Boda de etiqueta",
+              "Pendientes colgantes largos, pendientes de botón elegantes o pendientes statement refinados",
               "Concetta Long, Cadenza M, Lusso"
             ],
             [
-              "boda en la playa",
-              "Aretes pequeños, abrazos o aretes suaves",
+              "Boda en la playa",
+              "Pendientes de botón pequeños, aros pequeños (huggies) o pendientes suaves",
               "Cadenza S, Amadea, Farfalla"
             ],
             [
-              "boda en la ciudad",
-              "Aros, tachuelas o gotas",
+              "Boda urbana",
+              "Pendientes de aro, de botón o colgantes",
               "Pave Hoops, Cadenza M, Orsola"
             ],
             [
               "Boda de noche",
-              "Gotas, aros o aretes atrevidos",
-              "Orsola, Pave Aros, Lusso"
+              "Pendientes colgantes, de aro o llamativos",
+              "Orsola, Pave Hoops, Lusso"
             ],
             [
-              "boda del dia",
-              "Pendientes tipo tachuelas, colgantes cortos o de mariposa",
+              "Boda de día",
+              "Pendientes de botón, colgantes cortos o pendientes de mariposa",
               "Cadenza S, Concetta Short, Farfalla"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Guía de pendientes de fiesta",
+          "text": "Guía de pendientes para fiestas",
           "href": "/resources/earring-style-guides/party-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Pendientes por temporada",
+      "heading": "Pendientes según la estación",
       "content": [
         {
           "type": "paragraph",
-          "text": "La temporada puede cambiar el color, el tejido y el estado de ánimo de los trajes de los invitados a la boda."
+          "text": "La estación puede cambiar el color, el tejido y el estilo de los looks de invitada de boda."
         },
         {
           "type": "table",
           "headers": [
-            "Temporada de bodas",
-            "Mejor dirección de aretes",
-            "Dirección de producto"
+            "Estación de la boda",
+            "Mejor elección de pendientes",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "boda de primavera",
-              "Pendientes de mariposa, gotas suaves o tachuelas",
+              "Boda de primavera",
+              "Pendientes de mariposa, colgantes suaves o pendientes de botón",
               "Farfalla, Concetta Short, Cadenza S"
             ],
             [
-              "boda de verano",
-              "Pendientes, abrazos, gotas suaves o aros",
+              "Boda de verano",
+              "Pendientes de botón, aros pequeños (huggies), colgantes suaves o pendientes de aro",
               "Cadenza S, Amadea, Orsola, Pave Hoops"
             ],
             [
               "Boda de otoño",
-              "Gotas, aros o tachuelas medianas de oro",
+              "Pendientes colgantes dorados, de aro o de botón medianos",
               "Orsola, Pave Hoops, Cadenza M"
             ],
             [
-              "boda de invierno",
-              "Pendientes largos, tachuelas pulidas o pendientes atrevidos",
+              "Boda de invierno",
+              "Pendientes colgantes largos, de botón pulidos o llamativos",
               "Concetta Long, Cadenza M, Lusso"
             ],
             [
-              "Boda de destino",
-              "Sementales o abrazos",
+              "Boda en otro destino",
+              "Pendientes de botón o aros pequeños (huggies)",
               "Cadenza S, Amadea"
             ],
             [
-              "Boda de temporada por la noche",
-              "Gotas o aros",
-              "Orsola, pavimenta aros"
+              "Boda nocturna de temporada",
+              "Pendientes colgantes o de aro",
+              "Orsola, Pave Hoops"
             ],
             [
-              "Boda de primavera en colores pastel",
-              "Pendientes de mariposa o gotas cortas",
-              "Farfalla, Concetta Corto"
+              "Boda primaveral en tonos pastel",
+              "Pendientes de mariposa o pendientes colgantes cortos",
+              "Farfalla, Concetta Short"
             ],
             [
-              "Boda de invierno de terciopelo",
-              "Gotas, gotas largas o tachuelas",
-              "Orsola, Concetta Long, Cadenza M."
+              "Boda invernal de terciopelo",
+              "Pendientes colgantes, colgantes largos o de botón",
+              "Orsola, Concetta Long, Cadenza M"
             ]
           ]
         }
       ]
     },
     {
-      "heading": "Ideas para apilar orejas de invitados a la boda",
+      "heading": "Ideas de ear stack para invitadas de boda",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las orejeras para invitados a la boda deben verse pulidas e intencionadas. La mejor pila tiene una pieza principal y una pequeña pieza de soporte."
+          "text": "Los ear stacks de invitada deben verse pulidos y bien pensados. El mejor stack tiene una pieza principal y otra pequeña de apoyo."
         },
         {
           "type": "table",
           "headers": [
-            "Tipo de pila de invitados de boda",
+            "Tipo de ear stack para invitada",
             "Pieza principal",
-            "Pieza de soporte",
-            "Dirección de producto"
+            "Pieza de apoyo",
+            "Orientación de producto"
           ],
           "rows": [
             [
-              "La pila de invitados a la boda más segura",
-              "Semental pequeño",
-              "huggie",
+              "El ear stack más seguro para una invitada",
+              "Pendiente de botón pequeño",
+              "Aro pequeño (huggie)",
               "Cadenza S + Amadea"
             ],
             [
-              "Pila de brillo clásica",
-              "Semental mediano",
-              "Semental pequeño",
+              "Stack de brillo clásico",
+              "Pendiente de botón mediano",
+              "Pendiente de botón pequeño",
               "Cadenza M + Cadenza S"
             ],
             [
-              "pila elegante",
-              "Pendiente de gota",
-              "Semental pequeño",
+              "Ear stack elegante",
+              "Pendiente colgante",
+              "Pendiente de botón pequeño",
               "Orsola + Cadenza S"
             ],
             [
-              "Pila suave",
-              "Caída corta",
-              "Semental pequeño",
+              "Ear stack suave",
+              "Pendiente colgante corto",
+              "Pendiente de botón pequeño",
               "Concetta Short + Cadenza S"
             ],
             [
-              "pila formal",
-              "caída larga",
-              "Semental pequeño",
+              "Ear stack formal",
+              "Pendiente colgante largo",
+              "Pendiente de botón pequeño",
               "Concetta Long + Cadenza S"
             ],
             [
-              "Pila romántica",
+              "Stack romántico",
               "Pendiente de mariposa",
-              "Semental pequeño",
+              "Pendiente de botón pequeño",
               "Farfalla + Cadenza S"
             ],
             [
-              "Pila mínima",
-              "Semental pequeño",
+              "Ear stack minimalista",
+              "Pendiente de botón pequeño",
               "Detalle minimalista",
               "Cadenza S + Laluce"
             ],
             [
-              "pila moderna",
-              "aro",
-              "Semental pequeño",
-              "Pave Aros + Cadenza S"
+              "Ear stack moderno",
+              "Pendiente de aro",
+              "Pendiente de botón pequeño",
+              "Pave Hoops + Cadenza S"
             ],
             [
-              "Pila de fiesta nocturna",
-              "Pendiente atrevido",
-              "Semental pequeño",
+              "Ear stack para una fiesta nocturna",
+              "Pendiente llamativo",
+              "Pendiente de botón pequeño",
               "Lusso + Cadenza S"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Cómo apilar aretes",
+          "text": "Cómo combinar pendientes",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         }
       ]
     },
     {
-      "heading": "Reglas de combinación de aretes y collares",
+      "heading": "Reglas para combinar pendientes y collar",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los pendientes y collares para invitadas de boda no deben competir. Si los aretes son fuertes, el collar debe ser silencioso. Si los pendientes son pequeños, el collar puede quedar más visible."
+          "text": "Los pendientes y collares de invitada no deben competir entre sí. Si los pendientes destacan, el collar debe ser discreto. Si los pendientes son pequeños, el collar puede tener más presencia."
         },
         {
           "type": "table",
           "headers": [
-            "Elección de aretes",
-            "Dirección del collar"
+            "Elección de pendientes",
+            "Orientación del collar"
           ],
           "rows": [
             [
               "Pendientes colgantes",
-              "Sin collar ni cadena delicada"
+              "Sin collar o con cadena delicada"
             ],
             [
-              "Gotas largas",
-              "Normalmente te saltas el collar"
+              "Pendientes colgantes largos",
+              "Normalmente, prescinda del collar"
             ],
             [
-              "Tacos medianos",
+              "Pendientes de botón medianos",
               "El collar puede funcionar"
             ],
             [
-              "Sementales pequeños",
-              "El collar puede liderar el look."
+              "Pendientes de botón pequeños",
+              "El collar puede protagonizar el look"
             ],
             [
               "Pendientes de mariposa",
-              "Collar suave y delicado si es necesario."
+              "Collar suave y delicado si es necesario"
             ],
             [
-              "Aros",
+              "Pendientes de aro",
               "Collar delicado o sin collar"
             ],
             [
-              "abrazos",
-              "Un collar simple puede funcionar"
+              "Aros pequeños (huggies)",
+              "Un collar sencillo puede funcionar"
             ],
             [
               "Pendientes atrevidos",
-              "Saltar el collar o mantenerlo mínimo"
+              "Prescinda del collar o manténgalo minimalista"
             ],
             [
               "Pendientes minimalistas",
-              "El collar puede convertirse en el punto focal"
+              "El collar puede convertirse en el centro de atención"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para la mayoría de los conjuntos de invitadas a una boda, una joya clara parece más elegante que pendientes, collares y pulseras compitiendo al mismo tiempo."
+          "text": "En la mayoría de los looks de invitada, un único foco claro de joyería resulta más elegante que unos pendientes, un collar y pulseras compitiendo a la vez."
         },
         {
           "type": "see-also",
-          "text": "Joyas para escote corazón",
+          "text": "Joyería para escotes corazón",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
         }
       ]
     },
     {
-      "heading": "Rutas de producto según las necesidades de los invitados a la boda",
+      "heading": "Rutas de producto según la necesidad de la invitada",
       "content": [
         {
           "type": "subheading",
-          "text": "Para los pendientes de invitada de boda más seguros"
+          "text": "Para elegir los pendientes más seguros como invitada"
         },
         {
           "type": "paragraph",
-          "text": "Elija los aretes de diamantes Cadenza M. Funcionan con muchos colores de vestidos, tejidos y escotes sin sobrecargar el conjunto."
+          "text": "Elija los pendientes de botón con diamantes Cadenza M. Combinan con muchos colores, tejidos y escotes sin restar protagonismo al look."
         },
         {
           "type": "subheading",
-          "text": "Para un estilo minimalista para invitados a la boda"
+          "text": "Para un estilo minimalista de invitada"
         },
         {
           "type": "paragraph",
-          "text": "Elija Cadenza S o Laluce. Son mejores para vestidos detallados, escotes altos y estilos sobrios."
+          "text": "Elija Cadenza S o Laluce. Son ideales para vestidos detallados, escotes altos y looks discretos."
         },
         {
           "type": "subheading",
-          "text": "Para un estilo elegante para invitados a una boda"
+          "text": "Para un estilo elegante de invitada"
         },
         {
           "type": "paragraph",
-          "text": "Elige los pendientes colgantes de Orsola. Son más fuertes para vestidos de satén, vestidos con cuello en V, vestidos con hombros descubiertos y trajes sencillos para invitadas a la boda."
+          "text": "Elija los pendientes colgantes Orsola. Funcionan especialmente bien con vestidos de satén, escotes en V, vestidos de hombros descubiertos y looks sencillos de invitada."
         },
         {
           "type": "subheading",
-          "text": "Para vestidos románticos suaves"
+          "text": "Para vestidos románticos y suaves"
         },
         {
           "type": "paragraph",
-          "text": "Elige Farfalla, Alidi Farfalla o Concetta Short. Estos son fuertes para trajes de invitados a bodas de color rubor, champán, salvia, menta, flores y pasteles."
+          "text": "Elija Farfalla, Alidi Farfalla o Concetta Short. Funcionan especialmente bien con looks de invitada en tonos blush, champán, salvia, menta, florales y pastel."
         },
         {
           "type": "subheading",
-          "text": "Para trajes formales de invitados a una boda"
+          "text": "Para looks formales de invitada"
         },
         {
           "type": "paragraph",
-          "text": "Elija Concetta Long o Cadenza M. Concetta Long crea una línea refinada, mientras que Cadenza M mantiene el estilo clásico."
+          "text": "Elija Concetta Long o Cadenza M. Concetta Long crea una línea refinada, mientras que Cadenza M mantiene un estilo clásico."
         },
         {
           "type": "subheading",
-          "text": "Para looks modernos de invitadas a bodas"
+          "text": "Para looks modernos de invitada"
         },
         {
           "type": "paragraph",
-          "text": "Elija Pave Hoops o Amadea. Los Pave Hoops aportan una forma visible, mientras que Amadea mantiene el estilo ceñido y discreto."
+          "text": "Elija Pave Hoops o Amadea. Pave Hoops aporta una forma visible, mientras que Amadea mantiene un estilo ajustado y discreto."
         },
         {
           "type": "subheading",
-          "text": "Para trajes de boda de noche sencillos"
+          "text": "Para looks sencillos de boda de noche"
         },
         {
           "type": "paragraph",
-          "text": "Elige Lusso sólo cuando el vestido sea lo suficientemente sencillo como para dejar llevar los pendientes. Si el vestido es detallado, elige Cadenza M u Orsola en su lugar."
+          "text": "Elija Lusso solo cuando el vestido sea lo bastante sencillo como para que los pendientes sean los protagonistas. Si el vestido es elaborado, elija Cadenza M u Orsola."
         }
       ]
     },
@@ -1224,190 +1224,190 @@
           "type": "table",
           "headers": [
             "Producto",
-            "Mejor papel de invitado a una boda",
+            "Mejor papel de los pendientes para una invitada",
             "Por qué funciona"
           ],
           "rows": [
             [
-              "aretes colgantes de Orsola",
-              "El mejor pendiente de invitada de boda en general",
-              "Agrega movimiento elegante y funciona con vestidos de satén."
+              "Pendientes colgantes Orsola",
+              "Mejores pendientes en general para una invitada",
+              "Aportan un movimiento elegante y combinan con vestidos de satén"
             ],
             [
-              "aretes Cadenza M con diamantes",
-              "El brillo de las invitadas de boda más seguras",
-              "Pulido, clásico y fácil de peinar."
+              "Pendientes de botón de diamantes Cadenza M",
+              "El brillo más seguro para una invitada",
+              "Pulidos, clásicos y fáciles de combinar"
             ],
             [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "El mejor montante mínimo/de soporte",
-              "Funciona para estilos simples y audífonos."
+              "Pendientes de botón de diamantes de laboratorio Cadenza S",
+              "Mejores pendientes de botón minimalistas o de apoyo",
+              "Funcionan con looks sencillos y ear stacks"
             ],
             [
-              "Pendientes cortos Concetta",
-              "La mejor caída suave para ocasiones",
-              "Fuerte para vestidos color champán, rubor, salvia y colores pastel."
+              "Pendientes Concetta Short",
+              "Mejores pendientes colgantes suaves para una ocasión especial",
+              "Ideales para vestidos en tonos champán, blush, salvia y pastel"
             ],
             [
-              "Pendientes largos Concetta",
-              "El mejor pendiente formal para invitadas a una boda",
-              "Crea una línea de noche refinada."
+              "Pendientes Concetta Long",
+              "Mejores pendientes formales para una invitada",
+              "Crean una línea nocturna refinada"
             ],
             [
               "Pendientes mariposa Farfalla",
-              "El mejor pendiente para invitada de boda romántica",
-              "Suave, significativa y femenina."
+              "Mejores pendientes románticos para una invitada",
+              "Suaves, especiales y femeninos"
             ],
             [
-              "Pendientes de mariposa Alidi Farfalla",
-              "La mejor opción romántica basada en regalos",
-              "Fuerte para un estilo sentimental."
+              "Pendientes mariposa Alidi Farfalla",
+              "Mejor opción romántica para regalar",
+              "Ideales para un estilo sentimental"
             ],
             [
-              "Aros de pavimentación",
-              "La mejor forma de invitada de boda moderna",
-              "Funciona con vestidos y monos sencillos."
+              "Pave Hoops",
+              "Mejor forma moderna para una invitada",
+              "Combina con vestidos sencillos y monos"
             ],
             [
-              "Pendientes Amadea Huggie",
-              "La mejor opción moderna y discreta",
-              "Bueno para vestidos detallados y orejeras."
+              "Pendientes de aro pequeño (huggies) Amadea",
+              "Mejor opción moderna y discreta",
+              "Adecuados para vestidos elaborados y ear stacks"
             ],
             [
-              "Pendientes minimalistas de diamantes Laluce",
-              "El mejor detalle silencioso",
-              "Útil para conjuntos mínimos y detallados."
+              "Pendientes de diamantes minimalistas Laluce",
+              "Mejor detalle discreto",
+              "Útil para looks minimalistas y elaborados"
             ],
             [
-              "Pendientes llamativos Lusso",
-              "La mejor opción de vestido de noche sencillo.",
-              "Funciona solo cuando el atuendo puede tener un brillo atrevido."
+              "Pendientes statement llamativos Lusso",
+              "Mejor opción para un vestido de noche sencillo",
+              "Solo funciona cuando el look puede llevar un brillo llamativo"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Elige primero los pendientes de invitada de boda por vestido. Elija Orsola para satén y escotes abiertos, Cadenza M para un brillo seguro, Concetta Short para conjuntos románticos suaves, Farfalla para vestidos florales y pastel, Pave Hoops para looks modernos y Cadenza S o Amadea para pendientes limpias."
+          "text": "Elija los pendientes de invitada empezando por el vestido. Escoja Orsola para el satén y los escotes abiertos, Cadenza M para un brillo seguro, Concetta Short para looks románticos y suaves, Farfalla para vestidos florales y pastel, Pave Hoops para estilos modernos y Cadenza S o Amadea para ear stacks depurados."
         }
       ]
     },
     {
-      "heading": "Errores comunes que se deben evitar en los pendientes de invitados a una boda",
+      "heading": "Errores habituales al elegir pendientes de invitada",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un error común es elegir los pendientes antes de pensar en el vestido. El color del vestido, la tela y el escote deben guiar la elección de los pendientes."
+          "text": "Un error habitual es elegir los pendientes sin tener en cuenta el vestido. El color, el tejido y el escote deben orientar la elección."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es usar aretes que compitan con un outfit detallado. Si el vestido tiene encaje, lentejuelas, bordados o estampados pesados, los pendientes o tachuelas minimalistas suelen quedar mejor."
+          "text": "Otro error es llevar pendientes que compitan con un look elaborado. Si el vestido tiene encaje, lentejuelas, bordados o un estampado intenso, los pendientes de botón o minimalistas suelen quedar mejor."
         },
         {
           "type": "paragraph",
-          "text": "Un tercer error es llevar pendientes diminutos con el pelo suelto y un vestido de color fuerte. Los pendientes pueden desaparecer, especialmente con conjuntos negros, verdes, rojos o burdeos."
+          "text": "Un tercer error es llevar pendientes diminutos con el pelo suelto y un vestido de color intenso. Los pendientes pueden perderse, especialmente con looks negros, verdes, rojos o burdeos."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es usar un collar pesado con aretes largos. Si los pendientes ya enmarcan el rostro, el collar normalmente debe ser delicado o salteado."
+          "text": "Otro error es llevar un collar pesado con pendientes colgantes largos. Si los pendientes ya enmarcan el rostro, normalmente el collar debe ser delicado o no llevarse."
         },
         {
           "type": "paragraph",
-          "text": "Un quinto error es elegir pendientes que parezcan demasiado nupciales. Los pendientes para invitadas de boda deben tener un aspecto elegante, pero no como joyas de novia."
+          "text": "Un quinto error es elegir pendientes que resulten demasiado nupciales. Los pendientes de invitada deben verse elegantes, pero no como joyería de novia."
         },
         {
           "type": "paragraph",
-          "text": "Por último, no ignores la comodidad. Las invitadas a una boda suelen llevar pendientes durante muchas horas, por lo que la pareja debe sentirse segura y cómoda."
+          "text": "Por último, no ignore la comodidad. Las invitadas suelen llevar pendientes durante muchas horas, por lo que deben sentirse seguros y cómodos."
         },
         {
           "type": "see-also",
-          "text": "Guía de cuidado de joyas chapadas en oro",
+          "text": "Guía de cuidado de joyería chapada en oro",
           "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
         }
       ]
     },
     {
-      "heading": "Lista de verificación final de pendientes para invitados a la boda",
+      "heading": "Lista final para elegir pendientes de invitada",
       "content": [
         {
           "type": "paragraph",
-          "text": "Antes de elegir unos pendientes como invitada a una boda, pregunta:"
+          "text": "Antes de elegir los pendientes como invitada, pregúntese:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿El vestido es simple o detallado?",
+            "¿El vestido es sencillo o elaborado?",
             "¿De qué color es el vestido?",
-            "¿La tela es satinada, encaje, floral, lentejuelas, terciopelo o lisa?",
+            "¿El tejido es satén, encaje, floral, de lentejuelas, terciopelo o liso?",
             "¿Qué escote tiene el vestido?",
-            "¿El cabello estará recogido, suelto o medio recogido?",
-            "¿La boda es informal, en el jardín, de cóctel, formal o de gala?",
+            "¿Llevará el cabello recogido, suelto o semirrecogido?",
+            "¿La boda es informal, de jardín, de cóctel, formal o de etiqueta?",
             "¿Quiero brillo, movimiento, forma o suavidad?",
-            "¿Los pendientes o el collar deberían ser el foco principal de la joyería?",
-            "¿El color del metal coincide con el conjunto?",
-            "¿Los aretes son cómodos para todo el evento?",
-            "¿Se pueden volver a usar los pendientes después de la boda?",
-            "¿El look es elegante sin parecer demasiado nupcial?",
-            "¿Una pila de orejas haría que el conjunto se sintiera más pulido?",
-            "¿Los aretes están equilibrados con el vestido y el peinado?"
+            "¿Deben ser los pendientes o el collar el foco principal de la joyería?",
+            "¿El color del metal combina con el look?",
+            "¿Los pendientes resultan cómodos durante todo el evento?",
+            "¿Podré volver a llevar los pendientes después de la boda?",
+            "¿El look es elegante sin resultar demasiado nupcial?",
+            "¿Un ear stack haría que el look se viera más pulido?",
+            "¿Los pendientes están equilibrados con el vestido y el peinado?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si no está seguro, elija Cadenza M para un brillo seguro, Orsola para un movimiento elegante, Farfalla para vestidos románticos, Pave Hoops para un estilo moderno y Cadenza S para unas orejas minimalistas."
+          "text": "Si tiene dudas, elija Cadenza M para un brillo seguro, Orsola para un movimiento elegante, Farfalla para vestidos románticos, Pave Hoops para un estilo moderno y Cadenza S para un ear stack minimalista."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Qué pendientes debo llevar como invitada a una boda?",
-      "answer": "Los mejores pendientes para lucir como invitada a una boda dependen de tu vestido. Los aretes colgantes combinan bien con satén y escotes abiertos, los aretes son más seguros para vestidos detallados, los aretes de mariposa combinan con atuendos románticos y los aros funcionan para looks modernos y sencillos."
+      "question": "¿Qué pendientes debo llevar como invitada de boda?",
+      "answer": "Los mejores pendientes para llevar como invitada dependen del vestido. Los pendientes colgantes combinan bien con el satén y los escotes abiertos, los pendientes de botón son la opción más segura para vestidos elaborados, los pendientes de mariposa encajan con looks románticos y los pendientes de aro funcionan con estilos modernos y sencillos."
     },
     {
-      "question": "¿Los pendientes de diamantes son buenos para los invitados a la boda?",
-      "answer": "Sí, los aretes de diamantes son una de las opciones de aretes para invitadas a una boda más seguras porque agregan brillo sin dominar el atuendo."
+      "question": "¿Son adecuados los pendientes de diamantes para las invitadas de boda?",
+      "answer": "Sí, los pendientes de botón con diamantes son una de las opciones más seguras para una invitada, porque aportan brillo sin restar protagonismo al look."
     },
     {
-      "question": "¿Los pendientes colgantes son buenos para las invitadas a una boda?",
-      "answer": "Sí, los pendientes colgantes son excelentes para las invitadas a una boda porque añaden movimiento y elegancia, especialmente con vestidos de raso, con escote en V, con forma de corazón y con hombros descubiertos."
+      "question": "¿Son adecuados los pendientes colgantes para invitadas de boda?",
+      "answer": "Sí, los pendientes colgantes son excelentes para las invitadas, ya que aportan movimiento y elegancia, especialmente con vestidos de satén, escote en V, escote corazón y hombros descubiertos."
     },
     {
-      "question": "¿Pueden las invitadas a la boda llevar pendientes de aro?",
-      "answer": "Sí, las invitadas a la boda pueden llevar pendientes de aro, especialmente con vestidos modernos, monos, conjuntos sencillos y looks de boda urbana."
+      "question": "¿Pueden llevar pendientes de aro las invitadas de boda?",
+      "answer": "Sí, las invitadas de boda pueden llevar pendientes de aro, especialmente con vestidos modernos, monos, conjuntos sencillos y looks de boda urbanos."
     },
     {
-      "question": "¿Pueden las invitadas a la boda llevar pendientes de mariposa?",
-      "answer": "Sí, los aretes de mariposa funcionan bien con trajes románticos para invitadas a una boda, especialmente vestidos de color rubor, champán, salvia, menta, florales y pasteles."
+      "question": "¿Pueden las invitadas de boda llevar pendientes de mariposa?",
+      "answer": "Sí, los pendientes de mariposa combinan bien con looks románticos para invitadas de boda, especialmente con vestidos en tonos blush, champán, salvia, menta, florales y pastel."
     },
     {
-      "question": "¿Qué pendientes debo llevar con un vestido de invitada de boda satinado?",
-      "answer": "Use aretes colgantes o aretes de diamantes medianos con un vestido de invitada de boda de satén. Las gotas añaden movimiento, mientras que las tachuelas mantienen el look limpio."
+      "question": "¿Qué pendientes debo llevar con un vestido de invitada de boda de satén?",
+      "answer": "Lleve pendientes colgantes o pendientes de botón con diamantes de tamaño mediano con un vestido de invitada de boda de satén. Los pendientes colgantes aportan movimiento, mientras que los de botón mantienen un look depurado."
     },
     {
-      "question": "¿Qué pendientes me pongo con un vestido de invitada de boda negro?",
-      "answer": "Un vestido de invitada de boda negro queda bien con pendientes colgantes, tachuelas medianas, aros o pendientes llamativos si el vestido es sencillo."
+      "question": "¿Qué pendientes debo llevar con un vestido negro de invitada de boda?",
+      "answer": "Un vestido negro de invitada de boda combina bien con pendientes colgantes, pendientes de botón medianos, pendientes de aro o pendientes llamativos si el vestido es sencillo."
     },
     {
-      "question": "¿Qué pendientes me pongo con un vestido de invitada de boda verde?",
-      "answer": "Los vestidos de invitadas de boda verdes combinan bien con gotas doradas, aros, tachuelas medianas o aretes de mariposa, según el tono."
+      "question": "¿Qué pendientes debo llevar con un vestido verde de invitada de boda?",
+      "answer": "Los vestidos verdes de invitada de boda combinan bien con pendientes colgantes dorados, pendientes de aro, pendientes de botón medianos o pendientes de mariposa, según el tono."
     },
     {
-      "question": "¿Los pendientes de invitada a la boda deben combinar con el collar?",
-      "answer": "Deben sentirse equilibrados, pero no es necesario que coincidan exactamente. Si los aretes son largos o atrevidos, mantén el collar delicado o evítalo."
+      "question": "¿Los pendientes de invitada de boda deben combinar con el collar?",
+      "answer": "Deben mantener un equilibrio, pero no tienen que combinar exactamente. Si los pendientes son largos o llamativos, elija un collar delicado o prescinda de él."
     },
     {
-      "question": "¿Qué pendientes de IWantJewels son mejores para las invitadas a una boda?",
-      "answer": "Orsola, Cadenza M, Cadenza S, Concetta Short, Concetta Long, Farfalla, Alidi Farfalla, Pave Hoops, Amadea y Laluce son buenas opciones de pendientes para invitadas a la boda según el conjunto."
+      "question": "¿Qué pendientes de IWantJewels son mejores para invitadas de boda?",
+      "answer": "Orsola, Cadenza M, Cadenza S, Concetta Short, Concetta Long, Farfalla, Alidi Farfalla, Pave Hoops, Amadea y Laluce son excelentes opciones de pendientes para invitadas de boda, según el conjunto."
     }
   ],
   "cta": {
-    "heading": "Los pendientes para invitadas de boda deben completar tu conjunto sin sobrecargarlo. Elija tachuelas para un brillo seguro, colgantes para un movimiento elegante, aretes de mariposa para un estilo romántico, aros para una forma moderna, aros para looks discretos y aretes minimalistas para vestidos detallados.",
-    "body": "Comience con los aretes de diamantes semifinos cultivados en laboratorio de IWantJewels si desea aretes para invitadas de boda con brillo de diamante real. Elija Orsola para satén y escotes abiertos, Cadenza M para un estilo clásico, Concetta Short para un estilo suave para ocasiones especiales, Farfalla para vestidos románticos, Pave Hoops para darle forma y Cadenza S o Amadea para unas orejas limpias para invitadas a la boda.",
+    "heading": "Los pendientes para invitadas de boda deben completar el conjunto sin dominarlo. Elija pendientes de botón para un brillo fácil de llevar, pendientes colgantes para aportar movimiento y elegancia, pendientes de mariposa para un estilo romántico, pendientes de aro para una forma moderna, aros pequeños (huggies) para un look discreto y pendientes minimalistas para vestidos elaborados.",
+    "body": "Empiece con los pendientes de diamante de laboratorio de joyería demi-fine de IWantJewels si busca pendientes para invitada de boda con el brillo de un diamante real. Elija Orsola para satén y escotes abiertos, Cadenza M para un acabado clásico, Concetta Short para un estilo delicado de ocasión, Farfalla para vestidos románticos, Pave Hoops para aportar forma y Cadenza S o Amadea para un ear stack de invitada de boda depurado.",
     "primaryLabel": "Comprar pendientes para invitadas de boda",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explora los aretes de diamantes cultivados en laboratorio",
+    "secondaryLabel": "Explore los pendientes de diamantes de laboratorio",
     "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lea la guía de joyería para invitadas a la boda",
+    "tertiaryLabel": "Leer la guía de joyería para invitadas de boda",
     "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
   }
 }
