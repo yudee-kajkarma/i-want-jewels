@@ -6,6 +6,7 @@ import Header from "../components/layout/Header";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 import { resourceCategories, getArticleCount } from "../data/resources";
 import { useTranslation } from "react-i18next";
+import { toDateLocale } from "../utils/formatDate";
 import { useLocalizedArticle, useLocalizedCategory } from "@/hooks/useLocalizedContent";
 
 type ResourceCategoryPageProps = {
@@ -73,7 +74,7 @@ function ArticleCard({ article }: { article: ResourceArticle }) {
     const { t, i18n } = useTranslation('common', { keyPrefix: 'resourceCategory' });
     const localized = useLocalizedArticle(article);
     const href = `/resources/${article.categorySlug}/${article.slug}`;
-    const dateLocale = i18n.resolvedLanguage === 'en' ? 'en-GB' : i18n.resolvedLanguage ?? 'en-GB';
+    const dateLocale = toDateLocale(i18n.resolvedLanguage ?? 'en');
     return (
         <article className="group border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_12px_32px_rgba(194,110,143,0.1)]">
             <Link to={href} className="block overflow-hidden">

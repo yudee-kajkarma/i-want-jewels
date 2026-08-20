@@ -1,1278 +1,717 @@
 {
   "meta": {
-    "title": "Guía de estilo de joyería minimalista",
-    "description": "Aprenda a diseñar joyas minimalistas con aretes, tachuelas, aros, diamantes cultivados en laboratorio, ropa de trabajo, regalos, bodas y atuendos cotidianos."
+    "title": "Cómo combinar joyería minimalista",
+    "description": "Aprenda a combinar joyería minimalista con prendas, escotes y otras piezas. Cree un armario cápsula versátil con pendientes, collares, anillos y pulseras."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-97.jpg",
-    "title": "Guía de estilo de joyería minimalista:",
-    "subtitle": "Cómo diseñar joyas sencillas para el día a día, el trabajo y las ocasiones",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Cómo combinar la joyería minimalista:",
+    "subtitle": "Guía completa",
     "paragraphs": [
-      "Las joyas minimalistas son simples, pulidas y fáciles de usar con frecuencia. No se trata de llevar joyas que desaparecen. Se trata de elegir piezas limpias que aporten forma, brillo y acabado sin que el conjunto parezca pesado.",
-      "La mejor joyería minimalista suele tener un propósito claro. Un pequeño pendiente de diamante añade un brillo sutil. Un abrazo añade forma. Un pendiente minimalista añade un detalle discreto. Una tachuela mediana añade brillo clásico. Una caída suave añade movimiento para cenas y bodas sin resultar demasiado atrevida.",
-      "En IWantJewels, el estilo minimalista funciona especialmente bien con aretes de diamantes cultivados en laboratorio porque incluso las piezas pequeñas pueden sentirse elevadas. Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short y Farfalla pueden combinar diferentes looks minimalistas según el outfit y la ocasión."
+      "Combinar joyería minimalista consiste en unir unas pocas piezas cuidadosamente elegidas para que complementen su conjunto en lugar de competir con él.",
+      "La joyería no tiene que ser invisible. Un pendiente de botón con diamante, un aro fino, un colgante, un anillo o una pulsera pueden aportar brillo y forma visibles. El efecto minimalista se consigue controlando los puntos focales, repitiendo detalles relacionados y dejando espacio visual entre las piezas.",
+      "Esta guía explica cómo crear un armario cápsula de joyería minimalista, superponer distintas piezas y coordinar la joyería con conjuntos, escotes, peinados y colores de metal."
     ],
-    "shopLabel": "Comprar joyería minimalista",
-    "shopHref": "/products?category=Earring"
+    "shopLabel": "Descubra la joyería minimalista",
+    "shopHref": "/products"
   },
   "quickSummary": {
     "items": [
-      "Entiende cómo diseñar joyas minimalistas.",
-      "Elija aretes sencillos para el uso diario.",
-      "Construye pendientes minimalistas con tachuelas, aros y pequeños detalles.",
-      "Combina bisutería con camisas, blazers, vestidos negros, vestidos de raso y conjuntos de invitadas de boda.",
-      "Elige joyas para ropa de trabajo, viajes, cenas y regalos.",
-      "Decide cuándo usar tachuelas, aros, aros o gotas suaves.",
-      "Comprenda cómo el color del metal cambia el estilo minimalista.",
-      "Encuentre recomendaciones de productos IWantJewels por vestimenta y ocasión.",
-      "Planifique bloques de imágenes, módulos de productos, secciones de CTA y enlaces internos para esta página."
+      "La fórmula: un punto focal + un detalle repetido + espacio visual",
+      "Repita el color del metal, la forma del diamante o la línea para conectar piezas separadas",
+      "Empiece con una cápsula de tres piezas: pendientes, un collar y un detalle para la mano o la muñeca",
+      "Combine el collar con el escote, no con el conjunto en general",
+      "Cambie una pieza focal —no varias— para pasar del día a la noche",
+      "Los metales combinados funcionan cuando ambos colores aparecen más de una vez"
     ],
-    "image": "/blog-images/blog-image-99.jpg"
+    "image": "/blog-images/blog-image-54.jpg"
   },
   "content": [
     {
-      "heading": "Selector de joyería minimalista",
+      "heading": "La fórmula de la joyería minimalista",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como herramienta principal para tomar decisiones de estilo."
+          "type": "section-lead",
+          "text": "Un punto focal + un detalle repetido + espacio visual."
         },
         {
-          "type": "table",
-          "headers": [
-            "Necesidad de estilo",
-            "Mejor Dirección de Joyería Minimalista",
-            "Dirección IWJ recomendada"
-          ],
-          "rows": [
-            [
-              "Joyas de todos los días",
-              "Sementales pequeños o abrazos",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Brillo cotidiano más pulido",
-              "Tacos medianos",
-              "CadenzaM"
-            ],
-            [
-              "Estilo minimalista tranquilo",
-              "Pendientes minimalistas de diamantes",
-              "laluce"
-            ],
-            [
-              "Pila de oreja mínima",
-              "Semental pequeño + pendiente minimalista",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Joyas para ropa de trabajo",
-              "Studs, huggies o aretes minimalistas",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Joyas de viaje",
-              "Sementales o abrazos seguros",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Estilo de vestido negro",
-              "Tachuelas medianas, aros o gotas suaves",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Estilo de vestido de satén",
-              "Pendientes medianos o colgantes",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Estilismo de invitadas de boda",
-              "Pendientes tipo tachuelas, gotas suaves o mariposas",
-              "Cadenza M, Concetta Short, Farfalla"
-            ],
-            [
-              "Estilo de fiesta minimalista",
-              "Tachuelas medianas, aros o gotas elegantes",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Joyas minimalistas para regalar",
-              "Aretes, abrazos o aretes suaves",
-              "Cadenza S, Cadenza M, Laluce"
-            ],
-            [
-              "Estilo minimalista romántico",
-              "Pendientes de mariposa o gotas delicadas",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Por ejemplo: pendientes de botón con diamantes como punto focal, un pequeño colgante de diamantes que repita el brillo y ningún collar grande adicional ni pendientes decorativos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Otra combinación puede usar un colgante depurado como punto focal, una pulsera fina que repita el metal y pendientes pequeños y discretos que no compitan con el collar."
+        },
+        {
+          "type": "paragraph",
+          "text": "El estilo minimalista no depende únicamente del número de piezas. Tres artículos pequeños pero inconexos pueden parecer más recargados que dos piezas algo más visibles que compartan forma y acabado."
         }
       ]
     },
     {
-      "heading": "¿Qué es el estilo de joyería minimalista?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El estilo de joyería minimalista significa elegir joyas que se sientan limpias, equilibradas y ponibles. Las piezas suelen ser más pequeñas, más simples o más refinadas, pero aun así añaden brillo al conjunto."
-        },
-        {
-          "type": "paragraph",
-          "text": "Las joyas minimalistas pueden incluir aretes de diamantes cultivados en laboratorio, aros, aros pequeños, aretes minimalistas, gotas delicadas y piezas simbólicas suaves. El diseño no debe parecer pesado, abarrotado ni demasiado orientado a las tendencias."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un look de joyería minimalista suele tener:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Elemento de estilo minimalista",
-            "Lo que significa"
-          ],
-          "rows": [
-            [
-              "forma limpia",
-              "La joya tiene un diseño sencillo y fácil de leer."
-            ],
-            [
-              "Tamaño usable",
-              "La pieza sirve para más de un outfit."
-            ],
-            [
-              "Brillo sutil",
-              "La joya aporta luz sin abrumar."
-            ],
-            [
-              "Color metálico equilibrado",
-              "El acabado combina con el resto del conjunto."
-            ],
-            [
-              "Sensación cómoda",
-              "Las joyas se pueden usar durante varias horas."
-            ],
-            [
-              "Estilo repetible",
-              "La pieza no se limita a una sola ocasión."
-            ],
-            [
-              "Un enfoque claro",
-              "El conjunto no tiene demasiadas piezas de joyería en competencia."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para IWantJewels, el estilo minimalista no debe parecer sencillo. El objetivo es hacer que las pequeñas piezas de diamantes cultivadas en laboratorio se sientan intencionadas, premium y fáciles de usar con frecuencia."
-        },
-        {
-          "type": "see-also",
-          "text": "¿Qué es la joyería semifina?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Por qué las joyas minimalistas funcionan para el uso diario",
+      "heading": "¿Qué es la joyería minimalista?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-101.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Las joyas minimalistas funcionan para el uso diario porque no exigen un atuendo especial. Se puede usar con camisas, jeans, blazers, prendas de punto, vestidos, ropa de trabajo, trajes de viaje y looks sencillos de noche."
+              "text": "La joyería minimalista suele utilizar siluetas claras, proporciones discretas, pocos detalles decorativos, acabados metálicos coordinados, una o dos formas repetidas, brillo controlado y piezas que pueden combinarse de varias maneras."
             },
             {
               "type": "paragraph",
-              "text": "Los aretes pequeños de diamantes cultivados en laboratorio son especialmente útiles porque añaden brillo sin que el aspecto parezca demasiado formal. Un pequeño punto brillante puede hacer que un conjunto sencillo parezca acabado."
+              "text": "Entre las posibles piezas minimalistas se incluyen:"
             },
             {
-              "type": "table",
-              "headers": [
-                "Motivo de estilo cotidiano",
-                "Por qué ayudan las joyas minimalistas"
-              ],
-              "rows": [
-                [
-                  "fácil de repetir",
-                  "Funciona con muchos conjuntos."
-                ],
-                [
-                  "Cómodo",
-                  "Los aretes más pequeños son más fáciles de usar por mucho tiempo."
-                ],
-                [
-                  "Pulido",
-                  "Añade acabado sin parecer pesado."
-                ],
-                [
-                  "Amigable para el trabajo",
-                  "Se ve profesional y limpio."
-                ],
-                [
-                  "Apto para viajes",
-                  "Las piezas simples son más fáciles de diseñar."
-                ],
-                [
-                  "Apilable",
-                  "Funciona con tachuelas, abrazos y pequeños detalles."
-                ],
-                [
-                  "Apto para regalos",
-                  "Más seguro que las joyas muy atrevidas"
-                ],
-                [
-                  "Atemporal",
-                  "Menos dependiente de las tendencias a corto plazo"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Cadenza S, Laluce y Amadea son las direcciones más fuertes de IWantJewels para un estilo minimalista diario. Cadenza M funciona cuando el comprador quiere una apariencia más limpia con un brillo más visible."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "¿Se pueden usar aretes de diamantes cultivados en laboratorio todos los días?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Fórmula de joyería minimalista",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "La fórmula de joyería minimalista más sencilla es:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Un punto de brillo + un detalle de forma + un acabado limpio"
-        },
-        {
-          "type": "paragraph",
-          "text": "El punto de brillo puede ser un pendiente de diamante. El detalle de la forma puede ser un aro o un aro. El acabado limpio se logra manteniendo el resto de la joyería simple."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Papel de estilo",
-            "Qué hace",
-            "Mejor dirección IWJ"
-          ],
-          "rows": [
-            [
-              "punto de brillo",
-              "Añade luz cerca del rostro.",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Detalle de forma",
-              "Añade curva y estructura.",
-              "Amadea, Pave Aros"
-            ],
-            [
-              "Detalle suave",
-              "Agrega un interés silencioso",
-              "laluce"
-            ],
-            [
-              "Detalle romántico",
-              "Añade significado y suavidad.",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Movimiento de ocasión",
-              "Agrega una longitud suave",
-              "Orsola, Concetta Short"
-            ],
-            [
-              "Movimiento formal",
-              "Añade longitud refinada",
-              "Concetta Long"
-            ],
-            [
-              "Soporte mínimo",
-              "Equilibra una pieza más grande",
-              "Cadenza S, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para el peinado diario, mantenga la fórmula simple. Para un evento, utiliza una pieza un poco más fuerte y mantén el resto limpio."
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes minimalistas para atuendos cotidianos",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes minimalistas de uso diario deben ser fáciles de usar con atuendos casuales, ropa de trabajo, vestidos sencillos y looks de viaje."
-        },
-        {
-          "type": "paragraph",
-          "text": "El punto de partida más seguro es un pequeño pendiente de diamante. Si el comprador quiere una apariencia más estilizada, agregue un abrazo. Si prefieren detalles discretos, elige un pendiente minimalista. Si quieren un brillo más visible sin pasar a un estilo llamativo, elija una tachuela mediana."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Traje diario",
-            "Mejor dirección de aretes minimalistas",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Camisa blanca y jeans",
-              "Sementales pequeños o abrazos",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Americana y pantalones",
-              "Sementales medianos o abrazos",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Prendas de punto",
-              "Tachuelas o aros pequeños",
-              "Cadenza S, Pave Aros"
-            ],
-            [
-              "vestido informal",
-              "Pendientes pequeños o minimalistas",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "traje de viaje",
-              "Sementales o abrazos seguros",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "traje neutro",
-              "Pendientes minimalistas o tachuelas medianas",
-              "Laluce, Cadenza M."
-            ],
-            [
-              "traje de fin de semana",
-              "Abrazos o aros",
-              "Amadea, Pave Aros"
-            ],
-            [
-              "traje de cena sencillo",
-              "Tacos medianos o gotas suaves",
-              "Cadenza M, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes Stud vs Huggie",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Joyería minimalista para ropa de trabajo",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Las joyas minimalistas son una de las mejores opciones para la ropa de trabajo porque lucen refinadas sin distraer."
-        },
-        {
-          "type": "paragraph",
-          "text": "Para el trabajo, elija prendas que queden cerca de la oreja y que no tiren, no se muevan demasiado ni choquen con la vestimenta profesional. Los tachuelas, los aros y los aretes minimalistas son los más fuertes. Los aros pueden funcionar si están refinados. Las gotas son mejores para el estilo del día a la cena que para el uso diario en la oficina."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-103.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look de ropa de trabajo",
-                "Mejor Dirección de Joyería",
-                "Dirección de producto"
-              ],
-              "rows": [
-                [
-                  "traje de oficina clásico",
-                  "Tacos pequeños o medianos",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Estilo de oficina moderno",
-                  "abrazos",
-                  "amadea"
-                ],
-                [
-                  "Ropa de trabajo mínima",
-                  "Pendientes minimalistas",
-                  "laluce"
-                ],
-                [
-                  "Aspecto de oficina creativa",
-                  "Aros o abrazos",
-                  "Pave Aros, Amadea"
-                ],
-                [
-                  "traje de chaqueta",
-                  "Sementales medianos o abrazos",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Evento de trabajo",
-                  "Tachuelas medianas o aros refinados",
-                  "Cadenza M, Pave Aros"
-                ],
-                [
-                  "Traje del día a la cena",
-                  "Tacos medianos o gotas suaves",
-                  "Cadenza M, Orsola"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Pendientes de botón con diamantes estilo solitario",
+                "Aros pequeños (huggies) o pendientes de aro finos",
+                "Pendientes geométricos sencillos",
+                "Cadenas finas",
+                "Colgantes pequeños",
+                "Pulseras finas",
+                "Anillos depurados",
+                "Pendientes colgantes cortos y discretos"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Aretes versus aretes de aro",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+          "type": "paragraph",
+          "text": "«Minimalista» describe la línea de diseño. No garantiza que un producto sea ligero, resistente, hipoalergénico o adecuado para cualquier actividad."
         }
       ]
     },
     {
-      "heading": "Joyería minimalista para vestidos negros",
+      "heading": "¿Qué hace que funcione el estilo de joyería minimalista?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Un vestido negro puede llevar joyas atrevidas, pero las joyas minimalistas pueden hacerlo parecer limpio, refinado y caro."
+          "type": "subheading",
+          "text": "Un punto focal claro"
         },
         {
           "type": "paragraph",
-          "text": "Para un vestido negro detallado, las joyas minimalistas suelen ser la mejor opción. Para un vestido negro sencillo, las joyas minimalistas funcionan cuando el comprador busca elegancia discreta en lugar de impacto festivo."
+          "text": "Elija la zona que desea que atraiga primero la mirada. El punto focal pueden ser unos pendientes que enmarquen el rostro, un colgante relacionado con el escote, una pequeña combinación de anillos, una pulsera visible bajo la manga o un ear stack cuidadosamente creado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evite que los pendientes, el collar, los anillos y la pulsera tengan la misma presencia."
+        },
+        {
+          "type": "subheading",
+          "text": "Repetición"
+        },
+        {
+          "type": "paragraph",
+          "text": "Repita un detalle para conectar piezas separadas. Algunos detalles útiles son el color del metal, la forma del diamante, las líneas redondeadas o angulares, el motivo, el nivel de brillo y la textura."
+        },
+        {
+          "type": "paragraph",
+          "text": "Las piezas no tienen que pertenecer a la misma colección, pero sí deben guardar una relación visual."
+        },
+        {
+          "type": "subheading",
+          "text": "Espacio visual"
+        },
+        {
+          "type": "paragraph",
+          "text": "El estilo minimalista necesita zonas en las que la joyería no compita. Si lleva pendientes visibles, un collar y varios anillos, mantenga al menos una zona más despejada. Puede omitir la pulsera o elegir un collar sin capas decorativas adicionales."
+        },
+        {
+          "type": "subheading",
+          "text": "Proporción"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compare la joyería con el conjunto en lugar de juzgar cada pieza por separado. Un pendiente de botón muy pequeño puede perderse junto a un peinado voluminoso o un conjunto con estampado marcado. Un pendiente de aro fino o un pendiente de botón mediano puede seguir siendo minimalista si su diseño permanece depurado."
+        }
+      ]
+    },
+    {
+      "heading": "Cree un armario cápsula de joyería minimalista",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un armario cápsula de joyería es un pequeño grupo de piezas que pueden combinarse en distintas composiciones. Una cápsula práctica puede incluir seis categorías."
         },
         {
           "type": "table",
           "headers": [
-            "Estilo de vestido negro",
-            "Mejor Dirección de Joyería Minimalista",
-            "Dirección de producto"
+            "Pieza de la cápsula",
+            "Función",
+            "Qué comprobar"
           ],
           "rows": [
             [
-              "vestido negro sencillo",
-              "Tachuelas medianas, aros o gotas suaves",
-              "Cadenza M, Pave Hoops, Orsola"
+              "Pendientes de botón pequeños con diamantes",
+              "Brillo discreto",
+              "Diámetro, peso y cierre trasero"
             ],
             [
-              "vestido negro detallado",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
+              "Aros pequeños (huggies) o pendientes de aro finos",
+              "Forma curva",
+              "Diámetro, grosor y cierre"
             ],
             [
-              "Vestido raso negro",
-              "Studs o gotas medianas",
-              "Cadenza M, Orsola"
+              "Collar con colgante sencillo",
+              "Detalle del escote",
+              "Largo de la cadena y dimensiones del colgante"
             ],
             [
-              "Vestido negro con cuello alto",
-              "Studs o aros",
-              "Cadenza M, Pave Aros"
+              "Pulsera fina",
+              "Detalle de la muñeca",
+              "Largo, cierre y posibilidad de ajuste"
             ],
             [
-              "Vestido negro para eventos de trabajo",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
+              "Anillo depurado",
+              "Detalle de la mano",
+              "Talla, anchura y acabado"
             ],
             [
-              "Vestido negro minimalista",
-              "Una pieza focal limpia",
-              "Cadenza M, Orsola, Pave Hoops"
-            ],
-            [
-              "Vestido de cena negro",
-              "Tacos medianos o gotas suaves",
-              "Cadenza M, Orsola"
+              "Pieza focal opcional",
+              "Variación para cenas u ocasiones especiales",
+              "Dimensiones, peso y compatibilidad con el conjunto"
             ]
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "No necesita comprar toda la cápsula de una vez. Empiece por las piezas que combinen con los conjuntos que usa con más frecuencia."
+        },
+        {
+          "type": "subheading",
+          "text": "Una cápsula inicial de tres piezas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para empezar con una colección más pequeña, elija:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Un par de pendientes discretos",
+            "Un collar sencillo",
+            "Un anillo o una pulsera con un acabado coordinado"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estas tres piezas pueden crear varias combinaciones: solo pendientes; pendientes y collar; pendientes y pulsera; collar y anillo; o las tres juntas cuando sus proporciones estén equilibradas."
+        },
+        {
+          "type": "subheading",
+          "text": "Una cápsula de cinco piezas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una cápsula más flexible puede incluir pendientes de botón con diamantes, aros pequeños (huggies) o pendientes de aro finos, un colgante sencillo, una pulsera fina y un anillo depurado. Los pendientes ofrecen dos opciones distintas para enmarcar el rostro, mientras que el colgante, la pulsera y el anillo pueden añadirse o quitarse según el conjunto."
+        }
+      ]
+    },
+    {
+      "heading": "Cómo combinar pendientes y collares minimalistas",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Cuando los pendientes son el punto focal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Elija un collar discreto o deje el escote despejado. Funciona al llevar pendientes de botón con diamantes visibles, pendientes de aro con pavé, un ear stack pequeño, pendientes geométricos o pendientes colgantes cortos."
+        },
+        {
+          "type": "subheading",
+          "text": "Cuando el collar es el punto focal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use pendientes de botón pequeños o aros pequeños (huggies) sencillos para que el rostro y el escote no compitan por la atención. Funciona con un collar con colgante, una combinación de dos cadenas superpuestas, un collar con un motivo reconocible o un collar que siga la forma del escote."
+        },
+        {
+          "type": "subheading",
+          "text": "Cuando ambos llevan diamantes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Repita el detalle del diamante, pero varíe la escala. Por ejemplo, combine un colgante más visible con pendientes de botón con diamantes pequeños, en lugar de llevar piezas igual de llamativas en la oreja y el escote."
+        },
+        {
+          "type": "see-also",
+          "text": "Guía de pendientes minimalistas",
+          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Cómo superponer collares minimalistas",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La superposición de collares minimalistas debe crear una diferencia visible entre las cadenas. Considere el largo de la cadena, el tamaño del colgante, el grosor de la cadena, el color del metal, el escote y si los colgantes se solapan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una composición sencilla de dos cadenas combina una cadena lisa más corta con otra ligeramente más larga y un colgante. La diferencia de largo debe bastar para mantenerlas visualmente separadas. Las recomendaciones universales en centímetros no son fiables: mida los productos reales y tenga en cuenta el cuello de quien los lleva y el escote."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para tres collares, cree una progresión clara de largos y deje al menos una cadena sin colgante."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evite combinar:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Varios colgantes de tamaño similar a la misma altura",
+            "Varias cadenas que se enreden de inmediato",
+            "Varios motivos sin relación",
+            "Cadenas pesadas y delicadas sin una relación clara"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Cómo combinar anillos y pulseras minimalistas",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Anillos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una combinación minimalista de anillos puede incluir una alianza lisa con un anillo de detalle de diamantes, dos alianzas finas con texturas distintas, un anillo en varios dedos o dos anillos coordinados en un mismo dedo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varíe la anchura o la textura para que los anillos no parezcan duplicados por accidente. Si un anillo tiene el detalle de diamantes más destacado, deje que los demás aporten metal, forma o textura en lugar del mismo nivel de brillo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe la talla de cada anillo por separado. Varios anillos juntos pueden ajustarse de forma distinta a uno solo."
+        },
+        {
+          "type": "subheading",
+          "text": "Pulseras"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una sola pulsera puede aportar suficiente detalle a la muñeca, especialmente con mangas largas, un reloj o un conjunto que ya incluya varios elementos de joyería."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al superponerlas, combine anchuras diferentes pero relacionadas, compruebe que los cierres no interfieran, evite diferencias excesivas de peso, deje suficiente movimiento sin permitir que las pulseras se solapen continuamente y tenga en cuenta el color y el tamaño del reloj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un reloj puede formar parte de la composición de joyería. Coordine el acabado de la pulsera con la caja, la correa u otro detalle metálico del reloj."
+        }
+      ]
+    },
+    {
+      "heading": "Joyería minimalista con distintos escotes",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Escote alto o redondo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un escote alto reduce la cantidad de piel visible alrededor de la zona del collar. Deje que los pendientes aporten el detalle principal o use un collar que quede claramente por encima o por debajo del escote, en lugar de justo en el borde. Los pendientes de botón o los aros pequeños (huggies) con un contorno limpio y visible funcionan bien, y el collar es opcional."
+        },
+        {
+          "type": "subheading",
+          "text": "Escote en V"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un colgante puede seguir la dirección descendente de un escote en V. Si el colgante es el punto focal, elija pendientes discretos: pendientes de botón pequeños o medianos, un collar fino con colgante y un anillo o una pulsera de líneas limpias."
+        },
+        {
+          "type": "see-also",
+          "text": "Qué joyas llevar con un vestido de escote en V",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Escote corazón"
+        },
+        {
+          "type": "paragraph",
+          "text": "El escote corazón ya crea una forma curva que atrae la atención. Elija joyas que complementen la curva sin llenar todos los espacios abiertos: un colgante pequeño o ningún collar, pendientes de botón, aros pequeños (huggies) o pendientes colgantes discretos, y un detalle de pulsera o anillo."
+        },
+        {
+          "type": "see-also",
+          "text": "Joyas para un escote corazón",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Escote bardot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una prenda con escote bardot deja los hombros y el escote al descubierto. Decida si los pendientes o el collar serán el elemento principal: pendientes visibles sin collar, un colgante con pendientes de botón discretos o una pulsera de líneas limpias para equilibrar el escote abierto."
+        },
+        {
+          "type": "see-also",
+          "text": "Qué pendientes llevar con un vestido de escote bardot",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Joyería minimalista con prendas habituales",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Camisa blanca y vaqueros"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una camisa blanca crea una base neutra para un pequeño detalle de diamante o una forma metálica de líneas limpias. Pruebe con pendientes de botón pequeños con diamantes, un colgante fino y un anillo o una pulsera. Si lleva la camisa abierta en el cuello, el colgante puede convertirse en el punto focal. Si está más abotonada, deje que los pendientes sean protagonistas."
+        },
+        {
+          "type": "subheading",
+          "text": "Blazer y pantalón de vestir"
+        },
+        {
+          "type": "paragraph",
+          "text": "La ropa estructurada combina bien con joyas que repiten líneas limpias: un pendiente de botón mediano o un pendiente geométrico, una cadena fina, un anillo de líneas limpias y una pulsera solo si no compite con el reloj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para la ropa de trabajo, tenga en cuenta las normas del entorno laboral y factores prácticos, como el uso de auriculares, en lugar de asumir que un estilo sirve para todos los ambientes."
+        },
+        {
+          "type": "subheading",
+          "text": "Prendas de punto"
+        },
+        {
+          "type": "paragraph",
+          "text": "La textura de la ropa puede enganchar u ocultar las joyas finas. Pruebe con pendientes de botón o aros pequeños (huggies), un collar solo cuando quede claramente por encima del punto y un anillo o una pulsera para añadir detalle. Evite las cadenas delicadas que se enganchen continuamente en los tejidos con textura."
+        },
+        {
+          "type": "subheading",
+          "text": "Vestido negro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un vestido negro ofrece un contraste marcado tanto para los acabados metálicos cálidos como para los fríos. Pruebe con un pendiente de botón visible o un aro fino, un colgante delicado o el escote al descubierto, y un anillo o una pulsera. Si los pendientes son más llamativos, reduzca el detalle del collar."
         },
         {
           "type": "see-also",
           "text": "Qué joyas llevar con un vestido negro",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Joyería minimalista para vestidos de satén",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "El satén ya tiene brillo, por lo que las joyas minimalistas funcionan especialmente bien cuando el vestido debe mantenerse elegante."
+          "type": "subheading",
+          "text": "Vestido de satén"
         },
         {
           "type": "paragraph",
-          "text": "Las tachuelas medianas añaden brillo sin añadir demasiado movimiento. Los pendientes colgantes añaden brillo cuando el vestido es sencillo. Los huggies y los aretes minimalistas funcionan cuando el atuendo de satén es más informal o se centra en un evento de trabajo."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo de vestido de satén",
-            "Mejor Dirección de Joyería Minimalista",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Vestido lencero de raso",
-              "Pendientes colgantes",
-              "Úrsola"
-            ],
-            [
-              "Vestido de satén con cuello alto",
-              "Aros o tachuelas medianas",
-              "Cadenza M, Pave Aros"
-            ],
-            [
-              "Vestido satén champán",
-              "Gotas suaves o tachuelas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Vestido raso rubor",
-              "Pendientes de mariposa o gotas cortas",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "Vestido raso negro",
-              "Studs o gotas medianas",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Vestido raso verde",
-              "Gotas o aros",
-              "Orsola, pavimenta aros"
-            ],
-            [
-              "Vestido de satén detallado",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
-            ]
-          ]
+          "text": "El satén ya refleja la luz y aporta movimiento. Evite cubrirlo con varias piezas que compitan entre sí. Pruebe con pendientes de botón con diamantes y una pulsera fina, pendientes colgantes discretos sin collar o un colgante fino con pendientes de botón pequeños."
         },
         {
           "type": "see-also",
-          "text": "Joyas con vestido de raso",
+          "text": "Qué joyas llevar con un vestido de satén",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Prenda estampada o adornada"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando la prenda incluye bordados, lentejuelas, estampados u otros detalles decorativos, reduzca el número de puntos focales de las joyas: pendientes de botón pequeños, una cadena sencilla o ningún collar, y un anillo discreto. Minimalista no significa invisible; el objetivo es que la prenda y las joyas ocupen papeles visuales diferentes."
         }
       ]
     },
     {
-      "heading": "Joyas minimalistas para outfits de invitadas de boda",
+      "heading": "Joyería minimalista con peinados y gafas",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Las joyas minimalistas funcionan muy bien para los invitados a la boda porque mantienen un aspecto elegante y respetuoso."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un traje de invitada a una boda no debe parecer demasiado nupcial ni demasiado pesado. Los tachuelas, los colgantes suaves, los aretes de mariposa y los abrazos delicados suelen ser más seguros que las joyas muy llamativas, especialmente si el vestido ya tiene encaje, satén, estampado, bordado o un escote fuerte."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look de invitada de boda",
-                "Mejor Dirección de Joyería Minimalista",
-                "Dirección de producto"
-              ],
-              "rows": [
-                [
-                  "Vestido de invitada de boda sencillo",
-                  "Pendientes colgantes o tachuelas medianas",
-                  "Orsola, Cadenza M."
-                ],
-                [
-                  "Vestido de invitada de boda detallado",
-                  "Sementales o abrazos",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Vestido de invitada de boda de raso",
-                  "Pendientes colgantes",
-                  "Úrsola"
-                ],
-                [
-                  "Vestido de flores",
-                  "Pendientes de mariposa o tachuelas pequeñas",
-                  "Farfalla, Cadenza S."
-                ],
-                [
-                  "vestido champán",
-                  "Gotas suaves o tachuelas medianas",
-                  "Concetta Short, Cadenza M"
-                ],
-                [
-                  "Vestido salvia o menta",
-                  "Pendientes de mariposa o gotas delicadas",
-                  "Farfalla, Concetta Corto"
-                ],
-                [
-                  "Vestido de invitada de boda negro",
-                  "Tacos medianos o gotas suaves",
-                  "Cadenza M, Orsola"
-                ],
-                [
-                  "Estilo de dama de honor",
-                  "Pequeños tachuelas o gotas delicadas",
-                  "Cadenza S, Concetta Corto"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio para bodas",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Joyería minimalista para fiestas y cenas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Las joyas de fiesta minimalistas deberían seguir resultando especiales. La diferencia es que utiliza piezas más limpias en lugar de joyas llamativas y pesadas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Las tachuelas medianas, los aros y las gotas elegantes son las opciones más fuertes. Si el conjunto ya tiene lentejuelas, satén, tela roja, satén negro o un escote espectacular, las joyas minimalistas pueden parecer más refinadas que los aretes atrevidos."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Look de fiesta o cena",
-            "Mejor Dirección de Joyería Minimalista",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "traje de cena",
-              "Tacos medianos o gotas suaves",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "vestido de coctel",
-              "Aros o tachuelas medianas",
-              "Pave Aros, Cadenza M"
-            ],
-            [
-              "vestido de fiesta negro",
-              "Aros, tachuelas o gotas",
-              "Pave Hoops, Cadenza M, Orsola"
-            ],
-            [
-              "vestido rojo",
-              "Studs o gotas medianas",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "vestido verde",
-              "Gotas, aros o tachuelas medianas",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Vestido de fiesta de raso",
-              "Gotas o tachuelas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Conjunto de fiesta detallado",
-              "Sementales o abrazos",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Traje de fiesta minimalista",
-              "Aros o gotas",
-              "Pave Aros, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de pendientes de fiesta",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Joyería minimalista para regalos",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Las joyas minimalistas son excelentes regalos porque son más fáciles de usar que los diseños muy atrevidos o muy específicos."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si no está seguro del estilo exacto del destinatario, los pendientes suelen ser los más seguros. Los Huggies son buenos para alguien a quien le gustan las joyas modernas. Los aretes minimalistas son los mejores para alguien con un gusto sobrio. Los aretes de mariposa son más fuertes cuando el regalo debe parecer significativo o romántico."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Necesidad de regalo",
-            "Mejor Dirección de Joyería Minimalista",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Regalo más seguro",
-              "Tacos pequeños o medianos",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Primer regalo de diamantes",
-              "Sementales pequeños",
-              "Cadenza S"
-            ],
-            [
-              "Regalo clásico y brillante.",
-              "Tacos medianos",
-              "CadenzaM"
-            ],
-            [
-              "regalo moderno",
-              "abrazos",
-              "amadea"
-            ],
-            [
-              "Regalo de lujo tranquilo",
-              "Pendientes minimalistas",
-              "laluce"
-            ],
-            [
-              "regalo romantico",
-              "Pendientes de mariposa",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "regalo de dama de honor",
-              "Pequeños tachuelas o gotas delicadas",
-              "Cadenza S, Concetta Corto"
-            ],
-            [
-              "regalo de cumpleaños",
-              "Aretes, aretes de mariposa o huggies",
-              "Cadenza M, Farfalla, Amadea"
-            ],
-            [
-              "regalo de aniversario",
-              "Pendientes de gotas o mariposas",
-              "Orsola, Alidi Farfalla"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio para regalos",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Ideas minimalistas para apilar orejas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los auriculares minimalistas deben sentirse limpios e intencionados."
-        },
-        {
-          "type": "paragraph",
-          "text": "Utilice un pequeño punto brillante, una pieza con forma y un detalle discreto. Mantenga el color del metal constante si el comprador quiere que la pila luzca pulida."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-107.jpg",
+          "image": "/blog-images/blog-image-46.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Objetivo de pila de orejas minimalista",
-                "Pieza principal",
-                "Pieza de soporte",
-                "Dirección de producto"
-              ],
-              "rows": [
-                [
-                  "Pila diaria simple",
-                  "Semental pequeño",
-                  "huggie",
-                  "Cadenza S + Amadea"
-                ],
-                [
-                  "Pila mínima suave",
-                  "Semental pequeño",
-                  "Pendiente minimalista",
-                  "Cadenza S + Laluce"
-                ],
-                [
-                  "Pila de ropa de trabajo pulida",
-                  "Semental mediano",
-                  "huggie",
-                  "Cadenza M + Amadea"
-                ],
-                [
-                  "Pila de lujo tranquila",
-                  "Semental mediano",
-                  "Detalle mínimo",
-                  "Cadenza M + Laluce"
-                ],
-                [
-                  "Pila minimalista romántica",
-                  "Pendiente de mariposa",
-                  "Semental pequeño",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Pila mínima de boda",
-                  "caída suave",
-                  "Semental pequeño",
-                  "Concetta Short + Cadenza S"
-                ],
-                [
-                  "Pila mínima de noche",
-                  "Pendiente de gota",
-                  "Semental pequeño",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Pila mínima de aro",
-                  "aro",
-                  "Semental pequeño",
-                  "Pave Aros + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio para aros",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Joyería minimalista por tipo de vestimenta",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Esta sección debería ayudar a los compradores a elegir joyas en función de lo que llevan puesto."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Tipo de vestimenta",
-            "Mejor Dirección de Joyería Minimalista",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Camisa blanca y jeans",
-              "Sementales pequeños o abrazos",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "traje de chaqueta",
-              "Sementales medianos o abrazos",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "vestido negro",
-              "Tachuelas medianas, aros o gotas suaves",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Vestido de raso",
-              "Pendientes medianos o colgantes",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "vestido con cuello en V",
-              "Gotas o tachuelas medianas",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Escote corazón",
-              "Pendientes de mariposa o gotas suaves",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "vestido con hombros descubiertos",
-              "Gotas, aros o tachuelas",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "vestido verde",
-              "Gotas, aros o pendientes románticos suaves",
-              "Orsola, Pave Aros, Farfalla"
-            ],
-            [
-              "vestido rojo",
-              "Studs o gotas medianas",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Ropa de trabajo",
-              "Studs, huggies o aretes minimalistas",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Traje de invitada de boda",
-              "Pendientes colgantes, de tachuelas o de mariposa",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "traje de viaje",
-              "Sementales o abrazos seguros",
-              "Cadenza S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Joyas con vestido rojo",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Joyería minimalista por color de metal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El color del metal puede cambiar la sensación de las joyas minimalistas."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro amarillo se siente cálido y clásico. El tono blanco o plateado se siente limpio y moderno. El oro rosa se siente suave y romántico. Para un estilo minimalista, la elección más sencilla suele ser el color metálico que el comprador ya usa con más frecuencia."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-102.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Color metálico",
-                "Estilo minimalista",
-                "Mejor para"
-              ],
-              "rows": [
-                [
-                  "oro amarillo",
-                  "Cálido, clásico y refinado",
-                  "Ropa de diario, vestidos negros, vestidos verdes, regalos."
-                ],
-                [
-                  "Tono blanco o plateado",
-                  "Limpio, luminoso y moderno.",
-                  "Ropa de trabajo, outfits minimalistas, guardarropas geniales"
-                ],
-                [
-                  "oro rosa",
-                  "Suave, romántica y femenina.",
-                  "Regalos, conjuntos ruborizados, vestidos en colores pastel, estilismo romántico."
-                ],
-                [
-                  "metales mixtos",
-                  "Creativo y orientado a las tendencias",
-                  "Orejeras y estilo casual"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Pelo suelto"
             },
             {
               "type": "paragraph",
-              "text": "Para los audífonos minimalistas, un color metálico suele ser el más seguro. Una pila de oro amarillo se siente cálida, una pila de tono blanco/plateado se siente limpia y una pila de oro rosa se siente suave."
+              "text": "Los pendientes pequeños pueden quedar parcialmente ocultos por el pelo suelto. Considere un contorno más limpio y visible si quiere que los pendientes sigan destacando, y compruebe si los aros, los pendientes colgantes o los bordes decorativos se enganchan en el cabello."
+            },
+            {
+              "type": "subheading",
+              "text": "Pelo recogido"
+            },
+            {
+              "type": "paragraph",
+              "text": "El pelo recogido deja la oreja al descubierto y puede hacer que los pendientes pequeños sean más visibles. Un pendiente de botón, un aro pequeño (huggie) o un ear stack minimalista pueden aportar suficiente detalle sin necesidad de llevar un pendiente más grande."
+            },
+            {
+              "type": "subheading",
+              "text": "Pelo corto"
+            },
+            {
+              "type": "paragraph",
+              "text": "El pelo corto puede dejar visibles tanto la oreja como el escote. Decida si los pendientes o el collar serán protagonistas, en lugar de dar la misma importancia a ambos."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Gafas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las gafas incorporan otra forma y otro color de metal o acetato alrededor del rostro. Tenga en cuenta el color y el grosor de la montura, el acabado metálico, la distancia entre la patilla y los pendientes, y si estos compiten con una montura decorativa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Las joyas no tienen que combinar exactamente con las gafas, pero conviene considerar sus proporciones en conjunto."
+        }
+      ]
+    },
+    {
+      "heading": "Cómo combinar colores metálicos",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "El estilo minimalista con metales combinados funciona cuando el contraste se repite. Por ejemplo: pendientes de oro amarillo con un reloj de metales combinados, un collar de tono blanco con un anillo que contenga ambos acabados o acabados alternos en los anillos repetidos en la oreja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evite añadir una única pieza de contraste sin otra conexión visual. Para lograr un resultado uniforme, elija el acabado que ya esté presente en su reloj, anillo de uso diario o cadena que lleve con más frecuencia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes de elegir una pieza con acabado en oro amarillo, blanco o rosa, confirme sus variantes actuales en la página del producto."
+        },
+        {
           "type": "see-also",
-          "text": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Pendientes con diamantes de laboratorio en oro amarillo, blanco y rosa",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Rutas de producto según la necesidad de estilo",
+      "heading": "Una transición minimalista del día a la noche",
       "content": [
         {
-          "type": "subheading",
-          "text": "Para el mejor comienzo minimalista diario"
-        },
-        {
           "type": "paragraph",
-          "text": "Elija aretes de diamantes cultivados en laboratorio Cadenza S. Son sutiles, fáciles de llevar y fuertes como un primer pendiente de diamantes minimalista."
+          "text": "No necesita cambiar todas las joyas para transformar el efecto de un conjunto."
         },
         {
           "type": "subheading",
-          "text": "Para un brillo minimalista más visible"
+          "text": "Día"
         },
         {
-          "type": "paragraph",
-          "text": "Elija los aretes de diamantes Cadenza M. Mantienen la forma limpia de los montantes y añaden más presencia."
-        },
-        {
-          "type": "subheading",
-          "text": "Para detalles minimalistas y silenciosos"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija los pendientes de diamantes minimalistas de Laluce. Son los mejores para los compradores que desean un estilo discreto."
+          "type": "bullet-list",
+          "items": [
+            "Pendientes de botón pequeños con diamantes",
+            "Colgante fino",
+            "Anillo de líneas limpias"
+          ]
         },
         {
           "type": "subheading",
-          "text": "Para un estilo minimalista moderno"
+          "text": "Noche"
         },
         {
-          "type": "paragraph",
-          "text": "Elige los pendientes Amadea Huggie. Añaden forma mientras permanecen cerca de la oreja y son fáciles de peinar."
-        },
-        {
-          "type": "subheading",
-          "text": "Para audífonos minimalistas"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige Cadenza S con Laluce o Amadea. Esto crea una pila limpia sin que la oreja parezca abarrotada."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo minimalista para invitados a una boda"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige los pendientes colgantes Orsola, los pendientes Concetta Short o Cadenza M según el detalle del vestido."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo minimalista romántico"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elige los pendientes de mariposa Farfalla o los pendientes de mariposa Alidi Farfalla. Funcionan bien para regalos, vestidos suaves y estilos significativos."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo de fiesta minimalista"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija Cadenza M, Pave Hoops u Orsola. Estos añaden suficiente brillo nocturno sin volverse demasiado atrevidos."
-        }
-      ]
-    },
-    {
-      "heading": "Recomendaciones de productos de IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Producto",
-            "Mejor papel de estilo minimalista",
-            "Por qué funciona"
-          ],
-          "rows": [
-            [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "Mejor primera pieza minimalista.",
-              "Pequeño, sutil y fácil de usar a diario."
-            ],
-            [
-              "aretes Cadenza M con diamantes",
-              "El mejor brillo minimalista visible",
-              "Forma clásica con más presencia."
-            ],
-            [
-              "Pendientes minimalistas de diamantes Laluce",
-              "El mejor detalle silencioso",
-              "Suave, discreto y fácil de peinar."
-            ],
-            [
-              "Pendientes Amadea Huggie",
-              "La mejor forma minimalista moderna.",
-              "Fuerte para uso diario y orejeras."
-            ],
-            [
-              "Aros de pavimentación",
-              "Mejor dirección de aro mínima",
-              "Añade forma sin dejar de ser portátil."
-            ],
-            [
-              "aretes colgantes de Orsola",
-              "Mejor movimiento de ocasión minimalista.",
-              "Añade elegancia para cenas y bodas."
-            ],
-            [
-              "Pendientes cortos Concetta",
-              "La mejor pieza para ocasiones delicadas.",
-              "Bueno para damas de honor y peinado suave."
-            ],
-            [
-              "Pendientes largos Concetta",
-              "La mejor línea minimalista formal.",
-              "Refinado y listo para la noche"
-            ],
-            [
-              "Pendientes mariposa Farfalla",
-              "La mejor pieza romántica minimalista.",
-              "Agrega significado sin sentirse pesado"
-            ],
-            [
-              "Pendientes de mariposa Alidi Farfalla",
-              "La mejor pieza romántica para regalar",
-              "Fuerte para cumpleaños y aniversarios."
-            ],
-            [
-              "Pendientes llamativos Lusso",
-              "Contraste no minimalista, pero útil.",
-              "Mejor solo cuando el conjunto necesita un punto focal audaz."
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Cambie los pendientes de botón por unos pendientes más visibles",
+            "Mantenga el colgante o quítelo si los pendientes se convierten en el punto focal",
+            "Añada una pulsera",
+            "Conserve el mismo anillo y la misma orientación metálica"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Las joyas minimalistas deben ser fáciles de usar, fáciles de repetir y fáciles de diseñar. Comience con Cadenza S para un brillo sutil, Cadenza M para un pulido clásico, Laluce para detalles discretos, Amadea para una forma moderna y Orsola para un movimiento suave en ocasiones."
+          "text": "Cambiar una pieza focal suele crear una transición más clara que añadir varias piezas extra."
         }
       ]
     },
     {
-      "heading": "Errores comunes de estilo minimalista que se deben evitar",
+      "heading": "Joyería minimalista y ear stacks",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un error común es pensar que las joyas minimalistas tienen que ser invisibles. Las joyas minimalistas aún pueden brillar y enmarcar el rostro; simplemente no domina el conjunto."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es elegir piezas demasiado pequeñas para el outfit. Si el vestido es oscuro, satinado o visualmente fuerte, pueden desaparecer pendientes muy pequeños."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un tercer error es llevar demasiadas piezas pequeñas y sin estructura. Incluso las joyas minimalistas pueden parecer abarrotadas si no hay una pieza principal o un equilibrio claro."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es mezclar metales sin intención. Los metales mezclados pueden parecer elegantes, pero un color de metal suele ser más fácil para una apariencia minimalista y pulida."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un quinto error es utilizar joyas minimalistas sólo para uso casual. Los pendientes, pendientes y abrazos minimalistas también pueden funcionar maravillosamente para bodas, cenas y fiestas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Por último, no elijas joyas sólo porque son sencillas. Aún así debe adaptarse al atuendo, escote, peinado, ocasión y estilo personal del usuario."
+          "text": "Un ear stack minimalista puede combinar dos pendientes de botón de tamaño gradual, un pendiente de botón con un aro pequeño (huggie), un aro fino con un pendiente de botón o tres pendientes discretos con una forma metálica o de diamante repetida."
         },
         {
           "type": "see-also",
-          "text": "Guía de cuidado de joyas chapadas en oro",
+          "text": "Cómo crear un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ideas para un ear stack de diamantes",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Cuidado de un conjunto de joyas minimalista",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un conjunto más reducido suele implicar que las piezas se usan y manipulan con más frecuencia. Para las piezas confirmadas de plata de ley 925 chapadas en oro:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Aplique el perfume, los cosméticos y los productos capilares antes de ponerse las joyas",
+            "Quítese las joyas antes de ducharse, nadar y hacer ejercicio",
+            "Limpie suavemente las piezas después de usarlas",
+            "Guarde las piezas por separado para reducir la fricción",
+            "Mantenga las cadenas finas cerradas durante el almacenamiento para reducir los enredos",
+            "Evite los productos de pulido abrasivos",
+            "Siga las instrucciones de cuidado incluidas con cada producto"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo cuidar la joyería chapada en oro",
           "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
         }
       ]
     },
     {
-      "heading": "Lista de verificación final de joyería minimalista",
+      "heading": "Errores habituales al combinar joyas minimalistas",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Antes de elegir joyas minimalistas, pregunta:"
+          "type": "subheading",
+          "text": "Llevar varias piezas focales"
         },
         {
-          "type": "bullet-list",
+          "type": "paragraph",
+          "text": "Los pendientes visibles, varios collares, múltiples anillos y las pulseras apiladas pueden competir entre sí. Elija una zona principal y haga que las piezas restantes sean más discretas."
+        },
+        {
+          "type": "subheading",
+          "text": "Dar por hecho que minimalista significa pequeño"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una pieza muy pequeña puede desaparecer contra la ropa, el peinado o las gafas. Al elegir el tamaño, tenga en cuenta las proporciones del conjunto completo."
+        },
+        {
+          "type": "subheading",
+          "text": "Combinar detalles inconexos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Varios motivos pequeños también pueden resultar recargados. Repita una forma, un detalle de diamante o un color metálico."
+        },
+        {
+          "type": "subheading",
+          "text": "Ignorar las medidas"
+        },
+        {
+          "type": "paragraph",
+          "text": "La longitud de la cadena, las dimensiones del colgante, el diámetro de los aros y el tamaño de los pendientes afectan a la forma en que interactúan las piezas. Utilice medidas reales y fotografías auténticas de modelos."
+        },
+        {
+          "type": "subheading",
+          "text": "Mezclar metales por accidente"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los metales combinados pueden parecer intencionados cuando el contraste se repite. Una única pieza de contraste puede parecer desconectada."
+        },
+        {
+          "type": "subheading",
+          "text": "Elegir cada pieza para la misma ocasión"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un conjunto útil contiene piezas que se pueden recombinar con varios conjuntos, en lugar de un juego completo que siempre se lleva unido."
+        }
+      ]
+    },
+    {
+      "heading": "Lista de comprobación final para combinar joyas",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Antes de dar por terminado el conjunto, pregúntese:"
+        },
+        {
+          "type": "numbered-list",
           "items": [
-            "¿El outfit es casual, de trabajo, de invitada a una boda, a una cena o a una fiesta?",
-            "¿Quiero brillo, forma, movimiento o suavidad?",
-            "¿Los pendientes o el collar deberían ser el momento principal de la joyería?",
-            "¿Mi peinado mostrará los aretes?",
-            "¿El outfit es simple o detallado?",
-            "¿El color del metal coincide con mis joyas habituales?",
-            "¿Se puede usar la pieza con más de un outfit?",
-            "¿Las joyas son lo suficientemente cómodas para usarlas por mucho tiempo?",
-            "¿Se pueden usar los aretes en una pila de orejas?",
-            "¿Están los materiales claramente explicados?",
-            "¿El diseño es simple pero sigue siendo especial?",
-            "¿Estas joyas seguirán siendo ponibles después de una temporada?"
+            "¿Qué pieza es el punto focal?",
+            "¿Qué detalle conecta las joyas?",
+            "¿Hay suficiente espacio visual?",
+            "¿El collar guarda relación con el escote?",
+            "¿Los pendientes combinan con el peinado y las gafas?",
+            "¿Las proporciones de las joyas son adecuadas para la ropa?",
+            "¿La combinación de metales parece intencionada?",
+            "¿Se enganchan las cadenas, los aros o los pendientes colgantes en la ropa?",
+            "¿Puede quitar una pieza para que la composición resulte más clara?",
+            "¿Conoce los materiales y sus requisitos de cuidado?"
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Si no está seguro, comience con pequeños aretes o abrazos de diamantes cultivados en laboratorio. Son las piezas de joyería minimalistas más fáciles de usar con frecuencia."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Qué es la joyería minimalista?",
-      "answer": "Las joyas minimalistas son joyas sencillas, limpias y portátiles diseñadas para añadir brillo sin sobrecargar el conjunto. Puede incluir tachuelas, aros, aros pequeños, aretes minimalistas y gotas delicadas."
+      "question": "¿En qué consiste el estilo de joyería minimalista?",
+      "answer": "El estilo de joyería minimalista combina un número limitado de piezas mediante proporciones controladas, detalles repetidos y espacio visual. Las joyas complementan el conjunto sin convertir cada zona en un punto focal."
     },
     {
-      "question": "¿Cómo diseñas las joyas minimalistas?",
-      "answer": "Diseñe joyas minimalistas eligiendo un punto de brillo, un detalle de forma y un acabado limpio. Mantén las piezas equilibradas y evita abarrotar el look."
+      "question": "¿Cuántas piezas debe incluir un look de joyería minimalista?",
+      "answer": "No existe un número fijo. Dos piezas coordinadas pueden resultar más completas que varias sin relación. Seleccione un punto focal y use las piezas restantes como apoyo."
     },
     {
-      "question": "¿Las joyas minimalistas son buenas para el uso diario?",
-      "answer": "Sí, las joyas minimalistas son excelentes para el uso diario porque combinan con muchos conjuntos y resultan cómodas para el uso habitual."
+      "question": "¿Cómo crear un conjunto de joyas minimalista?",
+      "answer": "Empiece por categorías de uso frecuente, como pendientes de botón pequeños, aros pequeños (huggies) o pendientes de aro, un colgante, una pulsera y un anillo de líneas limpias. Elija piezas que pueda recombinar, en lugar de llevarlas únicamente como un conjunto completo."
     },
     {
-      "question": "¿Qué pendientes son mejores para un estilo minimalista?",
-      "answer": "Los tachuelas de diamantes pequeños, las tachuelas medianas, los aros, los aretes minimalistas y las gotas suaves son los mejores para un estilo minimalista."
+      "question": "¿Se pueden superponer collares minimalistas?",
+      "answer": "Sí. Varíe las longitudes y mantenga al menos una cadena visualmente sencilla. Compruebe que los colgantes no se superpongan y que las cadenas combinen con el escote."
     },
     {
-      "question": "¿Se pueden usar joyas minimalistas en las bodas?",
-      "answer": "Sí, las joyas minimalistas funcionan de maravilla para las invitadas a una boda, especialmente cuando el conjunto ya tiene encaje, raso, bordados o un escote marcado."
+      "question": "¿Se pueden combinar colores de metal en la joyería minimalista?",
+      "answer": "Sí. Repita ambos colores de metal en algún punto del conjunto para que el contraste parezca intencionado."
     },
     {
-      "question": "¿Se pueden usar joyas minimalistas en las fiestas?",
-      "answer": "Sí, las joyas minimalistas pueden funcionar para fiestas cuando eliges piezas con suficiente brillo, como tachuelas medianas, aros o aretes colgantes elegantes."
+      "question": "¿Qué joyería combina con un escote alto?",
+      "answer": "Los pendientes pueden aportar el detalle principal. Si lleva un collar, colóquelo claramente por encima o por debajo del escote, no justo en el borde."
     },
     {
-      "question": "¿Las joyas minimalistas son buenas para el trabajo?",
-      "answer": "Sí, las joyas minimalistas son ideales para el trabajo porque añaden brillo sin distraer."
+      "question": "¿Qué joyería minimalista combina con un escote de pico?",
+      "answer": "Un colgante puede seguir la forma de V. Opte por pendientes discretos si el collar es el punto focal."
     },
     {
-      "question": "¿Qué joyería minimalista es mejor para regalar?",
-      "answer": "Los tachuelas, los aros y los aretes minimalistas de diamantes son las opciones de regalo más seguras porque son fáciles de usar y menos riesgosos que las joyas atrevidas."
+      "question": "¿Se puede llevar joyería minimalista en eventos de noche?",
+      "answer": "Sí. Aumente la visibilidad de una pieza focal, como los pendientes, y mantenga discreto el resto de la joyería."
     },
     {
-      "question": "¿Puedes construir una oreja con joyería minimalista?",
-      "answer": "Sí, las joyas minimalistas son perfectas para los pendientes. Un pequeño pendiente con un pendiente tipo aro o minimalista crea un conjunto limpio para el día a día."
+      "question": "¿Se pueden usar pendientes minimalistas en un ear stack?",
+      "answer": "Sí. Use piezas con formas o acabados relacionados y compruebe las dimensiones y el espacio reales antes de combinarlas."
     },
     {
-      "question": "¿Qué productos IWantJewels son mejores para un estilo minimalista?",
-      "answer": "Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short y Farfalla son opciones fuertes dependiendo de si el look es cotidiano, de trabajo, de invitada a una boda, romántico o de fiesta."
+      "question": "¿La joyería minimalista es siempre adecuada para el día a día?",
+      "answer": "No. La idoneidad depende de las dimensiones, el peso, el cierre, los materiales y el acabado de la pieza, así como de las actividades de quien la lleva."
     }
   ],
   "cta": {
-    "heading": "Las joyas minimalistas deben parecer simples, pulidas y fáciles de usar con frecuencia. Elija aretes para un brillo limpio, aros para una forma moderna, aretes minimalistas para detalles discretos, aros para una estructura suave y aretes colgantes para un movimiento elegante.",
-    "body": "Comience con los aretes semifinos de diamantes cultivados en laboratorio de IWantJewels si desea joyas minimalistas con brillo de diamantes reales. Elija Cadenza S para un brillo sutil todos los días, Cadenza M para un pulido clásico, Laluce para un estilo tranquilo, Amadea para abrazos, Pave Hoops para darle forma y Orsola para un movimiento suave en ocasiones.",
-    "primaryLabel": "Comprar joyería minimalista",
-    "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explora los aretes de diamantes cultivados en laboratorio",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lee la guía de pendientes minimalistas",
-    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
+    "heading": "Combinar joyería minimalista consiste en crear armonía, no en seguir reglas estrictas. Seleccione un punto focal, repita un detalle relacionado y deje suficiente espacio visual para reconocer cada pieza.",
+    "body": "Descubra las piezas minimalistas de I Want Jewels y cree una colección cápsula en torno a los conjuntos que lleva con más frecuencia. Consulte en cada página de producto sus dimensiones, materiales y acabado.",
+    "primaryLabel": "Descubra la joyería minimalista",
+    "primaryHref": "/products",
+    "secondaryLabel": "Compare estilos de pendientes minimalistas",
+    "secondaryHref": "/resources/earring-style-guides/minimalist-earrings-guide",
+    "tertiaryLabel": "Pendientes de diamante de laboratorio para cada día",
+    "tertiaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
   }
 }

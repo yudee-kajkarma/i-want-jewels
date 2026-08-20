@@ -1,77 +1,77 @@
 {
   "meta": {
-    "title": "Demi Fine vs Joaillerie Fine vs Bijoux Fantaisie",
-    "description": "Comparez les bijoux demi-fins, raffinés et fantaisie. Découvrez la différence de matériaux, de prix, de qualité, de portabilité et de valeur de cadeau."
+    "title": "Bijoux demi-fine, joaillerie ou bijoux fantaisie",
+    "description": "Comparez les bijoux demi-fine, la joaillerie et les bijoux fantaisie : matières, prix, qualité, confort et valeur à offrir."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-77.jpg",
-    "title": "Demi-Fine vs Joaillerie Fine vs Bijoux Fantaisie :",
-    "subtitle": "Quelle est la différence ?",
+    "title": "Bijoux demi-fine, joaillerie ou bijoux fantaisie :",
+    "subtitle": "Quelle différence ?",
     "paragraphs": [
-      "Les bijoux sont souvent décrits comme des bijoux fantaisie, des bijoux demi-fins ou des bijoux fins, mais de nombreux acheteurs ne savent pas vraiment ce que signifient ces termes. La différence réside généralement dans les matériaux, le prix, la durabilité, la qualité de la conception, le type de pierre et la manière dont le bijou est censé être porté.",
-      "Les bijoux fantaisie sont généralement conçus pour les tendances et le style à court terme. Les bijoux raffinés sont généralement fabriqués avec des métaux précieux solides et des pierres précieuses de plus grande valeur. Les bijoux demi-fins se situent entre les deux. Il donne aux acheteurs une sensation plus élevée que les bijoux fantaisie, mais il est généralement plus accessible et plus facile à porter que les bijoux raffinés traditionnels.",
-      "Cette ressource vous aide à comparer les trois catégories dans un langage simple, à comprendre où se situe IWantJewels et à choisir le bon type de bijoux pour un usage quotidien, des cadeaux, des mariages, des boucles d'oreilles et des occasions."
+      "Les bijoux sont souvent décrits comme fantaisie, demi-fine ou de joaillerie, mais ces termes restent flous pour de nombreux acheteurs. La différence tient généralement aux matières, au prix, à la durabilité, à la qualité du design, au type de pierre et à la façon dont le bijou se porte.",
+      "Les bijoux fantaisie sont généralement conçus pour suivre les tendances et être portés peu de temps. La joaillerie utilise souvent des métaux précieux massifs et des pierres de grande valeur. Les bijoux demi-fine se situent entre les deux : ils offrent une allure plus raffinée que les bijoux fantaisie, tout en restant plus accessibles et faciles à porter que la joaillerie traditionnelle.",
+      "Ce guide vous aide à comparer les trois catégories simplement, à comprendre la place d’IWantJewels et à choisir le type de bijoux adapté au quotidien, aux cadeaux, aux mariages, aux ear stacks et aux occasions spéciales."
     ],
-    "shopLabel": "Achetez des bijoux demi-fins",
+    "shopLabel": "Acheter des bijoux demi-fine",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comprendre la différence entre la bijouterie mode, demi-fine et fine",
-      "Comparez les matériaux, le prix, la durabilité et la qualité des bijoux",
-      "Savoir quand les bijoux demi-fins ont plus de sens que les bijoux fantaisie",
-      "Sachez quand les bijoux raffinés peuvent encore être le meilleur choix",
-      "Comprendre pourquoi les diamants synthétiques fonctionnent bien dans la joaillerie demi-fine",
-      "Choisissez des bijoux pour le quotidien, les cadeaux, les mariages, les fêtes et les boucles d'oreilles.",
-      "Trouvez des recommandations de produits IWantJewels en fonction de votre objectif d'achat",
-      "Planifiez des liens internes, des blocs de produits, des modules d'images et des sections CTA pour cette page de ressources"
+      "Comprenez la différence entre bijoux fantaisie, demi-fine et joaillerie",
+      "Comparez les matières, le prix, la durabilité et la qualité des bijoux",
+      "Sachez quand choisir le demi-fine plutôt que les bijoux fantaisie",
+      "Sachez quand la joaillerie reste le meilleur choix",
+      "Comprendre pourquoi les diamants de laboratoire conviennent aux bijoux demi-fine",
+      "Choisissez des bijoux pour le quotidien, les cadeaux, les mariages, les fêtes et les ear stacks",
+      "Trouvez les recommandations IWantJewels adaptées à votre achat",
+      "Planifiez les liens internes, blocs produits, modules images et sections CTA de cette page"
     ],
     "image": "/blog-images/blog-image-34.jpg"
   },
   "content": [
     {
-      "heading": "Comparaison des catégories de bijoux",
+      "heading": "Comparatif des catégories de bijoux",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilisez ce tableau en haut de la page comme principal outil de comparaison."
+          "text": "Placez ce tableau en haut de la page comme outil de comparaison principal."
         },
         {
           "type": "table",
           "headers": [
             "Type de bijoux",
-            "Matériaux typiques",
+            "Matières courantes",
             "Idéal pour",
-            "Principal avantage",
-            "Principale limite"
+            "Atout principal",
+            "Limite principale"
           ],
           "rows": [
             [
               "Bijoux fantaisie",
-              "Métaux de base, finitions plaquées, pierres d'imitation, cristaux, zircone cubique",
-              "Style tendance, tenues uniques, accessoires à petits prix",
-              "Très accessible et tendance",
-              "Peut s'user plus rapidement et donner une impression moins premium"
+              "Métaux communs, finitions plaquées, pierres d’imitation, cristaux, zircone cubique",
+              "Styles tendance, tenues uniques, accessoires abordables",
+              "Très accessible et axé sur les tendances",
+              "Peut s’user plus vite et sembler moins haut de gamme"
             ],
             [
-              "Bijoux demi-fins",
-              "Argent sterling, plaqué or, vermeil, diamants synthétiques, pierres semi-précieuses",
-              "Bijoux de tous les jours, cadeaux, boucles d'oreilles, style d'occasion",
-              "Plus raffiné que la bijouterie fantaisie et plus accessible que la haute joaillerie",
-              "Nécessite des soins appropriés, en particulier les finitions plaquées"
+              "Bijoux demi-fine",
+              "Argent sterling 925, plaqué or, vermeil, diamants de laboratoire, pierres semi-précieuses",
+              "Bijoux du quotidien, cadeaux, ear stacks, tenues de cérémonie",
+              "Plus raffiné que les bijoux fantaisie et plus accessible que la joaillerie",
+              "Demande un entretien adapté, surtout avec les finitions plaquées"
             ],
             [
-              "Bijoux raffinés",
+              "Joaillerie",
               "Or massif, platine, diamants naturels, pierres précieuses",
-              "Pièces d'héritage, cadeaux de luxe, haute joaillerie traditionnelle",
-              "Valeur matérielle la plus élevée et attrait de luxe à long terme",
-              "Généralement plus cher et parfois moins flexible pour un style tendance"
+              "Pièces de transmission, cadeaux de luxe, joaillerie traditionnelle",
+              "Valeur des matières et attrait luxueux durables",
+              "Généralement plus chère et parfois moins adaptée aux tendances"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux demi-fins sont le juste milieu. Il ne s’agit pas de bijoux fantaisie bon marché, mais il ne s’agit pas non plus toujours de bijoux fins en or massif ou en platine. Il est destiné aux acheteurs qui recherchent des bijoux raffinés, à offrir et à porter sans toujours entrer dans les prix de luxe traditionnels."
+          "text": "Les bijoux demi-fine sont un juste milieu. Ce ne sont pas de simples bijoux fantaisie bon marché, mais pas toujours non plus des bijoux de joaillerie en or massif ou en platine. Ils s’adressent aux personnes qui recherchent des bijoux soignés, faciles à offrir et à porter, sans forcément atteindre les prix du luxe traditionnel."
         }
       ]
     },
@@ -80,85 +80,85 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Les bijoux fantaisie sont généralement conçus pour un style tendance. Cela peut être amusant, abordable et facile à acheter, surtout lorsque vous voulez une pièce pour une tenue, une saison ou un événement."
+          "text": "Les bijoux fantaisie sont généralement conçus pour suivre les tendances. Ils peuvent être amusants, abordables et faciles à acheter, notamment lorsque vous cherchez une pièce pour une tenue, une saison ou une occasion."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux fantaisie utilisent souvent des matériaux moins coûteux tels que des métaux communs, des imitations de pierres, des cristaux, de la zircone cubique ou du placage léger. Certaines pièces peuvent être belles sur les photos, mais elles ne résistent pas toujours bien à un usage régulier."
+          "text": "Les bijoux fantaisie utilisent souvent des matières peu coûteuses : métaux communs, pierres d’imitation, cristaux, zircone cubique ou placage léger. Certaines pièces sont très belles en photo, mais résistent moins bien à un port régulier."
         },
         {
           "type": "paragraph",
-          "text": "Ce type de bijoux est utile lorsque l’on souhaite expérimenter les tendances. Par exemple, si vous souhaitez une grande boucle d'oreille colorée pour une soirée ou une pièce très tendance, les bijoux fantaisie peuvent avoir du sens."
+          "text": "Cette catégorie est utile pour expérimenter les tendances. Par exemple, si vous cherchez une grande boucle colorée pour une fête ou une pièce très marquée par une tendance, les bijoux fantaisie peuvent être un choix pertinent."
         },
         {
           "type": "paragraph",
-          "text": "La limite est que les bijoux fantaisie peuvent ne pas sembler aussi haut de gamme, significatifs ou durables. Ce n’est peut-être pas non plus le meilleur choix pour les cadeaux importants ou les pièces du quotidien que vous souhaitez porter à plusieurs reprises."
+          "text": "En contrepartie, les bijoux fantaisie peuvent sembler moins haut de gamme, moins personnels ou moins durables. Ils ne sont pas toujours le meilleur choix pour un cadeau important ou une pièce du quotidien que vous souhaitez porter souvent."
         },
         {
           "type": "see-also",
-          "text": "Diamants de laboratoire vs zircone cubique",
+          "text": "Diamants de laboratoire ou zircone cubique",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia"
         }
       ]
     },
     {
-      "heading": "Qu'est-ce que les bijoux demi-fins ?",
+      "heading": "Que sont les bijoux demi-fine ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les bijoux demi-fins se situent entre les bijoux fantaisie et les bijoux raffinés."
+          "text": "Les bijoux demi-fine se situent entre les bijoux fantaisie et la joaillerie."
         },
         {
           "type": "paragraph",
-          "text": "Il est généralement fabriqué avec de meilleurs matériaux que les bijoux fantaisie, comme l'argent sterling, le plaqué or, le vermeil, les diamants synthétiques ou les pierres semi-précieuses. Il est conçu pour paraître plus élégant et plus durable que les bijoux fantaisie à bas prix, mais plus accessible que les bijoux raffinés traditionnels."
+          "text": "Ils sont généralement fabriqués dans de meilleures matières que les bijoux fantaisie, comme l’argent sterling 925, le plaqué or, le vermeil, les diamants de laboratoire ou les pierres semi-précieuses. Ils sont conçus pour être plus raffinés et durables que les bijoux fantaisie bon marché, tout en restant plus accessibles que la joaillerie traditionnelle."
         },
         {
           "type": "paragraph",
-          "text": "Chez IWantJewels, les bijoux demi-fins sont construits autour de diamants de laboratoire, d'argent sterling 925 et de placage en or 14 carats. Cela donne aux bijoux un véritable éclat de diamant, une base en argent de qualité et une finition dorée chaleureuse tout en gardant les pièces portables pour un style quotidien, des cadeaux et des occasions."
+          "text": "Chez IWantJewels, les bijoux demi-fine reposent sur des diamants de laboratoire, de l’argent sterling 925 et un plaqué or 14 carats. Vous profitez ainsi de l’éclat de vrais diamants, d’une base en argent de qualité et d’une finition dorée chaleureuse, avec des pièces faciles à porter au quotidien, à offrir ou à choisir pour une occasion."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux demi-fins sont particulièrement utiles pour les boucles d'oreilles, car les boucles d'oreilles sont souvent achetées pour être portées dans la vie réelle. Vous voudrez peut-être des clous pour le travail, des câlins pour les boucles d'oreilles, des gouttes pour les mariages et des pièces plus audacieuses pour les fêtes. Les bijoux demi-fins facilitent la création de ce type de collection."
+          "text": "Les bijoux demi-fine sont particulièrement adaptés aux boucles d’oreilles, souvent achetées pour être réellement portées. Vous pouvez choisir des puces d’oreilles pour le travail, des petites créoles (huggies) pour un ear stack, des boucles d’oreilles pendantes pour un mariage et des modèles plus audacieux pour une fête. Cette catégorie facilite la création d’une collection variée."
         },
         {
           "type": "see-also",
-          "text": "Qu'est-ce que les bijoux demi-fins ?",
+          "text": "Que sont les bijoux demi-fine ?",
           "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
         }
       ]
     },
     {
-      "heading": "Qu’est-ce que la haute joaillerie ?",
+      "heading": "Qu’est-ce que la joaillerie ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les bijoux fins sont généralement fabriqués avec des métaux précieux solides tels que l'or massif, le platine ou parfois des alliages de grande valeur. Il s’agit souvent de diamants naturels, de pierres précieuses ou de matériaux de plus grande valeur."
+          "text": "La joaillerie est généralement réalisée en métaux précieux massifs, comme l’or massif, le platine ou parfois des alliages de grande valeur. Elle comprend souvent des diamants naturels, des pierres précieuses ou des matières haut de gamme."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux raffinés sont généralement choisis pour les bagues de fiançailles, les bijoux de famille, les cadeaux de luxe, les achats marquants et les pièces destinées à durer des générations. Il dégage une sensation de luxe plus traditionnelle et son prix est généralement plus élevé."
+          "text": "La joaillerie est souvent choisie pour les bagues de fiançailles, les bijoux de transmission, les cadeaux de luxe, les achats marquants et les pièces conçues pour durer plusieurs générations. Elle offre une vision plus traditionnelle du luxe et son prix est généralement plus élevé."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux raffinés peuvent être beaux et significatifs, mais ils ne constituent pas toujours l’option la plus pratique pour chaque achat. Si quelqu'un veut plusieurs boucles d'oreilles de tous les jours, des modèles tendance, des pièces à offrir ou des options de piles d'oreilles, les bijoux raffinés peuvent devenir chers très rapidement."
+          "text": "La joaillerie peut être belle et symbolique, mais elle n’est pas toujours la solution la plus pratique pour chaque achat. Si vous recherchez plusieurs boucles d’oreilles du quotidien, des modèles tendance, des cadeaux faciles à offrir ou des options d’ear stack, la joaillerie peut rapidement devenir coûteuse."
         },
         {
           "type": "paragraph",
-          "text": "C’est là que les bijoux demi-fins peuvent être utiles. Il donne aux acheteurs une apparence et une sensation plus raffinées que les bijoux fantaisie sans que chaque pièce soit un investissement majeur en joaillerie fine."
+          "text": "C’est là que les bijoux demi-fine peuvent être utiles. Ils offrent une allure et une sensation plus raffinées que les bijoux fantaisie, sans exiger que chaque pièce représente un investissement majeur en joaillerie."
         },
         {
           "type": "see-also",
-          "text": "Bijoux en plaqué or ou en or massif",
+          "text": "Bijoux plaqué or ou en or massif",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Matériaux comparés",
+      "heading": "Comparaison des matières",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les matériaux constituent l’une des plus grandes différences entre les bijoux mode, demi-fins et raffinés."
+          "text": "Les matières sont l’une des principales différences entre bijoux fantaisie, demi-fine et joaillerie."
         },
         {
           "type": "grid-layout",
@@ -169,40 +169,40 @@
               "type": "table",
               "headers": [
                 "Caractéristique",
-                "Bijoux de mode",
-                "Bijoux demi-fins",
-                "Bijoux raffinés"
+                "Bijoux fantaisie",
+                "Bijoux demi-fine",
+                "Joaillerie"
               ],
               "rows": [
                 [
-                  "Métal commun",
-                  "Souvent en métal commun ou en alliage à faible coût",
+                  "Métal de base",
+                  "Souvent en métal commun ou alliage peu coûteux",
                   "Souvent en argent sterling, vermeil ou métal précieux plaqué",
-                  "Or massif, platine ou métal précieux de première qualité"
+                  "Or massif, platine ou métal précieux haut de gamme"
                 ],
                 [
-                  "Type de pierre",
-                  "Pierres d'imitation, cristaux, zircone cubique",
-                  "Diamants de synthèse, pierres semi-précieuses, pierres de qualité",
+                  "Le type de pierre",
+                  "Pierres d’imitation, cristaux, zircone cubique",
+                  "Diamants de laboratoire, pierres semi-précieuses, pierres de qualité",
                   "Diamants naturels, pierres précieuses, pierres de grande valeur"
                 ],
                 [
-                  "Terminer",
-                  "Souvent plaqué ou enduit",
-                  "Meilleur placage ou vermeil selon la marque",
+                  "Finition",
+                  "Souvent plaquée ou revêtue",
+                  "Placage ou vermeil de meilleure qualité selon la marque",
                   "Finition en métal précieux massif"
                 ],
                 [
-                  "Portabilité",
-                  "Idéal pour un coiffage occasionnel",
-                  "Bon à porter régulièrement avec soin",
-                  "Solide pour une utilisation à long terme"
+                  "Confort au porté",
+                  "Convient aux looks occasionnels",
+                  "Convient à un port régulier avec soin",
+                  "Adaptée à un port durable"
                 ],
                 [
-                  "Soins nécessaires",
-                  "Peut être sensible à l'eau et aux produits chimiques",
-                  "Nécessite des soins appropriés, en particulier le placage",
-                  "A encore besoin de soins, mais les métaux solides sont plus durables"
+                  "Entretien nécessaire",
+                  "Peut être sensible à l’eau et aux produits chimiques",
+                  "Demande un entretien adapté, surtout le placage",
+                  "Nécessite aussi des soins, mais les métaux massifs sont plus durables"
                 ]
               ]
             }
@@ -210,17 +210,17 @@
         },
         {
           "type": "paragraph",
-          "text": "Chez IWantJewels, l'histoire matérielle importante est celle des diamants synthétiques, de l'argent sterling 925 et du placage en or 14 carats. Cette combinaison permet de séparer les bijoux des pièces de mode basiques tout en les gardant plus accessibles que les bijoux en or massif et diamants."
+          "text": "Chez IWantJewels, les matières essentielles sont les diamants de laboratoire, l’argent sterling 925 et le plaqué or 14 carats. Cette combinaison distingue les bijoux des modèles fantaisie basiques, tout en les rendant plus accessibles que les bijoux en or massif sertis de diamants."
         },
         {
           "type": "see-also",
-          "text": "bijoux en argent sterling 925",
+          "text": "Bijoux en argent sterling 925",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Prix et valeur comparés",
+      "heading": "Comparaison du prix et de la valeur",
       "content": [
         {
           "type": "paragraph",
@@ -228,186 +228,186 @@
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux fantaisie sont généralement l’option la moins chère. Les bijoux raffinés sont généralement l’option la plus chère. Les bijoux demi-fins se situent au milieu, offrant une sensation plus premium que les bijoux fantaisie sans toujours atteindre les prix des bijoux fins."
+          "text": "Les bijoux fantaisie sont généralement les moins chers. La joaillerie est généralement la plus coûteuse. Les bijoux demi-fine se situent au milieu : ils offrent une sensation plus haut de gamme que les bijoux fantaisie sans atteindre systématiquement les prix de la joaillerie."
         },
         {
           "type": "table",
           "headers": [
-            "Priorité de l'acheteur",
-            "Meilleure catégorie",
+            "Priorité de l’acheteur",
+            "Catégorie recommandée",
             "Pourquoi"
           ],
           "rows": [
             [
               "Prix le plus bas possible",
               "Bijoux fantaisie",
-              "Idéal pour un coiffage temporaire"
+              "Idéal pour un style temporaire"
             ],
             [
-              "De meilleurs matériaux sans prix de haute joaillerie",
-              "Bijoux demi-fins",
-              "Fort équilibre entre qualité et accessibilité"
+              "De meilleures matières sans le prix de la joaillerie",
+              "Bijoux demi-fine",
+              "Bon équilibre entre qualité et accessibilité"
             ],
             [
-              "Valeur de patrimoine à long terme",
-              "Bijoux raffinés",
-              "Métaux précieux solides et matériaux de luxe traditionnels"
+              "Valeur durable et transmission",
+              "Joaillerie",
+              "Métaux précieux massifs et matières luxueuses traditionnelles"
             ],
             [
-              "L'éclat du diamant au quotidien",
-              "Bijoux demi-fins",
-              "Plus portable et accessible"
+              "Éclat de diamant au quotidien",
+              "Bijoux demi-fine",
+              "Plus facile à porter et plus accessible"
             ],
             [
-              "Expérimentation des tendances",
+              "Expérimenter les tendances",
               "Bijoux fantaisie ou demi-fine",
-              "Cela dépend de la qualité et du budget"
+              "Dépend de la qualité et du budget"
             ],
             [
-              "Cadeau significatif",
-              "Bijoux demi-fins ou fins",
-              "Cela dépend de l'occasion et de la relation"
+              "Cadeau porteur de sens",
+              "Bijoux demi-fine ou joaillerie",
+              "Dépend de l’occasion et de la relation"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un bon achat de bijoux n’est pas toujours le plus cher. C'est la pièce qui correspond à l'objectif. Pour les boucles d'oreilles quotidiennes, les bijoux demi-fins peuvent être plus avantageux que les bijoux raffinés si l'acheteur souhaite quelque chose de portable et accessible. Pour un achat d’héritage, des bijoux raffinés peuvent être mieux adaptés."
+          "text": "Un bon achat de bijoux n’est pas toujours le plus cher. C’est celui qui correspond à l’usage prévu. Pour des boucles d’oreilles quotidiennes, les bijoux demi-fine peuvent offrir un meilleur rapport valeur-prix que la joaillerie si vous recherchez une pièce facile à porter et accessible. Pour un bijou de transmission, la joaillerie peut être préférable."
         },
         {
           "type": "see-also",
-          "text": "Guide des prix des boucles d'oreilles en diamants synthétiques",
+          "text": "Guide des prix des boucles d’oreilles en diamant de laboratoire",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Comparaison des vêtements de tous les jours",
+      "heading": "Comparaison pour le quotidien",
       "content": [
         {
           "type": "paragraph",
-          "text": "Pour un usage quotidien, le confort et la répétabilité comptent plus que le drame."
+          "text": "Au quotidien, le confort et la possibilité de porter souvent un bijou comptent plus que son caractère spectaculaire."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux fantaisie peuvent convenir à un style décontracté, mais ils ne résistent pas toujours bien à un port fréquent. Les bijoux raffinés peuvent fonctionner à merveille au quotidien, mais ils peuvent être trop chers pour les acheteurs qui souhaitent avoir plusieurs styles. Les bijoux demi-fins occupent souvent la meilleure position pratique pour les pièces du quotidien."
+          "text": "Les bijoux fantaisie peuvent convenir à un style décontracté, mais résistent moins bien à un port fréquent. La joaillerie peut se porter chaque jour avec élégance, mais son prix peut être trop élevé si vous souhaitez plusieurs styles. Les bijoux demi-fine occupent souvent la position la plus pratique pour les pièces du quotidien."
         },
         {
           "type": "table",
           "headers": [
-            "Besoin quotidien",
-            "Bijoux de mode",
-            "Bijoux demi-fins",
-            "Bijoux raffinés"
+            "Besoin au quotidien",
+            "Bijoux fantaisie",
+            "Bijoux demi-fine",
+            "Joaillerie"
           ],
           "rows": [
             [
-              "Goujons quotidiens",
-              "Idéal pour une utilisation à faible coût",
-              "Choix fort",
-              "Fort mais plus cher"
+              "Puces d’oreilles au quotidien",
+              "Bon choix pour un usage peu coûteux",
+              "Excellent choix",
+              "Très adaptées, mais plus coûteuses"
             ],
             [
-              "Huggies et piles d'oreilles",
-              "Bon pour les tendances",
-              "Choix très fort",
-              "Beau mais coûteux à construire"
+              "Petites créoles (huggies) et ear stacks",
+              "Idéales pour suivre les tendances",
+              "Excellent choix",
+              "Élégantes, mais coûteuses à collectionner"
             ],
             [
-              "Bijoux de travail",
-              "Peut fonctionner",
-              "Choix fort",
-              "Choix fort"
+              "Bijoux pour le travail",
+              "Peuvent convenir",
+              "Bon choix",
+              "Bon choix"
             ],
             [
               "Plusieurs styles",
-              "Facile à acheter mais de qualité inférieure",
-              "Fort équilibre",
+              "Achat facile, qualité inférieure",
+              "Bon équilibre",
               "Plus cher"
             ],
             [
-              "L'éclat du quotidien",
-              "Peut utiliser des imitations de pierres",
-              "Les diamants synthétiques peuvent bien fonctionner",
-              "Les diamants naturels peuvent bien fonctionner"
+              "Éclat au quotidien",
+              "Peut utiliser des pierres d’imitation",
+              "Les diamants de laboratoire peuvent être un bon choix",
+              "Les diamants naturels peuvent être un bon choix"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Pour IWantJewels, les choix semi-fins de tous les jours incluent les clous d'oreilles en diamants synthétiques Cadenza S, les boucles d'oreilles en diamant Cadenza M, les boucles d'oreilles Amadea Huggie et les boucles d'oreilles en diamant minimalistes Laluce."
+          "text": "Chez I Want Jewels, les bijoux demi-fine du quotidien comprennent les puces d’oreilles en diamant de laboratoire Cadenza S, les puces d’oreilles en diamant Cadenza M, les petites créoles (huggies) Amadea et les boucles d’oreilles en diamant minimalistes Laluce."
         },
         {
           "type": "see-also",
-          "text": "Pouvez-vous porter des boucles d’oreilles en diamants synthétiques tous les jours ?",
+          "text": "Pouvez-vous porter des boucles d'oreilles en diamant de laboratoire tous les jours ?",
           "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
         }
       ]
     },
     {
-      "heading": "Comparaison de cadeaux",
+      "heading": "Comparatif des cadeaux",
       "content": [
         {
           "type": "paragraph",
-          "text": "Pour offrir, les bijoux doivent être réfléchis et faciles à porter."
+          "text": "Pour offrir, les bijoux doivent être choisis avec soin et faciles à porter."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux tendance peuvent convenir pour des cadeaux décontractés, mais ils peuvent ne pas sembler assez spéciaux pour les anniversaires, les demoiselles d'honneur ou les occasions romantiques. Les bijoux raffinés peuvent sembler très spéciaux, mais ils peuvent aussi paraître chers ou trop formels. Les bijoux demi-fins offrent souvent le meilleur équilibre."
+          "text": "Les bijoux fantaisie conviennent aux cadeaux décontractés, mais peuvent sembler trop peu spéciaux pour un anniversaire, un anniversaire de mariage, des cadeaux de demoiselles d’honneur ou une occasion romantique. Les bijoux de joaillerie peuvent être très précieux, mais aussi coûteux ou trop formels. Les bijoux demi-fine offrent souvent le meilleur équilibre."
         },
         {
           "type": "table",
           "headers": [
             "Type de cadeau",
-            "Meilleure catégorie de bijoux",
+            "Catégorie de bijoux recommandée",
             "Pourquoi"
           ],
           "rows": [
             [
               "Petit cadeau décontracté",
-              "Mode ou demi-fine",
-              "Cela dépend du budget et de l'occasion"
+              "Fantaisie ou demi-fine",
+              "Selon le budget et l’occasion"
             ],
             [
-              "Cadeau d'anniversaire",
-              "Bijoux demi-fins",
-              "Semble réfléchi mais portable"
+              "Cadeau d’anniversaire",
+              "Bijoux demi-fine",
+              "Attentionné et facile à porter"
             ],
             [
-              "Cadeau d'anniversaire",
-              "Bijoux demi-fins ou fins",
-              "Cela dépend du caractère formel du cadeau"
+              "Cadeau d’anniversaire de mariage",
+              "Bijoux demi-fine ou de joaillerie",
+              "Selon le degré de formalité souhaité"
             ],
             [
-              "Cadeau de demoiselle d'honneur",
-              "Bijoux demi-fins",
-              "Beau, portable et plus facile à répéter"
+              "Cadeau pour demoiselle d’honneur",
+              "Bijoux demi-fine",
+              "Beau, facile à porter et simple à offrir à nouveau"
             ],
             [
               "Cadeau romantique",
-              "Bijoux demi-fins ou fins",
-              "Cela dépend de la relation et du budget"
+              "Bijoux demi-fine ou de joaillerie",
+              "Selon la relation et le budget"
             ],
             [
-              "Cadeau de déclaration",
-              "Bijoux demi-fins",
-              "Permet un design plus solide sans prix pour les bijoux raffinés"
+              "Cadeau marquant",
+              "Bijoux demi-fine",
+              "Permet un design plus affirmé sans le prix de la joaillerie"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Pour IWantJewels, les boucles d'oreilles en diamant Cadenza M constituent un cadeau classique et sûr. Les boucles d'oreilles papillon Farfalla et les boucles d'oreilles papillon Alidi Farfalla sont plus fortes lorsque le cadeau a besoin de sens. Les boucles d'oreilles pendantes Orsola sont idéales pour les cadeaux romantiques ou occasionnels. Les boucles d'oreilles Amadea Huggie sont idéales pour quelqu'un qui aime les bijoux modernes."
+          "text": "Chez I Want Jewels, les puces d’oreilles en diamant Cadenza M sont un choix classique et sûr. Les boucles d’oreilles papillon Farfalla et Alidi Farfalla conviennent mieux lorsque le cadeau doit avoir une signification. Les boucles d’oreilles pendantes Orsola sont idéales pour un cadeau romantique ou lié à une occasion. Les petites créoles (huggies) Amadea conviennent parfaitement à une personne qui aime les bijoux modernes."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques à offrir en cadeau",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
+          "text": "Boucles d’oreilles en diamant de laboratoire à offrir",
+          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
         }
       ]
     },
     {
-      "heading": "Comparaison des mariages et des occasions",
+      "heading": "Comparatif mariage et occasions",
       "content": [
         {
           "type": "paragraph",
@@ -415,69 +415,69 @@
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux fantaisie peuvent convenir à des looks de fête uniques, mais ils peuvent parfois sembler moins raffinés. Les bijoux raffinés fonctionnent à merveille pour les événements formels, mais ils peuvent être coûteux si l'acheteur souhaite des pièces pour plusieurs occasions. Les bijoux demi-fins donnent un aspect poli qui peut encore être porté."
+          "text": "Les bijoux fantaisie conviennent aux looks de fête ponctuels, mais peuvent parfois sembler moins raffinés. Les bijoux de joaillerie sont parfaits pour les événements formels, mais peuvent coûter cher si vous souhaitez plusieurs bijoux pour différentes occasions. Les bijoux demi-fine offrent une allure élégante que vous pourrez reporter."
         },
         {
           "type": "table",
           "headers": [
-            "Besoin d'occasion",
+            "Besoin pour l’occasion",
             "Meilleure catégorie",
-            "Meilleure réalisation IWJ"
+            "Sélection IWJ recommandée"
           ],
           "rows": [
             [
-              "Tenue d'invité de mariage",
-              "Bijoux demi-fins",
+              "Tenue d’invitée à un mariage",
+              "Bijoux demi-fine",
               "Orsola, Cadenza M, Farfalla"
             ],
             [
-              "Bijoux de demoiselle d'honneur",
-              "Bijoux demi-fins",
-              "Cadenza S, Cadenza M, Concetta Courte"
+              "Bijoux de demoiselle d’honneur",
+              "Bijoux demi-fine",
+              "Cadenza S, Cadenza M, Concetta Short"
             ],
             [
-              "Dîner du soir",
-              "Bijoux demi-fins ou fins",
+              "Dîner en soirée",
+              "Bijoux demi-fine ou de joaillerie",
               "Orsola, Concetta Long"
             ],
             [
               "Look de fête",
-              "Bijoux demi-fins ou fantaisie",
-              "Lusso, cerceaux pavés"
+              "Bijoux demi-fine ou fantaisie",
+              "Lusso, Pave Hoops"
             ],
             [
-              "Tenue cravate noire",
-              "Bijoux demi-fins ou fins",
+              "Tenue de cérémonie",
+              "Bijoux demi-fine ou de joaillerie",
               "Concetta Long, Lusso"
             ],
             [
               "Soirée romantique",
-              "Bijoux demi-fins",
+              "Bijoux demi-fine",
               "Orsola, Farfalla, Alidi Farfalla"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les boucles d'oreilles en diamants demi-fins cultivés en laboratoire fonctionnent bien pour les occasions car elles peuvent ajouter de l'éclat et du poli sans ressembler à des bijoux que vous ne portez qu'une seule fois."
+          "text": "Les boucles d’oreilles demi-fine en diamant de laboratoire conviennent aux occasions, car elles apportent éclat et élégance sans donner l’impression d’un bijou réservé à une seule occasion."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour les mariages",
+          "text": "Boucles d'oreilles en diamants de laboratoire pour un mariage",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
         }
       ]
     },
     {
-      "heading": "Comparaison des piles d'oreilles",
+      "heading": "Comparatif de l’ear stack",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les piles d'oreilles sont l'un des cas d'utilisation les plus importants pour les bijoux demi-fins."
+          "text": "L’ear stack est l’un des usages les plus adaptés aux bijoux demi-fine."
         },
         {
           "type": "paragraph",
-          "text": "Construire une pile d'oreilles avec des bijoux raffinés peut rapidement devenir coûteux. Construire une pile d'oreilles avec des bijoux fantaisie peut être abordable, mais les pièces peuvent ne pas sembler aussi élevées. Les bijoux demi-fins offrent un juste milieu, car les acheteurs peuvent mélanger des clous, des câlins, des créoles et des boucles d'oreilles minimalistes de manière plus raffinée."
+          "text": "Créer un ear stack avec des bijoux de joaillerie peut vite coûter cher. Avec des bijoux fantaisie, le budget reste accessible, mais les pièces peuvent sembler moins raffinées. Les bijoux demi-fine offrent un excellent compromis, en permettant d’associer puces d’oreilles, petites créoles (huggies), créoles et boucles d’oreilles minimalistes avec plus d’élégance."
         },
         {
           "type": "grid-layout",
@@ -487,35 +487,35 @@
             {
               "type": "table",
               "headers": [
-                "Besoin de pile d'oreille",
+                "Besoin pour l’ear stack",
                 "Meilleure catégorie",
                 "Pourquoi"
               ],
               "rows": [
                 [
-                  "Première pile d'oreille",
-                  "Bijoux demi-fins",
-                  "De meilleure qualité et toujours accessible"
+                  "Premier ear stack",
+                  "Bijoux demi-fine",
+                  "Meilleure qualité, tout en restant accessible"
                 ],
                 [
-                  "Pile de tendances",
-                  "Mode ou demi-fine",
-                  "Cela dépend combien de temps vous souhaitez le porter"
+                  "Ear stack tendance",
+                  "Fantaisie ou demi-fine",
+                  "Selon la durée pendant laquelle vous souhaitez le porter"
                 ],
                 [
-                  "Pile d'oreilles en diamant",
-                  "Bijoux demi-fins",
-                  "Les diamants synthétiques le rendent plus accessible"
+                  "Ear stack en diamant",
+                  "Bijoux demi-fine",
+                  "Les diamants de laboratoire le rendent plus accessible"
                 ],
                 [
-                  "Pile d'oreille de luxe",
-                  "Bijoux raffinés",
-                  "Idéal pour le style en or massif ou héritage"
+                  "Ear stack luxueux",
+                  "Joaillerie",
+                  "Idéal pour l’or massif ou un style destiné à être transmis"
                 ],
                 [
-                  "Pile d'oreilles à offrir",
-                  "Bijoux demi-fins",
-                  "Facile à créer des combinaisons réfléchies"
+                  "Ear stack à offrir",
+                  "Bijoux demi-fine",
+                  "Facile à composer avec des associations attentionnées"
                 ]
               ]
             }
@@ -523,82 +523,82 @@
         },
         {
           "type": "paragraph",
-          "text": "Pour IWantJewels, une simple pile d'oreilles pourrait inclure des clous en diamant cultivés en laboratoire Cadenza S avec des boucles d'oreilles Amadea Huggie. Une pile plus douce pourrait ajouter des boucles d’oreilles minimalistes en diamant Laluce. Un stack plus visible pourrait utiliser Cadenza M comme haras principal."
+          "text": "Chez I Want Jewels, un ear stack simple peut associer les puces d’oreilles en diamant de laboratoire Cadenza S aux petites créoles (huggies) Amadea. Pour un résultat plus doux, ajoutez les boucles d’oreilles en diamant minimalistes Laluce. Pour un ear stack plus visible, utilisez Cadenza M comme puce principale."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour piles d'oreilles",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+          "text": "Boucles d’oreilles en diamant de laboratoire pour ear stack",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Quand choisir des bijoux fantaisie ?",
+      "heading": "Quand choisir des bijoux fantaisie ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Choisissez des bijoux fantaisie lorsque vous recherchez un accessoire à petit prix pour une tendance à court terme, une tenue unique ou un style expérimental que vous ne portez peut-être pas souvent."
+          "text": "Choisissez des bijoux fantaisie si vous recherchez un accessoire peu coûteux pour une tendance passagère, une tenue ponctuelle ou un style expérimental que vous porterez rarement."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux fantaisie peuvent être utiles pour les couleurs vives, les tendances saisonnières, les looks de costumes ou les pièces que vous ne comptez pas conserver longtemps. Ce n'est pas toujours un mauvais choix. Cela sert simplement un objectif différent."
+          "text": "Les bijoux fantaisie peuvent être utiles pour les couleurs audacieuses, les tendances saisonnières, les looks de costume ou les pièces que vous ne comptez pas conserver longtemps. Ce n’est pas toujours un mauvais choix : leur usage est simplement différent."
         },
         {
           "type": "paragraph",
-          "text": "La limite est que les bijoux fantaisie peuvent ne pas sembler aussi haut de gamme, durables ou significatifs. Ce n’est peut-être pas non plus le meilleur choix pour les cadeaux importants ou les pièces du quotidien que vous souhaitez porter à plusieurs reprises."
+          "text": "Leur limite est qu’ils peuvent sembler moins haut de gamme, moins résistants ou moins significatifs. Ils ne sont pas toujours le meilleur choix pour un cadeau important ou une pièce du quotidien que vous souhaitez porter régulièrement."
         }
       ]
     },
     {
-      "heading": "Quand devriez-vous choisir des bijoux demi-fins ?",
+      "heading": "Quand choisir des bijoux demi-fine ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Choisissez des bijoux demi-fins lorsque vous voulez quelque chose de plus raffiné que les bijoux fantaisie, mais plus accessible et portable que les bijoux raffinés traditionnels."
+          "text": "Choisissez des bijoux demi-fine si vous recherchez quelque chose de plus raffiné que la fantaisie, mais plus accessible et facile à porter que la joaillerie traditionnelle."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux demi-fins sont particulièrement résistants pour :"
+          "text": "Les bijoux demi-fine sont particulièrement adaptés aux éléments suivants :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Boucles d'oreilles de tous les jours",
-            "Clous en diamants cultivés en laboratoire",
-            "Huggies et piles d'oreilles",
-            "Cadeaux d'anniversaire",
-            "Cadeaux de demoiselle d'honneur",
-            "Bijoux pour invités de mariage",
-            "Cadeaux d'anniversaire",
-            "Boucles d'oreilles de fête",
+            "Boucles d’oreilles du quotidien",
+            "Puces d’oreilles en diamant de laboratoire",
+            "Petites créoles (huggies) et ear stacks",
+            "Cadeaux d’anniversaire",
+            "Cadeaux pour demoiselles d’honneur",
+            "Bijoux d’invitée à un mariage",
+            "Cadeaux d’anniversaire de mariage",
+            "Boucles d’oreilles de fête",
             "Collections de bijoux modernes"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Pour IWantJewels, les bijoux demi-fins constituent la position principale de la marque. Les pièces sont conçues pour offrir un éclat de diamants synthétiques, de meilleurs matériaux et un style moderne dans des bijoux qui peuvent réellement être portés."
+          "text": "Chez I Want Jewels, les bijoux demi-fine sont au cœur du positionnement de la marque. Les pièces associent l’éclat des diamants de laboratoire, de meilleurs matériaux et un style moderne, dans des bijoux réellement faits pour être portés."
         }
       ]
     },
     {
-      "heading": "Quand choisir des bijoux raffinés ?",
+      "heading": "Quand choisir des bijoux de joaillerie ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Choisissez des bijoux raffinés lorsque vous recherchez des métaux précieux solides, du luxe traditionnel, une valeur d'héritage ou une pièce marquante."
+          "text": "Choisissez des bijoux de joaillerie si vous recherchez des métaux précieux massifs, un luxe traditionnel, une valeur à transmettre ou une pièce marquant une étape importante."
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux raffinés conviennent souvent mieux aux bagues de fiançailles, aux colliers de famille, aux pièces d'investissement en or massif, aux cadeaux d'anniversaire marquants ou aux bijoux destinés à durer à travers les générations."
+          "text": "Les bijoux de joaillerie sont souvent préférables pour les bagues de fiançailles, les colliers à transmettre, les pièces d’investissement en or massif, les cadeaux d’anniversaire de mariage important ou les bijoux destinés à traverser les générations."
         },
         {
           "type": "paragraph",
-          "text": "Ce n’est pas toujours nécessaire pour chaque achat. De nombreux acheteurs n’ont pas besoin que chaque paire de boucles d’oreilles soit en or massif ou au niveau d’un héritage. Pour un style quotidien, des cadeaux et des pièces tendance, les bijoux demi-fins peuvent être le choix le plus pratique."
+          "text": "Ce n’est toutefois pas nécessaire pour chaque achat. Toutes les paires de boucles d’oreilles n’ont pas besoin d’être en or massif ou destinées à être transmises. Pour le quotidien, les cadeaux et les pièces tendance, les bijoux demi-fine peuvent être plus pratiques."
         }
       ]
     },
     {
-      "heading": "Parcours de produits par besoin de l'acheteur",
+      "heading": "Parcours produits selon vos besoins",
       "content": [
         {
           "type": "paragraph",
@@ -606,125 +606,125 @@
         },
         {
           "type": "subheading",
-          "text": "Pour les nouveaux acheteurs de bijoux"
+          "text": "Pour un premier achat de bijoux"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez des clous demi-fins. Les clous d'oreilles en diamants synthétiques Cadenza S sont une première pièce solide car ils sont simples, faciles à porter et pas trop audacieux."
+          "text": "Choisissez des puces d’oreilles demi-fine. Les puces d’oreilles en diamant de laboratoire Cadenza S sont une excellente première pièce : elles sont simples, faciles à porter et discrètes."
         },
         {
           "type": "subheading",
-          "text": "Pour les boucles d'oreilles de tous les jours"
+          "text": "Pour les boucles d’oreilles du quotidien"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles Cadenza S, Cadenza M, Amadea Huggie ou les boucles d'oreilles minimalistes en diamant Laluce. Ces pièces sont faciles à répéter et s’adaptent à de nombreuses tenues."
+          "text": "Choisissez Cadenza S, Cadenza M, les petites créoles (huggies) Amadea ou les boucles d’oreilles en diamant minimalistes Laluce. Ces pièces se portent facilement au quotidien et s’accordent avec de nombreuses tenues."
         },
         {
           "type": "subheading",
-          "text": "Pour les cadeaux"
+          "text": "Pour offrir"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Cadenza M pour un cadeau classique en diamant, Farfalla pour un cadeau significatif, Amadea pour un cadeau moderne ou Orsola pour un cadeau romantique."
+          "text": "Choisissez Cadenza M pour un cadeau classique en diamant, Farfalla pour un cadeau symbolique, Amadea pour un cadeau moderne ou Orsola pour un cadeau romantique."
         },
         {
           "type": "subheading",
-          "text": "Pour les bijoux d'invités de mariage"
+          "text": "Pour les bijoux d’invitée à un mariage"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Cadenza M pour des tenues détaillées, des boucles d'oreilles Orsola pour des robes simples ou des boucles d'oreilles papillon Farfalla pour un style romantique et doux."
+          "text": "Choisissez Cadenza M avec une tenue détaillée, les boucles d’oreilles pendantes Orsola avec une robe simple ou les boucles d’oreilles papillon Farfalla pour un style romantique et délicat."
         },
         {
           "type": "subheading",
-          "text": "Pour les piles d'oreilles"
+          "text": "Pour un ear stack"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Cadenza S avec les boucles d'oreilles Amadea Huggie pour une pile épurée. Ajoutez des boucles d'oreilles en diamant minimalistes Laluce pour un look superposé plus doux."
+          "text": "Associez Cadenza S aux petites créoles (huggies) Amadea pour un ear stack épuré. Ajoutez les boucles d’oreilles en diamant minimalistes Laluce pour un effet superposé plus doux."
         },
         {
           "type": "subheading",
-          "text": "Pour le style de fête"
+          "text": "Pour une tenue de fête"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles audacieuses Lusso si les bijoux doivent se démarquer, ou les Pave Hoops si vous voulez briller avec une forme d'anneau plus moderne."
+          "text": "Choisissez les boucles d’oreilles statement audacieuses Lusso si le bijou doit attirer l’attention, ou Pave Hoops pour un éclat associé à une forme de créole plus moderne."
         }
       ]
     },
     {
-      "heading": "Recommandations de produits d'IWantJewels",
+      "heading": "Recommandations de produits IWantJewels",
       "content": [
         {
           "type": "table",
           "headers": [
             "Produit",
-            "Meilleur rôle dans la catégorie bijoux",
+            "Rôle de la meilleure catégorie de bijoux",
             "Idéal pour"
           ],
           "rows": [
             [
-              "Clous d'oreilles en diamants synthétiques Cadenza S",
-              "Demi-fin indispensable au quotidien",
-              "Premières boucles d'oreilles diamant, workwear, éclat subtil"
+              "Puces d’oreilles Cadenza S en diamant de laboratoire",
+              "Essentiel demi-fine du quotidien",
+              "Premières boucles d’oreilles en diamant, tenue de travail, éclat discret"
             ],
             [
-              "Boucles d'oreilles puces diamant Cadenza M",
-              "Cadeau classique demi-fin",
-              "Un éclat visible au quotidien et un cadeau sûr"
+              "Puces d’oreilles Cadenza M en diamant",
+              "Cadeau classique demi-fine",
+              "Éclat visible au quotidien et cadeau facile à offrir"
             ],
             [
-              "Boucles d'oreilles Amadea Huggie",
-              "Pièce d'empilage demi-fine",
-              "Piles d'oreilles, deuxièmes piercings, style moderne"
+              "Petites créoles (huggies) Amadea",
+              "Pièce demi-fine à superposer",
+              "Ear stacks, seconds piercings, style moderne"
             ],
             [
-              "Boucles d'oreilles diamant minimalistes Laluce",
+              "Boucles d’oreilles minimalistes en diamant Laluce",
               "Pièce demi-fine minimaliste",
-              "Bijoux quotidiens silencieux"
+              "Bijoux discrets au quotidien"
             ],
             [
-              "Cerceaux pavés",
-              "Style cerceau demi-fin",
-              "Un style décontracté et prêt pour la fête"
+              "Pave Hoops",
+              "Style demi-fine avec créoles",
+              "Éclat décontracté et style prêt pour la fête"
             ],
             [
-              "Boucles d'oreilles papillon Farfalla",
-              "Cadeau significatif demi-fine",
-              "Anniversaires, jalons et cadeaux romantiques"
+              "Boucles d’oreilles papillon Farfalla",
+              "Cadeau demi-fine symbolique",
+              "Anniversaires, étapes importantes et cadeaux romantiques"
             ],
             [
-              "Boucles d'oreilles papillon Alidi Farfalla",
-              "Cadeau symbolique demi-fine",
-              "Style féminin et cadeaux personnels"
+              "Boucles d’oreilles papillon Alidi Farfalla",
+              "Cadeau demi-fine évocateur",
+              "Style féminin et cadeau personnel"
             ],
             [
-              "Boucles d'oreilles pendantes Orsola",
-              "Boucle d'oreille d'occasion demi-fine",
+              "Boucles d’oreilles pendantes Orsola",
+              "Boucles d’oreilles demi-fine pour les occasions",
               "Mariages, dîners et tenues de soirée"
             ],
             [
-              "Boucles d'oreilles courtes Concetta",
-              "Goutte délicate demi-fine",
-              "Demoiselles d’honneur et looks doux pour les grandes occasions"
+              "Boucles d’oreilles Concetta Short",
+              "Boucles d’oreilles pendantes demi-fine délicates",
+              "Demoiselles d’honneur et occasions délicates"
             ],
             [
-              "Boucles d'oreilles longues Concetta",
-              "Boucle d'oreille formelle demi-fine",
+              "Boucles d’oreilles Concetta Long",
+              "Boucles d’oreilles demi-fine formelles",
               "Soirées formelles et style raffiné"
             ],
             [
-              "Boucles d'oreilles Lusso audacieuses",
-              "Pièce tendance demi-fine",
+              "Boucles d’oreilles statement audacieuses Lusso",
+              "Pièce demi-fine statement",
               "Fêtes et tenues à fort impact"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux demi-fins sont le meilleur choix lorsque vous souhaitez de meilleurs matériaux que les bijoux fantaisie sans faire de chaque achat un investissement dans la haute joaillerie. Commencez par des clous à porter au quotidien, des câlins à superposer, des boucles d'oreilles papillon pour les cadeaux, des gouttes pour les mariages et des boucles d'oreilles audacieuses pour les fêtes."
+          "text": "Les bijoux demi-fine sont le meilleur choix si vous souhaitez de meilleurs matériaux que la fantaisie sans transformer chaque achat en investissement de joaillerie. Commencez par des puces d’oreilles pour le quotidien, des petites créoles (huggies) pour les superpositions, des boucles d’oreilles papillon pour les cadeaux, des pendantes pour les mariages et des boucles d’oreilles statement audacieuses pour les fêtes."
         }
       ]
     },
@@ -733,110 +733,110 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Une erreur courante consiste à supposer que les bijoux fantaisie, les bijoux demi-fins et les bijoux raffinés sont identiques, car ils peuvent tous paraître brillants sur les photos. Le matériau et la construction font une grande différence."
+          "text": "Une erreur fréquente consiste à penser que les bijoux fantaisie, demi-fine et de joaillerie sont identiques parce qu’ils peuvent tous sembler brillants en photo. Les matériaux et la fabrication font une grande différence."
         },
         {
           "type": "paragraph",
-          "text": "Une autre erreur consiste à s’attendre à ce que les bijoux fantaisie se comportent comme des bijoux raffinés. Les bijoux tendance à faible coût peuvent être utiles, mais ils ne sont peut-être pas conçus pour être portés à long terme."
+          "text": "Une autre erreur consiste à attendre des bijoux fantaisie qu’ils se comportent comme des bijoux de joaillerie. Les bijoux tendance peu coûteux peuvent être utiles, mais ils ne sont pas toujours conçus pour durer."
         },
         {
           "type": "paragraph",
-          "text": "Une troisième erreur consiste à traiter les bijoux demi-fins exactement comme des bijoux fins en or massif. Les pièces en plaqué or et en argent sterling nécessitent toujours des soins appropriés."
+          "text": "Une troisième erreur consiste à traiter les bijoux demi-fine exactement comme des bijoux de joaillerie en or massif. Les pièces plaqué or et en argent sterling 925 nécessitent tout de même un entretien adapté."
         },
         {
           "type": "paragraph",
-          "text": "Une autre erreur est de penser que les bijoux raffinés sont toujours le meilleur choix. C'est peut-être mieux pour les pièces d'héritage, mais les bijoux demi-fins peuvent être plus pratiques pour le style quotidien, les cadeaux et les boucles d'oreilles."
+          "text": "Une autre erreur est de penser que les bijoux de joaillerie sont toujours le meilleur choix. Ils peuvent être préférables pour les pièces à transmettre, mais les bijoux demi-fine sont souvent plus pratiques au quotidien, pour les cadeaux et les ear stacks."
         },
         {
           "type": "paragraph",
-          "text": "Enfin, ne choisissez pas uniquement par prix. Choisissez en fonction de l'objectif, des matériaux, du confort, de la portabilité et de la fréquence d'utilisation de la pièce."
+          "text": "Enfin, ne choisissez pas uniquement en fonction du prix. Tenez compte de l’usage, des matériaux, du confort, de la facilité à porter la pièce et de la fréquence à laquelle vous l’utiliserez."
         },
         {
           "type": "see-also",
-          "text": "Comment nettoyer les boucles d'oreilles en diamants synthétiques",
+          "text": "Comment nettoyer des boucles d’oreilles en diamant de laboratoire",
           "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Liste de contrôle d'achat finale",
+      "heading": "Liste de contrôle avant achat",
       "content": [
         {
           "type": "paragraph",
-          "text": "Avant de choisir entre bijoux mode, demi-fins et bijoux raffinés, demandez-vous :"
+          "text": "Avant de choisir entre bijoux fantaisie, demi-fine et de joaillerie, demandez-vous :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Est-ce pour un usage quotidien, un cadeau, un style ou un achat d'héritage ?",
+            "Est-ce destiné au quotidien, à un cadeau, au stylisme ou à être transmis ?",
             "Est-ce que je veux une pièce tendance ou quelque chose de plus durable ?",
             "Les matériaux sont-ils clairement expliqués ?",
             "Les bijoux sont-ils fabriqués avec de vrais diamants de laboratoire ou des pierres d'imitation ?",
-            "Le métal convient-il à une usure régulière ?",
-            "La pièce nécessitera-t-elle des soins particuliers ?",
-            "Le prix correspond-il à la qualité du matériau ?",
-            "Le destinataire portera-t-il réellement ce style ?",
-            "Cette pièce est-elle destinée à être portée une ou plusieurs fois ?",
-            "Les bijoux sont-ils suffisamment spéciaux pour l’usage prévu ?"
+            "Le métal convient-il à un port régulier ?",
+            "La pièce nécessite-t-elle un entretien particulier ?",
+            "Le prix est-il à la hauteur de la qualité des matériaux ?",
+            "La personne à qui vous l’offrez portera-t-elle vraiment ce style ?",
+            "Cette pièce est-elle destinée à être portée une seule fois ou régulièrement ?",
+            "Le bijou est-il assez spécial pour l'occasion ?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Pour la plupart des boucles d'oreilles, des cadeaux et des besoins de style moderne du quotidien, les bijoux demi-fins constituent un choix intermédiaire solide."
+          "text": "Pour les boucles d'oreilles du quotidien, les cadeaux et les looks modernes, les bijoux demi-fine offrent un excellent équilibre."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Quelle est la différence entre les bijoux demi-fins et les bijoux fins ?",
-      "answer": "La bijouterie fine utilise généralement des métaux précieux solides tels que l'or massif ou le platine et des pierres de plus grande valeur. Les bijoux demi-fins utilisent de meilleurs matériaux que les bijoux fantaisie, comme l'argent sterling, le plaqué or ou les diamants synthétiques, mais sont généralement plus accessibles que les bijoux raffinés."
+      "question": "Quelle est la différence entre les bijoux demi-fine et la joaillerie ?",
+      "answer": "La joaillerie utilise généralement des métaux précieux massifs, comme l'or massif ou le platine, ainsi que des pierres de plus grande valeur. Les bijoux demi-fine utilisent de meilleurs matériaux que les bijoux fantaisie, comme l'argent sterling 925, le plaqué or ou les diamants de laboratoire, tout en restant généralement plus accessibles que la joaillerie."
     },
     {
-      "question": "Quelle est la différence entre les bijoux demi-fins et les bijoux fantaisie ?",
-      "answer": "Les bijoux fantaisie sont généralement moins chers et plus tendance. Les bijoux demi-fins utilisent de meilleurs matériaux et semblent plus élégants, ce qui les rend plus solides pour un usage quotidien et des cadeaux."
+      "question": "Quelle est la différence entre les bijoux demi-fine et les bijoux fantaisie ?",
+      "answer": "Les bijoux fantaisie sont généralement moins chers et davantage axés sur les tendances. Les bijoux demi-fine utilisent de meilleurs matériaux et offrent un rendu plus raffiné, ce qui les rend plus adaptés au quotidien et aux cadeaux."
     },
     {
-      "question": "Les bijoux demi-fins sont-ils de vrais bijoux ?",
-      "answer": "Oui, les bijoux demi-fins sont de vrais bijoux. Il se situe entre les bijoux fantaisie et la haute joaillerie traditionnelle."
+      "question": "Les bijoux demi-fine sont-ils de vrais bijoux ?",
+      "answer": "Oui, les bijoux demi-fine sont de vrais bijoux. Ils se situent entre les bijoux fantaisie et la joaillerie traditionnelle."
     },
     {
-      "question": "Les bijoux demi-fins sont-ils de bonne qualité ?",
-      "answer": "Les bijoux demi-fins peuvent être de bonne qualité lorsqu'ils utilisent des matériaux solides, une bonne finition et une construction appropriée. IWantJewels utilise des diamants synthétiques, de l'argent sterling 925 et un placage en or 14 carats."
+      "question": "Les bijoux demi-fine sont-ils de bonne qualité ?",
+      "answer": "Les bijoux demi-fine peuvent être de bonne qualité lorsqu'ils utilisent des matériaux résistants, des finitions soignées et une construction adaptée. IWantJewels utilise des diamants de laboratoire, de l'argent sterling 925 et un plaqué or 14 carats."
     },
     {
-      "question": "Les bijoux fantaisie sont-ils mauvais ?",
-      "answer": "Les bijoux fantaisie ne sont pas mauvais. Il est utile pour les tendances et les styles à faible coût. C'est tout simplement différent des bijoux demi-fins et fins."
+      "question": "Les bijoux fantaisie sont-ils de mauvaise qualité ?",
+      "answer": "Les bijoux fantaisie ne sont pas de mauvaise qualité. Ils sont utiles pour suivre les tendances et créer des looks à petit prix. Ils se distinguent simplement des bijoux demi-fine et de la joaillerie."
     },
     {
-      "question": "La haute joaillerie est-elle toujours meilleure ?",
-      "answer": "Pas toujours. Les bijoux raffinés conviennent mieux aux achats en or massif, en objets de famille et en produits de luxe. Les bijoux demi-fins peuvent être mieux adaptés au quotidien, aux cadeaux et aux boucles d'oreilles."
+      "question": "La joaillerie est-elle toujours meilleure ?",
+      "answer": "Pas toujours. La joaillerie est idéale pour l'or massif, les pièces à transmettre et les achats de luxe. Les bijoux demi-fine peuvent être plus adaptés au quotidien, aux cadeaux et à l'ear stack."
     },
     {
-      "question": "Les bijoux demi-fins sont-ils bons à porter au quotidien ?",
-      "answer": "Oui, les bijoux demi-fins peuvent être parfaits pour un usage quotidien lorsque le design est confortable et que la pièce est correctement entretenue."
+      "question": "Les bijoux demi-fine conviennent-ils au quotidien ?",
+      "answer": "Oui, les bijoux demi-fine peuvent convenir au quotidien lorsque leur design est confortable et qu'ils sont correctement entretenus."
     },
     {
-      "question": "Les bijoux demi-fins sont-ils bons pour offrir ?",
-      "answer": "Oui, les bijoux demi-fins sont excellents pour les cadeaux car ils semblent plus spéciaux que les bijoux fantaisie, mais ils sont généralement plus faciles à choisir que les bijoux raffinés traditionnels."
+      "question": "Les bijoux demi-fine sont-ils de bons cadeaux ?",
+      "answer": "Oui, les bijoux demi-fine sont parfaits pour offrir : ils semblent plus spéciaux que les bijoux fantaisie, tout en étant généralement plus faciles à choisir que la joaillerie traditionnelle."
     },
     {
-      "question": "Les bijoux demi-fins ternissent-ils ?",
-      "answer": "Cela dépend du matériel et de la routine d'entretien. Les bijoux en argent sterling et plaqués or doivent être protégés de l’humidité, des parfums, des produits chimiques agressifs et d’un stockage difficile."
+      "question": "Les bijoux demi-fine ternissent-ils ?",
+      "answer": "Cela dépend du matériau et de la routine d'entretien. L'argent sterling et les bijoux plaqués or doivent être protégés de l'humidité, du parfum, des produits chimiques agressifs et d'un rangement inadapté."
     },
     {
       "question": "Quel type de bijoux choisir ?",
-      "answer": "Choisissez des bijoux fantaisie pour les tendances à court terme, des bijoux demi-fins pour des pièces portables élevées et des bijoux raffinés pour des objets de famille ou des achats de luxe traditionnels."
+      "answer": "Choisissez les bijoux fantaisie pour les tendances éphémères, les bijoux demi-fine pour des pièces raffinées à porter au quotidien, et la joaillerie pour les pièces à transmettre ou les achats de luxe traditionnel."
     }
   ],
   "cta": {
-    "heading": "Bijoux fantaisie, demi-joaillerie et haute joaillerie ont tous leur place. Le meilleur choix dépend de la raison pour laquelle vous achetez. Les bijoux fantaisie sont utiles pour les tendances, les bijoux raffinés sont idéaux pour le luxe héritage et les bijoux demi-fins sont le juste milieu pour un usage quotidien, des cadeaux et un style moderne.",
-    "body": "Commencez par les bijoux en diamants semi-fins de laboratoire IWantJewels si vous voulez un véritable éclat de diamant dans des modèles portables. Choisissez Cadenza S pour un éclat subtil au quotidien, Cadenza M pour des cadeaux classiques, Amadea pour des boucles d'oreilles, Farfalla pour des cadeaux significatifs, Orsola pour le style des invités de mariage et Lusso pour des looks de fête audacieux.",
-    "primaryLabel": "Achetez des bijoux demi-fins",
+    "heading": "Les bijoux fantaisie, les bijoux demi-fine et la joaillerie ont chacun leur place. Le meilleur choix dépend de la raison de votre achat. Les bijoux fantaisie sont utiles pour suivre les tendances, la joaillerie convient parfaitement au luxe à transmettre, et les bijoux demi-fine offrent un excellent équilibre pour le quotidien, les cadeaux et les looks modernes.",
+    "body": "Commencez par les bijoux demi-fine ornés de diamants de laboratoire IWantJewels si vous recherchez l’éclat d’un vrai diamant dans des modèles faciles à porter. Choisissez Cadenza S pour une brillance discrète au quotidien, Cadenza M pour un cadeau classique, Amadea pour un ear stack, Farfalla pour un cadeau plein de sens, Orsola pour une tenue d’invitée à un mariage et Lusso pour un look de soirée audacieux.",
+    "primaryLabel": "Acheter des bijoux demi-fine",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Découvrez les boucles d'oreilles en diamants cultivés en laboratoire",
+    "secondaryLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lisez Qu’est-ce que les bijoux demi-fins ?",
+    "tertiaryLabel": "Lire Qu'est-ce que les bijoux demi-fine ?",
     "tertiaryHref": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
   }
 }

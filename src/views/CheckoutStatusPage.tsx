@@ -19,7 +19,7 @@ import {
 import { useTranslation } from 'react-i18next'
 
 export default function CheckoutStatusPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const dispatch = useAppDispatch()
   const [searchParams] = useSearchParams()
   const paymentResult = searchParams.get('payment') === 'cancel' ? 'cancel' : 'success'
@@ -67,7 +67,7 @@ export default function CheckoutStatusPage() {
         await dispatch(fetchCart()).unwrap().catch(() => undefined)
       } catch {
         if (isMounted) {
-          setSyncError('Order status was updated, but cart synchronization needs another refresh.')
+          setSyncError(i18n.t('checkout.syncError'))
         }
       } finally {
         clearPendingOrderStatus()
@@ -83,7 +83,9 @@ export default function CheckoutStatusPage() {
     return () => {
       isMounted = false
     }
-  }, [dispatch, paymentResult, pendingOrder?.source])
+    // i18n is a stable instance: adding it satisfies the linter without
+    // re-running this effect, which would re-verify the payment.
+  }, [dispatch, paymentResult, pendingOrder?.source, i18n])
 
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">

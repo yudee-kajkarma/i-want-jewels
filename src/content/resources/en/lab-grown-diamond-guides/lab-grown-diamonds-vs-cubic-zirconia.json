@@ -1,697 +1,546 @@
 {
   "meta": {
-    "title": "Lab Grown Diamonds vs Cubic Zirconia",
-    "description": "Learn the difference between lab grown diamonds and cubic zirconia, including sparkle, durability, price, value and jewellery use."
+    "title": "Lab-Grown Diamonds vs Cubic Zirconia",
+    "description": "Compare lab-grown diamonds and cubic zirconia by material, sparkle, durability, price and everyday wear to decide which stone suits you."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-115.png",
+    "image": "/blog-images/blog-image-61.jpg",
     "title": "Lab-Grown Diamonds vs Cubic Zirconia:",
     "subtitle": "What Is the Difference?",
     "paragraphs": [
-      "Lab-grown diamonds and cubic zirconia are not the same. A lab-grown diamond is a real diamond created in a controlled laboratory environment, while cubic zirconia is a diamond simulant made to look like a diamond. Cubic zirconia can be shiny and affordable, but it is not a diamond.",
-      "The main difference is material, durability and long-term appearance. Lab-grown diamonds have the beauty, hardness and structure of diamond jewellery. Cubic zirconia is a lower-cost alternative that can look sparkly at first, but it is more likely to scratch, dull or look glassy over time.",
-      "For earrings, lab-grown diamonds are the better choice if you want real diamond sparkle, better durability and a more premium jewellery feeling. Cubic zirconia can work for short-term fashion jewellery, but it does not give the same value or meaning as genuine lab-grown diamond earrings."
+      "Lab-grown diamonds and cubic zirconia can both be cut into bright, colourless stones, but they are fundamentally different materials.",
+      "A laboratory-grown diamond is diamond material created using a controlled technological process. It consists of crystallised carbon and has essentially the same chemical, physical and optical properties as a natural diamond. Cubic zirconia, usually shortened to CZ, is a manufactured form of zirconium dioxide. It is used as a diamond simulant because it can imitate some of a diamond's appearance, but it is not a diamond.",
+      "Neither choice is automatically right for every person. Cubic zirconia offers considerable sparkle at a much lower price. Laboratory-grown diamonds offer the material properties, hardness and optical character of diamond. Your decision should depend on your budget, how often you intend to wear the jewellery and whether owning a diamond matters to you."
     ],
-    "shopLabel": "Shop Lab-Grown Diamond Earrings",
+    "shopLabel": "Explore Lab-Grown Diamond Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Lab-grown diamonds are real diamonds; cubic zirconia is not.",
-      "Cubic zirconia is a diamond simulant, meaning it is made to imitate the look of a diamond.",
-      "Lab-grown diamonds are more durable than cubic zirconia.",
-      "Cubic zirconia can look shiny, but it may scratch, dull or look glassier over time.",
-      "Lab-grown diamonds are usually more expensive than cubic zirconia, but they offer real diamond value.",
-      "Cubic zirconia is better for very low-cost fashion jewellery.",
-      "Lab-grown diamonds are better for earrings, gifts, demi-fine jewellery and pieces you want to wear often.",
-      "For IWantJewels, lab-grown diamond earrings are positioned as real diamond jewellery, not simple diamond-look accessories."
+      "A laboratory-grown diamond is a diamond with a laboratory origin",
+      "Cubic zirconia is a different manufactured material used to look diamond-like",
+      "Diamond scores 10 on the Mohs scale; cubic zirconia around 8–8.5",
+      "Cubic zirconia generally costs considerably less",
+      "Both sparkle, but they interact with light differently",
+      "CZ can be an appropriate choice for lower-cost or trend-led jewellery",
+      "Choose diamond when you specifically want diamond, or greater scratch resistance"
     ],
-    "image": "/blog-images/blog-image-113.png"
+    "image": "/blog-images/blog-image-69.jpg"
   },
   "content": [
     {
-      "heading": "What Is the Main Difference Between Lab-Grown Diamonds and Cubic Zirconia?",
+      "heading": "Quick answer",
       "content": [
         {
-          "type": "paragraph",
-          "text": "The main difference is that lab-grown diamonds are diamonds, while cubic zirconia is not."
+          "type": "section-lead",
+          "text": "The essential difference is the material."
         },
         {
           "type": "paragraph",
-          "text": "A lab-grown diamond is created in a laboratory using technology that grows diamond material. It has the basic structure and durability people expect from diamond jewellery. Cubic zirconia, often shortened to CZ, is a diamond simulant. It is made to look like a diamond, but it is a different material."
-        },
-        {
-          "type": "paragraph",
-          "text": "This difference matters because many shoppers see a sparkly earring and assume all shine is the same. It is not. A cubic zirconia earring can look bright in a photo or under store lighting, but it does not have the same diamond identity, durability or long-term jewellery value as a lab-grown diamond."
-        },
-        {
-          "type": "paragraph",
-          "text": "For someone buying jewellery just for a temporary trend, cubic zirconia may be enough. But for someone who wants real diamond earrings that feel more premium and meaningful, lab-grown diamonds are the stronger choice."
+          "text": "A laboratory-grown diamond is a diamond with a laboratory origin. Cubic zirconia is a different manufactured material used to create a diamond-like appearance. Both can sparkle, but they are not the same substance and they do not wear in the same way."
         },
         {
           "type": "see-also",
           "text": "What are lab-grown diamonds?",
-          "href": "#"
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
         }
       ]
     },
     {
-      "heading": "Lab-Grown Diamonds vs Cubic Zirconia: Simple Comparison",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Feature",
-            "Lab-Grown Diamond",
-            "Cubic Zirconia"
-          ],
-          "rows": [
-            [
-              "Is it a real diamond?",
-              "Yes",
-              "No"
-            ],
-            [
-              "Material",
-              "Diamond",
-              "Diamond simulant"
-            ],
-            [
-              "Origin",
-              "Created in a controlled laboratory environment",
-              "Man-made stone created to imitate diamond"
-            ],
-            [
-              "Sparkle",
-              "Classic diamond brilliance",
-              "Very sparkly, sometimes glassier or more artificial"
-            ],
-            [
-              "Durability",
-              "Very durable",
-              "Less durable than diamond"
-            ],
-            [
-              "Long-term look",
-              "Holds its diamond beauty better",
-              "Can scratch, dull or lose polish more easily"
-            ],
-            [
-              "Price",
-              "Usually more expensive than CZ",
-              "Usually much cheaper"
-            ],
-            [
-              "Best for",
-              "Real diamond jewellery, gifts, earrings, demi-fine pieces",
-              "Low-cost fashion jewellery"
-            ],
-            [
-              "Buyer feeling",
-              "Premium, meaningful, long-term",
-              "Budget-friendly, temporary, trend-led"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "The most important point is simple: both can sparkle, but only one is diamond. If your priority is the lowest possible price, cubic zirconia may be enough. If your priority is real diamond jewellery, lab-grown diamonds are the better option."
-        }
-      ]
-    },
-    {
-      "heading": "Is Cubic Zirconia Fake Diamond?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Cubic zirconia is not a diamond. It is a diamond simulant."
-        },
-        {
-          "type": "paragraph",
-          "text": "That does not mean cubic zirconia is always bad. It can be useful for low-cost jewellery, costume jewellery or trend pieces that you do not expect to wear for years. It can also look bright and shiny when new."
-        },
-        {
-          "type": "paragraph",
-          "text": "The issue is that cubic zirconia is sometimes confused with lab-grown diamond, and that confusion can lead shoppers to think both are the same. They are not. Cubic zirconia is made to imitate the appearance of a diamond. A lab-grown diamond is a diamond with a laboratory origin."
-        },
-        {
-          "type": "paragraph",
-          "text": "For buyers who want jewellery with more meaning, durability and long-term beauty, lab-grown diamond earrings are usually a better choice than CZ earrings."
-        },
-        {
-          "type": "see-also",
-          "text": "Are lab-grown diamonds real?",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Are Lab-Grown Diamonds Fake Like Cubic Zirconia?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "No, lab-grown diamonds are not fake like cubic zirconia."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is one of the biggest misunderstandings in jewellery shopping. Some people hear \"lab-grown\" and think it means imitation. But lab-grown diamonds are not diamond-look stones. They are created differently from natural diamonds, but they are still diamonds."
-        },
-        {
-          "type": "paragraph",
-          "text": "Cubic zirconia is different. It is not diamond material. It is made to look similar to a diamond, but it is a separate stone."
-        },
-        {
-          "type": "paragraph",
-          "text": "A better way to think about it is this:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Lab-grown diamond = real diamond with a laboratory origin. Cubic zirconia = diamond-look stone made from a different material."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is why lab-grown diamonds are a much stronger choice for people who want genuine diamond jewellery without choosing mined diamonds."
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown vs natural diamonds",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Which Looks Better: Lab-Grown Diamond or Cubic Zirconia?",
+      "heading": "Lab-grown diamond and cubic zirconia comparison",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-12.jpg",
+          "image": "/blog-images/blog-image-75.jpg",
           "content": [
             {
-              "type": "paragraph",
-              "text": "At first glance, both can look sparkly. But over time, lab-grown diamonds usually offer a more premium and lasting look."
-            },
-            {
-              "type": "paragraph",
-              "text": "Cubic zirconia can sometimes look very bright, but it may also appear glassier or more artificial, especially in certain lighting. It can show more rainbow-like flashes and may not have the same depth as a diamond. It can also scratch and dull more easily, which affects how it looks after regular wear."
-            },
-            {
-              "type": "paragraph",
-              "text": "A well-cut lab-grown diamond has classic diamond brilliance. It can look clean, bright and refined in jewellery, especially in earrings where the stones sit close to the face."
+              "type": "table",
+              "headers": ["Feature", "Laboratory-grown diamond", "Cubic zirconia"],
+              "rows": [
+                ["Material", "Crystallised carbon", "Manufactured zirconium dioxide"],
+                ["Classification", "Diamond with a laboratory origin", "Diamond simulant"],
+                ["Diamond?", "Yes, when accurately identified as laboratory-grown", "No"],
+                ["Creation", "Commonly produced using HPHT or CVD technology", "Manufactured by stabilising and crystallising zirconium dioxide"],
+                ["Mohs hardness", "10", "Approximately 8–8.5"],
+                ["Scratch resistance", "Extremely high, although not indestructible", "Good, but more likely to scratch through prolonged wear"],
+                ["Light performance", "Diamond brilliance, fire and scintillation", "Often displays strong rainbow-coloured fire"],
+                ["Density", "Lower than CZ", "Denser and heavier at equivalent dimensions"],
+                ["Price", "More expensive than CZ", "Usually considerably less expensive"],
+                ["Everyday wear", "Well suited when properly set and cared for", "Suitable, but surface wear may become more visible over time"],
+                ["Identification", "Label, documentation and professional testing", "Label and professional testing"],
+                ["Best suited to", "Buyers who specifically want diamond jewellery", "Buyers prioritising affordability and visual sparkle"]
+              ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "For everyday earrings, this matters. You want the jewellery to continue looking polished after repeated wear, not only in the first product photo."
+          "text": "The Mohs scale measures resistance to scratching. It does not measure every type of durability. A diamond can still chip if struck at a vulnerable angle, and the setting and metal may require repair even when the diamond remains undamaged."
         }
       ]
     },
     {
-      "heading": "Which Lasts Longer: Lab-Grown Diamond or Cubic Zirconia?",
+      "heading": "What is a laboratory-grown diamond?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Lab-grown diamonds last longer than cubic zirconia."
+          "text": "A laboratory-grown diamond is produced using technology that recreates the conditions necessary for diamond crystal growth. Two widely used production methods are:"
         },
         {
-          "type": "paragraph",
-          "text": "Diamond is one of the hardest materials used in jewellery. Cubic zirconia is less durable and more likely to show wear over time. It can scratch, lose polish and become dull more easily than diamond."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is especially important for earrings you plan to wear often. Earrings come into contact with skin, hair products, perfume, makeup, storage pouches and travel cases. A stone that is less durable may lose its fresh sparkle faster."
-        },
-        {
-          "type": "paragraph",
-          "text": "If you only need jewellery for one event or a short-term trend, cubic zirconia may be fine. If you want earrings that feel more premium and can stay beautiful with proper care, lab-grown diamonds are the stronger option."
-        },
-        {
-          "type": "see-also",
-          "text": "How to clean lab-grown diamond earrings",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Why Is Cubic Zirconia Cheaper Than Lab-Grown Diamond?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Cubic zirconia is cheaper because it is not diamond."
-        },
-        {
-          "type": "paragraph",
-          "text": "It is easier and less costly to produce than lab-grown diamonds. It does not carry the same material value, durability or diamond identity. That is why cubic zirconia jewellery is often found in low-cost fashion jewellery, costume jewellery and trend-led pieces."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lab-grown diamonds cost more because they are real diamonds created through a more advanced process. They also offer better durability and a more premium jewellery experience."
-        },
-        {
-          "type": "paragraph",
-          "text": "The lower price of cubic zirconia can be attractive, but price should not be the only factor. A very cheap earring that loses shine quickly may not be good value if you wanted something long-lasting. A lab-grown diamond earring may cost more upfront, but it can feel more worthwhile if you wear it often."
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond earrings price guide",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Lab-Grown Diamond Earrings vs Cubic Zirconia Earrings",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "For earrings, the choice depends on what you want from the jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "If you want a very affordable fashion earring for a one-time outfit, cubic zirconia can work. But if you want earrings that feel more special, more durable and closer to fine jewellery, lab-grown diamonds are the better option."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Buyer Need",
-            "Better Choice",
-            "Why"
-          ],
-          "rows": [
-            [
-              "Lowest possible price",
-              "Cubic zirconia",
-              "It is usually much cheaper"
-            ],
-            [
-              "Real diamond jewellery",
-              "Lab-grown diamond",
-              "It is actual diamond"
-            ],
-            [
-              "Everyday earrings",
-              "Lab-grown diamond",
-              "More durable and premium"
-            ],
-            [
-              "Short-term fashion trend",
-              "Cubic zirconia",
-              "Good for temporary styling"
-            ],
-            [
-              "Meaningful gift",
-              "Lab-grown diamond",
-              "Feels more special and lasting"
-            ],
-            [
-              "Wedding guest jewellery",
-              "Lab-grown diamond",
-              "Looks more refined and elegant"
-            ],
-            [
-              "Ear stacks",
-              "Lab-grown diamond",
-              "Small diamonds add lasting sparkle"
-            ],
-            [
-              "Demi-fine jewellery",
-              "Lab-grown diamond",
-              "Better fit for premium everyday pieces"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "High Pressure High Temperature: HPHT uses high pressure and high temperature to grow diamond material.",
+            "Chemical Vapour Deposition: CVD introduces carbon-rich gas into a controlled chamber and deposits carbon onto a diamond seed."
           ]
         },
         {
           "type": "paragraph",
-          "text": "At IWantJewels, lab-grown diamond earrings are designed for people who want real diamond sparkle in wearable demi-fine designs. They are not meant to compete with the cheapest costume jewellery. They are made for shoppers who want better materials, better feeling and more lasting beauty."
+          "text": "The finished stone is then cut and polished. The laboratory origin should always be disclosed clearly wherever the stone is described or sold."
+        },
+        {
+          "type": "paragraph",
+          "text": "A laboratory-grown diamond should not be confused with a diamond simulant. Cubic zirconia and moissanite resemble aspects of a diamond's appearance, but they have different chemical compositions and physical properties."
         },
         {
           "type": "see-also",
-          "text": "Lab-grown diamond earrings",
-          "href": "/products?category=Earring"
+          "text": "Are lab-grown diamonds real diamonds?",
+          "href": "/resources/lab-grown-diamond-guides/are-lab-grown-diamonds-real"
         }
       ]
     },
     {
-      "heading": "Are Lab-Grown Diamond Earrings Worth More Than Cubic Zirconia Earrings?",
+      "heading": "What is cubic zirconia?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Yes, lab-grown diamond earrings are generally worth more than cubic zirconia earrings because they use real diamonds."
+          "text": "Cubic zirconia is the cubic crystalline form of zirconium dioxide. The colourless version is widely used in jewellery as a diamond simulant."
         },
         {
           "type": "paragraph",
-          "text": "That does not mean every shopper needs lab-grown diamonds for every purchase. For a costume party, trend-led look or very short-term accessory, cubic zirconia may be enough. But for jewellery you want to wear often, gift meaningfully or keep in your regular collection, lab-grown diamonds make more sense."
+          "text": "Calling CZ a simulant does not mean it is automatically poor quality or deceptive. It means the material can imitate aspects of a diamond's appearance without being diamond. Problems arise only when cubic zirconia is incorrectly represented or sold as diamond."
         },
         {
           "type": "paragraph",
-          "text": "The extra value is not only about the stone. It is about how the jewellery feels when you wear it. A real diamond earring can feel more polished and special. It can also hold up better to repeated use when properly cared for."
-        },
-        {
-          "type": "see-also",
-          "text": "Are lab-grown diamonds worth it?",
-          "href": "#"
+          "text": "Cubic zirconia should also not be confused with zircon. Zircon is a naturally occurring mineral, while the CZ used in jewellery is a manufactured material with a different composition."
         }
       ]
     },
     {
-      "heading": "Are Cubic Zirconia Earrings Good for Everyday Wear?",
+      "heading": "Is cubic zirconia a fake diamond?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Cubic zirconia earrings can be worn every day, but they are not the best choice if you want long-term durability and a premium look."
+          "text": "Cubic zirconia is not a diamond. The most accurate description is diamond simulant."
         },
         {
           "type": "paragraph",
-          "text": "Because CZ is less durable than diamond, it may show wear faster. It can also lose some of its original shine with regular use, especially if it is exposed to makeup, perfume, lotion, sweat, hair products or rough storage."
+          "text": "If a product is clearly described as containing cubic zirconia, there is nothing inherently misleading about it. It can be a valid choice for someone who wants a colourless, sparkling stone at an accessible price."
         },
         {
           "type": "paragraph",
-          "text": "For everyday jewellery, lab-grown diamonds are usually a better choice because they offer real diamond durability and a more refined appearance."
+          "text": "The word \"fake\" is less useful because it confuses material identity with product honesty. A properly disclosed CZ earring is not pretending to be something else. A problem exists when a seller describes or prices cubic zirconia as though it were diamond."
+        }
+      ]
+    },
+    {
+      "heading": "Are laboratory-grown diamonds fake?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "No. Laboratory-grown diamonds are diamonds created by a technological process rather than through geological formation in the earth."
         },
         {
           "type": "paragraph",
-          "text": "For IWantJewels customers, pieces like Cadenza S lab-grown diamond studs, Cadenza M diamond stud earrings, Amadea Huggie earrings and Laluce minimalist diamond earrings are better everyday options than CZ earrings because they are designed as wearable demi-fine jewellery with genuine lab-grown diamonds."
+          "text": "However, the laboratory origin must remain clear. Product titles, descriptions, packaging, receipts and advertising should consistently use a qualifying term such as \"laboratory-grown diamond\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Laboratory-grown and natural diamonds share essentially the same material properties, but they differ in origin. Specialist equipment and trained gemologists may be required to distinguish a laboratory-grown diamond from a natural one reliably."
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown vs natural diamonds",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-vs-natural-diamonds"
+        }
+      ]
+    },
+    {
+      "heading": "Do laboratory-grown diamonds and cubic zirconia look different?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Both stones can look colourless and highly polished, particularly when they are small and well cut. Their optical properties are different, however."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diamond's appearance combines:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Brightness from reflected white light",
+            "Fire from the separation of light into spectral colours",
+            "Scintillation from flashes created as the stone, wearer or light moves"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cubic zirconia has greater dispersion than diamond and may display more rainbow-coloured flashes. Whether this looks attractive is a matter of personal preference. The result also depends heavily on the cut, stone size, setting and lighting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Descriptions such as \"glassy\" or \"artificial-looking\" are subjective rather than universal facts. High-quality CZ can look attractive, especially in smaller sizes. It simply does not have the same optical properties as diamond."
+        },
+        {
+          "type": "paragraph",
+          "text": "Online photographs are not a reliable way to identify a stone. Photography, lighting and editing can make different stones look similar."
+        }
+      ]
+    },
+    {
+      "heading": "Which is more durable?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Laboratory-grown diamond is more resistant to scratching because diamond scores 10 on the Mohs hardness scale. Cubic zirconia scores approximately 8–8.5."
+        },
+        {
+          "type": "paragraph",
+          "text": "This means CZ is more likely to develop scratches, softened facet edges or surface wear over an extended period. Oils and cosmetic residue can also reduce visible sparkle, although this type of buildup may be removable through appropriate cleaning."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diamond's hardness does not make the complete earring indestructible. Diamond can chip, and the surrounding metal, plating, post, back and setting may wear or become damaged."
+        },
+        {
+          "type": "paragraph",
+          "text": "For earrings, durability depends on:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "The stone",
+            "The security of the setting",
+            "The earring metal and finish",
+            "How frequently the earrings are worn",
+            "Exposure to water, cosmetics and hair products",
+            "Cleaning and storage habits"
+          ]
         },
         {
           "type": "see-also",
           "text": "Can you wear lab-grown diamond earrings every day?",
-          "href": "#"
+          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
         }
       ]
     },
     {
-      "heading": "Lab-Grown Diamond vs Cubic Zirconia for Gifts",
+      "heading": "Which costs more?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Lab-grown diamonds are usually better than cubic zirconia for meaningful gifts."
+          "text": "Cubic zirconia normally costs considerably less than laboratory-grown diamond because the materials, production processes and markets are different."
         },
         {
           "type": "paragraph",
-          "text": "A gift does not always need to be expensive, but it should feel thoughtful. Lab-grown diamond jewellery feels more special because it uses real diamonds. Cubic zirconia can look pretty, but it may feel more like fashion jewellery than a lasting gift."
-        },
-        {
-          "type": "paragraph",
-          "text": "For birthdays, anniversaries, bridesmaids, graduations and romantic gifts, lab-grown diamond earrings are usually the stronger choice. They feel more personal, more premium and more memorable."
-        },
-        {
-          "type": "paragraph",
-          "text": "If you want a safe gift, choose Cadenza S or Cadenza M lab-grown diamond studs. If you want a symbolic gift, Farfalla butterfly earrings or Alidi Farfalla butterfly earrings can feel more personal. If the person enjoys dressing up, Orsola drop earrings or Lusso bold statement earrings may feel more exciting."
-        },
-        {
-          "type": "see-also",
-          "text": "Explore Jewellery Gifts",
-          "href": "/products"
-        }
-      ]
-    },
-    {
-      "heading": "Lab-Grown Diamond vs Cubic Zirconia for Wedding Guest Jewellery",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "For wedding guest jewellery, lab-grown diamonds usually look more refined than cubic zirconia."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wedding guest jewellery should feel polished, elegant and appropriate for the occasion. Cubic zirconia can look bright, but it may sometimes feel too costume-like, especially if the stones are large or overly flashy. Lab-grown diamonds give a cleaner and more premium sparkle."
-        },
-        {
-          "type": "paragraph",
-          "text": "For a wedding guest outfit, you do not always need the biggest earrings. The right balance matters more. Studs work well with detailed dresses. Drop earrings work beautifully with simple dresses, satin outfits, strapless necklines and evening looks. Butterfly earrings can suit softer romantic outfits."
-        },
-        {
-          "type": "paragraph",
-          "text": "For IWantJewels, Orsola drop earrings are a strong wedding guest recommendation. Cadenza M diamond stud earrings work well if the outfit is already detailed. Farfalla butterfly earrings are a lovely option for softer looks."
-        },
-        {
-          "type": "see-also",
-          "text": "Wedding guest jewellery guide",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Lab-Grown Diamond vs Cubic Zirconia for Ear Stacks",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "For ear stacks, lab-grown diamonds are usually better if you want a polished and lasting look."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ear stacks depend on small details. A tiny stud, huggie or minimalist earring may be small, but it still affects the whole look. Cubic zirconia can work for trend-led stacks, but lab-grown diamonds give the ear stack a cleaner, more premium finish."
-        },
-        {
-          "type": "paragraph",
-          "text": "A simple diamond ear stack could include Cadenza S lab-grown diamond studs with Amadea Huggie earrings. For a softer look, add Laluce minimalist diamond earrings. This creates sparkle without making the ear feel crowded."
-        },
-        {
-          "type": "see-also",
-          "text": "How to stack earrings",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Lab-Grown Diamond vs Cubic Zirconia in Demi-Fine Jewellery",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Demi-fine jewellery sits between costume jewellery and traditional fine jewellery. It should feel more elevated than low-cost fashion jewellery, but more accessible than solid gold or platinum fine jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lab-grown diamonds are a strong fit for demi-fine jewellery because they add real diamond beauty without making the jewellery feel too formal or unreachable. Cubic zirconia can be used in fashion jewellery, but it does not carry the same premium feeling."
-        },
-        {
-          "type": "paragraph",
-          "text": "At IWantJewels, the jewellery direction is built around lab-grown diamonds, 925 sterling silver and 14kt gold plating. This combination gives the pieces a more meaningful material story than simple CZ fashion jewellery."
-        },
-        {
-          "type": "see-also",
-          "text": "What is demi-fine jewellery?",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "When Should You Choose Cubic Zirconia?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Cubic zirconia can make sense in some situations."
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose cubic zirconia if you want the lowest possible price, need jewellery for one outfit, are buying a trend piece you do not expect to wear often, or want costume-style jewellery for temporary use."
-        },
-        {
-          "type": "paragraph",
-          "text": "There is nothing wrong with that when the purpose is clear. The problem happens when shoppers think cubic zirconia and lab-grown diamonds are the same. They are not."
-        },
-        {
-          "type": "paragraph",
-          "text": "If you want a fashion accessory, cubic zirconia can work. If you want real diamond jewellery, lab-grown diamonds are the better choice."
-        }
-      ]
-    },
-    {
-      "heading": "When Should You Choose Lab-Grown Diamonds?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Choose lab-grown diamonds if you want jewellery that feels more premium, more durable and more meaningful than diamond-look fashion jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "They are especially worth choosing for:"
+          "text": "The final jewellery price does not depend on the centre stone alone. It may also include:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Everyday diamond earrings",
-            "Birthday or anniversary gifts",
-            "Wedding guest jewellery",
-            "Bridesmaid jewellery",
-            "Ear stacks",
-            "Drop earrings for dinners and parties",
-            "Demi-fine jewellery collections",
-            "Pieces you want to wear more than once"
+            "Stone size and quality",
+            "Cut and setting complexity",
+            "Metal and plating",
+            "Design and manufacturing",
+            "Brand, packaging and service",
+            "Testing or grading documentation",
+            "Warranty and returns support"
           ]
         },
         {
           "type": "paragraph",
-          "text": "For IWantJewels, lab-grown diamonds are the stronger choice because the brand is built around real diamond sparkle in wearable demi-fine designs. The goal is not just to create jewellery that looks shiny for a short time, but jewellery that feels beautiful, useful and giftable."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If you are choosing lab-grown diamonds instead of cubic zirconia, start with earrings you can actually wear often."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best For",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Cadenza S lab-grown diamond studs",
-              "First real diamond earrings",
-              "Simple, clean and easy to wear daily"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "More visible everyday sparkle",
-              "Classic with stronger presence"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Ear stacks",
-              "Adds diamond shine in a modern way"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Quiet everyday styling",
-              "Easy to pair with simple outfits"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Meaningful gifts",
-              "More personal than basic fashion jewellery"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Feminine gift styling",
-              "Soft, symbolic and memorable"
-            ],
-            [
-              "Orsola drop earrings",
-              "Wedding guests and dinners",
-              "More refined than CZ occasion earrings"
-            ],
-            [
-              "Lusso bold statement earrings",
-              "Party looks",
-              "Strong sparkle with real diamond appeal"
-            ]
-          ]
+          "text": "A lower price does not make CZ a poor decision, and a higher price does not automatically make every laboratory-grown diamond product superior. Compare the complete piece, including its metal, construction, stone disclosure and aftercare."
         },
         {
           "type": "paragraph",
-          "text": "If you want jewellery that feels more special than diamond-look accessories, start with lab-grown diamond earrings. Choose studs for everyday wear, huggies for ear stacks, butterfly earrings for gifts or drop earrings for occasions."
-        }
-      ]
-    },
-    {
-      "heading": "Common Mistakes to Avoid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "One common mistake is assuming that all sparkly stones are diamonds. They are not. Always check whether the jewellery uses lab-grown diamonds, natural diamonds, cubic zirconia or another simulant."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is buying cubic zirconia while expecting it to age like diamond. CZ can look pretty, but it is not as durable as diamond."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is choosing only by price. The cheapest option is not always the best value if the jewellery dulls quickly or does not feel special enough to wear often."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not assume lab-grown means fake. Lab-grown diamonds are real diamonds with a laboratory origin."
+          "text": "Laboratory-grown diamond prices can change over time. Neither laboratory-grown diamonds nor cubic zirconia should be treated as a guaranteed financial investment or as certain to retain resale value."
         },
         {
           "type": "see-also",
-          "text": "Lab-grown diamond earrings buying guide",
-          "href": "#"
+          "text": "Lab-grown diamond earrings price guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide"
         }
       ]
     },
     {
-      "heading": "Final Checklist Before Buying",
+      "heading": "Which is better for earrings?",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-77.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Laboratory-grown diamond earrings may be the better choice if:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "You specifically want diamond rather than a diamond simulant.",
+                "You plan to wear the earrings regularly.",
+                "Scratch resistance is important to you.",
+                "The jewellery marks a meaningful event.",
+                "You want the optical properties associated with diamond."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Cubic zirconia earrings may be the better choice if:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "You want the lowest possible purchase price.",
+                "You enjoy strong rainbow-coloured fire.",
+                "You are experimenting with a new size or style.",
+                "The earrings are for occasional or trend-led wear.",
+                "Owning diamond is not important to you."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The best choice is the one that matches the wearer's priorities. CZ is not limited to one-night use; properly made and cared-for CZ jewellery can be worn many times. It is simply more likely than diamond to show surface wear over time."
+        }
+      ]
+    },
+    {
+      "heading": "Laboratory-grown diamond vs cubic zirconia studs",
       "content": [
         {
           "type": "paragraph",
-          "text": "Before choosing between lab-grown diamonds and cubic zirconia, ask yourself:"
+          "text": "Stud earrings are often worn regularly, making scratch resistance and secure settings important."
+        },
+        {
+          "type": "paragraph",
+          "text": "Small CZ studs can provide an affordable way to test whether you enjoy a particular stone diameter or visual presence. Laboratory-grown diamond studs are more appropriate when the buyer wants diamond material and expects the pair to form a long-term part of their jewellery collection."
+        },
+        {
+          "type": "paragraph",
+          "text": "When comparing studs, check:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Do I want real diamond jewellery or a diamond-look accessory?",
-            "Will I wear this piece often?",
-            "Is this for a meaningful gift?",
-            "Do I care about long-term sparkle and durability?",
-            "Am I buying for everyday wear, a wedding, a party or one outfit?",
-            "Does the product clearly say lab-grown diamond or cubic zirconia?",
-            "Is the metal suitable for regular wear?",
-            "Does the jewellery feel special enough for the purpose?"
+            "Total carat weight versus per-ear carat weight",
+            "Stone diameter in millimetres",
+            "Metal and plating",
+            "Setting type",
+            "Post and earring-back design",
+            "Whether the stone is laboratory-grown diamond or CZ",
+            "Returns, warranty and care instructions"
           ]
         },
         {
+          "type": "see-also",
+          "text": "Lab-grown diamond stud earrings guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamond earring size guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Which is better for a gift?",
+      "content": [
+        {
           "type": "paragraph",
-          "text": "If you want the lowest possible price for temporary styling, cubic zirconia may be enough. If you want real diamond jewellery that feels more premium and wearable, lab-grown diamonds are the better choice."
+          "text": "A jewellery gift does not have to contain diamond to be thoughtful. The right choice depends on the occasion, the recipient's preferences and the buyer's budget."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose laboratory-grown diamond when the recipient has expressed a preference for diamond or the material is part of the meaning of the gift. Choose cubic zirconia when the recipient prioritises design, affordability or fashion rather than stone identity."
+        },
+        {
+          "type": "paragraph",
+          "text": "The product description should state the material clearly so that both the buyer and recipient know what they are receiving."
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamond earrings for gifts",
+          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
+        }
+      ]
+    },
+    {
+      "heading": "Can you tell CZ from a laboratory-grown diamond at home?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Visual checks are not sufficiently reliable to authenticate a stone. Online \"fog tests\", scratch tests, water tests and similar home methods can produce incorrect conclusions or damage the jewellery."
+        },
+        {
+          "type": "paragraph",
+          "text": "A basic thermal diamond tester may separate some CZ from diamond, but testers vary and are not complete proof of stone identity or origin. Separating a laboratory-grown diamond from a natural diamond requires more specialised screening."
+        },
+        {
+          "type": "paragraph",
+          "text": "For greater confidence:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Buy from a retailer that discloses the stone clearly.",
+            "Check the product specification and receipt.",
+            "Ask what documentation accompanies the jewellery.",
+            "Use a qualified gemologist or reputable laboratory when independent verification is necessary.",
+            "Never perform a scratch test on finished jewellery."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What should you check before purchasing?",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before choosing either laboratory-grown diamond or cubic zirconia jewellery, check the following."
+        },
+        {
+          "type": "subheading",
+          "text": "Stone disclosure"
+        },
+        {
+          "type": "paragraph",
+          "text": "The product should state clearly whether it contains laboratory-grown diamond, cubic zirconia, natural diamond, moissanite or another stone."
+        },
+        {
+          "type": "subheading",
+          "text": "Stone measurements"
+        },
+        {
+          "type": "paragraph",
+          "text": "Check both carat weight and physical dimensions. Cubic zirconia is denser than diamond, so equal carat weights do not necessarily represent equal dimensions. Some CZ jewellery may use \"diamond-equivalent weight\", which should be identified clearly."
+        },
+        {
+          "type": "subheading",
+          "text": "Metal and finish"
+        },
+        {
+          "type": "paragraph",
+          "text": "Determine whether the piece is solid gold, gold-plated sterling silver, unplated sterling silver or another material. The setting and finish influence comfort, care and longevity."
+        },
+        {
+          "type": "subheading",
+          "text": "Total carat weight"
+        },
+        {
+          "type": "paragraph",
+          "text": "For earrings, total carat weight may refer to the combined weight of both earrings. Confirm whether the stated weight applies to the pair or each individual earring."
+        },
+        {
+          "type": "subheading",
+          "text": "Returns and aftercare"
+        },
+        {
+          "type": "paragraph",
+          "text": "Review the returns policy, warranty and cleaning instructions. These are important regardless of which stone you choose."
+        },
+        {
+          "type": "subheading",
+          "text": "Documentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Not every small diamond used in an earring will have an individual laboratory report. The retailer should still provide an accurate product specification and stone disclosure."
+        }
+      ]
+    },
+    {
+      "heading": "How should the stones be cleaned?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Both CZ and laboratory-grown diamond can collect oils and cosmetic residue. The correct cleaning method must account for the entire piece, including its metal, plating and setting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Use the product's care instructions. Avoid toothpaste, abrasive powders, bleach and aggressive scrubbing. If the earring has a plated finish, a cleaning method that is safe for the stone may still damage the metal."
+        },
+        {
+          "type": "see-also",
+          "text": "How to clean lab-grown diamond earrings",
+          "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "The final decision",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Choose laboratory-grown diamond when you specifically want diamond material, high scratch resistance and jewellery intended for frequent wear. Choose cubic zirconia when price and accessible sparkle matter more than owning a diamond."
+        },
+        {
+          "type": "paragraph",
+          "text": "The decision should not be based on claims that one stone is \"real\" and the other is \"worthless\". They are different materials serving different needs. What matters is accurate disclosure, appropriate pricing and choosing a well-made piece that suits how you intend to wear it."
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamonds vs moissanite",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Are lab-grown diamonds the same as cubic zirconia?",
-      "answer": "No, lab-grown diamonds and cubic zirconia are not the same. Lab-grown diamonds are real diamonds, while cubic zirconia is a diamond simulant."
+      "question": "Is cubic zirconia a laboratory-grown diamond?",
+      "answer": "No. Cubic zirconia is manufactured in a laboratory, but it is not laboratory-grown diamond. It is a different material made from zirconium dioxide."
     },
     {
-      "question": "Is cubic zirconia a real diamond?",
-      "answer": "No, cubic zirconia is not a real diamond. It is made to look like a diamond, but it is a different material."
+      "question": "Is cubic zirconia the same as zircon?",
+      "answer": "No. Cubic zirconia is a manufactured zirconium dioxide crystal. Zircon is a naturally occurring zirconium silicate mineral."
     },
     {
-      "question": "Are lab-grown diamonds fake?",
-      "answer": "No, lab-grown diamonds are not fake. They are real diamonds created in a controlled laboratory environment."
+      "question": "Which sparkles more: CZ or laboratory-grown diamond?",
+      "answer": "They display light differently. CZ has greater dispersion and can show more rainbow-coloured fire. Diamond produces its own balance of brightness, fire and scintillation."
     },
     {
-      "question": "Which is better, lab-grown diamond or cubic zirconia?",
-      "answer": "Lab-grown diamonds are better if you want real diamond jewellery, durability and a more premium feel. Cubic zirconia is better if you want a very low-cost fashion accessory."
+      "question": "Does cubic zirconia become cloudy?",
+      "answer": "CZ may appear less bright because of oils, cosmetics, scratches or surface wear. Cleaning can remove residue, but it cannot reverse scratches or damaged facet edges."
     },
     {
-      "question": "Does cubic zirconia sparkle like a diamond?",
-      "answer": "Cubic zirconia can sparkle, but its sparkle can look glassier or more artificial. It may also dull or scratch more easily over time."
+      "question": "Can cubic zirconia be worn every day?",
+      "answer": "It can, but it is more susceptible to scratching than diamond. The setting, metal and care routine also influence how well the jewellery wears."
     },
     {
-      "question": "Do lab-grown diamonds last longer than cubic zirconia?",
-      "answer": "Yes, lab-grown diamonds are more durable and generally last longer than cubic zirconia when properly cared for."
+      "question": "Are laboratory-grown diamonds more valuable than CZ?",
+      "answer": "Laboratory-grown diamonds generally cost more, but price is not the same as guaranteed resale value. Neither should be represented as a guaranteed investment."
     },
     {
-      "question": "Are lab-grown diamonds more expensive than cubic zirconia?",
-      "answer": "Yes, lab-grown diamonds are usually more expensive than cubic zirconia because they are real diamonds, not simulants."
+      "question": "Can a jeweller tell the difference?",
+      "answer": "A jeweller or gemologist with appropriate equipment can distinguish CZ from diamond. More specialised screening is needed to distinguish laboratory-grown diamonds from natural diamonds reliably."
     },
     {
-      "question": "Are cubic zirconia earrings good for everyday wear?",
-      "answer": "Cubic zirconia earrings can be worn daily, but they may scratch or dull faster than lab-grown diamond earrings."
-    },
-    {
-      "question": "Are lab-grown diamond earrings good gifts?",
-      "answer": "Yes, lab-grown diamond earrings make thoughtful gifts because they feel more special and lasting than diamond-look fashion jewellery."
-    },
-    {
-      "question": "Should I buy lab-grown diamond earrings or cubic zirconia earrings?",
-      "answer": "Choose lab-grown diamond earrings if you want real diamond jewellery for everyday wear, gifts or occasions. Choose cubic zirconia if you only need a low-cost accessory for temporary use."
+      "question": "Which is better for sensitive ears?",
+      "answer": "The stone does not usually determine whether earrings suit sensitive ears. The post, base metal, plating, nickel content and individual sensitivity are more relevant."
     }
   ],
   "cta": {
-    "heading": "Lab-grown diamonds and cubic zirconia can both sparkle, but they are not the same. Cubic zirconia is a diamond-look stone, while lab-grown diamonds are real diamonds created above ground.",
-    "body": "If you want jewellery that feels more premium, meaningful and wearable, lab-grown diamonds are the stronger choice. Start with IWantJewels lab-grown diamond earrings if you want real diamond sparkle in a demi-fine design. Choose studs for everyday polish, huggies for ear stacks, butterfly earrings for thoughtful gifts or drop earrings for weddings and evening outfits.",
-    "primaryLabel": "Shop Lab-Grown Diamond Earrings",
+    "heading": "Choose laboratory-grown diamond when you specifically want diamond material, high scratch resistance and jewellery for frequent wear. Choose cubic zirconia when price and accessible sparkle matter more than owning a diamond.",
+    "body": "Explore I Want Jewels laboratory-grown diamond earrings and check each product page for its stone disclosure, dimensions, metal construction, setting and care instructions before comparing on price alone.",
+    "primaryLabel": "Explore Lab-Grown Diamond Earrings",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Jewellery Gifts",
-    "secondaryHref": "/products",
-    "tertiaryLabel": "Read the Lab-Grown Diamond Earrings Buying Guide",
-    "tertiaryHref": "#"
+    "secondaryLabel": "What Are Lab-Grown Diamonds?",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds",
+    "tertiaryLabel": "Lab-Grown Diamond Earrings Buying Guide",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide"
   }
 }

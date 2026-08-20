@@ -1,1425 +1,694 @@
 {
   "meta": {
-    "title": "Leitfaden für auffällige Statement-Ohrringe",
-    "description": "Erfahren Sie, wie Sie auffällige Statement-Ohrringe mit schwarzen Kleidern, Party-Outfits, Abendlooks, im Labor gezüchteten Diamanten, Ohrsteckern und Ear-Stacks kombinieren."
+    "title": "Statement-Ohrringe: Styling-Guide",
+    "description": "Erfahren Sie, wie Sie markante Statement-Ohrringe nach Größe, Gewicht, Ausschnitt, Frisur und Outfit stylen, ohne Ihren Look zu überladen."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-7.jpg",
-    "title": "Leitfaden für auffällige Statement-Ohrringe:",
-    "subtitle": "So stylen Sie auffällige Ohrringe, ohne den Look zu übertreiben",
+    "image": "/blog-images/blog-image-42.jpg",
+    "title": "Markante Statement-Ohrringe:",
+    "subtitle": "So wählen und stylen Sie sie",
     "paragraphs": [
-      "Mutige Statement-Ohrringe eignen sich für Outfits, die einen klaren Schmuckmoment benötigen. Sie sollen nicht im Outfit verschwinden. Sie sollen das Gesicht umrahmen, Glanz verleihen und einem schlichten Look das Gefühl geben, partytauglich zu sein.",
-      "Der einfachste Weg, auffällige Ohrringe zu stylen, besteht darin, den Rest des Schmucks sauber zu halten. Ein schlichtes schwarzes Kleid, ein Satin-Outfit, ein trägerloses Kleid, ein schulterfreies Kleid oder ein eleganter Party-Look können auffällige Ohrringe wunderbar tragen. Wenn das Kleid bereits Pailletten, schwere Stickereien, Spitze, metallischen Stoff oder einen dramatischen Ausschnitt hat, sind mittlere Nieten, Tropfen oder Huggies möglicherweise besser.",
-      "Bei IWantJewels sind die auffälligen Statement-Ohrringe von Lusso die Hauptproduktrichtung für diese Seite. Lusso sollte als herausragender Party-Ohrring gestylt werden, insbesondere für schlichte Abendoutfits, schwarze Kleider, Geburtstags-Looks, Dinnerpartys und selbstbewusstes Styling. Cadenza S fungiert als bester Stützstecker für einen auffälligen Ear-Stack, während Orsola, Pave Hoops und Cadenza M sicherere Alternativen sind, wenn das Outfit Bewegung, Form oder klassischen Glanz anstelle eines auffälligen Blickfangs benötigt."
+      "Markante Statement-Ohrringe sind dafür gemacht, eine sichtbare Rolle im Outfit zu spielen. Ihre Wirkung kann aus Größe, Form, Bewegung, Kontrast, Diamantbesatz oder einem ungewöhnlichen Motiv entstehen – nicht nur aus ihrer Größe.",
+      "Am ausgewogensten tragen Sie Statement-Ohrringe, wenn Sie festlegen, was den Look anführt. Sind die Ohrringe der Blickfang, können Halskette, Ear Stack und Outfitdetails sie ergänzen, statt um Aufmerksamkeit zu konkurrieren.",
+      "Prüfen Sie vor der Auswahl die vollständigen Maße, das Gewicht pro Ohrring, den Verschluss und die Materialien. Diese Angaben sind hilfreicher als Begriffe wie „markant“ oder „leicht“, die je nach Design unterschiedlich gemeint sein können."
     ],
-    "shopLabel": "Kaufen Sie auffällige Statement-Ohrringe",
+    "shopLabel": "Statement-Ohrringe entdecken",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Verstehen Sie, wann Sie auffällige Statement-Ohrringe tragen sollten",
-      "Stylen Sie auffällige Ohrringe mit schwarzen Kleidern, roten Kleidern, grünen Kleidern, Satin-Outfits und Party-Looks",
-      "Entscheiden Sie, wann auffällige Ohrringe besser sind als Ohrstecker, Creolen oder Tropfen",
-      "Erfahren Sie, wie Sie auffällige Ohrringe mit Halsketten, Frisuren und Ausschnitten in Einklang bringen",
-      "Erstellen Sie kühne Ohrring-Ohrstecker mit kleinen Stützsteckern",
-      "Wählen Sie auffällige Ohrringe für Geburtstagsfeiern, Abendessen, Hochzeiten, Abendveranstaltungen und Geschenke",
-      "Vermeiden Sie es, das Outfit überfüllt wirken zu lassen",
-      "Finden Sie Produktempfehlungen von IWantJewels nach Outfit und Anlass",
-      "Planen Sie Bildblöcke, Produktmodule, CTA-Bereiche und interne Links für diese Seite ein"
+      "Die Wirkung entsteht durch Form, Bewegung, Kontrast oder Diamantbesatz – nicht allein durch Größe",
+      "„Statement“ und „Ohrstecker“ sind keine Gegensätze: Ein skulpturaler Ohrstecker kann beides sein",
+      "Wählen Sie einen Schmuck-Blickfang und lassen Sie den Rest ihn ergänzen",
+      "Prüfen Sie vollständige Breite, Höhe, Länge, Ausladung und Gewicht pro Ohrring",
+      "Eine Halskette ist nicht automatisch falsch – der Ausschnitt entscheidet",
+      "Statement-Ohrringe können tagsüber funktionieren, wenn die Angaben zur Tragedauer passen"
     ],
-    "image": "/blog-images/blog-image-81.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Mutiger Statement-Ohrring-Selektor",
+      "heading": "Statement-Ohrringe stylen: Überblick",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als wichtigstes Styling-Entscheidungstool."
-        },
+          "type": "table",
+          "headers": [
+            "Styling-Situation",
+            "Passende Ohrrichtung",
+            "So schaffen Sie Balance"
+          ],
+          "rows": [
+            [
+              "Schlichtes oder minimalistisches Outfit",
+              "Eine sichtbarere Form, ein markantes Motiv oder eine auffälligere Diamantanordnung",
+              "Halten Sie Halskette und weitere Ohrringe zurückhaltend"
+            ],
+            [
+              "Detailreiches oder verziertes Outfit",
+              "Ein Statement-Design mit kontrollierten Maßen",
+              "Vermeiden Sie, jedes Detail des Kleids zu wiederholen"
+            ],
+            [
+              "Offener Ausschnitt",
+              "Ohrringe können zum wichtigsten Schmuckelement werden",
+              "Eine Halskette ist optional"
+            ],
+            [
+              "Hoher oder detailreicher Ausschnitt",
+              "Achten Sie auf Breite, Länge und möglichen Kontakt mit dem Stoff",
+              "Die Halskette meist minimal halten"
+            ],
+            [
+              "Hochgestecktes Haar",
+              "Die meisten Formen bleiben sichtbar",
+              "Wählen Sie nach Größe und Komfort"
+            ],
+            [
+              "Offenes Haar",
+              "Wählen Sie eine sichtbare Kontur oder ein kontrastierendes Finish",
+              "Erhöhen Sie das Gewicht nicht nur für bessere Sichtbarkeit"
+            ],
+            [
+              "Mehrere Piercings",
+              "Tragen Sie einen Blickfang-Ohrring mit kleineren ergänzenden Stücken",
+              "Prüfen Sie den tatsächlichen Abstand zwischen den Piercings"
+            ],
+            [
+              "Langes Event",
+              "Achten Sie auf angegebenes Gewicht, Verschluss und Bewegung",
+              "Überlegen Sie, wie sich die Ohrringe über mehrere Stunden anfühlen"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Was macht einen markanten Statement-Ohrring aus?",
+      "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-83.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Stylingbedarf",
-                "Beste Ohrringrichtung",
-                "Empfohlene IWJ-Richtung"
-              ],
-              "rows": [
-                [
-                  "Mutiger Party-Look",
-                  "Mutige Statement-Ohrringe",
-                  "Lusso"
-                ],
-                [
-                  "Schlichtes schwarzes Kleid",
-                  "Auffällige Ohrringe, Tropfen oder Creolen",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Partykleid aus Satin",
-                  "Tropfen oder auffällige Ohrringe, wenn das Kleid schlicht ist",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Rotes Kleid-Styling",
-                  "Drops oder mittlere Stollen; Fett nur, wenn das Kleid schlicht ist",
-                  "Orsola, Cadenza M, Lusso"
-                ],
-                [
-                  "Grünes Kleid-Styling",
-                  "Goldtropfen, Creolen oder auffällige Ohrringe",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Geburtstagsparty-Look",
-                  "Auffällige Ohrringe, Creolen oder Schmetterlingsohrringe",
-                  "Lusso, Pave Hoops, Farfalla"
-                ],
-                [
-                  "Dinner-Party-Look",
-                  "Drops oder mittlere Stollen",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Formeller Abendlook",
-                  "Lange Tropfen oder polierte Nieten",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Detailliertes Outfit",
-                  "Ohrstecker, Huggies oder minimalistische Ohrringe",
-                  "Cadenza M, Amadea, Laluce"
-                ],
-                [
-                  "Mutiger Ohrstapel",
-                  "Mutiger Ohrring + kleiner Ohrstecker",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Sicherere, mutige Alternative",
-                  "Tropfenohrringe oder Creolen",
-                  "Orsola, Pave-Reifen"
-                ],
-                [
-                  "Geschenk für mutige Schmuckliebhaber",
-                  "Auffällige Ohrringe oder Creolen",
-                  "Lusso, Pave Hoops"
-                ]
+              "type": "paragraph",
+              "text": "Statement-Ohrringe sind keine fest definierte Produktkategorie. Ein Paar kann durch eines oder mehrere der folgenden Merkmale wirken:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Eine breitere oder längere Silhouette",
+                "Eine skulpturale oder geometrische Form",
+                "Ein wiedererkennbares Motiv",
+                "Mehrere Steine oder eine sichtbarere Diamantanordnung",
+                "Bewegung durch bewegliche oder hängende Elemente",
+                "Starker Kontrast zu Haaren oder Kleidung der Trägerin",
+                "Eine ungewöhnliche Kombination aus Form, Struktur oder Negativraum"
               ]
             }
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein kompakter, skulpturaler Ohrstecker kann stärker wirken als ein dünner, längerer Ohrring. Ebenso kann eine Pavé-Creole zum Blickfang eines Outfits werden, ohne übergroß zu sein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deshalb sind Maße und Fotos hilfreicher als Produktbezeichnungen allein."
         }
       ]
     },
     {
-      "heading": "Was sind auffällige Statement-Ohrringe?",
+      "heading": "Prüfen Sie vor der Auswahl die Maße",
       "content": [
         {
           "type": "paragraph",
-          "text": "Auffällige Statement-Ohrringe sind Ohrringe, die den Schmuckschwerpunkt eines Outfits bilden sollen. Sie sind in der Regel größer, sichtbarer, glitzernder oder designorientierter als alltägliche Ohrstecker, Huggies oder minimalistische Ohrringe."
+          "text": "Produktfotos werden nicht immer im gleichen Maßstab gezeigt. Zwei Ohrringe können online ähnlich groß wirken, beim Tragen aber ganz unterschiedliche Proportionen haben."
+        },
+        {
+          "type": "subheading",
+          "text": "Vollständige Breite und Höhe"
         },
         {
           "type": "paragraph",
-          "text": "Ein auffälliger Ohrring muss nicht immer übergroß sein. Es braucht einfach genug Präsenz, um den Look anzuführen. Es sollte die Aufmerksamkeit auf das Gesicht lenken und dem Outfit ein gestyltes Aussehen verleihen."
+          "text": "Die vollständige Kontur bestimmt, wie viel Raum ein Ohrring am Ohr einnimmt. Die Maße sollten das gesamte Design umfassen, nicht nur den Mittelstein oder das Motiv."
+        },
+        {
+          "type": "subheading",
+          "text": "Länge des Ohrhängers"
         },
         {
           "type": "paragraph",
-          "text": "Für IWantJewels sollten die auffälligen Statement-Ohrringe von Lusso als eine Party-geführte, herausragende Ohrringoption positioniert werden. Sie sind nicht der sicherste Alltagsohrring. Sie sind am stärksten, wenn das Outfit schlicht genug ist, sodass die Ohrringe zum Hauptglanzmoment werden."
+          "text": "Messen Sie bei Ohrhängern vom Piercing oder Verschlusspunkt bis zum tiefsten Teil des Designs. So erkennen Sie, ob der Ohrring an Kieferlinie, Ausschnitt oder Kragen reichen kann."
         },
         {
-          "type": "table",
-          "headers": [
-            "Mutige Ohrringqualität",
-            "Was es bedeutet"
-          ],
-          "rows": [
-            [
-              "Klarer Schwerpunkt",
-              "Der Ohrring prägt den Schmuck-Look"
-            ],
-            [
-              "Sichtbares Funkeln",
-              "Der Ohrring ist auf Fotos und im Abendlicht zu sehen"
-            ],
-            [
-              "Stärkeres Design",
-              "Mehr Wirkung als ein einfacher Stud oder Huggie"
-            ],
-            [
-              "Outfitabhängig",
-              "Funktioniert am besten, wenn es mit dem Kleid harmoniert"
-            ],
-            [
-              "Minimaler Stützschmuck",
-              "Halskette und andere Teile sollten sauber bleiben"
-            ],
-            [
-              "Anlassorientiert",
-              "Ideal für Partys, Abendessen, Geburtstage und Abendlooks"
-            ],
-            [
-              "Selbstbewusstes Styling",
-              "Funktioniert, wenn der Träger möchte, dass der Schmuck auffällt"
-            ]
-          ]
+          "type": "subheading",
+          "text": "Ausladung"
         },
         {
-          "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
+          "type": "paragraph",
+          "text": "Die Ausladung beschreibt, wie weit ein Ohrring vom Ohr absteht. Sie beeinflusst die Seitenansicht eines skulpturalen Stücks und ob es sich in Haaren oder Kleidung verfangen kann."
+        },
+        {
+          "type": "subheading",
+          "text": "Gewicht je Ohrring"
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Gewicht sollte pro Ohrring und nicht nur für das Paar angegeben werden. Der persönliche Komfort ist unterschiedlich, doch die Angabe ermöglicht einen fairen Designvergleich."
+        },
+        {
+          "type": "subheading",
+          "text": "Verschluss und Rückteil"
+        },
+        {
+          "type": "paragraph",
+          "text": "Prüfen Sie, ob der Ohrring einen Stift mit Butterfly-Verschluss, Scharnier-, Klapp- oder einen anderen Verschluss verwendet. Der Verschluss muss dem tatsächlichen Produkt entsprechen."
+        },
+        {
+          "type": "subheading",
+          "text": "Bewegung"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein beweglicher Ohrhänger verhält sich anders als ein starres Design. Bewegung kann ihn auffälliger machen, aber auch den Kontakt mit Haaren, Kragen oder Schultern erhöhen."
         }
       ]
     },
     {
-      "heading": "Wann sollten Sie auffällige Ohrringe tragen?",
+      "heading": "So tragen Sie Statement-Ohrringe, ohne den Look zu überladen",
       "content": [
         {
           "type": "paragraph",
-          "text": "Tragen Sie auffällige Ohrringe, wenn das Outfit schlicht oder schlicht ist oder einen starken Abschluss braucht."
+          "text": "Wählen Sie zunächst einen zentralen Schmuck-Blickfang."
         },
         {
           "type": "paragraph",
-          "text": "Ein schlichtes schwarzes Kleid, ein Satin-Slip-Kleid, ein trägerloses Kleid, ein schulterfreies Kleid, ein eleganter Overall oder ein minimalistisches Party-Outfit passen gut zu auffälligen Ohrringen. Je schlichter das Outfit, desto eher wirken auffällige Ohrringe gewollt."
+          "text": "Enthalten die Ohrringe eine markante Form, sichtbaren Diamantbesatz oder viel Bewegung, lassen Sie sie den Look anführen. Der übrige Schmuck muss nicht verschwinden, sollte aber eine unterstützende Rolle spielen."
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Betrachten Sie die vorhandenen Outfitdetails.",
+            "Entscheiden Sie, ob die Ohrringe oder der Ausschnitt mehr Aufmerksamkeit erhalten sollen.",
+            "Ergänzen Sie nur dann eine Halskette, wenn sie dem Outfit wirklich etwas gibt.",
+            "Halten Sie zusätzliche Piercings kleiner als den Blickfang-Ohrring.",
+            "Prüfen Sie den vollständigen Look aus normaler Betrachtungsdistanz."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Balance bedeutet nicht, dass jedes Outfit minimalistisch sein muss. Es bedeutet, mehrere unverbundene Blickfänge im Bereich von Gesicht und Ausschnitt zu vermeiden."
+        }
+      ]
+    },
+    {
+      "heading": "Sollten Sie Statement-Ohrringe mit einer Halskette tragen?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Es gibt keine Regel, dass Statement-Ohrringe immer ohne Halskette getragen werden müssen. Die Entscheidung hängt vom Ausschnitt, der visuellen Wirkung der Ohrringe und der Halskette selbst ab."
         },
         {
           "type": "table",
           "headers": [
-            "Beste Zeit, auffällige Ohrringe zu tragen",
-            "Warum es funktioniert"
+            "Kombination aus Ohrringen und Outfit",
+            "Empfehlung für die Halskette"
           ],
           "rows": [
             [
-              "Schlichtes schwarzes Kleid",
-              "Auffällige Ohrringe sorgen für einen besonderen Glanz"
+              "Statement-Ohrringe zu einem schulterfreien Outfit",
+              "Keine Halskette oder eine zurückhaltende Halskette kann funktionieren"
             ],
             [
-              "Minimales Abendoutfit",
-              "Fügt Interesse hinzu, ohne dass eine Halskette erforderlich ist"
+              "Statement-Ohrringe zu einem schulterfreien Ausschnitt",
+              "Lassen Sie die Ohrringe führen oder wählen Sie eine sehr schlichte Halskette"
             ],
             [
-              "Trägerloses Kleid",
-              "Umrahmt Gesicht und Dekolleté"
+              "Statement-Ohrringe zu einem V-Ausschnitt",
+              "Ein Anhänger kann passen, wenn er nicht mit den Ohrringen konkurriert"
             ],
             [
-              "Schulterfreies Kleid",
-              "Gleicht die offene Schulterlinie aus"
+              "Statement-Ohrringe zu einem hochgeschlossenen Ausschnitt",
+              "Eine Halskette ist oft unnötig"
             ],
             [
-              "Geburtstagsfeier",
-              "Schafft einen feierlichen Schmuckmoment"
+              "Statement-Ohrringe zu einem verzierten Ausschnitt",
+              "Vermeiden Sie meist ein weiteres auffälliges Element"
             ],
             [
-              "Cocktailparty",
-              "Fügt sichtbares Styling hinzu"
-            ],
-            [
-              "Dinnerparty",
-              "Funktioniert, wenn das Outfit sauber ist"
-            ],
-            [
-              "Outfit für den Abend",
-              "Verleiht Selbstvertrauen und Glanz"
-            ],
-            [
-              "Einfacher Overall",
-              "Verleiht Struktur und Glamour"
-            ],
-            [
-              "Hochzeitsabendparty",
-              "Funktioniert, wenn das Outfit des Gastes schlicht und nicht zu brautlich ist"
+              "Statement-Ohrringe zu einem schlichten Rundhalsausschnitt",
+              "Eine feine Kette kann Struktur geben, ohne zum zweiten Blickfang zu werden"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Lusso ist die stärkste Empfehlung von IWantJewels, wenn der Käufer möchte, dass die Ohrringe den Look bestimmen."
+          "text": "Treffen Sie die Entscheidung nicht nur anhand der Länge des Ohrrings. Auch Breite, Form, Funkeln und Bewegung bestimmen seine visuelle Wirkung."
+        }
+      ]
+    },
+    {
+      "heading": "Statement-Ohrringe zu schlichten und detailreichen Outfits stylen",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Schlichte Outfits"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein schlichtes Outfit lässt Raum für eine besondere Ohrringform. Dazu gehören etwa ein schlichtes Kleid, ein maßgeschneiderter Jumpsuit, ein klares Hemd, ein monochromer Stricklook oder ein unkompliziertes Abendoberteil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Ohrringe müssen nicht unbedingt die Form des Outfits aufgreifen. Kontraste können wirkungsvoll sein: Eine geschwungene Creole kann ein strukturiertes Outfit weicher wirken lassen, während ein geometrisches Design fließendem Stoff Kontur gibt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zu einem schwarzen Kleid können warme und kühle Metallfarben sichtbaren Kontrast schaffen. Die endgültige Wahl sollte Stoff, weitere Accessoires und Ihre persönlichen Vorlieben berücksichtigen."
         },
         {
           "type": "see-also",
-          "text": "Welchen Schmuck trägt man zu einem schwarzen Kleid?",
+          "text": "Welcher Schmuck passt zu einem schwarzen Kleid?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Wann sollten Sie auffällige Ohrringe meiden?",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe sind nicht immer die beste Wahl. Sie können zu beschäftigt aussehen, wenn im Outfit bereits viel los ist."
+          "type": "subheading",
+          "text": "Detailreiche Outfits"
         },
         {
           "type": "paragraph",
-          "text": "Wenn das Kleid Pailletten, schwere Spitze, Stickereien, metallische Stoffe, große Drucke, dramatische Ärmel, einen sehr detaillierten Ausschnitt oder eine starke Halskette hat, können auffällige Ohrringe konkurrieren. In diesen Fällen sehen mittelgroße Ohrstecker, Huggies, minimalistische Ohrringe oder elegante Tropfen möglicherweise eleganter aus."
+          "text": "Pailletten, Spitze, Stickereien, Metallic-Stoffe, Muster und dramatische Ausschnitte enthalten bereits viele visuelle Informationen. Statement-Ohrringe können trotzdem funktionieren, sollten sich aber auf das Outfit beziehen, statt einfach weitere Details hinzuzufügen."
         },
         {
-          "type": "table",
-          "headers": [
-            "Wann man auffällige Ohrringe meiden sollte",
-            "Bessere Richtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Paillettenkleid",
-              "Mittlere Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Schweres Spitzenkleid",
-              "Ohrstecker oder zarte Tropfen",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Metallisches Outfit",
-              "Ohrstecker oder minimalistische Ohrringe",
-              "Kadenz M, Laluce"
-            ],
-            [
-              "Starke Halskette",
-              "Ohrstecker oder Huggies",
-              "Kadenz S, Amadea"
-            ],
-            [
-              "Dramatischer Ausschnitt",
-              "Ohrstecker, Creolen oder einfache Tropfen",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Sehr bedrucktes Kleid",
-              "Ohrstecker oder minimalistische Ohrringe",
-              "Kadenz S, Laluce"
-            ],
-            [
-              "Formale, dezente Veranstaltung",
-              "Polierte Nieten oder lange Tropfen",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Alltagsoutfit",
-              "Ohrstecker, Huggies oder minimalistische Ohrringe",
-              "Cadenza S, Amadea, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für minimalistische Ohrringe",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe im Vergleich zu Ohrsteckern, Tropfen und Creolen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe eignen sich am besten, wenn das Outfit einen starken Fokus auf Schmuck erfordert. Stollen sind sicherer. Tropfen sorgen für Bewegung. Reifen verleihen Form. Huggies sorgen für ein klares und modernes Styling."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Ohrringtyp",
-            "Am besten für",
-            "IWJ-Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Mutige Statement-Ohrringe",
-              "Einfache Outfits, Party-Looks, herausragendes Styling",
-              "Lusso"
-            ],
-            [
-              "Mittlere Stollen",
-              "Sicherer Glanz, detaillierte Outfits, klassischer Glanz",
-              "Cadenza M"
-            ],
-            [
-              "Kleine Nieten",
-              "Minimales Aussehen und Unterstützung des Ohrstapels",
-              "Cadenza S"
-            ],
-            [
-              "Tropfenohrringe",
-              "Bewegung, Satinkleider, Abendessen, Hochzeiten",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Reifen",
-              "Moderne Passform, Jumpsuits, schlichte Party-Looks",
-              "Pave-Reifen"
-            ],
-            [
-              "Huggies",
-              "Dezentes, modernes Design",
-              "Amadea"
-            ],
-            [
-              "Minimalistische Ohrringe",
-              "Ruhige Details und detaillierte Outfits",
-              "Laluce"
-            ],
-            [
-              "Schmetterlingsohrringe",
-              "Sanfter, romantischer und bedeutungsvoller Stil",
-              "Farfalla, Alidi Farfalla"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Eine klare Kontur statt mehrerer konkurrierender Motive",
+            "Kontrollierte Maße an einem stark verzierten Ausschnitt",
+            "Eine Metallfarbe, die an anderer Stelle im Outfit wiederkehrt",
+            "Weniger Bewegung, wenn der Stoff bereits Bewegung oder Fransen aufweist",
+            "Ein deutlicher Abstand zwischen Ohrring und Kleidungsstück"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Lusso, wenn die Ohrringe führen sollen. Wählen Sie Orsola, wenn das Outfit Bewegung braucht. Wählen Sie Pave Hoops, wenn das Outfit Form braucht. Wählen Sie Cadenza M, wenn das Outfit bereits Details aufweist."
+          "text": "Es geht nicht darum, markante Ohrringe automatisch zu vermeiden. Entscheidend ist, die vorhandenen Blickfänge zu erkennen."
         },
         {
           "type": "see-also",
-          "text": "Ohrstecker vs. Creolen",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe mit schwarzen Kleidern",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein schwarzes Kleid ist eines der besten Outfits für auffällige Ohrringe, denn die Farbe gibt dem Schmuck Raum zum Leuchten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn das schwarze Kleid schlicht ist, kann Lusso zum Hauptschmuckmoment werden. Wenn das Kleid aus Satin ist, kann Orsola für elegante Bewegung sorgen. Wenn das Kleid modern oder hochgeschlossen ist, funktionieren Pave Hoops oder Cadenza M möglicherweise besser. Wenn das schwarze Kleid voller Spitze oder detailliert ist, halten Sie die Ohrringe sauberer."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-85.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Schwarzer Kleidungsstil",
-                "Beste Ohrringrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Schlichtes schwarzes Kleid",
-                  "Mutige Ohrringe",
-                  "Lusso"
-                ],
-                [
-                  "Schwarzes Satinkleid",
-                  "Tropfen oder auffällige Ohrringe, wenn sie schlicht sind",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Schwarzes schulterfreies Kleid",
-                  "Auffällige Ohrringe, Tropfen oder Creolen",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Schwarzes trägerloses Kleid",
-                  "Auffällige Ohrringe oder Tropfen",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Schwarzes Kleid mit Stehkragen",
-                  "Reifen oder mittlere Nieten",
-                  "Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Schwarzes Spitzenkleid",
-                  "Ohrstecker oder zarte Tropfen",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Schwarzes Paillettenkleid",
-                  "Ohrstecker oder Huggies",
-                  "Kadenz M, Amadea"
-                ],
-                [
-                  "Schwarzer Overall",
-                  "Auffällige Ohrringe oder Creolen",
-                  "Lusso, Pave Hoops"
-                ],
-                [
-                  "Formelles schwarzes Kleid",
-                  "Lange Tropfen oder polierte Nieten",
-                  "Concetta Long, Cadenza M"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Ohrringe für schulterfreie Kleider",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe mit roten Kleidern",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Rote Kleider haben bereits eine starke visuelle Energie, daher müssen auffällige Ohrringe mit Vorsicht eingesetzt werden."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn das rote Kleid schlicht ist, können auffällige Ohrringe funktionieren. Wenn das rote Kleid aus Satin, Spitze, Rüschen, Pailletten oder vielen Details besteht, sind Orsola oder Cadenza M möglicherweise sicherer. Goldfarbene Ohrringe passen normalerweise wunderbar zu Rot, weil sie Wärme verleihen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Roter Kleidungsstil",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Einfaches rotes Kleid",
-              "Tropfen, mittelgroße Ohrstecker oder auffällige Ohrringe",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Rotes Satinkleid",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Rotes schulterfreies Kleid",
-              "Tropfen, Creolen oder auffällige Ohrringe",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Rotes Spitzenkleid",
-              "Ohrstecker oder zarte Tropfen",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Rotes Paillettenkleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Burgunderrotes Kleid",
-              "Tropfen, lange Tropfen oder polierte Nieten",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Rotes Partykleid",
-              "Tropfen oder auffällige Ohrringe, wenn sie schlicht sind",
-              "Orsola, Lusso"
-            ],
-            [
-              "Rotes Abendkleid",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck mit rotem Kleid",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe mit grünen Kleidern",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Grüne Kleider passen wunderbar zu goldfarbenem Glitzer, besonders für Party- und Abend-Styling."
-        },
-        {
-          "type": "paragraph",
-          "text": "Smaragd und Waldgrün können auffällige Ohrringe, Tropfen oder Creolen tragen. Salbei und Minze passen normalerweise besser zu weicheren Ohrringen wie Schmetterlingsohrringen, kleinen Ohrsteckern oder kurzen Tropfen."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-93.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Grüner Kleidungsstil",
-                "Beste Ohrringrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Smaragdgrünes Kleid",
-                  "Auffällige Ohrringe, goldene Tropfen oder Creolen",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Waldgrünes Kleid",
-                  "Tropfen, lange Tropfen oder auffällige Ohrringe",
-                  "Orsola, Concetta Long, Lusso"
-                ],
-                [
-                  "Grünes Satinkleid",
-                  "Tropfen oder Reifen",
-                  "Orsola, Pave-Reifen"
-                ],
-                [
-                  "Grünes Partykleid",
-                  "Goldtropfen, Creolen oder auffällige Ohrringe",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Salbeigrünes Kleid",
-                  "Schmetterlingsohrringe oder kurze Tropfen",
-                  "Farfalla, Concetta Short"
-                ],
-                [
-                  "Mintfarbenes Kleid",
-                  "Kleine Ohrstecker oder Schmetterlingsohrringe",
-                  "Kadenz S, Farfalla"
-                ],
-                [
-                  "Olivgrünes Kleid",
-                  "Creolen, Tropfen oder mittlere Nieten",
-                  "Pave Hoops, Orsola, Cadenza M"
-                ],
-                [
-                  "Grünes Blumenkleid",
-                  "Schmetterlingsohrringe oder kleine Ohrstecker",
-                  "Farfalla, Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck mit grünem Kleid",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Auffällige Ohrringe mit Satin-Outfits",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Satin-Outfits reflektieren bereits das Licht, daher funktionieren auffällige Ohrringe am besten, wenn das Satin-Design schlicht ist."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn das Satinkleid Drapierungen, Wasserfallausschnitte, Rüschen oder starken Glanz aufweist, sehen Tropfenohrringe oder mittelgroße Ohrstecker möglicherweise sauberer aus. Ist das Satinkleid schlicht und der Ausschnitt offen, können auffällige Ohrringe für einen starken Party-Look sorgen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satin-Outfit-Stil",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Schlichtes Satinkleid",
-              "Auffällige Ohrringe oder Tropfen",
-              "Lusso, Orsola"
-            ],
-            [
-              "Unterkleid aus Satin",
-              "Tropfen oder auffällige Ohrringe",
-              "Orsola, Lusso"
-            ],
-            [
-              "Schwarzes Satinkleid",
-              "Tropfen, Ohrstecker oder auffällige Ohrringe, wenn es schlicht ist",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Rotes Satinkleid",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Champagnerfarbenes Satinkleid",
-              "Tropfen oder kurze Tropfen",
-              "Orsola, Concetta Short"
-            ],
-            [
-              "Errötendes Satinkleid",
-              "Schmetterlingsohrringe oder kurze Tropfen",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Detailliertes Satinkleid",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Overall aus Satin",
-              "Creolen, Tropfen oder auffällige Ohrringe",
-              "Pave Hoops, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck mit Satinkleid",
+          "text": "Welcher Schmuck passt zu einem Satinkleid?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         }
       ]
     },
     {
-      "heading": "Auffällige Ohrringe von Neckline",
+      "heading": "Wählen Sie Statement-Ohrringe passend zum Ausschnitt",
       "content": [
         {
           "type": "paragraph",
-          "text": "Der Ausschnitt hilft bei der Entscheidung, ob auffällige Ohrringe ausgewogen oder zu schwer wirken."
-        },
-        {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe passen normalerweise am besten zu offenen Ausschnitten, trägerlosen Kleidern, schulterfreien Kleidern, einfachen V-Ausschnitten und schlichten Outfits mit hohem Ausschnitt. Detaillierte Ausschnitte erfordern normalerweise klarere Ohrringe."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-87.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Ausschnitt",
-                "Mutige Ohrring-Passform",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Trägerloses Kleid",
-                  "Ausgezeichnet",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Schulterfreies Kleid",
-                  "Ausgezeichnet",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Herzförmiger Ausschnitt",
-                  "Stark, wenn das Outfit schlicht ist",
-                  "Lusso, Farfalla, Orsola"
-                ],
-                [
-                  "Kleid mit V-Ausschnitt",
-                  "Gut, wenn die Halskette minimal ist",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Kleid mit quadratischem Ausschnitt",
-                  "Gut mit kontrolliertem Styling",
-                  "Lusso, Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Kleid mit Stehkragen",
-                  "Reifen oder Nieten können sauberer sein",
-                  "Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Neckholder-Kleid",
-                  "Vorsichtig verwenden; Schlanke Tropfen oder Noppen funktionieren möglicherweise besser",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Wasserfallausschnitt",
-                  "Drops oder Noppen könnten besser sein",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Detaillierter Ausschnitt",
-                  "Vermeiden Sie auffällige Ohrringe",
-                  "Cadenza S, Laluce, Amadea"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck für herzförmigen Ausschnitt",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe von Hairstyle",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die Frisur hat einen großen Einfluss auf auffällige Ohrringe, denn auffällige Stücke müssen sichtbar sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Zurückgezogenes Haar, glatte Pferdeschwänze, tiefe Dutts und kurzes Haar lassen auffällige Ohrringe deutlich erkennen. Offenes Haar kann immer noch funktionieren, aber die Ohrringe müssen ausreichend Präsenz haben, um durch das Haar hindurchscheinen zu können."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Frisur",
-                "Beste Ohrringrichtung",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Glatter Pferdeschwanz",
-                  "Auffällige Ohrringe, Creolen oder Tropfen",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Niedriges Brötchen",
-                  "Auffällige Ohrringe oder Tropfen",
-                  "Lusso, Orsola, Concetta Long"
-                ],
-                [
-                  "Hohes Brötchen",
-                  "Auffällige Ohrringe oder Creolen",
-                  "Lusso, Pave Hoops"
-                ],
-                [
-                  "Kurzes Haar",
-                  "Auffällige Ohrringe, Creolen oder Tropfen",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Haare runter",
-                  "Auffällige Ohrringe oder sichtbare Tropfen",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Sanfte Wellen",
-                  "Tropfen, Schmetterlingsohrringe oder auffällige Ohrringe",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "Halbhochgestecktes Haar",
-                  "Auffällige Ohrringe, Ohrstecker oder Schmetterlingsohrringe",
-                  "Lusso, Cadenza M, Farfalla"
-                ],
-                [
-                  "Geflochtener Stil",
-                  "Drops, Studs oder Huggies",
-                  "Orsola, Cadenza M, Amadea"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Auffällige Ohrringe für Partys und Geburtstage",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe eignen sich am besten für Partys, Geburtstage und Abendoutfits, bei denen der Schmuck auffallen soll."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lusso sollte als Hauptoption für Partys und Geburtstage positioniert werden, wenn das Outfit schlicht ist. Für sanftere Geburtstage wirken Farfalla oder Orsola möglicherweise romantischer. Für ein modernes Party-Styling sind Pave Hoops möglicherweise die bessere Wahl."
+          "text": "Der Ausschnitt beeinflusst den verfügbaren Raum rund um die Ohrringe."
         },
         {
           "type": "table",
           "headers": [
-            "Ereignistyp",
-            "Beste Ohrringrichtung",
-            "Produktrichtung"
+            "Ausschnitt",
+            "Darauf sollten Sie achten"
           ],
           "rows": [
             [
-              "Geburtstagsfeier",
-              "Auffällige Ohrringe, Creolen oder Schmetterlingsohrringe",
-              "Lusso, Pave Hoops, Farfalla"
+              "Schulterfrei",
+              "Der offene Raum lässt die Ohrringe hervortreten; entscheiden Sie, ob eine Halskette nötig ist"
             ],
             [
-              "Geburtstagsessen",
-              "Drops oder mittlere Stollen",
-              "Orsola, Cadenza M"
+              "Off-Shoulder",
+              "Achten Sie auf das Verhältnis von Ohrringlänge, freien Schultern und Frisur"
             ],
             [
-              "Cocktailparty",
-              "Auffällige Ohrringe, Tropfen oder Creolen",
-              "Lusso, Orsola, Pave Hoops"
+              "Herzausschnitt",
+              "Geschwungene oder weich strukturierte Designs können den Ausschnitt aufgreifen, während geometrische Ohrringe Kontrast schaffen"
             ],
             [
-              "Dinnerparty",
-              "Tropfen oder polierte Nieten",
-              "Orsola, Cadenza M"
+              "V-Ausschnitt",
+              "Überlegen Sie, ob die Ohrringe oder ein Anhänger den Blickfang bilden sollen"
             ],
             [
-              "Outfit für den Abend",
-              "Auffällige Ohrringe oder Creolen",
-              "Lusso, Pave Hoops"
+              "Karreeausschnitt",
+              "Geschwungene und kantige Ohrringe können funktionieren; wiederholen oder kontrastieren Sie den Ausschnitt bewusst"
             ],
             [
-              "Feiertagsparty",
-              "Auffällige Ohrringe, Tropfen oder Creolen",
-              "Lusso, Orsola, Pave Hoops"
+              "Hoher Ausschnitt",
+              "Prüfen Sie, ob längere Ohrringe den Stoff berühren"
             ],
             [
-              "Büroparty",
-              "Ohrstecker, Huggies oder raffinierte Creolen",
-              "Cadenza M, Amadea, Pave Hoops"
+              "Neckholder",
+              "Der Ausschnitt lenkt die Aufmerksamkeit bereits nach oben. Betrachten Sie daher den gesamten Bereich von Gesicht und Schultern"
             ],
             [
-              "Jubiläumsfeier",
-              "Tropfen, Schmetterlingsohrringe oder Ohrstecker",
-              "Orsola, Alidi Farfalla, Cadenza M"
+              "Cowl-Neck",
+              "Beweglicher oder gefalteter Stoff kann mit langen oder stark beweglichen Ohrhängern konkurrieren"
+            ],
+            [
+              "Verzierter Ausschnitt",
+              "Eine kontrollierte Breite oder ein kompakter Statement-Ohrstecker kann für ausreichend Wirkung sorgen"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Schmuckgeschenke zum Geburtstag",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Auffällige Ohrringe für Hochzeiten und formelle Anlässe",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe eignen sich für Hochzeiten und formelle Anlässe, aber nur, wenn das Outfit dies zulässt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Für Hochzeitsgäste sollten auffällige Ohrringe nicht zu brautlich oder zu ablenkend wirken. Sie passen am besten zu schlichten schwarzen Kleidern, schlichten Satinkleidern, modernen Jumpsuits und abendlichen Hochzeitsoutfits. Für detaillierte Hochzeitsgästekleider sind Cadenza M, Orsola oder Concetta Short möglicherweise sicherer."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Formeller Veranstaltungsbedarf",
-            "Beste Regie",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Einfaches Hochzeitsoutfit für den Abend",
-              "Auffällige Ohrringe oder Tropfen",
-              "Lusso, Orsola"
-            ],
-            [
-              "Schwarzes Hochzeitsgastkleid",
-              "Tropfen, Ohrstecker, Creolen oder auffällige Ohrringe",
-              "Orsola, Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Formelles Abendessen",
-              "Lange Tropfen oder polierte Nieten",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Cocktailhochzeit",
-              "Tropfen, Creolen oder auffällige Ohrringe",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Detailliertes Hochzeitsoutfit",
-              "Ohrstecker oder Huggies",
-              "Kadenz M, Amadea"
-            ],
-            [
-              "Romantisches Hochzeitsoutfit",
-              "Schmetterlingsohrringe oder weiche Tropfen",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Moderner Hochzeitsgast-Look",
-              "Reifen oder Tropfen",
-              "Pave Hoops, Orsola"
-            ],
-            [
-              "Black-Tie-Event",
-              "Lange Tropfen, polierte Ohrstecker oder raffinierte, kräftige Ohrringe",
-              "Concetta Long, Cadenza M, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Hochzeiten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe-Ear-Stack-Ideen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe können in einem Ear Stack funktionieren, aber der auffällige Ohrring muss das Hauptstück sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Der Stützohrring sollte klein und sauber sein. Cadenza S ist der sicherste Stützstollen. Laluce kann funktionieren, wenn sich der Stapel weicher anfühlen soll. Vermeiden Sie es, zu viele große Ohrringe mit Lusso zu stapeln, da der Look schnell überfüllt wirken kann."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-95.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Fettgedruckter Stapeltyp",
-                "Hauptstück",
-                "Stützstück",
-                "Produktrichtung"
-              ],
-              "rows": [
-                [
-                  "Mutiger Party-Stack",
-                  "Mutiger Ohrring",
-                  "Kleiner Bolzen",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Minimaler fetter Stapel",
-                  "Mutiger Ohrring",
-                  "Minimalistisches Detail",
-                  "Lusso + Laluce"
-                ],
-                [
-                  "Moderner, mutiger Stapel",
-                  "Mutiger Ohrring",
-                  "Huggie",
-                  "Lusso + Amadea"
-                ],
-                [
-                  "Schwarzer Kleiderstapel",
-                  "Mutiger Ohrring",
-                  "Kleiner Bolzen",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Fettgedruckter Stapel zum Geburtstag",
-                  "Mutiger Ohrring",
-                  "Kleiner Bolzen",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Sicherer Party-Stack",
-                  "Tropfenohrring",
-                  "Kleiner Bolzen",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Hoop-Party-Stapel",
-                  "Reifen",
-                  "Kleiner Bolzen",
-                  "Pave Hoops + Cadenza S"
-                ],
-                [
-                  "Formaler Stapel",
-                  "Langer Tropfen",
-                  "Kleiner Bolzen",
-                  "Concetta Long + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Halskette oder keine Halskette mit auffälligen Ohrringen?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bei kräftigen Ohrringen sollte die Halskette meist zart oder gesprungen sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Auffällige Ohrringe umrahmen bereits das Gesicht und setzen den Schmuckschwerpunkt. Eine schwere Halskette kann das Outfit überladen wirken lassen. Wenn sich der Ausschnitt leer anfühlt, wählen Sie eine ganz einfache Kette. Wenn der Ausschnitt trägerlos, schulterfrei oder herzförmig ist, können auffällige Ohrringe oft allein stehen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Mutiges Ohrring-Styling",
-            "Richtung der Halskette"
-          ],
-          "rows": [
-            [
-              "Auffällige Ohrringe mit trägerlosem Kleid",
-              "Normalerweise keine Halskette oder sehr zarte Kette"
-            ],
-            [
-              "Auffällige Ohrringe mit schulterfreiem Kleid",
-              "Normalerweise keine Halskette"
-            ],
-            [
-              "Auffällige Ohrringe mit V-Ausschnitt-Kleid",
-              "Zarte Halskette nur bei Bedarf"
-            ],
-            [
-              "Auffällige Ohrringe mit hochgeschlossenem Kleid",
-              "Keine Halskette"
-            ],
-            [
-              "Auffällige Ohrringe mit schwarzem Kleid",
-              "Halten Sie den Ausschnitt sauber"
-            ],
-            [
-              "Mutige Ohrringe mit Satinkleid",
-              "Keine Halskette oder sehr weiche Kette"
-            ],
-            [
-              "Auffällige Ohrringe zum Partyoutfit",
-              "Lassen Sie Ohrringe führen"
-            ],
-            [
-              "Auffällige Ohrringe im Ohrstapel",
-              "Vermeiden Sie schwere Halsketten"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Schmuck für Kleider mit V-Ausschnitt",
+          "text": "Welcher Schmuck passt zu einem Kleid mit V-Ausschnitt?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Mutige Ohrringe von Metal Color",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Die Metallfarbe verändert das Gefühl auffälliger Ohrringe."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gelbgold fühlt sich warm, reichhaltig und partytauglich an. Weiß- oder Silbertöne wirken sauber, hell und formell. Roségold fühlt sich weicher und romantischer an, aber auffällige Ohrringe aus Roségold sollten sorgfältig gestylt werden, damit sie nicht zu süß zum Outfit wirken."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-97.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metallfarbe",
-                "Mutige Ohrring-Stimmung",
-                "Beste Outfitfarben"
-              ],
-              "rows": [
-                [
-                  "Gelbgold",
-                  "Warm, reichhaltig und glamourös",
-                  "Schwarz, Rot, Grün, Champagner, Burgund, Creme"
-                ],
-                [
-                  "Weiß- oder Silberton",
-                  "Sauber, hell und modern",
-                  "Schwarz, Marineblau, Silber, Weiß, Grau, kühle Töne"
-                ],
-                [
-                  "Roségold",
-                  "Weich, romantisch und feminin",
-                  "Rouge-, Rosa-, Champagner- und Pastell-Outfits"
-                ],
-                [
-                  "Gemischte Metalle",
-                  "Kreativ und trendorientiert",
-                  "Minimale Outfits und Ear Stacks"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Bei auffälligen Ohrringen eignen sich Gelbgold und Weiß-/Silbertöne normalerweise am besten für das Party-Styling. Roségold ist am stärksten, wenn der Look sanft, romantisch oder geschenkorientiert ist."
         },
         {
           "type": "see-also",
-          "text": "Gold- vs. Weiß- vs. Roségold-Ohrringe mit im Labor gezüchteten Diamanten",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Welche Ohrringe passen zu einem schulterfreien Kleid?",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         }
       ]
     },
     {
-      "heading": "Produktpfade von Styling Need",
+      "heading": "Statement-Ohrringe passend zur Frisur auswählen",
       "content": [
         {
-          "type": "subheading",
-          "text": "Für den stärksten, auffälligen Ohrring-Look"
-        },
-        {
           "type": "paragraph",
-          "text": "Wählen Sie die markanten Statement-Ohrringe von Lusso. Am besten wirken sie, wenn das Outfit schlicht ist und die Ohrringe im Mittelpunkt des Schmucks stehen sollen."
+          "text": "Die Frisur beeinflusst die Sichtbarkeit, sollte aber nicht der einzige Grund sein, einen größeren oder schwereren Ohrring auszuwählen."
         },
         {
           "type": "subheading",
-          "text": "Für einen auffälligen schwarzen Kleid-Look"
+          "text": "Nach oben gestecktes Haar"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Lusso mit einem schlichten schwarzen Kleid. Wenn das schwarze Kleid aus Satin oder formell ist, können auch Orsola oder Concetta Long wunderbar funktionieren."
+          "text": "Ein Dutt, Pferdeschwanz oder hochgestecktes Haar gibt den vollständigen Ohrring frei. Dadurch werden Breite, Ausladung und Verschluss stärker wahrgenommen."
         },
         {
           "type": "subheading",
-          "text": "Für einen mutigen Ear Stack"
+          "text": "Kurzes Haar"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Lusso mit Cadenza S. Die auffälligen Ohrringe und der kleine Ohrstecker unterstützen den Stapel, ohne ihn zu überladen."
+          "text": "Kürzere Frisuren können sowohl kompakte, skulpturale Ohrstecker als auch längere Designs deutlich zeigen. Achten Sie auf den Abstand zwischen Ohrring und Kieferpartie."
         },
         {
           "type": "subheading",
-          "text": "Für einen sichereren Party-Look"
+          "text": "Haare hinter die Ohren gesteckt"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie die Diamant-Ohrstecker von Cadenza M, wenn das Outfit bereits starke Details, Pailletten, metallische Stoffe oder einen dramatischen Ausschnitt aufweist."
+          "text": "So bleibt der Ohrring sichtbar, ohne dass die Frisur vollständig hochgesteckt sein muss. Prüfen Sie, ob strukturierte Oberflächen oder bewegliche Elemente im Haar hängen bleiben können."
         },
         {
           "type": "subheading",
-          "text": "Für elegante Bewegung statt kühne Wirkung"
+          "text": "Offenes Haar"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Ohrhänger von Orsola. Sie eignen sich besser, wenn das Outfit Bewegung braucht, statt einer starken Statement-Form."
-        },
-        {
-          "type": "subheading",
-          "text": "Für moderne Form statt kühne Wirkung"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Pave Hoops. Sie verleihen sichtbare Form und funkeln, ohne so dramatisch zu wirken wie auffällige Ohrringe."
-        },
-        {
-          "type": "subheading",
-          "text": "Für sanftes, romantisches Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Farfalla, Alidi Farfalla oder Concetta Short, wenn das Outfit in Rouge, Pastell, Blumen, Romantik oder weichem Satin gehalten ist."
-        },
-        {
-          "type": "subheading",
-          "text": "Für minimale Stützteile"
-        },
-        {
-          "type": "paragraph",
-          "text": "Wählen Sie Cadenza S, Laluce oder Amadea als Stützteile für gewagtes Styling und Ear-Stacks."
+          "text": "Eine klar definierte Kontur, ein kontrastierender Metallton oder sichtbare Bewegung können dazu beitragen, dass der Ohrring auffällt. Sehen Sie sich Fotos an, die das Design mit offenem Haar zeigen, statt sich nur auf isolierte Produktbilder zu verlassen."
         }
       ]
     },
     {
-      "heading": "Produktempfehlungen von IWantJewels",
+      "heading": "Können Statement-Ohrringe tagsüber getragen werden?",
       "content": [
         {
-          "type": "table",
-          "headers": [
-            "Produkt",
-            "Beste mutige Styling-Rolle",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Hauptempfehlung für auffällige Ohrringe",
-              "Die beste Wahl für herausragendes Party-Styling"
-            ],
-            [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Bester Stützbolzen",
-              "Balanciert auffällige Ohrringe in Ear Stacks"
-            ],
-            [
-              "Cadenza M Diamant-Ohrstecker",
-              "Beste sichere Sparkle-Alternative",
-              "Funktioniert, wenn sich auffällige Ohrringe zu viel anfühlen"
-            ],
-            [
-              "Orsola-Ohrhänger",
-              "Beste elegante Alternative",
-              "Fügt Bewegung statt kühner Wirkung hinzu"
-            ],
-            [
-              "Pave-Reifen",
-              "Beste moderne Formalternative",
-              "Fügt Rundung und Sichtbarkeit hinzu"
-            ],
-            [
-              "Concetta Lange Ohrringe",
-              "Beste formelle Abendalternative",
-              "Erzeugt eine raffinierte lange Linie"
-            ],
-            [
-              "Concetta Kurze Ohrringe",
-              "Beste Alternative für weiche Anlässe",
-              "Eignet sich für ein zartes Party- und Hochzeits-Styling"
-            ],
-            [
-              "Farfalla Schmetterlingsohrringe",
-              "Beste romantische Alternative",
-              "Stark für weiche, aussagekräftige Outfits"
-            ],
-            [
-              "Alidi Farfalla Schmetterlingsohrringe",
-              "Beste geschenkte romantische Option",
-              "Funktioniert für Geburtstage und Jubiläen"
-            ],
-            [
-              "Amadea Huggie-Ohrringe",
-              "Bestes dezentes Stützstück",
-              "Nützlich für detaillierte Outfits und Stapel"
-            ],
-            [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Bestes leises Detail",
-              "Hilft, das gewagte Styling ausgewogen zu halten"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Statement-Ohrringe sind nicht auf Abendveranstaltungen beschränkt. Ein kompakter, skulpturaler Ohrstecker, eine kleine Pavé-Creole oder ein zurückhaltendes geometrisches Design kann zum Blickfang eines Tagesoutfits werden."
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Lusso, wenn das Outfit schlicht ist und die Ohrringe hervorstechen sollen. Wählen Sie Cadenza S als schlichten Stützknopf, Orsola, wenn Sie Bewegung wünschen, Pave Hoops, wenn Sie Form wünschen, und Cadenza M, wenn das Outfit bereits über genügend Details verfügt."
+          "text": "Für die Arbeit oder längere Tragezeiten sollten Sie das Gewicht pro Ohrring, die vollständigen Maße, die Sicherheit des Verschlusses, die Beweglichkeit, die Kleiderordnung am Arbeitsplatz sowie die Verwendung mit Kopfhörern, Telefonen oder Kopfbedeckungen vergleichen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Design sollte nicht als für den ganzen Tag geeignet beschrieben werden, wenn seine Spezifikationen und Tests diese Aussage nicht stützen. Komfort bleibt individuell."
         }
       ]
     },
     {
-      "heading": "Häufige Fehler bei auffälligen Ohrringen, die Sie vermeiden sollten",
+      "heading": "Statement-Ohrringe für Partys, Hochzeiten und Black-Tie-Events",
       "content": [
         {
           "type": "paragraph",
-          "text": "Ein häufiger Fehler besteht darin, auffällige Ohrringe zu einem bereits zu detaillierten Outfit zu tragen. Pailletten, metallische Stoffe, schwere Spitze, Stickereien und starke Drucke erfordern normalerweise sauberere Ohrringe."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, zu viel Schmuck um auffällige Ohrringe zu legen. Wenn die Ohrringe bereits das Hauptmerkmal sind, halten Sie die Halskette zart oder lassen Sie sie weg."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, auffällige Ohrringe zu wählen, die mit dem Ausschnitt konkurrieren. Trägerlose und schulterfreie Outfits funktionieren gut, detaillierte Ausschnitte können jedoch zu eng wirken."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler ist das Vergessen der Frisur. Auffällige Ohrringe sehen am besten aus, wenn sie sichtbar sind, insbesondere bei zurückgesteckten Haaren, kurzen Haaren oder sanften Wellen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein fünfter Fehler besteht darin, mehrere große Ohrringe in einem Ohrstapel zu verwenden. Mutige Ohrringe brauchen kleine Stützstücke."
-        },
-        {
-          "type": "paragraph",
-          "text": "Schließlich sollten Sie auffällige Ohrringe nicht nur deshalb wählen, weil sie dramatisch aussehen. Sie sollten dennoch zum Outfit, zur Veranstaltung, zum Selbstvertrauen und zum Komfort des Trägers passen."
+          "text": "Partys und Abendveranstaltungen bieten oft mehr Freiheit für auffällige Formen, Bewegung oder eine stärkere Diamantbesetzung. Berücksichtigen Sie vor der Auswahl den Veranstaltungsort und das gesamte Outfit, statt sich allein am Namen der Veranstaltung zu orientieren. Ein schlichtes Cocktailkleid kann einen auffälligeren Ohrring erlauben als ein aufwendig verziertes Partykleid."
         },
         {
           "type": "see-also",
-          "text": "Leitfaden für minimalistisches Schmuck-Styling",
-          "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
+          "text": "Guide zu Party-Ohrringen",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement-Ohrringe können bei Hochzeiten und Black-Tie-Events getragen werden, wenn sie zum Outfit, zur Kleiderordnung und zum Rahmen passen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hochzeitsgäste sollten darauf achten, dass das Design das Outfit ergänzt, ohne unbeabsichtigt einen Brautlook zu erzeugen. Beim Black-Tie-Styling sollten Sie das Zusammenspiel von Ohrringen, Frisur, Ausschnitt und einer möglichen Halskette prüfen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein langer Ohrring wirkt nicht automatisch formeller und ein Ohrstecker nicht automatisch leger. Material, Oberfläche, Proportionen und das gesamte Styling bestimmen das Ergebnis."
         }
       ]
     },
     {
-      "heading": "Abschließende Checkliste für auffällige Ohrringe",
+      "heading": "Statement-Ohrringe im Vergleich zu Ohrsteckern und Creolen",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "„Statement-Ohrring“ und „Ohrstecker“ sind keine Gegensätze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Ohrstecker beschreibt, wie ein Ohrring am Ohrloch sitzt, während Statement seine visuelle Rolle bezeichnet. Ein breiter Diamant-Cluster, eine skulpturale Form oder ein markantes Motiv kann zugleich ein Ohrstecker und ein Statement-Ohrring sein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie einen kompakten Statement-Ohrstecker, wenn Sie sichtbare Details ohne langen Ohrhänger wünschen. Wählen Sie einen kleineren klassischen Ohrstecker, wenn der Ohrring einen anderen Teil des Outfits unterstützen soll."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch eine Creole kann ein Statement-Ohrring sein. Creole bezeichnet die gebogene Konstruktion, während Statement ihre Wirkung im Gesamtlook beschreibt. Eine Creole kann durch Durchmesser, Breite, Diamantplatzierung, Form, Oberflächendetails, mehrere Reihen oder eine skulpturale Konstruktion zum Blickfang werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergleichen Sie die tatsächlichen Maße, statt anzunehmen, dass jede Creole zurückhaltender ist als ein auffälliger Ohrhänger oder Ohrstecker."
+        },
+        {
+          "type": "see-also",
+          "text": "Ohrstecker oder Creolen",
+          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ratgeber für Creolen mit im Labor gezüchteten Diamanten",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Können Statement-Ohrringe in einem Ear Stack getragen werden?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Bevor Sie auffällige Statement-Ohrringe wählen, fragen Sie:"
+          "text": "Ja, vorausgesetzt, der Hauptohrring hat ausreichend Platz und die ergänzenden Schmuckstücke bleiben im Hintergrund. Ein einfacher Ear Stack besteht aus:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Ist das Outfit schlicht genug für auffällige Ohrringe?",
-            "Gibt es bereits Spitze, Pailletten, metallischen Stoff oder schwere Details?",
-            "Sollten die Ohrringe im Mittelpunkt des Schmucks stehen?",
-            "Sollte die Halskette weggelassen werden?",
-            "Unterstützt der Ausschnitt auffällige Ohrringe?",
-            "Wird die Frisur die Ohrringe zeigen?",
-            "Ist dies für eine Party, einen Geburtstag, ein Abendessen, eine Hochzeit oder eine formelle Veranstaltung?",
-            "Passt die Metallfarbe zum Outfit?",
-            "Sind die Ohrringe während der gesamten Veranstaltung bequem?",
-            "Benötige ich einen Stützbolzen für einen Ear Stack?",
-            "Wären Tropfen, Reifen oder Nieten besser?",
-            "Werde ich die Ohrringe wieder tragen?",
-            "Ist der Look selbstbewusst, aber dennoch ausgewogen?"
+            "Einem Statement-Ohrring im Hauptohrloch",
+            "Einem kleineren Ohrstecker oder einem eng anliegenden Schmuckstück im nächsten Ohrloch",
+            "Optionalen zusätzlichen Details nur dann, wenn der Abstand dies zulässt"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wenn Sie unsicher sind, wählen Sie auffällige Ohrringe nur, wenn das Outfit schlicht ist. Wenn das Outfit bereits detailliert ist, wählen Sie stattdessen Cadenza M, Orsola, Pave Hoops oder Amadea."
+          "text": "Prüfen Sie den Abstand zwischen den Ohrlöchern, die Breite jedes Ohrrings, die Richtung der Stifte und ob sich benachbarte Schmuckstücke berühren. Produkt-Mock-ups sollten Fotos der tatsächlich getragenen Kombination nicht ersetzen."
+        },
+        {
+          "type": "see-also",
+          "text": "So kombinieren Sie Ohrringe im Ear Stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ideen für einen Diamant-Ear-Stack",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Metallfarbe, Materialien und Diamanten auswählen",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Metallfarbe und Metallzusammensetzung sind unterschiedliche Angaben. „Goldton“ beschreibt das Aussehen. Er bestätigt nicht, dass es sich um Massivgold, eine Vergoldung, Vermeil oder ein anderes Material handelt. Jedes Produkt sollte sein tatsächliches Grundmetall und seine Oberfläche korrekt angeben."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Gelbgoldtöne verleihen Wärme",
+            "Weiß- oder Silbertöne schaffen einen kühleren Kontrast",
+            "Roségoldtöne bringen einen sanfteren Rosaton ein",
+            "Bimetall kann funktionieren, wenn die Kombination bewusst wiederholt wird"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei Statement-Ohrringen mit im Labor gezüchteten Diamanten sollten Sie mehr als die allgemeine Produktbeschreibung prüfen. Die Produktseite sollte angeben:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Ob es sich bei den Steinen um im Labor gezüchtete Diamanten handelt",
+            "Das Gesamtkaratgewicht und ob es sich auf das Paar bezieht",
+            "Die Anzahl der Steine",
+            "Die Formen der Steine",
+            "Platzierung der Diamanten",
+            "Die vollständigen Maße des Ohrrings",
+            "Gewicht je Ohrring",
+            "Metall und Oberfläche",
+            "Verschluss",
+            "Ob das Angebot als Paar oder als einzelner Ohrring verkauft wird"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein höheres Gesamtkaratgewicht macht ein Design nicht automatisch sichtbarer. Auch Steinverteilung, Fassung, Breite und Kontrast beeinflussen die Wirkung des Ohrrings."
+        },
+        {
+          "type": "see-also",
+          "text": "Ratgeber zu Ohrsteckern mit im Labor gezüchteten Diamanten",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Häufige Stylingfehler bei Statement-Ohrringen",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Anzunehmen, Statement-Ohrringe müssten übergroß sein"
+            },
+            {
+              "type": "paragraph",
+              "text": "Eine markante Form oder eine kompakte Diamantanordnung kann auch ohne extreme Maße für Wirkung sorgen."
+            },
+            {
+              "type": "subheading",
+              "text": "Mehrere voneinander unabhängige Blickfänge zu tragen"
+            },
+            {
+              "type": "paragraph",
+              "text": "Ein auffälliger Ohrring, eine schwere Halskette, ein verzierter Ausschnitt und ein komplexer Ear Stack können miteinander konkurrieren. Entscheiden Sie, welches Element den Ton angeben soll."
+            },
+            {
+              "type": "subheading",
+              "text": "Vollständige Maße zu ignorieren"
+            },
+            {
+              "type": "paragraph",
+              "text": "Produktfotos allein liefern keinen verlässlichen Maßstab. Prüfen Sie Breite, Höhe, Länge und Gewicht."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Jeden Ohrstecker oder jede Creole als zurückhaltend zu behandeln"
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch Ohrstecker und Creolen können Statement-Designs sein. Vergleichen Sie ihre tatsächliche visuelle Wirkung."
+        },
+        {
+          "type": "subheading",
+          "text": "Nur nach dem Namen des Anlasses auszuwählen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zwei Outfits für eine Hochzeit, eine Party oder ein Dinner können völlig unterschiedliche Ohrringe erfordern. Berücksichtigen Sie Stoff, Ausschnitt und Frisur."
+        },
+        {
+          "type": "subheading",
+          "text": "Nicht verifizierten Produktversprechen zu vertrauen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Produkte sollten ohne entsprechende Nachweise nicht als leicht, sicher, hypoallergen, für empfindliche Ohren geeignet oder für den ganzen Tag angenehm beschrieben werden."
+        }
+      ]
+    },
+    {
+      "heading": "Checkliste für Statement-Ohrringe",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Fragen Sie sich vor dem Kauf oder Styling eines Paars:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Was erzeugt die Wirkung: Größe, Form, Bewegung, Motiv oder Diamantbesatz?",
+            "Wie lauten die vollständigen Maße?",
+            "Wie viel wiegt jeder Ohrring?",
+            "Welchen Verschluss hat der Ohrring?",
+            "Berührt er Kragen, Schulter oder Ausschnitt?",
+            "Enthält das Outfit bereits auffällige Details?",
+            "Sollen die Ohrringe oder die Halskette den Ton angeben?",
+            "Zeigt die Frisur das vollständige Design?",
+            "Ist genügend Platz für einen Ear Stack vorhanden?",
+            "Sind Metall, Oberfläche und Steine eindeutig angegeben?",
+            "Werden alle Produktangaben durch die exakten Produktspezifikationen belegt?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Was sind auffällige Statement-Ohrringe?",
-      "answer": "Auffällige Statement-Ohrringe sind Ohrringe, die den Schmuckschwerpunkt eines Outfits bilden sollen. Sie sind in der Regel sichtbarer, funkelnder oder designorientierter als alltägliche Ohrringe."
+      "question": "Was macht einen Ohrring zu einem Statement-Ohrring?",
+      "answer": "Ein Ohrring wird zum Statement-Schmuckstück, wenn er genug visuelle Präsenz besitzt, um zum Blickfang zu werden. Diese Wirkung kann durch Form, Größe, Bewegung, Kontrast, Diamantplatzierung oder ein markantes Motiv entstehen."
     },
     {
-      "question": "Wann sollte ich auffällige Ohrringe tragen?",
-      "answer": "Tragen Sie auffällige Ohrringe zu schlichten Outfits, schwarzen Kleidern, Party-Looks, trägerlosen Kleidern, schulterfreien Kleidern, eleganten Jumpsuits und Abendoutfits, bei denen die Ohrringe führen können."
+      "question": "Müssen Statement-Ohrringe groß sein?",
+      "answer": "Nein. Ein kompakter, skulpturaler Ohrstecker oder eine markante Creole kann Wirkung zeigen, ohne übergroß zu sein. Vollständige Proportionen und das Design sind wichtiger als die Länge allein."
     },
     {
-      "question": "Kann ich auffällige Ohrringe zu einem schwarzen Kleid tragen?",
-      "answer": "Ja, ein schwarzes Kleid ist eines der besten Outfits für auffällige Ohrringe, besonders wenn das Kleid schlicht ist."
+      "question": "Kann ich eine Halskette zu Statement-Ohrringen tragen?",
+      "answer": "Ja. Orientieren Sie sich am Ausschnitt und an der visuellen Wirkung beider Schmuckstücke. Eine zurückhaltende Halskette kann passen, sollte aber nicht unbeabsichtigt mit den Ohrringen konkurrieren."
     },
     {
-      "question": "Kann ich auffällige Ohrringe zu einem roten Kleid tragen?",
-      "answer": "Ja, aber nur, wenn das rote Kleid schlicht ist. Wenn das rote Kleid Satinglanz, Spitze, Pailletten oder starke Details hat, sehen Tropfen oder mittelgroße Nieten möglicherweise besser aus."
+      "question": "Kann ich Statement-Ohrringe bei der Arbeit tragen?",
+      "answer": "Das hängt von ihren Maßen, ihrer Beweglichkeit, ihrem Gewicht und dem Arbeitsplatz ab. Vergleichen Sie die genauen Spezifikationen und berücksichtigen Sie praktische Anforderungen wie die Nutzung von Kopfhörern und Telefonen."
     },
     {
-      "question": "Kann ich auffällige Ohrringe zu einem Satinkleid tragen?",
-      "answer": "Ja, auffällige Ohrringe passen zu einem einfachen Satinkleid. Wenn das Satinkleid stark drapiert, gerüscht oder glänzend ist, sind Tropfenohrringe oder Ohrstecker möglicherweise sicherer."
+      "question": "Kann ich Statement-Ohrringe zu einer Hochzeit tragen?",
+      "answer": "Ja, wenn sie zur Kleiderordnung passen und das Outfit ergänzen. Hochzeitsgäste sollten Ausschnitt, Stoff, Frisur und die Frage berücksichtigen, ob das Design zu stark nach Brautschmuck wirkt."
     },
     {
-      "question": "Sollte ich eine Halskette mit auffälligen Ohrringen tragen?",
-      "answer": "Halten Sie die Halskette normalerweise empfindlich oder lassen Sie sie weg. Auffällige Ohrringe sollten normalerweise im Mittelpunkt des Schmucks stehen."
+      "question": "Können Ohrstecker Statement-Ohrringe sein?",
+      "answer": "Ja. „Ohrstecker“ beschreibt die Konstruktion, während „Statement“ die visuelle Rolle des Ohrrings bezeichnet. Skulpturale Ohrstecker, Cluster-Ohrstecker und Ohrstecker mit Motiv können als Statement-Ohrringe wirken."
     },
     {
-      "question": "Sind auffällige Ohrringe gut für Hochzeiten?",
-      "answer": "Auffällige Ohrringe können bei Hochzeitsgästen wirken, wenn das Outfit schlicht und der Stil ausgewogen ist. Für detaillierte Hochzeitsoutfits sind Nieten oder Tropfen in der Regel sicherer."
+      "question": "Können Creolen Statement-Ohrringe sein?",
+      "answer": "Ja. Creolen können durch Durchmesser, Breite, Form, Oberflächendetails oder Diamantplatzierung zum Statement-Schmuckstück werden."
     },
     {
-      "question": "Können auffällige Ohrringe in einem Ear Stack getragen werden?",
-      "answer": "Ja, aber der auffällige Ohrring sollte das Hauptstück sein. Kombinieren Sie es mit einem kleinen Ohrstecker wie Cadenza S oder einem ruhigen, minimalistischen Detail."
-    },
-    {
-      "question": "Sind auffällige Ohrringe ein gutes Geschenk?",
-      "answer": "Auffällige Ohrringe sind nur dann ein gutes Geschenk, wenn der Beschenkte auffälligen Schmuck mag. Wenn Sie sich nicht sicher sind, sind Diamantstecker oder Huggies sicherer."
-    },
-    {
-      "question": "Welche IWantJewels-Ohrringe eignen sich am besten für ein auffälliges Styling?",
-      "answer": "Die kräftigen Statement-Ohrringe von Lusso sind die stärkste IWantJewels-Option für gewagtes Styling. Cadenza S, Orsola, Pave Hoops und Cadenza M funktionieren als Stützstücke oder Alternativen."
+      "question": "Sind Statement-Ohrringe immer schwer?",
+      "answer": "Nein. Die visuelle Wirkung lässt keinen Rückschluss auf das Gewicht zu. Prüfen Sie das angegebene Gewicht pro Ohrring, da ähnlich große Designs eine unterschiedliche Konstruktion und ein unterschiedliches Gewicht haben können."
     }
   ],
   "cta": {
-    "heading": "Auffällige Statement-Ohrringe funktionieren am besten, wenn das Outfit ihnen Freiraum lässt.",
-    "body": "Wählen Sie sie für schlichte Partykleider, schwarze Outfits, klare Satin-Looks, Geburtstagsnächte, Abendveranstaltungen und selbstbewusstes Styling. Halten Sie die Halskette minimal, lassen Sie die Ohrringe das Gesicht umrahmen und verwenden Sie kleine Stützteile, wenn Sie einen Ear-Stack bauen. Beginnen Sie mit den markanten Statement-Ohrringen von IWantJewels Lusso, wenn Sie möchten, dass die Ohrringe den Look bestimmen. Wählen Sie Cadenza S als Stützniete, Orsola für elegante Bewegungen, Pave Hoops für moderne Formen und Cadenza M, wenn das Outfit mehr Glanz braucht.",
-    "primaryLabel": "Kaufen Sie auffällige Statement-Ohrringe",
+    "heading": "Auffällige Statement-Ohrringe wirken am überzeugendsten, wenn ihre Rolle im Outfit bewusst gewählt ist. Lassen Sie ein Element den Schmucklook anführen.",
+    "body": "Durchstöbern Sie die Kollektion von I Want Jewels, indem Sie Maße, Gewicht, Verschluss, Materialien und Diamantdetails vergleichen. Wählen Sie das Design passend zu Ihrem Outfit und gewünschten Styling – nicht allein nach dem Produktnamen.",
+    "primaryLabel": "Statement-Ohrringe kaufen",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie Party-Ohrringe",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lesen Sie den Ratgeber zu Party-Ohrringen",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "Party-Ohrringe entdecken",
+    "secondaryHref": "/resources/earring-style-guides/party-earrings-guide",
+    "tertiaryLabel": "Guide für minimalistische Ohrringe",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
   }
 }

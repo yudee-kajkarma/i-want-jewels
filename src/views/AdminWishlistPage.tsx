@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Search, RefreshCw, Heart, Users } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import Pagination from '../components/sections/Pagination'
@@ -12,22 +13,8 @@ import { getAdminUserWishlist, getAdminWishlistUsers } from '../services/wishlis
 import type { AdminUserWishlist, AdminWishlistUser, WishlistUsersPagination } from '../types/wishlist'
 import { formatPrice } from '../utils/price'
 
-function formatDate(value: string): string {
-  if (!value) {
-    return '--'
-  }
-
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
-
 export default function AdminWishlistPage() {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.wishlist' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.wishlist' })
   const { currency } = useCurrency()
   const [users, setUsers] = useState<AdminWishlistUser[]>([])
   const [pagination, setPagination] = useState<WishlistUsersPagination | null>(null)
@@ -233,7 +220,7 @@ export default function AdminWishlistPage() {
                           {formatPrice(user.totalValue, currency)}
                         </span>
                       </div>
-                      <p className="mt-2 text-[11px] text-zinc-500">Updated: {formatDate(user.lastUpdated)}</p>
+                      <p className="mt-2 text-[11px] text-zinc-500">Updated: {formatDateTime(user.lastUpdated, i18n.language, '--')}</p>
                     </button>
                   ))}
                 </div>
@@ -274,7 +261,7 @@ export default function AdminWishlistPage() {
                     <h2 className="mt-2 text-xl font-bold text-[#3f1933]">{selectedWishlist.userDetails.userName || 'Unknown user'}</h2>
                     <p className="mt-1 text-sm text-zinc-600">{selectedWishlist.userDetails.userEmail || '--'}</p>
                     <p className="mt-1 text-sm text-zinc-600">{selectedWishlist.userDetails.userPhone || 'Not provided'}</p>
-                    <p className="mt-3 text-xs text-zinc-500">Last updated: {formatDate(selectedWishlist.updatedAt)}</p>
+                    <p className="mt-3 text-xs text-zinc-500">Last updated: {formatDateTime(selectedWishlist.updatedAt, i18n.language, '--')}</p>
                   </div>
 
                   <div className="mt-5 flex items-center justify-between">
@@ -308,7 +295,7 @@ export default function AdminWishlistPage() {
                               {t('productId')} {item.productId || '--'}
                             </p>
                             <p className="mt-1 text-xs text-zinc-500">
-                              {t('added')} {formatDate(item.addedAt)}
+                              {t('added')} {formatDateTime(item.addedAt, i18n.language, '--')}
                             </p>
                           </div>
 

@@ -1,1278 +1,717 @@
 {
   "meta": {
-    "title": "Guide de style de bijoux minimalistes",
-    "description": "Apprenez à créer des bijoux minimalistes avec des boucles d'oreilles, des clous, des câlins, des diamants synthétiques, des vêtements de travail, des cadeaux, des mariages et des tenues de tous les jours."
+    "title": "Comment porter des bijoux minimalistes",
+    "description": "Associez vos bijoux minimalistes à vos tenues et décolletés. Composez une capsule polyvalente avec boucles d’oreilles, colliers, bagues et bracelets."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-97.jpg",
-    "title": "Guide de style de bijoux minimalistes :",
-    "subtitle": "Comment créer des bijoux simples pour le quotidien, le travail et les occasions",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Comment porter des bijoux minimalistes :",
+    "subtitle": "Le guide complet",
     "paragraphs": [
-      "Les bijoux minimalistes sont simples, raffinés et faciles à porter souvent. Il ne s’agit pas de porter des bijoux qui disparaissent. Il s’agit de choisir des pièces épurées qui ajoutent de la forme, de l’éclat et de la finition sans alourdir la tenue.",
-      "Les meilleurs bijoux minimalistes ont généralement un objectif clair. Un petit clou en diamant ajoute un éclat subtil. Un câlin ajoute de la forme. Une boucle d'oreille minimaliste ajoute des détails discrets. Un clou moyen ajoute un vernis classique. Une goutte douce ajoute du mouvement pour les dîners et les mariages sans devenir trop audacieuse.",
-      "Chez IWantJewels, le style minimaliste fonctionne particulièrement bien avec les boucles d'oreilles en diamants synthétiques, car même les petites pièces peuvent sembler élevées. Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short et Farfalla peuvent tous prendre en charge différents looks minimalistes en fonction de la tenue et de l'occasion."
+      "Le style de bijoux minimalistes consiste à associer quelques pièces choisies avec soin, afin qu’elles s’accordent à votre tenue sans lui faire concurrence.",
+      "Les bijoux n’ont pas besoin d’être invisibles. Une puce d’oreille sertie de diamant, une créole fine, un pendentif, une bague ou un bracelet peuvent apporter éclat et relief. L’effet minimaliste vient du contrôle des points d’attention, de la répétition de détails similaires et de l’espace visuel laissé entre les pièces.",
+      "Ce guide vous explique comment créer une capsule de bijoux minimalistes, superposer différentes pièces et les assortir à vos tenues, décolletés, coiffures et couleurs de métal."
     ],
-    "shopLabel": "Achetez des bijoux minimalistes",
-    "shopHref": "/products?category=Earring"
+    "shopLabel": "Découvrez les bijoux minimalistes",
+    "shopHref": "/products"
   },
   "quickSummary": {
     "items": [
-      "Comprenez comment créer des bijoux minimalistes.",
-      "Choisissez des boucles d’oreilles simples à porter au quotidien.",
-      "Construisez des piles d'oreilles minimalistes avec des clous, des câlins et de petits détails.",
-      "Portez des bijoux avec des chemises, des blazers, des robes noires, des robes en satin et des tenues d'invités de mariage.",
-      "Choisissez des bijoux pour les vêtements de travail, les voyages, les dîners et les cadeaux.",
-      "Décidez quand porter des clous, des câlins, des cerceaux ou des gouttes souples.",
-      "Comprenez comment la couleur du métal change le style minimaliste.",
-      "Trouvez les recommandations de produits IWantJewels par tenue et occasion.",
-      "Planifiez les blocs d'images, les modules de produits, les sections CTA et les liens internes pour cette page."
+      "La formule : un point d’attention + un détail répété + de l’espace visuel",
+      "Répétez la couleur du métal, la forme du diamant ou la ligne pour relier les pièces entre elles",
+      "Commencez par une capsule de trois pièces : des boucles d’oreilles, un collier et un détail pour la main ou le poignet",
+      "Adaptez le collier au décolleté, pas à la tenue dans son ensemble",
+      "Changez un seul point d’attention — et non plusieurs — pour passer du jour au soir",
+      "Les métaux mélangés fonctionnent lorsque chaque couleur apparaît plusieurs fois"
     ],
-    "image": "/blog-images/blog-image-99.jpg"
+    "image": "/blog-images/blog-image-54.jpg"
   },
   "content": [
     {
-      "heading": "Sélecteur de bijoux minimalistes",
+      "heading": "La formule des bijoux minimalistes",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Utilisez ce tableau en haut de la page comme principal outil de décision en matière de style."
+          "type": "section-lead",
+          "text": "Un point d’attention + un détail répété + de l’espace visuel."
         },
         {
-          "type": "table",
-          "headers": [
-            "Besoin de style",
-            "Meilleure direction de bijoux minimalistes",
-            "Direction IWJ recommandée"
-          ],
-          "rows": [
-            [
-              "Bijoux de tous les jours",
-              "Petits clous ou câlins",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Un éclat plus raffiné au quotidien",
-              "Clous moyens",
-              "Cadenza M"
-            ],
-            [
-              "Style minimaliste et discret",
-              "Boucles d'oreilles diamant minimalistes",
-              "Laluce"
-            ],
-            [
-              "Pile d'oreille minimale",
-              "Petit clou + boucle d'oreille minimaliste",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Bijoux de travail",
-              "Puces, câlins ou boucles d'oreilles minimalistes",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Bijoux de voyage",
-              "Goujons ou câlins sécurisés",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Style de robe noire",
-              "Clous moyens, cerceaux ou gouttes souples",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Style de robe en satin",
-              "Puces moyennes ou boucles d'oreilles pendantes",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Stylisme des invités de mariage",
-              "Boucles d'oreilles clous, gouttes souples ou papillons",
-              "Cadenza M, Short Concetta, Farfalla"
-            ],
-            [
-              "Style de fête minimaliste",
-              "Clous moyens, créoles ou gouttes élégantes",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Bijoux minimalistes à offrir",
-              "Puces, câlins ou boucles d'oreilles souples",
-              "Cadenza S, Cadenza M, Laluce"
-            ],
-            [
-              "Style minimaliste romantique",
-              "Boucles d'oreilles papillon ou gouttes délicates",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Par exemple : des puces d’oreilles en diamant comme point d’attention, un petit pendentif en diamant pour répéter l’éclat, et aucun autre collier imposant ni boucles d’oreilles décoratives."
+        },
+        {
+          "type": "paragraph",
+          "text": "Autre combinaison possible : un pendentif épuré comme point d’attention, un bracelet fin reprenant le métal, et de petites boucles d’oreilles discrètes qui ne rivalisent pas avec le collier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le style minimaliste ne dépend pas uniquement du nombre de pièces. Trois petits bijoux sans lien peuvent sembler plus chargés que deux pièces un peu plus visibles partageant la même forme et la même finition."
         }
       ]
     },
     {
-      "heading": "Qu’est-ce que le style de bijoux minimaliste ?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Le style minimaliste des bijoux signifie choisir des bijoux propres, équilibrés et faciles à porter. Les pièces sont généralement plus petites, plus simples ou plus raffinées, mais elles ajoutent néanmoins du raffinement à la tenue."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les bijoux minimalistes peuvent inclure des clous de diamants synthétiques, des câlins, des petits cerceaux, des boucles d'oreilles minimalistes, des gouttes délicates et des pièces symboliques douces. Le design ne doit pas paraître lourd, encombré ou trop tendance."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un look bijou minimaliste comporte généralement :"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Élément de style minimaliste",
-            "Ce que cela signifie"
-          ],
-          "rows": [
-            [
-              "Forme épurée",
-              "Le bijou a un design simple et facile à lire"
-            ],
-            [
-              "Taille portable",
-              "La pièce fonctionne pour plus d'une tenue"
-            ],
-            [
-              "Un éclat subtil",
-              "Les bijoux ajoutent de la lumière sans dominer"
-            ],
-            [
-              "Couleur métal équilibrée",
-              "La finition fonctionne avec le reste de la tenue"
-            ],
-            [
-              "Sensation confortable",
-              "Le bijou peut être porté plusieurs heures"
-            ],
-            [
-              "Style reproductible",
-              "La pièce n'est pas limitée à une seule occasion"
-            ],
-            [
-              "Un objectif clair",
-              "La tenue n'a pas trop de bijoux concurrents"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour IWantJewels, le style minimaliste ne doit pas paraître simple. L’objectif est de faire en sorte que les petites pièces de diamants synthétiques soient intentionnelles, haut de gamme et faciles à porter souvent."
-        },
-        {
-          "type": "see-also",
-          "text": "Qu'est-ce que les bijoux demi-fins ?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Pourquoi les bijoux minimalistes conviennent à un usage quotidien",
+      "heading": "Qu’est-ce qu’un bijou minimaliste ?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-101.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Les bijoux minimalistes conviennent à un usage quotidien car ils ne nécessitent pas de tenue spéciale. Il peut être porté avec des chemises, des jeans, des blazers, des tricots, des robes, des vêtements de travail, des tenues de voyage et des looks de soirée simples."
+              "text": "Les bijoux minimalistes privilégient généralement des silhouettes nettes, des proportions discrètes, peu de détails décoratifs, des finitions métalliques coordonnées, une ou deux formes répétées, un éclat maîtrisé et des pièces faciles à associer de différentes manières."
             },
             {
               "type": "paragraph",
-              "text": "Les petites boucles d'oreilles en diamants synthétiques sont particulièrement utiles car elles ajoutent du poli sans rendre le look trop formel. Un petit point scintillant peut donner l’impression qu’une tenue simple est terminée."
+              "text": "Les pièces minimalistes peuvent inclure :"
             },
             {
-              "type": "table",
-              "headers": [
-                "Raison de style au quotidien",
-                "Pourquoi les bijoux minimalistes sont utiles"
-              ],
-              "rows": [
-                [
-                  "Facile à répéter",
-                  "Fonctionne avec de nombreuses tenues"
-                ],
-                [
-                  "Confortable",
-                  "Les boucles d'oreilles plus petites sont plus faciles à porter longtemps"
-                ],
-                [
-                  "Poli",
-                  "Ajoute de la finition sans paraître lourd"
-                ],
-                [
-                  "Adapté au travail",
-                  "A l'air professionnel et propre"
-                ],
-                [
-                  "Adapté aux voyages",
-                  "Les pièces simples sont plus faciles à coiffer"
-                ],
-                [
-                  "Empilable",
-                  "Fonctionne avec des clous, des câlins et des petits détails"
-                ],
-                [
-                  "Adapté aux cadeaux",
-                  "Plus sûr que des bijoux très audacieux"
-                ],
-                [
-                  "Intemporel",
-                  "Moins dépendant des tendances à court terme"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Cadenza S, Laluce et Amadea sont les directions IWantJewels les plus fortes pour un style minimaliste quotidien. Cadenza M fonctionne lorsque l'acheteur souhaite un look plus propre avec un éclat plus visible."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pouvez-vous porter des boucles d’oreilles en diamants synthétiques tous les jours ?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Formule de bijoux minimaliste",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "La formule de bijoux minimaliste la plus simple est :"
-        },
-        {
-          "type": "paragraph",
-          "text": "Un point scintillant + un détail de forme + une finition épurée"
-        },
-        {
-          "type": "paragraph",
-          "text": "Le point scintillant peut être un clou en diamant. Le détail de la forme peut être un câlin ou un cerceau. La finition épurée vient du fait que le reste des bijoux reste simple."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Rôle de style",
-            "Ce qu'il fait",
-            "Meilleure réalisation IWJ"
-          ],
-          "rows": [
-            [
-              "Point scintillant",
-              "Ajoute de la lumière près du visage",
-              "Cadence S, Cadence M"
-            ],
-            [
-              "Détail de la forme",
-              "Ajoute de la courbe et de la structure",
-              "Amadea, cerceaux pavés"
-            ],
-            [
-              "Détails doux",
-              "Ajoute un intérêt discret",
-              "Laluce"
-            ],
-            [
-              "Détail romantique",
-              "Ajoute du sens et de la douceur",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Mouvement d'occasion",
-              "Ajoute une longueur douce",
-              "Orsola, Concetta Court"
-            ],
-            [
-              "Mouvement formel",
-              "Ajoute une longueur raffinée",
-              "Concetta Longue"
-            ],
-            [
-              "Prise en charge minimale",
-              "Équilibre un morceau plus gros",
-              "Cadenza S, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour un coiffage quotidien, gardez la formule simple. Pour un événement, utilisez une pièce légèrement plus solide et gardez le reste propre."
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles minimalistes pour les tenues de tous les jours",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles minimalistes de tous les jours doivent être faciles à porter avec des tenues décontractées, des vêtements de travail, des robes simples et des looks de voyage."
-        },
-        {
-          "type": "paragraph",
-          "text": "Le point de départ le plus sûr est un petit clou en diamant. Si l'acheteur souhaite un look plus stylé, ajoutez un câlin. S’ils préfèrent les détails discrets, choisissez une boucle d’oreille minimaliste. S’ils veulent un éclat plus visible sans passer à un style affirmé, choisissez un clou moyen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Tenue de tous les jours",
-            "Meilleure direction de boucle d’oreille minimaliste",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Chemise blanche et jean",
-              "Petits clous ou câlins",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Blazer et pantalon",
-              "Goujons moyens ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Tricots",
-              "Des clous ou des petits cerceaux",
-              "Cadenza S, cerceaux pavés"
-            ],
-            [
-              "Robe décontractée",
-              "Petits clous ou boucles d'oreilles minimalistes",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Tenue de voyage",
-              "Goujons ou câlins sécurisés",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Tenue neutre",
-              "Boucles d'oreilles minimalistes ou clous moyens",
-              "Laluce, Cadenza M."
-            ],
-            [
-              "Tenue de week-end",
-              "Câlins ou cerceaux",
-              "Amadea, cerceaux pavés"
-            ],
-            [
-              "Tenue de dîner simple",
-              "Clous moyens ou gouttes douces",
-              "Cadenza M, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles Stud vs Huggie",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Bijoux minimalistes pour vêtements de travail",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les bijoux minimalistes sont l’un des meilleurs choix pour les vêtements de travail car ils ont l’air raffinés sans être gênants."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour le travail, choisissez des pièces qui se placent près de l'oreille et qui ne tirent pas, ne bougent pas trop et n'entrent pas en conflit avec les tenues professionnelles. Les clous, les câlins et les boucles d’oreilles minimalistes sont les plus solides. Les cerceaux peuvent fonctionner s'ils sont raffinés. Les gouttes sont meilleures pour un style de jour comme de nuit plutôt que pour une tenue de bureau quotidienne."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-103.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look vêtement de travail",
-                "Meilleure direction de bijoux",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Tenue de bureau classique",
-                  "Goujons petits ou moyens",
-                  "Cadence S, Cadence M"
-                ],
-                [
-                  "Style de bureau moderne",
-                  "Câlins",
-                  "Amédée"
-                ],
-                [
-                  "Vêtements de travail minimalistes",
-                  "Boucles d'oreilles minimalistes",
-                  "Laluce"
-                ],
-                [
-                  "Look de bureau créatif",
-                  "Cerceaux ou câlins",
-                  "Cerceaux pavés, Amadea"
-                ],
-                [
-                  "Tenue blazer",
-                  "Goujons moyens ou câlins",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Événement de travail",
-                  "Clous moyens ou créoles raffinées",
-                  "Cadenza M, cerceaux pavés"
-                ],
-                [
-                  "Tenue du jour au dîner",
-                  "Clous moyens ou gouttes douces",
-                  "Cadenza M, Orsola"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Puces d’oreilles en diamant style solitaire",
+                "Petites créoles (huggies) ou créoles fines",
+                "Boucles d’oreilles géométriques simples",
+                "Chaînes fines",
+                "Petits pendentifs",
+                "Bracelets fins",
+                "Bagues épurées",
+                "Boucles d’oreilles pendantes courtes et discrètes"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Boucles d'oreilles à tige ou créoles",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+          "type": "paragraph",
+          "text": "« Minimaliste » décrit une orientation stylistique. Cela ne garantit pas qu’un produit soit léger, durable, hypoallergénique ou adapté à toutes les activités."
         }
       ]
     },
     {
-      "heading": "Bijoux minimalistes pour robes noires",
+      "heading": "Qu’est-ce qui fait fonctionner le style de bijoux minimalistes ?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Une robe noire peut porter des bijoux audacieux, mais des bijoux minimalistes peuvent lui donner un aspect propre, raffiné et cher."
+          "type": "subheading",
+          "text": "Un point d’attention clairement défini"
         },
         {
           "type": "paragraph",
-          "text": "Pour une robe noire détaillée, les bijoux minimalistes sont généralement le meilleur choix. Pour une simple robe noire, les bijoux minimalistes conviennent lorsque l'acheteur recherche une élégance discrète plutôt qu'un impact festif."
+          "text": "Choisissez la zone que vous souhaitez mettre en valeur en premier. Le point d’attention peut être constitué de boucles d’oreilles encadrant le visage, d’un pendentif faisant écho au décolleté, d’un petit assemblage de bagues, d’un bracelet visible sous une manche ou d’un ear stack soigneusement composé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Évitez de donner la même importance aux boucles d’oreilles, au collier, aux bagues et au bracelet."
+        },
+        {
+          "type": "subheading",
+          "text": "La répétition"
+        },
+        {
+          "type": "paragraph",
+          "text": "Répétez un détail pour relier les pièces entre elles. Les détails utiles à reprendre peuvent être la couleur du métal, la forme du diamant, des lignes arrondies ou anguleuses, un motif, le niveau d’éclat ou la texture."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les pièces ne doivent pas forcément provenir de la même collection, mais elles doivent présenter une cohérence visuelle."
+        },
+        {
+          "type": "subheading",
+          "text": "L’espace visuel"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le style minimaliste a besoin de zones où les bijoux ne se font pas concurrence. Si vous portez des boucles d’oreilles visibles, un collier et plusieurs bagues, gardez au moins une zone plus sobre. Vous pouvez par exemple retirer le bracelet ou choisir un collier sans couches décoratives supplémentaires."
+        },
+        {
+          "type": "subheading",
+          "text": "Les proportions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Comparez les bijoux à la tenue plutôt que d’évaluer chaque pièce séparément. Une très petite puce d’oreille peut disparaître avec une coiffure volumineuse ou une tenue très imprimée. Une créole fine ou une puce de taille moyenne peut rester minimaliste si son design demeure épuré."
+        }
+      ]
+    },
+    {
+      "heading": "Créer une capsule de bijoux minimalistes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une capsule de bijoux est un petit groupe de pièces pouvant être combinées de différentes façons. Une capsule pratique peut comprendre six catégories."
         },
         {
           "type": "table",
           "headers": [
-            "Style de robe noire",
-            "Meilleure direction de bijoux minimalistes",
-            "Direction du produit"
+            "Pièce de la capsule",
+            "Rôle",
+            "Points à vérifier"
           ],
           "rows": [
             [
-              "Robe noire simple",
-              "Clous moyens, cerceaux ou gouttes souples",
-              "Cadenza M, Pave Hoops, Orsola"
+              "Petites puces d'oreilles en diamant",
+              "Éclat discret",
+              "Diamètre, poids et fermoir"
             ],
             [
-              "Robe noire détaillée",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
+              "Petites créoles (huggies) ou créoles fines",
+              "Forme courbe",
+              "Diamètre, épaisseur et fermeture"
             ],
             [
-              "Robe en satin noir",
-              "Goujons ou gouttes moyens",
-              "Cadenza M, Orsola"
+              "Collier à pendentif simple",
+              "Détail du décolleté",
+              "Longueur de la chaîne et dimensions du pendentif"
             ],
             [
-              "Robe noire à col montant",
-              "Clous ou cerceaux",
-              "Cadenza M, cerceaux pavés"
+              "Bracelet fin",
+              "Détail du poignet",
+              "Longueur, fermeture et réglage"
             ],
             [
-              "Robe d'événement de travail noire",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
+              "Bague épurée",
+              "Détail de la main",
+              "Taille, largeur et finition"
             ],
             [
-              "Robe noire minimaliste",
-              "Une pièce maîtresse propre",
-              "Cadenza M, Orsola, Pave Hoops"
-            ],
-            [
-              "Robe de soirée noire",
-              "Clous moyens ou gouttes douces",
-              "Cadenza M, Orsola"
+              "Pièce d’exception facultative",
+              "Variation pour le soir ou une occasion",
+              "Dimensions, poids et compatibilité avec la tenue"
             ]
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Vous n’avez pas besoin d’acheter toute la capsule en une fois. Commencez par les pièces qui s’accordent à vos tenues les plus portées."
+        },
+        {
+          "type": "subheading",
+          "text": "Une capsule de départ en trois pièces"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour commencer avec une collection plus réduite, choisissez :"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Une paire de boucles d’oreilles discrètes",
+            "Un collier simple",
+            "Une bague ou un bracelet à la finition assortie"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces trois pièces permettent plusieurs combinaisons : boucles d’oreilles seules ; boucles d’oreilles et collier ; boucles d’oreilles et bracelet ; collier et bague ; ou les trois ensemble lorsque leurs proportions restent équilibrées."
+        },
+        {
+          "type": "subheading",
+          "text": "Une capsule de cinq pièces"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une capsule plus modulable peut inclure des puces d’oreilles en diamant, des petites créoles (huggies) ou des créoles fines, un pendentif simple, un bracelet fin et une bague épurée. Les boucles d’oreilles offrent deux façons d’encadrer le visage, tandis que le pendentif, le bracelet et la bague peuvent être ajoutés ou retirés selon la tenue."
+        }
+      ]
+    },
+    {
+      "heading": "Comment associer boucles d’oreilles et colliers minimalistes",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Lorsque les boucles d’oreilles sont le point d’attention"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choisissez un collier discret ou laissez le décolleté nu. Cette option convient aux puces d’oreilles en diamant visibles, aux créoles pavé, à un petit ear stack, aux boucles d’oreilles géométriques ou aux boucles d’oreilles pendantes courtes."
+        },
+        {
+          "type": "subheading",
+          "text": "Lorsque le collier est le point d’attention"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choisissez de petites puces d’oreilles ou de simples petites créoles (huggies), afin que le visage et le décolleté ne se disputent pas l’attention. Cette option convient à un collier pendentif, à deux chaînes superposées, à un collier orné d’un motif reconnaissable ou à un collier qui suit la forme du décolleté."
+        },
+        {
+          "type": "subheading",
+          "text": "Lorsque les deux pièces comportent des diamants"
+        },
+        {
+          "type": "paragraph",
+          "text": "Répétez le détail du diamant, mais variez l’échelle. Par exemple, associez un pendentif plus visible à de petites puces d’oreilles en diamant plutôt que deux pièces tout aussi imposantes aux oreilles et au décolleté."
+        },
+        {
+          "type": "see-also",
+          "text": "Guide des boucles d'oreilles minimalistes",
+          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Comment superposer des colliers minimalistes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La superposition de colliers minimalistes doit créer une différence visible entre les chaînes. Tenez compte de leur longueur, de la taille du pendentif, de l’épaisseur de la chaîne, de la couleur du métal, du décolleté et du chevauchement éventuel des pendentifs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une association simple de deux chaînes consiste à porter une chaîne courte sans pendentif et une chaîne légèrement plus longue avec un pendentif. L’écart de longueur doit suffire à séparer visuellement les chaînes. Les recommandations universelles en centimètres sont peu fiables : mesurez les produits eux-mêmes et tenez compte du cou et du décolleté de la personne qui les porte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec trois colliers, créez une progression nette des longueurs et gardez au moins une chaîne sans pendentif."
+        },
+        {
+          "type": "paragraph",
+          "text": "Évitez d’associer :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Plusieurs pendentifs de taille similaire à la même hauteur",
+            "Plusieurs chaînes qui s’emmêlent immédiatement",
+            "Plusieurs motifs sans lien entre eux",
+            "Des chaînes imposantes et délicates sans relation claire"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Comment superposer bagues et bracelets minimalistes",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Les bagues"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ear stack de bagues minimaliste peut réunir un anneau simple et une bague ornée de diamants, deux anneaux fins aux textures différentes, une bague portée sur plusieurs doigts ou deux bagues coordonnées sur un même doigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Variez la largeur ou la texture afin que les bagues ne semblent pas dupliquées par hasard. Si une bague présente le détail en diamant le plus marqué, laissez les autres apporter du métal, de la forme ou de la texture plutôt qu’un éclat équivalent."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vérifiez la taille de chaque bague séparément. Plusieurs bagues portées ensemble peuvent être ajustées différemment d’une bague portée seule."
+        },
+        {
+          "type": "subheading",
+          "text": "Les bracelets"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un seul bracelet peut suffire à habiller le poignet, notamment avec des manches longues, une montre ou une tenue qui comporte déjà plusieurs bijoux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les superposer, associez des largeurs différentes mais harmonieuses, vérifiez que les fermoirs ne se gênent pas, évitez les écarts de poids trop importants, laissez suffisamment de liberté de mouvement sans permettre aux bracelets de se chevaucher constamment, et tenez compte de la couleur et de la taille de la montre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une montre peut faire partie de l’ensemble de bijoux. Coordonnez la finition du bracelet avec le boîtier, le bracelet de la montre ou un autre détail métallique."
+        }
+      ]
+    },
+    {
+      "heading": "Les bijoux minimalistes selon les décolletés",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Col rond ou montant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un col montant réduit la peau visible autour du cou. Laissez les boucles d’oreilles apporter le détail principal, ou choisissez un collier placé nettement au-dessus ou au-dessous du col, plutôt que directement sur son bord. Des puces d’oreilles ou de petites créoles (huggies) au contour bien visible fonctionnent bien, et le collier reste facultatif."
+        },
+        {
+          "type": "subheading",
+          "text": "Col en V"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendentif peut suivre la direction descendante d’un col en V. Si le pendentif est la pièce maîtresse, optez pour des boucles d’oreilles discrètes — de petites ou moyennes puces d’oreilles, un collier fin avec pendentif et une bague ou un bracelet épuré."
+        },
+        {
+          "type": "see-also",
+          "text": "Quels bijoux porter avec une robe à col en V",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Col cœur"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un col cœur crée déjà une forme courbe qui attire le regard. Choisissez des bijoux qui accompagnent cette courbe sans remplir chaque espace ouvert : un petit pendentif ou aucun collier, des puces d’oreilles, de petites créoles (huggies) ou des boucles d’oreilles pendantes discrètes, ainsi qu’un bracelet ou une bague."
+        },
+        {
+          "type": "see-also",
+          "text": "Quels bijoux porter avec un col cœur",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Col bardot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une tenue à épaules dénudées laisse les épaules et le décolleté ouverts. Choisissez si les boucles d’oreilles ou le collier sera la pièce principale : des boucles visibles sans collier, un pendentif avec des puces d’oreilles discrètes, ou un bracelet épuré pour équilibrer le décolleté ouvert."
+        },
+        {
+          "type": "see-also",
+          "text": "Quelles boucles d’oreilles porter avec une robe à épaules dénudées",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Les bijoux minimalistes avec les tenues courantes",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Chemise blanche et jean"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une chemise blanche offre une base neutre à un petit détail en diamant ou à une forme métallique épurée. Essayez de petites puces d’oreilles en diamant, un pendentif fin et une bague ou un bracelet. Si la chemise est ouverte au col, le pendentif peut devenir la pièce maîtresse. Si elle est boutonnée plus haut, laissez les boucles d’oreilles attirer le regard."
+        },
+        {
+          "type": "subheading",
+          "text": "Blazer et pantalon tailleur"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les vêtements structurés s’accordent bien avec des bijoux aux lignes nettes : une puce d’oreille moyenne ou une boucle géométrique, une chaîne fine, une bague épurée et un bracelet seulement s’il ne rivalise pas avec une montre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour une tenue de travail, tenez compte des attentes professionnelles et des aspects pratiques, comme l’utilisation d’écouteurs, plutôt que de supposer qu’un seul style convient à tous les environnements."
+        },
+        {
+          "type": "subheading",
+          "text": "Vêtements en maille"
+        },
+        {
+          "type": "paragraph",
+          "text": "La texture des vêtements peut accrocher ou dissimuler les bijoux fins. Essayez des puces d’oreilles ou de petites créoles (huggies), un collier uniquement s’il repose nettement au-dessus de la maille, ainsi qu’une bague ou un bracelet pour ajouter du détail. Évitez les chaînes délicates qui s’accrochent continuellement aux tissus texturés."
+        },
+        {
+          "type": "subheading",
+          "text": "Robe noire"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une robe noire crée un contraste marqué avec les finitions métalliques chaudes comme froides. Essayez une puce visible ou une créole fine, un pendentif délicat ou un décolleté nu, ainsi qu’une bague ou un bracelet. Si les boucles d’oreilles sont très visibles, réduisez le détail du collier."
         },
         {
           "type": "see-also",
           "text": "Quels bijoux porter avec une robe noire",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Bijoux minimalistes pour robes en satin",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Le satin a déjà de l'éclat, c'est pourquoi les bijoux minimalistes conviennent particulièrement bien lorsque la robe doit rester élégante."
+          "type": "subheading",
+          "text": "Robe satinée"
         },
         {
           "type": "paragraph",
-          "text": "Les clous moyens ajoutent de l'éclat sans ajouter trop de mouvement. Les boucles d'oreilles pendantes ajoutent du vernis lorsque la robe est simple. Les câlins et les boucles d'oreilles minimalistes fonctionnent lorsque la tenue en satin est plus décontractée ou axée sur un événement professionnel."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Style de robe en satin",
-            "Meilleure direction de bijoux minimalistes",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Robe nuisette en satin",
-              "Boucles d'oreilles pendantes",
-              "Orsola"
-            ],
-            [
-              "Robe col montant en satin",
-              "Clous ou cerceaux moyens",
-              "Cadenza M, cerceaux pavés"
-            ],
-            [
-              "Robe en satin champagne",
-              "Gouttes ou clous souples",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Robe en satin rose poudré",
-              "Boucles d'oreilles papillon ou gouttes courtes",
-              "Farfalla, Short Concetta"
-            ],
-            [
-              "Robe en satin noir",
-              "Goujons ou gouttes moyens",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe en satin vert",
-              "Gouttes ou cerceaux",
-              "Orsola, Cerceaux Pavés"
-            ],
-            [
-              "Robe en satin détaillée",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
-            ]
-          ]
+          "text": "Le satin reflète déjà la lumière et crée du mouvement. Évitez de le recouvrir de plusieurs pièces qui se concurrencent. Essayez des puces d’oreilles en diamant avec un bracelet fin, des boucles d’oreilles pendantes discrètes sans collier, ou un pendentif fin avec de petites puces d’oreilles."
         },
         {
           "type": "see-also",
-          "text": "Bijoux avec robe en satin",
+          "text": "Quels bijoux porter avec une robe satinée",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Tenue imprimée ou ornée"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lorsque la tenue comporte des broderies, des sequins, des imprimés ou d’autres détails décoratifs, réduisez le nombre de points d’attention : de petites puces d’oreilles, une chaîne simple ou aucun collier, et une bague discrète. Minimaliste ne signifie pas invisible ; l’objectif est de donner à la tenue et aux bijoux des rôles visuels différents."
         }
       ]
     },
     {
-      "heading": "Bijoux minimalistes pour les tenues d’invités de mariage",
+      "heading": "Bijoux minimalistes, coiffures et lunettes",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Les bijoux minimalistes fonctionnent à merveille pour les invités d’un mariage car ils conservent un look élégant et respectueux."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une tenue d’invité à un mariage ne doit pas paraître trop nuptiale ou trop lourde. Les clous, les gouttes douces, les boucles d'oreilles papillon et les câlins délicats sont généralement plus sûrs que les bijoux très spectaculaires, surtout si la robe est déjà ornée de dentelle, de satin, d'imprimés, de broderies ou d'un décolleté prononcé."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look invité au mariage",
-                "Meilleure direction de bijoux minimalistes",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Robe d'invité de mariage simple",
-                  "Boucles d'oreilles pendantes ou clous moyens",
-                  "Orsola, Cadenza M."
-                ],
-                [
-                  "Robe d'invité de mariage détaillée",
-                  "Goujons ou câlins",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Robe d'invité de mariage en satin",
-                  "Boucles d'oreilles pendantes",
-                  "Orsola"
-                ],
-                [
-                  "Robe fleurie",
-                  "Boucles d'oreilles papillon ou petits clous",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Robe champagne",
-                  "Gouttes souples ou clous moyens",
-                  "Short Concetta, Cadenza M"
-                ],
-                [
-                  "Robe sauge ou menthe",
-                  "Boucles d'oreilles papillon ou gouttes délicates",
-                  "Farfalla, Short Concetta"
-                ],
-                [
-                  "Robe d'invité de mariage noire",
-                  "Clous moyens ou gouttes douces",
-                  "Cadenza M, Orsola"
-                ],
-                [
-                  "Style de demoiselle d'honneur",
-                  "Petits clous ou gouttes délicates",
-                  "Cadenza S, Short Concetta"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants cultivés en laboratoire pour les mariages",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Bijoux minimalistes pour les fêtes et les dîners",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les bijoux de fête minimalistes doivent néanmoins être spéciaux. La différence est qu’il utilise des pièces plus propres au lieu de bijoux lourds."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les clous moyens, les créoles et les gouttes élégantes sont les choix les plus solides. Si la tenue comporte déjà des paillettes, du satin, du tissu rouge, du satin noir ou un décolleté spectaculaire, les bijoux minimalistes peuvent paraître plus raffinés que des boucles d'oreilles audacieuses."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Look de fête ou de dîner",
-            "Meilleure direction de bijoux minimalistes",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Tenue de dîner",
-              "Clous moyens ou gouttes douces",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe de cocktail",
-              "Créoles ou clous moyens",
-              "Créoles Pave, Cadenza M"
-            ],
-            [
-              "Robe de soirée noire",
-              "Cerceaux, clous ou gouttes",
-              "Cerceaux Pave, Cadenza M, Orsola"
-            ],
-            [
-              "Robe rouge",
-              "Goujons ou gouttes moyens",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe verte",
-              "Drops, cerceaux ou crampons moyens",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Robe de soirée en satin",
-              "Gouttes ou clous",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Tenue de fête détaillée",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Tenue de fête minimale",
-              "Cerceaux ou gouttes",
-              "Cerceaux pavés, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles de fête",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Bijoux minimalistes pour cadeaux",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les bijoux minimalistes font des cadeaux forts car ils sont plus faciles à porter que des modèles très audacieux ou très spécifiques."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si vous n'êtes pas sûr du style exact du destinataire, les clous d'oreilles sont généralement les plus sûrs. Les Huggies conviennent à quelqu'un qui aime les bijoux modernes. Les boucles d’oreilles minimalistes conviennent mieux à quelqu’un au goût discret. Les boucles d'oreilles papillon sont plus fortes lorsque le cadeau doit être significatif ou romantique."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Besoin de cadeau",
-            "Meilleure direction de bijoux minimalistes",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Cadeau le plus sûr",
-              "Goujons petits ou moyens",
-              "Cadence S, Cadence M"
-            ],
-            [
-              "Premier cadeau en diamant",
-              "Petits clous",
-              "Cadenza S"
-            ],
-            [
-              "Cadeau scintillant classique",
-              "Clous moyens",
-              "Cadenza M"
-            ],
-            [
-              "Cadeau moderne",
-              "Câlins",
-              "Amédée"
-            ],
-            [
-              "Cadeau de luxe tranquille",
-              "Boucles d'oreilles minimalistes",
-              "Laluce"
-            ],
-            [
-              "Cadeau romantique",
-              "Boucles d'oreilles papillon",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Cadeau de demoiselle d'honneur",
-              "Petits clous ou gouttes délicates",
-              "Cadenza S, Short Concetta"
-            ],
-            [
-              "Cadeau d'anniversaire",
-              "Puces, boucles d'oreilles papillon ou câlins",
-              "Cadenza M, Farfalla, Amadea"
-            ],
-            [
-              "Cadeau d'anniversaire",
-              "Boucles d'oreilles gouttes ou papillon",
-              "Orsola, Alidi Farfalla"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants cultivés en laboratoire pour cadeaux",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Idées minimalistes de piles d’oreilles",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les piles d’oreilles minimalistes doivent sembler propres et intentionnelles."
-        },
-        {
-          "type": "paragraph",
-          "text": "Utilisez un petit point scintillant, une pièce de forme et un détail discret. Gardez la couleur du métal cohérente si l'acheteur souhaite que la pile ait l'air polie."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-107.jpg",
+          "image": "/blog-images/blog-image-46.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Objectif de pile d'oreille minimaliste",
-                "Pièce principale",
-                "Pièce de support",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Pile quotidienne simple",
-                  "Petit goujon",
-                  "Câlin",
-                  "Cadenza S + Amadea"
-                ],
-                [
-                  "Pile minimale douce",
-                  "Petit goujon",
-                  "Boucle d'oreille minimaliste",
-                  "Cadenza S + Laluce"
-                ],
-                [
-                  "Pile de vêtements de travail polis",
-                  "Goujon moyen",
-                  "Câlin",
-                  "Cadenza M + Amadea"
-                ],
-                [
-                  "Pile de luxe silencieuse",
-                  "Goujon moyen",
-                  "Détail minimal",
-                  "Cadenza M + Laluce"
-                ],
-                [
-                  "Pile minimale romantique",
-                  "Boucle d'oreille papillon",
-                  "Petit goujon",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Pile minimale de mariage",
-                  "Chute douce",
-                  "Petit goujon",
-                  "Concetta Short + Cadenza S"
-                ],
-                [
-                  "Pile minimale du soir",
-                  "Boucle d'oreille pendante",
-                  "Petit goujon",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Pile minimale de cerceau",
-                  "Cerceau",
-                  "Petit goujon",
-                  "Cerceaux Pave + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamant cultivé en laboratoire pour piles d'oreilles",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Bijoux minimalistes par type de tenue",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Cette section devrait aider les acheteurs à choisir des bijoux en fonction de ce qu'ils portent."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Type de tenue",
-            "Meilleure direction de bijoux minimalistes",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Chemise blanche et jean",
-              "Petits clous ou câlins",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Tenue blazer",
-              "Goujons moyens ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Robe noire",
-              "Clous moyens, cerceaux ou gouttes souples",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Robe en satin",
-              "Puces moyennes ou boucles d'oreilles pendantes",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Robe col V",
-              "Gouttes ou clous moyens",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Décolleté en cœur",
-              "Boucles d'oreilles papillon ou gouttes douces",
-              "Farfalla, Short Concetta"
-            ],
-            [
-              "Robe à épaules dénudées",
-              "Gouttes, cerceaux ou clous",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Robe verte",
-              "Gouttes, créoles ou boucles d'oreilles douces et romantiques",
-              "Orsola, Cerceaux Pavés, Farfalla"
-            ],
-            [
-              "Robe rouge",
-              "Goujons ou gouttes moyens",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Vêtements de travail",
-              "Puces, câlins ou boucles d'oreilles minimalistes",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Tenue d'invité de mariage",
-              "Boucles d'oreilles pendantes, clous ou papillons",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Tenue de voyage",
-              "Goujons ou câlins sécurisés",
-              "Cadenza S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bijoux avec robe rouge",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Bijoux minimalistes par Metal Color",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "La couleur du métal peut changer la sensation des bijoux minimalistes."
-        },
-        {
-          "type": "paragraph",
-          "text": "L’or jaune est chaleureux et classique. Le ton blanc ou argenté est propre et moderne. L'or rose est doux et romantique. Pour un style minimaliste, le choix le plus simple est généralement la couleur du métal que l’acheteur porte déjà le plus souvent."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-102.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Couleur du métal",
-                "Ambiance stylistique minimaliste",
-                "Idéal pour"
-              ],
-              "rows": [
-                [
-                  "Or jaune",
-                  "Chaleureux, classique et raffiné",
-                  "Vêtements de tous les jours, robes noires, robes vertes, cadeaux"
-                ],
-                [
-                  "Ton blanc ou argenté",
-                  "Propre, lumineux et moderne",
-                  "Workwear, tenues minimales, garde-robes cool"
-                ],
-                [
-                  "Or rose",
-                  "Doux, romantique et féminin",
-                  "Cadeaux, tenues blush, robes pastel, style romantique"
-                ],
-                [
-                  "Métaux mixtes",
-                  "Créatif et à l'écoute des tendances",
-                  "Piles d'oreilles et style décontracté"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Cheveux détachés"
             },
             {
               "type": "paragraph",
-              "text": "Pour les oreillettes minimalistes, une seule couleur de métal est généralement la plus sûre. Une pile en or jaune est chaude, une pile blanc/argenté est propre et une pile en or rose est douce."
+              "text": "De petites boucles d’oreilles peuvent être partiellement dissimulées par des cheveux lâchés. Envisagez un contour plus net et visible si vous souhaitez que les boucles restent remarquées, et vérifiez si les créoles, les boucles pendantes ou les contours décoratifs s’accrochent aux cheveux."
+            },
+            {
+              "type": "subheading",
+              "text": "Cheveux attachés"
+            },
+            {
+              "type": "paragraph",
+              "text": "Les cheveux attachés dégagent l’oreille et peuvent rendre les petites boucles d’oreilles plus visibles. Une puce d’oreille, une petite créole (huggie) ou un ear stack minimaliste peut apporter suffisamment de détail sans nécessiter une boucle plus imposante."
+            },
+            {
+              "type": "subheading",
+              "text": "Cheveux courts"
+            },
+            {
+              "type": "paragraph",
+              "text": "Les cheveux courts peuvent laisser l’oreille et le décolleté visibles. Décidez si les boucles d’oreilles ou le collier doit dominer, plutôt que de les rendre aussi présents l’un que l’autre."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Lunettes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les lunettes ajoutent une forme et une couleur de métal ou d’acétate autour du visage. Tenez compte de la couleur et de l’épaisseur de la monture, de sa finition métallique, de la distance entre sa branche et les boucles d’oreilles, ainsi que de la concurrence éventuelle avec une monture décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les bijoux n’ont pas besoin d’être exactement assortis aux lunettes, mais leurs proportions doivent être pensées ensemble."
+        }
+      ]
+    },
+    {
+      "heading": "Comment mélanger les couleurs de métal",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un style minimaliste mêlant les métaux fonctionne lorsque le contraste est répété. Par exemple : des boucles d’oreilles en or jaune avec une montre bicolore, un collier aux tons blancs avec une bague associant les deux finitions, ou des finitions de bagues alternées, reprises aux oreilles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Évitez d’ajouter une seule pièce contrastante sans autre lien visuel. Pour un résultat uniforme, choisissez la finition déjà présente sur votre montre, votre bague portée au quotidien ou votre chaîne la plus souvent portée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avant de choisir un bijou à finition or jaune, or blanc ou or rose, vérifiez ses variantes actuelles sur la page produit."
+        },
+        {
           "type": "see-also",
-          "text": "Boucles d'oreilles en or vs blanc vs or rose avec diamants cultivés en laboratoire",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Boucles d’oreilles en diamants de laboratoire : or jaune, blanc ou rose",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Parcours de produits par besoin de style",
+      "heading": "Une transition minimaliste du jour au soir",
       "content": [
         {
-          "type": "subheading",
-          "text": "Pour le meilleur départ minimaliste au quotidien"
-        },
-        {
           "type": "paragraph",
-          "text": "Choisissez les clous d'oreilles en diamants synthétiques Cadenza S. Elles sont subtiles, faciles à porter et solides comme une première boucle d'oreille diamant minimaliste."
+          "text": "Il n’est pas nécessaire de remplacer tous vos bijoux pour changer l’effet d’une tenue."
         },
         {
           "type": "subheading",
-          "text": "Pour un éclat minimaliste plus visible"
+          "text": "Jour"
         },
         {
-          "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles clous en diamant Cadenza M. Ils conservent la forme épurée des crampons tout en ajoutant plus de présence."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour des détails minimalistes et discrets"
-        },
-        {
-          "type": "paragraph",
-          "text": "Optez pour les boucles d'oreilles diamant minimalistes Laluce. Ils conviennent parfaitement aux acheteurs qui souhaitent un style discret."
+          "type": "bullet-list",
+          "items": [
+            "Petites puces d'oreilles en diamant",
+            "Pendentif fin",
+            "Bague épurée"
+          ]
         },
         {
           "type": "subheading",
-          "text": "Pour un style minimaliste moderne"
+          "text": "Soirée"
         },
         {
-          "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles Amadea Huggie. Ils ajoutent de la forme tout en restant proches de l'oreille et faciles à coiffer."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour les piles d’oreilles minimalistes"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Cadenza S avec Laluce ou Amadea. Cela crée une pile propre sans donner l’impression que l’oreille est encombrée."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style minimaliste pour les invités de mariage"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles Orsola, les boucles d'oreilles Concetta Short ou Cadenza M selon le détail de la robe."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style minimaliste et romantique"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles papillon Farfalla ou les boucles d'oreilles papillon Alidi Farfalla. Ceux-ci fonctionnent bien pour les cadeaux, les robes douces et les styles significatifs."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style de fête minimaliste"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Cadenza M, Pave Hoops ou Orsola. Ceux-ci ajoutent suffisamment de vernis de soirée sans devenir trop audacieux."
-        }
-      ]
-    },
-    {
-      "heading": "Recommandations de produits d'IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produit",
-            "Meilleur rôle de style minimaliste",
-            "Pourquoi ça marche"
-          ],
-          "rows": [
-            [
-              "Clous d'oreilles en diamants synthétiques Cadenza S",
-              "Meilleure première pièce minimaliste",
-              "Petit, subtil et facile à porter au quotidien"
-            ],
-            [
-              "Boucles d'oreilles puces diamant Cadenza M",
-              "Meilleur éclat minimaliste visible",
-              "Forme classique avec plus de présence"
-            ],
-            [
-              "Boucles d'oreilles diamant minimalistes Laluce",
-              "Meilleur détail silencieux",
-              "Doux, sobre et facile à coiffer"
-            ],
-            [
-              "Boucles d'oreilles Amadea Huggie",
-              "Meilleure forme minimaliste moderne",
-              "Solide pour un usage quotidien et pour les oreilles"
-            ],
-            [
-              "Cerceaux pavés",
-              "Meilleure direction minimale du cerceau",
-              "Ajoute de la forme tout en restant portable"
-            ],
-            [
-              "Boucles d'oreilles pendantes Orsola",
-              "Meilleur mouvement d’occasion minimaliste",
-              "Ajoute de l'élégance pour les dîners et les mariages"
-            ],
-            [
-              "Boucles d'oreilles courtes Concetta",
-              "Meilleure pièce délicate pour une occasion",
-              "Bon pour les demoiselles d'honneur et un style doux"
-            ],
-            [
-              "Boucles d'oreilles longues Concetta",
-              "Meilleure ligne minimale formelle",
-              "Raffiné et prêt pour le soir"
-            ],
-            [
-              "Boucles d'oreilles papillon Farfalla",
-              "Meilleure pièce minimaliste romantique",
-              "Ajoute du sens sans se sentir lourd"
-            ],
-            [
-              "Boucles d'oreilles papillon Alidi Farfalla",
-              "Meilleure pièce romantique dirigée par un cadeau",
-              "Fort pour les anniversaires et les anniversaires"
-            ],
-            [
-              "Boucles d'oreilles Lusso audacieuses",
-              "Pas minimaliste, mais contraste utile",
-              "Idéal seulement lorsque la tenue a besoin d’un point focal audacieux"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Remplacez les puces d’oreilles par une boucle plus visible",
+            "Gardez le pendentif, ou retirez-le si les boucles d’oreilles deviennent la pièce maîtresse",
+            "Ajoutez un bracelet",
+            "Gardez la même bague et la même direction métallique"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Les bijoux minimalistes doivent être faciles à porter, faciles à répéter et à coiffer. Commencez par Cadenza S pour un éclat subtil, Cadenza M pour un vernis classique, Laluce pour des détails discrets, Amadea pour une forme moderne et Orsola pour un mouvement doux lors d'occasions."
+          "text": "Changer une seule pièce maîtresse crée généralement une transition plus nette qu’ajouter plusieurs bijoux."
         }
       ]
     },
     {
-      "heading": "Erreurs de style minimaliste courantes à éviter",
+      "heading": "Bijoux minimalistes et ear stacks",
       "content": [
         {
           "type": "paragraph",
-          "text": "Une erreur courante consiste à penser que les bijoux minimalistes doivent être invisibles. Les bijoux minimalistes peuvent toujours briller et encadrer le visage ; cela ne domine tout simplement pas la tenue."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur est de choisir des pièces trop petites pour la tenue. Si la robe est sombre, satinée ou visuellement forte, de très petites boucles d'oreilles peuvent disparaître."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une troisième erreur est de porter trop de petites pièces sans structure. Même les bijoux minimalistes peuvent paraître encombrés s’il n’y a pas de pièce principale ou d’équilibre clair."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur consiste à mélanger les métaux sans intention. Les métaux mélangés peuvent paraître élégants, mais une seule couleur de métal est généralement plus facile pour un look minimaliste et raffiné."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une cinquième erreur consiste à utiliser des bijoux minimalistes uniquement pour des vêtements décontractés. Les clous, les gouttes et les câlins minimalistes peuvent également fonctionner à merveille pour les mariages, les dîners et les fêtes."
-        },
-        {
-          "type": "paragraph",
-          "text": "Enfin, ne choisissez pas un bijou uniquement parce qu'il est simple. Il doit toujours convenir à la tenue, au décolleté, à la coiffure, à l'occasion et au style personnel du porteur."
+          "text": "Un ear stack minimaliste peut associer deux puces d’oreilles graduées, une puce avec une petite créole (huggie), une créole fine avec une petite puce, ou trois boucles discrètes reprenant un même métal ou une même forme de diamant."
         },
         {
           "type": "see-also",
-          "text": "Guide d'entretien des bijoux plaqués or",
+          "text": "Comment composer un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Idées d'ear stack en diamant",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Entretenir une capsule de bijoux minimalistes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Une capsule plus réduite signifie souvent que les pièces sont portées et manipulées plus fréquemment. Pour les pièces en argent sterling 925 plaqué or confirmées :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Appliquez le parfum, les cosmétiques et les produits capillaires avant de mettre vos bijoux",
+            "Retirez vos bijoux avant la douche, la baignade et l’exercice",
+            "Essuyez délicatement les pièces après les avoir portées",
+            "Rangez les pièces séparément pour réduire les frottements",
+            "Gardez les chaînes fines fermées pendant le rangement pour limiter les nœuds",
+            "Évitez les produits de polissage abrasifs",
+            "Suivez les consignes d’entretien fournies avec chaque produit"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Comment entretenir les bijoux plaqué or",
           "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
         }
       ]
     },
     {
-      "heading": "Liste de contrôle finale des bijoux minimalistes",
+      "heading": "Erreurs courantes avec les bijoux minimalistes",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Avant de choisir des bijoux minimalistes, demandez-vous :"
+          "type": "subheading",
+          "text": "Porter plusieurs pièces maîtresses"
         },
         {
-          "type": "bullet-list",
+          "type": "paragraph",
+          "text": "Des boucles d’oreilles visibles, plusieurs colliers, de nombreuses bagues et des bracelets superposés peuvent se concurrencer. Choisissez une zone principale et rendez les autres pièces plus discrètes."
+        },
+        {
+          "type": "subheading",
+          "text": "Penser que minimaliste signifie minuscule"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une pièce très petite peut disparaître sur une tenue, avec une coiffure ou derrière des lunettes. Tenez compte des proportions de l’ensemble pour choisir la taille."
+        },
+        {
+          "type": "subheading",
+          "text": "Associer des détails sans lien"
+        },
+        {
+          "type": "paragraph",
+          "text": "Plusieurs petits motifs peuvent malgré tout donner une impression de surcharge. Répétez une forme, un détail en diamant ou une couleur de métal."
+        },
+        {
+          "type": "subheading",
+          "text": "Négliger les dimensions"
+        },
+        {
+          "type": "paragraph",
+          "text": "La longueur de la chaîne, les dimensions du pendentif, le diamètre des créoles et la taille des boucles influencent leurs interactions. Utilisez les mesures réelles et les photos authentiques des modèles."
+        },
+        {
+          "type": "subheading",
+          "text": "Mélanger les métaux par inadvertance"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les métaux mélangés peuvent sembler intentionnels lorsqu’ils sont répétés. Une seule pièce contrastante peut paraître déconnectée."
+        },
+        {
+          "type": "subheading",
+          "text": "Choisir chaque pièce pour la même occasion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une capsule utile contient des pièces qui se recombinent avec plusieurs tenues, plutôt qu’un ensemble complet toujours porté ensemble."
+        }
+      ]
+    },
+    {
+      "heading": "Liste de contrôle finale pour votre style",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Avant de terminer votre look, demandez-vous :"
+        },
+        {
+          "type": "numbered-list",
           "items": [
-            "La tenue est-elle décontractée, de travail, d'invité à un mariage, un dîner ou une fête ?",
-            "Est-ce que je veux de l’éclat, de la forme, du mouvement ou de la douceur ?",
-            "Les boucles d'oreilles ou le collier doivent-ils être le moment principal du bijou ?",
-            "Ma coiffure montrera-t-elle les boucles d'oreilles ?",
-            "La tenue est-elle simple ou détaillée ?",
-            "La couleur du métal correspond-elle à mes bijoux habituels ?",
-            "La pièce peut-elle être portée avec plusieurs tenues ?",
-            "Les bijoux sont-ils suffisamment confortables pour être portés longtemps ?",
-            "Les boucles d'oreilles peuvent-elles être utilisées dans une pile d'oreilles ?",
-            "Les matériaux sont-ils clairement expliqués ?",
-            "Le design est-il simple mais néanmoins spécial ?",
-            "Ces bijoux seront-ils encore portables après une saison ?"
+            "Quelle est la pièce maîtresse ?",
+            "Quel détail relie les bijoux ?",
+            "Y a-t-il suffisamment d’espace visuel ?",
+            "Le collier s’accorde-t-il avec le décolleté ?",
+            "Les boucles d’oreilles conviennent-elles à la coiffure et aux lunettes ?",
+            "Les proportions des bijoux sont-elles adaptées à la tenue ?",
+            "L’association des métaux semble-t-elle intentionnelle ?",
+            "Des chaînes, des créoles ou des boucles pendantes s’accrochent-elles aux vêtements ?",
+            "Pouvez-vous retirer une pièce pour clarifier la composition ?",
+            "Les matériaux et les exigences d’entretien sont-ils bien compris ?"
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Si vous n’êtes pas sûr, commencez par de petits clous ou câlins en diamant cultivés en laboratoire. Ce sont les bijoux minimalistes les plus faciles à porter souvent."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Qu'est-ce qu'un bijou minimaliste ?",
-      "answer": "Les bijoux minimalistes sont des bijoux simples, propres et portables, conçus pour ajouter du poli sans surcharger la tenue. Il peut inclure des clous, des câlins, des petites créoles, des boucles d'oreilles minimalistes et des pendants délicats."
+      "question": "Qu’est-ce que le style de bijoux minimaliste ?",
+      "answer": "Le style de bijoux minimaliste associe un nombre limité de pièces, des proportions maîtrisées, des détails répétés et de l’espace visuel. Les bijoux complètent la tenue sans faire de chaque zone un point d’attention."
     },
     {
-      "question": "Comment styliser des bijoux minimalistes ?",
-      "answer": "Créez des bijoux minimalistes en choisissant un point scintillant, un détail de forme et une finition épurée. Gardez les pièces équilibrées et évitez de surcharger le look."
+      "question": "Combien de pièces porter dans un look minimaliste ?",
+      "answer": "Il n’y a pas de nombre fixe. Deux pièces coordonnées peuvent sembler plus complètes que plusieurs pièces sans lien. Choisissez un point d’attention et utilisez les autres bijoux en soutien."
     },
     {
-      "question": "Les bijoux minimalistes sont-ils bons à porter au quotidien ?",
-      "answer": "Oui, les bijoux minimalistes sont excellents à porter au quotidien car ils s’adaptent à de nombreuses tenues et sont confortables pour un usage régulier."
+      "question": "Comment constituer une capsule de bijoux minimalistes ?",
+      "answer": "Commencez par des catégories faciles à porter, comme de petites puces d’oreilles, des petites créoles (huggies) ou des créoles, un pendentif, un bracelet et une bague épurée. Choisissez des pièces qui se recombinent plutôt que de ne fonctionner qu’en ensemble complet."
     },
     {
-      "question": "Quelles boucles d'oreilles conviennent le mieux à un style minimaliste ?",
-      "answer": "Les petits clous en diamant, les clous moyens, les câlins, les boucles d'oreilles minimalistes et les gouttes douces sont les meilleurs pour un style minimaliste."
+      "question": "Peut-on superposer des colliers minimalistes ?",
+      "answer": "Oui. Variez leurs longueurs et gardez au moins une chaîne visuellement simple. Vérifiez que les pendentifs ne se chevauchent pas et que les chaînes s'accordent avec l'encolure."
     },
     {
-      "question": "Les bijoux minimalistes peuvent-ils être portés lors des mariages ?",
-      "answer": "Oui, les bijoux minimalistes fonctionnent à merveille pour les invités d’un mariage, surtout lorsque la tenue comporte déjà de la dentelle, du satin, des broderies ou un décolleté prononcé."
+      "question": "Peut-on mélanger les couleurs de métal dans des bijoux minimalistes ?",
+      "answer": "Oui. Répétez les deux couleurs de métal dans la composition afin que le contraste paraisse intentionnel."
     },
     {
-      "question": "Les bijoux minimalistes peuvent-ils être portés en soirée ?",
-      "answer": "Oui, les bijoux minimalistes peuvent convenir aux fêtes lorsque vous choisissez des pièces suffisamment polies, comme des clous de taille moyenne, des créoles ou des boucles d'oreilles élégantes."
+      "question": "Quels bijoux porter avec une encolure haute ?",
+      "answer": "Les boucles d'oreilles peuvent apporter le détail principal. Si vous portez un collier, placez-le nettement au-dessus ou en dessous de l'encolure, plutôt que directement sur son bord."
     },
     {
-      "question": "Les bijoux minimalistes sont-ils bons pour le travail ?",
-      "answer": "Oui, les bijoux minimalistes sont idéaux pour le travail car ils ajoutent du poli sans être distrayants."
+      "question": "Quels bijoux minimalistes porter avec un col en V ?",
+      "answer": "Un pendentif peut suivre la forme en V. Optez pour des boucles d'oreilles discrètes si le collier est la pièce maîtresse."
     },
     {
-      "question": "Quels bijoux minimalistes conviennent le mieux aux cadeaux ?",
-      "answer": "Les clous d'oreilles, les câlins et les boucles d'oreilles minimalistes en diamant sont les choix de cadeaux les plus sûrs car ils sont faciles à porter et moins risqués que les bijoux audacieux."
+      "question": "Peut-on porter des bijoux minimalistes pour une soirée ?",
+      "answer": "Oui. Accentuez la présence d'une pièce maîtresse, comme les boucles d'oreilles, tout en gardant les autres bijoux discrets."
     },
     {
-      "question": "Pouvez-vous construire une pile d'oreilles avec des bijoux minimalistes ?",
-      "answer": "Oui, les bijoux minimalistes sont parfaits pour les boucles d’oreilles. Un petit clou avec une boucle d'oreille ou une boucle d'oreille minimaliste crée une pile propre au quotidien."
+      "question": "Les boucles d'oreilles minimalistes peuvent-elles être intégrées à un ear stack ?",
+      "answer": "Oui. Choisissez des pièces aux formes ou finitions assorties et vérifiez leurs dimensions et leur espacement réels avant de les associer."
     },
     {
-      "question": "Quels produits IWantJewels conviennent le mieux pour un style minimaliste ?",
-      "answer": "Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short et Farfalla sont des options solides selon que le look est quotidien, professionnel, invité à un mariage, romantique ou axé sur la fête."
+      "question": "Les bijoux minimalistes conviennent-ils toujours au quotidien ?",
+      "answer": "Non. Leur adéquation dépend des dimensions, du poids, du fermoir, des matériaux, de la finition et des activités de la personne qui les porte."
     }
   ],
   "cta": {
-    "heading": "Les bijoux minimalistes doivent être simples, raffinés et faciles à porter souvent. Choisissez des clous pour un éclat épuré, des câlins pour une forme moderne, des boucles d'oreilles minimalistes pour des détails discrets, des créoles pour une structure douce et des boucles d'oreilles pendantes pour un mouvement élégant.",
-    "body": "Commencez par les boucles d'oreilles en diamants semi-fins de laboratoire IWantJewels si vous voulez des bijoux minimalistes avec un véritable éclat de diamant. Choisissez Cadenza S pour une brillance subtile au quotidien, Cadenza M pour un vernis classique, Laluce pour un style discret, Amadea pour les câlins, Pave Hoops pour la forme et Orsola pour un mouvement doux lors d'occasions.",
-    "primaryLabel": "Achetez des bijoux minimalistes",
-    "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Découvrez les boucles d'oreilles en diamants cultivés en laboratoire",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lire le guide des boucles d'oreilles minimalistes",
-    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
+    "heading": "Le style minimaliste repose sur la clarté, plutôt que sur des règles strictes. Choisissez un point focal, répétez un détail assorti et laissez suffisamment d'espace visuel pour que chaque pièce soit identifiable.",
+    "body": "Découvrez les pièces minimalistes I Want Jewels et composez une capsule autour des tenues que vous portez le plus souvent. Consultez la page de chaque produit pour vérifier ses dimensions, ses matériaux et sa finition.",
+    "primaryLabel": "Découvrez les bijoux minimalistes",
+    "primaryHref": "/products",
+    "secondaryLabel": "Comparez les styles de boucles d'oreilles minimalistes",
+    "secondaryHref": "/resources/earring-style-guides/minimalist-earrings-guide",
+    "tertiaryLabel": "Boucles d'oreilles en diamant de laboratoire au quotidien",
+    "tertiaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
   }
 }

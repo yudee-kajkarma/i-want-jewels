@@ -1,834 +1,729 @@
 {
   "meta": {
-    "title": "Aretes de diamantes de oro versus oro blanco versus oro rosa",
-    "description": "Compare aretes de diamantes cultivados en laboratorio de oro, oro blanco y oro rosa. Elija el mejor color de metal para uso diario, regalos, bodas y estilismo."
+    "title": "Pendientes de diamante: oro amarillo, blanco o rosa",
+    "description": "Compare pendientes de diamante de laboratorio en oro amarillo, blanco y rosa. Conozca sus diferencias antes de elegir."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-100.jpg",
-    "title": "Aretes de diamantes cultivados en laboratorio de oro versus oro blanco versus oro rosa:",
-    "subtitle": "Guía de colores de metales",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Oro amarillo, blanco o rosa",
+    "subtitle": "Pendientes de diamante de laboratorio",
     "paragraphs": [
-      "El color metálico de sus aretes de diamantes creados en laboratorio cambia toda la sensación de la joya. El mismo diseño de arete de diamantes puede lucir cálido y clásico en oro amarillo, limpio y moderno en tonos blanco o plateado, y suave y romántico en oro rosa.",
-      "Este recurso ayuda a los compradores a elegir el mejor color de metal para aretes de diamantes cultivados en laboratorio según el estilo personal, el tono de piel, los colores de la vestimenta, el propósito del regalo, el estilo de la boda y el uso diario. También guía a los usuarios hacia las direcciones de productos de IWantJewels, como Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long y los atrevidos aretes Lusso.",
-      "Para IWantJewels, esta página es importante porque muchos compradores no sólo preguntan \"¿qué aretes de diamantes debo comprar?\" Preguntan \"¿debería elegir oro, plata, oro blanco u oro rosa?\" Esta guía ayuda a responder esa decisión antes de enviarlos a páginas de productos o colecciones."
+      "El oro amarillo, blanco y rosa puede rodear el mismo diamante de laboratorio con tres efectos de color muy distintos. El oro amarillo crea un contraste cálido; el blanco, una transición más fría entre el diamante y el engaste; y el rosa añade un marco rosado.",
+      "Pero el color es solo una parte de la decisión. Antes de elegir unos pendientes, compruebe si están hechos de oro macizo o de otro metal base con un acabado superficial de color dorado. Unos pendientes descritos como «plata de ley 925 chapada en oro de 14 kt» no son unos pendientes de oro macizo de 14 quilates.",
+      "La elección adecuada depende del estilo que busca, de las joyas que ya lleva, del diseño de los pendientes y de su construcción completa."
     ],
-    "shopLabel": "Compre aretes de diamantes cultivados en laboratorio",
+    "shopLabel": "Compare pendientes de diamante de laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Compare aretes de diamantes cultivados en laboratorio en oro amarillo, tono blanco/plateado y oro rosa",
-      "Elige el mejor color de metal para el uso diario.",
-      "Elija el acabado adecuado para regalos, cumpleaños, aniversarios y damas de honor",
-      "Haga coincidir los aretes con el tono de piel, los colores del guardarropa y las joyas existentes.",
-      "Elige el color metal para los trajes de invitadas a la boda y el estilo para ocasiones especiales.",
-      "Comprenda qué colores de metal se sienten clásicos, modernos, románticos o atrevidos",
-      "Encuentre recomendaciones de productos IWantJewels por color de metal y necesidad de estilo",
-      "Planificar bloques de imágenes, módulos de productos, secciones de CTA y enlaces internos para la página."
+      "Oro amarillo: calidez y contraste visibles alrededor de los diamantes",
+      "Oro blanco o acabado blanco verificado: más frío y continuo con piedras incoloras",
+      "Oro rosa: un contraste rosado más suave",
+      "El color y la construcción del metal no son lo mismo",
+      "«Plata de ley 925 con baño de oro de 14 kt» no es oro macizo",
+      "El color no determina si son adecuados para oídos sensibles"
     ],
-    "image": "/blog-images/blog-image-102.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Selector de color metálico",
+      "heading": "Respuesta rápida",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como principal herramienta de decisión."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Si quieres",
-            "Mejor color de metal",
-            "Sensación de estilo",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Pendientes clásicos de todos los días",
-              "oro amarillo",
-              "Cálido, atemporal, sencillo.",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Brillo limpio y moderno",
-              "Tono blanco o plateado",
-              "Brillante, pulido, minimalista",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Pendientes de regalo románticos",
-              "oro rosa",
-              "Suave, personal, femenina.",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Pendientes para invitadas de boda",
-              "Tono oro amarillo o blanco/plata",
-              "Elegante y pulido",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Joyas minimalistas",
-              "Tono blanco/plateado u oro amarillo.",
-              "Sencillo y refinado",
-              "Laluce, Cadenza S."
-            ],
-            [
-              "Estilo de ropa cálida",
-              "oro amarillo",
-              "Rico y clásico",
-              "Cadenza M, Pave Aros"
-            ],
-            [
-              "Trajes de colores pastel suaves",
-              "oro rosa",
-              "gentil y romantico",
-              "Farfalla, Concetta Corto"
-            ],
-            [
-              "Estilo de vestido negro",
-              "Oro amarillo, tono blanco/plateado o brillo atrevido",
-              "Contraste y brillo",
-              "Orsola, Lusso"
-            ],
-            [
-              "Pilas de orejas",
-              "Combina el color del metal existente",
-              "Equilibrado e intencional",
-              "Cadenza S, Amadea, Laluce"
-            ],
-            [
-              "Estilo de fiesta llamativo",
-              "Tono oro amarillo o blanco/plata",
-              "Fuerte y visible",
-              "Lusso, Orsola"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Aretes de diamantes cultivados en laboratorio de oro amarillo",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes de oro amarillo con diamantes cultivados en laboratorio se sienten cálidos, clásicos y fáciles de usar. Son una de las opciones más seguras para la joyería de todos los días porque el oro amarillo combina bien con muchos guardarropas y tonos de piel."
+          "text": "Elija oro amarillo si busca calidez y contraste visibles alrededor de los diamantes. Elija oro blanco o un acabado de metal blanco verificado si desea que el engaste parezca más frío y se funda con diamantes incoloros o casi incoloros. Elija oro rosa si prefiere un contraste rosado más suave."
         },
         {
           "type": "paragraph",
-          "text": "El oro amarillo es especialmente fuerte si quien lo lleva ya posee joyas de oro. Si alguien usa un reloj de oro, anillos de oro, collares de oro o accesorios de tonos cálidos, los aretes de oro amarillo generalmente se sentirán naturales en su colección."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro amarillo también combina maravillosamente con trajes negros, crema, marrones, verdes, rojos, champán y neutros cálidos. Puede hacer que los aretes de diamantes se sientan más ricos y un poco más tradicionales sin parecer anticuados."
-        },
-        {
-          "type": "paragraph",
-          "text": "Para IWantJewels, el oro amarillo es una fuerte dirección para los aretes de diamantes cultivados en laboratorio Cadenza S, los aretes de diamantes Cadenza M, los aretes Amadea Huggie, los aros Pave, los aretes colgantes Orsola y los atrevidos aretes Lusso."
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de oro con diamantes cultivados en laboratorio",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Aretes de diamantes cultivados en laboratorio en tono blanco o plateado",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes de diamantes cultivados en laboratorio en tono blanco o plateado se sienten limpios, brillantes y modernos. Son una buena opción para los compradores que prefieren un estilo minimalista, prendas en tonos fríos o joyas que resulten frescas en lugar de cálidas."
-        },
-        {
-          "type": "paragraph",
-          "text": "Este acabado funciona especialmente bien con conjuntos en negro, blanco, azul marino, gris, plateado, azul y colores pastel. También es adecuado para personas que ya usan relojes plateados, anillos en tonos blancos o acabados de joyería más frescos."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes blancos o plateados pueden hacer que los diamantes cultivados en laboratorio luzcan muy brillantes porque el metal no agrega calidez alrededor de la piedra. Esto puede resultar útil para conjuntos minimalistas, estilos de oficina, vestidos negros y looks de noche limpios."
-        },
-        {
-          "type": "paragraph",
-          "text": "Para IWantJewels, el estilo blanco o plateado puede funcionar bien para Cadenza S, Cadenza M, aretes de diamantes minimalistas Laluce, Pave Hoops y aretes colgantes Orsola, según el acabado del producto disponible."
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de plata con diamantes",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Pendientes de diamantes cultivados en laboratorio de oro rosa",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los aretes de diamantes cultivados en laboratorio en oro rosa se sienten suaves, románticos y personales. Son especialmente fuertes para los regalos porque el oro rosa a menudo resulta más cálido y emotivo que los tonos blanco o plateado."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro rosa combina maravillosamente con rubor, rosa, crema, champán, verde suave, beige, estampados florales y atuendos románticos. También puede ser una buena opción para regalos de cumpleaños, regalos de aniversario, regalos de dama de honor y momentos significativos de joyería."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro rosa no siempre es la opción más segura si el destinatario nunca usa joyas en tonos rosas. Pero cuando se adapta al estilo de la persona, puede hacer que el regalo parezca más reflexivo."
-        },
-        {
-          "type": "paragraph",
-          "text": "Para IWantJewels, el estilo en oro rosa es especialmente fuerte para aretes de mariposa, aretes colgantes románticos y piezas suaves para regalo. Los aretes de mariposa Farfalla y los aretes de mariposa Alidi Farfalla son opciones naturales para esta dirección. Los aretes colgantes Orsola y los aretes cortos Concetta también pueden resultar románticos con un acabado en tono rosa."
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio en oro rosa",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "El mejor color de metal para el uso diario",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Para el uso diario, el mejor color de metal suele ser el que combine con las joyas que la persona ya usa con más frecuencia."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si usan oro amarillo a diario, elija aretes de diamantes cultivados en laboratorio de oro amarillo. Si usan piezas plateadas o en tonos blancos a diario, elige aretes blancos o en tonos plateados. Si les gustan las joyas suaves y románticas y suelen usar tonos rosados ​​cálidos o ruborizados, el oro rosa puede funcionar a la perfección."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Estilo diario",
-            "Mejor color de metal",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "Estilo clásico de todos los días",
-              "oro amarillo",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Estilo minimalista para el día a día",
-              "Tono blanco/plateado u oro amarillo.",
-              "Laluce, Cadenza S."
-            ],
-            [
-              "Estilo moderno de oreja",
-              "Combina aretes existentes",
-              "Amadea, Cadenza S, Laluce"
-            ],
-            [
-              "Estilo femenino suave",
-              "Oro rosa u oro amarillo",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Estilo de ropa de trabajo",
-              "Tono oro amarillo o blanco/plata",
-              "Cadenza S, Cadenza M, Amadea"
-            ],
-            [
-              "Estilo informal de lujo",
-              "Aros o huggies de oro amarillo",
-              "Pave Aros, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Los aretes de uso diario no deberían resultar difíciles de diseñar. La elección diaria más segura suele ser un color metálico que ya se adapte a la rutina del usuario."
-        },
-        {
-          "type": "see-also",
-          "text": "¿Puedes usar aretes de diamantes cultivados en laboratorio todos los días?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "El mejor color de metal para regalos",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Para los regalos, el color del metal es muy importante porque muestra si se comprende el estilo del destinatario."
-        },
-        {
-          "type": "paragraph",
-          "text": "La regla más segura es comprobar lo que ya usan. Si la mayoría de sus joyas son de oro amarillo, elija oro amarillo. Si usan joyas plateadas o en tonos blancos, elige el tono blanco o plateado. Si les gustan las piezas románticas, suaves o femeninas, el oro rosa puede ser una buena elección."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-104.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Tipo de regalo",
-                "Mejor color de metal",
-                "Mejor dirección de aretes"
-              ],
-              "rows": [
-                [
-                  "Regalo de cumpleaños seguro",
-                  "Tono oro amarillo o blanco/plata",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "regalo romantico",
-                  "Oro rosa u oro amarillo",
-                  "Farfalla, Úrsola"
-                ],
-                [
-                  "regalo de aniversario",
-                  "Oro amarillo, oro rosa o elegante tono blanco/plateado.",
-                  "Cadenza M, Orsola, Farfalla"
-                ],
-                [
-                  "regalo de dama de honor",
-                  "Vestido a juego y paleta de boda.",
-                  "Cadenza S, Concetta Corto"
-                ],
-                [
-                  "regalo moderno",
-                  "Tono blanco/plateado u oro amarillo.",
-                  "Amadea, Pave Aros"
-                ],
-                [
-                  "Regalo significativo",
-                  "Oro rosa u oro amarillo",
-                  "Farfalla, Alidi Farfalla"
-                ],
-                [
-                  "Regalo para amantes de las fiestas",
-                  "Tono oro amarillo o blanco/plata",
-                  "Lusso, Orsola"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para regalar",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "El mejor color de metal para bodas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Las joyas de boda deben combinar con el atuendo, el código de vestimenta y el ambiente general del evento."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro amarillo queda muy bien con conjuntos de tonos cálidos, vestidos color champán, vestidos verdes, vestidos rojos y estilos de noche clásicos. Los aretes blancos o plateados combinan bien con atuendos negros, azul marino, plateados, grises, blancos y de tonos fríos. El oro rosa es encantador para vestidos pastel, ruborizados, florales y románticos."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "traje de boda",
-            "Mejor color de metal",
-            "Dirección de producto"
-          ],
-          "rows": [
-            [
-              "vestido negro",
-              "Tono oro amarillo o blanco/plata",
-              "Orsola, Lusso, Cadenza M."
-            ],
-            [
-              "vestido champán",
-              "oro amarillo",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "vestido colores pasteles",
-              "Oro rosa u oro amarillo",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "vestido verde",
-              "Oro amarillo u oro rosa",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "vestido azul marino",
-              "Tono blanco/plateado u oro amarillo.",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "vestido rojo",
-              "oro amarillo",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Vestido de flores",
-              "Oro rosa, oro amarillo o tachuelas simples.",
-              "Farfalla, Cadenza S."
-            ],
-            [
-              "Vestido plateado o gris",
-              "Tono blanco/plata",
-              "Laluce, Cadenza M."
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para las invitadas a la boda, los aretes deben sentirse pulidos pero no nupciales. Si el outfit es sencillo, elige gotas o brillos más visibles. Si el conjunto es detallado, elige tachuelas o aretes más pequeños."
-        },
-        {
-          "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para bodas",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Mejor color de metal por color de vestimenta",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Esta sección ayuda a los compradores a combinar los aretes con su guardarropa."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Color del traje",
-            "Mejor color de metal",
-            "Nota de estilo"
-          ],
-          "rows": [
-            [
-              "negro",
-              "Oro amarillo, tono blanco/plateado o brillo atrevido",
-              "Todo el trabajo; elegir según el estado de ánimo"
-            ],
-            [
-              "blanco",
-              "Oro amarillo para calidez, tono blanco/plateado para un estilo limpio",
-              "Mantenlo pulido"
-            ],
-            [
-              "Crema o marfil",
-              "Oro amarillo u oro rosa",
-              "Los metales más calientes se sienten más suaves"
-            ],
-            [
-              "Marrón o beige",
-              "oro amarillo",
-              "Agrega riqueza"
-            ],
-            [
-              "Marina",
-              "Tono blanco/plateado u oro amarillo.",
-              "Ambos se sienten elegantes"
-            ],
-            [
-              "gris",
-              "Tono blanco/plata",
-              "Mantiene el aspecto fresco y limpio."
-            ],
-            [
-              "rojo",
-              "oro amarillo",
-              "Equilibra la calidez"
-            ],
-            [
-              "Verde",
-              "Oro amarillo u oro rosa",
-              "Añade calidez y profundidad."
-            ],
-            [
-              "Rosa o rubor",
-              "Oro rosa u oro amarillo",
-              "Suave y romantico"
-            ],
-            [
-              "champán",
-              "oro amarillo",
-              "Combina maravillosamente con la calidez"
-            ],
-            [
-              "Estampado floral",
-              "Pendientes pequeños, de oro rosa u oro amarillo.",
-              "Evite complicar demasiado el look."
-            ],
-            [
-              "traje de raso",
-              "Gotas en tono dorado o blanco/plateado.",
-              "Añade movimiento y brillo."
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Qué joyas llevar con un vestido negro",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Mejor color de metal por estilo de joyería",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Los diferentes estilos de aretes pueden parecer muy diferentes según el color del metal."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-106.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Estilo de pendiente",
-                "Oro Amarillo",
-                "Tono blanco/plateado.",
-                "Oro rosa"
-              ],
-              "rows": [
-                [
-                  "Pendientes",
-                  "Clásico y cálido",
-                  "Limpio y brillante",
-                  "Suave y romantico"
-                ],
-                [
-                  "abrazos",
-                  "Todos los días y con estilo",
-                  "Moderno y minimalista",
-                  "Femenino y gentil"
-                ],
-                [
-                  "Aros",
-                  "Rico y pulido",
-                  "Elegante y contemporáneo",
-                  "Suave y juguetón"
-                ],
-                [
-                  "Pendientes colgantes",
-                  "Elegante y cálido",
-                  "Refinado y brillante",
-                  "Romántico y delicado"
-                ],
-                [
-                  "Pendientes de mariposa",
-                  "Significativo y cálido",
-                  "Más moderno",
-                  "mas romantico"
-                ],
-                [
-                  "Pendientes atrevidos",
-                  "Fuerte y glamorosa",
-                  "Nítido y de alto impacto",
-                  "Aspecto más suave y llamativo"
-                ],
-                [
-                  "Pendientes minimalistas",
-                  "Cálida simplicidad",
-                  "Minimalismo limpio",
-                  "Suavidad suave"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Para regalos clásicos, el tono dorado amarillo o blanco/plateado suele funcionar mejor. Para regalos románticos, los aretes de oro rosa y mariposas son una combinación fuerte. Para looks de fiesta, el tono dorado amarillo o blanco/plateado puede resultar más dramático."
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de aretes de diamantes cultivados en laboratorio",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "¿Importa el tono de piel al elegir el color del metal?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "El tono de la piel puede ayudar, pero no debería ser la única regla."
-        },
-        {
-          "type": "paragraph",
-          "text": "El oro amarillo suele lucir hermoso en tonos de piel cálidos y neutros. Los tonos blancos o plateados suelen combinar con estilos de tonos fríos. El oro rosa puede favorecer a muchos tonos de piel porque se encuentra entre los tonos rosados ​​cálidos y suaves."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pero el estilo personal importa más que las reglas estrictas. Es posible que alguien con piel fría todavía ame el oro amarillo. Alguien con piel cálida aún puede preferir la plata. La mejor pista son las joyas que ya llevan."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si lo compras para ti, elige el color de metal que te haga sentir más natural. Si compra como regalo, elija el color de metal que la persona ya posee."
-        }
-      ]
-    },
-    {
-      "heading": "¿Se pueden mezclar aretes de oro, oro blanco y oro rosa?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Sí, puedes mezclar metales, especialmente en los audífonos, pero debe parecer intencional."
-        },
-        {
-          "type": "paragraph",
-          "text": "Mezclar metales funciona mejor cuando las formas de los aretes están equilibradas. Por ejemplo, un pendiente de oro amarillo con un aro blanco/plateado puede parecer moderno si el resto de la joyería es simple. El oro rosa también se puede mezclar suavemente con el oro amarillo, especialmente en un estilo romántico."
-        },
-        {
-          "type": "paragraph",
-          "text": "Sin embargo, para los regalos, es más seguro combinar el color metálico habitual del destinatario. Los metales mixtos son mejores para alguien a quien ya le gusta el estilo creativo."
-        },
-        {
-          "type": "see-also",
-          "text": "Cómo apilar aretes",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Rutas de producto por color de metal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Utilice esta sección como una guía práctica de compras."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo clásico en oro amarillo"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija Cadenza S para un brillo sutil todos los días, Cadenza M para un brillo clásico más visible, Pave Hoops para darle forma u Orsola para un estilo ocasional."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un peinado limpio en tonos blancos o plateados"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija Laluce para un estilo minimalista, Cadenza S para tachuelas simples, Cadenza M para un brillo visible u Orsola para un look de noche elegante."
-        },
-        {
-          "type": "subheading",
-          "text": "Para un estilo romántico en oro rosa"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija Farfalla o Alidi Farfalla para regalos significativos, Concetta Short para un estilo suave para ocasiones especiales u Orsola para trajes de noche románticos."
-        },
-        {
-          "type": "subheading",
-          "text": "Para pilas de orejas"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija una dirección de metal para una apariencia más limpia. Cadenza S con aretes Amadea Huggie es una combinación sólida para el día a día. Agrega Laluce para un acabado más suave."
-        },
-        {
-          "type": "subheading",
-          "text": "Para regalos"
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija Cadenza M para un regalo de diamantes clásico, Farfalla para un regalo significativo, Amadea para un regalo moderno u Orsola para un regalo para una ocasión romántica."
-        }
-      ]
-    },
-    {
-      "heading": "Recomendaciones de productos de IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Producto",
-            "Mejor dirección de color de metal",
-            "Mejor para"
-          ],
-          "rows": [
-            [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "Oro amarillo, tono blanco/plateado.",
-              "Uso diario, primeros pendientes de diamantes."
-            ],
-            [
-              "aretes Cadenza M con diamantes",
-              "Oro amarillo, tono blanco/plateado.",
-              "Regalos, ropa de trabajo, brillo diario visible"
-            ],
-            [
-              "Pendientes Amadea Huggie",
-              "Oro amarillo, tono blanco/plateado.",
-              "Pendientes y estilo moderno"
-            ],
-            [
-              "Pendientes minimalistas de diamantes Laluce",
-              "Tono blanco/plateado, oro amarillo.",
-              "Trajes minimalistas y joyas tranquilas para el día a día."
-            ],
-            [
-              "Aros de pavimentación",
-              "Oro amarillo, tono blanco/plateado.",
-              "Estilo de aro, brillo casual y fiestas."
-            ],
-            [
-              "Pendientes mariposa Farfalla",
-              "Oro rosa, oro amarillo",
-              "Regalos significativos y estilo romántico."
-            ],
-            [
-              "Pendientes de mariposa Alidi Farfalla",
-              "Oro rosa, oro amarillo",
-              "Cumpleaños, aniversarios y regalos simbólicos."
-            ],
-            [
-              "aretes colgantes de Orsola",
-              "Oro amarillo, tono blanco/plateado, oro rosa.",
-              "Invitados a bodas, cenas y trajes de noche."
-            ],
-            [
-              "Pendientes cortos Concetta",
-              "Oro rosa, oro amarillo",
-              "Estilo suave para ocasiones especiales"
-            ],
-            [
-              "Pendientes largos Concetta",
-              "Oro amarillo, tono blanco/plateado.",
-              "Looks de noche formales y refinados."
-            ],
-            [
-              "Pendientes llamativos Lusso",
-              "Oro amarillo, tono blanco/plateado.",
-              "Looks de fiesta y brillo fuerte"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Elija el color del metal según la forma en que se usarán los aretes. Elija oro amarillo para una calidez clásica, tonos blancos o plateados para un brillo limpio y moderno y oro rosa para regalos románticos o un estilo suave."
-        }
-      ]
-    },
-    {
-      "heading": "Errores comunes en el color del metal que se deben evitar",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un error común es elegir un color de metal sólo porque queda bien en la foto de un producto. La mejor pregunta es si coincide con las joyas y el vestuario reales de quien lo lleva."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es comprar oro rosa para alguien que sólo usa oro amarillo o plata. El oro rosa puede ser hermoso, pero es más personal y menos seguro para todos."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un tercer error es mezclar demasiados colores metálicos en un auricular sin un plan. Los metales mezclados pueden parecer elegantes, pero deben parecer intencionados."
-        },
-        {
-          "type": "paragraph",
-          "text": "Otro error es elegir tonos blancos o plateados cuando todo el vestuario y la colección de joyas de la persona son de tonos cálidos. El oro amarillo puede resultarles más fácil de llevar."
-        },
-        {
-          "type": "paragraph",
-          "text": "Por último, no desaproveches la ocasión. Los pendientes de uso diario, los pendientes de boda y los regalos románticos pueden necesitar diferentes opciones de color de metal."
-        },
-        {
-          "type": "see-also",
-          "text": "Guía de compra de aretes de diamantes cultivados en laboratorio",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Lista de verificación final del color del metal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Antes de elegir aretes de diamantes cultivados en laboratorio en oro, tono blanco/plateado u oro rosa, pregunte:"
+          "text": "No elija solo por el nombre del color. Compruebe:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿Qué color de metal usa la persona con más frecuencia?",
-            "¿Es para uso diario, un regalo, una boda o una fiesta?",
-            "¿La paleta de vestimenta se siente cálida, fresca o romántica?",
-            "¿Los pendientes deben parecer clásicos, modernos o suaves?",
-            "¿Los aretes se usarán solos o en un aro?",
-            "¿El color del metal combina con otras joyas?",
-            "¿El oro rosa es apropiado para el estilo de la persona?",
-            "¿Sería más seguro el oro amarillo?",
-            "¿El tono blanco o plateado se sentiría más limpio?",
-            "¿Las piedras son diamantes auténticos cultivados en laboratorio?",
-            "¿El diseño se siente usable más allá de un solo conjunto?"
+            "Metal base",
+            "Si la construcción es maciza o chapada",
+            "La pureza del oro",
+            "El material exacto del chapado",
+            "El grosor del chapado, si está disponible",
+            "Las medidas completas del pendiente",
+            "El peso y el cierre",
+            "Las especificaciones del diamante",
+            "Si el producto se vende por unidad o en pareja"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Comparativa de pendientes de oro amarillo, blanco y rosa",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Característica",
+            "Oro amarillo",
+            "Oro blanco",
+            "Oro rosa"
+          ],
+          "rows": [
+            [
+              "Color visible",
+              "Amarillo cálido",
+              "Blanco frío o blanco grisáceo",
+              "Rosa o cobrizo"
+            ],
+            [
+              "Contraste con los diamantes",
+              "Crea un borde cálido visible",
+              "Puede crear una apariencia fría más continua",
+              "Crea un contraste rosado suave"
+            ],
+            [
+              "Estilo",
+              "Cálido, tradicional o de alto contraste",
+              "Limpio, neutro o frío",
+              "Suave, distintivo o cálido"
+            ],
+            [
+              "Coordinación con el vestuario",
+              "Crema, marrón, verde, rojo, negro y neutros cálidos",
+              "Negro, blanco, gris, azul marino y colores fríos",
+              "Rosa empolvado, malva, crema, salvia y colores apagados"
+            ],
+            [
+              "Joyas que ya tiene",
+              "Combina con piezas de oro amarillo",
+              "Combina con joyería de metal blanco",
+              "Combina con piezas de oro rosa"
+            ],
+            [
+              "Construcción que debe comprobar",
+              "Oro macizo o chapado en oro amarillo",
+              "Oro blanco macizo, chapado en oro blanco, rodio u otro acabado",
+              "Oro rosa macizo o chapado en oro rosa"
+            ],
+            [
+              "Mantenimiento",
+              "Depende de la aleación y el acabado",
+              "Algunos acabados blancos pueden requerir renovación",
+              "Depende de la aleación y el acabado"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si no estás seguro, elige el color de metal que ya usa la persona. Suele ser la opción más segura y útil."
+          "text": "Son orientaciones visuales, no reglas fijas. Los tres colores pueden combinarse con una gran variedad de prendas."
+        }
+      ]
+    },
+    {
+      "heading": "El color y la construcción del metal no son lo mismo",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "right",
+          "image": "/blog-images/blog-image-42.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Una pieza puede parecer de oro amarillo, blanco o rosa sin estar hecha completamente de oro macizo."
+            },
+            {
+              "type": "subheading",
+              "text": "Oro macizo"
+            },
+            {
+              "type": "paragraph",
+              "text": "La joyería de oro macizo utiliza una aleación de oro en todo el componente metálico. El oro puro se mezcla con otros metales para ajustar su color, resistencia y propiedades de trabajo. Una aleación de oro de 14 quilates o 14 kt contiene aproximadamente 14 partes de oro de 24. También puede llevar el sello 585, que representa aproximadamente un 58,5 % de oro. El resto de la aleación ayuda a crear el color amarillo, blanco o rosa."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Plata de ley 925 chapada en oro"
+        },
+        {
+          "type": "paragraph",
+          "text": "La plata de ley 925 chapada en oro tiene una base de plata de ley con una capa superficial de aleación de oro. El sello 925 indica plata de ley con un 92,5 % de plata; no significa que todo el pendiente sea de oro. Si el producto se describe como «plata de ley 925 con baño de oro de 14 kt», la descripción de 14 kt se refiere al material del chapado, no al pendiente completo."
+        },
+        {
+          "type": "subheading",
+          "text": "Acabados de color blanco"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un pendiente de color blanco puede estar hecho de:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Oro blanco macizo",
+            "Chapado en oro blanco",
+            "Chapado de rodio",
+            "Platino",
+            "Paladio",
+            "Plata de ley 925",
+            "Otro acabado de metal blanco"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El color por sí solo no revela la construcción. La página del producto debe indicar el metal base y el acabado reales."
+        },
+        {
+          "type": "subheading",
+          "text": "Acabados de oro rosa"
+        },
+        {
+          "type": "paragraph",
+          "text": "El oro rosa obtiene su tono rosado de la composición de su aleación, que suele incluir cobre. Cuando se aplica como chapado, la aleación de oro rosa forma solo la capa superficial sobre el metal base. Conviene comprobar la composición exacta en lugar de asumir que todos los pendientes rosados utilizan la misma aleación."
+        },
+        {
+          "type": "see-also",
+          "text": "¿Qué es la joyería demi-fine?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "¿Qué son los pendientes de diamante de laboratorio en oro amarillo?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de oro amarillo rodean los diamantes con un tono amarillo cálido. Esto crea una distinción visible entre el diamante blanco y su engaste, especialmente cuando el diseño deja más metal a la vista."
+        },
+        {
+          "type": "paragraph",
+          "text": "El oro amarillo puede combinarse con pendientes de botón de diamante, pendientes de aro, pendientes colgantes, diseños de mariposa, pendientes geométricos y ear stack."
+        },
+        {
+          "type": "paragraph",
+          "text": "El efecto también depende de cuánto metal queda visible. Un pendiente de botón de cuatro garras puede mostrar solo una pequeña cantidad de oro amarillo, mientras que un pendiente de aro o un diseño geométrico puede convertir el color del metal en una parte protagonista de la pieza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elija oro amarillo porque le gusta su apariencia o porque combina con las joyas que ya tiene, no porque se adapte universalmente a un tono de piel concreto."
+        }
+      ]
+    },
+    {
+      "heading": "¿Qué son los pendientes de diamante de laboratorio en oro blanco?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "El oro blanco es una aleación de oro creada para producir un color blanco o blanco grisáceo. La joyería de oro blanco macizo también puede llevar un acabado superficial de rodio, pero no es universal y debe comprobarse en cada producto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un engaste blanco puede reducir el límite de color visible entre un diamante incoloro o casi incoloro y el metal que lo rodea. Esto puede hacer que el engaste parezca visualmente continuo con las piedras."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de color blanco pueden ser adecuados si:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Ya lleva joyería de plata o de metal blanco",
+            "Quiere que el color del engaste sea discreto",
+            "Su vestuario incluye negro, blanco, azul marino, gris o colores fríos",
+            "Quiere que el metal y los diamantes parezcan más integrados"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La plata de ley 925 con acabado blanco nunca debe describirse como oro blanco macizo."
+        }
+      ]
+    },
+    {
+      "heading": "¿Qué son los pendientes de diamante de laboratorio en oro rosa?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "El oro rosa presenta un aspecto rosado o cobrizo. La intensidad del color depende de la composición de la aleación o del chapado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de oro rosa crean un contraste más visible que el oro blanco, pero normalmente más suave que el oro amarillo intenso. Pueden combinar con rosa empolvado, crema, salvia, malva, marrón y colores apagados, aunque no se limitan a esos vestuarios."
+        },
+        {
+          "type": "paragraph",
+          "text": "El oro rosa puede utilizarse en engastes de pendientes de botón, pendientes de mariposa, pendientes colgantes cortos, pendientes de aro, diseños geométricos y ear stack de metales combinados. Como con los demás colores, compruebe si el producto es de oro rosa macizo o lleva un acabado superficial de oro rosa sobre otro metal base."
+        }
+      ]
+    },
+    {
+      "heading": "¿El color del metal cambia el aspecto del diamante?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "El color del metal puede afectar al contraste alrededor de un diamante, pero no cambia su origen ni sus propiedades fundamentales. El Gemological Institute of America explica que los diamantes de laboratorio tienen esencialmente la misma composición química, estructura cristalina y propiedades ópticas y físicas que los diamantes naturales."
+        },
+        {
+          "type": "subheading",
+          "text": "Oro amarillo"
+        },
+        {
+          "type": "paragraph",
+          "text": "El oro amarillo crea un marco cálido alrededor de un diamante blanco. El efecto se nota más cuando el engaste, el aro o el metal decorativo quedan claramente visibles."
+        },
+        {
+          "type": "subheading",
+          "text": "Oro blanco o metal blanco"
+        },
+        {
+          "type": "paragraph",
+          "text": "El metal blanco puede fundirse visualmente con un diamante incoloro o casi incoloro, especialmente en garras pequeñas o engastes de estilo pavé."
+        },
+        {
+          "type": "subheading",
+          "text": "Oro rosa"
+        },
+        {
+          "type": "paragraph",
+          "text": "El oro rosa añade un límite rosado. Este contraste puede ser sutil en un pequeño engaste de pendiente de botón y más visible en pendientes de aro, colgantes o diseños geométricos."
+        },
+        {
+          "type": "paragraph",
+          "text": "El tallado, las proporciones, el engaste, la limpieza y la iluminación del diamante también influyen en lo que se ve. Ningún color de metal hace que todos los diamantes brillen más automáticamente."
+        },
+        {
+          "type": "see-also",
+          "text": "¿Qué son los diamantes de laboratorio?",
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
+        }
+      ]
+    },
+    {
+      "heading": "¿Qué color combina con cada estilo de pendiente?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Pendientes de diamante"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de botón dejan menos metal visible que muchos pendientes de aro o colgantes, por lo que la diferencia entre el oro amarillo, blanco y rosa puede concentrarse alrededor de las garras, el engaste bisel o la montura. Elija oro amarillo para un contorno cálido, oro blanco o metal blanco verificado para una transición más fría, u oro rosa para un borde rosado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe también la vista lateral. Un pendiente de botón puede mostrar más metal de lado que de frente. El diámetro, la proyección, la montura, el cierre y el peso total en quilates pueden influir más en el aspecto que un pequeño cambio en el color del metal."
+        },
+        {
+          "type": "see-also",
+          "text": "Guía de pendientes de botón de diamante de laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes de aro con diamantes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de aro muestran más superficie metálica que muchos pendientes de botón, por lo que el acabado puede convertirse en una parte importante del diseño. Los aros de oro amarillo crean un contorno curvo y cálido. Los aros de metal blanco resultan más fríos, mientras que los de oro rosa aportan una forma rosada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes de elegir unos pendientes de aro, confirme el diámetro exterior, el diámetro interior, el ancho, el peso, el cierre, la colocación de los diamantes, si aparecen solo en la parte frontal o continúan alrededor del aro, así como el metal base y el acabado de la superficie."
+        },
+        {
+          "type": "see-also",
+          "text": "Guía de pendientes de aro con diamantes de laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Pendientes colgantes y geométricos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes colgantes y geométricos pueden mostrar una mayor superficie metálica y moverse al llevarlos. Por eso, su color puede resultar más visible que el de la pequeña montura de unos pendientes de botón. El oro amarillo puede resaltar el contorno del diseño. El metal blanco puede mantener más fría la estructura visible, mientras que el oro rosa crea un marco de color más suave."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe la altura total, el ancho, la proyección, el peso terminado y el cierre. No se deben recomendar pendientes largos o geométricos para llevarlos durante mucho tiempo sin medidas verificadas e información específica sobre quien los llevará."
+        }
+      ]
+    },
+    {
+      "heading": "¿Debe elegir según su tono de piel?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "El asesoramiento basado en el tono de piel puede servir como experimento, pero no debe considerarse una regla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una persona con subtonos cálidos puede preferir el metal blanco. Una persona con subtonos fríos puede preferir el oro amarillo. La ropa, el color del cabello, las joyas que ya lleva y sus preferencias personales pueden importar más que una categoría simplificada de tono de piel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una comparación más fiable consiste en:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Observar las joyas que ya lleva.",
+            "Comparar los colores con luz natural.",
+            "Comprobar cómo queda cada color junto a su ropa habitual.",
+            "Decidir si prefiere combinar o crear contraste."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El color que probablemente combinará mejor con sus joyas actuales puede ser la opción más útil."
+        }
+      ]
+    },
+    {
+      "heading": "Combine el color del metal con su armario",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Color de la ropa",
+            "Oro amarillo",
+            "Blanco o plateado",
+            "Oro rosa"
+          ],
+          "rows": [
+            [
+              "Negro",
+              "Contraste cálido",
+              "Contraste limpio",
+              "Contraste suave"
+            ],
+            [
+              "Blanco",
+              "Definición cálida",
+              "Aspecto tonal y más frío",
+              "Detalle rosado"
+            ],
+            [
+              "Azul marino",
+              "Contraste cálido",
+              "Combinación más fría",
+              "Contraste apagado"
+            ],
+            [
+              "Verde",
+              "Combina con muchos verdes cálidos",
+              "Contrasta con los verdes fríos",
+              "Combina con algunos verdes salvia y apagados"
+            ],
+            [
+              "Rojo o burdeos",
+              "Aporta calidez",
+              "Crea un contraste más frío",
+              "Puede suavizar los rojos apagados"
+            ],
+            [
+              "Rosa empolvado o malva",
+              "Contraste cálido",
+              "Contraste limpio",
+              "Combinación muy coordinada"
+            ],
+            [
+              "Marrón o camel",
+              "Combinación cálida",
+              "Contraste más marcado",
+              "Combinación suave"
+            ],
+            [
+              "Gris",
+              "Contraste cálido",
+              "Combinación tonal",
+              "Contraste rosado"
+            ],
+            [
+              "Crema",
+              "Combinación cálida",
+              "Contraste más frío",
+              "Combinación suave"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estas combinaciones son puntos de partida, no restricciones."
+        },
+        {
+          "type": "see-also",
+          "text": "Qué joyas llevar con un vestido verde",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "Qué joyas llevar con un vestido negro",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
+        }
+      ]
+    },
+    {
+      "heading": "¿Todas sus joyas deben tener el mismo color de metal?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "No. Combinar todas las piezas puede crear un estilo coherente, pero mezclar metales también puede parecer intencionado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para combinar metales de forma equilibrada:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Elija un color de metal principal",
+            "Repítalo en al menos otra pieza",
+            "Mantenga equilibrado el tamaño de los pendientes",
+            "Evite que todas las piezas tengan el mismo nivel de detalle",
+            "Utilice el color del diamante como elemento visual recurrente"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si ya lleva un reloj de metal blanco y un collar de oro amarillo, los pendientes pueden repetir cualquiera de los dos metales o incluir ambos si el diseño combina metales de forma auténtica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un producto chapado de un solo color no es bicolor solo porque el metal base subyacente sea diferente. El estilo bicolor se refiere a los colores de metal visibles."
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo crear un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Elegir el color del metal para un regalo",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Al comprar pendientes para otra persona, observe lo que ya lleva. Compruebe:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Los pendientes que aparecen en fotografías recientes",
+            "El color del reloj",
+            "El color del collar y la pulsera",
+            "Si mezcla metales",
+            "Si suele elegir el mismo acabado",
+            "Si normalmente lleva pendientes de botón, pendientes de aro o pendientes colgantes"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "No elija basándose únicamente en un tono de piel supuesto, la edad o el trabajo. Si no puede determinar sus preferencias actuales, elija un regalo versátil en lugar de considerar que un color de metal es adecuado para todo el mundo."
+        }
+      ]
+    },
+    {
+      "heading": "Pendientes de oro macizo frente a pendientes chapados en oro",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Característica",
+            "Fabricación en oro macizo",
+            "Fabricación chapada en oro"
+          ],
+          "rows": [
+            [
+              "Material principal",
+              "Aleación de oro en toda la pieza",
+              "Metal base independiente"
+            ],
+            [
+              "Superficie",
+              "La misma aleación o un acabado adicional",
+              "Capa superficial de aleación de oro"
+            ],
+            [
+              "Descripción del producto",
+              "Debe indicar la pureza del oro",
+              "Debe indicar el metal base y el chapado"
+            ],
+            [
+              "Contraste o marca",
+              "Depende del mercado y de los requisitos legales",
+              "Pueden aplicarse marcas del metal base"
+            ],
+            [
+              "Mantenimiento del color",
+              "Depende de la aleación y del tratamiento superficial",
+              "La capa superficial puede cambiar con el uso"
+            ],
+            [
+              "Estructura del precio",
+              "Influye el contenido de oro y el peso terminado",
+              "Influyen el metal base, el chapado, el diseño y las piedras"
+            ],
+            [
+              "Información que debe comprobar",
+              "Pureza del oro, peso y color de la aleación",
+              "Metal base, material del chapado, grosor y cuidados"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ninguna de las dos construcciones debe ocultarse detrás de un selector de color. Antes de añadir el producto a la cesta, debe poder consultar toda la información sobre los materiales."
+        },
+        {
+          "type": "see-also",
+          "text": "Joyería demi-fine, fina y de moda",
+          "href": "/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "¿El color del metal determina si los pendientes son adecuados para orejas sensibles?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "No. El color por sí solo no determina si un pendiente será adecuado para orejas sensibles. La idoneidad depende de:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "La composición completa del metal base",
+            "La composición de la aleación",
+            "Material del chapado",
+            "El grosor y el estado del chapado",
+            "El material del poste y el cierre",
+            "La liberación de níquel",
+            "La sensibilidad individual",
+            "El estado de la perforación"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Los pendientes de oro amarillo, blanco y rosa no deben describirse como hipoalergénicos sin conocer su composición completa y contar con pruebas pertinentes."
+        }
+      ]
+    },
+    {
+      "heading": "Cuidados según la construcción",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Los cuidados dependen más de la construcción y el acabado que de si el color visible es amarillo, blanco o rosa. Antes de limpiar los pendientes o llevarlos cerca de agua, cosméticos o productos químicos:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Lea las instrucciones de cuidado específicas del producto",
+            "Confirme si los pendientes son macizos o chapados",
+            "Evite los limpiadores abrasivos salvo que el fabricante confirme que son adecuados",
+            "Guarde las piezas por separado para reducir el contacto entre superficies",
+            "Revise los postes, cierres y sistemas de cierre",
+            "Siga las indicaciones específicas para nadar, ducharse, dormir y hacer ejercicio"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "No dé por hecho que todos los productos chapados en oro tienen el mismo grosor de chapado o las mismas características de desgaste."
+        },
+        {
+          "type": "see-also",
+          "text": "Cómo cuidar la joyería chapada en oro",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Lista de comprobación para comprar según el color del metal",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Antes de elegir una variante de color, confirme:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "¿El producto es de oro macizo o está chapado?",
+                "¿Cuál es el metal base?",
+                "¿A qué se aplica la descripción de la pureza del oro?",
+                "¿Qué crea el color blanco?",
+                "¿Qué crea el color rosa?",
+                "¿Se indica el grosor del chapado?",
+                "¿El poste y el cierre están hechos del mismo material?",
+                "¿Qué colores de metal están realmente disponibles para el artículo seleccionado?",
+                "¿Cambia la imagen del producto al seleccionar el color?",
+                "¿El precio y la disponibilidad son correctos para esa variante?",
+                "¿Los diamantes son diamantes de laboratorio y se indica claramente?",
+                "¿El peso en quilates es individual o total?",
+                "¿El artículo se vende por unidad o por pares?",
+                "¿Cuáles son las medidas en milímetros?",
+                "¿Cuál es el peso de cada pendiente y el peso combinado?",
+                "¿Qué cierre se utiliza?",
+                "¿Hay imágenes frontales, laterales y con los pendientes puestos?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Guía de compra de pendientes con diamante de laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Qué es mejor para los pendientes de diamantes, el oro o el oro blanco?",
-      "answer": "Ninguno de los dos es automáticamente mejor. El oro amarillo se siente cálido y clásico, mientras que los tonos blanco o plateado se sienten limpios y modernos. La mejor elección depende del estilo del usuario y de las joyas existentes."
+      "question": "¿Qué color de metal debo elegir para unos pendientes con diamantes de laboratorio?",
+      "answer": "Elija oro amarillo para crear un contraste cálido, oro blanco o un acabado de metal blanco para una transición más fría, y oro rosa para un contraste rosado. Sus joyas actuales y el aspecto que prefiere deben guiar la decisión."
     },
     {
-      "question": "¿Los aretes de diamantes en oro rosa son buenos para regalar?",
-      "answer": "Sí, los aretes de diamantes en oro rosa pueden ser regalos hermosos porque se sienten suaves, románticos y personales. Son especialmente fuertes para cumpleaños, aniversarios y regalos significativos."
+      "question": "¿Los diamantes de laboratorio se ven diferentes en oro amarillo, blanco y rosa?",
+      "answer": "El diamante sigue siendo el mismo, pero el metal que lo rodea cambia el contraste visible. El oro amarillo y el oro rosa crean bordes de color, mientras que el metal blanco puede integrarse mejor con un diamante incoloro o casi incoloro."
     },
     {
-      "question": "¿Qué color de metal es mejor para los aretes de diamantes de todos los días?",
-      "answer": "El mejor color de metal para los aretes de todos los días suele ser el que la persona ya usa con más frecuencia. El oro amarillo es clásico, el tono blanco o plateado es moderno y el oro rosa es más suave y romántico."
+      "question": "¿El oro blanco es realmente oro?",
+      "answer": "El oro blanco macizo es una aleación de oro. Sin embargo, un pendiente de color blanco puede estar hecho de plata de ley 925, llevar un chapado de oro blanco, rodio u otro acabado. Compruebe la especificación completa de los materiales del producto."
     },
     {
-      "question": "¿Qué color de metal es mejor para los pendientes de invitada de boda?",
-      "answer": "El oro amarillo combina bien con prendas abrigadas, vestidos color champán y vestidos verdes. Los tonos blancos o plateados combinan bien con conjuntos negros, azul marino, grises y de tonos fríos. El oro rosa combina bien con vestidos pastel y románticos."
+      "question": "¿De qué está hecho el oro rosa?",
+      "answer": "El oro rosa es una aleación de oro con un tono rosado que suele producirse con cobre. En un producto chapado, la aleación de oro rosa forma una capa superficial sobre un metal base independiente."
     },
     {
-      "question": "¿Debo elegir pendientes de oro amarillo o de oro rosa?",
-      "answer": "Elija oro amarillo para una apariencia clásica más segura. Elija oro rosa si a la persona le gustan las joyas suaves y románticas o si ya usa piezas en tonos rosas."
+      "question": "¿Los pendientes chapados en oro de 14 kt son de oro macizo?",
+      "answer": "No. Un pendiente chapado en oro de 14 kt tiene una capa superficial de aleación de oro de 14 kt sobre otro metal base. La descripción del producto debe identificar ese metal base."
     },
     {
-      "question": "¿Los aretes blancos o plateados hacen que los diamantes parezcan más brillantes?",
-      "answer": "Los engarces blancos o plateados pueden hacer que los diamantes luzcan muy limpios y brillantes porque el metal no agrega calidez alrededor de la piedra."
+      "question": "¿Qué color de metal es adecuado para las orejas sensibles?",
+      "answer": "El color por sí solo no permite determinar si unos pendientes son adecuados para orejas sensibles. Compruebe la aleación completa, el chapado, el poste, el cierre, la información sobre la liberación de níquel y la sensibilidad individual de quien los llevará."
     },
     {
-      "question": "¿Puedo mezclar aretes de oro y plata en una pila de orejas?",
-      "answer": "Sí, puedes mezclar metales, especialmente en los audífonos, pero debe parecer intencional. Si lo compra como regalo, es más seguro combinar el color metálico habitual de la persona."
+      "question": "¿Puedo mezclar pendientes de oro amarillo, blanco y rosa?",
+      "answer": "Sí. Combinar metales puede funcionar cuando un color es el protagonista y las demás piezas son más pequeñas o repiten ese tono en otros accesorios. Mantenga un punto focal claro."
     },
     {
-      "question": "¿Qué color de metal queda mejor con un vestido negro?",
-      "answer": "Los aretes de oro amarillo, tono blanco/plateado y diamantes llamativos pueden combinar con un vestido negro. El oro amarillo añade calidez, mientras que el tono blanco/plateado crea un contraste más limpio."
+      "question": "¿Cómo elegir el color de los pendientes para regalar?",
+      "answer": "Fíjese en el color del metal que la persona ya lleva en pendientes, collares, pulseras y relojes. Evite elegir basándose solo en la edad, el tono de piel o la profesión que supone que tiene."
     },
     {
-      "question": "¿Qué color de metal es mejor para los pendientes de mariposa?",
-      "answer": "El oro rosa y el oro amarillo suelen funcionar muy bien para los pendientes de mariposa porque respaldan la sensación suave, significativa y femenina del diseño."
-    },
-    {
-      "question": "¿Cuál es el color de metal más seguro para un regalo de joyería?",
-      "answer": "El color de metal más seguro es el que ya lleva el destinatario. Si no está seguro, el oro amarillo o el clásico tono blanco/plateado suele ser más seguro que el oro rosa."
+      "question": "¿El oro blanco requiere cuidados diferentes?",
+      "answer": "Algunas joyas de oro blanco llevan un acabado superficial de rodio, mientras que otros pendientes de color blanco utilizan materiales distintos. Siga las instrucciones de cuidado específicas de la aleación o el acabado, en lugar de basarse solo en el nombre del color."
     }
   ],
   "cta": {
-    "heading": "El color del metal cambia la sensación de los aretes de diamantes creados en laboratorio. El oro amarillo es cálido y clásico, los tonos blancos o plateados son limpios y modernos y el oro rosa es suave y romántico. La mejor elección depende del guardarropa del usuario, las joyas existentes, los colores de la vestimenta y el propósito del regalo.",
-    "body": "Comience con los aretes de diamantes cultivados en laboratorio de IWantJewels si desea un brillo de diamante real en diseños semifinos ponibles. Elija Cadenza S o Cadenza M para aretes clásicos de uso diario, Amadea para apilamiento moderno, Farfalla para regalos románticos, Orsola para el estilo de invitada a la boda y Lusso para un brillo atrevido en la noche.",
-    "primaryLabel": "Compre aretes de diamantes cultivados en laboratorio",
+    "heading": "Elija oro amarillo si busca una calidez visible, oro blanco o un acabado de metal blanco verificado para una apariencia más fría, u oro rosa para crear un contraste rosado.",
+    "body": "Después, confirme la construcción y las especificaciones del producto en lugar de basarse únicamente en el nombre del color.",
+    "primaryLabel": "Compare pendientes de diamante de laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explorar regalos de joyería",
-    "secondaryHref": "/products",
-    "tertiaryLabel": "Lea la guía de compra de aretes de diamantes cultivados en laboratorio",
-    "tertiaryHref": "#"
+    "secondaryLabel": "Guía de compra de pendientes de diamantes de laboratorio",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide",
+    "tertiaryLabel": "¿Qué son los diamantes de laboratorio?",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
   }
 }

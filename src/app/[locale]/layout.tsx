@@ -4,7 +4,7 @@ import "../../index.css";
 import "./app.css";
 import Providers from "../../components/app/Providers";
 import { dir } from "i18next";
-import { getTranslation, namespaces } from "../../i18n";
+import { clientNamespaces, getTranslation } from "../../i18n";
 import { getLocalizedStaticParams } from "../../i18n/settings";
 import { I18nProvider } from "../../i18n/I18nProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -50,7 +50,7 @@ export default async function RootLayout({
     params: Promise<{ locale: string }>;
 }>) {
     const { locale } = await params;
-    const { resources } = await getTranslation(locale, [...namespaces]);
+    const { resources } = await getTranslation(locale, [...clientNamespaces]);
 
     return (
         <html

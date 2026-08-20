@@ -1,834 +1,729 @@
 {
   "meta": {
-    "title": "Goud versus wit versus roségouden diamanten oorbellen",
-    "description": "Vergelijk gouden, witte en roségouden lab-grown diamanten oorbellen. Kies de beste metaalkleur voor dagelijks gebruik, geschenken, bruiloften en styling."
+    "title": "Diamanten oorbellen: geel, wit of roségoud",
+    "description": "Vergelijk labgegroeide diamanten oorbellen in geel-, wit- en roségoud. Ontdek kleur, massief of verguld, stijl en verzorging voor u kiest."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-100.jpg",
-    "title": "Goud versus wit versus roségouden laboratoriumdiamantenoorbellen:",
-    "subtitle": "Metaalkleurengids",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Geelgoud vs. witgoud vs. roségoud",
+    "subtitle": "Oorbellen met labgegroeide diamanten",
     "paragraphs": [
-      "De metaalkleur van uw lab-grown diamanten oorbellen verandert het hele gevoel van het sieraad. Hetzelfde diamanten oorbelontwerp kan er warm en klassiek uitzien in geel goud, strak en modern in witte of zilveren tinten, en zacht en romantisch in rosé goud.",
-      "Deze hulpbron helpt shoppers bij het kiezen van de beste metaalkleur voor in het laboratorium gekweekte diamanten oorbellen op basis van persoonlijke stijl, huidskleur, outfitkleuren, cadeaudoel, bruiloftsstijl en dagelijks gebruik. Het leidt gebruikers ook naar de productrichtingen van IWantJewels, zoals Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long en Lusso opvallende statement-oorbellen.",
-      "Voor IWantJewels is deze pagina belangrijk omdat veel shoppers niet alleen vragen: \"welke diamanten oorbellen moet ik kopen?\" Ze vragen zich af: \"Moet ik kiezen voor goud, zilver, witgoud of roségoud?\" Deze gids helpt bij het beantwoorden van die beslissing voordat ze naar product- of collectiepagina's worden gestuurd."
+      "Geelgoud, witgoud en roségoud kunnen dezelfde labgegroeide diamant omringen met drie duidelijk verschillende kleureffecten. Geelgoud zorgt voor een warm contrast, witgoud voor een koelere overgang tussen diamant en zetting en roségoud voor een roze omlijsting.",
+      "Maar kleur is slechts een deel van de keuze. Controleer voordat u een oorbel kiest of deze van massief goud is gemaakt of van een ander basismetaal met een goudkleurige afwerking. Een oorbel die wordt omschreven als \"14kt verguld 925 sterling zilver\" is geen massief gouden oorbel van 14 karaat.",
+      "De juiste keuze hangt af van de uitstraling die u wenst, de sieraden die u al draagt, het ontwerp van de oorbel en de volledige constructie van het product."
     ],
-    "shopLabel": "Koop oorbellen van laboratorium-gekweekte diamanten",
+    "shopLabel": "Vergelijk oorbellen met labgegroeide diamanten",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Vergelijk geelgouden, wit/zilverkleurige en roségouden oorbellen met laboratoriumdiamanten",
-      "Kies de beste metaalkleur voor dagelijks gebruik",
-      "Kies de juiste afwerking voor cadeaus, verjaardagen, jubilea en bruidsmeisjes",
-      "Match oorbellen met huidskleur, garderobekleuren en bestaande sieraden",
-      "Kies een metaalkleur voor outfits voor bruiloftsgasten en gelegenheidsstyling",
-      "Begrijp welke metaalkleuren klassiek, modern, romantisch of gewaagd aanvoelen",
-      "Vind IWantJewels-productaanbevelingen op basis van metaalkleur en stylingbehoefte",
-      "Plan afbeeldingsblokken, productmodules, CTA-secties en interne links voor de pagina"
+      "Geelgoud — zichtbare warmte en contrast rond de diamanten",
+      "Witgoud of een gecontroleerde witte afwerking — koeler en sluit beter aan bij kleurloze stenen",
+      "Roségoud — een zachter contrast met een roze tint",
+      "Metaalkleur en metaalconstructie zijn niet hetzelfde",
+      "\"925 sterling zilver met 14kt vergulding\" is geen massief goud",
+      "Kleur bepaalt niet of een sieraad geschikt is voor een gevoelige huid"
     ],
-    "image": "/blog-images/blog-image-102.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Metalen kleurkiezer",
+      "heading": "Kort antwoord",
       "content": [
         {
           "type": "paragraph",
-          "text": "Gebruik deze tabel bovenaan de pagina als het belangrijkste beslissingsinstrument."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Als je wilt",
-            "Beste metaalkleur",
-            "Stijlgevoel",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Klassieke alledaagse oorbellen",
-              "Geel goud",
-              "Warm, tijdloos, gemakkelijk",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Schone moderne glans",
-              "Witte of zilveren tint",
-              "Helder, gepolijst, minimaal",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Romantische cadeau-oorbellen",
-              "Rosé goud",
-              "Zacht, persoonlijk, vrouwelijk",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Bruiloft gast oorbellen",
-              "Geelgouden of wit/zilveren tint",
-              "Elegant en gepolijst",
-              "Orsola, Concetta Lang"
-            ],
-            [
-              "Minimalistische sieraden",
-              "Wit/zilvertint of geelgoud",
-              "Eenvoudig en verfijnd",
-              "Laluce, Cadenza S"
-            ],
-            [
-              "Warme outfitstyling",
-              "Geel goud",
-              "Rijk en klassiek",
-              "Cadenza M, Pave-hoepels"
-            ],
-            [
-              "Zachte pastelkleurige outfits",
-              "Rosé goud",
-              "Zacht en romantisch",
-              "Farfalla, Concetta Kort"
-            ],
-            [
-              "Zwarte jurkstijl",
-              "Geelgoud, wit/zilvertint of opvallende schittering",
-              "Contrast en glans",
-              "Orsola, Lusso"
-            ],
-            [
-              "Oor stapels",
-              "Overeenkomen met de bestaande metaalkleur",
-              "Evenwichtig en opzettelijk",
-              "Cadenza S, Amadea, Laluce"
-            ],
-            [
-              "Statement party-styling",
-              "Geelgouden of wit/zilveren tint",
-              "Sterk en zichtbaar",
-              "Lusso, Orsola"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Geelgouden laboratorium-gekweekte diamanten oorbellen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Geelgouden oorbellen met lab-grown diamant voelen warm, klassiek en gemakkelijk te dragen aan. Ze zijn een van de veiligste keuzes voor alledaagse sieraden, omdat geel goud goed past bij veel kledingkasten en huidtinten."
+          "text": "Kies geelgoud als u zichtbare warmte en contrast rond de diamanten wenst. Kies witgoud of een gecontroleerde afwerking in wit metaal als u wilt dat de zetting koeler oogt en beter aansluit bij kleurloze of bijna kleurloze diamanten. Kies roségoud voor een zachter contrast met een roze tint."
         },
         {
           "type": "paragraph",
-          "text": "Geel goud is vooral sterk als de drager al gouden sieraden bezit. Als iemand een gouden horloge, gouden ringen, gouden kettingen of warm getinte accessoires draagt, zullen geelgouden oorbellen meestal natuurlijk aanvoelen in hun collectie."
-        },
-        {
-          "type": "paragraph",
-          "text": "Geel goud past ook prachtig bij zwart, crème, bruin, groen, rood, champagne en warme neutrale outfits. Het kan ervoor zorgen dat diamanten oorbellen rijker en iets traditioneler aanvoelen, zonder er ouderwets uit te zien."
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor IWantJewels is geel goud een sterke richting voor Cadenza S lab-grown diamanten studs, Cadenza M diamanten oorknopjes, Amadea Huggie oorbellen, Pave Hoops, Orsola drop oorbellen en Lusso opvallende statement oorbellen."
-        },
-        {
-          "type": "see-also",
-          "text": "Gouden oorbellen met in het laboratorium gekweekte diamanten",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Witte of zilverkleurige laboratoriumdiamantenoorbellen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Witte of zilverkleurige oorbellen met laboratoriumdiamanten voelen schoon, helder en modern aan. Ze zijn een goede keuze voor shoppers die de voorkeur geven aan een minimalistische stijl, outfits in koele tinten of sieraden die eerder fris dan warm aanvoelen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Deze afwerking werkt vooral goed bij zwarte, witte, marineblauwe, grijze, zilveren, blauwe en coole pastelkleurige outfits. Het past ook bij mensen die al zilveren horloges, witgekleurde ringen of koelere sieraden dragen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Witte of zilverkleurige oorbellen kunnen in het laboratorium gekweekte diamanten er heel helder uit laten zien, omdat het metaal geen warmte rond de steen toevoegt. Dit kan handig zijn voor minimalistische outfits, kantoorstijlen, zwarte jurken en strakke avondlooks."
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor IWantJewels kan een witte of zilverkleurige styling goed werken voor Cadenza S, Cadenza M, Laluce minimalistische diamanten oorbellen, Pave Hoops en Orsola oorbellen, afhankelijk van de beschikbare productafwerking."
-        },
-        {
-          "type": "see-also",
-          "text": "Zilveren diamanten oorbellen",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Roségouden laboratorium-gekweekte diamanten oorbellen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Roségouden oorbellen met lab-grown diamant voelen zacht, romantisch en persoonlijk aan. Ze zijn vooral sterk als cadeau, omdat roségoud vaak warmer en emotioneler aanvoelt dan witte of zilveren tinten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Roségoud past prachtig bij blozen, roze, crème, champagne, zachtgroen, beige, bloemenprints en romantische outfits. Het kan ook een goede keuze zijn voor verjaardagscadeaus, jubileumcadeaus, bruidsmeisjescadeaus en betekenisvolle sieradenmomenten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Roségoud is niet altijd de veiligste optie als de ontvanger nooit roze sieraden draagt. Maar als het bij de stijl van de persoon past, kan het cadeau een attenter gevoel geven."
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor IWantJewels is de roségouden stijl vooral sterk voor vlinderoorbellen, romantische oorbellen en zachte, cadeau-geleide stukken. Farfalla vlinderoorbellen en Alidi Farfalla vlinderoorbellen passen natuurlijk bij deze richting. Orsola-druppeloorbellen en Concetta Short-oorbellen kunnen ook romantisch aanvoelen in een roze afwerking."
-        },
-        {
-          "type": "see-also",
-          "text": "Roségouden oorbellen met laboratoriumdiamanten",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Beste metaalkleur voor dagelijks gebruik",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Voor dagelijks gebruik is de beste metaalkleur meestal degene die past bij de sieraden die de persoon al het vaakst draagt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Als ze dagelijks geel goud dragen, kies dan voor geelgouden oorbellen met laboratoriumdiamanten. Als ze dagelijks zilveren of witgekleurde sieraden dragen, kies dan voor witte of zilverkleurige oorbellen. Als ze van zachte, romantische sieraden houden en vaak warme roze of blozende tinten dragen, kan roségoud prachtig werken."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Dagelijkse stijl",
-            "Beste metaalkleur",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Klassieke alledaagse stijl",
-              "Geel goud",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Minimale alledaagse stijl",
-              "Wit/zilvertint of geelgoud",
-              "Laluce, Cadenza S"
-            ],
-            [
-              "Moderne oorstijl",
-              "Match met bestaande oorbellen",
-              "Amadea, Cadenza S, Laluce"
-            ],
-            [
-              "Zachte vrouwelijke stijl",
-              "Roségoud of geelgoud",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Werkkleding stijl",
-              "Geelgouden of wit/zilveren tint",
-              "Cadenza S, Cadenza M, Amadea"
-            ],
-            [
-              "Casual luxe stijl",
-              "Geelgouden hoepels of knuffels",
-              "Pave Hoops, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Oorbellen voor dagelijks gebruik moeten niet moeilijk te stylen zijn. De veiligste dagelijkse keuze is meestal een metaalkleur die al bij de routine van de drager past."
-        },
-        {
-          "type": "see-also",
-          "text": "Kun je elke dag oorbellen met laboratoriumdiamanten dragen?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Beste metaalkleur voor geschenken",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bij cadeaus is de metaalkleur erg belangrijk, omdat deze laat zien of je de stijl van de ontvanger begrijpt."
-        },
-        {
-          "type": "paragraph",
-          "text": "De veiligste regel is om te controleren wat ze al dragen. Als de meeste van hun sieraden geel goud zijn, kies dan voor geel goud. Als ze zilveren of witgekleurde sieraden dragen, kies dan voor een witte of zilveren tint. Als ze van romantische, zachte of vrouwelijke stukken houden, kan roségoud een doordachte keuze zijn."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-104.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Cadeautype",
-                "Beste metaalkleur",
-                "Beste oorbelrichting"
-              ],
-              "rows": [
-                [
-                  "Veilig verjaardagscadeau",
-                  "Geelgouden of wit/zilveren tint",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Romantisch cadeau",
-                  "Roségoud of geelgoud",
-                  "Farfalla, Orsola"
-                ],
-                [
-                  "Jubileumcadeau",
-                  "Geelgoud, roségoud of elegante wit/zilvertint",
-                  "Cadenza M, Orsola, Farfalla"
-                ],
-                [
-                  "Bruidsmeisje cadeau",
-                  "Match jurk en trouwpalet",
-                  "Cadenza S, Concetta kort"
-                ],
-                [
-                  "Modern cadeau",
-                  "Wit/zilvertint of geelgoud",
-                  "Amadea, Pave Hoops"
-                ],
-                [
-                  "Betekenisvol geschenk",
-                  "Roségoud of geelgoud",
-                  "Farfalla, Alidi Farfalla"
-                ],
-                [
-                  "Cadeau voor een feestliefhebber",
-                  "Geelgouden of wit/zilveren tint",
-                  "Lusso, Orsola"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "In het laboratorium gekweekte diamanten oorbellen voor cadeaus",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Beste metaalkleur voor bruiloften",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Bruiloftssieraden moeten passen bij de outfit, de dresscode en de algehele sfeer van het evenement."
-        },
-        {
-          "type": "paragraph",
-          "text": "Geelgoud past prachtig bij outfits met warme tinten, champagnejurken, groene jurken, rode jurken en klassieke avondstijlen. Witte of zilverkleurige oorbellen passen goed bij zwarte, marineblauwe, zilveren, grijze, witte en coole outfits. Roségoud is prachtig bij pastelkleurige, blozende, gebloemde en romantische jurken."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Bruiloft outfit",
-            "Beste metaalkleur",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Zwarte jurk",
-              "Geelgouden of wit/zilveren tint",
-              "Orsola, Lusso, Cadenza M"
-            ],
-            [
-              "Champagnejurk",
-              "Geel goud",
-              "Orsola, Concetta Lang"
-            ],
-            [
-              "Pastelkleurige jurk",
-              "Roségoud of geelgoud",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Groene jurk",
-              "Geel goud of rosé goud",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Marine jurk",
-              "Wit/zilvertint of geelgoud",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Rode jurk",
-              "Geel goud",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Bloemen jurk",
-              "Roségoud, geelgoud of simpele studs",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Zilverkleurige of grijze jurk",
-              "Wit/zilveren tint",
-              "Laluce, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor bruiloftsgasten moeten de oorbellen gepolijst aanvoelen, maar niet bruids. Als de outfit eenvoudig is, kies dan voor druppels of een meer zichtbare glitter. Als de outfit gedetailleerd is, kies dan voor studs of kleinere oorbellen."
-        },
-        {
-          "type": "see-also",
-          "text": "In het laboratorium gekweekte diamanten oorbellen voor bruiloften",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Beste metaalkleur per outfitkleur",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Deze sectie helpt shoppers oorbellen bij hun garderobe te matchen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Kleur outfit",
-            "Beste metaalkleur",
-            "Stylingopmerking"
-          ],
-          "rows": [
-            [
-              "Zwart",
-              "Geelgoud, wit/zilvertint of opvallende schittering",
-              "Alle werkzaamheden; kies op basis van stemming"
-            ],
-            [
-              "Wit",
-              "Geelgoud voor warmte, wit/zilvertint voor strakke styling",
-              "Houd het gepolijst"
-            ],
-            [
-              "Crème of ivoor",
-              "Geel goud of rosé goud",
-              "Warmere metalen voelen zachter aan"
-            ],
-            [
-              "Bruin of beige",
-              "Geel goud",
-              "Voegt rijkdom toe"
-            ],
-            [
-              "Marine",
-              "Wit/zilvertint of geelgoud",
-              "Beide voelen elegant aan"
-            ],
-            [
-              "Grijs",
-              "Wit/zilveren tint",
-              "Houdt de look koel en schoon"
-            ],
-            [
-              "Rood",
-              "Geel goud",
-              "Brengt warmte in evenwicht"
-            ],
-            [
-              "Groen",
-              "Geel goud of rosé goud",
-              "Voegt warmte en diepte toe"
-            ],
-            [
-              "Roze of blozen",
-              "Roségoud of geelgoud",
-              "Zacht en romantisch"
-            ],
-            [
-              "Champagne",
-              "Geel goud",
-              "Past prachtig bij de warmte"
-            ],
-            [
-              "Bloemenprint",
-              "Kleine studs, roségoud of geelgoud",
-              "Vermijd een te ingewikkelde look"
-            ],
-            [
-              "Satijnen outfit",
-              "Druppels in goud- of wit/zilvertint",
-              "Voegt beweging en glans toe"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Welke sieraden draag je bij een zwarte jurk?",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Beste metaalkleur per sieradenstijl",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Verschillende oorbelstijlen kunnen heel verschillend aanvoelen, afhankelijk van de metaalkleur."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-106.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Oorbel stijl",
-                "Geel goud",
-                "Wit/zilvertint",
-                "Roségoud"
-              ],
-              "rows": [
-                [
-                  "Oorknopjes",
-                  "Klassiek en warm",
-                  "Schoon en helder",
-                  "Zacht en romantisch"
-                ],
-                [
-                  "Knuffels",
-                  "Alledaags en stijlvol",
-                  "Modern en minimaal",
-                  "Vrouwelijk en zachtaardig"
-                ],
-                [
-                  "Hoepels",
-                  "Rijk en gepolijst",
-                  "Strak en eigentijds",
-                  "Zacht en speels"
-                ],
-                [
-                  "Druppel oorbellen",
-                  "Elegant en warm",
-                  "Verfijnd en helder",
-                  "Romantisch en delicaat"
-                ],
-                [
-                  "Vlinder oorbellen",
-                  "Betekenisvol en warm",
-                  "Moderner",
-                  "Meest romantisch"
-                ],
-                [
-                  "Opvallende statement oorbellen",
-                  "Sterk en glamoureus",
-                  "Helder en met hoge impact",
-                  "Zachtere statement-look"
-                ],
-                [
-                  "Minimalistische oorbellen",
-                  "Warme eenvoud",
-                  "Puur minimalisme",
-                  "Zachte zachtheid"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor klassieke geschenken werkt geelgoud of wit/zilver meestal het beste. Voor romantische cadeaus zijn roségouden en vlinderoorbellen een sterke combinatie. Voor feestlooks kunnen geelgouden of wit/zilvertinten dramatischer aanvoelen."
-        },
-        {
-          "type": "see-also",
-          "text": "Handleiding voor oorbellen met in het laboratorium gekweekte diamanten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Is de huidskleur van belang bij het kiezen van een metaalkleur?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Huidskleur kan helpen, maar het mag niet de enige regel zijn."
-        },
-        {
-          "type": "paragraph",
-          "text": "Geelgoud staat vaak prachtig op warme en neutrale huidtinten. Witte of zilveren tinten passen vaak bij een koele styling. Roségoud kan veel huidtinten flatteren omdat het tussen warme en zachtroze tinten zit."
-        },
-        {
-          "type": "paragraph",
-          "text": "Maar persoonlijke stijl is belangrijker dan strikte regels. Iemand met een koele huid kan nog steeds dol zijn op geel goud. Iemand met een warme huid kan nog steeds de voorkeur geven aan zilver. De beste aanwijzing zijn de sieraden die ze al dragen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Als u het voor uzelf koopt, kies dan de metaalkleur waarbij u zich het meest natuurlijk voelt. Als je het als cadeau koopt, kies dan de metaalkleur die de persoon al bezit."
-        }
-      ]
-    },
-    {
-      "heading": "Kun je gouden, witte en roségouden oorbellen combineren?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ja, je kunt metalen mengen, vooral in oorstapels, maar het moet er opzettelijk uitzien."
-        },
-        {
-          "type": "paragraph",
-          "text": "Het mixen van metalen werkt het beste als de oorbelvormen in balans zijn. Zo kan een geelgouden stud met een wit/zilveren knuffel er modern uitzien als de rest van de sieraden eenvoudig is. Roségoud kan ook zachtjes worden gemengd met geelgoud, vooral in een romantische styling."
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor geschenken is het echter veiliger om de gebruikelijke metaalkleur van de ontvanger te matchen. Gemengde metalen zijn beter voor iemand die al van creatieve styling houdt."
-        },
-        {
-          "type": "see-also",
-          "text": "Hoe oorbellen te stapelen",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Producttrajecten per metaalkleur",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gebruik dit gedeelte als een praktische winkelgids."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor klassieke geelgouden styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies Cadenza S voor subtiele alledaagse glans, Cadenza M voor meer zichtbare klassieke sprankeling, Pave Hoops voor vorm, of Orsola voor gelegenheidsstyling."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor een zuivere witte of zilverkleurige styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies Laluce voor een minimalistische styling, Cadenza S voor eenvoudige studs, Cadenza M voor zichtbare schittering, of Orsola voor een gepolijste avondlook."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor romantische roségouden styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies Farfalla of Alidi Farfalla voor betekenisvolle cadeaus, Concetta Short voor zachte gelegenheidsstyling, of Orsola voor romantische avondoutfits."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor oorstapels"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies één metalen richting voor een netter uiterlijk. Cadenza S met Amadea Huggie-oorbellen is een sterke alledaagse stapel. Voeg Laluce toe voor een zachtere afwerking."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor geschenken"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies Cadenza M voor een klassiek diamantgeschenk, Farfalla voor een betekenisvol geschenk, Amadea voor een modern geschenk, of Orsola voor een romantisch geschenk voor een gelegenheid."
-        }
-      ]
-    },
-    {
-      "heading": "Productaanbevelingen van IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Beste metaalkleurrichting",
-            "Beste voor"
-          ],
-          "rows": [
-            [
-              "Cadenza S lab-grown diamanten studs",
-              "Geel goud, wit/zilveren tint",
-              "Dagelijks gebruik, eerste diamanten oorbellen"
-            ],
-            [
-              "Cadenza M diamanten oorknopjes",
-              "Geel goud, wit/zilveren tint",
-              "Cadeaus, werkkleding, zichtbare dagelijkse schittering"
-            ],
-            [
-              "Amadea Huggie oorbellen",
-              "Geel goud, wit/zilveren tint",
-              "Oorstapels en moderne styling"
-            ],
-            [
-              "Laluce minimalistische diamanten oorbellen",
-              "Wit/zilvertint, geel goud",
-              "Minimalistische outfits en rustige dagelijkse sieraden"
-            ],
-            [
-              "Hoepels effenen",
-              "Geel goud, wit/zilveren tint",
-              "Hoepelstyling, casual glitter en feestjes"
-            ],
-            [
-              "Farfalla vlinder oorbellen",
-              "Roségoud, geelgoud",
-              "Betekenisvolle geschenken en romantische styling"
-            ],
-            [
-              "Alidi Farfalla vlinderoorbellen",
-              "Roségoud, geelgoud",
-              "Verjaardagen, jubilea en symbolische geschenken"
-            ],
-            [
-              "Orsola oorbellen",
-              "Geel goud, wit/zilver toon, rosé goud",
-              "Bruiloftsgasten, diners en avondoutfits"
-            ],
-            [
-              "Concetta korte oorbellen",
-              "Roségoud, geelgoud",
-              "Zachte gelegenheidsstyling"
-            ],
-            [
-              "Concetta Lange oorbellen",
-              "Geel goud, wit/zilveren tint",
-              "Formele en verfijnde avondlooks"
-            ],
-            [
-              "Lusso opvallende statement oorbellen",
-              "Geel goud, wit/zilveren tint",
-              "Feestelijke looks en sterke schittering"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies de metaalkleur afhankelijk van de manier waarop de oorbellen gedragen zullen worden. Kies geel goud voor klassieke warmte, witte of zilveren tinten voor een strakke, moderne schittering, en rosé goud voor romantische cadeaus of zachte styling."
-        }
-      ]
-    },
-    {
-      "heading": "Veel voorkomende metaalkleurfouten die u moet vermijden",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Een veelgemaakte fout is dat je alleen een metaalkleur kiest omdat deze er goed uitziet op een productfoto. De betere vraag is of het past bij de echte sieraden en garderobe van de drager."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een andere fout is het kopen van roségoud voor iemand die alleen geelgoud of zilver draagt. Roségoud kan mooi zijn, maar het is persoonlijker en minder universeel veilig."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een derde fout is het zonder plan te veel metaalkleuren in een oorstapel mengen. Gemengde metalen kunnen er stijlvol uitzien, maar ze moeten wel opzettelijk aanvoelen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een andere fout is het kiezen voor witte of zilveren tinten wanneer de hele garderobe en sieradencollectie van de persoon warme tinten heeft. Geel goud is misschien gemakkelijker voor hen om te dragen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ten slotte: negeer de gelegenheid niet. Voor alledaagse oorbellen, bruiloftsoorbellen en romantische cadeaus kunnen verschillende metaalkleuren nodig zijn."
-        },
-        {
-          "type": "see-also",
-          "text": "Koopgids voor oorbellen met in het laboratorium gekweekte diamanten",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Laatste checklist voor metaalkleuren",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Voordat u gouden, wit/zilverkleurige of roségouden oorbellen met laboratoriumdiamanten kiest, vraagt u zich af:"
+          "text": "Kies niet alleen op basis van de kleurnaam. Controleer:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Welke metaalkleur draagt de persoon al het vaakst?",
-            "Is dit voor dagelijks gebruik, een cadeau, een bruiloft of een feest?",
-            "Voelt het outfitpalet warm, stoer of romantisch aan?",
-            "Moeten de oorbellen klassiek, modern of zacht aanvoelen?",
-            "Worden de oorbellen alleen gedragen of in een oorstukje?",
-            "Past de metaalkleur bij andere sieraden?",
-            "Is roségoud geschikt voor de stijl van de persoon?",
-            "Zou geel goud veiliger zijn?",
-            "Zou een witte of zilveren tint schoner aanvoelen?",
-            "Zijn de stenen echte in het laboratorium gekweekte diamanten?",
-            "Voelt het ontwerp draagbaar buiten één outfit?"
+            "Basismetaal",
+            "Of de constructie massief of verguld is",
+            "Het goudgehalte",
+            "Het exacte materiaal van de vergulding",
+            "De dikte van de vergulding, indien beschikbaar",
+            "De volledige afmetingen van de oorbel",
+            "Het gewicht en de sluiting",
+            "De diamantspecificaties",
+            "Of het product per stuk of als paar wordt verkocht"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Vergelijking van geel-, wit- en roségouden oorbellen",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Kenmerk",
+            "Geelgoud",
+            "Witgoud",
+            "Roségoud"
+          ],
+          "rows": [
+            [
+              "Zichtbare kleur",
+              "Warmgeel",
+              "Koel wit of grijswit",
+              "Roze of koperkleurig"
+            ],
+            [
+              "Contrast met diamanten",
+              "Creëert een zichtbare warme rand",
+              "Kan voor een meer doorlopende koele uitstraling zorgen",
+              "Creëert een zacht roze contrast"
+            ],
+            [
+              "Stijlrichting",
+              "Warm, traditioneel of contrastrijk",
+              "Strak, neutraal of koel",
+              "Zacht, onderscheidend of warm"
+            ],
+            [
+              "Combineren met uw garderobe",
+              "Crème, bruin, groen, rood, zwart en warme neutrale tinten",
+              "Zwart, wit, grijs, marineblauw en koele kleuren",
+              "Blush, mauve, crème, saliegroen en gedempte kleuren"
+            ],
+            [
+              "Bestaande sieraden",
+              "Past bij sieraden van geelgoud",
+              "Past bij sieraden van wit metaal",
+              "Past bij sieraden van roségoud"
+            ],
+            [
+              "Te controleren constructie",
+              "Massief goud of geelgouden vergulding",
+              "Massief witgoud, witgouden vergulding, rhodium of een andere afwerking",
+              "Massief roségoud of roségouden vergulding"
+            ],
+            [
+              "Onderhoud",
+              "Hangt af van legering en afwerking",
+              "Sommige witte afwerkingen moeten mogelijk worden vernieuwd",
+              "Hangt af van legering en afwerking"
+            ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Als je het niet zeker weet, kies dan de metaalkleur die de persoon al draagt. Dat is meestal de veiligste en nuttigste keuze."
+          "text": "Dit zijn stijlr ichtingen, geen vaste regels. U kunt alle drie de kleuren combineren met uiteenlopende outfits."
+        }
+      ]
+    },
+    {
+      "heading": "Metaalkleur en metaalconstructie zijn niet hetzelfde",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "right",
+          "image": "/blog-images/blog-image-42.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Een product kan eruitzien als geelgoud, witgoud of roségoud zonder volledig van massief goud te zijn gemaakt."
+            },
+            {
+              "type": "subheading",
+              "text": "Massief goud"
+            },
+            {
+              "type": "paragraph",
+              "text": "Sieraden van massief goud gebruiken door de hele metalen component een goudlegering. Puur goud wordt gemengd met andere metalen om de kleur, sterkte en verwerkbaarheid aan te passen. Een goudlegering van 14 karaat of 14kt bevat ongeveer 14 delen goud op 24. De legering kan ook worden aangeduid met 585, wat staat voor ongeveer 58,5% goud. De resterende samenstelling helpt de gele, witte of roze kleur te creëren."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Verguld sterling zilver"
+        },
+        {
+          "type": "paragraph",
+          "text": "Verguld 925 sterling zilver heeft een basis van sterling zilver met een oppervlaktelaag van een goudlegering. Een merkteken 925 verwijst naar sterling zilver dat 92,5% zilver bevat; het betekent niet dat de hele oorbel van goud is. Als het product wordt omschreven als \"925 sterling zilver met 14kt vergulding\", geldt de aanduiding 14kt voor het materiaal van de vergulding, niet voor de volledige oorbel."
+        },
+        {
+          "type": "subheading",
+          "text": "Witgekleurde afwerkingen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een witgekleurde oorbel kan bestaan uit:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Massief witgoud",
+            "Witgouden vergulding",
+            "Rhodiumvergulding",
+            "Platina",
+            "Palladium",
+            "925 sterling zilver",
+            "Een andere afwerking in wit metaal"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "De kleur alleen geeft geen informatie over de constructie. Op de productpagina moet het werkelijke basismetaal en de afwerking worden vermeld."
+        },
+        {
+          "type": "subheading",
+          "text": "Roségouden afwerkingen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségoud krijgt zijn roze tint door de samenstelling van de legering, vaak met koper. Wanneer het als vergulding wordt aangebracht, vormt de roségouden legering alleen de oppervlaktelaag over het basismetaal. Controleer de exacte samenstelling in plaats van ervan uit te gaan dat elke roze oorbel dezelfde legering gebruikt."
+        },
+        {
+          "type": "see-also",
+          "text": "Wat zijn demi-fine sieraden?",
+          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Wat zijn oorbellen met labgegroeide diamanten in geelgoud?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Geelgouden oorbellen omringen de diamanten met een warme gele kleur. Hierdoor ontstaat een zichtbaar onderscheid tussen de witte diamant en de zetting, vooral wanneer het ontwerp meer metaal laat zien."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geelgoud past bij diamanten oorstekers, creolen, oorhangers, vlinderontwerpen, geometrische oorbellen en ear stacks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het effect hangt ook af van de hoeveelheid zichtbaar metaal. Bij een oorsteker met vier chatons is mogelijk maar weinig geelgoud te zien, terwijl een creool of geometrisch ontwerp de metaalkleur een belangrijk onderdeel van de oorbel maakt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kies geelgoud omdat u de uitstraling mooi vindt of omdat het past bij sieraden die u al bezit — niet omdat het universeel geschikt zou zijn voor een bepaalde huidtint."
+        }
+      ]
+    },
+    {
+      "heading": "Wat zijn oorbellen met labgegroeide diamanten in witgoud?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Witgoud is een goudlegering die is ontwikkeld voor een witte of grijswitte kleur. Sieraden van massief witgoud kunnen ook een rhodiumafwerking hebben, maar dat is niet altijd zo en moet per product worden gecontroleerd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een witte zetting kan de zichtbare kleurgrens tussen een kleurloze of bijna kleurloze diamant en het omringende metaal verkleinen. Hierdoor kan de zetting visueel doorlopen in de stenen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Witgekleurde oorbellen passen goed wanneer:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "U al zilveren sieraden of sieraden van wit metaal draagt",
+            "U wilt dat de kleur van de zetting ingetogen blijft",
+            "Uw garderobe zwart, wit, marineblauw, grijs of koele kleuren bevat",
+            "U wilt dat metaal en diamanten sterker bij elkaar aansluiten"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "925 sterling zilver met een witte afwerking mag nooit worden omschreven als massief witgoud."
+        }
+      ]
+    },
+    {
+      "heading": "Wat zijn oorbellen met labgegroeide diamanten in roségoud?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Roségoud heeft een roze of koperkleurige uitstraling. De intensiteit van die kleur hangt af van de samenstelling van de legering of vergulding."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségouden oorbellen creëren een opvallender kleurcontrast dan witgoud, maar vaak een zachter contrast dan uitgesproken geelgoud. Ze passen bij blush, crème, saliegroen, mauve, bruin en gedempte kleuren, maar zijn niet beperkt tot die garderobes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségoud kan worden gebruikt in zettingen voor oorstekers, vlinderoorbellen, korte oorhangers, creolen, geometrische ontwerpen en ear stacks met meerdere metalen. Controleer, net als bij de andere kleuren, of het product van massief roségoud is gemaakt of een roségouden oppervlaktelaag over een ander basismetaal heeft."
+        }
+      ]
+    },
+    {
+      "heading": "Verandert de metaalkleur de uitstraling van de diamant?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "De metaalkleur kan het contrast rond een diamant beïnvloeden, maar verandert de herkomst of onderliggende eigenschappen van de diamant niet. Het Gemological Institute of America legt uit dat labgegroeide diamanten in wezen dezelfde chemische samenstelling, kristalstructuur en optische en fysieke eigenschappen hebben als natuurlijke diamanten."
+        },
+        {
+          "type": "subheading",
+          "text": "Geelgoud"
+        },
+        {
+          "type": "paragraph",
+          "text": "Geelgoud vormt een warme omlijsting rond een witte diamant. Dit effect is duidelijker wanneer de zetting, creool of decoratieve metalen elementen goed zichtbaar zijn."
+        },
+        {
+          "type": "subheading",
+          "text": "Witgoud of wit metaal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wit metaal kan visueel samenvloeien met een kleurloze of bijna kleurloze diamant, vooral bij kleine chatons of zettingen in pavé-stijl."
+        },
+        {
+          "type": "subheading",
+          "text": "Roségoud"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roségoud voegt een roze rand toe. Dit contrast kan subtiel zijn bij een kleine oorsteker en beter zichtbaar worden bij creolen, oorhangers of geometrische oorbellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ook slijpvorm, verhoudingen, zetting, reinheid en verlichting beïnvloeden wat de kijker ziet. Geen enkele metaalkleur laat elke diamant automatisch sterker schitteren."
+        },
+        {
+          "type": "see-also",
+          "text": "Wat zijn labgegroeide diamanten?",
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
+        }
+      ]
+    },
+    {
+      "heading": "Welke kleur past bij elk type oorbel?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Diamanten oorstekers"
+        },
+        {
+          "type": "paragraph",
+          "text": "Oorsteker s laten minder metaal zien dan veel creolen of oorhangers. Het verschil tussen geel-, wit- en roségoud concentreert zich daardoor mogelijk rond de chatons, kastzetting of zetting. Kies geelgoud voor een warme omlijsting, witgoud of gecontroleerd wit metaal voor een koelere overgang, of roségoud voor een roze rand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bekijk ook de zijkant. Een oorstekers kan van opzij meer metaal tonen dan van voren. De diameter, uitsteeklengte, zetkast, achterkant en het totale karaatgewicht van de oorsteker kunnen het uiterlijk sterker beïnvloeden dan een klein verschil in metaalkleur."
+        },
+        {
+          "type": "see-also",
+          "text": "Gids voor oorstekers met labgegroeide diamant",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Diamanten creolen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Creolen tonen meer metaaloppervlak dan veel oorstekers, waardoor de afwerking een belangrijk onderdeel van het ontwerp kan worden. Creolen van geelgoud creëren een warme, gebogen omlijsting. Creolen van wit metaal ogen koeler, terwijl roségouden creolen een roze tint toevoegen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controleer vóór u creolen kiest de buitendiameter, binnendiameter, breedte, het gewicht, de sluiting, de plaatsing van de diamanten, of de diamanten alleen aan de voorkant zichtbaar zijn of rondom de creool doorlopen, en het basismetaal en de oppervlakteafwerking."
+        },
+        {
+          "type": "see-also",
+          "text": "Gids voor labgegroeide diamanten creolen",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Oorhangers en geometrische oorbellen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Oorhangers en geometrische oorbellen kunnen een groter metaaloppervlak tonen en tijdens het dragen bewegen. Hun kleur kan daardoor opvallender zijn dan die van een kleine zetting voor een oorsteker. Geelgoud kan de contouren van het ontwerp benadrukken. Wit metaal houdt de zichtbare structuur koeler, terwijl roségoud een zachter gekleurde omlijsting creëert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controleer de volledige hoogte, breedte, uitsteeklengte, het afgewerkte gewicht en de sluiting. Lange of geometrische oorbellen mogen niet zonder gecontroleerde afmetingen en informatie over de drager voor langdurig dragen worden aanbevolen."
+        }
+      ]
+    },
+    {
+      "heading": "Moet u kiezen op basis van uw huidtint?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Advies op basis van huidtint kan als experiment dienen, maar mag niet als regel worden beschouwd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iemand met een warme ondertoon kan toch de voorkeur geven aan wit metaal. Iemand met een koele ondertoon kan juist geelgoud verkiezen. Kleding, haarkleur, bestaande sieraden en persoonlijke voorkeur kunnen belangrijker zijn dan een vereenvoudigde huidtintcategorie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een betrouwbaardere vergelijking is:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Bekijk de sieraden die u al draagt.",
+            "Vergelijk de kleuren bij natuurlijk licht.",
+            "Bekijk hoe elke kleur naast uw gebruikelijke kleding staat.",
+            "Bepaal of u de voorkeur geeft aan harmonie of contrast."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "De kleur die u waarschijnlijk het vaakst met uw bestaande sieraden combineert, kan de nuttigste keuze zijn."
+        }
+      ]
+    },
+    {
+      "heading": "Stem de metaalkleur af op uw garderobe",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Kleur van de garderobe",
+            "Geelgoud",
+            "Wit of zilver",
+            "Roségoud"
+          ],
+          "rows": [
+            [
+              "Zwart",
+              "Warm contrast",
+              "Helder contrast",
+              "Zachter contrast"
+            ],
+            [
+              "Wit",
+              "Warme definitie",
+              "Tonale, koelere uitstraling",
+              "Detail met roze tint"
+            ],
+            [
+              "Navy",
+              "Warm contrast",
+              "Koelere harmonie",
+              "Gedempt contrast"
+            ],
+            [
+              "Groen",
+              "Past bij veel warme groentinten",
+              "Contrasteert met koele groentinten",
+              "Past bij sommige salie- en gedempte groentinten"
+            ],
+            [
+              "Rood of bordeaux",
+              "Voegt warmte toe",
+              "Creëert een koeler contrast",
+              "Kan gedempte roodtinten verzachten"
+            ],
+            [
+              "Blush of mauve",
+              "Warm contrast",
+              "Helder contrast",
+              "Sterke harmonie"
+            ],
+            [
+              "Bruin of camel",
+              "Warme harmonie",
+              "Scherper contrast",
+              "Zachte harmonie"
+            ],
+            [
+              "Grijs",
+              "Warm contrast",
+              "Tonale harmonie",
+              "Contrast met roze tint"
+            ],
+            [
+              "Crème",
+              "Warme harmonie",
+              "Koeler contrast",
+              "Zachte harmonie"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Deze combinaties zijn uitgangspunten, geen beperkingen."
+        },
+        {
+          "type": "see-also",
+          "text": "Welke sieraden draagt u bij een groene jurk?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "Welke sieraden draagt u bij een zwarte jurk?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Moeten al uw sieraden dezelfde metaalkleur hebben?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nee. Door elk stuk op elkaar af te stemmen ontstaat een consistente uitstraling, maar gemengde metalen kunnen ook bewust gekozen lijken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voor een gecontroleerde combinatie van gemengde metalen:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Kies één hoofdkleur voor het metaal",
+            "Laat die kleur in minstens één ander sieraad terugkomen",
+            "Houd de afmetingen van de oorbellen in balans",
+            "Vermijd dat elk sieraad even gedetailleerd is",
+            "Gebruik de kleur van de diamant als terugkerend visueel element"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Draagt u al een horloge van wit metaal en een ketting van geelgoud, dan kunnen uw oorbellen één van beide metalen herhalen of beide bevatten, als het ontwerp gemengde metalen echt toepast."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een verguld product in één kleur is niet automatisch een combinatie van gemengde metalen omdat het basismetaal eronder anders is. Bij styling met gemengde metalen gaat het om zichtbare metaalkleuren."
+        },
+        {
+          "type": "see-also",
+          "text": "Oorbellen stapelen",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Een metaalkleur kiezen als cadeau",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Kijkt u bij het kopen van oorbellen voor iemand anders naar wat die persoon al draagt. Let op:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Oorbellen op recente foto's",
+            "De kleur van het horloge",
+            "De kleur van ketting en armband",
+            "Of die persoon metalen combineert",
+            "Of die persoon steeds dezelfde afwerking kiest",
+            "Of de piercings meestal oorstekers, creolen of oorhangers dragen"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kies niet uitsluitend op basis van een veronderstelde huidtint, leeftijd of beroep. Als de bestaande voorkeur niet kan worden vastgesteld, kies dan een veelzijdig cadeau in plaats van ervan uit te gaan dat één metaalkleur altijd geschikt is."
+        }
+      ]
+    },
+    {
+      "heading": "Massief gouden versus vergulde oorbellen",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Kenmerk",
+            "Constructie van massief goud",
+            "Vergulde constructie"
+          ],
+          "rows": [
+            [
+              "Basismateriaal",
+              "Overal een goudlegering",
+              "Afzonderlijk basismetaal"
+            ],
+            [
+              "Oppervlak",
+              "Dezelfde legering of een extra afwerking",
+              "Oppervlaktelaag van een goudlegering"
+            ],
+            [
+              "Productbeschrijving",
+              "Moet de goudzuiverheid vermelden",
+              "Moet het basismetaal en de vergulding vermelden"
+            ],
+            [
+              "Keurmerk of markering",
+              "Afhankelijk van markt en wettelijke vereisten",
+              "Markeringen van het basismetaal kunnen van toepassing zijn"
+            ],
+            [
+              "Kleurbehoud",
+              "Afhankelijk van legering en oppervlaktebehandeling",
+              "De oppervlaktelaag kan door slijtage veranderen"
+            ],
+            [
+              "Prijsopbouw",
+              "Beïnvloed door goudgehalte en afgewerkt gewicht",
+              "Beïnvloed door basismetaal, vergulding, ontwerp en stenen"
+            ],
+            [
+              "Te controleren informatie",
+              "Goudzuiverheid, gewicht en kleur van de legering",
+              "Basismetaal, materiaal en dikte van de vergulding, en onderhoud"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Geen van beide constructies mag worden verborgen achter een kleurkeuze. U moet vóór u het product aan uw winkelmand toevoegt de volledige materiaalspecificatie kunnen bekijken."
+        },
+        {
+          "type": "see-also",
+          "text": "Demi-fine versus fijne versus fashion sieraden",
+          "href": "/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Bepaalt de metaalkleur of oorbellen geschikt zijn voor gevoelige oren?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Nee. Alleen de kleur kan niet bepalen of een oorbel geschikt is voor gevoelige oren. De geschiktheid hangt af van:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "De volledige samenstelling van het basismetaal",
+            "De samenstelling van de legering",
+            "Platingmateriaal",
+            "De dikte en staat van de vergulding",
+            "Het materiaal van staafje en achterkant",
+            "Nikkelafgifte",
+            "Individuele gevoeligheid",
+            "De conditie van de piercing"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oorbellen van geelgoud, witgoud en roségoud mogen niet als hypoallergeen worden beschreven zonder de volledige samenstelling en relevante onderbouwing."
+        }
+      ]
+    },
+    {
+      "heading": "Onderhoud per constructie",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Onderhoudsvereisten hangen meer af van de constructie en afwerking dan van de vraag of de zichtbare kleur geel, wit of rosé is. Lees dit vóór u de oorbellen reinigt of draagt in de buurt van water, cosmetica of chemicaliën:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Lees de onderhoudsinstructies voor het specifieke product",
+            "Controleer of de oorbellen massief of verguld zijn",
+            "Vermijd schurende reinigingsmiddelen, tenzij de fabrikant bevestigt dat ze geschikt zijn",
+            "Bewaar sieraden afzonderlijk om contact met oppervlakken te beperken",
+            "Controleer staafjes, achterkanten en sluitingen",
+            "Volg specifieke adviezen voor zwemmen, douchen, slapen en sporten"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ga er niet van uit dat elk verguld product dezelfde dikte of slijtage-eigenschappen heeft."
+        },
+        {
+          "type": "see-also",
+          "text": "Zo verzorgt u vergulde sieraden",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "Checklist voor het kiezen van een metaalkleur",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Controleer vóór u een kleurvariant kiest:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Is het product van massief goud of verguld?",
+                "Wat is het basismetaal?",
+                "Waarop heeft de beschrijving van de goudzuiverheid betrekking?",
+                "Waardoor ontstaat de witte kleur?",
+                "Waardoor ontstaat de rosékleur?",
+                "Wordt de dikte van de vergulding vermeld?",
+                "Zijn het staafje en de achterkant van hetzelfde materiaal?",
+                "Welke metaalkleuren zijn daadwerkelijk beschikbaar voor het geselecteerde item?",
+                "Verandert de productafbeelding wanneer u de kleur selecteert?",
+                "Zijn prijs en beschikbaarheid correct voor die variant?",
+                "Zijn de diamanten labgegroeid en duidelijk vermeld?",
+                "Gaat het om het karaatgewicht per diamant of in totaal?",
+                "Wordt het item per stuk of per paar verkocht?",
+                "Wat zijn de afmetingen in millimeters?",
+                "Wat is het gewicht per oorbel en gecombineerd?",
+                "Welke sluiting wordt gebruikt?",
+                "Zijn er afbeeldingen van de voorzijde, zijkant en gedragen op het oor beschikbaar?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Koopgids voor oorbellen met labgegroeide diamanten",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Wat is beter voor diamanten oorbellen, goud of witgoud?",
-      "answer": "Geen van beide is automatisch beter. Geelgoud voelt warm en klassiek aan, terwijl witte of zilveren tinten schoon en modern aanvoelen. De beste keuze hangt af van de stijl van de drager en het bestaande sieraad."
+      "question": "Welke metaalkleur moet ik kiezen voor oorbellen met labgegroeide diamanten?",
+      "answer": "Kies geelgoud voor warm contrast, witgoud of een afwerking van wit metaal voor een koelere overgang, en roségoud voor contrast met een roze tint. Laat uw bestaande sieraden en de uitstraling die u mooi vindt de keuze bepalen."
     },
     {
-      "question": "Zijn roségouden diamanten oorbellen goed als cadeau?",
-      "answer": "Ja, roségouden diamanten oorbellen kunnen mooie cadeaus zijn omdat ze zacht, romantisch en persoonlijk aanvoelen. Ze zijn vooral sterk voor verjaardagen, jubilea en betekenisvolle geschenken."
+      "question": "Zien labgegroeide diamanten er anders uit in geelgoud, witgoud en roségoud?",
+      "answer": "De diamant blijft hetzelfde, maar het omringende metaal verandert het zichtbare contrast. Geelgoud en roségoud creëren gekleurde randen, terwijl wit metaal nauwer kan aansluiten bij een kleurloze of bijna kleurloze diamant."
     },
     {
-      "question": "Welke metaalkleur is het beste voor alledaagse diamanten oorbellen?",
-      "answer": "De beste metaalkleur voor alledaagse oorbellen is meestal degene die de persoon al het vaakst draagt. Geel goud is klassiek, wit of zilver is modern en rosé goud is zachter en romantischer."
+      "question": "Is witgoud echt goud?",
+      "answer": "Massief witgoud is een goudlegering. Een witgekleurde oorbel kan echter ook van 925 sterling zilver, witgoudvergulding, rhodium of een andere afwerking zijn gemaakt. Controleer de volledige materiaalspecificatie van het product."
     },
     {
-      "question": "Welke metaalkleur is het beste voor oorbellen voor bruiloftsgasten?",
-      "answer": "Geel goud past goed bij warme outfits, champagnejurken en groene jurken. Witte of zilveren tinten passen goed bij zwarte, marineblauwe, grijze en coole outfits. Roségoud past goed bij pastelkleurige en romantische jurken."
+      "question": "Waarvan wordt roségoud gemaakt?",
+      "answer": "Roségoud is een goudlegering met een roze tint, die meestal met koper wordt verkregen. Bij een verguld product vormt de roségouden legering een oppervlaktelaag over een afzonderlijk basismetaal."
     },
     {
-      "question": "Moet ik geelgouden of roségouden oorbellen kiezen?",
-      "answer": "Kies geelgoud voor een veiligere klassieke look. Kies voor roségoud als de persoon van zachte, romantische sieraden houdt of al rozekleurige sieraden draagt."
+      "question": "Zijn vergulde oorbellen van 14 karaat massief goud?",
+      "answer": "Nee. Een vergulde oorbel van 14 karaat heeft een oppervlaktelaag van een 14-karaats goudlegering over een ander basismetaal. De productbeschrijving moet dat basismetaal vermelden."
     },
     {
-      "question": "Zorgen witte of zilverkleurige oorbellen ervoor dat diamanten er helderder uitzien?",
-      "answer": "Witte of zilverkleurige zettingen kunnen ervoor zorgen dat diamanten er heel schoon en helder uitzien, omdat het metaal geen warmte rond de steen toevoegt."
+      "question": "Welke metaalkleur is geschikt voor gevoelige oren?",
+      "answer": "Alleen de kleur kan niet bepalen of iets geschikt is voor gevoelige oren. Controleer de volledige legering, de vergulding, het staafje, de achterkant, de informatie over nikkelafgifte en de individuele gevoeligheid van de drager."
     },
     {
-      "question": "Kan ik gouden en zilveren oorbellen combineren in een oorstukje?",
-      "answer": "Ja, je kunt metalen mengen, vooral in oorstapels, maar het moet er opzettelijk uitzien. Als je het als cadeau koopt, is het veiliger om de gebruikelijke metaalkleur van de persoon te matchen."
+      "question": "Kan ik geelgouden, witgouden en roségouden oorbellen combineren?",
+      "answer": "Ja. Een combinatie van metaalsoorten werkt wanneer één kleur de hoofdrol speelt en de andere sieraden kleiner zijn of elders terugkomen. Houd één duidelijk focuspunt aan."
     },
     {
-      "question": "Welke metaalkleur is het beste voor een zwarte jurk?",
-      "answer": "Geelgouden, wit/zilverkleurige en opvallende diamanten oorbellen passen allemaal bij een zwarte jurk. Geelgoud voegt warmte toe, terwijl de wit/zilvertint een zuiverder contrast creëert."
+      "question": "Hoe kiest u de kleur van oorbellen als cadeau?",
+      "answer": "Kijk naar de metaalkleur die de ontvanger al draagt in oorbellen, kettingen, armbanden en horloges. Kies niet uitsluitend op basis van veronderstelde leeftijd, huidskleur of beroep."
     },
     {
-      "question": "Welke metaalkleur is het beste voor vlinderoorbellen?",
-      "answer": "Roségoud en geelgoud passen meestal prachtig bij vlinderoorbellen omdat ze het zachte, betekenisvolle en vrouwelijke gevoel van het ontwerp ondersteunen."
-    },
-    {
-      "question": "Wat is de veiligste metaalkleur voor een sieradencadeau?",
-      "answer": "De veiligste metaalkleur is de kleur die de ontvanger al draagt. Als u het niet zeker weet, is geelgoud of de klassieke wit/zilvertint meestal veiliger dan roségoud."
+      "question": "Heeft witgoud andere verzorging nodig?",
+      "answer": "Sommige witgouden sieraden hebben een rhodiumlaag, terwijl andere witgekleurde oorbellen van andere materialen zijn gemaakt. Volg de verzorgingsinstructies voor de specifieke legering of afwerking, in plaats van alleen op de kleurnaam af te gaan."
     }
   ],
   "cta": {
-    "heading": "De metaalkleur verandert hoe in het laboratorium gekweekte diamanten oorbellen aanvoelen. Geel goud is warm en klassiek, witte of zilveren tinten zijn strak en modern en rosé goud is zacht en romantisch. De beste keuze hangt af van de garderobe van de drager, bestaande sieraden, outfitkleuren en het doel van het cadeau.",
-    "body": "Begin met IWantJewels lab-grown diamanten oorbellen als je echte diamanten schittering wilt in draagbare halffijne ontwerpen. Kies Cadenza S of Cadenza M voor klassieke alledaagse oorbellen, Amadea voor modern stapelen, Farfalla voor romantische cadeaus, Orsola voor styling voor bruiloftsgasten en Lusso voor opvallende avondsprankeling.",
-    "primaryLabel": "Koop oorbellen van laboratorium-gekweekte diamanten",
+    "heading": "Kies geelgoud voor een zichtbare warme uitstraling, witgoud of een gecontroleerde afwerking in wit metaal voor een koelere uitstraling, of roségoud voor een roze accent.",
+    "body": "Controleer daarna de constructie en specificaties van het product, in plaats van alleen op de kleurnaam af te gaan.",
+    "primaryLabel": "Vergelijk oorbellen met labgegroeide diamant",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Ontdek sieradencadeaus",
-    "secondaryHref": "/products",
-    "tertiaryLabel": "Lees de koopgids voor laboratorium-gekweekte diamanten oorbellen",
-    "tertiaryHref": "#"
+    "secondaryLabel": "Koopgids voor oorbellen met labgegroeide diamanten",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide",
+    "tertiaryLabel": "Wat zijn labgegroeide diamanten?",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
   }
 }

@@ -1,30 +1,30 @@
 {
   "meta": {
-    "title": "Demi Fine vs. feiner Schmuck vs. Modeschmuck",
-    "description": "Vergleichen Sie halbfeinen, feinen und modischen Schmuck. Erfahren Sie den Unterschied in Bezug auf Materialien, Preis, Qualität, Tragbarkeit und Geschenkwert."
+    "title": "Demi-Fine vs. feiner Schmuck vs. Modeschmuck",
+    "description": "Vergleichen Sie Demi-Fine, feinen Schmuck und Modeschmuck: Materialien, Preis, Qualität und Alltagstauglichkeit."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-77.jpg",
-    "title": "Demi-Fine vs. Feinschmuck vs. Modeschmuck:",
-    "subtitle": "Was ist der Unterschied?",
+    "title": "Demi-Fine vs. feiner Schmuck vs. Modeschmuck:",
+    "subtitle": "Wo liegt der Unterschied?",
     "paragraphs": [
-      "Schmuck wird oft als Modeschmuck, halbfeiner Schmuck oder edler Schmuck beschrieben, aber viele Käufer sind sich nicht ganz sicher, was diese Begriffe bedeuten. Der Unterschied liegt in der Regel in den Materialien, dem Preis, der Haltbarkeit, der Designqualität, der Steinart und der Art und Weise, wie der Schmuck getragen werden soll.",
-      "Modeschmuck wird in der Regel für Trends und kurzfristige Stylings hergestellt. Edler Schmuck wird in der Regel aus massiven Edelmetallen und höherwertigen Edelsteinen hergestellt. Halbfeiner Schmuck liegt dazwischen. Es verleiht Käufern ein gehobeneres Gefühl als Modeschmuck, ist jedoch in der Regel zugänglicher und einfacher zu tragen als traditioneller edler Schmuck.",
-      "Diese Ressource hilft Ihnen, alle drei Kategorien in einfacher Sprache zu vergleichen, zu verstehen, wo IWantJewels passt, und den richtigen Schmucktyp für Alltagskleidung, Geschenke, Hochzeiten, Ear Stacks und Anlass-Styling auszuwählen."
+      "Schmuck wird oft als Modeschmuck, Demi-Fine Schmuck oder feiner Schmuck bezeichnet. Doch viele Kundinnen und Kunden wissen nicht genau, was diese Begriffe bedeuten. Der Unterschied liegt meist in Materialien, Preis, Haltbarkeit, Designqualität, Steinart und dem vorgesehenen Trageanlass.",
+      "Modeschmuck wird meist für Trends und kurzfristige Looks gefertigt. Feiner Schmuck besteht in der Regel aus massivem Edelmetall und wertvolleren Edelsteinen. Demi-Fine Schmuck liegt dazwischen. Er wirkt hochwertiger als Modeschmuck, ist aber meist zugänglicher und alltagstauglicher als klassischer feiner Schmuck.",
+      "Dieser Ratgeber hilft Ihnen, alle drei Kategorien einfach zu vergleichen, die Position von IWantJewels zu verstehen und den passenden Schmuck für den Alltag, Geschenke, Hochzeiten, Ear Stacks und besondere Anlässe zu wählen."
     ],
-    "shopLabel": "Kaufen Sie halbfeinen Schmuck",
+    "shopLabel": "Demi-Fine Schmuck entdecken",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Verstehen Sie den Unterschied zwischen Mode-, Halbfein- und Feinschmuck",
-      "Vergleichen Sie Materialien, Preis, Haltbarkeit und Schmuckqualität",
-      "Erfahren Sie, wann halbfeiner Schmuck sinnvoller ist als Modeschmuck",
-      "Erfahren Sie, wann edler Schmuck möglicherweise noch die bessere Wahl ist",
-      "Verstehen Sie, warum im Labor gezüchtete Diamanten gut für halbfeinen Schmuck geeignet sind",
-      "Wählen Sie Schmuck für den Alltag, Geschenke, Hochzeiten, Partys und Ear Stacks",
-      "Finden Sie IWantJewels-Produktempfehlungen basierend auf Ihrem Kaufzweck",
-      "Planen Sie interne Links, Produktblöcke, Bildmodule und CTA-Abschnitte für diese Ressourcenseite"
+      "Den Unterschied zwischen Mode-, Demi-Fine- und feinem Schmuck verstehen",
+      "Materialien, Preis, Haltbarkeit und Schmuckqualität vergleichen",
+      "Erkennen, wann Demi-Fine Schmuck sinnvoller ist als Modeschmuck",
+      "Erkennen, wann feiner Schmuck die bessere Wahl sein kann",
+      "Verstehen, warum im Labor gezüchtete Diamanten gut zu Demi-Fine Schmuck passen",
+      "Schmuck für Alltag, Geschenke, Hochzeiten, Partys und Ear Stacks wählen",
+      "Produktempfehlungen von IWantJewels passend zu Ihrem Kaufanlass finden",
+      "Interne Links, Produktblöcke, Bildmodule und CTA-Bereiche für diese Ratgeberseite planen"
     ],
     "image": "/blog-images/blog-image-34.jpg"
   },
@@ -34,44 +34,44 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als Hauptvergleichstool."
+          "text": "Platzieren Sie diese Tabelle im oberen Seitenbereich als zentrales Vergleichselement."
         },
         {
           "type": "table",
           "headers": [
-            "Schmucktyp",
+            "Schmuckart",
             "Typische Materialien",
-            "Am besten für",
-            "Hauptvorteil",
-            "Haupteinschränkung"
+            "Ideal für",
+            "Größter Vorteil",
+            "Größter Nachteil"
           ],
           "rows": [
             [
               "Modeschmuck",
-              "Unedle Metalle, plattierte Oberflächen, Steinimitationen, Kristalle, Zirkonia",
-              "Trendiges Styling, einzigartige Outfits, preiswerte Accessoires",
+              "Unedle Metalle, Beschichtungen, Imitationssteine, Kristalle, Zirkonia",
+              "Trend-Looks, einzelne Outfits, günstige Accessoires",
               "Sehr zugänglich und trendorientiert",
-              "Verschleißt möglicherweise schneller und fühlt sich weniger hochwertig an"
+              "Kann schneller abnutzen und weniger hochwertig wirken"
             ],
             [
-              "Halbfeiner Schmuck",
-              "Sterlingsilber, vergoldet, Vermeil, im Labor gezüchtete Diamanten, Halbedelsteine",
-              "Alltagsschmuck, Geschenke, Ear Stacks, Styling für besondere Anlässe",
-              "Erhabener als Modeschmuck und zugänglicher als edler Schmuck",
-              "Benötigt die richtige Pflege, insbesondere plattierte Oberflächen"
+              "Demi-Fine Schmuck",
+              "925 Sterlingsilber, Vergoldungen, Vermeil, im Labor gezüchtete Diamanten, Halbedelsteine",
+              "Alltagsschmuck, Geschenke, Ear Stacks, Schmuck für besondere Anlässe",
+              "Hochwertiger als Modeschmuck und zugänglicher als feiner Schmuck",
+              "Benötigt die richtige Pflege, besonders bei beschichteten Oberflächen"
             ],
             [
               "Feiner Schmuck",
               "Massives Gold, Platin, natürliche Diamanten, Edelsteine",
-              "Erbstücke, Luxusgeschenke, traditioneller edler Schmuck",
-              "Höchster materieller Wert und langfristiger Luxusanklang",
-              "Meist teurer und manchmal weniger flexibel für Trend-Styling"
+              "Erbstücke, luxuriöse Geschenke, klassischer feiner Schmuck",
+              "Höchster Materialwert und langfristige Luxuswirkung",
+              "Meist teurer und für trendige Looks manchmal weniger flexibel"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Halbfeiner Schmuck ist der Mittelweg. Es handelt sich nicht um billigen Modeschmuck, aber es handelt sich auch nicht immer um edlen Schmuck aus massivem Gold oder Platin. Es richtet sich an Käufer, die sich Schmuck wünschen, der sich elegant, verschenkbar und tragbar anfühlt, ohne dabei immer die traditionellen Luxuspreise in Kauf nehmen zu müssen."
+          "text": "Demi-Fine Schmuck bildet die goldene Mitte. Er ist kein günstiger Modeschmuck, besteht aber auch nicht immer aus massivem Gold oder Platin. Er richtet sich an Kundinnen und Kunden, die sich polierten, stilvollen und tragbaren Schmuck wünschen, ohne immer in die klassische Luxuspreisklasse einzusteigen."
         }
       ]
     },
@@ -80,75 +80,75 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Modeschmuck wird in der Regel für trendorientiertes Styling hergestellt. Es kann Spaß machen, erschwinglich und einfach zu kaufen sein, insbesondere wenn Sie ein Teil für ein Outfit, eine Saison oder eine Veranstaltung suchen."
+          "text": "Modeschmuck wird meist für trendige Looks gefertigt. Er kann verspielt, erschwinglich und unkompliziert zu kaufen sein – besonders wenn Sie ein Schmuckstück für ein Outfit, eine Saison oder einen Anlass suchen."
         },
         {
           "type": "paragraph",
-          "text": "Bei Modeschmuck werden häufig kostengünstigere Materialien wie unedle Metalle, Steinimitationen, Kristalle, Zirkonia oder helle Beschichtungen verwendet. Manche Stücke können auf Fotos schön aussehen, aber sie halten bei regelmäßigem Tragen möglicherweise nicht immer gut."
+          "text": "Modeschmuck verwendet häufig günstigere Materialien wie unedle Metalle, Imitationssteine, Kristalle, Zirkonia oder leichte Beschichtungen. Manche Stücke sehen auf Fotos wunderschön aus, halten dem regelmäßigen Tragen aber möglicherweise nicht dauerhaft stand."
         },
         {
           "type": "paragraph",
-          "text": "Diese Art von Schmuck ist nützlich, wenn Sie mit Trends experimentieren möchten. Wenn Sie beispielsweise einen großen bunten Ohrring für eine Party oder ein sehr trendspezifisches Stück wünschen, kann Modeschmuck sinnvoll sein."
+          "text": "Diese Schmuckart eignet sich, wenn Sie Trends ausprobieren möchten. Suchen Sie zum Beispiel einen großen, farbenfrohen Ohrring für eine Party oder ein besonders trendbezogenes Schmuckstück, kann Modeschmuck sinnvoll sein."
         },
         {
           "type": "paragraph",
-          "text": "Die Einschränkung besteht darin, dass sich Modeschmuck möglicherweise nicht so hochwertig, bedeutungsvoll oder langlebig anfühlt. Es ist möglicherweise auch nicht die beste Wahl für wichtige Geschenke oder Alltagsstücke, die Sie wiederholt tragen möchten."
+          "text": "Der Nachteil: Modeschmuck wirkt möglicherweise weniger hochwertig, bedeutungsvoll oder langlebig. Für wichtige Geschenke oder Schmuckstücke, die Sie regelmäßig tragen möchten, ist er daher nicht immer die beste Wahl."
         },
         {
           "type": "see-also",
-          "text": "Im Labor gezüchtete Diamanten vs. Zirkonia",
+          "text": "Im Labor gezüchtete Diamanten oder Zirkonia",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia"
         }
       ]
     },
     {
-      "heading": "Was ist halbfeiner Schmuck?",
+      "heading": "Was ist Demi-Fine Schmuck?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Halbfeiner Schmuck liegt zwischen Modeschmuck und edlem Schmuck."
+          "text": "Demi-Fine Schmuck liegt zwischen Modeschmuck und feinem Schmuck."
         },
         {
           "type": "paragraph",
-          "text": "Er besteht in der Regel aus besseren Materialien als Modeschmuck, wie zum Beispiel Sterlingsilber, Vergoldung, Vermeil, im Labor gezüchtete Diamanten oder Halbedelsteine. Es soll sich hochwertiger und langlebiger anfühlen als preisgünstiger Modeschmuck, aber zugänglicher als traditioneller edler Schmuck."
+          "text": "Er wird meist aus hochwertigeren Materialien als Modeschmuck gefertigt, etwa aus 925 Sterlingsilber, vergoldetem Metall, Vermeil, im Labor gezüchteten Diamanten oder Halbedelsteinen. Er wirkt hochwertiger und langlebiger als günstiger Modeschmuck, bleibt aber zugänglicher als klassischer feiner Schmuck."
         },
         {
           "type": "paragraph",
-          "text": "Bei IWantJewels wird halbfeiner Schmuck aus im Labor gezüchteten Diamanten, 925er Sterlingsilber und 14-karätiger Vergoldung hergestellt. Dies verleiht dem Schmuck echtes Diamantfunkeln, eine hochwertige Silberbasis und ein warmes Goldfinish, während die Stücke für alltägliche Stylings, Geschenke und Anlässe tragbar bleiben."
+          "text": "Bei IWantJewels basiert Demi-Fine Schmuck auf im Labor gezüchteten Diamanten, 925 Sterlingsilber und einer Vergoldung mit 14 Karat (Goldlegierung). So erhalten die Schmuckstücke echtes Diamantfunkeln, eine hochwertige Silberbasis und einen warmen Goldton – für den Alltag, Geschenke und besondere Anlässe."
         },
         {
           "type": "paragraph",
-          "text": "Halbfeiner Schmuck eignet sich besonders für Ohrringe, da Ohrringe oft für den Alltag gekauft werden. Vielleicht möchten Sie Ohrstecker für die Arbeit, Huggies für Ear-Stacks, Ohrhänger für Hochzeiten und auffälligere Stücke für Partys. Halbfeiner Schmuck erleichtert den Aufbau einer solchen Sammlung."
+          "text": "Demi-Fine Schmuck eignet sich besonders für Ohrringe, da diese häufig im Alltag getragen werden. Sie wünschen sich vielleicht Ohrstecker fürs Büro, kleine Creolen (Huggies) für Ear Stacks, Ohrhänger für Hochzeiten und auffälligere Stücke für Partys. Mit Demi-Fine Schmuck lässt sich eine solche Kollektion leichter zusammenstellen."
         },
         {
           "type": "see-also",
-          "text": "Was ist halbfeiner Schmuck?",
+          "text": "Was ist Demi-Fine Schmuck?",
           "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
         }
       ]
     },
     {
-      "heading": "Was ist edler Schmuck?",
+      "heading": "Was ist feiner Schmuck?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Edler Schmuck wird in der Regel aus massiven Edelmetallen wie massivem Gold, Platin oder manchmal auch hochwertigen Legierungen hergestellt. Dabei handelt es sich häufig um natürliche Diamanten, Edelsteine ​​oder höherwertige Materialien."
+          "text": "Feiner Schmuck wird meist aus massiven Edelmetallen wie massivem Gold, Platin oder manchmal hochwertigen Legierungen gefertigt. Häufig kommen natürliche Diamanten, Edelsteine oder andere wertvolle Materialien zum Einsatz."
         },
         {
           "type": "paragraph",
-          "text": "Edler Schmuck wird häufig für Verlobungsringe, Erbstückschmuck, Luxusgeschenke, Meilensteinkäufe und Stücke ausgewählt, die Generationen überdauern sollen. Es vermittelt ein eher traditionelles Luxusgefühl und hat normalerweise einen höheren Preis."
+          "text": "Feiner Schmuck wird häufig für Verlobungsringe, Erbstücke, luxuriöse Geschenke, besondere Meilensteine und Schmuckstücke gewählt, die über Generationen Bestand haben sollen. Er vermittelt ein klassisches Luxusgefühl und liegt meist in einer höheren Preisklasse."
         },
         {
           "type": "paragraph",
-          "text": "Edler Schmuck kann schön und bedeutungsvoll sein, aber er ist nicht immer die praktischste Option bei jedem Kauf. Wenn jemand mehrere alltägliche Ohrringe, trendige Designs, Geschenkstücke oder Ear-Stack-Optionen möchte, kann edler Schmuck sehr schnell teuer werden."
+          "text": "Feiner Schmuck kann wunderschön und bedeutungsvoll sein, ist aber nicht für jeden Kauf die praktischste Option. Wer mehrere Alltagsohrringe, trendige Designs, gut verschenkbare Schmuckstücke oder Optionen für einen Ear Stack sucht, gibt für feinen Schmuck möglicherweise sehr schnell viel Geld aus."
         },
         {
           "type": "paragraph",
-          "text": "Hier kann halbfeiner Schmuck nützlich sein. Es verleiht Käufern ein gehobeneres Aussehen und Gefühl als Modeschmuck, ohne dass jedes Stück eine große Investition in edlen Schmuck darstellt."
+          "text": "Hier kann Demi-Fine Schmuck die passende Lösung sein. Er bietet Ihnen eine hochwertigere Optik und Haptik als Modeschmuck, ohne dass jedes Stück eine große Investition in feinen Schmuck erfordert."
         },
         {
           "type": "see-also",
-          "text": "Vergoldeter oder massiver Goldschmuck",
+          "text": "Vergoldeter Schmuck vs. Schmuck aus massivem Gold",
           "href": "#"
         }
       ]
@@ -158,7 +158,7 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Die Materialien sind einer der größten Unterschiede zwischen Mode-, Halbfein- und Feinschmuck."
+          "text": "Die Materialien gehören zu den größten Unterschieden zwischen Mode-, Demi-Fine- und feinem Schmuck."
         },
         {
           "type": "grid-layout",
@@ -168,41 +168,41 @@
             {
               "type": "table",
               "headers": [
-                "Funktion",
+                "Eigenschaft",
                 "Modeschmuck",
-                "Halbfeiner Schmuck",
+                "Demi-Fine Schmuck",
                 "Feiner Schmuck"
               ],
               "rows": [
                 [
-                  "Unedles Metall",
-                  "Oftmals unedles Metall oder eine kostengünstige Legierung",
-                  "Oftmals Sterlingsilber, Vermeil oder plattiertes Edelmetall",
+                  "Grundmetall",
+                  "Häufig unedles Metall oder günstige Legierung",
+                  "Häufig 925 Sterlingsilber, Vermeil oder beschichtetes Edelmetall",
                   "Massives Gold, Platin oder hochwertiges Edelmetall"
                 ],
                 [
-                  "Steinart",
-                  "Imitation von Steinen, Kristallen, Zirkonia",
-                  "Im Labor gezüchtete Diamanten, Halbedelsteine, Qualitätssteine",
-                  "Natürliche Diamanten, Edelsteine, hochwertige Steine"
+                  "Die Steinart",
+                  "Imitationssteine, Kristalle, Zirkonia",
+                  "Im Labor gezüchtete Diamanten, Halbedelsteine, hochwertige Steine",
+                  "Natürliche Diamanten, Edelsteine, wertvolle Steine"
                 ],
                 [
-                  "Beenden",
-                  "Oft plattiert oder beschichtet",
-                  "Je nach Marke besser plattiert oder vergoldet",
-                  "Massives Edelmetall-Finish"
+                  "Oberfläche",
+                  "Häufig beschichtet oder überzogen",
+                  "Je nach Marke bessere Beschichtung oder Vermeil",
+                  "Oberfläche aus massivem Edelmetall"
                 ],
                 [
-                  "Tragbarkeit",
-                  "Gut für gelegentliches Styling",
-                  "Gut für regelmäßiges Tragen mit Vorsicht",
-                  "Stark für langfristiges Tragen"
+                  "Tragekomfort",
+                  "Gut für gelegentliche Looks",
+                  "Bei richtiger Pflege gut für regelmäßiges Tragen",
+                  "Für langfristiges Tragen geeignet"
                 ],
                 [
-                  "Pflege nötig",
+                  "Pflegeaufwand",
                   "Kann empfindlich auf Wasser und Chemikalien reagieren",
-                  "Benötigt die richtige Pflege, insbesondere das Beschichten",
-                  "Benötigt noch Pflege, aber massive Metalle sind haltbarer"
+                  "Benötigt die richtige Pflege, besonders die Beschichtung",
+                  "Benötigt weiterhin Pflege, massive Metalle sind jedoch langlebiger"
                 ]
               ]
             }
@@ -210,11 +210,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Bei IWantJewels sind im Labor gezüchtete Diamanten, 925er Sterlingsilber und 14-karätige Vergoldung die wichtigsten Materialien. Diese Kombination trägt dazu bei, den Schmuck von einfachen Modestücken abzuheben und ihn gleichzeitig zugänglicher zu halten als Schmuck aus massivem Gold mit Diamanten."
+          "text": "Bei IWantJewels stehen im Labor gezüchtete Diamanten, 925 Sterlingsilber und eine Vergoldung mit 14 Karat (Goldlegierung) im Mittelpunkt. Diese Kombination hebt den Schmuck von einfachen Modestücken ab und macht ihn zugleich zugänglicher als Diamantschmuck aus massivem Gold."
         },
         {
           "type": "see-also",
-          "text": "Schmuck aus 925er Sterlingsilber",
+          "text": "Schmuck aus 925 Sterlingsilber",
           "href": "#"
         }
       ]
@@ -224,122 +224,122 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Der Preis ist ein weiterer großer Unterschied zwischen diesen Schmuckkategorien."
+          "text": "Der Preis ist ein weiterer wesentlicher Unterschied zwischen diesen Schmuckkategorien."
         },
         {
           "type": "paragraph",
-          "text": "Modeschmuck ist in der Regel die günstigste Option. Edler Schmuck ist in der Regel die teuerste Option. Halbfeiner Schmuck liegt in der Mitte und bietet ein hochwertigeres Gefühl als Modeschmuck, ohne dabei immer die Preise für edlen Schmuck zu erreichen."
+          "text": "Modeschmuck ist meist die günstigste Option. Feiner Schmuck ist in der Regel am teuersten. Demi-Fine Schmuck liegt dazwischen und bietet ein hochwertigeres Gefühl als Modeschmuck, ohne immer die Preise von feinem Schmuck zu erreichen."
         },
         {
           "type": "table",
           "headers": [
-            "Käuferpriorität",
+            "Priorität beim Kauf",
             "Beste Kategorie",
             "Warum"
           ],
           "rows": [
             [
-              "Niedrigstmöglicher Preis",
+              "Der niedrigstmögliche Preis",
               "Modeschmuck",
-              "Am besten für temporäres Styling geeignet"
+              "Ideal für vorübergehende Looks"
             ],
             [
-              "Bessere Materialien ohne teure Schmuckpreise",
-              "Halbfeiner Schmuck",
-              "Starke Balance zwischen Qualität und Zugänglichkeit"
+              "Bessere Materialien ohne den Preis von feinem Schmuck",
+              "Demi-Fine Schmuck",
+              "Ausgewogenes Verhältnis von Qualität und Zugänglichkeit"
             ],
             [
-              "Langfristiger Erbwert",
+              "Langfristiger Wert als Erbstück",
               "Feiner Schmuck",
-              "Massive Edelmetalle und traditionelle Luxusmaterialien"
+              "Massive Edelmetalle und klassische Luxusmaterialien"
             ],
             [
-              "Alltagsdiamantenfunkeln",
-              "Halbfeiner Schmuck",
+              "Diamantfunkeln für jeden Tag",
+              "Demi-Fine Schmuck",
               "Tragbarer und zugänglicher"
             ],
             [
-              "Trendexperimente",
-              "Mode- oder halbfeiner Schmuck",
+              "Trends ausprobieren",
+              "Mode- oder Demi-Fine Schmuck",
               "Hängt von Qualität und Budget ab"
             ],
             [
-              "Sinnvolles Geschenk",
-              "Halbfeiner oder feiner Schmuck",
-              "Kommt auf den Anlass und die Beziehung an"
+              "Bedeutungsvolles Geschenk",
+              "Demi-Fine oder feiner Schmuck",
+              "Hängt vom Anlass und der Beziehung ab"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Ein guter Schmuckkauf ist nicht immer der teuerste. Es ist das Stück, das dem Zweck entspricht. Wenn der Käufer etwas Tragbares und Zugängliches wünscht, ist halbfeiner Schmuck für den täglichen Gebrauch möglicherweise günstiger als edler Schmuck. Für den Kauf eines Erbstücks ist edler Schmuck möglicherweise besser geeignet."
+          "text": "Ein guter Schmuckkauf ist nicht immer der teuerste. Entscheidend ist, ob das Stück zum Zweck passt. Für Alltagsohrringe kann Demi-Fine Schmuck einen besseren Wert bieten als feiner Schmuck, wenn Sie etwas Tragbares und Zugängliches suchen. Für ein Erbstück kann feiner Schmuck die bessere Wahl sein."
         },
         {
           "type": "see-also",
-          "text": "Preisführer für im Labor gezüchtete Diamantohrringe",
+          "text": "Preisratgeber für Ohrringe mit im Labor gezüchteten Diamanten",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Vergleich der Alltagskleidung",
+      "heading": "Alltagstauglichkeit im Vergleich",
       "content": [
         {
           "type": "paragraph",
-          "text": "Beim täglichen Tragen sind Komfort und Wiederholbarkeit wichtiger als Drama."
+          "text": "Beim täglichen Tragen zählen Komfort und Vielseitigkeit mehr als ein dramatischer Auftritt."
         },
         {
           "type": "paragraph",
-          "text": "Modeschmuck kann für ein lässiges Styling geeignet sein, aber er hält bei häufigem Tragen möglicherweise nicht immer gut. Edler Schmuck kann jeden Tag wunderbar aussehen, für Käufer, die mehrere Stile wünschen, ist er jedoch möglicherweise zu teuer. Halbfeiner Schmuck sitzt oft in der praktischsten Position für Alltagsstücke."
+          "text": "Modeschmuck eignet sich für lässige Looks, hält dem häufigen Tragen aber möglicherweise nicht immer gut stand. Feiner Schmuck kann im Alltag wunderbar funktionieren, ist für Kundinnen und Kunden mit mehreren Styles jedoch eventuell zu teuer. Demi-Fine Schmuck bietet für Alltagsschmuck oft die praktischste Lösung."
         },
         {
           "type": "table",
           "headers": [
-            "Alltagsbedarf",
+            "Bedarf im Alltag",
             "Modeschmuck",
-            "Halbfeiner Schmuck",
+            "Demi-Fine Schmuck",
             "Feiner Schmuck"
           ],
           "rows": [
             [
-              "Tägliche Stollen",
-              "Gut für den kostengünstigen Einsatz",
-              "Starke Wahl",
-              "Stark, aber teurer"
+              "Ohrstecker für jeden Tag",
+              "Gut für günstige Nutzung",
+              "Sehr gute Wahl",
+              "Sehr gut, aber teurer"
             ],
             [
-              "Huggies und Ear Stacks",
+              "Kleine Creolen (Huggies) und Ear Stacks",
               "Gut für Trends",
-              "Sehr starke Wahl",
-              "Schön, aber teuer im Bau"
+              "Sehr gute Wahl",
+              "Wunderschön, aber teuer aufzubauen"
             ],
             [
-              "Schmuck für Arbeitskleidung",
+              "Schmuck fürs Büro",
               "Kann funktionieren",
-              "Starke Wahl",
-              "Starke Wahl"
+              "Gute Wahl",
+              "Gute Wahl"
             ],
             [
-              "Mehrere Stile",
-              "Leicht zu kaufen, aber von geringerer Qualität",
-              "Starkes Gleichgewicht",
+              "Mehrere Stilrichtungen",
+              "Einfach zu kaufen, aber geringere Qualität",
+              "Gutes Gleichgewicht",
               "Teurer"
             ],
             [
-              "Alltagsglanz",
-              "Es können künstliche Steine verwendet werden",
-              "Im Labor gezüchtete Diamanten können gut funktionieren",
-              "Natürliche Diamanten können gut funktionieren"
+              "Alltagstauglicher Glanz",
+              "Kann Imitationssteine enthalten",
+              "Im Labor gezüchtete Diamanten können eine gute Wahl sein",
+              "Natürliche Diamanten können eine gute Wahl sein"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Für IWantJewels gehören zu den Halbfein-Ohrringen für den Alltag Cadenza S im Labor gezüchtete Diamant-Ohrstecker, Cadenza M-Diamant-Ohrstecker, Amadea Huggie-Ohrringe und Laluce minimalistische Diamant-Ohrringe."
+          "text": "Bei I Want Jewels gehören Cadenza S Ohrstecker mit im Labor gezüchteten Diamanten, Cadenza M Diamant-Ohrstecker, Amadea kleine Creolen (Huggies) und minimalistische Laluce Diamant-Ohrstecker zu den alltagstauglichen Demi-Fine Optionen."
         },
         {
           "type": "see-also",
-          "text": "Können Sie jeden Tag im Labor gezüchtete Diamantohrringe tragen?",
+          "text": "Können Sie Ohrschmuck mit im Labor gezüchteten Diamanten jeden Tag tragen?",
           "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
         }
       ]
@@ -349,117 +349,117 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Beim Verschenken sollte sich Schmuck durchdacht und tragbar anfühlen."
+          "text": "Schmuck zum Verschenken sollte durchdacht und gut tragbar sein."
         },
         {
           "type": "paragraph",
-          "text": "Modeschmuck eignet sich als Geschenk für den Alltag, wirkt aber für Geburtstage, Jubiläen, Brautjungfern oder romantische Anlässe möglicherweise nicht besonders genug. Edler Schmuck kann etwas ganz Besonderes sein, er kann sich aber auch teuer oder zu formell anfühlen. Halbfeiner Schmuck bietet oft die beste Balance."
+          "text": "Modeschmuck eignet sich für lässige Geschenke, wirkt aber für Geburtstage, Jahrestage, Brautjungfern oder romantische Anlässe möglicherweise nicht besonders genug. Edler Schmuck kann sehr besonders wirken, aber auch teuer oder zu formell sein. Demi-Fine Schmuck bietet oft das beste Gleichgewicht."
         },
         {
           "type": "table",
           "headers": [
-            "Geschenktyp",
+            "Geschenkart",
             "Beste Schmuckkategorie",
             "Warum"
           ],
           "rows": [
             [
-              "Kleines lässiges Geschenk",
-              "Modisch oder mittelmäßig",
-              "Abhängig vom Budget und Anlass"
+              "Kleines, lässiges Geschenk",
+              "Mode- oder Demi-Fine Schmuck",
+              "Hängt von Budget und Anlass ab"
             ],
             [
               "Geburtstagsgeschenk",
-              "Halbfeiner Schmuck",
-              "Fühlt sich nachdenklich, aber tragbar an"
+              "Demi-Fine Schmuck",
+              "Wirkt durchdacht und ist gut tragbar"
             ],
             [
-              "Jubiläumsgeschenk",
-              "Halbfeiner oder feiner Schmuck",
+              "Jahrestagsgeschenk",
+              "Demi-Fine oder edler Schmuck",
               "Hängt davon ab, wie formell das Geschenk wirken soll"
             ],
             [
               "Brautjungferngeschenk",
-              "Halbfeiner Schmuck",
-              "Schön, tragbar und einfacher zu wiederholen"
+              "Demi-Fine Schmuck",
+              "Schön, tragbar und leichter erneut zu verschenken"
             ],
             [
               "Romantisches Geschenk",
-              "Halbfeiner oder feiner Schmuck",
-              "Hängt von der Beziehung und dem Budget ab"
+              "Demi-Fine oder edler Schmuck",
+              "Hängt von Beziehung und Budget ab"
             ],
             [
-              "Statement-Geschenk",
-              "Halbfeiner Schmuck",
-              "Ermöglicht stärkeres Design ohne teure Schmuckpreise"
+              "Auffälliges Geschenk",
+              "Demi-Fine Schmuck",
+              "Ermöglicht ein ausdrucksstärkeres Design ohne den Preis von edlem Schmuck"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Für IWantJewels eignen sich Cadenza M Diamant-Ohrstecker gut als sicheres klassisches Geschenk. Farfalla-Schmetterlingsohrringe und Alidi Farfalla-Schmetterlingsohrringe sind stärker, wenn das Geschenk eine Bedeutung braucht. Orsola-Ohrringe eignen sich besser für romantische oder anlassbezogene Geschenke. Amadea Huggie-Ohrringe sind ideal für jemanden, der modernen Schmuck mag."
+          "text": "Bei I Want Jewels eignen sich Cadenza M Diamant-Ohrstecker als sichere, klassische Geschenke. Farfalla Schmetterlings-Ohrringe und Alidi Farfalla Schmetterlings-Ohrringe sind passender, wenn das Geschenk eine Bedeutung vermitteln soll. Orsola Ohrhänger eignen sich besser für romantische oder besondere Anlässe. Amadea kleine Creolen (Huggies) sind ideal für Menschen, die modernen Schmuck mögen."
         },
         {
           "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe zum Verschenken",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
+          "text": "Ohrringe mit im Labor gezüchteten Diamanten als Geschenk",
+          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
         }
       ]
     },
     {
-      "heading": "Vergleich von Hochzeiten und Anlässen",
+      "heading": "Vergleich für Hochzeiten und besondere Anlässe",
       "content": [
         {
           "type": "paragraph",
-          "text": "Für Hochzeiten und Anlässe hängt die beste Schmuckkategorie von der Rolle und dem Outfit ab."
+          "text": "Für Hochzeiten und besondere Anlässe hängt die beste Schmuckkategorie von Rolle und Outfit ab."
         },
         {
           "type": "paragraph",
-          "text": "Modeschmuck eignet sich für einmalige Party-Looks, wirkt aber manchmal weniger raffiniert. Edler Schmuck eignet sich wunderbar für formelle Anlässe, kann jedoch teuer sein, wenn der Käufer Stücke für mehrere Anlässe wünscht. Halbfeiner Schmuck verleiht einen polierten Look, der immer noch getragen werden kann."
+          "text": "Modeschmuck eignet sich für einmalige Party-Looks, kann aber manchmal weniger edel wirken. Edler Schmuck passt wunderbar zu formellen Anlässen, kann jedoch teuer werden, wenn mehrere Schmuckstücke für besondere Gelegenheiten gewünscht sind. Demi-Fine Schmuck sorgt für einen gepflegten Look und kann dennoch erneut getragen werden."
         },
         {
           "type": "table",
           "headers": [
-            "Anlassbedarf",
+            "Anlass",
             "Beste Kategorie",
-            "Beste IWJ-Regie"
+            "Beste IWJ-Empfehlung"
           ],
           "rows": [
             [
-              "Hochzeitsgast-Outfit",
-              "Halbfeiner Schmuck",
+              "Outfit als Hochzeitsgast",
+              "Demi-Fine Schmuck",
               "Orsola, Cadenza M, Farfalla"
             ],
             [
-              "Brautjungfernschmuck",
-              "Halbfeiner Schmuck",
+              "Schmuck für Brautjungfern",
+              "Demi-Fine Schmuck",
               "Cadenza S, Cadenza M, Concetta Short"
             ],
             [
               "Abendessen",
-              "Halbfeiner oder feiner Schmuck",
+              "Demi-Fine oder edler Schmuck",
               "Orsola, Concetta Long"
             ],
             [
               "Party-Look",
-              "Halbfein- oder Modeschmuck",
+              "Demi-Fine oder Modeschmuck",
               "Lusso, Pave Hoops"
             ],
             [
-              "Schwarzes Krawatten-Outfit",
-              "Halbfeiner oder feiner Schmuck",
+              "Black-Tie-Outfit",
+              "Demi-Fine oder edler Schmuck",
               "Concetta Long, Lusso"
             ],
             [
-              "Romantische Date-Nacht",
-              "Halbfeiner Schmuck",
+              "Romantischer Abend zu zweit",
+              "Demi-Fine Schmuck",
               "Orsola, Farfalla, Alidi Farfalla"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Halbfeine, im Labor gezüchtete Diamantohrringe eignen sich gut für Anlässe, da sie für Glanz und Glanz sorgen, ohne dass sie sich wie Schmuck anfühlen, den man nur einmal trägt."
+          "text": "Demi-Fine Ohrringe mit im Labor gezüchteten Diamanten eignen sich gut für besondere Anlässe, da sie Glanz und einen gepflegten Look verleihen, ohne wie Schmuck zu wirken, den Sie nur einmal tragen."
         },
         {
           "type": "see-also",
@@ -473,11 +473,11 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Ear Stacks sind einer der stärksten Anwendungsfälle für halbfeinen Schmuck."
+          "text": "Ear Stacks gehören zu den überzeugendsten Einsatzmöglichkeiten für Demi-Fine Schmuck."
         },
         {
           "type": "paragraph",
-          "text": "Der Aufbau eines Ear Stacks mit edlem Schmuck kann schnell teuer werden. Einen Ear-Stack mit Modeschmuck zu bauen, kann erschwinglich sein, aber die Stücke fühlen sich möglicherweise nicht so hochwertig an. Halbfeiner Schmuck bietet einen starken Mittelweg, da Käufer Ohrstecker, Huggies, Creolen und minimalistische Ohrringe eleganter kombinieren können."
+          "text": "Ein Ear Stack aus edlem Schmuck kann schnell teuer werden. Ein Ear Stack aus Modeschmuck ist erschwinglich, wirkt aber möglicherweise weniger hochwertig. Demi-Fine Schmuck bietet eine überzeugende Mitte, da Sie Ohrstecker, kleine Creolen (Huggies), Creolen und minimalistische Ohrringe auf elegantere Weise kombinieren können."
         },
         {
           "type": "grid-layout",
@@ -487,35 +487,35 @@
             {
               "type": "table",
               "headers": [
-                "Ear-Stack-Bedarf",
+                "Anforderung an den Ear Stack",
                 "Beste Kategorie",
                 "Warum"
               ],
               "rows": [
                 [
-                  "Erster Ohrenstapel",
-                  "Halbfeiner Schmuck",
-                  "Bessere Qualität und trotzdem zugänglich"
+                  "Erster Ear Stack",
+                  "Demi-Fine Schmuck",
+                  "Bessere Qualität und dennoch erschwinglich"
                 ],
                 [
-                  "Trendstapel",
-                  "Modisch oder mittelmäßig",
-                  "Hängt davon ab, wie lange Sie es tragen möchten"
+                  "Trend-Ear-Stack",
+                  "Mode- oder Demi-Fine Schmuck",
+                  "Hängt davon ab, wie lange Sie ihn tragen möchten"
                 ],
                 [
-                  "Diamant-Ohrstecker",
-                  "Halbfeiner Schmuck",
-                  "Im Labor gezüchtete Diamanten machen es leichter zugänglich"
+                  "Diamant-Ear-Stack",
+                  "Demi-Fine Schmuck",
+                  "Im Labor gezüchtete Diamanten machen ihn erschwinglicher"
                 ],
                 [
-                  "Luxuriöser Ear-Stack",
+                  "Luxuriöser Ear Stack",
                   "Feiner Schmuck",
-                  "Am besten für Massivgold- oder Erbstück-Styling geeignet"
+                  "Am besten für Massivgold oder einen zeitlosen Stil"
                 ],
                 [
-                  "Verschenkbarer Ear Stack",
-                  "Halbfeiner Schmuck",
-                  "Einfache, durchdachte Kombinationen"
+                  "Ear Stack zum Verschenken",
+                  "Demi-Fine Schmuck",
+                  "Ermöglicht einfach durchdachte Kombinationen"
                 ]
               ]
             }
@@ -523,102 +523,102 @@
         },
         {
           "type": "paragraph",
-          "text": "Für IWantJewels könnte ein einfacher Ear-Stack aus im Labor gezüchteten Cadenza S-Diamantohrsteckern mit Amadea Huggie-Ohrringen bestehen. Zu einem weicheren Stapel könnten minimalistische Diamantohrringe von Laluce hinzugefügt werden. Ein sichtbarerer Stack könnte Cadenza M als Hauptbolzen verwenden."
+          "text": "Bei I Want Jewels kann ein schlichter Ear Stack Cadenza S Ohrstecker mit im Labor gezüchteten Diamanten und Amadea kleinen Creolen (Huggies) kombinieren. Für einen weicheren Stack können Sie minimalistische Laluce Diamant-Ohrstecker ergänzen. Ein auffälligerer Stack kann Cadenza M als Haupt-Ohrstecker verwenden."
         },
         {
           "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+          "text": "Ohrringe mit im Labor gezüchteten Diamanten für Ear Stacks",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Wann sollten Sie sich für Modeschmuck entscheiden?",
+      "heading": "Wann sollten Sie Modeschmuck wählen?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Wählen Sie Modeschmuck, wenn Sie ein kostengünstiges Accessoire für einen kurzfristigen Trend, ein einmaliges Outfit oder einen experimentellen Stil suchen, den Sie vielleicht nicht oft tragen."
+          "text": "Wählen Sie Modeschmuck, wenn Sie ein günstiges Accessoire für einen kurzfristigen Trend, ein einmaliges Outfit oder einen experimentellen Stil suchen, den Sie wahrscheinlich nicht oft tragen werden."
         },
         {
           "type": "paragraph",
-          "text": "Modeschmuck kann für kräftige Farben, saisonale Trends, Kostüm-Looks oder Stücke, die Sie nicht lange behalten möchten, nützlich sein. Es ist nicht immer eine schlechte Wahl. Es dient einfach einem anderen Zweck."
+          "text": "Modeschmuck kann für kräftige Farben, saisonale Trends, Kostüm-Looks oder Schmuckstücke nützlich sein, die Sie nicht lange behalten möchten. Er ist nicht grundsätzlich eine schlechte Wahl, sondern erfüllt einen anderen Zweck."
         },
         {
           "type": "paragraph",
-          "text": "Die Einschränkung besteht darin, dass sich Modeschmuck möglicherweise nicht so hochwertig, langlebig oder bedeutungsvoll anfühlt. Es ist möglicherweise auch nicht die beste Wahl für wichtige Geschenke oder Alltagsstücke, die Sie wiederholt tragen möchten."
+          "text": "Die Einschränkung besteht darin, dass Modeschmuck möglicherweise weniger hochwertig, langlebig oder bedeutungsvoll wirkt. Für wichtige Geschenke oder Schmuckstücke, die Sie im Alltag immer wieder tragen möchten, ist er möglicherweise ebenfalls nicht die beste Wahl."
         }
       ]
     },
     {
-      "heading": "Wann sollten Sie sich für halbfeinen Schmuck entscheiden?",
+      "heading": "Wann sollten Sie Demi-Fine Schmuck wählen?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Wählen Sie halbfeinen Schmuck, wenn Sie etwas Erhabeneres als Modeschmuck, aber zugänglicher und tragbarer als traditionellen edlen Schmuck wünschen."
+          "text": "Wählen Sie Demi-Fine Schmuck, wenn Sie etwas Besonderes suchen, das hochwertiger als Modeschmuck, aber zugänglicher und tragbarer als traditioneller edler Schmuck ist."
         },
         {
           "type": "paragraph",
-          "text": "Halbfeiner Schmuck ist besonders stark für:"
+          "text": "Demi-Fine Schmuck eignet sich besonders für:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Alltägliche Ohrringe",
-            "Im Labor gezüchtete Diamant-Ohrstecker",
-            "Huggies und Ear Stacks",
+            "Alltags-Ohrringe",
+            "Ohrstecker mit im Labor gezüchteten Diamanten",
+            "Kleine Creolen (Huggies) und Ear Stacks",
             "Geburtstagsgeschenke",
-            "Brautjungferngeschenke",
+            "Geschenke für Brautjungfern",
             "Schmuck für Hochzeitsgäste",
-            "Jubiläumsgeschenke",
+            "Geschenke zum Jahrestag",
             "Party-Ohrringe",
             "Moderne Schmuckkollektionen"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Für IWantJewels ist halbfeiner Schmuck die Hauptposition der Marke. Die Stücke sind so gestaltet, dass sie das Funkeln von im Labor gezüchteten Diamanten, bessere Materialien und ein modernes Design in Schmuckstücken bieten, die tatsächlich getragen werden können."
+          "text": "Bei I Want Jewels steht Demi-Fine Schmuck im Mittelpunkt. Die Schmuckstücke verbinden den Glanz im Labor gezüchteter Diamanten, hochwertigere Materialien und modernes Design mit einer Tragbarkeit für den Alltag."
         }
       ]
     },
     {
-      "heading": "Wann sollten Sie sich für edlen Schmuck entscheiden?",
+      "heading": "Wann sollten Sie edlen Schmuck wählen?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Wählen Sie edlen Schmuck, wenn Sie solide Edelmetalle, traditionellen Luxus, den Wert eines Erbstücks oder ein wichtiges Meilensteinstück wünschen."
+          "text": "Wählen Sie edlen Schmuck, wenn Sie massive Edelmetalle, traditionellen Luxus, einen bleibenden Wert oder ein Schmuckstück für einen wichtigen Meilenstein suchen."
         },
         {
           "type": "paragraph",
-          "text": "Edler Schmuck eignet sich oft besser für Verlobungsringe, Erbstückketten, Anlagestücke aus massivem Gold, Geschenke zu runden Jahrestagen oder Schmuck, der über Generationen hinweg Bestand haben soll."
+          "text": "Edler Schmuck eignet sich oft besser für Verlobungsringe, zeitlose Halsketten, Investitionsstücke aus Massivgold, Geschenke zum runden Jahrestag oder Schmuck, der über Generationen Bestand haben soll."
         },
         {
           "type": "paragraph",
-          "text": "Es ist nicht immer bei jedem Einkauf notwendig. Für viele Käufer ist es nicht notwendig, dass jedes Paar Ohrringe aus massivem Gold oder auf Erbstück-Niveau besteht. Für alltägliches Styling, Geschenke und trendige Stücke kann halbfeiner Schmuck die praktischere Wahl sein."
+          "text": "Das ist nicht für jeden Kauf notwendig. Viele Menschen brauchen nicht jedes Paar Ohrringe aus Massivgold oder auf Erbstück-Niveau. Für alltägliche Looks, Geschenke und trendbewusste Schmuckstücke kann Demi-Fine Schmuck die praktischere Wahl sein."
         }
       ]
     },
     {
-      "heading": "Produktpfade nach Käuferbedarf",
+      "heading": "Produktempfehlungen nach Bedarf",
       "content": [
         {
           "type": "paragraph",
-          "text": "Nutzen Sie diesen Abschnitt als praktischen Einkaufsführer."
+          "text": "Nutzen Sie diesen Abschnitt als praktischen Einkaufsratgeber."
         },
         {
           "type": "subheading",
-          "text": "Für Erstkäufer von Schmuck"
+          "text": "Für Schmuck-Einsteiger"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie halbfeine Nieten. Die im Labor gezüchteten Diamant-Ohrstecker von Cadenza S sind ein starkes erstes Stück, weil sie einfach, tragbar und nicht zu auffällig sind."
+          "text": "Wählen Sie Demi-Fine Ohrstecker. Cadenza S Ohrstecker mit im Labor gezüchteten Diamanten sind ein überzeugendes erstes Schmuckstück, da sie schlicht, gut tragbar und nicht zu auffällig sind."
         },
         {
           "type": "subheading",
-          "text": "Für alltägliche Ohrringe"
+          "text": "Für Alltags-Ohrringe"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie die Ohrringe Cadenza S, Cadenza M, Amadea Huggie oder die minimalistischen Diamantohrringe Laluce. Diese Stücke lassen sich leicht wiederholen und passen zu vielen Outfits."
+          "text": "Wählen Sie Cadenza S, Cadenza M, Amadea kleine Creolen (Huggies) oder minimalistische Laluce Diamant-Ohrstecker. Diese Schmuckstücke lassen sich leicht immer wieder tragen und passen zu vielen Outfits."
         },
         {
           "type": "subheading",
@@ -630,11 +630,11 @@
         },
         {
           "type": "subheading",
-          "text": "Für Hochzeitsgastschmuck"
+          "text": "Für Schmuck als Hochzeitsgast"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Cadenza M für detaillierte Outfits, Orsola-Ohrringe für schlichte Kleider oder Farfalla-Schmetterlingsohrringe für sanfte, romantische Stylings."
+          "text": "Wählen Sie Cadenza M zu detailreichen Outfits, Orsola Ohrhänger zu schlichten Kleidern oder Farfalla Schmetterlings-Ohrringe für einen sanft-romantischen Look."
         },
         {
           "type": "subheading",
@@ -642,7 +642,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Cadenza S mit Amadea Huggie-Ohrringen für einen sauberen Look. Fügen Sie die minimalistischen Diamantohrringe von Laluce hinzu, um einen weicheren Lagenlook zu erzielen."
+          "text": "Wählen Sie Cadenza S mit Amadea kleinen Creolen (Huggies) für einen klaren Stack. Ergänzen Sie minimalistische Laluce Diamant-Ohrstecker für einen weicheren, geschichteten Look."
         },
         {
           "type": "subheading",
@@ -650,193 +650,193 @@
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie auffällige Statement-Ohrringe von Lusso, wenn der Schmuck hervorstechen soll, oder Pave Hoops, wenn Sie mit einer moderneren Creolenform funkeln möchten."
+          "text": "Wählen Sie auffällige Statement-Ohrringe von Lusso, wenn der Schmuck hervorstechen soll, oder Pave Hoops, wenn Sie Glanz mit einer moderneren Creolenform wünschen."
         }
       ]
     },
     {
-      "heading": "Produktempfehlungen von IWantJewels",
+      "heading": "Produktempfehlungen von I Want Jewels",
       "content": [
         {
           "type": "table",
           "headers": [
             "Produkt",
-            "Beste Rolle in der Schmuckkategorie",
-            "Am besten für"
+            "Rolle der besten Schmuckkategorie",
+            "Ideal für"
           ],
           "rows": [
             [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Halbfeiner Alltags-Essential",
-              "Erste Diamantohrringe, Arbeitskleidung, dezentes Funkeln"
+              "Cadenza S Ohrstecker mit im Labor gezüchteten Diamanten",
+              "Demi-Fine Alltags-Essential",
+              "Erste Diamant-Ohrringe, Business-Looks, dezenter Glanz"
             ],
             [
               "Cadenza M Diamant-Ohrstecker",
-              "Halbfeines klassisches Geschenk",
-              "Sichtbarer täglicher Glanz und sicheres Verschenken"
+              "Klassisches Demi-Fine Geschenk",
+              "Sichtbarer Glanz im Alltag und sichere Geschenkwahl"
             ],
             [
-              "Amadea Huggie-Ohrringe",
-              "Halbfeines Stapelstück",
-              "Ear Stacks, Zweitpiercings, modernes Styling"
+              "Amadea kleine Creolen (Huggies)",
+              "Demi-Fine Schmuckstück zum Kombinieren",
+              "Ear Stacks, zweite Ohrlöcher, modernes Styling"
             ],
             [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Halbfeine minimalistisches Stück",
-              "Ruhiger Alltagsschmuck"
+              "Laluce minimalistischer Diamantschmuck",
+              "Minimalistisches Demi-Fine Schmuckstück",
+              "Dezenter Alltagsschmuck"
             ],
             [
-              "Pave-Reifen",
-              "Halbfeiner Hoop-Styling",
+              "Pave Hoops",
+              "Demi-Fine Creolen-Styling",
               "Lässiger Glanz und partytaugliches Styling"
             ],
             [
               "Farfalla Schmetterlingsohrringe",
-              "Halbfeine, bedeutungsvolles Geschenk",
+              "Bedeutungsvolles Demi-Fine Geschenk",
               "Geburtstage, Meilensteine und romantische Geschenke"
             ],
             [
               "Alidi Farfalla Schmetterlingsohrringe",
-              "Halbfeine symbolische Gabe",
-              "Feminines Styling und persönliches Geschenk"
+              "Symbolisches Demi-Fine Geschenk",
+              "Feminines Styling und persönliche Geschenke"
             ],
             [
-              "Orsola-Ohrhänger",
-              "Halbfeiner Ohrring für besondere Anlässe",
+              "Orsola Ohrhänger",
+              "Demi-Fine Ohrringe für besondere Anlässe",
               "Hochzeiten, Abendessen und Abendoutfits"
             ],
             [
-              "Concetta Kurze Ohrringe",
-              "Halbfeiner zarter Tropfen",
-              "Brautjungfern und weiche Anlass-Looks"
+              "Concetta Short Ohrringe",
+              "Zarte Demi-Fine Ohrhänger",
+              "Brautjungfern und sanfte Looks für besondere Anlässe"
             ],
             [
-              "Concetta Lange Ohrringe",
-              "Halbfeiner formeller Ohrring",
-              "Formelle Abende und raffiniertes Styling"
+              "Concetta Long Ohrringe",
+              "Formelle Demi-Fine Ohrringe",
+              "Formelle Abende und elegantes Styling"
             ],
             [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Halbfeines Statement-Stück",
-              "Partys und wirkungsvolle Outfits"
+              "Auffällige Statement-Ohrringe von Lusso",
+              "Auffälliges Demi-Fine Schmuckstück",
+              "Partys und ausdrucksstarke Outfits"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Halbfeiner Schmuck ist die beste Wahl, wenn Sie bessere Materialien als Modeschmuck wünschen, ohne jeden Kauf zu einer Investition in edlen Schmuck zu machen. Beginnen Sie mit Ohrsteckern für den Alltag, Huggies zum Stapeln, Schmetterlingsohrringen für Geschenke, Tropfen für Hochzeiten und auffälligen Statement-Ohrringen für Partys."
+          "text": "Demi-Fine Schmuck ist die beste Wahl, wenn Sie hochwertigere Materialien als bei Modeschmuck wünschen, ohne jeden Kauf als Investition in edlen Schmuck zu betrachten. Beginnen Sie mit Ohrsteckern für den Alltag, kleinen Creolen (Huggies) zum Kombinieren, Schmetterlings-Ohrringen als Geschenken, Ohrhängern für Hochzeiten und auffälligen Statement-Ohrringen für Partys."
         }
       ]
     },
     {
-      "heading": "Häufige Fehler, die es zu vermeiden gilt",
+      "heading": "Häufige Fehler vermeiden",
       "content": [
         {
           "type": "paragraph",
-          "text": "Ein häufiger Fehler besteht darin, anzunehmen, dass Modeschmuck, halbfeiner Schmuck und edler Schmuck gleich sind, weil sie auf Fotos alle glänzend aussehen können. Das Material und die Konstruktion machen einen großen Unterschied."
+          "text": "Ein häufiger Fehler ist die Annahme, Mode-, Demi-Fine und edler Schmuck seien gleich, weil sie auf Fotos alle glänzen können. Material und Verarbeitung machen einen großen Unterschied."
         },
         {
           "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, zu erwarten, dass sich Modeschmuck wie edler Schmuck verhält. Günstiger Trendschmuck kann nützlich sein, ist aber möglicherweise nicht für den Langzeitgebrauch geeignet."
+          "text": "Ein weiterer Fehler ist, von Modeschmuck dieselbe Leistung wie von edlem Schmuck zu erwarten. Günstiger Trendschmuck kann nützlich sein, ist aber möglicherweise nicht für langfristiges Tragen gefertigt."
         },
         {
           "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, halbfeinen Schmuck genauso zu behandeln wie feinen Schmuck aus massivem Gold. Vergoldete und Sterlingsilberstücke benötigen dennoch die richtige Pflege."
+          "text": "Ein dritter Fehler besteht darin, Demi-Fine Schmuck genauso zu behandeln wie edlen Schmuck aus Massivgold. Vergoldete und aus 925 Sterlingsilber gefertigte Schmuckstücke benötigen dennoch die richtige Pflege."
         },
         {
           "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, zu glauben, dass edler Schmuck immer die beste Wahl sei. Es eignet sich vielleicht am besten für Erbstücke, halbfeiner Schmuck kann jedoch für alltägliche Stylings, Geschenke und Ear-Stacks praktischer sein."
+          "text": "Ein weiterer Fehler ist der Gedanke, edler Schmuck sei immer die beste Wahl. Für Erbstücke kann er ideal sein, doch Demi-Fine Schmuck ist für alltägliches Styling, Geschenke und Ear Stacks oft praktischer."
         },
         {
           "type": "paragraph",
-          "text": "Schließlich sollten Sie Ihre Auswahl nicht nur nach dem Preis treffen. Wählen Sie basierend auf Zweck, Materialien, Komfort, Tragbarkeit und der Häufigkeit, mit der das Stück verwendet wird."
+          "text": "Wählen Sie schließlich nicht nur nach dem Preis. Entscheiden Sie nach Zweck, Materialien, Tragekomfort, Alltagstauglichkeit und der Häufigkeit, mit der Sie das Schmuckstück tragen werden."
         },
         {
           "type": "see-also",
-          "text": "So reinigen Sie im Labor gezüchtete Diamantohrringe",
+          "text": "So reinigen Sie Ohrringe mit im Labor gezüchteten Diamanten",
           "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Endgültige Kaufcheckliste",
+      "heading": "Checkliste vor dem Kauf",
       "content": [
         {
           "type": "paragraph",
-          "text": "Bevor Sie zwischen Mode, Halbfeinschmuck und edlem Schmuck wählen, fragen Sie:"
+          "text": "Bevor Sie sich zwischen Mode-, Demi-Fine und edlem Schmuck entscheiden, fragen Sie sich:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Ist dies für den Alltag, zum Verschenken, zum Stylen oder zum Kauf eines Erbstücks gedacht?",
-            "Möchte ich ein Trendstück oder etwas Dauerhafteres?",
+            "Ist das Schmuckstück für den Alltag, zum Verschenken, für das Styling oder als Erbstück gedacht?",
+            "Möchten Sie ein Trendstück oder etwas, das länger Bestand hat?",
             "Sind die Materialien klar erklärt?",
-            "Besteht der Schmuck aus echten, im Labor gezüchteten Diamanten oder nachgeahmten Steinen?",
-            "Passt das Metall zum normalen Tragen?",
-            "Benötigt das Stück besondere Pflege?",
+            "Wird der Schmuck mit echten im Labor gezüchteten Diamanten oder Imitationssteinen gefertigt?",
+            "Eignet sich das Metall für regelmäßiges Tragen?",
+            "Benötigt das Schmuckstück besondere Pflege?",
             "Entspricht der Preis der Materialqualität?",
-            "Wird der Beschenkte diesen Stil tatsächlich tragen?",
-            "Soll dieses Stück einmal oder mehrmals getragen werden?",
-            "Fühlt sich der Schmuck für diesen Zweck besonders genug an?"
+            "Wird die beschenkte Person diesen Stil tatsächlich tragen?",
+            "Ist dieses Schmuckstück zum einmaligen oder wiederholten Tragen gedacht?",
+            "Fühlt sich der Schmuck für den Anlass besonders genug an?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Für die meisten alltäglichen Ohrringe, Geschenke und modernen Styling-Bedürfnisse ist halbfeiner Schmuck eine gute Mittelklasse-Wahl."
+          "text": "Für die meisten Alltagsohrringe, Geschenke und modernen Stylingwünsche ist Demi-Fine Schmuck eine überzeugende Lösung aus der Mitte."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Was ist der Unterschied zwischen Halbfein- und Feinschmuck?",
-      "answer": "Für edlen Schmuck werden in der Regel massive Edelmetalle wie massives Gold oder Platin sowie höherwertige Steine verwendet. Für halbfeinen Schmuck werden bessere Materialien verwendet als für Modeschmuck, beispielsweise Sterlingsilber, Vergoldung oder im Labor gezüchtete Diamanten, er ist jedoch in der Regel leichter zugänglich als edler Schmuck."
+      "question": "Was ist der Unterschied zwischen Demi-Fine Schmuck und feinem Schmuck?",
+      "answer": "Feiner Schmuck wird meist aus massiven Edelmetallen wie Gold oder Platin und wertvolleren Steinen gefertigt. Demi-Fine Schmuck verwendet hochwertigere Materialien als Modeschmuck, etwa 925 Sterlingsilber, vergoldete Oberflächen oder im Labor gezüchtete Diamanten, ist aber meist zugänglicher als feiner Schmuck."
     },
     {
-      "question": "Was ist der Unterschied zwischen Halbfein- und Modeschmuck?",
-      "answer": "Modeschmuck ist in der Regel kostengünstiger und trendorientierter. Halbfeiner Schmuck besteht aus besseren Materialien und fühlt sich hochwertiger an, was ihn für den Alltag und als Geschenk robuster macht."
+      "question": "Was ist der Unterschied zwischen Demi-Fine Schmuck und Modeschmuck?",
+      "answer": "Modeschmuck ist meist günstiger und stärker an Trends orientiert. Demi-Fine Schmuck verwendet bessere Materialien und wirkt hochwertiger – idealer für den Alltag und als Geschenk."
     },
     {
-      "question": "Ist halbfeiner Schmuck echter Schmuck?",
-      "answer": "Ja, halbfeiner Schmuck ist echter Schmuck. Es liegt zwischen Modeschmuck und traditionellem Feinschmuck."
+      "question": "Ist Demi-Fine Schmuck echter Schmuck?",
+      "answer": "Ja, Demi-Fine Schmuck ist echter Schmuck. Er liegt zwischen Modeschmuck und traditionellem feinem Schmuck."
     },
     {
-      "question": "Ist halbfeiner Schmuck von guter Qualität?",
-      "answer": "Halbfeiner Schmuck kann von guter Qualität sein, wenn robuste Materialien, eine gute Verarbeitung und eine ordnungsgemäße Konstruktion verwendet werden. IWantJewels verwendet im Labor gezüchtete Diamanten, 925er Sterlingsilber und 14-karätige Vergoldung."
+      "question": "Ist Demi-Fine Schmuck hochwertig?",
+      "answer": "Demi-Fine Schmuck kann eine gute Qualität haben, wenn er aus robusten Materialien gefertigt ist, eine hochwertige Verarbeitung und eine solide Konstruktion bietet. IWantJewels verwendet im Labor gezüchtete Diamanten, 925 Sterlingsilber und eine 14-karätige Vergoldung."
     },
     {
       "question": "Ist Modeschmuck schlecht?",
-      "answer": "Modeschmuck ist nicht schlecht. Es ist nützlich für Trends und kostengünstiges Styling. Es unterscheidet sich einfach von halbfeinem und feinem Schmuck."
+      "answer": "Modeschmuck ist nicht schlecht. Er eignet sich für Trends und günstige Stylings. Er unterscheidet sich einfach von Demi-Fine Schmuck und feinem Schmuck."
     },
     {
-      "question": "Ist edler Schmuck immer besser?",
-      "answer": "Nicht immer. Edler Schmuck eignet sich am besten für massives Gold, Erbstücke und Luxuskäufe. Halbfeiner Schmuck eignet sich möglicherweise besser für das alltägliche Styling, als Geschenk und für Ear-Stacks."
+      "question": "Ist feiner Schmuck immer besser?",
+      "answer": "Nicht immer. Feiner Schmuck eignet sich am besten für massives Gold, Erbstücke und luxuriöse Anschaffungen. Demi-Fine Schmuck kann für Alltagslooks, Geschenke und Ear Stacks die bessere Wahl sein."
     },
     {
-      "question": "Eignet sich halbfeiner Schmuck für den Alltag?",
-      "answer": "Ja, halbfeiner Schmuck eignet sich gut für den täglichen Gebrauch, wenn das Design bequem ist und das Schmuckstück richtig gepflegt wird."
+      "question": "Eignet sich Demi-Fine Schmuck für den Alltag?",
+      "answer": "Ja, Demi-Fine Schmuck eignet sich für den Alltag, wenn das Design bequem ist und das Schmuckstück richtig gepflegt wird."
     },
     {
-      "question": "Eignet sich halbfeiner Schmuck zum Verschenken?",
-      "answer": "Ja, halbfeiner Schmuck eignet sich hervorragend als Geschenk, da er sich besonderer anfühlt als Modeschmuck, aber in der Regel einfacher auszuwählen ist als traditioneller edler Schmuck."
+      "question": "Eignet sich Demi-Fine Schmuck als Geschenk?",
+      "answer": "Ja, Demi-Fine Schmuck eignet sich hervorragend als Geschenk, weil er besonderer wirkt als Modeschmuck, aber meist leichter auszuwählen ist als traditioneller feiner Schmuck."
     },
     {
-      "question": "Läuft halbfeiner Schmuck an?",
-      "answer": "Es kommt auf das Material und die Pflegeroutine an. Sterlingsilber- und vergoldeter Schmuck sollte vor Feuchtigkeit, Parfüm, aggressiven Chemikalien und unsachgemäßer Lagerung geschützt werden."
+      "question": "Läuft Demi-Fine Schmuck an?",
+      "answer": "Das hängt vom Material und der Pflegeroutine ab. Schmuck aus 925 Sterlingsilber und vergoldeter Schmuck sollten vor Feuchtigkeit, Parfüm, aggressiven Chemikalien und ungeschützter Aufbewahrung bewahrt werden."
     },
     {
-      "question": "Welchen Schmucktyp soll ich wählen?",
-      "answer": "Wählen Sie Modeschmuck für kurzfristige Trends, halbfeinen Schmuck für tragbare, gehobene Stücke und edlen Schmuck für Erbstücke oder traditionelle Luxuskäufe."
+      "question": "Welche Schmuckart sollte ich wählen?",
+      "answer": "Wählen Sie Modeschmuck für kurzfristige Trends, Demi-Fine Schmuck für tragbare, hochwertige Designs und feinen Schmuck für Erbstücke oder traditionelle Luxusanschaffungen."
     }
   ],
   "cta": {
-    "heading": "Modeschmuck, halbfeiner Schmuck und edler Schmuck haben alle ihren Platz. Die beste Wahl hängt davon ab, warum Sie kaufen. Modeschmuck eignet sich für Trends, edler Schmuck ist ideal für Erbstück-Luxus und halbfeiner Schmuck ist der starke Mittelweg für Alltagskleidung, Geschenke und modernes Styling.",
-    "body": "Beginnen Sie mit halbfeinem, im Labor gezüchteten Diamantschmuck von IWantJewels, wenn Sie echten Diamantglanz in tragbaren Designs wünschen. Wählen Sie Cadenza S für dezenten Alltagsglanz, Cadenza M für klassische Geschenke, Amadea für Ear Stacks, Farfalla für sinnvolle Geschenke, Orsola für das Styling von Hochzeitsgästen und Lusso für auffällige Party-Looks.",
-    "primaryLabel": "Kaufen Sie halbfeinen Schmuck",
+    "heading": "Modeschmuck, Demi-Fine Schmuck und feiner Schmuck haben jeweils ihren Platz. Die beste Wahl hängt davon ab, warum Sie kaufen. Modeschmuck eignet sich für Trends, feiner Schmuck ideal für luxuriöse Erbstücke und Demi-Fine Schmuck als überzeugende Lösung aus der Mitte für den Alltag, Geschenke und moderne Stylings.",
+    "body": "Beginnen Sie mit dem Demi-Fine Schmuck von IWantJewels mit im Labor gezüchteten Diamanten, wenn Sie echten Diamantenglanz in tragbaren Designs suchen. Wählen Sie Cadenza S für dezenten Glanz im Alltag, Cadenza M für klassische Geschenke, Amadea für Ear Stacks, Farfalla für bedeutungsvolle Geschenke, Orsola für Hochzeitsgast-Looks und Lusso für auffällige Party-Looks.",
+    "primaryLabel": "Demi-Fine Schmuck entdecken",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie im Labor gezüchtete Diamantohrringe",
+    "secondaryLabel": "Im Labor gezüchtete Diamantohrringe entdecken",
     "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lesen Sie: Was ist halbfeiner Schmuck?",
+    "tertiaryLabel": "Lesen Sie: Was ist Demi-Fine Schmuck?",
     "tertiaryHref": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
   }
 }

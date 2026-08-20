@@ -1,1075 +1,514 @@
 {
   "meta": {
-    "title": "What Jewellery to Wear with a Sweetheart Neckline",
-    "description": "Choose jewellery for a sweetheart neckline dress with earrings, necklaces, diamonds, gold, wedding guest looks and party styling ideas."
+    "title": "Jewellery for a Sweetheart Neckline: Styling Guide",
+    "description": "Choose jewellery for a sweetheart neckline. Compare earrings, necklaces and metal colours for wedding, party, satin and romantic dresses."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-87.jpg",
-    "title": "What Jewellery to Wear with a Sweetheart Neckline:",
-    "subtitle": "Earrings, Necklaces & Styling Guide",
+    "image": "/blog-images/blog-image-46.jpg",
+    "title": "What Jewellery to Wear",
+    "subtitle": "with a Sweetheart Neckline",
     "paragraphs": [
-      "A sweetheart neckline already has a soft, romantic shape. It frames the upper body beautifully, so the jewellery should add polish without making the neckline feel crowded. The best jewellery for a sweetheart neckline usually depends on how simple the dress is, how formal the occasion is, and whether you want the look to feel romantic, elegant, minimal or party-ready.",
-      "Drop earrings are one of the easiest choices because they frame the face and add movement without crowding the neckline. Butterfly earrings work beautifully when the look should feel romantic or meaningful. Medium diamond studs are best when the dress already has lace, sequins, embroidery or strong detail. Bold statement earrings can work when the sweetheart neckline dress is simple and the earrings are meant to lead the look.",
-      "This resource helps shoppers choose jewellery for sweetheart neckline dresses by dress type, occasion, hairstyle, necklace choice and metal colour. It also connects each styling direction to IWantJewels products such as Orsola drop earrings, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Concetta Short earrings, Concetta Long earrings, Pave Hoops, Lusso bold statement earrings, Amadea Huggie earrings and Laluce minimalist diamond earrings."
+      "A sweetheart neckline creates a curved, heart-like shape across the chest and leaves open space around the neck and collarbone. That space can support drop earrings, a well-positioned necklace or one stronger jewellery focal point — but wearing all three at the same visual weight can make the outfit feel crowded.",
+      "Start by looking at the dress itself. A simple sweetheart neckline can carry visible earrings or a necklace. Lace, beading, sequins, embroidery and corset detailing already add interest, so they usually need cleaner jewellery. The occasion, hairstyle and dress colour should then refine the choice."
     ],
-    "shopLabel": "Shop Earrings for Sweetheart Necklines",
+    "shopLabel": "Explore Lab-Grown Diamond Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Choose jewellery for sweetheart neckline dresses.",
-      "Decide between earrings, necklace or both.",
-      "Match jewellery to romantic, satin, black, wedding guest and party sweetheart dresses.",
-      "Choose earrings based on hairstyle and dress detail.",
-      "Decide whether gold, white/silver tone or rose gold works best.",
-      "Build sweetheart neckline ear stack combinations.",
-      "Understand when to wear butterfly earrings, drops, studs, hoops or bold earrings.",
-      "Find IWantJewels product recommendations by styling need.",
-      "Plan image blocks, product modules, CTA sections and internal links for this page."
+      "A sweetheart neckline is not the same as strapless — the shape is curved, not the straps",
+      "Simple bodice — drops, hoops or a pendant can lead",
+      "Lace, beading or corset detail — clean studs and usually no necklace",
+      "Rounded and pear-shaped pendants echo the curve; angular ones contrast with it",
+      "Choose the earrings or the necklace to lead, not both",
+      "Chain length plus pendant drop decides placement, not chain length alone"
     ],
-    "image": "/blog-images/blog-image-86.jpg"
+    "image": "/blog-images/blog-image-50.jpg"
   },
   "content": [
     {
-      "heading": "Sweetheart Neckline Jewellery Selector",
+      "heading": "Quick answer",
       "content": [
         {
           "type": "paragraph",
-          "text": "Use this table near the top of the page as the main styling decision tool."
+          "text": "With a sweetheart neckline, choose jewellery that follows or frames its curved shape."
         },
         {
+          "type": "paragraph",
+          "text": "A pendant can sit within the open area above the neckline, while drop earrings can lengthen the look without interrupting the curve. Studs suit embellished, bridal or heavily detailed dresses. Hoops and geometric earrings give the neckline a more contemporary direction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose either the earrings or necklace as the main focal point. If the earrings are long or design-led, use a restrained necklace or leave the neck bare. If the necklace leads, choose smaller earrings."
+        }
+      ]
+    },
+    {
+      "heading": "Sweetheart-neckline jewellery selector",
+      "content": [
+        {
           "type": "table",
-          "headers": [
-            "Sweetheart Neckline Style",
-            "Best Jewellery Direction",
-            "Recommended IWJ Direction"
-          ],
+          "headers": ["Dress or styling need", "Earring direction", "Necklace direction"],
           "rows": [
-            [
-              "Simple sweetheart dress",
-              "Drops, butterfly earrings or bold earrings",
-              "Orsola, Farfalla, Lusso"
-            ],
-            [
-              "Romantic sweetheart dress",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Satin sweetheart dress",
-              "Drop earrings or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Black sweetheart dress",
-              "Drops, bold earrings or hoops",
-              "Orsola, Lusso, Pave Hoops"
-            ],
-            [
-              "Wedding guest sweetheart dress",
-              "Drops, studs or romantic earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Detailed sweetheart dress",
-              "Studs or clean huggies",
-              "Cadenza M, Cadenza S, Amadea"
-            ],
-            [
-              "Strapless sweetheart dress",
-              "Drops or bold statement earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Soft pastel sweetheart dress",
-              "Butterfly earrings or delicate drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Party sweetheart dress",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Sweetheart ear stack",
-              "Main earring + small support",
-              "Orsola + Cadenza S, Farfalla + Cadenza S"
-            ]
+            ["Simple sweetheart dress", "Drops, hoops or geometric earrings", "Pendant or fine necklace"],
+            ["Strapless sweetheart dress", "Drops, visible studs or focal earrings", "Optional pendant or short necklace"],
+            ["Sweetheart dress with straps", "Studs, short drops or hoops", "Pendant if the straps leave clear space"],
+            ["Lace sweetheart dress", "Studs or restrained drops", "Fine chain or no necklace"],
+            ["Embellished sweetheart dress", "Clean studs", "Usually skip"],
+            ["Satin sweetheart dress", "Drops, studs or geometric earrings", "Fine pendant if the neckline is simple"],
+            ["Floral sweetheart dress", "Studs, butterfly shapes or short drops", "Restrained chain"],
+            ["Sweetheart wedding guest dress", "Studs, short drops or hoops", "Match the dress detail and formality"],
+            ["Sweetheart wedding dress", "Studs or carefully measured drops", "Coordinate with the bodice and veil"],
+            ["Sweetheart party dress", "Hoops, drops or focal earrings", "Keep the second focal point quiet"],
+            ["Romantic sweetheart dress", "Butterfly shapes, drops or studs", "Fine pendant if space allows"],
+            ["Modern corset dress", "Geometric earrings, hoops or studs", "Optional clean pendant"]
           ]
         }
       ]
     },
     {
-      "heading": "Why Sweetheart Necklines Need Soft Balance",
+      "heading": "What is a sweetheart neckline?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-91.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "A sweetheart neckline has a curved, romantic shape. It naturally draws attention to the collarbone, shoulders and face. Because the neckline is already decorative, the jewellery should support the shape rather than compete with it."
+              "text": "A sweetheart neckline has two curved upper edges that meet in a dip at the centre, creating a shape similar to the top of a heart. The dip may be shallow and subtle or lower and more defined."
             },
             {
               "type": "paragraph",
-              "text": "If the dress is simple, earrings can become stronger. If the dress has lace, embroidery, crystals, sequins or heavy fabric detail, the earrings should stay cleaner. If the neckline is open, drop earrings or butterfly earrings can frame the face beautifully. If the dress already has a strong necklace-like detail, studs or huggies are usually better."
+              "text": "The neckline may appear on:"
             },
             {
-              "type": "paragraph",
-              "text": "The main rule is simple: keep one clear focal point. If the earrings are bold, keep the necklace minimal or skip it. If the necklace is the focal point, choose cleaner earrings."
-            },
-            {
-              "type": "see-also",
-              "text": "Jewellery for V-Neck Dresses",
-              "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-            },
-            {
-              "type": "see-also",
-              "text": "Jewellery with Satin Dress",
-              "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
-            },
-            {
-              "type": "see-also",
-              "text": "Party Earrings Guide",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Sweetheart Neckline",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The best earrings for a sweetheart neckline are usually drop earrings, butterfly earrings, medium studs or bold statement earrings, depending on the dress."
-        },
-        {
-          "type": "paragraph",
-          "text": "Drop earrings work because they add length and movement without filling the neckline. Butterfly earrings work because they match the romantic shape of the dress. Medium studs are best when the outfit already has detail. Bold statement earrings are strongest when the dress is simple and the jewellery should lead."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Styling Goal",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Elegant movement",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Romantic softness",
-              "Butterfly earrings",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Delicate occasion styling",
-              "Short drops",
-              "Concetta Short"
-            ],
-            [
-              "Formal long line",
-              "Long drops",
-              "Concetta Long"
-            ],
-            [
-              "Classic sparkle",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Subtle support",
-              "Small studs",
-              "Cadenza S"
-            ],
-            [
-              "Modern shape",
-              "Hoops",
-              "Pave Hoops"
-            ],
-            [
-              "Strong party look",
-              "Bold statement earrings",
-              "Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "divider"
-        }
-      ]
-    },
-    {
-      "heading": "Necklace or Earrings with a Sweetheart Neckline?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A sweetheart neckline can work with a necklace, earrings or both, but the styling should not feel crowded."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the earrings are bold or long, skip the necklace or choose a very delicate chain. If the earrings are simple studs, a necklace can become more visible. If the sweetheart neckline is strapless and plain, you can choose either a delicate necklace with studs or stronger earrings with no necklace."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Jewellery Choice",
-            "Best When",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Drop earrings only",
-              "Dress is simple, romantic or evening-ready",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Butterfly earrings only",
-              "Look should feel soft and romantic",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Bold earrings only",
-              "Dress is minimal and party-ready",
-              "Lusso"
-            ],
-            [
-              "Medium studs + delicate necklace",
-              "Neckline needs subtle jewellery balance",
-              "Cadenza M"
-            ],
-            [
-              "Small studs + pendant",
-              "Dress is delicate or detailed",
-              "Cadenza S"
-            ],
-            [
-              "Hoops + no necklace",
-              "Look should feel modern",
-              "Pave Hoops"
-            ],
-            [
-              "Huggies + necklace",
-              "Workwear or casual sweetheart styling",
-              "Amadea"
-            ],
-            [
-              "Minimalist earrings + necklace",
-              "Necklace should lead the look",
-              "Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Jewellery for Romantic Sweetheart Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Romantic sweetheart dresses usually work best with soft, feminine jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "Butterfly earrings are especially strong because they add meaning and softness. Drop earrings also work beautifully if the dress needs movement. Medium studs are better when the dress already has lace, floral detail or embroidery."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-93.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Romantic Sweetheart Dress Style",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Blush sweetheart dress",
-                  "Butterfly earrings or soft drops",
-                  "Farfalla, Orsola"
-                ],
-                [
-                  "Floral sweetheart dress",
-                  "Butterfly earrings or studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Lace sweetheart dress",
-                  "Studs or delicate drops",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Champagne sweetheart dress",
-                  "Gold drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Pastel sweetheart dress",
-                  "Butterfly earrings or short drops",
-                  "Alidi Farfalla, Concetta Short"
-                ],
-                [
-                  "Soft wedding guest dress",
-                  "Drops or romantic earrings",
-                  "Orsola, Farfalla"
-                ],
-                [
-                  "Birthday sweetheart dress",
-                  "Butterfly earrings or medium studs",
-                  "Alidi Farfalla, Cadenza M"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Strapless dresses",
+                "Dresses with narrow straps",
+                "Dresses with sleeves",
+                "Corset dresses",
+                "Wedding and bridesmaid dresses",
+                "Satin evening dresses",
+                "Party and cocktail dresses",
+                "Floral summer dresses"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Gifts",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        },
-        {
-          "type": "see-also",
-          "text": "Wedding Guest Jewellery Guide",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
+          "type": "paragraph",
+          "text": "A sweetheart neckline is not automatically strapless. A dress can have a sweetheart-shaped neckline with straps, sleeves or an off-shoulder construction."
         }
       ]
     },
     {
-      "heading": "Jewellery for Satin Sweetheart Dresses",
+      "heading": "Sweetheart neckline vs V-neck",
       "content": [
         {
           "type": "paragraph",
-          "text": "Satin sweetheart dresses already have shine and softness, so the jewellery should add balance."
-        },
-        {
-          "type": "paragraph",
-          "text": "Drop earrings are usually the strongest choice because they echo the movement of satin. Medium studs are safer when the satin dress has strong colour or draping. Bold earrings can work if the satin dress is simple and the earrings are meant to become the focal point."
+          "text": "Both necklines create a central dip, but the shape is different."
         },
         {
           "type": "table",
-          "headers": [
-            "Satin Sweetheart Dress Style",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
+          "headers": ["Feature", "Sweetheart neckline", "V-neck"],
           "rows": [
-            [
-              "Black satin sweetheart dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Champagne satin sweetheart dress",
-              "Gold drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Blush satin sweetheart dress",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Concetta Short"
-            ],
-            [
-              "Green satin sweetheart dress",
-              "Gold drops or hoops",
-              "Orsola, Pave Hoops"
-            ],
-            [
-              "Red satin sweetheart dress",
-              "Medium studs, drops or bold earrings",
-              "Cadenza M, Orsola, Lusso"
-            ],
-            [
-              "Satin wedding guest sweetheart",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Satin party sweetheart",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ]
+            ["Central shape", "Curved", "Straight or angular"],
+            ["Upper edges", "Rounded", "Diagonal"],
+            ["Overall effect", "Soft, shaped and open", "Linear and lengthening"],
+            ["Necklace approach", "Rounded or drop pendant within the open area", "Pendant following the V"],
+            ["Earring approach", "Studs, drops, hoops or design-led shapes", "Drops, studs or hoops based on depth"]
           ]
         },
         {
+          "type": "paragraph",
+          "text": "A sharp pendant may echo a V-neck more directly. With a sweetheart neckline, a rounded, pear-shaped or softly dropping pendant can reflect the curved construction. This is a styling direction rather than a compulsory shape rule."
+        },
+        {
           "type": "see-also",
-          "text": "Jewellery with Satin Dress",
+          "text": "What jewellery to wear with a V-neck dress",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Should you wear earrings, a necklace or both?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You can wear both earrings and a necklace, but the pieces should not compete."
+        },
+        {
+          "type": "subheading",
+          "text": "When the earrings should lead"
+        },
+        {
+          "type": "paragraph",
+          "text": "Let the earrings become the focal point when they are long drop earrings, highly visible hoops, butterfly or floral designs, geometric earrings, diamond-set focal earrings, or larger designs intended to frame the face. Use a fine necklace or leave the neckline bare."
+        },
+        {
+          "type": "subheading",
+          "text": "When the necklace should lead"
+        },
+        {
+          "type": "paragraph",
+          "text": "Let the necklace lead when the dress has a clean, unembellished neckline, a wide open area above the bodice, smaller earrings, a hairstyle that keeps attention on the neckline, or when the pendant has personal or visual significance. The pendant should sit clearly above the fabric rather than repeatedly touching the neckline."
+        },
+        {
+          "type": "subheading",
+          "text": "When to skip the necklace"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider leaving the neck bare when the dress includes:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Beading around the neckline",
+            "Lace appliqué",
+            "Sequins or crystals",
+            "A large bow",
+            "Corset lacing or strong seam detail",
+            "A highly structured bust",
+            "A veil, scarf or other accessory near the neck",
+            "Earrings that already provide the main focal point"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Which earrings work with a sweetheart neckline?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Stud earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Studs keep the neckline clear and work particularly well when the dress already contains lace, embroidery, beading or structured corset detail. Their visual presence depends on diameter, projection and stone arrangement. A larger stud can still provide a noticeable focal point without adding the movement of a drop earring."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before purchasing, confirm the diameter in millimetres, projection from the ear, closure, individual and combined weight, whether the carat specification is per stone or total, and whether the product is sold singly or as a pair."
+        },
+        {
+          "type": "subheading",
+          "text": "Short drop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Short drops introduce movement while leaving space for a necklace. They suit sweetheart dresses with straps, wedding guest dresses and outfits where the wearer wants visible earrings without a long vertical line. Check the complete drop length in millimetres — product photographs alone may not show how close the earring sits to the shoulder or neckline."
+        },
+        {
+          "type": "subheading",
+          "text": "Long drop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Long drops can frame an open sweetheart neckline, particularly when the dress is simple and no necklace is being used. Suitability depends on the drop length, earring width, finished weight, closure, hairstyle, shoulder position and the wearer's piercing placement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Long earrings should not be described as universally comfortable. Fit and wear experience depend on the measurements and the individual wearer."
+        },
+        {
+          "type": "subheading",
+          "text": "Hoop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoops create a more contemporary outline and can reduce the overtly romantic appearance of a sweetheart dress. Small or medium hoops can work with satin dresses, modern corset dresses and tailored evening outfits. Check the outer diameter, inner diameter, thickness, weight and closure."
+        },
+        {
+          "type": "subheading",
+          "text": "Butterfly and floral earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Butterfly or floral shapes can reinforce the softer lines of a sweetheart neckline. They can work with floral dresses, pastel colours, wedding guest outfits and looks intended to feel more romantic. Because the neckline already has a recognisable shape, keep the necklace restrained when the earrings also contain a strong motif."
+        },
+        {
+          "type": "see-also",
+          "text": "How to style butterfly earrings",
+          "href": "/resources/earring-style-guides/how-to-style-butterfly-earrings"
+        },
+        {
+          "type": "subheading",
+          "text": "Geometric earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Angular earrings create contrast against the curved neckline. This direction works with minimalist sweetheart dresses, clean satin fabrics and modern corset silhouettes. Geometric does not have to mean oversized — a compact X, line or zig-zag design can add structure without becoming the only visible part of the outfit."
+        },
+        {
+          "type": "subheading",
+          "text": "Bold focal earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Visible focal earrings can work when the sweetheart dress is plain and the earrings are intended to lead. Avoid combining bold earrings with a large necklace, dense neckline beading, heavy embroidery, large hair accessories or a strongly embellished bodice. The outfit needs one clear hierarchy rather than several competing features."
+        }
+      ]
+    },
+    {
+      "heading": "What necklace suits a sweetheart neckline?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A necklace should occupy the open space created by the neckline without ending directly on its edge."
+        },
+        {
+          "type": "subheading",
+          "text": "Pendant necklace"
+        },
+        {
+          "type": "paragraph",
+          "text": "A pendant can follow the central dip and draw the eye towards the centre of the neckline. Rounded, pear-shaped and softly pointed pendants can all work, depending on the depth and curve of the dress. Check both the chain length and pendant drop — a 45 cm chain with a pendant does not necessarily produce a 45 cm total visual drop."
+        },
+        {
+          "type": "subheading",
+          "text": "Short necklace"
+        },
+        {
+          "type": "paragraph",
+          "text": "A shorter necklace can sit above the curves of the neckline. This can work when there is enough space between the base of the neck and the top of the dress. Avoid placing a short necklace so close to the fabric that the two shapes appear to collide."
+        },
+        {
+          "type": "subheading",
+          "text": "Delicate chain"
+        },
+        {
+          "type": "paragraph",
+          "text": "A fine chain can add a small amount of detail while allowing earrings or the dress to remain the focal point. It is particularly useful when the neckline feels open but does not need a prominent pendant."
+        },
+        {
+          "type": "subheading",
+          "text": "No necklace"
+        },
+        {
+          "type": "paragraph",
+          "text": "A bare neckline can be intentional. It gives more space to drop earrings, hoops, a veil or the construction of the dress itself."
+        }
+      ]
+    },
+    {
+      "heading": "Match jewellery to the dress detail",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Lace sweetheart dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lace already adds pattern and texture. Choose studs or restrained drops and avoid a necklace that catches against the lace edge. If the lace extends above the sweetheart shape as an illusion neckline, treat the visible lace as part of the neckline rather than as empty skin."
+        },
+        {
+          "type": "subheading",
+          "text": "Satin sweetheart dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Satin reflects light, so consider the dress's sheen alongside the jewellery. A simple satin dress can carry drops or geometric earrings. A ruched, draped or embellished satin bodice usually needs cleaner earrings."
+        },
+        {
+          "type": "see-also",
+          "text": "Jewellery to wear with satin & silk dresses",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Sequin or beaded sweetheart dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose clean studs or a restrained earring shape. Additional diamond detail can work, but it should not compete with every reflected surface on the bodice. A necklace is usually unnecessary when the beading follows the neckline."
+        },
+        {
+          "type": "subheading",
+          "text": "Floral sweetheart dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Small studs, short drops and butterfly shapes can complement a floral dress. If the print is large or colourful, avoid trying to reproduce every colour in the jewellery."
+        },
+        {
+          "type": "subheading",
+          "text": "Corset sweetheart dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A corset bodice can appear romantic, modern or dramatic depending on its seams and fabric. Hoops or geometric earrings can make it feel more contemporary. Drops or butterfly designs can maintain a softer direction. If the corset contains visible crystals, metallic boning or dense embroidery, choose restrained earrings."
         }
       ]
     },
     {
-      "heading": "Jewellery for Black Sweetheart Dresses",
+      "heading": "Match jewellery to the dress colour",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "A black sweetheart dress gives jewellery a strong background and a romantic neckline at the same time. This makes it excellent for drops, bold earrings, hoops and classic diamond studs."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the dress is simple, choose Lusso, Orsola or Pave Hoops. If the dress is detailed, choose Cadenza M, Cadenza S or Amadea. If the black sweetheart dress is formal, Concetta Long can create a refined longer line."
-        },
         {
           "type": "table",
-          "headers": [
-            "Black Sweetheart Dress Style",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
+          "headers": ["Dress colour", "Metal and earring direction"],
           "rows": [
-            [
-              "Simple black sweetheart dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Black satin sweetheart dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Black party sweetheart dress",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Black wedding guest sweetheart",
-              "Drops or studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Detailed black sweetheart dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Formal black sweetheart dress",
-              "Long drops or classic studs",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Romantic black sweetheart look",
-              "Butterfly earrings or drops",
-              "Farfalla, Orsola"
-            ]
+            ["Black", "Yellow-gold, white or silver-tone, or rose-gold; studs, drops or geometric earrings"],
+            ["White or ivory", "Coordinate carefully with the occasion and garment undertone"],
+            ["Champagne", "Yellow-gold tones, short drops or restrained diamond detail"],
+            ["Blush", "Rose-gold, white or silver-tone, or delicate yellow-gold tones"],
+            ["Red", "Yellow-gold drops, studs or clean hoops"],
+            ["Burgundy", "Warm gold tones, drops or visible studs"],
+            ["Emerald", "Yellow-gold drops, hoops or diamond studs"],
+            ["Sage", "Delicate yellow-gold, rose-gold or white or silver-tone pieces"],
+            ["Navy", "White or silver-tone diamonds, or yellow-gold contrast"],
+            ["Pastel blue", "White or silver-tone, or rose-gold with restrained earrings"],
+            ["Floral or printed", "Simple earrings coordinated with one element of the print"]
           ]
         },
         {
-          "type": "see-also",
-          "text": "What Jewellery to Wear with a Black Dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
+          "type": "paragraph",
+          "text": "These are starting points. The fabric undertone, embellishment, hairstyle and wearer's existing jewellery should refine the choice."
         },
         {
           "type": "see-also",
-          "text": "Party Earrings Guide",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
+          "text": "What jewellery to wear with a green dress",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
+        },
+        {
+          "type": "see-also",
+          "text": "What jewellery to wear with a red dress",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
         }
       ]
     },
     {
-      "heading": "Jewellery for Wedding Guest Sweetheart Dresses",
+      "heading": "Jewellery for sweetheart necklines by occasion",
       "content": [
         {
-          "type": "paragraph",
-          "text": "A wedding guest sweetheart neckline should feel elegant and polished without becoming too bridal or too heavy."
+          "type": "subheading",
+          "text": "Weddings"
         },
         {
           "type": "paragraph",
-          "text": "Drop earrings are one of the strongest choices because they frame the face and keep the neckline open. Medium studs are best if the dress already has lace, embroidery or print. Butterfly earrings work well for softer romantic wedding guest looks."
+          "text": "For a wedding guest dress, choose according to the venue, time and formality. Studs, short drops and hoops can all work if their scale suits the dress. For a wedding dress, consider the veil, headpiece, hair, bodice embellishment and any necklace before selecting earrings. The neckline alone should not decide the entire bridal jewellery set."
         },
         {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-95.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Wedding Guest Sweetheart Style",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Simple wedding guest sweetheart",
-                  "Drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Satin wedding guest sweetheart",
-                  "Drop earrings",
-                  "Orsola"
-                ],
-                [
-                  "Floral sweetheart dress",
-                  "Butterfly earrings or studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Lace sweetheart dress",
-                  "Studs or delicate drops",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Champagne sweetheart dress",
-                  "Gold drops or studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Pastel sweetheart dress",
-                  "Butterfly earrings or soft drops",
-                  "Alidi Farfalla, Concetta Short"
-                ],
-                [
-                  "Black sweetheart wedding guest dress",
-                  "Drops or studs",
-                  "Orsola, Cadenza M"
-                ]
-              ]
-            }
-          ]
+          "type": "subheading",
+          "text": "Bridesmaid dresses"
+        },
+        {
+          "type": "paragraph",
+          "text": "Coordinated studs or drops can create consistency without requiring every bridesmaid to wear an identical earring size. Piercing placement, earring weight and individual preference still matter."
+        },
+        {
+          "type": "subheading",
+          "text": "Parties and dinners"
+        },
+        {
+          "type": "paragraph",
+          "text": "A simple sweetheart party dress can support hoops, drops or focal earrings. A sequinned or heavily embellished dress generally needs a cleaner earring."
         },
         {
           "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Weddings",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        },
-        {
-          "type": "see-also",
-          "text": "What Earrings to Wear as a Wedding Guest",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Jewellery for Party Sweetheart Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A party sweetheart dress can carry more sparkle when the dress is simple."
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso if the earrings should lead. Choose Orsola if you want elegant movement. Choose Pave Hoops if you want modern shape. Choose Cadenza M if the dress already has detail and needs cleaner diamond sparkle."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party Sweetheart Dress Style",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple party sweetheart",
-              "Bold earrings",
-              "Lusso"
-            ],
-            [
-              "Satin party sweetheart",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Black party sweetheart",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Sequin sweetheart dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Cocktail sweetheart dress",
-              "Hoops, drops or medium studs",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Birthday sweetheart dress",
-              "Drops, studs or butterfly earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Formal party sweetheart",
-              "Long drops or bold earrings",
-              "Concetta Long, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Party Earrings Guide",
+          "text": "Party earrings guide",
           "href": "/resources/earring-style-guides/party-earrings-guide"
         },
         {
+          "type": "subheading",
+          "text": "Date nights"
+        },
+        {
+          "type": "paragraph",
+          "text": "A sweetheart dress does not require explicitly romantic jewellery. Choose a style that suits the venue and wearer: drops for movement, hoops for a modern direction, butterfly designs for a softer motif or studs when the dress already has detail."
+        },
+        {
           "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+          "text": "Date night earrings: what to wear",
+          "href": "/resources/jewellery-gift-guides/date-night-jewellery-guide"
         }
       ]
     },
     {
-      "heading": "Jewellery for Detailed Sweetheart Dresses",
+      "heading": "Match the earrings to your hairstyle",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "If a sweetheart neckline dress already has sequins, lace, embroidery, crystals, floral detail, ruffles or metallic fabric, the earrings should usually stay cleaner."
-        },
-        {
-          "type": "paragraph",
-          "text": "Studs, huggies and minimalist earrings are the safest choices because they add polish without competing with the dress. If the dress needs a little movement, choose delicate drops rather than bold statement earrings."
-        },
         {
           "type": "table",
-          "headers": [
-            "Detailed Sweetheart Dress Type",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
+          "headers": ["Hairstyle", "Earring direction"],
           "rows": [
-            [
-              "Sequin sweetheart dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Lace sweetheart dress",
-              "Studs or delicate drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Embroidered sweetheart dress",
-              "Studs",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Metallic sweetheart dress",
-              "Minimalist earrings or studs",
-              "Laluce, Cadenza M"
-            ],
-            [
-              "Ruffled sweetheart dress",
-              "Studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Floral sweetheart dress",
-              "Butterfly earrings or studs",
-              "Farfalla, Cadenza S"
-            ],
-            [
-              "Crystal-detail sweetheart dress",
-              "Studs",
-              "Cadenza M"
-            ]
+            ["Low bun", "Drops, hoops or visible studs"],
+            ["High bun", "Drops, geometric earrings or hoops"],
+            ["Sleek ponytail", "Hoops, drops or focal earrings"],
+            ["Soft waves", "Short drops, butterfly shapes or visible studs"],
+            ["Hair worn down", "Earrings with a clear outline and confirmed dimensions"],
+            ["Half-up hairstyle", "Studs, short drops or motif earrings"],
+            ["Short hair", "Studs, hoops, drops or geometric designs"],
+            ["Braided style", "Studs or drops that do not catch in the hair"]
           ]
         },
         {
-          "type": "see-also",
-          "text": "Minimalist Earrings Guide",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+          "type": "paragraph",
+          "text": "Check settings, edges and closures where an earring may come into contact with hair."
         }
       ]
     },
     {
-      "heading": "Jewellery for Sweetheart Necklines by Hairstyle",
+      "heading": "Can you build an ear stack with a sweetheart dress?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Hairstyle changes how visible the jewellery looks."
+          "text": "Yes, but the stack should retain one main piece. Possible structures include:"
         },
         {
-          "type": "paragraph",
-          "text": "Sweetheart necklines often look beautiful with soft waves, half-up hair, low buns and sleek ponytails. If the hair is down, choose earrings that are visible enough. If the hair is pulled back, drops, butterfly earrings and bold earrings can frame the face clearly."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-97.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hairstyle",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Hair down",
-                  "Medium studs, hoops or drops",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Soft waves",
-                  "Drops, butterfly earrings or visible studs",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Sleek ponytail",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Low bun",
-                  "Drops, butterfly earrings or bold earrings",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "High bun",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Half-up hair",
-                  "Studs, huggies or soft drops",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "Short hair",
-                  "Studs, hoops or bold earrings",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Gold vs Silver vs Rose Gold with Sweetheart Dresses",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Metal colour changes the mood of a sweetheart neckline dress."
-        },
-        {
-          "type": "paragraph",
-          "text": "Yellow gold feels warm, classic and rich. White or silver tone feels clean, bright and modern. Rose gold feels soft, romantic and feminine, which can work especially well with sweetheart necklines."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Metal Colour",
-            "Feeling with Sweetheart Dresses",
-            "Best Dress Colours"
-          ],
-          "rows": [
-            [
-              "Yellow gold",
-              "Warm, classic and polished",
-              "Black, champagne, green, red, cream"
-            ],
-            [
-              "White or silver tone",
-              "Clean, bright and formal",
-              "Navy, black, grey, silver, cool pastels"
-            ],
-            [
-              "Rose gold",
-              "Soft, romantic and feminine",
-              "Blush, pink, champagne, soft green"
-            ],
-            [
-              "Mixed metals",
-              "Creative and modern",
-              "Minimal sweetheart outfits and ear stacks"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Drop earring with one small support stud",
+            "Hoop with one restrained stud",
+            "Butterfly design with one simple diamond stud",
+            "Geometric earring with a smaller plain or diamond detail",
+            "Medium stud with a smaller second-lobe stud"
           ]
         },
         {
           "type": "paragraph",
-          "text": "For romantic sweetheart dresses, rose gold or yellow gold can work beautifully. For formal sweetheart dresses, white/silver tone or yellow gold may feel more refined."
+          "text": "Avoid making every earring equally visible. A busy stack, necklace and decorated bodice can remove the visual focus from the neckline."
         },
         {
           "type": "see-also",
-          "text": "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings",
-          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Sweetheart Neckline Ear Stack Ideas",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A sweetheart neckline works well with ear stacks when the stack feels soft and balanced."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the main earring is a drop, butterfly earring or bold earring, keep the support piece small. If the main earring is a medium stud, you can add a huggie or minimalist earring."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Sweetheart Stack Goal",
-            "Main Piece",
-            "Support Piece",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Elegant sweetheart stack",
-              "Drop earring",
-              "Small stud",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Romantic sweetheart stack",
-              "Butterfly earring",
-              "Small stud",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Soft pastel stack",
-              "Butterfly earring",
-              "Minimalist detail",
-              "Alidi Farfalla + Laluce"
-            ],
-            [
-              "Bold sweetheart stack",
-              "Bold earring",
-              "Small stud",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Modern sweetheart stack",
-              "Hoop",
-              "Small stud",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Classic sweetheart stack",
-              "Medium stud",
-              "Huggie",
-              "Cadenza M + Amadea"
-            ],
-            [
-              "Formal sweetheart stack",
-              "Long drop",
-              "Small stud",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Delicate sweetheart stack",
-              "Short drop",
-              "Small stud",
-              "Concetta Short + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "How to Stack Earrings",
+          "text": "How to stack earrings",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         }
       ]
     },
     {
-      "heading": "Product Pathways by Sweetheart Styling Need",
+      "heading": "Sweetheart-neckline shopping checklist",
       "content": [
         {
-          "type": "subheading",
-          "text": "For the Safest Sweetheart Dress Earrings"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings. They add visible sparkle without making the neckline feel crowded."
-        },
-        {
-          "type": "subheading",
-          "text": "For Elegant Movement"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They work beautifully with sweetheart necklines because they frame the face and keep the neckline open."
-        },
-        {
-          "type": "subheading",
-          "text": "For Romantic Sweetheart Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings or Alidi Farfalla butterfly earrings. These are best for blush, champagne, pastel, floral or romantic sweetheart dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Delicate Wedding Guest Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Short earrings. They add soft movement without feeling too bold."
-        },
-        {
-          "type": "subheading",
-          "text": "For Formal Sweetheart Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Long earrings. They create a refined long line for formal sweetheart neckline dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Modern Sweetheart Shape"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Pave Hoops. They work well with black sweetheart dresses, satin sweetheart dresses and party looks."
-        },
-        {
-          "type": "subheading",
-          "text": "For Bold Sweetheart Party Looks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso bold statement earrings when the sweetheart dress is simple and the earrings should lead."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Sweetheart Neckline Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Orsola drop earrings",
-              "Best overall sweetheart earring",
-              "Adds movement while keeping the neckline open"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Best romantic option",
-              "Matches the soft mood of sweetheart necklines"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Gift-led romantic option",
-              "Strong for birthdays and soft sweetheart looks"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Safest sparkle option",
-              "Works when the dress already has detail"
-            ],
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Support piece",
-              "Balances drops, hoops and bold earrings"
-            ],
-            [
-              "Concetta Short earrings",
-              "Delicate occasion styling",
-              "Good for wedding guest and bridesmaid looks"
-            ],
-            [
-              "Concetta Long earrings",
-              "Formal sweetheart styling",
-              "Creates a refined longer line"
-            ],
-            [
-              "Pave Hoops",
-              "Modern sweetheart shape",
-              "Adds curve and visible shine"
-            ],
-            [
-              "Lusso bold statement earrings",
-              "Strongest party sweetheart option",
-              "Best with simple sweetheart dresses"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Modern support piece",
-              "Works with detailed dresses and ear stacks"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Soft detail",
-              "Useful with detailed sweetheart outfits"
-            ]
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Before selecting the jewellery, confirm:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Is the neckline shallow or deeply curved?",
+                "Is the dress strapless, sleeved or supported by straps?",
+                "Is the bodice plain, ruched, laced, beaded or sequinned?",
+                "Should the earrings or necklace lead?",
+                "Where will the necklace sit in relation to the fabric?",
+                "What are the earring dimensions in millimetres?",
+                "What is the individual and combined earring weight?",
+                "What closure is used?",
+                "What is the complete material and finish?",
+                "Is the diamond weight individual or total?",
+                "Is the product sold singly or as a pair?",
+                "Could the setting catch lace, silk, satin or hair?",
+                "Will the hairstyle reveal or cover the earrings?",
+                "Does the selected product variant match its displayed specifications?"
+              ]
+            }
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose sweetheart neckline jewellery by mood. Pick Orsola for movement, Farfalla for romance, Cadenza M for clean sparkle, Concetta Short for delicate wedding guest styling, Pave Hoops for modern shape and Lusso for bold party looks."
-        }
-      ]
-    },
-    {
-      "heading": "Common Sweetheart Neckline Jewellery Mistakes to Avoid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "One common mistake is overcrowding the neckline. Sweetheart necklines already have a decorative shape, so heavy earrings and a heavy necklace together can feel too much."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is ignoring the romantic mood of the neckline. Very harsh or overly geometric jewellery may not always suit a soft sweetheart dress unless the look is intentionally modern."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is choosing tiny earrings for a party sweetheart dress. If the hair is down or the dress is visually strong, very small earrings may disappear."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is wearing bold earrings with a heavily detailed sweetheart dress. In that case, studs or huggies may look more polished."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not choose jewellery only by sparkle. Think about dress detail, fabric, neckline openness, hairstyle, metal colour and comfort."
-        },
-        {
-          "type": "see-also",
-          "text": "Gold-Plated Jewellery Care Guide",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Final Sweetheart Neckline Jewellery Checklist",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Before choosing jewellery for a sweetheart neckline, ask:"
-        },
-        {
-          "type": "bullet-list",
-          "items": [
-            "Is the sweetheart dress simple or detailed?",
-            "Is the look romantic, formal, minimal or party-ready?",
-            "Is the fabric satin, lace, sequin, floral or plain?",
-            "Will my hair hide or show the earrings?",
-            "Do I want sparkle, movement, shape or softness?",
-            "Should the earrings or necklace be the main jewellery moment?",
-            "Am I wearing a necklace, or should I skip it?",
-            "Does the metal colour work with the dress colour?",
-            "Is the occasion a wedding, party, dinner or formal event?",
-            "Are the earrings comfortable for the full event?",
-            "Is the ear stack balanced with one main piece?",
-            "Can the jewellery be worn again with other outfits?"
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "If you are unsure, choose drop earrings for a simple sweetheart dress, butterfly earrings for a romantic sweetheart dress and medium studs for a detailed sweetheart dress."
         }
       ]
     }
@@ -1077,53 +516,45 @@
   "faq": [
     {
       "question": "What jewellery should I wear with a sweetheart neckline?",
-      "answer": "The best jewellery for a sweetheart neckline depends on the dress style. Drop earrings, butterfly earrings, medium studs and delicate necklaces all work well, depending on how simple or detailed the dress is."
+      "answer": "Choose jewellery that frames or follows the curved neckline. Studs suit detailed dresses, while drops, hoops and pendants can work with a simple sweetheart neckline."
     },
     {
-      "question": "What earrings look best with a sweetheart neckline?",
-      "answer": "Drop earrings, butterfly earrings, medium diamond studs and bold statement earrings can all work with a sweetheart neckline. Choose based on the occasion, hairstyle and dress detail."
+      "question": "What necklace suits a sweetheart neckline?",
+      "answer": "A pendant or short necklace can occupy the open area above the neckline. Check that it sits clearly above the dress rather than ending directly on the fabric edge."
     },
     {
-      "question": "Should I wear a necklace with a sweetheart neckline?",
-      "answer": "Yes, a delicate necklace can work with a sweetheart neckline, especially if the earrings are simple. If the earrings are bold or long, skip the necklace or keep it very minimal."
+      "question": "What earrings suit a sweetheart neckline?",
+      "answer": "Studs, short drops, long drops, hoops, butterfly earrings and geometric designs can all work. The dress detail, hairstyle and whether you are wearing a necklace should determine the final choice."
     },
     {
-      "question": "What earrings should I wear with a romantic sweetheart dress?",
-      "answer": "Butterfly earrings, soft drop earrings and delicate diamond studs work well with romantic sweetheart dresses."
+      "question": "Should I wear a necklace with a sweetheart dress?",
+      "answer": "You can wear a necklace when the neckline is simple and provides clear space. Consider skipping it when the bodice is beaded, laced, sequinned or when the earrings are the focal point."
     },
     {
-      "question": "What jewellery should I wear with a black sweetheart dress?",
-      "answer": "A black sweetheart dress works well with Orsola drop earrings, Lusso bold statement earrings, Pave Hoops or Cadenza M diamond studs depending on how simple the dress is."
+      "question": "Can I wear statement earrings with a sweetheart neckline?",
+      "answer": "Yes, if the dress is sufficiently simple. Keep the necklace restrained or leave the neck bare so that the earrings and neckline do not compete."
     },
     {
-      "question": "What jewellery should I wear with a satin sweetheart dress?",
-      "answer": "Drop earrings or medium diamond studs work well with satin sweetheart dresses. Drops add movement, while studs keep the styling clean."
+      "question": "What jewellery goes with a strapless sweetheart dress?",
+      "answer": "Drops, hoops, visible studs or a pendant can work with a strapless sweetheart dress. Choose either the earrings or necklace to provide the main jewellery focus."
     },
     {
-      "question": "Can wedding guests wear bold earrings with a sweetheart neckline?",
-      "answer": "Yes, if the dress is simple and the earrings do not overpower the look. If the dress has lace, sequins or embroidery, studs or delicate drops may be better."
+      "question": "What jewellery suits a sweetheart wedding dress?",
+      "answer": "Consider the bodice detail, veil, hairstyle and necklace together. Studs or measured drop earrings may work, but heavily embellished dresses usually need restrained jewellery."
     },
     {
-      "question": "Are butterfly earrings good with a sweetheart neckline?",
-      "answer": "Yes, butterfly earrings work beautifully with sweetheart necklines because both have a soft, romantic feeling."
-    },
-    {
-      "question": "What metal colour works best with a sweetheart neckline?",
-      "answer": "Yellow gold feels warm and classic, white or silver tone feels clean and formal, and rose gold feels soft and romantic. Choose based on dress colour and personal style."
-    },
-    {
-      "question": "What IWantJewels earrings are best with a sweetheart neckline?",
-      "answer": "Orsola, Farfalla, Alidi Farfalla, Cadenza M, Concetta Short, Concetta Long, Pave Hoops and Lusso are strong sweetheart neckline options depending on whether you want movement, romance, sparkle, shape or boldness."
+      "question": "Is a sweetheart neckline the same as a V-neck?",
+      "answer": "No. A sweetheart neckline has curved upper edges that form a heart-like shape, while a V-neck uses straighter diagonal lines. Their jewellery options can overlap, but the shapes are different."
     }
   ],
   "cta": {
-    "heading": "A sweetheart neckline already has a soft, romantic shape, so the jewellery should keep the look balanced. Choose drop earrings when the dress is simple, butterfly earrings when the look should feel romantic, medium studs when the dress has detail, hoops when you want modern shape, and bold earrings when the outfit is clean enough to let the jewellery lead.",
-    "body": "Start with IWantJewels demi-fine lab-grown diamond earrings if you want sweetheart neckline jewellery with real diamond sparkle. Choose Orsola for elegant movement, Farfalla for romantic softness, Cadenza M for clean sparkle, Concetta Short for delicate occasion styling, Pave Hoops for shape and Lusso for bold party impact.",
-    "primaryLabel": "Shop Earrings for Sweetheart Necklines",
+    "heading": "Use the neckline's curved shape as the starting point, then consider the dress detail, hairstyle and occasion.",
+    "body": "Give either the earrings or necklace visual priority and keep the remaining jewellery supportive. Check the measurements, weight, closure, materials and sale unit before purchasing.",
+    "primaryLabel": "Explore Lab-Grown Diamond Earrings",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Drop Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Wedding Guest Jewellery Guide",
-    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
+    "secondaryLabel": "What Jewellery to Wear with a V-Neck Dress",
+    "secondaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress",
+    "tertiaryLabel": "What Earrings to Wear with an Off-Shoulder Dress",
+    "tertiaryHref": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
   }
 }

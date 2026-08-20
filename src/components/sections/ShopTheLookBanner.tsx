@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
+import { splitLines } from "@/i18n/splitLines";
 import { useCurrency } from "../../context/CurrencyContext";
 import { getProductBySlug } from "../../services/productService";
 import type { PriceInput } from "../../utils/price";
@@ -189,8 +190,9 @@ export default function ShopTheLookBanner() {
                 {/* Left: collage card */}
                 <div className="flex flex-col bg-[#f1f1f1] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
                     <h2 className="text-[22px] font-medium uppercase leading-[1.2] tracking-[0.12em] text-zinc-900 sm:text-[26px] lg:text-[34px]">
-                        <span className="block">{t("home.alessiaCollection").split('\n')[0] || "Explore Our"}</span>
-                        <span className="block">{t("home.alessiaCollection").split('\n')[1] || "Alessia Collection"}</span>
+                        {splitLines(t("home.exploreAlessia")).map((line) => (
+                            <span key={line} className="block">{line}</span>
+                        ))}
                     </h2>
 
                     <div className="relative mt-8">

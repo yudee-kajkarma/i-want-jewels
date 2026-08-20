@@ -114,11 +114,11 @@ export const resourceArticles: ResourceArticle[] = [
     categorySlug: "lab-grown-diamond-guides",
     title: "Lab-Grown Diamond Earrings Buying Guide",
     excerpt:
-      "Learn how to choose lab grown diamond earrings, including studs, huggies, drops, metal colours, sizes, gifts and everyday styling.",
-    coverImage: "/blog-images/blog-image-17.jpg",
+      "Learn how to choose lab-grown diamond earrings by style, size, carat weight, metal, setting, closure, comfort and price.",
+    coverImage: "/blog-images/blog-image-83.jpg",
     publishedAt: "2025-03-25",
-    readTime: "10 min read",
-    tags: ["buying guide", "earrings", "lab-grown"],
+    readTime: "12 min read",
+    tags: ["buying guide", "earrings", "lab-grown", "settings", "closures"],
   },
   {
     slug: "lab-grown-diamond-earrings-price-guide",
@@ -167,35 +167,35 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-are-lab-grown-diamonds",
     categorySlug: "lab-grown-diamond-guides",
-    title: "What Are Lab-Grown Diamonds?",
+    title: "What Are Lab-Grown Diamonds? A Clear Guide",
     excerpt:
-      "Lab-grown diamonds are real diamonds — chemically, physically, and optically identical to mined diamonds. Here is how they are created and why they matter.",
-    coverImage: "/blog-images/blog-image-2.jpg",
+      "Learn what lab-grown diamonds are, how CVD and HPHT diamonds are created, how they compare with mined diamonds and what buyers should check.",
+    coverImage: "/blog-images/blog-image-60.jpg",
     publishedAt: "2025-03-10",
-    readTime: "6 min read",
-    tags: ["lab-grown", "diamonds", "education"],
+    readTime: "13 min read",
+    tags: ["lab-grown", "diamonds", "education", "HPHT", "CVD"],
   },
   {
     slug: "lab-grown-diamonds-vs-cubic-zirconia",
     categorySlug: "lab-grown-diamond-guides",
     title: "Lab-Grown Diamonds vs Cubic Zirconia: What Is the Difference?",
     excerpt:
-      "Learn the difference between lab grown diamonds and cubic zirconia, including sparkle, durability, price, value and jewellery use.",
-    coverImage: "/blog-images/blog-image-115.png",
+      "Compare lab-grown diamonds and cubic zirconia by material, sparkle, durability, price and everyday wear to decide which stone suits you.",
+    coverImage: "/blog-images/blog-image-61.jpg",
     publishedAt: "2025-04-15",
     readTime: "12 min read",
-    tags: ["lab-grown", "cubic zirconia", "comparison"],
+    tags: ["lab-grown", "cubic zirconia", "comparison", "simulants"],
   },
   {
     slug: "lab-grown-diamonds-vs-moissanite",
     categorySlug: "lab-grown-diamond-guides",
     title: "Lab-Grown Diamonds vs Moissanite: What Is the Difference?",
     excerpt:
-      "Compare lab grown diamonds and moissanite in simple language. Learn the difference in sparkle, durability, price, value and jewellery use.",
-    coverImage: "/blog-images/blog-image-19.jpg",
+      "Compare lab-grown diamonds and moissanite by material, sparkle, hardness, price and everyday wear to choose the right stone for you.",
+    coverImage: "/blog-images/blog-image-81.jpg",
     publishedAt: "2025-04-20",
     readTime: "13 min read",
-    tags: ["lab-grown", "moissanite", "comparison"],
+    tags: ["lab-grown", "moissanite", "comparison", "simulants"],
   },
   {
     slug: "how-to-clean-lab-grown-diamond-earrings",
@@ -233,10 +233,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "lab-grown-diamond-earrings-for-weddings",
     categorySlug: "lab-grown-diamond-guides",
-    title:
-      "Lab-Grown Diamond Earrings for Weddings: Guest, Bridesmaid & Occasion Guide",
+    title: "Lab-Grown Diamond Earrings for Weddings",
     excerpt:
-      "Choose lab grown diamond earrings for weddings, wedding guests, bridesmaids, receptions, dresses, necklines and elegant occasion styling.",
+      "Choose lab-grown diamond wedding earrings for brides, bridesmaids and receptions. Compare studs, drops and hoops by dress, neckline and hairstyle.",
     coverImage: "/blog-images/blog-image-105.jpg",
     publishedAt: "2025-05-06",
     readTime: "14 min read",
@@ -253,51 +252,52 @@ export const resourceArticles: ResourceArticle[] = [
     readTime: "13 min read",
     tags: ["worth it", "value", "earrings", "lab-grown"],
   },
-  {
-    slug: "lab-grown-diamond-earrings-for-gifts",
-    categorySlug: "lab-grown-diamond-guides",
-    title:
-      "Lab-Grown Diamond Earrings for Gifts: Birthday, Anniversary & Bridesmaid Guide",
-    excerpt:
-      "Choose lab grown diamond earrings for birthday gifts, anniversary gifts, bridesmaids, romantic gifts and everyday jewellery gifts.",
-    coverImage: "/blog-images/blog-image-60.jpg",
-    publishedAt: "2025-05-14",
-    readTime: "13 min read",
-    tags: [
-      "gifts",
-      "birthday",
-      "anniversary",
-      "bridesmaid",
-      "earrings",
-      "lab-grown",
-    ],
-  },
-  {
-    slug: "lab-grown-diamond-earrings-for-ear-stacks",
-    categorySlug: "lab-grown-diamond-guides",
-    title:
-      "Lab-Grown Diamond Earrings for Ear Stacks: Studs, Huggies & Styling Guide",
-    excerpt:
-      "Build a diamond ear stack with lab grown diamond studs, huggies, hoops and minimalist earrings for everyday styling and occasions.",
-    coverImage: "/blog-images/blog-image-102.jpg",
-    publishedAt: "2025-05-18",
-    readTime: "13 min read",
-    tags: [
-      "ear stacks",
-      "studs",
-      "huggies",
-      "earrings",
-      "lab-grown",
-      "styling",
-    ],
-  },
+  // ─── SEO-RETIRED R5 · /resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts → /resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "lab-grown-diamond-earrings-for-gifts",
+  //   categorySlug: "lab-grown-diamond-guides",
+  //   title:
+  //     "Lab-Grown Diamond Earrings for Gifts: Birthday, Anniversary & Bridesmaid Guide",
+  //   excerpt:
+  //     "Choose lab grown diamond earrings for birthday gifts, anniversary gifts, bridesmaids, romantic gifts and everyday jewellery gifts.",
+  //   coverImage: "/blog-images/blog-image-60.jpg",
+  //   publishedAt: "2025-05-14",
+  //   readTime: "13 min read",
+  //   tags: [
+  //     "gifts",
+  //     "birthday",
+  //     "anniversary",
+  //     "bridesmaid",
+  //     "earrings",
+  //     "lab-grown",
+  //   ],
+  // },
+  // ─── SEO-RETIRED R4 · /resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks → /resources/earring-style-guides/diamond-ear-stack-ideas · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "lab-grown-diamond-earrings-for-ear-stacks",
+  //   categorySlug: "lab-grown-diamond-guides",
+  //   title:
+  //     "Lab-Grown Diamond Earrings for Ear Stacks: Studs, Huggies & Styling Guide",
+  //   excerpt:
+  //     "Build a diamond ear stack with lab grown diamond studs, huggies, hoops and minimalist earrings for everyday styling and occasions.",
+  //   coverImage: "/blog-images/blog-image-102.jpg",
+  //   publishedAt: "2025-05-18",
+  //   readTime: "13 min read",
+  //   tags: [
+  //     "ear stacks",
+  //     "studs",
+  //     "huggies",
+  //     "earrings",
+  //     "lab-grown",
+  //     "styling",
+  //   ],
+  // },
   {
     slug: "gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings",
     categorySlug: "lab-grown-diamond-guides",
-    title:
-      "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings: Metal Colour Guide",
+    title: "Yellow vs White vs Rose Gold Diamond Earrings",
     excerpt:
-      "Compare gold, white and rose gold lab grown diamond earrings. Choose the best metal colour for everyday wear, gifts, weddings and styling.",
+      "Compare yellow, white and rose-gold lab-grown diamond earrings. Understand colour, solid versus plated construction, styling and care before choosing.",
     coverImage: "/blog-images/blog-image-41.jpg",
     publishedAt: "2025-05-22",
     readTime: "13 min read",
@@ -571,28 +571,30 @@ export const resourceArticles: ResourceArticle[] = [
     readTime: "16 min read",
     tags: ["maid of honour", "wedding", "butterfly earrings", "studs", "earrings", "lab-grown"],
   },
-  {
-    slug: "anniversary-jewellery-gifts",
-    categorySlug: "jewellery-gift-guides",
-    title: "Anniversary Jewellery Gifts: Romantic Earrings She Will Actually Wear",
-    excerpt:
-      "Choose anniversary jewellery gifts with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and romantic gift ideas.",
-    coverImage: "/blog-images/blog-image-87.jpg",
-    publishedAt: "2025-09-03",
-    readTime: "16 min read",
-    tags: ["anniversary gifts", "butterfly earrings", "romantic", "studs", "earrings", "lab-grown"],
-  },
-  {
-    slug: "birthday-jewellery-gifts",
-    categorySlug: "jewellery-gift-guides",
-    title: "Birthday Jewellery Gifts: Earrings She Will Actually Wear After Her Birthday",
-    excerpt:
-      "Choose birthday jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and meaningful gift ideas.",
-    coverImage: "/blog-images/blog-image-85.jpg",
-    publishedAt: "2025-08-30",
-    readTime: "16 min read",
-    tags: ["birthday gifts", "butterfly earrings", "studs", "earrings", "meaningful", "lab-grown"],
-  },
+  // ─── SEO-RETIRED R10 · /resources/jewellery-gift-guides/anniversary-jewellery-gifts → /resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "anniversary-jewellery-gifts",
+  //   categorySlug: "jewellery-gift-guides",
+  //   title: "Anniversary Jewellery Gifts: Romantic Earrings She Will Actually Wear",
+  //   excerpt:
+  //     "Choose anniversary jewellery gifts with lab grown diamond earrings, butterfly earrings, studs, drops, huggies and romantic gift ideas.",
+  //   coverImage: "/blog-images/blog-image-87.jpg",
+  //   publishedAt: "2025-09-03",
+  //   readTime: "16 min read",
+  //   tags: ["anniversary gifts", "butterfly earrings", "romantic", "studs", "earrings", "lab-grown"],
+  // },
+  // ─── SEO-RETIRED R9 · /resources/jewellery-gift-guides/birthday-jewellery-gifts → /resources/jewellery-gift-guides/birthday-jewellery-gifts-for-her · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "birthday-jewellery-gifts",
+  //   categorySlug: "jewellery-gift-guides",
+  //   title: "Birthday Jewellery Gifts: Earrings She Will Actually Wear After Her Birthday",
+  //   excerpt:
+  //     "Choose birthday jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and meaningful gift ideas.",
+  //   coverImage: "/blog-images/blog-image-85.jpg",
+  //   publishedAt: "2025-08-30",
+  //   readTime: "16 min read",
+  //   tags: ["birthday gifts", "butterfly earrings", "studs", "earrings", "meaningful", "lab-grown"],
+  // },
   {
     slug: "graduation-jewellery-gifts",
     categorySlug: "jewellery-gift-guides",
@@ -684,10 +686,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "date-night-jewellery-guide",
     categorySlug: "jewellery-gift-guides",
-    title:
-      "Date Night Jewellery Guide: What Earrings to Wear for Dinner, Drinks & Romantic Outfits",
+    title: "Date Night Earrings: What to Wear",
     excerpt:
-      "Choose date night jewellery with lab grown diamond earrings, studs, drops, hoops, butterfly earrings and romantic styling ideas.",
+      "Choose date night earrings for casual dinners, drinks, anniversary meals and formal evenings. Compare studs, hoops, drops and statement styles by outfit.",
     coverImage: "/blog-images/blog-image-67.jpg",
     publishedAt: "2025-07-25",
     readTime: "16 min read",
@@ -704,9 +705,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "how-to-stack-earrings",
     categorySlug: "earring-style-guides",
-    title: "How to Stack Earrings: A Complete Ear Stack Styling Guide",
+    title: "How to Stack Earrings: Complete Ear Stack Guide",
     excerpt:
-      "Learn how to stack earrings with studs, huggies, hoops, drops and lab grown diamond earrings for everyday, wedding and party looks.",
+      "Learn how to stack earrings step by step: choose a focal piece, vary the scale, repeat one feature and check spacing across two or three piercings.",
     coverImage: "/blog-images/blog-image-96.jpg",
     publishedAt: "2025-07-21",
     readTime: "13 min read",
@@ -722,35 +723,34 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "diamond-ear-stack-ideas",
     categorySlug: "earring-style-guides",
-    title:
-      "Diamond Ear Stack Ideas: Everyday, Minimalist, Wedding & Party Looks",
+    title: "Diamond Ear Stack Ideas: 15 Curated Looks",
     excerpt:
-      "Explore diamond ear stack ideas with studs, huggies, hoops, drops and lab grown diamond earrings for everyday, wedding and party looks.",
+      "Fifteen diamond ear stack ideas for two and three piercings, covering minimalist, everyday, workwear, wedding guest and evening combinations.",
     coverImage: "/blog-images/blog-image-67.jpg",
     publishedAt: "2025-07-25",
-    readTime: "13 min read",
+    readTime: "12 min read",
     tags: [
       "diamond ear stacks",
       "ear stack ideas",
       "earring styling",
-      "studs",
-      "huggies",
+      "two piercings",
+      "three piercings",
       "lab-grown",
     ],
   },
   {
     slug: "minimalist-earrings-guide",
     categorySlug: "earring-style-guides",
-    title: "Minimalist Earrings Guide: Simple Earrings for Everyday Styling",
+    title: "Minimalist Earrings Guide: Styles & Buying Tips",
     excerpt:
-      "Learn how to choose minimalist earrings for everyday wear, work outfits, ear stacks, gifts and simple lab grown diamond styling.",
+      "Learn how to choose minimalist earrings by style, size, metal, closure and sparkle. Compare studs, huggies, slim hoops and subtle diamond designs.",
     coverImage: "/blog-images/blog-image-69.jpg",
     publishedAt: "2025-07-29",
-    readTime: "12 min read",
+    readTime: "14 min read",
     tags: [
       "minimalist earrings",
-      "everyday wear",
-      "earring styling",
+      "buying guide",
+      "earring sizes",
       "studs",
       "huggies",
       "lab-grown",
@@ -759,9 +759,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "stud-vs-huggie-earrings",
     categorySlug: "earring-style-guides",
-    title: "Stud vs Huggie Earrings: Which Style Should You Choose?",
+    title: "Stud vs Huggie Earrings: Key Differences",
     excerpt:
-      "Compare stud and huggie earrings for everyday wear, ear stacks, gifts, workwear and lab grown diamond styling.",
+      "Compare stud and huggie earrings by shape, fit, backing, movement and styling. Learn which design suits a single piercing, gift or ear stack.",
     coverImage: "/blog-images/blog-image-71.jpg",
     publishedAt: "2025-08-02",
     readTime: "11 min read",
@@ -776,9 +776,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "hoop-vs-huggie-earrings",
     categorySlug: "earring-style-guides",
-    title: "Hoop vs Huggie Earrings: Which Style Should You Choose?",
+    title: "Hoop vs Huggie Earrings: Key Differences",
     excerpt:
-      "Compare hoop and huggie earrings for everyday wear, ear stacks, gifts, workwear, parties and lab grown diamond styling.",
+      "Compare hoop and huggie earrings by diameter, fit, movement, closure and styling. Learn which design better suits your piercings and preferred look.",
     coverImage: "/blog-images/blog-image-13.jpg",
     publishedAt: "2025-08-06",
     readTime: "11 min read",
@@ -810,10 +810,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "party-earrings-guide",
     categorySlug: "earring-style-guides",
-    title:
-      "Party Earrings Guide: What Earrings to Wear for Evening Looks, Dinners & Celebrations",
+    title: "Party Earrings Guide: What to Wear to Every Event",
     excerpt:
-      "Choose party earrings for black dresses, satin outfits, dinners, weddings, birthdays and evening looks with lab grown diamond styling ideas.",
+      "Choose earrings for cocktail parties, formal dinners, galas, birthdays and black-tie events. Compare studs, hoops, drops and bolder styles.",
     coverImage: "/blog-images/blog-image-77.jpg",
     publishedAt: "2025-08-14",
     readTime: "13 min read",
@@ -829,10 +828,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "bold-statement-earrings-guide",
     categorySlug: "earring-style-guides",
-    title:
-      "Bold Statement Earrings Guide: How to Style Strong Sparkle Without Overdoing It",
+    title: "Bold Statement Earrings: Styling Guide",
     excerpt:
-      "Learn how to style bold statement earrings for parties, black dresses, weddings, dinners, birthdays and evening outfits.",
+      "Learn how to choose and style bold statement earrings by size, weight, neckline, hairstyle and outfit detail, without making your look feel crowded.",
     coverImage: "/blog-images/blog-image-79.jpg",
     publishedAt: "2025-08-18",
     readTime: "13 min read",
@@ -847,10 +845,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-jewellery-to-wear-with-a-black-dress",
     categorySlug: "earring-style-guides",
-    title:
-      "What Jewellery to Wear with a Black Dress: Earrings, Metals & Styling Guide",
+    title: "What Jewellery to Wear with a Black Dress",
     excerpt:
-      "Choose jewellery for a black dress with earrings, diamonds, gold, silver, rose gold, party looks, weddings and evening outfit styling.",
+      "Choose earrings, necklaces and metal colours for a black dress by neckline, fabric and occasion. Compare studs, hoops, drops and statement designs.",
     coverImage: "/blog-images/blog-image-52.jpg",
     publishedAt: "2025-08-22",
     readTime: "16 min read",
@@ -866,10 +863,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-jewellery-to-wear-with-a-satin-dress",
     categorySlug: "earring-style-guides",
-    title:
-      "What Jewellery to Wear with a Satin Dress: Earrings, Metals & Styling Guide",
+    title: "Jewellery to Wear with Satin & Silk Dresses",
     excerpt:
-      "Choose jewellery for a satin dress with earrings, gold, silver, diamonds, party looks, wedding guest outfits and evening styling ideas.",
+      "Learn what jewellery to wear with satin and silk dresses. Choose earrings, necklaces and metal colours by neckline, dress colour and occasion.",
     coverImage: "/blog-images/blog-image-83.jpg",
     publishedAt: "2025-08-26",
     readTime: "16 min read",
@@ -885,10 +881,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-jewellery-to-wear-with-a-v-neck-dress",
     categorySlug: "earring-style-guides",
-    title:
-      "What Jewellery to Wear with a V-Neck Dress: Earrings, Necklaces & Styling Guide",
+    title: "What Jewellery to Wear with a V-Neck Dress",
     excerpt:
-      "Choose jewellery for a V neck dress with earrings, necklaces, diamonds, gold, party looks, weddings and evening styling ideas.",
+      "Choose necklaces and earrings for V-neck dresses by neckline depth, pendant placement, fabric and occasion. Learn when to wear earrings, a necklace or both.",
     coverImage: "/blog-images/blog-image-85.jpg",
     publishedAt: "2025-08-30",
     readTime: "15 min read",
@@ -904,10 +899,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-jewellery-to-wear-with-a-sweetheart-neckline",
     categorySlug: "earring-style-guides",
-    title:
-      "What Jewellery to Wear with a Sweetheart Neckline: Earrings, Necklaces & Styling Guide",
+    title: "Jewellery for a Sweetheart Neckline: Styling Guide",
     excerpt:
-      "Choose jewellery for a sweetheart neckline dress with earrings, necklaces, diamonds, gold, wedding guest looks and party styling ideas.",
+      "Choose jewellery for a sweetheart neckline. Compare earrings, necklaces and metal colours for wedding, party, satin and romantic dresses.",
     coverImage: "/blog-images/blog-image-87.jpg",
     publishedAt: "2025-09-03",
     readTime: "16 min read",
@@ -923,10 +917,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-earrings-to-wear-with-an-off-shoulder-dress",
     categorySlug: "earring-style-guides",
-    title:
-      "What Earrings to Wear with an Off-Shoulder Dress: Styling Guide for Weddings, Parties & Evening Looks",
+    title: "What Earrings to Wear with an Off-Shoulder Dress",
     excerpt:
-      "Choose earrings for an off shoulder dress with diamonds, drops, hoops, studs, gold, party looks, wedding guest outfits and evening styling ideas.",
+      "Choose earrings for an off-shoulder dress by earring size, neckline width, hairstyle, fabric and occasion. Compare studs, hoops, drops and statement styles.",
     coverImage: "/blog-images/blog-image-89.jpg",
     publishedAt: "2025-09-07",
     readTime: "16 min read",
@@ -939,32 +932,32 @@ export const resourceArticles: ResourceArticle[] = [
       "lab-grown",
     ],
   },
-  {
-    slug: "gold-vs-white-vs-rose-gold-diamond-earrings",
-    categorySlug: "earring-style-guides",
-    title:
-      "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings: Which Metal Colour Should You Choose?",
-    excerpt:
-      "Compare gold, white and rose gold lab grown diamond earrings for everyday wear, gifts, weddings, parties, skin tone and outfit styling.",
-    coverImage: "/blog-images/blog-image-91.jpg",
-    publishedAt: "2025-09-11",
-    readTime: "15 min read",
-    tags: [
-      "metal colour",
-      "gold",
-      "white gold",
-      "rose gold",
-      "lab-grown diamond earrings",
-      "earring styling",
-    ],
-  },
+  // ─── SEO-RETIRED R3 · /resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings → /resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "gold-vs-white-vs-rose-gold-diamond-earrings",
+  //   categorySlug: "earring-style-guides",
+  //   title:
+  //     "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings: Which Metal Colour Should You Choose?",
+  //   excerpt:
+  //     "Compare gold, white and rose gold lab grown diamond earrings for everyday wear, gifts, weddings, parties, skin tone and outfit styling.",
+  //   coverImage: "/blog-images/blog-image-91.jpg",
+  //   publishedAt: "2025-09-11",
+  //   readTime: "15 min read",
+  //   tags: [
+  //     "metal colour",
+  //     "gold",
+  //     "white gold",
+  //     "rose gold",
+  //     "lab-grown diamond earrings",
+  //     "earring styling",
+  //   ],
+  // },
   {
     slug: "what-jewellery-to-wear-with-a-green-dress",
     categorySlug: "earring-style-guides",
-    title:
-      "What Jewellery to Wear with a Green Dress: Earrings, Metals & Styling Guide",
+    title: "What Jewellery to Wear with a Green Dress",
     excerpt:
-      "Choose jewellery for a green dress with gold, silver, rose gold, diamond earrings, wedding guest looks, party styling and outfit ideas.",
+      "Choose jewellery for emerald, sage, olive, mint and forest-green dresses. Compare metal colours, earrings and necklaces by fabric and occasion.",
     coverImage: "/blog-images/blog-image-93.jpg",
     publishedAt: "2025-09-15",
     readTime: "16 min read",
@@ -980,10 +973,9 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "what-jewellery-to-wear-with-a-red-dress",
     categorySlug: "earring-style-guides",
-    title:
-      "What Jewellery to Wear with a Red Dress: Earrings, Metals & Styling Guide",
+    title: "What Jewellery to Wear with a Red Dress",
     excerpt:
-      "Choose jewellery for a red dress with gold, silver, rose gold, diamond earrings, party looks, wedding guest outfits and evening styling ideas.",
+      "Discover what jewellery to wear with a red dress, from gold and silver earrings to choices for satin dresses, weddings, parties and necklines.",
     coverImage: "/blog-images/blog-image-95.jpg",
     publishedAt: "2025-09-19",
     readTime: "16 min read",
@@ -999,41 +991,41 @@ export const resourceArticles: ResourceArticle[] = [
   {
     slug: "minimalist-jewellery-styling-guide",
     categorySlug: "earring-style-guides",
-    title:
-      "Minimalist Jewellery Styling Guide: How to Style Simple Jewellery for Everyday, Work & Occasions",
+    title: "How to Style Minimalist Jewellery",
     excerpt:
-      "Learn how to style minimalist jewellery with earrings, studs, huggies, lab grown diamonds, workwear, gifts, weddings and everyday outfits.",
+      "Learn how to style minimalist jewellery with outfits, necklines and other pieces. Build a versatile capsule using earrings, necklaces, rings and bracelets.",
     coverImage: "/blog-images/blog-image-97.jpg",
     publishedAt: "2025-09-23",
     readTime: "15 min read",
     tags: [
       "minimalist jewellery",
-      "earring styling",
-      "everyday wear",
-      "workwear",
-      "studs",
+      "jewellery capsule",
+      "layering",
+      "necklines",
+      "styling",
       "lab-grown",
     ],
   },
-  {
-    slug: "lab-grown-diamond-hoop-earrings-guide",
-    categorySlug: "earring-style-guides",
-    title:
-      "Lab-Grown Diamond Hoop Earrings Guide: How to Choose and Style Diamond Hoops",
-    excerpt:
-      "Learn how to choose lab grown diamond hoop earrings for everyday wear, parties, weddings, gifts, ear stacks and outfit styling.",
-    coverImage: "/blog-images/blog-image-99.jpg",
-    publishedAt: "2025-09-27",
-    readTime: "14 min read",
-    tags: [
-      "hoop earrings",
-      "lab-grown diamond earrings",
-      "earring styling",
-      "ear stacks",
-      "everyday wear",
-      "lab-grown",
-    ],
-  },
+  // ─── SEO-RETIRED R1 · /resources/earring-style-guides/lab-grown-diamond-hoop-earrings-guide → /resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "lab-grown-diamond-hoop-earrings-guide",
+  //   categorySlug: "earring-style-guides",
+  //   title:
+  //     "Lab-Grown Diamond Hoop Earrings Guide: How to Choose and Style Diamond Hoops",
+  //   excerpt:
+  //     "Learn how to choose lab grown diamond hoop earrings for everyday wear, parties, weddings, gifts, ear stacks and outfit styling.",
+  //   coverImage: "/blog-images/blog-image-99.jpg",
+  //   publishedAt: "2025-09-27",
+  //   readTime: "14 min read",
+  //   tags: [
+  //     "hoop earrings",
+  //     "lab-grown diamond earrings",
+  //     "earring styling",
+  //     "ear stacks",
+  //     "everyday wear",
+  //     "lab-grown",
+  //   ],
+  // },
   {
     slug: "everyday-lab-grown-diamond-earrings-guide",
     categorySlug: "earring-style-guides",
@@ -1053,23 +1045,109 @@ export const resourceArticles: ResourceArticle[] = [
       "lab-grown",
     ],
   },
+  // ─── SEO-RETIRED R2 · /resources/earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day → /resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "can-you-wear-lab-grown-diamond-earrings-every-day",
+  //   categorySlug: "earring-style-guides",
+  //   title:
+  //     "Can You Wear Lab-Grown Diamond Earrings Every Day? Daily Wear, Care & Styling Guide",
+  //   excerpt:
+  //     "Learn if lab grown diamond earrings are good for everyday wear, work, sleep, showering, sensitive ears, care, gifts and daily styling.",
+  //   coverImage: "/blog-images/blog-image-103.jpg",
+  //   publishedAt: "2025-10-05",
+  //   readTime: "14 min read",
+  //   tags: [
+  //     "everyday earrings",
+  //     "daily wear",
+  //     "lab-grown diamond earrings",
+  //     "earring care",
+  //     "workwear",
+  //     "lab-grown",
+  //   ],
+  // },
   {
-    slug: "can-you-wear-lab-grown-diamond-earrings-every-day",
+    slug: "how-to-style-geometric-earrings",
     categorySlug: "earring-style-guides",
-    title:
-      "Can You Wear Lab-Grown Diamond Earrings Every Day? Daily Wear, Care & Styling Guide",
+    title: "How to Style Geometric Earrings",
     excerpt:
-      "Learn if lab grown diamond earrings are good for everyday wear, work, sleep, showering, sensitive ears, care, gifts and daily styling.",
-    coverImage: "/blog-images/blog-image-103.jpg",
-    publishedAt: "2025-10-05",
-    readTime: "14 min read",
+      "Learn how to style geometric earrings with workwear, casual outfits, dresses and evening looks, including advice on size, necklines and other jewellery.",
+    coverImage: "/blog-images/blog-image-62.jpg",
+    publishedAt: "2025-10-20",
+    readTime: "12 min read",
     tags: [
-      "everyday earrings",
-      "daily wear",
-      "lab-grown diamond earrings",
-      "earring care",
+      "geometric earrings",
+      "earring styling",
       "workwear",
-      "lab-grown",
+      "necklines",
+      "metal colours",
+    ],
+  },
+  {
+    slug: "how-to-style-butterfly-earrings",
+    categorySlug: "earring-style-guides",
+    title: "How to Style Butterfly Earrings",
+    excerpt:
+      "Learn how to style butterfly earrings with casual outfits, dresses, necklaces and ear stacks. Compare simple, diamond and pavé butterfly designs.",
+    coverImage: "/blog-images/blog-image-68.jpg",
+    publishedAt: "2025-10-18",
+    readTime: "13 min read",
+    tags: [
+      "butterfly earrings",
+      "earring styling",
+      "motif jewellery",
+      "necklines",
+      "ear stacks",
+    ],
+  },
+  {
+    slug: "how-to-style-huggie-earrings",
+    categorySlug: "earring-style-guides",
+    title: "How to Style Huggie Earrings",
+    excerpt:
+      "Learn how to style huggie earrings alone, with studs and in balanced ear stacks. Match their size, metal and diamond detail to outfits and occasions.",
+    coverImage: "/blog-images/blog-image-78.jpg",
+    publishedAt: "2025-10-16",
+    readTime: "12 min read",
+    tags: [
+      "huggie earrings",
+      "earring styling",
+      "ear stacks",
+      "metal colours",
+      "studs",
+    ],
+  },
+  {
+    slug: "what-are-huggie-earrings",
+    categorySlug: "earring-style-guides",
+    title: "What Are Huggie Earrings? Fit, Sizes and Buying Guide",
+    excerpt:
+      "Learn what huggie earrings are, how they differ from hoops and how to choose the right diameter, thickness, closure, material and fit for your ear.",
+    coverImage: "/blog-images/blog-image-66.jpg",
+    publishedAt: "2025-10-14",
+    readTime: "13 min read",
+    tags: [
+      "huggie earrings",
+      "earring sizes",
+      "earring fit",
+      "buying guide",
+      "hoops",
+    ],
+  },
+  {
+    slug: "travel-jewellery-guide",
+    categorySlug: "earring-style-guides",
+    title: "Travel Jewellery Guide: What to Pack and How to Protect It",
+    excerpt:
+      "Learn what jewellery to pack for a holiday, how to prevent tangles and damage, what to keep in hand luggage, and how to care for pieces while travelling.",
+    coverImage: "/blog-images/blog-image-84.jpg",
+    publishedAt: "2025-10-12",
+    readTime: "12 min read",
+    tags: [
+      "travel jewellery",
+      "packing",
+      "jewellery care",
+      "earrings",
+      "storage",
     ],
   },
   {
@@ -1102,17 +1180,18 @@ export const resourceArticles: ResourceArticle[] = [
     readTime: "17 min read",
     tags: ["valentine's day", "romantic", "butterfly earrings", "studs", "earrings", "lab-grown"],
   },
-  {
-    slug: "new-year-jewellery-gifts",
-    categorySlug: "jewellery-care-guides",
-    title: "New Year Jewellery Gifts: Earrings for a Fresh Start and Every Celebration After",
-    excerpt:
-      "Choose New Year jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and party-ready gift ideas.",
-    coverImage: "/blog-images/blog-image-11.jpg",
-    publishedAt: "2025-10-01",
-    readTime: "17 min read",
-    tags: ["new year gifts", "party jewellery", "butterfly earrings", "studs", "earrings", "lab-grown"],
-  },
+  // ─── SEO-RETIRED R7 · /resources/jewellery-care-guides/new-year-jewellery-gifts → /resources/occasion-jewellery-guides/new-year-jewellery-gifts · see src/data/retired-urls.ts ───
+  // {
+  //   slug: "new-year-jewellery-gifts",
+  //   categorySlug: "jewellery-care-guides",
+  //   title: "New Year Jewellery Gifts: Earrings for a Fresh Start and Every Celebration After",
+  //   excerpt:
+  //     "Choose New Year jewellery gifts with lab grown diamond earrings, studs, huggies, butterfly earrings, drops, hoops and party-ready gift ideas.",
+  //   coverImage: "/blog-images/blog-image-11.jpg",
+  //   publishedAt: "2025-10-01",
+  //   readTime: "17 min read",
+  //   tags: ["new year gifts", "party jewellery", "butterfly earrings", "studs", "earrings", "lab-grown"],
+  // },
   {
     slug: "new-year-jewellery-gifts",
     categorySlug: "occasion-jewellery-guides",

@@ -1,111 +1,58 @@
 {
   "meta": {
-    "title": "So stapeln Sie Ohrringe: Ear Stack Guide",
-    "description": "Erfahren Sie, wie Sie Ohrringe mit Ohrsteckern, Huggies, Creolen, Tropfen und im Labor gezüchteten Diamantohrringen für Alltags-, Hochzeits- und Party-Looks kombinieren."
+    "title": "Ohrringe kombinieren: Ihr Ear-Stack-Guide",
+    "description": "Ohrringe kombinieren: Wählen Sie ein Fokusstück, variieren Sie Größen, wiederholen Sie ein Detail und prüfen Sie Abstände an zwei oder drei Ohrlöchern."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-63.jpg",
-    "title": "So stapeln Sie Ohrringe:",
-    "subtitle": "Ein vollständiger Ear-Stack-Styling-Guide",
+    "image": "/blog-images/blog-image-6.jpg",
+    "title": "Ohrringe kombinieren:",
+    "subtitle": "Schritt-für-Schritt-Guide für Ihren Ear Stack",
     "paragraphs": [
-      "Das Stapeln von Ohrringen ist eine der einfachsten Möglichkeiten, Schmuck persönlicher wirken zu lassen. Anstatt ein Paar Ohrringe zu tragen, kreieren Sie eine stilvolle Kombination aus Ohrsteckern, Huggies, Creolen, minimalistischen Ohrringen, Schmetterlingsohrringen, Tropfen oder einem stärkeren Statement-Stück.",
-      "Ein guter Ear Stack sollte sich ausgewogen und nicht überladen anfühlen. Die besten Stapel haben normalerweise einen Hauptohrring, einen Stützohrring und ein weicheres Detail. Der Hauptohrring sorgt für den Fokus, der Stützohrring verleiht Form und das kleinere Stück hält den Stapel poliert, ohne dass sich das Ohr schwer anfühlt.",
-      "Diese Ressource hilft Käufern beim Zusammenstellen von Ohrringstapeln für Alltagskleidung, Arbeitsoutfits, Looks für Hochzeitsgäste, Partys, Geschenke und modernes halbfeine Styling. Es führt Benutzer auch zu IWantJewels-Produkten wie Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long und Lusso Bold Statement-Ohrringen."
+      "Ein Ear Stack ist eine Kombination aus Ohrringen, die über zwei oder mehr Ohrlöcher hinweg getragen werden. Bei einem gelungenen Stack geht es nicht darum, möglichst viele Ohrringe zu tragen. Entscheidend ist ein klares Zusammenspiel von Größe, Form, Glanz, Metall und Abstand.",
+      "Am einfachsten wählen Sie einen auffälligen Fokus-Ohrring, ergänzen ein dezenteres Stück und lassen genug visuellen Raum, damit jeder Ohrring sichtbar bleibt. Ohrstecker, kleine Creolen (Huggies) und kleine Creolen sind vielseitige Grundelemente, während Ohrhänger oder dekorativere Designs zum Fokus werden können.",
+      "Dieser Guide erklärt, wie Sie Ohrringe mit zwei oder drei Ohrlöchern kombinieren, verschiedene Ohrringarten zusammenstellen und verhindern, dass der Stack überladen wirkt."
     ],
-    "shopLabel": "Kaufen Sie Ear Stack-Ohrringe",
+    "shopLabel": "Im Labor gezüchtete Diamantohrringe entdecken",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Erfahren Sie, wie Sie Ohrringe stapeln, ohne dass das Ohr überfüllt wirkt",
-      "Wählen Sie die richtigen Ohrringe für das erste, zweite und dritte Piercing",
-      "Kombinieren Sie Ohrstecker, Huggies, Creolen, Tropfen und minimalistische Ohrringe",
-      "Erstellen Sie Ohrstöpsel für den Alltag, minimalistisch, für Hochzeitsgäste und Partys",
-      "Entscheiden Sie, welcher Ohrring das Hauptstück sein soll",
-      "Verstehen Sie, wie Sie Größe, Form, Glanz und Metallfarbe in Einklang bringen",
-      "Finden Sie IWantJewels-Produktkombinationen, die zusammenpassen",
-      "Planen Sie Bildblöcke, Produktmodule, CTA-Platzierungen und interne Links für diese Seite ein"
+      "Wählen Sie einen Fokus-Ohrring",
+      "Ergänzen Sie einen kleineren oder dezenteren Ohrring",
+      "Wiederholen Sie ein Element – Metallfarbe, Diamantdetail oder Form",
+      "Variieren Sie die Größe, damit die Ohrringe nicht miteinander konkurrieren",
+      "Prüfen Sie den Abstand von vorn und von der Seite",
+      "Testen Sie den Stack mit Haaren, Brille und Kopfhörern",
+      "Auch ein Stack aus zwei Teilen kann bewusst zusammengestellt wirken"
     ],
-    "image": "/blog-images/blog-image-69.jpg"
+    "image": "/blog-images/blog-image-14.jpg"
   },
   "content": [
     {
-      "heading": "Ear Stack Builder",
+      "heading": "Die kurze Antwort: Wie kombiniert man Ohrringe?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Verwenden Sie diese Tabelle oben auf der Seite als wichtigste Entscheidungshilfe."
+          "text": "Folgen Sie dieser einfachen Formel für Ihren Ear Stack:"
         },
         {
-          "type": "table",
-          "headers": [
-            "Ear-Stack-Ziel",
-            "Hauptohrring",
-            "Unterstützender Ohrring",
-            "Beste IWJ-Regie"
-          ],
-          "rows": [
-            [
-              "Einfacher Alltagsstapel",
-              "Kleiner Bolzen",
-              "Huggie",
-              "Kadenz S + Amadea Huggie"
-            ],
-            [
-              "Besser sichtbarer Tagesstapel",
-              "Mittlerer Bolzen",
-              "Huggie oder minimalistischer Ohrring",
-              "Kadenz M + Amadea oder Laluce"
-            ],
-            [
-              "Minimalistischer Stapel",
-              "Kleiner Bolzen",
-              "Minimalistischer Ohrring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Moderner Reifenstapel",
-              "Hoop oder Huggie",
-              "Kleiner Bolzen",
-              "Pave Hoops oder Amadea + Cadenza S"
-            ],
-            [
-              "Romantischer Stapel",
-              "Schmetterlingsohrring",
-              "Kleiner Bolzen",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Hochzeitsgästestapel",
-              "Drop oder Medium Stud",
-              "Kleiner Hengst oder Huggie",
-              "Orsola oder Cadenza M + Amadea"
-            ],
-            [
-              "Partystapel",
-              "Mutiger Statement-Ohrring",
-              "Kleiner Hengst oder Huggie",
-              "Lusso + Cadenza S oder Amadea"
-            ],
-            [
-              "Verschenkbarer Starterstapel",
-              "Stud",
-              "Huggie",
-              "Kadenz S + Amadea"
-            ],
-            [
-              "Weicher Anlassstapel",
-              "Kurzer Abstieg",
-              "Minimaler Bolzen",
-              "Concetta Short + Cadenza S"
-            ],
-            [
-              "Formeller Abendstapel",
-              "Langer Tropfen",
-              "Kleiner Bolzen",
-              "Concetta Long + Cadenza S"
-            ]
+          "type": "numbered-list",
+          "items": [
+            "Wählen Sie einen Fokus-Ohrring.",
+            "Ergänzen Sie einen kleineren oder dezenteren Ohrring.",
+            "Wiederholen Sie ein Element, etwa die Metallfarbe, ein Diamantdetail oder die Form.",
+            "Variieren Sie die Größe der Ohrringe, damit sie nicht miteinander konkurrieren.",
+            "Prüfen Sie den Abstand von vorn und von der Seite.",
+            "Testen Sie den vollständigen Stack mit Ihren Haaren, Ihrer Brille und Ihren Kopfhörern."
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Stack aus zwei Teilen kann genauso bewusst zusammengestellt wirken wie eine Kombination aus drei oder vier Teilen. Ziel ist Ausgewogenheit, nicht Quantität."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dieser Styling-Guide richtet sich an vollständig verheilte Ohrlöcher. Setzen Sie Schmuck nicht mit Gewalt in ein Ohrloch ein und wechseln Sie den Schmuck in einem heilenden Ohrloch nicht ohne Anleitung durch einen qualifizierten Piercer. Winkel, Abstände und Anatomie unterscheiden sich von Person zu Person. Professionelle Empfehlungen zum Piercen besagen, dass Schmuckwechsel während der Heilung von einem qualifizierten Piercer vorgenommen werden sollten und dass eine ungeeignete Größe, ein ungeeignetes Gewicht oder ein ungeeigneter Stil Probleme verursachen kann."
         }
       ]
     },
@@ -114,136 +61,64 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "Ein Ear Stack ist eine Kombination aus Ohrringen, die zusammen über einem oder mehreren Piercings getragen werden. Es kann einfach sein, wie ein Ohrstecker mit einem Huggie, oder detaillierter, wie ein Ohrstecker, ein Huggie, eine Creole und ein Hängeohrring, die zusammen gestaltet sind."
+          "text": "Ein Ear Stack ist eine geplante Anordnung von Ohrringen, die über mehrere Ohrlöcher hinweg getragen werden. Er kann Folgendes enthalten:"
         },
         {
-          "type": "paragraph",
-          "text": "Die besten Ear Stacks sehen nicht zufällig aus. Sie haben eine klare Struktur. Normalerweise gibt ein Teil den Look vor, während die anderen ihn unterstützen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn Sie beispielsweise als Hauptstück einen auffälligen Ohrring tragen, sollte der Rest des Stapels kleiner bleiben. Wenn Sie einen kleinen Ohrstecker als Hauptstück tragen, können Sie für die Form einen Huggie- oder minimalistischen Ohrring hinzufügen. Wenn Sie einen Ohrhänger tragen, sollte dieser in der Regel im Mittelpunkt stehen, da er für mehr Länge und Bewegung sorgt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ear-Stacks passen besonders gut zu halbfeinem Schmuck, da sich kleine Stücke immer noch erhaben anfühlen können. Im Labor gezüchtete Diamant-Ohrstecker, Huggies und minimalistische Ohrringe sorgen für Glanz, ohne dass das Ohr zu schwer wirkt."
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Die einfache Formel zum Stapeln von Ohrringen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Der einfachste Weg, einen Ear Stack zu bauen, ist:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Hauptteil + Formteil + weiches Detail"
-        },
-        {
-          "type": "paragraph",
-          "text": "Das Hauptstück ist der Ohrring, der den Leuten zuerst auffällt. Das Formteil fügt Struktur hinzu, z. B. ein Huggie oder ein Reifen. Die weichen Details sorgen für ein wenig Glanz oder Ausgewogenheit, ohne zu konkurrieren."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stack-Rolle",
-            "Was es tut",
-            "Beste IWJ-Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Hauptstück",
-              "Schafft den Fokus",
-              "Cadenza M, Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Formstück",
-              "Fügt Kurve oder Struktur hinzu",
-              "Amadea Huggie, Pave Hoops"
-            ],
-            [
-              "Weiche Details",
-              "Fügt subtilen Glanz hinzu",
-              "Kadenz S, Laluce"
-            ],
-            [
-              "Romantisches Detail",
-              "Fügt Bedeutung hinzu",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Anlassstück",
-              "Fügt Bewegung hinzu",
-              "Orsola, Concetta Short, Concetta Long"
-            ],
-            [
-              "Partystück",
-              "Fügt Wirkung hinzu",
-              "Lusso"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Zwei Ohrstecker in unterschiedlichen Größen",
+            "Einen Ohrstecker mit einer kleinen Creole (Huggie)",
+            "Eine Creole mit einem kleineren Ohrstecker",
+            "Einen dekorativen Fokus-Ohrring mit einem dezenten ergänzenden Stück",
+            "Drei kleine Ohrringe, die durch Metall, Form oder Glanz verbunden sind"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Für den täglichen Gebrauch sollten Sie das Hauptteil klein oder mittelgroß halten. Wählen Sie für den Look Ihrer Hochzeitsgäste einen eleganten Blickfang. Lassen Sie für Partys einen auffälligen Ohrring hervorstechen und halten Sie die tragenden Ohrringe schlicht."
+          "text": "Die Ohrringe müssen nicht exakt zusammenpassen. Sie brauchen ein gemeinsames visuelles Merkmal, das die Kombination bewusst gestaltet wirken lässt."
+        },
+        {
+          "type": "see-also",
+          "text": "Ideen für einen Diamant-Ear-Stack",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Erster, zweiter und dritter Piercing-Leitfaden",
+      "heading": "Die vier Bestandteile eines ausgewogenen Ear Stacks",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Jede Piercing-Position hat in einem Ear Stack eine andere Rolle."
-        },
-        {
-          "type": "paragraph",
-          "text": "Das erste Piercing trägt normalerweise den Hauptohrring. Das zweite Piercing unterstützt das erste. Das dritte Piercing oder Oberlappen sollte normalerweise kleiner, weicher und minimaler sein."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-71.jpg",
+          "image": "/blog-images/blog-image-22.jpg",
           "content": [
             {
               "type": "table",
               "headers": [
-                "Piercing-Position",
-                "Bester Ohrringtyp",
-                "IWJ-Produktrichtung"
+                "Element",
+                "Zweck",
+                "Möglicher Ohrring"
               ],
               "rows": [
                 [
-                  "Erstes Piercing",
-                  "Hauptohrstecker, Creole, Ohrhänger oder Statement-Ohrring",
-                  "Cadenza M, Pave Hoops, Orsola, Lusso"
+                  "Fokusstück",
+                  "Zieht die meiste Aufmerksamkeit auf sich",
+                  "Mittlerer Ohrstecker, Creole, Ohrhänger oder dekorativer Ohrring"
                 ],
                 [
-                  "Zweites Piercing",
-                  "Kleiner Ohrstecker, Huggie oder minimalistischer Ohrring",
-                  "Cadenza S, Amadea, Laluce"
+                  "Ergänzendes Stück",
+                  "Verbindet den Fokus-Ohrring mit dem restlichen Stack",
+                  "Kleine Creole (Huggie), kleine Creole oder kleinerer Ohrstecker"
                 ],
                 [
-                  "Drittes Piercing",
-                  "Kleine Niete oder dezentes Detail",
-                  "Kadenz S, Laluce"
+                  "Abschließendes Detail",
+                  "Setzt einen dezenten finalen Akzent",
+                  "Kleiner Ohrstecker oder minimalistischer Ohrring"
                 ],
                 [
-                  "Einzelnes Piercing",
-                  "Mittlerer Bolzen, Ring oder Tropfen",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Mehrere Piercings",
-                  "Mischung aus einem Hauptstück mit kleinerem Träger",
-                  "Cadenza S, Amadea, Laluce, Cadenza M"
+                  "Freiraum",
+                  "Hält die Ohrringe optisch getrennt",
+                  "Natürlicher Abstand zwischen den Ohrlöchern"
                 ]
               ]
             }
@@ -251,823 +126,429 @@
         },
         {
           "type": "paragraph",
-          "text": "Wenn Sie nur ein Piercing haben, wählen Sie den Ohrringstil, der den gewünschten Effekt erzielt. Wenn Sie zwei oder mehr Piercings haben, vermeiden Sie es, alle Ohrringe gleich groß zu machen. Ein Stapel sieht besser aus, wenn es einen deutlichen Größenunterschied gibt."
+          "text": "Nicht jeder Stack braucht alle vier Bestandteile. Bei zwei Ohrlöchern können Fokusstück und ergänzendes Stück ausreichen."
         }
       ]
     },
     {
-      "heading": "So stapeln Sie Ohrstecker",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ohrstecker lassen sich am einfachsten stapeln, da sie nah am Ohr sitzen und nicht viel Platz beanspruchen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein kleiner Ohrstecker eignet sich gut für das zweite oder dritte Piercing. Ein mittelgroßer Ohrstecker kann der Hauptohrring beim ersten Piercing sein. Wenn Sie mit dem Stapeln von Ohrringen noch nicht vertraut sind, beginnen Sie mit Ohrsteckern, bevor Sie Huggies, Creolen oder Tropfen hinzufügen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Im Labor gezüchtete Cadenza S-Diamantstecker sind nützlich, da sie als Hauptstück in einem minimalen Stapel oder als Stützstück in einem detaillierteren Stapel funktionieren können. Diamant-Ohrstecker von Cadenza M eignen sich besser, wenn der Ohrstecker im Mittelpunkt stehen soll."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stud-Stack-Ziel",
-            "Produktkombination",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Einfacher Bolzenstapel",
-              "Cadenza S + Laluce",
-              "Weich und minimalistisch"
-            ],
-            [
-              "Klassischer Diamantstapel",
-              "Kadenz M + Kadenz S",
-              "Sichtbares Funkeln mit Ausgewogenheit"
-            ],
-            [
-              "Alltäglicher, polierter Stapel",
-              "Kadenz S + Amadea",
-              "Glitzernder Ohrstecker in Huggie-Form"
-            ],
-            [
-              "Verschenkbarer Bolzenstapel",
-              "Kadenz M + Laluce",
-              "Klassisch mit weichen Details"
-            ],
-            [
-              "Stapel von Hochzeitsgästen",
-              "Kadenz M + Amadea",
-              "Glanz plus Struktur"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Diamant-Ohrstecker",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "So stapeln Sie Huggies und Hoops",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Huggies und Hoops verleihen einem Ear Stack Form."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein Huggie sitzt nah am Ohr und lässt sich normalerweise leichter stapeln als ein größerer Hoop. Ein Reifen sorgt für mehr Sichtbarkeit und kann zum Hauptstück werden. Wenn Sie Creolen und Huggies stapeln, halten Sie den Rest des Ohrs einfach, damit die Formen nicht konkurrieren."
-        },
-        {
-          "type": "paragraph",
-          "text": "Amadea Huggie-Ohrringe eignen sich hervorragend für den Alltag, da sie Form verleihen, ohne sich schwer anzufühlen. Pave Hoops eignen sich besser, wenn die Reifenform besser sichtbar sein soll."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Hoop / Huggie Stack-Ziel",
-            "Produktkombination",
-            "Styling-Hinweis"
-          ],
-          "rows": [
-            [
-              "Täglicher Huggie-Stack",
-              "Amadea + Cadenza S",
-              "Einfach und tragbar"
-            ],
-            [
-              "Besser sichtbarer Reifenstapel",
-              "Pave Hoops + Cadenza S",
-              "Hoop führt den Look an"
-            ],
-            [
-              "Minimaler Huggie-Stack",
-              "Amadea + Laluce",
-              "Weich und modern"
-            ],
-            [
-              "Party-Hoop-Stapel",
-              "Pave Hoops + Cadenza M",
-              "Mehr Glanz und Form"
-            ],
-            [
-              "Gemischter Formstapel",
-              "Amadea + Cadenza M + Laluce",
-              "Ausgewogen, wenn der Abstand es zulässt"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Creolen vs. Huggie-Ohrringe",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "So stapeln Sie Ohrhänger",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ohrhänger können in einem Ear-Stack verwendet werden, sollten aber in der Regel das Hauptstück sein."
-        },
-        {
-          "type": "paragraph",
-          "text": "Da Ohrhänger für mehr Länge und Bewegung sorgen, ziehen sie ganz natürlich die Aufmerksamkeit auf sich. Wenn Sie sie mit anderen großen Ohrringen kombinieren, kann der Stapel überfüllt wirken. Der beste Ansatz besteht darin, beim ersten Piercing einen Tropfenohrring zu tragen und das zweite oder dritte Piercing schlicht zu halten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Orsola-Ohrringe eignen sich hervorragend für den Look von Hochzeitsgästen, Abendessen und Abendoutfits. Die kurzen Concetta-Ohrringe eignen sich gut für ein dezenteres Styling für besondere Anlässe. Concetta Long-Ohrringe eignen sich besser für formelle oder längere Abendlooks."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Drop-Stack-Ziel",
-            "Hauptohrring",
-            "Stützohrring"
-          ],
-          "rows": [
-            [
-              "Eleganter Hochzeitsstapel",
-              "Orsola",
-              "Cadenza S"
-            ],
-            [
-              "Weicher Anlassstapel",
-              "Concetta Short",
-              "Laluce"
-            ],
-            [
-              "Formeller Abendstapel",
-              "Concetta Long",
-              "Cadenza S"
-            ],
-            [
-              "Romantischer Stapel",
-              "Orsola oder Concetta Short",
-              "Farfalla oder Cadenza S"
-            ],
-            [
-              "Minimaler Drop-Stack",
-              "Orsola",
-              "Keine zusätzlichen Ohrringe oder ein kleiner Ohrstecker"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Ohrhänger mit im Labor gezüchteten Diamanten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "So stapeln Sie Statement-Ohrringe",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Statement-Ohrringe sollten normalerweise den gesamten Look prägen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Wenn ein Statement-Ohrring auffällig, groß oder stark funkelnd ist, sollte der Rest des Stapels sehr schlicht bleiben. Dadurch bleibt der Look gewollt und nicht überwältigend."
-        },
-        {
-          "type": "paragraph",
-          "text": "Die auffälligen Statement-Ohrringe von Lusso eignen sich am besten für Partys, Abend-Styling und einfache Outfits, bei denen der Schmuck hervorstechen soll. Kombinieren Sie sie mit den Ohrringen Cadenza S oder Amadea Huggie, wenn Sie mehrere Piercings haben. Vermeiden Sie es, sie mit einem anderen großen Creolen-, langen Ohrhänger- oder detaillierten Schmetterlingsohrring zu kombinieren, es sei denn, das Styling ist absichtlich dramatisch."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Statement-Stack-Ziel",
-            "Hauptohrring",
-            "Stützohrring"
-          ],
-          "rows": [
-            [
-              "Partystapel",
-              "Lusso",
-              "Cadenza S"
-            ],
-            [
-              "Mutiger Abendstapel",
-              "Lusso",
-              "Amadea"
-            ],
-            [
-              "Schlichter schwarzer Kleiderstapel",
-              "Lusso",
-              "Cadenza S oder kein zusätzlicher Ohrring"
-            ],
-            [
-              "Empfangsstil",
-              "Lusso",
-              "Laluce"
-            ],
-            [
-              "Eindrucksvoller Look",
-              "Lusso",
-              "Halten Sie den Rest minimal"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Alltägliche Ear-Stack-Ideen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Alltägliche Ear-Stacks sollten sich bequem, leicht und einfach zu wiederholen anfühlen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Sie brauchen nicht viele Ohrringe für einen guten täglichen Stapel. Ein kleiner Hengst mit einem Huggie kann ausreichen. Der Stapel sollte mit Hemden, Strickwaren, Freizeitkleidern, Blazern, Reiseoutfits und Wochenend-Styling funktionieren."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Alltagsstapel",
-            "Produktkombination",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Einfacher täglicher Stapel",
-              "Kadenz S + Amadea",
-              "Sauber, ausgewogen und einfach"
-            ],
-            [
-              "Besser sichtbarer Tagesstapel",
-              "Kadenz M + Amadea",
-              "Mehr Glanz und gleichzeitig tragbar"
-            ],
-            [
-              "Minimaler täglicher Stack",
-              "Cadenza S + Laluce",
-              "Weich und ruhig"
-            ],
-            [
-              "Hoop-Tagesstapel",
-              "Pave Hoops + Cadenza S",
-              "Verleiht Form und Glanz"
-            ],
-            [
-              "Femininer täglicher Stapel",
-              "Farfalla + Cadenza S",
-              "Fügt Bedeutung hinzu, ohne schwer zu wirken"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische Ear-Stack-Ideen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische Ear-Stacks sollten sich sauber, weich und nicht überverziert anfühlen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Verwenden Sie kleinere Ohrringe, einfache Formen und eine Metallfarbe. Vermeiden Sie es, zu viele starke Designs zu mischen. Minimales Stapeln eignet sich gut für Arbeitskleidung, neutrale Outfits, dezentes Luxus-Styling und Menschen, die dezenten Schmuck bevorzugen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein minimalistischer Stapel könnte Folgendes umfassen:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Position",
-            "Ohrringrichtung",
-            "Produktrichtung"
-          ],
-          "rows": [
-            [
-              "Erstes Piercing",
-              "Kleiner Diamantstecker",
-              "Cadenza S"
-            ],
-            [
-              "Zweites Piercing",
-              "Minimalistischer Ohrring",
-              "Laluce"
-            ],
-            [
-              "Optionaler Huggie",
-              "Kleiner, eng anliegender Huggie",
-              "Amadea"
-            ],
-            [
-              "Optionales Haupt-Upgrade",
-              "Mittlerer Bolzen",
-              "Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza S mit Laluce ist die weichste Richtung. Cadenza S mit Amadea fühlt sich etwas stilvoller an. Cadenza M mit Laluce sorgt für mehr sichtbaren Glanz und bleibt gleichzeitig sauber."
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für minimalistische Ohrringe",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Ear-Stack-Ideen für Hochzeitsgäste",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ear-Stacks für Hochzeitsgäste sollten sich elegant und nicht überladen anfühlen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Das Outfit sollte den Stapel leiten. Wenn das Kleid Details aufweist, wählen Sie Nieten und kleine Zierknöpfe. Wenn das Outfit schlicht ist, kann ein Ohrhänger zum Hauptstück werden. Wenn der Look romantisch ist, können Schmetterlingsohrringe für ein sanfteres Gefühl sorgen."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-73.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hochzeitsgast-Look",
-                "Richtung des Ohrstapels",
-                "Produktkombination"
-              ],
-              "rows": [
-                [
-                  "Detailliertes Kleid",
-                  "Hengst + Huggie",
-                  "Kadenz M + Amadea"
-                ],
-                [
-                  "Schlichtes Satinkleid",
-                  "Tropfen + kleiner Nieten",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Romantisches Kleid",
-                  "Schmetterling + kleiner Ohrstecker",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Schwarzes Kleid",
-                  "Tropfen- oder auffälliger Ohrring + einfache Stütze",
-                  "Orsola oder Lusso + Cadenza S"
-                ],
-                [
-                  "Moderner Overall",
-                  "Reifen + Bolzen",
-                  "Pave Hoops + Cadenza S"
-                ],
-                [
-                  "Weiches Pastell-Outfit",
-                  "Schmetterling + minimalistisches Detail",
-                  "Alidi Farfalla + Laluce"
-                ],
-                [
-                  "Formelles Abendoutfit",
-                  "Langer Tropfen + kleiner Bolzen",
-                  "Concetta Long + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe für Hochzeiten",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Party-Ear-Stack-Ideen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Party-Ear-Stacks können gewagter sein als alltägliche Ear-Stacks, aber sie brauchen trotzdem Ausgewogenheit."
-        },
-        {
-          "type": "paragraph",
-          "text": "Die einfachste Partyregel lautet: Wählen Sie einen starken Ohrring und halten Sie den Rest einfach. Dadurch sticht das Hauptteil hervor, ohne dass das Ohr unordentlich aussieht."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Party-Stack-Ziel",
-            "Produktkombination",
-            "Styling-Hinweis"
-          ],
-          "rows": [
-            [
-              "Mutiger Glitzerstapel",
-              "Lusso + Cadenza S",
-              "Lass Lusso führen"
-            ],
-            [
-              "Eleganter Partystapel",
-              "Orsola + Cadenza S",
-              "Sorgt für Bewegung ohne zu viel Gewicht"
-            ],
-            [
-              "Moderner Reifenstapel",
-              "Pave Hoops + Laluce",
-              "Passt gut zu eleganten Outfits"
-            ],
-            [
-              "Schwarzer Kleiderstapel",
-              "Lusso oder Orsola + Cadenza S",
-              "Starker Kontrast"
-            ],
-            [
-              "Vom Abendessen bis zur Party",
-              "Kadenz M + Amadea",
-              "Poliert, aber tragbar"
-            ],
-            [
-              "Formeller Empfangsstapel",
-              "Concetta Long + Cadenza S",
-              "Raffiniert und länglich"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Leitfaden für Party-Ohrringe",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Verschenkbare Ear-Stack-Ideen",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein Ear Stack kann ein aufmerksames Geschenk sein, da er dem Beschenkten eine fertige Styling-Kombination bietet."
-        },
-        {
-          "type": "paragraph",
-          "text": "Anstatt nur ein Paar Ohrringe zu verschenken, können Sie auch zwei Teile auswählen, die zusammenpassen. Dies ist nützlich für Geburtstage, Brautjungfern, Jubiläen, Meilensteingeschenke und moderne Schmuckliebhaber."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Geschenkstil",
-            "Ear-Stack-Kombination",
-            "Am besten für"
-          ],
-          "rows": [
-            [
-              "Sicherer Starter-Stack",
-              "Kadenz S + Amadea",
-              "Erstes Ear-Stack-Geschenk"
-            ],
-            [
-              "Klassischer Glitzerstapel",
-              "Kadenz M + Amadea",
-              "Besser sichtbares Diamantgeschenk"
-            ],
-            [
-              "Minimalistischer Geschenkstapel",
-              "Cadenza S + Laluce",
-              "Ruhige Schmuckliebhaber"
-            ],
-            [
-              "Romantischer Geschenkstapel",
-              "Farfalla + Cadenza S",
-              "Geburtstags- oder Jubiläumsgeschenk"
-            ],
-            [
-              "Brautjungfernstapel",
-              "Cadenza S + Concetta Short",
-              "Geschenk zur Hochzeit"
-            ],
-            [
-              "Party-Geschenkstapel",
-              "Lusso + Cadenza S",
-              "Jemand, der es liebt, sich zu verkleiden"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Im Labor gezüchtete Diamantohrringe zum Verschenken",
-          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Tipps zur Metallfarbe und -balance",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Ein polierter Ear Stack sieht normalerweise am besten aus, wenn die Metallfarbe gewollt wirkt."
-        },
-        {
-          "type": "paragraph",
-          "text": "Am einfachsten ist es, im gesamten Stapel eine Metallfarbe beizubehalten. Gelbgold fühlt sich warm und klassisch an. Weiß- oder Silbertöne wirken sauber und modern. Roségold fühlt sich weich und romantisch an. Gemischte Metalle können funktionieren, aber sie sollten geplant aussehen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Metallrichtung",
-            "Am besten für",
-            "Stilgefühl"
-          ],
-          "rows": [
-            [
-              "Stapel aus Gelbgold",
-              "Alltags-Styling, warme Outfits, Liebhaber klassischer Schmuckstücke",
-              "Warm, poliert, einfach"
-            ],
-            [
-              "Weißer oder silberfarbener Stapel",
-              "Minimale Outfits, kühle Garderobe",
-              "Sauber, modern, hell"
-            ],
-            [
-              "Stapel aus Roségold",
-              "Romantische Looks, Geschenke, weiche Outfits",
-              "Feminin, sanft, persönlich"
-            ],
-            [
-              "Gemischter Metallstapel",
-              "Kreatives Styling und trendorientierte Looks",
-              "Modern und verspielt"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Das Gleichgewicht hängt auch von der Größe ab. Wenn ein Ohrring groß ist, sollte der Rest kleiner sein. Wenn alle Teile klein sind, können Sie Formvariationen verwenden, um den Stapel interessant zu halten."
-        },
-        {
-          "type": "see-also",
-          "text": "Gold- vs. Weiß- vs. Roségold-Ohrringe mit im Labor gezüchteten Diamanten",
-          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Produktpfade von Styling Goal",
+      "heading": "So bauen Sie einen Ear Stack Schritt für Schritt auf",
       "content": [
         {
           "type": "subheading",
-          "text": "Für einen ersten Ear Stack"
+          "text": "1. Zählen Sie Ihre verheilten Ohrlöcher"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Cadenza S-Ohrstecker mit im Labor gezüchteten Diamanten und Amadea Huggie-Ohrringen. Dadurch entsteht ein sauberer, ausgewogener Stapel, der leicht zu tragen ist."
+          "text": "Beginnen Sie mit der Anzahl und Platzierung Ihrer verheilten Ohrlöcher. Gehen Sie nicht davon aus, dass jedes erste, zweite oder dritte Ohrloch denselben Abstand hat. Achten Sie auf den Abstand zwischen den einzelnen Ohrlöchern, darauf, ob sie einer geraden oder gebogenen Linie folgen, wie viel sichtbares Ohrläppchen um jeden Ohrring bleibt, ob Creolen oder kleine Creolen (Huggies) unabhängig voneinander sitzen, ohne sich zu berühren, und in welche Richtung Ohrstecker von Natur aus zeigen."
         },
         {
           "type": "subheading",
-          "text": "Für einen minimalistischen Stack"
+          "text": "2. Wählen Sie einen Fokus-Ohrring"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Cadenza S mit minimalistischen Diamantohrringen von Laluce. Fügen Sie Amadea hinzu, wenn die Trägerin mehr Form wünscht."
+          "text": "Der Fokus-Ohrring sollte das Stück sein, das die meiste Aufmerksamkeit erhält. Das kann der größte Ohrring sein, aber auch ein kleineres Stück mit einer markanten Form oder einem auffälligeren Diamantdetail. Mögliche Fokusstücke sind ein mittlerer Diamant-Ohrstecker, eine Pavé-Creole, ein geometrischer Ohrring, ein Schmetterlingsdesign, ein Ohrhänger oder ein markanter dekorativer Ohrring."
         },
         {
           "type": "subheading",
-          "text": "Für einen sichtbareren täglichen Stack"
+          "text": "3. Entscheiden Sie, wo die optische Wirkung liegen soll"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Cadenza M mit Amadea Huggie-Ohrringen. Dies sorgt für mehr Glanz und bleibt gleichzeitig praktisch für das alltägliche Styling."
+          "text": "Viele Menschen tragen den auffälligsten Ohrring im unteren Ohrloch, doch das ist eine Styling-Option und keine feste Regel. Ein unteres Ohrloch kann das Fokusstück meist gut tragen, während die Stücke darüber zunehmend dezenter werden. Wenn der Abstand passt, kann jedoch auch eine kleine Creole (Huggie) im zweiten Ohrloch oder ein markanter Ohrstecker am oberen Ohrläppchen zum Fokus werden."
         },
         {
           "type": "subheading",
-          "text": "Für einen romantischen Stapel"
+          "text": "4. Variieren Sie die Größe"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Farfalla-Schmetterlingsohrringe mit Cadenza S. Diese eignen sich gut für weiche Outfits, Geburtstagsgeschenke und symbolisches Styling."
+          "text": "Mehrere Ohrringe exakt derselben Größe können den Stack flach oder überladen wirken lassen. Schaffen Sie einen sichtbaren Unterschied zwischen Fokusstück und ergänzenden Stücken – etwa mit einem mittleren und einem kleinen Ohrstecker, einer kleinen Creole (Huggie) und einem kleinen Solitär-Ohrstecker, einer kleinen Creole mit einem dezenteren Diamantdetail oder einem dekorativen Ohrring mit einem schlichten ergänzenden Ohrstecker."
         },
         {
           "type": "subheading",
-          "text": "Für einen Hochzeitsgästestapel"
+          "text": "5. Wiederholen Sie ein visuelles Element"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie Orsola-Ohrhänger mit Cadenza S, wenn das Outfit schlicht ist. Wählen Sie Cadenza M mit Amadea, wenn das Outfit bereits Details aufweist."
+          "text": "Wenn Sie ein Merkmal wiederholen, wirken unterschiedliche Ohrringe wie Teil derselben Komposition. Wiederholen Sie beispielsweise dieselbe Metallfarbe, Brillantschliff-Diamantdetails, runde Formen, geometrische Linien, eine bestimmte Farbe oder ein ähnliches Maß an Glanz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein hilfreiches Prinzip lautet: Wiederholen Sie ein Element und variieren Sie ein anderes. Zwei Ohrringe können dieselbe Metalloberfläche haben, aber unterschiedliche Formen besitzen, oder ein rundes Diamantdetail teilen und sich in der Größe unterscheiden."
         },
         {
           "type": "subheading",
-          "text": "Für einen Party-Stack"
+          "text": "6. Prüfen Sie den Abstand"
         },
         {
           "type": "paragraph",
-          "text": "Wählen Sie auffällige Statement-Ohrringe von Lusso mit Cadenza S oder Amadea. Halten Sie den Rest des Ohrs einfach, damit Lusso führen kann."
-        }
-      ]
-    },
-    {
-      "heading": "Produktempfehlungen von IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produkt",
-            "Beste Ear-Stack-Rolle",
-            "Warum es funktioniert"
-          ],
-          "rows": [
-            [
-              "Cadenza S im Labor gezüchtete Diamant-Ohrstecker",
-              "Kleiner Glitzerpunkt",
-              "Funktioniert bei ersten, zweiten oder unterstützenden Piercings"
-            ],
-            [
-              "Cadenza M Diamant-Ohrstecker",
-              "Hauptgestüt",
-              "Sichtbarerer Glanz für den Alltag oder Anlass"
-            ],
-            [
-              "Amadea Huggie-Ohrringe",
-              "Form und Gleichgewicht",
-              "Stabiler Huggie zum Stapeln"
-            ],
-            [
-              "Minimalistische Diamantohrringe von Laluce",
-              "Weiche Details",
-              "Hält Stapel sauber und dezent"
-            ],
-            [
-              "Pave-Reifen",
-              "Hauptreifenstück",
-              "Verleiht Form und Glanz"
-            ],
-            [
-              "Farfalla Schmetterlingsohrringe",
-              "Persönliches Schwerpunktstück",
-              "Fügt Bedeutung und feminine Details hinzu"
-            ],
-            [
-              "Alidi Farfalla Schmetterlingsohrringe",
-              "Romantisches Schwerpunktstück",
-              "Stark für Geschenke und sanftes Styling"
-            ],
-            [
-              "Orsola-Ohrhänger",
-              "Anlassiges Hauptstück",
-              "Sorgt für Bewegung bei Hochzeiten und Abendessen"
-            ],
-            [
-              "Concetta Kurze Ohrringe",
-              "Weiches Tropfenstück",
-              "Funktioniert für Stapel für empfindliche Anlässe"
-            ],
-            [
-              "Concetta Lange Ohrringe",
-              "Formelles Tropfenteil",
-              "Erzeugt eine raffinierte längere Linie"
-            ],
-            [
-              "Mutige Statement-Ohrringe von Lusso",
-              "Der Mittelpunkt einer Party",
-              "Am besten, wenn der Rest des Stapels einfach ist"
-            ]
-          ]
+          "text": "Jeder Ohrring sollte genug Raum haben, um eigenständig erkannt zu werden. Enge kann entstehen, wenn sich zwei Creolen überschneiden, ein großer Ohrstecker ein benachbartes Ohrloch verdeckt, ein Ohrhänger unter einer kleinen Creole (Huggie) hängen bleibt, dekorative Kanten sich den ganzen Tag berühren oder die Verschlüsse hinter dem Ohr miteinander konkurrieren."
         },
         {
           "type": "paragraph",
-          "text": "Bauen Sie Ihren Ear Stack um ein Hauptstück herum auf. Beginnen Sie mit Cadenza S und Amadea für eine einfache Kombination für den Alltag, Cadenza M und Amadea für sichtbareres Glitzern, Farfalla und Cadenza S für eine romantische Kombination oder Lusso und Cadenza S für Party-Styling."
-        }
-      ]
-    },
-    {
-      "heading": "Häufige Fehler beim Stapeln von Ohrringen, die Sie vermeiden sollten",
-      "content": [
+          "text": "Nutzen Sie Produktmaße und echte Aufnahmen am Ohr, statt sich nur auf Nahaufnahmen der Produkte zu verlassen. Es gibt kein einheitliches Maß in Millimetern, das für jedes Ohr funktioniert."
+        },
         {
-          "type": "paragraph",
-          "text": "Ein häufiger Fehler besteht darin, zu viele große Ohrringe zusammen zu tragen. Ein guter Stapel braucht eine Hauptfigur und nicht drei Figuren, die um Aufmerksamkeit kämpfen."
+          "type": "subheading",
+          "text": "7. Testen Sie den Stack im Alltag"
         },
         {
           "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, den Abstand zu ignorieren. Wenn die Ohrringe in Größe oder Form zu dicht beieinander liegen, kann der Stapel überfüllt wirken."
+          "text": "Eine Kombination kann im Spiegel ausgewogen wirken, sich im Laufe des Tages aber anders verhalten. Prüfen Sie, wie die Ohrringe mit offenem und zurückgebundenem Haar, Brille, Kopfhörern und In-Ear-Kopfhörern, hohen Kragen und Schals, beim Telefonieren und in Bewegung beim Gehen zusammenspielen."
         },
         {
           "type": "paragraph",
-          "text": "Ein dritter Fehler besteht darin, zu viele Stile zu vermischen. Ein Schmetterlingsohrring, eine Creole, ein langer Tropfenohrring und ein auffälliger Statement-Ohrring können zusammen verwirrend wirken, es sei denn, der Look ist absichtlich dramatisch."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ein weiterer Fehler besteht darin, den Komfort zu vergessen. Wenn der Stapel zieht, sich an den Haaren verfängt oder sich schwer anfühlt, sieht er nicht wie vorgesehen aus."
-        },
-        {
-          "type": "paragraph",
-          "text": "Schließlich sollten Sie Ohrringe nicht nur deshalb wählen, weil sie einzeln gut aussehen. Sie sollten zusammen gut aussehen."
+          "text": "Wenn sich die Ohrringe berühren, ziehen, übermäßig drehen oder immer wieder hängen bleiben, ändern Sie die Kombination oder die Platzierung."
         },
         {
           "type": "see-also",
-          "text": "Größenratgeber für im Labor gezüchtete Diamantohrringe",
+          "text": "Ratgeber zu Größen von Ohrringen mit im Labor gezüchteten Diamanten",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Abschließende Ear-Stack-Checkliste",
+      "heading": "Ohrringe mit zwei Ohrlöchern kombinieren",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Bei zwei Ohrlöchern schaffen Sie Kontrast zwischen den Ohrringen und behalten gleichzeitig ein gemeinsames Merkmal bei."
+        },
+        {
+          "type": "subheading",
+          "text": "Ohrstecker und kleine Creole (Huggie)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Ohrstecker setzt einen konzentrierten Glanzpunkt, während eine kleine Creole (Huggie) eine geschwungene Form ergänzt. Für eine schlichte Kombination wählen Sie dieselbe Metalloberfläche oder verbinden Sie die Stücke durch aufeinander abgestimmte Diamantdetails."
+        },
+        {
+          "type": "subheading",
+          "text": "Mittlerer und kleiner Ohrstecker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wählen Sie zwei Ohrstecker mit einem klaren Größenunterschied. Der größere Ohrstecker kann als Fokusstück dienen, während der kleinere einen dezenteren Abschluss bildet."
+        },
+        {
+          "type": "subheading",
+          "text": "Creole und Ohrstecker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lassen Sie die Creole für Kontur und Bewegung sorgen. Verwenden Sie einen kleineren Ohrstecker als Ergänzung, damit beide Ohrringe sichtbar bleiben."
+        },
+        {
+          "type": "subheading",
+          "text": "Dekorativer Ohrring und schlichter Ohrstecker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn der Fokus-Ohrring eine markante Form hat, kombinieren Sie ihn mit einem zurückhaltenden Ohrstecker. Vermeiden Sie ein weiteres Stück mit ebenso vielen Details."
+        },
+        {
+          "type": "see-also",
+          "text": "Ohrstecker oder kleine Creolen (Huggies)",
+          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Ohrringe mit drei Ohrlöchern kombinieren",
       "content": [
         {
           "type": "paragraph",
-          "text": "Bevor Sie einen Ear Stack bauen, fragen Sie:"
+          "text": "Ein Stack mit drei Ohrlöchern kann dieser Struktur folgen:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Wie viele Piercings habe ich?",
-            "Welcher Ohrring ist das Hauptstück?",
-            "Welcher Ohrring verleiht Form?",
-            "Welches Stück fügt weiche Details hinzu?",
-            "Sind die Ohrringe ausgewogen in der Größe?",
-            "Ist der Stapel bequem?",
-            "Fühlt sich die Metallfarbe gewollt an?",
-            "Funktioniert der Stapel mit meiner Frisur?",
-            "Ist der Look für den Alltag, eine Hochzeit, eine Party oder ein Geschenk gedacht?",
-            "Kann ich den Stapel mit mehr als einem Outfit tragen?",
-            "Sind die Ohrringe leicht zu reinigen und aufzubewahren?",
-            "Fühlt sich der Stapel poliert statt überfüllt an?"
+            "Fokusstück: der auffälligste Ohrring",
+            "Verbindungsstück: verbindet den Fokus-Ohrring mit dem oberen Detail",
+            "Abschließendes Stück: der kleinste oder dezenteste Ohrring"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wenn Sie sich nicht sicher sind, beginnen Sie mit einem kleinen Ohrstecker und einem Huggie. Das ist der am einfachsten zu bauende Ohrringstapel."
+          "text": "Ein Beispiel ist ein mittlerer Ohrstecker, eine kleine Creole (Huggie) und ein kleinerer Ohrstecker. Eine andere Kombination besteht aus einer Creole, einem Solitär-Ohrstecker und einem minimalistischen Detail am oberen Ohrläppchen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Versehen Sie nicht automatisch jede Position mit Glanz. Eine schlichte Metallform zwischen zwei Diamantstücken kann dem Auge einen Ruhepunkt geben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn das dritte Ohrloch sehr nah am zweiten sitzt, prüfen Sie vor dem Kauf die tatsächlichen Maße der Ohrringe. Ein kleines Produktfoto zeigt nicht, wie viel Raum ein Ohrring an Ihrem Ohr einnimmt."
+        }
+      ]
+    },
+    {
+      "heading": "Verschiedene Ohrringarten kombinieren",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Ohrstecker"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrstecker setzen einen konzentrierten Lichtpunkt, ohne eine weitere runde Kontur einzuführen. Je nach Größe können sie als Fokus-Ohrring oder als kleinstes ergänzendes Stück eingesetzt werden."
+        },
+        {
+          "type": "subheading",
+          "text": "kleine Creolen (Huggies)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kleine Creolen (Huggies) bringen Form ins Ohr und liegen dabei nah am Ohrläppchen. Ob sie geeignet sind, hängt vom Innendurchmesser, Verschluss, der Position des Piercings und der individuellen Anatomie ab. Nicht jede kleine Creole (Huggie) ist automatisch bequem oder für jedes Piercing geeignet – vergleichen Sie die Maße mit der vorgesehenen Platzierung."
+        },
+        {
+          "type": "subheading",
+          "text": "Creolen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Creolen bilden eine markantere Kontur und können optisch mehr Raum einnehmen als Ohrstecker. Wenn eine Creole im Mittelpunkt steht, wählen Sie kleinere ergänzende Ohrringe dazu."
+        },
+        {
+          "type": "subheading",
+          "text": "Ohrhänger"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Ohrhänger wird meist zum Blickfang, da er unter dem Ohrläppchen hängt und Bewegung ins Design bringt. Kombinieren Sie ihn mit einem oder zwei dezenten Ohrsteckern statt mit einer weiteren großen Creole oder einem großen Ohrhänger."
+        },
+        {
+          "type": "subheading",
+          "text": "Dekorative Formen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ohrringe mit Schmetterlings-, Blumen- und geometrischen Formen verleihen einem Ear Stack Persönlichkeit. Greifen Sie ihr Metall oder Diamantdetail an anderer Stelle wieder auf, vermeiden Sie jedoch mehrere unverbundene Motive am selben Ohr."
+        },
+        {
+          "type": "see-also",
+          "text": "Creolen oder kleine Creolen (Huggies)",
+          "href": "/resources/earring-style-guides/hoop-vs-huggie-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Schmetterlings-Ohrringe stylen",
+          "href": "/resources/earring-style-guides/how-to-style-butterfly-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Können Sie Metalle in einem Ear Stack kombinieren?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Ja. Ein Mix aus Metallen kann bewusst wirken, wenn sich der Kontrast wiederholt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verwenden Sie nicht nur einen einzelnen Ohrring in Weiß oder Silber zwischen mehreren Gelbgoldstücken. Wiederholen Sie stattdessen beide Oberflächen im Ear Stack oder wählen Sie ein Übergangsstück, das verwandte Farbtöne verbindet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für ein dezenteres Ergebnis bleiben Sie bei einer Metallfarbe und schaffen Sie Abwechslung durch Größe und Form."
+        },
+        {
+          "type": "see-also",
+          "text": "Ohrschmuck mit im Labor gezüchteten Diamanten in Gelb-, Weiß- oder Roségold",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Müssen beide Ohren denselben Ear Stack haben?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sie können übereinstimmen, müssen es aber nicht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei einer symmetrischen Anordnung tragen Sie an beiden Ohren dieselben Ohrringe an entsprechenden Positionen. Das ergibt ein traditionelleres, einheitliches Erscheinungsbild."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei einer asymmetrischen Anordnung können Sie an einem Ohr drei Ohrringe kombinieren und am anderen einen schlichteren Ohrstecker oder eine kleine Creole (Huggie). Damit der Look zusammenhängend wirkt, wiederholen Sie mindestens ein Merkmal an beiden Ohren, etwa die Metalloberfläche, Diamantform oder das zentrale Design."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asymmetrie sollte bewusst und nicht zufällig wirken."
+        }
+      ]
+    },
+    {
+      "heading": "Häufige Fehler beim Ear Stack",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Jeden Ohrring zum Blickfang machen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mehrere große, detailreiche Stücke können miteinander konkurrieren. Wählen Sie einen Blickfang und gestalten Sie die übrigen Ohrringe zunehmend dezenter."
+        },
+        {
+          "type": "subheading",
+          "text": "Nur anhand von Produktfotos auswählen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nahaufnahmen zeigen Details, können kleine Ohrringe jedoch deutlich größer erscheinen lassen. Prüfen Sie die Millimeterangaben und Fotos am Ohr."
+        },
+        {
+          "type": "subheading",
+          "text": "Davon ausgehen, dass Piercingpositionen immer gleich sind"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zwei Personen können unterschiedliche Abstände, Winkel und nutzbare Flächen am Ohrläppchen haben. Eine Kombination, die an einem Model gezeigt wird, kann bei einer anderen Person anders sitzen."
+        },
+        {
+          "type": "subheading",
+          "text": "Verschlüsse und Ohrringrückseiten ignorieren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Enge kann hinter dem Ohr ebenso wie an der Vorderseite entstehen. Achten Sie darauf, dass Stifte, Butterfly-Verschlüsse und Creolenverschlüsse benachbarte Ohrringe nicht beeinträchtigen."
+        },
+        {
+          "type": "subheading",
+          "text": "Zu viele unverbundene Ideen kombinieren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn Sie gleichzeitig unterschiedliche Metalle, Formen, Größen und Motive kombinieren, kann der Ear Stack seine Struktur verlieren. Wiederholen Sie ein oder zwei Merkmale in der Anordnung."
+        },
+        {
+          "type": "subheading",
+          "text": "Den Alltag vergessen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Haare, Brillen, Kleidung und Kopfhörer können beeinflussen, wie sich ein Ear Stack anfühlt und bewegt. Testen Sie die vollständige Kombination, bevor Sie sie als täglichen Ear Stack tragen."
+        }
+      ]
+    },
+    {
+      "heading": "Ohrringe im Ear Stack pflegen",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Mehrere Ohrringe können Kosmetik, Haarprodukte und natürliche Hautöle aufnehmen, besonders wenn die Schmuckstücke eng beieinanderliegen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Befolgen Sie die Pflegehinweise, die jedem Produkt beiliegen. Für Ohrringe aus 925 Sterlingsilber mit 14-Karat-Vergoldung gilt:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Fassen Sie die Ohrringe mit sauberen, trockenen Händen an.",
+            "Vermeiden Sie den direkten Kontakt mit Parfüm, Lotionen und Haarspray.",
+            "Nehmen Sie sie vor dem Duschen, Schwimmen und Sport ab.",
+            "Wischen Sie sie nach dem Tragen vorsichtig ab.",
+            "Bewahren Sie die Schmuckstücke getrennt auf, um Reibung und Kratzer zu reduzieren.",
+            "Verwenden Sie keine aggressiven Chemikalien oder scheuernden Bürsten."
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "So reinigen Sie Ohrringe mit im Labor gezüchteten Diamanten",
+          "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Checkliste für den Ear Stack",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-38.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Bevor Sie eine Kombination tragen oder kaufen, fragen Sie sich:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Sind alle vorgesehenen Piercings vollständig verheilt?",
+                "Welcher Ohrring ist der Blickfang?",
+                "Gibt es einen deutlichen Größenunterschied?",
+                "Welches Merkmal verbindet die Ohrringe?",
+                "Ist jedes Schmuckstück einzeln sichtbar?",
+                "Habe ich die tatsächlichen Maße geprüft?",
+                "Haben Verschlüsse und Rückseiten genügend Platz?",
+                "Wird der Ear Stack mit meinen Haaren oder meiner Brille in Kontakt kommen?",
+                "Wirkt die Asymmetrie oder Symmetrie bewusst gestaltet?",
+                "Kann ich jeden Ohrring auch einzeln tragen?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Wenn die Kombination überladen wirkt, entfernen Sie ein Schmuckstück, bevor Sie alle Ohrringe austauschen. Ein schlichterer Ear Stack lässt das zentrale Design oft besser zur Geltung kommen."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Wie stapelt man Ohrringe?",
-      "answer": "Beginnen Sie mit einem Hauptohrring und fügen Sie dann einen Stützohrring und ein kleineres Detail hinzu, wenn Sie genügend Piercings haben. Halten Sie die Größen im Gleichgewicht, damit das Ohr nicht überfüllt wirkt."
+      "question": "Wie kombiniert man Ohrringe zu einem Ear Stack?",
+      "answer": "Wählen Sie einen Blickfang und ergänzen Sie ihn um ein oder zwei dezentere Stücke. Variieren Sie die Größen, greifen Sie ein gemeinsames Merkmal wieder auf und achten Sie darauf, dass jeder Ohrring genügend sichtbaren Raum hat."
     },
     {
-      "question": "Welche Ohrringe eignen sich am besten zum Stapeln?",
-      "answer": "Ohrstecker, Huggies, kleine Creolen und minimalistische Ohrringe eignen sich am besten zum Stapeln. Tropfen- und Statement-Ohrringe können funktionieren, sollten aber normalerweise das Hauptstück sein."
+      "question": "Wie kombiniert man Ohrringe mit zwei Piercings?",
+      "answer": "Wählen Sie beispielsweise einen Ohrstecker mit einer kleinen Creole (Huggie), einen mittelgroßen Ohrstecker mit einem kleineren Ohrstecker oder eine Creole mit einem dezenten ergänzenden Ohrstecker. Ein Stück sollte optisch stärker wirken als das andere."
     },
     {
-      "question": "Wie stapelt man Ohrringe mit zwei Piercings?",
-      "answer": "Verwenden Sie einen Hauptohrring im ersten Piercing und einen kleineren Ohrstecker oder Huggie im zweiten Piercing. Eine einfache Kombination ist ein Diamantstecker mit einem Huggie."
+      "question": "Wie kombiniert man Ohrringe mit drei Piercings?",
+      "answer": "Verwenden Sie einen Blickfang, ein verbindendes Stück und ein kleines abschließendes Detail. Passen Sie die Positionen an den Abstand Ihrer Piercings und Ihre Ohranatomie an."
     },
     {
-      "question": "Wie stapelt man Ohrringe mit drei Piercings?",
-      "answer": "Verwenden Sie für das erste Piercing den größten oder am besten sichtbaren Ohrring, für das zweite einen Huggie- oder kleinen Ohrstecker und für das dritte einen winzigen oder minimalistischen Ohrring."
+      "question": "Sollte der größte Ohrring im ersten Piercing sitzen?",
+      "answer": "Das ist häufig der Fall, aber keine Voraussetzung. Wählen Sie die Position, in der der Blickfang genügend Platz hat und die ausgewogenste Anordnung entsteht."
     },
     {
-      "question": "Kann man Ohrhänger stapeln?",
-      "answer": "Ja, aber der Ohrhänger sollte normalerweise das Hauptstück sein. Halten Sie die anderen Ohrringe klein, damit der Stapel nicht überfüllt wirkt."
+      "question": "Kann man Ohrstecker, kleine Creolen (Huggies) und Creolen kombinieren?",
+      "answer": "Ja. Unterschiedliche Formen schaffen optisches Interesse. Verbinden Sie sie durch die Metallfarbe, ein Diamantdetail oder ein anderes wiederkehrendes Merkmal."
     },
     {
-      "question": "Kann man Statement-Ohrringe stapeln?",
-      "answer": "Ja, aber halten Sie den Rest des Stapels minimal. Ein Statement-Ohrring sollte den Look bestimmen."
+      "question": "Sind kleine Creolen (Huggies) für Ear Stacks geeignet?",
+      "answer": "Kleine Creolen (Huggies) können gut funktionieren, da sie eine geschwungene Form nah am Ohrläppchen einbringen. Die Eignung hängt von den Maßen der kleinen Creole (Huggie), ihrem Verschluss, der Piercingposition und der individuellen Anatomie ab."
     },
     {
-      "question": "Sind Huggies gut für Ear Stacks?",
-      "answer": "Ja, Huggies gehören zu den am besten kombinierbaren Ohrringen, da sie Form verleihen und nah am Ohr sitzen."
+      "question": "Kann man Metalle in einem Ear Stack kombinieren?",
+      "answer": "Ja. Wiederholen Sie beide Metallfarben oder verwenden Sie ein Übergangsstück, damit die Kombination bewusst wirkt. Für ein einheitlicheres Ergebnis verwenden Sie durchgehend ein Metall."
     },
     {
-      "question": "Sollten alle Ohrringe in einem Stapel zusammenpassen?",
-      "answer": "Sie müssen nicht genau übereinstimmen, aber sie sollten sich ausgewogen anfühlen. Die passende Metallfarbe ist der einfachste Weg, einem Stapel ein poliertes Aussehen zu verleihen."
+      "question": "Müssen beide Ohren übereinstimmen?",
+      "answer": "Sie können übereinstimmen oder asymmetrisch gestaltet sein. In einem asymmetrischen Ear Stack wiederholen Sie ein Metall, einen Stein oder eine Form an beiden Ohren, um die Anordnung zu verbinden."
     },
     {
-      "question": "Was ist der einfachste Ear-Stack für den Alltag?",
-      "answer": "Ein kleiner Diamantstecker mit Huggie ist der einfachste Ohrschmuck für den Alltag, da er bequem, ausgewogen und einfach zu stylen ist."
+      "question": "Können Ohrhänger Teil eines Ear Stacks sein?",
+      "answer": "Ja. Setzen Sie den Ohrhänger als Blickfang ein und tragen Sie in den umliegenden Piercings kleinere Ohrstecker oder dezente kleine Creolen (Huggies)."
     },
     {
-      "question": "Kann ich ein Ear-Stack-Set verschenken?",
-      "answer": "Ja, ein Ear-Stack-Set kann ein aufmerksames Geschenk sein. Eine Kombination aus Stud und Huggie ist normalerweise der sicherste Ausgangspunkt."
+      "question": "Kann man Ohrringe in einem heilenden Piercing kombinieren?",
+      "answer": "Wechseln oder erzwingen Sie Schmuck in einem heilenden Piercing nicht zu Stylingzwecken. Fragen Sie einen qualifizierten Piercer, bevor Sie Größe, Stil oder Platzierung verändern."
     }
   ],
   "cta": {
-    "heading": "Beim Stapeln von Ohrringen kommt es auf das Gleichgewicht an. Wählen Sie ein Hauptteil, fügen Sie eine unterstützende Form hinzu und halten Sie die kleinsten Details weich. Die besten Ear-Stacks fühlen sich gewollt, bequem und einfach zu tragen an.",
-    "body": "Beginnen Sie mit den halbfeinen, im Labor gezüchteten Diamantohrringen von IWantJewels, wenn Sie stapelbare Stücke mit echtem Diamantfunkeln wünschen. Wählen Sie Cadenza S und Amadea für einen einfachen Alltags-Stack, Cadenza M für mehr sichtbaren Glanz, Laluce für minimalistische Details, Farfalla für Bedeutung, Orsola für Anlässe und Lusso für Party-Effekt.",
-    "primaryLabel": "Kaufen Sie Ear Stack-Ohrringe",
+    "heading": "Bereit, Ihren Ear Stack zusammenzustellen? Beginnen Sie mit einem Blickfang und einem dezenten ergänzenden Stück. Fügen Sie weitere Details erst hinzu, wenn der Abstand es zulässt.",
+    "body": "Entdecken Sie die im Labor gezüchteten Diamantohrringe von I Want Jewels. Prüfen Sie auf jeder Produktseite Maße, Gewicht, Verschluss und ob der Ohrring als Paar oder einzeln verkauft wird, bevor Sie mehrere Stücke am selben Ohr kombinieren.",
+    "primaryLabel": "Im Labor gezüchtete Diamantohrringe entdecken",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Entdecken Sie Huggie-Ohrringe",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lesen Sie „Ohrringe mit im Labor gezüchteten Diamanten“ für Ear Stacks",
-    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+    "secondaryLabel": "Ideen für Diamant-Ear-Stacks",
+    "secondaryHref": "/resources/earring-style-guides/diamond-ear-stack-ideas",
+    "tertiaryLabel": "Ratgeber: Ohrringgrößen mit im Labor gezüchteten Diamanten",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
   }
 }

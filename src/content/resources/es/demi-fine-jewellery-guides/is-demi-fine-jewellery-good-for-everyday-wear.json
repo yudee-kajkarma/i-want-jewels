@@ -1,97 +1,97 @@
 {
   "meta": {
-    "title": "¿Las joyas semifinas son buenas para el uso diario?",
-    "description": "Descubra si la joyería semifina es buena para el uso diario, cómo elegir piezas diarias y cómo cuidar las joyas chapadas en oro y de plata esterlina."
+    "title": "¿Es buena la joyería demi-fine para el día a día?",
+    "description": "Descubra si la joyería demi-fine sirve para el día a día, cómo elegir joyas y cuidar el chapado en oro y la plata de ley 925."
   },
   "heroIntro": {
     "image": "/blog-images/blog-image-88.jpg",
-    "title": "¿Las joyas semifinas son buenas para el uso diario?",
+    "title": "¿Es buena la joyería demi-fine para el uso diario?",
     "subtitle": "",
     "paragraphs": [
-      "La joyería semifina puede ser una buena opción para el uso diario cuando la pieza está hecha con buenos materiales, diseñada de manera cómoda y cuidada adecuadamente. Es más elevado que la joyería de moda de bajo costo, pero generalmente más accesible que la joyería fina tradicional de oro macizo.",
-      "Para el peinado diario, las mejores prendas semifinas suelen ser sencillas, seguras y fáciles de repetir. Los aretes, huggies, aretes minimalistas y aros pequeños son especialmente prácticos porque combinan con ropa de trabajo, outfits casuales, cenas, viajes y estilismo de fin de semana.",
-      "En IWantJewels, la tendencia semifina de todos los días se basa en diamantes cultivados en laboratorio, plata de ley 925 y baño de oro de 14 quilates. Esto le da a la joyería un brillo de diamante real y un acabado pulido, al mismo tiempo que mantiene las piezas ponibles para el uso diario moderno."
+      "La joyería demi-fine puede ser una excelente opción diaria si está hecha con buenos materiales, resulta cómoda y recibe los cuidados adecuados. Es más sofisticada que la joyería de moda económica, pero suele ser más accesible que la joyería fina de oro macizo.",
+      "Para el día a día, las mejores piezas demi-fine suelen ser sencillas, seguras y fáciles de combinar. Los pendientes de botón, los aros pequeños (huggies), los pendientes minimalistas y los pendientes de aro pequeños resultan especialmente prácticos con ropa de trabajo, looks informales, cenas, viajes y estilismos de fin de semana.",
+      "En I Want Jewels, la propuesta demi-fine para el día a día gira en torno a diamantes de laboratorio, plata de ley 925 y chapado en oro de 14 kt. Así, las joyas ofrecen el brillo real del diamante y un acabado pulido, sin renunciar a la comodidad diaria."
     ],
-    "shopLabel": "Compre joyería semifina para todos los días",
+    "shopLabel": "Comprar joyería demi-fine para el día a día",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comprenda si las joyas semifinas son adecuadas para el uso diario",
-      "Descubra qué piezas semifinas son mejores para el peinado diario",
-      "Compare aretes, aros, aros, colgantes y de mariposa para uso diario",
-      "Entiende cómo se debe cuidar la plata de ley 925 y el baño de oro de 14kt",
-      "Elija joyas de uso diario para el trabajo, ropa informal, viajes, cenas y pendientes.",
-      "Evite hábitos de uso diario que puedan dañar las joyas.",
-      "Encuentre recomendaciones de productos IWantJewels para el uso diario",
-      "Planificar módulos de productos, bloques de imágenes, CTA y enlaces internos para la página."
+      "Descubra si la joyería demi-fine es adecuada para el día a día",
+      "Descubra qué piezas demi-fine son mejores para sus looks diarios",
+      "Compare pendientes de botón, aros pequeños (huggies), pendientes de aro, pendientes colgantes y pendientes mariposa para el día a día",
+      "Descubra cómo cuidar la plata de ley 925 y el chapado en oro de 14 kt",
+      "Elija joyas para el trabajo, looks informales, viajes, cenas y ear stacks",
+      "Evite hábitos diarios que pueden dañar sus joyas",
+      "Descubra las recomendaciones de productos de I Want Jewels para el día a día",
+      "Planifique módulos de producto, bloques de imágenes, CTA y enlaces internos para la página"
     ],
     "image": "/blog-images/blog-image-87.jpg"
   },
   "content": [
     {
-      "heading": "Selector de joyería semifina para el día a día",
+      "heading": "Selector de joyería demi-fine para el día a día",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta tabla cerca de la parte superior de la página como principal herramienta de decisión."
+          "text": "Utilice esta tabla cerca del inicio de la página como herramienta principal de decisión."
         },
         {
           "type": "table",
           "headers": [
-            "Necesidad de uso diario",
-            "Mejor Dirección de Joyería",
-            "Dirección IWJ recomendada"
+            "Necesidad para el día a día",
+            "Mejor opción de joyería",
+            "Propuesta recomendada de IWJ"
           ],
           "rows": [
             [
-              "Brillo cotidiano sencillo",
-              "Pequeños pendientes de diamantes cultivados en laboratorio.",
+              "Brillo sencillo para cada día",
+              "Pendientes de botón pequeños con diamante de laboratorio",
               "Cadenza S"
             ],
             [
-              "Brillo diario más visible",
-              "Aretes de diamantes medianos cultivados en laboratorio",
-              "CadenzaM"
+              "Más brillo visible a diario",
+              "Pendientes de botón medianos con diamante de laboratorio",
+              "Cadenza M"
             ],
             [
-              "Estilo diario moderno",
-              "Huggies o aros pequeños",
+              "Estilo moderno para cada día",
+              "Aros pequeños (huggies) o pendientes de aro pequeños",
               "Amadea Huggie, Pave Hoops"
             ],
             [
-              "Joyería diaria mínima",
-              "Pendientes minimalistas limpios",
-              "laluce"
+              "Joyería minimalista diaria",
+              "Pendientes minimalistas y depurados",
+              "Laluce"
             ],
             [
-              "Estilo de pila de orejas",
-              "Sementales con abrazos",
+              "Estilo ear stack",
+              "Pendientes de botón con aros pequeños (huggies)",
               "Cadenza S + Amadea"
             ],
             [
-              "Joyas de oficina",
-              "Pendientes pequeños o abrazos refinados",
+              "Joyería para la oficina",
+              "Pendientes de botón pequeños o aros pequeños (huggies) refinados",
               "Cadenza S, Cadenza M, Amadea"
             ],
             [
-              "Estilo del día a la noche",
-              "Tacos medianos o gotas suaves",
+              "Del día a la noche",
+              "Pendientes de botón medianos o pendientes colgantes delicados",
               "Cadenza M, Orsola"
             ],
             [
-              "Look diario femenino y suave.",
-              "Pendientes de mariposa o tachuelas delicadas",
+              "Look femenino y delicado para cada día",
+              "Pendientes mariposa o pendientes de botón delicados",
               "Farfalla, Alidi Farfalla"
             ],
             [
-              "fiesta despues del trabajo",
-              "Gotas o brillo atrevido",
+              "Fiesta después del trabajo",
+              "Pendientes colgantes o brillo llamativo",
               "Orsola, Lusso"
             ],
             [
-              "Joyas de viaje",
-              "Sementales o abrazos seguros",
+              "Joyería para viajar",
+              "Pendientes de botón o aros pequeños (huggies) seguros",
               "Cadenza S, Amadea"
             ]
           ]
@@ -99,194 +99,194 @@
       ]
     },
     {
-      "heading": "¿Qué hace que las joyas semifinas sean buenas para el uso diario?",
+      "heading": "¿Qué hace que la joyería demi-fine sea adecuada para el día a día?",
       "content": [
         {
           "type": "paragraph",
-          "text": "La joyería semifina es buena para el uso diario cuando equilibra calidad, comodidad y practicidad."
+          "text": "La joyería demi-fine es adecuada para el día a día cuando combina calidad, comodidad y practicidad."
         },
         {
           "type": "paragraph",
-          "text": "Las joyas diarias deben hacer más que verse hermosas en una foto de producto. Debe resultar cómodo durante varias horas, combinar con más de una vestimenta, sentarse de forma segura en el cuerpo y ser fácil de cuidar. Una prenda que parezca demasiado pesada, demasiado delicada o demasiado difícil de peinar no formará parte de la rutina diaria."
+          "text": "La joyería diaria debe hacer algo más que verse bonita en una foto de producto. Debe resultar cómoda durante varias horas, combinar con más de un conjunto, mantenerse segura y ser fácil de cuidar. Una pieza demasiado pesada, delicada o difícil de combinar no formará parte de su rutina diaria."
         },
         {
           "type": "paragraph",
-          "text": "La mejor joyería semifina de uso diario suele tener:"
+          "text": "La mejor joyería demi-fine para el día a día suele ofrecer:"
         },
         {
           "type": "table",
           "headers": [
             "Calidad diaria",
-            "Por qué es importante"
+            "Por qué importa"
           ],
           "rows": [
             [
               "Diseño cómodo",
-              "La pieza se puede usar durante largas horas."
+              "La pieza puede llevarse durante muchas horas"
             ],
             [
               "Cierre seguro",
-              "Reduce la preocupación durante el movimiento diario."
+              "Reduce las preocupaciones durante el movimiento diario"
             ],
             [
-              "Tamaño usable",
-              "Funciona con trajes casuales, ropa de trabajo y cenas."
+              "Tamaño fácil de llevar",
+              "Combina con looks informales, ropa de trabajo y cenas"
             ],
             [
               "Mejores materiales",
-              "Se siente más elevado que la joyería de moda."
+              "Resulta más sofisticada que la joyería de moda"
             ],
             [
-              "Estilo fácil",
+              "Fácil de combinar",
               "Combina con más de un conjunto"
             ],
             [
               "Rutina de cuidado sencilla",
-              "Es más fácil mantener un aspecto pulido"
+              "Es más fácil mantener su acabado pulido"
             ],
             [
-              "No demasiado guiado por las tendencias",
-              "Se siente útil más allá de una temporada."
+              "Sin depender demasiado de las tendencias",
+              "Sigue siendo útil más allá de una temporada"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "En IWantJewels, la combinación de diamantes cultivados en laboratorio, plata de ley 925 y baño de oro de 14 quilates ayuda a crear joyas que se sienten pulidas pero que aún se pueden usar. La clave es elegir el estilo adecuado para el uso diario."
+          "text": "En I Want Jewels, la combinación de diamantes de laboratorio, plata de ley 925 y chapado en oro de 14 kt crea joyas de aspecto pulido y cómodas para llevar. La clave está en elegir el estilo adecuado para el uso diario."
         },
         {
           "type": "see-also",
-          "text": "¿Qué es la joyería semifina?",
+          "text": "¿Qué es la joyería demi-fine?",
           "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
         }
       ]
     },
     {
-      "heading": "Las mejores joyas semifinas para el uso diario",
+      "heading": "La mejor joyería demi-fine para el día a día",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las mejores joyas semifinas para el día a día suelen ser sencillas, ligeras y fáciles de repetir."
+          "text": "La mejor joyería demi-fine para el día a día suele ser sencilla, ligera y fácil de repetir."
         },
         {
           "type": "paragraph",
-          "text": "Los aretes, los huggies y los aretes minimalistas son las categorías cotidianas más fuertes porque no requieren mucho esfuerzo de estilo. Los aros pequeños también pueden funcionar bien porque añaden forma sin volverse demasiado formales. Los pendientes colgantes se pueden utilizar para looks del día a la noche, pero suelen ser mejores para días con cenas, eventos o atuendos arreglados."
+          "text": "Los pendientes de botón, los aros pequeños (huggies) y los pendientes minimalistas son las categorías diarias más prácticas porque requieren poco esfuerzo al combinarlos. Los pendientes de aro pequeños también funcionan bien: aportan forma sin resultar demasiado formales. Los pendientes colgantes pueden llevarse del día a la noche, aunque suelen ser más adecuados para días con cenas, eventos o looks arreglados."
         },
         {
           "type": "table",
           "headers": [
             "Tipo de joyería",
-            "Clasificación de uso diario",
+            "Valoración para el día a día",
             "Mejor uso"
           ],
           "rows": [
             [
-              "Pendientes",
+              "Pendientes de botón",
               "Excelente",
-              "Ropa de trabajo, brillo diario, primeros pendientes de diamantes"
+              "Ropa de trabajo, brillo diario, primeros pendientes con diamante"
             ],
             [
-              "abrazos",
+              "Aros pequeños (huggies)",
               "Excelente",
-              "Pilas de orejas, segundos piercings, looks diarios modernos"
+              "Ear stacks, segundos piercings, looks modernos diarios"
             ],
             [
               "Pendientes minimalistas",
               "Excelente",
-              "Estilo diario tranquilo"
+              "Estilo diario discreto"
             ],
             [
-              "Aros pequeños",
-              "Muy bueno",
-              "Estilo casual, ropa de trabajo, outfits de fin de semana."
+              "Pendientes de aro pequeños",
+              "Muy buenos",
+              "Looks informales, ropa de trabajo y conjuntos de fin de semana"
             ],
             [
               "Pendientes de mariposa",
-              "bueno",
-              "Estilo diario femenino y piezas significativas."
+              "Buenos",
+              "Estilo femenino diario y piezas con significado"
             ],
             [
-              "Gotas cortas",
-              "Bueno para días seleccionados.",
-              "Cenas, outfits smart-casual, looks del día a la noche"
+              "Pendientes colgantes cortos",
+              "Buenos para días concretos",
+              "Cenas, looks smart casual y conjuntos del día a la noche"
             ],
             [
-              "Gotas largas",
-              "Centrado en la ocasión",
-              "Bodas, fiestas y outfits formales."
+              "Pendientes colgantes largos",
+              "Para ocasiones concretas",
+              "Bodas, fiestas y looks formales"
             ],
             [
-              "Pendientes atrevidos",
-              "No suele ser diario",
-              "Fiestas, estilismos de noche y looks de alto impacto"
+              "Pendientes statement llamativos",
+              "No suelen ser para el día a día",
+              "Fiestas, looks de noche y estilismos de gran impacto"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para el uso diario, las direcciones IWantJewels más seguras son Cadenza S, Cadenza M, Amadea Huggie y Laluce. Para días un poco más estilizados, Pave Hoops u Orsola pueden funcionar a la perfección."
+          "text": "Para el uso diario, las propuestas más seguras de I Want Jewels son Cadenza S, Cadenza M, Amadea Huggie y Laluce. Para días algo más arreglados, Pave Hoops u Orsola pueden funcionar a la perfección."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio",
+          "text": "Pendientes de diamantes de laboratorio",
           "href": "/products?category=Earring"
         }
       ]
     },
     {
-      "heading": "Aretes semifinos para uso diario",
+      "heading": "Pendientes de botón demi-fine para el día a día",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aretes son las piezas de joyería semifina más fáciles de usar todos los días."
+          "text": "Los pendientes de botón son las piezas demi-fine más fáciles de llevar a diario."
         },
         {
           "type": "paragraph",
-          "text": "Se colocan cerca de la oreja, no se mueven mucho y combinan con casi cualquier vestimenta. Se pueden usar con una chaqueta, una camisa blanca, prendas de punto, un vestido informal, un vestido negro, un traje de viaje o un sencillo look de noche. Esta es la razón por la que los aretes suelen ser los primeros aretes semifinos que compran los compradores."
+          "text": "Quedan cerca de la oreja, se mueven poco y combinan con casi cualquier conjunto. Puede llevarlos con una americana, una camisa blanca, prendas de punto, un vestido informal, un vestido negro, un look de viaje o un estilismo de noche sencillo. Por eso, los pendientes de botón suelen ser el primer estilo de pendientes demi-fine que compran muchas personas."
         },
         {
           "type": "paragraph",
-          "text": "Los pendientes de diamantes cultivados en laboratorio Cadenza S son ideales para un brillo sutil diario. Son limpios, simples y fáciles de repetir. Los aretes de diamantes Cadenza M son mejores cuando el usuario prefiere una apariencia de diamante ligeramente más visible manteniendo el estilo clásico."
+          "text": "Los pendientes de botón Cadenza S con diamante de laboratorio son ideales para un brillo diario sutil. Son limpios, sencillos y fáciles de repetir. Los pendientes de botón Cadenza M con diamante son mejores si prefiere un brillo algo más visible sin renunciar a un estilo clásico."
         },
         {
           "type": "paragraph",
-          "text": "Los pendientes también son fuertes para las personas que prefieren joyas que requieran poco esfuerzo. No necesitan un escote, peinado o vestimenta especial para funcionar bien."
+          "text": "Los pendientes de botón también son ideales si prefiere una joyería que no requiera esfuerzo. No necesitan un escote, peinado o conjunto especial para quedar bien."
         },
         {
           "type": "see-also",
-          "text": "Guía de aretes de diamantes cultivados en laboratorio",
+          "text": "Guía de pendientes de botón de diamante de laboratorio",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Huggies y aros semifinos para uso diario",
+      "heading": "Aros pequeños (huggies) y pendientes de aro demi-fine para el día a día",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los huggies y los aros pequeños son excelentes para el estilo diario porque añaden forma sin sentirse demasiado pesados."
+          "text": "Los aros pequeños (huggies) y los pendientes de aro pequeños son excelentes para el día a día porque aportan forma sin resultar demasiado pesados."
         },
         {
           "type": "paragraph",
-          "text": "Un huggie se coloca cerca de la oreja, lo que lo hace práctico para la ropa diaria y las orejeras. Un aro pequeño crea más forma que un pendiente, pero aun así se siente fácil de usar. Ambos son útiles cuando el usuario quiere joyas que se sientan un poco más estilizadas que las tachuelas clásicas."
+          "text": "Un aro pequeño (huggie) queda cerca de la oreja, por lo que resulta práctico con looks diarios y ear stacks. Un pendiente de aro pequeño aporta más forma que un pendiente de botón, pero sigue siendo fácil de llevar. Ambos son útiles si busca una joya algo más arreglada que los pendientes de botón clásicos."
         },
         {
           "type": "paragraph",
-          "text": "Los aretes Amadea Huggie son una excelente opción para el día a día porque funcionan solos o con tachuelas. Los Pave Hoops son mejores cuando el usuario quiere una forma de aro clásica con un brillo más visible."
+          "text": "Los pendientes Amadea Huggie son una excelente opción diaria porque pueden llevarse solos o con pendientes de botón. Pave Hoops es mejor si busca la forma clásica de un pendiente de aro con un brillo más visible."
         },
         {
           "type": "paragraph",
-          "text": "Para un aro diario sencillo, combine los aretes de diamantes cultivados en laboratorio Cadenza S con los aretes Amadea Huggie. Esto crea un punto brillante y un arete con forma sin que la oreja parezca abarrotada."
+          "text": "Para crear un ear stack sencillo, combine los pendientes de botón Cadenza S con diamante de laboratorio con los pendientes Amadea Huggie. Así conseguirá un punto de brillo y una pieza con forma, sin sobrecargar la oreja."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para aros",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+          "text": "Pendientes de diamante de laboratorio para ear stacks",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "Pendientes semifinos minimalistas para uso diario",
+      "heading": "Pendientes demi-fine minimalistas para el día a día",
       "content": [
         {
           "type": "grid-layout",
@@ -295,19 +295,19 @@
           "content": [
             {
               "type": "paragraph",
-              "text": "Los pendientes minimalistas semifinos son ideales para compradores que prefieren joyas discretas."
+              "text": "Los pendientes demi-fine minimalistas son ideales si prefiere una joyería discreta."
             },
             {
               "type": "paragraph",
-              "text": "No dominan el conjunto, pero aun así hacen que el look parezca acabado. Esto es especialmente útil para ropa de trabajo, ropa limpia, guardarropas neutros, estilo de viaje y personas a las que no les gustan las joyas pesadas."
+              "text": "No dominan el conjunto, pero hacen que el look se vea completo. Resultan especialmente útiles con ropa de trabajo, looks depurados, armarios de tonos neutros, estilismos de viaje y para quienes no disfrutan de las joyas pesadas."
             },
             {
               "type": "paragraph",
-              "text": "Los aretes de diamantes minimalistas Laluce son una fuerte dirección de IWantJewels para esta necesidad. Se adaptan a atuendos sencillos, estilos suaves para el día a día y a quienes usan joyas que prefieren los detalles sutiles al brillo dramático."
+              "text": "Los pendientes minimalistas con diamante Laluce son una excelente propuesta de I Want Jewels para esta necesidad. Combinan con conjuntos sencillos, looks delicados para cada día y personas que prefieren los detalles sutiles a un brillo dramático."
             },
             {
               "type": "paragraph",
-              "text": "Los aretes minimalistas también pueden funcionar como piezas de soporte en una pila de orejas. Ayudan a crear equilibrio cuando se combinan con tachuelas, aros o aros."
+              "text": "Los pendientes minimalistas también pueden utilizarse como piezas de apoyo en un ear stack. Ayudan a crear equilibrio al combinarlos con pendientes de botón, aros pequeños (huggies) o pendientes de aro."
             }
           ]
         },
@@ -319,67 +319,67 @@
       ]
     },
     {
-      "heading": "¿Puedes usar aretes colgantes semifinos todos los días?",
+      "heading": "¿Puede llevar pendientes demi-fine colgantes todos los días?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Algunos aretes colgantes semifinos se pueden usar con frecuencia, pero la mayoría son mejores para días seleccionados en lugar de usarlos constantemente a diario."
+          "text": "Algunos pendientes demi-fine colgantes pueden llevarse con frecuencia, pero la mayoría son más adecuados para días concretos que para un uso diario constante."
         },
         {
           "type": "paragraph",
-          "text": "Los aretes colgantes añaden movimiento, longitud y un estilo más visible. Eso los hace hermosos para cenas, eventos de trabajo, bodas, citas nocturnas y trajes de noche. Para el uso diario básico, los pendientes o huggies suelen ser más fáciles."
+          "text": "Los pendientes colgantes aportan movimiento, longitud y un estilo más visible. Por eso resultan ideales para cenas, eventos de trabajo, bodas, citas y looks de noche. Para el día a día, los pendientes de botón o los aros pequeños (huggies) suelen ser más prácticos."
         },
         {
           "type": "paragraph",
-          "text": "Las caídas cortas y livianas pueden funcionar para un estilo elegante e informal. Las gotas más largas son mejores para las ocasiones. Por lo general, las gotas atrevidas o dramáticas deben reservarse para eventos en los que las joyas formen parte del conjunto."
+          "text": "Los pendientes colgantes cortos y ligeros pueden funcionar con looks smart casual. Los diseños más largos son mejores para ocasiones especiales. Los pendientes colgantes llamativos o dramáticos suelen reservarse para eventos en los que la joya forma parte esencial del conjunto."
         },
         {
           "type": "paragraph",
-          "text": "Los pendientes colgantes de Orsola son ideales para looks de día y de noche, cenas y looks de invitada a una boda. Los aretes cortos Concetta pueden funcionar para un estilo más suave para ocasiones especiales. Los pendientes largos Concetta son más formales y quedan mejor con trajes de noche."
+          "text": "Los pendientes colgantes Orsola son ideales para looks del día a la noche, cenas y estilismos para invitadas de boda. Los pendientes Concetta Short funcionan con looks delicados para ocasiones especiales. Concetta Long resulta más formal y es mejor para conjuntos de noche."
         },
         {
           "type": "see-also",
-          "text": "Guía de aretes colgantes con diamantes cultivados en laboratorio",
+          "text": "Guía de pendientes colgantes con diamantes de laboratorio",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
         }
       ]
     },
     {
-      "heading": "¿Puedes usar aretes de mariposa todos los días?",
+      "heading": "¿Puede llevar pendientes mariposa todos los días?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Los aretes de mariposa pueden funcionar para el uso diario cuando el diseño es cómodo y no demasiado grande."
+          "text": "Los pendientes mariposa pueden llevarse a diario si el diseño es cómodo y no demasiado grande."
         },
         {
           "type": "paragraph",
-          "text": "Son especialmente útiles para los compradores que desean joyas diarias con significado. Los aretes de mariposa pueden simbolizar crecimiento, transformación, belleza y nuevos comienzos, lo que los hace sentir más personales que un arete básico."
+          "text": "Son especialmente útiles si busca una joya diaria con significado. Los pendientes mariposa pueden simbolizar crecimiento, transformación, belleza y nuevos comienzos, lo que les aporta un carácter más personal que el de unos pendientes de botón básicos."
         },
         {
           "type": "paragraph",
-          "text": "Los aretes de mariposa Farfalla y los aretes de mariposa Alidi Farfalla son excelentes opciones para un estilo femenino suave, regalos de cumpleaños, obsequios románticos y joyas de hitos personales. Para el uso diario, funcionan mejor con atuendos sencillos, colores suaves y un mínimo de joyería de apoyo."
+          "text": "Los pendientes de mariposa Farfalla y los pendientes de mariposa Alidi Farfalla son excelentes opciones para looks femeninos y delicados, regalos de cumpleaños, regalos románticos y joyas para celebrar momentos importantes. Para el día a día, combinan mejor con conjuntos sencillos, colores suaves y pocas joyas adicionales."
         },
         {
           "type": "paragraph",
-          "text": "Para un look diario más sutil, combine aretes de mariposa con tachuelas simples o joyas minimalistas. Para los regalos, los aretes de mariposa pueden parecer más reflexivos que un arete simple de todos los días."
+          "text": "Para un look diario más discreto, combine los pendientes de mariposa con pendientes de botón sencillos o joyería minimalista. Como regalo, unos pendientes de mariposa pueden resultar más especiales que unos pendientes básicos para diario."
         },
         {
           "type": "see-also",
-          "text": "Pendientes de diamantes cultivados en laboratorio para regalar",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
+          "text": "Pendientes de diamante de laboratorio para regalar",
+          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
         }
       ]
     },
     {
-      "heading": "Joyería semifina para ropa de trabajo",
+      "heading": "Joyería Demi-Fine para la Oficina",
       "content": [
         {
           "type": "paragraph",
-          "text": "La joyería semifina funciona muy bien para la ropa de trabajo porque añade brillo sin parecer demasiado formal."
+          "text": "La joyería demi-fine funciona muy bien con la ropa de oficina porque aporta elegancia sin resultar demasiado formal."
         },
         {
           "type": "paragraph",
-          "text": "La mejor joyería de trabajo debe ser cómoda, sutil y fácil de combinar con camisas, blazers, prendas de punto, vestidos y prendas de sastrería sencillas. Los aretes, aros y aretes minimalistas suelen ser las opciones más fuertes."
+          "text": "Las mejores joyas para la oficina deben ser cómodas, discretas y fáciles de combinar con camisas, blazers, prendas de punto, vestidos y prendas de sastrería sencilla. Los pendientes de botón, los aros pequeños (huggies) y los pendientes minimalistas suelen ser las opciones más acertadas."
         },
         {
           "type": "grid-layout",
@@ -389,34 +389,34 @@
             {
               "type": "table",
               "headers": [
-                "Estilo de ropa de trabajo",
-                "Mejor Dirección de Joyería",
-                "Dirección de producto"
+                "Estilo de oficina",
+                "Mejor elección de joyas",
+                "Orientación de producto"
               ],
               "rows": [
                 [
-                  "Aspecto clásico de oficina",
-                  "Tacos pequeños o medianos",
+                  "Look de oficina clásico",
+                  "Pendientes de botón pequeños o medianos",
                   "Cadenza S, Cadenza M"
                 ],
                 [
-                  "Aspecto de oficina moderna",
-                  "Huggies o aros pequeños",
-                  "Amadea, Pave Aros"
+                  "Look de oficina moderno",
+                  "Aros pequeños (huggies) o pendientes de aro pequeños",
+                  "Amadea, Pave Hoops"
                 ],
                 [
-                  "Aspecto de oficina minimalista",
-                  "Aretes simples o aretes minimalistas",
+                  "Look de oficina minimalista",
+                  "Pendientes de botón sencillos o pendientes minimalistas",
                   "Cadenza S, Laluce"
                 ],
                 [
-                  "Aspecto de oficina creativa",
-                  "Pendientes huggies, aros o mariposas",
-                  "Amadea, Pave Aros, Farfalla"
+                  "Look de oficina creativo",
+                  "Aros pequeños (huggies), pendientes de aro o pendientes de mariposa",
+                  "Amadea, Pave Hoops, Farfalla"
                 ],
                 [
                   "Cena después del trabajo",
-                  "Tacos medianos o gotas suaves",
+                  "Pendientes de botón medianos o pendientes colgantes delicados",
                   "Cadenza M, Orsola"
                 ]
               ]
@@ -426,41 +426,41 @@
       ]
     },
     {
-      "heading": "Joyería semifina para viajes y fines de semana",
+      "heading": "Joyería Demi-Fine para Viajes y Fines de Semana",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las joyas de viaje y de fin de semana deben ser fáciles, seguras y versátiles."
+          "text": "Las joyas para viajar y para el fin de semana deben ser fáciles de llevar, seguras y versátiles."
         },
         {
           "type": "paragraph",
-          "text": "Los pendientes y los huggies son las mejores opciones de viaje porque es menos probable que se enganchen en la ropa, las bufandas o el cabello. También funcionan con atuendos casuales y pueden convertirse en looks para la cena."
+          "text": "Los pendientes de botón y los aros pequeños (huggies) son las mejores opciones para viajar porque es menos probable que se enganchen con la ropa, las bufandas o el cabello. Además, combinan con looks informales y pueden adaptarse a una cena."
         },
         {
           "type": "paragraph",
-          "text": "Para viajar, elija prendas que se puedan usar con varios conjuntos en lugar de llevar demasiados aretes. Los pendientes Cadenza S y Amadea Huggie son opciones fuertes porque son simples, seguros y fáciles de repetir. Cadenza M funciona cuando se necesita un poco más de brillo para cenas o planes nocturnos."
+          "text": "Para viajar, elija piezas que pueda llevar con varios conjuntos en lugar de llevar demasiados pendientes. Los pendientes de aro pequeño (huggies) Cadenza S y Amadea son excelentes opciones porque son sencillos, seguros y fáciles de repetir. Cadenza M funciona cuando necesita un poco más de brillo para una cena o un plan nocturno."
         },
         {
           "type": "paragraph",
-          "text": "Para el estilo de fin de semana, Pave Hoops y Laluce pueden agregar forma o detalles sutiles sin parecer demasiado formal."
+          "text": "Para los looks de fin de semana, Pave Hoops y Laluce pueden aportar forma o un detalle sutil sin resultar demasiado formales."
         },
         {
           "type": "see-also",
-          "text": "Cómo guardar aretes",
+          "text": "Cómo guardar los pendientes",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Reglas de cuidado diario para joyas semifinas",
+      "heading": "Rutina diaria de cuidado de la joyería demi-fine",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las joyas semifinas se pueden usar con regularidad, pero los hábitos diarios importan."
+          "text": "La joyería demi-fine puede llevarse con frecuencia, pero los hábitos diarios son importantes."
         },
         {
           "type": "paragraph",
-          "text": "Debido a que las piezas de IWantJewels utilizan plata de ley 925 y baño de oro de 14 quilates, el acabado del metal debe protegerse de condiciones adversas. Los diamantes cultivados en laboratorio son duraderos, pero el enchapado, el engaste y el acabado aún necesitan un cuidado cuidadoso."
+          "text": "Como las piezas de IWantJewels utilizan plata de ley 925 y baño de oro de 14 kt, el acabado metálico debe protegerse de las condiciones agresivas. Los diamantes de laboratorio son resistentes, pero el baño, el engaste y el acabado también necesitan cuidados adecuados."
         },
         {
           "type": "table",
@@ -470,94 +470,94 @@
           ],
           "rows": [
             [
-              "Ponte joyas después del perfume y la loción.",
-              "Reduce la exposición química"
+              "Póngase las joyas después del perfume y la crema",
+              "Reduce la exposición a sustancias químicas"
             ],
             [
-              "Quitar antes de ducharse o nadar.",
-              "Protege el chapado y el acabado."
+              "Quítese las joyas antes de ducharse o nadar",
+              "Protege el baño y el acabado"
             ],
             [
-              "Evite los entrenamientos intensos en joyería.",
-              "Reduce la exposición al sudor y la fricción."
+              "Evite entrenamientos intensos con las joyas puestas",
+              "Reduce la exposición al sudor y la fricción"
             ],
             [
-              "Limpiar después de usar",
-              "Elimina la acumulación de grasa, maquillaje y productos."
+              "Límpielas después de llevarlas",
+              "Elimina la grasa, el maquillaje y la acumulación de productos"
             ],
             [
-              "Almacenar por separado",
-              "Evita rozaduras y arañazos."
+              "Guárdelas por separado",
+              "Evita roces y arañazos"
             ],
             [
-              "Evite los limpiadores fuertes",
-              "Protege el metal y el ajuste."
+              "Evite los limpiadores agresivos",
+              "Protege el metal y el engaste"
             ],
             [
-              "Mantener alejado del cloro",
-              "Ayuda a conservar el acabado."
+              "Manténgalas alejadas del cloro",
+              "Ayuda a conservar el acabado"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Un buen cuidado no significa que no se puedan disfrutar las joyas. Significa que las joyas deben tratarse adecuadamente para que permanezcan brillantes y pulidas por más tiempo."
+          "text": "Cuidarlas bien no significa que no pueda disfrutar de sus joyas. Significa tratarlas adecuadamente para que conserven su brillo y acabado durante más tiempo."
         },
         {
           "type": "see-also",
-          "text": "Cómo cuidar las joyas bañadas en oro",
+          "text": "Cómo cuidar la joyería chapada en oro",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "¿Se pueden empañar las joyas semifinas con el uso diario?",
+      "heading": "¿Puede la joyería demi-fine perder su brillo con el uso diario?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Las joyas semifinas pueden cambiar de apariencia dependiendo de sus materiales y de su cuidado."
+          "text": "La joyería demi-fine puede cambiar de aspecto según sus materiales y los cuidados que reciba."
         },
         {
           "type": "paragraph",
-          "text": "El diamante cultivado en laboratorio en sí no se empaña, pero el metal y el acabado pueden verse afectados por la humedad, los productos químicos, los perfumes, las lociones, el sudor, el cloro y el almacenamiento brusco. Esto es especialmente importante en el caso de las joyas bañadas en oro."
+          "text": "El diamante de laboratorio no se deslustra, pero el metal y el acabado pueden verse afectados por la humedad, los productos químicos, el perfume, la crema, el sudor, el cloro y un almacenamiento inadecuado. Esto es especialmente importante en la joyería chapada en oro."
         },
         {
           "type": "paragraph",
-          "text": "En IWantJewels, las piezas se describen con cuidado como resistentes al deslustre y al sudor. Esa parte del cuidado importa. Aún así, las joyas deben protegerse de la exposición innecesaria y limpiarse con cuidado."
+          "text": "En IWantJewels, las piezas se describen como resistentes al deslustre y al sudor si se cuidan correctamente. Esa parte del cuidado es importante. Aun así, debe proteger las joyas de exposiciones innecesarias y limpiarlas con delicadeza."
         },
         {
           "type": "paragraph",
-          "text": "Para el uso diario, lo más seguro es limpiar las piezas después de su uso, guardarlas adecuadamente y evitar usarlas en la ducha, la piscina o durante entrenamientos intensos."
+          "text": "Para el uso diario, lo más recomendable es limpiar las piezas después de usarlas, guardarlas correctamente y evitar llevarlas en la ducha, la piscina o durante entrenamientos intensos."
         },
         {
           "type": "see-also",
-          "text": "¿Se empañan las joyas bañadas en oro?",
+          "text": "¿La joyería chapada en oro pierde su brillo?",
           "href": "#"
         }
       ]
     },
     {
-      "heading": "Rutas de producto según la necesidad diaria de estilo",
+      "heading": "Opciones según sus necesidades de estilo diario",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilice esta sección como una guía práctica de compras."
+          "text": "Utilice esta sección como guía práctica de compra."
         },
         {
           "type": "subheading",
-          "text": "Para los primeros aretes semifinos de uso diario"
+          "text": "Para sus primeros pendientes demi-fine de diario"
         },
         {
           "type": "paragraph",
-          "text": "Elija aretes de diamantes cultivados en laboratorio Cadenza S. Son simples, sutiles y fáciles de usar en ropa de trabajo, atuendos casuales y looks para cenar."
+          "text": "Elija los pendientes de botón con diamante de laboratorio Cadenza S. Son sencillos, discretos y fáciles de llevar con ropa de oficina, looks informales y conjuntos para cenar."
         },
         {
           "type": "subheading",
-          "text": "Para un brillo cotidiano más visible"
+          "text": "Para un brillo diario más visible"
         },
         {
           "type": "paragraph",
-          "text": "Elija los aretes de diamantes Cadenza M. Siguen siendo clásicos, pero dan más presencia que las tachuelas más pequeñas."
+          "text": "Elija los pendientes de botón con diamantes Cadenza M. Siguen siendo clásicos, pero destacan más que los pendientes de botón pequeños."
         },
         {
           "type": "subheading",
@@ -565,31 +565,31 @@
         },
         {
           "type": "paragraph",
-          "text": "Elige pendientes Amadea Huggie o Pave Hoops. Los Huggies funcionan bien para las orejas, mientras que los aros añaden más forma."
+          "text": "Elija los pendientes de aro pequeño (huggies) Amadea o Pave Hoops. Los aros pequeños (huggies) funcionan muy bien en un ear stack, mientras que los pendientes de aro aportan más forma."
         },
         {
           "type": "subheading",
-          "text": "Para joyería minimalista de uso diario"
+          "text": "Para una joyería diaria minimalista"
         },
         {
           "type": "paragraph",
-          "text": "Elija los pendientes de diamantes minimalistas de Laluce. Son los mejores para estilos tranquilos, guardarropas neutros y personas que prefieren joyas sutiles."
+          "text": "Elija los pendientes minimalistas con diamantes Laluce. Son ideales para looks discretos, armarios de tonos neutros y quienes prefieren una joyería sutil."
         },
         {
           "type": "subheading",
-          "text": "Para peinar del día a la noche"
+          "text": "Para looks de día a noche"
         },
         {
           "type": "paragraph",
-          "text": "Elija Cadenza M para un pendiente impecable para el día y la noche o aretes colgantes Orsola cuando el conjunto necesite más movimiento para una cena o un evento."
+          "text": "Elija Cadenza M para un look de día a noche con pendientes de botón elegantes, u Orsola para aportar más movimiento a un conjunto de cena o evento."
         },
         {
           "type": "subheading",
-          "text": "Para un peinado diario suave y femenino"
+          "text": "Para un estilo diario femenino y delicado"
         },
         {
           "type": "paragraph",
-          "text": "Elige los pendientes de mariposa Farfalla o Alidi Farfalla. Funcionan bien cuando al usuario le gustan las joyas con significado y un aspecto más suave."
+          "text": "Elija los pendientes de mariposa Farfalla o Alidi Farfalla. Funcionan muy bien si le gustan las joyas con significado y un look más suave."
         }
       ]
     },
@@ -600,177 +600,177 @@
           "type": "table",
           "headers": [
             "Producto",
-            "Mejor papel cotidiano",
+            "Mejor uso diario",
             "Por qué funciona"
           ],
           "rows": [
             [
-              "Aretes de diamantes cultivados en laboratorio Cadenza S",
-              "Primeros pendientes semifinos de uso diario",
-              "Pequeño, limpio y fácil de repetir."
+              "Pendientes de botón de diamantes de laboratorio Cadenza S",
+              "Primeros pendientes demi-fine para diario",
+              "Pequeños, sencillos y fáciles de repetir"
             ],
             [
-              "aretes Cadenza M con diamantes",
-              "Brillo diario más visible",
-              "Clásico pero más notable"
+              "Pendientes de botón de diamantes Cadenza M",
+              "Más brillo visible para el día a día",
+              "Clásicos, pero más llamativos"
             ],
             [
-              "Pendientes Amadea Huggie",
+              "Pendientes de aro pequeño (huggies) Amadea",
               "Estilo diario moderno",
-              "Funciona solo o en audífonos"
+              "Funcionan solos o en un ear stack"
             ],
             [
-              "Pendientes minimalistas de diamantes Laluce",
-              "Joyas diarias silenciosas",
-              "Suave, sencillo y fácil de combinar"
+              "Pendientes de diamantes minimalistas Laluce",
+              "Joyería discreta para cada día",
+              "Suaves, sencillos y fáciles de combinar"
             ],
             [
-              "Aros de pavimentación",
-              "Estilo de aro cotidiano",
-              "Añade forma y brillo."
+              "Pave Hoops",
+              "Estilo diario con pendientes de aro",
+              "Aportan forma y brillo"
             ],
             [
               "Pendientes mariposa Farfalla",
-              "Estilo diario suave o regalos.",
-              "Añade significado y detalles femeninos."
+              "Estilo diario delicado o regalos",
+              "Aportan significado y un detalle femenino"
             ],
             [
-              "Pendientes de mariposa Alidi Farfalla",
-              "Pieza o regalo personal diario",
-              "Simbólico y memorable"
+              "Pendientes mariposa Alidi Farfalla",
+              "Pieza personal para diario o regalo",
+              "Simbólica y memorable"
             ],
             [
-              "aretes colgantes de Orsola",
-              "Estilo del día a la noche",
-              "Añade movimiento para cenas y eventos."
+              "Pendientes colgantes Orsola",
+              "Del día a la noche",
+              "Aporta movimiento para cenas y eventos"
             ],
             [
-              "Pendientes cortos Concetta",
-              "Estilo suave para la ocasión y el día a día.",
-              "Dirección de caída delicada"
+              "Pendientes Concetta Short",
+              "Estilo delicado para ocasiones y diario",
+              "Estilo de pendiente colgante delicado"
             ],
             [
-              "Pendientes llamativos Lusso",
-              "No diario, pero útil para diseñar eventos.",
-              "Lo mejor para fiestas y looks atrevidos."
+              "Pendientes statement llamativos Lusso",
+              "No son para diario, pero resultan útiles para looks de evento",
+              "Ideales para fiestas y looks llamativos"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para la joyería semifina de uso diario, comience con piezas que sean fáciles de repetir. Elija Cadenza S para un brillo sutil diario, Cadenza M para tachuelas más visibles, Amadea para un estilo abrazable, Laluce para looks minimalistas y Orsola para atuendos del día a la noche."
+          "text": "Para la joyería demi-fine de diario, empiece por piezas fáciles de repetir. Elija Cadenza S para un brillo diario discreto, Cadenza M para pendientes de botón más visibles, Amadea para un estilo con aros pequeños (huggies), Laluce para looks minimalistas y Orsola para conjuntos de día a noche."
         }
       ]
     },
     {
-      "heading": "Errores comunes que se deben evitar en el uso diario",
+      "heading": "Errores frecuentes que debe evitar al llevar joyas a diario",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un error común es usar joyas semifinas sin ninguna rutina de cuidado. Las piezas diarias acumulan aceite, maquillaje, perfume y residuos de la piel, por lo que deben limpiarse con regularidad."
+          "text": "Un error frecuente es llevar joyería demi-fine sin una rutina de cuidado. Las piezas de uso diario acumulan grasa, maquillaje, perfume y residuos de la piel, por lo que deben limpiarse con regularidad."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es ducharse o nadar con joyas bañadas en oro. Los diamantes pueden ser duraderos, pero el acabado del metal aún necesita protección."
+          "text": "Otro error es ducharse o nadar con joyería chapada en oro. Los diamantes pueden ser resistentes, pero el acabado metálico necesita protección."
         },
         {
           "type": "paragraph",
-          "text": "Un tercer error es elegir pendientes demasiado atrevidos para el uso diario. Las piezas atrevidas son hermosas, pero es posible que no se conviertan en las favoritas de todos los días."
+          "text": "Un tercer error es elegir pendientes demasiado llamativos para el uso diario. Los pendientes statement son preciosos, pero quizá no se conviertan en sus favoritos de diario."
         },
         {
           "type": "paragraph",
-          "text": "Otro error es guardar las joyas sueltas en un bolso o cajón. Esto puede provocar roces, rayones o la pérdida de los cierres de los pendientes."
+          "text": "Otro error es guardar las joyas sueltas en un bolso o cajón. Esto puede provocar roces, arañazos o la pérdida de los cierres de los pendientes."
         },
         {
           "type": "paragraph",
-          "text": "Por último, no trate las joyas semifinas exactamente como si fueran joyas finas de oro macizo. Las piezas semifinas son ponibles y elevadas, pero los acabados enchapados y la plata esterlina aún necesitan el cuidado adecuado."
+          "text": "Por último, no trate la joyería demi-fine exactamente igual que la joyería fina de oro macizo. Las piezas demi-fine son fáciles de llevar y sofisticadas, pero los acabados chapados y la plata de ley 925 siguen necesitando cuidados adecuados."
         },
         {
           "type": "see-also",
-          "text": "Semifina versus joyería fina versus joyería de moda",
+          "text": "Joyería demi-fine frente a joyería fina y joyería de moda",
           "href": "/resources/demi-fine-jewellery-guides/demi-fine-vs-fine-jewellery-vs-fashion-jewellery"
         }
       ]
     },
     {
-      "heading": "Lista de verificación final para el uso diario",
+      "heading": "Lista final para el uso diario",
       "content": [
         {
           "type": "paragraph",
-          "text": "Antes de elegir joyería semifina para uso diario, pregunte:"
+          "text": "Antes de elegir joyería demi-fine para llevar a diario, pregúntese:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "¿Es la pieza lo suficientemente cómoda para usarla por mucho tiempo?",
+            "¿Es la pieza lo bastante cómoda para llevarla durante mucho tiempo?",
             "¿El cierre es seguro?",
-            "¿El estilo combina con más de un outfit?",
-            "¿El tamaño es práctico para el uso diario?",
-            "¿Las joyas están hechas con mejores materiales que la bisutería?",
-            "¿El color del metal coincide con las joyas existentes?",
-            "¿Se puede limpiar la pieza fácilmente?",
-            "¿Se quitará antes de ducharse, nadar o hacer ejercicio intenso?",
-            "¿Se puede almacenar de forma segura?",
-            "¿Seguirá siendo útil después de una temporada?"
+            "¿El estilo combina con más de un conjunto?",
+            "¿El tamaño resulta práctico para el uso diario?",
+            "¿La joya está fabricada con mejores materiales que la joyería de moda?",
+            "¿El color del metal combina con sus joyas actuales?",
+            "¿Puede limpiarse fácilmente?",
+            "¿Se la quitará antes de ducharse, nadar o hacer entrenamientos intensos?",
+            "¿Puede guardarse de forma segura?",
+            "¿Seguirá resultándole útil después de una temporada?"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Para la mayoría de los compradores cotidianos, los aretes, aros y aretes minimalistas son los puntos de partida más seguros."
+          "text": "Para la mayoría de las personas que buscan joyas de diario, los pendientes de botón, los aros pequeños (huggies) y los pendientes minimalistas son el mejor punto de partida."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "¿Las joyas semifinas son buenas para el uso diario?",
-      "answer": "Sí, las joyas semifinas pueden ser buenas para el uso diario cuando son cómodas, están bien hechas y se cuidan adecuadamente. Los tachuelas, los huggies y los aretes minimalistas son opciones diarias especialmente buenas."
+      "question": "¿La joyería demi-fine es adecuada para el uso diario?",
+      "answer": "Sí, la joyería demi-fine puede ser adecuada para llevar a diario si es cómoda, está bien fabricada y recibe los cuidados necesarios. Los pendientes de botón, los aros pequeños (huggies) y los pendientes minimalistas son especialmente apropiados para el día a día."
     },
     {
-      "question": "¿Puedes usar joyas semifinas todos los días?",
-      "answer": "Sí, muchas prendas semifinas se pueden usar con regularidad. Las joyas aún deben protegerse del agua, productos químicos agresivos, perfumes, cloro y almacenamiento brusco."
+      "question": "¿Puede llevar joyería demi-fine a diario?",
+      "answer": "Sí, muchas piezas demi-fine pueden llevarse con frecuencia. Aun así, debe proteger la joyería del agua, los productos químicos agresivos, el perfume, el cloro y un almacenamiento inadecuado."
     },
     {
-      "question": "¿Qué joyería semifina es mejor para el uso diario?",
-      "answer": "Los aretes, los huggies, los aretes minimalistas y los aros pequeños suelen ser los mejores para el uso diario porque son cómodos y fáciles de peinar."
+      "question": "¿Qué joyería demi-fine es mejor para el uso diario?",
+      "answer": "Los pendientes de botón, los aros pequeños (huggies), los pendientes minimalistas y los pendientes de aro pequeños suelen ser las mejores opciones para el uso diario porque son cómodos y fáciles de combinar."
     },
     {
-      "question": "¿Puedes ducharte con joyas semifinas?",
-      "answer": "Es mejor no bañarse con joyas semifinas, especialmente si están bañadas en oro. Los productos de ducha y la humedad pueden afectar el acabado con el tiempo."
+      "question": "¿Puede ducharse con joyería demi-fine?",
+      "answer": "Es mejor no ducharse con joyería demi-fine, especialmente si está chapada en oro. Los productos de ducha y la humedad pueden afectar al acabado con el tiempo."
     },
     {
-      "question": "¿Se empañan las joyas semifinas?",
-      "answer": "Depende del material y de la rutina de cuidados. Las joyas de plata de ley y chapadas en oro deben protegerse de la humedad, perfumes, sudor, cloro y productos agresivos."
+      "question": "¿La joyería demi-fine se ennegrece?",
+      "answer": "Depende del material y de la rutina de cuidado. La plata de ley 925 y la joyería chapada en oro deben protegerse de la humedad, el perfume, el sudor, el cloro y los productos agresivos."
     },
     {
-      "question": "¿Las joyas semifinas bañadas en oro son buenas para el uso diario?",
-      "answer": "Las joyas semifinas bañadas en oro se pueden usar con regularidad con el cuidado adecuado. Debe retirarse antes de ducharse, nadar y hacer ejercicio intenso."
+      "question": "¿La joyería demi-fine chapada en oro es adecuada para el uso diario?",
+      "answer": "La joyería demi-fine chapada en oro puede llevarse con frecuencia si se cuida correctamente. Debe quitársela antes de ducharse, nadar o hacer entrenamientos intensos."
     },
     {
-      "question": "¿La plata de ley 925 es buena para la joyería de todos los días?",
-      "answer": "Sí, la plata de ley 925 es una base sólida para la joyería semifina y puede funcionar bien para piezas cotidianas si se cuida adecuadamente."
+      "question": "¿La plata de ley 925 es adecuada para la joyería de uso diario?",
+      "answer": "Sí, la plata de ley 925 es una base resistente para la joyería demi-fine y funciona muy bien en piezas de diario si se cuida adecuadamente."
     },
     {
-      "question": "¿Los aretes de diamantes cultivados en laboratorio son buenos para el uso diario?",
-      "answer": "Sí, los aretes, aros y aretes minimalistas de diamantes cultivados en laboratorio son excelentes para el uso diario porque agregan brillo de diamantes reales en diseños portátiles."
+      "question": "¿Los pendientes con diamantes de laboratorio son adecuados para el uso diario?",
+      "answer": "Sí, los pendientes de botón con diamante de laboratorio, los aros pequeños (huggies) y los pendientes minimalistas son excelentes para el día a día, ya que aportan el brillo real del diamante en diseños cómodos de llevar."
     },
     {
-      "question": "¿Cuál es la joyería cotidiana más fácil de comprar primero?",
-      "answer": "Los pendientes sencillos suelen ser la primera pieza de joyería cotidiana más sencilla porque son atemporales, cómodos y versátiles."
+      "question": "¿Qué joya para el día a día es más fácil comprar primero?",
+      "answer": "Los pendientes de botón sencillos suelen ser la primera joya más fácil de elegir para el día a día, porque son atemporales, cómodos y versátiles."
     },
     {
-      "question": "¿Cómo cuidas las joyas semifinas que se usan a diario?",
-      "answer": "Límpielo después de usarlo, guárdelo por separado, evite productos químicos agresivos, quítelo antes de ducharse o nadar y límpielo suavemente cuando sea necesario."
+      "question": "¿Cómo se cuida la joyería demi-fine de uso diario?",
+      "answer": "Límpiela con un paño después de usarla, guárdela por separado, evite los productos químicos agresivos, quítesela antes de ducharse o nadar y límpiela con suavidad cuando sea necesario."
     }
   ],
   "cta": {
-    "heading": "Las joyas semifinas son una buena opción para el uso diario cuando el diseño es cómodo, los materiales se explican claramente y las joyas se cuidan adecuadamente. Le brinda una sensación más elevada que la joyería de moda y, al mismo tiempo, es más fácil de usar y coleccionar que la joyería fina tradicional.",
-    "body": "Comience con los aretes semifinos de diamantes cultivados en laboratorio de IWantJewels para lograr el brillo cotidiano. Elija Cadenza S para un brillo diario sutil, Cadenza M para tachuelas más visibles, Amadea para un estilo abrazable, Laluce para conjuntos minimalistas y Orsola para looks del día a la noche.",
-    "primaryLabel": "Compre joyería semifina para todos los días",
+    "heading": "La joyería demi-fine es una excelente opción para el día a día cuando el diseño resulta cómodo, los materiales se explican claramente y la joya recibe los cuidados adecuados. Ofrece una sensación más sofisticada que la joyería de moda, pero es más fácil de llevar y de coleccionar que la joyería fina tradicional.",
+    "body": "Empiece con los pendientes de diario de joyería demi-fine con diamante de laboratorio de IWantJewels para disfrutar de un brillo diario. Elija Cadenza S para un brillo sutil, Cadenza M para unos pendientes de botón más visibles, Amadea para un estilo con aros pequeños (huggies), Laluce para looks minimalistas y Orsola para llevar del día a la noche.",
+    "primaryLabel": "Descubra la joyería demi-fine para el día a día",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explora los aretes de diamantes cultivados en laboratorio",
+    "secondaryLabel": "Explore los pendientes de diamantes de laboratorio",
     "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lea ¿Qué es la joyería semifina?",
+    "tertiaryLabel": "Lea ¿Qué es la joyería demi-fine?",
     "tertiaryHref": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
   }
 }

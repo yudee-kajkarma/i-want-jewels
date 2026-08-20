@@ -1,852 +1,694 @@
 {
   "meta": {
-    "title": "Lab Grown Diamond Earrings for Weddings",
-    "description": "Choose lab grown diamond earrings for weddings, wedding guests, bridesmaids, receptions, dresses, necklines and elegant occasion styling."
+    "title": "Lab-Grown Diamond Earrings for Weddings",
+    "description": "Choose lab-grown diamond wedding earrings for brides, bridesmaids and receptions. Compare studs, drops and hoops by dress, neckline and hairstyle."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-60.jpg",
-    "title": "Lab-Grown Diamond Earrings for Weddings:",
-    "subtitle": "Guest, Bridesmaid & Occasion Guide",
+    "image": "/blog-images/blog-image-46.jpg",
+    "title": "Lab-Grown Diamond Earrings",
+    "subtitle": "for Weddings",
     "paragraphs": [
-      "Wedding jewellery should feel elegant, polished and appropriate for the moment. The right earrings can make a dress look more complete, frame the face beautifully in photos and add sparkle without overpowering the outfit.",
-      "Lab-grown diamond earrings are a strong choice for weddings because they give the beauty of real diamond jewellery in a modern and wearable way. They work for wedding guests, bridesmaids, maid of honour outfits, evening receptions, engagement parties, rehearsal dinners and romantic gift moments.",
-      "This resource helps shoppers choose the right lab-grown diamond earrings based on wedding role, outfit style, neckline, dress colour, hairstyle and how much sparkle feels right. It also guides users toward IWantJewels products such as Cadenza S, Cadenza M, Orsola, Farfalla, Alidi Farfalla, Concetta Short, Concetta Long, Amadea Huggie and Lusso bold statement earrings."
+      "Wedding earrings sit close to the face and appear in many of the photographs taken throughout the day. The right pair should complement the wedding dress, hairstyle and veil while remaining secure and suitable for the ceremony and reception.",
+      "Lab-grown diamond studs, drops and hoops can all work as bridal earrings. Studs create a concentrated point of sparkle and suit detailed dresses, veils and prominent necklaces. Drop earrings add length and movement, particularly with open necklines and hair worn up. Diamond hoops provide a more contemporary direction for minimalist dresses, civil ceremonies and reception looks.",
+      "Begin with the dress and hairstyle rather than choosing earrings only by sparkle. Consider the neckline, fabric, embellishment, veil, other jewellery and the earrings' actual dimensions before deciding."
     ],
-    "shopLabel": "Shop Wedding Guest Earrings",
+    "shopLabel": "Explore Lab-Grown Diamond Wedding Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Choose earrings for wedding guests, bridesmaids and evening receptions",
-      "Decide between studs, drops, huggies, butterfly earrings and bold statement earrings",
-      "Match earrings to wedding dress codes and outfit styles",
-      "Pick earrings for strapless, off-shoulder, V-neck, high-neck and sweetheart necklines",
-      "Choose the right sparkle level without looking too bridal",
-      "Find gift-friendly earrings for bridesmaids, maid of honour or wedding-related gifts",
-      "Understand which IWantJewels products suit each wedding styling need",
-      "Plan where to place images, CTAs and product recommendation blocks on the page"
+      "Wear studs when the dress, veil or necklace is already detailed",
+      "Choose short drops for movement without a dramatic focal point",
+      "Consider longer drops with plain dresses, open necklines and hair worn up",
+      "Choose hoops for contemporary, civil-ceremony or reception styling",
+      "Use one prominent jewellery element, not two",
+      "Test the earrings with the actual hairstyle and veil before the wedding",
+      "Judge size in millimetres and try-on photographs, not carat weight alone"
     ],
-    "image": "/blog-images/blog-image-62.jpg"
+    "image": "/blog-images/blog-image-50.jpg"
   },
   "content": [
     {
-      "heading": "Wedding Earring Selector",
+      "heading": "Bridal earring selector",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Use this table as the main decision tool near the top of the page."
-        },
-        {
           "type": "table",
-          "headers": [
-            "Wedding Need",
-            "Best Earring Direction",
-            "Recommended IWJ Direction"
-          ],
+          "headers": ["Bridal look", "Earring direction", "Necklace direction"],
           "rows": [
-            [
-              "Simple wedding guest outfit",
-              "Medium studs or drop earrings",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Detailed or embellished dress",
-              "Small or medium studs",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Romantic floral dress",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Black tie wedding",
-              "Elegant drops or bold sparkle",
-              "Orsola, Concetta Long, Lusso"
-            ],
-            [
-              "Bridesmaid jewellery",
-              "Simple studs or refined drops",
-              "Cadenza S, Cadenza M, Concetta Short"
-            ],
-            [
-              "Maid of honour styling",
-              "Medium studs or elegant drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Reception or after-party",
-              "Drops or bold statement earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Minimal outfit",
-              "Drops, hoops or visible studs",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Soft pastel outfit",
-              "Butterfly earrings or rose-toned styles",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Ear stack styling",
-              "Studs with huggies",
-              "Cadenza S, Amadea, Laluce"
-            ]
+            ["Minimalist wedding dress", "Studs, drops or contemporary hoops", "Optional delicate necklace"],
+            ["Detailed lace dress", "Studs or uncomplicated short drops", "Keep it restrained"],
+            ["Beaded or sequinned dress", "Diamond studs", "Usually unnecessary"],
+            ["Satin slip dress", "Short or medium drops", "Fine chain or no necklace"],
+            ["Strapless wedding dress", "Drops, hoops or visible studs", "Optional, depending on earrings"],
+            ["Off-shoulder wedding dress", "Drops or visible studs", "Often unnecessary"],
+            ["Sweetheart neckline", "Studs, drops or short pendant combination", "Pendant can follow the neckline"],
+            ["High-neck wedding dress", "Studs or visible earrings", "Usually skip the necklace"],
+            ["Wedding veil with heavy detail", "Studs or snag-resistant short earrings", "Keep the neckline balanced"],
+            ["Hair worn up", "Studs, short drops or longer drops", "Based on neckline"],
+            ["Hair worn down", "Visible studs or drops that clear the hair", "Keep other jewellery simple"],
+            ["Reception second look", "Hoops, drops or one stronger design", "Usually secondary"]
           ]
         }
       ]
     },
     {
-      "heading": "Best Lab-Grown Diamond Earrings for Wedding Guests",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Wedding guest earrings should feel elegant, but they should not overpower the outfit or look too bridal. The goal is to add polish, not steal attention."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the outfit is simple, drop earrings can add movement and sparkle. If the outfit already has lace, sequins, embroidery or a bold neckline, diamond studs are usually better. If the dress is soft, floral or romantic, butterfly earrings can feel more personal and feminine."
-        },
-        {
-          "type": "paragraph",
-          "text": "For a safe wedding guest choice, Cadenza M diamond stud earrings work well because they add visible sparkle without looking too heavy. Orsola drop earrings are stronger when the outfit needs movement. Farfalla butterfly earrings work beautifully with romantic dresses. Lusso bold statement earrings are best for evening receptions or party-style wedding looks where the outfit is simple."
-        },
-        {
-          "type": "see-also",
-          "text": "Wedding guest jewellery guide",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for Bridesmaids",
+      "heading": "Why choose lab-grown diamond earrings for a wedding?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-64.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Bridesmaid earrings should look elegant in photos and feel wearable after the wedding. The safest choices are usually studs, small drops or delicate shapes that do not clash with the dress."
+              "text": "Lab-grown diamonds are diamonds created in controlled laboratory conditions rather than extracted from the earth. They are not cubic zirconia, moissanite or glass."
             },
             {
               "type": "paragraph",
-              "text": "If bridesmaids are wearing matching dresses, simple lab-grown diamond studs can create a clean, consistent look. If the dresses are soft and romantic, butterfly earrings can add a more personal touch. If the wedding is more formal, small or medium drop earrings can feel polished without being too dramatic."
+              "text": "For a wedding, their origin does not change the basic styling process. You should still evaluate:"
             },
             {
-              "type": "paragraph",
-              "text": "Cadenza S lab-grown diamond studs are ideal for a subtle bridesmaid look. Cadenza M diamond stud earrings are better if the earrings need to show more in photos. Concetta Short earrings can work well if the bride wants a soft drop shape. Farfalla or Alidi Farfalla butterfly earrings can feel meaningful if the earrings are also being given as bridesmaid gifts."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bridesmaid jewellery",
-          "href": "/products"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for Maid of Honour",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Maid of honour jewellery can be slightly more noticeable than bridesmaid jewellery, but it should still feel balanced."
-        },
-        {
-          "type": "paragraph",
-          "text": "The maid of honour often stands close to the bride in photos, so the earrings should look polished without feeling distracting. Medium studs, soft drops or elegant diamond earrings are usually the best direction."
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza M diamond stud earrings are a strong choice if the outfit is detailed or the neckline is high. Orsola drop earrings work better with simple dresses, off-shoulder necklines and evening wedding styling. Concetta Long earrings can create a more refined look if the wedding is formal or black tie."
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for maid of honour",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Stud Earrings vs Drop Earrings for Weddings",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Studs and drops are both strong wedding choices, but they solve different styling needs."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Wedding Styling Need",
-            "Choose Studs If",
-            "Choose Drops If"
-          ],
-          "rows": [
-            [
-              "Dress detail",
-              "The dress has lace, sequins, embroidery or print",
-              "The dress is simple or minimal"
-            ],
-            [
-              "Neckline",
-              "High neck, halter or detailed neckline",
-              "Strapless, sweetheart, V-neck or off-shoulder"
-            ],
-            [
-              "Hairstyle",
-              "Hair down or soft waves",
-              "Updo, tucked hair or pulled-back style"
-            ],
-            [
-              "Dress code",
-              "Day wedding or semi-formal wedding",
-              "Formal, evening or black tie wedding"
-            ],
-            [
-              "Jewellery balance",
-              "You are wearing a necklace",
-              "You are skipping a necklace"
-            ],
-            [
-              "Gift safety",
-              "You want the safest option",
-              "You know the person likes occasion jewellery"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Studs are usually the safest wedding earrings because they work with nearly everything. Drops are better when you want the earrings to shape the look."
-        },
-        {
-          "type": "paragraph",
-          "text": "For IWantJewels, Cadenza S and Cadenza M cover the stud direction. Orsola, Concetta Short and Concetta Long cover the drop direction."
-        },
-        {
-          "type": "see-also",
-          "text": "Stud vs drop earrings",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings by Wedding Dress Code",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The wedding dress code can help decide how much sparkle is appropriate."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Dress Code",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Casual wedding",
-              "Small studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Garden wedding",
-              "Butterfly earrings, small studs or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Cocktail wedding",
-              "Medium studs, huggies or drops",
-              "Cadenza M, Amadea, Orsola"
-            ],
-            [
-              "Formal wedding",
-              "Medium studs or elegant drops",
-              "Cadenza M, Orsola, Concetta Long"
-            ],
-            [
-              "Black tie wedding",
-              "Drops or bold statement earrings",
-              "Concetta Long, Orsola, Lusso"
-            ],
-            [
-              "Evening reception",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Beach wedding",
-              "Small studs, huggies or delicate drops",
-              "Cadenza S, Amadea, Concetta Short"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For relaxed weddings, avoid earrings that feel too heavy. For formal or evening weddings, earrings can be more visible. For black tie styling, drop earrings or bold statement jewellery often works better than very small studs."
-        },
-        {
-          "type": "see-also",
-          "text": "Party earrings guide",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings by Wedding Neckline",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The neckline is one of the most important parts of choosing wedding earrings."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-66.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Neckline",
-                "Best Earring Choice",
-                "Why"
-              ],
-              "rows": [
-                [
-                  "Strapless",
-                  "Drop earrings or bold earrings",
-                  "Frames the face and shoulders"
-                ],
-                [
-                  "Sweetheart",
-                  "Soft drops or butterfly earrings",
-                  "Matches the romantic neckline"
-                ],
-                [
-                  "V-neck",
-                  "Medium drops or elegant studs",
-                  "Follows the line of the neckline"
-                ],
-                [
-                  "Off-shoulder",
-                  "Drops or statement earrings",
-                  "Balances open shoulders"
-                ],
-                [
-                  "High neck",
-                  "Studs or refined small drops",
-                  "Keeps the look clean"
-                ],
-                [
-                  "Halter neck",
-                  "Studs or slim drops",
-                  "Avoids crowding the neckline"
-                ],
-                [
-                  "Square neck",
-                  "Clean drops or medium studs",
-                  "Adds polish without competing"
-                ],
-                [
-                  "One-shoulder",
-                  "Studs or one strong earring direction",
-                  "Keeps balance with asymmetry"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Diamond size and arrangement",
+                "Earring dimensions",
+                "Setting construction",
+                "Base metal and finish",
+                "Closure",
+                "Weight per earring",
+                "How the design sits on the ear",
+                "Whether the listing is for a pair or single earring",
+                "Care requirements",
+                "Returns and delivery timing"
               ]
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "For strapless and off-shoulder outfits, Orsola drop earrings or Concetta Long earrings can work beautifully. For sweetheart necklines, Farfalla butterfly earrings or Concetta Short earrings can feel softer. For high-neck dresses, Cadenza S or Cadenza M studs are usually cleaner."
+          "text": "A laboratory report should only be mentioned when that specific product genuinely includes one. Not every small diamond or finished earring automatically has an individual grading report."
         },
         {
           "type": "see-also",
-          "text": "Jewellery for strapless dresses",
-          "href": "#"
+          "text": "What are lab-grown diamonds?",
+          "href": "/resources/lab-grown-diamond-guides/what-are-lab-grown-diamonds"
         }
       ]
     },
     {
-      "heading": "Earrings by Wedding Outfit Colour",
+      "heading": "Start with the wedding dress",
       "content": [
         {
           "type": "paragraph",
-          "text": "Dress colour also affects what earring style looks best."
+          "text": "The dress determines how much additional detail the earrings need to introduce."
         },
         {
-          "type": "table",
-          "headers": [
-            "Outfit Colour",
-            "Best Earring Direction",
-            "Styling Note"
-          ],
-          "rows": [
-            [
-              "Black",
-              "Diamond drops, medium studs or bold sparkle",
-              "Creates contrast and polish"
-            ],
-            [
-              "Navy",
-              "White/silver tones or clean diamond studs",
-              "Feels elegant and refined"
-            ],
-            [
-              "Red",
-              "Yellow gold or classic diamond studs",
-              "Keeps the look balanced"
-            ],
-            [
-              "Green",
-              "Yellow gold, rose gold or drops",
-              "Adds warmth and richness"
-            ],
-            [
-              "Pastel pink",
-              "Rose gold, butterfly earrings or delicate studs",
-              "Feels soft and romantic"
-            ],
-            [
-              "Champagne",
-              "Yellow gold or elegant drops",
-              "Works with warm tones"
-            ],
-            [
-              "Silver or grey",
-              "White/silver tones or clean studs",
-              "Keeps the look cool and polished"
-            ],
-            [
-              "Floral print",
-              "Small studs or butterfly earrings",
-              "Avoids overcomplicating the outfit"
-            ],
-            [
-              "Satin dress",
-              "Drops or visible studs",
-              "Adds movement and light"
-            ]
-          ]
+          "type": "subheading",
+          "text": "Minimalist wedding dress"
         },
         {
           "type": "paragraph",
-          "text": "For black dresses, Orsola or Lusso can create a stronger jewellery moment. For pastel or romantic outfits, Farfalla and Alidi Farfalla are better. For printed dresses, Cadenza S or Cadenza M keeps the look clean."
+          "text": "A plain crepe, satin or structured dress provides flexibility. Studs can maintain the minimalist direction, while drops or hoops can become the principal jewellery feature. If the dress has a clean neckline and limited embellishment, the earrings can be more visible. However, they should still be checked against the hairstyle, veil and shoulder line."
+        },
+        {
+          "type": "subheading",
+          "text": "Lace wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lace already creates pattern and texture. Choose studs or uncomplicated drops that do not introduce another highly decorative motif. If lace continues into a high neckline or sleeves, earrings may be more effective than a necklace."
+        },
+        {
+          "type": "subheading",
+          "text": "Beaded or sequinned wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A heavily embellished dress usually needs less jewellery. Diamond studs can add light around the face without introducing another moving or highly detailed element. Check whether the dress embellishment is warm, cool or mixed in tone before choosing yellow, white or rose-gold finishes."
+        },
+        {
+          "type": "subheading",
+          "text": "Satin wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Satin reflects light across the fabric, so the jewellery does not need to create sparkle everywhere. Short and medium drops can complement a plain satin dress. Studs may be more suitable when the satin includes a cowl neck, ruching, draping or additional crystal detail."
+        },
+        {
+          "type": "subheading",
+          "text": "Vintage-inspired wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Look at the specific design period and dress details rather than treating \"vintage\" as one style. A clean diamond stud, short drop or motif earring may work, depending on the neckline and headpiece."
+        }
+      ]
+    },
+    {
+      "heading": "Studs, drops and hoops for brides",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Stud earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diamond studs are useful when the dress, veil or necklace already contains important details. They provide sparkle in one defined area and are less likely than long drops to overlap with a veil or high neckline."
+        },
+        {
+          "type": "paragraph",
+          "text": "Studs can work well with lace wedding dresses, beaded dresses, high necklines, halter necklines, detailed veils, hair worn down, prominent bridal necklaces and minimal civil-ceremony outfits."
+        },
+        {
+          "type": "paragraph",
+          "text": "The correct stud size depends on the wearer's ear, hairstyle and desired visibility. Product photography should show the exact stud on an ear, accompanied by measurements in millimetres. \"Small\", \"medium\" and \"large\" should never be used without actual dimensions."
         },
         {
           "type": "see-also",
-          "text": "What jewellery to wear with a black dress",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Earrings by Wedding Hairstyle",
-      "content": [
+          "text": "Lab-grown diamond stud earrings guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        },
         {
-          "type": "paragraph",
-          "text": "Hair can change how visible earrings look."
+          "type": "subheading",
+          "text": "Drop earrings"
         },
         {
           "type": "paragraph",
-          "text": "If your hair is worn down, smaller studs may disappear slightly, so medium studs or drops can work better. If your hair is pulled back, even small studs can look noticeable. If you are wearing a low bun or updo, drop earrings can frame the face beautifully."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Hairstyle",
-            "Best Earring Choice"
-          ],
-          "rows": [
-            [
-              "Hair down",
-              "Medium studs, huggies or visible drops"
-            ],
-            [
-              "Soft waves",
-              "Studs, butterfly earrings or short drops"
-            ],
-            [
-              "Low bun",
-              "Drop earrings or bold statement earrings"
-            ],
-            [
-              "High bun",
-              "Drops, hoops or visible studs"
-            ],
-            [
-              "Half-up hairstyle",
-              "Medium studs, huggies or soft drops"
-            ],
-            [
-              "Sleek ponytail",
-              "Drops, hoops or bold earrings"
-            ],
-            [
-              "Short hair",
-              "Studs, huggies, drops or hoops all work well"
-            ]
-          ]
+          "text": "Drop earrings create a vertical line below the ear and can add movement to bridal photographs. Their effect depends on their total length, width, weight and how close they sit to the neck or shoulder."
         },
         {
           "type": "paragraph",
-          "text": "For hair-down styling, Cadenza M or Orsola is stronger than very tiny studs. For a low bun, Concetta Long or Orsola can look elegant. For soft waves, Farfalla or Concetta Short can feel romantic."
-        }
-      ]
-    },
-    {
-      "heading": "Day Wedding vs Evening Reception Earrings",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Day weddings usually call for softer jewellery. Evening receptions allow more sparkle."
+          "text": "Drop earrings can suit strapless dresses, off-shoulder dresses, sweetheart necklines, V-neck wedding dresses, plain satin dresses, hair worn up, simple veils, evening ceremonies and reception dresses."
         },
         {
           "type": "paragraph",
-          "text": "For daytime weddings, small studs, medium studs, butterfly earrings and short drops usually feel appropriate. For evening receptions, drop earrings, hoops and bold statement earrings can work better, especially if the outfit is simple."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Wedding Timing",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Day ceremony",
-              "Studs, huggies, butterfly earrings",
-              "Cadenza S, Cadenza M, Amadea, Farfalla"
-            ],
-            [
-              "Afternoon garden wedding",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Evening reception",
-              "Drops, hoops, bold statement earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Black tie evening",
-              "Longer drops or stronger sparkle",
-              "Concetta Long, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "If the wedding has both ceremony and reception, choose earrings that can transition. Medium studs or elegant drops usually work best because they are not too casual for the evening or too heavy for the day."
-        }
-      ]
-    },
-    {
-      "heading": "Lab-Grown Diamond Earrings as Wedding Gifts",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Lab-grown diamond earrings make strong wedding-related gifts because they feel special, wearable and easier to choose than rings."
-        },
-        {
-          "type": "paragraph",
-          "text": "They can work as bridesmaid gifts, maid of honour gifts, anniversary gifts, bridal shower gifts or gifts for someone attending a special wedding event. Earrings are especially gift-friendly because sizing is easier than rings."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Gift Purpose",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Bridesmaid gift",
-              "Simple studs or delicate drops",
-              "Cadenza S, Concetta Short"
-            ],
-            [
-              "Maid of honour gift",
-              "Medium studs or elegant drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Romantic wedding gift",
-              "Butterfly earrings or rose-toned styles",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Thank-you gift",
-              "Classic studs",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Reception-ready gift",
-              "Drops or bold sparkle",
-              "Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "If the gift needs to be safe and classic, choose studs. If it needs to feel personal, choose butterfly earrings. If it is for someone who loves dressing up, choose drops."
+          "text": "Short drops provide some movement without becoming the only jewellery feature. Longer drops need more space and should be tested against the shoulder, hairstyle and veil."
         },
         {
           "type": "see-also",
-          "text": "Jewellery gifts",
-          "href": "/products"
-        }
-      ]
-    },
-    {
-      "heading": "Product Pathways by Wedding Styling Need",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Use this section as a practical shopping guide."
+          "text": "Lab-grown diamond drop earrings guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
         },
         {
           "type": "subheading",
-          "text": "For a Classic Wedding Guest Look"
+          "text": "Diamond hoop earrings"
         },
         {
           "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings if you want sparkle that feels polished but not too bold. They work well with detailed dresses, satin outfits and classic wedding guest styling."
-        },
-        {
-          "type": "subheading",
-          "text": "For a Romantic Wedding Outfit"
+          "text": "Diamond hoops offer a more contemporary silhouette than traditional studs or drops. They can work with minimalist wedding dresses, civil ceremonies, tailored bridal suits and reception outfits. Small hoops can suit a restrained look or multiple piercings. More visible pavé hoops can work when the dress is plain enough to allow the hoop shape to remain clear."
         },
         {
           "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings or Alidi Farfalla butterfly earrings if the outfit is floral, pastel, soft or feminine. The butterfly shape adds meaning and makes the jewellery feel more personal."
-        },
-        {
-          "type": "subheading",
-          "text": "For a Simple Dress That Needs Movement"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They add elegance, movement and light near the face, especially with strapless, off-shoulder or V-neck dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For a Formal or Black Tie Wedding"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Long earrings or Lusso bold statement earrings. Concetta Long feels refined and elongated, while Lusso is better when the earrings are meant to be the main jewellery moment."
-        },
-        {
-          "type": "subheading",
-          "text": "For Bridesmaid or Maid of Honour Gifts"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza S for subtle matching earrings, Cadenza M for a more visible gift, or Concetta Short if you want a softer drop."
-        },
-        {
-          "type": "subheading",
-          "text": "For Wedding Ear Stacks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza S with Amadea Huggie earrings for a clean, modern stack. Add Laluce minimalist diamond earrings if you want a softer layered look."
-        },
-        {
-          "type": "see-also",
-          "text": "How to stack earrings",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Wedding Use",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Bridesmaids, day weddings, subtle guest looks",
-              "Simple, clean and easy to wear again"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Wedding guests, maid of honour, classic gifts",
-              "More visible sparkle while staying elegant"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Wedding ear stacks and modern guests",
-              "Adds shape without looking too heavy"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Soft daily-to-wedding styling",
-              "Quiet, refined and easy to layer"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Romantic outfits and meaningful gifts",
-              "Butterfly design feels personal and feminine"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Bridesmaid or birthday wedding gifts",
-              "Soft, symbolic and memorable"
-            ],
-            [
-              "Orsola drop earrings",
-              "Wedding guests, dinners and receptions",
-              "Adds movement and polished sparkle"
-            ],
-            [
-              "Concetta Short earrings",
-              "Bridesmaids and softer occasion looks",
-              "A gentler drop option"
-            ],
-            [
-              "Concetta Long earrings",
-              "Formal weddings and evening outfits",
-              "Creates a refined elongated look"
-            ],
-            [
-              "Pave Hoops",
-              "Modern wedding guest styling",
-              "Adds shape and sparkle without a drop"
-            ],
-            [
-              "Lusso bold statement earrings",
-              "Receptions, black tie and party looks",
-              "Stronger sparkle for simple outfits"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose earrings based on the wedding role and outfit. For classic guest styling, start with Cadenza M. For romantic looks, choose Farfalla. For simple dresses, choose Orsola. For black tie or reception styling, choose Concetta Long or Lusso."
-        }
-      ]
-    },
-    {
-      "heading": "Common Wedding Earring Mistakes to Avoid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "One common mistake is choosing earrings that compete with the outfit. If the dress already has heavy detail, large earrings can make the look feel crowded. Studs are often better in that case."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is wearing bridal-looking earrings as a guest. Wedding guest jewellery should feel elegant, but not like bridal jewellery."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is ignoring the neckline. Drop earrings usually look better with open necklines, while studs are cleaner with high necklines."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is buying earrings only for one wedding. Choose a pair that can be worn again for dinners, parties, anniversaries or future events."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not choose only by sparkle. Comfort matters, especially if the earrings will be worn for a full wedding day."
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamond earrings buying guide",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Final Wedding Earring Checklist",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Before choosing lab-grown diamond earrings for a wedding, ask:"
+          "text": "Before choosing hoops, check:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Am I shopping for a guest, bridesmaid, maid of honour or gift?",
-            "Is the wedding daytime, evening, formal or casual?",
-            "Does the dress already have detail?",
-            "What neckline will the outfit have?",
-            "Will the hairstyle show the earrings clearly?",
-            "Do I want studs, drops, huggies, hoops or butterfly earrings?",
-            "Will the earrings be comfortable for several hours?",
-            "Can the earrings be worn again after the wedding?",
-            "Does the metal colour match the outfit and other jewellery?",
-            "Are the stones genuine lab-grown diamonds?"
+            "Hoop diameter",
+            "Hoop width",
+            "Closure type",
+            "Weight per earring",
+            "Whether the stones face forward when worn",
+            "Interaction with the veil",
+            "Whether the hoop catches against hair or dress detail"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamond hoop earrings guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Studs versus drops for a wedding",
+      "content": [
+        {
+          "type": "table",
+          "headers": ["Consideration", "Choose studs when", "Choose drops when"],
+          "rows": [
+            ["Dress detail", "Lace, beads or sequins are prominent", "The dress is relatively plain"],
+            ["Neckline", "High, halter or heavily detailed", "Strapless, off-shoulder, sweetheart or V-neck"],
+            ["Hairstyle", "Hair is down or partly covering the ear", "Hair is worn up or tucked back"],
+            ["Veil", "The veil is ornate or sits close to the ear", "The veil is simple and clears the earrings"],
+            ["Necklace", "The necklace is prominent", "The necklace is absent or delicate"],
+            ["Desired effect", "Concentrated sparkle", "Length and movement"],
+            ["Reception", "Same understated pair all day", "More visible evening styling"]
           ]
         },
         {
           "type": "paragraph",
-          "text": "If you are unsure, choose medium diamond studs for safety or elegant drop earrings for a simple dress."
+          "text": "Neither type is universally better. The decision should be based on how the earrings interact with the complete bridal look."
+        }
+      ]
+    },
+    {
+      "heading": "Match earrings to the wedding neckline",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Strapless wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A strapless neckline creates open space around the shoulders. Studs, drops and hoops can all work. If the earrings are long or visually strong, the neckline may look cleaner without a necklace. If the earrings are small, a short necklace can become the principal jewellery element."
+        },
+        {
+          "type": "subheading",
+          "text": "Off-shoulder wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Drops or visible studs can frame the face while keeping the shoulder line clear. Check that longer earrings do not touch the dress or catch against sleeves."
+        },
+        {
+          "type": "see-also",
+          "text": "What earrings to wear with an off-shoulder dress",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Sweetheart neckline"
+        },
+        {
+          "type": "paragraph",
+          "text": "A sweetheart neckline naturally creates central space for a pendant. If a necklace is worn, use studs or restrained drops. Without a necklace, the earrings can be more noticeable."
+        },
+        {
+          "type": "see-also",
+          "text": "Jewellery for a sweetheart neckline",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "V-neck wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A delicate pendant can follow the V shape, paired with studs or shorter earrings. Alternatively, leave the neckline clear and use drops as the primary jewellery feature."
+        },
+        {
+          "type": "subheading",
+          "text": "High-neck or halter dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "High necklines usually leave limited space for a necklace. Use earrings to add light around the face. Studs are appropriate with detailed fabric, while more visible earrings can work with a plain high-neck design."
+        },
+        {
+          "type": "subheading",
+          "text": "One-shoulder wedding dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "The asymmetric shoulder already creates a strong line. Studs or controlled drops can work without adding another competing shape. Check that the earring on the covered side does not catch against the dress."
+        }
+      ]
+    },
+    {
+      "heading": "Match earrings to the bridal hairstyle",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Bridal updo"
+        },
+        {
+          "type": "paragraph",
+          "text": "An updo exposes the complete earring. Studs, short drops and longer drops can all be considered, depending on the neckline and veil. Take side-profile photographs during the hair trial to see the actual scale."
+        },
+        {
+          "type": "subheading",
+          "text": "Hair worn down"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose earrings that remain visible without catching in the hair. Small studs may disappear beneath thick hair, while highly open or intricate designs may catch. Test the earrings after the hairstyle has been completed rather than relying only on product photographs."
+        },
+        {
+          "type": "subheading",
+          "text": "Half-up hairstyle"
+        },
+        {
+          "type": "paragraph",
+          "text": "A half-up style can expose part of the ear while retaining movement around the face. Studs and short drops often work, but the final decision should be made during the hair trial."
+        },
+        {
+          "type": "subheading",
+          "text": "Short bridal hair"
+        },
+        {
+          "type": "paragraph",
+          "text": "Short hair naturally exposes the ear, but that does not mean the earrings must be large. Choose the scale according to the dress and desired focal point."
+        }
+      ]
+    },
+    {
+      "heading": "Wearing bridal earrings with a veil",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The veil can change how the earrings sit and move. Test the exact earrings with the actual veil or a fabric sample whenever possible. Check:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Whether the veil comb changes the hairstyle",
+            "Whether the veil edge touches the earrings",
+            "Whether stones or prongs catch the fabric",
+            "Whether the earrings remain visible",
+            "Whether the veil creates too much detail around the face",
+            "Whether removing the veil changes the balance of the jewellery",
+            "Whether the earring backing remains secure"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Put the earrings on before the veil is attached, following the hairstylist's instructions. When removing the veil, have someone check that the fabric is clear of the earrings."
+        },
+        {
+          "type": "paragraph",
+          "text": "No earring should be described as \"veil-safe\" without testing its exact setting and construction."
+        }
+      ]
+    },
+    {
+      "heading": "Yellow, white or rose-gold bridal earrings",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Yellow-gold finish"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yellow gold can add warmth to ivory, cream, champagne and warm-white dresses. It can also coordinate with warm-toned embroidery, shoes or other jewellery."
+        },
+        {
+          "type": "subheading",
+          "text": "White or silver-tone finish"
+        },
+        {
+          "type": "paragraph",
+          "text": "White and silver tones can create a cleaner, lower-contrast pairing with many white dresses. They may also coordinate with cool-toned embellishment and white-metal engagement rings."
+        },
+        {
+          "type": "subheading",
+          "text": "Rose-gold finish"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rose gold provides a softer metal direction and may work with blush, champagne and warm romantic wedding palettes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bridal earrings do not have to match an engagement ring perfectly. Mixed metals can work when the combination is deliberate. Repeating each metal once elsewhere in the look can help the combination feel connected."
+        },
+        {
+          "type": "see-also",
+          "text": "Yellow vs white vs rose gold diamond earrings",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "How large should bridal earrings be?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is no universal bridal earring size. Carat weight does not tell you the full visible size because total carat weight may be divided across several diamonds or across both earrings."
+        },
+        {
+          "type": "paragraph",
+          "text": "Check:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Total earring height in millimetres",
+            "Maximum width",
+            "Hoop diameter, when relevant",
+            "Weight per earring",
+            "Total carat weight and how it is distributed",
+            "Number and arrangement of stones",
+            "On-ear photographs",
+            "Model ear scale",
+            "Distance from the earlobe to shoulder",
+            "Hairstyle visibility"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Lab-grown diamond earring size guide",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Coordinating earrings for bridesmaids",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Bridesmaid earrings can be coordinated without being completely identical. Choose one common feature:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "The same metal finish",
+            "The same diamond shape",
+            "The same stud family in different sizes",
+            "The same short-drop silhouette",
+            "The same motif",
+            "One design for all bridesmaids and a related design for the maid of honour"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Before buying matching earrings, confirm whether every person has pierced ears, any metal sensitivities or known allergies, the preferred earring size, whether the listing is for a pair, the dress necklines, hairstyle plans, delivery and return dates, and whether the earrings are a gift or part of the required outfit."
+        },
+        {
+          "type": "see-also",
+          "text": "Bridesmaid jewellery gifts",
+          "href": "/resources/jewellery-gift-guides/bridesmaid-jewellery-gifts"
+        }
+      ]
+    },
+    {
+      "heading": "Ceremony and reception earrings",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A bride can wear one pair throughout the day or change earrings for the reception."
+        },
+        {
+          "type": "subheading",
+          "text": "Wearing one pair all day"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose earrings that work with the ceremony dress, veil and reception plans. Check closure, weight and movement during the complete try-on."
+        },
+        {
+          "type": "subheading",
+          "text": "Changing earrings for the reception"
+        },
+        {
+          "type": "paragraph",
+          "text": "A reception change can work when the second outfit is simpler or more contemporary. Hoops, longer drops or a stronger design may suit a reception dress after the veil has been removed."
+        },
+        {
+          "type": "paragraph",
+          "text": "If changing earrings:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Store the first pair in a labelled pouch",
+            "Ask a trusted person to keep the replacement pair",
+            "Keep clean hands when changing them",
+            "Check the backing or closure",
+            "Avoid changing earrings in a crowded or poorly lit area",
+            "Confirm whether newly pierced ears allow jewellery changes"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What to verify before buying",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Do not choose wedding earrings from the product name alone. The product page should clearly state:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Whether the earrings are sold as a pair",
+                "Base metal",
+                "Plating or finish",
+                "Stone origin",
+                "Total diamond weight",
+                "Whether weight is per pair or per earring",
+                "Number of diamonds",
+                "Earring dimensions in millimetres",
+                "Finished weight per earring",
+                "Closure type",
+                "Available metal colours",
+                "Care instructions",
+                "Dispatch estimate",
+                "Return conditions",
+                "Whether a grading or jewellery report is included"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If any information is unavailable, the product page should be corrected before the earrings are promoted as bridal recommendations."
+        }
+      ]
+    },
+    {
+      "heading": "Wedding-day jewellery care",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Apply hairspray, perfume and other styling products before putting on plated jewellery wherever possible. Avoid spraying products directly onto the earrings."
+        },
+        {
+          "type": "paragraph",
+          "text": "After the wedding:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Handle the earrings with clean, dry hands.",
+            "Wipe them gently with an appropriate soft cloth.",
+            "Store each earring so it does not rub against other jewellery.",
+            "Keep them away from moisture, perfume and household cleaning products.",
+            "Follow the exact care instructions supplied with the product."
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "How to care for gold-plated jewellery",
+          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+        }
+      ]
+    },
+    {
+      "heading": "What about wedding-guest earrings?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Wedding guests need different advice because their earrings must be selected around a guest dress, dress code, colour and fabric."
+        },
+        {
+          "type": "paragraph",
+          "text": "This page focuses on brides and wedding-party coordination."
+        },
+        {
+          "type": "see-also",
+          "text": "What earrings to wear as a wedding guest",
+          "href": "/resources/lab-grown-diamond-guides/what-earrings-to-wear-as-a-wedding-guest"
+        }
+      ]
+    },
+    {
+      "heading": "Common mistakes to avoid",
+      "content": [
+        {
+          "type": "bullet-list",
+          "items": [
+            "Choosing earrings before confirming the dress and hairstyle",
+            "Wearing long drops without testing them against the shoulder",
+            "Ignoring whether the veil catches on the setting",
+            "Judging visible size only by carat weight",
+            "Combining large earrings with an equally prominent necklace",
+            "Assuming every bride needs white-metal jewellery",
+            "Buying matching bridesmaid earrings without checking piercings",
+            "Describing earrings as comfortable without accurate weight information",
+            "Forgetting to check whether the listing is for a pair",
+            "Waiting until the wedding day to try the complete jewellery look"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Final checklist",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before buying lab-grown diamond wedding earrings, confirm:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Is the dress simple or highly detailed?",
+            "What is the neckline?",
+            "Will the bride wear a veil?",
+            "Will the hair be up, down or half-up?",
+            "Should the earrings or necklace lead the jewellery look?",
+            "Are studs, drops or hoops more appropriate?",
+            "What are the exact dimensions?",
+            "What is the weight per earring?",
+            "What closure is used?",
+            "Are the earrings sold as a pair?",
+            "Is the metal and plating accurately described?",
+            "Are the stones clearly disclosed as lab-grown?",
+            "Has the product been tried with the dress and veil?",
+            "Can delivery and returns be completed before the wedding?",
+            "Are the care instructions clear?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Are lab-grown diamond earrings good for weddings?",
-      "answer": "Yes, lab-grown diamond earrings are excellent for weddings because they give real diamond sparkle in a modern and wearable way. They work for wedding guests, bridesmaids, receptions and wedding-related gifts."
+      "question": "Are lab-grown diamond earrings suitable for a bride?",
+      "answer": "Yes. Lab-grown diamonds are diamonds created in laboratory conditions and can be used in studs, drops, hoops and other bridal designs. Choose the setting and size according to the dress, hairstyle and veil."
     },
     {
-      "question": "What earrings should a wedding guest wear?",
-      "answer": "Wedding guests should wear earrings that match the outfit without overpowering it. Studs are best for detailed dresses, while drop earrings work well with simple dresses and open necklines."
+      "question": "Are diamond studs or drops better for a wedding?",
+      "answer": "Studs work well with detailed dresses, veils, high necklines and prominent necklaces. Drops work well with plain dresses, open necklines and hair worn up. Neither is universally better."
     },
     {
-      "question": "Are diamond studs good for wedding guests?",
-      "answer": "Yes, diamond studs are one of the safest wedding guest choices. They add sparkle without looking too heavy or bridal."
+      "question": "What earrings should a bride wear with a veil?",
+      "answer": "Choose earrings that do not catch against the veil and test them with the actual veil before the wedding. Studs and uncomplicated short drops may require less clearance than long or intricate earrings."
     },
     {
-      "question": "Are drop earrings good for weddings?",
-      "answer": "Yes, drop earrings are beautiful for weddings, especially with strapless, off-shoulder, V-neck and simple dresses. They add movement and elegance."
-    },
-    {
-      "question": "What earrings are best for bridesmaids?",
-      "answer": "Simple studs, delicate drops or soft butterfly earrings work well for bridesmaids. They look elegant in photos and can be worn again after the wedding."
+      "question": "Should bridal earrings match the engagement ring?",
+      "answer": "They do not have to match exactly. A coordinated metal creates a consistent look, but deliberate mixed-metal styling can also work."
     },
     {
       "question": "Can bridesmaids wear lab-grown diamond earrings?",
-      "answer": "Yes, bridesmaids can wear lab-grown diamond earrings. They are a strong choice because they feel special, polished and giftable."
+      "answer": "Yes. Bridesmaid earrings can share a metal, stone shape or silhouette without every person wearing an identical design. Confirm piercings and product preferences before ordering."
     },
     {
-      "question": "What earrings should I wear with a strapless wedding guest dress?",
-      "answer": "Drop earrings or bold earrings usually work best with strapless dresses because they frame the face and shoulders."
+      "question": "How large should bridal diamond earrings be?",
+      "answer": "Use millimetre measurements, weight and accurate on-ear photographs. Carat weight alone does not reveal the complete visible size, especially when several stones are used."
     },
     {
-      "question": "What earrings should I wear with a high-neck dress?",
-      "answer": "Studs or small refined drops usually work best with high-neck dresses because they keep the look clean."
+      "question": "Can a bride change earrings for the reception?",
+      "answer": "Yes. A bride may wear restrained earrings during the ceremony and change to hoops, longer drops or a more visible design after removing the veil."
     },
     {
-      "question": "Are butterfly earrings good for weddings?",
-      "answer": "Yes, butterfly earrings can work beautifully for romantic wedding outfits, bridesmaid gifts and soft feminine styling."
-    },
-    {
-      "question": "What is the safest wedding earring choice?",
-      "answer": "Medium lab-grown diamond studs are usually the safest choice because they work with many outfits, dress codes and hairstyles."
+      "question": "Can bridal earrings be worn after the wedding?",
+      "answer": "They can, particularly when the design also works with dinners, parties or formal outfits. Rewear is a styling possibility rather than a guarantee of value."
     }
   ],
   "cta": {
-    "heading": "Wedding earrings should make the outfit feel finished, not overdone. The right pair depends on the dress, neckline, hairstyle, role and how much sparkle feels appropriate for the occasion.",
-    "body": "Start with IWantJewels lab-grown diamond earrings if you want real diamond sparkle in wearable demi-fine designs. Choose Cadenza M for classic wedding guest polish, Orsola for elegant drop styling, Farfalla for romantic outfits, Concetta Long for formal weddings or Lusso when you want a stronger reception look.",
-    "primaryLabel": "Shop Wedding Guest Earrings",
+    "heading": "Begin with the dress, hairstyle and veil — then compare the earrings' actual dimensions, weight and closure before deciding.",
+    "body": "Explore I Want Jewels lab-grown diamond earrings and check each product page for its measurements, materials, closure and whether the listing is for a pair.",
+    "primaryLabel": "Explore Lab-Grown Diamond Wedding Earrings",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Lab-Grown Diamond Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Lab-Grown Diamond Earrings Buying Guide",
-    "tertiaryHref": "#"
+    "secondaryLabel": "Lab-Grown Diamond Earring Size Guide",
+    "secondaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide",
+    "tertiaryLabel": "Jewellery for a Sweetheart Neckline",
+    "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
   }
 }

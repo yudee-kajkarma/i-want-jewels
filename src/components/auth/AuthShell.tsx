@@ -1,4 +1,7 @@
+'use client'
+
 import type { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from '@/lib/router'
 import Footer from '../layout/Footer'
 import Header from '../layout/Header'
@@ -18,6 +21,8 @@ export default function AuthShell({
   asideTitle: string
   asideBody: string
 }) {
+  const { t } = useTranslation('common', { keyPrefix: 'auth' })
+
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
       <Header />
@@ -36,9 +41,9 @@ export default function AuthShell({
 
               <div className="grid gap-4 sm:grid-cols-3">
                 {[
-                  'Secure account access',
-                  'Quick OTP verification',
-                  'Saved locally after success',
+                  t('shellFeatureSecureAccess'),
+                  t('shellFeatureQuickOtp'),
+                  t('shellFeatureSavedLocally'),
                 ].map((item) => (
                   <div key={item} className="border border-white/50 bg-white/55 px-5 py-6 backdrop-blur-sm">
                     <div className="mb-3 flex h-11 w-11 items-center justify-center bg-white text-lg text-[#b63f80] shadow-sm">
@@ -50,9 +55,9 @@ export default function AuthShell({
               </div>
 
               <p className="text-sm text-[#7d3760]">
-                Continue shopping from{' '}
+                {t('shellContinueShopping')}{' '}
                 <Link to="/products" className="font-bold underline decoration-[#cf6ba0] underline-offset-4">
-                  all products
+                  {t('shellAllProducts')}
                 </Link>
                 .
               </p>

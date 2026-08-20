@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
+import { splitLines } from "@/i18n/splitLines";
 import { useCurrency } from "../../context/CurrencyContext";
 import { getProductBySlug } from "../../services/productService";
 import type { PriceInput } from "../../utils/price";
@@ -289,22 +290,23 @@ export default function GiftCardShoppableBanner() {
                 <div className="relative flex items-center justify-center px-6 py-12 sm:px-10 lg:justify-start lg:px-14 lg:py-20">
                     <div className="w-full max-w-[440px] bg-black px-8 py-10 text-white sm:px-10 sm:py-12">
                         <h2 className="text-center text-[22px] font-medium uppercase leading-[1.15] tracking-[0.16em] sm:text-[26px] font-play">
-                            <span className="block">{t("home.thePerfectGift").split('\n')[0] || "The Perfect Gift,"}</span>
-                            <span className="block">{t("home.thePerfectGift").split('\n')[1] || "Every Time"}</span>
+                            {splitLines(t("home.perfectGiftTitle")).map((line) => (
+                                <span key={line} className="block">{line}</span>
+                            ))}
                         </h2>
                         <p className="mt-3 text-center text-[12px] tracking-wide text-white/90">
-                            {t("home.giveGiftOfChoiceDesc")}
+                            {t("home.perfectGiftSubtitle")}
                         </p>
 
                         <ul className="mt-10 space-y-2 pl-2 text-[13px] text-white/95">
-                            <li>• {t("home.giftCardBenefit1")}</li>
-                            <li>• {t("home.giftCardBenefit2")}</li>
-                            <li>• {t("home.giftCardBenefit3")}</li>
-                            <li>• {t("home.giftCardBenefit4")}</li>
+                            <li>• {t("home.giftFeature1")}</li>
+                            <li>• {t("home.giftFeature2")}</li>
+                            <li>• {t("home.giftFeature3")}</li>
+                            <li>• {t("home.giftFeature4")}</li>
                         </ul>
 
                         <p className="mt-10 text-center text-[11px] tracking-wide text-white/80">
-                            {t("home.giftCardFooterDesc")}
+                            {t("home.giftFooterNote")}
                         </p>
 
                         <Link

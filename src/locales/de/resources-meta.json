@@ -58,32 +58,36 @@
     },
     "lab-grown-diamond-guides/lab-grown-diamond-earrings-buying-guide": {
       "title": "Kaufratgeber für im Labor gezüchtete Diamantohrringe",
-      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamantohrringe auswählen, darunter Ohrstecker, Huggies, Tropfen, Metallfarben, Größen, Geschenke und alltägliches Styling.",
-      "readTime": "10 Min. Lektüre",
+      "excerpt": "Erfahren Sie, wie Sie Ohrstecker mit im Labor gezüchteten Diamanten nach Stil, Größe, Karat, Metall, Fassung, Verschluss, Komfort und Preis auswählen.",
+      "readTime": "12 Min. gelesen",
       "tags": [
         "Kaufratgeber",
         "Ohrringe",
-        "im Labor gezüchtet"
+        "im Labor gezüchtet",
+        "Fassungen",
+        "Verschlüsse"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamond-earrings-price-guide": {
-      "title": "Preisführer für im Labor gezüchtete Diamantohrringe",
-      "excerpt": "Erfahren Sie, wie viel im Labor gezüchtete Diamantohrringe kosten, was sich auf den Preis auswirkt und wie Sie Ohrstecker, Huggies, Ohrhänger und Geschenkohrringe auswählen.",
-      "readTime": "9 Min. gelesen",
+      "title": "Preisguide: Ohrringe mit im Labor gezüchteten Diamanten",
+      "excerpt": "Was Preise für Ohrringe mit im Labor gezüchteten Diamanten beeinflusst und wie Sie Karatgewicht, Stile, Metalle und Fassungen fair vergleichen.",
+      "readTime": "12 Min. gelesen",
       "tags": [
-        "Preisführer",
+        "Preisratgeber",
         "Ohrringe",
-        "im Labor gezüchtet"
+        "im Labor gezüchtet",
+        "Karatgewicht"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide": {
       "title": "Leitfaden für im Labor gezüchtete Diamant-Ohrstecker",
-      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamant-Ohrstecker für den Alltag, als Geschenk, für Ohrstecker, die Metallfarbe, die Größe und das Styling auswählen.",
-      "readTime": "9 Min. gelesen",
+      "excerpt": "So wählen Sie im Labor gezüchtete Diamant-Ohrstecker nach Fassung, Größe, Profil, Verschluss und Metall – mit Tipps zu Sitz, Qualität und Pflege.",
+      "readTime": "11 Min. gelesen",
       "tags": [
         "Ohrstecker",
-        "Alltagskleidung",
-        "im Labor gezüchtet"
+        "Fassungen",
+        "im Labor gezüchtet",
+        "Verschlüsse"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide": {
@@ -97,19 +101,20 @@
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide": {
-      "title": "Leitfaden für im Labor gezüchtete Diamant-Creolen",
-      "excerpt": "Erfahren Sie, wie Sie im Labor gezüchtete Diamant-Creolen für den Alltag, Ear-Stacks, Geschenke, Partys und modernes Schmuck-Styling auswählen.",
-      "readTime": "9 Min. gelesen",
+      "title": "Guide zu Creolen mit im Labor gezüchteten Diamanten",
+      "excerpt": "So wählen Sie Creolen mit im Labor gezüchteten Diamanten: Tipps zu Durchmesser, Breite, Fassung, Verschluss, Metall, Sitz und Pflege.",
+      "readTime": "12 Min. gelesen",
       "tags": [
         "Creolen",
-        "Ohrenstapel",
-        "im Labor gezüchtet"
+        "Durchmesser",
+        "im Labor gezüchtet",
+        "Verschlüsse"
       ]
     },
     "lab-grown-diamond-guides/what-are-lab-grown-diamonds": {
-      "title": "Was sind im Labor gezüchtete Diamanten?",
-      "excerpt": "Im Labor gezüchtete Diamanten sind echte Diamanten – chemisch, physikalisch und optisch identisch mit abgebauten Diamanten. Hier erfahren Sie, wie sie erstellt werden und warum sie wichtig sind.",
-      "readTime": "6 Min. gelesen",
+      "title": "Was sind im Labor gezüchtete Diamanten? Klar erklärt",
+      "excerpt": "Erfahren Sie, wie im Labor gezüchtete Diamanten entstehen, wie CVD und HPHT sich von Minendiamanten unterscheiden und worauf Sie beim Kauf achten.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "im Labor gezüchtet",
         "Diamanten",
@@ -117,23 +122,25 @@
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamonds-vs-cubic-zirconia": {
-      "title": "Im Labor gezüchtete Diamanten vs. Zirkonia: Was ist der Unterschied?",
-      "excerpt": "Erfahren Sie den Unterschied zwischen im Labor gezüchteten Diamanten und Zirkonia, einschließlich Glanz, Haltbarkeit, Preis, Wert und Verwendung von Schmuck.",
-      "readTime": "12 Min. Lektüre",
+      "title": "Im Labor gezüchtete Diamanten vs. Zirkonia",
+      "excerpt": "Vergleichen Sie im Labor gezüchtete Diamanten und Zirkonia nach Material, Funkeln, Haltbarkeit, Preis und Alltagstauglichkeit.",
+      "readTime": "12 Min. gelesen",
       "tags": [
         "im Labor gezüchtet",
         "Zirkonia",
-        "Vergleich"
+        "Vergleich",
+        "Imitate"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamonds-vs-moissanite": {
-      "title": "Im Labor gezüchtete Diamanten vs. Moissanit: Was ist der Unterschied?",
-      "excerpt": "Vergleichen Sie im Labor gezüchtete Diamanten und Moissanit in einfacher Sprache. Erfahren Sie den Unterschied in Bezug auf Glanz, Haltbarkeit, Preis, Wert und Verwendung von Schmuck.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Im Labor gezüchtete Diamanten vs. Moissanit",
+      "excerpt": "Vergleichen Sie im Labor gezüchtete Diamanten und Moissanit nach Material, Funkeln, Härte, Preis und Alltagstauglichkeit – für den passenden Stein.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "im Labor gezüchtet",
         "Moissanit",
-        "Vergleich"
+        "Vergleich",
+        "Imitate"
       ]
     },
     "lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings": {
@@ -148,47 +155,48 @@
       ]
     },
     "lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
-      "title": "Können Sie jeden Tag im Labor gezüchtete Diamantohrringe tragen?",
-      "excerpt": "Erfahren Sie, ob im Labor gezüchtete Diamantohrringe für den täglichen Gebrauch geeignet sind, wie Sie Ohrringe für den Alltag auswählen und wie Sie Ohrstecker, Huggies und Tropfen pflegen.",
-      "readTime": "12 Min. Lektüre",
+      "title": "Im Labor gezüchtete Diamantohrringe täglich tragen?",
+      "excerpt": "Ohrringe mit im Labor gezüchteten Diamanten können regelmäßig, aber nicht dauerhaft getragen werden. Erfahren Sie, wann Sie sie abnehmen und wie Sie Fassung, Stift, Verschluss und Oberfläche pflegen.",
+      "readTime": "13 Min. gelesen",
       "tags": [
-        "Alltagskleidung",
+        "Alltag",
         "Ohrringe",
         "im Labor gezüchtet",
         "Pflege"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide": {
-      "title": "Größentabelle für Ohrringe mit im Labor gezüchteten Diamanten: Kleine, mittlere und 1-Karat-Modelle",
-      "excerpt": "Vergleichen Sie die Größen von im Labor gezüchteten Diamantohrringen, von kleinen Ohrsteckern bis hin zu 1-Karat-Modellen. Erfahren Sie, welche Größe für den Alltag, Geschenke und Anlässe am besten geeignet ist.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Ratgeber: Ohrringgrößen mit im Labor gezüchteten Diamanten",
+      "excerpt": "Vergleichen Sie Ohrringgrößen mit im Labor gezüchteten Diamanten, verstehen Sie das Gesamtkarat und sehen Sie Ohrstecker, Creolen und Ohrhänger am Ohr.",
+      "readTime": "13 Min. gelesen",
       "tags": [
-        "Größentabelle",
-        "Ohrringe",
+        "Größenratgeber",
+        "Millimeter",
         "im Labor gezüchtet",
         "Karatgewicht"
       ]
     },
     "lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings": {
-      "title": "Im Labor gezüchtete Diamantohrringe für Hochzeiten: Leitfaden für Gäste, Brautjungfern und Anlässe",
-      "excerpt": "Wählen Sie im Labor gezüchtete Diamantohrringe für Hochzeiten, Hochzeitsgäste, Brautjungfern, Empfänge, Kleider, Ausschnitte und elegante Anlässe.",
-      "readTime": "14 Min. gelesen",
+      "title": "Ohrringe aus im Labor gezüchteten Diamanten für Hochzeiten",
+      "excerpt": "Brautohrringe aus im Labor gezüchteten Diamanten: Stecker, Hänger und Creolen nach Kleid, Ausschnitt und Frisur vergleichen.",
+      "readTime": "15 Min. gelesen",
       "tags": [
+        "Brautohrringe",
         "Hochzeiten",
-        "Gelegenheit",
-        "Ohrringe",
-        "im Labor gezüchtet",
-        "Brautjungfer"
+        "Schleier",
+        "Brautjungfern",
+        "Ausschnitte",
+        "lab-grown"
       ]
     },
     "lab-grown-diamond-guides/are-lab-grown-diamond-earrings-worth-it": {
-      "title": "Lohnen sich im Labor gezüchtete Diamantohrringe?",
-      "excerpt": "Finden Sie heraus, ob es sich lohnt, im Labor gezüchtete Diamantohrringe für den Alltag, als Geschenk, für Hochzeiten, Ear Stacks und als Schmuck für besondere Anlässe zu kaufen.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Lohnen sich Diamant-Ohrringe aus dem Labor?",
+      "excerpt": "Lohnen sich Diamant-Ohrringe aus dem Labor? Vergleichen Sie Tragekosten, Verarbeitung, Wiederverkaufsgrenzen und den tatsächlichen Wert.",
+      "readTime": "12 Min. gelesen",
       "tags": [
-        "es lohnt sich",
+        "lohnt sich",
         "Wert",
-        "Ohrringe",
+        "Kosten pro Tragen",
         "im Labor gezüchtet"
       ]
     },
@@ -219,16 +227,16 @@
       ]
     },
     "lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings": {
-      "title": "Gold vs. Weiß vs. Roségold: Im Labor gezüchtete Diamantohrringe: Metallfarbratgeber",
-      "excerpt": "Vergleichen Sie Ohrringe mit Labordiamanten aus Gold, Weiß- und Roségold. Wählen Sie die beste Metallfarbe für Alltagskleidung, Geschenke, Hochzeiten und Styling.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Diamant-Ohrringe: Gelb-, Weiß- oder Roségold?",
+      "excerpt": "Vergleichen Sie Ohrringe mit im Labor gezüchteten Diamanten in Gelb-, Weiß- und Roségold. Erfahren Sie mehr über Farbe, Material und Pflege.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "Metallfarbe",
-        "Gold",
-        "Roségold",
+        "Gelbgold",
         "Weißgold",
-        "Ohrringe",
-        "im Labor gezüchtet"
+        "Roségold",
+        "Vergoldung",
+        "lab-grown"
       ]
     },
     "demi-fine-jewellery-guides/what-is-demi-fine-jewellery": {
@@ -571,79 +579,79 @@
       ]
     },
     "jewellery-gift-guides/date-night-jewellery-guide": {
-      "title": "Schmuckratgeber für den Date-Abend: Welche Ohrringe Sie zum Abendessen, zu Getränken und zu romantischen Outfits tragen sollten",
-      "excerpt": "Wählen Sie Date-Night-Schmuck mit im Labor gezüchteten Diamantohrringen, Ohrsteckern, Tropfen, Creolen, Schmetterlingsohrringen und romantischen Styling-Ideen.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Ohrringe fürs Date: Was passt?",
+      "excerpt": "Finden Sie Ohrringe fürs Date: für Dinner, Drinks, Jahrestage und festliche Abende. Vergleichen Sie Ohrstecker, Creolen, Ohrhänger und Statement-Styles.",
+      "readTime": "14 Min. gelesen",
       "tags": [
-        "Datum Nacht",
-        "romantisch",
-        "Tropfenohrringe",
-        "Schmetterlingsohrringe",
-        "Ohrringe",
-        "im Labor gezüchtet"
+        "Date Night",
+        "Dinner-Date",
+        "Jahrestag",
+        "Ohrhänger",
+        "Creolen",
+        "lab-grown"
       ]
     },
     "earring-style-guides/how-to-stack-earrings": {
-      "title": "So stapeln Sie Ohrringe: Eine vollständige Anleitung zum Styling von Ear Stacks",
-      "excerpt": "Erfahren Sie, wie Sie Ohrringe mit Ohrsteckern, Huggies, Creolen, Tropfen und im Labor gezüchteten Diamantohrringen für Alltags-, Hochzeits- und Party-Looks kombinieren.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Ohrringe kombinieren: Ihr Ear-Stack-Guide",
+      "excerpt": "Ohrringe kombinieren: Wählen Sie ein Fokusstück, variieren Sie Größen, wiederholen Sie ein Detail und prüfen Sie Abstände an zwei oder drei Ohrlöchern.",
+      "readTime": "13 Min. gelesen",
       "tags": [
-        "Ohrenstapel",
+        "Ear-Stacks",
         "Ohrring-Styling",
-        "Stollen",
-        "Umarmungen",
-        "Reifen",
+        "Piercings",
         "im Labor gezüchtet"
       ]
     },
     "earring-style-guides/diamond-ear-stack-ideas": {
-      "title": "Diamond Ear Stack-Ideen: Alltags-, Minimalist-, Hochzeits- und Party-Looks",
-      "excerpt": "Entdecken Sie Diamant-Ohrstecker-Ideen mit Ohrsteckern, Huggies, Creolen, Tropfen und im Labor gezüchteten Diamantohrringen für Alltags-, Hochzeits- und Party-Looks.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Ideen für Diamond Ear Stacks: 15 Looks",
+      "excerpt": "15 Ideen für Diamond Ear Stacks mit zwei oder drei Ohrlöchern – minimalistisch, alltagstauglich, fürs Büro, als Hochzeitsgast und für den Abend.",
+      "readTime": "12 Min. gelesen",
       "tags": [
-        "Diamant-Ohrstecker",
-        "Ear-Stack-Ideen",
-        "Ohrring-Styling",
-        "Stollen",
-        "Umarmungen",
-        "im Labor gezüchtet"
+        "Diamant-Ohrstapel",
+        "Ohrstapel-Ideen",
+        "Ohrringe stylen",
+        "zwei Piercings",
+        "drei Piercings",
+        "lab-grown"
       ]
     },
     "earring-style-guides/minimalist-earrings-guide": {
-      "title": "Leitfaden für minimalistische Ohrringe: Einfache Ohrringe für das alltägliche Styling",
-      "excerpt": "Erfahren Sie, wie Sie minimalistische Ohrringe für den Alltag, Arbeitsoutfits, Ear Stacks, Geschenke und das einfache Styling mit im Labor gezüchteten Diamanten auswählen.",
-      "readTime": "12 Min. Lektüre",
+      "title": "Guide für minimalistische Ohrringe: Stile & Kauftipps",
+      "excerpt": "Minimalistische Ohrringe wählen: Vergleichen Sie Ohrstecker, kleine Creolen (Huggies), Creolen und Diamantdesigns nach Stil, Größe und Metall.",
+      "readTime": "14 Min. gelesen",
       "tags": [
         "minimalistische Ohrringe",
-        "Alltagskleidung",
-        "Ohrring-Styling",
-        "Stollen",
-        "Umarmungen",
-        "im Labor gezüchtet"
+        "Kaufberatung",
+        "Ohrringgrößen",
+        "Ohrstecker",
+        "Huggies",
+        "lab-grown"
       ]
     },
     "earring-style-guides/stud-vs-huggie-earrings": {
-      "title": "Ohrstecker vs. Huggie-Ohrringe: Welchen Stil sollten Sie wählen?",
-      "excerpt": "Vergleichen Sie Ohrstecker und Huggie-Ohrringe für den Alltag, Ear-Stacks, Geschenke, Arbeitskleidung und das Styling mit im Labor gezüchteten Diamanten.",
-      "readTime": "11 Min. Lektüre",
+      "title": "Ohrstecker vs. Huggies: Die wichtigsten Unterschiede",
+      "excerpt": "Ohrstecker oder kleine Creolen (Huggies): Vergleichen Sie Form, Sitz, Verschluss und Styling. Finden Sie Ihr Design für Piercing, Geschenk oder Ear Stack.",
+      "readTime": "12 Min. gelesen",
       "tags": [
         "Ohrstecker",
-        "Huggie-Ohrringe",
+        "Huggies",
         "Vergleich",
-        "Ohrring-Styling",
-        "im Labor gezüchtet"
+        "Verschlüsse",
+        "Ohrmuttern",
+        "lab-grown"
       ]
     },
     "earring-style-guides/hoop-vs-huggie-earrings": {
-      "title": "Creolen vs. Huggie-Ohrringe: Welchen Stil sollten Sie wählen?",
-      "excerpt": "Vergleichen Sie Creolen und Huggie-Ohrringe für den Alltag, Ear Stacks, Geschenke, Arbeitskleidung, Partys und das Styling mit im Labor gezüchteten Diamanten.",
-      "readTime": "11 Min. Lektüre",
+      "title": "Creolen vs. kleine Creolen (Huggies): Unterschiede",
+      "excerpt": "Vergleichen Sie Creolen und kleine Creolen (Huggies) nach Größe, Sitz, Bewegung, Verschluss und Styling. Finden Sie das passende Design für Ihr Piercing.",
+      "readTime": "12 Min. gelesen",
       "tags": [
         "Creolen",
-        "Huggie-Ohrringe",
+        "Huggies",
         "Vergleich",
-        "Ohrring-Styling",
-        "im Labor gezüchtet"
+        "Innendurchmesser",
+        "Passform",
+        "lab-grown"
       ]
     },
     "earring-style-guides/stud-vs-hoop-earrings": {
@@ -659,93 +667,94 @@
       ]
     },
     "earring-style-guides/party-earrings-guide": {
-      "title": "Leitfaden für Party-Ohrringe: Welche Ohrringe Sie für Abendlooks, Abendessen und Feiern tragen sollten",
-      "excerpt": "Wählen Sie Party-Ohrringe für schwarze Kleider, Satin-Outfits, Abendessen, Hochzeiten, Geburtstage und Abendlooks mit Styling-Ideen aus im Labor gezüchteten Diamanten.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Guide: Party-Ohrringe für jeden Anlass",
+      "excerpt": "Ohrringe für Cocktailpartys, Dinner, Galas, Geburtstage und Black-Tie-Events. Vergleichen Sie Ohrstecker, Creolen, Ohrhänger und auffällige Styles.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "Party-Ohrringe",
-        "Abend-Styling",
-        "schwarzes Kleid",
-        "Satin",
-        "im Labor gezüchtet",
-        "auffällige Ohrringe"
+        "Cocktailparty",
+        "Black Tie",
+        "festliches Dinner",
+        "Gala",
+        "lab-grown"
       ]
     },
     "earring-style-guides/bold-statement-earrings-guide": {
-      "title": "Leitfaden für auffällige Statement-Ohrringe: So stylen Sie kräftig funkelnde Ohrringe, ohne es zu übertreiben",
-      "excerpt": "Erfahren Sie, wie Sie auffällige Statement-Ohrringe für Partys, schwarze Kleider, Hochzeiten, Abendessen, Geburtstage und Abendoutfits stylen.",
-      "readTime": "13 Min. Lektüre",
+      "title": "Statement-Ohrringe: Styling-Guide",
+      "excerpt": "Erfahren Sie, wie Sie markante Statement-Ohrringe nach Größe, Gewicht, Ausschnitt, Frisur und Outfit stylen, ohne Ihren Look zu überladen.",
+      "readTime": "12 Min. gelesen",
       "tags": [
-        "auffällige Ohrringe",
         "Statement-Ohrringe",
-        "Party-Styling",
-        "Abend",
-        "im Labor gezüchtet"
+        "auffällige Ohrringe",
+        "Abendstyling",
+        "Ausschnitte",
+        "Proportion",
+        "lab-grown"
       ]
     },
     "earring-style-guides/what-jewellery-to-wear-with-a-black-dress": {
-      "title": "Welchen Schmuck man zu einem schwarzen Kleid trägt: Ohrringe, Metalle und Styling-Guide",
-      "excerpt": "Wählen Sie Schmuck für ein schwarzes Kleid mit Ohrringen, Diamanten, Gold, Silber, Roségold, Party-Looks, Hochzeiten und Abend-Outfit-Styling.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Welcher Schmuck passt zum schwarzen Kleid?",
+      "excerpt": "Wählen Sie Ohrringe, Ketten und Metallfarben passend zu Ausschnitt, Stoff und Anlass. Vergleichen Sie Ohrstecker, Creolen, Ohrhänger und Statement-Designs.",
+      "readTime": "15 Min. gelesen",
       "tags": [
         "schwarzes Kleid",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Party-Ohrringe",
-        "auffällige Ohrringe",
-        "im Labor gezüchtet"
+        "Ausschnitte",
+        "Metallfarben",
+        "Ohrringe stylen",
+        "Halsketten",
+        "lab-grown"
       ]
     },
     "earring-style-guides/what-jewellery-to-wear-with-a-satin-dress": {
-      "title": "Welchen Schmuck man zu einem Satinkleid tragen sollte: Ohrringe, Metalle und Styling-Guide",
-      "excerpt": "Wählen Sie Schmuck für ein Satinkleid mit Ohrringen, Gold, Silber, Diamanten, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Schmuck zu Satin- und Seidenkleidern",
+      "excerpt": "Welcher Schmuck passt zu Satin- und Seidenkleidern? Tipps zu Ohrringen, Ketten und Metallfarben nach Ausschnitt, Farbe und Anlass.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "Satinkleid",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Hochzeitsgast",
-        "Tropfenohrringe",
-        "im Labor gezüchtet"
+        "Seidenkleid",
+        "Ausschnitte",
+        "Ohrhänger",
+        "Metalltöne",
+        "lab-grown"
       ]
     },
     "earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress": {
-      "title": "Welchen Schmuck man zu einem Kleid mit V-Ausschnitt trägt: Ohrringe, Halsketten und Styling-Guide",
-      "excerpt": "Wählen Sie Schmuck für ein V-Ausschnitt-Kleid mit Ohrringen, Halsketten, Diamanten, Gold, Party-Looks, Hochzeiten und Styling-Ideen für den Abend.",
-      "readTime": "15 Minuten gelesen",
+      "title": "Welcher Schmuck passt zum Kleid mit V-Ausschnitt?",
+      "excerpt": "Wählen Sie Ketten und Ohrringe für Kleider mit V-Ausschnitt passend zu Ausschnitttiefe, Anhängerposition, Stoff und Anlass. Erfahren Sie, wann Ohrringe, eine Kette oder beides passt.",
+      "readTime": "15 Min. gelesen",
       "tags": [
-        "Kleid mit V-Ausschnitt",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Halskette",
-        "Tropfenohrringe",
-        "im Labor gezüchtet"
+        "V-Ausschnitt-Kleid",
+        "Halsketten",
+        "Anhängerposition",
+        "Kettenlänge",
+        "Ohrringe stylen",
+        "lab-grown"
       ]
     },
     "earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline": {
-      "title": "Welchen Schmuck man zu einem herzförmigen Ausschnitt trägt: Ohrringe, Halsketten und Styling-Guide",
-      "excerpt": "Wählen Sie Schmuck für ein Kleid mit Herzausschnitt mit Ohrringen, Halsketten, Diamanten, Gold, Looks für Hochzeitsgäste und Party-Styling-Ideen.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Schmuck zum Herzausschnitt: Styling-Guide",
+      "excerpt": "Schmuck zum Herzausschnitt wählen: Ohrringe, Ketten und Metallfarben für Hochzeiten, Partys sowie Satin- und Romantik-Kleider vergleichen.",
+      "readTime": "14 Min. gelesen",
       "tags": [
-        "herzförmiger Ausschnitt",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Schmetterlingsohrringe",
-        "Tropfenohrringe",
-        "im Labor gezüchtet"
+        "Herzausschnitt",
+        "Halsketten",
+        "Ohrhänger",
+        "Hochzeiten",
+        "Brautjungfern",
+        "lab-grown"
       ]
     },
     "earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress": {
-      "title": "Welche Ohrringe man zu einem schulterfreien Kleid trägt: Styling-Guide für Hochzeiten, Partys und Abendlooks",
-      "excerpt": "Wählen Sie Ohrringe für ein schulterfreies Kleid mit Diamanten, Tropfen, Creolen, Ohrsteckern, Gold, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Welche Ohrringe passen zu einem schulterfreien Kleid?",
+      "excerpt": "Wählen Sie Ohrringe für ein schulterfreies Kleid nach Ohrsteckergröße, Ausschnittbreite, Frisur, Stoff und Anlass. Vergleichen Sie Ohrstecker, Creolen, Ohrhänger und Statement-Ohrringe.",
+      "readTime": "14 Min. gelesen",
       "tags": [
         "schulterfreies Kleid",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Tropfenohrringe",
-        "auffällige Ohrringe",
-        "im Labor gezüchtet"
+        "Schulterabstand",
+        "Ohrhänger",
+        "Puffärmel",
+        "Hochzeiten",
+        "lab-grown"
       ]
     },
     "earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings": {
@@ -762,42 +771,42 @@
       ]
     },
     "earring-style-guides/what-jewellery-to-wear-with-a-green-dress": {
-      "title": "Welchen Schmuck man zu einem grünen Kleid trägt: Ohrringe, Metalle und Styling-Guide",
-      "excerpt": "Wählen Sie Schmuck für ein grünes Kleid mit Gold, Silber, Roségold, Diamantohrringen, Looks für Hochzeitsgäste, Party-Styling und Outfit-Ideen.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Welcher Schmuck passt zu einem grünen Kleid?",
+      "excerpt": "Schmuck für Kleider in Smaragd-, Salbei-, Oliv-, Mint- und Waldgrün. Metallfarben, Ohrringe und Ketten nach Stoff und Anlass vergleichen.",
+      "readTime": "14 Min. gelesen",
       "tags": [
         "grünes Kleid",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Goldschmuck",
-        "Tropfenohrringe",
-        "im Labor gezüchtet"
+        "Smaragd",
+        "Salbei",
+        "Oliv",
+        "Metallfarben",
+        "lab-grown"
       ]
     },
     "earring-style-guides/what-jewellery-to-wear-with-a-red-dress": {
-      "title": "Welchen Schmuck man zu einem roten Kleid trägt: Ohrringe, Metalle und Styling-Guide",
-      "excerpt": "Wählen Sie Schmuck für ein rotes Kleid mit Gold, Silber, Roségold, Diamantohrringen, Party-Looks, Outfits für Hochzeitsgäste und Styling-Ideen für den Abend.",
-      "readTime": "16 Min. Lektüre",
+      "title": "Welchen Schmuck trägt man zu einem roten Kleid?",
+      "excerpt": "Entdecken Sie Schmuck zum roten Kleid: von Gold- und Silberohrringen bis zu Satin, Hochzeit, Party und jedem Ausschnitt.",
+      "readTime": "13 Min. gelesen",
       "tags": [
         "rotes Kleid",
-        "Ohrring-Styling",
-        "Outfit-Styling",
-        "Goldschmuck",
-        "Tropfenohrringe",
-        "im Labor gezüchtet"
+        "Bordeaux",
+        "Satin",
+        "Metallfarben",
+        "Ausschnitte",
+        "lab-grown"
       ]
     },
     "earring-style-guides/minimalist-jewellery-styling-guide": {
-      "title": "Minimalistischer Schmuck-Styling-Guide: So stylen Sie einfachen Schmuck für Alltag, Arbeit und Anlässe",
-      "excerpt": "Erfahren Sie, wie Sie minimalistischen Schmuck mit Ohrringen, Ohrsteckern, Huggies, im Labor gezüchteten Diamanten, Arbeitskleidung, Geschenken, Hochzeiten und Alltagsoutfits stylen.",
-      "readTime": "15 Minuten gelesen",
+      "title": "Minimalistischen Schmuck stylen",
+      "excerpt": "Stylen Sie minimalistischen Schmuck zu Outfits und Ausschnitten. Bauen Sie vielseitige Schmuck-Capsule aus Ohrringen, Ketten, Ringen und Armbändern.",
+      "readTime": "15 Min. gelesen",
       "tags": [
         "minimalistischer Schmuck",
-        "Ohrring-Styling",
-        "Alltagskleidung",
-        "Arbeitskleidung",
-        "Stollen",
-        "im Labor gezüchtet"
+        "Schmuck-Capsule",
+        "Layering",
+        "Ausschnitte",
+        "Styling",
+        "lab-grown"
       ]
     },
     "earring-style-guides/lab-grown-diamond-hoop-earrings-guide": {
@@ -814,16 +823,14 @@
       ]
     },
     "earring-style-guides/everyday-lab-grown-diamond-earrings-guide": {
-      "title": "Alltagsohrringe mit im Labor gezüchteten Diamanten: So wählen Sie Ohrringe aus, die Sie täglich tragen können",
-      "excerpt": "Wählen Sie alltägliche, im Labor gezüchtete Diamantohrringe für die Arbeit, Freizeitoutfits, Ear Stacks, Geschenke, Reisen und das tägliche Schmuck-Styling.",
-      "readTime": "15 Minuten gelesen",
+      "title": "Ohrringe mit im Labor gezüchteten Diamanten: Guide",
+      "excerpt": "Wählen Sie Ohrstecker mit im Labor gezüchteten Diamanten für Arbeit, Alltag und Büro-Dinner-Looks – mit Tipps zu Größe, Profil, Verschluss und Metallfarbe.",
+      "readTime": "14 Min. gelesen",
       "tags": [
-        "alltägliche Ohrringe",
-        "Ohrringe mit im Labor gezüchteten Diamanten",
-        "Arbeitskleidung",
-        "Ohrenstapel",
-        "Alltagsschmuck",
-        "im Labor gezüchtet"
+        "Alltag",
+        "Businesskleidung",
+        "im Labor gezüchtet",
+        "Büro bis Dinner"
       ]
     },
     "earring-style-guides/can-you-wear-lab-grown-diamond-earrings-every-day": {
@@ -941,6 +948,66 @@
         "Tropfen",
         "Schmetterlingsohrringe",
         "im Labor gezüchtet"
+      ]
+    },
+    "earring-style-guides/travel-jewellery-guide": {
+      "title": "Reiseführer für Schmuck: Verpackung, Lagerung und Pflege",
+      "excerpt": "Erfahren Sie, welchen Schmuck Sie für den Urlaub einpacken sollten, wie Sie Verwicklungen und Beschädigungen vermeiden, was Sie im Handgepäck aufbewahren sollten und wie Sie auf Reisen auf die Schmuckstücke achten.",
+      "readTime": "12 Min. gelesen",
+      "tags": [
+        "Reiseschmuck",
+        "Packen",
+        "Schmuckpflege",
+        "Ohrringe",
+        "Aufbewahrung"
+      ]
+    },
+    "earring-style-guides/what-are-huggie-earrings": {
+      "title": "Was sind Huggie-Ohrringe? Passform, Größen und Verschlüsse",
+      "excerpt": "Erfahren Sie, was Huggie-Ohrringe sind, wie sie sich von Creolen unterscheiden und wie Sie den richtigen Durchmesser, die richtige Dicke, den richtigen Verschluss, das richtige Material und die richtige Passform für Ihr Ohr auswählen.",
+      "readTime": "13 Min. gelesen",
+      "tags": [
+        "Huggie-Ohrringe",
+        "Ohrringgrößen",
+        "Passform",
+        "Kaufratgeber",
+        "Creolen"
+      ]
+    },
+    "earring-style-guides/how-to-style-huggie-earrings": {
+      "title": "So stylen Sie Huggie-Ohrringe: Komplette Anleitung",
+      "excerpt": "Erfahren Sie, wie Sie Huggie-Ohrringe einzeln, mit Ohrsteckern und in ausgewogenen Ohrstapeln stylen. Passen Sie Größe, Metall- und Diamantdetails an Outfits und Anlässe an.",
+      "readTime": "12 Min. gelesen",
+      "tags": [
+        "Huggie-Ohrringe",
+        "Ohrring-Styling",
+        "Ear-Stacks",
+        "Metallfarben",
+        "Ohrstecker"
+      ]
+    },
+    "earring-style-guides/how-to-style-butterfly-earrings": {
+      "title": "Schmetterling-Ohrringe stylen: Der komplette Guide",
+      "excerpt": "Erfahren Sie, wie Sie Schmetterling-Ohrringe zu Alltagsoutfits, Kleidern, Halsketten und Ear-Stacks stylen. Vergleichen Sie schlichte, Diamant- und Pavé-Designs.",
+      "readTime": "13 Min. gelesen",
+      "tags": [
+        "Schmetterling-Ohrringe",
+        "Ohrring-Styling",
+        "Motivschmuck",
+        "Ausschnitte",
+        "Ear-Stacks"
+      ]
+    },
+    "earring-style-guides/how-to-style-geometric-earrings": {
+      "title": "Geometrische Ohrringe stylen",
+      "excerpt": "Erfahren Sie, wie Sie geometrische Ohrringe zu Business-Looks, Alltagsoutfits, Kleidern und Abendlooks stylen – mit Hinweisen zu Größe, Ausschnitt und Schmuck.",
+      "readTime": "12 Min. gelesen",
+      "tags": [
+        "geometrische Ohrringe",
+        "Ohrring-Styling",
+        "Businesskleidung",
+        "Ausschnitte",
+        "Metallfarben"
       ]
     }
   },

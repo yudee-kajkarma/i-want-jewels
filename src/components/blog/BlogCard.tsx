@@ -1,27 +1,27 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import { Link } from "@/lib/router";
+import { formatDate } from "../../utils/formatDate";
 import type { BlogListItem } from "../../types/blog";
 
 type BlogCardProps = {
     post: BlogListItem;
 };
 
-function formatDateParts(dateValue: string): { day: string; month: string } {
-    const parsedDate = new Date(dateValue);
-
-    if (Number.isNaN(parsedDate.getTime())) {
-        return { day: "--", month: "---" };
-    }
-
+function formatDateParts(
+    dateValue: string,
+    locale: string,
+): { day: string; month: string } {
     return {
-        day: parsedDate.toLocaleDateString("en-US", { day: "2-digit" }),
-        month: parsedDate.toLocaleDateString("en-US", { month: "short" }),
+        day: formatDate(dateValue, locale, { day: "2-digit" }, "--"),
+        month: formatDate(dateValue, locale, { month: "short" }, "---"),
     };
 }
 
 export default function BlogCard({ post }: BlogCardProps) {
-    const dateParts = formatDateParts(post.publishedAt);
+    const { i18n } = useTranslation();
+    const dateParts = formatDateParts(post.publishedAt, i18n.language);
     const postHref = `/blog/${post.slug}`;
 
     return (

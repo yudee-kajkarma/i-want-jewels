@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { RefreshCw, Search, Users } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { formatDateTime } from '../utils/formatDate'
 import { toast } from 'react-hot-toast'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -12,22 +13,8 @@ import { getAdminCartUsers, getAdminUserCart } from '../services/cartService'
 import type { AdminCartUser, AdminUserCart, CartUsersPagination } from '../types/cart'
 import { formatPrice, getPriceAmount } from '../utils/price'
 
-function formatDate(value: string): string {
-  if (!value) {
-    return '--'
-  }
-
-  return new Intl.DateTimeFormat('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).format(new Date(value))
-}
-
 export default function AdminCartPage() {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.cart' })
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.cart' })
   const { currency } = useCurrency()
   const [users, setUsers] = useState<AdminCartUser[]>([])
   const [pagination, setPagination] = useState<CartUsersPagination | null>(null)
@@ -229,7 +216,7 @@ export default function AdminCartPage() {
                           {formatPrice(user.totalAmount, currency)}
                         </span>
                       </div>
-                      <p className="mt-2 text-[11px] text-zinc-500">{formatDate(user.lastUpdated)}</p>
+                      <p className="mt-2 text-[11px] text-zinc-500">{formatDateTime(user.lastUpdated, i18n.language, '--')}</p>
                     </button>
                   ))}
                 </div>
@@ -270,7 +257,7 @@ export default function AdminCartPage() {
                     <h2 className="mt-2 text-xl font-bold text-[#3f1933]">{selectedCart.userDetails.userName || '--'}</h2>
                     <p className="mt-1 text-sm text-zinc-600">{selectedCart.userDetails.userEmail || '--'}</p>
                     <p className="mt-1 text-sm text-zinc-600">{selectedCart.userDetails.userPhone || '--'}</p>
-                    <p className="mt-3 text-xs text-zinc-500">{formatDate(selectedCart.updatedAt)}</p>
+                    <p className="mt-3 text-xs text-zinc-500">{formatDateTime(selectedCart.updatedAt, i18n.language, '--')}</p>
                   </div>
 
                   <div className="mt-5 flex items-center justify-between">
@@ -304,7 +291,7 @@ export default function AdminCartPage() {
                               {t('variant')} {item.variantName || '--'}
                             </p>
                             <p className="mt-1 text-xs text-zinc-500">
-                              {t('added')} {formatDate(item.addedAt)}
+                              {t('added')} {formatDateTime(item.addedAt, i18n.language, '--')}
                             </p>
                           </div>
 

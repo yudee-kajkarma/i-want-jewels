@@ -1,1032 +1,526 @@
 {
   "meta": {
     "title": "What Jewellery to Wear with a Red Dress",
-    "description": "Choose jewellery for a red dress with gold, silver, rose gold, diamond earrings, party looks, wedding guest outfits and evening styling ideas."
+    "description": "Discover what jewellery to wear with a red dress, from gold and silver earrings to choices for satin dresses, weddings, parties and necklines."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-95.jpg",
-    "title": "What Jewellery to Wear with a Red Dress:",
-    "subtitle": "Earrings, Metals & Styling Guide",
+    "image": "/blog-images/blog-image-54.jpg",
+    "title": "What Jewellery to Wear",
+    "subtitle": "with a Red Dress",
     "paragraphs": [
-      "A red dress already makes a strong statement, so the jewellery should add polish without fighting the outfit. The best jewellery for a red dress usually depends on the shade of red, the dress fabric, the neckline and the occasion.",
-      "Gold jewellery is one of the strongest choices with a red dress because it adds warmth, richness and evening elegance. Diamond earrings also work beautifully because they brighten the outfit without changing the colour mood. White or silver-tone jewellery can make a red dress feel sharper and more formal, while rose gold works best with softer reds, blush-red tones and romantic styling.",
-      "This resource helps shoppers choose jewellery for red dresses by colour shade, neckline, fabric, event type and hairstyle. It also connects each styling direction to IWantJewels products such as Orsola drop earrings, Lusso bold statement earrings, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Pave Hoops, Concetta Long earrings, Concetta Short earrings, Farfalla butterfly earrings, Alidi Farfalla butterfly earrings, Amadea Huggie earrings and Laluce minimalist diamond earrings."
+      "A red dress already creates a strong focal point, so the jewellery should complete the outfit rather than compete with it. The right choice depends on the shade of red, the amount of detail in the dress, its neckline and the occasion.",
+      "Yellow-gold jewellery can add warmth to bright, tomato and scarlet reds. White or silver-tone jewellery creates a cleaner contrast and can work particularly well with cherry, wine and burgundy shades. Rose gold offers a softer finish for coral-red, muted red and romantic outfits.",
+      "For earrings, choose studs or small hoops when the dress is embellished, sequinned or highly structured. A simple red dress can carry more visible hoops, drop earrings or one statement design. If the earrings lead the look, keep the necklace delicate or leave the neckline clear."
     ],
     "shopLabel": "Shop Earrings for Red Dresses",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Choose jewellery for red dresses.",
-      "Decide whether gold, white/silver tone or rose gold works best with red.",
-      "Match earrings to bright red, burgundy, wine, cherry red, satin red and soft red dresses.",
-      "Style red dresses for parties, weddings, dinners, birthdays and formal events.",
-      "Choose earrings based on neckline and hairstyle.",
-      "Decide between studs, hoops, drops, butterfly earrings and bold statement earrings.",
-      "Build red dress ear stack combinations.",
-      "Find IWantJewels product recommendations by red dress style.",
-      "Plan image blocks, product modules, CTA sections and internal links for this page."
+      "The dress's level of detail matters more than its colour alone",
+      "Yellow gold warms scarlet, tomato, rust and warm burgundy",
+      "White or silver tone suits cherry, wine, oxblood and blue-based red",
+      "Rose gold softens coral, muted and floral red",
+      "Sequins, lace and velvet call for studs or clean drops",
+      "A bare neckline is not unfinished — it is often the cleaner result"
     ],
-    "image": "/blog-images/blog-image-97.jpg"
+    "image": "/blog-images/blog-image-42.jpg"
   },
   "content": [
     {
-      "heading": "Red Dress Jewellery Selector",
+      "heading": "Quick red-dress jewellery guide",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Use this table near the top of the page as the main styling decision tool."
-        },
         {
           "type": "table",
-          "headers": [
-            "Red Dress Style",
-            "Best Jewellery Direction",
-            "Recommended IWJ Direction"
-          ],
+          "headers": ["Red-dress style", "Earring direction", "Metal direction", "Necklace"],
           "rows": [
-            [
-              "Bright red dress",
-              "Gold studs, drops or bold earrings",
-              "Cadenza M, Orsola, Lusso"
-            ],
-            [
-              "Burgundy dress",
-              "Gold drops, long drops or medium studs",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Wine red dress",
-              "Drops, studs or refined hoops",
-              "Orsola, Cadenza M, Pave Hoops"
-            ],
-            [
-              "Red satin dress",
-              "Drop earrings or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Red party dress",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Red wedding guest dress",
-              "Drops, studs or soft romantic earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Detailed red dress",
-              "Studs or clean huggies",
-              "Cadenza M, Cadenza S, Amadea"
-            ],
-            [
-              "Simple red dress",
-              "One strong jewellery focal point",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Romantic red dress",
-              "Butterfly earrings or soft drops",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ],
-            [
-              "Red ear stack",
-              "Main earring + small support",
-              "Orsola + Cadenza S, Lusso + Cadenza S"
-            ]
+            ["Simple bright-red dress", "Drops, hoops or one statement pair", "Yellow gold for warmth or white tone for contrast", "Optional delicate chain"],
+            ["Detailed or sequinned red dress", "Studs or small hoops", "Repeat the metal used in other accessories", "Usually unnecessary"],
+            ["Burgundy or wine dress", "Studs or refined drops", "Yellow gold for warmth; white tone for contrast", "Based on the neckline"],
+            ["Red satin dress", "Studs or clean drop earrings", "Yellow gold, white tone or rose gold", "Keep it minimal"],
+            ["Red wedding-guest dress", "Studs, drops or medium hoops", "Coordinate with the bag and shoes", "Delicate if the neckline is open"],
+            ["High-neck red dress", "Studs, hoops or visible earrings", "Any coordinated metal", "Usually skip it"],
+            ["Off-shoulder red dress", "Drops, hoops or statement earrings", "Choose according to the dress's undertone", "Optional; earrings can lead"],
+            ["Red lace dress", "Studs or uncomplicated drops", "A single, consistent metal", "Keep it understated"]
           ]
         }
       ]
     },
     {
-      "heading": "Why Red Dresses Need Balanced Jewellery",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-99.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "A red dress is already powerful. It naturally draws attention, so the jewellery should complete the outfit rather than compete with it."
-            },
-            {
-              "type": "paragraph",
-              "text": "If the red dress is simple, the jewellery can be stronger. Bold earrings, drops and hoops can all work beautifully. If the red dress has sequins, lace, embroidery, ruffles, metallic shine or a dramatic neckline, the jewellery should usually be cleaner."
-            },
-            {
-              "type": "paragraph",
-              "text": "Red also changes depending on fabric. Red satin reflects light, so drop earrings or medium studs usually work better than too many shiny accessories. Matte red dresses can handle stronger jewellery. Burgundy and wine dresses feel richer and more formal, while bright red dresses feel energetic and party-ready."
-            },
-            {
-              "type": "paragraph",
-              "text": "The main rule is simple: choose one clear jewellery focal point. If the earrings are bold, keep the necklace minimal or skip it. If the necklace is the main piece, choose cleaner earrings."
-            },
-            {
-              "type": "see-also",
-              "text": "Party Earrings Guide",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Gold, Silver or Rose Gold with a Red Dress",
+      "heading": "Should you wear gold or silver jewellery with a red dress?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Gold is usually the easiest metal colour with a red dress because it adds warmth and richness. White or silver-tone jewellery can work when the look should feel modern, formal or sharper. Rose gold can work with softer red shades, romantic outfits or blush-red styling, but it is usually more delicate than yellow gold."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-101.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metal Colour",
-                "Feeling with Red Dresses",
-                "Best Red Dress Types"
-              ],
-              "rows": [
-                [
-                  "Yellow gold",
-                  "Warm, rich, classic and evening-ready",
-                  "Bright red, burgundy, wine, red satin, red party dresses"
-                ],
-                [
-                  "White or silver tone",
-                  "Clean, sharp, bright and formal",
-                  "Deep red, wine, cool red, formal red dresses"
-                ],
-                [
-                  "Rose gold",
-                  "Soft, romantic and feminine",
-                  "Soft red, blush-red, romantic red, floral red dresses"
-                ],
-                [
-                  "Mixed metals",
-                  "Modern and creative",
-                  "Minimal red dresses and ear stacks"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "For IWantJewels styling, yellow gold is strongest for Orsola, Lusso, Pave Hoops and Cadenza M with red dresses. White or silver-tone styling works well for Cadenza M, Laluce, Concetta Long and Orsola when the outfit should feel cleaner. Rose gold is better for Farfalla, Alidi Farfalla and Concetta Short when the look should feel romantic."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Bright Red Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A bright red dress feels bold, confident and energetic. The jewellery should be polished but not chaotic."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gold earrings are usually the strongest choice because they match the warmth of the dress. Medium diamond studs are safest when the outfit is already strong. Drop earrings add elegance. Bold statement earrings can work if the dress is simple and the earrings are meant to lead."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Bright Red Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple bright red dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Bright red party dress",
-              "Hoops, drops or bold earrings",
-              "Pave Hoops, Orsola, Lusso"
-            ],
-            [
-              "Bright red satin dress",
-              "Medium studs or drops",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Bright red V-neck dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Bright red high-neck dress",
-              "Studs or hoops",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Detailed bright red dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Bright red birthday dress",
-              "Drops, studs or butterfly earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for V-Neck Dresses",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Burgundy or Wine Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Burgundy and wine dresses feel deeper, richer and more formal than bright red. They usually work beautifully with yellow gold, white/silver tone and refined diamond earrings."
-        },
-        {
-          "type": "paragraph",
-          "text": "Drop earrings are especially strong because they add polish and movement. Concetta Long can work well for formal wine-coloured dresses. Cadenza M is a safer option when the dress already has velvet, lace, satin or detail."
+          "text": "Both gold and silver-tone jewellery can work with red. The decision should be based on the dress's undertone and the finish you want — not a rule that every red dress must be worn with gold."
         },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-103.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Burgundy / Wine Dress Style",
-                "Best Earring Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Simple burgundy dress",
-                  "Drops or bold earrings",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Burgundy satin dress",
-                  "Drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Wine evening dress",
-                  "Long drops or refined studs",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Burgundy wedding guest dress",
-                  "Drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Detailed burgundy dress",
-                  "Studs or huggies",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Burgundy party dress",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Burgundy sweetheart dress",
-                  "Drops or romantic earrings",
-                  "Orsola, Farfalla"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Yellow gold with red"
+            },
+            {
+              "type": "paragraph",
+              "text": "Yellow gold creates a warm combination. It can work especially well with scarlet and tomato red, warm burgundy, rust and terracotta-red shades, matte red dresses, and evening and party outfits."
+            },
+            {
+              "type": "paragraph",
+              "text": "Choose yellow-gold earrings when you want the jewellery to feel warm and visible. If the dress is already highly embellished, use that warmth in a smaller stud or restrained hoop."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "White or silver-tone jewellery with red"
+        },
+        {
+          "type": "paragraph",
+          "text": "White and silver tones provide a cooler, clearer contrast. Consider them with cherry red, blue-based red, wine and oxblood, cool burgundy, and modern or minimalist outfits. Lab-grown diamond earrings in a white finish can add light around the face without introducing another strong colour."
+        },
+        {
+          "type": "subheading",
+          "text": "Rose gold with red"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rose gold creates a softer, less contrasting finish. It can suit coral-red dresses, soft or muted red, floral red dresses, romantic wedding-guest outfits, and blush-red and pink-red shades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before choosing a metal, also check the hardware on the dress, bag and shoes. Repeating one existing metal can make the outfit feel more intentional."
+        },
+        {
           "type": "see-also",
-          "text": "Jewellery for Sweetheart Neckline",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+          "text": "Gold vs white vs rose gold lab-grown diamond earrings",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Best Earrings for a Red Satin Dress",
+      "heading": "What earrings look good with a red dress?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Red satin already has shine and colour strength, so the jewellery should feel balanced."
+          "type": "section-lead",
+          "text": "The dress's level of detail is more important than the colour alone."
+        },
+        {
+          "type": "subheading",
+          "text": "Diamond studs"
         },
         {
           "type": "paragraph",
-          "text": "Drop earrings work beautifully with red satin because they add movement and elegance. Medium studs are safer when the dress has strong draping, shine or a dramatic neckline. Bold statement earrings work best only when the satin dress is simple and the earrings are meant to be the main feature."
+          "text": "Diamond studs provide a concentrated point of light without adding another complicated shape. They are particularly useful with sequinned red dresses, red lace, structured shoulders, detailed necklines, formal work events, and dresses worn with a necklace."
         },
         {
-          "type": "table",
-          "headers": [
-            "Red Satin Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple red satin dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Red satin slip dress",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Red satin high-neck dress",
-              "Studs or hoops",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Red satin V-neck dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Red satin party dress",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Red satin wedding guest dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Detailed red satin dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Smaller studs keep the result restrained, while a more visible stud can hold its own against a bold block of red."
+        },
+        {
+          "type": "subheading",
+          "text": "Hoop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoops add shape and can make a red outfit feel more contemporary. Small or medium hoops suit daytime events, dinners and modern wedding-guest outfits. More visible pavé hoops can work with a plain red dress or jumpsuit."
+        },
+        {
+          "type": "paragraph",
+          "text": "If the dress has ruffles, a heavily embellished shoulder or an ornate collar, check that the hoop cannot catch against the fabric."
+        },
+        {
+          "type": "subheading",
+          "text": "Drop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Drop earrings introduce a vertical line and gentle movement. They work especially well with open necklines, swept-back hair and relatively simple fabrics. Use shorter drops when you want some movement without making the earrings the central feature. Longer drops are better suited to a plain evening dress with enough space around the neckline and shoulders."
+        },
+        {
+          "type": "subheading",
+          "text": "Statement earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement earrings can work with red, but the dress needs to give them visual space. They are most effective with plain red column dresses, minimal slip dresses, simple strapless dresses, clean red jumpsuits and unembellished party dresses."
+        },
+        {
+          "type": "paragraph",
+          "text": "If the dress already includes sequins, metallic embroidery, large bows or elaborate ruffles, statement earrings may make the outfit feel crowded. Choose one focal point."
         },
         {
           "type": "see-also",
-          "text": "Jewellery with Satin Dress",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Red Party Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A red party dress can carry stronger earrings when the outfit is simple. The key is to avoid making the look too loud."
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso if the earrings should become the main jewellery feature. Choose Orsola if you want elegance and movement. Choose Pave Hoops if you want shape and sparkle. Choose Cadenza M if the dress already has detail and needs clean diamond polish."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Red Party Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Simple red party dress",
-              "Bold earrings",
-              "Lusso"
-            ],
-            [
-              "Red cocktail dress",
-              "Hoops, drops or medium studs",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Red satin party dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Red sequin dress",
-              "Studs or huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Red birthday dress",
-              "Drops, studs or butterfly earrings",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Red jumpsuit",
-              "Hoops or bold earrings",
-              "Pave Hoops, Lusso"
-            ],
-            [
-              "Formal red party dress",
-              "Long drops or refined studs",
-              "Concetta Long, Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
+          "text": "Bold statement earrings: styling guide",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Best Jewellery for a Red Wedding Guest Dress",
+      "heading": "Jewellery for different shades of red",
       "content": [
         {
-          "type": "paragraph",
-          "text": "A red wedding guest dress should feel elegant and respectful, not too overpowering. The jewellery should soften and polish the outfit."
+          "type": "subheading",
+          "text": "Bright red and scarlet"
         },
         {
           "type": "paragraph",
-          "text": "Drop earrings are one of the best choices because they add movement and elegance. Medium studs are better when the dress is detailed or bright. Butterfly earrings can work if the red dress has a romantic or floral mood."
+          "text": "Bright red has strong visual presence. Clean diamond studs, polished hoops and uncomplicated drop earrings all work. A statement earring is possible when the dress itself is plain. Yellow gold reinforces the warmth, while a white finish creates sharper contrast. Neither is automatically better — the choice depends on the overall effect and the other accessories."
         },
         {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Red Wedding Guest Dress Style",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Simple red wedding guest dress",
-                  "Drops or medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Red satin wedding guest dress",
-                  "Drop earrings",
-                  "Orsola"
-                ],
-                [
-                  "Burgundy wedding guest dress",
-                  "Drops or refined studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Floral red wedding guest dress",
-                  "Butterfly earrings or studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Lace red dress",
-                  "Studs or delicate drops",
-                  "Cadenza M, Concetta Short"
-                ],
-                [
-                  "Detailed red wedding guest dress",
-                  "Studs or huggies",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Romantic red wedding guest dress",
-                  "Butterfly earrings or soft drops",
-                  "Farfalla, Concetta Short"
-                ]
-              ]
-            }
-          ]
+          "type": "subheading",
+          "text": "Burgundy, wine and oxblood"
         },
         {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Weddings",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
+          "type": "paragraph",
+          "text": "Darker reds can feel more formal and subdued than scarlet. Diamond studs and refined drops work well for dinners, winter weddings and evening events. Yellow gold can add warmth to burgundy, while white or silver tones create a cooler contrast. Avoid automatically matching the dress with red gemstones unless you intentionally want a tonal look."
+        },
+        {
+          "type": "subheading",
+          "text": "Cherry and blue-based red"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cooler cherry reds often work well with white or silver-tone jewellery, particularly when paired with black, navy or silver accessories. Yellow gold can still be used if you want warmer contrast."
+        },
+        {
+          "type": "subheading",
+          "text": "Coral and soft red"
+        },
+        {
+          "type": "paragraph",
+          "text": "Coral-red and muted red dresses can work with yellow gold or rose gold. Smaller drops, butterfly-inspired designs and delicate studs can support a softer outfit without making it overly decorative."
         }
       ]
     },
     {
-      "heading": "Jewellery for Red Dresses by Neckline",
+      "heading": "Jewellery for different red-dress fabrics",
       "content": [
         {
-          "type": "paragraph",
-          "text": "The neckline helps decide whether earrings, necklace or both should lead."
+          "type": "subheading",
+          "text": "Red satin"
         },
         {
           "type": "paragraph",
-          "text": "Open necklines can carry drops or bold earrings. High necklines usually work better with studs or hoops. Sweetheart and off-shoulder red dresses can look beautiful with drops, romantic earrings or one bold focal piece."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Red Dress Neckline",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "V-neck red dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Sweetheart red dress",
-              "Drops, butterfly earrings or bold earrings",
-              "Orsola, Farfalla, Lusso"
-            ],
-            [
-              "Off-shoulder red dress",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "High-neck red dress",
-              "Studs or hoops",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Halter red dress",
-              "Studs or slim drops",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Square-neck red dress",
-              "Hoops, drops or medium studs",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "Strapless red dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Cowl-neck red dress",
-              "Studs or soft drops",
-              "Cadenza M, Orsola"
-            ]
-          ]
+          "text": "Satin already reflects light, so jewellery does not need to create sparkle everywhere. Choose one source of emphasis: earrings, necklace or bracelet. Studs and clean drops are dependable choices. Larger earrings can work with an uncomplicated satin slip dress, but scale them back when the dress includes ruching, draping, a cowl neckline or crystal detail."
         },
         {
           "type": "see-also",
-          "text": "Earrings for Off-Shoulder Dresses",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+          "text": "Jewellery to wear with satin & silk dresses",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Red sequins or metallic fabric"
+        },
+        {
+          "type": "paragraph",
+          "text": "Keep the jewellery controlled. Small diamond earrings or clean hoops usually provide enough definition. Avoid combining a sequinned dress with large earrings, a statement necklace and several other sparkling pieces."
+        },
+        {
+          "type": "subheading",
+          "text": "Red lace"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lace creates its own pattern and texture. Studs or uncomplicated drop earrings allow that detail to remain visible. If the lace sits close to the neck, earrings are generally more useful than a necklace."
+        },
+        {
+          "type": "subheading",
+          "text": "Red velvet"
+        },
+        {
+          "type": "paragraph",
+          "text": "Velvet has visual depth and can suit polished studs or refined drop earrings. Allow the fabric to remain the dominant texture and avoid adding too many competing surfaces."
+        },
+        {
+          "type": "subheading",
+          "text": "Plain matte fabric"
+        },
+        {
+          "type": "paragraph",
+          "text": "A plain matte dress gives you the most flexibility. Hoops, drops and statement earrings can all work because the fabric is not already reflecting light or carrying heavy surface detail."
         }
       ]
     },
     {
-      "heading": "Jewellery for Red Dresses by Hairstyle",
+      "heading": "Match the jewellery to the neckline",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Hairstyle changes how visible the jewellery looks, especially with a strong dress colour like red."
+          "type": "subheading",
+          "text": "V-neck red dress"
         },
         {
           "type": "paragraph",
-          "text": "If the hair is down, very small earrings can disappear. Medium studs, hoops and drops usually show better. If the hair is pulled back, drop earrings, hoops and bold statement earrings can frame the face beautifully."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-107.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hairstyle",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Hair down",
-                  "Medium studs, hoops or drops",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Soft waves",
-                  "Drops, butterfly earrings or visible studs",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Sleek ponytail",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Low bun",
-                  "Drops, butterfly earrings or bold earrings",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "High bun",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Half-up hair",
-                  "Studs, huggies or soft drops",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "Short hair",
-                  "Studs, hoops or bold earrings",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Necklace or No Necklace with a Red Dress?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The necklace decision depends on the neckline and the earrings."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the earrings are bold or long, skip the necklace or choose a very delicate chain. If the earrings are simple studs, a necklace can become more visible. If the red dress has a high neckline, earrings usually matter more than a necklace. If the dress has a deep V-neck, a delicate necklace can work with cleaner earrings."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Earring Choice",
-            "Necklace Direction"
-          ],
-          "rows": [
-            [
-              "Bold statement earrings",
-              "No necklace or very delicate chain"
-            ],
-            [
-              "Long drop earrings",
-              "No necklace or simple pendant"
-            ],
-            [
-              "Hoop earrings",
-              "Delicate necklace or no necklace"
-            ],
-            [
-              "Medium studs",
-              "Necklace can be more visible"
-            ],
-            [
-              "Small studs",
-              "Necklace can lead the look"
-            ],
-            [
-              "Butterfly earrings",
-              "Soft delicate necklace if needed"
-            ],
-            [
-              "Huggies",
-              "Simple necklace can work"
-            ],
-            [
-              "Minimalist earrings",
-              "Necklace can become the focal point"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For a red dress, avoid making both the earrings and necklace too strong. Red already has visual power, so one clear jewellery focal point usually looks more elegant."
+          "text": "A delicate pendant can echo the downward line of a V-neck. If you choose a necklace, pair it with studs, small hoops or restrained drops. If the earrings are long or visually strong, leave the V-neckline open instead."
         },
         {
           "type": "see-also",
-          "text": "Jewellery for V-Neck Dresses",
+          "text": "What jewellery to wear with a V-neck dress",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Red Dress Ear Stack Ideas",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "A red dress can work beautifully with ear stacks when the stack stays controlled."
+          "type": "subheading",
+          "text": "Strapless or off-shoulder red dress"
         },
         {
           "type": "paragraph",
-          "text": "For bright red and burgundy, gold-toned stacks feel warm and polished. For cooler red or wine shades, white/silver tone can also feel refined. The stack should have one main piece and one smaller support piece."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Red Dress Stack Goal",
-            "Main Piece",
-            "Support Piece",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Elegant red dress stack",
-              "Drop earring",
-              "Small stud",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Bold red party stack",
-              "Bold earring",
-              "Small stud",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Modern red stack",
-              "Hoop",
-              "Small stud",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Classic red stack",
-              "Medium stud",
-              "Huggie",
-              "Cadenza M + Amadea"
-            ],
-            [
-              "Minimal red stack",
-              "Small stud",
-              "Minimalist earring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Romantic red stack",
-              "Butterfly earring",
-              "Small stud",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Formal burgundy stack",
-              "Long drop",
-              "Small stud",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Delicate red wedding stack",
-              "Short drop",
-              "Small stud",
-              "Concetta Short + Cadenza S"
-            ]
-          ]
+          "text": "An open shoulder line provides room for hoops, drops or a statement earring. You do not have to fill the neckline with a necklace; earrings alone can frame the face and preserve the clean shoulder line."
         },
         {
           "type": "see-also",
-          "text": "How to Stack Earrings",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Product Pathways by Red Dress Styling Need",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "For the Safest Red Dress Earrings"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings. They add visible sparkle without making a strong red outfit feel too busy."
+          "text": "What earrings to wear with an off-shoulder dress",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         },
         {
           "type": "subheading",
-          "text": "For Elegant Red Dress Movement"
+          "text": "Sweetheart neckline"
         },
         {
           "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They work beautifully with red satin, burgundy, wedding guest and evening dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Bold Red Party Looks"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso bold statement earrings when the red dress is simple and the earrings should lead."
-        },
-        {
-          "type": "subheading",
-          "text": "For Modern Red Dress Shape"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Pave Hoops. They are strong for red party dresses, red jumpsuits, high-neck red dresses and simple red outfits."
-        },
-        {
-          "type": "subheading",
-          "text": "For Formal Burgundy Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Concetta Long earrings when the outfit needs a refined long line, especially with burgundy, wine or formal red evening dresses."
-        },
-        {
-          "type": "subheading",
-          "text": "For Romantic Red Dress Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings, Alidi Farfalla butterfly earrings or Concetta Short earrings. These work well with romantic, floral, soft red or wedding guest looks."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Red Dress Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Orsola drop earrings",
-              "Best overall red dress earring",
-              "Adds movement and polish"
-            ],
-            [
-              "Lusso bold statement earrings",
-              "Strongest red party option",
-              "Best with simple red dresses"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Safest sparkle option",
-              "Strong when the red dress already has detail"
-            ],
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Support piece",
-              "Balances drops, hoops and bold earrings"
-            ],
-            [
-              "Pave Hoops",
-              "Best modern shape option",
-              "Works well with red party dresses and jumpsuits"
-            ],
-            [
-              "Concetta Long earrings",
-              "Formal red dress styling",
-              "Creates a refined evening line"
-            ],
-            [
-              "Concetta Short earrings",
-              "Delicate wedding guest styling",
-              "Works for romantic and softer red looks"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Romantic red dress styling",
-              "Adds softness and meaning"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Gift-led romantic option",
-              "Strong for birthdays and soft red outfits"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Modern support piece",
-              "Works with detailed dresses and ear stacks"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Soft detail",
-              "Useful with detailed red dresses"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose red dress jewellery by intensity. Pick Orsola for elegant movement, Lusso for bold party sparkle, Cadenza M for clean diamond polish, Pave Hoops for modern shape, and Farfalla or Concetta Short for softer romantic red looks."
-        }
-      ]
-    },
-    {
-      "heading": "Common Red Dress Jewellery Mistakes to Avoid",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "One common mistake is adding too many strong jewellery pieces to an already strong red dress. Red is powerful, so the styling usually looks better with one clear focal point."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is choosing earrings that are too tiny for a bright red or burgundy evening dress. Strong colours can overpower very small earrings, especially when hair is down."
-        },
-        {
-          "type": "paragraph",
-          "text": "A third mistake is wearing bold earrings with a highly detailed red dress. If the dress has sequins, lace, embroidery, heavy draping or a dramatic neckline, studs or huggies may look more polished."
-        },
-        {
-          "type": "paragraph",
-          "text": "Another mistake is choosing rose gold for every red dress. Rose gold works best with softer romantic reds, but yellow gold is usually stronger for bright red, burgundy and wine."
-        },
-        {
-          "type": "paragraph",
-          "text": "Finally, do not ignore the fabric. Red satin needs balanced jewellery because the fabric already has shine, while matte red dresses can usually carry stronger earrings."
+          "text": "A short pendant can sit naturally above a sweetheart neckline. Alternatively, skip the necklace and use romantic drops or polished studs."
         },
         {
           "type": "see-also",
-          "text": "Gold-Plated Jewellery Care Guide",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+          "text": "Jewellery for a sweetheart neckline",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "High-neck red dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "High necklines normally leave limited space for a necklace. Use earrings to create the jewellery focus. Studs keep the look minimal, while hoops or drops create greater visibility."
+        },
+        {
+          "type": "subheading",
+          "text": "One-shoulder red dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "The dress already has an asymmetric visual line, so avoid introducing too many additional focal points. Earrings and a ring or bracelet are often sufficient. Check that longer earrings do not catch against shoulder details."
         }
       ]
     },
     {
-      "heading": "Final Red Dress Jewellery Checklist",
+      "heading": "Jewellery for different occasions",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Red wedding-guest dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Start with the wedding's stated dress code and cultural expectations. For the jewellery, medium studs, controlled drops or refined hoops can provide enough polish without overpowering the outfit. If the dress includes florals, lace or an ornate neckline, use simpler earrings. A plain red dress can carry more visible drops or a romantic motif."
+        },
+        {
+          "type": "subheading",
+          "text": "Red party dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A plain party dress can support pavé hoops, drop earrings or one statement design. A sequinned or metallic party dress usually needs less jewellery."
+        },
+        {
+          "type": "see-also",
+          "text": "Party earrings guide",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Dinner or date-night dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose earrings that remain visible in evening lighting but still suit the scale of the outfit. Medium studs, short drops and polished hoops are useful options. Keep the necklace secondary when the earrings are prominent."
+        },
+        {
+          "type": "see-also",
+          "text": "Date night earrings: what to wear",
+          "href": "/resources/jewellery-gift-guides/date-night-jewellery-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Black-tie or gala dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Look at the complete silhouette rather than choosing the largest earrings available. Long drops can complement an uncomplicated gown, but structured, embellished or asymmetric dresses may look cleaner with studs."
+        },
+        {
+          "type": "subheading",
+          "text": "Red dress for work"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choose studs or small hoops and avoid earrings likely to catch on hair, collars or headsets. A delicate necklace can work with a simple V-neck or round neckline."
+        }
+      ]
+    },
+    {
+      "heading": "Should you wear a necklace with a red dress?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Before choosing jewellery for a red dress, ask:"
+          "text": "Wear a necklace when the neckline creates a natural space for it and the earrings are not already leading the look."
+        },
+        {
+          "type": "paragraph",
+          "text": "A necklace can work with V-neck dresses, scoop necklines, simple strapless dresses, plain sweetheart necklines, and red dresses worn with small studs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider skipping the necklace when:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Is the red shade bright red, burgundy, wine, cherry, soft red or rust red?",
-            "Is the dress simple or detailed?",
-            "Is the fabric satin, lace, sequin, floral, knit or plain?",
-            "Will my hair hide or show the earrings?",
-            "Do I want sparkle, movement, shape or softness?",
-            "Should the earrings or necklace be the main jewellery moment?",
-            "Am I wearing a necklace, or should I skip it?",
-            "Does gold, white/silver tone or rose gold suit this red shade better?",
-            "Is the occasion a wedding, party, dinner or formal event?",
-            "Are the earrings comfortable for the full event?",
-            "Is the ear stack balanced with one main piece?",
-            "Can the jewellery be worn again with other outfits?"
+            "The dress has a high neckline",
+            "The neckline is embellished",
+            "The earrings are long or bold",
+            "The dress has an ornate one-shoulder detail",
+            "The fabric is heavily sequinned",
+            "You want the earrings to be the only focal point"
           ]
         },
         {
           "type": "paragraph",
-          "text": "If you are unsure, choose gold drop earrings for a simple red or burgundy dress, medium studs for a detailed red dress, and bold earrings only when the outfit is clean enough to let the jewellery lead."
+          "text": "A bare neckline is not unfinished. With a strong red dress and visible earrings, it can create the cleaner result."
+        }
+      ]
+    },
+    {
+      "heading": "Three complete red-dress jewellery combinations",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-46.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Simple red slip dress"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Short or medium drop earrings",
+                "No necklace, or one fine chain",
+                "One restrained bracelet or ring",
+                "Hair tucked behind the ears or worn up"
+              ]
+            },
+            {
+              "type": "subheading",
+              "text": "Burgundy V-neck dress"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Diamond studs or short drops",
+                "Delicate pendant following the neckline",
+                "One coordinated metal across earrings and necklace",
+                "No additional statement piece"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Red sequin high-neck dress"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Small or medium studs",
+            "No necklace",
+            "One simple ring",
+            "Hair arranged so the earrings remain visible"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Common mistakes to avoid",
+      "content": [
+        {
+          "type": "bullet-list",
+          "items": [
+            "Wearing large earrings and a large necklace at the same time",
+            "Choosing every accessory solely because it is red",
+            "Ignoring the dress's embellishment and fabric",
+            "Mixing several jewellery styles without a clear focal point",
+            "Selecting long earrings that catch against the neckline or shoulder",
+            "Using tiny earrings that disappear completely beneath the hair",
+            "Treating gold as the only metal that works with red"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Final checklist",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before choosing jewellery, ask:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Is the dress warm red, cool red, burgundy or coral?",
+            "Is the fabric plain, satin, lace, velvet or sequinned?",
+            "Does the neckline provide space for a necklace?",
+            "Will the hairstyle show the earrings?",
+            "Is the dress already highly detailed?",
+            "Should the earrings or necklace lead the look?",
+            "Which metal is already present on the bag, shoes or dress?",
+            "Could the earrings catch against the neckline?",
+            "Does the jewellery suit the event's dress code?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "When uncertain, begin with diamond studs or clean drop earrings, repeat one metal across the outfit and limit the jewellery to one primary focal point."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "What jewellery should I wear with a red dress?",
-      "answer": "The best jewellery for a red dress depends on the shade and dress detail. Gold jewellery, diamond earrings, drop earrings, hoops and medium studs all work well when styled with balance."
-    },
-    {
-      "question": "What earrings look best with a red dress?",
-      "answer": "Drop earrings, medium diamond studs, hoops and bold statement earrings can all work with a red dress. Choose drops for elegance, studs for clean sparkle, hoops for shape and bold earrings for simple party dresses."
+      "question": "What jewellery goes best with a red dress?",
+      "answer": "Diamond studs, hoops and drop earrings can all work with a red dress. Choose the size according to the dress's detail: simpler dresses can carry more visible earrings, while sequinned, lace or embellished dresses usually suit cleaner jewellery."
     },
     {
       "question": "Does gold jewellery go with a red dress?",
-      "answer": "Yes, gold jewellery is one of the best choices with a red dress because it adds warmth, richness and evening polish."
+      "answer": "Yes. Yellow gold creates a warm combination with scarlet, tomato red, rust and many burgundy shades. Keep the design restrained if the dress is already highly detailed."
     },
     {
       "question": "Does silver jewellery go with a red dress?",
-      "answer": "Yes, white or silver-tone jewellery can work with red dresses when the look should feel sharper, cooler or more formal."
-    },
-    {
-      "question": "Does rose gold go with a red dress?",
-      "answer": "Rose gold can work with softer red shades, blush-red outfits and romantic red dresses. Yellow gold is usually stronger for bright red, burgundy and wine."
+      "answer": "Yes. White and silver tones create a cooler contrast and can work particularly well with cherry red, wine, oxblood and blue-based reds."
     },
     {
       "question": "What earrings should I wear with a red satin dress?",
-      "answer": "A red satin dress works well with Orsola drop earrings or Cadenza M diamond studs. Drops add movement, while studs keep the look clean."
-    },
-    {
-      "question": "What jewellery should I wear with a burgundy dress?",
-      "answer": "Burgundy dresses work beautifully with gold drop earrings, long drops, medium diamond studs and refined diamond jewellery."
-    },
-    {
-      "question": "What jewellery should wedding guests wear with a red dress?",
-      "answer": "Wedding guests can wear drop earrings, medium studs, butterfly earrings or delicate drops with a red dress. The best choice depends on whether the dress is simple, satin, lace or detailed."
+      "answer": "Choose diamond studs or clean drop earrings when the satin includes draping, ruching or an elaborate neckline. More visible earrings can work with an uncomplicated satin slip dress."
     },
     {
       "question": "Should I wear a necklace with a red dress?",
-      "answer": "You can, but if the earrings are bold or long, skip the necklace or keep it very delicate. Red dresses usually look better with one clear jewellery focal point."
+      "answer": "A necklace works when the dress has an open neckline and the earrings are relatively simple. Skip it when the dress has a high or embellished neckline or when the earrings already lead the look."
     },
     {
-      "question": "What IWantJewels earrings are best with a red dress?",
-      "answer": "Orsola, Lusso, Cadenza M, Pave Hoops, Concetta Long, Farfalla, Alidi Farfalla and Concetta Short are strong red dress options depending on whether you want movement, boldness, sparkle, shape or softness."
+      "question": "What jewellery works with a burgundy dress?",
+      "answer": "Both yellow-gold and white-tone jewellery can complement burgundy. Consider diamond studs, short drops or refined longer drops depending on the neckline, fabric and event."
     }
   ],
   "cta": {
-    "heading": "A red dress already has impact, so the jewellery should add balance. Choose gold drops for elegant movement, medium studs for clean sparkle, hoops for modern shape, and bold earrings when the dress is simple enough to let the jewellery lead.",
-    "body": "Start with IWantJewels demi-fine lab-grown diamond earrings if you want red dress jewellery with real diamond sparkle. Choose Orsola for elegant movement, Lusso for bold party styling, Cadenza M for clean sparkle, Pave Hoops for shape, Concetta Long for formal burgundy looks and Farfalla or Concetta Short for softer romantic styling.",
+    "heading": "When uncertain, begin with diamond studs or clean drop earrings, repeat one metal across the outfit and limit the jewellery to one primary focal point.",
+    "body": "Check each product page for its dimensions, weight, closure and materials before deciding.",
     "primaryLabel": "Shop Earrings for Red Dresses",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Party Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Party Earrings Guide",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "What Jewellery to Wear with a Green Dress",
+    "secondaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress",
+    "tertiaryLabel": "What Jewellery to Wear with a Black Dress",
+    "tertiaryHref": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
   }
 }

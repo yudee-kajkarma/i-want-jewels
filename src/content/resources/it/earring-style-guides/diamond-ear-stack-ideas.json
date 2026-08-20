@@ -1,507 +1,98 @@
 {
   "meta": {
-    "title": "Idee per stack di orecchie di diamante",
-    "description": "Esplora idee per orecchini con diamanti con borchie, orecchini a cerchio, cerchi, gocce e orecchini con diamanti coltivati in laboratorio per look di tutti i giorni, matrimoni e feste."
+    "title": "Idee ear stack con diamanti: 15 look",
+    "description": "Quindici idee ear stack con diamanti per due e tre piercing: minimal, quotidiane, da lavoro, per invitate a nozze e serate."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-69.jpg",
-    "title": "Idee per la pila di orecchie di diamante:",
-    "subtitle": "Look per tutti i giorni, minimalisti, per matrimoni e feste",
+    "image": "/blog-images/blog-image-42.jpg",
+    "title": "Idee ear stack con diamanti:",
+    "subtitle": "15 look selezionati",
     "paragraphs": [
-      "Un orecchio con diamanti è una combinazione di stile di orecchini di diamanti indossati insieme su uno o più piercing. Può essere morbido e minimale con un piccolo bottone a pressione e un abbraccio, o più evidente con cerchi, gocce e un orecchino audace.",
-      "Il miglior stack per l'orecchio con diamante non deve essere complicato. Dovrebbe sembrare equilibrato, confortevole e intenzionale. Un orecchino dovrebbe solitamente guidare il look, mentre gli altri aggiungono forma, brillantezza o morbidezza.",
-      "Questa risorsa offre idee pratiche per orecchini con diamanti da indossare tutti i giorni, abiti da lavoro, stile minimalista, look per gli invitati al matrimonio, abiti per le feste e set regalo. Collega inoltre ciascuna direzione stilistica ai prodotti IWantJewels come Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long e gli orecchini Lusso bold."
+      "Un ear stack con diamanti combina orecchini a lobo, orecchini a cerchio piccoli (huggie), orecchini a cerchio o gioielli decorativi su più piercing. L'insieme può essere discreto e minimal oppure ruotare intorno a un elemento più evidente.",
+      "L'ispirazione più utile per un ear stack considera più dei singoli orecchini. Colore del metallo, dimensioni, posizione e distanza tra i piercing, acconciatura e abbigliamento influenzano il risultato finale.",
+      "Di seguito trova 15 idee ear stack con diamanti per due e tre piercing, incluse combinazioni minimal, quotidiane, da lavoro, per invitate a nozze e per la sera. Posizioni e distanze dei piercing variano: consideri ogni proposta un'ispirazione, non una regola universale.",
+      "Queste idee sono pensate per piercing guariti. Se un piercing è ancora in fase di guarigione, chieda consiglio a un piercer qualificato prima di cambiare gioiello e non forzi l'orecchino nel piercing."
     ],
-    "shopLabel": "Acquista orecchini a forma di orecchio con diamanti",
+    "shopLabel": "Scopra gli orecchini con diamanti da laboratorio",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Trova idee per orecchini con diamanti in base allo stile e all'occasione",
-      "Costruisci pile di orecchie semplici, equilibrate e di tendenza",
-      "Scegli quale orecchino deve essere inserito nel primo, secondo o terzo piercing",
-      "Abbina borchie, orecchini, cerchi, gocce, orecchini a farfalla e orecchini audaci",
-      "Crea orecchini per tutti i giorni, minimalisti, per invitati a matrimoni, feste e romantici",
-      "Scegli i prodotti IWantJewels impilabili che funzionano insieme",
-      "Pianifica blocchi di immagini, elementi visivi del modello, moduli di prodotto e posizionamenti di CTA",
-      "Costruisci collegamenti interni tra guide di stile, pagine di prodotto e categorie di negozi"
+      "Minimal — piccolo dettaglio con diamante e secondo orecchino discreto",
+      "Classico — diamanti di dimensioni graduate e forma coordinata",
+      "Moderno — silhouette curva e brillantezza concentrata",
+      "Protagonista: cerchio — cerchio pavé con piccolo dettaglio di supporto",
+      "Romantico — farfalla o motivo delicato con dettaglio solitario",
+      "Da lavoro — dimensioni contenute e forme vicine al lobo",
+      "Serale — elemento protagonista deciso e piccolo punto luce con diamante"
     ],
-    "image": "/blog-images/blog-image-62.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Selettore di idee per lo stack dell'orecchio di diamante",
+      "heading": "Selettore di idee ear stack con diamanti",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Utilizza questa tabella nella parte superiore della pagina come strumento di styling principale."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile pila",
-            "Pezzo principale",
-            "Pezzo di supporto",
-            "Miglior direzione dell'IWJ"
-          ],
-          "rows": [
-            [
-              "Pila semplice di tutti i giorni",
-              "Piccolo perno di diamanti",
-              "Huggie",
-              "Cadenza S+Amadea Huggie"
-            ],
-            [
-              "Pila minimalista",
-              "Piccola borchia",
-              "Orecchino minimalista",
-              "Cadenza S+Laluce"
-            ],
-            [
-              "Pila di diamanti classica",
-              "Borchia media",
-              "Piccola borchia",
-              "Cadenza M + Cadenza S"
-            ],
-            [
-              "Moderna pila di abbracci",
-              "Huggie",
-              "Piccola borchia",
-              "Amadea + Cadenza S"
-            ],
-            [
-              "Pila del cerchio",
-              "Cerchio di pavimentazione",
-              "Piccola borchia",
-              "Cerchi Pave + Cadenza S"
-            ],
-            [
-              "Pila romantica",
-              "Orecchino a farfalla",
-              "Piccola borchia",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Pila degli invitati al matrimonio",
-              "Orecchino a goccia",
-              "Piccolo stallone o abbraccio",
-              "Orsola + Cadenza S o Amadea"
-            ],
-            [
-              "Pila morbida per occasioni",
-              "Breve calo",
-              "Orecchino minimalista",
-              "Concetta Corta + Laluce"
-            ],
-            [
-              "Stack serale formale",
-              "Caduta lunga",
-              "Piccola borchia",
-              "Concetta Long + Cadenza S"
-            ],
-            [
-              "Pila di feste",
-              "Orecchino di dichiarazione audace",
-              "Piccola borchia",
-              "Lusso + Cadenza S"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Semplice pila di orecchie di diamanti per tutti i giorni",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un semplice auricolare con diamante per tutti i giorni dovrebbe sembrare facile, comodo e ripetibile. Dovrebbe funzionare con abiti casual, abiti da lavoro, look da viaggio, abiti semplici e styling per il fine settimana."
-        },
-        {
-          "type": "paragraph",
-          "text": "La pila quotidiana più semplice è un piccolo perno di diamante con un abbraccio. Il perno aggiunge brillantezza, mentre l'abbraccio aggiunge forma. Questa combinazione sembra elegante senza diventare troppo pesante."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Posizione",
-            "Direzione degli orecchini",
-            "Direzione del prodotto IWJ"
-          ],
-          "rows": [
-            [
-              "Primo piercing",
-              "Piccolo perno di diamanti",
-              "Cadenza S"
-            ],
-            [
-              "Secondo piercing",
-              "Huggie",
-              "Amedea Huggie"
-            ],
-            [
-              "Terzo piercing opzionale",
-              "Dettaglio minimalista",
-              "Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza S con Amadea Huggie è la combinazione più pulita per tutti i giorni. Se chi lo indossa desidera una finitura più morbida, Laluce può essere aggiunto come piccolo dettaglio di supporto."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Pila minimalista dell'orecchio del diamante",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un auricolare minimalista con diamante dovrebbe apparire morbido, pulito e lucido. Non dovrebbe sembrare affollato o eccessivamente decorato."
-        },
-        {
-          "type": "paragraph",
-          "text": "I migliori stack minimalisti di solito utilizzano orecchini piccoli, forme semplici e un solo colore di metallo. Evita di mescolare troppi pezzi di grandi dimensioni o diversi temi di design diversi."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-73.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
               "type": "table",
               "headers": [
-                "Idea dello stack minimalista",
-                "Combinazione di prodotti",
-                "Perché funziona"
+                "Stile",
+                "Elemento principale",
+                "Elemento di supporto",
+                "Combinazione suggerita"
               ],
               "rows": [
                 [
-                  "Stack morbido e scintillante",
-                  "Cadenza S+Laluce",
-                  "Pulito e silenzioso"
+                  "Minimal",
+                  "Piccolo dettaglio con diamante",
+                  "Secondo orecchino discreto",
+                  "Orecchino a lobo piccolo + orecchino a lobo minimal"
                 ],
                 [
-                  "Stack minimo di abbracci",
-                  "Cadenza S+Amadea",
-                  "Aggiunge forma senza pesantezza"
+                  "Classico",
+                  "Diamanti di dimensioni graduate",
+                  "Forma coordinata",
+                  "Orecchino a lobo medio + orecchino a lobo piccolo"
                 ],
                 [
-                  "Piccola pila a strati",
-                  "Laluce + Cadenza S",
-                  "Molto sottile e indossabile"
+                  "Moderno",
+                  "Silhouette curva",
+                  "Brillantezza concentrata",
+                  "Orecchini a cerchio piccoli (huggie) + orecchino a lobo solitario"
                 ],
                 [
-                  "Pila minima di indumenti da lavoro",
-                  "Cadenza S + Laluce + Amadea",
-                  "Lucido ma non rumoroso"
+                  "Protagonista: cerchio",
+                  "Orecchino a cerchio pavé o con diamanti",
+                  "Piccolo dettaglio di supporto",
+                  "Orecchino a cerchio + orecchino a lobo piccolo"
                 ],
                 [
-                  "Semplice pila di regali",
-                  "Cadenza S+Laluce",
-                  "Sicuro per gli amanti dei gioielli minimal"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Per uno stile minimalista, Cadenza S dovrebbe solitamente essere il punto di partenza. Laluce aggiunge morbidezza, mentre Amadea aggiunge una forma moderna e aderente."
-        },
-        {
-          "type": "see-also",
-          "text": "Guida agli orecchini minimalisti",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Pila classica di borchie di diamanti",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una classica pila di borchie a diamante è costruita attorno a borchie anziché a cerchi o gocce. È una delle idee per gli orecchini più sicure perché sembra senza tempo e facile da indossare."
-        },
-        {
-          "type": "paragraph",
-          "text": "La regola principale è posizionare la borchia più visibile nel primo piercing e quella più piccola nel secondo o terzo piercing. Questo crea un gradiente di dimensioni pulite."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stile impilabile",
-            "Combinazione di prodotti",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Classico stack da stallone quotidiano",
-              "Cadenza M + Cadenza S",
-              "Scintillio più visibile con equilibrio"
-            ],
-            [
-              "Piccola pila di borchie",
-              "Cadenza S+Laluce",
-              "Abbigliamento quotidiano discreto"
-            ],
-            [
-              "Pila di borchie regalabile",
-              "Cadenza M+Laluce",
-              "Regalo classico con dettagli morbidi"
-            ],
-            [
-              "Pila di borchie per abbigliamento da lavoro",
-              "Cadenza S + Cadenza M",
-              "Stile da ufficio raffinato"
-            ],
-            [
-              "Pila di borchie per invitati al matrimonio",
-              "Cadenza M + Cadenza S",
-              "Elegante ma non troppo audace"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza M funziona bene come perno principale perché ha più presenza. Cadenza S funziona bene come pezzo di supporto più piccolo."
-        },
-        {
-          "type": "see-also",
-          "text": "Guida agli orecchini con diamanti coltivati in laboratorio",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Pila di orecchie con diamanti Huggie e Stud",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una pila di orecchini e borchie è una delle idee moderne più indossabili per le orecchie."
-        },
-        {
-          "type": "paragraph",
-          "text": "Il perno fa brillare il diamante e l'abbraccio crea forma attorno all'orecchio. Funziona bene per l'uso quotidiano, i secondi piercing, l'abbigliamento da lavoro, i viaggi e lo stile casual."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Idea della pila di Huggie",
-            "Combinazione di prodotti",
-            "Nota di stile"
-          ],
-          "rows": [
-            [
-              "Semplice pila di abbracci",
-              "Cadenza S+Amadea",
-              "Il miglior stack quotidiano"
-            ],
-            [
-              "Stack di abbracci visibile",
-              "Cadenza M+Amadea",
-              "Più scintillante ma comunque indossabile"
-            ],
-            [
-              "Stack minimo di abbracci",
-              "Laluce+Amadea",
-              "Morbido e moderno"
-            ],
-            [
-              "Stack di abbracci regalabili",
-              "Cadenza S+Amadea",
-              "Regalo semplice in due pezzi"
-            ],
-            [
-              "Pila di abbracci nuziali",
-              "Cadenza M+Amadea",
-              "Buono quando l'outfit ha già dei dettagli"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini Amadea Huggie sono la principale raccomandazione Huggie per questa pagina. Possono essere dotati di un piccolo perno per uno stack leggero o di Cadenza M per uno scintillio più visibile."
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini a bottone o a forma di abbraccio",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Pila di cerchi e borchie di diamanti",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una pila di cerchi e borchie a diamante dà più forma di una semplice pila di borchie. È ottimo per gli acquirenti che desiderano che l'orecchio abbia un aspetto elegante ma comunque indossabile."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pave Hoops può fungere da pezzo principale, mentre Cadenza S o Laluce possono supportare il look. Se il cerchio è più visibile, mantieni gli altri orecchini più piccoli."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Idea della pila del cerchio",
-            "Combinazione di prodotti",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Pila di cerchi di tutti i giorni",
-              "Cerchi Pave + Cadenza S",
-              "Scintilla casuale"
-            ],
-            [
-              "Pila di cerchi minima",
-              "Cerchi Pave + Laluce",
-              "Pulito e moderno"
-            ],
-            [
-              "Pila di cerchi per feste",
-              "Pave Hoops + Cadenza M",
-              "Scintillio più visibile"
-            ],
-            [
-              "Pila del fine settimana",
-              "Cerchi Pave + Amadea",
-              "Uno stile più orientato alla forma"
-            ],
-            [
-              "Pila di vestiti neri",
-              "Cerchi Pave + Cadenza S",
-              "Contrasto e lucentezza semplici"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini a cerchio contro quelli a forma di abbraccio",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Romantico orecchio a farfalla",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un auricolare romantico utilizza forme più morbide e dettagli più personali. Gli orecchini a farfalla funzionano bene qui perché aggiungono significato, non solo brillantezza."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini a farfalla Farfalla o gli orecchini a farfalla Alidi Farfalla possono diventare il punto focale dello stack. Abbinali a un piccolo orecchino a bottone o minimalista in modo che il design a farfalla rimanga chiaro."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Idea romantica dello stack",
-            "Combinazione di prodotti",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Morbida pila di farfalle",
-              "Farfalla + Cadenza S",
-              "Stile romantico quotidiano"
-            ],
-            [
-              "Pila di farfalle regalabile",
-              "Alidi Farfalla + Cadenza S",
-              "Regalo di compleanno o anniversario"
-            ],
-            [
-              "Stack romantico minimo",
-              "Farfalla+Laluce",
-              "Morbido e sottile"
-            ],
-            [
-              "Pila di abiti pastello",
-              "Alidi Farfalla + Laluce",
-              "Stile femminile"
-            ],
-            [
-              "Pila romantica di nozze",
-              "Farfalla + Cadenza S o Concetta Corta",
-              "Look morbido per gli invitati al matrimonio"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli stack di farfalle sono particolarmente utili per compleanni, anniversari, regali per damigelle d'onore, regali romantici e abiti con colori tenui, fiori o raso."
-        },
-        {
-          "type": "see-also",
-          "text": "Significato degli orecchini a farfalla",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Stack di orecchie di diamanti per invitati al matrimonio",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini per gli invitati al matrimonio dovrebbero essere eleganti, raffinati ed equilibrati. Non dovrebbero sembrare troppo nuziali o troppo affollati."
-        },
-        {
-          "type": "paragraph",
-          "text": "Se l'outfit è dettagliato, usa borchie e abbracci. Se l'outfit è semplice, usa un orecchino pendente come pezzo principale. Se l'outfit è romantico, usate orecchini a farfalla o a goccia morbida."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-75.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look degli invitati al matrimonio",
-                "Combinazione di prodotti",
-                "Perché funziona"
-              ],
-              "rows": [
-                [
-                  "Abito dettagliato",
-                  "Cadenza M+Amadea",
-                  "Brilla senza sovraffollamento"
+                  "Romantico",
+                  "Farfalla o motivo delicato",
+                  "Dettaglio solitario",
+                  "Orecchino decorativo + orecchino a lobo piccolo"
                 ],
                 [
-                  "Abito semplice in raso",
-                  "Orsola + Cadenza S",
-                  "Aggiunge movimento e lucentezza"
+                  "Da lavoro",
+                  "Dimensioni contenute",
+                  "Forme vicine al lobo",
+                  "Orecchino a lobo + orecchini a cerchio piccoli (huggie)"
                 ],
                 [
-                  "Abito floreale romantico",
-                  "Farfalla + Cadenza S",
-                  "Morbido e femminile"
+                  "Invitata a nozze",
+                  "Orecchino pendente o a lobo evidente",
+                  "Supporto discreto",
+                  "Orecchino pendente + orecchino a lobo piccolo"
                 ],
                 [
-                  "Abito nero",
-                  "Orsola o Lusso + Cadenza S",
-                  "Forte contrasto e brillantezza"
-                ],
-                [
-                  "Abito pastello",
-                  "Alidi Farfalla + Laluce",
-                  "Morbido e romantico"
-                ],
-                [
-                  "Abito formale",
-                  "Concetta Long + Cadenza S",
-                  "Allungato e raffinato"
-                ],
-                [
-                  "Look da damigella d'onore",
-                  "Cadenza S + Concetta Corta",
-                  "Delicato e indossabile"
+                  "Serale",
+                  "Elemento protagonista deciso",
+                  "Piccolo punto luce con diamante",
+                  "Orecchino decorativo + orecchino a lobo piccolo"
                 ]
               ]
             }
@@ -509,596 +100,342 @@
         },
         {
           "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per matrimoni",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Pila di orecchie di diamanti per feste",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una pila di orecchie di diamanti da festa può essere più forte, ma ha comunque bisogno di equilibrio."
-        },
-        {
-          "type": "paragraph",
-          "text": "I migliori stack per le feste di solito hanno un pezzo audace e un piccolo pezzo di supporto. Se ogni orecchino è grande, la pila può sembrare disordinata. Lascia che sia l'orecchino principale a condurre."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Idea dello stack del partito",
-            "Combinazione di prodotti",
-            "Nota di stile"
-          ],
-          "rows": [
-            [
-              "Pila di feste in grassetto",
-              "Lusso + Cadenza S",
-              "Lascia che Lusso guidi"
-            ],
-            [
-              "Elegante pila per feste",
-              "Orsola + Cadenza S",
-              "Aggiunge movimento senza pesantezza"
-            ],
-            [
-              "Pila di feste a cerchio",
-              "Pave Hoops + Cadenza M",
-              "Più forma e brillantezza"
-            ],
-            [
-              "Pila di vestiti neri",
-              "Lusso+Laluce",
-              "Forte ma equilibrato"
-            ],
-            [
-              "Pila da cena a festa",
-              "Cadenza M+Amadea",
-              "Lucido e indossabile"
-            ],
-            [
-              "Pila di feste formali",
-              "Concetta Long + Cadenza S",
-              "Raffinato e allungato"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Gli orecchini Lusso audaci di solito dovrebbero essere il pezzo principale. Abbinalo a Cadenza S o Laluce in modo che l'orecchio non sembri troppo affollato."
-        },
-        {
-          "type": "see-also",
-          "text": "Guida agli orecchini per le feste",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Stack di orecchie di diamante per indumenti da lavoro",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un auricolare da lavoro dovrebbe sembrare raffinato, semplice e non distraente."
-        },
-        {
-          "type": "paragraph",
-          "text": "Borchie, orecchini e orecchini minimalisti sono i migliori per il lavoro perché stanno vicino all'orecchio e si sentono a proprio agio per lunghe ore. Evita orecchini a goccia lunghi o orecchini vistosi, a meno che lo stile sul posto di lavoro non consenta gioielli più espressivi."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Idea per la pila di indumenti da lavoro",
-            "Combinazione di prodotti",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Pila da ufficio classica",
-              "Cadenza S+Laluce",
-              "Indumenti da lavoro minimi"
-            ],
-            [
-              "Pila da ufficio lucida",
-              "Cadenza M+Amadea",
-              "Più visibile ma comunque pulito"
-            ],
-            [
-              "Pila di ufficio moderno",
-              "Amadea + Cadenza S",
-              "Stile guidato da Huggie"
-            ],
-            [
-              "Pila ufficio minima",
-              "Laluce + Cadenza S",
-              "Stile silenzioso e morbido"
-            ],
-            [
-              "Pila dal giorno alla cena",
-              "Cadenza M+Orsola",
-              "Per i piani dopo il lavoro"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "La gioielleria semifine è adatta per essere indossata tutti i giorni?",
-          "href": "/resources/demi-fine-jewellery-guides/is-demi-fine-jewellery-good-for-everyday-wear"
-        }
-      ]
-    },
-    {
-      "heading": "Set regalo per orecchini con diamanti",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Una pila di orecchini con diamanti può essere un regalo premuroso perché offre al destinatario una combinazione di stile già pronta."
-        },
-        {
-          "type": "paragraph",
-          "text": "Funziona particolarmente bene se il destinatario ha già più piercing o ama i gioielli moderni. Se non sei sicuro, inizia con una combinazione stud-hugie perché è la più sicura."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Tipo di regalo",
-            "Combinazione di pile",
-            "Ideale per"
-          ],
-          "rows": [
-            [
-              "Regalo iniziale sicuro",
-              "Cadenza S+Amadea",
-              "Regalo per il primo orecchio"
-            ],
-            [
-              "Regalo classico con diamanti",
-              "Cadenza M + Cadenza S",
-              "Scintillio senza tempo"
-            ],
-            [
-              "Regalo minimalista",
-              "Cadenza S+Laluce",
-              "Tranquillo amante dei gioielli"
-            ],
-            [
-              "Regalo romantico",
-              "Farfalla + Cadenza S",
-              "Compleanno o anniversario"
-            ],
-            [
-              "Regalo moderno",
-              "Amadea + Pave Cerchi",
-              "Amante del cerchio e dell'abbraccio"
-            ],
-            [
-              "Regalo della damigella d'onore",
-              "Cadenza S + Concetta Corta",
-              "Regalo legato al matrimonio"
-            ],
-            [
-              "Regalo per feste",
-              "Lusso + Cadenza S",
-              "Amante audace dei gioielli"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio per regali",
-          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Idee per l'impilamento delle orecchie di Piercing Count",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Il numero di piercing cambia quanto puoi impilare."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Conteggio penetrante",
-            "Migliore direzione dello stack",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Un piercing",
-              "Scegli un pezzo forte",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Due piercing",
-              "Pezzo principale + piccolo supporto",
-              "Cadenza M + Cadenza S, Cadenza S + Amadea"
-            ],
-            [
-              "Tre piercing",
-              "Principale + forma + dettaglio morbido",
-              "Cadenza M+Amadea+Laluce"
-            ],
-            [
-              "piercing multipli",
-              "Un pezzo focale con supporto più piccolo",
-              "Orsola + Cadenza S + Laluce"
-            ],
-            [
-              "Nessun secondo piercing",
-              "Usa uno stile di orecchino dal design forte",
-              "Pave Hoops, Farfalla, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Se hai un solo piercing, puoi comunque creare un look da orecchino forte. Scegli un orecchino a bottone, a cerchio, a farfalla, a goccia o audace in base all'occasione."
-        },
-        {
-          "type": "see-also",
-          "text": "Come impilare gli orecchini",
+          "text": "Come creare un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
         }
       ]
     },
     {
-      "heading": "Idee per l'impilamento delle orecchie di Outfit",
+      "heading": "Idee ear stack con diamanti per due piercing",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Lo stile dell'outfit dovrebbe guidare lo stack dell'orecchio."
+          "type": "subheading",
+          "text": "1. Orecchino a lobo piccolo con diamante e huggie"
         },
         {
-          "type": "table",
-          "headers": [
-            "Vestito",
-            "La migliore idea per lo stack dell'orecchio",
-            "Direzione del prodotto"
-          ],
-          "rows": [
-            [
-              "Camicia bianca e jeans",
-              "Piccolo stallone + abbraccio",
-              "Cadenza S+Amadea"
-            ],
-            [
-              "Completo blazer",
-              "Borchia media + abbraccio",
-              "Cadenza M+Amadea"
-            ],
-            [
-              "Abito nero",
-              "Goccia o dichiarazione + piccola borchia",
-              "Orsola o Lusso + Cadenza S"
-            ],
-            [
-              "Abito in raso",
-              "Goccia + perno minimo",
-              "Orsola+Laluce"
-            ],
-            [
-              "Abito floreale",
-              "Farfalla + borchia piccola",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Abito minimale",
-              "Cerchio o goccia + piccolo dettaglio",
-              "Pave Hoops oppure Orsola+Laluce"
-            ],
-            [
-              "Abito per invitati al matrimonio",
-              "Stack a goccia, a perno o a farfalla",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Abito da festa",
-              "Orecchino audace + supporto sottile",
-              "Lusso + Cadenza S"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Un orecchino a lobo piccolo in stile solitario e un orecchino a cerchio piccolo (huggie) creano un contrasto semplice tra brillantezza concentrata e silhouette curva. Scelga la stessa finitura del metallo per entrambi, così da ottenere un effetto uniforme. Per un contrasto maggiore, scelga un huggie con un dettaglio di diamante evidente e un orecchino a lobo solitario più discreto."
+        },
+        {
+          "type": "subheading",
+          "text": "2. Orecchini a lobo con diamanti, medi e piccoli"
+        },
+        {
+          "type": "paragraph",
+          "text": "Abbini due orecchini a lobo con diamanti di dimensioni chiaramente diverse. Quello più grande diventa il punto focale, mentre quello più piccolo continua la brillantezza senza duplicarne il peso visivo. Un ear stack con dimensioni graduate è ideale se preferisce gioielli classici e vuole mantenere la stessa forma su entrambi gli orecchini."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posizioni l'orecchino più grande nel punto con maggiore spazio intorno. Spesso sarà il piercing del lobo inferiore, ma la disposizione deve seguire l'anatomia di chi lo indossa."
+        },
+        {
+          "type": "subheading",
+          "text": "3. Orecchino a cerchio pavé con orecchino solitario"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino a cerchio pavé definisce maggiormente il contorno, mentre un piccolo orecchino a lobo con diamante aggiunge un discreto punto luce. Questa combinazione punta più sulle forme rispetto a un ear stack con due orecchini a lobo. Prima di scegliere un cerchio specifico, verifichi diametro, peso e chiusura: non tutti gli orecchini a cerchio sono adatti a ogni posizione del piercing."
+        },
+        {
+          "type": "subheading",
+          "text": "4. Orecchino a lobo geometrico con orecchino a lobo tondo con diamante"
+        },
+        {
+          "type": "paragraph",
+          "text": "Abbini un orecchino geometrico a un orecchino a lobo tondo in stile solitario per creare un contrasto controllato. Le forme sono diverse, ma la stessa finitura del metallo e il dettaglio con diamante collegano l'insieme. Un orecchino focale esagonale, triangolare o angolare si abbina bene a un orecchino a lobo tondo più piccolo."
+        },
+        {
+          "type": "subheading",
+          "text": "5. Coppia minimal di orecchini a lobo con diamanti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Scelga due piccoli orecchini con contorni diversi ma peso visivo simile. Uno può avere un dettaglio solitario tondo, mentre l'altro può seguire una forma curva o lineare. È una proposta più discreta rispetto a una progressione con orecchino a lobo medio e piccolo."
         },
         {
           "type": "see-also",
-          "text": "Quali gioielli indossare con un abito nero",
-          "href": "#"
+          "text": "Guida agli orecchini minimalisti",
+          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
         }
       ]
     },
     {
-      "heading": "Punte di colore in metallo per pile di orecchie di diamante",
+      "heading": "Idee ear stack con diamanti per tre piercing",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "6. Ear stack graduato con tre orecchini a lobo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ear stack graduato con orecchini a lobo con diamanti usa tre dimensioni o design visibili, disposti dal più evidente al più discreto. Gli orecchini non devono essere identici: l'aspetto importante è la riduzione graduale delle dimensioni, ad esempio con un orecchino a lobo solitario medio, uno piccolo e un dettaglio minimal con diamante."
+        },
+        {
+          "type": "subheading",
+          "text": "7. Orecchino a lobo, huggie e dettaglio minimal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa combinazione usa tre forme diverse: un orecchino a lobo con diamante per una brillantezza concentrata, un orecchino a cerchio piccolo (huggie) per la curvatura e un orecchino minimal come dettaglio finale. La stessa finitura del metallo impedisce alle tre forme di apparire scollegate."
+        },
+        {
+          "type": "subheading",
+          "text": "8. Orecchino a cerchio con due orecchini a lobo graduati"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lasci che un orecchino a cerchio definisca il contorno principale e disponga intorno due orecchini a lobo progressivamente più discreti. Questa combinazione contiene più gioielli visibili rispetto a un ear stack per due piercing, quindi i due elementi di supporto dovrebbero restare contenuti. Eviti di abbinare al cerchio due orecchini a lobo altrettanto grandi o decorativi: l'insieme dovrebbe avere un solo punto focale evidente."
+        },
+        {
+          "type": "subheading",
+          "text": "9. Orecchino a lobo con diamante e due forme diverse"
+        },
+        {
+          "type": "paragraph",
+          "text": "Parta da un orecchino a lobo in stile solitario e aggiunga due piccoli orecchini con contorni diversi, ad esempio un orecchino a cerchio piccolo (huggie) e un design curvo minimal. I tre gioielli possono condividere la finitura del metallo e i dettagli con diamanti, introducendo varietà attraverso le forme."
+        },
+        {
+          "type": "subheading",
+          "text": "10. Ear stack con farfalla protagonista"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino a farfalla può offrire il motivo distintivo, accompagnato da due dettagli con diamanti più discreti. Usi una sola farfalla o un solo motivo riconoscibile nell'ear stack. Aggiungere diverse forme simboliche può rendere l'insieme poco coordinato."
+        },
+        {
+          "type": "see-also",
+          "text": "Come abbinare gli orecchini a forma di farfalla",
+          "href": "/resources/earring-style-guides/how-to-style-butterfly-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Idee ear stack con diamanti per stile e occasione",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "11. Ear stack minimal con diamanti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ear stack minimal si basa su dimensioni contenute, forme pulite e spazio visibile tra gli orecchini. Scelga due o tre piccoli gioielli accomunati dallo stesso colore del metallo. La varietà dovrebbe derivare dai contorni, non da diversi motivi in competizione."
+        },
+        {
+          "type": "subheading",
+          "text": "12. Ear stack quotidiano e da lavoro"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un look quotidiano o da lavoro, scelga orecchini relativamente vicini al lobo, che non dominino l'outfit completo. La combinazione di orecchino a lobo e huggie offre un contrasto sufficiente a rendere visibile l'ear stack, mantenendo un aspetto discreto. Può aggiungere un terzo piccolo dettaglio quando lo spazio lo consente."
+        },
+        {
+          "type": "subheading",
+          "text": "13. Ear stack con diamanti per invitate a nozze"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ear stack per un'invitata a nozze può usare un orecchino pendente o a lobo più evidente come punto focale, sostenuto da un orecchino con diamante più piccolo. Con un abito ricco o molto elaborato, scelga una combinazione discreta di orecchino a lobo e huggie. Con un abito semplice, un orecchino pendente abbinato a un piccolo orecchino a lobo è una scelta efficace."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Abito in raso semplice: orecchino pendente + piccolo orecchino a lobo solitario",
+            "Abito floreale: orecchino a farfalla + piccolo orecchino a lobo",
+            "Abito strutturato: orecchino a lobo medio + huggie",
+            "Abito nero: orecchino pendente allungato + dettaglio discreto con diamante"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "14. Ear stack per cena e serata formale"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un orecchino allungato può diventare l'elemento principale del look per una cena o un evento formale. Mantenga piccoli gli altri gioielli, così la linea allungata resta visibile. Un pendente lungo con un piccolo orecchino a lobo solitario è una combinazione affidabile."
+        },
+        {
+          "type": "subheading",
+          "text": "15. Ear stack con punto focale per feste"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un ear stack da festa può scegliere un orecchino più decorativo o visivamente importante, ma gli altri elementi non dovrebbero ripetere lo stesso livello di dettaglio. Abbini un solo orecchino protagonista deciso a un piccolo orecchino a lobo con diamante."
+        },
+        {
+          "type": "see-also",
+          "text": "Orecchini con diamanti da laboratorio per matrimoni",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini da festa",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "see-also",
+          "text": "Guida agli orecchini con diamanti da laboratorio per tutti i giorni",
+          "href": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Ear stack con diamanti simmetrico e asimmetrico",
       "content": [
         {
           "type": "paragraph",
-          "text": "Un orecchio con diamante di solito sembra più lucido quando il colore del metallo è coerente."
+          "text": "Un ear stack simmetrico ripete elementi corrispondenti su entrambe le orecchie. Il risultato ha una struttura coerente e tradizionale."
         },
         {
           "type": "paragraph",
-          "text": "L'oro giallo dona un aspetto caldo e classico. I toni bianchi o argento sembrano puliti e moderni. L'oro rosa è morbido e romantico. I metalli misti possono funzionare, ma dovrebbero sembrare intenzionali."
+          "text": "Un ear stack asimmetrico usa disposizioni diverse su ciascun orecchio. Ad esempio:"
         },
         {
-          "type": "table",
-          "headers": [
-            "Direzione del metallo",
-            "Ideale per",
-            "Sensazione di stile"
-          ],
-          "rows": [
-            [
-              "Pila d'oro giallo",
-              "Outfit quotidiani, armadi caldi, styling classico",
-              "Caldo e raffinato"
-            ],
-            [
-              "Pila bianca o argento",
-              "Abiti minimal, armadi fantastici, stile moderno",
-              "Pulito e luminoso"
-            ],
-            [
-              "Pila in oro rosa",
-              "Abiti romantici e stile regalo",
-              "Morbido e femminile"
-            ],
-            [
-              "Pila metallica mista",
-              "Stile creativo",
-              "Moderno e giocoso"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Tre orecchini su un orecchio e un orecchino a lobo solitario sull'altro",
+            "Un ear stack con orecchino a cerchio protagonista su un orecchio e una combinazione di due orecchini a lobo sull'altro",
+            "Un elemento decorativo protagonista su un lato e un huggie più discreto sull'altro"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Per i regali, scegli il colore del metallo che il destinatario indossa già più spesso. Per il tuo stack, scegli la finitura che si adatta al tuo guardaroba quotidiano di gioielli."
+          "text": "Per collegare una disposizione asimmetrica, ripeta un elemento su entrambe le orecchie: colore del metallo, forma del diamante, motivo, livello di brillantezza oppure linee curve rispetto ad angolari."
+        }
+      ]
+    },
+    {
+      "heading": "Idee ear stack con diamanti in oro giallo, bianco e rosa",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Il colore del metallo cambia il carattere complessivo di un ear stack con diamanti."
+        },
+        {
+          "type": "subheading",
+          "text": "Finitura in oro giallo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una finitura in oro giallo crea un aspetto più caldo e si abbina bene ad abiti neutri, color crema, marroni, verde oliva e neri."
+        },
+        {
+          "type": "subheading",
+          "text": "Finitura bianca o color argento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ear stack bianco o dai toni argentati crea un contrasto più fresco e netto attorno ai diamanti, separandoli visivamente dai capelli o dagli abiti scuri."
+        },
+        {
+          "type": "subheading",
+          "text": "Finitura oro rosa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una finitura oro rosa crea una palette più delicata, che può valorizzare il rosa cipria, il bordeaux e altre tonalità calde."
+        },
+        {
+          "type": "subheading",
+          "text": "Ear stack in metalli misti"
+        },
+        {
+          "type": "paragraph",
+          "text": "I metalli misti funzionano quando entrambi i colori vengono ripresi. Eviti di aggiungere un singolo orecchino a contrasto, che potrebbe sembrare casuale. Prima di dare per disponibile un prodotto in una determinata finitura, verifichi le varianti attuali nella pagina prodotto."
         },
         {
           "type": "see-also",
-          "text": "Orecchini con diamanti coltivati in laboratorio in oro, bianco e oro rosa",
+          "text": "Orecchini con diamanti da laboratorio in oro giallo, bianco o rosa",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Percorsi del prodotto in base allo stile dello stack",
+      "heading": "Come scegliere un'idea per i Suoi piercing",
       "content": [
         {
-          "type": "subheading",
-          "text": "Per un semplice stack quotidiano"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini a bottone con diamanti coltivati in laboratorio Cadenza S con gli orecchini Amadea Huggie. Questo è lo stack di orecchini con diamante più semplice da indossare ogni giorno."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stack minimalista"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Cadenza S con gli orecchini minimalisti con diamanti Laluce. Ciò conferisce una brillantezza morbida senza che l'orecchio si senta occupato."
-        },
-        {
-          "type": "subheading",
-          "text": "Per una classica pila di diamanti"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli Cadenza M con Cadenza S. Questo crea una pila di borchie diamantate pulita con equilibrio di dimensioni."
-        },
-        {
-          "type": "subheading",
-          "text": "Per uno stack romantico"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini farfalla Farfalla con Cadenza S. Funziona bene per outfit morbidi, compleanni e regali simbolici."
-        },
-        {
-          "type": "subheading",
-          "text": "Per una pila di invitati al matrimonio"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini pendenti Orsola con Cadenza S per abiti semplici, o Cadenza M con Amadea per outfit dettagliati."
-        },
-        {
-          "type": "subheading",
-          "text": "Per una pila di feste"
-        },
-        {
-          "type": "paragraph",
-          "text": "Scegli gli orecchini audaci di Lusso con Cadenza S. Mantieni il pezzo di supporto piccolo in modo che Lusso possa guidare il look."
-        }
-      ]
-    },
-    {
-      "heading": "Consigli sui prodotti da IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Prodotto",
-            "Miglior ruolo nell'orecchio",
-            "Perché funziona"
-          ],
-          "rows": [
-            [
-              "Borchie con diamanti coltivati in laboratorio Cadenza S",
-              "Piccolo punto di scintilla",
-              "Funziona con il primo, il secondo o il piercing di supporto"
-            ],
-            [
-              "Orecchini a bottone con diamanti Cadenza M",
-              "Perno principale",
-              "Scintillio del diamante più visibile"
-            ],
-            [
-              "Orecchini Amadea Huggie",
-              "Pezzo di forma",
-              "Forte per gli stack di tutti i giorni"
-            ],
-            [
-              "Orecchini minimalisti con diamanti Laluce",
-              "Dettagli morbidi",
-              "Mantiene gli stack puliti e discreti"
-            ],
-            [
-              "Pavimentare i cerchi",
-              "Pezzo principale del cerchio",
-              "Aggiunge forma e brillantezza"
-            ],
-            [
-              "Orecchini farfalla Farfalla",
-              "Pezzo focale romantico",
-              "Aggiunge significato e morbidezza"
-            ],
-            [
-              "Orecchini farfalla Alidi Farfalla",
-              "Pezzo romantico regalabile",
-              "Forte per compleanni e anniversari"
-            ],
-            [
-              "Orecchini pendenti Orsola",
-              "Pezzo focale per l'occasione",
-              "Aggiunge movimento per matrimoni e cene"
-            ],
-            [
-              "Orecchini corti Concetta",
-              "Pezzo morbido",
-              "Funziona per pile di occasioni delicate"
-            ],
-            [
-              "Orecchini Concetta Lunghi",
-              "Pezzo formale",
-              "Crea una raffinata linea da sera"
-            ],
-            [
-              "Orecchini di lusso audaci",
-              "Pezzo centrale della festa",
-              "Meglio quando il resto dello stack è semplice"
-            ]
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Usi queste idee come ispirazione, poi verifichi:"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Il numero di piercing cicatrizzati",
+                "La distanza tra loro",
+                "Le dimensioni di ogni orecchino",
+                "Se gli orecchini vicini si toccherebbero",
+                "La direzione in cui è posizionato ogni orecchino a lobo",
+                "Diametro dell'orecchino a cerchio o dell'orecchino a cerchio piccolo (huggie)",
+                "Lo spazio per la chiusura e il retro",
+                "Il peso dell'orecchino",
+                "Se il prodotto viene venduto in coppia o come pezzo singolo"
+              ]
+            }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Scegli il tuo stack auricolare in base all'umore. Inizia con Cadenza S e Amadea per lo styling di tutti i giorni, Cadenza S e Laluce per look minimal, Farfalla e Cadenza S per uno stile romantico, Orsola e Cadenza S per i matrimoni, o Lusso e Cadenza S per le feste."
-        }
-      ]
-    },
-    {
-      "heading": "Errori comuni nello stack dell'orecchio di diamante da evitare",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Un errore comune è fare in modo che ogni orecchino abbia la stessa dimensione. Un buon stack per le orecchie necessita di una differenza di dimensioni in modo che l'aspetto risulti equilibrato."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è usare troppi elementi focali. Un orecchino audace, un orecchino pendente e un cerchio grande insieme possono far sembrare l'orecchio affollato."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un terzo errore è dimenticare il comfort. Se la pila tira, si impiglia nei capelli o sembra pesante, non verrà indossata spesso."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un altro errore è mescolare i colori metallici senza intenzione. I metalli misti possono funzionare, ma abbinare i metalli è più facile per un aspetto lucido."
-        },
-        {
-          "type": "paragraph",
-          "text": "Infine, non comprare orecchini solo perché stanno bene separatamente. Dovrebbero anche funzionare insieme come uno stack."
+          "text": "Non acquisti una combinazione di tre pezzi basandosi solo sulla fotografia di una modella. La forma dell'orecchio, l'angolazione dei piercing e la distanza tra loro variano."
         },
         {
           "type": "see-also",
-          "text": "Come impilare gli orecchini",
+          "text": "Come creare un ear stack",
           "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Elenco di controllo finale dello stack dell'orecchio di diamante",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Prima di scegliere una pila di orecchie di diamante, chiedi:"
         },
         {
-          "type": "bullet-list",
-          "items": [
-            "Quanti piercing ho?",
-            "Quale orecchino è il pezzo principale?",
-            "Quale orecchino aggiunge forma?",
-            "Quale orecchino aggiunge dettagli morbidi?",
-            "Le dimensioni degli orecchini sono equilibrate?",
-            "Il colore del metallo sembra intenzionale?",
-            "Lo stack è comodo per l'occasione?",
-            "Si abbina al mio outfit?",
-            "È da indossare tutti i giorni, al lavoro, a un matrimonio, a una festa o a un regalo?",
-            "Gli orecchini possono essere indossati anche separatamente?",
-            "Gli orecchini sono facili da pulire e riporre?",
-            "Lo stack completo sembra raffinato anziché affollato?"
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Se non sei sicuro, inizia con un piccolo stallone e un abbraccio. Questa è l'idea più semplice per impilare le orecchie con diamanti e la più facile da indossare."
+          "type": "see-also",
+          "text": "Guida alle dimensioni degli orecchini con diamante da laboratorio",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Cos'è una pila di orecchie di diamante?",
-      "answer": "Un orecchio con diamanti è una combinazione di orecchini di diamanti indossati insieme su uno o più piercing. Può includere borchie, orecchini, cerchi, gocce e piccoli orecchini di tendenza."
+      "question": "Che cos'è un ear stack con diamanti?",
+      "answer": "Un ear stack con diamanti è una combinazione di orecchini con diamanti indossati su più piercing. Può includere orecchini a lobo, orecchini a cerchio piccoli (huggie), orecchini a cerchio, orecchini pendenti o orecchini decorativi, collegati dalla dimensione, dal metallo o dai dettagli con diamanti."
     },
     {
-      "question": "Quali orecchini sono i migliori per un orecchio con diamanti?",
-      "answer": "Borchie, orecchini a cerchio, cerchi e orecchini minimalisti sono i migliori per la maggior parte degli orecchini con diamanti. Orecchini a goccia e di tendenza possono funzionare se usati come pezzo principale."
+      "question": "Che cos'è un semplice ear stack con diamanti per due piercing?",
+      "answer": "Un piccolo orecchino a lobo con diamante abbinato a un orecchino a cerchio piccolo (huggie) è un'opzione. Anche due orecchini a lobo con diamanti di dimensioni graduate o un piccolo orecchino a cerchio con un orecchino a lobo più discreto possono creare una combinazione chiara di due pezzi."
     },
     {
-      "question": "Qual è lo stack di orecchie di diamante più semplice?",
-      "answer": "Il modello più semplice per l'orecchio con diamante è un piccolo perno di diamante con un abbraccio. È comodo, equilibrato e facile da indossare tutti i giorni."
+      "question": "Qual è una buona idea per un ear stack con diamanti su tre piercing?",
+      "answer": "Provi un orecchino a lobo medio, un orecchino a cerchio piccolo (huggie) e un dettaglio minimalista con diamante. Un'altra opzione è un orecchino a cerchio con due orecchini a lobo progressivamente più piccoli. Adatti le posizioni alla forma del Suo orecchio e alla distanza tra i piercing."
     },
     {
-      "question": "Come si fa a far sembrare bilanciato un auricolare?",
-      "answer": "Scegli un orecchino principale, una forma di supporto e un dettaglio più piccolo. Evita di rendere ogni orecchino grande o ugualmente audace."
+      "question": "Tutti gli orecchini di un ear stack con diamanti devono essere abbinati?",
+      "answer": "No. Possono differire per forma e dimensione, ma ripetere un elemento — come il colore del metallo, la forma del diamante o un motivo — aiuta a creare un ear stack armonioso."
     },
     {
-      "question": "Puoi indossare i cerchi in una pila di orecchie?",
-      "answer": "Sì, i cerchi funzionano bene in una pila di orecchie. Abbina un cerchio a un orecchino a bottone più piccolo o minimalista in modo che il cerchio possa guidare il look."
+      "question": "Si possono abbinare orecchini a cerchio e orecchini a lobo in un ear stack?",
+      "answer": "Sì. Lasci che l'orecchino a cerchio definisca il profilo e usi orecchini a lobo più piccoli come elementi di supporto, così entrambi resteranno ben visibili."
     },
     {
-      "question": "Puoi indossare orecchini pendenti in una pila di orecchie?",
-      "answer": "Sì, ma di solito l'orecchino pendente dovrebbe essere il pezzo principale. Mantieni gli altri orecchini più piccoli."
+      "question": "Un ear stack con diamanti deve essere simmetrico?",
+      "answer": "Può essere simmetrico o asimmetrico. Un ear stack asimmetrico appare studiato quando almeno un elemento — il colore del metallo, la forma del diamante o il motivo — viene ripetuto su entrambe le orecchie."
     },
     {
-      "question": "Puoi indossare orecchini a farfalla in una pila di orecchie?",
-      "answer": "Sì, gli orecchini a farfalla possono essere usati come pezzo focale romantico. Abbinali a piccole borchie o orecchini minimalisti."
+      "question": "Quale ear stack è adatto a un matrimonio per un'invitata?",
+      "answer": "Un orecchino pendente o un orecchino a lobo più visibile come punto focale, abbinato a un orecchino con diamante più piccolo come supporto. Abbini le dimensioni a quanto è già elaborato l'abito."
     },
     {
-      "question": "Quale auricolare con diamanti è il migliore da indossare ogni giorno?",
-      "answer": "Un piccolo perno di diamanti con un abbraccio è l'ideale da indossare ogni giorno. Cadenza S con Amadea Huggie è una forte direzione di IWantJewels."
-    },
-    {
-      "question": "Quale orecchio di diamanti è il migliore per i matrimoni?",
-      "answer": "Per i matrimoni, scegli un pezzo elegante e focale come gli orecchini pendenti Orsola con un piccolo bottone, o Cadenza M con Amadea se l'outfit ha già dei dettagli."
-    },
-    {
-      "question": "Un orecchio con diamanti può essere un regalo?",
-      "answer": "Sì, un set per orecchini con diamanti può essere un regalo premuroso, in particolare una combinazione di borchie e orecchini o un orecchino a farfalla con un piccolo perno di diamanti."
+      "question": "Si può creare un ear stack con soli due piercing?",
+      "answer": "Sì. Un ear stack di due pezzi può apparire studiato quanto uno più ricco, quando gli orecchini hanno dimensioni diverse e condividono un elemento visivo."
     }
   ],
   "cta": {
-    "heading": "Gli orecchini con diamanti funzionano meglio quando si sentono equilibrati, indossabili e intenzionali. Inizia con un orecchino principale, aggiungi una forma di supporto e mantieni morbido il più piccolo dettaglio. Per l'uso quotidiano, scegli borchie e abbracci. Per i matrimoni scegliete le gocce con piccoli orecchini di sostegno. Per le feste, lascia che sia un pezzo audace a guidare.",
-    "body": "Inizia con gli orecchini con diamanti semifini coltivati in laboratorio di IWantJewels se desideri pezzi impilabili con il vero scintillio dei diamanti. Scegli Cadenza S e Amadea per un semplice stile quotidiano, Cadenza S e Laluce per uno stile minimalista, Farfalla e Cadenza S per uno stile romantico, Orsola e Cadenza S per i matrimoni, o Lusso e Cadenza S per uno stile da festa.",
-    "primaryLabel": "Acquista orecchini a forma di orecchio con diamanti",
+    "heading": "Usi questi quindici look come punto di partenza, poi li adatti alla distanza tra i Suoi piercing, alle dimensioni degli orecchini e alla Sua acconciatura, invece di copiare esattamente una fotografia.",
+    "body": "Scopra gli orecchini con diamanti da laboratorio di I Want Jewels e controlli nella pagina di ogni prodotto le dimensioni, il peso, la chiusura e se viene venduto in coppia, prima di abbinare più pezzi allo stesso orecchio.",
+    "primaryLabel": "Scopra gli orecchini con diamanti da laboratorio",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Esplora gli orecchini Huggie",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Leggi Come impilare gli orecchini",
-    "tertiaryHref": "/resources/earring-style-guides/how-to-stack-earrings"
+    "secondaryLabel": "Come creare un ear stack di orecchini",
+    "secondaryHref": "/resources/earring-style-guides/how-to-stack-earrings",
+    "tertiaryLabel": "Guida agli orecchini minimalisti",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
   }
 }

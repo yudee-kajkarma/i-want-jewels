@@ -1,249 +1,124 @@
 {
   "meta": {
-    "title": "Comment empiler des boucles d'oreilles : Guide de pile d'oreilles",
-    "description": "Apprenez à superposer des boucles d'oreilles avec des clous, des câlins, des créoles, des pendants et des boucles d'oreilles en diamants synthétiques pour des looks de tous les jours, de mariage et de fête."
+    "title": "Comment composer un ear stack : guide complet",
+    "description": "Composez votre ear stack : choisissez une pièce phare, variez les tailles, répétez un élément et vérifiez l'espacement sur deux ou trois piercings."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-63.jpg",
-    "title": "Comment empiler des boucles d'oreilles :",
-    "subtitle": "Un guide complet de style pour les piles d'oreilles",
+    "image": "/blog-images/blog-image-6.jpg",
+    "title": "Comment composer un ear stack :",
+    "subtitle": "Guide de l'ear stack étape par étape",
     "paragraphs": [
-      "Les boucles d’oreilles superposées sont l’un des moyens les plus simples de donner à vos bijoux un aspect plus personnel. Au lieu de porter une seule paire de boucles d'oreilles, vous créez une combinaison stylée en utilisant des clous, des câlins, des créoles, des boucles d'oreilles minimalistes, des boucles d'oreilles papillon, des gouttes ou une pièce plus forte.",
-      "Une bonne oreillette doit être équilibrée et non encombrée. Les meilleures piles ont généralement une boucle d'oreille principale, une boucle d'oreille de support et un détail plus doux. La boucle d'oreille principale crée le focus, la boucle d'oreille de support ajoute de la forme et la plus petite pièce maintient la pile polie sans alourdir l'oreille.",
-      "Cette ressource aide les acheteurs à créer des piles de boucles d'oreilles pour un usage quotidien, des tenues de travail, des looks d'invités de mariage, des fêtes, des cadeaux et un style semi-fin moderne. Il guide également les utilisateurs vers les produits IWantJewels tels que Cadenza S, Cadenza M, Amadea Huggie, Laluce, Pave Hoops, Farfalla, Alidi Farfalla, Orsola, Concetta Short, Concetta Long et Lusso, des boucles d'oreilles audacieuses."
+      "Un ear stack est une combinaison de boucles d'oreilles portées sur deux piercings ou plus. Un ear stack réussi ne consiste pas à porter le plus de boucles possible. Il repose sur une relation harmonieuse entre la taille, la forme, l'éclat, le métal et l'espacement.",
+      "L'approche la plus simple consiste à choisir une boucle d'oreille phare, à ajouter une pièce plus discrète et à laisser suffisamment d'espace pour que chaque boucle soit visible. Les puces d'oreilles, les petites créoles (huggies) et les petites créoles sont de bonnes bases, tandis que les boucles d'oreilles pendantes ou les modèles plus travaillés peuvent devenir la pièce phare.",
+      "Ce guide vous explique comment composer un ear stack sur deux ou trois piercings, associer différents styles de boucles d'oreilles et éviter un résultat trop chargé."
     ],
-    "shopLabel": "Achetez des boucles d'oreilles empilées",
+    "shopLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Apprenez à empiler des boucles d'oreilles sans donner l'impression que l'oreille est encombrée",
-      "Choisissez les bonnes boucles d'oreilles pour le premier, le deuxième et le troisième piercing",
-      "Mélangez des clous, des câlins, des créoles, des gouttes et des boucles d'oreilles minimalistes",
-      "Construisez des piles d'oreilles minimalistes pour tous les jours, pour les invités de mariage et les fêtes.",
-      "Décidez quelle boucle d'oreille devrait être la pièce principale",
-      "Comprendre comment équilibrer la taille, la forme, l'éclat et la couleur du métal",
-      "Trouvez des combinaisons de produits IWantJewels qui fonctionnent ensemble",
-      "Planifiez les blocs d'images, les modules de produits, les emplacements CTA et les liens internes pour cette page"
+      "Choisissez une boucle d'oreille phare",
+      "Ajoutez une boucle d'oreille plus petite ou plus discrète",
+      "Répétez un élément — couleur du métal, détail en diamant ou forme",
+      "Variez les tailles pour éviter que les boucles se concurrencent",
+      "Vérifiez l'espacement de face et de profil",
+      "Testez l'ear stack avec vos cheveux, vos lunettes et vos écouteurs",
+      "Un ear stack de deux pièces peut sembler aussi réfléchi qu'un ensemble de quatre"
     ],
-    "image": "/blog-images/blog-image-69.jpg"
+    "image": "/blog-images/blog-image-14.jpg"
   },
   "content": [
     {
-      "heading": "Générateur de piles d'oreilles",
+      "heading": "La réponse courte : comment composer un ear stack ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Utilisez ce tableau en haut de la page comme principal outil de décision."
+          "text": "Suivez cette formule simple :"
         },
         {
-          "type": "table",
-          "headers": [
-            "Objectif de pile d'oreille",
-            "Boucle d'oreille principale",
-            "Boucle d'oreille de soutien",
-            "Meilleure réalisation IWJ"
-          ],
-          "rows": [
-            [
-              "Pile simple de tous les jours",
-              "Petit goujon",
-              "Câlin",
-              "Cadenza S + Amadea Huggie"
-            ],
-            [
-              "Pile quotidienne plus visible",
-              "Goujon moyen",
-              "Boucle d'oreille Huggie ou minimaliste",
-              "Cadenza M + Amadea ou Laluce"
-            ],
-            [
-              "Pile minimaliste",
-              "Petit goujon",
-              "Boucle d'oreille minimaliste",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Pile de cerceaux moderne",
-              "Cerceau ou câlin",
-              "Petit goujon",
-              "Pave Hoops ou Amadea + Cadenza S"
-            ],
-            [
-              "Pile romantique",
-              "Boucle d'oreille papillon",
-              "Petit goujon",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Pile d'invités de mariage",
-              "Goujon goutte ou moyen",
-              "Petit étalon ou câlin",
-              "Orsola ou Cadenza M + Amadea"
-            ],
-            [
-              "Pile de fête",
-              "Boucle d'oreille audacieuse",
-              "Petit étalon ou câlin",
-              "Lusso + Cadenza S ou Amadea"
-            ],
-            [
-              "Pile de démarrage à offrir",
-              "Goujon",
-              "Câlin",
-              "Cadenza S + Amadea"
-            ],
-            [
-              "Pile d'occasion douce",
-              "Courte chute",
-              "Goujon minimal",
-              "Concetta Short + Cadenza S"
-            ],
-            [
-              "Pile de soirée formelle",
-              "Longue chute",
-              "Petit goujon",
-              "Concetta Longue + Cadenza S"
-            ]
+          "type": "numbered-list",
+          "items": [
+            "Choisissez une boucle d'oreille phare.",
+            "Ajoutez une boucle d'oreille plus petite ou plus discrète.",
+            "Répétez un élément, comme la couleur du métal, un détail en diamant ou la forme.",
+            "Variez la taille des boucles d'oreilles pour éviter qu'elles se concurrencent.",
+            "Vérifiez l'espacement de face et de profil.",
+            "Testez l'ear stack complet avec vos cheveux, vos lunettes et vos écouteurs."
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ear stack de deux pièces peut sembler tout aussi réfléchi qu'une combinaison de trois ou quatre pièces. L'objectif est l'équilibre, pas la quantité."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce guide de style s'adresse aux piercings cicatrisés. Ne forcez jamais un bijou dans un piercing et ne changez pas le bijou d'un piercing en cours de cicatrisation sans l'avis d'un perceur qualifié. L'angle, l'espacement et l'anatomie des piercings varient d'une personne à l'autre. Les recommandations professionnelles préconisent de confier tout changement de bijou pendant la cicatrisation à un perceur qualifié, car une taille, un poids ou un style inadapté peut causer des problèmes."
         }
       ]
     },
     {
-      "heading": "Qu'est-ce qu'une pile d'oreilles ?",
+      "heading": "Qu'est-ce qu'un ear stack ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Une pile d'oreilles est une combinaison de boucles d'oreilles portées ensemble sur un ou plusieurs piercings. Cela peut être simple, comme un clou avec un câlin, ou plus détaillé, comme un clou, un câlin, une créole et une boucle d'oreille pendante coiffés ensemble."
+          "text": "Un ear stack est un agencement réfléchi de boucles d'oreilles portées sur plusieurs piercings. Il peut comprendre :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Deux puces d'oreilles de tailles différentes",
+            "Une puce d'oreille avec une petite créole (huggie)",
+            "Une créole avec une puce d'oreille plus petite",
+            "Une boucle d'oreille phare travaillée avec une pièce discrète",
+            "Trois petites boucles d'oreilles reliées par le métal, la forme ou l'éclat"
+          ]
         },
         {
           "type": "paragraph",
-          "text": "Les meilleures piles d’oreilles ne semblent pas aléatoires. Ils ont une structure claire. Une pièce mène généralement le look, tandis que les autres le soutiennent."
-        },
-        {
-          "type": "paragraph",
-          "text": "Par exemple, si vous portez une boucle d'oreille audacieuse comme pièce principale, le reste de la pile doit rester plus petit. Si vous portez un petit clou comme pièce principale, vous pouvez ajouter une boucle d'oreille câline ou minimaliste pour la forme. Si vous portez une boucle d'oreille pendante, elle devrait généralement être au centre de l'attention car elle ajoute de la longueur et du mouvement."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles fonctionnent particulièrement bien avec les bijoux demi-fins, car les petites pièces peuvent toujours paraître élevées. Les clous d'oreilles en diamants synthétiques, les câlins et les boucles d'oreilles minimalistes ajoutent de l'éclat sans alourdir l'oreille."
+          "text": "Les boucles d'oreilles n'ont pas besoin d'être parfaitement assorties. Elles doivent partager un élément visuel qui donne à l'ensemble une impression d'intention."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour piles d'oreilles",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+          "text": "Idées d'ear stack en diamant",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
         }
       ]
     },
     {
-      "heading": "La formule simple d’empilage de boucles d’oreilles",
+      "heading": "Les quatre éléments d'un ear stack équilibré",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "La façon la plus simple de construire une pile d'oreilles est la suivante :"
-        },
-        {
-          "type": "paragraph",
-          "text": "Pièce principale + pièce de forme + détail doux"
-        },
-        {
-          "type": "paragraph",
-          "text": "La pièce principale est la boucle d’oreille que les gens remarquent en premier. La pièce de forme ajoute de la structure, comme un câlin ou un cerceau. Le détail doux ajoute un peu d’éclat ou d’équilibre sans rivaliser."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Rôle de pile",
-            "Ce qu'il fait",
-            "Meilleure direction produit IWJ"
-          ],
-          "rows": [
-            [
-              "Pièce principale",
-              "Crée le focus",
-              "Cadenza M, Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Pièce de forme",
-              "Ajoute une courbe ou une structure",
-              "Amadea Huggie, Pave Hoops"
-            ],
-            [
-              "Détails doux",
-              "Ajoute un éclat subtil",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Détail romantique",
-              "Ajoute du sens",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Pièce de grande occasion",
-              "Ajoute du mouvement",
-              "Orsola, Concetta courte, Concetta longue"
-            ],
-            [
-              "Pièce de fête",
-              "Ajoute de l'impact",
-              "Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour un usage quotidien, gardez la pièce principale petite ou moyenne. Pour les looks des invités au mariage, choisissez un point focal élégant. Pour les fêtes, laissez une boucle d'oreille audacieuse se démarquer et gardez les boucles d'oreilles de support simples."
-        }
-      ]
-    },
-    {
-      "heading": "Guide des premier, deuxième et troisième perçages",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Chaque position de perçage a un rôle différent dans une pile d'oreille."
-        },
-        {
-          "type": "paragraph",
-          "text": "Le premier piercing porte généralement la boucle d’oreille principale. Le deuxième piercing soutient le premier. Le troisième piercing ou lobe supérieur doit généralement être plus petit, plus doux et plus minimal."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-71.jpg",
+          "image": "/blog-images/blog-image-22.jpg",
           "content": [
             {
               "type": "table",
               "headers": [
-                "Position du perçage",
-                "Meilleur type de boucle d’oreille",
-                "Direction des produits IWJ"
+                "Élément",
+                "Fonction",
+                "Boucle d'oreille possible"
               ],
               "rows": [
                 [
-                  "Premier perçage",
-                  "Boucle d'oreille principale, créole, pendante ou tendance",
-                  "Cadenza M, Pave Hoops, Orsola, Lusso"
+                  "Pièce phare",
+                  "Attire le plus l'attention",
+                  "Puce d'oreille moyenne, créole, boucle d'oreille pendante ou modèle travaillé"
                 ],
                 [
-                  "Deuxième perçage",
-                  "Boucle d'oreille petit clou, câlin ou minimaliste",
-                  "Cadenza S, Amadea, Laluce"
+                  "Pièce de soutien",
+                  "Relie la pièce phare au reste de l'ear stack",
+                  "Petite créole (huggie), petite créole ou puce d'oreille plus petite"
                 ],
                 [
-                  "Troisième perçage",
-                  "Petit clou ou détail subtil",
-                  "Cadenza S, Laluce"
+                  "Détail final",
+                  "Ajoute une dernière touche discrète",
+                  "Petite puce d'oreille ou boucle d'oreille minimaliste"
                 ],
                 [
-                  "Perçage simple",
-                  "Goujon, cerceau ou goutte moyen",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Plusieurs piercings",
-                  "Mélange d'une pièce principale avec un support plus petit",
-                  "Cadenza S, Amadea, Laluce, Cadenza M"
+                  "Espace de respiration",
+                  "Maintient une séparation visuelle entre les boucles d'oreilles",
+                  "Espace naturel entre les piercings"
                 ]
               ]
             }
@@ -251,823 +126,429 @@
         },
         {
           "type": "paragraph",
-          "text": "Si vous n'avez qu'un seul piercing, choisissez le style de boucle d'oreille qui donne l'effet souhaité. Si vous avez deux piercings ou plus, évitez de faire en sorte que chaque boucle d'oreille ait la même taille. Une pile est plus belle lorsqu’il existe une nette différence de taille."
+          "text": "Tous les ear stacks n'ont pas besoin des quatre éléments. Avec deux piercings, la pièce phare et la pièce de soutien peuvent suffire."
         }
       ]
     },
     {
-      "heading": "Comment empiler des boucles d'oreilles",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les clous d'oreilles sont les boucles d'oreilles les plus faciles à empiler car elles se placent près de l'oreille et ne prennent pas beaucoup de place."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un petit clou fonctionne bien dans les deuxième ou troisième piercings. Un clou moyen peut être la boucle d'oreille principale du premier piercing. Si vous débutez dans l'empilage de boucles d'oreilles, commencez par les clous avant d'ajouter des câlins, des cerceaux ou des gouttes."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les clous en diamant cultivés en laboratoire Cadenza S sont utiles car ils peuvent fonctionner comme pièce principale dans une pile minimale ou comme pièce de support dans une pile plus détaillée. Les boucles d'oreilles en diamant Cadenza M sont idéales lorsque vous souhaitez que le clou soit le point central."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objectif de pile de goujons",
-            "Combinaison de produits",
-            "Pourquoi ça marche"
-          ],
-          "rows": [
-            [
-              "Pile de goujons simple",
-              "Cadenza S + Laluce",
-              "Doux et minimal"
-            ],
-            [
-              "Pile de diamants classique",
-              "Cadenza M + Cadenza S",
-              "Éclat visible avec équilibre"
-            ],
-            [
-              "Pile polie au quotidien",
-              "Cadenza S + Amadea",
-              "Stud scintillant en forme de câlin"
-            ],
-            [
-              "Pile d'étalons à offrir",
-              "Cadenza M + Laluce",
-              "Classique avec des détails doux"
-            ],
-            [
-              "Pile de goujons pour invités de mariage",
-              "Cadenza M + Amadea",
-              "Structure étincelante et"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles clous diamant",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Comment empiler des câlins et des cerceaux",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les câlins et les cerceaux ajoutent de la forme à une pile d'oreilles."
-        },
-        {
-          "type": "paragraph",
-          "text": "Un câlin se place près de l’oreille et est généralement plus facile à empiler qu’un cerceau plus grand. Un cerceau crée plus de visibilité et peut devenir la pièce principale. Si vous empilez des cerceaux et des câlins, gardez le reste de l'oreille simple afin que les formes ne soient pas en concurrence."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles Amadea Huggie sont solides pour les piles de tous les jours car elles ajoutent de la forme sans se sentir lourdes. Les Pave Hoops sont meilleurs lorsque vous souhaitez que la forme du cerceau soit plus visible."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objectif Hoop / Huggie Stack",
-            "Combinaison de produits",
-            "Note de style"
-          ],
-          "rows": [
-            [
-              "Pile de câlins quotidiens",
-              "Amadea + Cadenza S",
-              "Facile et portable"
-            ],
-            [
-              "Pile de cerceaux plus visible",
-              "Cerceaux Pave + Cadenza S",
-              "Hoop mène le look"
-            ],
-            [
-              "Pile de câlins minimale",
-              "Amadea + Laluce",
-              "Doux et moderne"
-            ],
-            [
-              "Pile de cerceaux de fête",
-              "Créoles Pave + Cadenza M",
-              "Plus d'éclat et de forme"
-            ],
-            [
-              "Pile de formes mixtes",
-              "Amadea + Cadenza M + Laluce",
-              "Equilibré si l'espacement le permet"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles créoles ou câlins",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Comment empiler des boucles d'oreilles pendantes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles pendantes peuvent être utilisées dans une pile d'oreilles, mais elles doivent généralement constituer la pièce principale."
-        },
-        {
-          "type": "paragraph",
-          "text": "Parce que les boucles d’oreilles pendantes ajoutent de la longueur et du mouvement, elles attirent naturellement l’attention. Si vous les associez à d’autres grandes boucles d’oreilles, la pile peut sembler encombrée. La meilleure approche consiste à porter une boucle d’oreille pendante lors du premier piercing et à garder le deuxième ou le troisième piercing simple."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles pendantes Orsola sont idéales pour les looks d'invités de mariage, les dîners et les tenues de soirée. Les boucles d’oreilles Concetta Short fonctionnent bien pour un style d’occasion plus doux. Les boucles d'oreilles Concetta Long conviennent mieux aux looks de soirée formels ou allongés."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objectif de suppression de la pile",
-            "Boucle d'oreille principale",
-            "Boucle d'oreille de soutien"
-          ],
-          "rows": [
-            [
-              "Pile de mariage élégante",
-              "Orsola",
-              "Cadenza S"
-            ],
-            [
-              "Pile d'occasion douce",
-              "Short Concetta",
-              "Laluce"
-            ],
-            [
-              "Pile de soirée formelle",
-              "Concetta Longue",
-              "Cadenza S"
-            ],
-            [
-              "Pile romantique",
-              "Short Orsola ou Concetta",
-              "Farfalla ou Cadenza S"
-            ],
-            [
-              "Pile de chute minimale",
-              "Orsola",
-              "Pas de boucles d'oreilles supplémentaires ni un petit clou"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles pendantes en diamants synthétiques",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Comment empiler des boucles d'oreilles tendance",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d’oreilles tendance devraient généralement diriger l’ensemble du look."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si une boucle d'oreille tendance est audacieuse, grande ou très brillante, le reste de la pile doit rester très simple. Cela garde le look intentionnel au lieu d’être écrasant."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles Lusso audacieuses sont idéales pour les fêtes, les soirées et les tenues simples où les bijoux doivent se démarquer. Associez-les aux boucles d'oreilles Cadenza S ou Amadea Huggie si vous avez plusieurs piercings. Évitez de les associer avec une autre grande créole, une longue goutte ou une boucle d'oreille papillon détaillée, à moins que le style ne soit intentionnellement dramatique."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objectif de la pile d'instructions",
-            "Boucle d'oreille principale",
-            "Boucle d'oreille de soutien"
-          ],
-          "rows": [
-            [
-              "Pile de fête",
-              "Lusso",
-              "Cadenza S"
-            ],
-            [
-              "Pile de soirée audacieuse",
-              "Lusso",
-              "Amédée"
-            ],
-            [
-              "Pile de robe noire simple",
-              "Lusso",
-              "Cadenza S ou pas de boucle d'oreille supplémentaire"
-            ],
-            [
-              "Style de réception",
-              "Lusso",
-              "Laluce"
-            ],
-            [
-              "Un look à fort impact",
-              "Lusso",
-              "Gardez le reste au minimum"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles de fête",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Idées de piles d'oreilles au quotidien",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les piles d'oreilles de tous les jours doivent être confortables, légères et faciles à répéter."
-        },
-        {
-          "type": "paragraph",
-          "text": "Vous n'avez pas besoin de beaucoup de boucles d'oreilles pour une bonne pile quotidienne. Un petit étalon avec un câlin peut suffire. La pile devrait fonctionner avec des chemises, des tricots, des robes décontractées, des blazers, des tenues de voyage et des styles de week-end."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Pile quotidienne",
-            "Combinaison de produits",
-            "Pourquoi ça marche"
-          ],
-          "rows": [
-            [
-              "Pile quotidienne simple",
-              "Cadenza S + Amadea",
-              "Propre, équilibré et facile"
-            ],
-            [
-              "Pile quotidienne plus visible",
-              "Cadenza M + Amadea",
-              "Plus d'éclat tout en restant portable"
-            ],
-            [
-              "Pile quotidienne minimale",
-              "Cadenza S + Laluce",
-              "Doux et silencieux"
-            ],
-            [
-              "Pile quotidienne de cerceaux",
-              "Cerceaux Pave + Cadenza S",
-              "Ajoute de la forme et de l'éclat"
-            ],
-            [
-              "Pile quotidienne féminine",
-              "Farfalla + Cadenza S",
-              "Ajoute du sens sans se sentir lourd"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques",
-          "href": "/products?category=Earring"
-        }
-      ]
-    },
-    {
-      "heading": "Idées minimalistes de piles d’oreilles",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les piles d’oreilles minimalistes doivent être propres, douces et pas trop décorées."
-        },
-        {
-          "type": "paragraph",
-          "text": "Utilisez des boucles d'oreilles plus petites, des formes simples et une seule couleur de métal. Évitez de mélanger trop de designs forts. L'empilement minimal convient parfaitement aux vêtements de travail, aux tenues neutres, aux styles luxueux et discrets et aux personnes qui préfèrent les bijoux subtils."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une pile minimaliste pourrait inclure :"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Poste",
-            "Direction des boucles d'oreilles",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Premier perçage",
-              "Petit clou en diamant",
-              "Cadenza S"
-            ],
-            [
-              "Deuxième perçage",
-              "Boucle d'oreille minimaliste",
-              "Laluce"
-            ],
-            [
-              "Câlin en option",
-              "Petit câlin près du corps",
-              "Amédée"
-            ],
-            [
-              "Mise à niveau principale en option",
-              "Goujon moyen",
-              "Cadenza M"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza S avec Laluce est la direction la plus douce. Cadenza S avec Amadea semble légèrement plus stylée. Cadenza M avec Laluce donne un éclat plus visible tout en restant propre."
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles minimalistes",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Idées de pile d’oreilles d’invité de mariage",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les piles d'oreilles pour invités de mariage doivent être élégantes et non occupées."
-        },
-        {
-          "type": "paragraph",
-          "text": "La tenue doit guider la pile. Si la robe comporte des détails, choisissez des clous et des petits câlins. Si la tenue est simple, une boucle d’oreille pendante peut devenir la pièce principale. Si le look est romantique, les boucles d’oreilles papillon peuvent ajouter une sensation plus douce."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-73.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Look invité au mariage",
-                "Direction de la pile d'oreille",
-                "Combinaison de produits"
-              ],
-              "rows": [
-                [
-                  "Robe détaillée",
-                  "Étalon + câlin",
-                  "Cadenza M + Amadea"
-                ],
-                [
-                  "Robe simple en satin",
-                  "Goutte + petit plot",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Robe romantique",
-                  "Papillon + petit clou",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Robe noire",
-                  "Boucle d'oreille pendante ou audacieuse + support simple",
-                  "Orsola ou Lusso + Cadenza S"
-                ],
-                [
-                  "Combinaison moderne",
-                  "Cerceau + clou",
-                  "Cerceaux Pave + Cadenza S"
-                ],
-                [
-                  "Tenue pastel douce",
-                  "Papillon + détail minimaliste",
-                  "Alidi Farfalla + Laluce"
-                ],
-                [
-                  "Tenue de soirée formelle",
-                  "Goutte longue + petit clou",
-                  "Concetta Longue + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour les mariages",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Idées de piles d'oreilles de fête",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les piles d'oreilles de fête peuvent être plus audacieuses que les piles de tous les jours, mais elles ont quand même besoin d'équilibre."
-        },
-        {
-          "type": "paragraph",
-          "text": "La règle de fête la plus simple est la suivante : choisissez une boucle d’oreille solide et gardez le reste simple. Cela permet à la pièce principale de se démarquer sans donner à l'oreille un aspect salissant."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Objectif de pile de fête",
-            "Combinaison de produits",
-            "Note de style"
-          ],
-          "rows": [
-            [
-              "Pile scintillante audacieuse",
-              "Lusso + Cadenza S",
-              "Laissons Lusso diriger"
-            ],
-            [
-              "Pile de fête élégante",
-              "Orsola + Cadenza S",
-              "Ajoute du mouvement sans trop de poids"
-            ],
-            [
-              "Pile de cerceaux moderne",
-              "Créoles Pavé + Laluce",
-              "Bien avec des tenues élégantes"
-            ],
-            [
-              "Pile de robe noire",
-              "Lusso ou Orsola + Cadenza S",
-              "Fort contraste"
-            ],
-            [
-              "Pile de dîner à la fête",
-              "Cadenza M + Amadea",
-              "Poli mais portable"
-            ],
-            [
-              "Pile de réception formelle",
-              "Concetta Longue + Cadenza S",
-              "Raffiné et allongé"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles de fête",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Idées de piles d'oreilles à offrir",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Une pile d'oreilles peut être un cadeau attentionné car elle offre au destinataire une combinaison de styles prête à l'emploi."
-        },
-        {
-          "type": "paragraph",
-          "text": "Au lieu d’offrir une seule paire de boucles d’oreilles, vous pouvez choisir deux pièces qui fonctionnent ensemble. Ceci est utile pour les anniversaires, les demoiselles d'honneur, les anniversaires, les cadeaux marquants et les amateurs de bijoux modernes."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Style de cadeau",
-            "Combinaison de piles d'oreilles",
-            "Idéal pour"
-          ],
-          "rows": [
-            [
-              "Pile de démarrage sécurisée",
-              "Cadenza S + Amadea",
-              "Cadeau première pile d’oreille"
-            ],
-            [
-              "Pile scintillante classique",
-              "Cadenza M + Amadea",
-              "Un cadeau en diamant plus visible"
-            ],
-            [
-              "Pile de cadeaux minimaliste",
-              "Cadenza S + Laluce",
-              "Amateurs de bijoux tranquilles"
-            ],
-            [
-              "Pile de cadeaux romantiques",
-              "Farfalla + Cadenza S",
-              "Cadeau d'anniversaire ou d'anniversaire"
-            ],
-            [
-              "Pile de demoiselle d'honneur",
-              "Short Cadenza S + Concetta",
-              "Cadeau lié au mariage"
-            ],
-            [
-              "Pile de cadeaux de fête",
-              "Lusso + Cadenza S",
-              "Quelqu'un qui aime se déguiser"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques à offrir en cadeau",
-          "href": "/resources/jewellery-gift-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Conseils sur la couleur et l’équilibre du métal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Une pile d'oreille polie est généralement plus belle lorsque la couleur du métal semble intentionnelle."
-        },
-        {
-          "type": "paragraph",
-          "text": "Le choix le plus simple consiste à conserver une seule couleur de métal sur toute la pile. L’or jaune est chaleureux et classique. Les tons blancs ou argentés semblent propres et modernes. L'or rose est doux et romantique. Les métaux mixtes peuvent fonctionner, mais ils doivent avoir l’air planifiés."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Direction du métal",
-            "Idéal pour",
-            "Sentiment de style"
-          ],
-          "rows": [
-            [
-              "Pile d'or jaune",
-              "Style de tous les jours, tenues chaudes, amateurs de bijoux classiques",
-              "Chaud, poli, facile"
-            ],
-            [
-              "Pile blanche ou argentée",
-              "Tenues minimales, garde-robes aux tons froids",
-              "Propre, moderne, lumineux"
-            ],
-            [
-              "Pile en or rose",
-              "Looks romantiques, cadeaux, tenues douces",
-              "Féminin, doux, personnel"
-            ],
-            [
-              "Pile de métaux mixtes",
-              "Style créatif et looks tendance",
-              "Moderne et ludique"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "L'équilibre dépend aussi de la taille. Si une boucle d'oreille est grande, les autres devraient être plus petites. Si toutes les pièces sont petites, vous pouvez utiliser la variation de forme pour garder la pile intéressante."
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en or, blanc ou or rose, diamants synthétiques",
-          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Parcours de produits par objectif de style",
+      "heading": "Comment composer un ear stack étape par étape",
       "content": [
         {
           "type": "subheading",
-          "text": "Pour une première pile d'oreille"
+          "text": "1. Comptez vos piercings cicatrisés"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez les clous d'oreilles en diamants synthétiques Cadenza S avec les boucles d'oreilles Amadea Huggie. Cela crée une pile propre et équilibrée, facile à porter."
+          "text": "Commencez par observer le nombre et l'emplacement de vos piercings cicatrisés. Ne partez pas du principe que tous les premiers, deuxièmes ou troisièmes piercings sont espacés de la même façon. Regardez la distance entre chaque piercing, leur alignement droit ou incurvé, la quantité de lobe visible autour de chaque boucle d'oreille, la possibilité pour les créoles ou les petites créoles (huggies) de rester indépendantes sans se toucher, ainsi que l'orientation naturelle des puces d'oreilles."
         },
         {
           "type": "subheading",
-          "text": "Pour une pile minimaliste"
+          "text": "2. Choisissez une boucle d'oreille phare"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Cadenza S avec les boucles d'oreilles minimalistes en diamant Laluce. Ajoutez Amadea si le porteur souhaite plus de forme."
+          "text": "La boucle d'oreille phare est celle qui attire le plus l'attention. Il peut s'agir de la plus grande, mais aussi d'un modèle plus petit à la forme distinctive ou au détail en diamant plus marqué. Parmi les pièces phares possibles : une puce d'oreille sertie d'un diamant de taille moyenne, une créole pavé, une boucle d'oreille géométrique, un modèle papillon, une boucle d'oreille pendante ou un modèle décoratif affirmé."
         },
         {
           "type": "subheading",
-          "text": "Pour une pile quotidienne plus visible"
+          "text": "3. Décidez où placer le poids visuel"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Cadenza M avec les boucles d'oreilles Amadea Huggie. Cela donne plus d'éclat tout en restant pratique pour un style quotidien."
+          "text": "Beaucoup de personnes placent la boucle la plus remarquable sur le piercing inférieur du lobe, mais il s'agit d'une option de style, pas d'une règle absolue. Un piercing inférieur peut généralement accueillir la pièce phare, avec des pièces progressivement plus discrètes au-dessus. Toutefois, une petite créole (huggie) sur le deuxième piercing ou une puce d'oreille distinctive sur le haut du lobe peut aussi devenir le point central si l'espacement s'y prête."
         },
         {
           "type": "subheading",
-          "text": "Pour une pile romantique"
+          "text": "4. Variez les tailles"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles papillon Farfalla avec Cadenza S. Cela fonctionne bien pour les tenues douces, les cadeaux d'anniversaire et les styles symboliques."
+          "text": "Porter plusieurs boucles d'oreilles exactement de la même taille peut donner un ear stack plat ou chargé. Créez une différence visible entre les pièces phare et de soutien : par exemple, une puce moyenne avec une petite puce, une petite créole (huggie) avec une petite puce d'oreille solitaire, une petite créole avec un détail en diamant plus discret, ou une boucle d'oreille décorative avec une puce d'oreille de soutien simple."
         },
         {
           "type": "subheading",
-          "text": "Pour une pile d'invités de mariage"
+          "text": "5. Répétez un élément visuel"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles pendantes Orsola avec Cadenza S si la tenue est simple. Choisissez Cadenza M avec Amadea si la tenue a déjà des détails."
+          "text": "Répéter un élément aide des boucles d'oreilles différentes à sembler appartenir à la même composition. Vous pouvez reprendre la même couleur de métal, des détails en diamants taille brillant, des formes arrondies, des lignes géométriques, une couleur particulière ou un niveau d'éclat similaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un principe utile : répétez un élément et faites-en varier un autre. Deux boucles d'oreilles peuvent partager la même finition métallique tout en ayant des formes différentes, ou reprendre un détail rond en diamant tout en variant par la taille."
         },
         {
           "type": "subheading",
-          "text": "Pour une pile de fête"
+          "text": "6. Vérifiez l'espacement"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez des boucles d'oreilles Lusso audacieuses avec Cadenza S ou Amadea. Gardez le reste de l’oreille simple pour que Lusso puisse diriger."
-        }
-      ]
-    },
-    {
-      "heading": "Recommandations de produits d'IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Produit",
-            "Meilleur rôle de pile d'oreille",
-            "Pourquoi ça marche"
-          ],
-          "rows": [
-            [
-              "Clous d'oreilles en diamants synthétiques Cadenza S",
-              "Petit point scintillant",
-              "Fonctionne dans les premier, deuxième ou supports piercings"
-            ],
-            [
-              "Boucles d'oreilles puces diamant Cadenza M",
-              "Goujon principal",
-              "Un éclat plus visible pour les piles quotidiennes ou occasionnelles"
-            ],
-            [
-              "Boucles d'oreilles Amadea Huggie",
-              "Forme et équilibre",
-              "Câlin solide à empiler"
-            ],
-            [
-              "Boucles d'oreilles diamant minimalistes Laluce",
-              "Détails doux",
-              "Garde les piles propres et subtiles"
-            ],
-            [
-              "Cerceaux pavés",
-              "Pièce principale du cerceau",
-              "Ajoute de la forme et de l'éclat"
-            ],
-            [
-              "Boucles d'oreilles papillon Farfalla",
-              "Pièce maîtresse personnelle",
-              "Ajoute du sens et des détails féminins"
-            ],
-            [
-              "Boucles d'oreilles papillon Alidi Farfalla",
-              "Pièce maîtresse romantique",
-              "Solide pour les cadeaux et le style doux"
-            ],
-            [
-              "Boucles d'oreilles pendantes Orsola",
-              "Pièce principale d'occasion",
-              "Ajoute du mouvement pour les mariages et les dîners"
-            ],
-            [
-              "Boucles d'oreilles courtes Concetta",
-              "Pièce souple",
-              "Fonctionne pour les piles d'occasions délicates"
-            ],
-            [
-              "Boucles d'oreilles longues Concetta",
-              "Pièce de chute formelle",
-              "Crée une ligne plus longue et raffinée"
-            ],
-            [
-              "Boucles d'oreilles Lusso audacieuses",
-              "Pièce maîtresse de la fête",
-              "Meilleur lorsque le reste de la pile est simple"
-            ]
-          ]
+          "text": "Chaque boucle d'oreille doit disposer de suffisamment d'espace pour être identifiée séparément. L'ensemble peut sembler trop chargé lorsque deux créoles se chevauchent, qu'une grande puce couvre le piercing voisin, qu'une boucle d'oreille pendante se prend sous une petite créole (huggie), que des bords décoratifs se touchent au fil de la journée ou que les fermoirs se gênent derrière l'oreille."
         },
         {
           "type": "paragraph",
-          "text": "Construisez votre pile d'oreille autour d'une pièce principale. Commencez par Cadenza S et Amadea pour une pile simple au quotidien, Cadenza M et Amadea pour un éclat plus visible, Farfalla et Cadenza S pour une pile romantique, ou Lusso et Cadenza S pour un style de fête."
-        }
-      ]
-    },
-    {
-      "heading": "Erreurs courantes d’empilage de boucles d’oreilles à éviter",
-      "content": [
+          "text": "Appuyez-vous sur les mesures des produits et sur des photos portées, plutôt que sur les seuls gros plans des produits. Il n'existe pas de mesure en millimètres adaptée à toutes les oreilles."
+        },
         {
-          "type": "paragraph",
-          "text": "Une erreur courante consiste à porter trop de grandes boucles d’oreilles ensemble. Une bonne pile a besoin d’une pièce principale, et non de trois pièces qui se battent pour attirer l’attention."
+          "type": "subheading",
+          "text": "7. Testez l'ear stack dans la vie réelle"
         },
         {
           "type": "paragraph",
-          "text": "Une autre erreur consiste à ignorer l'espacement. Si les boucles d’oreilles sont trop proches en taille ou en forme, la pile peut paraître encombrée."
+          "text": "Une combinaison peut sembler équilibrée dans un miroir, mais se comporter différemment au fil de la journée. Vérifiez l'interaction des boucles d'oreilles avec les cheveux détachés ou attachés, les lunettes et les écouteurs, les cols montants et les écharpes, l'utilisation du téléphone et vos mouvements lorsque vous marchez."
         },
         {
           "type": "paragraph",
-          "text": "Une troisième erreur consiste à mélanger trop de styles. Une boucle d'oreille papillon, une créole, une longue goutte et une boucle d'oreille audacieuse peuvent sembler déroutantes à moins que le look ne soit intentionnellement dramatique."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur est d'oublier le confort. Si la pile tire, s'accroche aux cheveux ou est lourde, elle ne deviendra pas un look régulier."
-        },
-        {
-          "type": "paragraph",
-          "text": "Enfin, ne choisissez pas des boucles d’oreilles uniquement parce qu’elles ont fière allure séparément. Ils devraient aller bien ensemble."
+          "text": "Si les boucles d'oreilles se touchent, tirent, tournent excessivement ou s'accrochent régulièrement, modifiez la combinaison ou leur emplacement."
         },
         {
           "type": "see-also",
-          "text": "Guide des tailles de boucles d'oreilles en diamant cultivé en laboratoire",
+          "text": "Guide des tailles de boucles d’oreilles en diamant de laboratoire",
           "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
         }
       ]
     },
     {
-      "heading": "Liste de contrôle finale de la pile d'oreille",
+      "heading": "Comment composer un ear stack sur deux piercings",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Avec deux piercings, créez un contraste entre les boucles d'oreilles tout en conservant un élément commun."
+        },
+        {
+          "type": "subheading",
+          "text": "Puce d'oreille et petite créole (huggie)"
+        },
+        {
+          "type": "paragraph",
+          "text": "La puce d'oreille apporte un point d'éclat concentré, tandis que la petite créole (huggie) ajoute une forme courbe. Gardez la même finition métallique pour une combinaison simple, ou utilisez des détails en diamant assortis pour relier les pièces."
+        },
+        {
+          "type": "subheading",
+          "text": "Puce d'oreille moyenne et petite puce"
+        },
+        {
+          "type": "paragraph",
+          "text": "Choisissez deux puces d'oreilles présentant une différence de taille nette. La plus grande peut devenir la pièce phare, tandis que la plus petite apporte une touche finale discrète."
+        },
+        {
+          "type": "subheading",
+          "text": "Créole et puce d'oreille"
+        },
+        {
+          "type": "paragraph",
+          "text": "Laissez la créole dessiner le contour et apporter du mouvement. Utilisez une puce d'oreille plus petite en soutien afin que les deux modèles restent visibles."
+        },
+        {
+          "type": "subheading",
+          "text": "Boucle d'oreille décorative et puce d'oreille simple"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lorsque la boucle d'oreille phare a une forme distinctive, associez-la à une puce d'oreille sobre. Évitez d'ajouter une autre pièce tout aussi travaillée."
+        },
+        {
+          "type": "see-also",
+          "text": "Puces d'oreilles ou petites créoles (huggies)",
+          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Comment composer un ear stack sur trois piercings",
       "content": [
         {
           "type": "paragraph",
-          "text": "Avant de construire une pile d'oreille, demandez :"
+          "text": "Un ear stack sur trois piercings peut suivre cette structure :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Combien de piercings ai-je ?",
-            "Quelle boucle d'oreille est la pièce principale ?",
-            "Quelle boucle d'oreille ajoute de la forme ?",
-            "Quelle pièce ajoute des détails doux ?",
-            "Les boucles d'oreilles sont-elles de taille équilibrée ?",
-            "La pile est-elle confortable ?",
-            "La couleur du métal vous semble-t-elle intentionnelle ?",
-            "La pile fonctionnera-t-elle avec ma coiffure ?",
-            "Le look est-il à porter au quotidien, pour un mariage, une fête ou un cadeau ?",
-            "Puis-je porter la pile avec plus d’une tenue ?",
-            "Les boucles d'oreilles sont-elles faciles à nettoyer et à ranger ?",
-            "La pile semble-t-elle soignée au lieu d’être encombrée ?"
+            "Pièce phare : la boucle d'oreille la plus remarquable",
+            "Pièce de liaison : relie la pièce phare au détail supérieur",
+            "Pièce finale : la boucle d'oreille la plus petite ou la plus discrète"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Si vous n'êtes pas sûr, commencez avec un petit étalon et un câlin. C’est la pile de boucles d’oreilles la plus simple à construire."
+          "text": "Un exemple : une puce d'oreille moyenne, une petite créole (huggie) et une puce plus petite. Autre possibilité : une créole, une puce d'oreille solitaire et un détail minimaliste sur le haut du lobe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Évitez de remplir automatiquement chaque emplacement d'éclat. Une forme en métal simple entre deux pièces serties de diamants peut offrir un point de repos au regard."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si le troisième piercing est très proche du deuxième, vérifiez les dimensions réelles des boucles d'oreilles avant d'acheter. Une petite photo de produit ne montre pas l'espace qu'occupera réellement une boucle sur votre oreille."
+        }
+      ]
+    },
+    {
+      "heading": "Comment associer différents types de boucles d'oreilles",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Puces"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les puces d'oreilles apportent un point de lumière concentré sans ajouter un autre contour circulaire. Elles peuvent servir de pièce phare ou de plus petite pièce de soutien, selon leur taille."
+        },
+        {
+          "type": "subheading",
+          "text": "Petites créoles (huggies)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les petites créoles (huggies) apportent une forme tout en restant près du lobe. Leur confort dépend du diamètre intérieur, du fermoir, de la position du piercing et de votre anatomie. Aucune petite créole (huggie) n'est automatiquement confortable ou adaptée à tous les piercings : comparez ses mesures avec l'emplacement prévu."
+        },
+        {
+          "type": "subheading",
+          "text": "Créoles"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les créoles dessinent davantage l'oreille et peuvent occuper plus d'espace visuel que les puces d'oreilles. Lorsqu'une créole est la pièce maîtresse, choisissez de plus petites boucles d'oreilles pour l'accompagner."
+        },
+        {
+          "type": "subheading",
+          "text": "Boucles d’oreilles pendantes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une boucle d'oreille pendante devient généralement la pièce maîtresse, car elle descend sous le lobe et apporte du mouvement. Associez-la à une ou deux puces d'oreilles discrètes plutôt qu'à une autre grande créole ou boucle pendante."
+        },
+        {
+          "type": "subheading",
+          "text": "Formes décoratives"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles d'oreilles papillon, florales et géométriques donnent du caractère à un ear stack. Reprenez leur métal ou leur détail diamant ailleurs, mais évitez d'associer plusieurs motifs sans lien sur la même oreille."
+        },
+        {
+          "type": "see-also",
+          "text": "Créoles ou petites créoles (huggies)",
+          "href": "/resources/earring-style-guides/hoop-vs-huggie-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Comment porter des boucles d'oreilles papillon",
+          "href": "/resources/earring-style-guides/how-to-style-butterfly-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Pouvez-vous mélanger les métaux dans un ear stack ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Oui. Un ear stack mêlant les métaux peut sembler harmonieux si le contraste est répété."
+        },
+        {
+          "type": "paragraph",
+          "text": "Plutôt que de porter une seule boucle d'oreille blanche ou argentée parmi plusieurs pièces en or jaune, répétez les deux finitions dans l'ear stack ou utilisez une pièce de transition réunissant des tons associés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un résultat plus discret, gardez une seule couleur de métal et créez de la variété grâce aux tailles et aux formes."
+        },
+        {
+          "type": "see-also",
+          "text": "Boucles d’oreilles en diamants de laboratoire : or jaune, blanc ou rose",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Les deux oreilles doivent-elles avoir le même ear stack ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Elles peuvent être assorties, mais ce n'est pas obligatoire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une composition symétrique reprend les mêmes boucles d'oreilles aux emplacements correspondants sur les deux oreilles. Le résultat est plus traditionnel et uniforme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une composition asymétrique peut associer un ear stack de trois pièces sur une oreille à une puce d'oreille ou une petite créole (huggie) plus discrète sur l'autre. Pour préserver l'harmonie, reprenez au moins un élément des deux côtés, comme la finition du métal, la forme du diamant ou le design principal."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'asymétrie doit sembler réfléchie, et non accidentelle."
+        }
+      ]
+    },
+    {
+      "heading": "Erreurs courantes avec un ear stack",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Faire de chaque boucle d'oreille une pièce maîtresse"
+        },
+        {
+          "type": "paragraph",
+          "text": "Plusieurs pièces imposantes et très travaillées peuvent se faire concurrence. Choisissez une boucle d'oreille principale, puis rendez les autres progressivement plus discrètes."
+        },
+        {
+          "type": "subheading",
+          "text": "Choisir uniquement à partir des photos produit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les gros plans montrent bien les détails, mais peuvent donner l'impression que les petites boucles d'oreilles sont beaucoup plus grandes. Vérifiez les mesures en millimètres et les photos portées."
+        },
+        {
+          "type": "subheading",
+          "text": "Penser que les positions des piercings sont universelles"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'espacement, les angles et la surface utilisable du lobe varient d'une personne à l'autre. Une combinaison présentée sur un modèle peut se placer différemment sur une autre oreille."
+        },
+        {
+          "type": "subheading",
+          "text": "Négliger les fermoirs et les poussettes"
+        },
+        {
+          "type": "paragraph",
+          "text": "L'encombrement peut se produire derrière l'oreille comme à l'avant. Vérifiez que les tiges, les poussettes papillon et les fermoirs des créoles ne gênent pas les boucles d'oreilles voisines."
+        },
+        {
+          "type": "subheading",
+          "text": "Mélanger trop d'idées sans lien"
+        },
+        {
+          "type": "paragraph",
+          "text": "Associer simultanément différents métaux, formes, tailles et motifs peut faire perdre sa structure à l'ear stack. Répétez un ou deux éléments dans la composition."
+        },
+        {
+          "type": "subheading",
+          "text": "Oublier le port au quotidien"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les cheveux, les lunettes, les vêtements et les écouteurs peuvent modifier le confort et le mouvement d'un ear stack. Testez la combinaison complète avant d'en faire votre composition quotidienne."
+        }
+      ]
+    },
+    {
+      "heading": "Entretenir les boucles d'oreilles portées en ear stack",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Plusieurs boucles d'oreilles peuvent retenir des cosmétiques, des produits capillaires et des huiles naturelles, surtout lorsque les pièces sont proches les unes des autres."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suivez les conseils d'entretien fournis avec chaque produit. Pour les boucles d'oreilles en argent sterling 925 plaqué or 14 carats :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Manipulez les boucles d'oreilles avec des mains propres et sèches.",
+            "Évitez le contact direct avec les parfums, les lotions et la laque.",
+            "Retirez-les avant la douche, la baignade et l'exercice.",
+            "Essuyez-les délicatement après les avoir portées.",
+            "Rangez les pièces séparément pour limiter les frottements et les rayures.",
+            "N'utilisez pas de produits chimiques agressifs ni de brosses abrasives."
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Comment nettoyer des boucles d’oreilles en diamant de laboratoire",
+          "href": "/resources/lab-grown-diamond-guides/how-to-clean-lab-grown-diamond-earrings"
+        }
+      ]
+    },
+    {
+      "heading": "Checklist finale pour votre ear stack",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-38.jpg",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Avant de porter ou d'acheter une combinaison, demandez-vous :"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Tous les piercings prévus sont-ils parfaitement cicatrisés ?",
+                "Quelle boucle d'oreille est la pièce maîtresse ?",
+                "La différence de taille est-elle visible ?",
+                "Quel élément relie les boucles d'oreilles ?",
+                "Chaque pièce reste-t-elle visible séparément ?",
+                "Ai-je vérifié les mesures réelles ?",
+                "Les fermoirs et les poussettes disposent-ils de suffisamment d'espace ?",
+                "L'ear stack risque-t-il d'interagir avec mes cheveux ou mes lunettes ?",
+                "L'asymétrie ou la symétrie semble-t-elle intentionnelle ?",
+                "Chaque boucle d'oreille peut-elle aussi être portée seule ?"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si la composition paraît trop chargée, retirez une pièce avant de remplacer toutes les boucles d'oreilles. Un ear stack plus simple met souvent mieux en valeur le design principal."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Comment empiler les boucles d’oreilles ?",
-      "answer": "Commencez avec une boucle d'oreille principale, puis ajoutez une boucle d'oreille de support et un détail plus petit si vous avez suffisamment de piercings. Gardez les tailles équilibrées afin que l’oreille ne semble pas encombrée."
+      "question": "Comment composer un ear stack ?",
+      "answer": "Choisissez une boucle d'oreille principale et ajoutez une ou deux pièces plus discrètes. Variez les tailles, reprenez un élément commun et vérifiez que chaque boucle d'oreille dispose de suffisamment d'espace visible."
     },
     {
-      "question": "Quelles boucles d'oreilles sont les meilleures à empiler ?",
-      "answer": "Les clous, les câlins, les petites créoles et les boucles d'oreilles minimalistes sont les meilleurs à empiler. Les pendants et les boucles d’oreilles tendance peuvent fonctionner, mais elles devraient généralement constituer la pièce principale."
+      "question": "Comment composer un ear stack avec deux piercings ?",
+      "answer": "Essayez par exemple une puce d'oreille avec une petite créole (huggie), une puce moyenne avec une plus petite ou une créole avec une puce d'accompagnement discrète. L'une des pièces doit être visuellement plus forte que l'autre."
     },
     {
-      "question": "Comment superposer des boucles d'oreilles avec deux piercings ?",
-      "answer": "Utilisez une boucle d'oreille principale dans le premier piercing et un clou ou un câlin plus petit dans le deuxième piercing. Une combinaison simple est un clou de diamant avec un câlin."
+      "question": "Comment composer un ear stack avec trois piercings ?",
+      "answer": "Utilisez une pièce principale, une pièce de transition et un petit détail final. Adaptez les positions à l'espacement de vos piercings et à l'anatomie de votre oreille."
     },
     {
-      "question": "Comment superposer des boucles d'oreilles avec trois piercings ?",
-      "answer": "Utilisez la boucle d'oreille la plus grande ou la plus visible dans le premier piercing, un câlin ou un petit clou dans le deuxième et une boucle d'oreille minuscule ou minimaliste dans le troisième."
+      "question": "La plus grande boucle d'oreille doit-elle être placée dans le premier piercing ?",
+      "answer": "C'est souvent le cas, mais ce n'est pas une obligation. Choisissez la position qui laisse suffisamment d'espace à la pièce principale et crée la composition la plus équilibrée."
     },
     {
-      "question": "Pouvez-vous empiler des boucles d'oreilles pendantes ?",
-      "answer": "Oui, mais la boucle d’oreille pendante devrait généralement être la pièce principale. Gardez les autres boucles d'oreilles petites pour que la pile ne semble pas encombrée."
+      "question": "Pouvez-vous mélanger puces d'oreilles, petites créoles (huggies) et créoles ?",
+      "answer": "Oui. Varier les formes crée de l'intérêt visuel. Reliez-les par la couleur du métal, le détail diamant ou un autre élément répété."
     },
     {
-      "question": "Pouvez-vous empiler des boucles d’oreilles tendance ?",
-      "answer": "Oui, mais gardez le reste de la pile au minimum. Une boucle d’oreille tendance devrait mener le look."
+      "question": "Les petites créoles (huggies) conviennent-elles aux ear stacks ?",
+      "answer": "Les petites créoles (huggies) peuvent très bien convenir, car elles apportent une forme arrondie près du lobe. Leur adéquation dépend de leurs dimensions, de leur fermoir, de la position du piercing et de votre anatomie."
     },
     {
-      "question": "Les câlins sont-ils bons pour les oreilles ?",
-      "answer": "Oui, les câlins sont l’une des meilleures boucles d’oreilles à empiler car ils ajoutent de la forme et se placent près de l’oreille."
+      "question": "Pouvez-vous mélanger les métaux dans un ear stack ?",
+      "answer": "Oui. Répétez les deux couleurs de métal ou utilisez une pièce de transition pour donner une intention à la combinaison. Pour un résultat plus uniforme, utilisez un seul métal."
     },
     {
-      "question": "Toutes les boucles d’oreilles d’une pile doivent-elles correspondre ?",
-      "answer": "Ils n’ont pas besoin d’être exactement identiques, mais ils doivent être équilibrés. Faire correspondre la couleur du métal est le moyen le plus simple de donner à une pile un aspect poli."
+      "question": "Les deux oreilles doivent-elles être assorties ?",
+      "answer": "Elles peuvent être assorties ou coiffées de façon asymétrique. Dans un ear stack asymétrique, reprenez un métal, une pierre ou une forme sur les deux oreilles pour relier la composition."
     },
     {
-      "question": "Quelle est la pile d'oreille la plus simple au quotidien ?",
-      "answer": "Un petit clou en diamant avec un câlin est la pile d'oreille la plus simple au quotidien car elle est confortable, équilibrée et facile à coiffer."
+      "question": "Peut-on intégrer des boucles d'oreilles pendantes à un ear stack ?",
+      "answer": "Oui. Faites de la boucle d'oreille pendante la pièce principale et choisissez de petites puces d'oreilles ou des petites créoles (huggies) discrètes pour les piercings voisins."
     },
     {
-      "question": "Puis-je offrir un ensemble de piles d'oreilles ?",
-      "answer": "Oui, un ensemble de boucles d'oreilles peut être un cadeau attentionné. Une combinaison étalon et câlin est généralement le point de départ le plus sûr."
+      "question": "Peut-on composer un ear stack sur un piercing en cours de cicatrisation ?",
+      "answer": "Ne changez pas et ne forcez pas un bijou dans un piercing en cours de cicatrisation à des fins de style. Demandez conseil à un perceur qualifié avant de modifier sa taille, son style ou son emplacement."
     }
   ],
   "cta": {
-    "heading": "Empiler des boucles d’oreilles est une question d’équilibre. Choisissez une pièce principale, ajoutez une forme de soutien et gardez les moindres détails doux. Les meilleures oreillettes sont intentionnelles, confortables et faciles à porter.",
-    "body": "Commencez par les boucles d'oreilles en diamant semi-fin cultivées en laboratoire IWantJewels si vous voulez des pièces empilables avec un véritable éclat de diamant. Choisissez Cadenza S et Amadea pour une pile simple au quotidien, Cadenza M pour une brillance plus visible, Laluce pour des détails minimalistes, Farfalla pour le sens, Orsola pour les occasions et Lusso pour un impact festif.",
-    "primaryLabel": "Achetez des boucles d'oreilles empilées",
+    "heading": "Prête à créer votre ear stack ? Commencez par une boucle d'oreille principale et une pièce d'accompagnement plus discrète, puis ajoutez d'autres détails uniquement si l'espacement le permet.",
+    "body": "Découvrez les boucles d'oreilles en diamant de laboratoire de I Want Jewels et consultez la page de chaque produit pour vérifier ses dimensions, son poids, son fermoir et s'il est vendu par paire ou à l'unité avant d'associer plusieurs pièces sur la même oreille.",
+    "primaryLabel": "Découvrez les boucles d’oreilles en diamant de laboratoire",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Découvrez les boucles d'oreilles Huggie",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lire les boucles d'oreilles en diamants cultivés en laboratoire pour les piles d'oreilles",
-    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
+    "secondaryLabel": "Idées d'ear stacks diamant",
+    "secondaryHref": "/resources/earring-style-guides/diamond-ear-stack-ideas",
+    "tertiaryLabel": "Guide tailles : boucles d'oreilles en diamant de laboratoire",
+    "tertiaryHref": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earring-size-guide"
   }
 }

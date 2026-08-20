@@ -576,7 +576,7 @@ export default function ProductsPage({
                             </p>
                             <p className="mt-1 text-[14px] font-medium uppercase tracking-[0.08em] text-zinc-900">
                                 {productsData
-                                    ? t("products.showingProductsOf", { count: sortedProducts.length, total: pagination?.totalRecords ?? sortedProducts.length })
+                                    ? t("products.showingProductsOf", { shown: sortedProducts.length, count: pagination?.totalRecords ?? sortedProducts.length })
                                     : t("products.unableToLoad")}
                             </p>
                         </div>

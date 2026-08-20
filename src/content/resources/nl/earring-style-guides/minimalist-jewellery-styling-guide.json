@@ -1,1278 +1,717 @@
 {
   "meta": {
-    "title": "Minimalistische sieradenstylinggids",
-    "description": "Leer hoe je minimalistische sieraden kunt stylen met oorbellen, studs, knuffels, laboratoriumdiamanten, werkkleding, cadeaus, bruiloften en alledaagse outfits."
+    "title": "Zo stylet u minimalistische sieraden",
+    "description": "Leer minimalistische sieraden combineren met outfits, halslijnen en andere stukken. Stel een capsule samen met oorbellen, kettingen, ringen en armbanden."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-97.jpg",
-    "title": "Minimalistische sieradenstylinggids:",
-    "subtitle": "Hoe je eenvoudige sieraden kunt stylen voor dagelijks gebruik, werk en gelegenheden",
+    "image": "/blog-images/blog-image-50.jpg",
+    "title": "Zo stylet u minimalistische sieraden:",
+    "subtitle": "Een complete gids",
     "paragraphs": [
-      "Minimalistische sieraden zijn eenvoudig, gepolijst en gemakkelijk om vaak te dragen. Het gaat niet om het dragen van sieraden die verdwijnen. Het gaat om het kiezen van strakke stukken die vorm, sprankeling en afwerking toevoegen zonder dat de outfit zwaar aanvoelt.",
-      "De beste minimalistische sieraden hebben meestal één duidelijk doel. Een kleine diamanten stud voegt subtiele sprankeling toe. Een knuffel geeft vorm. Een minimalistische oorbel voegt een rustig detail toe. Een medium stud voegt klassieke glans toe. Een zachte drop voegt beweging toe aan diners en bruiloften zonder te opvallend te worden.",
-      "Bij IWantJewels werkt minimalistische styling vooral goed met in het laboratorium gekweekte diamanten oorbellen, omdat zelfs kleine stukjes verheven kunnen aanvoelen. Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short en Farfalla kunnen allemaal verschillende minimalistische looks ondersteunen, afhankelijk van de outfit en de gelegenheid."
+      "Minimalistische sieraden stylen betekent dat u een klein aantal zorgvuldig gekozen stukken combineert, zodat ze uw outfit aanvullen in plaats van overheersen.",
+      "De sieraden hoeven niet onzichtbaar te zijn. Een diamanten oorsteker, slanke creool, hanger, ring of armband kan nog steeds zichtbaar schitteren en vorm geven. Het minimalistische effect ontstaat door het aantal blikvangers te beperken, verwante details te herhalen en visuele ruimte tussen de stukken te laten.",
+      "In deze gids leest u hoe u een minimalistische sieradencapsule samenstelt, verschillende stukken in laagjes draagt en sieraden afstemt op outfits, halslijnen, kapsels en metaalkleuren."
     ],
-    "shopLabel": "Shop minimalistische sieraden",
-    "shopHref": "/products?category=Earring"
+    "shopLabel": "Ontdek minimalistische sieraden",
+    "shopHref": "/products"
   },
   "quickSummary": {
     "items": [
-      "Begrijp hoe je minimalistische sieraden kunt stylen.",
-      "Kies eenvoudige oorbellen voor dagelijks gebruik.",
-      "Bouw minimalistische oorbellen met studs, knuffels en kleine details.",
-      "Style sieraden met overhemden, blazers, zwarte jurken, satijnen jurken en outfits voor bruiloftsgasten.",
-      "Kies sieraden voor werkkleding, reizen, diners en cadeaus.",
-      "Bepaal wanneer je studs, knuffels, hoepels of zachte druppels draagt.",
-      "Begrijp hoe metaalkleur de minimalistische stijl verandert.",
-      "Vind IWantJewels-productaanbevelingen per outfit en gelegenheid.",
-      "Plan afbeeldingsblokken, productmodules, CTA-secties en interne links voor deze pagina."
+      "De formule: één blikvanger + één herhaald detail + visuele ruimte",
+      "Herhaal de metaalkleur, diamantvorm of lijn om afzonderlijke stukken met elkaar te verbinden",
+      "Begin met een capsule van drie stukken: oorbellen, een ketting en één detail voor hand of pols",
+      "Stem de ketting af op de halslijn, niet op de outfit in het algemeen",
+      "Wissel één blikvanger — niet meerdere — om van dag naar avond te gaan",
+      "Gemengde metalen werken wanneer beide kleuren meer dan één keer terugkomen"
     ],
-    "image": "/blog-images/blog-image-99.jpg"
+    "image": "/blog-images/blog-image-54.jpg"
   },
   "content": [
     {
-      "heading": "Minimalistische sieradenkiezer",
+      "heading": "De formule voor minimalistische sieraden",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Gebruik deze tabel bovenaan de pagina als het belangrijkste hulpmiddel bij het bepalen van de stijl."
+          "type": "section-lead",
+          "text": "Eén blikvanger + één herhaald detail + visuele ruimte."
         },
         {
-          "type": "table",
-          "headers": [
-            "Stylingbehoefte",
-            "Beste minimalistische sieradenrichting",
-            "Aanbevolen IWJ-richting"
-          ],
-          "rows": [
-            [
-              "Alledaagse sieraden",
-              "Kleine studs of knuffels",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Meer gepolijste, alledaagse schittering",
-              "Middelgrote noppen",
-              "Cadenza M"
-            ],
-            [
-              "Rustige, minimalistische stijl",
-              "Minimalistische diamanten oorbellen",
-              "Laluce"
-            ],
-            [
-              "Minimale oorstapel",
-              "Kleine stud + minimalistische oorbel",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Werkkleding sieraden",
-              "Studs, knuffels of minimalistische oorbellen",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Reissieraden",
-              "Veilige studs of knuffels",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Zwarte jurkstijl",
-              "Medium studs, hoops of zachte drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Satijnen jurkstijl",
-              "Middelgrote studs of oorbellen",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Styling van bruiloftsgasten",
-              "Studs, zachte druppels of vlinderoorbellen",
-              "Cadenza M, Concetta Short, Farfalla"
-            ],
-            [
-              "Minimale feeststijl",
-              "Medium studs, hoops of elegante drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Giftable minimalistische sieraden",
-              "Studs, knuffels of zachte oorbellen",
-              "Cadenza S, Cadenza M, Laluce"
-            ],
-            [
-              "Romantische minimalistische stijl",
-              "Vlinderoorbellen of delicate druppels",
-              "Farfalla, Alidi Farfalla, Concetta Short"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Bijvoorbeeld: diamanten oorstekers als blikvanger, een kleine diamanten hanger die de schittering herhaalt en geen extra grote ketting of decoratieve oorbellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een andere combinatie bestaat uit een strakke hanger als blikvanger, een smalle armband die het metaal herhaalt en kleine, ingetogen oorbellen die niet met de ketting concurreren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Minimalistisch stylen wordt niet alleen bepaald door het aantal stukken. Drie kleine maar niet bij elkaar passende items kunnen drukker ogen dan twee iets opvallendere stukken met dezelfde vorm en afwerking."
         }
       ]
     },
     {
-      "heading": "Wat is minimalistische sieradenstyling?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische sieradenstyling betekent kiezen voor sieraden die schoon, evenwichtig en draagbaar aanvoelen. De stukken zijn meestal kleiner, eenvoudiger of verfijnder, maar ze geven toch nog meer glans aan de outfit."
-        },
-        {
-          "type": "paragraph",
-          "text": "Minimalistische sieraden kunnen bestaan uit in het laboratorium gekweekte diamanten studs, knuffels, kleine oorringen, minimalistische oorbellen, delicate druppels en zachte symbolische stukken. Het ontwerp mag niet zwaar, druk of te trendy aanvoelen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een minimalistische sieradenlook heeft meestal:"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Minimalistisch stijlelement",
-            "Wat het betekent"
-          ],
-          "rows": [
-            [
-              "Schone vorm",
-              "De sieraden hebben een eenvoudig, gemakkelijk leesbaar ontwerp"
-            ],
-            [
-              "Draagbaar formaat",
-              "Het stuk werkt voor meer dan één outfit"
-            ],
-            [
-              "Subtiele glans",
-              "De sieraden voegen licht toe zonder te overheersen"
-            ],
-            [
-              "Evenwichtige metaalkleur",
-              "De afwerking past bij de rest van de outfit"
-            ],
-            [
-              "Comfortabel gevoel",
-              "De sieraden kunnen meerdere uren gedragen worden"
-            ],
-            [
-              "Herhaalbare styling",
-              "Het stuk beperkt zich niet tot één gelegenheid"
-            ],
-            [
-              "Eén duidelijke focus",
-              "De outfit heeft niet al te veel concurrerende sieraden"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor IWantJewels mag minimalistische styling niet vanzelfsprekend aanvoelen. Het doel is om kleine, in het laboratorium gekweekte diamantstukken het gevoel te geven dat ze opzettelijk, premium en gemakkelijk te dragen zijn."
-        },
-        {
-          "type": "see-also",
-          "text": "Wat zijn demi-fijne sieraden?",
-          "href": "/resources/demi-fine-jewellery-guides/what-is-demi-fine-jewellery"
-        }
-      ]
-    },
-    {
-      "heading": "Waarom minimalistische sieraden geschikt zijn voor dagelijks gebruik",
+      "heading": "Wat zijn minimalistische sieraden?",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-101.jpg",
+          "image": "/blog-images/blog-image-42.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Minimalistische sieraden zijn geschikt voor dagelijks gebruik, omdat ze geen speciale outfit vereisen. Het kan worden gedragen met overhemden, jeans, blazers, gebreide kleding, jurken, werkkleding, reisoutfits en eenvoudige avondlooks."
+              "text": "Minimalistische sieraden hebben meestal duidelijke silhouetten, ingetogen proporties, weinig decoratieve details, afgestemde metaalafwerkingen, één of twee herhaalde vormen, gecontroleerde schittering en stukken die u op verschillende manieren kunt combineren."
             },
             {
               "type": "paragraph",
-              "text": "Kleine, in het laboratorium gekweekte diamanten oorbellen zijn vooral handig omdat ze glans toevoegen zonder de look te formeel te laten aanvoelen. Een klein glitterpuntje kan een eenvoudige outfit compleet maken."
+              "text": "Mogelijke minimalistische sieraden zijn:"
             },
             {
-              "type": "table",
-              "headers": [
-                "Reden voor alledaagse styling",
-                "Waarom minimalistische sieraden helpen"
-              ],
-              "rows": [
-                [
-                  "Makkelijk te herhalen",
-                  "Past bij veel outfits"
-                ],
-                [
-                  "Comfortabel",
-                  "Kleinere oorbellen zijn gemakkelijker voor langdurig dragen"
-                ],
-                [
-                  "Gepolijst",
-                  "Voegt afwerking toe zonder er zwaar uit te zien"
-                ],
-                [
-                  "Werkvriendelijk",
-                  "Ziet er professioneel en schoon uit"
-                ],
-                [
-                  "Reisvriendelijk",
-                  "Eenvoudige stukken zijn gemakkelijker te stylen"
-                ],
-                [
-                  "Stapelbaar",
-                  "Werkt met studs, knuffels en kleine details"
-                ],
-                [
-                  "Cadeauvriendelijk",
-                  "Veiliger dan zeer opvallende sieraden"
-                ],
-                [
-                  "Tijdloos",
-                  "Minder afhankelijk van kortetermijntrends"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "Cadenza S, Laluce en Amadea zijn de sterkste IWantJewels-richtingen voor dagelijkse minimalistische styling. Cadenza M werkt wanneer de shopper een strakkere look met meer zichtbare glans wil."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Kun je elke dag lab-gekweekte diamanten oorbellen dragen?",
-          "href": "/resources/lab-grown-diamond-guides/can-you-wear-lab-grown-diamond-earrings-every-day"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieradenformule",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "De eenvoudigste minimalistische sieradenformule is:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Eén glitterpunt + één vormdetail + één strakke afwerking"
-        },
-        {
-          "type": "paragraph",
-          "text": "Het fonkelpunt kan een diamanten stud zijn. Het vormdetail kan een knuffel of hoepel zijn. De strakke afwerking ontstaat doordat de rest van de sieraden eenvoudig is gehouden."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Stylingrol",
-            "Wat het doet",
-            "Beste IWJ-richting"
-          ],
-          "rows": [
-            [
-              "Sparkle punt",
-              "Voegt licht dicht bij het gezicht toe",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Vormdetail",
-              "Voegt curve en structuur toe",
-              "Amadea, Pave Hoops"
-            ],
-            [
-              "Zachte details",
-              "Voegt stille interesse toe",
-              "Laluce"
-            ],
-            [
-              "Romantisch detail",
-              "Voegt betekenis en zachtheid toe",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Gelegenheidsbeweging",
-              "Voegt zachte lengte toe",
-              "Orsola, Concetta Kort"
-            ],
-            [
-              "Formele beweging",
-              "Voegt verfijnde lengte toe",
-              "Concetta lang"
-            ],
-            [
-              "Minimale ondersteuning",
-              "Brengt een groter stuk in evenwicht",
-              "Cadenza S, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Voor dagelijkse styling houd je de formule simpel. Gebruik voor een evenement één iets sterker stuk en houd de rest schoon."
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische oorbellen voor alledaagse outfits",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische oorbellen voor dagelijks gebruik moeten gemakkelijk te dragen zijn bij casual outfits, werkkleding, eenvoudige jurken en reislooks."
-        },
-        {
-          "type": "paragraph",
-          "text": "Het veiligste startpunt is een kleine diamanten stud. Als de shopper een meer stijlvolle look wil, voeg dan een knuffel toe. Als ze de voorkeur geven aan rustige details, kies dan voor een minimalistische oorbel. Als ze meer zichtbare schittering willen zonder in een statement-stijl te vervallen, kies dan voor een medium stud."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Dagelijkse outfit",
-            "Beste minimalistische oorbelrichting",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Wit overhemd en spijkerbroek",
-              "Kleine studs of knuffels",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Blazer en broek",
-              "Medium studs of knuffels",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Gebreide kleding",
-              "Studs of kleine hoepels",
-              "Cadenza S, Pave-hoepels"
-            ],
-            [
-              "Vrijetijdskleding",
-              "Kleine studs of minimalistische oorbellen",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Reisoutfit",
-              "Veilige studs of knuffels",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Neutrale outfit",
-              "Minimalistische oorbellen of medium studs",
-              "Laluce, Cadenza M"
-            ],
-            [
-              "Weekendoutfit",
-              "Knuffels of hoepels",
-              "Amadea, Pave Hoops"
-            ],
-            [
-              "Eenvoudige dineroutfit",
-              "Middelgrote noppen of zachte druppels",
-              "Cadenza M, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Stud versus Huggie oorbellen",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieraden voor werkkleding",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische sieraden zijn een van de beste keuzes voor werkkleding, omdat ze er gepolijst uitzien zonder afleidend te zijn."
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies voor werk stukken die dicht bij het oor zitten en niet trekken, te veel bewegen of botsen met professionele outfits. Studs, knuffels en minimalistische oorbellen zijn het sterkst. Hoepels kunnen werken als ze verfijnd zijn. Drops zijn beter voor een dagelijkse styling dan voor een dagelijkse kantoorkleding."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-103.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Werkkleding-look",
-                "Beste sieradenrichting",
-                "Productrichting"
-              ],
-              "rows": [
-                [
-                  "Klassieke kantooroutfit",
-                  "Kleine of middelgrote noppen",
-                  "Cadenza S, Cadenza M"
-                ],
-                [
-                  "Moderne kantoorstijl",
-                  "Knuffels",
-                  "Amadea"
-                ],
-                [
-                  "Minimale werkkleding",
-                  "Minimalistische oorbellen",
-                  "Laluce"
-                ],
-                [
-                  "Creatieve kantoorlook",
-                  "Hoepels of knuffels",
-                  "Pave Hoops, Amadea"
-                ],
-                [
-                  "Blazer-outfit",
-                  "Medium studs of knuffels",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Werk evenement",
-                  "Medium studs of verfijnde oorringen",
-                  "Cadenza M, Pave-hoepels"
-                ],
-                [
-                  "Outfit van dag tot diner",
-                  "Middelgrote noppen of zachte druppels",
-                  "Cadenza M, Orsola"
-                ]
+              "type": "bullet-list",
+              "items": [
+                "Diamanten oorstekers in solitairstijl",
+                "Kleine creolen (huggies) of smalle creolen",
+                "Eenvoudige geometrische oorbellen",
+                "Fijne kettingen",
+                "Kleine hangers",
+                "Smalle armbanden",
+                "Strakke ringen",
+                "Korte, ingetogen oorhangers"
               ]
             }
           ]
         },
         {
-          "type": "see-also",
-          "text": "Stud versus hoepeloorbellen",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+          "type": "paragraph",
+          "text": "‘Minimalistisch’ beschrijft de ontwerprichting. Het garandeert niet dat een product licht, duurzaam, hypoallergeen of geschikt voor elke activiteit is."
         }
       ]
     },
     {
-      "heading": "Minimalistische sieraden voor zwarte jurken",
+      "heading": "Wat maakt het stylen van minimalistische sieraden geslaagd?",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Een zwarte jurk kan opvallende sieraden dragen, maar minimalistische sieraden kunnen ervoor zorgen dat het schoon, verfijnd en duur aanvoelt."
+          "type": "subheading",
+          "text": "Een duidelijke blikvanger"
         },
         {
           "type": "paragraph",
-          "text": "Voor een gedetailleerde zwarte jurk zijn minimalistische sieraden meestal de betere keuze. Voor een eenvoudige zwarte jurk werken minimalistische sieraden wanneer de shopper ingetogen elegantie wil in plaats van feestelijke impact."
+          "text": "Kies het gebied dat u als eerste wilt laten opvallen. De blikvanger kan bestaan uit oorbellen die het gezicht omlijsten, een hanger die bij de halslijn past, een kleine ringcombinatie, een armband die onder een mouw zichtbaar is of één zorgvuldig opgebouwde ear stack."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voorkom dat de oorbellen, ketting, ringen en armband allemaal even prominent zijn."
+        },
+        {
+          "type": "subheading",
+          "text": "Herhaling"
+        },
+        {
+          "type": "paragraph",
+          "text": "Herhaal één detail om afzonderlijke stukken met elkaar te verbinden. Nuttige details om te herhalen zijn metaalkleur, diamantvorm, ronde of hoekige lijnen, een motief, de mate van schittering en textuur."
+        },
+        {
+          "type": "paragraph",
+          "text": "De stukken hoeven niet uit dezelfde collectie te komen, maar moeten wel visueel bij elkaar passen."
+        },
+        {
+          "type": "subheading",
+          "text": "Visuele ruimte"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij een minimalistische styling zijn er gebieden nodig waar de sieraden niet met elkaar concurreren. Draagt u zichtbare oorbellen, een ketting en meerdere ringen, houd dan minstens één gebied rustiger. Dat kan betekenen dat u een armband weglaat of kiest voor een ketting zonder extra decoratieve lagen."
+        },
+        {
+          "type": "subheading",
+          "text": "Proportie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergelijk de sieraden met de outfit in plaats van elk stuk afzonderlijk te beoordelen. Een heel kleine oorsteker kan verdwijnen naast een volumineus kapsel of een opvallend patroon. Een smalle creool of middelgrote oorsteker kan nog steeds minimalistisch zijn zolang het ontwerp strak blijft."
+        }
+      ]
+    },
+    {
+      "heading": "Stel een minimalistische sieradencapsule samen",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Een sieradencapsule is een kleine groep stukken die u in verschillende combinaties kunt dragen. Een praktische capsule kan zes categorieën bevatten."
         },
         {
           "type": "table",
           "headers": [
-            "Zwarte kledingstijl",
-            "Beste minimalistische sieradenrichting",
-            "Productrichting"
+            "Capsulestuk",
+            "Functie",
+            "Waarop letten"
           ],
           "rows": [
             [
-              "Simpel zwart jurkje",
-              "Medium studs, hoops of zachte drops",
-              "Cadenza M, Pave Hoops, Orsola"
+              "Kleine diamanten oorstekers",
+              "Ingetogen schittering",
+              "Diameter, gewicht en achterkant"
             ],
             [
-              "Gedetailleerde zwarte jurk",
-              "Studs of knuffels",
-              "Cadenza M, Amadea"
+              "Kleine creolen (huggies) of smalle creolen",
+              "Gebogen vorm",
+              "Diameter, dikte en sluiting"
             ],
             [
-              "Zwarte satijnen jurk",
-              "Middelgrote noppen of druppels",
-              "Cadenza M, Orsola"
+              "Eenvoudige ketting met hanger",
+              "Detail bij de halslijn",
+              "Kettinglengte en afmetingen van de hanger"
             ],
             [
-              "Zwarte jurk met hoge hals",
-              "Studs of hoepels",
-              "Cadenza M, Pave-hoepels"
+              "Fijne armband",
+              "Polsdetail",
+              "Lengte, sluiting en verstelbaarheid"
             ],
             [
-              "Zwarte werkevenementjurk",
-              "Studs of knuffels",
-              "Cadenza M, Amadea"
+              "Strakke ring",
+              "Handdetail",
+              "Maat, breedte en afwerking"
             ],
             [
-              "Minimale zwarte jurk",
-              "Eén schoon brandpuntstuk",
-              "Cadenza M, Orsola, Pave Hoops"
-            ],
-            [
-              "Zwarte dinerjurk",
-              "Middelgrote noppen of zachte druppels",
-              "Cadenza M, Orsola"
+              "Optionele blikvanger",
+              "Variatie voor diner of gelegenheid",
+              "Afmetingen, gewicht en geschiktheid voor de outfit"
             ]
           ]
         },
         {
+          "type": "paragraph",
+          "text": "U hoeft niet de hele capsule in één keer aan te schaffen. Begin met de stukken die passen bij de outfits die u het vaakst draagt."
+        },
+        {
+          "type": "subheading",
+          "text": "Een startercapsule van drie stukken"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kies voor een kleinere startcollectie:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Eén paar ingetogen oorbellen",
+            "Eén eenvoudige ketting",
+            "Eén ring of armband met bijpassende afwerking"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Met deze drie stukken creëert u verschillende combinaties: alleen oorbellen; oorbellen en ketting; oorbellen en armband; ketting en ring; of alle drie samen wanneer de proporties in balans blijven."
+        },
+        {
+          "type": "subheading",
+          "text": "Een capsule van vijf stukken"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een flexibelere capsule kan bestaan uit kleine diamanten oorstekers, kleine creolen (huggies) of slanke creolen, een eenvoudige hanger, een fijne armband en een strakke ring. De oorbellen bieden twee verschillende manieren om het gezicht te omlijsten, terwijl u de hanger, armband en ring afhankelijk van de outfit kunt toevoegen of weglaten."
+        }
+      ]
+    },
+    {
+      "heading": "Zo combineert u minimalistische oorbellen en kettingen",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Wanneer de oorbellen de blikvanger zijn"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kies een ingetogen ketting of laat de halslijn vrij. Dit werkt bij zichtbare diamanten oorstekers, pavé-creolen, een kleine ear stack, geometrische oorbellen of korte oorhangers."
+        },
+        {
+          "type": "subheading",
+          "text": "Wanneer de ketting de blikvanger is"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kies kleinere oorstekers of eenvoudige kleine creolen (huggies), zodat het gezicht en de halslijn niet om aandacht strijden. Dit werkt met een ketting met hanger, twee kettingen in laagjes, een ketting met een herkenbaar motief of een ketting die de vorm van de halslijn volgt."
+        },
+        {
+          "type": "subheading",
+          "text": "Wanneer beide diamanten bevatten"
+        },
+        {
+          "type": "paragraph",
+          "text": "Herhaal het diamantdetail, maar varieer in formaat. Draag bijvoorbeeld een opvallendere hanger met kleinere diamanten oorstekers in plaats van even prominente stukken bij het oor en de halslijn."
+        },
+        {
           "type": "see-also",
-          "text": "Welke sieraden draag je bij een zwarte jurk?",
+          "text": "Gids voor minimalistische oorbellen",
+          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Zo draagt u minimalistische kettingen in laagjes",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Bij minimalistische kettingen in laagjes moet een zichtbaar verschil tussen de kettingen ontstaan. Let op kettinglengte, hangerformaat, kettingdikte, metaalkleur, de halslijn en de vraag of de hangers elkaar overlappen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een eenvoudige combinatie van twee kettingen bestaat uit een kortere ketting zonder hanger en een iets langere ketting met één hanger. Het lengteverschil moet groot genoeg zijn om de kettingen visueel gescheiden te houden. Universele aanbevelingen in centimeters zijn onbetrouwbaar — meet de producten zelf en houd rekening met de hals en halslijn van de drager."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voeg bij drie kettingen een duidelijke lengteopbouw toe en houd minstens één ketting vrij van een hanger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Combineer liever niet:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Meerdere hangers van vergelijkbare grootte op dezelfde lengte",
+            "Meerdere kettingen die direct in de knoop raken",
+            "Verschillende, niet bij elkaar passende motieven",
+            "Zware en delicate kettingen zonder duidelijke samenhang"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Zo stapelt u minimalistische ringen en armbanden",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Ringen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een minimalistische ringstack kan bestaan uit één gladde band met één ring met diamantdetail, twee smalle banden met verschillende texturen, één ring aan meerdere vingers of twee bij elkaar passende ringen aan één vinger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varieer in breedte of textuur, zodat de ringen niet per ongeluk dubbel lijken. Bevat één ring het opvallendste diamantdetail, laat de andere ringen dan metaal, vorm of textuur toevoegen in plaats van evenveel schittering."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controleer de ringmaat per ring. Meerdere samen gedragen ringen kunnen anders passen dan één ring afzonderlijk."
+        },
+        {
+          "type": "subheading",
+          "text": "Armbanden"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eén armband kan al voldoende detail aan de pols geven, vooral bij lange mouwen, een horloge of een outfit waarin al meerdere sieradenelementen zitten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Combineer bij laagjes verschillende maar verwante breedtes, controleer of de sluitingen elkaar hinderen, vermijd grote gewichtsverschillen, laat voldoende bewegingsruimte zonder dat de armbanden voortdurend over elkaar schuiven en houd rekening met de kleur en grootte van een horloge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een horloge kan deel uitmaken van de sieradencombinatie. Stem de afwerking van de armband af op de horlogekast, band of andere metalen details."
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistische sieraden bij verschillende halslijnen",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Hoge of ronde hals"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een hoge halslijn laat minder huid rond de hals en ketting zien. Laat oorbellen het belangrijkste detail vormen of kies een ketting die duidelijk boven of onder de halslijn valt, in plaats van precies op de rand. Oorstekers of kleine creolen (huggies) met een duidelijk zichtbare contour werken goed; een ketting is optioneel."
+        },
+        {
+          "type": "subheading",
+          "text": "V-hals"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een hanger kan de neerwaartse lijn van een V-hals volgen. Is de hanger het middelpunt, kies dan ingetogen oorbellen — kleine of middelgrote oorstekers, een fijne ketting met hanger en één eenvoudige ring of armband."
+        },
+        {
+          "type": "see-also",
+          "text": "Welke sieraden draagt u bij een jurk met V-hals?",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Hartvormige halslijn"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een hartvormige halslijn creëert al een gebogen blikvanger. Kies sieraden die de curve aanvullen zonder elke open ruimte te vullen: een kleine hanger of geen ketting, oorstekers, kleine creolen (huggies) of ingetogen oorhangers, en één detail met een armband of ring."
+        },
+        {
+          "type": "see-also",
+          "text": "Sieraden bij een hartvormige halslijn",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        },
+        {
+          "type": "subheading",
+          "text": "Off-shoulderhalslijn"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een off-shoulderoutfit laat de schouders en halslijn vrij. Kies of de oorbellen of de ketting het belangrijkste accent vormt: zichtbare oorbellen zonder ketting, een hanger met ingetogen oorstekers of één eenvoudige armband als balans bij de open halslijn."
+        },
+        {
+          "type": "see-also",
+          "text": "Welke oorbellen draagt u bij een off-shoulderjurk?",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        }
+      ]
+    },
+    {
+      "heading": "Minimalistische sieraden bij alledaagse outfits",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Wit overhemd en jeans"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een wit overhemd vormt een neutrale basis voor een klein diamantdetail of een strakke metaalvorm. Probeer kleine diamanten oorstekers, een fijne ketting met hanger en één ring of armband. Als het overhemd bij de kraag openstaat, kan de hanger het middelpunt worden. Bij een hoger gesloten kraag laat u de oorbellen de aandacht trekken."
+        },
+        {
+          "type": "subheading",
+          "text": "Blazer en pantalon"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gestructureerde kleding werkt goed met sieraden die strakke lijnen herhalen: een middelgrote oorsteker of geometrische oorbel, een fijne ketting, een eenvoudige ring en alleen een armband als die niet concurreert met een horloge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controleer voor werkkleding de verwachtingen op de werkplek en praktische factoren, zoals het gebruik van een koptelefoon, in plaats van ervan uit te gaan dat één stijl in elke omgeving past."
+        },
+        {
+          "type": "subheading",
+          "text": "Gebreide kleding"
+        },
+        {
+          "type": "paragraph",
+          "text": "De textuur van kleding kan fijne sieraden vangen of aan het zicht onttrekken. Probeer oorstekers of kleine creolen (huggies), alleen een ketting als die duidelijk boven het breisel valt, en een ring of armband als extra detail. Vermijd fijne kettingen die steeds achter een structuurstof blijven haken."
+        },
+        {
+          "type": "subheading",
+          "text": "Zwarte jurk"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een zwarte jurk creëert een sterk contrast met zowel warme als koele metaalafwerkingen. Probeer een zichtbare oorsteker of smalle creool, een fijne hanger of een onbedekte halslijn, en één ring of armband. Zijn de oorbellen opvallender, beperk dan het detail van de ketting."
+        },
+        {
+          "type": "see-also",
+          "text": "Welke sieraden draagt u bij een zwarte jurk?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieraden voor satijnen jurken",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Satijn heeft al glans, dus minimalistische sieraden komen vooral goed tot hun recht als de jurk elegant moet blijven."
+          "type": "subheading",
+          "text": "Satijnen jurk"
         },
         {
           "type": "paragraph",
-          "text": "Medium studs voegen glitter toe zonder al te veel beweging toe te voegen. Druppeloorbellen voegen glans toe als de jurk eenvoudig is. Huggies en minimalistische oorbellen werken wanneer de satijnen outfit meer casual is of gericht op een werkevenement."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Satijnen jurkstijl",
-            "Beste minimalistische sieradenrichting",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Satijnen onderjurk",
-              "Druppel oorbellen",
-              "Orsola"
-            ],
-            [
-              "Satijnen jurk met hoge hals",
-              "Middelgrote noppen of hoepels",
-              "Cadenza M, Pave-hoepels"
-            ],
-            [
-              "Champagne satijnen jurk",
-              "Zachte druppels of noppen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Blozende satijnen jurk",
-              "Vlinderoorbellen of korte druppels",
-              "Farfalla, Concetta Kort"
-            ],
-            [
-              "Zwarte satijnen jurk",
-              "Middelgrote noppen of druppels",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Groene satijnen jurk",
-              "Druppels of hoepels",
-              "Orsola, Pave Hoops"
-            ],
-            [
-              "Gedetailleerde satijnen jurk",
-              "Studs of knuffels",
-              "Cadenza M, Amadea"
-            ]
-          ]
+          "text": "Satijn weerkaatst al licht en brengt beweging in de look. Bedek de stof niet met meerdere concurrerende sieraden. Probeer diamanten oorstekers met een fijne armband, ingetogen oorhangers zonder ketting of een fijne hanger met kleine oorstekers."
         },
         {
           "type": "see-also",
-          "text": "Sieraden met satijnen jurk",
+          "text": "Welke sieraden draagt u bij een satijnen jurk?",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Bedrukte of gedecoreerde outfit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wanneer een outfit borduurwerk, pailletten, prints of andere decoratieve details bevat, beperkt u het aantal blikvangers: kleine oorstekers, een eenvoudige ketting of geen ketting, en één ingetogen ring. Minimalistisch betekent niet onzichtbaar; het doel is dat outfit en sieraden elk een eigen visuele rol hebben."
         }
       ]
     },
     {
-      "heading": "Minimalistische sieraden voor outfits voor bruiloftsgasten",
+      "heading": "Minimalistische sieraden bij kapsels en brillen",
       "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische sieraden werken prachtig voor bruiloftsgasten omdat ze de look elegant en respectvol houden."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een outfit voor een bruiloftsgast mag er niet te bruids of te zwaar uitzien. Studs, zachte oorbellen, vlinderoorbellen en delicate knuffels zijn meestal veiliger dan zeer dramatische sieraden, vooral als de jurk al kant, satijn, print, borduursel of een sterke halslijn heeft."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-105.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Bruiloft gast look",
-                "Beste minimalistische sieradenrichting",
-                "Productrichting"
-              ],
-              "rows": [
-                [
-                  "Eenvoudige bruiloftsgastenjurk",
-                  "Oorhangers of medium studs",
-                  "Orsola, Cadenza M"
-                ],
-                [
-                  "Gedetailleerde bruiloftsgastjurk",
-                  "Studs of knuffels",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Satijnen bruiloftsgastenjurk",
-                  "Druppel oorbellen",
-                  "Orsola"
-                ],
-                [
-                  "Bloemen jurk",
-                  "Vlinderoorbellen of kleine studs",
-                  "Farfalla, Cadenza S"
-                ],
-                [
-                  "Champagnejurk",
-                  "Zachte drops of medium noppen",
-                  "Concetta Kort, Cadenza M"
-                ],
-                [
-                  "Salie of mint jurk",
-                  "Vlinderoorbellen of delicate druppels",
-                  "Farfalla, Concetta Kort"
-                ],
-                [
-                  "Zwarte bruiloftsgastenjurk",
-                  "Middelgrote noppen of zachte druppels",
-                  "Cadenza M, Orsola"
-                ],
-                [
-                  "Bruidsmeisjestyling",
-                  "Kleine noppen of delicate druppels",
-                  "Cadenza S, Concetta kort"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "In het laboratorium gekweekte diamanten oorbellen voor bruiloften",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieraden voor feesten en diners",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische feestsieraden moeten toch speciaal aanvoelen. Het verschil is dat er schonere stukken worden gebruikt in plaats van zware statement-sieraden."
-        },
-        {
-          "type": "paragraph",
-          "text": "Medium studs, hoops en elegante drops zijn de sterkste keuzes. Als de outfit al pailletten, satijn, rode stof, zwart satijn of een dramatische halslijn heeft, zien minimalistische sieraden er misschien meer gepolijst uit dan opvallende oorbellen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Feest- of dinerlook",
-            "Beste minimalistische sieradenrichting",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Diner outfit",
-              "Middelgrote noppen of zachte druppels",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Cocktailjurk",
-              "Hoepels of medium studs",
-              "Pave Hoops, Cadenza M"
-            ],
-            [
-              "Zwarte feestjurk",
-              "Hoepels, studs of druppels",
-              "Pave Hoops, Cadenza M, Orsola"
-            ],
-            [
-              "Rode jurk",
-              "Middelgrote noppen of druppels",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Groene jurk",
-              "Drops, hoops of medium studs",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Satijnen feestjurk",
-              "Druppels of noppen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Gedetailleerde feestoutfit",
-              "Studs of knuffels",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Minimale feestoutfit",
-              "Hoepels of druppels",
-              "Pave Hoops, Orsola"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gids voor feestoorbellen",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieraden voor geschenken",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische sieraden zijn sterke cadeaus omdat ze gemakkelijker te dragen zijn dan zeer opvallende of zeer specifieke ontwerpen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Als je niet zeker weet wat de exacte stijl van de ontvanger is, zijn studs meestal het veiligst. Huggies zijn goed voor iemand die van moderne sieraden houdt. Minimalistische oorbellen zijn het beste voor iemand met een ingetogen smaak. Vlinderoorbellen zijn sterker als het cadeau betekenisvol of romantisch moet aanvoelen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Cadeau nodig",
-            "Beste minimalistische sieradenrichting",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Veiligste cadeau",
-              "Kleine of middelgrote noppen",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Eerste diamantgeschenk",
-              "Kleine studs",
-              "Cadenza S"
-            ],
-            [
-              "Klassiek sprankelend cadeau",
-              "Middelgrote noppen",
-              "Cadenza M"
-            ],
-            [
-              "Modern cadeau",
-              "Knuffels",
-              "Amadea"
-            ],
-            [
-              "Rustig luxe geschenk",
-              "Minimalistische oorbellen",
-              "Laluce"
-            ],
-            [
-              "Romantisch cadeau",
-              "Vlinder oorbellen",
-              "Farfalla, Alidi Farfalla"
-            ],
-            [
-              "Bruidsmeisje cadeau",
-              "Kleine noppen of delicate druppels",
-              "Cadenza S, Concetta kort"
-            ],
-            [
-              "Verjaardagscadeau",
-              "Studs, vlinderoorbellen of knuffels",
-              "Cadenza M, Farfalla, Amadea"
-            ],
-            [
-              "Jubileumcadeau",
-              "Druppels of vlinderoorbellen",
-              "Orsola, Alidi Farfalla"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-gekweekte diamanten oorbellen voor geschenken",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-gifts"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische oorstapelideeën",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Minimalistische oorstukken moeten schoon en doelgericht aanvoelen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Gebruik één klein glitterpunt, één vormstuk en één rustig detail. Houd de metaalkleur consistent als de klant wil dat de stapel er gepolijst uitziet."
-        },
         {
           "type": "grid-layout",
           "imagePosition": "left",
-          "image": "/blog-images/blog-image-107.jpg",
+          "image": "/blog-images/blog-image-46.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Minimalistisch oorstapeldoel",
-                "Hoofdstuk",
-                "Ondersteunend stuk",
-                "Productrichting"
-              ],
-              "rows": [
-                [
-                  "Eenvoudige dagelijkse stapel",
-                  "Kleine stoeterij",
-                  "Knuffel",
-                  "Cadenza S + Amadea"
-                ],
-                [
-                  "Zachte minimale stapel",
-                  "Kleine stoeterij",
-                  "Minimalistische oorbellen",
-                  "Cadenza S + Laluce"
-                ],
-                [
-                  "Gepolijste stapel werkkleding",
-                  "Middelgrote stud",
-                  "Knuffel",
-                  "Cadenza M + Amadea"
-                ],
-                [
-                  "Rustige luxe stapel",
-                  "Middelgrote stud",
-                  "Minimale details",
-                  "Cadenza M + Laluce"
-                ],
-                [
-                  "Romantische minimale stapel",
-                  "Vlinder oorbel",
-                  "Kleine stoeterij",
-                  "Farfalla + Cadenza S"
-                ],
-                [
-                  "Bruiloft minimale stapel",
-                  "Zachte daling",
-                  "Kleine stoeterij",
-                  "Concetta Kort + Cadenza S"
-                ],
-                [
-                  "Avond minimale stapel",
-                  "Oorbel laten vallen",
-                  "Kleine stoeterij",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Minimale stapel in de hoepel",
-                  "Hoepel",
-                  "Kleine stoeterij",
-                  "Pave Hoops + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-grown diamanten oorbellen voor oorstapels",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieraden per outfittype",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Dit gedeelte moet shoppers helpen sieraden te kiezen op basis van wat ze dragen."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Outfittype",
-            "Beste minimalistische sieradenrichting",
-            "Productrichting"
-          ],
-          "rows": [
-            [
-              "Wit overhemd en spijkerbroek",
-              "Kleine studs of knuffels",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Blazer-outfit",
-              "Medium studs of knuffels",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Zwarte jurk",
-              "Medium studs, hoops of zachte drops",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Satijnen jurk",
-              "Middelgrote studs of oorbellen",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Jurk met V-hals",
-              "Druppels of medium noppen",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Lieve halslijn",
-              "Vlinderoorbellen of zachte druppels",
-              "Farfalla, Concetta Kort"
-            ],
-            [
-              "Off-shoulder jurk",
-              "Drops, hoepels of studs",
-              "Orsola, Pave Hoops, Cadenza M"
-            ],
-            [
-              "Groene jurk",
-              "Druppels, oorringen of zachte romantische oorbellen",
-              "Orsola, Pave Hoops, Farfalla"
-            ],
-            [
-              "Rode jurk",
-              "Middelgrote noppen of druppels",
-              "Cadenza M, Orsola"
-            ],
-            [
-              "Werkkleding",
-              "Studs, knuffels of minimalistische oorbellen",
-              "Cadenza M, Amadea, Laluce"
-            ],
-            [
-              "Bruiloft gast outfit",
-              "Druppels, studs of vlinderoorbellen",
-              "Orsola, Cadenza M, Farfalla"
-            ],
-            [
-              "Reisoutfit",
-              "Veilige studs of knuffels",
-              "Cadenza S, Amadea"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Sieraden met rode jurk",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Minimalistische sieraden van Metal Color",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Metaalkleur kan het gevoel van minimalistische sieraden veranderen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Geelgoud voelt warm en klassiek aan. Witte of zilveren tinten voelen schoon en modern aan. Roségoud voelt zacht en romantisch aan. Voor een minimalistische styling is de gemakkelijkste keuze meestal de metaalkleur die de shopper al het vaakst draagt."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-102.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metaal kleur",
-                "Minimalistische stylingstemming",
-                "Beste voor"
-              ],
-              "rows": [
-                [
-                  "Geel goud",
-                  "Warm, klassiek en gepolijst",
-                  "Dagelijkse kleding, zwarte jurken, groene jurken, cadeaus"
-                ],
-                [
-                  "Witte of zilveren tint",
-                  "Schoon, licht en modern",
-                  "Werkkleding, minimalistische outfits, coole kledingkasten"
-                ],
-                [
-                  "Rosé goud",
-                  "Zacht, romantisch en vrouwelijk",
-                  "Cadeaus, blush-outfits, pasteljurken, romantische styling"
-                ],
-                [
-                  "Gemengde metalen",
-                  "Creatief en trendgericht",
-                  "Oorstapels en casual styling"
-                ]
-              ]
+              "type": "subheading",
+              "text": "Los gedragen haar"
             },
             {
               "type": "paragraph",
-              "text": "Voor minimalistische oorstukken is één metaalkleur meestal het veiligst. Een geelgouden stapel voelt warm aan, een wit/zilverkleurige stapel voelt schoon aan en een roségouden stapel voelt zacht aan."
+              "text": "Kleine oorbellen kunnen deels verborgen raken onder los haar. Kies een strakkere, beter zichtbare contour als u wilt dat de oorbellen opvallen, en controleer of creolen, oorhangers of decoratieve randen in het haar blijven haken."
+            },
+            {
+              "type": "subheading",
+              "text": "Opgestoken haar"
+            },
+            {
+              "type": "paragraph",
+              "text": "Opgestoken haar maakt het oor vrij en kan kleinere oorbellen beter zichtbaar maken. Een oorsteker, kleine creool (huggie) of minimalistische ear stack kan voldoende detail geven zonder een grotere oorbel te vereisen."
+            },
+            {
+              "type": "subheading",
+              "text": "Kort haar"
+            },
+            {
+              "type": "paragraph",
+              "text": "Kort haar kan zowel het oor als de halslijn zichtbaar maken. Bepaal of de oorbellen of de ketting de hoofdrol krijgt, in plaats van beide even opvallend te maken."
             }
           ]
         },
         {
+          "type": "subheading",
+          "text": "Bril"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een bril voegt rond het gezicht een extra vorm en een kleur van metaal of acetaat toe. Let op de kleur en dikte van het montuur, de metaalafwerking, de afstand tussen de brilpoot en de oorbellen en de vraag of de oorbellen concurreren met een decoratief montuur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uw sieraden hoeven niet exact bij uw bril te passen, maar houd wel rekening met hun verhoudingen samen."
+        }
+      ]
+    },
+    {
+      "heading": "Metaalkleuren combineren",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Een minimalistische combinatie van metalen werkt wanneer het contrast wordt herhaald. Bijvoorbeeld: geelgouden oorbellen met een horloge van gemengde metalen, een ketting in een witte metaaltoon met een ring waarin beide afwerkingen terugkomen, of afwisselende ringafwerkingen die u bij het oor herhaalt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voeg geen enkel losstaand contrasterend sieraad toe zonder een tweede visuele verbinding. Kies voor een uniform resultaat de afwerking die al voorkomt op uw horloge, dagelijkse ring of meest gedragen ketting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Controleer voordat u een sieraad in geelgoud, witgoud of roségoud kiest de actuele varianten op de productpagina."
+        },
+        {
           "type": "see-also",
-          "text": "Goud versus wit versus roségouden laboratoriumdiamantenoorbellen",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Labgegroeide diamanten oorbellen in geelgoud, witgoud of roségoud",
+          "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Producttrajecten per stylingbehoefte",
+      "heading": "Een minimalistische overgang van dag naar avond",
       "content": [
         {
-          "type": "subheading",
-          "text": "Voor de beste dagelijkse minimalistische start"
-        },
-        {
           "type": "paragraph",
-          "text": "Kies Cadenza S lab-grown diamanten studs. Ze zijn subtiel, gemakkelijk te dragen en sterk als een eerste minimalistische diamanten oorbel."
+          "text": "U hoeft niet elk sieraad te vervangen om het effect van een outfit te veranderen."
         },
         {
           "type": "subheading",
-          "text": "Voor meer zichtbare minimalistische sprankeling"
+          "text": "Overdag"
         },
         {
-          "type": "paragraph",
-          "text": "Kies voor Cadenza M diamanten oorknopjes. Ze behouden de strakke vorm van de noppen en voegen tegelijkertijd meer aanwezigheid toe."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor rustige, minimalistische details"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies voor minimalistische diamanten oorbellen van Laluce. Ze zijn het beste voor shoppers die een ingetogen styling willen."
+          "type": "bullet-list",
+          "items": [
+            "Kleine diamanten oorstekers",
+            "Fijne hanger",
+            "Eenvoudige ring"
+          ]
         },
         {
           "type": "subheading",
-          "text": "Voor moderne minimalistische styling"
+          "text": "Avond"
         },
         {
-          "type": "paragraph",
-          "text": "Kies voor oorbellen van Amadea Huggie. Ze voegen vorm toe, blijven dicht bij het oor en zijn gemakkelijk te stylen."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor minimalistische oorstapels"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies Cadenza S met Laluce of Amadea. Hierdoor ontstaat een schone stapel zonder dat het oor er vol uitziet."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor minimalistische bruiloftsstyling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies Orsola oorbellen, Concetta korte oorbellen of Cadenza M, afhankelijk van het detail van de jurk."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor romantische minimalistische styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies voor Farfalla vlinderoorbellen of Alidi Farfalla vlinderoorbellen. Deze werken goed voor geschenken, zachte jurken en betekenisvolle styling."
-        },
-        {
-          "type": "subheading",
-          "text": "Voor minimalistische feeststyling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies voor Cadenza M, Pave Hoops of Orsola. Deze voegen voldoende avondlak toe zonder te brutaal te worden."
-        }
-      ]
-    },
-    {
-      "heading": "Productaanbevelingen van IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Beste minimalistische stylingrol",
-            "Waarom het werkt"
-          ],
-          "rows": [
-            [
-              "Cadenza S lab-grown diamanten studs",
-              "Beste eerste minimalistische stuk",
-              "Klein, subtiel en gemakkelijk dagelijks te dragen"
-            ],
-            [
-              "Cadenza M diamanten oorknopjes",
-              "Best zichtbare minimalistische schittering",
-              "Klassieke vorm met meer aanwezigheid"
-            ],
-            [
-              "Laluce minimalistische diamanten oorbellen",
-              "Beste rustige detail",
-              "Zacht, ingetogen en gemakkelijk te stylen"
-            ],
-            [
-              "Amadea Huggie oorbellen",
-              "Beste moderne minimalistische vorm",
-              "Sterk voor dagelijks gebruik en oorstapels"
-            ],
-            [
-              "Hoepels effenen",
-              "Beste minimale borduurringrichting",
-              "Voegt vorm toe en blijft draagbaar"
-            ],
-            [
-              "Orsola oorbellen",
-              "Beste minimalistische gelegenheidsbeweging",
-              "Voegt elegantie toe aan diners en bruiloften"
-            ],
-            [
-              "Concetta korte oorbellen",
-              "Beste delicate gelegenheidsstuk",
-              "Goed voor bruidsmeisjes en zachte styling"
-            ],
-            [
-              "Concetta Lange oorbellen",
-              "Beste formele minimale lijn",
-              "Verfijnd en avondklaar"
-            ],
-            [
-              "Farfalla vlinder oorbellen",
-              "Beste romantische minimalistische stuk",
-              "Voegt betekenis toe zonder zwaar te voelen"
-            ],
-            [
-              "Alidi Farfalla vlinderoorbellen",
-              "Het beste romantische stuk op basis van geschenken",
-              "Sterk voor verjaardagen en jubilea"
-            ],
-            [
-              "Lusso opvallende statement oorbellen",
-              "Niet minimalistisch, maar nuttig contrast",
-              "Het beste is alleen als de outfit één opvallend middelpunt nodig heeft"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Vervang de oorstekers door een beter zichtbare oorbel",
+            "Houd de hanger om, of verwijder hem als de oorbellen het middelpunt worden",
+            "Voeg één armband toe",
+            "Houd dezelfde ring en metaalrichting aan"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Minimalistische sieraden moeten gemakkelijk te dragen, gemakkelijk te herhalen en gemakkelijk te stylen zijn. Begin met Cadenza S voor subtiele schittering, Cadenza M voor klassieke glans, Laluce voor rustige details, Amadea voor moderne vormen en Orsola voor zachte gelegenheidsbewegingen."
+          "text": "Door één blikvanger te veranderen ontstaat meestal een duidelijkere overgang dan door meerdere extra sieraden toe te voegen."
         }
       ]
     },
     {
-      "heading": "Veel voorkomende minimalistische stijlfouten die u moet vermijden",
+      "heading": "Minimalistische sieraden en ear stacks",
       "content": [
         {
           "type": "paragraph",
-          "text": "Een veelgemaakte fout is dat minimalistische sieraden onzichtbaar moeten zijn. Minimalistische sieraden kunnen nog steeds schitteren en het gezicht omlijsten; het overheerst de outfit gewoon niet."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een andere fout is het kiezen van stukken die te klein zijn voor de outfit. Als de jurk donker, satijn of visueel sterk is, kunnen hele kleine oorbellen verdwijnen."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een derde fout is het dragen van te veel kleine kledingstukken zonder structuur. Zelfs minimalistische sieraden kunnen er vol uitzien als er geen hoofdstuk of duidelijk evenwicht is."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een andere fout is het onbedoeld mengen van metalen. Gemengde metalen kunnen er stijlvol uitzien, maar één metaalkleur is meestal gemakkelijker voor een gepolijste, minimalistische look."
-        },
-        {
-          "type": "paragraph",
-          "text": "Een vijfde fout is het gebruik van minimalistische sieraden alleen voor vrijetijdskleding. Minimalistische studs, drops en knuffels kunnen ook prachtig staan ​​op bruiloften, diners en feesten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Kies ten slotte niet alleen voor sieraden omdat ze eenvoudig zijn. Het moet nog steeds passen bij de outfit, de halslijn, het kapsel, de gelegenheid en de persoonlijke stijl van de drager."
+          "text": "Een minimalistische ear stack kan bestaan uit twee oplopende oorstekers, een oorsteker met een kleine creool (huggie), een smalle creool met een kleine oorsteker of drie ingetogen oorbellen met een herhaalde metaal- of diamantvorm."
         },
         {
           "type": "see-also",
-          "text": "Onderhoudsgids voor vergulde sieraden",
+          "text": "Oorbellen stapelen",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Ideeën voor een diamond ear stack",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Een capsulecollectie met minimalistische sieraden onderhouden",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Een kleinere collectie betekent vaak dat u de sieraden vaker draagt en vastpakt. Voor bevestigde vergulde 925 sterling zilveren sieraden:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Breng parfum, cosmetica en haarproducten aan voordat u uw sieraden omdoet",
+            "Doe uw sieraden af voordat u gaat douchen, zwemmen of sporten",
+            "Wrijf de sieraden na het dragen voorzichtig schoon",
+            "Bewaar sieraden afzonderlijk om wrijving te beperken",
+            "Houd fijne kettingen gesloten tijdens het opbergen om klitten te beperken",
+            "Vermijd schurende poetsmiddelen",
+            "Volg de onderhoudsinstructies die bij elk product zijn meegeleverd"
+          ]
+        },
+        {
+          "type": "see-also",
+          "text": "Zo verzorgt u vergulde sieraden",
           "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
         }
       ]
     },
     {
-      "heading": "Laatste minimalistische sieradenchecklist",
+      "heading": "Veelgemaakte fouten bij het stylen van minimalistische sieraden",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Vraag voordat u minimalistische sieraden kiest:"
+          "type": "subheading",
+          "text": "Meerdere blikvangers dragen"
         },
         {
-          "type": "bullet-list",
+          "type": "paragraph",
+          "text": "Zichtbare oorbellen, meerdere kettingen, verschillende ringen en gestapelde armbanden kunnen met elkaar concurreren. Kies één hoofdzone en houd de overige sieraden rustiger."
+        },
+        {
+          "type": "subheading",
+          "text": "Aannemen dat minimalistisch piepklein betekent"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een heel klein sieraad kan wegvallen tegen een outfit, kapsel of bril. Gebruik de verhoudingen van de complete look bij het kiezen van de maat."
+        },
+        {
+          "type": "subheading",
+          "text": "Niet bij elkaar passende details combineren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ook meerdere kleine motieven kunnen druk ogen. Herhaal een vorm, diamantdetail of metaalkleur."
+        },
+        {
+          "type": "subheading",
+          "text": "Afmetingen negeren"
+        },
+        {
+          "type": "paragraph",
+          "text": "De lengte van de ketting, afmetingen van de hanger, diameter van de creool en maat van de oorbel beïnvloeden hoe sieraden samen werken. Gebruik echte afmetingen en authentieke foto’s van modellen."
+        },
+        {
+          "type": "subheading",
+          "text": "Metalen per ongeluk combineren"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gemengde metalen kunnen bewust gekozen lijken wanneer u ze herhaalt. Eén losstaand contrasterend sieraad kan onsamenhangend ogen."
+        },
+        {
+          "type": "subheading",
+          "text": "Elk sieraad voor dezelfde gelegenheid kiezen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Een nuttige capsulecollectie bevat sieraden die u voor verschillende outfits opnieuw kunt combineren, in plaats van één complete set die u altijd samen draagt."
+        }
+      ]
+    },
+    {
+      "heading": "Checklist voor de styling",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Vraag uzelf voordat u de look afrondt af:"
+        },
+        {
+          "type": "numbered-list",
           "items": [
-            "Is de outfit casual, werkkleding, bruiloftsgast, diner of feest?",
-            "Wil ik sprankeling, vorm, beweging of zachtheid?",
-            "Moeten de oorbellen of ketting het belangrijkste sieraadmoment zijn?",
-            "Zal mijn kapsel de oorbellen laten zien?",
-            "Is de outfit eenvoudig of gedetailleerd?",
-            "Past de metaalkleur bij mijn gebruikelijke sieraden?",
-            "Kan het kledingstuk bij meer dan één outfit worden gedragen?",
-            "Zijn de sieraden comfortabel genoeg om lang te dragen?",
-            "Kunnen de oorbellen in een oorstukje gebruikt worden?",
-            "Zijn de materialen duidelijk uitgelegd?",
-            "Is het ontwerp eenvoudig maar toch bijzonder?",
-            "Zullen deze sieraden na één seizoen nog draagbaar zijn?"
+            "Welk sieraad is het middelpunt?",
+            "Welk detail verbindt de sieraden?",
+            "Is er genoeg visuele ruimte?",
+            "Past de ketting bij de halslijn?",
+            "Passen de oorbellen bij het kapsel en de bril?",
+            "Zijn de verhoudingen van de sieraden geschikt voor de outfit?",
+            "Lijkt de combinatie van metalen bewust gekozen?",
+            "Blijven kettingen, creolen of oorhangers aan kleding haken?",
+            "Kunt u één sieraad verwijderen om de compositie duidelijker te maken?",
+            "Zijn de materialen en onderhoudsvereisten duidelijk?"
           ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Als je het niet zeker weet, begin dan met kleine in het laboratorium gekweekte diamanten studs of knuffels. Het zijn de gemakkelijkste minimalistische sieraden om vaak te dragen."
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Wat zijn minimalistische sieraden?",
-      "answer": "Minimalistische sieraden zijn eenvoudige, strakke en draagbare sieraden die ontworpen zijn om glans toe te voegen zonder de outfit te overheersen. Het kan bestaan ​​uit studs, knuffels, kleine oorringen, minimalistische oorbellen en delicate druppels."
+      "question": "Wat is minimalistische sieradenstyling?",
+      "answer": "Bij minimalistische sieradenstyling combineert u een beperkt aantal sieraden met beheerste verhoudingen, herhaalde details en visuele ruimte. De sieraden vullen de outfit aan zonder van elk gebied een blikvanger te maken."
     },
     {
-      "question": "Hoe style je minimalistische sieraden?",
-      "answer": "Stijl minimalistische sieraden door één fonkelingspunt, één vormdetail en één strakke afwerking te kiezen. Houd de stukken in balans en voorkom dat de look te vol wordt."
+      "question": "Hoeveel sieraden horen bij een minimalistische look?",
+      "answer": "Er is geen vast aantal. Twee goed op elkaar afgestemde sieraden kunnen completer ogen dan meerdere niet bij elkaar passende items. Kies één blikvanger en gebruik de overige sieraden als ondersteuning."
     },
     {
-      "question": "Zijn minimalistische sieraden goed voor dagelijks gebruik?",
-      "answer": "Ja, minimalistische sieraden zijn uitstekend geschikt voor dagelijks gebruik, omdat ze bij veel outfits passen en comfortabel aanvoelen bij regelmatig gebruik."
+      "question": "Hoe bouwt u een capsulecollectie met minimalistische sieraden op?",
+      "answer": "Begin met categorieën die u vaak kunt dragen, zoals kleine oorstekers, kleine creolen (huggies) of creolen, een hanger, een armband en een eenvoudige ring. Kies sieraden die u opnieuw kunt combineren, in plaats van ze alleen als één complete set te dragen."
     },
     {
-      "question": "Welke oorbellen zijn het beste voor een minimalistische styling?",
-      "answer": "Kleine diamanten studs, medium studs, knuffels, minimalistische oorbellen en zachte oorbellen zijn het beste voor een minimalistische styling."
+      "question": "Kunt u minimalistische kettingen laag over elkaar dragen?",
+      "answer": "Ja. Wissel de lengtes af en houd minstens één ketting visueel eenvoudig. Controleer of hangers elkaar niet overlappen en of de kettingen bij de halslijn passen."
     },
     {
-      "question": "Kunnen minimalistische sieraden gedragen worden op bruiloften?",
-      "answer": "Ja, minimalistische sieraden werken prachtig voor bruiloftsgasten, vooral als de outfit al kant, satijn, borduursels of een sterke halslijn heeft."
+      "question": "Kunt u metaalkleuren combineren in minimalistische sieraden?",
+      "answer": "Ja. Laat beide metaalkleuren ergens in de combinatie terugkomen, zodat het contrast bewust gekozen lijkt."
     },
     {
-      "question": "Kunnen minimalistische sieraden op feestjes worden gedragen?",
-      "answer": "Ja, minimalistische sieraden kunnen geschikt zijn voor feestjes als je kiest voor stukken die voldoende glans hebben, zoals medium studs, ringetjes of elegante oorbellen."
+      "question": "Welke sieraden passen bij een hoge halslijn?",
+      "answer": "Oorbellen kunnen het belangrijkste detail vormen. Draagt u een ketting, plaats die dan duidelijk boven of onder de halslijn, niet precies op de rand."
     },
     {
-      "question": "Zijn minimalistische sieraden goed voor op het werk?",
-      "answer": "Ja, minimalistische sieraden zijn ideaal voor op het werk, omdat ze glans toevoegen zonder afleidend te zijn."
+      "question": "Welke minimalistische sieraden passen bij een V-hals?",
+      "answer": "Een hanger kan de V-vorm volgen. Kies voor ingetogen oorbellen als de ketting de blikvanger is."
     },
     {
-      "question": "Welke minimalistische sieraden zijn het beste als cadeau?",
-      "answer": "Studs, knuffels en minimalistische diamanten oorbellen zijn de veiligste cadeaukeuzes, omdat ze gemakkelijk te dragen en minder riskant zijn dan opvallende sieraden."
+      "question": "Kunt u minimalistische sieraden dragen naar avondevenementen?",
+      "answer": "Ja. Maak één blikvanger, zoals de oorbellen, wat opvallender en houd de overige sieraden ingetogen."
     },
     {
-      "question": "Kun je een oorstapel bouwen met minimalistische sieraden?",
-      "answer": "Ja, minimalistische sieraden zijn perfect voor oorbellen. Een kleine stud met een knuffel of minimalistische oorbel zorgt voor een opgeruimde alledaagse stapel."
+      "question": "Kunnen minimalistische oorbellen deel uitmaken van een ear stack?",
+      "answer": "Ja. Kies sieraden met verwante vormen of afwerkingen en controleer de werkelijke afmetingen en tussenruimtes voordat u ze combineert."
     },
     {
-      "question": "Welke IWantJewels-producten zijn het beste voor minimalistische styling?",
-      "answer": "Cadenza S, Cadenza M, Laluce, Amadea Huggie, Pave Hoops, Orsola, Concetta Short en Farfalla zijn sterke opties, afhankelijk van of de look alledaags is, werkkleding, bruiloftsgast, romantisch of feestgericht."
+      "question": "Zijn minimalistische sieraden altijd geschikt voor dagelijks gebruik?",
+      "answer": "Nee. De geschiktheid hangt af van de afmetingen, het gewicht, de sluiting, de materialen, de afwerking en uw activiteiten."
     }
   ],
   "cta": {
-    "heading": "Minimalistische sieraden moeten eenvoudig, gepolijst en gemakkelijk te dragen zijn. Kies studs voor een zuivere schittering, knuffels voor een moderne vorm, minimalistische oorbellen voor rustige details, oorringen voor een zachte structuur en druppeloorbellen voor elegante beweging.",
-    "body": "Begin met IWantJewels demi-fijne lab-grown diamanten oorbellen als je minimalistische sieraden met echte diamanten schittering wilt. Kies Cadenza S voor subtiele alledaagse glans, Cadenza M voor klassieke lak, Laluce voor rustige styling, Amadea voor knuffels, Pave Hoops voor vorm en Orsola voor zachte beweging tijdens gelegenheden.",
-    "primaryLabel": "Shop minimalistische sieraden",
-    "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Ontdek lab-gekweekte diamanten oorbellen",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lees de Minimalistische Oorbellen Gids",
-    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
+    "heading": "Minimalistische sieraden stylen draait om helderheid, niet om strikte regels. Kies één blikvanger, laat een verwant detail terugkomen en houd genoeg visuele ruimte, zodat elk sieraad herkenbaar blijft.",
+    "body": "Ontdek de minimalistische sieraden van I Want Jewels en stel een capsulecollectie samen rond de outfits die u het vaakst draagt. Controleer op elke productpagina de afmetingen, materialen en afwerking.",
+    "primaryLabel": "Ontdek minimalistische sieraden",
+    "primaryHref": "/products",
+    "secondaryLabel": "Vergelijk stijlen oorbellen",
+    "secondaryHref": "/resources/earring-style-guides/minimalist-earrings-guide",
+    "tertiaryLabel": "Labgegroeide diamanten oorbellen voor elke dag",
+    "tertiaryHref": "/resources/earring-style-guides/everyday-lab-grown-diamond-earrings-guide"
   }
 }

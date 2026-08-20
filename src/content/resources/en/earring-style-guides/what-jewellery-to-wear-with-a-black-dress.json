@@ -1,1080 +1,639 @@
 {
   "meta": {
     "title": "What Jewellery to Wear with a Black Dress",
-    "description": "Choose jewellery for a black dress with earrings, diamonds, gold, silver, rose gold, party looks, weddings and evening outfit styling."
+    "description": "Choose earrings, necklaces and metal colours for a black dress by neckline, fabric and occasion. Compare studs, hoops, drops and statement designs."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-53.jpg",
-    "title": "What Jewellery to Wear with a Black Dress:",
-    "subtitle": "Earrings, Metals & Styling Guide",
+    "image": "/blog-images/blog-image-54.jpg",
+    "title": "What Jewellery to Wear",
+    "subtitle": "with a Black Dress",
     "paragraphs": [
-      "A black dress is one of the easiest outfits to style with jewellery because it gives sparkle, metal colour and diamond details a clean background. The right earrings can make a black dress feel elegant, romantic, modern, minimal or party-ready.",
-      "The best jewellery for a black dress depends on the dress style. A simple black dress can carry bold statement earrings, drop earrings or hoops. A detailed black dress usually looks better with studs or clean huggies. A satin black dress works beautifully with movement, while a high-neck black dress often suits studs or hoops better than long drops.",
-      "This resource helps shoppers choose jewellery for a black dress by occasion, neckline, hairstyle, metal colour and sparkle level. It also connects each styling direction to IWantJewels products such as Lusso bold statement earrings, Orsola drop earrings, Pave Hoops, Cadenza M diamond stud earrings, Cadenza S lab-grown diamond studs, Amadea Huggie earrings, Laluce minimalist diamond earrings, Farfalla butterfly earrings and Concetta Long earrings."
+      "A black dress can be styled with yellow-gold, white or silver-coloured, rose-gold or mixed-metal jewellery. The right choice depends less on the colour black and more on the dress's neckline, fabric, level of detail and occasion.",
+      "Start by deciding which part of the look should become the focal point. A plain black dress may leave room for noticeable earrings or a necklace, while a sequinned, lace or embellished dress may already contain enough visual detail.",
+      "After selecting a styling direction, check the jewellery's actual dimensions, weight, fastening, materials and finish. Product names such as \"minimalist\", \"statement\" or \"occasion earrings\" do not replace complete specifications."
     ],
-    "shopLabel": "Shop Earrings for a Black Dress",
+    "shopLabel": "Explore Earrings",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Choose the best jewellery for a black dress.",
-      "Decide between studs, hoops, drops, huggies, butterfly earrings and bold statement earrings.",
-      "Match earrings to black satin, simple black, high-neck, strapless and party dresses.",
-      "Choose gold, white/silver tone or rose gold jewellery with a black dress.",
-      "Style jewellery for parties, weddings, dinners, birthdays and evening events.",
-      "Choose the right earrings based on neckline and hairstyle.",
-      "Build black dress ear stack combinations.",
-      "Find IWantJewels product recommendations by outfit and occasion.",
-      "Plan image blocks, product modules, CTA sections and internal links for this page."
+      "Plain black dress — room for one clear focal point",
+      "Detailed black dress — compact studs or restrained jewellery",
+      "Yellow gold warms; white or silver cools; rose gold softens",
+      "Metal colour is not metal composition — check the base metal separately",
+      "The neckline decides the necklace, not the dress colour",
+      "Occasion, fabric and hairstyle matter more than the word \"black\""
     ],
-    "image": "/blog-images/blog-image-13.jpg"
+    "image": "/blog-images/blog-image-42.jpg"
   },
   "content": [
     {
-      "heading": "Black Dress Jewellery Selector",
+      "heading": "Quick answer",
       "content": [
         {
           "type": "paragraph",
-          "text": "Use this table near the top of the page as the main styling decision tool."
+          "text": "For a simple black dress, consider a clear focal point such as drop earrings, hoops, a statement design or a necklace. For a detailed black dress, compact studs, geometric earrings or restrained jewellery may provide enough contrast."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yellow gold creates warmer contrast against black, while white or silver colours create a cooler appearance. Rose gold introduces a softer pink tone. None is universally better; choose according to the outfit, other accessories and personal preference."
         },
         {
           "type": "table",
-          "headers": [
-            "Black Dress Style",
-            "Best Jewellery Direction",
-            "Recommended IWJ Direction"
-          ],
+          "headers": ["Black dress style", "Jewellery direction to consider", "What to check"],
           "rows": [
-            [
-              "Simple black dress",
-              "Bold earrings, drops or hoops",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Satin black dress",
-              "Drop earrings or visible studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "High-neck black dress",
-              "Studs, hoops or bold earrings",
-              "Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Strapless black dress",
-              "Drops or bold statement earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Off-shoulder black dress",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Detailed black dress",
-              "Studs or huggies",
-              "Cadenza M, Cadenza S, Amadea"
-            ],
-            [
-              "Black jumpsuit",
-              "Hoops, huggies or bold earrings",
-              "Pave Hoops, Amadea, Lusso"
-            ],
-            [
-              "Black dinner dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Black party dress",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Minimal black dress",
-              "One strong jewellery focal point",
-              "Lusso, Orsola, Pave Hoops"
-            ]
+            ["Plain black dress", "One noticeable earring or necklace", "Scale, neckline and intended focal point"],
+            ["Satin black dress", "Studs, hoops or controlled drops", "Fabric shine, draping and movement"],
+            ["High-neck black dress", "Earrings instead of a prominent necklace", "Contact with the neckline and hair"],
+            ["Strapless black dress", "Earrings, necklace or a coordinated combination", "Open neckline and spacing"],
+            ["Off-shoulder black dress", "Drops, hoops, statement earrings or a restrained necklace", "Shoulder line and earring length"],
+            ["V-neck black dress", "Earrings with or without a pendant", "Whether the pendant follows the neckline"],
+            ["Lace black dress", "Compact or controlled jewellery", "Pattern density and neckline detail"],
+            ["Sequinned black dress", "Defined but restrained jewellery", "Existing sparkle and embellishment"],
+            ["Black work dress", "Studs, compact hoops or geometric earrings", "Workplace practicality"],
+            ["Black evening dress", "Studs, drops, hoops or statement earrings", "Dress code, fabric and hairstyle"]
           ]
         }
       ]
     },
     {
-      "heading": "Why Black Dresses Are Easy to Style with Jewellery",
+      "heading": "Start with the dress, not the jewellery",
       "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-85.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
               "type": "paragraph",
-              "text": "Black dresses are easy to style because black gives jewellery contrast. Diamonds look brighter, gold looks warmer, silver tones look cleaner, and bold earrings can stand out without competing with the outfit."
+              "text": "Before selecting the jewellery, look at four features of the dress."
+            },
+            {
+              "type": "subheading",
+              "text": "The neckline"
             },
             {
               "type": "paragraph",
-              "text": "A black dress also lets you choose the mood of the look. Gold jewellery can make the outfit feel warm and classic. White or silver-tone jewellery can make it feel clean and modern. Rose gold can soften the look. Lab-grown diamond earrings can add sparkle without needing heavy accessories."
+              "text": "The neckline determines how much visual and physical space is available for earrings and necklaces. A high neckline creates different requirements from a strapless or deep V-neck dress."
+            },
+            {
+              "type": "subheading",
+              "text": "The fabric"
             },
             {
               "type": "paragraph",
-              "text": "The main rule is balance. If the black dress is simple, the jewellery can be stronger. If the dress has detail, the jewellery should be cleaner. If the neckline is open, drops or bold earrings can work beautifully. If the neckline is high, studs or hoops often feel more balanced."
-            },
-            {
-              "type": "see-also",
-              "text": "Party Earrings Guide",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
-            },
-            {
-              "type": "see-also",
-              "text": "Bold Statement Earrings Guide",
-              "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Simple Black Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A simple black dress is the best outfit for stronger jewellery because the dress gives the earrings space to stand out."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is where Lusso bold statement earrings, Orsola drop earrings and Pave Hoops are strongest. If you want the earrings to become the main jewellery moment, choose Lusso. If you want movement and elegance, choose Orsola. If you want shape and modern polish, choose Pave Hoops."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Styling Goal",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Strong party look",
-              "Bold statement earrings",
-              "Lusso"
-            ],
-            [
-              "Elegant evening look",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Modern shape",
-              "Hoops",
-              "Pave Hoops"
-            ],
-            [
-              "Classic sparkle",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Minimal black dress styling",
-              "One focal earring",
-              "Lusso, Orsola, Pave Hoops"
-            ],
-            [
-              "Balanced ear stack",
-              "Main earring + small stud",
-              "Lusso + Cadenza S, Orsola + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "divider"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Satin Black Dress",
-      "content": [
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-87.jpg",
-          "content": [
-            {
-              "type": "paragraph",
-              "text": "A satin black dress already has shine, so the jewellery should add polish without making the full look too heavy."
-            },
-            {
-              "type": "paragraph",
-              "text": "Drop earrings work especially well with satin because they add movement and catch light naturally. Medium studs are better if the satin dress already has a dramatic neckline or strong shape. Bold statement earrings can work if the satin dress is simple and the rest of the jewellery is minimal."
-            },
-            {
-              "type": "see-also",
-              "text": "Party Earrings Guide",
-              "href": "/resources/earring-style-guides/party-earrings-guide"
+              "text": "Satin, velvet, lace, sequins, crepe and knitwear reflect light and move differently. Jewellery that works with plain crepe may compete with sequinned fabric."
             }
           ]
         },
         {
-          "type": "table",
-          "headers": [
-            "Satin Black Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Satin slip dress",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Satin black midi dress",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Satin black high-neck dress",
-              "Studs or hoops",
-              "Cadenza M, Pave Hoops"
-            ],
-            [
-              "Satin black strapless dress",
-              "Drops or bold earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Satin black party dress",
-              "Bold earrings or drops",
-              "Lusso, Orsola"
-            ],
-            [
-              "Satin black jumpsuit",
-              "Hoops or bold earrings",
-              "Pave Hoops, Lusso"
-            ]
-          ]
+          "type": "subheading",
+          "text": "The amount of detail"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ruffles, embroidery, metallic thread, lace, beading and decorative buttons already create focal points. Jewellery does not need to repeat every detail."
+        },
+        {
+          "type": "subheading",
+          "text": "The occasion"
+        },
+        {
+          "type": "paragraph",
+          "text": "A black work dress, cocktail dress and formal evening gown may all be black, but they serve different purposes. Choose jewellery according to the setting rather than the colour alone."
         }
       ]
     },
     {
-      "heading": "Best Earrings for a High-Neck Black Dress",
+      "heading": "Gold, silver or rose-gold jewellery with a black dress",
       "content": [
         {
           "type": "paragraph",
-          "text": "A high-neck black dress usually works better with earrings that sit close to the ear or create shape without adding too much length."
-        },
-        {
-          "type": "paragraph",
-          "text": "Studs, hoops and bold earrings can all work. Long drops can sometimes compete with the neckline, unless the dress is very simple and the drop is refined."
-        },
-        {
-          "type": "paragraph",
-          "text": "Cadenza M diamond stud earrings are strong for a clean high-neck look. Pave Hoops add shape. Lusso bold statement earrings work if the dress is simple and the earrings are meant to lead the outfit."
+          "text": "Black can provide visible contrast for several metal colours, which means there is no single correct answer."
         },
         {
           "type": "table",
-          "headers": [
-            "High-Neck Black Dress Style",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
+          "headers": ["Metal colour", "Appearance against black", "Styling considerations"],
           "rows": [
-            [
-              "Simple high-neck dress",
-              "Bold earrings or hoops",
-              "Lusso, Pave Hoops"
-            ],
-            [
-              "Detailed high-neck dress",
-              "Studs",
-              "Cadenza M, Cadenza S"
-            ],
-            [
-              "Office-to-evening high neck",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Minimal high-neck dress",
-              "Hoops or bold earrings",
-              "Pave Hoops, Lusso"
-            ],
-            [
-              "Formal high-neck dress",
-              "Studs or refined drops",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "High-neck knit dress",
-              "Studs or hoops",
-              "Cadenza S, Pave Hoops"
-            ]
+            ["Yellow gold", "Warm contrast", "Coordinate with warm-coloured accessories or use it deliberately as the main contrast"],
+            ["White or silver colour", "Cooler, more tonal contrast", "Can work with silver hardware, cool accessories or monochrome styling"],
+            ["Rose gold", "Softer pink contrast", "Consider whether other accessories contain warm or pink tones"],
+            ["Mixed metals", "Deliberately varied contrast", "Repeat more than one metal colour elsewhere to make the combination intentional"]
           ]
         },
         {
-          "type": "see-also",
-          "text": "Stud vs Hoop Earrings",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Minimalist Earrings Guide",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Strapless Black Dress",
-      "content": [
-        {
           "type": "paragraph",
-          "text": "A strapless black dress gives earrings more space because the neckline is open. This makes it one of the best dress styles for drops, bold statement earrings and stronger sparkle."
+          "text": "Metal colour and metal composition are not the same. \"Gold colour\" does not establish whether a product is solid gold, gold-plated silver, vermeil or another material. Likewise, \"silver colour\" does not prove that a product is sterling silver."
         },
         {
           "type": "paragraph",
-          "text": "If you want a dramatic party look, choose Lusso. If you want elegant movement, choose Orsola. If you want a more refined formal look, Concetta Long can work beautifully. If you want a safer sparkle option, choose Cadenza M."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Strapless Black Dress Look",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Party look",
-              "Bold statement earrings",
-              "Lusso"
-            ],
-            [
-              "Elegant dinner look",
-              "Drop earrings",
-              "Orsola"
-            ],
-            [
-              "Formal evening look",
-              "Long drops",
-              "Concetta Long"
-            ],
-            [
-              "Minimal sparkle",
-              "Medium studs",
-              "Cadenza M"
-            ],
-            [
-              "Romantic look",
-              "Drops or butterfly earrings",
-              "Orsola, Farfalla"
-            ],
-            [
-              "Ear stack look",
-              "Drop or bold + small stud",
-              "Orsola + Cadenza S, Lusso + Cadenza S"
-            ]
-          ]
+          "text": "Every product page should separately identify the base metal, fineness where applicable, plating or finish, plating karat where applicable, stone type, complete dimensions, weight and fastening."
         },
         {
           "type": "see-also",
-          "text": "Party Earrings Guide",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Drop Earrings Guide",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-drop-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Best Earrings for a Detailed Black Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If a black dress already has sequins, lace, embroidery, ruffles, metallic details or a dramatic neckline, earrings should usually be cleaner."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is where studs, huggies and minimalist earrings are better than bold pieces. The goal is to let the dress stay the main visual detail while the jewellery adds polish."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Detailed Black Dress Type",
-            "Best Earring Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Sequin black dress",
-              "Studs or clean huggies",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Lace black dress",
-              "Studs or soft drops",
-              "Cadenza M, Concetta Short"
-            ],
-            [
-              "Embroidered black dress",
-              "Studs",
-              "Cadenza S, Cadenza M"
-            ],
-            [
-              "Metallic black dress",
-              "Minimalist earrings or studs",
-              "Laluce, Cadenza M"
-            ],
-            [
-              "Ruffled black dress",
-              "Studs or huggies",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Printed black dress",
-              "Studs or small hoops",
-              "Cadenza S, Pave Hoops"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Minimalist Earrings Guide",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        },
-        {
-          "type": "see-also",
-          "text": "Stud vs Huggie Earrings",
-          "href": "/resources/earring-style-guides/stud-vs-huggie-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Stud vs Hoop Earrings",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Gold vs Silver vs Rose Gold Jewellery with a Black Dress",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A black dress works with almost every metal colour, but each finish creates a different mood."
-        },
-        {
-          "type": "paragraph",
-          "text": "Yellow gold adds warmth and richness. White or silver tones feel clean, sharp and modern. Rose gold softens the black dress and makes the look more romantic."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Metal Colour",
-                "Feeling with a Black Dress",
-                "Best For"
-              ],
-              "rows": [
-                [
-                  "Yellow gold",
-                  "Warm, rich and classic",
-                  "Parties, dinners, bold styling"
-                ],
-                [
-                  "White or silver tone",
-                  "Clean, bright and modern",
-                  "Minimal looks, formal styling, cool outfits"
-                ],
-                [
-                  "Rose gold",
-                  "Soft, romantic and feminine",
-                  "Date nights, birthdays, softer styling"
-                ],
-                [
-                  "Mixed metals",
-                  "Modern and creative",
-                  "Ear stacks and trend-led looks"
-                ]
-              ]
-            },
-            {
-              "type": "paragraph",
-              "text": "For most black dress party looks, yellow gold or white/silver tone will feel strongest. Rose gold is better when the look should feel softer or more romantic."
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Gold vs White vs Rose Gold Lab-Grown Diamond Earrings",
+          "text": "Gold vs white vs rose gold lab-grown diamond earrings",
           "href": "/resources/lab-grown-diamond-guides/gold-vs-white-vs-rose-gold-lab-grown-diamond-earrings"
         }
       ]
     },
     {
-      "heading": "Jewellery for a Black Dress by Occasion",
+      "heading": "What earrings should you wear with a black dress?",
       "content": [
         {
           "type": "paragraph",
-          "text": "The occasion should guide how strong the jewellery should be."
+          "text": "Studs, hoops, drops, motifs, geometric earrings and statement designs can all work with a black dress. Choose according to the dress structure and the role you want the earrings to play."
+        },
+        {
+          "type": "subheading",
+          "text": "Stud earrings"
         },
         {
           "type": "paragraph",
-          "text": "A birthday party can carry more sparkle. A wedding guest look should feel elegant and not too bridal. A dinner outfit may need polish rather than drama. A formal event may need refined drops or classic diamond studs."
+          "text": "Studs create a compact point of detail around the ear. They can be useful with lace, sequins, high necklines or prominent necklaces. A stud does not have to be visually minimal — cluster, motif and geometric studs may still become a focal point."
         },
         {
-          "type": "table",
-          "headers": [
-            "Occasion",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Party",
-              "Bold earrings, hoops or drops",
-              "Lusso, Pave Hoops, Orsola"
-            ],
-            [
-              "Birthday dinner",
-              "Medium studs, drops or butterfly earrings",
-              "Cadenza M, Orsola, Farfalla"
-            ],
-            [
-              "Wedding guest",
-              "Drops, studs or refined hoops",
-              "Orsola, Cadenza M, Pave Hoops"
-            ],
-            [
-              "Evening reception",
-              "Bold earrings or long drops",
-              "Lusso, Concetta Long"
-            ],
-            [
-              "Anniversary dinner",
-              "Drops or romantic earrings",
-              "Orsola, Farfalla"
-            ],
-            [
-              "Formal dinner",
-              "Refined drops or classic studs",
-              "Concetta Long, Orsola, Cadenza M"
-            ],
-            [
-              "Work event",
-              "Studs, huggies or small hoops",
-              "Cadenza M, Amadea, Pave Hoops"
-            ],
-            [
-              "Cocktail party",
-              "Hoops, drops or bold sparkle",
-              "Pave Hoops, Orsola, Lusso"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "For diamond-set studs, check the complete width and height, total carat weight, whether carat weight refers to the pair, stone count and shape, weight per earring, and the post and backing."
+        },
+        {
+          "type": "subheading",
+          "text": "Hoop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoops create a curved outline. Their impact depends on diameter, thickness, profile and diamond placement. A compact hoop may support a work or daytime outfit, while a wider or diamond-set hoop can become more prominent with a plain black dress."
+        },
+        {
+          "type": "paragraph",
+          "text": "Check the external diameter, internal diameter, width, weight and fastening. Do not assume every small hoop is a huggie."
+        },
+        {
+          "type": "subheading",
+          "text": "Drop earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Drop earrings create a vertical line beneath the earlobe. Some are rigid, while others contain articulated sections that move independently. Drops may work particularly well with strapless, off-shoulder, sweetheart and uncomplicated V-neck dresses. However, their complete length should be checked against the jawline, shoulder and neckline."
+        },
+        {
+          "type": "subheading",
+          "text": "Statement earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement describes an earring's visual role, not its construction. A hoop, stud or drop can all become statement earrings. A simple black dress may provide space for a focal design, but statement earrings are not automatically the correct choice. Check how their width, length, movement and diamond coverage interact with the hairstyle and neckline."
         },
         {
           "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Weddings",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Jewellery for a Black Dress by Hairstyle",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Hairstyle changes how visible your jewellery looks."
-        },
-        {
-          "type": "paragraph",
-          "text": "If your hair is down, very small earrings may disappear. Medium studs, hoops and drops usually show better. If your hair is pulled back, bold earrings, drops and hoops can frame the face beautifully."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-91.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Hairstyle",
-                "Best Jewellery Direction",
-                "Product Direction"
-              ],
-              "rows": [
-                [
-                  "Hair down",
-                  "Medium studs, hoops or drops",
-                  "Cadenza M, Pave Hoops, Orsola"
-                ],
-                [
-                  "Soft waves",
-                  "Drops, butterfly earrings or visible studs",
-                  "Orsola, Farfalla, Cadenza M"
-                ],
-                [
-                  "Sleek ponytail",
-                  "Hoops, drops or bold earrings",
-                  "Pave Hoops, Orsola, Lusso"
-                ],
-                [
-                  "Low bun",
-                  "Drops or bold earrings",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "High bun",
-                  "Hoops or bold earrings",
-                  "Pave Hoops, Lusso"
-                ],
-                [
-                  "Half-up hair",
-                  "Studs, huggies or soft drops",
-                  "Cadenza M, Amadea, Concetta Short"
-                ],
-                [
-                  "Short hair",
-                  "Studs, hoops or bold earrings",
-                  "Cadenza M, Pave Hoops, Lusso"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Jewellery for a Black Dress by Neckline",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The neckline is one of the most important styling clues."
-        },
-        {
-          "type": "paragraph",
-          "text": "Open necklines can carry drops and bold earrings. High necklines usually work better with studs or hoops. One-shoulder outfits often need one clear focal point so the jewellery does not fight the neckline."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Neckline",
-            "Best Jewellery Direction",
-            "Product Direction"
-          ],
-          "rows": [
-            [
-              "Strapless",
-              "Drops or bold statement earrings",
-              "Orsola, Lusso"
-            ],
-            [
-              "Sweetheart",
-              "Soft drops, butterfly earrings or bold sparkle",
-              "Orsola, Farfalla, Lusso"
-            ],
-            [
-              "V-neck",
-              "Drops or medium studs",
-              "Orsola, Cadenza M"
-            ],
-            [
-              "Off-shoulder",
-              "Drops, hoops or bold earrings",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "High neck",
-              "Studs, hoops or bold earrings",
-              "Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Halter",
-              "Studs or slim drops",
-              "Cadenza M, Concetta Long"
-            ],
-            [
-              "Square neck",
-              "Hoops, drops or medium studs",
-              "Pave Hoops, Orsola, Cadenza M"
-            ],
-            [
-              "One-shoulder",
-              "Studs, drops or one strong focal piece",
-              "Cadenza M, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for V-Neck Dresses",
-          "href": "#"
-        },
-        {
-          "type": "see-also",
-          "text": "Jewellery for Sweetheart Neckline",
-          "href": "#"
-        },
-        {
-          "type": "see-also",
-          "text": "Earrings for Off-Shoulder Dresses",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Necklace or No Necklace with a Black Dress?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The necklace decision depends on the earrings and neckline."
-        },
-        {
-          "type": "paragraph",
-          "text": "If the earrings are bold, the safest choice is usually no necklace or a very delicate necklace. If the earrings are simple studs, a necklace can become more visible. If the neckline is high, skip a necklace and use earrings instead. If the neckline is open, you can choose either a necklace or stronger earrings, but not always both."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Earring Choice",
-            "Necklace Direction"
-          ],
-          "rows": [
-            [
-              "Bold statement earrings",
-              "No necklace or very delicate chain"
-            ],
-            [
-              "Long drop earrings",
-              "No necklace or simple pendant"
-            ],
-            [
-              "Hoop earrings",
-              "Delicate chain or no necklace"
-            ],
-            [
-              "Medium studs",
-              "Necklace can be more visible"
-            ],
-            [
-              "Small studs",
-              "Necklace can lead the look"
-            ],
-            [
-              "Butterfly earrings",
-              "Soft, delicate necklace if needed"
-            ],
-            [
-              "Huggies",
-              "Necklace can be simple or moderate"
-            ],
-            [
-              "Minimalist earrings",
-              "Necklace can become the focal point"
-            ]
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "For IWantJewels styling, if Lusso is the main earring, let Lusso lead. If Cadenza S or Cadenza M is the earring choice, the wearer can add a necklace more easily."
-        },
-        {
-          "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
+          "text": "Bold statement earrings: styling guide",
           "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
         },
         {
+          "type": "subheading",
+          "text": "Butterfly and motif earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Motif earrings can add a recognisable shape to an otherwise simple outfit. Their suitability depends on scale and design — not only the symbolism of the motif. If the black dress already includes floral, lace or embroidered detail, compare the motif carefully so the two designs do not compete."
+        },
+        {
+          "type": "subheading",
+          "text": "Geometric earrings"
+        },
+        {
+          "type": "paragraph",
+          "text": "Geometric earrings can introduce structure to a soft dress or continue the clean lines of a tailored black outfit. Photographs should show the complete design from both front and side angles."
+        },
+        {
           "type": "see-also",
-          "text": "Party Earrings Guide",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
+          "text": "How to style geometric earrings",
+          "href": "/resources/earring-style-guides/how-to-style-geometric-earrings"
         }
       ]
     },
     {
-      "heading": "Black Dress Ear Stack Ideas",
+      "heading": "What necklace should you wear with a black dress?",
       "content": [
         {
           "type": "paragraph",
-          "text": "A black dress works beautifully with ear stacks because the outfit is usually clean enough to let the stack show."
-        },
-        {
-          "type": "paragraph",
-          "text": "The best approach is to choose one main earring and one smaller support piece. If the main piece is Lusso, Orsola or Pave Hoops, keep the support piece small. If the main piece is Cadenza M, you can add a huggie or minimalist detail."
+          "text": "The necklace decision depends primarily on the neckline and the earrings."
         },
         {
           "type": "table",
-          "headers": [
-            "Black Dress Stack Goal",
-            "Main Piece",
-            "Support Piece",
-            "Product Direction"
-          ],
+          "headers": ["Black dress neckline", "Necklace direction"],
           "rows": [
-            [
-              "Bold party stack",
-              "Bold earring",
-              "Small stud",
-              "Lusso + Cadenza S"
-            ],
-            [
-              "Elegant black dress stack",
-              "Drop earring",
-              "Small stud",
-              "Orsola + Cadenza S"
-            ],
-            [
-              "Modern hoop stack",
-              "Hoop",
-              "Small stud",
-              "Pave Hoops + Cadenza S"
-            ],
-            [
-              "Classic sparkle stack",
-              "Medium stud",
-              "Huggie",
-              "Cadenza M + Amadea"
-            ],
-            [
-              "Minimal black dress stack",
-              "Small stud",
-              "Minimalist earring",
-              "Cadenza S + Laluce"
-            ],
-            [
-              "Romantic black dress stack",
-              "Butterfly earring",
-              "Small stud",
-              "Farfalla + Cadenza S"
-            ],
-            [
-              "Formal black dress stack",
-              "Long drop",
-              "Small stud",
-              "Concetta Long + Cadenza S"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "How to Stack Earrings",
-          "href": "/resources/earring-style-guides/how-to-stack-earrings"
-        },
-        {
-          "type": "see-also",
-          "text": "Diamond Ear Stack Ideas",
-          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
-        },
-        {
-          "type": "see-also",
-          "text": "Lab-Grown Diamond Earrings for Ear Stacks",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Product Pathways by Black Dress Styling Need",
-      "content": [
-        {
-          "type": "subheading",
-          "text": "For the Strongest Black Dress Look"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Lusso bold statement earrings. They are best for a simple black dress, black party dress or minimal jumpsuit where the earrings should lead."
-        },
-        {
-          "type": "subheading",
-          "text": "For Elegant Movement"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Orsola drop earrings. They work beautifully with satin black dresses, strapless black dresses and dinner outfits."
-        },
-        {
-          "type": "subheading",
-          "text": "For Modern Shape"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Pave Hoops. They are strong for black jumpsuits, high-neck black dresses, casual party styling and sleek hairstyles."
-        },
-        {
-          "type": "subheading",
-          "text": "For Classic Sparkle"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza M diamond stud earrings. They are best when the black dress already has detail or when the wearer wants clean diamond polish."
-        },
-        {
-          "type": "subheading",
-          "text": "For Subtle Support"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Cadenza S lab-grown diamond studs. They are perfect as a supporting earring in black dress ear stacks."
-        },
-        {
-          "type": "subheading",
-          "text": "For Romantic Black Dress Styling"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choose Farfalla butterfly earrings or Alidi Farfalla butterfly earrings if the look should feel softer and more personal."
-        }
-      ]
-    },
-    {
-      "heading": "Product Recommendations from IWantJewels",
-      "content": [
-        {
-          "type": "table",
-          "headers": [
-            "Product",
-            "Best Black Dress Role",
-            "Why It Works"
-          ],
-          "rows": [
-            [
-              "Lusso bold statement earrings",
-              "Strongest black dress focal piece",
-              "Best for simple black dresses and party looks"
-            ],
-            [
-              "Orsola drop earrings",
-              "Elegant movement",
-              "Adds length, polish and evening sparkle"
-            ],
-            [
-              "Pave Hoops",
-              "Modern shape",
-              "Adds curve and visible shine"
-            ],
-            [
-              "Cadenza M diamond stud earrings",
-              "Classic sparkle",
-              "Best for detailed dresses or safer elegance"
-            ],
-            [
-              "Cadenza S lab-grown diamond studs",
-              "Support piece",
-              "Balances bold earrings, drops and hoops"
-            ],
-            [
-              "Amadea Huggie earrings",
-              "Modern support piece",
-              "Strong for work events and ear stacks"
-            ],
-            [
-              "Laluce minimalist diamond earrings",
-              "Soft detail",
-              "Good for minimal stacks and detailed dresses"
-            ],
-            [
-              "Farfalla butterfly earrings",
-              "Romantic styling",
-              "Adds softness and meaning"
-            ],
-            [
-              "Alidi Farfalla butterfly earrings",
-              "Gift-led romantic styling",
-              "Good for birthdays and soft black dress looks"
-            ],
-            [
-              "Concetta Short earrings",
-              "Delicate occasion styling",
-              "Soft drop option"
-            ],
-            [
-              "Concetta Long earrings",
-              "Formal evening styling",
-              "Refined, elongated and polished"
-            ]
+            ["Strapless", "Pendant, collar-style necklace, delicate chain or no necklace"],
+            ["Sweetheart", "A pendant or curved necklace can follow the open neckline"],
+            ["V-neck", "A pendant may follow the V shape if its drop fits the available space"],
+            ["Square neck", "A shorter necklace can echo the horizontal line, while a pendant can create contrast"],
+            ["Scoop neck", "Several necklace lengths may work depending on the depth"],
+            ["High neck", "A necklace may be unnecessary; earrings can become more prominent"],
+            ["Halter", "Often easier to focus on earrings because the neckline already contains strong lines"],
+            ["Cowl neck", "Avoid necklaces that become lost or tangled in folded fabric"],
+            ["Embellished neckline", "A necklace may create unnecessary competition"]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Choose jewellery for a black dress based on the dress detail. Pick Lusso for bold sparkle, Orsola for movement, Pave Hoops for shape, Cadenza M for classic polish, and Cadenza S or Laluce as support pieces in an ear stack."
+          "text": "There is no universal requirement to skip a necklace when wearing noticeable earrings. Review the visual weight of both pieces together."
+        },
+        {
+          "type": "paragraph",
+          "text": "A delicate chain may work with wider earrings, while compact studs may leave space for a stronger necklace. The aim is to establish a clear relationship between the pieces rather than applying a fixed rule."
         }
       ]
     },
     {
-      "heading": "Common Black Dress Jewellery Mistakes to Avoid",
+      "heading": "Bracelets and rings with a black dress",
       "content": [
         {
-          "type": "paragraph",
-          "text": "One common mistake is wearing too many strong pieces at once. A black dress can carry bold jewellery, but the look should still have one clear focal point."
+          "type": "subheading",
+          "text": "Bracelets"
         },
         {
           "type": "paragraph",
-          "text": "Another mistake is pairing bold earrings with a heavy necklace. If the earrings are strong, the necklace should usually be minimal or skipped."
+          "text": "Bracelets are more visible with sleeveless, short-sleeved or three-quarter-sleeved dresses. With long sleeves, check whether the bracelet catches against cuffs or decorative fabric. A bracelet may become useful when the neckline is detailed and you do not want to add a necklace."
+        },
+        {
+          "type": "subheading",
+          "text": "Rings"
         },
         {
           "type": "paragraph",
-          "text": "A third mistake is choosing tiny earrings when the hair is down. If the earrings are too small, they may disappear."
+          "text": "Rings are less affected by the dress neckline, making them useful for adding detail without crowding the area around the face. Consider existing engagement or wedding rings, metal colours used elsewhere, stone shapes, whether several rings are being stacked, and contact with delicate fabric."
         },
         {
           "type": "paragraph",
-          "text": "Another mistake is wearing bold earrings with a highly detailed black dress. In that case, studs or huggies may look more refined."
+          "text": "You do not need to match every jewellery item exactly. Repetition of one or two visual elements can create enough consistency."
+        }
+      ]
+    },
+    {
+      "heading": "Jewellery for different black dress fabrics",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Satin black dress"
         },
         {
           "type": "paragraph",
-          "text": "Finally, do not choose jewellery only because it sparkles. Think about neckline, hairstyle, dress fabric, occasion and comfort."
+          "text": "Satin already reflects light and may include draping, ruching or a cowl neckline. Earrings with controlled movement, hoops or studs can work depending on the dress structure. A simple satin slip dress may leave space for more visible earrings. A heavily draped satin dress may require fewer competing details."
         },
         {
           "type": "see-also",
-          "text": "Party Earrings Guide",
+          "text": "What jewellery to wear with a satin dress",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Velvet black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Velvet absorbs more light and creates a dense visual texture. Polished metal or diamond-set jewellery can create contrast, but dimensions still matter. Check whether earrings or bracelets may catch against the fabric."
+        },
+        {
+          "type": "subheading",
+          "text": "Lace black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lace contains repeated patterns and open spaces. Compact studs, clean hoops or a controlled drop may complement the fabric without repeating too many shapes. A larger earring can still work when the lace placement and neckline remain simple."
+        },
+        {
+          "type": "subheading",
+          "text": "Sequinned black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sequins already create reflected light across the garment. Consider jewellery with a clear outline rather than automatically adding more stone coverage. The earrings do not need to disappear, but the full look should not depend on several unrelated sources of sparkle."
+        },
+        {
+          "type": "subheading",
+          "text": "Crepe or plain woven fabric"
+        },
+        {
+          "type": "paragraph",
+          "text": "Plain fabrics may provide more room for a distinctive earring, necklace or bracelet. This is where one jewellery focal point can have a noticeable effect."
+        },
+        {
+          "type": "subheading",
+          "text": "Black knit dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Check collars, roll necks, scarves and textured yarn. Longer earrings, open settings and protruding components may come into contact with the fabric."
+        }
+      ]
+    },
+    {
+      "heading": "Jewellery for a black dress by neckline",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "High-neck black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A high neckline reduces the visual space available for a necklace. Studs, hoops, geometric earrings or a controlled statement design may therefore become the main jewellery feature. Long earrings are not automatically unsuitable, but check whether they touch the neckline or collar."
+        },
+        {
+          "type": "subheading",
+          "text": "Strapless black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "A strapless dress creates open space around the neck and shoulders. You can use earrings, a necklace or both, provided the pieces have a clear relationship. If the earrings are highly prominent, a restrained necklace may be sufficient. With compact studs, the necklace can take a larger role."
+        },
+        {
+          "type": "subheading",
+          "text": "Off-shoulder black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider the complete horizontal line across the shoulders. Drops, hoops and statement earrings can work, but their width and length should relate to the open neckline."
+        },
+        {
+          "type": "see-also",
+          "text": "What earrings to wear with an off-shoulder dress",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "V-neck black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Decide whether a pendant should follow the neckline or whether the earrings should lead. Avoid placing a pendant directly against the dress edge unless that placement is intentional."
+        },
+        {
+          "type": "see-also",
+          "text": "What jewellery to wear with a V-neck dress",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
+        },
+        {
+          "type": "subheading",
+          "text": "Sweetheart black dress"
+        },
+        {
+          "type": "paragraph",
+          "text": "Curved jewellery can echo the neckline, while angular jewellery can provide deliberate contrast. Consider the amount of open space before adding both a necklace and long earrings."
+        },
+        {
+          "type": "see-also",
+          "text": "Jewellery for a sweetheart neckline",
+          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
+        }
+      ]
+    },
+    {
+      "heading": "Jewellery for a black dress by occasion",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Work or business setting"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider studs, compact hoops or controlled geometric earrings. Check practical requirements involving headsets, telephones and the workplace dress code."
+        },
+        {
+          "type": "subheading",
+          "text": "Date night"
+        },
+        {
+          "type": "paragraph",
+          "text": "A date-night black dress may work with studs, hoops, drops, motifs or statement earrings. The venue, dress detail and hairstyle should determine the direction."
+        },
+        {
+          "type": "see-also",
+          "text": "Date night earrings: what to wear",
+          "href": "/resources/jewellery-gift-guides/date-night-jewellery-guide"
+        },
+        {
+          "type": "subheading",
+          "text": "Party"
+        },
+        {
+          "type": "paragraph",
+          "text": "A plain party dress may leave space for a more visible earring or necklace. Sequinned and embellished dresses may already contain the main visual feature."
+        },
+        {
+          "type": "see-also",
+          "text": "Party earrings guide",
           "href": "/resources/earring-style-guides/party-earrings-guide"
         },
         {
-          "type": "see-also",
-          "text": "Bold Statement Earrings Guide",
-          "href": "/resources/earring-style-guides/bold-statement-earrings-guide"
+          "type": "subheading",
+          "text": "Wedding guest"
         },
         {
-          "type": "see-also",
-          "text": "Minimalist Earrings Guide",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
+          "type": "paragraph",
+          "text": "Black wedding-guest attire should first be checked against the couple's dress code and cultural expectations. Jewellery can then be selected according to the formality, neckline and fabric. Avoid assuming that every wedding requires long drops or statement diamonds."
         },
         {
-          "type": "see-also",
-          "text": "Gold-Plated Jewellery Care Guide",
-          "href": "/resources/demi-fine-jewellery-guides/how-to-care-for-gold-plated-jewellery"
+          "type": "subheading",
+          "text": "Formal or black-tie event"
+        },
+        {
+          "type": "paragraph",
+          "text": "Formal styling can include studs, drops, hoops or statement earrings. The construction and proportions matter more than the category name. Check actual dimensions, fastening, movement and weight before selecting earrings for a longer event."
         }
       ]
     },
     {
-      "heading": "Final Black Dress Jewellery Checklist",
+      "heading": "Choosing jewellery by hairstyle",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Hair worn up"
+        },
+        {
+          "type": "paragraph",
+          "text": "An updo exposes the complete earring, including its width, projection and backing."
+        },
+        {
+          "type": "subheading",
+          "text": "Hair tucked behind the ears"
+        },
+        {
+          "type": "paragraph",
+          "text": "This can show the earring while keeping some softness around the face. Check whether textured surfaces catch against the hair."
+        },
+        {
+          "type": "subheading",
+          "text": "Hair worn down"
+        },
+        {
+          "type": "paragraph",
+          "text": "A defined outline or contrasting metal colour may help the earring remain visible. Do not increase weight merely to compensate for hair coverage."
+        },
+        {
+          "type": "subheading",
+          "text": "Short hair"
+        },
+        {
+          "type": "paragraph",
+          "text": "Both compact and longer earrings may remain visible. Consider the relationship between the earring and jawline."
+        }
+      ]
+    },
+    {
+      "heading": "Building an ear stack with a black dress",
       "content": [
         {
           "type": "paragraph",
-          "text": "Before choosing jewellery for a black dress, ask:"
+          "text": "A black dress can provide a neutral background for an ear stack, but the stack should still have a hierarchy. A simple structure is:"
         },
         {
           "type": "bullet-list",
           "items": [
-            "Is the dress simple or detailed?",
-            "Is the fabric satin, lace, sequin, knit or plain?",
-            "Is the neckline strapless, high, V-neck, square or off-shoulder?",
-            "Will my hair hide or show the earrings?",
-            "Do I want sparkle, shape, movement or softness?",
-            "Should the earrings be the main jewellery moment?",
-            "Am I wearing a necklace, or should I skip it?",
-            "Does the metal colour match the look?",
-            "Is the occasion a party, wedding, dinner or work event?",
-            "Are the earrings comfortable enough for the full event?",
-            "Can the jewellery be worn again with other outfits?",
-            "Is the ear stack balanced with one main piece?"
+            "One main earring",
+            "One smaller support stud or close-fitting piece",
+            "Optional third piece only when the piercing spacing allows it"
           ]
         },
         {
           "type": "paragraph",
-          "text": "If the black dress is simple, choose stronger earrings. If the dress is detailed, choose cleaner earrings."
+          "text": "Check the complete dimensions and spacing of the exact products. Two earrings that appear separate in isolated product photographs may overlap when worn together."
+        },
+        {
+          "type": "see-also",
+          "text": "How to stack earrings",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Diamond ear stack ideas",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Lab-grown diamond jewellery with a black dress",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Lab-grown diamond jewellery can provide visible contrast against black, but diamond origin alone does not establish the quality of the finished piece."
+        },
+        {
+          "type": "paragraph",
+          "text": "For earrings, verify:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Diamond count",
+            "Stone shapes",
+            "Total carat weight",
+            "Whether weight refers to the pair",
+            "Stone placement",
+            "Complete dimensions",
+            "Weight per earring",
+            "Fastening",
+            "Metal and finish",
+            "Pair or single-earring status"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For necklaces, also verify chain length, pendant dimensions and whether the chain is included."
+        }
+      ]
+    },
+    {
+      "heading": "Common black-dress jewellery mistakes",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-46.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Choosing only by metal colour"
+            },
+            {
+              "type": "paragraph",
+              "text": "Gold, silver and rose-gold colours can all work with black. Dress structure and jewellery proportions often matter more."
+            },
+            {
+              "type": "subheading",
+              "text": "Treating every black dress alike"
+            },
+            {
+              "type": "paragraph",
+              "text": "A plain crepe dress and sequinned lace dress require different decisions even though both are black."
+            },
+            {
+              "type": "subheading",
+              "text": "Adding several competing focal points"
+            },
+            {
+              "type": "paragraph",
+              "text": "Prominent earrings, a strong necklace and an embellished neckline can compete. Decide which area should lead."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Ignoring jewellery dimensions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Photographs use different crop and zoom levels. Compare actual measurements and on-body images."
+        },
+        {
+          "type": "subheading",
+          "text": "Calling every small earring a huggie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Huggies are hoop-style earrings designed to sit close to the earlobe. A compact stud or geometric earring is not automatically a huggie."
+        },
+        {
+          "type": "subheading",
+          "text": "Assuming statement earrings are always heavy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Statement describes visual presence, not weight. Verify the weight per earring."
+        },
+        {
+          "type": "subheading",
+          "text": "Confusing metal colour with composition"
+        },
+        {
+          "type": "paragraph",
+          "text": "A gold-coloured product is not automatically solid gold. Check the base metal and finish."
+        }
+      ]
+    },
+    {
+      "heading": "Black dress jewellery checklist",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Before choosing your jewellery, ask:"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Is the dress plain or detailed?",
+            "What is the fabric?",
+            "What is the neckline?",
+            "What is the occasion and dress code?",
+            "Should the earrings or necklace lead?",
+            "Is a bracelet visible with the sleeve length?",
+            "Which metal colours already appear on the shoes, bag or dress hardware?",
+            "What are the jewellery's complete dimensions?",
+            "What is the weight per earring?",
+            "What fastening is used?",
+            "Are the metal and finish accurately identified?",
+            "Are the diamond details complete?",
+            "Will the jewellery touch the dress, hair, shoulder or collar?",
+            "Can the jewellery be worn with other outfits?"
+          ]
         }
       ]
     }
@@ -1082,53 +641,49 @@
   "faq": [
     {
       "question": "What jewellery should I wear with a black dress?",
-      "answer": "The best jewellery for a black dress depends on the dress style. Simple black dresses work well with bold earrings, drops or hoops. Detailed black dresses usually look better with studs or clean huggies."
+      "answer": "Yellow-gold, white or silver-coloured, rose-gold and mixed-metal jewellery can all work. Choose according to the dress neckline, fabric, detail and occasion."
     },
     {
-      "question": "What earrings look best with a black dress?",
-      "answer": "Drop earrings, hoops, medium diamond studs and bold statement earrings all work well with a black dress. Choose based on neckline, hairstyle and occasion."
+      "question": "Is gold or silver jewellery better with a black dress?",
+      "answer": "Neither is universally better. Yellow gold creates warmer contrast, while white or silver colours create a cooler appearance. Coordinate the choice with other accessories and personal preference."
     },
     {
-      "question": "Can I wear gold jewellery with a black dress?",
-      "answer": "Yes, gold jewellery works beautifully with a black dress because it adds warmth and contrast."
+      "question": "What earrings should I wear with a black dress?",
+      "answer": "Studs, hoops, drops, motifs, geometric earrings and statement designs can all work. The correct direction depends on the neckline, fabric, hairstyle and intended focal point."
     },
     {
-      "question": "Can I wear silver jewellery with a black dress?",
-      "answer": "Yes, silver or white-tone jewellery works well with a black dress when you want a clean, modern and bright look."
+      "question": "Can I wear statement earrings with a black dress?",
+      "answer": "Yes. A plain black dress may provide room for a noticeable earring. Check the earrings' dimensions, weight and relationship with the neckline."
     },
     {
-      "question": "Is rose gold good with a black dress?",
-      "answer": "Rose gold can work with a black dress when the look should feel softer, romantic or feminine."
+      "question": "Should I wear a necklace with a black dress?",
+      "answer": "A necklace can work when it suits the neckline. Strapless, sweetheart and V-neck dresses may leave space for one, while high or embellished necklines may not require it."
     },
     {
-      "question": "What earrings should I wear with a simple black dress?",
-      "answer": "A simple black dress can carry bold statement earrings, drop earrings or hoops because the outfit gives the jewellery room to stand out."
+      "question": "What jewellery works with a high-neck black dress?",
+      "answer": "Studs, hoops, geometric earrings or a controlled statement design may work because the neckline leaves less visual space for a necklace."
     },
     {
-      "question": "What earrings should I wear with a detailed black dress?",
-      "answer": "Choose studs, huggies or minimalist earrings if the black dress has sequins, lace, embroidery, ruffles or a dramatic neckline."
+      "question": "Can I wear rose-gold jewellery with a black dress?",
+      "answer": "Yes. Rose-gold colours introduce a softer pink contrast against black. Check the actual metal composition separately from its colour."
     },
     {
-      "question": "Should I wear a necklace with bold earrings and a black dress?",
-      "answer": "Usually no, or only a very delicate necklace. Bold earrings look best when they are allowed to lead the look."
+      "question": "What jewellery should I wear with a sequinned black dress?",
+      "answer": "Consider jewellery with a defined outline and controlled stone coverage. The sequins already reflect light, so review the complete outfit before adding more sparkle."
     },
     {
-      "question": "What jewellery should I wear with a black satin dress?",
-      "answer": "Drop earrings or medium studs work well with a black satin dress. Drops add movement, while studs keep the styling clean."
-    },
-    {
-      "question": "What IWantJewels earrings are best with a black dress?",
-      "answer": "Lusso, Orsola, Pave Hoops, Cadenza M and Concetta Long are strong black dress options depending on whether you want bold sparkle, movement, shape or classic polish."
+      "question": "Can I mix metals with a black dress?",
+      "answer": "Yes. Mixed metals can work when the combination appears deliberate. Repeat the metal colours through earrings, rings, bracelets or accessory hardware."
     }
   ],
   "cta": {
-    "heading": "A black dress gives jewellery the perfect background. Choose bold statement earrings when the dress is simple, drop earrings when you want movement, hoops when you want shape, and studs when the dress already has detail.",
-    "body": "Start with IWantJewels demi-fine lab-grown diamond earrings if you want black dress jewellery with real diamond sparkle. Choose Lusso for bold evening impact, Orsola for elegant movement, Pave Hoops for modern shape, Cadenza M for classic polish and Cadenza S or Laluce as support pieces in an ear stack.",
-    "primaryLabel": "Shop Earrings for a Black Dress",
+    "heading": "A black dress does not require one particular metal colour or earring type. The most reliable decision comes from examining the neckline, fabric, detail, occasion and intended focal point.",
+    "body": "Once the styling direction is clear, compare measurements, materials, weight and fastening. This produces a more useful result than assuming one product works with every black dress.",
+    "primaryLabel": "Explore Jewellery for a Black Dress",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Explore Party Earrings",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Read the Party Earrings Guide",
+    "secondaryLabel": "Bold Statement Earrings Guide",
+    "secondaryHref": "/resources/earring-style-guides/bold-statement-earrings-guide",
+    "tertiaryLabel": "Party Earrings Guide",
     "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
   }
 }

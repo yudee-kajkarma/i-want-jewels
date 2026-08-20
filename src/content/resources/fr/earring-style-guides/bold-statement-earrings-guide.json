@@ -1,1425 +1,694 @@
 {
   "meta": {
-    "title": "Guide des boucles d’oreilles audacieuses",
-    "description": "Apprenez à porter des boucles d'oreilles audacieuses avec des robes noires, des tenues de soirée, des looks de soirée, des diamants synthétiques, des clous et des boucles d'oreilles."
+    "title": "Boucles d’oreilles statement : guide de style",
+    "description": "Découvrez comment choisir et porter des boucles d’oreilles statement selon leur taille, poids, encolure, coiffure et tenue, sans surcharger votre look."
   },
   "heroIntro": {
-    "image": "/blog-images/blog-image-7.jpg",
-    "title": "Guide des boucles d’oreilles audacieuses :",
-    "subtitle": "Comment porter des boucles d'oreilles remarquables sans en faire trop",
+    "image": "/blog-images/blog-image-42.jpg",
+    "title": "Boucles d’oreilles statement :",
+    "subtitle": "Comment les choisir et les porter",
     "paragraphs": [
-      "Les boucles d'oreilles audacieuses sont destinées aux tenues qui ont besoin d'un moment de bijouterie clair. Ils ne sont pas destinés à disparaître dans la tenue. Ils sont destinés à encadrer le visage, à ajouter de l’éclat et à donner l’impression qu’un look simple est prêt pour la fête.",
-      "La façon la plus simple de créer des boucles d’oreilles audacieuses est de garder le reste des bijoux propre. Une simple robe noire, une tenue en satin, une robe sans bretelles, une robe à épaules dénudées ou un look de fête élégant peut porter à merveille des boucles d'oreilles audacieuses. Si la robe comporte déjà des paillettes, des broderies épaisses, de la dentelle, du tissu métallisé ou un décolleté dramatique, des clous moyens, des gouttes ou des câlins peuvent être préférables.",
-      "Chez IWantJewels, les boucles d'oreilles audacieuses Lusso sont la principale direction produit de cette page. Lusso devrait être considérée comme une boucle d'oreille de fête remarquable, en particulier pour les tenues de soirée simples, les robes noires, les looks d'anniversaire, les dîners et un style confiant. Cadenza S fonctionne comme le meilleur clou de support pour une pile d'oreille audacieuse, tandis qu'Orsola, Pave Hoops et Cadenza M sont des alternatives plus sûres lorsque la tenue a besoin de mouvement, de forme ou d'éclat classique au lieu d'un point focal audacieux."
+      "Les boucles d’oreilles statement sont conçues pour jouer un rôle visible dans une tenue. Leur impact peut venir de leur volume, forme, mouvement, contraste, couverture de diamants ou motif original — pas seulement de leur taille imposante.",
+      "Pour porter des boucles d’oreilles statement avec équilibre, déterminez ce qui doit dominer le look. Si les boucles sont le point focal, le collier, l’ear stack et les détails de la tenue peuvent les compléter plutôt que leur faire concurrence.",
+      "Avant de choisir une paire, vérifiez ses dimensions complètes, son poids par boucle, son fermoir et ses matériaux. Ces informations sont plus utiles que des termes comme « audacieuses » ou « légères », qui peuvent désigner des choses différentes selon les modèles."
     ],
-    "shopLabel": "Achetez des boucles d'oreilles audacieuses",
+    "shopLabel": "Découvrir les boucles d’oreilles statement",
     "shopHref": "/products?category=Earring"
   },
   "quickSummary": {
     "items": [
-      "Comprendre quand porter des boucles d'oreilles audacieuses",
-      "Portez des boucles d'oreilles audacieuses avec des robes noires, des robes rouges, des robes vertes, des tenues en satin et des looks de fête.",
-      "Décidez quand des boucles d'oreilles audacieuses valent mieux que des clous, des créoles ou des pendants",
-      "Apprenez à équilibrer des boucles d'oreilles audacieuses avec des colliers, des coiffures et des décolletés.",
-      "Construisez des piles d'oreilles audacieuses avec de petits clous de support.",
-      "Choisissez des boucles d'oreilles audacieuses pour les anniversaires, les dîners, les mariages, les soirées et les cadeaux",
-      "Évitez de donner l'impression que la tenue est encombrée",
-      "Trouvez les recommandations de produits IWantJewels par tenue et occasion",
-      "Planifiez les blocs d'images, les modules de produits, les sections CTA et les liens internes pour cette page"
+      "L’impact vient de la forme, du mouvement, du contraste ou de la couverture de diamants — pas seulement de la taille",
+      "« Statement » et « puce » ne sont pas opposés : une puce sculpturale peut réunir les deux",
+      "Choisissez un point focal parmi vos bijoux et laissez le reste le soutenir",
+      "Vérifiez la largeur, la hauteur, la longueur pendante, la projection et le poids complet de chaque boucle",
+      "Un collier n’est pas automatiquement à proscrire — tout dépend de l’encolure",
+      "Les boucles d’oreilles statement peuvent se porter le jour si leurs caractéristiques conviennent à ce moment"
     ],
-    "image": "/blog-images/blog-image-81.jpg"
+    "image": "/blog-images/blog-image-46.jpg"
   },
   "content": [
     {
-      "heading": "Sélecteur de boucles d’oreilles audacieuses",
+      "heading": "Le style des boucles d’oreilles statement en un coup d’œil",
       "content": [
         {
-          "type": "paragraph",
-          "text": "Utilisez ce tableau en haut de la page comme principal outil de décision en matière de style."
-        },
+          "type": "table",
+          "headers": [
+            "Situation de style",
+            "Style de boucles d’oreilles",
+            "Comment l’équilibrer"
+          ],
+          "rows": [
+            [
+              "Tenue sobre ou minimaliste",
+              "Une forme, un motif ou une composition de diamants plus visible",
+              "Gardez le collier et les autres boucles d’oreilles discrets"
+            ],
+            [
+              "Tenue détaillée ou ornée",
+              "Un modèle statement aux dimensions maîtrisées",
+              "Évitez de répéter tous les détails de la robe"
+            ],
+            [
+              "Décolleté ouvert",
+              "Les boucles peuvent devenir la pièce maîtresse des bijoux",
+              "Le collier est facultatif"
+            ],
+            [
+              "Encolure haute ou travaillée",
+              "Tenez compte de la largeur, de la longueur et du contact éventuel avec le tissu",
+              "Gardez généralement le collier minimaliste"
+            ],
+            [
+              "Cheveux relevés",
+              "La plupart des formes resteront visibles",
+              "Choisissez selon la taille et le confort"
+            ],
+            [
+              "Cheveux détachés",
+              "Choisissez un contour visible ou une finition contrastante",
+              "N’augmentez pas le poids uniquement pour améliorer la visibilité"
+            ],
+            [
+              "Piercings multiples",
+              "Utilisez une boucle focale avec des pièces d’accompagnement plus petites",
+              "Vérifiez l’espacement réel entre les piercings"
+            ],
+            [
+              "Événement de longue durée",
+              "Privilégiez le poids indiqué, le fermoir et le mouvement",
+              "Demandez-vous comment les boucles seront ressenties après plusieurs heures"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Qu’est-ce qu’une boucle d’oreille statement audacieuse ?",
+      "content": [
         {
           "type": "grid-layout",
           "imagePosition": "right",
-          "image": "/blog-images/blog-image-83.jpg",
+          "image": "/blog-images/blog-image-50.jpg",
           "content": [
             {
-              "type": "table",
-              "headers": [
-                "Besoin de style",
-                "Meilleure direction de boucle d’oreille",
-                "Direction IWJ recommandée"
-              ],
-              "rows": [
-                [
-                  "Look de fête audacieux",
-                  "Boucles d'oreilles audacieuses",
-                  "Lusso"
-                ],
-                [
-                  "Robe noire simple",
-                  "Boucles d'oreilles, gouttes ou créoles audacieuses",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Robe de soirée en satin",
-                  "Des gouttes ou des boucles d'oreilles audacieuses si la robe est simple",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Style de robe rouge",
-                  "Gouttes ou clous moyens ; audacieux seulement si la robe est simple",
-                  "Orsola, Cadenza M, Lusso"
-                ],
-                [
-                  "Style de robe verte",
-                  "Gouttes d'or, créoles ou boucles d'oreilles audacieuses",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Look de fête d'anniversaire",
-                  "Boucles d'oreilles audacieuses, créoles ou boucles d'oreilles papillon",
-                  "Lusso, Pave Hoops, Farfalla"
-                ],
-                [
-                  "Look de dîner",
-                  "Gouttes ou clous moyens",
-                  "Orsola, Cadenza M."
-                ],
-                [
-                  "Look de soirée formel",
-                  "Longues gouttes ou clous polis",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Tenue détaillée",
-                  "Puces, câlins ou boucles d'oreilles minimalistes",
-                  "Cadenza M, Amadea, Laluce"
-                ],
-                [
-                  "Pile d'oreille audacieuse",
-                  "Boucle d'oreille audacieuse + petit clou",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Alternative audacieuse plus sûre",
-                  "Boucles d'oreilles ou créoles pendantes",
-                  "Orsola, Cerceaux Pavés"
-                ],
-                [
-                  "Cadeau pour un amateur de bijoux audacieux",
-                  "Boucles d'oreilles ou créoles audacieuses",
-                  "Lusso, cerceaux pavés"
-                ]
+              "type": "paragraph",
+              "text": "Les boucles d’oreilles statement ne constituent pas une catégorie de produits unique. Une paire peut créer un impact visuel grâce à une ou plusieurs des caractéristiques suivantes :"
+            },
+            {
+              "type": "bullet-list",
+              "items": [
+                "Une silhouette plus large ou plus longue",
+                "Une forme sculpturale ou géométrique",
+                "Un motif reconnaissable",
+                "Plusieurs pierres ou une composition de diamants plus visible",
+                "Un mouvement créé par des éléments articulés ou pendants",
+                "Un contraste marqué avec les cheveux ou les vêtements de la personne qui les porte",
+                "Une association originale de formes, de textures ou d’espaces négatifs"
               ]
             }
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Une puce sculpturale compacte peut être plus marquante qu’une boucle fine et longue. De même, une créole pavé peut devenir le point focal d’une tenue sans être une créole imposante."
+        },
+        {
+          "type": "paragraph",
+          "text": "C’est pourquoi les mesures et les photos sont plus utiles que les seules appellations des produits."
         }
       ]
     },
     {
-      "heading": "Que sont les boucles d’oreilles audacieuses ?",
+      "heading": "Vérifiez les mesures avant de choisir",
       "content": [
         {
           "type": "paragraph",
-          "text": "Les boucles d’oreilles audacieuses sont des boucles d’oreilles conçues pour être le principal bijou d’une tenue. Ils sont généralement plus grands, plus visibles, plus brillants ou plus design que les clous d'oreilles, les câlins ou les boucles d'oreilles minimalistes de tous les jours."
+          "text": "Les photos des produits ne sont pas toujours présentées à la même échelle. Deux boucles peuvent sembler avoir une taille similaire en ligne, tout en ayant des proportions très différentes une fois portées."
+        },
+        {
+          "type": "subheading",
+          "text": "Largeur et hauteur complètes"
         },
         {
           "type": "paragraph",
-          "text": "Une boucle d’oreille audacieuse n’a pas toujours besoin d’être surdimensionnée. Il lui faut simplement suffisamment de présence pour diriger le look. Il doit attirer l’attention sur le visage et donner du style à la tenue."
+          "text": "Le contour complet détermine l’espace occupé par une boucle autour de l’oreille. Les mesures doivent inclure l’ensemble du modèle, pas seulement la pierre centrale ou le motif."
+        },
+        {
+          "type": "subheading",
+          "text": "Longueur de la partie pendante"
         },
         {
           "type": "paragraph",
-          "text": "Pour IWantJewels, les boucles d'oreilles audacieuses Lusso doivent être positionnées comme une option de boucle d'oreille remarquable pour les fêtes. Ce ne sont pas les boucles d'oreilles les plus sûres au quotidien. Ils sont plus forts lorsque la tenue est suffisamment simple pour laisser les boucles d’oreilles devenir le principal moment d’éclat."
+          "text": "Pour les boucles d’oreilles pendantes, mesurez du piercing ou du point d’attache jusqu’à la partie la plus basse du modèle. Vous saurez ainsi si la boucle peut approcher la mâchoire, l’encolure ou le col."
         },
         {
-          "type": "table",
-          "headers": [
-            "Qualité des boucles d'oreilles audacieuses.",
-            "Ce que cela signifie"
-          ],
-          "rows": [
-            [
-              "Point focal clair",
-              "La boucle d'oreille mène le look bijou"
-            ],
-            [
-              "Éclat visible",
-              "La boucle d'oreille apparaît sur les photos et l'éclairage du soir"
-            ],
-            [
-              "Conception plus solide",
-              "Plus d'impact qu'un simple étalon ou un câlin"
-            ],
-            [
-              "Dépend de la tenue",
-              "Fonctionne mieux lorsqu'il est équilibré avec la robe"
-            ],
-            [
-              "Bijoux de soutien minimal",
-              "Le collier et les autres pièces doivent rester propres"
-            ],
-            [
-              "Mené par l'occasion",
-              "Idéal pour les fêtes, dîners, anniversaires et looks de soirée"
-            ],
-            [
-              "Style de confiance",
-              "Fonctionne lorsque le porteur souhaite que les bijoux soient remarqués"
-            ]
-          ]
+          "type": "subheading",
+          "text": "Projection"
         },
         {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles de fête",
-          "href": "/resources/earring-style-guides/party-earrings-guide"
+          "type": "paragraph",
+          "text": "La projection indique jusqu’à quelle distance une boucle s’éloigne de l’oreille. Elle peut modifier l’apparence d’une pièce sculpturale de profil et déterminer si elle risque d’accrocher les cheveux ou les vêtements."
+        },
+        {
+          "type": "subheading",
+          "text": "Poids de chaque boucle"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le poids doit être indiqué par boucle, et non seulement pour la paire. Le confort varie selon les personnes, mais cette mesure permet de comparer correctement les modèles."
+        },
+        {
+          "type": "subheading",
+          "text": "Fermoir et poussette"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vérifiez si la boucle utilise une tige avec poussette papillon, un fermoir articulé, un fermoir à levier ou un autre système. Le fermoir doit toujours correspondre au produit réel."
+        },
+        {
+          "type": "subheading",
+          "text": "Mouvement"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une boucle pendante articulée ne se comporte pas comme un modèle rigide. Le mouvement peut la rendre plus visible, mais aussi augmenter le contact avec les cheveux, les cols ou les épaules."
         }
       ]
     },
     {
-      "heading": "Quand devriez-vous porter des boucles d’oreilles audacieuses ?",
+      "heading": "Comment porter des boucles d’oreilles statement sans surcharger la tenue",
       "content": [
         {
           "type": "paragraph",
-          "text": "Portez des boucles d'oreilles audacieuses lorsque la tenue est simple, propre ou nécessite une finition solide."
+          "text": "Commencez par choisir un point focal principal parmi vos bijoux."
         },
         {
           "type": "paragraph",
-          "text": "Une robe noire unie, une robe nuisette en satin, une robe sans bretelles, une robe à épaules dénudées, une combinaison élégante ou une tenue de soirée minimaliste peuvent bien porter des boucles d'oreilles audacieuses. Plus la tenue est propre, plus il est facile pour les boucles d'oreilles audacieuses d'avoir l'air intentionnelles."
+          "text": "Si les boucles présentent une forme affirmée, une couverture de diamants visible ou un mouvement important, laissez-les dominer. Le reste des bijoux n’a pas besoin de disparaître, mais doit rester en soutien."
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Observez les détails déjà présents dans la tenue.",
+            "Déterminez si les boucles ou l’encolure doivent attirer davantage l’attention.",
+            "Ajoutez un collier uniquement s’il apporte réellement quelque chose à la tenue.",
+            "Gardez les piercings secondaires plus petits que la boucle focale.",
+            "Observez l’ensemble du look à une distance de vue habituelle."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "L’équilibre n’impose pas une tenue minimaliste. Il consiste à éviter plusieurs points focaux sans lien autour du visage et de l’encolure."
+        }
+      ]
+    },
+    {
+      "heading": "Peut-on porter des boucles d’oreilles statement avec un collier ?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Aucune règle n’impose de porter les boucles d’oreilles statement sans collier. La décision dépend de l’encolure, du poids visuel des boucles et du collier lui-même."
         },
         {
           "type": "table",
           "headers": [
-            "Meilleur moment pour porter des boucles d’oreilles audacieuses",
-            "Pourquoi ça marche"
+            "Association boucles d’oreilles et tenue",
+            "Choix du collier"
           ],
           "rows": [
             [
-              "Robe noire simple",
-              "Les boucles d'oreilles audacieuses deviennent l'éclat principal"
+              "Boucles d’oreilles statement avec une tenue bustier",
+              "Sans collier ou avec un collier discret, les deux options peuvent convenir"
             ],
             [
-              "Tenue de soirée minimaliste",
-              "Ajoute de l'intérêt sans avoir besoin d'un collier"
+              "Boucles d’oreilles statement avec une encolure épaules dénudées",
+              "Laissez les boucles dominer ou choisissez un collier très simple"
             ],
             [
-              "Robe bustier",
-              "Encadre le visage et le décolleté"
+              "Boucles d’oreilles statement avec un col en V",
+              "Un pendentif peut convenir s’il ne rivalise pas avec les boucles"
             ],
             [
-              "Robe à épaules dénudées",
-              "Équilibre la ligne d'épaule ouverte"
+              "Boucles d’oreilles statement avec une encolure haute",
+              "Un collier est souvent inutile"
             ],
             [
-              "Fête d'anniversaire",
-              "Crée un moment de bijoux festif"
+              "Boucles d’oreilles statement avec une encolure ornée",
+              "Évitez généralement d’ajouter un autre élément imposant"
             ],
             [
-              "Soirée cocktail",
-              "Ajoute un style visible"
-            ],
-            [
-              "Dîner",
-              "Fonctionne si la tenue est propre"
-            ],
-            [
-              "Tenue de soirée",
-              "Ajoute confiance et brillance"
-            ],
-            [
-              "Combinaison simple",
-              "Donne de la structure et du glamour"
-            ],
-            [
-              "Soirée de mariage",
-              "Fonctionne si la tenue des invités est simple et pas trop nuptiale"
+              "Boucles d’oreilles statement avec un col rond uni",
+              "Une chaîne fine peut structurer la tenue sans devenir un second point focal"
             ]
           ]
         },
         {
           "type": "paragraph",
-          "text": "Lusso est la recommandation la plus forte d'IWantJewels lorsque l'acheteur souhaite que les boucles d'oreilles mènent le look."
+          "text": "Ne vous basez pas uniquement sur la longueur de la boucle. Sa largeur, sa forme, son éclat et son mouvement contribuent aussi à sa présence visuelle."
+        }
+      ]
+    },
+    {
+      "heading": "Porter des boucles d’oreilles statement avec des tenues sobres ou détaillées",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Tenues sobres"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une tenue sobre laisse la place à une forme de boucle distinctive. Il peut s’agir d’une robe unie, d’une combinaison structurée, d’une chemise épurée, d’un tricot monochrome ou d’un haut de soirée simple."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles n’ont pas forcément besoin de reprendre la forme de la tenue. Le contraste peut être efficace : une créole arrondie adoucit une silhouette structurée, tandis qu’un modèle géométrique peut donner du relief à un tissu fluide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec une robe noire, des métaux chauds comme froids peuvent créer un contraste visible. Le choix final dépend du tissu de la robe, des autres accessoires et de vos préférences."
         },
         {
           "type": "see-also",
           "text": "Quels bijoux porter avec une robe noire",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-black-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Quand devriez-vous éviter les boucles d’oreilles audacieuses ?",
-      "content": [
+        },
         {
-          "type": "paragraph",
-          "text": "Les boucles d’oreilles audacieuses ne sont pas toujours le meilleur choix. Ils peuvent avoir l’air trop occupés alors que la tenue a déjà beaucoup de choses à faire."
+          "type": "subheading",
+          "text": "Tenues détaillées"
         },
         {
           "type": "paragraph",
-          "text": "Si la robe comporte des paillettes, de la dentelle épaisse, des broderies, du tissu métallisé, de grands imprimés, des manches spectaculaires, un décolleté très détaillé ou un collier solide, des boucles d'oreilles audacieuses peuvent rivaliser. Dans ces cas-là, les clous de taille moyenne, les câlins, les boucles d’oreilles minimalistes ou les pendants élégants peuvent paraître plus raffinés."
+          "text": "Sequins, dentelle, broderies, tissus métallisés, imprimés et encolures spectaculaires apportent déjà de nombreux détails visuels. Les boucles d’oreilles statement restent possibles, mais leur forme doit dialoguer avec la tenue plutôt que simplement ajouter du décor."
         },
         {
-          "type": "table",
-          "headers": [
-            "Quand éviter les boucles d’oreilles audacieuses",
-            "Meilleure orientation",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Robe à paillettes",
-              "Goujons moyens ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Robe en dentelle épaisse",
-              "Clous ou gouttes délicates",
-              "Cadenza M, Short Concetta"
-            ],
-            [
-              "Tenue métallique",
-              "Puces ou boucles d'oreilles minimalistes",
-              "Cadenza M, Laluce"
-            ],
-            [
-              "Collier fort",
-              "Goujons ou câlins",
-              "Cadenza S, Amadea"
-            ],
-            [
-              "Décolleté dramatique",
-              "Clous, anneaux ou simples gouttes",
-              "Cadenza M, Pave Hoops, Orsola"
-            ],
-            [
-              "Robe très imprimée",
-              "Puces ou boucles d'oreilles minimalistes",
-              "Cadenza S, Laluce"
-            ],
-            [
-              "Événement formel et discret",
-              "Clous polis ou longues gouttes",
-              "Cadenza M, Concetta Longue"
-            ],
-            [
-              "Tenue de tous les jours",
-              "Puces, câlins ou boucles d'oreilles minimalistes",
-              "Cadenza S, Amadea, Laluce"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Guide des boucles d'oreilles minimalistes",
-          "href": "/resources/earring-style-guides/minimalist-earrings-guide"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses vs clous, gouttes et créoles",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d’oreilles audacieuses sont idéales lorsque la tenue nécessite une forte concentration sur les bijoux. Les goujons sont plus sûrs. Les gouttes ajoutent du mouvement. Les cerceaux ajoutent de la forme. Les Huggies gardent le style proche et moderne."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Type de boucle d'oreille",
-            "Idéal pour",
-            "Direction des produits IWJ"
-          ],
-          "rows": [
-            [
-              "Boucles d'oreilles audacieuses",
-              "Tenues simples, looks de fête, style remarquable",
-              "Lusso"
-            ],
-            [
-              "Clous moyens",
-              "Un éclat sûr, des tenues détaillées, un vernis classique",
-              "Cadenza M"
-            ],
-            [
-              "Petits clous",
-              "Look minimal et support de pile d'oreille",
-              "Cadenza S"
-            ],
-            [
-              "Boucles d'oreilles pendantes",
-              "Mouvement, robes en satin, dîners, mariages",
-              "Orsola, Concetta Long"
-            ],
-            [
-              "Cerceaux",
-              "Forme moderne, combinaisons, looks de fête simples",
-              "Cerceaux pavés"
-            ],
-            [
-              "Câlins",
-              "Style moderne et discret",
-              "Amédée"
-            ],
-            [
-              "Boucles d'oreilles minimalistes",
-              "Détails discrets et tenues détaillées",
-              "Laluce"
-            ],
-            [
-              "Boucles d'oreilles papillon",
-              "Style doux, romantique et significatif",
-              "Farfalla, Alidi Farfalla"
-            ]
+          "type": "bullet-list",
+          "items": [
+            "Un contour épuré au lieu de plusieurs motifs concurrents",
+            "Des dimensions maîtrisées près d’une encolure très travaillée",
+            "Une couleur de métal reprise ailleurs dans la tenue",
+            "Moins de mouvement si le tissu comporte déjà du mouvement ou des franges",
+            "Un espace dégagé entre la boucle et le vêtement"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Lusso lorsque les boucles d'oreilles doivent mener. Choisissez Orsola lorsque la tenue a besoin de mouvement. Choisissez Pave Hoops lorsque la tenue a besoin de forme. Choisissez Cadenza M lorsque la tenue a déjà des détails."
+          "text": "L’objectif n’est pas d’éviter automatiquement les boucles audacieuses, mais de comprendre où se trouvent les points focaux déjà présents."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles clous ou créoles",
-          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses avec des robes noires",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Une robe noire est l’une des meilleures tenues pour des boucles d’oreilles audacieuses, car la couleur donne au bijou de l’espace pour briller."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si la robe noire est simple, Lusso peut devenir le moment principal du bijou. Si la robe est en satin, Orsola peut ajouter un mouvement élégant. Si la robe est moderne ou à col haut, Pave Hoops ou Cadenza M peuvent mieux fonctionner. Si la robe noire est riche en dentelle ou détaillée, gardez les boucles d'oreilles plus propres."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-85.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Style de robe noire",
-                "Meilleure direction de boucle d’oreille",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Robe noire simple",
-                  "Boucles d'oreilles audacieuses",
-                  "Lusso"
-                ],
-                [
-                  "Robe en satin noir",
-                  "Gouttes ou boucles d'oreilles audacieuses si simples",
-                  "Orsola, Lusso"
-                ],
-                [
-                  "Robe noire à épaules dénudées",
-                  "Boucles d'oreilles, gouttes ou créoles audacieuses",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Robe bustier noire",
-                  "Boucles d'oreilles ou gouttes audacieuses",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Robe noire à col montant",
-                  "Créoles ou clous moyens",
-                  "Créoles Pave, Cadenza M"
-                ],
-                [
-                  "Robe en dentelle noire",
-                  "Clous ou gouttes délicates",
-                  "Cadenza M, Short Concetta"
-                ],
-                [
-                  "Robe noire à sequins",
-                  "Goujons ou câlins",
-                  "Cadenza M, Amadea"
-                ],
-                [
-                  "Combinaison noire",
-                  "Boucles d'oreilles ou créoles audacieuses",
-                  "Lusso, cerceaux pavés"
-                ],
-                [
-                  "Robe noire formelle",
-                  "Longues gouttes ou clous polis",
-                  "Concetta Long, Cadenza M"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles pour robes à épaules dénudées",
-          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses avec des robes rouges",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les robes rouges ont déjà une forte énergie visuelle, les boucles d'oreilles audacieuses doivent donc être utilisées avec précaution."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si la robe rouge est simple, des boucles d’oreilles audacieuses peuvent fonctionner. Si la robe rouge est en satin, en dentelle, froncée, à paillettes ou très détaillée, Orsola ou Cadenza M peuvent être plus sûres. Les boucles d'oreilles dorées se marient généralement à merveille avec le rouge car elles ajoutent de la chaleur."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Style de robe rouge",
-            "Meilleure direction de boucle d’oreille",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Robe rouge simple",
-              "Gouttes, clous moyens ou boucles d'oreilles audacieuses",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Robe en satin rouge",
-              "Gouttes ou clous moyens",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Robe rouge à épaules dénudées",
-              "Gouttes, créoles ou boucles d'oreilles audacieuses",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Robe en dentelle rouge",
-              "Clous ou gouttes délicates",
-              "Cadenza M, Short Concetta"
-            ],
-            [
-              "Robe rouge à paillettes",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Robe bordeaux",
-              "Gouttes, longues gouttes ou clous polis",
-              "Orsola, Concetta Long, Cadenza M"
-            ],
-            [
-              "Robe de soirée rouge",
-              "Gouttes ou boucles d'oreilles audacieuses si simples",
-              "Orsola, Lusso"
-            ],
-            [
-              "Robe de soirée rouge",
-              "Gouttes ou clous moyens",
-              "Orsola, Cadenza M."
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bijoux avec robe rouge",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-red-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses avec des robes vertes",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les robes vertes se marient à merveille avec des reflets dorés, en particulier pour les fêtes et les soirées."
-        },
-        {
-          "type": "paragraph",
-          "text": "L'émeraude et le vert forêt peuvent porter des boucles d'oreilles, des gouttes ou des créoles audacieuses. La sauge et la menthe fonctionnent généralement mieux avec des boucles d'oreilles plus douces telles que des boucles d'oreilles papillon, de petits clous ou des gouttes courtes."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-93.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Style vestimentaire vert",
-                "Meilleure direction de boucle d’oreille",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Robe vert émeraude",
-                  "Boucles d'oreilles audacieuses, gouttes ou créoles en or",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Robe vert forêt",
-                  "Gouttes, longues gouttes ou boucles d'oreilles audacieuses",
-                  "Orsola, Concetta Long, Lusso"
-                ],
-                [
-                  "Robe en satin vert",
-                  "Gouttes ou cerceaux",
-                  "Orsola, Cerceaux Pavés"
-                ],
-                [
-                  "Robe de soirée verte",
-                  "Gouttes d'or, créoles ou boucles d'oreilles audacieuses",
-                  "Orsola, Pave Hoops, Lusso"
-                ],
-                [
-                  "Robe vert sauge",
-                  "Boucles d'oreilles papillon ou gouttes courtes",
-                  "Farfalla, Short Concetta"
-                ],
-                [
-                  "Robe menthe",
-                  "Petites boucles d'oreilles clous ou papillon",
-                  "Cadenza S, Farfalla"
-                ],
-                [
-                  "Robe olive",
-                  "Créoles, gouttes ou clous moyens",
-                  "Cerceaux Pave, Orsola, Cadenza M"
-                ],
-                [
-                  "Robe verte à fleurs",
-                  "Boucles d'oreilles papillon ou petits clous",
-                  "Farfalla, Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bijoux avec robe verte",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-green-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Des boucles d'oreilles audacieuses avec des tenues en satin",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les tenues en satin reflètent déjà la lumière, c'est pourquoi les boucles d'oreilles audacieuses fonctionnent mieux lorsque le design en satin est simple."
-        },
-        {
-          "type": "paragraph",
-          "text": "Si la robe en satin présente des drapés, des détails de capuchon, des fronces ou une brillance intense, des boucles d'oreilles pendantes ou des clous de taille moyenne peuvent paraître plus propres. Si la robe en satin est unie et que le décolleté est ouvert, des boucles d'oreilles audacieuses peuvent créer un look de fête fort."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Style de tenue en satin",
-            "Meilleure direction de boucle d’oreille",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Robe simple en satin",
-              "Boucles d'oreilles ou gouttes audacieuses",
-              "Lusso, Orsola"
-            ],
-            [
-              "Robe nuisette en satin",
-              "Gouttes ou boucles d'oreilles audacieuses",
-              "Orsola, Lusso"
-            ],
-            [
-              "Robe en satin noir",
-              "Gouttes, clous ou boucles d'oreilles audacieuses si simples",
-              "Orsola, Cadenza M, Lusso"
-            ],
-            [
-              "Robe en satin rouge",
-              "Gouttes ou clous moyens",
-              "Orsola, Cadenza M."
-            ],
-            [
-              "Robe en satin champagne",
-              "Gouttes ou gouttes courtes",
-              "Orsola, Concetta Court"
-            ],
-            [
-              "Robe en satin rose poudré",
-              "Boucles d'oreilles papillon ou gouttes courtes",
-              "Farfalla, Short Concetta"
-            ],
-            [
-              "Robe en satin détaillée",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Combinaison satinée",
-              "Créoles, gouttes ou boucles d'oreilles audacieuses",
-              "Cerceaux pavés, Orsola, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bijoux avec robe en satin",
+          "text": "Quels bijoux porter avec une robe satinée",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-satin-dress"
         }
       ]
     },
     {
-      "heading": "Boucles d'oreilles audacieuses par Neckline",
+      "heading": "Choisir des boucles d’oreilles statement selon l’encolure",
       "content": [
         {
           "type": "paragraph",
-          "text": "Le décolleté aide à décider si les boucles d’oreilles audacieuses sembleront équilibrées ou trop lourdes."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles audacieuses fonctionnent généralement mieux avec des décolletés ouverts, des robes sans bretelles, des robes à épaules dénudées, des cols en V simples et des tenues épurées à col haut. Les décolletés détaillés nécessitent généralement des boucles d’oreilles plus propres."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-87.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Encolure",
-                "Coupe de boucle d'oreille audacieuse",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Robe bustier",
-                  "Excellent",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Robe à épaules dénudées",
-                  "Excellent",
-                  "Lusso, Orsola, Pave Hoops"
-                ],
-                [
-                  "Décolleté en cœur",
-                  "Fort si la tenue est simple",
-                  "Lusso, Farfalla, Orsola"
-                ],
-                [
-                  "Robe col V",
-                  "Bien si le collier est minime",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Robe à encolure carrée",
-                  "Bon avec un style contrôlé",
-                  "Lusso, Pave Hoops, Cadenza M"
-                ],
-                [
-                  "Robe à col montant",
-                  "Les cerceaux ou les goujons peuvent être plus propres",
-                  "Créoles Pave, Cadenza M"
-                ],
-                [
-                  "Robe dos nu",
-                  "Utiliser avec précaution ; des gouttes ou des clous minces peuvent mieux fonctionner",
-                  "Concetta Long, Cadenza M"
-                ],
-                [
-                  "Col bénitier",
-                  "Des gouttes ou des clous peuvent être meilleurs",
-                  "Orsola, Cadenza M."
-                ],
-                [
-                  "Encolure détaillée",
-                  "Évitez les boucles d'oreilles audacieuses",
-                  "Cadenza S, Laluce, Amadea"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bijoux pour décolleté en cœur",
-          "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-sweetheart-neckline"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses par coiffure",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "La coiffure a un grand effet sur les boucles d'oreilles audacieuses, car les pièces audacieuses ont besoin de visibilité."
-        },
-        {
-          "type": "paragraph",
-          "text": "Les cheveux tirés en arrière, les queues de cheval élégantes, les chignons bas et les cheveux courts mettent clairement en valeur les boucles d'oreilles audacieuses. Les cheveux détachés peuvent toujours fonctionner, mais les boucles d'oreilles ont besoin de suffisamment de présence pour apparaître à travers les cheveux."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-89.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Coiffure",
-                "Meilleure direction de boucle d’oreille",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Queue de cheval élégante",
-                  "Boucles d'oreilles, créoles ou gouttes audacieuses",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Chignon bas",
-                  "Boucles d'oreilles ou gouttes audacieuses",
-                  "Lusso, Orsola, Concetta Long"
-                ],
-                [
-                  "Chignon haut",
-                  "Boucles d'oreilles ou créoles audacieuses",
-                  "Lusso, cerceaux pavés"
-                ],
-                [
-                  "Cheveux courts",
-                  "Boucles d'oreilles, créoles ou gouttes audacieuses",
-                  "Lusso, Pave Hoops, Orsola"
-                ],
-                [
-                  "Cheveux lâchés",
-                  "Boucles d'oreilles audacieuses ou gouttes visibles",
-                  "Lusso, Orsola"
-                ],
-                [
-                  "Des vagues douces",
-                  "Gouttes, boucles d'oreilles papillon ou boucles d'oreilles audacieuses",
-                  "Orsola, Farfalla, Lusso"
-                ],
-                [
-                  "Cheveux mi-hauts",
-                  "Boucles d'oreilles audacieuses, clous ou boucles d'oreilles papillon",
-                  "Lusso, Cadenza M, Farfalla"
-                ],
-                [
-                  "Style tressé",
-                  "Gouttes, clous ou câlins",
-                  "Orsola, Cadenza M, Amadea"
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses pour les fêtes et les anniversaires",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Les boucles d'oreilles audacieuses sont idéales pour les fêtes, les anniversaires et les tenues de soirée où les bijoux doivent être remarqués."
-        },
-        {
-          "type": "paragraph",
-          "text": "Lusso devrait être positionné comme l'option principale de fête et d'anniversaire lorsque la tenue est simple. Pour des anniversaires plus doux, Farfalla ou Orsola peuvent sembler plus romantiques. Pour un style de fête moderne, Pave Hoops peut être un meilleur choix."
+          "text": "L’encolure influence l’espace physique autour des boucles."
         },
         {
           "type": "table",
           "headers": [
-            "Type d'événement",
-            "Meilleure direction de boucle d’oreille",
-            "Direction du produit"
+            "Encolure",
+            "Points à considérer"
           ],
           "rows": [
             [
-              "Fête d'anniversaire",
-              "Boucles d'oreilles audacieuses, créoles ou boucles d'oreilles papillon",
-              "Lusso, Pave Hoops, Farfalla"
+              "Bustier",
+              "L’espace dégagé permet aux boucles de s’imposer ; déterminez si un collier est nécessaire"
             ],
             [
-              "Dîner d'anniversaire",
-              "Gouttes ou clous moyens",
-              "Orsola, Cadenza M."
+              "Épaules dénudées",
+              "Observez le rapport entre la longueur des boucles, les épaules découvertes et la coiffure"
             ],
             [
-              "Soirée cocktail",
-              "Boucles d'oreilles, gouttes ou créoles audacieuses",
-              "Lusso, Orsola, Pave Hoops"
+              "Cœur",
+              "Des modèles arrondis ou délicatement structurés peuvent reprendre l’encolure, tandis que des boucles géométriques créeront un contraste"
             ],
             [
-              "Dîner",
-              "Gouttes ou clous polis",
-              "Orsola, Cadenza M."
+              "Col en V",
+              "Déterminez si les boucles ou un pendentif doivent dominer"
             ],
             [
-              "Tenue de soirée",
-              "Boucles d'oreilles ou créoles audacieuses",
-              "Lusso, cerceaux pavés"
+              "Encolure carrée",
+              "Les boucles arrondies comme angulaires peuvent convenir ; reprenez ou contrastez volontairement avec l’encolure"
             ],
             [
-              "Fête de Noël",
-              "Boucles d'oreilles, gouttes ou créoles audacieuses",
-              "Lusso, Orsola, Pave Hoops"
+              "Col montant",
+              "Vérifiez que les boucles longues ne touchent pas le tissu"
             ],
             [
-              "Fête de bureau",
-              "Studs, câlins ou créoles raffinées",
-              "Cadenza M, Amadea, Pave Hoops"
+              "Col halter",
+              "L’encolure attire déjà le regard vers le haut ; observez donc l’ensemble du visage et des épaules"
             ],
             [
-              "Fête d'anniversaire",
-              "Gouttes, boucles d'oreilles papillon ou clous",
-              "Orsola, Alidi Farfalla, Cadenza M"
+              "Col bénitier",
+              "Un tissu souple ou plissé peut rivaliser avec des boucles longues ou très articulées"
+            ],
+            [
+              "Encolure ornée",
+              "Une largeur maîtrisée ou une puce d'oreilles statement compacte peut suffire à créer un impact visuel"
             ]
           ]
         },
         {
           "type": "see-also",
-          "text": "Cadeaux bijoux d'anniversaire",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses pour les mariages et les événements formels",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Des boucles d'oreilles audacieuses peuvent convenir aux mariages et aux événements formels, mais seulement lorsque la tenue le permet."
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour les invités au mariage, les boucles d’oreilles audacieuses ne doivent pas paraître trop nuptiales ou trop distrayantes. Ils fonctionnent mieux avec des robes noires simples, des robes simples en satin, des combinaisons modernes et des tenues de mariage en soirée. Pour les robes d'invitées de mariage détaillées, Cadenza M, Orsola ou Concetta Short peuvent être plus sûres."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Besoin d'un événement formel",
-            "Meilleure réalisation",
-            "Direction du produit"
-          ],
-          "rows": [
-            [
-              "Tenue de mariage simple en soirée",
-              "Boucles d'oreilles ou gouttes audacieuses",
-              "Lusso, Orsola"
-            ],
-            [
-              "Robe d'invité de mariage noire",
-              "Gouttes, clous, créoles ou boucles d'oreilles audacieuses",
-              "Orsola, Cadenza M, Pave Hoops, Lusso"
-            ],
-            [
-              "Dîner formel",
-              "Longues gouttes ou clous polis",
-              "Concetta Long, Cadenza M"
-            ],
-            [
-              "Cocktail de mariage",
-              "Gouttes, créoles ou boucles d'oreilles audacieuses",
-              "Orsola, Pave Hoops, Lusso"
-            ],
-            [
-              "Tenue de mariage détaillée",
-              "Goujons ou câlins",
-              "Cadenza M, Amadea"
-            ],
-            [
-              "Tenue de mariage romantique",
-              "Boucles d'oreilles papillon ou gouttes douces",
-              "Farfalla, Short Concetta"
-            ],
-            [
-              "Look moderne pour les invités de mariage",
-              "Cerceaux ou gouttes",
-              "Cerceaux pavés, Orsola"
-            ],
-            [
-              "Événement cravate noire",
-              "Longues gouttes, clous polis ou boucles d'oreilles raffinées et audacieuses",
-              "Concetta Long, Cadenza M, Lusso"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour les mariages",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-weddings"
-        }
-      ]
-    },
-    {
-      "heading": "Idées audacieuses de pile d’oreilles de boucles d’oreilles",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Des boucles d'oreilles audacieuses peuvent fonctionner dans une pile d'oreilles, mais la boucle d'oreille audacieuse doit être la pièce principale."
-        },
-        {
-          "type": "paragraph",
-          "text": "La boucle d'oreille de support doit être petite et propre. Cadenza S est le goujon de support le plus sûr. Laluce peut fonctionner si la pile est plus molle. Évitez d'empiler trop de grosses boucles d'oreilles avec Lusso car le look peut vite devenir encombré."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "left",
-          "image": "/blog-images/blog-image-95.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Type de pile en gras",
-                "Pièce principale",
-                "Pièce de support",
-                "Direction du produit"
-              ],
-              "rows": [
-                [
-                  "Pile de fête audacieuse",
-                  "Boucle d'oreille audacieuse",
-                  "Petit goujon",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Pile minimale en gras",
-                  "Boucle d'oreille audacieuse",
-                  "Détail minimaliste",
-                  "Lusso + Laluce"
-                ],
-                [
-                  "Pile audacieuse moderne",
-                  "Boucle d'oreille audacieuse",
-                  "Câlin",
-                  "Lusso + Amadea"
-                ],
-                [
-                  "Robe noire pile audacieuse",
-                  "Boucle d'oreille audacieuse",
-                  "Petit goujon",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Pile audacieuse d'anniversaire",
-                  "Boucle d'oreille audacieuse",
-                  "Petit goujon",
-                  "Lusso + Cadenza S"
-                ],
-                [
-                  "Pile de fête plus sûre",
-                  "Boucle d'oreille pendante",
-                  "Petit goujon",
-                  "Orsola + Cadenza S"
-                ],
-                [
-                  "Pile de fête cerceau",
-                  "Cerceau",
-                  "Petit goujon",
-                  "Cerceaux Pave + Cadenza S"
-                ],
-                [
-                  "Pile formelle",
-                  "Longue chute",
-                  "Petit goujon",
-                  "Concetta Longue + Cadenza S"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Boucles d'oreilles en diamants synthétiques pour piles d'oreilles",
-          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-earrings-for-ear-stacks"
-        }
-      ]
-    },
-    {
-      "heading": "Collier ou pas de collier avec des boucles d'oreilles audacieuses ?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Avec des boucles d'oreilles audacieuses, le collier doit généralement être délicat ou sauté."
-        },
-        {
-          "type": "paragraph",
-          "text": "Des boucles d'oreilles audacieuses encadrent déjà le visage et créent le centre principal du bijou. Un collier lourd peut donner l’impression que la tenue est encombrée. Si le décolleté semble vide, choisissez une chaîne très simple. Si le décolleté est sans bretelles, à épaules dénudées ou en forme de cœur, les boucles d'oreilles audacieuses peuvent souvent être autonomes."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Style de boucles d'oreilles audacieux",
-            "Direction du collier"
-          ],
-          "rows": [
-            [
-              "Boucles d'oreilles audacieuses avec robe bustier",
-              "Généralement pas de collier ou de chaîne très délicate"
-            ],
-            [
-              "Boucles d'oreilles audacieuses avec robe à épaules dénudées",
-              "Généralement pas de collier"
-            ],
-            [
-              "Boucles d'oreilles audacieuses avec robe à col en V",
-              "Collier délicat seulement si nécessaire"
-            ],
-            [
-              "Boucles d'oreilles audacieuses avec robe à col montant",
-              "Pas de collier"
-            ],
-            [
-              "Boucles d'oreilles audacieuses avec robe noire",
-              "Gardez le décolleté propre"
-            ],
-            [
-              "Boucles d'oreilles audacieuses avec robe en satin",
-              "Pas de collier ni de chaîne très douce"
-            ],
-            [
-              "Boucles d'oreilles audacieuses avec tenue de fête",
-              "Laissez les boucles d'oreilles mener"
-            ],
-            [
-              "Boucles d'oreilles audacieuses en pile d'oreilles",
-              "Évitez les colliers lourds"
-            ]
-          ]
-        },
-        {
-          "type": "see-also",
-          "text": "Bijoux pour robes à col en V",
+          "text": "Quels bijoux porter avec une robe à col en V",
           "href": "/resources/earring-style-guides/what-jewellery-to-wear-with-a-v-neck-dress"
-        }
-      ]
-    },
-    {
-      "heading": "Boucles d'oreilles audacieuses par Metal Color",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "La couleur du métal change la sensation des boucles d'oreilles audacieuses."
-        },
-        {
-          "type": "paragraph",
-          "text": "L’or jaune est chaleureux, riche et prêt pour la fête. Le ton blanc ou argenté est propre, lumineux et formel. L'or rose est plus doux et plus romantique, mais les boucles d'oreilles audacieuses en or rose doivent être coiffées avec soin afin qu'elles ne paraissent pas trop mignonnes pour la tenue."
-        },
-        {
-          "type": "grid-layout",
-          "imagePosition": "right",
-          "image": "/blog-images/blog-image-97.jpg",
-          "content": [
-            {
-              "type": "table",
-              "headers": [
-                "Couleur du métal",
-                "Ambiance audacieuse pour les boucles d'oreilles",
-                "Meilleures couleurs de tenue"
-              ],
-              "rows": [
-                [
-                  "Or jaune",
-                  "Chaleureux, riche et glamour",
-                  "Noir, rouge, vert, champagne, bordeaux, crème"
-                ],
-                [
-                  "Ton blanc ou argenté",
-                  "Propre, lumineux et moderne",
-                  "Noir, bleu marine, argent, blanc, gris, tons froids"
-                ],
-                [
-                  "Or rose",
-                  "Doux, romantique et féminin",
-                  "Tenues blush, rose, champagne, pastel"
-                ],
-                [
-                  "Métaux mixtes",
-                  "Créatif et à l'écoute des tendances",
-                  "Tenues minimales et piles d'oreilles"
-                ]
-              ]
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "text": "Pour les boucles d'oreilles audacieuses, l'or jaune et le ton blanc/argenté sont généralement les plus faciles à porter pour une fête. L’or rose est plus fort lorsque le look est doux, romantique ou axé sur les cadeaux."
         },
         {
           "type": "see-also",
-          "text": "Boucles d'oreilles en or, blanc ou or rose, diamants synthétiques",
-          "href": "/resources/earring-style-guides/gold-vs-white-vs-rose-gold-diamond-earrings"
+          "text": "Quelles boucles d’oreilles porter avec une robe à épaules dénudées",
+          "href": "/resources/earring-style-guides/what-earrings-to-wear-with-an-off-shoulder-dress"
         }
       ]
     },
     {
-      "heading": "Parcours de produits par besoin de style",
+      "heading": "Choisir des boucles d'oreilles statement selon la coiffure",
       "content": [
         {
-          "type": "subheading",
-          "text": "Pour le look de boucle d'oreille le plus audacieux"
-        },
-        {
           "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles audacieuses Lusso. Ils sont parfaits lorsque la tenue est simple et que les boucles d'oreilles doivent devenir le centre d'intérêt principal des bijoux."
+          "text": "Les cheveux influencent la visibilité, mais ne doivent pas être la seule raison de choisir une boucle plus grande ou plus lourde."
         },
         {
           "type": "subheading",
-          "text": "Pour un look de robe noire audacieux"
+          "text": "Cheveux relevés"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Lusso avec une simple robe noire. Si la robe noire est en satin ou formelle, Orsola ou Concetta Long peuvent également fonctionner à merveille."
+          "text": "Un chignon, une queue-de-cheval ou une coiffure attachée dévoile entièrement la boucle d'oreille. Sa largeur, sa projection et son fermoir sont ainsi plus visibles."
         },
         {
           "type": "subheading",
-          "text": "Pour une pile d’oreilles audacieuse"
+          "text": "Cheveux courts"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Lusso avec Cadenza S. La boucle d'oreille audacieuse mène et le petit clou soutient la pile sans l'encombrer."
+          "text": "Les coiffures courtes peuvent mettre en valeur aussi bien des puces d'oreilles sculpturales et compactes que des modèles plus longs. Tenez compte de l'espace entre la boucle et la mâchoire."
         },
         {
           "type": "subheading",
-          "text": "Pour un look de fête plus sûr"
+          "text": "Cheveux derrière les oreilles"
         },
         {
           "type": "paragraph",
-          "text": "Choisissez les boucles d'oreilles en diamant Cadenza M lorsque la tenue comporte déjà des détails forts, des paillettes, un tissu métallisé ou un décolleté spectaculaire."
+          "text": "Cette coiffure offre une bonne visibilité sans nécessiter de relever complètement les cheveux. Vérifiez si les surfaces texturées ou les éléments mobiles risquent de s'y accrocher."
         },
         {
           "type": "subheading",
-          "text": "Pour un mouvement élégant plutôt qu’un impact audacieux"
+          "text": "Cheveux détachés"
         },
         {
           "type": "paragraph",
-          "text": "Optez pour les boucles d'oreilles pendantes Orsola. Ils sont meilleurs lorsque la tenue a besoin de mouvement plutôt que d’une forme forte."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour une forme moderne plutôt qu’un impact audacieux"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Pave Hoops. Elles ajoutent une forme visible et un éclat sans être aussi spectaculaires que des boucles d'oreilles audacieuses."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour un style romantique et doux"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Farfalla, Alidi Farfalla ou Concetta Short lorsque la tenue est blush, pastel, florale, romantique ou satinée douce."
-        },
-        {
-          "type": "subheading",
-          "text": "Pour des pièces de support minimales"
-        },
-        {
-          "type": "paragraph",
-          "text": "Choisissez Cadenza S, Laluce ou Amadea comme pièces de support pour un style audacieux et des piles d'oreilles."
+          "text": "Un contour défini, une couleur de métal contrastante ou un mouvement visible peuvent aider la boucle à rester remarquable. Consultez des photos montrant le modèle avec les cheveux détachés, plutôt que de vous fier uniquement aux images isolées du produit."
         }
       ]
     },
     {
-      "heading": "Recommandations de produits d'IWantJewels",
+      "heading": "Les boucles d'oreilles statement conviennent-elles en journée ?",
       "content": [
         {
-          "type": "table",
-          "headers": [
-            "Produit",
-            "Meilleur rôle de style audacieux",
-            "Pourquoi ça marche"
-          ],
-          "rows": [
-            [
-              "Boucles d'oreilles Lusso audacieuses",
-              "Principale recommandation de boucles d'oreilles audacieuses",
-              "Le meilleur choix pour un style de fête remarquable"
-            ],
-            [
-              "Clous d'oreilles en diamants synthétiques Cadenza S",
-              "Meilleur goujon de support",
-              "Équilibre les boucles d'oreilles audacieuses dans les piles d'oreilles"
-            ],
-            [
-              "Boucles d'oreilles puces diamant Cadenza M",
-              "Meilleure alternative scintillante sûre",
-              "Fonctionne lorsque les boucles d'oreilles audacieuses semblent trop"
-            ],
-            [
-              "Boucles d'oreilles pendantes Orsola",
-              "Meilleure alternative élégante",
-              "Ajoute du mouvement au lieu d'un impact audacieux"
-            ],
-            [
-              "Cerceaux pavés",
-              "Meilleure alternative de forme moderne",
-              "Ajoute de la courbe et de la visibilité"
-            ],
-            [
-              "Boucles d'oreilles longues Concetta",
-              "Meilleure alternative à une soirée formelle",
-              "Crée une longue ligne raffinée"
-            ],
-            [
-              "Boucles d'oreilles courtes Concetta",
-              "Meilleure alternative aux occasions douces",
-              "Fonctionne pour un style délicat de fête et de mariage."
-            ],
-            [
-              "Boucles d'oreilles papillon Farfalla",
-              "Meilleure alternative romantique",
-              "Fort pour des tenues douces et pleines de sens"
-            ],
-            [
-              "Boucles d'oreilles papillon Alidi Farfalla",
-              "Meilleure option romantique axée sur les cadeaux",
-              "Fonctionne pour les anniversaires et les anniversaires"
-            ],
-            [
-              "Boucles d'oreilles Amadea Huggie",
-              "Meilleure pièce de support discrète",
-              "Utile pour les tenues et les stacks détaillés"
-            ],
-            [
-              "Boucles d'oreilles diamant minimalistes Laluce",
-              "Meilleur détail silencieux",
-              "Aide à garder un style audacieux et équilibré"
-            ]
-          ]
+          "type": "paragraph",
+          "text": "Les boucles d'oreilles statement ne sont pas réservées aux soirées. Une puce d'oreilles statement sculpturale et compacte, une petite créole pavé ou un modèle géométrique aux proportions maîtrisées peuvent devenir le point focal d'une tenue de journée."
         },
         {
           "type": "paragraph",
-          "text": "Choisissez Lusso lorsque la tenue est simple et que les boucles d'oreilles doivent mener. Choisissez Cadenza S comme support épuré, Orsola lorsque vous voulez du mouvement, Pave Hoops lorsque vous voulez de la forme et Cadenza M lorsque la tenue contient déjà suffisamment de détails."
+          "text": "Pour le travail ou les périodes de port prolongé, comparez le poids de chaque boucle, les dimensions complètes, la sécurité du fermoir, le mouvement, les exigences vestimentaires du lieu de travail et l'utilisation avec un casque, un téléphone ou un couvre-chef."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un modèle ne doit pas être présenté comme adapté à un port toute la journée si ses caractéristiques et les tests réalisés ne le justifient pas. Le confort reste personnel."
         }
       ]
     },
     {
-      "heading": "Erreurs courantes de boucles d'oreilles audacieuses à éviter",
+      "heading": "Boucles d'oreilles statement pour les fêtes, les mariages et les événements black-tie",
       "content": [
         {
           "type": "paragraph",
-          "text": "Une erreur courante consiste à porter des boucles d’oreilles audacieuses avec une tenue déjà trop détaillée. Les paillettes, les tissus métalliques, la dentelle épaisse, les broderies et les imprimés forts nécessitent généralement des boucles d'oreilles plus propres."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur consiste à ajouter trop de bijoux autour de boucles d'oreilles audacieuses. Si les boucles d'oreilles sont déjà l'élément principal, gardez le collier délicat ou sautez-le."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une troisième erreur consiste à choisir des boucles d’oreilles audacieuses qui rivalisent avec le décolleté. Les tenues sans bretelles et à épaules dénudées fonctionnent bien, mais les décolletés détaillés peuvent devenir trop encombrés."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une autre erreur est d’oublier la coiffure. Les boucles d'oreilles audacieuses sont plus belles lorsqu'elles sont visibles, en particulier avec des cheveux tirés en arrière, des cheveux courts ou des vagues douces."
-        },
-        {
-          "type": "paragraph",
-          "text": "Une cinquième erreur consiste à utiliser plusieurs grandes boucles d’oreilles dans une seule pile d’oreilles. Les boucles d'oreilles audacieuses ont besoin de petites pièces de support."
-        },
-        {
-          "type": "paragraph",
-          "text": "Enfin, ne choisissez pas des boucles d’oreilles audacieuses uniquement parce qu’elles ont un aspect spectaculaire. Ils doivent toujours correspondre à la tenue, à l'événement, à la confiance et au confort du porteur."
+          "text": "Les fêtes et les événements en soirée permettent souvent davantage de liberté pour porter des formes visibles, du mouvement ou une forte couverture de diamants. Avant de choisir, tenez compte du lieu et de l'ensemble de la tenue, plutôt que du seul nom de l'événement. Une robe de cocktail simple peut accueillir une boucle plus imposante qu'une robe de fête richement ornée."
         },
         {
           "type": "see-also",
-          "text": "Guide de style de bijoux minimalistes",
-          "href": "/resources/earring-style-guides/minimalist-jewellery-styling-guide"
+          "text": "Guide des boucles d’oreilles de fête",
+          "href": "/resources/earring-style-guides/party-earrings-guide"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les boucles d'oreilles statement peuvent se porter lors d'un mariage ou d'un événement black-tie si elles s'accordent avec la tenue, le dress code et le cadre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les invités à un mariage doivent vérifier que le modèle complète leur tenue sans créer un effet nuptial involontaire. Pour un style black-tie, examinez l'accord entre les boucles d'oreilles, la coiffure, l'encolure et un éventuel collier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une boucle longue n'est pas automatiquement plus formelle, et une puce d'oreilles n'est pas nécessairement décontractée. La matière, la finition, les proportions et le style complet déterminent le résultat."
         }
       ]
     },
     {
-      "heading": "Liste de contrôle finale des boucles d'oreilles audacieuses",
+      "heading": "Boucles d'oreilles statement, puces d'oreilles et créoles",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "« Boucle d'oreilles statement » et « puce d'oreilles » ne sont pas opposées."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une puce d'oreilles décrit la façon dont la boucle se place sur le piercing, tandis que statement décrit son rôle visuel. Un large assemblage de diamants, une forme sculpturale ou un motif distinctif peuvent être à la fois une puce d'oreilles et une boucle d'oreilles statement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choisissez une puce d'oreilles statement compacte si vous souhaitez un détail visible sans longue partie pendante. Préférez une puce d'oreilles classique plus petite si vous voulez que la boucle mette en valeur une autre partie de la tenue."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une créole peut également être une boucle d'oreilles statement. Créole désigne la construction courbe, tandis que statement décrit son importance dans l'ensemble du look. Une créole peut devenir un point focal grâce à son diamètre, sa largeur, la disposition des diamants, sa forme, ses détails de surface, ses rangées multiples ou sa construction sculpturale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Comparez les dimensions réelles au lieu de supposer que toutes les créoles sont plus discrètes qu'une boucle pendante ou qu'une puce d'oreilles statement."
+        },
+        {
+          "type": "see-also",
+          "text": "Puces d'oreilles ou créoles",
+          "href": "/resources/earring-style-guides/stud-vs-hoop-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Guide des créoles en diamants de laboratoire",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-hoop-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Les boucles d'oreilles statement peuvent-elles être portées dans un ear stack ?",
       "content": [
         {
           "type": "paragraph",
-          "text": "Avant de choisir des boucles d’oreilles audacieuses, demandez :"
+          "text": "Oui, à condition que la boucle principale dispose de suffisamment d'espace et que les pièces complémentaires restent secondaires. Une structure simple d'ear stack est la suivante :"
         },
         {
           "type": "bullet-list",
           "items": [
-            "La tenue est-elle assez simple pour des boucles d’oreilles audacieuses ?",
-            "Y a-t-il déjà de la dentelle, des paillettes, du tissu métallisé ou des détails lourds ?",
-            "Les boucles d’oreilles doivent-elles être la pièce maîtresse des bijoux ?",
-            "Faut-il sauter le collier ?",
-            "Le décolleté supporte-t-il des boucles d'oreilles audacieuses ?",
-            "La coiffure montrera-t-elle les boucles d'oreilles ?",
-            "Est-ce pour une fête, un anniversaire, un dîner, un mariage ou un événement formel ?",
-            "La couleur du métal correspond-elle à la tenue ?",
-            "Les boucles d'oreilles sont-elles confortables pour tout l'événement ?",
-            "Ai-je besoin d'un goujon de support pour une pile d'oreille ?",
-            "Les drops, les cerceaux ou les clous seraient-ils meilleurs ?",
-            "Vais-je porter à nouveau les boucles d'oreilles ?",
-            "Le look est-il confiant mais toujours équilibré ?"
+            "Une boucle d'oreilles statement dans le piercing principal",
+            "Une puce d'oreilles plus petite ou une pièce ajustée dans le piercing suivant",
+            "Un détail supplémentaire en option, uniquement si l'espacement le permet"
           ]
         },
         {
           "type": "paragraph",
-          "text": "En cas de doute, choisissez des boucles d'oreilles audacieuses uniquement lorsque la tenue est simple. Si la tenue est déjà détaillée, choisissez plutôt Cadenza M, Orsola, Pave Hoops ou Amadea."
+          "text": "Vérifiez la distance entre les piercings, la largeur de chaque boucle, l'orientation des tiges et le risque de contact entre les pièces voisines. Les mises en scène de produit ne doivent pas remplacer les photos de la combinaison exacte portée."
+        },
+        {
+          "type": "see-also",
+          "text": "Comment composer un ear stack",
+          "href": "/resources/earring-style-guides/how-to-stack-earrings"
+        },
+        {
+          "type": "see-also",
+          "text": "Idées d'ear stack en diamant",
+          "href": "/resources/earring-style-guides/diamond-ear-stack-ideas"
+        }
+      ]
+    },
+    {
+      "heading": "Choisir la couleur du métal, les matières et les diamants",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "La couleur et la composition du métal sont deux informations différentes. « Ton or » décrit une apparence. Cela ne confirme ni l'or massif, ni le plaqué or, ni le vermeil, ni une autre matière. Chaque produit doit indiquer précisément son métal de base et sa finition réelle."
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Les tons or jaune apportent de la chaleur",
+            "Les tons blancs ou argentés créent un contraste plus froid",
+            "Les tons or rose introduisent une nuance rose plus douce",
+            "Les métaux mélangés peuvent fonctionner lorsque l'association est répétée de manière intentionnelle"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les boucles d'oreilles statement en diamant de laboratoire, vérifiez davantage que la description générale du produit. La page produit doit préciser :"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Si les pierres sont des diamants de laboratoire",
+            "Le poids total en carats et s'il concerne la paire",
+            "Le nombre de pierres",
+            "La forme des pierres",
+            "Disposition des diamants",
+            "Les dimensions complètes de la boucle d'oreilles",
+            "Poids de chaque boucle",
+            "Métal et finition",
+            "Fermoir",
+            "Si le produit est vendu par paire ou à l'unité"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un poids total en carats plus élevé ne rend pas automatiquement un modèle plus visible. La répartition des pierres, le serti, la largeur et le contraste influencent également l'apparence de la boucle."
+        },
+        {
+          "type": "see-also",
+          "text": "Guide des puces d’oreilles en diamant de laboratoire",
+          "href": "/resources/lab-grown-diamond-guides/lab-grown-diamond-stud-earrings-guide"
+        }
+      ]
+    },
+    {
+      "heading": "Erreurs courantes pour porter des boucles d'oreilles statement",
+      "content": [
+        {
+          "type": "grid-layout",
+          "imagePosition": "left",
+          "image": "/blog-images/blog-image-54.jpg",
+          "content": [
+            {
+              "type": "subheading",
+              "text": "Penser que les boucles d'oreilles statement doivent être imposantes"
+            },
+            {
+              "type": "paragraph",
+              "text": "Une forme distinctive ou une composition compacte de diamants peut créer un impact sans dimensions extrêmes."
+            },
+            {
+              "type": "subheading",
+              "text": "Porter plusieurs pièces focales sans lien entre elles"
+            },
+            {
+              "type": "paragraph",
+              "text": "Une boucle imposante, un collier lourd, une encolure ornée et un ear stack complexe peuvent se faire concurrence. Déterminez quel élément doit dominer."
+            },
+            {
+              "type": "subheading",
+              "text": "Négliger les dimensions complètes"
+            },
+            {
+              "type": "paragraph",
+              "text": "Les photos de produit seules ne donnent pas une échelle fiable. Vérifiez la largeur, la hauteur, la longueur pendante et le poids."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Considérer chaque puce d'oreilles ou créole comme discrète"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les puces d'oreilles et les créoles peuvent également être des modèles statement. Comparez leur présence visuelle réelle."
+        },
+        {
+          "type": "subheading",
+          "text": "Choisir uniquement selon le nom de l'occasion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Deux tenues de mariage, de fête ou de dîner peuvent nécessiter des boucles complètement différentes. Tenez compte du tissu, de l'encolure et de la coiffure."
+        },
+        {
+          "type": "subheading",
+          "text": "Se fier à des promesses produit non vérifiées"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un produit ne doit pas être présenté comme léger, sûr, hypoallergénique, adapté aux oreilles sensibles ou confortable toute la journée sans preuves à l'appui."
+        }
+      ]
+    },
+    {
+      "heading": "Checklist des boucles d'oreilles statement",
+      "content": [
+        {
+          "type": "section-lead",
+          "text": "Avant d'acheter ou de composer une paire, demandez-vous :"
+        },
+        {
+          "type": "numbered-list",
+          "items": [
+            "Qu'est-ce qui crée l'effet statement : la taille, la forme, le mouvement, le motif ou la couverture de diamants ?",
+            "Quelles sont les dimensions complètes ?",
+            "Quel est le poids de chaque boucle d'oreille\u001f?",
+            "Quel fermoir utilise-t-elle ?",
+            "Touchera-t-elle le col, l'épaule ou l'encolure ?",
+            "La tenue comporte-t-elle déjà des détails marquants ?",
+            "Les boucles d'oreilles ou le collier doivent-ils dominer ?",
+            "La coiffure laissera-t-elle voir le modèle en entier ?",
+            "Y a-t-il suffisamment de place pour un ear stack ?",
+            "Le métal, la finition et les pierres sont-ils clairement identifiés ?",
+            "Toutes les promesses produit sont-elles étayées par les caractéristiques exactes du produit ?"
+          ]
         }
       ]
     }
   ],
   "faq": [
     {
-      "question": "Que sont les boucles d'oreilles audacieuses ?",
-      "answer": "Les boucles d’oreilles audacieuses sont des boucles d’oreilles conçues pour être le principal bijou d’une tenue. Elles sont généralement plus visibles, scintillantes ou plus design que les boucles d'oreilles de tous les jours."
+      "question": "Qu'est-ce qui fait d'une boucle une boucle d'oreilles statement ?",
+      "answer": "Une boucle devient une pièce statement lorsqu'elle possède une présence visuelle suffisante pour devenir un point focal. Cette présence peut venir de sa forme, de sa taille, de son mouvement, de son contraste, de la disposition des diamants ou d'un motif distinctif."
     },
     {
-      "question": "Quand dois-je porter des boucles d’oreilles audacieuses ?",
-      "answer": "Portez des boucles d'oreilles audacieuses avec des tenues simples, des robes noires, des looks de fête, des robes sans bretelles, des robes à épaules dénudées, des combinaisons élégantes et des tenues de soirée où les boucles d'oreilles peuvent mener."
+      "question": "Les boucles d'oreilles statement doivent-elles être grandes ?",
+      "answer": "Non. Une puce d'oreilles sculpturale et compacte ou une créole distinctive peut attirer l'attention sans être imposante. Les proportions d'ensemble et le design comptent davantage que la longueur seule."
     },
     {
-      "question": "Puis-je porter des boucles d'oreilles audacieuses avec une robe noire ?",
-      "answer": "Oui, une robe noire est l’une des meilleures tenues pour des boucles d’oreilles audacieuses, surtout lorsque la robe est simple."
+      "question": "Puis-je porter un collier avec des boucles d'oreilles statement ?",
+      "answer": "Oui. Appuyez-vous sur l'encolure et le poids visuel des deux pièces pour décider. Un collier discret peut convenir, mais il ne doit pas entrer involontairement en concurrence avec les boucles d'oreilles."
     },
     {
-      "question": "Puis-je porter des boucles d'oreilles audacieuses avec une robe rouge ?",
-      "answer": "Oui, mais seulement si la robe rouge est simple. Si la robe rouge a un éclat satiné, de la dentelle, des paillettes ou des détails forts, des gouttes ou des clous moyens peuvent être plus beaux."
+      "question": "Les boucles d'oreilles statement peuvent-elles se porter au travail ?",
+      "answer": "Oui, selon leurs dimensions, leur mouvement, leur poids et le lieu de travail. Comparez les caractéristiques exactes et tenez compte des contraintes pratiques, comme l'utilisation d'un casque ou du téléphone."
     },
     {
-      "question": "Puis-je porter des boucles d'oreilles audacieuses avec une robe en satin ?",
-      "answer": "Oui, des boucles d’oreilles audacieuses peuvent fonctionner avec une simple robe en satin. Si la robe en satin présente un fort drapé, des fronces ou des reflets, des boucles d'oreilles ou des clous peuvent être plus sûrs."
+      "question": "Les boucles d'oreilles statement peuvent-elles se porter à un mariage ?",
+      "answer": "Oui, si elles respectent le dress code et complètent la tenue. Les invités doivent tenir compte de l'encolure, du tissu, de la coiffure et du risque que le modèle paraisse trop nuptial."
     },
     {
-      "question": "Dois-je porter un collier avec des boucles d'oreilles audacieuses ?",
-      "answer": "Habituellement, gardez le collier délicat ou sautez-le. Les boucles d’oreilles audacieuses devraient normalement être la pièce maîtresse des bijoux."
+      "question": "Les puces d'oreilles peuvent-elles être des boucles d'oreilles statement ?",
+      "answer": "Oui. « Puce d'oreilles » décrit la construction, tandis que « statement » décrit le rôle visuel de la boucle. Les puces d'oreilles sculpturales, à assemblage ou à motif peuvent toutes être des boucles d'oreilles statement."
     },
     {
-      "question": "Les boucles d'oreilles audacieuses sont-elles bonnes pour les mariages ?",
-      "answer": "Des boucles d’oreilles audacieuses peuvent convenir aux invités du mariage lorsque la tenue est simple et que le style est équilibré. Pour les tenues de mariage détaillées, les clous ou les gouttes sont généralement plus sûrs."
+      "question": "Les créoles peuvent-elles être des boucles d'oreilles statement ?",
+      "answer": "Oui. Les créoles peuvent devenir des pièces statement grâce à leur diamètre, leur largeur, leur forme, leurs détails de surface ou la disposition des diamants."
     },
     {
-      "question": "Des boucles d'oreilles audacieuses peuvent-elles être portées dans une pile d'oreilles ?",
-      "answer": "Oui, mais la boucle d'oreille audacieuse devrait être la pièce principale. Associez-le à un petit clou tel que Cadenza S ou à un détail minimaliste et discret."
-    },
-    {
-      "question": "Les boucles d'oreilles audacieuses sont-elles de bons cadeaux ?",
-      "answer": "Les boucles d'oreilles audacieuses ne sont de bons cadeaux que si le destinataire aime les bijoux remarquables. Si vous n'êtes pas sûr, les clous en diamant ou les câlins sont plus sûrs."
-    },
-    {
-      "question": "Quelles boucles d'oreilles IWantJewels conviennent le mieux pour un style audacieux ?",
-      "answer": "Les boucles d'oreilles Lusso audacieuses sont l'option IWantJewels la plus solide pour un style audacieux. Cadenza S, Orsola, Pave Hoops et Cadenza M fonctionnent comme pièces de support ou alternatives."
+      "question": "Les boucles d'oreilles statement sont-elles toujours lourdes ?",
+      "answer": "Non. L'impact visuel ne permet pas de déterminer le poids. Vérifiez le poids publié de chaque boucle, car des modèles de taille similaire peuvent avoir une construction et un poids différents."
     }
   ],
   "cta": {
-    "heading": "Les boucles d'oreilles audacieuses fonctionnent mieux lorsque la tenue leur laisse de l'espace.",
-    "body": "Choisissez-les pour des robes de soirée simples, des tenues noires, des looks satinés épurés, des soirées d'anniversaire, des soirées et un style confiant. Gardez le collier minimal, laissez les boucles d'oreilles encadrer le visage et utilisez de petites pièces de support si vous construisez une pile d'oreilles. Commencez par les boucles d'oreilles audacieuses IWantJewels Lusso si vous voulez que les boucles d'oreilles mènent le look. Choisissez Cadenza S comme clou de support, Orsola pour un mouvement élégant, Pave Hoops pour une forme moderne et Cadenza M lorsque la tenue a besoin d'un éclat plus sûr.",
-    "primaryLabel": "Achetez des boucles d'oreilles audacieuses",
+    "heading": "Les boucles d'oreilles statement audacieuses fonctionnent le mieux lorsque leur rôle dans la tenue est intentionnel. Laissez un élément dominer le style joaillerie.",
+    "body": "Parcourez la collection I Want Jewels en comparant les dimensions, le poids, le fermoir, les matériaux et les détails des diamants. Choisissez le modèle qui s’accorde à votre tenue et au style recherché, plutôt que de vous fier uniquement à son nom.",
+    "primaryLabel": "Achetez des boucles d’oreilles statement",
     "primaryHref": "/products?category=Earring",
-    "secondaryLabel": "Découvrez les boucles d'oreilles de fête",
-    "secondaryHref": "/products?category=Earring",
-    "tertiaryLabel": "Lire le guide des boucles d'oreilles de fête",
-    "tertiaryHref": "/resources/earring-style-guides/party-earrings-guide"
+    "secondaryLabel": "Découvrez nos boucles d’oreilles de fête",
+    "secondaryHref": "/resources/earring-style-guides/party-earrings-guide",
+    "tertiaryLabel": "Guide des boucles d'oreilles minimalistes",
+    "tertiaryHref": "/resources/earring-style-guides/minimalist-earrings-guide"
   }
 }
