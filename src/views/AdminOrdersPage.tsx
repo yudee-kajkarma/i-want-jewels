@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useVariantLabel } from '../hooks/useVariantLabel'
 import { formatDateTime } from '../utils/formatDate'
 import { toast } from 'react-hot-toast'
 import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown, Package, ChevronDown, ArrowLeft, X, CheckCircle2, AlertCircle, Search } from 'lucide-react'
@@ -86,6 +87,7 @@ function getPaymentStatusClass(status: string) {
 export default function AdminOrdersPage() {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.orders' })
   const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
+  const variantLabel = useVariantLabel()
   const { currency } = useCurrency()
 
   function getActionLabel(type: PendingActionType) {
@@ -1182,7 +1184,7 @@ export default function AdminOrdersPage() {
                           </div>
                           <p className="mt-2 text-sm font-semibold text-[#351626] line-clamp-2">{itemTitle}</p>
                           <p className="mt-1 text-xs text-zinc-500">
-                            {(item?.variantName || tCommon('default'))} · {t('grid.qty', { count: item?.quantity ?? 0 })}
+                            {(variantLabel(item?.variantName) || tCommon('default'))} · {t('grid.qty', { count: item?.quantity ?? 0 })}
                           </p>
                         </div>
                       )

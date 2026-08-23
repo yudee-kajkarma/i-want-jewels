@@ -9,6 +9,7 @@ import { getOrders } from '../services/orderService'
 import type { Order, OrdersPagination } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
 import { useTranslation } from 'react-i18next'
+import { useVariantLabel } from '../hooks/useVariantLabel'
 import { formatDateTime } from '../utils/formatDate'
 
 function getOrderStatusClass(status: string) {
@@ -36,6 +37,7 @@ function getPaymentStatusClass(status: string) {
 
 export default function OrdersPage() {
   const { t, i18n } = useTranslation()
+  const variantLabel = useVariantLabel()
   const [orders, setOrders] = useState<Order[]>([])
   const [pagination, setPagination] = useState<OrdersPagination | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -137,7 +139,7 @@ export default function OrdersPage() {
                           <img src={item.thumbnail} alt={item.title} className="h-24 w-full object-contain" />
                         </div>
                         <p className="mt-3 text-sm font-bold text-[#17110d] line-clamp-2">{item.title}</p>
-                        <p className="mt-1 text-xs text-zinc-500">{item.variantName || t('account.orders.defaultVariant')} · {t('account.orders.qty', { count: item.quantity })}</p>
+                        <p className="mt-1 text-xs text-zinc-500">{variantLabel(item.variantName) || t('account.orders.defaultVariant')} · {t('account.orders.qty', { count: item.quantity })}</p>
                       </div>
                     ))}
                   </div>

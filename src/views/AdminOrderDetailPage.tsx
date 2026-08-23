@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useTranslation } from 'react-i18next'
+import { useVariantLabel } from '../hooks/useVariantLabel'
 import { formatDateTime } from '../utils/formatDate'
 import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift, Undo2, Check, X } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
@@ -74,6 +75,7 @@ function getReturnStatusClass(status: string) {
 
 export default function AdminOrderDetailPage() {
     const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.orderDetail' })
+    const variantLabel = useVariantLabel()
     const params = useParams<{ orderId?: string | string[] }>()
     const { currency } = useCurrency()
     const orderId = typeof params.orderId === 'string' ? params.orderId : ''
@@ -475,7 +477,7 @@ export default function AdminOrderDetailPage() {
                                             <div>
                                                 <p className="font-semibold text-[#17110d]">{item.title}</p>
                                                 <p className="text-xs text-zinc-500">
-                                                    {item.variantName || t('defaultVariant')}
+                                                    {variantLabel(item.variantName) || t('defaultVariant')}
                                                     {item.size !== undefined ? ` · ${t('size', { size: `${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` })}` : ''}
                                                     {' · '}{t('qty', { count: item.quantity })}
                                                 </p>

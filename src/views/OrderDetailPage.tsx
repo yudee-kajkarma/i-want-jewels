@@ -12,6 +12,7 @@ import { cancelOrder, cancelOrderReturnRequest, getOrderById, regenerateOrderPay
 import type { Order } from '../types/order'
 import { formatPrice, getPriceAmount, isoToCurrencyCode } from '../utils/price'
 import { useTranslation } from 'react-i18next'
+import { useVariantLabel } from '../hooks/useVariantLabel'
 import { formatDateTime } from '../utils/formatDate'
 
 function getOrderStatusClass(status: string) {
@@ -81,6 +82,7 @@ function getReturnStatusClass(status: string): string {
 
 export default function OrderDetailPage() {
   const { t, i18n } = useTranslation()
+  const variantLabel = useVariantLabel()
   const params = useParams<{ orderId?: string | string[] }>()
   const { session } = useAuth()
   const orderId = typeof params.orderId === 'string' ? params.orderId : ''
@@ -319,7 +321,7 @@ export default function OrderDetailPage() {
                     </div>
                     <div>
                       <p className="text-lg font-bold text-[#17110d]">{item.title}</p>
-                      <p className="mt-1 text-sm text-zinc-500">{item.variantName || t('account.orderDetails.defaultVariant')}</p>
+                      <p className="mt-1 text-sm text-zinc-500">{variantLabel(item.variantName) || t('account.orderDetails.defaultVariant')}</p>
                       {item.size !== undefined ? (
                         <p className="mt-1 text-sm text-zinc-500">{t('account.orderDetails.size', { size: `${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` })}</p>
                       ) : null}
