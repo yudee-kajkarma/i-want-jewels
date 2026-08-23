@@ -451,7 +451,10 @@ export default function ProductDetailPage({
       setIsLoading(true);
 
       try {
-        const productResponse = await getProductBySlug(productIdentifier);
+        const productResponse = await getProductBySlug(
+          productIdentifier,
+          i18n.language,
+        );
         const reviewsResponse = await getProductReviews(productResponse.id);
 
         if (!isMounted) {
@@ -497,7 +500,9 @@ export default function ProductDetailPage({
     return () => {
       isMounted = false;
     };
-  }, [initialProduct?.id, initialProduct?.slug, productIdentifier, slugParam]);
+    // `i18n.language` is a dependency: switching language must refetch the
+    // product so its copy matches the rest of the page.
+  }, [initialProduct?.id, initialProduct?.slug, productIdentifier, slugParam, i18n.language]);
 
   useEffect(() => {
     if (!isSizeGuideOpen) {

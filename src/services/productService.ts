@@ -19,6 +19,7 @@ import type {
 import axios from 'axios'
 import { minPriceOf, toPrice, type Price } from '../utils/price'
 import apiClient, { authApiClient, adminApiClient } from './apiClient'
+import { fallbackLng } from '@/i18n/settings'
 
 type ProductImageApiResponse = {
   _id: string
@@ -651,8 +652,21 @@ export async function getRandomProducts(count = 4): Promise<Product[]> {
   }
 }
 
-export async function getProductById(productId: string): Promise<ProductDetail> {
-  const response = await apiClient.get<ProductDetailResponse>(`/products/${productId}`)
+/**
+ * `lng` asks the API for translated product copy. English is the fallback for
+ * any field a locale has not been translated for, so omitting it — or sending
+ * an unsupported code — simply serves English.
+ */
+function localeParams(locale?: string): { params?: { lng: string } } {
+  if (!locale || locale === fallbackLng) return {}
+  return { params: { lng: locale } }
+}
+
+export async function getProductById(productId: string, locale?: string): Promise<ProductDetail> {
+  const response = await apiClient.get<ProductDetailResponse>(
+    `/products/${productId}`,
+    localeParams(locale),
+  )
 
   return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
 }
@@ -661,8 +675,11 @@ export function isProductNotFoundError(error: unknown): boolean {
   return axios.isAxiosError(error) && error.response?.status === 404
 }
 
-export async function getProductBySlug(slug: string): Promise<ProductDetail> {
-  const response = await apiClient.get<ProductDetailResponse>(`/products/slug/${slug}`)
+export async function getProductBySlug(slug: string, locale?: string): Promise<ProductDetail> {
+  const response = await apiClient.get<ProductDetailResponse>(
+    `/products/slug/${slug}`,
+    localeParams(locale),
+  )
 
   return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
 }
