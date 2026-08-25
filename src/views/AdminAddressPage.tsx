@@ -1,12 +1,14 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import axios from 'axios'
 import { toast } from 'react-hot-toast'
-import { Building2, MapPinHouse, Save } from 'lucide-react'
+import { Building2, MapPinHouse, Save, UserRound } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
-import { getAdminAddress, updateAdminAddress } from '../services/userService'
+import { useAuth } from '../context/AuthContext'
+import { getAdminAddress, getUserProfile, updateAdminAddress, updateUserProfile } from '../services/userService'
 import type { UpdateAdminAddressPayload } from '../types/address'
 import { getCountryOptions, getStateOptions, isValidPostalCode } from '../utils/location'
 
@@ -16,13 +18,44 @@ const initialForm: UpdateAdminAddressPayload = {
   city: '',
   state: '',
   postalCode: '',
-  country: 'IN',
+  country: '',
   addressType: 'billing',
+}
+
+type AdminNameForm = {
+  firstName: string
+  lastName: string
+  phoneNumber: string
+  countryCode: string
+}
+
+const initialNameForm: AdminNameForm = {
+  firstName: '',
+  lastName: '',
+  phoneNumber: '',
+  countryCode: '',
+}
+
+type ApiErrorBody = {
+  message?: string
+  error?: {
+    message?: string
+  }
+}
+
+function getApiErrorMessage(error: unknown, fallback: string): string {
+  if (axios.isAxiosError<ApiErrorBody>(error)) {
+    return error.response?.data?.error?.message || error.response?.data?.message || fallback
+  }
+
+  return error instanceof Error && error.message ? error.message : fallback
 }
 
 export default function AdminAddressPage() {
   const { t } = useTranslation('common', { keyPrefix: 'admin.address' })
+  const { session, saveSession } = useAuth()
   const [form, setForm] = useState<UpdateAdminAddressPayload>(initialForm)
+  const [nameForm, setNameForm] = useState<AdminNameForm>(initialNameForm)
   const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
   const [error, setError] = useState('')
@@ -33,23 +66,25 @@ export default function AdminAddressPage() {
   useEffect(() => {
     let mounted = true
 
-    async function loadAddress() {
+    async function loadSettings() {
       setIsLoading(true)
       setError('')
 
       try {
-        const address = await getAdminAddress()
+        const [address, profile] = await Promise.all([getAdminAddress(), getUserProfile()])
 
         if (!mounted) {
           return
         }
 
-        if (!address) {
-          setForm(initialForm)
-          return
-        }
+        setNameForm({
+          firstName: profile.firstName,
+          lastName: profile.lastName,
+          phoneNumber: profile.phoneNumber,
+          countryCode: profile.countryCode,
+        })
 
-        setForm({
+        setForm(address ? {
           street: address.street,
           houseNumber: address.houseNumber,
           city: address.city,
@@ -57,13 +92,13 @@ export default function AdminAddressPage() {
           postalCode: address.postalCode,
           country: address.country,
           addressType: address.addressType || 'billing',
-        })
-      } catch {
+        } : initialForm)
+      } catch (loadError) {
         if (!mounted) {
           return
         }
 
-        setError(t('errorLoad'))
+        setError(getApiErrorMessage(loadError, t('errorLoad')))
       } finally {
         if (mounted) {
           setIsLoading(false)
@@ -71,7 +106,7 @@ export default function AdminAddressPage() {
       }
     }
 
-    void loadAddress()
+    void loadSettings()
 
     return () => {
       mounted = false
@@ -88,6 +123,11 @@ export default function AdminAddressPage() {
 
     if (!form.street.trim() || !form.city.trim() || !form.state.trim() || !form.postalCode.trim() || !form.country.trim() || !form.addressType.trim()) {
       setError(t('errorFillRequired'))
+      return
+    }
+
+    if (!nameForm.firstName.trim() || !nameForm.lastName.trim()) {
+      setError(t('errorFillName'))
       return
     }
 
@@ -109,11 +149,29 @@ export default function AdminAddressPage() {
         country: form.country.trim(),
         addressType: form.addressType.trim(),
       })
+      await updateUserProfile({
+        firstName: nameForm.firstName,
+        lastName: nameForm.lastName,
+        phoneNumber: nameForm.phoneNumber,
+        countryCode: nameForm.countryCode,
+      })
+
+      if (session) {
+        const firstName = nameForm.firstName.trim()
+        const lastName = nameForm.lastName.trim()
+        saveSession({
+          ...session,
+          firstName,
+          lastName,
+          username: [firstName, lastName].filter(Boolean).join(' ') || session.username,
+        })
+      }
 
       toast.success(t('toastUpdateSuccess'))
-    } catch {
-      setError(t('errorUpdate'))
-      toast.error(t('toastUpdateError'))
+    } catch (saveError) {
+      const message = getApiErrorMessage(saveError, t('errorUpdate'))
+      setError(message)
+      toast.error(message)
     } finally {
       setIsSaving(false)
     }
@@ -149,6 +207,42 @@ export default function AdminAddressPage() {
             <p className="text-sm text-zinc-500">{t('loading')}</p>
           ) : (
             <form onSubmit={(event) => void handleSave(event)} className="space-y-6">
+              <div className="border border-[#efe1d5] bg-[#fffdfa] p-5">
+                <div className="mb-4 flex items-center gap-2">
+                  <UserRound className="h-4 w-4 text-[#8f2a60]" />
+                  <div>
+                    <h2 className="text-sm font-bold text-[#17110d]">{t('accountName')}</h2>
+                    <p className="text-xs text-zinc-500">{t('accountNameHint')}</p>
+                  </div>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="space-y-2 text-sm">
+                    <span className="font-semibold text-[#17110d]">{t('firstName')}</span>
+                    <input
+                      type="text"
+                      value={nameForm.firstName}
+                      onChange={(event) => setNameForm((current) => ({ ...current, firstName: event.target.value }))}
+                      maxLength={50}
+                      required
+                      className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                      placeholder={t('firstName')}
+                    />
+                  </label>
+                  <label className="space-y-2 text-sm">
+                    <span className="font-semibold text-[#17110d]">{t('lastName')}</span>
+                    <input
+                      type="text"
+                      value={nameForm.lastName}
+                      onChange={(event) => setNameForm((current) => ({ ...current, lastName: event.target.value }))}
+                      maxLength={50}
+                      required
+                      className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
+                      placeholder={t('lastName')}
+                    />
+                  </label>
+                </div>
+              </div>
+
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-2 text-sm">
                   <span className="font-semibold text-[#17110d]">{t('country')}</span>
@@ -255,7 +349,7 @@ export default function AdminAddressPage() {
                   className="inline-flex items-center gap-2 bg-[#111111] px-5 py-3 text-xs font-bold tracking-[0.08em] text-white transition hover:bg-[#2e221b] disabled:opacity-60"
                 >
                   <Save className="h-4 w-4" />
-                  {isSaving ? t('updating') : t('updateAddress')}
+                  {isSaving ? t('updating') : t('updateSettings')}
                 </button>
               </div>
             </form>

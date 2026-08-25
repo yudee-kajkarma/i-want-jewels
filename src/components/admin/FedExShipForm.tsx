@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast'
 import type { AdminShippingQuote, AdminShipmentPreviewItem, AdminShippingRateOption, Order } from '../../types/order'
 import { shipOrderForAdmin, updateOrderShippingAddressForAdmin, getAdminCarrierRatesForOrder, type FedExShipOptions } from '../../services/orderService'
 import { getCountryOptions, getStateOptions } from '../../utils/location'
+import ShippingValueSummary from './ShippingValueSummary'
 
 const PACKAGING_VALUES = [
   'YOUR_PACKAGING',
@@ -31,7 +32,7 @@ const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
   countryOfManufacture: string
-  customsValueEUR: number
+  customsValue: number
 }
 
 type ReceiverDraft = {
@@ -51,6 +52,14 @@ type Props = {
 
 function fmt(n: number) {
   return `€${n.toFixed(2)}`
+}
+
+function fmtDeclaration(n: number, currency: 'EUR' | 'USD' | 'GBP') {
+  return new Intl.NumberFormat(currency === 'USD' ? 'en-US' : currency === 'GBP' ? 'en-GB' : 'en-IE', {
+    style: 'currency',
+    currency,
+    minimumFractionDigits: 2,
+  }).format(n)
 }
 
 export default function FedExShipForm({ order, preview: previewQuote, onBack, onShipped }: Props) {
@@ -114,17 +123,21 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(receiverDraft.country), [receiverDraft.country])
 
-  const isOutsideEU = preview?.package.retailValueEUR !== undefined
+  const isOutsideEU = preview?.package.isOutsideEU ?? preview?.package.deliveryChargeEUR !== undefined
+  const declarationCurrency = preview?.package.declarationCurrency ?? 'EUR'
 
   const [commodities, setCommodities] = useState<CommodityRow[]>(
     (preview?.items ?? []).map((it) => ({
       ...it,
       hsCode: it.hsCode,
       countryOfManufacture: it.mfrCountry,
-      customsValueEUR: isOutsideEU && it.customsValueUSD != null
-        ? parseFloat((it.customsValueUSD * it.qty).toFixed(2))
-        : parseFloat((it.unitPriceEUR * it.qty).toFixed(2)),
+      customsValue: typeof it.customsValue === 'number'
+        ? it.customsValue
+        : parseFloat(((it.unitPrice ?? it.unitPriceEUR) * it.qty).toFixed(2)),
     }))
+  )
+  const totalCustomsValue = parseFloat(
+    commodities.reduce((sum, item) => sum + item.customsValue, 0).toFixed(2),
   )
 
   const [packagingType, setPackagingType] = useState('YOUR_PACKAGING')
@@ -187,7 +200,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         commodityOverrides: commodities.map((c) => ({
           hsCode: c.hsCode,
           countryOfManufacture: c.countryOfManufacture,
-          customsValueEUR: c.customsValueEUR,
+          customsValue: c.customsValue,
         })),
       }
 
@@ -300,6 +313,14 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </section>
       </div>
 
+      <ShippingValueSummary
+        order={order}
+        carrier="FedEx"
+        pkg={preview?.package}
+        items={commodities}
+        declaredValue={totalCustomsValue}
+      />
+
       {commodities.length > 0 ? (
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
@@ -313,11 +334,11 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.number')}</th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.description')}</th>
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.qty')}</th>
-                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur', { currency: declarationCurrency })}</th>
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.weightG')}</th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.hsCode')}</th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.countryOfMfr')}</th>
-                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur', { currency: declarationCurrency })}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6e3ee]">
@@ -326,7 +347,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                     <td className="px-3 py-2 text-zinc-400">{c.number}</td>
                     <td className="px-3 py-2 max-w-[180px] truncate" title={c.title}>{c.title}</td>
                     <td className="px-3 py-2 text-right">{c.qty}</td>
-                    <td className="px-3 py-2 text-right">{c.unitPriceEUR.toFixed(2)}</td>
+                    <td className="px-3 py-2 text-right">{fmtDeclaration(c.unitPrice ?? c.unitPriceEUR, declarationCurrency)}</td>
                     <td className="px-3 py-2 text-right">{c.unitWeightG}</td>
                     <td className="px-2 py-1.5">
                       <input value={c.hsCode}
@@ -335,7 +356,14 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                         className="w-24 border border-[#e3bfd6] px-1.5 py-1 font-mono text-[11px] outline-none focus:border-[#d24a90]" />
                     </td>
                     <td className="px-3 py-2 font-mono uppercase">{c.countryOfManufacture}</td>
-                    <td className="px-3 py-2 text-right font-mono">{c.customsValueEUR.toFixed(2)}</td>
+                    <td className="px-3 py-2 text-right font-mono">
+                      <span className="block">{fmtDeclaration(c.customsValue, declarationCurrency)}</span>
+                      {isOutsideEU && c.customsValueUSD != null ? (
+                        <span className="block text-[9px] font-sans text-zinc-400">
+                          {t('storedCustomsSource', { value: c.customsValueUSD.toFixed(2) })}
+                        </span>
+                      ) : null}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -344,7 +372,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
           {preview?.package ? (
             <div className="border-t border-[#efcfe1] px-4 py-2.5 text-[11px] text-[#694d5f]">
               <span className="font-semibold text-[#4f2040]">{t('totalCustomsValue')} </span>
-              {fmt(preview.package.declaredValueEUR)}
+              {fmtDeclaration(totalCustomsValue, declarationCurrency)}
               <span className="ml-3 font-semibold text-[#4f2040]">{t('incoterm')} </span>{preview.package.incoterm}
             </div>
           ) : null}
@@ -624,8 +652,6 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </div>
       ) : null}
 
-      <CustomsBreakdown commodities={commodities} pkg={preview?.package} isOutsideEU={isOutsideEU} />
-
       <div className="flex items-center justify-between gap-3 border-t border-[#efcfe1] pt-4">
         <button type="button" onClick={onBack}
           className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb]">
@@ -642,71 +668,5 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         </button>
       </div>
     </div>
-  )
-}
-
-function CustomsBreakdown({
-  commodities,
-  pkg,
-  isOutsideEU,
-}: {
-  commodities: CommodityRow[]
-  pkg: import('../../types/order').AdminShipmentPackagePreview | undefined
-  isOutsideEU: boolean
-}) {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.components.fedExShipForm' })
-  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
-
-  if (!pkg || !isOutsideEU) return null
-
-  const totalCustomsValue = parseFloat(
-    commodities.reduce((s, c) => s + c.customsValueEUR, 0).toFixed(2)
-  )
-
-  return (
-    <section className="border border-[#efcfe1] bg-white">
-      <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-        <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-          {t('customsDeclaration')}
-        </p>
-        <p className="mt-0.5 text-[10px] text-zinc-400">
-          {t('customsValuesNote')}
-        </p>
-      </div>
-
-      <div className="px-4 py-3 space-y-3 text-[11px] text-[#694d5f]">
-        {commodities.length > 0 ? (
-          <div className="space-y-1">
-            {commodities.map((c, i) => (
-              <div key={i} className="flex items-center justify-between">
-                <span className="truncate max-w-[220px]" title={c.title}>
-                  {c.title} <span className="text-zinc-400">× {c.qty}</span>
-                </span>
-                <span className="font-mono text-[#4f2040]">{fmt(c.customsValueEUR)}</span>
-              </div>
-            ))}
-          </div>
-        ) : null}
-
-        <div className="border border-[#f0dbe8] divide-y divide-[#f6e3ee]">
-          <div className="flex items-center justify-between px-3 py-2.5 bg-[#fff0f9]">
-            <span className="font-bold text-[#3d1530]">
-              {t('totalDeclaredCustoms')}
-              <span className="ml-1.5 text-[9px] font-normal text-zinc-400 uppercase tracking-[0.06em]">
-                {t('sentToFedEx')}
-              </span>
-            </span>
-            <span className="font-mono font-bold text-[#d24a90] text-sm">{fmt(totalCustomsValue)}</span>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-x-6 gap-y-1 text-[10px] text-zinc-400">
-          <span><span className="font-semibold text-[#8b5a75]">{t('incoterm')}</span> {pkg.incoterm}</span>
-          <span><span className="font-semibold text-[#8b5a75]">{t('totalWeight')}</span> {pkg.totalWeightKg} {tCommon('kg')}</span>
-          <span><span className="font-semibold text-[#8b5a75]">{t('currency')}</span> EUR</span>
-          <span className="text-amber-600">{t('outsideEuNote')}</span>
-        </div>
-      </div>
-    </section>
   )
 }

@@ -757,7 +757,7 @@ export type FedExShipOptions = {
   dutiesPaymentType?: string;
   dutiesAccountNumber?: string;
   notificationEmails?: string[];
-  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValueEUR?: number }>;
+  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
 }
 
 export type DhlShipOptions = {
@@ -765,7 +765,7 @@ export type DhlShipOptions = {
   shipmentType?: 'commercial' | 'personal';
   exportReasonType?: string;
   dimensions?: { lengthCm: number; widthCm: number; heightCm: number };
-  insurance?: { enabled: boolean; valueEUR?: number };
+  insurance?: { enabled: boolean; value?: number };
   goGreen?: boolean;
   saturdayDelivery?: boolean;
   paperlessTrade?: boolean;
@@ -773,7 +773,7 @@ export type DhlShipOptions = {
   dutiesPaymentType?: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY';
   dutiesAccountNumber?: string;
   invoiceNumber?: string;
-  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValueEUR?: number }>;
+  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
 }
 
 export async function shipOrderForAdmin(

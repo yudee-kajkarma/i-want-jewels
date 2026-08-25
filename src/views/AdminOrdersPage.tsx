@@ -2301,7 +2301,19 @@ export default function AdminOrdersPage() {
                           <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.packageCustoms')}</p>
                           <div className="grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
                             <p><span className="font-semibold text-[#4f2040]">{t('actionModal.weight')}</span> {shippingQuote.preview.package.totalWeightKg} {tCommon('kg')}</p>
-                            <p><span className="font-semibold text-[#4f2040]">{t('actionModal.declared')}</span> €{shippingQuote.preview.package.declaredValueEUR.toFixed(2)}</p>
+                            <p>
+                              <span className="font-semibold text-[#4f2040]">{t('actionModal.declared')}</span>{' '}
+                              {new Intl.NumberFormat(
+                                shippingQuote.preview.package.declarationCurrency === 'USD'
+                                  ? 'en-US'
+                                  : shippingQuote.preview.package.declarationCurrency === 'GBP' ? 'en-GB' : 'en-IE',
+                                {
+                                  style: 'currency',
+                                  currency: shippingQuote.preview.package.declarationCurrency ?? 'EUR',
+                                  minimumFractionDigits: 2,
+                                },
+                              ).format(shippingQuote.preview.package.declaredValue ?? shippingQuote.preview.package.declaredValueEUR)}
+                            </p>
                             <p><span className="font-semibold text-[#4f2040]">{t('actionModal.incoterm')}</span> {shippingQuote.preview.package.incoterm}</p>
                             <p>
                               <span className="font-semibold text-[#4f2040]">{t('actionModal.customs')}</span>{' '}
@@ -2325,7 +2337,7 @@ export default function AdminOrdersPage() {
                                   <th className="pr-2">{t('actionModal.lineItemsHeaders.number')}</th>
                                   <th className="pr-2">{t('actionModal.lineItemsHeaders.title')}</th>
                                   <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.qty')}</th>
-                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitEur')}</th>
+                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitEur', { currency: shippingQuote.preview.package.declarationCurrency ?? 'EUR' })}</th>
                                   <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitG')}</th>
                                   <th className="pr-2">{t('actionModal.lineItemsHeaders.mfr')}</th>
                                   <th>{t('actionModal.lineItemsHeaders.hsCode')}</th>
@@ -2337,7 +2349,18 @@ export default function AdminOrdersPage() {
                                     <td className="pr-2 py-0.5">{it.number}</td>
                                     <td className="pr-2 py-0.5">{it.title}</td>
                                     <td className="pr-2 py-0.5 text-right">{it.qty}</td>
-                                    <td className="pr-2 py-0.5 text-right">{it.unitPriceEUR.toFixed(2)}</td>
+                                    <td className="pr-2 py-0.5 text-right">
+                                      {new Intl.NumberFormat(
+                                        shippingQuote.preview?.package.declarationCurrency === 'USD'
+                                          ? 'en-US'
+                                          : shippingQuote.preview?.package.declarationCurrency === 'GBP' ? 'en-GB' : 'en-IE',
+                                        {
+                                          style: 'currency',
+                                          currency: shippingQuote.preview?.package.declarationCurrency ?? 'EUR',
+                                          minimumFractionDigits: 2,
+                                        },
+                                      ).format(it.unitPrice ?? it.unitPriceEUR)}
+                                    </td>
                                     <td className="pr-2 py-0.5 text-right">{it.unitWeightG}</td>
                                     <td className="pr-2 py-0.5">{it.mfrCountry}</td>
                                     <td className="py-0.5 font-mono">{it.hsCode}</td>
