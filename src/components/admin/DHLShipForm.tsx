@@ -11,6 +11,7 @@ import {
   type DhlShipOptions,
 } from '../../services/orderService'
 import { getCountryOptions, getStateOptions } from '../../utils/location'
+import ShippingValueSummary from './ShippingValueSummary'
 
 const INCOTERM_VALUES = ['DAP', 'DDP', 'DDU', 'CPT', 'CIP', 'EXW', 'FCA'] as const
 
@@ -31,7 +32,7 @@ const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
   countryOfManufacture: string
-  customsValueEUR: number
+  customsValue: number
 }
 
 type ReceiverDraft = {
@@ -51,6 +52,14 @@ type Props = {
 
 function fmt(n: number) {
   return `€${n.toFixed(2)}`
+}
+
+function fmtDeclaration(n: number, currency: 'EUR' | 'USD' | 'GBP') {
+  return new Intl.NumberFormat(currency === 'USD' ? 'en-US' : currency === 'GBP' ? 'en-GB' : 'en-IE', {
+    style: 'currency',
+    currency,
+    minimumFractionDigits: 2,
+  }).format(n)
 }
 
 export default function DHLShipForm({ order, preview: previewQuote, onBack, onShipped }: Props) {
@@ -118,17 +127,21 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const countryOptions = useMemo(() => getCountryOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(receiverDraft.country), [receiverDraft.country])
 
-  const isOutsideEU = preview?.package.retailValueEUR !== undefined
+  const isOutsideEU = preview?.package.isOutsideEU ?? preview?.package.deliveryChargeEUR !== undefined
+  const declarationCurrency = preview?.package.declarationCurrency ?? 'EUR'
 
   const [commodities, setCommodities] = useState<CommodityRow[]>(
     (preview?.items ?? []).map((it) => ({
       ...it,
       hsCode: it.hsCode,
       countryOfManufacture: it.mfrCountry,
-      customsValueEUR: isOutsideEU && it.customsValueUSD != null
-        ? parseFloat((it.customsValueUSD * it.qty).toFixed(2))
-        : parseFloat((it.unitPriceEUR * it.qty).toFixed(2)),
+      customsValue: typeof it.customsValue === 'number'
+        ? it.customsValue
+        : parseFloat(((it.unitPrice ?? it.unitPriceEUR) * it.qty).toFixed(2)),
     }))
+  )
+  const totalCustomsValue = parseFloat(
+    commodities.reduce((sum, item) => sum + item.customsValue, 0).toFixed(2),
   )
 
   const [incoterm, setIncoterm] = useState('DAP')
@@ -139,7 +152,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [dimH, setDimH] = useState('10')
 
   const [insuranceEnabled, setInsuranceEnabled] = useState(false)
-  const [insuranceValueEUR, setInsuranceValueEUR] = useState('')
+  const [insuranceValue, setInsuranceValue] = useState('')
   const [saturdayDelivery, setSaturdayDelivery] = useState(false)
   const [paperlessTrade, setPaperlessTrade] = useState(false)
 
@@ -191,9 +204,9 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         insurance: insuranceEnabled
           ? {
               enabled: true,
-              valueEUR: insuranceValueEUR
-                ? parseFloat(insuranceValueEUR)
-                : (preview?.package.declaredValueEUR ?? 0),
+              value: insuranceValue
+                ? parseFloat(insuranceValue)
+                : totalCustomsValue,
             }
           : undefined,
         saturdayDelivery: saturdayDelivery || undefined,
@@ -208,7 +221,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         commodityOverrides: commodities.map((c) => ({
           hsCode: c.hsCode,
           countryOfManufacture: c.countryOfManufacture,
-          customsValueEUR: c.customsValueEUR,
+          customsValue: c.customsValue,
         })),
       }
 
@@ -321,6 +334,14 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </section>
       </div>
 
+      <ShippingValueSummary
+        order={order}
+        carrier="DHL"
+        pkg={preview?.package}
+        items={commodities}
+        declaredValue={totalCustomsValue}
+      />
+
       {commodities.length > 0 ? (
         <section className="border border-[#efcfe1] bg-white">
           <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
@@ -334,11 +355,11 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.number')}</th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.description')}</th>
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.qty')}</th>
-                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur', { currency: declarationCurrency })}</th>
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.weightG')}</th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.hsCode')}</th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.countryOfMfr')}</th>
-                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur')}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur', { currency: declarationCurrency })}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6e3ee]">
@@ -347,7 +368,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                     <td className="px-3 py-2 text-zinc-400">{c.number}</td>
                     <td className="px-3 py-2 max-w-[180px] truncate" title={c.title}>{c.title}</td>
                     <td className="px-3 py-2 text-right">{c.qty}</td>
-                    <td className="px-3 py-2 text-right">{c.unitPriceEUR.toFixed(2)}</td>
+                    <td className="px-3 py-2 text-right">{fmtDeclaration(c.unitPrice ?? c.unitPriceEUR, declarationCurrency)}</td>
                     <td className="px-3 py-2 text-right">{c.unitWeightG}</td>
                     <td className="px-2 py-1.5">
                       <input
@@ -358,7 +379,14 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                       />
                     </td>
                     <td className="px-3 py-2 font-mono uppercase">{c.countryOfManufacture}</td>
-                    <td className="px-3 py-2 text-right font-mono">{c.customsValueEUR.toFixed(2)}</td>
+                    <td className="px-3 py-2 text-right font-mono">
+                      <span className="block">{fmtDeclaration(c.customsValue, declarationCurrency)}</span>
+                      {isOutsideEU && c.customsValueUSD != null ? (
+                        <span className="block text-[9px] font-sans text-zinc-400">
+                          {t('storedCustomsSource', { value: c.customsValueUSD.toFixed(2) })}
+                        </span>
+                      ) : null}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -367,8 +395,8 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           {preview?.package ? (
             <div className="border-t border-[#efcfe1] px-4 py-2.5 text-[11px] text-[#694d5f]">
               <span className="font-semibold text-[#4f2040]">{t('totalCustomsValue')} </span>
-              {fmt(preview.package.declaredValueEUR)}
-              <span className="ml-3 font-semibold text-[#4f2040]">{t('currency')} </span>EUR
+              {fmtDeclaration(totalCustomsValue, declarationCurrency)}
+              <span className="ml-3 font-semibold text-[#4f2040]">{t('currency')} </span>{declarationCurrency}
             </div>
           ) : null}
         </section>
@@ -550,10 +578,10 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           </label>
           {insuranceEnabled ? (
             <div className="flex items-center gap-2">
-              <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('insuredEur')}</label>
-              <input type="number" min="0" step="0.01" value={insuranceValueEUR}
-                onChange={(e) => setInsuranceValueEUR(e.target.value)}
-                placeholder={(preview?.package.declaredValueEUR ?? 0).toFixed(2)}
+              <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('insuredEur', { currency: declarationCurrency })}</label>
+              <input type="number" min="0" step="0.01" value={insuranceValue}
+                onChange={(e) => setInsuranceValue(e.target.value)}
+                placeholder={totalCustomsValue.toFixed(2)}
                 className="w-28 border border-[#e3bfd6] px-2 py-1.5 text-xs outline-none focus:border-[#d24a90]" />
             </div>
           ) : <div />}
@@ -618,13 +646,6 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </div>
       </section>
 
-      <CustomsBreakdown
-        commodities={commodities}
-        pkg={preview?.package}
-        isOutsideEU={isOutsideEU}
-        incoterm={incoterm}
-      />
-
       {hasBlockers ? (
         <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">
           <p className="mb-1 font-semibold">{t('cannotShipUntilFixed')}</p>
@@ -650,73 +671,5 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </button>
       </div>
     </div>
-  )
-}
-
-function CustomsBreakdown({
-  commodities,
-  pkg,
-  isOutsideEU,
-  incoterm,
-}: {
-  commodities: CommodityRow[]
-  pkg: import('../../types/order').AdminShipmentPackagePreview | undefined
-  isOutsideEU: boolean
-  incoterm: string
-}) {
-  const { t } = useTranslation('common', { keyPrefix: 'admin.components.dhlShipForm' })
-  const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
-
-  if (!pkg || !isOutsideEU) return null
-
-  const totalCustomsValue = parseFloat(
-    commodities.reduce((s, c) => s + c.customsValueEUR, 0).toFixed(2)
-  )
-
-  return (
-    <section className="border border-[#efcfe1] bg-white">
-      <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
-        <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">
-          {t('customsDeclaration')}
-        </p>
-        <p className="mt-0.5 text-[10px] text-zinc-400">
-          {t('customsValuesNote')}
-        </p>
-      </div>
-
-      <div className="px-4 py-3 space-y-3 text-[11px] text-[#694d5f]">
-        {commodities.length > 0 ? (
-          <div className="space-y-1">
-            {commodities.map((c, i) => (
-              <div key={i} className="flex items-center justify-between">
-                <span className="truncate max-w-[220px]" title={c.title}>
-                  {c.title} <span className="text-zinc-400">× {c.qty}</span>
-                </span>
-                <span className="font-mono text-[#4f2040]">€{c.customsValueEUR.toFixed(2)}</span>
-              </div>
-            ))}
-          </div>
-        ) : null}
-
-        <div className="border border-[#f0dbe8] divide-y divide-[#f6e3ee]">
-          <div className="flex items-center justify-between px-3 py-2.5 bg-[#fff0f9]">
-            <span className="font-bold text-[#3d1530]">
-              {t('totalDeclaredCustoms')}
-              <span className="ml-1.5 text-[9px] font-normal text-zinc-400 uppercase tracking-[0.06em]">
-                {t('sentToDhl')}
-              </span>
-            </span>
-            <span className="font-mono font-bold text-amber-700 text-sm">€{totalCustomsValue.toFixed(2)}</span>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-x-6 gap-y-1 text-[10px] text-zinc-400">
-          <span><span className="font-semibold text-[#8b5a75]">{t('incoterm').replace(' *', ':')}</span> {incoterm}</span>
-          <span><span className="font-semibold text-[#8b5a75]">{t('totalWeight')}</span> {pkg.totalWeightKg} {tCommon('kg')}</span>
-          <span><span className="font-semibold text-[#8b5a75]">{t('currencyLabel')}</span> EUR</span>
-          <span className="text-amber-600">{t('outsideEuNote')}</span>
-        </div>
-      </div>
-    </section>
   )
 }

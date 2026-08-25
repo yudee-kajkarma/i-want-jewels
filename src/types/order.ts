@@ -281,11 +281,15 @@ export type AdminShipmentPartyPreview = {
 export type AdminShipmentPackagePreview = {
   totalWeightKg: number
   declaredValueEUR: number
+  retailValueEUR: number
+  declarationCurrency: 'EUR' | 'USD' | 'GBP'
+  declaredValue: number
+  retailValue: number
   description: string
   incoterm: string
   isCustomsDeclarable: boolean
-  retailValueEUR?: number
   deliveryChargeEUR?: number
+  isOutsideEU: boolean
 }
 
 export type AdminShipmentPreviewItem = {
@@ -293,10 +297,13 @@ export type AdminShipmentPreviewItem = {
   title: string
   qty: number
   unitPriceEUR: number
+  unitPrice: number
   unitWeightG: number
   mfrCountry: string
   hsCode: string
   customsValueUSD?: number
+  customsValueEUR: number
+  customsValue: number
 }
 
 export type AdminShipmentPreview = {

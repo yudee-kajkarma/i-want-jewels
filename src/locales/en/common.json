@@ -1103,7 +1103,7 @@
           "number": "#",
           "title": "Title",
           "qty": "Qty",
-          "unitEur": "Unit €",
+          "unitEur": "Unit ({{currency}})",
           "unitG": "Unit g",
           "mfr": "Mfr",
           "hsCode": "HS code"
@@ -1220,7 +1220,11 @@
     "address": {
       "breadcrumb": "Admin",
       "title": "Address Settings",
-      "loading": "Loading admin address...",
+      "loading": "Loading admin settings...",
+      "accountName": "Account Name",
+      "accountNameHint": "This name is used as the sender name on FedEx and DHL shipments.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "country": "Country",
       "selectCountry": "Select country",
       "state": "State",
@@ -1233,12 +1237,14 @@
       "addressTypePlaceholder": "billing, work, shipping...",
       "updating": "UPDATING...",
       "updateAddress": "UPDATE ADDRESS",
-      "errorLoad": "Unable to load admin address right now.",
+      "updateSettings": "UPDATE ACCOUNT & ADDRESS",
+      "errorLoad": "Unable to load admin settings right now.",
+      "errorFillName": "Please enter both first and last name before saving.",
       "errorFillRequired": "Please fill all required address fields before saving.",
       "errorInvalidPostal": "Please enter a valid postal code.",
-      "errorUpdate": "Unable to update admin address right now. Please try again.",
-      "toastUpdateSuccess": "Admin address updated successfully.",
-      "toastUpdateError": "Unable to update admin address right now."
+      "errorUpdate": "Unable to update admin settings right now. Please try again.",
+      "toastUpdateSuccess": "Admin account and address updated successfully.",
+      "toastUpdateError": "Unable to update admin settings right now."
     },
     "blogPreview": {
       "loading": "Loading blog preview...",
@@ -1923,6 +1929,21 @@
           "uploadFailed": "Upload failed"
         }
       },
+      "shippingValueSummary": {
+        "title": "Order & declaration values",
+        "customerTotal": "Customer order total",
+        "customerTotalHint": "Amount charged in {{currency}}",
+        "retailReference": "Carrier retail reference",
+        "retailReferenceHint": "Physical-item sale value on carrier paperwork",
+        "declaredCustoms": "Declared customs value",
+        "declaredCustomsHint": "Amount sent to {{carrier}} in the currency shown",
+        "notRequired": "Not required",
+        "withinEuHint": "No customs declaration within the EU",
+        "currencyExplanation": "{{customerAmount}} is the customer order total. {{retailAmount}} is the physical-item sale value declared in {{currency}}. Shipping-rate prices below are separate carrier account charges in EUR.",
+        "customsFromUsdDirect": "This USD shipment uses the product's stored USD customs cost directly. The customs cost is not the selling price.",
+        "customsFromUsd": "The declared value comes from the product's stored USD customs cost, converted to EUR. It is not the selling price.",
+        "customsFromRetail": "No separate product customs cost is stored, so the EUR retail value is used for the declaration."
+      },
       "fedExShipForm": {
         "packagingOptions": {
           "YOUR_PACKAGING": "Your Packaging",
@@ -1950,16 +1971,17 @@
         "readOnly": "(read-only)",
         "deliverTo": "Deliver To",
         "customsCommodities": "Customs / Commodities",
-        "onlyHsEditable": "Only HS codes are editable.",
+        "onlyHsEditable": "HS codes are editable. Retail and customs amounts are read-only order snapshots.",
+        "storedCustomsSource": "from ${{value}} USD/unit",
         "tableHeaders": {
           "number": "#",
           "description": "Description",
           "qty": "Qty",
-          "unitEur": "Unit €",
+          "unitEur": "Retail / unit ({{currency}})",
           "weightG": "Weight g",
           "hsCode": "HS Code",
           "countryOfMfr": "Country of Mfr",
-          "customsValueEur": "Customs Value €"
+          "customsValueEur": "Declared / line ({{currency}})"
         },
         "totalCustomsValue": "Total customs value:",
         "incoterm": "Incoterm:",
@@ -2053,16 +2075,17 @@
         "readOnly": "(read-only)",
         "deliverTo": "Deliver To",
         "customsCommodities": "Customs / Commodities",
-        "onlyHsEditable": "Only HS codes are editable.",
+        "onlyHsEditable": "HS codes are editable. Retail and customs amounts are read-only order snapshots.",
+        "storedCustomsSource": "from ${{value}} USD/unit",
         "tableHeaders": {
           "number": "#",
           "description": "Description",
           "qty": "Qty",
-          "unitEur": "Unit €",
+          "unitEur": "Retail / unit ({{currency}})",
           "weightG": "Weight g",
           "hsCode": "HS Code",
           "countryOfMfr": "Country of Mfr",
-          "customsValueEur": "Customs Value €"
+          "customsValueEur": "Declared / line ({{currency}})"
         },
         "totalCustomsValue": "Total customs value:",
         "currency": "Currency:",
@@ -2091,7 +2114,7 @@
         "selectProductBreakdown": "Select a product to see the breakdown",
         "valueAddedServices": "Value-Added Services",
         "shipmentInsurance": "Shipment Insurance (II)",
-        "insuredEur": "Insured €",
+        "insuredEur": "Insured value ({{currency}})",
         "saturdayDelivery": "Saturday Delivery (AA)",
         "paperlessTrade": "Paperless Trade — electronic invoice (WY)",
         "billingDutiesPayment": "Billing / Duties Payment",

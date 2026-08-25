@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { authApiClient } from './apiClient'
 import type { UpdateProfileFormPayload, UpdateProfileRequestPayload, UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
 import type { AdminAddress, UpdateAdminAddressPayload } from '../types/address'
@@ -179,12 +180,20 @@ export async function setDefaultUserAddress(addressId: string): Promise<void> {
 }
 
 export async function getAdminAddress(): Promise<AdminAddress | null> {
-  const response = await authApiClient.get<ApiEnvelope<unknown>>('/addresses/admin/me')
-  const dataRecord = response.data.data && typeof response.data.data === 'object' && !Array.isArray(response.data.data)
-    ? (response.data.data as Record<string, unknown>)
-    : {}
+  try {
+    const response = await authApiClient.get<ApiEnvelope<unknown>>('/addresses/admin/me')
+    const dataRecord = response.data.data && typeof response.data.data === 'object' && !Array.isArray(response.data.data)
+      ? (response.data.data as Record<string, unknown>)
+      : {}
 
-  return normalizeAdminAddress(dataRecord.address)
+    return normalizeAdminAddress(dataRecord.address)
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response?.status === 404) {
+      return null
+    }
+
+    throw error
+  }
 }
 
 export async function updateAdminAddress(payload: UpdateAdminAddressPayload): Promise<void> {

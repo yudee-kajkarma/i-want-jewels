@@ -1125,7 +1125,7 @@
           "number": "#",
           "title": "Titre",
           "qty": "Qté",
-          "unitEur": "Unité €",
+          "unitEur": "Unité ({{currency}})",
           "unitG": "Unité g",
           "mfr": "Fab.",
           "hsCode": "Code SH"
@@ -1247,7 +1247,11 @@
     "address": {
       "breadcrumb": "Administrateur",
       "title": "Paramètres d'adresse",
-      "loading": "Chargement de l'adresse admin...",
+      "loading": "Chargement des paramètres admin...",
+      "accountName": "Nom du compte",
+      "accountNameHint": "Ce nom est utilisé comme nom d'expéditeur pour les envois FedEx et DHL.",
+      "firstName": "Prénom",
+      "lastName": "Nom",
       "country": "Pays",
       "selectCountry": "Sélectionner le pays",
       "state": "État",
@@ -1260,12 +1264,14 @@
       "addressTypePlaceholder": "facturation, travail, livraison...",
       "updating": "MISE À JOUR EN COURS...",
       "updateAddress": "METTRE À JOUR L'ADRESSE",
-      "errorLoad": "Impossible de charger l'adresse admin pour le moment.",
+      "updateSettings": "METTRE À JOUR LE COMPTE ET L'ADRESSE",
+      "errorLoad": "Impossible de charger les paramètres admin pour le moment.",
+      "errorFillName": "Veuillez saisir le prénom et le nom avant d'enregistrer.",
       "errorFillRequired": "Veuillez remplir tous les champs d'adresse requis avant d'enregistrer.",
       "errorInvalidPostal": "Veuillez saisir un code postal valide.",
-      "errorUpdate": "Impossible de mettre à jour l'adresse admin pour le moment. Veuillez réessayer.",
-      "toastUpdateSuccess": "Adresse admin mise à jour avec succès.",
-      "toastUpdateError": "Impossible de mettre à jour l'adresse admin pour le moment."
+      "errorUpdate": "Impossible de mettre à jour les paramètres admin. Veuillez réessayer.",
+      "toastUpdateSuccess": "Compte et adresse admin mis à jour avec succès.",
+      "toastUpdateError": "Impossible de mettre à jour les paramètres admin."
     },
     "blogPreview": {
       "loading": "Chargement de l'aperçu du blog...",
@@ -1954,6 +1960,21 @@
           "uploadFailed": "Échec du téléchargement"
         }
       },
+      "shippingValueSummary": {
+        "title": "Valeurs de la commande et de la déclaration",
+        "customerTotal": "Total de la commande client",
+        "customerTotalHint": "Montant facturé en {{currency}}",
+        "retailReference": "Référence de vente du transporteur",
+        "retailReferenceHint": "Valeur de vente des articles physiques sur les documents du transporteur",
+        "declaredCustoms": "Valeur en douane déclarée",
+        "declaredCustomsHint": "Montant envoyé à {{carrier}} dans la devise affichée",
+        "notRequired": "Non requis",
+        "withinEuHint": "Aucune déclaration en douane au sein de l'UE",
+        "currencyExplanation": "{{customerAmount}} est le total de la commande client. {{retailAmount}} est la valeur de vente des articles physiques déclarée en {{currency}}. Les tarifs d'expédition ci-dessous sont des frais de compte transporteur distincts en EUR.",
+        "customsFromUsdDirect": "Cet envoi en USD utilise directement le coût douanier du produit enregistré en USD. Le coût douanier n'est pas le prix de vente.",
+        "customsFromUsd": "La valeur déclarée provient du coût douanier du produit enregistré en USD, converti en EUR. Ce n'est pas le prix de vente.",
+        "customsFromRetail": "Aucun coût douanier distinct n'est enregistré ; la valeur de vente en EUR est donc utilisée pour la déclaration."
+      },
       "fedExShipForm": {
         "packagingOptions": {
           "YOUR_PACKAGING": "Votre emballage",
@@ -1981,16 +2002,17 @@
         "readOnly": "(lecture seule)",
         "deliverTo": "Livrer à",
         "customsCommodities": "Douane / Marchandises",
-        "onlyHsEditable": "Seuls les codes SH sont modifiables.",
+        "onlyHsEditable": "Les codes SH sont modifiables. Les montants de vente et de douane sont des instantanés de commande en lecture seule.",
+        "storedCustomsSource": "depuis ${{value}} USD/unité",
         "tableHeaders": {
           "number": "#",
           "description": "Description",
           "qty": "Qté",
-          "unitEur": "Unité €",
+          "unitEur": "Vente / unité ({{currency}})",
           "weightG": "Poids g",
           "hsCode": "Code SH",
           "countryOfMfr": "Pays de fabrication",
-          "customsValueEur": "Valeur en douane €"
+          "customsValueEur": "Déclaré / ligne ({{currency}})"
         },
         "totalCustomsValue": "Valeur totale en douane :",
         "incoterm": "Incoterm :",
@@ -2084,16 +2106,17 @@
         "readOnly": "(lecture seule)",
         "deliverTo": "Livrer à",
         "customsCommodities": "Douane / Marchandises",
-        "onlyHsEditable": "Seuls les codes SH sont modifiables.",
+        "onlyHsEditable": "Les codes SH sont modifiables. Les montants de vente et de douane sont des instantanés de commande en lecture seule.",
+        "storedCustomsSource": "depuis ${{value}} USD/unité",
         "tableHeaders": {
           "number": "#",
           "description": "Description",
           "qty": "Qté",
-          "unitEur": "Unité €",
+          "unitEur": "Vente / unité ({{currency}})",
           "weightG": "Poids g",
           "hsCode": "Code SH",
           "countryOfMfr": "Pays de fabrication",
-          "customsValueEur": "Valeur en douane €"
+          "customsValueEur": "Déclaré / ligne ({{currency}})"
         },
         "totalCustomsValue": "Valeur totale en douane :",
         "currency": "Devise :",
@@ -2122,7 +2145,7 @@
         "selectProductBreakdown": "Sélectionnez un produit pour voir le détail",
         "valueAddedServices": "Services à valeur ajoutée",
         "shipmentInsurance": "Assurance d'expédition (II)",
-        "insuredEur": "Assuré €",
+        "insuredEur": "Valeur assurée ({{currency}})",
         "saturdayDelivery": "Livraison le samedi (AA)",
         "paperlessTrade": "Commerce sans papier — facture électronique (WY)",
         "billingDutiesPayment": "Facturation / Paiement des droits",

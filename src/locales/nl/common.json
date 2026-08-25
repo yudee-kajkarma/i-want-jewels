@@ -1103,7 +1103,7 @@
           "number": "#",
           "title": "Titel",
           "qty": "Aantal",
-          "unitEur": "Eenheid €",
+          "unitEur": "Eenheid ({{currency}})",
           "unitG": "Eenheid g",
           "mfr": "Mfr",
           "hsCode": "HS-code"
@@ -1220,7 +1220,11 @@
     "address": {
       "breadcrumb": "Beheerder",
       "title": "Adresinstellingen",
-      "loading": "Beheerdersadres laden...",
+      "loading": "Beheerdersinstellingen laden...",
+      "accountName": "Accountnaam",
+      "accountNameHint": "Deze naam wordt gebruikt als afzender voor FedEx- en DHL-zendingen.",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
       "country": "Land",
       "selectCountry": "Selecteer land",
       "state": "Staat",
@@ -1233,12 +1237,14 @@
       "addressTypePlaceholder": "facturering, werk, verzending...",
       "updating": "UPDATEN...",
       "updateAddress": "ADRES UPDATEN",
-      "errorLoad": "Kan het beheerdersadres momenteel niet laden.",
+      "updateSettings": "ACCOUNT EN ADRES UPDATEN",
+      "errorLoad": "Kan de beheerdersinstellingen momenteel niet laden.",
+      "errorFillName": "Vul voor- en achternaam in voordat u opslaat.",
       "errorFillRequired": "Vul alle verplichte adresvelden in voordat u opslaat.",
       "errorInvalidPostal": "Voer een geldige postcode in.",
-      "errorUpdate": "Kan het beheerdersadres momenteel niet bijwerken. Probeer het opnieuw.",
-      "toastUpdateSuccess": "Beheerdersadres succesvol bijgewerkt.",
-      "toastUpdateError": "Kan het beheerdersadres momenteel niet bijwerken."
+      "errorUpdate": "Kan de beheerdersinstellingen momenteel niet bijwerken. Probeer het opnieuw.",
+      "toastUpdateSuccess": "Beheerdersaccount en adres succesvol bijgewerkt.",
+      "toastUpdateError": "Kan de beheerdersinstellingen momenteel niet bijwerken."
     },
     "blogPreview": {
       "loading": "Blogvoorbeeld laden...",
@@ -1923,6 +1929,21 @@
           "uploadFailed": "Uploaden mislukt"
         }
       },
+      "shippingValueSummary": {
+        "title": "Bestel- en aangiftewaarden",
+        "customerTotal": "Totaal klantbestelling",
+        "customerTotalHint": "Bedrag afgerekend in {{currency}}",
+        "retailReference": "Winkelwaarde voor vervoerder",
+        "retailReferenceHint": "Verkoopwaarde van fysieke artikelen op vervoersdocumenten",
+        "declaredCustoms": "Aangegeven douanewaarde",
+        "declaredCustomsHint": "Bedrag naar {{carrier}} verzonden in de getoonde valuta",
+        "notRequired": "Niet vereist",
+        "withinEuHint": "Geen douaneaangifte binnen de EU",
+        "currencyExplanation": "{{customerAmount}} is het totaal van de klantbestelling. {{retailAmount}} is de verkoopwaarde van de fysieke artikelen die in {{currency}} wordt aangegeven. De verzendtarieven hieronder zijn afzonderlijke accountkosten van de vervoerder in EUR.",
+        "customsFromUsdDirect": "Voor deze USD-zending worden de opgeslagen USD-douanekosten van het product direct gebruikt. De douanekosten zijn niet de verkoopprijs.",
+        "customsFromUsd": "De aangegeven waarde komt uit de opgeslagen douanekosten van het product in USD en wordt omgerekend naar EUR. Dit is niet de verkoopprijs.",
+        "customsFromRetail": "Er zijn geen afzonderlijke douanekosten opgeslagen; daarom wordt de winkelwaarde in EUR gebruikt voor de aangifte."
+      },
       "fedExShipForm": {
         "packagingOptions": {
           "YOUR_PACKAGING": "Uw verpakking",
@@ -1950,16 +1971,17 @@
         "readOnly": "(alleen-lezen)",
         "deliverTo": "Bezorgen aan",
         "customsCommodities": "Douane / Goederen",
-        "onlyHsEditable": "Alleen HS-codes kunnen worden bewerkt.",
+        "onlyHsEditable": "HS-codes kunnen worden bewerkt. Winkel- en douanebedragen zijn alleen-lezen momentopnamen van de bestelling.",
+        "storedCustomsSource": "van ${{value}} USD/stuk",
         "tableHeaders": {
           "number": "#",
           "description": "Beschrijving",
           "qty": "Aantal",
-          "unitEur": "Eenheid €",
+          "unitEur": "Verkoop / stuk ({{currency}})",
           "weightG": "Gewicht g",
           "hsCode": "HS-code",
           "countryOfMfr": "Land van Mfr",
-          "customsValueEur": "Douanewaarde €"
+          "customsValueEur": "Aangegeven / regel ({{currency}})"
         },
         "totalCustomsValue": "Totale douanewaarde:",
         "incoterm": "Incoterm:",
@@ -2053,16 +2075,17 @@
         "readOnly": "(alleen-lezen)",
         "deliverTo": "Bezorgen aan",
         "customsCommodities": "Douane / Goederen",
-        "onlyHsEditable": "Alleen HS-codes kunnen worden bewerkt.",
+        "onlyHsEditable": "HS-codes kunnen worden bewerkt. Winkel- en douanebedragen zijn alleen-lezen momentopnamen van de bestelling.",
+        "storedCustomsSource": "van ${{value}} USD/stuk",
         "tableHeaders": {
           "number": "#",
           "description": "Beschrijving",
           "qty": "Aantal",
-          "unitEur": "Eenheid €",
+          "unitEur": "Verkoop / stuk ({{currency}})",
           "weightG": "Gewicht g",
           "hsCode": "HS-code",
           "countryOfMfr": "Land van Mfr",
-          "customsValueEur": "Douanewaarde €"
+          "customsValueEur": "Aangegeven / regel ({{currency}})"
         },
         "totalCustomsValue": "Totale douanewaarde:",
         "currency": "Munteenheid:",
@@ -2091,7 +2114,7 @@
         "selectProductBreakdown": "Selecteer een product om het overzicht te zien",
         "valueAddedServices": "Diensten met toegevoegde waarde",
         "shipmentInsurance": "Verzendingsverzekering (II)",
-        "insuredEur": "Verzekerd €",
+        "insuredEur": "Verzekerde waarde ({{currency}})",
         "saturdayDelivery": "Zaterdaglevering (AA)",
         "paperlessTrade": "Papierloze handel – elektronische factuur (WY)",
         "billingDutiesPayment": "Facturering/belastingen Betaling",

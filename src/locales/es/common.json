@@ -1125,7 +1125,7 @@
           "number": "#",
           "title": "Título",
           "qty": "Cant.",
-          "unitEur": "Unidad €",
+          "unitEur": "Unidad ({{currency}})",
           "unitG": "Unidad g",
           "mfr": "Fabr.",
           "hsCode": "Código HS"
@@ -1247,7 +1247,11 @@
     "address": {
       "breadcrumb": "Administración",
       "title": "Configuración de Dirección",
-      "loading": "Cargando dirección de administrador...",
+      "loading": "Cargando configuración de administrador...",
+      "accountName": "Nombre de la cuenta",
+      "accountNameHint": "Este nombre se utiliza como remitente en los envíos de FedEx y DHL.",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
       "country": "País",
       "selectCountry": "Seleccionar país",
       "state": "Estado",
@@ -1260,12 +1264,14 @@
       "addressTypePlaceholder": "facturación, trabajo, envío...",
       "updating": "ACTUALIZANDO...",
       "updateAddress": "ACTUALIZAR DIRECCIÓN",
-      "errorLoad": "No se pudo cargar la dirección de administrador en este momento.",
+      "updateSettings": "ACTUALIZAR CUENTA Y DIRECCIÓN",
+      "errorLoad": "No se pudo cargar la configuración de administrador en este momento.",
+      "errorFillName": "Ingresa el nombre y el apellido antes de guardar.",
       "errorFillRequired": "Por favor completa todos los campos de dirección requeridos antes de guardar.",
       "errorInvalidPostal": "Por favor ingresa un código postal válido.",
-      "errorUpdate": "No se pudo actualizar la dirección de administrador en este momento. Por favor intenta de nuevo.",
-      "toastUpdateSuccess": "Dirección de administrador actualizada correctamente.",
-      "toastUpdateError": "No se pudo actualizar la dirección de administrador en este momento."
+      "errorUpdate": "No se pudo actualizar la configuración de administrador. Inténtalo de nuevo.",
+      "toastUpdateSuccess": "Cuenta y dirección de administrador actualizadas correctamente.",
+      "toastUpdateError": "No se pudo actualizar la configuración de administrador."
     },
     "blogPreview": {
       "loading": "Cargando vista previa del blog...",
@@ -1954,6 +1960,21 @@
           "uploadFailed": "Error al subir"
         }
       },
+      "shippingValueSummary": {
+        "title": "Valores del pedido y la declaración",
+        "customerTotal": "Total del pedido del cliente",
+        "customerTotalHint": "Importe cobrado en {{currency}}",
+        "retailReference": "Referencia minorista del transportista",
+        "retailReferenceHint": "Valor de venta de los artículos físicos en los documentos del transportista",
+        "declaredCustoms": "Valor aduanero declarado",
+        "declaredCustomsHint": "Importe enviado a {{carrier}} en la moneda mostrada",
+        "notRequired": "No requerido",
+        "withinEuHint": "Sin declaración aduanera dentro de la UE",
+        "currencyExplanation": "{{customerAmount}} es el total del pedido del cliente. {{retailAmount}} es el valor de venta de los artículos físicos declarado en {{currency}}. Las tarifas de envío inferiores son cargos separados de la cuenta del transportista en EUR.",
+        "customsFromUsdDirect": "Este envío en USD usa directamente el coste aduanero del producto guardado en USD. El coste aduanero no es el precio de venta.",
+        "customsFromUsd": "El valor declarado procede del coste aduanero del producto guardado en USD y convertido a EUR. No es el precio de venta.",
+        "customsFromRetail": "No hay un coste aduanero separado guardado, por lo que se usa el valor minorista en EUR para la declaración."
+      },
       "fedExShipForm": {
         "packagingOptions": {
           "YOUR_PACKAGING": "Tu Empaque",
@@ -1981,16 +2002,17 @@
         "readOnly": "(solo lectura)",
         "deliverTo": "Entregar A",
         "customsCommodities": "Aduana / Mercancías",
-        "onlyHsEditable": "Solo los códigos HS son editables.",
+        "onlyHsEditable": "Los códigos HS son editables. Los importes minoristas y aduaneros son datos de solo lectura del pedido.",
+        "storedCustomsSource": "de ${{value}} USD/unidad",
         "tableHeaders": {
           "number": "#",
           "description": "Descripción",
           "qty": "Cant.",
-          "unitEur": "Unidad €",
+          "unitEur": "Venta / unidad ({{currency}})",
           "weightG": "Peso g",
           "hsCode": "Código HS",
           "countryOfMfr": "País de Fabricación",
-          "customsValueEur": "Valor Aduanero €"
+          "customsValueEur": "Declarado / línea ({{currency}})"
         },
         "totalCustomsValue": "Valor aduanero total:",
         "incoterm": "Incoterm:",
@@ -2084,16 +2106,17 @@
         "readOnly": "(solo lectura)",
         "deliverTo": "Entregar A",
         "customsCommodities": "Aduana / Mercancías",
-        "onlyHsEditable": "Solo los códigos HS son editables.",
+        "onlyHsEditable": "Los códigos HS son editables. Los importes minoristas y aduaneros son datos de solo lectura del pedido.",
+        "storedCustomsSource": "de ${{value}} USD/unidad",
         "tableHeaders": {
           "number": "#",
           "description": "Descripción",
           "qty": "Cant.",
-          "unitEur": "Unidad €",
+          "unitEur": "Venta / unidad ({{currency}})",
           "weightG": "Peso g",
           "hsCode": "Código HS",
           "countryOfMfr": "País de Fabricación",
-          "customsValueEur": "Valor Aduanero €"
+          "customsValueEur": "Declarado / línea ({{currency}})"
         },
         "totalCustomsValue": "Valor aduanero total:",
         "currency": "Moneda:",
@@ -2122,7 +2145,7 @@
         "selectProductBreakdown": "Selecciona un producto para ver el desglose",
         "valueAddedServices": "Servicios de Valor Agregado",
         "shipmentInsurance": "Seguro de Envío (II)",
-        "insuredEur": "Asegurado €",
+        "insuredEur": "Valor asegurado ({{currency}})",
         "saturdayDelivery": "Entrega en Sábado (AA)",
         "paperlessTrade": "Comercio sin Papel — factura electrónica (WY)",
         "billingDutiesPayment": "Facturación / Pago de Aranceles",

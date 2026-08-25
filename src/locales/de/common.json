@@ -1103,7 +1103,7 @@
           "number": "#",
           "title": "Titel",
           "qty": "Menge",
-          "unitEur": "Einheit €",
+          "unitEur": "Einheit ({{currency}})",
           "unitG": "Einheit g",
           "mfr": "Hersteller",
           "hsCode": "HS-Code"
@@ -1220,7 +1220,11 @@
     "address": {
       "breadcrumb": "Admin",
       "title": "Adresseinstellungen",
-      "loading": "Admin-Adresse wird geladen...",
+      "loading": "Admin-Einstellungen werden geladen...",
+      "accountName": "Kontoname",
+      "accountNameHint": "Dieser Name wird als Absendername für FedEx- und DHL-Sendungen verwendet.",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
       "country": "Land",
       "selectCountry": "Land auswählen",
       "state": "Bundesland",
@@ -1233,12 +1237,14 @@
       "addressTypePlaceholder": "Rechnung, geschäftlich, Versand...",
       "updating": "WIRD AKTUALISIERT...",
       "updateAddress": "ADRESSE AKTUALISIEREN",
-      "errorLoad": "Die Admin-Adresse kann derzeit nicht geladen werden.",
+      "updateSettings": "KONTO UND ADRESSE AKTUALISIEREN",
+      "errorLoad": "Die Admin-Einstellungen können derzeit nicht geladen werden.",
+      "errorFillName": "Bitte geben Sie vor dem Speichern Vor- und Nachnamen ein.",
       "errorFillRequired": "Bitte füllen Sie alle erforderlichen Adressfelder aus, bevor Sie speichern.",
       "errorInvalidPostal": "Bitte geben Sie eine gültige Postleitzahl ein.",
-      "errorUpdate": "Die Admin-Adresse kann derzeit nicht aktualisiert werden. Bitte versuchen Sie es erneut.",
-      "toastUpdateSuccess": "Admin-Adresse erfolgreich aktualisiert.",
-      "toastUpdateError": "Die Admin-Adresse kann derzeit nicht aktualisiert werden."
+      "errorUpdate": "Die Admin-Einstellungen können derzeit nicht aktualisiert werden. Bitte versuchen Sie es erneut.",
+      "toastUpdateSuccess": "Admin-Konto und Adresse wurden erfolgreich aktualisiert.",
+      "toastUpdateError": "Die Admin-Einstellungen können derzeit nicht aktualisiert werden."
     },
     "blogPreview": {
       "loading": "Blogvorschau wird geladen...",
@@ -1923,6 +1929,21 @@
           "uploadFailed": "Upload fehlgeschlagen"
         }
       },
+      "shippingValueSummary": {
+        "title": "Bestell- und Deklarationswerte",
+        "customerTotal": "Gesamtsumme der Kundenbestellung",
+        "customerTotalHint": "Berechneter Betrag in {{currency}}",
+        "retailReference": "Verkaufswert für den Versanddienstleister",
+        "retailReferenceHint": "Verkaufswert der physischen Artikel in den Versandpapieren",
+        "declaredCustoms": "Deklarierter Zollwert",
+        "declaredCustomsHint": "An {{carrier}} in der angezeigten Währung übermittelter Betrag",
+        "notRequired": "Nicht erforderlich",
+        "withinEuHint": "Keine Zollanmeldung innerhalb der EU",
+        "currencyExplanation": "{{customerAmount}} ist die Gesamtsumme der Kundenbestellung. {{retailAmount}} ist der in {{currency}} deklarierte Verkaufswert der physischen Artikel. Die Versandtarife unten sind separate Kontobelastungen in EUR.",
+        "customsFromUsdDirect": "Für diese USD-Sendung werden die gespeicherten USD-Zollkosten des Produkts direkt verwendet. Die Zollkosten sind nicht der Verkaufspreis.",
+        "customsFromUsd": "Der deklarierte Wert stammt aus den gespeicherten USD-Zollkosten des Produkts und wird in EUR umgerechnet. Er ist nicht der Verkaufspreis.",
+        "customsFromRetail": "Es sind keine separaten Zollkosten gespeichert; daher wird der EUR-Verkaufswert für die Deklaration verwendet."
+      },
       "fedExShipForm": {
         "packagingOptions": {
           "YOUR_PACKAGING": "Eigene Verpackung",
@@ -1950,16 +1971,17 @@
         "readOnly": "(schreibgeschützt)",
         "deliverTo": "Lieferung an",
         "customsCommodities": "Zoll / Waren",
-        "onlyHsEditable": "Nur HS-Codes sind bearbeitbar.",
+        "onlyHsEditable": "HS-Codes sind bearbeitbar. Verkaufs- und Zollwerte sind schreibgeschützte Bestellwerte.",
+        "storedCustomsSource": "aus ${{value}} USD/Stück",
         "tableHeaders": {
           "number": "#",
           "description": "Beschreibung",
           "qty": "Menge",
-          "unitEur": "Einheit €",
+          "unitEur": "Verkauf / Stück ({{currency}})",
           "weightG": "Gewicht g",
           "hsCode": "HS-Code",
           "countryOfMfr": "Herstellungsland",
-          "customsValueEur": "Zollwert €"
+          "customsValueEur": "Deklariert / Position ({{currency}})"
         },
         "totalCustomsValue": "Gesamtzollwert:",
         "incoterm": "Incoterm:",
@@ -2053,16 +2075,17 @@
         "readOnly": "(schreibgeschützt)",
         "deliverTo": "Lieferung an",
         "customsCommodities": "Zoll / Waren",
-        "onlyHsEditable": "Nur HS-Codes sind bearbeitbar.",
+        "onlyHsEditable": "HS-Codes sind bearbeitbar. Verkaufs- und Zollwerte sind schreibgeschützte Bestellwerte.",
+        "storedCustomsSource": "aus ${{value}} USD/Stück",
         "tableHeaders": {
           "number": "#",
           "description": "Beschreibung",
           "qty": "Menge",
-          "unitEur": "Einheit €",
+          "unitEur": "Verkauf / Stück ({{currency}})",
           "weightG": "Gewicht g",
           "hsCode": "HS-Code",
           "countryOfMfr": "Herstellungsland",
-          "customsValueEur": "Zollwert €"
+          "customsValueEur": "Deklariert / Position ({{currency}})"
         },
         "totalCustomsValue": "Gesamtzollwert:",
         "currency": "Währung:",
@@ -2091,7 +2114,7 @@
         "selectProductBreakdown": "Wählen Sie ein Produkt, um die Aufschlüsselung zu sehen",
         "valueAddedServices": "Zusatzleistungen",
         "shipmentInsurance": "Sendungsversicherung (II)",
-        "insuredEur": "Versichert €",
+        "insuredEur": "Versicherter Wert ({{currency}})",
         "saturdayDelivery": "Samstagslieferung (AA)",
         "paperlessTrade": "Papierloser Handel — elektronische Rechnung (WY)",
         "billingDutiesPayment": "Abrechnung / Zollzahlung",
