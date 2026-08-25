@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
-import { Building2, MapPinHouse, Save, UserRound } from 'lucide-react'
+import { Building2, MapPinHouse, Phone, Save, UserRound } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -131,6 +131,11 @@ export default function AdminAddressPage() {
       return
     }
 
+    if (!nameForm.countryCode.trim() || !nameForm.phoneNumber.trim()) {
+      setError(t('errorFillPhone'))
+      return
+    }
+
     if (!isValidPostalCode(form.postalCode, form.country)) {
       setPostalCodeError(t('errorInvalidPostal'))
       return
@@ -239,6 +244,38 @@ export default function AdminAddressPage() {
                       className="w-full border border-[#e5d7cc] px-3 py-2.5 outline-none transition focus:border-[#b88a65]"
                       placeholder={t('lastName')}
                     />
+                  </label>
+                  <label className="space-y-2 text-sm">
+                    <span className="font-semibold text-[#17110d]">{t('countryCode')}</span>
+                    <div className="relative">
+                      <Phone className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+                      <input
+                        type="tel"
+                        inputMode="tel"
+                        value={nameForm.countryCode}
+                        onChange={(event) => setNameForm((current) => ({ ...current, countryCode: event.target.value }))}
+                        maxLength={6}
+                        required
+                        className="w-full border border-[#e5d7cc] py-2.5 pl-10 pr-3 outline-none transition focus:border-[#b88a65]"
+                        placeholder="+32"
+                      />
+                    </div>
+                  </label>
+                  <label className="space-y-2 text-sm">
+                    <span className="font-semibold text-[#17110d]">{t('phoneNumber')}</span>
+                    <div className="relative">
+                      <Phone className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+                      <input
+                        type="tel"
+                        inputMode="tel"
+                        value={nameForm.phoneNumber}
+                        onChange={(event) => setNameForm((current) => ({ ...current, phoneNumber: event.target.value }))}
+                        maxLength={24}
+                        required
+                        className="w-full border border-[#e5d7cc] py-2.5 pl-10 pr-3 outline-none transition focus:border-[#b88a65]"
+                        placeholder="470 12 34 56"
+                      />
+                    </div>
                   </label>
                 </div>
               </div>
