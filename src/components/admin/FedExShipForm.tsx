@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { toast } from 'react-hot-toast'
 import type { AdminShippingQuote, AdminShipmentPreviewItem, AdminShippingRateOption, Order } from '../../types/order'
 import { shipOrderForAdmin, updateOrderShippingAddressForAdmin, getAdminCarrierRatesForOrder, type FedExShipOptions } from '../../services/orderService'
-import { getCountryOptions, getStateOptions } from '../../utils/location'
+import { getCountryOptions, getDialCodeOptions, getStateOptions } from '../../utils/location'
 import ShippingValueSummary from './ShippingValueSummary'
 
 const PACKAGING_VALUES = [
@@ -41,6 +41,8 @@ type ReceiverDraft = {
   state: string
   postalCode: string
   country: string
+  phoneCountryCode: string
+  phoneNumber: string
 }
 
 type Props = {
@@ -117,7 +119,14 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     state: preview?.receiver.state ?? '',
     postalCode: preview?.receiver.postalCode ?? '',
     country: preview?.receiver.country ?? '',
+    phoneCountryCode: preview?.receiver.phoneCountryCode ?? '',
+    phoneNumber: preview?.receiver.phoneNumber ?? '',
   })
+  const dialCodeOptions = useMemo(() => getDialCodeOptions(), [])
+  // Display only — the carrier payload stays unspaced E.164.
+  const receiverPhoneDisplay = preview?.receiver.phoneCountryCode && preview?.receiver.phoneNumber
+    ? `${preview.receiver.phoneCountryCode} ${preview.receiver.phoneNumber}`
+    : preview?.receiver.phone ?? ''
   const [isSavingReceiver, setIsSavingReceiver] = useState(false)
   const [receiverSaveError, setReceiverSaveError] = useState('')
   const countryOptions = useMemo(() => getCountryOptions(), [])
@@ -167,7 +176,12 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     setIsSavingReceiver(true)
     setReceiverSaveError('')
     try {
-      await updateOrderShippingAddressForAdmin(order.id, receiverDraft)
+      const { phoneCountryCode, phoneNumber, ...address } = receiverDraft
+      await updateOrderShippingAddressForAdmin(order.id, {
+        ...address,
+        recipientCountryCode: phoneCountryCode,
+        recipientPhone: phoneNumber,
+      })
       setIsEditingReceiver(false)
       toast.success(t('toast.addressUpdated'))
       void loadFedexRates()
@@ -264,7 +278,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                   {preview?.receiver.state ? ', ' + preview.receiver.state : ''}
                   {preview?.receiver.postalCode ? ' ' + preview.receiver.postalCode : ''} · {preview?.receiver.country}
                 </p>
-                <p className={validation?.receiverPhoneOk === false ? 'text-rose-600' : ''}>📞 {preview?.receiver.phone || '—'}</p>
+                <p className={validation?.receiverPhoneOk === false ? 'text-rose-600' : ''}>📞 {receiverPhoneDisplay || '—'}</p>
                 <p className={validation?.receiverEmailOk === false ? 'text-rose-600' : ''}>✉ {preview?.receiver.email || '—'}</p>
               </div>
             ) : (
@@ -294,6 +308,22 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                     <option value="">{tCommon('selectState')}</option>
                     {stateOptions.map((s) => <option key={s.code} value={s.code}>{s.name}</option>)}
                   </select>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                    {t('phoneLabel', { defaultValue: 'Phone' })} *
+                  </label>
+                  <select value={receiverDraft.phoneCountryCode}
+                    onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneCountryCode: e.target.value }))}
+                    className="w-40 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+                    <option value="">{t('selectDialCode', { defaultValue: 'Code' })}</option>
+                    {dialCodeOptions.map((d) => (
+                      <option key={d.countryCode} value={d.dialCode}>{d.name} ({d.dialCode})</option>
+                    ))}
+                  </select>
+                  <input value={receiverDraft.phoneNumber} inputMode="tel"
+                    onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneNumber: e.target.value }))}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                 </div>
                 {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
                 <div className="flex justify-end gap-2 pt-1">
@@ -345,7 +375,12 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                 {commodities.map((c, idx) => (
                   <tr key={idx}>
                     <td className="px-3 py-2 text-zinc-400">{c.number}</td>
-                    <td className="px-3 py-2 max-w-[180px] truncate" title={c.title}>{c.title}</td>
+                    <td className="px-3 py-2 max-w-[220px]" title={c.title}>
+                      <span className="block">{c.customsDescription ?? c.title}</span>
+                      {c.customsDescription ? (
+                        <span className="block truncate text-[10px] text-zinc-400">{c.title}</span>
+                      ) : null}
+                    </td>
                     <td className="px-3 py-2 text-right">{c.qty}</td>
                     <td className="px-3 py-2 text-right">{fmtDeclaration(c.unitPrice ?? c.unitPriceEUR, declarationCurrency)}</td>
                     <td className="px-3 py-2 text-right">{c.unitWeightG}</td>

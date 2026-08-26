@@ -16,6 +16,87 @@ export type CityOption = {
   name: string
 }
 
+export type DialCodeOption = {
+  dialCode: string
+  countryCode: string
+  name: string
+}
+
+// A handful of calling codes are shared by several countries. Pick one country
+// to represent each so the dial-code list has exactly one entry per code and a
+// stored value always maps back to a single option.
+const PRIMARY_DIAL_COUNTRY: Record<string, string> = {
+  '+1': 'US',
+  '+7': 'RU',
+  '+47': 'NO',
+  '+61': 'AU',
+  '+212': 'MA',
+  '+262': 'RE',
+  '+500': 'FK',
+  '+590': 'GP',
+  '+599': 'CW',
+  '+672': 'NF',
+}
+
+/**
+ * `country-state-city` stores phonecode inconsistently: most countries carry
+ * bare digits ('82'), while dependent territories carry a '+' and a trailing
+ * area code ('+1-787 and 1-939'). Reduce either shape to the country calling
+ * code on its own, in '+82' form.
+ */
+export function normalizeDialCode(value: string | undefined | null): string {
+  const firstVariant = (value ?? '').trim().split(/\s+and\s+/)[0] ?? ''
+  const digits = firstVariant.replace(/^\+/, '').split('-')[0]?.replace(/\D/g, '') ?? ''
+
+  return digits ? `+${digits}` : ''
+}
+
+export function getDialCodeForCountry(countryCode: string | undefined | null): string {
+  const iso = normalizeCountryCode(countryCode ?? '').toUpperCase()
+
+  if (!iso) {
+    return ''
+  }
+
+  return normalizeDialCode(Country.getCountryByCode(iso)?.phonecode)
+}
+
+export function getDialCodeOptions(): DialCodeOption[] {
+  const byDialCode = new Map<string, DialCodeOption & { rank: number }>()
+
+  for (const country of Country.getAllCountries()) {
+    const dialCode = normalizeDialCode(country.phonecode)
+
+    if (!dialCode) {
+      continue
+    }
+
+    // Dependent territories carry a '+' prefixed phonecode, sovereign countries
+    // carry bare digits. Rank an explicit primary first, then any sovereign
+    // country, then territories — so '+358' resolves to Finland, not Åland.
+    const isTerritory = (country.phonecode ?? '').trim().startsWith('+')
+    const rank = PRIMARY_DIAL_COUNTRY[dialCode] === country.isoCode ? 2 : isTerritory ? 0 : 1
+    const existing = byDialCode.get(dialCode)
+
+    if (!existing || rank > existing.rank) {
+      byDialCode.set(dialCode, {
+        dialCode,
+        countryCode: country.isoCode,
+        name: country.name,
+        rank,
+      })
+    }
+  }
+
+  return [...byDialCode.values()]
+    .map((option) => ({
+      dialCode: option.dialCode,
+      countryCode: option.countryCode,
+      name: option.name,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
+
 export function getCountryOptions(): CountryOption[] {
   return Country.getAllCountries().map((country) => ({
     code: country.isoCode,

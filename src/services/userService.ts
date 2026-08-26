@@ -2,7 +2,7 @@ import axios from 'axios'
 import { authApiClient } from './apiClient'
 import type { UpdateProfileFormPayload, UpdateProfileRequestPayload, UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
 import type { AdminAddress, UpdateAdminAddressPayload } from '../types/address'
-import { normalizeCountryCode, normalizeStateCode } from '../utils/location'
+import { getDialCodeForCountry, normalizeCountryCode, normalizeDialCode, normalizeStateCode } from '../utils/location'
 
 type ApiEnvelope<T> = {
   success: boolean
@@ -23,7 +23,7 @@ function normalizeProfileAddress(value: unknown): UserProfileAddressPayload | nu
   }
 
   const record = value as Record<string, unknown>
-  const countryCode = normalizeCountryCode(getStringValue(record, 'country') || 'IN')
+  const countryCode = normalizeCountryCode(getStringValue(record, 'country'))
   const stateCode = normalizeStateCode(countryCode, getStringValue(record, 'state'))
 
   return {
@@ -32,7 +32,7 @@ function normalizeProfileAddress(value: unknown): UserProfileAddressPayload | nu
     city: getStringValue(record, 'city'),
     state: stateCode,
     postalCode: getStringValue(record, 'postalCode'),
-    country: countryCode || 'IN',
+    country: countryCode,
     isDefault: typeof record.isDefault === 'boolean' ? record.isDefault : false,
     addressType: getStringValue(record, 'addressType') || 'home',
   }
@@ -62,7 +62,7 @@ function normalizeAdminAddress(value: unknown): AdminAddress | null {
   }
 
   const record = value as Record<string, unknown>
-  const countryCode = normalizeCountryCode(getStringValue(record, 'country') || 'IN')
+  const countryCode = normalizeCountryCode(getStringValue(record, 'country'))
   const stateCode = normalizeStateCode(countryCode, getStringValue(record, 'state'))
 
   return {
@@ -72,7 +72,7 @@ function normalizeAdminAddress(value: unknown): AdminAddress | null {
     city: getStringValue(record, 'city'),
     state: stateCode,
     postalCode: getStringValue(record, 'postalCode'),
-    country: countryCode || 'IN',
+    country: countryCode,
     isDefault: typeof record.isDefault === 'boolean' ? record.isDefault : false,
     addressType: getStringValue(record, 'addressType') || 'work',
   }
@@ -98,11 +98,16 @@ function normalizeUserProfile(data: unknown): UserProfile {
           city: '',
           state: '',
           postalCode: '',
-          country: 'IN',
+          country: '',
           isDefault: true,
           addressType: 'home',
         },
       ]
+
+  // Never fall back to a fixed dialling code. Use what the customer saved, and
+  // otherwise derive it from their own default address country.
+  const defaultAddress = addresses.find((address) => address.isDefault) ?? addresses[0]
+  const storedDialCode = normalizeDialCode(getStringValue(userRecord, 'countryCode'))
 
   return {
     id: getStringValue(userRecord, '_id'),
@@ -111,7 +116,7 @@ function normalizeUserProfile(data: unknown): UserProfile {
     firstName: getStringValue(userRecord, 'firstName'),
     lastName: getStringValue(userRecord, 'lastName'),
     phoneNumber: getStringValue(userRecord, 'phoneNumber'),
-    countryCode: getStringValue(userRecord, 'countryCode') || '+91',
+    countryCode: storedDialCode || getDialCodeForCountry(defaultAddress?.country),
     role: getStringValue(userRecord, 'role'),
     status: getStringValue(userRecord, 'status'),
     addresses,

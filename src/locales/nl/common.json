@@ -2148,7 +2148,11 @@
         "toast": {
           "addressUpdated": "Adres van ontvanger bijgewerkt — tarieven vernieuwen…",
           "shipped": "Bestelling {{orderNumber}} verzonden via DHL Express."
-        }
+        },
+        "goGreen": "GoGreen klimaatneutraal (FD)",
+        "servicesPriced": "Prijs inclusief {{services}}",
+        "servicesNotPriced": "Prijs exclusief {{services}} — kosten verschijnen na verzending",
+        "adultSignature": "Handtekening volwassene (SD)"
       }
     }
   }

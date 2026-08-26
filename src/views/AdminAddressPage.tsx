@@ -10,7 +10,7 @@ import Header from '../components/layout/Header'
 import { useAuth } from '../context/AuthContext'
 import { getAdminAddress, getUserProfile, updateAdminAddress, updateUserProfile } from '../services/userService'
 import type { UpdateAdminAddressPayload } from '../types/address'
-import { getCountryOptions, getStateOptions, isValidPostalCode } from '../utils/location'
+import { getCountryOptions, getDialCodeOptions, getStateOptions, isValidPostalCode } from '../utils/location'
 
 const initialForm: UpdateAdminAddressPayload = {
   street: '',
@@ -61,6 +61,7 @@ export default function AdminAddressPage() {
   const [error, setError] = useState('')
   const [postalCodeError, setPostalCodeError] = useState('')
   const countryOptions = useMemo(() => getCountryOptions(), [])
+  const dialCodeOptions = useMemo(() => getDialCodeOptions(), [])
   const stateOptions = useMemo(() => getStateOptions(form.country), [form.country])
 
   useEffect(() => {
@@ -249,16 +250,19 @@ export default function AdminAddressPage() {
                     <span className="font-semibold text-[#17110d]">{t('countryCode')}</span>
                     <div className="relative">
                       <Phone className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
-                      <input
-                        type="tel"
-                        inputMode="tel"
+                      <select
                         value={nameForm.countryCode}
                         onChange={(event) => setNameForm((current) => ({ ...current, countryCode: event.target.value }))}
-                        maxLength={6}
                         required
                         className="w-full border border-[#e5d7cc] py-2.5 pl-10 pr-3 outline-none transition focus:border-[#b88a65]"
-                        placeholder="+32"
-                      />
+                      >
+                        <option value="">{t('countryCode')}</option>
+                        {dialCodeOptions.map((option) => (
+                          <option key={option.countryCode} value={option.dialCode}>
+                            {option.name} ({option.dialCode})
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </label>
                   <label className="space-y-2 text-sm">

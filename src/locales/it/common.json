@@ -2179,7 +2179,11 @@
         "toast": {
           "addressUpdated": "Indirizzo del destinatario aggiornato — aggiornamento tariffe in corso…",
           "shipped": "Ordine {{orderNumber}} spedito tramite DHL Express."
-        }
+        },
+        "goGreen": "GoGreen a impatto climatico zero (FD)",
+        "servicesPriced": "Il prezzo include {{services}}",
+        "servicesNotPriced": "Prezzo esclude {{services}} — il costo compare dopo la spedizione",
+        "adultSignature": "Firma adulto (SD)"
       }
     }
   }

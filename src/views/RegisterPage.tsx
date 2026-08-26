@@ -11,6 +11,8 @@ import { checkRegisterEmail, registerUser } from "../services/authService";
 import type { RegisterPayload } from "../types/auth";
 import {
     getCountryOptions,
+    getDialCodeForCountry,
+    getDialCodeOptions,
     getStateOptions,
     isValidEmailAddress,
     isValidPostalCode,
@@ -28,13 +30,13 @@ const initialForm: RegisterPayload = {
     firstName: "",
     lastName: "",
     phoneNumber: "",
-    countryCode: "+32",
+    countryCode: "",
     address: {
         street: "",
         city: "",
         state: "",
         postalCode: "",
-        country: "BE",
+        country: "",
         isDefault: true,
         addressType: "home",
     },
@@ -56,7 +58,11 @@ export default function RegisterPage() {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [isConfirmPasswordVisible, setIsConfirmPasswordVisible] =
         useState(false);
+    // Once the customer picks a dialling code themselves we stop prefilling it
+    // from the address country — a customer can ship abroad on a home number.
+    const [isCountryCodeTouched, setIsCountryCodeTouched] = useState(false);
     const countryOptions = useMemo(() => getCountryOptions(), []);
+    const dialCodeOptions = useMemo(() => getDialCodeOptions(), []);
     const stateOptions = useMemo(
         () => getStateOptions(form.address.country),
         [form.address.country],
@@ -558,14 +564,25 @@ export default function RegisterPage() {
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
                             {t("auth.countryCode")}
                         </span>
-                        <input
-                            type="text"
+                        <select
                             required
                             value={form.countryCode}
-                            onChange={(event) => updateField("countryCode", event.target.value)}
-                            placeholder="+353"
+                            onChange={(event) => {
+                                setIsCountryCodeTouched(true);
+                                updateField("countryCode", event.target.value);
+                            }}
                             className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
-                        />
+                        >
+                            <option value="">{t("auth.countryCode")}</option>
+                            {dialCodeOptions.map((option) => (
+                                <option
+                                    key={option.countryCode}
+                                    value={option.dialCode}
+                                >
+                                    {option.name} ({option.dialCode})
+                                </option>
+                            ))}
+                        </select>
                     </label>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
@@ -596,10 +613,23 @@ export default function RegisterPage() {
                                 required
                                 value={form.address.country}
                                 onChange={(event) => {
-                                    const countryCode = event.target.value;
-                                    updateAddressField("country", countryCode);
-                                    updateAddressField("state", "");
-                                    updateAddressField("city", "");
+                                    const selectedCountry = event.target.value;
+                                    const derivedDialCode =
+                                        getDialCodeForCountry(selectedCountry);
+
+                                    setForm((currentValue) => ({
+                                        ...currentValue,
+                                        countryCode:
+                                            isCountryCodeTouched || !derivedDialCode
+                                                ? currentValue.countryCode
+                                                : derivedDialCode,
+                                        address: {
+                                            ...currentValue.address,
+                                            country: selectedCountry,
+                                            state: "",
+                                            city: "",
+                                        },
+                                    }));
                                 }}
                                 className="h-14 w-full border border-[#ddcdc0] px-4 outline-none transition focus:border-[#17110d]"
                             >

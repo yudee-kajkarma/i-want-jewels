@@ -176,6 +176,8 @@ type AdminShippingQuoteRateArray =
       listFuelSurchargePercent?: number;
       deliveryDays?: number;
       tag?: string;
+      availableServices?: Array<{ code: string; name: string }>;
+      valueAddedServicesPriced?: boolean;
     }>
   | Record<string, unknown>;
 
@@ -233,6 +235,8 @@ function normalizeShippingRateOptions(
       listFuelSurchargePercent: typeof rate.listFuelSurchargePercent === "number" ? rate.listFuelSurchargePercent : undefined,
       deliveryDays: typeof rate.deliveryDays === "number" ? rate.deliveryDays : 0,
       tag: rate.tag,
+      availableServices: Array.isArray(rate.availableServices) ? rate.availableServices : undefined,
+      valueAddedServicesPriced: rate.valueAddedServicesPriced === true,
     }))
     .filter((rate) => rate.serviceCode);
 }
@@ -739,9 +743,14 @@ export async function getAdminCarrierRatesForOrder(
   orderId: string,
   carrier: 'FEDEX' | 'DHL',
   serviceCode?: string,
+  /** DHL value-added service codes to price into the quote, e.g. ['SF']. */
+  valueAddedServices?: string[],
 ): Promise<AdminShippingQuote | null> {
   const params = new URLSearchParams({ carrier })
   if (serviceCode) params.set('serviceCode', serviceCode)
+  if (valueAddedServices && valueAddedServices.length > 0) {
+    params.set('services', valueAddedServices.join(','))
+  }
   const response = await adminApiClient.get<AdminShippingQuoteApiResponse>(
     `/orders/admin/${orderId}/shipping-cost?${params.toString()}`,
   );
@@ -769,6 +778,7 @@ export type DhlShipOptions = {
   goGreen?: boolean;
   saturdayDelivery?: boolean;
   paperlessTrade?: boolean;
+  signatureOption?: 'SERVICE_DEFAULT' | 'DELIVERY_SIGNATURE' | 'DIRECT_SIGNATURE' | 'ADULT_SIGNATURE';
   notificationEmails?: string[];
   dutiesPaymentType?: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY';
   dutiesAccountNumber?: string;
@@ -806,6 +816,8 @@ export async function updateOrderShippingAddressForAdmin(
     state: string;
     postalCode: string;
     country: string;
+    recipientCountryCode: string;
+    recipientPhone: string;
   }>,
 ): Promise<Order | null> {
   const response = await adminApiClient.patch<AdminOrderUpdateApiResponse>(

@@ -10,7 +10,7 @@ import {
   getAdminCarrierRatesForOrder,
   type DhlShipOptions,
 } from '../../services/orderService'
-import { getCountryOptions, getStateOptions } from '../../utils/location'
+import { getCountryOptions, getDialCodeOptions, getStateOptions } from '../../utils/location'
 import ShippingValueSummary from './ShippingValueSummary'
 
 const INCOTERM_VALUES = ['DAP', 'DDP', 'DDU', 'CPT', 'CIP', 'EXW', 'FCA'] as const
@@ -29,6 +29,9 @@ const EXPORT_REASON_VALUES = [
 
 const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 
+// DHL adult-signature value-added service.
+const ADULT_SIGNATURE_CODE = 'SD'
+
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
   countryOfManufacture: string
@@ -41,6 +44,8 @@ type ReceiverDraft = {
   state: string
   postalCode: string
   country: string
+  phoneCountryCode: string
+  phoneNumber: string
 }
 
 type Props = {
@@ -92,27 +97,28 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
 
   const [selectedServiceCode, setSelectedServiceCode] = useState('')
 
-  async function loadDhlRates() {
+  async function loadDhlRates(serviceCodes: string[] = []) {
     setIsLoadingRates(true)
     setRatesError('')
-    setDhlRates([])
-    setSelectedServiceCode('')
     try {
-      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL')
+      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL', undefined, serviceCodes)
       const rates = q?.rates.DHL ?? []
       setDhlRates(rates)
-      if (rates[0]) setSelectedServiceCode(rates[0].serviceCode)
+      // Keep the admin's chosen service across a re-quote; only fall back to
+      // the cheapest option when the previous choice is no longer offered.
+      setSelectedServiceCode((current) =>
+        rates.some((r) => r.serviceCode === current)
+          ? current
+          : rates[0]?.serviceCode ?? '',
+      )
     } catch {
+      setDhlRates([])
+      setSelectedServiceCode('')
       setRatesError(t('ratesLoadError'))
     } finally {
       setIsLoadingRates(false)
     }
   }
-
-  useEffect(() => {
-    void loadDhlRates()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [order.id])
 
   const [isEditingReceiver, setIsEditingReceiver] = useState(false)
   const [receiverDraft, setReceiverDraft] = useState<ReceiverDraft>({
@@ -121,10 +127,17 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     state: preview?.receiver.state ?? '',
     postalCode: preview?.receiver.postalCode ?? '',
     country: preview?.receiver.country ?? '',
+    phoneCountryCode: preview?.receiver.phoneCountryCode ?? '',
+    phoneNumber: preview?.receiver.phoneNumber ?? '',
   })
   const [isSavingReceiver, setIsSavingReceiver] = useState(false)
   const [receiverSaveError, setReceiverSaveError] = useState('')
   const countryOptions = useMemo(() => getCountryOptions(), [])
+  const dialCodeOptions = useMemo(() => getDialCodeOptions(), [])
+  // Display only — the carrier payload stays unspaced E.164.
+  const receiverPhoneDisplay = preview?.receiver.phoneCountryCode && preview?.receiver.phoneNumber
+    ? `${preview.receiver.phoneCountryCode} ${preview.receiver.phoneNumber}`
+    : preview?.receiver.phone ?? ''
   const stateOptions = useMemo(() => getStateOptions(receiverDraft.country), [receiverDraft.country])
 
   const isOutsideEU = preview?.package.isOutsideEU ?? preview?.package.deliveryChargeEUR !== undefined
@@ -155,6 +168,27 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [insuranceValue, setInsuranceValue] = useState('')
   const [saturdayDelivery, setSaturdayDelivery] = useState(false)
   const [paperlessTrade, setPaperlessTrade] = useState(false)
+  const [goGreen, setGoGreen] = useState(false)
+  // Opt-in only — never added unless the admin ticks it, since it is billable.
+  const [adultSignature, setAdultSignature] = useState(false)
+
+  // Services whose cost DHL can quote from a code alone. Insurance is excluded
+  // because it is priced from the declared value the admin enters separately.
+  const pricedServiceCodes = useMemo(() => {
+    const codes: string[] = []
+    if (adultSignature) codes.push(ADULT_SIGNATURE_CODE)
+    if (goGreen) codes.push('FD')
+    if (saturdayDelivery) codes.push('AA')
+    return codes
+  }, [adultSignature, goGreen, saturdayDelivery])
+  const pricedServicesKey = pricedServiceCodes.join(',')
+
+  // Re-quote whenever the selected services change so the price on screen is
+  // the price DHL will bill, not a pre-signature estimate.
+  useEffect(() => {
+    void loadDhlRates(pricedServicesKey ? pricedServicesKey.split(',') : [])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [order.id, pricedServicesKey])
 
   const [dutiesPaymentType, setDutiesPaymentType] = useState<'SENDER' | 'RECIPIENT' | 'THIRD_PARTY'>('SENDER')
   const [dutiesAccountNumber, setDutiesAccountNumber] = useState('')
@@ -166,6 +200,12 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const selectedRate = dhlRates.find((r) => r.serviceCode === selectedServiceCode) ?? null
+  // DHL reports the value-added services available for the quoted lane. When it
+  // reports none we treat availability as unknown and leave the option enabled
+  // rather than hiding a service that may well be offered.
+  const availableServiceCodes = selectedRate?.availableServices?.map((s) => s.code) ?? []
+  const isServiceKnownUnavailable = (code: string) =>
+    availableServiceCodes.length > 0 && !availableServiceCodes.includes(code)
   const hasBlockers = (validation?.issues?.length ?? 0) > 0
 
   async function handleSaveReceiver() {
@@ -176,10 +216,15 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     setIsSavingReceiver(true)
     setReceiverSaveError('')
     try {
-      await updateOrderShippingAddressForAdmin(order.id, receiverDraft)
+      const { phoneCountryCode, phoneNumber, ...address } = receiverDraft
+      await updateOrderShippingAddressForAdmin(order.id, {
+        ...address,
+        recipientCountryCode: phoneCountryCode,
+        recipientPhone: phoneNumber,
+      })
       setIsEditingReceiver(false)
       toast.success(t('toast.addressUpdated'))
-      void loadDhlRates()
+      void loadDhlRates(pricedServiceCodes)
     } catch (err: any) {
       setReceiverSaveError(err?.response?.data?.message || t('errors.updateAddressFailed'))
     } finally {
@@ -211,6 +256,8 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           : undefined,
         saturdayDelivery: saturdayDelivery || undefined,
         paperlessTrade: paperlessTrade || undefined,
+        goGreen: goGreen || undefined,
+        signatureOption: adultSignature ? 'ADULT_SIGNATURE' : undefined,
         notificationEmails: notifyRecipient && notifyEmail ? [notifyEmail] : undefined,
         dutiesPaymentType: incoterm === 'DDP' ? dutiesPaymentType : undefined,
         dutiesAccountNumber:
@@ -285,7 +332,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                   {preview?.receiver.state ? ', ' + preview.receiver.state : ''}
                   {preview?.receiver.postalCode ? ' ' + preview.receiver.postalCode : ''} · {preview?.receiver.country}
                 </p>
-                <p className={validation?.receiverPhoneOk === false ? 'text-rose-600' : ''}>📞 {preview?.receiver.phone || '—'}</p>
+                <p className={validation?.receiverPhoneOk === false ? 'text-rose-600' : ''}>📞 {receiverPhoneDisplay || '—'}</p>
                 <p className={validation?.receiverEmailOk === false ? 'text-rose-600' : ''}>✉ {preview?.receiver.email || '—'}</p>
               </div>
             ) : (
@@ -315,6 +362,22 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                     <option value="">{tCommon('selectState')}</option>
                     {stateOptions.map((s) => <option key={s.code} value={s.code}>{s.name}</option>)}
                   </select>
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                    {t('phoneLabel', { defaultValue: 'Phone' })} *
+                  </label>
+                  <select value={receiverDraft.phoneCountryCode}
+                    onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneCountryCode: e.target.value }))}
+                    className="w-40 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+                    <option value="">{t('selectDialCode', { defaultValue: 'Code' })}</option>
+                    {dialCodeOptions.map((d) => (
+                      <option key={d.countryCode} value={d.dialCode}>{d.name} ({d.dialCode})</option>
+                    ))}
+                  </select>
+                  <input value={receiverDraft.phoneNumber} inputMode="tel"
+                    onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneNumber: e.target.value }))}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                 </div>
                 {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
                 <div className="flex justify-end gap-2 pt-1">
@@ -366,7 +429,12 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 {commodities.map((c, idx) => (
                   <tr key={idx}>
                     <td className="px-3 py-2 text-zinc-400">{c.number}</td>
-                    <td className="px-3 py-2 max-w-[180px] truncate" title={c.title}>{c.title}</td>
+                    <td className="px-3 py-2 max-w-[220px]" title={c.title}>
+                      <span className="block">{c.customsDescription ?? c.title}</span>
+                      {c.customsDescription ? (
+                        <span className="block truncate text-[10px] text-zinc-400">{c.title}</span>
+                      ) : null}
+                    </td>
                     <td className="px-3 py-2 text-right">{c.qty}</td>
                     <td className="px-3 py-2 text-right">{fmtDeclaration(c.unitPrice ?? c.unitPriceEUR, declarationCurrency)}</td>
                     <td className="px-3 py-2 text-right">{c.unitWeightG}</td>
@@ -596,7 +664,36 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
               className="h-4 w-4 accent-amber-600" />
             <span className="text-xs text-[#4f2040]">{t('paperlessTrade')}</span>
           </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" checked={goGreen} onChange={(e) => setGoGreen(e.target.checked)}
+              disabled={isServiceKnownUnavailable('FD')}
+              className="h-4 w-4 accent-amber-600" />
+            <span className="text-xs text-[#4f2040]">
+              {t('goGreen', { defaultValue: 'GoGreen Climate Neutral (FD)' })}
+            </span>
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" checked={adultSignature} onChange={(e) => setAdultSignature(e.target.checked)}
+              disabled={isServiceKnownUnavailable(ADULT_SIGNATURE_CODE)}
+              className="h-4 w-4 accent-amber-600" />
+            <span className="text-xs text-[#4f2040]">
+              {t('adultSignature', { defaultValue: 'Adult Signature (SD)' })}
+            </span>
+          </label>
         </div>
+        {pricedServiceCodes.length > 0 ? (
+          <p className={`px-4 pb-3 text-[10px] font-semibold ${selectedRate?.valueAddedServicesPriced ? 'text-emerald-700' : 'text-amber-700'}`}>
+            {selectedRate?.valueAddedServicesPriced
+              ? t('servicesPriced', {
+                  services: pricedServiceCodes.join(', '),
+                  defaultValue: 'Price includes {{services}}',
+                })
+              : t('servicesNotPriced', {
+                  services: pricedServiceCodes.join(', '),
+                  defaultValue: 'Price excludes {{services}} — cost appears after shipping',
+                })}
+          </p>
+        ) : null}
       </section>
 
       {incoterm === 'DDP' ? (

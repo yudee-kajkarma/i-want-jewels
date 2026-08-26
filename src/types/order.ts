@@ -264,11 +264,18 @@ export type AdminShippingRateOption = {
   listFuelSurchargePercent?: number
   deliveryDays: number
   tag?: string
+  /** DHL only: value-added services the carrier reports for this lane. Absent/empty = unknown. */
+  availableServices?: Array<{ code: string; name: string }>
+  /** DHL only: true when `price` already includes the selected value-added services. */
+  valueAddedServicesPriced?: boolean
 }
 
 export type AdminShipmentPartyPreview = {
   name: string
   phone: string
+  /** Receiver only: phone split into parts so the admin form can edit each. */
+  phoneCountryCode?: string
+  phoneNumber?: string
   email: string
   street: string
   houseNumber?: string
@@ -295,6 +302,8 @@ export type AdminShipmentPackagePreview = {
 export type AdminShipmentPreviewItem = {
   number: number
   title: string
+  /** Tariff wording sent to the carrier for this line; the title is the retail name. */
+  customsDescription?: string
   qty: number
   unitPriceEUR: number
   unitPrice: number

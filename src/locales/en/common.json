@@ -2148,7 +2148,11 @@
         "toast": {
           "addressUpdated": "Receiver address updated — refreshing rates…",
           "shipped": "Order {{orderNumber}} shipped via DHL Express."
-        }
+        },
+        "goGreen": "GoGreen Climate Neutral (FD)",
+        "servicesPriced": "Price includes {{services}}",
+        "servicesNotPriced": "Price excludes {{services}} — cost appears after shipping",
+        "adultSignature": "Adult Signature (SD)"
       }
     }
   }

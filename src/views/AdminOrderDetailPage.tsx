@@ -28,7 +28,7 @@ const EMPTY_SHIPPING_ADDRESS_FORM: AdminShippingAddressForm = {
     city: '',
     state: '',
     postalCode: '',
-    country: 'IN',
+    country: '',
 }
 
 function getOrderStatusClass(status: string) {
@@ -161,7 +161,7 @@ export default function AdminOrderDetailPage() {
             city: currentAddress?.city ?? '',
             state: currentAddress?.state ?? '',
             postalCode: currentAddress?.postalCode ?? '',
-            country: currentAddress?.country ?? 'IN',
+            country: currentAddress?.country ?? '',
         })
         setIsEditAddressOpen(true)
     }

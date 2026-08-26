@@ -2148,7 +2148,11 @@
         "toast": {
           "addressUpdated": "Empfängeradresse aktualisiert — Tarife werden aktualisiert…",
           "shipped": "Bestellung {{orderNumber}} per DHL Express versandt."
-        }
+        },
+        "goGreen": "GoGreen klimaneutral (FD)",
+        "servicesPriced": "Preis enthält {{services}}",
+        "servicesNotPriced": "Preis ohne {{services}} — Kosten erscheinen nach dem Versand",
+        "adultSignature": "Unterschrift Erwachsener (SD)"
       }
     }
   }

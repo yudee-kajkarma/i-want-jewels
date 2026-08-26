@@ -18,7 +18,7 @@ import {
   updateUserProfile,
 } from '../services/userService'
 import type { UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
-import { getCountryOptions, getStateOptions, isValidPostalCode, normalizeCountryCode, normalizeStateCode } from '../utils/location'
+import { getCountryOptions, getDialCodeForCountry, getDialCodeOptions, getStateOptions, isValidPostalCode, normalizeCountryCode, normalizeStateCode } from '../utils/location'
 import { useTranslation } from 'react-i18next'
 
 type AddressFormItem = UserProfileAddressPayload & {
@@ -35,7 +35,7 @@ function createAddress(defaults?: Partial<UserProfileAddressPayload>, apiId: str
     city: defaults?.city ?? '',
     state: defaults?.state ?? '',
     postalCode: defaults?.postalCode ?? '',
-    country: defaults?.country ?? 'IN',
+    country: defaults?.country ?? '',
     isDefault: defaults?.isDefault ?? false,
     addressType: defaults?.addressType ?? 'home',
   }
@@ -48,11 +48,11 @@ export default function ProfilePage() {
   const [firstName, setFirstName] = useState(session?.firstName ?? '')
   const [lastName, setLastName] = useState(session?.lastName ?? '')
   const [phoneNumber, setPhoneNumber] = useState('')
-  const [countryCode, setCountryCode] = useState('+91')
+  const [countryCode, setCountryCode] = useState('')
   const [draftFirstName, setDraftFirstName] = useState('')
   const [draftLastName, setDraftLastName] = useState('')
   const [draftPhoneNumber, setDraftPhoneNumber] = useState('')
-  const [draftCountryCode, setDraftCountryCode] = useState('+91')
+  const [draftCountryCode, setDraftCountryCode] = useState('')
   const [addresses, setAddresses] = useState<AddressFormItem[]>([createAddress({ isDefault: true })])
   const [initialAddressesById, setInitialAddressesById] = useState<Record<string, UserProfileAddressPayload>>({})
   const [isProfileLoading, setIsProfileLoading] = useState(true)
@@ -68,6 +68,7 @@ export default function ProfilePage() {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const countryOptions = useMemo(() => getCountryOptions(), [])
+  const dialCodeOptions = useMemo(() => getDialCodeOptions(), [])
 
   const canRemoveAddress = useMemo(() => addresses.length > 1, [addresses.length])
 
@@ -105,18 +106,18 @@ export default function ProfilePage() {
     setFirstName(profile.firstName)
     setLastName(profile.lastName)
     setPhoneNumber(profile.phoneNumber)
-    setCountryCode(profile.countryCode || '+91')
+    setCountryCode(profile.countryCode)
     setDraftFirstName(profile.firstName)
     setDraftLastName(profile.lastName)
     setDraftPhoneNumber(profile.phoneNumber)
-    setDraftCountryCode(profile.countryCode || '+91')
+    setDraftCountryCode(profile.countryCode)
   }
 
   function applyAddresses(nextAddresses: UserAddress[]) {
     const hasDefault = nextAddresses.some((address) => address.isDefault)
 
     if (nextAddresses.length === 0) {
-      setAddresses([createAddress({ isDefault: true, country: 'IN', addressType: 'home' })])
+      setAddresses([createAddress({ isDefault: true, addressType: 'home' })])
     } else {
       setAddresses(
         nextAddresses.map((address, index) =>
@@ -428,10 +429,14 @@ export default function ProfilePage() {
   }
 
   function openEditProfilePopup() {
+    const defaultAddress = addresses.find((address) => address.isDefault) ?? addresses[0]
+
     setDraftFirstName(firstName)
     setDraftLastName(lastName)
     setDraftPhoneNumber(phoneNumber)
-    setDraftCountryCode(countryCode)
+    // Customers saved before dialling codes were captured have none stored —
+    // suggest the one for their own country rather than leaving it blank.
+    setDraftCountryCode(countryCode || getDialCodeForCountry(defaultAddress?.country))
     setIsEditProfileOpen(true)
   }
 
@@ -760,13 +765,19 @@ export default function ProfilePage() {
                 </label>
                 <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                   {t('auth.countryCode')}
-                  <input
-                    type="text"
+                  <select
                     value={draftCountryCode}
                     onChange={(event) => setDraftCountryCode(event.target.value)}
                     className="h-11 border border-[#e7d8ca] bg-white px-4 text-sm font-medium text-zinc-800 outline-none transition focus:border-zinc-800"
                     required
-                  />
+                  >
+                    <option value="">{t('auth.countryCode')}</option>
+                    {dialCodeOptions.map((option) => (
+                      <option key={option.countryCode} value={option.dialCode}>
+                        {option.name} ({option.dialCode})
+                      </option>
+                    ))}
+                  </select>
                 </label>
                 <label className="flex flex-col gap-2 text-sm font-semibold text-zinc-700">
                   {t('auth.phoneNumber')}
