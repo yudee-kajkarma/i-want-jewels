@@ -49,6 +49,7 @@ type OrderApiResponse = {
   shippingCost?: number | null;
   trackingNumber?: string | null;
   trackingUrl?: string | null;
+  estimatedDeliveryDate?: string | null;
   isActive?: boolean;
   sessionId?: string;
   pickupId?: string | null;
@@ -178,6 +179,7 @@ type AdminShippingQuoteRateArray =
       tag?: string;
       availableServices?: Array<{ code: string; name: string }>;
       valueAddedServicesPriced?: boolean;
+      pickupCutoffLocal?: string;
     }>
   | Record<string, unknown>;
 
@@ -237,6 +239,7 @@ function normalizeShippingRateOptions(
       tag: rate.tag,
       availableServices: Array.isArray(rate.availableServices) ? rate.availableServices : undefined,
       valueAddedServicesPriced: rate.valueAddedServicesPriced === true,
+      pickupCutoffLocal: typeof rate.pickupCutoffLocal === 'string' ? rate.pickupCutoffLocal : undefined,
     }))
     .filter((rate) => rate.serviceCode);
 }
@@ -465,6 +468,8 @@ function normalizeAdminOrderDetail(order: OrderApiResponse): AdminOrderDetail {
   return {
     ...normalizedOrder,
     userId: typeof order.userId === "string" ? order.userId : "",
+    estimatedDeliveryDate:
+      typeof order.estimatedDeliveryDate === "string" ? order.estimatedDeliveryDate : null,
     customer: normalizeAdminOrderCustomer(order.customer),
     refundStatus:
       typeof order.refundStatus === "string" ? order.refundStatus : "NONE",
@@ -745,11 +750,26 @@ export async function getAdminCarrierRatesForOrder(
   serviceCode?: string,
   /** DHL value-added service codes to price into the quote, e.g. ['SF']. */
   valueAddedServices?: string[],
+  /** false = business delivery (skips the residential surcharge). */
+  receiverIsResidential?: boolean,
+  /** true = residential pickup (a home, not business premises). */
+  shipperIsResidential?: boolean,
+  /** YYYY-MM-DD the parcel is handed to DHL. */
+  shipDate?: string,
 ): Promise<AdminShippingQuote | null> {
   const params = new URLSearchParams({ carrier })
   if (serviceCode) params.set('serviceCode', serviceCode)
   if (valueAddedServices && valueAddedServices.length > 0) {
     params.set('services', valueAddedServices.join(','))
+  }
+  if (receiverIsResidential !== undefined) {
+    params.set('residential', String(receiverIsResidential))
+  }
+  if (shipperIsResidential !== undefined) {
+    params.set('shipperResidential', String(shipperIsResidential))
+  }
+  if (shipDate) {
+    params.set('shipDate', shipDate)
   }
   const response = await adminApiClient.get<AdminShippingQuoteApiResponse>(
     `/orders/admin/${orderId}/shipping-cost?${params.toString()}`,
@@ -766,6 +786,7 @@ export type FedExShipOptions = {
   dutiesPaymentType?: string;
   dutiesAccountNumber?: string;
   notificationEmails?: string[];
+  shipperCompanyName?: string;
   commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
 }
 
@@ -779,6 +800,10 @@ export type DhlShipOptions = {
   saturdayDelivery?: boolean;
   paperlessTrade?: boolean;
   signatureOption?: 'SERVICE_DEFAULT' | 'DELIVERY_SIGNATURE' | 'DIRECT_SIGNATURE' | 'ADULT_SIGNATURE';
+  shipperCompanyName?: string;
+  receiverIsResidential?: boolean;
+  shipperIsResidential?: boolean;
+  shipDate?: string;
   notificationEmails?: string[];
   dutiesPaymentType?: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY';
   dutiesAccountNumber?: string;
@@ -818,6 +843,8 @@ export async function updateOrderShippingAddressForAdmin(
     country: string;
     recipientCountryCode: string;
     recipientPhone: string;
+    recipientTaxId: string;
+    recipientTaxIdType: string;
   }>,
 ): Promise<Order | null> {
   const response = await adminApiClient.patch<AdminOrderUpdateApiResponse>(

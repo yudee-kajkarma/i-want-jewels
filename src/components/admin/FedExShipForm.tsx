@@ -43,6 +43,7 @@ type ReceiverDraft = {
   country: string
   phoneCountryCode: string
   phoneNumber: string
+  taxId: string
 }
 
 type Props = {
@@ -121,6 +122,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     country: preview?.receiver.country ?? '',
     phoneCountryCode: preview?.receiver.phoneCountryCode ?? '',
     phoneNumber: preview?.receiver.phoneNumber ?? '',
+    taxId: preview?.receiver.taxId ?? '',
   })
   const dialCodeOptions = useMemo(() => getDialCodeOptions(), [])
   // Display only — the carrier payload stays unspaced E.164.
@@ -156,6 +158,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
   const [signatureOption, setSignatureOption] = useState('SERVICE_DEFAULT')
   const [saturdayDelivery, setSaturdayDelivery] = useState(false)
+  const [shipperCompanyName, setShipperCompanyName] = useState('I Want Jewels')
 
   const [dutiesPaymentType, setDutiesPaymentType] = useState('SENDER')
   const [dutiesAccountNumber, setDutiesAccountNumber] = useState('')
@@ -176,11 +179,12 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     setIsSavingReceiver(true)
     setReceiverSaveError('')
     try {
-      const { phoneCountryCode, phoneNumber, ...address } = receiverDraft
+      const { phoneCountryCode, phoneNumber, taxId, ...address } = receiverDraft
       await updateOrderShippingAddressForAdmin(order.id, {
         ...address,
         recipientCountryCode: phoneCountryCode,
         recipientPhone: phoneNumber,
+        recipientTaxId: taxId,
       })
       setIsEditingReceiver(false)
       toast.success(t('toast.addressUpdated'))
@@ -208,6 +212,7 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         dimensions: dims,
         signatureOption: signatureOption !== 'SERVICE_DEFAULT' ? signatureOption : undefined,
         saturdayDelivery: saturdayDelivery || undefined,
+        shipperCompanyName: shipperCompanyName.trim() || undefined,
         dutiesPaymentType,
         dutiesAccountNumber: dutiesPaymentType === 'THIRD_PARTY' ? dutiesAccountNumber : undefined,
         notificationEmails: notifyRecipient && notifyEmail ? [notifyEmail] : undefined,
@@ -251,6 +256,15 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                 <p>{preview.shipper.city}{preview.shipper.postalCode ? ', ' + preview.shipper.postalCode : ''} · {preview.shipper.country}</p>
                 <p>📞 {preview.shipper.phone}</p>
                 <p>✉ {preview.shipper.email}</p>
+                <div className="mt-2 flex items-center gap-2 border-t border-[#f3e2ee] pt-2">
+                  <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-shipper-company">
+                    {t('shipperCompanyName', { defaultValue: 'Company name' })}
+                  </label>
+                  <input id="fedex-shipper-company" value={shipperCompanyName}
+                    onChange={(e) => setShipperCompanyName(e.target.value)}
+                    placeholder={t('shipperCompanyOptional', { defaultValue: 'Optional — shown as the exporter' })}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+                </div>
               </>
             ) : (
               <p className="text-zinc-400">{tCommon('loading')}</p>
@@ -323,6 +337,15 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
                   </select>
                   <input value={receiverDraft.phoneNumber} inputMode="tel"
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneNumber: e.target.value }))}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                    {t('receiverTaxId', { defaultValue: 'Tax / VAT ID' })}
+                  </label>
+                  <input value={receiverDraft.taxId}
+                    onChange={(e) => setReceiverDraft((p) => ({ ...p, taxId: e.target.value }))}
+                    placeholder={t('receiverTaxIdOptional', { defaultValue: 'Optional — business recipients only' })}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                 </div>
                 {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}

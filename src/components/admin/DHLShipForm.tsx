@@ -46,6 +46,7 @@ type ReceiverDraft = {
   country: string
   phoneCountryCode: string
   phoneNumber: string
+  taxId: string
 }
 
 type Props = {
@@ -97,11 +98,11 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
 
   const [selectedServiceCode, setSelectedServiceCode] = useState('')
 
-  async function loadDhlRates(serviceCodes: string[] = []) {
+  async function loadDhlRates(serviceCodes: string[] = [], residential?: boolean, shipperResidential?: boolean, date?: string) {
     setIsLoadingRates(true)
     setRatesError('')
     try {
-      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL', undefined, serviceCodes)
+      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL', undefined, serviceCodes, residential, shipperResidential, date)
       const rates = q?.rates.DHL ?? []
       setDhlRates(rates)
       // Keep the admin's chosen service across a re-quote; only fall back to
@@ -129,6 +130,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     country: preview?.receiver.country ?? '',
     phoneCountryCode: preview?.receiver.phoneCountryCode ?? '',
     phoneNumber: preview?.receiver.phoneNumber ?? '',
+    taxId: preview?.receiver.taxId ?? '',
   })
   const [isSavingReceiver, setIsSavingReceiver] = useState(false)
   const [receiverSaveError, setReceiverSaveError] = useState('')
@@ -169,6 +171,15 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [saturdayDelivery, setSaturdayDelivery] = useState(false)
   const [paperlessTrade, setPaperlessTrade] = useState(false)
   const [goGreen, setGoGreen] = useState(false)
+  const [shipperCompanyName, setShipperCompanyName] = useState('I Want Jewels')
+  // DHL bills a residential surcharge for private addresses; forwarding
+  // warehouses and offices are business deliveries.
+  const [receiverIsResidential, setReceiverIsResidential] = useState(true)
+  // Pickup is from the business premises unless the admin says otherwise.
+  const [shipperIsResidential, setShipperIsResidential] = useState(false)
+  // DHL accepts today; whether it actually ships depends on the local cutoff.
+  const earliestShipDate = useMemo(() => new Date().toISOString().split('T')[0], [])
+  const [shipDate, setShipDate] = useState(earliestShipDate)
   // Opt-in only — never added unless the admin ticks it, since it is billable.
   const [adultSignature, setAdultSignature] = useState(false)
 
@@ -186,9 +197,14 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   // Re-quote whenever the selected services change so the price on screen is
   // the price DHL will bill, not a pre-signature estimate.
   useEffect(() => {
-    void loadDhlRates(pricedServicesKey ? pricedServicesKey.split(',') : [])
+    void loadDhlRates(
+      pricedServicesKey ? pricedServicesKey.split(',') : [],
+      receiverIsResidential,
+      shipperIsResidential,
+      shipDate,
+    )
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [order.id, pricedServicesKey])
+  }, [order.id, pricedServicesKey, receiverIsResidential, shipperIsResidential, shipDate])
 
   const [dutiesPaymentType, setDutiesPaymentType] = useState<'SENDER' | 'RECIPIENT' | 'THIRD_PARTY'>('SENDER')
   const [dutiesAccountNumber, setDutiesAccountNumber] = useState('')
@@ -200,6 +216,17 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const selectedRate = dhlRates.find((r) => r.serviceCode === selectedServiceCode) ?? null
+  // DHL reports the latest same-day collection time for the lane. Shipping today
+  // after it would be rejected at label creation, so block it up front.
+  const pickupCutoff = selectedRate?.pickupCutoffLocal
+  const isPastCutoff = useMemo(() => {
+    if (!pickupCutoff) return false
+    const today = new Date().toISOString().split('T')[0]
+    if (shipDate !== today) return false
+    const [h, m] = pickupCutoff.split(':').map(Number)
+    const now = new Date()
+    return now.getHours() > h || (now.getHours() === h && now.getMinutes() >= m)
+  }, [pickupCutoff, shipDate])
   // DHL reports the value-added services available for the quoted lane. When it
   // reports none we treat availability as unknown and leave the option enabled
   // rather than hiding a service that may well be offered.
@@ -216,15 +243,16 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     setIsSavingReceiver(true)
     setReceiverSaveError('')
     try {
-      const { phoneCountryCode, phoneNumber, ...address } = receiverDraft
+      const { phoneCountryCode, phoneNumber, taxId, ...address } = receiverDraft
       await updateOrderShippingAddressForAdmin(order.id, {
         ...address,
         recipientCountryCode: phoneCountryCode,
         recipientPhone: phoneNumber,
+        recipientTaxId: taxId,
       })
       setIsEditingReceiver(false)
       toast.success(t('toast.addressUpdated'))
-      void loadDhlRates(pricedServiceCodes)
+      void loadDhlRates(pricedServiceCodes, receiverIsResidential, shipperIsResidential, shipDate)
     } catch (err: any) {
       setReceiverSaveError(err?.response?.data?.message || t('errors.updateAddressFailed'))
     } finally {
@@ -257,6 +285,10 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         saturdayDelivery: saturdayDelivery || undefined,
         paperlessTrade: paperlessTrade || undefined,
         goGreen: goGreen || undefined,
+        shipperCompanyName: shipperCompanyName.trim() || undefined,
+        receiverIsResidential,
+        shipperIsResidential,
+        shipDate,
         signatureOption: adultSignature ? 'ADULT_SIGNATURE' : undefined,
         notificationEmails: notifyRecipient && notifyEmail ? [notifyEmail] : undefined,
         dutiesPaymentType: incoterm === 'DDP' ? dutiesPaymentType : undefined,
@@ -305,6 +337,23 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 <p>{preview.shipper.city}{preview.shipper.postalCode ? ', ' + preview.shipper.postalCode : ''} · {preview.shipper.country}</p>
                 <p>📞 {preview.shipper.phone}</p>
                 <p>✉ {preview.shipper.email}</p>
+                <div className="mt-2 flex items-center gap-2 border-t border-[#f3e2ee] pt-2">
+                  <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-shipper-company">
+                    {t('shipperCompanyName', { defaultValue: 'Company name' })}
+                  </label>
+                  <input id="dhl-shipper-company" value={shipperCompanyName}
+                    onChange={(e) => setShipperCompanyName(e.target.value)}
+                    placeholder={t('shipperCompanyOptional', { defaultValue: 'Optional — shown as the exporter' })}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+                </div>
+                <label className="mt-2 flex items-center gap-2">
+                  <input type="checkbox" checked={shipperIsResidential}
+                    onChange={(e) => setShipperIsResidential(e.target.checked)}
+                    className="h-4 w-4 accent-amber-600" />
+                  <span className="text-[11px] text-[#4f2040]">
+                    {t('shipperResidential', { defaultValue: 'Residential pickup — tick only if collecting from a home' })}
+                  </span>
+                </label>
               </>
             ) : (
               <p className="text-zinc-400">{tCommon('loading')}</p>
@@ -334,6 +383,14 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 </p>
                 <p className={validation?.receiverPhoneOk === false ? 'text-rose-600' : ''}>📞 {receiverPhoneDisplay || '—'}</p>
                 <p className={validation?.receiverEmailOk === false ? 'text-rose-600' : ''}>✉ {preview?.receiver.email || '—'}</p>
+                <label className="mt-2 flex items-center gap-2 border-t border-[#f3e2ee] pt-2">
+                  <input type="checkbox" checked={receiverIsResidential}
+                    onChange={(e) => setReceiverIsResidential(e.target.checked)}
+                    className="h-4 w-4 accent-amber-600" />
+                  <span className="text-[11px] text-[#4f2040]">
+                    {t('receiverResidential', { defaultValue: 'Residential address — untick for offices and forwarding warehouses' })}
+                  </span>
+                </label>
               </div>
             ) : (
               <div className="space-y-2">
@@ -377,6 +434,15 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                   </select>
                   <input value={receiverDraft.phoneNumber} inputMode="tel"
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneNumber: e.target.value }))}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                    {t('receiverTaxId', { defaultValue: 'Tax / VAT ID' })}
+                  </label>
+                  <input value={receiverDraft.taxId}
+                    onChange={(e) => setReceiverDraft((p) => ({ ...p, taxId: e.target.value }))}
+                    placeholder={t('receiverTaxIdOptional', { defaultValue: 'Optional — business recipients only' })}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                 </div>
                 {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
@@ -516,6 +582,19 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
             <div className="border border-[#e3bfd6] bg-[#f9f0f6] px-3 py-2 text-xs text-[#694d5f]">
               {preview?.package.totalWeightKg ?? 0} {tCommon('kg')}
             </div>
+          </div>
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-ship-date">
+              {t('shipDateLabel', { defaultValue: 'Ship date (handover to DHL)' })}
+            </label>
+            <input id="dhl-ship-date" type="date" value={shipDate} min={earliestShipDate}
+              onChange={(e) => setShipDate(e.target.value || earliestShipDate)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+            <p className="mt-1 text-[10px] text-zinc-400">
+              {pickupCutoff
+                ? t('shipDateCutoff', { cutoff: pickupCutoff, defaultValue: 'Rates change by date. DHL collects today until {{cutoff}}.' })
+                : t('shipDateHint', { defaultValue: 'Rates change by date.' })}
+            </p>
           </div>
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
@@ -752,13 +831,23 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </div>
       ) : null}
 
+      {isPastCutoff ? (
+        <div className="border border-amber-300 bg-amber-50 px-4 py-3 text-xs text-amber-800">
+          {t('pastCutoff', {
+            cutoff: pickupCutoff,
+            defaultValue:
+              'DHL collection for today closed at {{cutoff}}. Pick a later ship date to create the label.',
+          })}
+        </div>
+      ) : null}
+
       <div className="flex items-center justify-between gap-3 border-t border-[#efcfe1] pt-4">
         <button type="button" onClick={onBack}
           className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb]">
           {t('back')}
         </button>
         <button type="button" onClick={() => void handleSubmit()}
-          disabled={isSubmitting || !selectedServiceCode || hasBlockers || isEditingReceiver}
+          disabled={isSubmitting || !selectedServiceCode || hasBlockers || isEditingReceiver || isPastCutoff}
           className="border border-amber-600 bg-amber-600 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-70">
           {isSubmitting
             ? t('creatingShipment')

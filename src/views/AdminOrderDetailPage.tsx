@@ -453,6 +453,14 @@ export default function AdminOrderDetailPage() {
                                 )}
                                 {order.shippingCarrier ? <p className="mt-2 text-xs uppercase tracking-[0.1em] text-zinc-500">{t('carrier')} {order.shippingCarrier}</p> : null}
                                 {order.trackingNumber ? <p className="text-xs uppercase tracking-[0.1em] text-zinc-500">{t('tracking')} {order.trackingNumber}</p> : null}
+                                {order.estimatedDeliveryDate ? (
+                                    <p className="text-xs uppercase tracking-[0.1em] text-zinc-500">
+                                        {t('estimatedDelivery', { defaultValue: 'Est. delivery' })}{' '}
+                                        <span className="font-semibold text-[#17110d]">
+                                            {formatDateTime(order.estimatedDeliveryDate, i18n.language)}
+                                        </span>
+                                    </p>
+                                ) : null}
                                 {order.trackingUrl ? (
                                     <a
                                         href={order.trackingUrl}

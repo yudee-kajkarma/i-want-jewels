@@ -268,6 +268,8 @@ export type AdminShippingRateOption = {
   availableServices?: Array<{ code: string; name: string }>
   /** DHL only: true when `price` already includes the selected value-added services. */
   valueAddedServicesPriced?: boolean
+  /** DHL only: latest local time (HH:MM) DHL can still collect today. */
+  pickupCutoffLocal?: string
 }
 
 export type AdminShipmentPartyPreview = {
@@ -276,6 +278,9 @@ export type AdminShipmentPartyPreview = {
   /** Receiver only: phone split into parts so the admin form can edit each. */
   phoneCountryCode?: string
   phoneNumber?: string
+  /** Receiver only: optional tax/VAT registration for customs. */
+  taxId?: string
+  taxIdType?: string
   email: string
   street: string
   houseNumber?: string
@@ -359,5 +364,7 @@ export type AdminOrderDetail = Order & {
   shippingCost: number | null
   trackingNumber: string | null
   trackingUrl: string | null
+  /** Delivery date DHL committed to when the label was created. */
+  estimatedDeliveryDate: string | null
   isActive: boolean
 }
