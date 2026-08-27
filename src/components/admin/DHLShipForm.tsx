@@ -12,6 +12,7 @@ import {
 } from '../../services/orderService'
 import { getCountryOptions, getDialCodeOptions, getStateOptions } from '../../utils/location'
 import ShippingValueSummary from './ShippingValueSummary'
+import FieldHelp from './FieldHelp'
 
 const INCOTERM_VALUES = ['DAP', 'DDP', 'DDU', 'CPT', 'CIP', 'EXW', 'FCA'] as const
 
@@ -29,11 +30,43 @@ const EXPORT_REASON_VALUES = [
 
 const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 
-// DHL adult-signature value-added service.
-const ADULT_SIGNATURE_CODE = 'SD'
+// DHL global package type codes (Reference Data Guide §25). Blank = your own box.
+const PACKAGE_TYPE_OPTIONS = [
+  { code: '', label: 'Your own packaging' },
+  { code: 'XPD', label: 'Express Envelope (32 x 24 x 1 cm)' },
+  { code: '1CE', label: 'Card Envelope (35 x 27.5 x 2 cm)' },
+  { code: '2BP', label: 'Box 2 Flat (34 x 33 x 6 cm)' },
+  { code: '2BX', label: 'Box 2 Shoe (34 x 18 x 8 cm)' },
+  { code: '3BX', label: 'Box 3 (34 x 32 x 9 cm)' },
+  { code: '4BX', label: 'Box 4 (34 x 32 x 18 cm)' },
+  { code: '5BX', label: 'Box 5 Jumbo Small (34 x 32 x 35 cm)' },
+] as const
+
+// Signature levels DHL offers. SERVICE_DEFAULT sends nothing and keeps
+// whatever the chosen product already includes.
+const SIGNATURE_SERVICE_CODES = {
+  SERVICE_DEFAULT: null,
+  DELIVERY_SIGNATURE: 'SA',
+  SIGNATURE_REQUIRED: 'SG',
+  DIRECT_SIGNATURE: 'SF',
+  ADULT_SIGNATURE: 'SD',
+  NO_SIGNATURE_REQUIRED: 'SX',
+} as const
+
+type SignatureOption = keyof typeof SIGNATURE_SERVICE_CODES
+
+const SIGNATURE_LABELS: Record<SignatureOption, string> = {
+  SERVICE_DEFAULT: 'Service default',
+  DELIVERY_SIGNATURE: 'Delivery Signature (SA)',
+  SIGNATURE_REQUIRED: 'Signature Required (SG)',
+  DIRECT_SIGNATURE: 'Direct Signature (SF)',
+  ADULT_SIGNATURE: 'Adult Signature (SD)',
+  NO_SIGNATURE_REQUIRED: 'No Signature Required (SX)',
+}
 
 type CommodityRow = AdminShipmentPreviewItem & {
   hsCode: string
+  importHsCode: string
   countryOfManufacture: string
   customsValue: number
 }
@@ -98,11 +131,11 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
 
   const [selectedServiceCode, setSelectedServiceCode] = useState('')
 
-  async function loadDhlRates(serviceCodes: string[] = [], residential?: boolean, shipperResidential?: boolean, date?: string) {
+  async function loadDhlRates(serviceCodes: string[] = [], residential?: boolean, shipperResidential?: boolean, date?: string, pkgType?: string) {
     setIsLoadingRates(true)
     setRatesError('')
     try {
-      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL', undefined, serviceCodes, residential, shipperResidential, date)
+      const q = await getAdminCarrierRatesForOrder(order.id, 'DHL', undefined, serviceCodes, residential, shipperResidential, date, pkgType)
       const rates = q?.rates.DHL ?? []
       setDhlRates(rates)
       // Keep the admin's chosen service across a re-quote; only fall back to
@@ -149,6 +182,8 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
     (preview?.items ?? []).map((it) => ({
       ...it,
       hsCode: it.hsCode,
+      // Destination import code — blank by default, it differs per country.
+      importHsCode: '',
       countryOfManufacture: it.mfrCountry,
       customsValue: typeof it.customsValue === 'number'
         ? it.customsValue
@@ -158,8 +193,14 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const totalCustomsValue = parseFloat(
     commodities.reduce((sum, item) => sum + item.customsValue, 0).toFixed(2),
   )
+  // What the customer paid for the goods — separate from the dutiable value.
+  const totalProductValue = parseFloat(
+    commodities
+      .reduce((sum, item) => sum + (item.unitPrice ?? item.unitPriceEUR) * item.qty, 0)
+      .toFixed(2),
+  )
 
-  const [incoterm, setIncoterm] = useState('DAP')
+  const [incoterm, setIncoterm] = useState('DDP')
   const [shipmentType, setShipmentType] = useState<'commercial' | 'personal'>('commercial')
   const [exportReasonType, setExportReasonType] = useState('permanent')
   const [dimL, setDimL] = useState('20')
@@ -172,6 +213,11 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [paperlessTrade, setPaperlessTrade] = useState(false)
   const [goGreen, setGoGreen] = useState(false)
   const [shipperCompanyName, setShipperCompanyName] = useState('I Want Jewels')
+  const [shipperEori, setShipperEori] = useState('')
+  const [extraReference, setExtraReference] = useState('')
+  const [packageTypeCode, setPackageTypeCode] = useState('')
+  // We already hold the recipient number; SMS is just an on/off choice.
+  const [notifyBySms, setNotifyBySms] = useState(false)
   // DHL bills a residential surcharge for private addresses; forwarding
   // warehouses and offices are business deliveries.
   const [receiverIsResidential, setReceiverIsResidential] = useState(true)
@@ -180,18 +226,20 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   // DHL accepts today; whether it actually ships depends on the local cutoff.
   const earliestShipDate = useMemo(() => new Date().toISOString().split('T')[0], [])
   const [shipDate, setShipDate] = useState(earliestShipDate)
-  // Opt-in only — never added unless the admin ticks it, since it is billable.
-  const [adultSignature, setAdultSignature] = useState(false)
+  // Opt-in only — nothing is added unless the admin picks a level, since
+  // signature services are billable.
+  const [signatureOption, setSignatureOption] = useState<SignatureOption>('SERVICE_DEFAULT')
 
   // Services whose cost DHL can quote from a code alone. Insurance is excluded
   // because it is priced from the declared value the admin enters separately.
   const pricedServiceCodes = useMemo(() => {
     const codes: string[] = []
-    if (adultSignature) codes.push(ADULT_SIGNATURE_CODE)
+    const signatureCode = SIGNATURE_SERVICE_CODES[signatureOption]
+    if (signatureCode) codes.push(signatureCode)
     if (goGreen) codes.push('FD')
     if (saturdayDelivery) codes.push('AA')
     return codes
-  }, [adultSignature, goGreen, saturdayDelivery])
+  }, [signatureOption, goGreen, saturdayDelivery])
   const pricedServicesKey = pricedServiceCodes.join(',')
 
   // Re-quote whenever the selected services change so the price on screen is
@@ -202,9 +250,10 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
       receiverIsResidential,
       shipperIsResidential,
       shipDate,
+      packageTypeCode,
     )
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [order.id, pricedServicesKey, receiverIsResidential, shipperIsResidential, shipDate])
+  }, [order.id, pricedServicesKey, receiverIsResidential, shipperIsResidential, shipDate, packageTypeCode])
 
   const [dutiesPaymentType, setDutiesPaymentType] = useState<'SENDER' | 'RECIPIENT' | 'THIRD_PARTY'>('SENDER')
   const [dutiesAccountNumber, setDutiesAccountNumber] = useState('')
@@ -252,7 +301,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
       })
       setIsEditingReceiver(false)
       toast.success(t('toast.addressUpdated'))
-      void loadDhlRates(pricedServiceCodes, receiverIsResidential, shipperIsResidential, shipDate)
+      void loadDhlRates(pricedServiceCodes, receiverIsResidential, shipperIsResidential, shipDate, packageTypeCode)
     } catch (err: any) {
       setReceiverSaveError(err?.response?.data?.message || t('errors.updateAddressFailed'))
     } finally {
@@ -286,10 +335,17 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         paperlessTrade: paperlessTrade || undefined,
         goGreen: goGreen || undefined,
         shipperCompanyName: shipperCompanyName.trim() || undefined,
+        shipperEori: shipperEori.trim() || undefined,
+        extraReferences: extraReference.trim() ? [extraReference.trim()] : undefined,
+        packageTypeCode: packageTypeCode || undefined,
+        smsNotificationNumber:
+          notifyBySms && receiverDraft.phoneCountryCode && receiverDraft.phoneNumber
+            ? `${receiverDraft.phoneCountryCode}${receiverDraft.phoneNumber}`
+            : undefined,
         receiverIsResidential,
         shipperIsResidential,
         shipDate,
-        signatureOption: adultSignature ? 'ADULT_SIGNATURE' : undefined,
+        signatureOption: signatureOption === 'SERVICE_DEFAULT' ? undefined : signatureOption,
         notificationEmails: notifyRecipient && notifyEmail ? [notifyEmail] : undefined,
         dutiesPaymentType: incoterm === 'DDP' ? dutiesPaymentType : undefined,
         dutiesAccountNumber:
@@ -299,6 +355,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         invoiceNumber: invoiceNumber || undefined,
         commodityOverrides: commodities.map((c) => ({
           hsCode: c.hsCode,
+          importHsCode: c.importHsCode.trim() || undefined,
           countryOfManufacture: c.countryOfManufacture,
           customsValue: c.customsValue,
         })),
@@ -339,11 +396,21 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 <p>✉ {preview.shipper.email}</p>
                 <div className="mt-2 flex items-center gap-2 border-t border-[#f3e2ee] pt-2">
                   <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-shipper-company">
-                    {t('shipperCompanyName', { defaultValue: 'Company name' })}
+                    {t('shipperCompanyName', { defaultValue: 'Company name' })}<FieldHelp text={'The legal company name printed on the label and customs paperwork — not the contact person.'} />
                   </label>
                   <input id="dhl-shipper-company" value={shipperCompanyName}
                     onChange={(e) => setShipperCompanyName(e.target.value)}
                     placeholder={t('shipperCompanyOptional', { defaultValue: 'Optional — shown as the exporter' })}
+                    className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+                </div>
+                <div className="mt-2 flex items-center gap-2">
+                  <label className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-eori">
+                    {t('shipperEori', { defaultValue: 'EORI' })}
+                    <FieldHelp text={'Your EU customs ID as exporter. Leave blank if DHL already holds it on the account, or the shipment can be rejected as a duplicate.'} />
+                  </label>
+                  <input id="dhl-eori" value={shipperEori}
+                    onChange={(e) => setShipperEori(e.target.value)}
+                    placeholder={'e.g. BE0123456789'}
                     className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
                 </div>
                 <label className="mt-2 flex items-center gap-2">
@@ -351,7 +418,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                     onChange={(e) => setShipperIsResidential(e.target.checked)}
                     className="h-4 w-4 accent-amber-600" />
                   <span className="text-[11px] text-[#4f2040]">
-                    {t('shipperResidential', { defaultValue: 'Residential pickup — tick only if collecting from a home' })}
+                    {t('shipperResidential', { defaultValue: 'Residential pickup — tick only if collecting from a home' })}<FieldHelp text={'Tick only if DHL collects from a home. Your business premises should stay unticked.'} />
                   </span>
                 </label>
               </>
@@ -388,7 +455,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                     onChange={(e) => setReceiverIsResidential(e.target.checked)}
                     className="h-4 w-4 accent-amber-600" />
                   <span className="text-[11px] text-[#4f2040]">
-                    {t('receiverResidential', { defaultValue: 'Residential address — untick for offices and forwarding warehouses' })}
+                    {t('receiverResidential', { defaultValue: 'Residential address — untick for offices and forwarding warehouses' })}<FieldHelp text={'Tick for a home address. Business addresses avoid the DHL residential delivery surcharge.'} />
                   </span>
                 </label>
               </div>
@@ -422,7 +489,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 </div>
                 <div className="flex items-center gap-2">
                   <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                    {t('phoneLabel', { defaultValue: 'Phone' })} *
+                    {t('phoneLabel', { defaultValue: 'Phone' })}<FieldHelp text={'DHL calls this number for delivery or customs questions. Pick the country code that matches the number.'} /> *
                   </label>
                   <select value={receiverDraft.phoneCountryCode}
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, phoneCountryCode: e.target.value }))}
@@ -438,7 +505,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 </div>
                 <div className="flex items-center gap-2">
                   <label className="w-24 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                    {t('receiverTaxId', { defaultValue: 'Tax / VAT ID' })}
+                    {t('receiverTaxId', { defaultValue: 'Tax / VAT ID' })}<FieldHelp text={'Only for business recipients or countries that require an importer ID. Leave blank for normal customers.'} />
                   </label>
                   <input value={receiverDraft.taxId}
                     onChange={(e) => setReceiverDraft((p) => ({ ...p, taxId: e.target.value }))}
@@ -486,9 +553,16 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.qty')}</th>
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.unitEur', { currency: declarationCurrency })}</th>
                   <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.weightG')}</th>
-                  <th className="px-3 py-2 font-semibold">{t('tableHeaders.hsCode')}</th>
+                  <th className="px-3 py-2 font-semibold">
+                    {t('tableHeaders.ehsCode', { defaultValue: 'EHS Code' })}
+                    <FieldHelp text={'Export code used by Belgian customs when the parcel leaves the EU. Same for every destination.'} />
+                  </th>
+                  <th className="px-3 py-2 font-semibold">
+                    {t('tableHeaders.ihsCode', { defaultValue: 'IHS Code' })}
+                    <FieldHelp text={'Import code for the destination country, e.g. 7113205000 for the USA. Optional — leave blank unless you know the code for that country.'} />
+                  </th>
                   <th className="px-3 py-2 font-semibold">{t('tableHeaders.countryOfMfr')}</th>
-                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsValueEur', { currency: declarationCurrency })}</th>
+                  <th className="px-3 py-2 font-semibold text-right">{t('tableHeaders.customsDeclared', { defaultValue: 'Customs declared' })}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#f6e3ee]">
@@ -512,6 +586,15 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                         className="w-24 border border-[#e3bfd6] px-1.5 py-1 font-mono text-[11px] outline-none focus:border-[#d24a90]"
                       />
                     </td>
+                    <td className="px-2 py-1.5">
+                      <input
+                        value={c.importHsCode}
+                        onChange={(e) => setCommodities((prev) => prev.map((r, i) => i === idx ? { ...r, importHsCode: e.target.value } : r))}
+                        maxLength={10}
+                        placeholder="optional"
+                        className="w-24 border border-[#e3bfd6] px-1.5 py-1 font-mono text-[11px] outline-none placeholder:font-sans placeholder:text-[10px] placeholder:text-zinc-400 focus:border-[#d24a90]"
+                      />
+                    </td>
                     <td className="px-3 py-2 font-mono uppercase">{c.countryOfManufacture}</td>
                     <td className="px-3 py-2 text-right font-mono">
                       <span className="block">{fmtDeclaration(c.customsValue, declarationCurrency)}</span>
@@ -528,7 +611,9 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           </div>
           {preview?.package ? (
             <div className="border-t border-[#efcfe1] px-4 py-2.5 text-[11px] text-[#694d5f]">
-              <span className="font-semibold text-[#4f2040]">{t('totalCustomsValue')} </span>
+              <span className="font-semibold text-[#4f2040]">{t('totalProductValue', { defaultValue: 'Total product value:' })} </span>
+              {fmtDeclaration(totalProductValue, declarationCurrency)}
+              <span className="ml-3 font-semibold text-[#4f2040]">{t('totalCustomsValue')} </span>
               {fmtDeclaration(totalCustomsValue, declarationCurrency)}
               <span className="ml-3 font-semibold text-[#4f2040]">{t('currency')} </span>{declarationCurrency}
             </div>
@@ -542,29 +627,38 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('incoterm')}</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('incoterm')}<FieldHelp text={t('help.incoterm', { defaultValue: 'Who pays import duties and taxes. DAP = the customer pays on delivery. DDP = you pay them upfront.' })} /></label>
             <select value={incoterm} onChange={(e) => setIncoterm(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
               {incotermOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('shipmentType')}</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('shipmentType')}<FieldHelp text={t('help.shipmentType', { defaultValue: 'Commercial = a sale. Personal = a gift or personal item. Customs treat them differently.' })} /></label>
             <select value={shipmentType} onChange={(e) => setShipmentType(e.target.value as 'commercial' | 'personal')}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
               {shipmentTypeOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('exportReason')}</label>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('exportReason')}<FieldHelp text={t('help.exportReason', { defaultValue: 'Why the goods are leaving the country. Use Permanent (sold) for a normal customer order.' })} /></label>
             <select value={exportReasonType} onChange={(e) => setExportReasonType(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
               {exportReasonOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
           </div>
           <div>
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('invoiceNumber')}</label>
-            <input value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)}
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('invoiceNumber')}<FieldHelp text={t('help.invoiceNumber', { defaultValue: 'Your reference on the customs invoice. Defaults to the order number.' })} /></label>
+            <input value={invoiceNumber} readOnly disabled
+              className="w-full cursor-not-allowed border border-[#e3bfd6] bg-[#fdf6fb] px-2 py-2 text-xs text-[#8b5a75] outline-none" />
+          </div>
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-extra-ref">
+              {t('extraReference', { defaultValue: 'Extra reference' })}
+              <FieldHelp text={'A second reference stored against the waybill. The order number is always sent as the first one.'} />
+            </label>
+            <input id="dhl-extra-ref" value={extraReference}
+              onChange={(e) => setExtraReference(e.target.value)}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
           </div>
         </div>
@@ -577,15 +671,28 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              {t('weightAuto')}
+              {t('weightAuto')}<FieldHelp text={t('help.weightAuto', { defaultValue: 'Added up from the item weights on the order. DHL bills the greater of actual or volumetric weight.' })} />
             </label>
             <div className="border border-[#e3bfd6] bg-[#f9f0f6] px-3 py-2 text-xs text-[#694d5f]">
               {preview?.package.totalWeightKg ?? 0} {tCommon('kg')}
             </div>
           </div>
           <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-packaging">
+              {t('packagingType', { defaultValue: 'Packaging' })}
+              <FieldHelp text={'A DHL packaging type uses its fixed size, which can be cheaper than your own box. Leave as your own packaging to use the dimensions below.'} />
+            </label>
+            <select id="dhl-packaging" value={packageTypeCode}
+              onChange={(e) => setPackageTypeCode(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]">
+              {PACKAGE_TYPE_OPTIONS.map((o) => (
+                <option key={o.code || 'own'} value={o.code}>{o.label}</option>
+              ))}
+            </select>
+          </div>
+          <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="dhl-ship-date">
-              {t('shipDateLabel', { defaultValue: 'Ship date (handover to DHL)' })}
+              {t('shipDateLabel', { defaultValue: 'Ship date (handover to DHL)' })}<FieldHelp text={'The day you hand the parcel to DHL. It is printed on the label and the price changes by date.'} />
             </label>
             <input id="dhl-ship-date" type="date" value={shipDate} min={earliestShipDate}
               onChange={(e) => setShipDate(e.target.value || earliestShipDate)}
@@ -598,7 +705,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           </div>
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-              {t('dimensionsCm')}
+              {t('dimensionsCm')}<FieldHelp text={t('help.dimensionsCm', { defaultValue: 'Outer size of the parcel. Used for volumetric weight, so a large light box can cost more.' })} />
             </label>
             <div className="flex items-center gap-2">
               <input type="number" min="1" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder={t('dimensionL')}
@@ -736,29 +843,39 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={saturdayDelivery} onChange={(e) => setSaturdayDelivery(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <span className="text-xs text-[#4f2040]">{t('saturdayDelivery')}</span>
+            <span className="text-xs text-[#4f2040]">{t('saturdayDelivery')}<FieldHelp text={t('help.saturdayDelivery', { defaultValue: 'Delivery on a Saturday. Chargeable and not available on every route.' })} /></span>
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={paperlessTrade} onChange={(e) => setPaperlessTrade(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <span className="text-xs text-[#4f2040]">{t('paperlessTrade')}</span>
+            <span className="text-xs text-[#4f2040]">{t('paperlessTrade')}<FieldHelp text={t('help.paperlessTrade', { defaultValue: 'Sends the customs invoice to DHL electronically, so no printed copy travels with the parcel.' })} /></span>
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={goGreen} onChange={(e) => setGoGreen(e.target.checked)}
               disabled={isServiceKnownUnavailable('FD')}
               className="h-4 w-4 accent-amber-600" />
             <span className="text-xs text-[#4f2040]">
-              {t('goGreen', { defaultValue: 'GoGreen Climate Neutral (FD)' })}
+              {t('goGreen', { defaultValue: 'GoGreen Climate Neutral (FD)' })}<FieldHelp text={'Offsets the carbon of this shipment through sustainable aviation fuel. Small extra charge.'} />
             </span>
           </label>
-          <label className="flex items-center gap-2">
-            <input type="checkbox" checked={adultSignature} onChange={(e) => setAdultSignature(e.target.checked)}
-              disabled={isServiceKnownUnavailable(ADULT_SIGNATURE_CODE)}
-              className="h-4 w-4 accent-amber-600" />
-            <span className="text-xs text-[#4f2040]">
-              {t('adultSignature', { defaultValue: 'Adult Signature (SD)' })}
-            </span>
-          </label>
+          <div className="flex items-center gap-2">
+            <label className="text-xs text-[#4f2040]" htmlFor="dhl-signature">
+              {t('signatureLabel', { defaultValue: 'Signature' })}<FieldHelp text={'Who must sign for the parcel. Adult Signature requires ID and an adult recipient. Each level is chargeable.'} />
+            </label>
+            <select id="dhl-signature" value={signatureOption}
+              onChange={(e) => setSignatureOption(e.target.value as SignatureOption)}
+              className="border border-[#e3bfd6] px-2 py-1.5 text-xs outline-none focus:border-[#d24a90]">
+              {(Object.keys(SIGNATURE_SERVICE_CODES) as SignatureOption[]).map((option) => {
+                const code = SIGNATURE_SERVICE_CODES[option]
+                return (
+                  <option key={option} value={option}
+                    disabled={!!code && isServiceKnownUnavailable(code)}>
+                    {t(`signatureOptions.${option}`, { defaultValue: SIGNATURE_LABELS[option] })}
+                  </option>
+                )
+              })}
+            </select>
+          </div>
         </div>
         {pricedServiceCodes.length > 0 ? (
           <p className={`px-4 pb-3 text-[10px] font-semibold ${selectedRate?.valueAddedServicesPriced ? 'text-emerald-700' : 'text-amber-700'}`}>
@@ -809,7 +926,7 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
           <div className="flex items-center gap-2">
             <input type="checkbox" id="dhl-notify-recipient" checked={notifyRecipient} onChange={(e) => setNotifyRecipient(e.target.checked)}
               className="h-4 w-4 accent-amber-600" />
-            <label htmlFor="dhl-notify-recipient" className="text-xs text-[#4f2040]">{t('notifyRecipient')}</label>
+            <label htmlFor="dhl-notify-recipient" className="text-xs text-[#4f2040]">{t('notifyRecipient')}<FieldHelp text={t('help.notifyRecipient', { defaultValue: 'DHL emails the customer directly with tracking updates as the parcel moves.' })} /></label>
           </div>
           {notifyRecipient ? (
             <div className="flex items-center gap-2">
@@ -817,6 +934,18 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
               <input value={notifyEmail} onChange={(e) => setNotifyEmail(e.target.value)}
                 type="email" placeholder={t('emailPlaceholder')}
                 className="flex-1 border border-[#e3bfd6] px-2 py-1.5 text-xs outline-none focus:border-[#d24a90]" />
+            </div>
+          ) : null}
+          {notifyRecipient ? (
+            <div className="flex items-center gap-2">
+              <input type="checkbox" id="dhl-notify-sms" checked={notifyBySms}
+                onChange={(e) => setNotifyBySms(e.target.checked)}
+                className="h-4 w-4 accent-amber-600" />
+              <label htmlFor="dhl-notify-sms" className="text-xs text-[#4f2040]">
+                {t('notifyBySms', { defaultValue: 'Also text the recipient' })}
+                <FieldHelp text={'DHL texts the recipient tracking updates on the delivery phone number already on this shipment.'} />
+              </label>
+              <span className="font-mono text-[10px] text-zinc-400">{receiverPhoneDisplay || '—'}</span>
             </div>
           ) : null}
         </div>

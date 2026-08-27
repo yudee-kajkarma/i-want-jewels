@@ -756,6 +756,8 @@ export async function getAdminCarrierRatesForOrder(
   shipperIsResidential?: boolean,
   /** YYYY-MM-DD the parcel is handed to DHL. */
   shipDate?: string,
+  /** DHL packaging type code — changes the price. */
+  packageTypeCode?: string,
 ): Promise<AdminShippingQuote | null> {
   const params = new URLSearchParams({ carrier })
   if (serviceCode) params.set('serviceCode', serviceCode)
@@ -770,6 +772,9 @@ export async function getAdminCarrierRatesForOrder(
   }
   if (shipDate) {
     params.set('shipDate', shipDate)
+  }
+  if (packageTypeCode) {
+    params.set('packageType', packageTypeCode)
   }
   const response = await adminApiClient.get<AdminShippingQuoteApiResponse>(
     `/orders/admin/${orderId}/shipping-cost?${params.toString()}`,
@@ -787,7 +792,7 @@ export type FedExShipOptions = {
   dutiesAccountNumber?: string;
   notificationEmails?: string[];
   shipperCompanyName?: string;
-  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
+  commodityOverrides?: Array<{ hsCode?: string; importHsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
 }
 
 export type DhlShipOptions = {
@@ -799,8 +804,12 @@ export type DhlShipOptions = {
   goGreen?: boolean;
   saturdayDelivery?: boolean;
   paperlessTrade?: boolean;
-  signatureOption?: 'SERVICE_DEFAULT' | 'DELIVERY_SIGNATURE' | 'DIRECT_SIGNATURE' | 'ADULT_SIGNATURE';
+  signatureOption?: 'SERVICE_DEFAULT' | 'DELIVERY_SIGNATURE' | 'SIGNATURE_REQUIRED' | 'DIRECT_SIGNATURE' | 'ADULT_SIGNATURE' | 'NO_SIGNATURE_REQUIRED';
   shipperCompanyName?: string;
+  shipperEori?: string;
+  extraReferences?: string[];
+  packageTypeCode?: string;
+  smsNotificationNumber?: string;
   receiverIsResidential?: boolean;
   shipperIsResidential?: boolean;
   shipDate?: string;
@@ -808,7 +817,7 @@ export type DhlShipOptions = {
   dutiesPaymentType?: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY';
   dutiesAccountNumber?: string;
   invoiceNumber?: string;
-  commodityOverrides?: Array<{ hsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
+  commodityOverrides?: Array<{ hsCode?: string; importHsCode?: string; countryOfManufacture?: string; customsValue?: number }>;
 }
 
 export async function shipOrderForAdmin(
