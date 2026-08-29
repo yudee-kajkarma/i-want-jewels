@@ -1,7 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type MouseEvent as ReactMouseEvent,
+} from 'react';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { languages, cookieName } from '../../i18n/settings';
@@ -35,18 +41,51 @@ function setLocaleCookie(locale: string) {
   document.cookie = `${cookieName}=${locale}; path=/; max-age=31536000`;
 }
 
-export default function LanguageSwitcher() {
-  const { t, i18n } = useTranslation('common', { keyPrefix: 'languageSwitcher' });
+/** Current locale + the path stripped of its locale prefix, so callers can
+ *  build a same-page href for every language. Shared by the header dropdown
+ *  and the mobile drawer's pill list. */
+function useLocaleRouting() {
+  const { i18n } = useTranslation();
   const pathname = usePathname() ?? '/';
-  const [isOpen, setIsOpen] = useState(false);
-  const ref = useRef<HTMLDivElement | null>(null);
 
   const { locale: localeFromPath, pathnameWithoutLocale } = useMemo(
     () => parseLocalePathname(pathname),
     [pathname],
   );
 
-  const currentLocale = localeFromPath ?? i18n.resolvedLanguage ?? 'en';
+  return {
+    currentLocale: localeFromPath ?? i18n.resolvedLanguage ?? 'en',
+    pathnameWithoutLocale,
+  };
+}
+
+/** Intercept a locale link so the cookie is written before navigating. Leaves
+ *  modified clicks (new tab, middle click) to the browser. */
+function handleLocaleClick(
+  event: ReactMouseEvent<HTMLAnchorElement>,
+  locale: string,
+  href: string,
+  onNavigate?: () => void,
+) {
+  if (event.defaultPrevented) return;
+  if (event.button !== 0) return;
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+  event.preventDefault();
+  onNavigate?.();
+  setLocaleCookie(locale);
+  // Full document navigation guarantees the new cookie is used for the
+  // request and bypasses the Router Cache (which would otherwise serve a
+  // prefetch made under the previous locale).
+  window.location.assign(href);
+}
+
+export default function LanguageSwitcher() {
+  const { t } = useTranslation('common', { keyPrefix: 'languageSwitcher' });
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const { currentLocale, pathnameWithoutLocale } = useLocaleRouting();
 
   // Close on an outside click or Escape. This used to be a native <details>,
   // which only closes when its own <summary> is clicked again — so the panel
@@ -115,18 +154,9 @@ export default function LanguageSwitcher() {
                 key={locale}
                 href={href}
                 prefetch={false}
-                onClick={(event) => {
-                  if (event.defaultPrevented) return;
-                  if (event.button !== 0) return;
-                  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-                  event.preventDefault();
-                  setIsOpen(false);
-                  setLocaleCookie(locale);
-                  // Full document navigation guarantees the new cookie is used
-                  // for the request and bypasses the Router Cache (which would
-                  // otherwise serve a prefetch made under the previous locale).
-                  window.location.assign(href);
-                }}
+                onClick={(event) =>
+                  handleLocaleClick(event, locale, href, () => setIsOpen(false))
+                }
                 className={`flex w-full items-center gap-2 px-3 py-2.5 text-left text-[13px] tracking-[0.02em] ${
                   isActive
                     ? 'bg-zinc-100 font-medium text-zinc-900'
@@ -142,6 +172,40 @@ export default function LanguageSwitcher() {
           })}
         </div>
       ) : null}
+    </div>
+  );
+}
+
+/** Language options as a wrapping pill list, for the mobile hamburger drawer.
+ *  The header dropdown is hidden on small screens, where it crowded the icon
+ *  row; this mirrors the drawer's currency picker instead. */
+export function LanguagePills({ onNavigate }: { onNavigate?: () => void }) {
+  const { currentLocale, pathnameWithoutLocale } = useLocaleRouting();
+
+  return (
+    <div className="mt-3 flex flex-wrap gap-2">
+      {languages.map((locale) => {
+        const href = getLocalizedPath(locale, pathnameWithoutLocale);
+        const isActive = locale === currentLocale;
+
+        return (
+          <Link
+            key={locale}
+            href={href}
+            prefetch={false}
+            hrefLang={locale}
+            aria-current={isActive ? 'true' : undefined}
+            onClick={(event) => handleLocaleClick(event, locale, href, onNavigate)}
+            className={`flex items-center gap-2 border px-3 py-2 text-[12px] font-medium uppercase tracking-[0.14em] transition ${
+              isActive
+                ? 'border-zinc-900 bg-zinc-900 text-white'
+                : 'border-zinc-200 bg-white text-zinc-800 hover:bg-zinc-50'
+            }`}
+          >
+            {LANGUAGE_LABELS[locale]}
+          </Link>
+        );
+      })}
     </div>
   );
 }

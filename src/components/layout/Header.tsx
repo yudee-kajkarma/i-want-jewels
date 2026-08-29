@@ -19,7 +19,7 @@ import { getProducts } from "../../services/productService";
 import { useAppSelector } from "../../store/hooks";
 import type { Product } from "../../types/product";
 import brandLogo from "../../assets/logo.svg";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher, { LanguagePills } from "./LanguageSwitcher";
 
 const socialLinks = [
     { name: "Instagram", href: "https://www.instagram.com/iwantjewels/" },
@@ -1045,7 +1045,11 @@ export default function Header() {
                             <SearchIcon />
                         </HeaderIconButton>
 
-                        <LanguageSwitcher />
+                        {/* Both selectors move into the hamburger drawer on
+                            small screens, where they overflowed the icon row. */}
+                        <div className="hidden sm:block">
+                            <LanguageSwitcher />
+                        </div>
 
                         <div className="hidden sm:block">
                             <MiniCurrencySelector
@@ -1485,6 +1489,15 @@ export default function Header() {
                                 </Link>
                             </div>
                         )}
+                    </div>
+
+                    <div className="mt-8 lg:hidden">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-zinc-400">
+                            {t("language")}
+                        </p>
+                        <LanguagePills
+                            onNavigate={() => setIsDrawerOpen(false)}
+                        />
                     </div>
 
                     <div className="mt-8 lg:hidden">
