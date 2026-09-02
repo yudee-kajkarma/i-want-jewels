@@ -499,6 +499,7 @@ export default function Header() {
             { label: t("home"), to: "/" },
             { label: t("dashboard"), to: "/admin" },
             { label: t("orders"), to: "/admin/orders" },
+            { label: t("customers", { defaultValue: "Customers" }), to: "/admin/customers" },
             { label: t("giftCards"), to: "/admin/gift-cards" },
             { label: t("carts"), to: "/admin/cart" },
             { label: t("wishlists"), to: "/admin/wishlist" },

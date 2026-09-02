@@ -9,6 +9,7 @@ import {
   getStoredAuthSession,
   isJwtExpired,
 } from "../utils/authStorage";
+import { getGuestCartId } from "../utils/guestCart";
 
 const apiBaseUrl = resolveApiBaseUrl();
 
@@ -53,6 +54,21 @@ function handleSessionExpiry(): void {
   }, 1200);
 }
 
+// Sign-in, register and the social callbacks all go through this public
+// client, and each one needs the shopper's guest cart id to merge the basket
+// they filled before signing in. Attached only while signed out, so a stale id
+// can never divert a logged-in shopper's cart.
+apiClient.interceptors.request.use((config) => {
+  if (!getStoredAuthSession()?.token) {
+    const guestCartId = getGuestCartId();
+    if (guestCartId) {
+      config.headers["x-guest-cart-id"] = guestCartId;
+    }
+  }
+
+  return config;
+});
+
 authApiClient.interceptors.request.use((config) => {
   const session = getStoredAuthSession();
 
@@ -65,6 +81,14 @@ authApiClient.interceptors.request.use((config) => {
 
   if (session?.token) {
     config.headers.Authorization = `Bearer ${session.token}`;
+  } else {
+    // Guests carry their cart's id instead of a token. Sent only when signed
+    // out, so a stale id can never divert a logged-in shopper's cart. It is
+    // also sent on login, so the server can merge the basket into the account.
+    const guestCartId = getGuestCartId();
+    if (guestCartId) {
+      config.headers["x-guest-cart-id"] = guestCartId;
+    }
   }
 
   return config;
@@ -106,9 +130,12 @@ function onResponseFulfilled(response: import("axios").AxiosResponse) {
 
 function onResponseRejected(error: unknown) {
   const axiosError = error as import("axios").AxiosError;
-  // Any 401 on an authenticated client means the token is no longer accepted
-  // ("Token expired", "Invalid token", "Authentication failed", ...).
-  if (axiosError.response?.status === 401) {
+  // A 401 while holding a token means it is no longer accepted ("Token
+  // expired", "Invalid token", "Authentication failed", ...). With no token
+  // there is no session to expire: it is a guest touching an endpoint that
+  // needs an account, and bouncing them to login would strand them mid-
+  // checkout. Let the caller handle it.
+  if (axiosError.response?.status === 401 && getStoredAuthSession()?.token) {
     handleSessionExpiry();
   }
   return Promise.reject(error);

@@ -895,6 +895,25 @@ export async function getAdminOrderLabelUrl(
     : null;
 }
 
+/**
+ * Presigned download link for an order invoice PDF. Same pattern as the
+ * shipping label — customs invoices carry declared values, so they are never
+ * served as public S3 URLs.
+ */
+export async function getAdminOrderInvoiceUrl(
+  orderId: string,
+  type: "customer" | "shipping",
+): Promise<string | null> {
+  const response = await adminApiClient.get<AdminLabelUrlApiResponse>(
+    `/orders/admin/${orderId}/invoice-url?type=${type}`,
+  );
+  const presignedUrl = response.data.data?.presignedUrl;
+
+  return typeof presignedUrl === "string" && presignedUrl.trim()
+    ? presignedUrl
+    : null;
+}
+
 export async function getAllOrdersForAdminByStatus(
   page = 1,
   limit = 20,

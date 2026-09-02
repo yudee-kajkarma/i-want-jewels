@@ -174,11 +174,7 @@ export default function ProductCard({
             return;
         }
 
-        if (!isAuthenticated) {
-            navigate("/login", { state: { from: location.pathname } });
-            return;
-        }
-
+        // Guests may shop and check out; only wishlist and reviews need an account.
         setIsAdding(true);
 
         try {
@@ -246,11 +242,7 @@ export default function ProductCard({
         const variant = selectedVariant ?? item.variants[0];
         if (!variant) return;
 
-        if (!isAuthenticated) {
-            navigate("/login", { state: { from: location.pathname } });
-            return;
-        }
-
+        // Guests may shop and check out; only wishlist and reviews need an account.
         if (variantHasNewShapeSizes(variant)) {
             const firstInStock = variant.sizes!.findIndex((s) => s.stock > 0);
             setPickerSizeIdx(firstInStock >= 0 ? firstInStock : 0);

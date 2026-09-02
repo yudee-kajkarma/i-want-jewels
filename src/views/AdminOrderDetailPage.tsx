@@ -10,7 +10,7 @@ import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
-import { approveOrderReturn, getAdminOrderById, rejectOrderReturn, updateOrderShippingAddressForAdmin, updateOrderStatusForAdmin, verifyPaymentStatus } from '../services/orderService'
+import { approveOrderReturn, getAdminOrderById, getAdminOrderInvoiceUrl, getAdminOrderLabelUrl, rejectOrderReturn, updateOrderShippingAddressForAdmin, updateOrderStatusForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
 import { getCountryName, getCountryOptions, getStateName, getStateOptions, isValidPostalCode } from '../utils/location'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
@@ -94,6 +94,32 @@ export default function AdminOrderDetailPage() {
     const [isRejectingReturn, setIsRejectingReturn] = useState(false)
     const [returnActionError, setReturnActionError] = useState('')
     const [isMarkingReturned, setIsMarkingReturned] = useState(false)
+    // Which document is being fetched — the links are presigned and short-lived,
+    // so they are requested on click rather than held on the page.
+    const [downloadingDoc, setDownloadingDoc] = useState<'label' | 'customer' | 'shipping' | null>(null)
+
+    async function handleDownload(kind: 'label' | 'customer' | 'shipping') {
+        if (!order || downloadingDoc) return
+        setDownloadingDoc(kind)
+
+        try {
+            const url = kind === 'label'
+                ? await getAdminOrderLabelUrl(order.id)
+                : await getAdminOrderInvoiceUrl(order.id, kind)
+
+            if (!url) {
+                toast.error(t('errors.documentUnavailable', { defaultValue: 'That document is not available for this order yet.' }))
+                return
+            }
+            window.open(url, '_blank', 'noopener,noreferrer')
+        } catch (error) {
+            const apiMessage = (error as { response?: { data?: { error?: { message?: string } } } })
+                ?.response?.data?.error?.message
+            toast.error(apiMessage || t('errors.documentUnavailable', { defaultValue: 'Could not open that document. Please try again.' }))
+        } finally {
+            setDownloadingDoc(null)
+        }
+    }
     const countryOptions = useMemo(() => getCountryOptions(), [])
     const stateOptions = useMemo(() => getStateOptions(addressForm.country), [addressForm.country])
     const canEditShippingAddress = order?.orderStatus === 'PENDING' || order?.orderStatus === 'CONFIRMED'
@@ -471,6 +497,26 @@ export default function AdminOrderDetailPage() {
                                         {t('trackShipment')}
                                     </a>
                                 ) : null}
+
+                                <div className="mt-3 flex flex-wrap gap-2">
+                                    {([
+                                        { kind: 'label' as const, label: t('downloadLabel', { defaultValue: 'Shipping label' }) },
+                                        { kind: 'shipping' as const, label: t('downloadCustomsInvoice', { defaultValue: 'Customs invoice' }) },
+                                        { kind: 'customer' as const, label: t('downloadCustomerInvoice', { defaultValue: 'Customer invoice' }) },
+                                    ]).map(({ kind, label }) => (
+                                        <button
+                                            key={kind}
+                                            type="button"
+                                            onClick={() => void handleDownload(kind)}
+                                            disabled={downloadingDoc !== null}
+                                            className="inline-flex items-center justify-center border border-[#8f2a60] px-4 py-2 text-xs font-semibold text-[#8f2a60] transition hover:bg-[#8f2a60] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+                                        >
+                                            {downloadingDoc === kind
+                                                ? t('actions.downloading', { defaultValue: 'Opening…' })
+                                                : label}
+                                        </button>
+                                    ))}
+                                </div>
                             </div>
 
 

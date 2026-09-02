@@ -1,15 +1,8 @@
 'use client'
 
-import { Suspense } from 'react'
-import RequireAuth from '../../../../components/auth/RequireAuth'
 import CheckoutStatusPage from '../../../../views/CheckoutStatusPage'
 
+// A guest returns here from Stripe, so this page must not require an account.
 export default function Page() {
-  return (
-    <Suspense fallback={null}>
-      <RequireAuth>
-        <CheckoutStatusPage />
-      </RequireAuth>
-    </Suspense>
-  )
+  return <CheckoutStatusPage />
 }

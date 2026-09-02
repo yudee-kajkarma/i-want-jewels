@@ -804,11 +804,7 @@ export default function ProductDetailPage({
             return;
         }
 
-        if (!isAuthenticated) {
-            navigate("/login", { state: { from: location.pathname } });
-            return;
-        }
-
+        // Guests may shop and check out; only wishlist and reviews need an account.
         const isGiftCardProduct = product.productType === "GIFT_CARD";
 
         setIsAddingToCart(true);
@@ -864,11 +860,7 @@ export default function ProductDetailPage({
             return;
         }
 
-        if (!isAuthenticated) {
-            navigate("/login", { state: { from: location.pathname } });
-            return;
-        }
-
+        // Guests may shop and check out; only wishlist and reviews need an account.
         const chosenSize =
             variantHasSizes && selectedSizeIndex !== null
                 ? selectedVariant.sizes![selectedSizeIndex]?.size
