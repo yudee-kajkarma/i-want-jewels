@@ -242,3 +242,101 @@ export async function updateCurrencyPreference(
 ): Promise<void> {
     await authApiClient.patch("/users/preference/currency", { currency });
 }
+
+/**
+ * Result of signing in with Google. A brand-new account has no phone or
+ * address yet, so it comes back as PROFILE_INCOMPLETE with a short-lived token
+ * that can only finish the signup — never a usable session.
+ */
+export type GoogleAuthResult =
+    | { status: "COMPLETE"; session: AuthSession }
+    | {
+          status: "PROFILE_INCOMPLETE";
+          pendingToken: string;
+          email: string;
+          firstName: string;
+          lastName: string;
+      };
+
+export async function loginWithGoogle(idToken: string): Promise<GoogleAuthResult> {
+    const response = await apiClient.post<ApiEnvelope<Record<string, unknown>>>(
+        "/users/auth/google",
+        { idToken },
+    );
+
+    const body = response.data;
+    const data = (body.data ?? {}) as Record<string, unknown>;
+
+    if (body.code === "PROFILE_INCOMPLETE") {
+        return {
+            status: "PROFILE_INCOMPLETE",
+            pendingToken: String(data.pendingToken ?? ""),
+            email: String(data.email ?? ""),
+            firstName: String(data.firstName ?? ""),
+            lastName: String(data.lastName ?? ""),
+        };
+    }
+
+    return {
+        status: "COMPLETE",
+        session: normalizeAuthSession(data, {
+            email: String(data.email ?? ""),
+        }),
+    };
+}
+
+export type CompleteGoogleProfilePayload = {
+    firstName?: string;
+    lastName?: string;
+    phoneNumber: string;
+    countryCode: string;
+    address: {
+        street: string;
+        city: string;
+        state: string;
+        postalCode: string;
+        country: string;
+        houseNumber?: string;
+    };
+};
+
+export async function completeGoogleProfile(
+    pendingToken: string,
+    payload: CompleteGoogleProfilePayload,
+): Promise<AuthSession> {
+    const response = await apiClient.post<ApiEnvelope<Record<string, unknown>>>(
+        "/users/auth/google/complete-profile",
+        payload,
+        // The pending token is not a session, so it is passed explicitly rather
+        // than picked up by the authenticated client.
+        { headers: { Authorization: `Bearer ${pendingToken}` } },
+    );
+
+    const data = (response.data.data ?? {}) as Record<string, unknown>;
+    return normalizeAuthSession(data, { email: "" });
+}
+
+export async function loginWithFacebook(accessToken: string): Promise<GoogleAuthResult> {
+    const response = await apiClient.post<ApiEnvelope<Record<string, unknown>>>(
+        "/users/auth/facebook",
+        { accessToken },
+    );
+
+    const body = response.data;
+    const data = (body.data ?? {}) as Record<string, unknown>;
+
+    if (body.code === "PROFILE_INCOMPLETE") {
+        return {
+            status: "PROFILE_INCOMPLETE",
+            pendingToken: String(data.pendingToken ?? ""),
+            email: String(data.email ?? ""),
+            firstName: String(data.firstName ?? ""),
+            lastName: String(data.lastName ?? ""),
+        };
+    }
+
+    return {
+        status: "COMPLETE",
+        session: normalizeAuthSession(data, { email: String(data.email ?? "") }),
+    };
+}

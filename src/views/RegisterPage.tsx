@@ -6,8 +6,11 @@ import { toast } from "react-hot-toast";
 import { Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "@/lib/router";
 import AuthShell from "../components/auth/AuthShell";
+import GoogleSignInButton from "../components/auth/GoogleSignInButton";
+import FacebookSignInButton from "../components/auth/FacebookSignInButton";
+import CompleteGoogleProfile from "../components/auth/CompleteGoogleProfile";
 import { useAuth } from "../context/AuthContext";
-import { checkRegisterEmail, registerUser } from "../services/authService";
+import { checkRegisterEmail, loginWithFacebook, loginWithGoogle, registerUser } from "../services/authService";
 import type { RegisterPayload } from "../types/auth";
 import {
     getCountryOptions,
@@ -45,7 +48,15 @@ const initialForm: RegisterPayload = {
 export default function RegisterPage() {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const { setOtpEmail } = useAuth();
+    const { saveSession, setOtpEmail } = useAuth();
+    // A Google signup that still needs a phone and address. Kept in state only,
+    // so closing the tab leaves no usable session behind.
+    const [pendingSignup, setPendingSignup] = useState<{
+        pendingToken: string;
+        email: string;
+        firstName: string;
+        lastName: string;
+    } | null>(null);
     const [phase, setPhase] = useState<RegisterPhase>("email-check");
     const [emailCheckValue, setEmailCheckValue] = useState("");
     const [emailCheckError, setEmailCheckError] = useState("");
@@ -213,6 +224,45 @@ export default function RegisterPage() {
         }));
     }
 
+    async function handleSocialResult(
+        run: () => Promise<Awaited<ReturnType<typeof loginWithGoogle>>>,
+        failureKey: string,
+    ) {
+        setIsCheckingEmail(true);
+        setEmailCheckError("");
+
+        try {
+            const result = await run();
+            if (result.status === "PROFILE_INCOMPLETE") {
+                setPendingSignup({
+                    pendingToken: result.pendingToken,
+                    email: result.email,
+                    firstName: result.firstName,
+                    lastName: result.lastName,
+                });
+                return;
+            }
+            // Already a full account — treat it as a sign-in.
+            saveSession(result.session);
+            navigate("/", { replace: true });
+        } catch (err: unknown) {
+            const apiMessage = (err as { response?: { data?: { message?: string } } })?.response?.data?.message;
+            setEmailCheckError(
+                apiMessage || t(failureKey, { defaultValue: "Sign-in failed. Please try again." }),
+            );
+        } finally {
+            setIsCheckingEmail(false);
+        }
+    }
+
+    async function handleGoogleCredential(idToken: string) {
+        await handleSocialResult(() => loginWithGoogle(idToken), "auth.googleFailed");
+    }
+
+    async function handleFacebookToken(accessToken: string) {
+        await handleSocialResult(() => loginWithFacebook(accessToken), "auth.facebookFailed");
+    }
+
     async function handleEmailCheck(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
@@ -340,6 +390,19 @@ export default function RegisterPage() {
                 asideTitle={t("auth.registerAsideTitleEmail")}
                 asideBody={t("auth.registerAsideBodyEmail")}
             >
+                {pendingSignup ? (
+                    <CompleteGoogleProfile
+                        pendingToken={pendingSignup.pendingToken}
+                        email={pendingSignup.email}
+                        firstName={pendingSignup.firstName}
+                        lastName={pendingSignup.lastName}
+                        onCompleted={(newSession) => {
+                            saveSession(newSession);
+                            navigate("/", { replace: true });
+                        }}
+                        onCancel={() => setPendingSignup(null)}
+                    />
+                ) : (
                 <form className="space-y-5" onSubmit={handleEmailCheck}>
                     <label className="block">
                         <span className="mb-2 block text-sm font-semibold text-[#17110d]">
@@ -389,6 +452,26 @@ export default function RegisterPage() {
                         {isCheckingEmail ? t("auth.checking") : t("auth.continue")}
                     </button>
 
+                    <div className="flex items-center gap-3 py-1">
+                        <span className="h-px flex-1 bg-[#e5d7cc]" />
+                        <span className="text-xs uppercase tracking-[0.1em] text-zinc-400">
+                            {t("auth.or", { defaultValue: "or" })}
+                        </span>
+                        <span className="h-px flex-1 bg-[#e5d7cc]" />
+                    </div>
+
+                    <GoogleSignInButton
+                        text="signup_with"
+                        disabled={isCheckingEmail}
+                        onCredential={handleGoogleCredential}
+                    />
+
+                    <FacebookSignInButton
+                        label={t("auth.signUpWithFacebook", { defaultValue: "Sign up with Facebook" })}
+                        disabled={isCheckingEmail}
+                        onAccessToken={handleFacebookToken}
+                    />
+
                     <p className="text-center text-sm text-zinc-500">
                         {t("auth.alreadyHaveAccount").replace("Sign in", "")}
                         <Link
@@ -399,6 +482,7 @@ export default function RegisterPage() {
                         </Link>
                     </p>
                 </form>
+                )}
             </AuthShell>
         );
     }

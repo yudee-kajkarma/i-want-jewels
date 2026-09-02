@@ -484,7 +484,7 @@ export default function ProductCard({
                     </p>
 
                     <div className="mt-5 flex items-center gap-2.5">
-                        {item.variants.map((variant) => {
+                        {item.productType === "GIFT_CARD" ? null : item.variants.map((variant) => {
                             const metalLabel =
                                 variant.title.split("/")[0]?.trim() ||
                                 variant.title;
@@ -711,8 +711,10 @@ export default function ProductCard({
                     </h3>
                 </Link>
 
+                {/* Gift cards have a single "gift card" variant, not a metal —
+                    a swatch circle there is meaningless. */}
                 <div className="flex items-center gap-2.5 transition-all duration-300 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                    {item.variants.map((variant) => {
+                    {item.productType === "GIFT_CARD" ? null : item.variants.map((variant) => {
                         const metalLabel =
                             variant.title.split("/")[0]?.trim() ||
                             variant.title;

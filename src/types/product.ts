@@ -246,6 +246,8 @@ export type ProductsPagination = {
   currentPage: number
   totalPages: number
   totalRecords: number
+  /** Variant-level count — every metal is separately sellable. */
+  totalVariants?: number
   recordsPerPage: number
   hasNextPage: boolean
   hasPrevPage: boolean
