@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
+import { sellableCountForProduct } from "../../utils/sellableCount";
 import { useCurrency } from "../../context/CurrencyContext";
 import type {
     Product,
@@ -175,15 +176,22 @@ export default function ProductsFilters({
             : [...currentValues, value];
     }
 
+    // Fallback for when the API has not supplied counts. Uses the same
+    // metal x size rule so it can never contradict the server's numbers.
     const categoryCounts = useMemo(() => {
         return products.reduce<Record<string, number>>((counts, product) => {
             const key = product.category.toLowerCase();
-            counts[key] = (counts[key] ?? 0) + 1;
+            counts[key] = (counts[key] ?? 0) + sellableCountForProduct(product);
             return counts;
         }, {});
     }, [products]);
 
     const availableCategories = filterOptions?.categories ?? [];
+    // Gift cards carry a single "gift card" variant, not a metal, so the
+    // jewellery-specific facets would otherwise offer filters that can never
+    // match anything in this category.
+    const isGiftCardCategory =
+        filters.category.trim().toLowerCase() === "gift card";
     const availableColors =
         (filterOptions?.metals?.length ?? 0) > 0
             ? (filterOptions?.metals ?? [])
@@ -289,6 +297,7 @@ export default function ProductsFilters({
                 </div>
             </section>
 
+            {isGiftCardCategory ? null : (
             <section className="border-b border-[#e9e1d8] py-8">
                 <h3 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">
                     {t("productsFilters.priceRange")}
@@ -350,7 +359,9 @@ export default function ProductsFilters({
                     </div>
                 </div>
             </section>
+            )}
 
+            {isGiftCardCategory ? null : (
             <section className="border-b border-[#e9e1d8] py-8">
                 <h3 className="text-[1.25rem] font-semibold tracking-[-0.03em] text-[#161311]">
                     {t("productsFilters.colors")}
@@ -423,6 +434,7 @@ export default function ProductsFilters({
                     })}
                 </div>
             </section>
+            )}
         </aside>
     );
 }

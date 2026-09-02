@@ -8,6 +8,7 @@ import Header from "../components/layout/Header";
 import ProductCard from "../components/sections/ProductCard";
 import ProductCardSkeleton from "../components/sections/ProductCardSkeleton";
 import ProductsFilters from "../components/sections/ProductsFilters";
+import { sellableCountForProduct } from "../utils/sellableCount";
 import { useCurrency } from "../context/CurrencyContext";
 import { getProducts } from "../services/productService";
 import type {
@@ -220,6 +221,14 @@ export default function ProductsPage({
                 return sortableProducts;
         }
     }, [products, sortOption, currency]);
+
+    // Every metal variant is separately sellable, so the counts are variant
+    // based. This is the variant total for the cards currently on screen —
+    // the page total comes from the API as `totalVariants`.
+    const shownVariantCount = useMemo(
+        () => sortedProducts.reduce((sum, product) => sum + sellableCountForProduct(product), 0),
+        [sortedProducts],
+    );
 
     useEffect(() => {
         setFilters(initialFilterState ?? defaultFilterState);
@@ -576,7 +585,7 @@ export default function ProductsPage({
                             </p>
                             <p className="mt-1 text-[14px] font-medium uppercase tracking-[0.08em] text-zinc-900">
                                 {productsData
-                                    ? t("products.showingProductsOf", { shown: sortedProducts.length, count: pagination?.totalRecords ?? sortedProducts.length })
+                                    ? t("products.showingProductsOf", { shown: shownVariantCount, count: pagination?.totalVariants ?? pagination?.totalRecords ?? shownVariantCount })
                                     : t("products.unableToLoad")}
                             </p>
                         </div>
@@ -601,7 +610,7 @@ export default function ProductsPage({
                             <div className="mb-6 flex flex-col gap-4 border-b border-zinc-200 pb-5 xl:flex-row xl:items-center xl:justify-between">
                                 <div className="flex flex-wrap items-center gap-5">
                                     <span className="hidden text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900 lg:inline">
-                                        {t("products.productsCount", { count: sortedProducts.length })}
+                                        {t("products.productsCount", { count: shownVariantCount })}
                                     </span>
 
                                     {appliedFilterKeys.length > 0 ? (

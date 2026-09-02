@@ -36,3 +36,5 @@ tsconfig.tsbuildinfo
 
 # translation pipeline cache (regenerable, can be large)
 scripts/translate/.cache.json
+
+certificates
