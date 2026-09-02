@@ -10,6 +10,8 @@ import type {
 } from '../types/cart'
 import { toPrice, type Price } from '../utils/price'
 import { adminApiClient, authApiClient } from './apiClient'
+import { getStoredAuthSession } from '../utils/authStorage'
+import { setGuestCartId } from '../utils/guestCart'
 
 type CartItemApiResponse = Record<string, unknown>
 
@@ -209,6 +211,14 @@ function normalizeCart(response: CartApiResponse['data']): Cart {
 
 export async function getCart(): Promise<Cart> {
   const response = await authApiClient.get<CartApiResponse>('/cart')
+
+  // The first guest request creates a cart server-side; remember its id so the
+  // basket survives a refresh. Only for signed-out shoppers — a logged-in cart
+  // is keyed by the account, and storing an id there would be misleading.
+  const cartId = (response.data.data as { id?: string } | undefined)?.id
+  if (cartId && !getStoredAuthSession()?.token) {
+    setGuestCartId(cartId)
+  }
 
   return normalizeCart(response.data.data)
 }

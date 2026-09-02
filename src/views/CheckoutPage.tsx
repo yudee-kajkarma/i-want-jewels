@@ -14,6 +14,7 @@ import Header from "../components/layout/Header";
 import { useAuth } from "../context/AuthContext";
 import { useCurrency } from "../context/CurrencyContext";
 import { createOrder } from "../services/orderService";
+import { clearGuestCartId } from "../utils/guestCart";
 import {
   validateGiftCard,
   type GiftCardValidation,
@@ -35,8 +36,11 @@ import type { UserAddress, UserProfileAddressPayload } from "../types/profile";
 import {
   getCountryName,
   getCountryOptions,
+  getDialCodeForCountry,
+  getDialCodeOptions,
   getStateName,
   getStateOptions,
+  isValidEmailAddress,
   isValidPostalCode,
 } from "../utils/location";
 import {
@@ -103,6 +107,20 @@ export default function CheckoutPage() {
   const [error, setError] = useState("");
   const [addresses, setAddresses] = useState<UserAddress[]>([]);
   const [selectedAddressId, setSelectedAddressId] = useState("");
+  // Guests have no saved addresses, so they type their details here. Held in
+  // state only — nothing about a guest is persisted until the order is placed.
+  const [guest, setGuest] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    countryCode: "",
+    phoneNumber: "",
+    street: "",
+    city: "",
+    state: "",
+    postalCode: "",
+    country: "",
+  });
   const [isAddressLoading, setIsAddressLoading] = useState(true);
   const [isAddressSaving, setIsAddressSaving] = useState(false);
   const [addressError, setAddressError] = useState("");
@@ -123,6 +141,11 @@ export default function CheckoutPage() {
     [location.key],
   );
   const countryOptions = useMemo(() => getCountryOptions(), []);
+  const dialCodeOptions = useMemo(() => getDialCodeOptions(), []);
+  const guestStateOptions = useMemo(
+    () => getStateOptions(guest.country),
+    [guest.country],
+  );
   const stateOptions = useMemo(
     () => getStateOptions(addressForm.country),
     [addressForm.country],
@@ -219,8 +242,17 @@ export default function CheckoutPage() {
     }
   }, [checkoutSource]);
 
+  const isSignedIn = Boolean(session);
+
   useEffect(() => {
     let isMounted = true;
+
+    // Guests have no saved address book — they type one into the guest form
+    // below. Calling the account endpoint signed out just 401s.
+    if (!isSignedIn) {
+      setIsAddressLoading(false);
+      return;
+    }
 
     async function loadAddresses() {
       setIsAddressLoading(true);
@@ -259,8 +291,8 @@ export default function CheckoutPage() {
     return () => {
       isMounted = false;
     };
-    // i18n is a stable instance, so this effect still runs once.
-  }, [i18n]);
+    // i18n is a stable instance, so this effect still runs once per sign-in state.
+  }, [i18n, isSignedIn]);
 
   const selectedAddress = useMemo(
     () => addresses.find((address) => address.id === selectedAddressId) ?? null,
@@ -387,7 +419,33 @@ export default function CheckoutPage() {
       return;
     }
 
-    if (!selectedAddressId) {
+    const isGuest = !session;
+
+    if (isGuest) {
+      const missing =
+        !guest.email.trim() ||
+        !guest.firstName.trim() ||
+        !guest.lastName.trim() ||
+        !guest.phoneNumber.trim() ||
+        !guest.countryCode.trim() ||
+        !guest.street.trim() ||
+        !guest.city.trim() ||
+        !guest.postalCode.trim() ||
+        !guest.country.trim();
+
+      if (missing) {
+        setError(
+          t("checkout.guestDetailsRequired", {
+            defaultValue: "Please fill in your email and full delivery address.",
+          }),
+        );
+        return;
+      }
+      if (!isValidEmailAddress(guest.email)) {
+        setError(t("auth.validEmailError"));
+        return;
+      }
+    } else if (!selectedAddressId) {
       setError(t("checkout.selectShippingAddressError"));
       return;
     }
@@ -418,7 +476,22 @@ export default function CheckoutPage() {
           : paymentMethod;
 
       const result = await createOrder({
-        addressId: selectedAddressId,
+        ...(isGuest
+          ? {
+              guestEmail: guest.email.trim(),
+              guestFirstName: guest.firstName.trim(),
+              guestLastName: guest.lastName.trim(),
+              guestCountryCode: guest.countryCode.trim(),
+              guestPhoneNumber: guest.phoneNumber.trim(),
+              guestAddress: {
+                street: guest.street.trim(),
+                city: guest.city.trim(),
+                state: guest.state.trim(),
+                postalCode: guest.postalCode.trim(),
+                country: guest.country.trim(),
+              },
+            }
+          : { addressId: selectedAddressId }),
         paymentMethod: effectivePaymentMethod,
         currency: getCurrencyIsoCode(currency),
         successUrl:
@@ -434,6 +507,12 @@ export default function CheckoutPage() {
             ? (giftValidation.code ?? giftCodeInput.trim())
             : undefined,
       });
+
+      // The cart behind this order is consumed server-side; drop the stale id
+      // so the next visit starts a fresh basket.
+      if (isGuest) {
+        clearGuestCartId();
+      }
 
       setPendingOrderStatus({
         orderId: result.order.id,
@@ -596,13 +675,129 @@ export default function CheckoutPage() {
                       </button>
                     </div>
 
-                    {isAddressLoading ? (
+                    {!session ? (
+                      <div className="mt-4 space-y-3">
+                        <p className="text-sm text-zinc-500">
+                          {t("checkout.guestIntro", {
+                            defaultValue:
+                              "Checking out as a guest. We need an email for your order confirmation and tracking.",
+                          })}
+                        </p>
+
+                        <input
+                          type="email"
+                          value={guest.email}
+                          onChange={(e) => setGuest((g) => ({ ...g, email: e.target.value }))}
+                          placeholder={t("auth.emailLabel")}
+                          className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                        />
+
+                        <div className="grid gap-3 sm:grid-cols-2">
+                          <input
+                            value={guest.firstName}
+                            onChange={(e) => setGuest((g) => ({ ...g, firstName: e.target.value }))}
+                            placeholder={t("auth.firstName")}
+                            className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                          />
+                          <input
+                            value={guest.lastName}
+                            onChange={(e) => setGuest((g) => ({ ...g, lastName: e.target.value }))}
+                            placeholder={t("auth.lastName")}
+                            className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                          />
+                        </div>
+
+                        <select
+                          value={guest.country}
+                          onChange={(e) => {
+                            const country = e.target.value;
+                            setGuest((g) => ({
+                              ...g,
+                              country,
+                              state: "",
+                              // Prefill the dialling code from the country, but
+                              // leave it editable — people ship abroad.
+                              countryCode: g.countryCode || getDialCodeForCountry(country),
+                            }));
+                          }}
+                          className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                        >
+                          <option value="">{t("auth.selectCountry", { defaultValue: "Select country" })}</option>
+                          {countryOptions.map((c) => (
+                            <option key={c.code} value={c.code}>{c.name}</option>
+                          ))}
+                        </select>
+
+                        <div className="grid gap-3 sm:grid-cols-2">
+                          <select
+                            value={guest.countryCode}
+                            onChange={(e) => setGuest((g) => ({ ...g, countryCode: e.target.value }))}
+                            className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                          >
+                            <option value="">{t("auth.countryCode")}</option>
+                            {dialCodeOptions.map((d) => (
+                              <option key={d.countryCode} value={d.dialCode}>{d.name} ({d.dialCode})</option>
+                            ))}
+                          </select>
+                          <input
+                            type="tel"
+                            value={guest.phoneNumber}
+                            onChange={(e) => setGuest((g) => ({ ...g, phoneNumber: e.target.value }))}
+                            placeholder={t("auth.phoneNumber")}
+                            className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                          />
+                        </div>
+
+                        <input
+                          value={guest.street}
+                          onChange={(e) => setGuest((g) => ({ ...g, street: e.target.value }))}
+                          placeholder={t("auth.street", { defaultValue: "Street address" })}
+                          className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                        />
+
+                        <div className="grid gap-3 sm:grid-cols-3">
+                          <input
+                            value={guest.city}
+                            onChange={(e) => setGuest((g) => ({ ...g, city: e.target.value }))}
+                            placeholder={t("auth.city", { defaultValue: "City" })}
+                            className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                          />
+                          {guestStateOptions.length > 0 ? (
+                            <select
+                              value={guest.state}
+                              onChange={(e) => setGuest((g) => ({ ...g, state: e.target.value }))}
+                              className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                            >
+                              <option value="">{t("auth.selectState", { defaultValue: "Select state" })}</option>
+                              {guestStateOptions.map((st) => (
+                                <option key={st.code} value={st.code}>{st.name}</option>
+                              ))}
+                            </select>
+                          ) : (
+                            <input
+                              value={guest.state}
+                              onChange={(e) => setGuest((g) => ({ ...g, state: e.target.value }))}
+                              placeholder={t("auth.stateLabel", { defaultValue: "State" })}
+                              className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                            />
+                          )}
+                          <input
+                            value={guest.postalCode}
+                            onChange={(e) => setGuest((g) => ({ ...g, postalCode: e.target.value }))}
+                            placeholder={t("auth.postalCode", { defaultValue: "Postal code" })}
+                            className="h-12 w-full border border-[#ddcdc0] px-4 text-sm outline-none focus:border-[#17110d]"
+                          />
+                        </div>
+                      </div>
+                    ) : null}
+
+                    {session && isAddressLoading ? (
                       <p className="mt-4 text-sm text-zinc-500">
                         {t("checkout.loadingAddresses")}
                       </p>
                     ) : null}
 
-                    {!isAddressLoading && addresses.length > 0 ? (
+                    {session && !isAddressLoading && addresses.length > 0 ? (
                       <div className="mt-4 space-y-3">
                         {addresses.map((address) => {
                           const isSelected = selectedAddressId === address.id;
@@ -851,33 +1046,6 @@ export default function CheckoutPage() {
                         </div>
                       </label>
 
-                      {/* COD option hidden
-                      {!hasGiftCardItems ? (
-                        <label className={`flex items-start gap-4 border px-4 py-4 transition ${
-                          giftValidation?.valid
-                            ? 'cursor-not-allowed border-[#eadfd4] bg-zinc-50 opacity-60'
-                            : `cursor-pointer ${paymentMethod === 'COD' ? 'border-[#17110d] bg-white' : 'border-[#eadfd4] bg-white/70 hover:border-[#c4a68b]'}`
-                        }`}>
-                          <input
-                            type="radio"
-                            name="paymentMethod"
-                            value="COD"
-                            checked={paymentMethod === 'COD'}
-                            disabled={giftValidation?.valid ?? false}
-                            onChange={() => setPaymentMethod('COD')}
-                            className="mt-1 h-4 w-4 border-[#d8c8bb] text-[#17110d] focus:ring-[#b88a65]"
-                          />
-                          <div>
-                            <p className="font-bold text-[#17110d]">{t("checkout.cashOnDelivery")}</p>
-                            <p className="mt-1 text-sm leading-6 text-zinc-500">
-                              {giftValidation?.valid
-                                ? 'Not available — a gift card discount has been applied.'
-                                : 'Your order is placed immediately and payment is collected on delivery.'}
-                            </p>
-                          </div>
-                        </label>
-                      ) : null}
-                      */}
                     </div>
                   </div>
                 </div>

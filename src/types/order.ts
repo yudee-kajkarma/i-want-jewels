@@ -1,6 +1,11 @@
 import type { Price } from '../utils/price'
 import type { CartItem } from './cart'
 
+/**
+ * 'COD' is never offered — the server rejects it on order creation. It stays in
+ * the union because orders placed before it was withdrawn still carry it, and
+ * the account and admin pages print the stored value.
+ */
 export type PaymentMethod = 'COD' | 'ONLINE'
 
 export type OrderStatus = 'PENDING' | 'CONFIRMED' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED' | 'RETURNED'
@@ -191,14 +196,31 @@ export type CheckoutSession = {
   url: string
 }
 
+export type GuestCheckoutDetails = {
+  guestEmail: string
+  guestFirstName: string
+  guestLastName: string
+  guestPhoneNumber: string
+  guestCountryCode: string
+  guestAddress: {
+    street: string
+    houseNumber?: string
+    city: string
+    state?: string
+    postalCode: string
+    country: string
+  }
+}
+
 export type CreateOrderPayload = {
-  addressId: string
+  /** Omitted for guest checkout, which sends `guestAddress` instead. */
+  addressId?: string
   paymentMethod: PaymentMethod
   currency: string
   successUrl?: string
   cancelUrl?: string
   giftCardCode?: string
-}
+} & Partial<GuestCheckoutDetails>
 
 export type CreateOrderResult = {
   order: Order

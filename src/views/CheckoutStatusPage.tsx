@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CheckCircle2, RotateCcw, ShoppingBag, XCircle } from 'lucide-react'
 import { Link, useSearchParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
@@ -8,6 +8,7 @@ import Header from '../components/layout/Header'
 import { addCartItem, clearCartItems } from '../services/cartService'
 import { getOrderById, verifyPaymentStatus } from '../services/orderService'
 import { fetchCart } from '../store/cartSlice'
+import type { PendingOrderStatus } from '../types/order'
 import { useAppDispatch } from '../store/hooks'
 import {
   clearCartRestoreSnapshot,
@@ -23,11 +24,26 @@ export default function CheckoutStatusPage() {
   const dispatch = useAppDispatch()
   const [searchParams] = useSearchParams()
   const paymentResult = searchParams.get('payment') === 'cancel' ? 'cancel' : 'success'
-  const pendingOrder = useMemo(() => getPendingOrderStatus(), [])
+  // Read after mount, never during render: this lives in browser storage, so
+  // the server renders it as null and any render-time read makes the two HTMLs
+  // disagree. `hasLoadedPendingOrder` also holds the sync effect until the
+  // order it depends on is actually available.
+  const [pendingOrder, setPendingOrder] = useState<PendingOrderStatus | null>(null)
+  const [hasLoadedPendingOrder, setHasLoadedPendingOrder] = useState(false)
+
+  useEffect(() => {
+    setPendingOrder(getPendingOrderStatus())
+    setHasLoadedPendingOrder(true)
+  }, [])
+
   const [isSyncing, setIsSyncing] = useState(true)
   const [syncError, setSyncError] = useState('')
 
   useEffect(() => {
+    if (!hasLoadedPendingOrder) {
+      return
+    }
+
     let isMounted = true
 
     async function syncCartAfterCheckout() {
@@ -85,7 +101,7 @@ export default function CheckoutStatusPage() {
     }
     // i18n is a stable instance: adding it satisfies the linter without
     // re-running this effect, which would re-verify the payment.
-  }, [dispatch, paymentResult, pendingOrder?.source, i18n])
+  }, [dispatch, paymentResult, pendingOrder?.source, hasLoadedPendingOrder, i18n])
 
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">
@@ -113,9 +129,7 @@ export default function CheckoutStatusPage() {
               ) : null}
               <p>
                 {paymentResult === 'success'
-                  ? pendingOrder?.paymentMethod === 'ONLINE'
-                    ? t('checkout.paymentCompleted')
-                    : t('checkout.codCompleted')
+                  ? t('checkout.paymentCompleted')
                   : t('checkout.paymentFailed')}
               </p>
               {isSyncing ? <p className="mt-3 text-zinc-500">{t('checkout.syncing')}</p> : null}

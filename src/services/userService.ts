@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { authApiClient } from './apiClient'
+import { adminApiClient, authApiClient } from './apiClient'
 import type { UpdateProfileFormPayload, UpdateProfileRequestPayload, UserAddress, UserProfile, UserProfileAddressPayload } from '../types/profile'
 import type { AdminAddress, UpdateAdminAddressPayload } from '../types/address'
 import { getDialCodeForCountry, normalizeCountryCode, normalizeDialCode, normalizeStateCode } from '../utils/location'
@@ -203,4 +203,93 @@ export async function getAdminAddress(): Promise<AdminAddress | null> {
 
 export async function updateAdminAddress(payload: UpdateAdminAddressPayload): Promise<void> {
   await authApiClient.put('/addresses/admin/me', payload)
+}
+
+// ── Admin: customers ────────────────────────────────────────────────────────
+
+export type AdminCustomerSummary = {
+  id: string
+  username: string
+  email: string
+  firstName: string
+  lastName: string
+  phoneNumber: string
+  countryCode: string
+  status: string
+  role: string
+  authProvider: string
+  createdAt: string
+}
+
+export type AdminCustomerCartItem = {
+  productId: string
+  variantId: string
+  variantName: string
+  sku: string
+  title: string
+  price: number
+  quantity: number
+  thumbnail?: string
+  size?: number
+  isGiftCard: boolean
+  addedAt?: string
+}
+
+export type AdminCustomerDetail = {
+  customer: AdminCustomerSummary
+  addresses: Array<{
+    id?: string
+    street: string
+    houseNumber?: string
+    city: string
+    state: string
+    postalCode: string
+    country: string
+    isDefault: boolean
+    addressType?: string
+  }>
+  cart: {
+    itemCount: number
+    totalValue: number
+    updatedAt: string | null
+    items: AdminCustomerCartItem[]
+  }
+}
+
+type CustomersListResponse = {
+  success: boolean
+  data?: AdminCustomerSummary[]
+  pagination?: {
+    currentPage: number
+    totalPages: number
+    totalRecords: number
+    recordsPerPage: number
+    hasNextPage: boolean
+    hasPrevPage: boolean
+  }
+}
+
+export async function getAdminCustomers(
+  page = 1,
+  limit = 20,
+  search?: string,
+): Promise<{ customers: AdminCustomerSummary[]; pagination: CustomersListResponse['pagination'] }> {
+  const params = new URLSearchParams({ page: String(page), limit: String(limit) })
+  if (search?.trim()) params.set('search', search.trim())
+
+  const response = await adminApiClient.get<CustomersListResponse>(
+    `/users/admin/customers?${params.toString()}`,
+  )
+
+  return {
+    customers: response.data.data ?? [],
+    pagination: response.data.pagination,
+  }
+}
+
+export async function getAdminCustomerDetail(userId: string): Promise<AdminCustomerDetail | null> {
+  const response = await adminApiClient.get<{ success: boolean; data?: AdminCustomerDetail }>(
+    `/users/admin/customers/${userId}`,
+  )
+  return response.data.data ?? null
 }

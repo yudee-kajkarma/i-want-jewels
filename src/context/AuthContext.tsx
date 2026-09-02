@@ -9,6 +9,7 @@ import {
 import { toast } from "react-hot-toast";
 import { clientTranslate } from "@/i18n/clientRef";
 import { logoutUser } from "../services/authService";
+import { clearGuestCartId } from "../utils/guestCart";
 import type { AuthSession } from "../types/auth";
 import {
   clearPendingOtpEmail,
@@ -62,6 +63,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       isAuthReady,
       pendingOtpEmail,
       saveSession(nextSession) {
+        // The server merges the guest cart into the account on sign-in, so the
+        // stored guest id is now stale and must not be sent again.
+        clearGuestCartId();
         setSession(nextSession);
         storeAuthSession(nextSession);
       },
