@@ -8,6 +8,7 @@ import { clientNamespaces, getTranslation } from "../../i18n";
 import { getLocalizedStaticParams } from "../../i18n/settings";
 import { I18nProvider } from "../../i18n/I18nProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { jewelryStoreSchema, websiteSchema } from "../../lib/structuredData";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -58,6 +59,19 @@ export default async function RootLayout({
             dir={dir(locale)}
             className={`${montserrat.variable} ${play.variable} ${poppins.variable}`}
         >
+            <head>
+                {/* Site-wide schema.org. Product and FAQ markup live on their
+                    own pages, where the content they describe is visible. */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify([
+                            websiteSchema(locale),
+                            jewelryStoreSchema(),
+                        ]),
+                    }}
+                />
+            </head>
             <body>
                 <I18nProvider locale={locale} resources={resources}>
                     <Providers>{children}</Providers>
