@@ -108,10 +108,6 @@ export default function ResourcesPage() {
                 {/* ── Category Cards Grid ───────────────────────────────── */}
                 <section className="mx-auto max-w-[1480px] px-6 py-14 lg:px-10 lg:py-20">
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {resourceCategories.map((category, index) => (
-                            <CategoryCard key={category.slug} category={category} index={index} />
-                        ))}
-
                         {/* ── Blog card → redirects to /blogs ───────────────── */}
                         <Link
                             to="/blogs"
@@ -150,6 +146,10 @@ export default function ResourcesPage() {
                                 </div>
                             </div>
                         </Link>
+
+                        {resourceCategories.map((category, index) => (
+                            <CategoryCard key={category.slug} category={category} index={index} />
+                        ))}
                     </div>
                 </section>
 
