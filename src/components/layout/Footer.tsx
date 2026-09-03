@@ -3,6 +3,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "@/lib/router";
 import logofooter from "@/../public/logofooter.png";
+import { SOCIAL_LINKS } from "@/lib/siteProfile";
 
 const CONTACT_EMAIL = "Info@iwantjewels.com";
 // Display form for humans; the tel:/wa.me links need it digits-only.
@@ -105,11 +106,8 @@ export default function Footer() {
     { label: t("footer.faqs"), to: "/faq" },
   ];
 
-  const socialLinks = [
-    { name: "Instagram", href: "https://www.instagram.com/iwantjewels/" },
-    { name: "Facebook", href: "https://www.facebook.com/iwjewels/" },
-    { name: "TikTok", href: "https://www.tiktok.com/@iwantjewelsofficial" },
-  ];
+  // Shared with the JewelryStore schema's sameAs, so the two cannot diverge.
+  const socialLinks = SOCIAL_LINKS;
 
   return (
     <footer className="bg-white font-poppins">

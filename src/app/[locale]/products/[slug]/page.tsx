@@ -9,6 +9,7 @@ import {
 } from "../../../../services/productService";
 import ProductDetailPage from "../../../../views/ProductDetailPage";
 import { formatPrice } from "../../../../utils/price";
+import { productSchema } from "../../../../lib/structuredData";
 
 export const dynamic = "force-dynamic";
 
@@ -95,9 +96,17 @@ export default async function Page({ params }: ProductPageProps) {
   }
 
   return (
-    <ProductDetailPage
-      initialProduct={initialData.product}
-      initialReviewsData={initialData.reviewsData}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema(initialData.product)),
+        }}
+      />
+      <ProductDetailPage
+        initialProduct={initialData.product}
+        initialReviewsData={initialData.reviewsData}
+      />
+    </>
   );
 }
