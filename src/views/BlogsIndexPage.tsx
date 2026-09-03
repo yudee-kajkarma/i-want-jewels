@@ -18,7 +18,7 @@ function BlogCard({ link }: { link: (typeof blogLinks)[number] }) {
             to={link.href}
             className="group relative flex flex-col overflow-hidden border border-[#eadfd4] bg-white transition duration-300 hover:border-[#d889ac] hover:shadow-[0_18px_40px_rgba(194,110,143,0.12)]"
         >
-            <div className="relative h-[220px] overflow-hidden bg-[#f6f0ea]">
+            <div className="relative aspect-square overflow-hidden bg-[#f6f0ea]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={link.coverImage}
@@ -63,7 +63,7 @@ export default function BlogsIndexPage() {
                 </section>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
-                    {blogLinks.map((link) => (
+                    {[...blogLinks].reverse().map((link) => (
                         <BlogCard key={link.href} link={link} />
                     ))}
                 </div>

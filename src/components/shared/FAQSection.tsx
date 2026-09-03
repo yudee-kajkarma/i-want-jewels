@@ -21,15 +21,19 @@ const FAQSection: React.FC<FAQSectionProps> = ({
 }) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+    if (!faqs || faqs.length === 0) return null;
+
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
         <div className={`mb-12 ${className}`}>
-            <h2 className="text-3xl md:text-4xl font-play font-semibold text-[#1f2732] mb-8">
-                {title}
-            </h2>
+            {title && (
+                <h2 className="text-3xl md:text-4xl font-play font-semibold text-[#1f2732] mb-8">
+                    {title}
+                </h2>
+            )}
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
                     <div

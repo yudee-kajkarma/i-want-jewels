@@ -489,4 +489,84 @@ export const blogLinks: BlogLink[] = [
         href: "/blogs/tennis-necklace-under-500",
         coverImage: "/blog-images/blog-image-86.jpg",
     },
+    {
+        title: "21 Christmas Gifts for Your Wife She'll Actually Love",
+        href: "/blogs/christmas-gifts-for-wife",
+        coverImage: "/blog-images/blog-image-87.jpg",
+    },
+    {
+        title: "25 Christmas Gifts for Your Girlfriend She'll Love",
+        href: "/blogs/christmas-gifts-for-girlfriend",
+        coverImage: "/blog-images/new-blog-images/IWJ Blog2/PIC2.png",
+    },
+    {
+        title: "Christmas Party Jewellery: What to Wear With Your Outfit",
+        href: "/blogs/christmas-party-jewellery-what-to-wear",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG3/img1.png",
+    },
+    {
+        title: "Are Black Friday Jewellery Deals Really Worth It? 9 Checks Before You Buy",
+        href: "/blogs/is-black-friday-a-good-time-to-buy-jewellery",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG4/PIC1.png",
+    },
+    {
+        title: "Black Friday Gifts for Her: What to Buy Early and What to Avoid",
+        href: "/blogs/black-friday-gift-for-her",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG5/PIC1.png",
+    },
+    {
+        title: "Jewellery Gifts When You Don't Know Her Size: 7 Safe Choices",
+        href: "/blogs/jewellery-gifts-when-you-dont-know-her-size",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG6/PIC1.png",
+    },
+    {
+        title: "Are Black Friday Jewellery Deals Worth It? 9 Checks Before You Buy",
+        href: "/blogs/are-black-friday-jewellery-deals-worth-it",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG7/PIC1.png",
+    },
+    {
+        title: "Should You Buy Christmas Gifts on Black Friday? What to Buy Early and What Can Wait",
+        href: "/blogs/should-you-buy-christmas-gifts-on-black-friday",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG8/PIC1.png",
+    },
+    {
+        title: "How to Style Halloween Jewellery Without Looking Like a Costume",
+        href: "/blogs/style-halloween-jewellery-without-looking-like-a-costume",
+        coverImage: "/blog-images/new-blog-images/IWJ Blog9/PIC1.png",
+    },
+    {
+        title: "What Jewellery Goes with a Halloween Costume?",
+        href: "/blogs/jewellery-for-halloween-costumes",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG10/PIC1.png",
+    },
+    {
+        title: "Halloween Earrings for Wigs and Face Paint",
+        href: "/blogs/halloween-earrings-for-wigs-and-face-paint",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG11/PIC1.png",
+    },
+    {
+        title: "Halloween Jewellery You Can Wear After October",
+        href: "/blogs/halloween-jewellery-you-can-wear-after-october",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG12/PIC1.png",
+    },
+    {
+        title: "Skull Jewellery Meaning, Symbolism and History",
+        href: "/blogs/meaning-of-skull-jewellery",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG13/PIC1.png",
+    },
+    {
+        title: "Last-Minute Halloween Jewellery Ideas",
+        href: "/blogs/last-minute-halloween-jewellery-ideas",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG14/PIC1.png",
+    },
+    {
+        title: "Halloween Jewellery Gift Guide for October Birthdays",
+        href: "/blogs/halloween-jewellery-gift-guide",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG17/PIC1.png",
+    },
+    {
+        title: "Halloween Jewellery for Work: Office-to-Party Style",
+        href: "/blogs/halloween-jewellery-for-work",
+        coverImage: "/blog-images/new-blog-images/IWJ BLOG15/PIC1.png",
+    },
 ];

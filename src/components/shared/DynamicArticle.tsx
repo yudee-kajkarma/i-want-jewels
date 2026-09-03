@@ -139,6 +139,7 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                 );
                             }
                             if (block.type === "faq") {
+                                if (!block.items || block.items.length === 0) return null;
                                 return (
                                     <FAQSection
                                         key={bIdx}
