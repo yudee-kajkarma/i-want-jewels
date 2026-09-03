@@ -4,7 +4,7 @@
     "description": "Devriez-vous acheter des cadeaux de Noël le Black Friday? Apprenez quels cadeaux acheter tôt, ce qui peut attendre et comment éviter les problèmes de taille, de retours et de livraison."
   },
   "h1": "Devriez-vous acheter des cadeaux de Noël le Black Friday? Quoi acheter tôt et ce qui peut attendre",
-  "coverImage": "/blog-images/new-blog-images/IWJ BLOG8/PIC1.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog8/PIC1.png",
   "sections": [
     {
       "content": [
@@ -179,7 +179,7 @@
       "content": [
         {
           "type": "image",
-          "src": "/blog-images/new-blog-images/IWJ BLOG8/PIC2.png",
+          "src": "/blog-images/new-blog-images/iwj-blog8/PIC2.png",
           "alt": "Stratégie de shopping de cadeaux de Noël Black Friday"
         }
       ]
@@ -503,7 +503,7 @@
       "content": [
         {
           "type": "image",
-          "src": "/blog-images/new-blog-images/IWJ BLOG8/PIC3.png",
+          "src": "/blog-images/new-blog-images/iwj-blog8/PIC3.png",
           "alt": "Chronologie et planification de shopping de cadeaux de Noël"
         }
       ]
