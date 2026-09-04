@@ -27,18 +27,62 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Atuendo o evento", "Mejor dirección de joyas", "Evitar"],
+          "headers": [
+            "Atuendo o evento",
+            "Mejor dirección de joyas",
+            "Evitar"
+          ],
           "rows": [
-            ["Fiesta de oficina", "Aretes, huggies o aros refinados", "Aretes muy grandes o distractores"],
-            ["Cóctel", "Pendientes, aros o una pieza statement", "Varias piezas audaces juntas"],
-            ["Cena formal de Navidad", "Pendientes elegantes, aretes pulidos o un collar delicado", "Joyas casuales o de novedad"],
-            ["Vestido negro simple", "Aretes statement, aros brillantes o pendientes largos", "Joyas que desaparecen completamente"],
-            ["Vestido de lentejuelas", "Aretes, huggies o aretes minimalistas", "Aretes grandes más un collar audaz"],
-            ["Vestido de terciopelo", "Pendientes, aros o aretes clásicos", "Demasiados accesorios pesados"],
-            ["Vestido de seda", "Pendientes o aretes de diamantes limpios", "Joyas que enganchan o tiran la tela"],
-            ["Vestido cuello alto", "Aretes y un brazalete; generalmente sin collar", "Un collar que compite con el escote"],
-            ["Vestido sin tirantes", "Aretes con un collar delicado opcional", "Saturar el escote abierto"],
-            ["Jumpsuit", "Aros, aretes geométricos o un brazalete estructurado", "Piezas demasiado delicadas que se pierden"]
+            [
+              "Fiesta de oficina",
+              "Aretes, huggies o aros refinados",
+              "Aretes muy grandes o distractores"
+            ],
+            [
+              "Cóctel",
+              "Pendientes, aros o una pieza statement",
+              "Varias piezas audaces juntas"
+            ],
+            [
+              "Cena formal de Navidad",
+              "Pendientes elegantes, aretes pulidos o un collar delicado",
+              "Joyas casuales o de novedad"
+            ],
+            [
+              "Vestido negro simple",
+              "Aretes statement, aros brillantes o pendientes largos",
+              "Joyas que desaparecen completamente"
+            ],
+            [
+              "Vestido de lentejuelas",
+              "Aretes, huggies o aretes minimalistas",
+              "Aretes grandes más un collar audaz"
+            ],
+            [
+              "Vestido de terciopelo",
+              "Pendientes, aros o aretes clásicos",
+              "Demasiados accesorios pesados"
+            ],
+            [
+              "Vestido de seda",
+              "Pendientes o aretes de diamantes limpios",
+              "Joyas que enganchan o tiran la tela"
+            ],
+            [
+              "Vestido cuello alto",
+              "Aretes y un brazalete; generalmente sin collar",
+              "Un collar que compite con el escote"
+            ],
+            [
+              "Vestido sin tirantes",
+              "Aretes con un collar delicado opcional",
+              "Saturar el escote abierto"
+            ],
+            [
+              "Jumpsuit",
+              "Aros, aretes geométricos o un brazalete estructurado",
+              "Piezas demasiado delicadas que se pierden"
+            ]
           ]
         }
       ]
@@ -167,6 +211,13 @@
       "heading": "Qué joyas llevar con seda?",
       "content": [
         {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog3/img3.png",
+          "alt": "Jewellery for satin and silk dress styling",
+          "width": 1200,
+          "height": 750
+        },
+        {
           "type": "paragraph",
           "text": "La seda tiene una superficie reflectante suave, por lo que las joyas con líneas limpias y brillo controlado son generalmente las más efectivas."
         },
@@ -254,12 +305,32 @@
         },
         {
           "type": "table",
-          "headers": ["Acabado", "Efecto general", "Colores de atuendo fuertes"],
+          "headers": [
+            "Acabado",
+            "Efecto general",
+            "Colores de atuendo fuertes"
+          ],
           "rows": [
-            ["Oro amarillo", "Cálido, rico y festivo", "Negro, rojo, verde, burdeos, crema y champán"],
-            ["Blanco o plateado", "Limpio, brillante y moderno", "Negro, marino, plata, blanco, gris y colores frescos"],
-            ["Oro rosa", "Suave, romántico y femenino", "Blush, rosa, champán y colores pastel"],
-            ["Metales mixtos", "Contemporáneo e individual", "Atuendos simples con competencia de color mínima"]
+            [
+              "Oro amarillo",
+              "Cálido, rico y festivo",
+              "Negro, rojo, verde, burdeos, crema y champán"
+            ],
+            [
+              "Blanco o plateado",
+              "Limpio, brillante y moderno",
+              "Negro, marino, plata, blanco, gris y colores frescos"
+            ],
+            [
+              "Oro rosa",
+              "Suave, romántico y femenino",
+              "Blush, rosa, champán y colores pastel"
+            ],
+            [
+              "Metales mixtos",
+              "Contemporáneo e individual",
+              "Atuendos simples con competencia de color mínima"
+            ]
           ]
         },
         {
@@ -309,16 +380,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Necesidad de estilo", "Dirección de joyas", "Recomendación I Want Jewels"],
+          "headers": [
+            "Necesidad de estilo",
+            "Dirección de joyas",
+            "Recomendación I Want Jewels"
+          ],
           "rows": [
-            ["Brillo de party más seguro", "Aretes de diamantes", "Cadenza"],
-            ["Party de oficina moderno", "Huggies", "Amadea"],
-            ["Atuendo nocturno elegante", "Pendientes", "Orsola"],
-            ["Forma de party moderna", "Aros de diamantes", "Pave Hoops"],
-            ["Look statement vestido simple", "Aretes statement", "Lusso"],
-            ["Atuendo romántico suave", "Aretes de mariposa", "Farfalla"],
-            ["Vestido detallado o de lentejuelas", "Aretes minimalistas", "Laluce"],
-            ["Línea nocturna formal", "Pendientes largos", "Concetta Long"]
+            [
+              "Brillo de party más seguro",
+              "Aretes de diamantes",
+              "Cadenza"
+            ],
+            [
+              "Party de oficina moderno",
+              "Huggies",
+              "Amadea"
+            ],
+            [
+              "Atuendo nocturno elegante",
+              "Pendientes",
+              "Orsola"
+            ],
+            [
+              "Forma de party moderna",
+              "Aros de diamantes",
+              "Pave Hoops"
+            ],
+            [
+              "Look statement vestido simple",
+              "Aretes statement",
+              "Lusso"
+            ],
+            [
+              "Atuendo romántico suave",
+              "Aretes de mariposa",
+              "Farfalla"
+            ],
+            [
+              "Vestido detallado o de lentejuelas",
+              "Aretes minimalistas",
+              "Laluce"
+            ],
+            [
+              "Línea nocturna formal",
+              "Pendientes largos",
+              "Concetta Long"
+            ]
           ]
         },
         {

@@ -54,9 +54,26 @@
       "content": [
         {
           "type": "table",
-          "headers": ["U moet wachten als…", "U zag het alleen door de korting", "Alleen de doorstreepprijs is zichtbaar", "De beschrijving gebruikt woorden als \"luxe\" of \"diamant-achtig\"", "U raadt de ring- of armbandmaat", "De retourtermijn eindigt voor Kerst", "De pagina vermeldt slechts een verzendingschatting", "U kunt zich niet voorstellen het na het evenement te dragen"],
+          "headers": [
+            "U moet wachten als…",
+            "U zag het alleen door de korting",
+            "Alleen de doorstreepprijs is zichtbaar",
+            "De beschrijving gebruikt woorden als \"luxe\" of \"diamant-achtig\"",
+            "U raadt de ring- of armbandmaat",
+            "De retourtermijn eindigt voor Kerst",
+            "De pagina vermeldt slechts een verzendingschatting",
+            "U kunt zich niet voorstellen het na het evenement te dragen"
+          ],
           "rows": [
-            ["U wilde het exacte stuk al", "U kent de eerdere verkoopprijs", "Materialen en afmetingen zijn duidelijk vermeld", "De maat is bekend", "De retourperiode dekt de cadeau-geefdatum", "Levertiming is bevestigd", "Het ontwerp past bij alledaagse of regelmatige dracht"]
+            [
+              "U wilde het exacte stuk al",
+              "U kent de eerdere verkoopprijs",
+              "Materialen en afmetingen zijn duidelijk vermeld",
+              "De maat is bekend",
+              "De retourperiode dekt de cadeau-geefdatum",
+              "Levertiming is bevestigd",
+              "Het ontwerp past bij alledaagse of regelmatige dracht"
+            ]
           ]
         }
       ]
@@ -181,14 +198,35 @@
         },
         {
           "type": "table",
-          "headers": ["Beschrijving", "Wat het betekent"],
+          "headers": [
+            "Beschrijving",
+            "Wat het betekent"
+          ],
           "rows": [
-            ["Natuurlijke diamant", "Een diamant die van nature onder de aarde werd gevormd"],
-            ["Lab-grown diamant", "Een diamant die onder gecontroleerde laboratoriumomstandigheden werd gekweekt"],
-            ["Moissaniet", "Een aparte edelsteen die op een diamant kan lijken"],
-            ["Kubieke zirkonia of CZ", "Een vervaardigde diamantimitatie"],
-            ["Kristal of glas", "Decoratief materiaal dat een edelsteen kan imiteren"],
-            ["\"Diamant-achtig\"", "Marketingtaal die de identiteit van de steen niet bevestigt"]
+            [
+              "Natuurlijke diamant",
+              "Een diamant die van nature onder de aarde werd gevormd"
+            ],
+            [
+              "Lab-grown diamant",
+              "Een diamant die onder gecontroleerde laboratoriumomstandigheden werd gekweekt"
+            ],
+            [
+              "Moissaniet",
+              "Een aparte edelsteen die op een diamant kan lijken"
+            ],
+            [
+              "Kubieke zirkonia of CZ",
+              "Een vervaardigde diamantimitatie"
+            ],
+            [
+              "Kristal of glas",
+              "Decoratief materiaal dat een edelsteen kan imiteren"
+            ],
+            [
+              "\"Diamant-achtig\"",
+              "Marketingtaal die de identiteit van de steen niet bevestigt"
+            ]
           ]
         },
         {
@@ -486,6 +524,13 @@
         {
           "type": "paragraph",
           "text": "Als het antwoord op de laatste vraag nee is, kan de korting de wens creëren in plaats van een bestaande beslissing te belonen."
+        },
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog4/PIC3.png",
+          "alt": "Black Friday jewellery purchase comparison and cost per wear",
+          "width": 1200,
+          "height": 750
         }
       ]
     },
@@ -547,16 +592,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Sieradencategorie", "Online kooprisico", "Wat te controleren"],
+          "headers": [
+            "Sieradencategorie",
+            "Online kooprisico",
+            "Wat te controleren"
+          ],
           "rows": [
-            ["Oorknopjes", "Laag", "Diameter, sluiting, of verkocht als paar en hygiëne-retourvoorwaarden"],
-            ["Huggies en oorringen", "Laag tot gemiddeld", "Interne diameter, gewicht en sluiting"],
-            ["Verstelbare kettingen", "Laag", "Kettinglengte, verlenger en hanger afmetingen"],
-            ["Vaste lengte kettingen", "Laag tot gemiddeld", "Exacte lengte en positie op de halslijn"],
-            ["Verstelbare armbanden", "Gemiddeld", "Minimum en maximum omtrek"],
-            ["Vaste armbanden en armbanden", "Gemiddeld tot hoog", "Polsmeting en interne diameter"],
-            ["Ringen", "Hoog", "Exacte maat, bandbreedte, vermaak en retourvoorwaarden"],
-            ["Gepersonaliseerde sieraden", "Hoog", "Spelling, productietijd en retouruitsluitingen"]
+            [
+              "Oorknopjes",
+              "Laag",
+              "Diameter, sluiting, of verkocht als paar en hygiëne-retourvoorwaarden"
+            ],
+            [
+              "Huggies en oorringen",
+              "Laag tot gemiddeld",
+              "Interne diameter, gewicht en sluiting"
+            ],
+            [
+              "Verstelbare kettingen",
+              "Laag",
+              "Kettinglengte, verlenger en hanger afmetingen"
+            ],
+            [
+              "Vaste lengte kettingen",
+              "Laag tot gemiddeld",
+              "Exacte lengte en positie op de halslijn"
+            ],
+            [
+              "Verstelbare armbanden",
+              "Gemiddeld",
+              "Minimum en maximum omtrek"
+            ],
+            [
+              "Vaste armbanden en armbanden",
+              "Gemiddeld tot hoog",
+              "Polsmeting en interne diameter"
+            ],
+            [
+              "Ringen",
+              "Hoog",
+              "Exacte maat, bandbreedte, vermaak en retourvoorwaarden"
+            ],
+            [
+              "Gepersonaliseerde sieraden",
+              "Hoog",
+              "Spelling, productietijd en retouruitsluitingen"
+            ]
           ]
         },
         {

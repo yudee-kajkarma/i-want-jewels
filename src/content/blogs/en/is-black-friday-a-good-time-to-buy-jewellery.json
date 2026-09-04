@@ -54,9 +54,26 @@
       "content": [
         {
           "type": "table",
-          "headers": ["You should consider waiting when…", "You noticed it only because of the discount", "Only the crossed-out price is visible", "The description relies on words such as \"luxury\" or \"diamond-like\"", "You are guessing a ring or bracelet size", "The return window ends before Christmas", "The page states only a dispatch estimate", "You cannot imagine wearing it after the event"],
+          "headers": [
+            "You should consider waiting when…",
+            "You noticed it only because of the discount",
+            "Only the crossed-out price is visible",
+            "The description relies on words such as \"luxury\" or \"diamond-like\"",
+            "You are guessing a ring or bracelet size",
+            "The return window ends before Christmas",
+            "The page states only a dispatch estimate",
+            "You cannot imagine wearing it after the event"
+          ],
           "rows": [
-            ["You already wanted the exact piece", "You know its previous selling price", "Materials and dimensions are clearly stated", "The size is known", "The return period covers the gifting date", "Delivery timing is confirmed", "The design suits everyday or regular wear"]
+            [
+              "You already wanted the exact piece",
+              "You know its previous selling price",
+              "Materials and dimensions are clearly stated",
+              "The size is known",
+              "The return period covers the gifting date",
+              "Delivery timing is confirmed",
+              "The design suits everyday or regular wear"
+            ]
           ]
         }
       ]
@@ -181,14 +198,35 @@
         },
         {
           "type": "table",
-          "headers": ["Description", "What it means"],
+          "headers": [
+            "Description",
+            "What it means"
+          ],
           "rows": [
-            ["Natural diamond", "A diamond formed naturally beneath the earth"],
-            ["Lab-grown diamond", "A diamond grown under controlled laboratory conditions"],
-            ["Moissanite", "A separate gemstone that can resemble a diamond"],
-            ["Cubic zirconia or CZ", "A manufactured diamond simulant"],
-            ["Crystal or glass", "Decorative material that may imitate a gemstone"],
-            ["\"Diamond-like\"", "Marketing language that does not confirm the stone's identity"]
+            [
+              "Natural diamond",
+              "A diamond formed naturally beneath the earth"
+            ],
+            [
+              "Lab-grown diamond",
+              "A diamond grown under controlled laboratory conditions"
+            ],
+            [
+              "Moissanite",
+              "A separate gemstone that can resemble a diamond"
+            ],
+            [
+              "Cubic zirconia or CZ",
+              "A manufactured diamond simulant"
+            ],
+            [
+              "Crystal or glass",
+              "Decorative material that may imitate a gemstone"
+            ],
+            [
+              "\"Diamond-like\"",
+              "Marketing language that does not confirm the stone's identity"
+            ]
           ]
         },
         {
@@ -486,6 +524,13 @@
         {
           "type": "paragraph",
           "text": "If the answer to the final question is no, the discount may be creating the desire rather than rewarding an existing decision."
+        },
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog4/PIC3.png",
+          "alt": "Black Friday jewellery purchase comparison and cost per wear",
+          "width": 1200,
+          "height": 750
         }
       ]
     },
@@ -547,16 +592,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Jewellery category", "Online buying risk", "What to check"],
+          "headers": [
+            "Jewellery category",
+            "Online buying risk",
+            "What to check"
+          ],
           "rows": [
-            ["Stud earrings", "Low", "Diameter, fastening, whether sold as a pair and hygiene-return terms"],
-            ["Huggies and hoops", "Low to medium", "Internal diameter, weight and closure"],
-            ["Adjustable necklaces", "Low", "Chain length, extender and pendant dimensions"],
-            ["Fixed-length necklaces", "Low to medium", "Exact length and position on the neckline"],
-            ["Adjustable bracelets", "Medium", "Minimum and maximum circumference"],
-            ["Fixed bracelets and bangles", "Medium to high", "Wrist measurement and internal diameter"],
-            ["Rings", "High", "Exact size, band width, resizing and return eligibility"],
-            ["Personalised jewellery", "High", "Spelling, production time and return exclusions"]
+            [
+              "Stud earrings",
+              "Low",
+              "Diameter, fastening, whether sold as a pair and hygiene-return terms"
+            ],
+            [
+              "Huggies and hoops",
+              "Low to medium",
+              "Internal diameter, weight and closure"
+            ],
+            [
+              "Adjustable necklaces",
+              "Low",
+              "Chain length, extender and pendant dimensions"
+            ],
+            [
+              "Fixed-length necklaces",
+              "Low to medium",
+              "Exact length and position on the neckline"
+            ],
+            [
+              "Adjustable bracelets",
+              "Medium",
+              "Minimum and maximum circumference"
+            ],
+            [
+              "Fixed bracelets and bangles",
+              "Medium to high",
+              "Wrist measurement and internal diameter"
+            ],
+            [
+              "Rings",
+              "High",
+              "Exact size, band width, resizing and return eligibility"
+            ],
+            [
+              "Personalised jewellery",
+              "High",
+              "Spelling, production time and return exclusions"
+            ]
           ]
         },
         {

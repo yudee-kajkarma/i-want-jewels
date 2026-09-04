@@ -44,16 +44,43 @@
         },
         {
           "type": "table",
-          "headers": ["Was Sie wissen", "Sicherste Richtung"],
+          "headers": [
+            "Was Sie wissen",
+            "Sicherste Richtung"
+          ],
           "rows": [
-            ["Sie hat durchbohrte Ohren und trägt täglich Ohrstecker", "Ohrstecker oder Huggies"],
-            ["Sie trägt sichtbare Ohrstecker", "Kleine oder mittlere Creolen"],
-            ["Sie trägt selten Ohrstecker", "Verstellbare Halskette"],
-            ["Sie trägt regelmäßig Armbänder", "Verstellbares Armband"],
-            ["Sie kennen ihren Stil aber nicht ihre Größe", "Ohrstecker oder verstellbare Halskette"],
-            ["Sie kennen ihre Größe aber nicht ihren Stil", "Geschenkkarte kann noch sicherer sein"],
-            ["Sie kennen weder ihre Größe noch ihren Stil", "Schmuck-Geschenkkarte"],
-            ["Sie wollen ihr einen Ring geben", "Finden Sie zuerst ihre genaue Größe"]
+            [
+              "Sie hat durchbohrte Ohren und trägt täglich Ohrstecker",
+              "Ohrstecker oder Huggies"
+            ],
+            [
+              "Sie trägt sichtbare Ohrstecker",
+              "Kleine oder mittlere Creolen"
+            ],
+            [
+              "Sie trägt selten Ohrstecker",
+              "Verstellbare Halskette"
+            ],
+            [
+              "Sie trägt regelmäßig Armbänder",
+              "Verstellbares Armband"
+            ],
+            [
+              "Sie kennen ihren Stil aber nicht ihre Größe",
+              "Ohrstecker oder verstellbare Halskette"
+            ],
+            [
+              "Sie kennen ihre Größe aber nicht ihren Stil",
+              "Geschenkkarte kann noch sicherer sein"
+            ],
+            [
+              "Sie kennen weder ihre Größe noch ihren Stil",
+              "Schmuck-Geschenkkarte"
+            ],
+            [
+              "Sie wollen ihr einen Ring geben",
+              "Finden Sie zuerst ihre genaue Größe"
+            ]
           ]
         }
       ]
@@ -67,18 +94,62 @@
         },
         {
           "type": "table",
-          "headers": ["Schmuckkategorie", "Größenrisiko", "Was Sie prüfen müssen"],
+          "headers": [
+            "Schmuckkategorie",
+            "Größenrisiko",
+            "Was Sie prüfen müssen"
+          ],
           "rows": [
-            ["Ohrstecker", "Niedrig", "Durchbohrte Ohren, Durchmesser und Verschluss"],
-            ["Huggie-Ohrringe", "Niedrig bis mittel", "Innendurchmesser und Piercing-Position"],
-            ["Kleine Creolen", "Niedrig bis mittel", "Durchmesser, Gewicht und Verschluss"],
-            ["Verstellbare Halskette", "Niedrig", "Minimale und maximale Länge"],
-            ["Halskette fester Länge", "Mittel", "Exakte Kettenlänge"],
-            ["Verstellbares Armband", "Mittel", "Minimale und maximale Umfang"],
-            ["Festes Armband", "Mittel bis hoch", "Handgelenk-Messung"],
-            ["Starrer Armreif", "Hoch", "Innendurchmesser und Handbreite"],
-            ["Ring", "Hoch", "Exakte Ringgröße und Bandbreite"],
-            ["Geschenkkarte", "Sehr niedrig", "Wert, Verfallsdatum und Einlösebedingungen"]
+            [
+              "Ohrstecker",
+              "Niedrig",
+              "Durchbohrte Ohren, Durchmesser und Verschluss"
+            ],
+            [
+              "Huggie-Ohrringe",
+              "Niedrig bis mittel",
+              "Innendurchmesser und Piercing-Position"
+            ],
+            [
+              "Kleine Creolen",
+              "Niedrig bis mittel",
+              "Durchmesser, Gewicht und Verschluss"
+            ],
+            [
+              "Verstellbare Halskette",
+              "Niedrig",
+              "Minimale und maximale Länge"
+            ],
+            [
+              "Halskette fester Länge",
+              "Mittel",
+              "Exakte Kettenlänge"
+            ],
+            [
+              "Verstellbares Armband",
+              "Mittel",
+              "Minimale und maximale Umfang"
+            ],
+            [
+              "Festes Armband",
+              "Mittel bis hoch",
+              "Handgelenk-Messung"
+            ],
+            [
+              "Starrer Armreif",
+              "Hoch",
+              "Innendurchmesser und Handbreite"
+            ],
+            [
+              "Ring",
+              "Hoch",
+              "Exakte Ringgröße und Bandbreite"
+            ],
+            [
+              "Geschenkkarte",
+              "Sehr niedrig",
+              "Wert, Verfallsdatum und Einlösebedingungen"
+            ]
           ]
         }
       ]
@@ -378,13 +449,6 @@
       "heading": "Wie Sie ihren Schmuckstil entdecken können, ohne ihre Größe zu fragen",
       "content": [
         {
-          "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog6/PIC2.png",
-          "alt": "Ihren bestehenden Schmuckstil verstehen",
-          "width": 1200,
-          "height": 750
-        },
-        {
           "type": "paragraph",
           "text": "Sie können eine überraschende Menge lernen, indem Sie beobachten, was sie bereits trägt."
         }
@@ -444,15 +508,39 @@
         },
         {
           "type": "table",
-          "headers": ["Lebensstil", "Sicherere Schmuck-Richtung"],
+          "headers": [
+            "Lebensstil",
+            "Sicherere Schmuck-Richtung"
+          ],
           "rows": [
-            ["Konservativer Arbeitsplatz", "Ohrstecker, Huggies oder delikate Halskette"],
-            ["Kreativer oder modegeleiteter Arbeit", "Moderne Creolen oder skulpturale Ohrstecker"],
-            ["Häufiger Reisender", "Sichere Ohrstecker, Huggies oder verstellbare Halskette"],
-            ["Regelmäßige Abendessen und Veranstaltungen", "Mittlere Creolen oder Tropfen-Ohrstecker"],
-            ["Aktive tägliche Routine", "Kleine, sichere und leichte Schmuckstücke"],
-            ["Minimalistische Garderobe", "Ohrstecker, feine Huggies oder einfacher Anhänger"],
-            ["Statement-Kleider", "Sichtbare Creolen oder skulpturale Ohrstecker"]
+            [
+              "Konservativer Arbeitsplatz",
+              "Ohrstecker, Huggies oder delikate Halskette"
+            ],
+            [
+              "Kreativer oder modegeleiteter Arbeit",
+              "Moderne Creolen oder skulpturale Ohrstecker"
+            ],
+            [
+              "Häufiger Reisender",
+              "Sichere Ohrstecker, Huggies oder verstellbare Halskette"
+            ],
+            [
+              "Regelmäßige Abendessen und Veranstaltungen",
+              "Mittlere Creolen oder Tropfen-Ohrstecker"
+            ],
+            [
+              "Aktive tägliche Routine",
+              "Kleine, sichere und leichte Schmuckstücke"
+            ],
+            [
+              "Minimalistische Garderobe",
+              "Ohrstecker, feine Huggies oder einfacher Anhänger"
+            ],
+            [
+              "Statement-Kleider",
+              "Sichtbare Creolen oder skulpturale Ohrstecker"
+            ]
           ]
         }
       ]

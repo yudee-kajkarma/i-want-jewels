@@ -44,16 +44,43 @@
         },
         {
           "type": "table",
-          "headers": ["Qué sabes", "Dirección más segura"],
+          "headers": [
+            "Qué sabes",
+            "Dirección más segura"
+          ],
           "rows": [
-            ["Tiene orejas perforadas y usa aretes diariamente", "Aretes o huggies"],
-            ["Ella usa aretes visibles", "Aros pequeños o medianos"],
-            ["Ella rara vez usa aretes", "Collar ajustable"],
-            ["Ella usa regularmente brazaletes", "Brazaletto ajustable"],
-            ["Conoces su estilo pero no su tamaño", "Aretes o collar ajustable"],
-            ["Conoces su tamaño pero no su estilo", "Una tarjeta regalo puede ser aún más segura"],
-            ["No conoces ni su tamaño ni su estilo", "Tarjeta regalo de joyería"],
-            ["Quieres darle un anillo", "Encuentra primero su talla exacta"]
+            [
+              "Tiene orejas perforadas y usa aretes diariamente",
+              "Aretes o huggies"
+            ],
+            [
+              "Ella usa aretes visibles",
+              "Aros pequeños o medianos"
+            ],
+            [
+              "Ella rara vez usa aretes",
+              "Collar ajustable"
+            ],
+            [
+              "Ella usa regularmente brazaletes",
+              "Brazaletto ajustable"
+            ],
+            [
+              "Conoces su estilo pero no su tamaño",
+              "Aretes o collar ajustable"
+            ],
+            [
+              "Conoces su tamaño pero no su estilo",
+              "Una tarjeta regalo puede ser aún más segura"
+            ],
+            [
+              "No conoces ni su tamaño ni su estilo",
+              "Tarjeta regalo de joyería"
+            ],
+            [
+              "Quieres darle un anillo",
+              "Encuentra primero su talla exacta"
+            ]
           ]
         }
       ]
@@ -67,18 +94,62 @@
         },
         {
           "type": "table",
-          "headers": ["Categoría de joyería", "Riesgo de tamaño", "Qué necesitas verificar"],
+          "headers": [
+            "Categoría de joyería",
+            "Riesgo de tamaño",
+            "Qué necesitas verificar"
+          ],
           "rows": [
-            ["Aretes", "Bajo", "Orejas perforadas, diámetro y cierre"],
-            ["Aretes huggie", "Bajo a medio", "Diámetro interno y posición del piercing"],
-            ["Aros pequeños", "Bajo a medio", "Diámetro, peso y cierre"],
-            ["Collar ajustable", "Bajo", "Longitud mínima y máxima"],
-            ["Collar de longitud fija", "Medio", "Longitud exacta de la cadena"],
-            ["Brazaletto ajustable", "Medio", "Circunferencia mínima y máxima"],
-            ["Brazaletto fijo", "Medio a alto", "Medición de muñeca"],
-            ["Brazalete rígido", "Alto", "Diámetro interno y ancho de la mano"],
-            ["Anillo", "Alto", "Talla exacta de anillo y ancho de la banda"],
-            ["Tarjeta regalo", "Muy bajo", "Valor, vencimiento y términos de canje"]
+            [
+              "Aretes",
+              "Bajo",
+              "Orejas perforadas, diámetro y cierre"
+            ],
+            [
+              "Aretes huggie",
+              "Bajo a medio",
+              "Diámetro interno y posición del piercing"
+            ],
+            [
+              "Aros pequeños",
+              "Bajo a medio",
+              "Diámetro, peso y cierre"
+            ],
+            [
+              "Collar ajustable",
+              "Bajo",
+              "Longitud mínima y máxima"
+            ],
+            [
+              "Collar de longitud fija",
+              "Medio",
+              "Longitud exacta de la cadena"
+            ],
+            [
+              "Brazaletto ajustable",
+              "Medio",
+              "Circunferencia mínima y máxima"
+            ],
+            [
+              "Brazaletto fijo",
+              "Medio a alto",
+              "Medición de muñeca"
+            ],
+            [
+              "Brazalete rígido",
+              "Alto",
+              "Diámetro interno y ancho de la mano"
+            ],
+            [
+              "Anillo",
+              "Alto",
+              "Talla exacta de anillo y ancho de la banda"
+            ],
+            [
+              "Tarjeta regalo",
+              "Muy bajo",
+              "Valor, vencimiento y términos de canje"
+            ]
           ]
         }
       ]
@@ -378,13 +449,6 @@
       "heading": "Cómo descubrir su estilo de joyería sin preguntar su tamaño",
       "content": [
         {
-          "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog6/PIC2.png",
-          "alt": "Entender su estilo de joyería existente",
-          "width": 1200,
-          "height": 750
-        },
-        {
           "type": "paragraph",
           "text": "Puedes aprender una cantidad sorprendente observando lo que ya usa."
         }
@@ -444,15 +508,39 @@
         },
         {
           "type": "table",
-          "headers": ["Estilo de vida", "Dirección de joyería más segura"],
+          "headers": [
+            "Estilo de vida",
+            "Dirección de joyería más segura"
+          ],
           "rows": [
-            ["Lugar de trabajo conservador", "Aretes, huggies o collar delicado"],
-            ["Trabajo creativo o liderado por la moda", "Aros modernos o aretes esculturales"],
-            ["Viajero frecuente", "Aretes seguros, huggies o collar ajustable"],
-            ["Cenas y eventos regulares", "Aros medianos o aretes colgantes"],
-            ["Rutina diaria activa", "Joyería pequeña, segura y ligera"],
-            ["Guardaroba minimalista", "Aretes, huggies finos o simple colgante"],
-            ["Estilo statement", "Aros visibles o aretes esculturales"]
+            [
+              "Lugar de trabajo conservador",
+              "Aretes, huggies o collar delicado"
+            ],
+            [
+              "Trabajo creativo o liderado por la moda",
+              "Aros modernos o aretes esculturales"
+            ],
+            [
+              "Viajero frecuente",
+              "Aretes seguros, huggies o collar ajustable"
+            ],
+            [
+              "Cenas y eventos regulares",
+              "Aros medianos o aretes colgantes"
+            ],
+            [
+              "Rutina diaria activa",
+              "Joyería pequeña, segura y ligera"
+            ],
+            [
+              "Guardaroba minimalista",
+              "Aretes, huggies finos o simple colgante"
+            ],
+            [
+              "Estilo statement",
+              "Aros visibles o aretes esculturales"
+            ]
           ]
         }
       ]

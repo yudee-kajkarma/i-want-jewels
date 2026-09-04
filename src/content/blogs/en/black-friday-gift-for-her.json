@@ -4,7 +4,7 @@
     "description": "Looking for a Black Friday gift for her? Discover thoughtful jewellery ideas, safer sizing choices and what to check before buying for Christmas."
   },
   "h1": "Black Friday Gifts for Her: What to Buy Early and What to Avoid",
-  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC1.png",
   "sections": [
     {
       "content": [
@@ -63,18 +63,51 @@
         },
         {
           "type": "table",
-          "headers": ["What you know about her", "Safest gift direction"],
+          "headers": [
+            "What you know about her",
+            "Safest gift direction"
+          ],
           "rows": [
-            ["She wears small earrings every day", "Diamond studs or huggies"],
-            ["She likes visible but wearable jewellery", "Small or medium hoops"],
-            ["She rarely wears earrings", "An adjustable necklace or bracelet"],
-            ["She wears mostly delicate jewellery", "Minimalist studs or a fine pendant"],
-            ["She likes romantic or symbolic designs", "A meaningful motif or delicate drop earrings"],
-            ["She enjoys statement accessories", "Larger hoops or sculptural earrings"],
-            ["She mixes several earrings", "A small stud or huggie for her ear stack"],
-            ["You know her exact ring size", "A ring in a style similar to one she owns"],
-            ["You do not know her size or style", "A jewellery gift card"],
-            ["The gift is for Christmas", "Choose an easy-to-size piece and verify delivery and returns"]
+            [
+              "She wears small earrings every day",
+              "Diamond studs or huggies"
+            ],
+            [
+              "She likes visible but wearable jewellery",
+              "Small or medium hoops"
+            ],
+            [
+              "She rarely wears earrings",
+              "An adjustable necklace or bracelet"
+            ],
+            [
+              "She wears mostly delicate jewellery",
+              "Minimalist studs or a fine pendant"
+            ],
+            [
+              "She likes romantic or symbolic designs",
+              "A meaningful motif or delicate drop earrings"
+            ],
+            [
+              "She enjoys statement accessories",
+              "Larger hoops or sculptural earrings"
+            ],
+            [
+              "She mixes several earrings",
+              "A small stud or huggie for her ear stack"
+            ],
+            [
+              "You know her exact ring size",
+              "A ring in a style similar to one she owns"
+            ],
+            [
+              "You do not know her size or style",
+              "A jewellery gift card"
+            ],
+            [
+              "The gift is for Christmas",
+              "Choose an easy-to-size piece and verify delivery and returns"
+            ]
           ]
         }
       ]
@@ -169,6 +202,13 @@
     {
       "heading": "1. Diamond stud earrings",
       "content": [
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "alt": "Diamond stud earrings Black Friday gift idea",
+          "width": 1200,
+          "height": 750
+        },
         {
           "type": "paragraph",
           "text": "Diamond studs are one of the safest jewellery gifts because they work with casual clothing, office outfits, dinners and formal occasions."
@@ -348,16 +388,52 @@
         },
         {
           "type": "table",
-          "headers": ["Recipient", "Safest jewellery direction", "What to be careful about"],
+          "headers": [
+            "Recipient",
+            "Safest jewellery direction",
+            "What to be careful about"
+          ],
           "rows": [
-            ["Wife", "Diamond earrings, meaningful necklace or elegant bracelet", "Avoid choosing solely by price"],
-            ["Girlfriend", "Huggies, studs, delicate necklace or small hoops", "Match the gift to the stage of the relationship"],
-            ["Mum", "Classic studs, comfortable huggies or adjustable necklace", "Prioritise comfort and ease of fastening"],
-            ["Sister", "Hoops, huggies, contemporary earrings or bracelet", "Consider her individual style rather than your own"],
-            ["Daughter", "Small studs, minimalist earrings or delicate necklace", "Choose an appropriate size and design"],
-            ["Best friend", "Everyday earrings, bracelet or meaningful motif", "Avoid anything that feels overly romantic"],
-            ["New partner", "Studs, huggies or a gift card", "Avoid very expensive or highly symbolic gifts"],
-            ["Someone whose style is unknown", "Gift card", "Do not guess her ring size"]
+            [
+              "Wife",
+              "Diamond earrings, meaningful necklace or elegant bracelet",
+              "Avoid choosing solely by price"
+            ],
+            [
+              "Girlfriend",
+              "Huggies, studs, delicate necklace or small hoops",
+              "Match the gift to the stage of the relationship"
+            ],
+            [
+              "Mum",
+              "Classic studs, comfortable huggies or adjustable necklace",
+              "Prioritise comfort and ease of fastening"
+            ],
+            [
+              "Sister",
+              "Hoops, huggies, contemporary earrings or bracelet",
+              "Consider her individual style rather than your own"
+            ],
+            [
+              "Daughter",
+              "Small studs, minimalist earrings or delicate necklace",
+              "Choose an appropriate size and design"
+            ],
+            [
+              "Best friend",
+              "Everyday earrings, bracelet or meaningful motif",
+              "Avoid anything that feels overly romantic"
+            ],
+            [
+              "New partner",
+              "Studs, huggies or a gift card",
+              "Avoid very expensive or highly symbolic gifts"
+            ],
+            [
+              "Someone whose style is unknown",
+              "Gift card",
+              "Do not guess her ring size"
+            ]
           ]
         }
       ]

@@ -44,16 +44,43 @@
         },
         {
           "type": "table",
-          "headers": ["Ce que vous savez", "Direction la plus sûre"],
+          "headers": [
+            "Ce que vous savez",
+            "Direction la plus sûre"
+          ],
           "rows": [
-            ["Elle a les oreilles percées et porte des boucles d'oreilles quotidiennement", "Pendants ou huggies"],
-            ["Elle porte des boucles d'oreilles visibles", "Petits ou moyens anneaux"],
-            ["Elle porte rarement des boucles d'oreilles", "Collier ajustable"],
-            ["Elle porte régulièrement des bracelets", "Bracelet ajustable"],
-            ["Vous connaissez son style mais pas sa taille", "Boucles d'oreilles ou collier ajustable"],
-            ["Vous connaissez sa taille mais pas son style", "Une carte cadeau peut encore être plus sûre"],
-            ["Vous ne connaissez ni sa taille ni son style", "Carte cadeau de bijoux"],
-            ["Vous voulez lui donner une bague", "Trouvez d'abord sa taille exacte"]
+            [
+              "Elle a les oreilles percées et porte des boucles d'oreilles quotidiennement",
+              "Pendants ou huggies"
+            ],
+            [
+              "Elle porte des boucles d'oreilles visibles",
+              "Petits ou moyens anneaux"
+            ],
+            [
+              "Elle porte rarement des boucles d'oreilles",
+              "Collier ajustable"
+            ],
+            [
+              "Elle porte régulièrement des bracelets",
+              "Bracelet ajustable"
+            ],
+            [
+              "Vous connaissez son style mais pas sa taille",
+              "Boucles d'oreilles ou collier ajustable"
+            ],
+            [
+              "Vous connaissez sa taille mais pas son style",
+              "Une carte cadeau peut encore être plus sûre"
+            ],
+            [
+              "Vous ne connaissez ni sa taille ni son style",
+              "Carte cadeau de bijoux"
+            ],
+            [
+              "Vous voulez lui donner une bague",
+              "Trouvez d'abord sa taille exacte"
+            ]
           ]
         }
       ]
@@ -67,18 +94,62 @@
         },
         {
           "type": "table",
-          "headers": ["Catégorie de bijoux", "Risque de taille", "Ce que vous devez vérifier"],
+          "headers": [
+            "Catégorie de bijoux",
+            "Risque de taille",
+            "Ce que vous devez vérifier"
+          ],
           "rows": [
-            ["Boucles d'oreilles pendants", "Faible", "Oreilles percées, diamètre et fermeture"],
-            ["Boucles d'oreilles huggies", "Faible à moyen", "Diamètre interne et position du piercing"],
-            ["Petits anneaux", "Faible à moyen", "Diamètre, poids et fermeture"],
-            ["Collier ajustable", "Faible", "Longueur minimale et maximale"],
-            ["Collier de longueur fixe", "Moyen", "Longueur exacte de la chaîne"],
-            ["Bracelet ajustable", "Moyen", "Circonférence minimale et maximale"],
-            ["Bracelet fixe", "Moyen à élevé", "Mesure du poignet"],
-            ["Bangle rigide", "Élevé", "Diamètre interne et largeur de la main"],
-            ["Bague", "Élevé", "Taille exacte de la bague et largeur de la bande"],
-            ["Carte cadeau", "Très faible", "Valeur, expiration et conditions d'échange"]
+            [
+              "Boucles d'oreilles pendants",
+              "Faible",
+              "Oreilles percées, diamètre et fermeture"
+            ],
+            [
+              "Boucles d'oreilles huggies",
+              "Faible à moyen",
+              "Diamètre interne et position du piercing"
+            ],
+            [
+              "Petits anneaux",
+              "Faible à moyen",
+              "Diamètre, poids et fermeture"
+            ],
+            [
+              "Collier ajustable",
+              "Faible",
+              "Longueur minimale et maximale"
+            ],
+            [
+              "Collier de longueur fixe",
+              "Moyen",
+              "Longueur exacte de la chaîne"
+            ],
+            [
+              "Bracelet ajustable",
+              "Moyen",
+              "Circonférence minimale et maximale"
+            ],
+            [
+              "Bracelet fixe",
+              "Moyen à élevé",
+              "Mesure du poignet"
+            ],
+            [
+              "Bangle rigide",
+              "Élevé",
+              "Diamètre interne et largeur de la main"
+            ],
+            [
+              "Bague",
+              "Élevé",
+              "Taille exacte de la bague et largeur de la bande"
+            ],
+            [
+              "Carte cadeau",
+              "Très faible",
+              "Valeur, expiration et conditions d'échange"
+            ]
           ]
         }
       ]
@@ -378,13 +449,6 @@
       "heading": "Comment découvrir son style de bijieux sans demander sa taille",
       "content": [
         {
-          "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog6/PIC2.png",
-          "alt": "Comprendre son style de bijoux existant",
-          "width": 1200,
-          "height": 750
-        },
-        {
           "type": "paragraph",
           "text": "Vous pouvez apprendre une quantité surprenante en observant ce qu'elle porte déjà."
         }
@@ -444,15 +508,39 @@
         },
         {
           "type": "table",
-          "headers": ["Mode de vie", "Direction de bijoux plus sûre"],
+          "headers": [
+            "Mode de vie",
+            "Direction de bijoux plus sûre"
+          ],
           "rows": [
-            ["Lieu de travail conservateur", "Pendants, huggies ou collier délicat"],
-            ["Travail créatif ou à la mode", "Anneaux modernes ou boucles d'oreilles sculpturales"],
-            ["Voyageur fréquent", "Pendants sûrs, huggies ou collier ajustable"],
-            ["Dîners et événements réguliers", "Anneaux moyens ou boucles pendantes"],
-            ["Routine quotidienne active", "Bijoux petits, sûrs et légers"],
-            ["Garde-robe minimaliste", "Pendants, huggies fins ou simple pendentif"],
-            ["Style statement", "Anneaux visibles ou boucles d'oreilles sculpturales"]
+            [
+              "Lieu de travail conservateur",
+              "Pendants, huggies ou collier délicat"
+            ],
+            [
+              "Travail créatif ou à la mode",
+              "Anneaux modernes ou boucles d'oreilles sculpturales"
+            ],
+            [
+              "Voyageur fréquent",
+              "Pendants sûrs, huggies ou collier ajustable"
+            ],
+            [
+              "Dîners et événements réguliers",
+              "Anneaux moyens ou boucles pendantes"
+            ],
+            [
+              "Routine quotidienne active",
+              "Bijoux petits, sûrs et légers"
+            ],
+            [
+              "Garde-robe minimaliste",
+              "Pendants, huggies fins ou simple pendentif"
+            ],
+            [
+              "Style statement",
+              "Anneaux visibles ou boucles d'oreilles sculpturales"
+            ]
           ]
         }
       ]
