@@ -30,9 +30,9 @@ import {
   updateOrderStatusForAdmin,
 } from '../services/orderService'
 import { useCurrency } from '../context/CurrencyContext'
-import type { AdminShippingQuote, AdminShippingRateOption, FedExPickupAvailability, Order, OrdersPagination, Pickup, PickupDetail, ShippingCarrier } from '../types/order'
+import type { AdminShippingQuote, AdminShippingRateOption, FedExPickupAvailability, Order, OrdersPagination, Pickup, PickupDetail, ShippingAddress, ShippingCarrier } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
-import { getCountryOptions, getStateOptions } from '../utils/location'
+import { getCountryOptions, getStateName, getStateOptions, normalizeDialCode } from '../utils/location'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'cancelShipment' | 'reorder'
 
@@ -84,9 +84,64 @@ function getPaymentStatusClass(status: string) {
   }
 }
 
+/** Buyer's display name — an account's real name, else the guest's, else their email. */
+function customerName(order: Order): string {
+  const first = order.customer?.firstName?.trim() ?? ''
+  const last = order.customer?.lastName?.trim() ?? ''
+  const full = `${first} ${last}`.trim()
+  if (full) return full
+  return order.customer?.username?.trim() || order.customer?.email?.trim() || ''
+}
+
+/**
+ * Delivery phone for the list.
+ *
+ * The order's own recipient number wins over the account's: profiles here hold
+ * stale dial codes (a Korean customer saved as +91), while the order carries
+ * what the shipment was actually booked with.
+ */
+function customerPhone(order: Order): string {
+  const orderPhone = order.recipientPhone?.trim()
+  if (orderPhone) {
+    const dial = normalizeDialCode(order.recipientCountryCode)
+    return dial ? `${dial} ${orderPhone}` : orderPhone
+  }
+
+  return order.customer?.phoneNumber?.trim() ?? ''
+}
+
+/** "DE" -> "DE (Delaware)". Falls back to the bare code for unknown states. */
+function stateWithName(countryCode: string, stateCode: string): string {
+  const code = stateCode?.trim()
+  if (!code) return ''
+
+  const name = getStateName(countryCode, code)
+  return name && name.toUpperCase() !== code.toUpperCase() ? `${code} (${name})` : code
+}
+
+/** Delivery address as labelled rows — a comma-joined line reads as noise. */
+function addressRows(
+  address: ShippingAddress,
+  tAddress: (key: string) => string,
+): Array<{ label: string; value: string }> {
+  return (
+    [
+      ['street', address.street],
+      ['city', address.city],
+      // "DE" alone is ambiguous — Delaware here, Germany elsewhere.
+      ['state', stateWithName(address.country, address.state)],
+      ['postalCode', address.postalCode],
+      ['country', address.country],
+    ] as const
+  )
+    .filter(([, value]) => Boolean(value?.trim()))
+    .map(([key, value]) => ({ label: tAddress(key), value: value!.trim() }))
+}
+
 export default function AdminOrdersPage() {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'admin.orders' })
   const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
+  const { t: tAddress } = useTranslation('common', { keyPrefix: 'admin.address' })
   const variantLabel = useVariantLabel()
   const { currency } = useCurrency()
 
@@ -1150,6 +1205,37 @@ export default function AdminOrdersPage() {
                           {t('grid.payment')} {order.paymentMethod}
                         </span>
                       </div>
+
+                      {/* Who ordered and where it ships. Lives in this column so
+                          the status badges opposite keep their position. */}
+                      {customerName(order) || customerPhone(order) || order.shippingAddress ? (
+                        <div className="mt-3 text-sm text-zinc-600">
+                          {customerName(order) ? (
+                            <p className="font-semibold text-[#351626]">{customerName(order)}</p>
+                          ) : null}
+                          {customerPhone(order) ? (
+                            <p className="mt-0.5 text-xs">
+                              <span className="text-zinc-400">{tAddress('phoneNumber')}:</span>{' '}
+                              <span className="text-zinc-600">{customerPhone(order)}</span>
+                            </p>
+                          ) : null}
+                          {order.shippingAddress ? (
+                            <>
+                              <p className="mt-2 text-xs font-bold uppercase tracking-[0.08em] text-zinc-400">
+                                {t('grid.address')}
+                              </p>
+                              <dl className="mt-1 grid gap-x-6 gap-y-0.5 text-xs leading-5 sm:grid-cols-2">
+                                {addressRows(order.shippingAddress, tAddress).map((row) => (
+                                  <div key={row.label} className="flex gap-1.5">
+                                    <dt className="shrink-0 text-zinc-400">{row.label}:</dt>
+                                    <dd className="text-zinc-600">{row.value}</dd>
+                                  </div>
+                                ))}
+                              </dl>
+                            </>
+                          ) : null}
+                        </div>
+                      ) : null}
                     </div>
 
                     <div className="flex flex-wrap gap-2 md:justify-end">
@@ -1186,6 +1272,11 @@ export default function AdminOrdersPage() {
                           <p className="mt-1 text-xs text-zinc-500">
                             {(variantLabel(item?.variantName) || tCommon('default'))} · {t('grid.qty', { count: item?.quantity ?? 0 })}
                           </p>
+                          {item?.sku ? (
+                            <p className="mt-0.5 font-mono text-[11px] tracking-tight text-zinc-400">
+                              {item.sku}
+                            </p>
+                          ) : null}
                         </div>
                       )
                     })}

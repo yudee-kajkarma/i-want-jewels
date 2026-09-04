@@ -82,6 +82,11 @@ export type Order = {
   returnReason?: string | null
   returnAdminNote?: string | null
   returnWindowDays?: number
+  /** Present on the admin list so a row can name the buyer. */
+  customer?: AdminOrderCustomer | null
+  /** Delivery phone as captured on the order — more reliable than the profile's. */
+  recipientCountryCode?: string
+  recipientPhone?: string
 }
 
 export type PickupStatus = 'SCHEDULED' | 'CANCELLED' | 'PICKED_UP'

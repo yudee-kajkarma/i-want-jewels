@@ -1054,7 +1054,8 @@
         "itemsCount_many": "{{count}} articoli",
         "payment": "Pagamento:",
         "customerTotal": "Totale cliente:",
-        "qty": "Quantità {{count}}"
+        "qty": "Quantità {{count}}",
+        "address": "Indirizzo"
       },
       "table": {
         "order": "Ordine",
