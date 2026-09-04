@@ -4,7 +4,7 @@
     "description": "Buscas un regalo Black Friday para ella? Descubre ideas de joyería pensadas, elecciones de tamaño más seguras y qué verificar antes de comprar para Navidad."
   },
   "h1": "Regalos Black Friday para ella: qué comprar temprano y qué evitar",
-  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC1.png",
   "sections": [
     {
       "content": [
@@ -63,18 +63,51 @@
         },
         {
           "type": "table",
-          "headers": ["Qué sabes de ella", "Dirección de regalo más segura"],
+          "headers": [
+            "Qué sabes de ella",
+            "Dirección de regalo más segura"
+          ],
           "rows": [
-            ["Ella usa aretes pequeños cada día", "Diamantes o huggies"],
-            ["Le gusta joyería visible pero utilizable", "Aros pequeños o medianos"],
-            ["Ella rara vez usa aretes", "Un collar o brazalete ajustable"],
-            ["Ella usa principalmente joyería delicada", "Aretes minimalistas o un colgante fino"],
-            ["Le gusta diseños románticos o simbólicos", "Un motivo significativo o aretes colgantes delicados"],
-            ["Ella disfruta accesorios statement", "Aros grandes o aretes esculturales"],
-            ["Ella mezcla varios aretes", "Un arete pequeño o huggie para su pila de orejas"],
-            ["Conoces su tamaño exacto de anillo", "Un anillo en un estilo similar a uno que posee"],
-            ["No conoces su tamaño o estilo", "Una tarjeta de regalo de joyería"],
-            ["El regalo es para Navidad", "Elige una pieza fácil de medir y verifica entrega y devoluciones"]
+            [
+              "Ella usa aretes pequeños cada día",
+              "Diamantes o huggies"
+            ],
+            [
+              "Le gusta joyería visible pero utilizable",
+              "Aros pequeños o medianos"
+            ],
+            [
+              "Ella rara vez usa aretes",
+              "Un collar o brazalete ajustable"
+            ],
+            [
+              "Ella usa principalmente joyería delicada",
+              "Aretes minimalistas o un colgante fino"
+            ],
+            [
+              "Le gusta diseños románticos o simbólicos",
+              "Un motivo significativo o aretes colgantes delicados"
+            ],
+            [
+              "Ella disfruta accesorios statement",
+              "Aros grandes o aretes esculturales"
+            ],
+            [
+              "Ella mezcla varios aretes",
+              "Un arete pequeño o huggie para su pila de orejas"
+            ],
+            [
+              "Conoces su tamaño exacto de anillo",
+              "Un anillo en un estilo similar a uno que posee"
+            ],
+            [
+              "No conoces su tamaño o estilo",
+              "Una tarjeta de regalo de joyería"
+            ],
+            [
+              "El regalo es para Navidad",
+              "Elige una pieza fácil de medir y verifica entrega y devoluciones"
+            ]
           ]
         }
       ]
@@ -169,6 +202,13 @@
     {
       "heading": "1. Aretes de diamante",
       "content": [
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "alt": "Diamond stud earrings Black Friday gift idea",
+          "width": 1200,
+          "height": 750
+        },
         {
           "type": "paragraph",
           "text": "Los aretes de diamante son uno de los regalos de joyería más seguros porque funcionan con ropa casual, outfits de oficina, cenas y ocasiones formales."
@@ -348,16 +388,52 @@
         },
         {
           "type": "table",
-          "headers": ["Destinatario", "Dirección de joyería más segura", "Qué tener cuidado"],
+          "headers": [
+            "Destinatario",
+            "Dirección de joyería más segura",
+            "Qué tener cuidado"
+          ],
           "rows": [
-            ["Esposa", "Aretes de diamante, collar significativo o brazalete elegante", "Evita elegir solo por precio"],
-            ["Novia", "Huggies, aretes, collar delicado o aros pequeños", "Adapta el regalo a la etapa de la relación"],
-            ["Mamá", "Aretes clásicos, huggies cómodos o collar ajustable", "Prioriza el confort y la facilidad de cierre"],
-            ["Hermana", "Aros, huggies, aretes contemporáneos o brazalete", "Considera su estilo individual en lugar del tuyo"],
-            ["Hija", "Aretes pequeños, aretes minimalistas o collar delicado", "Elige un tamaño y diseño apropiados"],
-            ["Mejor amiga", "Aretes diarios, brazalete o motivo significativo", "Evita cualquier cosa que se sienta demasiado romántica"],
-            ["Nueva pareja", "Aretes, huggies o una tarjeta de regalo", "Evita regalos muy caros o muy simbólicos"],
-            ["Alguien cuyo estilo es desconocido", "Tarjeta de regalo", "No adivines su tamaño de anillo"]
+            [
+              "Esposa",
+              "Aretes de diamante, collar significativo o brazalete elegante",
+              "Evita elegir solo por precio"
+            ],
+            [
+              "Novia",
+              "Huggies, aretes, collar delicado o aros pequeños",
+              "Adapta el regalo a la etapa de la relación"
+            ],
+            [
+              "Mamá",
+              "Aretes clásicos, huggies cómodos o collar ajustable",
+              "Prioriza el confort y la facilidad de cierre"
+            ],
+            [
+              "Hermana",
+              "Aros, huggies, aretes contemporáneos o brazalete",
+              "Considera su estilo individual en lugar del tuyo"
+            ],
+            [
+              "Hija",
+              "Aretes pequeños, aretes minimalistas o collar delicado",
+              "Elige un tamaño y diseño apropiados"
+            ],
+            [
+              "Mejor amiga",
+              "Aretes diarios, brazalete o motivo significativo",
+              "Evita cualquier cosa que se sienta demasiado romántica"
+            ],
+            [
+              "Nueva pareja",
+              "Aretes, huggies o una tarjeta de regalo",
+              "Evita regalos muy caros o muy simbólicos"
+            ],
+            [
+              "Alguien cuyo estilo es desconocido",
+              "Tarjeta de regalo",
+              "No adivines su tamaño de anillo"
+            ]
           ]
         }
       ]

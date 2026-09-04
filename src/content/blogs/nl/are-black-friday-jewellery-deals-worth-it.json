@@ -377,16 +377,43 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Een sterkere Black Friday-aankoop", "Een riskante Black Friday-aankoop"],
+          "headers": [
+            "Een sterkere Black Friday-aankoop",
+            "Een riskante Black Friday-aankoop"
+          ],
           "rows": [
-            ["Duidelijke recente prijsvergelijking", "Groot percentage zonder betrouwbare referentieprijs"],
-            ["Specifieke metaal- en platinginformatie", "Vage beschrijvingen zoals \"goudkleur\""],
-            ["Steentype en totaal gewicht bekendgemaakt", "\"Diamantlook\" zonder identificatie van het materiaal"],
-            ["Exacte afmetingen en meerdere foto's", "Alleen close-up lifestyle fotografie"],
-            ["Leverdatum en voorraadstatus bevestigd", "Onduidelijke verzend- of op maat gemaakte tijdlijn"],
-            ["Retouren en uitsluitingen getoond vóór afrekenen", "\"Uitverkoop\" informatie laat onthuld"],
-            ["Geschikt voor de echte stijl van de ontvanger", "Voornamelijk gekozen vanwege de korting"],
-            ["Volledige kosten begrepen", "Onverwachte levering, rechten of retourkosten"]
+            [
+              "Duidelijke recente prijsvergelijking",
+              "Groot percentage zonder betrouwbare referentieprijs"
+            ],
+            [
+              "Specifieke metaal- en platinginformatie",
+              "Vage beschrijvingen zoals \"goudkleur\""
+            ],
+            [
+              "Steentype en totaal gewicht bekendgemaakt",
+              "\"Diamantlook\" zonder identificatie van het materiaal"
+            ],
+            [
+              "Exacte afmetingen en meerdere foto's",
+              "Alleen close-up lifestyle fotografie"
+            ],
+            [
+              "Leverdatum en voorraadstatus bevestigd",
+              "Onduidelijke verzend- of op maat gemaakte tijdlijn"
+            ],
+            [
+              "Retouren en uitsluitingen getoond vóór afrekenen",
+              "\"Uitverkoop\" informatie laat onthuld"
+            ],
+            [
+              "Geschikt voor de echte stijl van de ontvanger",
+              "Voornamelijk gekozen vanwege de korting"
+            ],
+            [
+              "Volledige kosten begrepen",
+              "Onverwachte levering, rechten of retourkosten"
+            ]
           ]
         }
       ]
@@ -414,37 +441,36 @@
       ]
     },
     {
-      "heading": "Veelgestelde vragen",
       "content": [
         {
           "type": "faq",
-          "question": "Zijn Black Friday sieradenaanbiedingen echt?",
-          "answer": "Sommige zijn echt, maar het kortingspercentage moet worden gecontroleerd tegen de werkelijke prijsgeschiedenis van het product. Vergelijk de verkoopprijs, materialen, afmetingen, levering en retouren met equivalente sieraden voordat u beslist."
-        },
-        {
-          "type": "faq",
-          "question": "Is Black Friday een goed moment om kerstsieraden te kopen?",
-          "answer": "Het kan zijn, vooral als het product op voorraad is en de stijl of maat van de ontvanger bekend is. Black Friday 2026 laat vier weken over voor kerst, dus de volledige verzend- en levertijdlijn moet worden bevestigd voordat u bestelt."
-        },
-        {
-          "type": "faq",
-          "question": "Is uitverkoopsieraden van lagere kwaliteit?",
-          "answer": "Niet noodzakelijk. Een retailer kan bestaande producten reduceren voor seizoens-, voorraad- of promotiereden. Sommige producten kunnen echter specifiek voor uitverkoopgebeurten worden vervaardigd. Lees de materiaal-, steen- en constructiedetails in plaats van ervan uit te gaan dat het uitverkoopartikel identiek is aan een volledige prijsalternatief."
-        },
-        {
-          "type": "faq",
-          "question": "Kan afgeprijsde sieraden worden geretourneerd?",
-          "answer": "Het hangt af van de retailer, het artikel en de toepasselijke consumentenwet. Uitverkoopartikelen die defect zijn of niet zoals beschreven behouden wettelijke bescherming in het VK. Retouren van gedachtenwisseling kunnen worden beïnvloed door personalisatie, hygiënezegels of duidelijk bekendgemaakte uitverkoopcondities."
-        },
-        {
-          "type": "faq",
-          "question": "Moeten laboratoriumgekweekte diamantsieraden een certificaat bevatten?",
-          "answer": "Niet elk stuk vereist een individueel keuringsrapport. Rapporten zijn gebruikelijker voor in aanmerking komende individuele diamanten, terwijl kleine stenen in pavé- en meerstenenontwerpen mogelijk niet individueel zijn gecertificeerd. De retailer moet nog steeds bekendmaken dat de diamanten laboratoriumgekweekt zijn en nauwkeurige productspecificaties verstrekken."
-        },
-        {
-          "type": "faq",
-          "question": "Hoe kan ik vertellen of online sieraden de juiste grootte zullen hebben?",
-          "answer": "Controleer de afmetingen in millimeters en vergelijk ze met een stuk dat u al bezit. Beoordeel de schaal niet alleen op basis van close-up fotografie. Besteed bijzondere aandacht aan hangerafmetingen, oorbeldiameter, hanglengte en verstelbare kettingmetingen."
+          "title": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Zijn Black Friday sieradenaanbiedingen echt?",
+              "answer": "Sommige zijn echt, maar het kortingspercentage moet worden gecontroleerd tegen de werkelijke prijsgeschiedenis van het product. Vergelijk de verkoopprijs, materialen, afmetingen, levering en retouren met equivalente sieraden voordat u beslist."
+            },
+            {
+              "question": "Is Black Friday een goed moment om kerstsieraden te kopen?",
+              "answer": "Het kan zijn, vooral als het product op voorraad is en de stijl of maat van de ontvanger bekend is. Black Friday 2026 laat vier weken over voor kerst, dus de volledige verzend- en levertijdlijn moet worden bevestigd voordat u bestelt."
+            },
+            {
+              "question": "Is uitverkoopsieraden van lagere kwaliteit?",
+              "answer": "Niet noodzakelijk. Een retailer kan bestaande producten reduceren voor seizoens-, voorraad- of promotiereden. Sommige producten kunnen echter specifiek voor uitverkoopgebeurten worden vervaardigd. Lees de materiaal-, steen- en constructiedetails in plaats van ervan uit te gaan dat het uitverkoopartikel identiek is aan een volledige prijsalternatief."
+            },
+            {
+              "question": "Kan afgeprijsde sieraden worden geretourneerd?",
+              "answer": "Het hangt af van de retailer, het artikel en de toepasselijke consumentenwet. Uitverkoopartikelen die defect zijn of niet zoals beschreven behouden wettelijke bescherming in het VK. Retouren van gedachtenwisseling kunnen worden beïnvloed door personalisatie, hygiënezegels of duidelijk bekendgemaakte uitverkoopcondities."
+            },
+            {
+              "question": "Moeten laboratoriumgekweekte diamantsieraden een certificaat bevatten?",
+              "answer": "Niet elk stuk vereist een individueel keuringsrapport. Rapporten zijn gebruikelijker voor in aanmerking komende individuele diamanten, terwijl kleine stenen in pavé- en meerstenenontwerpen mogelijk niet individueel zijn gecertificeerd. De retailer moet nog steeds bekendmaken dat de diamanten laboratoriumgekweekt zijn en nauwkeurige productspecificaties verstrekken."
+            },
+            {
+              "question": "Hoe kan ik vertellen of online sieraden de juiste grootte zullen hebben?",
+              "answer": "Controleer de afmetingen in millimeters en vergelijk ze met een stuk dat u al bezit. Beoordeel de schaal niet alleen op basis van close-up fotografie. Besteed bijzondere aandacht aan hangerafmetingen, oorbeldiameter, hanglengte en verstelbare kettingmetingen."
+            }
+          ]
         }
       ]
     }

@@ -377,16 +377,43 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Un acquisto Black Friday più forte", "Un acquisto Black Friday rischioso"],
+          "headers": [
+            "Un acquisto Black Friday più forte",
+            "Un acquisto Black Friday rischioso"
+          ],
           "rows": [
-            ["Confronto prezzi recenti chiaro", "Grande percentuale senza prezzo di riferimento affidabile"],
-            ["Informazioni specifiche su metallo e plating", "Descrizioni vaghe come \"tono dorato\""],
-            ["Tipo di pietra e peso totale divulgato", "\"Aspetto diamante\" senza identificazione del materiale"],
-            ["Dimensioni esatte e più fotografie", "Solo fotografia lifestyle ravvicinata"],
-            ["Data di consegna e stato di stock confermato", "Cronologia di spedizione o fabbricazione su ordine poco chiara"],
-            ["Resi ed esclusioni mostrati prima del checkout", "Informazione \"vendita finale\" rivelata tardi"],
-            ["Adatto allo stile reale del destinatario", "Scelto principalmente a causa dello sconto"],
-            ["Costo completo compreso", "Spese di consegna, dazi o reso inaspettati"]
+            [
+              "Confronto prezzi recenti chiaro",
+              "Grande percentuale senza prezzo di riferimento affidabile"
+            ],
+            [
+              "Informazioni specifiche su metallo e plating",
+              "Descrizioni vaghe come \"tono dorato\""
+            ],
+            [
+              "Tipo di pietra e peso totale divulgato",
+              "\"Aspetto diamante\" senza identificazione del materiale"
+            ],
+            [
+              "Dimensioni esatte e più fotografie",
+              "Solo fotografia lifestyle ravvicinata"
+            ],
+            [
+              "Data di consegna e stato di stock confermato",
+              "Cronologia di spedizione o fabbricazione su ordine poco chiara"
+            ],
+            [
+              "Resi ed esclusioni mostrati prima del checkout",
+              "Informazione \"vendita finale\" rivelata tardi"
+            ],
+            [
+              "Adatto allo stile reale del destinatario",
+              "Scelto principalmente a causa dello sconto"
+            ],
+            [
+              "Costo completo compreso",
+              "Spese di consegna, dazi o reso inaspettati"
+            ]
           ]
         }
       ]
@@ -414,37 +441,36 @@
       ]
     },
     {
-      "heading": "Domande frequenti",
       "content": [
         {
           "type": "faq",
-          "question": "Le offerte di gioielli Black Friday sono autentiche?",
-          "answer": "Alcune lo sono autentiche, ma la percentuale di sconto dovrebbe essere controllata contro la storia dei prezzi reali del prodotto. Confronta il prezzo di vendita, i materiali, le dimensioni, la consegna e i resi con gioielli equivalenti prima di decidere."
-        },
-        {
-          "type": "faq",
-          "question": "Black Friday è un buon momento per acquistare gioielli di Natale?",
-          "answer": "Può esserlo, specialmente quando il prodotto è in stock e lo stile o la taglia del destinatario è noto. Black Friday 2026 lascia quattro settimane prima di Natale, quindi la cronologia completa di spedizione e consegna dovrebbe essere confermata prima di ordinare."
-        },
-        {
-          "type": "faq",
-          "question": "I gioielli in vendita sono di qualità inferiore?",
-          "answer": "Non necessariamente. Un rivenditore può ridurre i prodotti esistenti per ragioni stagionali, di inventario o promozionali. Tuttavia, alcuni prodotti possono essere fabbricati specificamente per eventi di vendita. Leggi i dettagli su materiale, pietra e costruzione invece di presumere che l'articolo in vendita sia identico a un'alternativa al prezzo pieno."
-        },
-        {
-          "type": "faq",
-          "question": "I gioielli scontati possono essere restituiti?",
-          "answer": "Dipende dal rivenditore, dall'articolo e dalla legge sulla protezione dei consumatori applicabile. Gli articoli in vendita che sono difettosi o non come descritto mantengono la protezione legale nel Regno Unito. I resi per cambio di idea possono essere influenzati da personalizzazione, sigilli igienici o condizioni di liquidazione chiaramente divulgate."
-        },
-        {
-          "type": "faq",
-          "question": "I gioielli a diamanti coltivati in laboratorio dovrebbero includere un certificato?",
-          "answer": "Non ogni pezzo richiede un rapporto di valutazione individuale. I rapporti sono più comuni per diamanti individuali idonei, mentre piccole pietre in design pavé e a più pietre potrebbero non essere certificate individualmente. Il rivenditore dovrebbe comunque divulgare che i diamanti sono coltivati in laboratorio e fornire specifiche accurate del prodotto."
-        },
-        {
-          "type": "faq",
-          "question": "Come posso dire se i gioielli online avranno la taglia giusta?",
-          "answer": "Controlla le misure in millimetri e confrontale con un pezzo che possiedi già. Non giudicare la scala solo sulla base della fotografia ravvicinata. Presta particolare attenzione alle dimensioni del ciondolo, al diametro dell'orecchino, alla lunghezza del ciondolo e alle misure della catena regolabile."
+          "title": "Domande frequenti",
+          "items": [
+            {
+              "question": "Le offerte di gioielli Black Friday sono autentiche?",
+              "answer": "Alcune lo sono autentiche, ma la percentuale di sconto dovrebbe essere controllata contro la storia dei prezzi reali del prodotto. Confronta il prezzo di vendita, i materiali, le dimensioni, la consegna e i resi con gioielli equivalenti prima di decidere."
+            },
+            {
+              "question": "Black Friday è un buon momento per acquistare gioielli di Natale?",
+              "answer": "Può esserlo, specialmente quando il prodotto è in stock e lo stile o la taglia del destinatario è noto. Black Friday 2026 lascia quattro settimane prima di Natale, quindi la cronologia completa di spedizione e consegna dovrebbe essere confermata prima di ordinare."
+            },
+            {
+              "question": "I gioielli in vendita sono di qualità inferiore?",
+              "answer": "Non necessariamente. Un rivenditore può ridurre i prodotti esistenti per ragioni stagionali, di inventario o promozionali. Tuttavia, alcuni prodotti possono essere fabbricati specificamente per eventi di vendita. Leggi i dettagli su materiale, pietra e costruzione invece di presumere che l'articolo in vendita sia identico a un'alternativa al prezzo pieno."
+            },
+            {
+              "question": "I gioielli scontati possono essere restituiti?",
+              "answer": "Dipende dal rivenditore, dall'articolo e dalla legge sulla protezione dei consumatori applicabile. Gli articoli in vendita che sono difettosi o non come descritto mantengono la protezione legale nel Regno Unito. I resi per cambio di idea possono essere influenzati da personalizzazione, sigilli igienici o condizioni di liquidazione chiaramente divulgate."
+            },
+            {
+              "question": "I gioielli a diamanti coltivati in laboratorio dovrebbero includere un certificato?",
+              "answer": "Non ogni pezzo richiede un rapporto di valutazione individuale. I rapporti sono più comuni per diamanti individuali idonei, mentre piccole pietre in design pavé e a più pietre potrebbero non essere certificate individualmente. Il rivenditore dovrebbe comunque divulgare che i diamanti sono coltivati in laboratorio e fornire specifiche accurate del prodotto."
+            },
+            {
+              "question": "Come posso dire se i gioielli online avranno la taglia giusta?",
+              "answer": "Controlla le misure in millimetri e confrontale con un pezzo che possiedi già. Non giudicare la scala solo sulla base della fotografia ravvicinata. Presta particolare attenzione alle dimensioni del ciondolo, al diametro dell'orecchino, alla lunghezza del ciondolo e alle misure della catena regolabile."
+            }
+          ]
         }
       ]
     }

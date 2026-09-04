@@ -44,16 +44,43 @@
         },
         {
           "type": "table",
-          "headers": ["What you know", "Safest direction"],
+          "headers": [
+            "What you know",
+            "Safest direction"
+          ],
           "rows": [
-            ["She has pierced ears and wears earrings daily", "Studs or huggies"],
-            ["She wears visible earrings", "Small or medium hoops"],
-            ["She rarely wears earrings", "Adjustable necklace"],
-            ["She regularly wears bracelets", "Adjustable bracelet"],
-            ["You know her style but not her size", "Earrings or adjustable necklace"],
-            ["You know her size but not her style", "Gift card may still be safer"],
-            ["You know neither her size nor style", "Jewellery gift card"],
-            ["You want to give her a ring", "Find her exact size first"]
+            [
+              "She has pierced ears and wears earrings daily",
+              "Studs or huggies"
+            ],
+            [
+              "She wears visible earrings",
+              "Small or medium hoops"
+            ],
+            [
+              "She rarely wears earrings",
+              "Adjustable necklace"
+            ],
+            [
+              "She regularly wears bracelets",
+              "Adjustable bracelet"
+            ],
+            [
+              "You know her style but not her size",
+              "Earrings or adjustable necklace"
+            ],
+            [
+              "You know her size but not her style",
+              "Gift card may still be safer"
+            ],
+            [
+              "You know neither her size nor style",
+              "Jewellery gift card"
+            ],
+            [
+              "You want to give her a ring",
+              "Find her exact size first"
+            ]
           ]
         }
       ]
@@ -67,18 +94,62 @@
         },
         {
           "type": "table",
-          "headers": ["Jewellery category", "Sizing risk", "What you need to check"],
+          "headers": [
+            "Jewellery category",
+            "Sizing risk",
+            "What you need to check"
+          ],
           "rows": [
-            ["Stud earrings", "Low", "Pierced ears, diameter and fastening"],
-            ["Huggie earrings", "Low to medium", "Internal diameter and piercing position"],
-            ["Small hoops", "Low to medium", "Diameter, weight and fastening"],
-            ["Adjustable necklace", "Low", "Minimum and maximum length"],
-            ["Fixed-length necklace", "Medium", "Exact chain length"],
-            ["Adjustable bracelet", "Medium", "Minimum and maximum circumference"],
-            ["Fixed bracelet", "Medium to high", "Wrist measurement"],
-            ["Rigid bangle", "High", "Internal diameter and hand width"],
-            ["Ring", "High", "Exact ring size and band width"],
-            ["Gift card", "Very low", "Value, expiry and redemption terms"]
+            [
+              "Stud earrings",
+              "Low",
+              "Pierced ears, diameter and fastening"
+            ],
+            [
+              "Huggie earrings",
+              "Low to medium",
+              "Internal diameter and piercing position"
+            ],
+            [
+              "Small hoops",
+              "Low to medium",
+              "Diameter, weight and fastening"
+            ],
+            [
+              "Adjustable necklace",
+              "Low",
+              "Minimum and maximum length"
+            ],
+            [
+              "Fixed-length necklace",
+              "Medium",
+              "Exact chain length"
+            ],
+            [
+              "Adjustable bracelet",
+              "Medium",
+              "Minimum and maximum circumference"
+            ],
+            [
+              "Fixed bracelet",
+              "Medium to high",
+              "Wrist measurement"
+            ],
+            [
+              "Rigid bangle",
+              "High",
+              "Internal diameter and hand width"
+            ],
+            [
+              "Ring",
+              "High",
+              "Exact ring size and band width"
+            ],
+            [
+              "Gift card",
+              "Very low",
+              "Value, expiry and redemption terms"
+            ]
           ]
         }
       ]
@@ -378,13 +449,6 @@
       "heading": "How to discover her jewellery style without asking her size",
       "content": [
         {
-          "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog6/PIC2.png",
-          "alt": "Understanding her existing jewellery style",
-          "width": 1200,
-          "height": 750
-        },
-        {
           "type": "paragraph",
           "text": "You can learn a surprising amount by observing what she already wears."
         }
@@ -444,15 +508,39 @@
         },
         {
           "type": "table",
-          "headers": ["Lifestyle", "Safer jewellery direction"],
+          "headers": [
+            "Lifestyle",
+            "Safer jewellery direction"
+          ],
           "rows": [
-            ["Conservative workplace", "Studs, huggies or delicate necklace"],
-            ["Creative or fashion-led work", "Modern hoops or sculptural earrings"],
-            ["Frequent traveller", "Secure studs, huggies or adjustable necklace"],
-            ["Regular dinners and events", "Medium hoops or drop earrings"],
-            ["Active daily routine", "Small, secure and lightweight jewellery"],
-            ["Minimalist wardrobe", "Studs, fine huggies or simple pendant"],
-            ["Statement dresser", "Visible hoops or sculptural earrings"]
+            [
+              "Conservative workplace",
+              "Studs, huggies or delicate necklace"
+            ],
+            [
+              "Creative or fashion-led work",
+              "Modern hoops or sculptural earrings"
+            ],
+            [
+              "Frequent traveller",
+              "Secure studs, huggies or adjustable necklace"
+            ],
+            [
+              "Regular dinners and events",
+              "Medium hoops or drop earrings"
+            ],
+            [
+              "Active daily routine",
+              "Small, secure and lightweight jewellery"
+            ],
+            [
+              "Minimalist wardrobe",
+              "Studs, fine huggies or simple pendant"
+            ],
+            [
+              "Statement dresser",
+              "Visible hoops or sculptural earrings"
+            ]
           ]
         }
       ]

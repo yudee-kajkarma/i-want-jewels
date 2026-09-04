@@ -54,9 +54,26 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Sie sollten warten, wenn…", "Sie bemerkten es nur durch den Rabatt", "Nur der durchgestrichene Preis ist sichtbar", "Die Beschreibung verwendet Wörter wie \"Luxus\" oder \"diamant-ähnlich\"", "Sie raten die Ring- oder Armbandgröße", "Das Rückgabefenster endet vor Weihnachten", "Die Seite gibt nur eine Versandkalkulation an", "Können Sie sich nicht vorstellen, es nach dem Ereignis zu tragen"],
+          "headers": [
+            "Sie sollten warten, wenn…",
+            "Sie bemerkten es nur durch den Rabatt",
+            "Nur der durchgestrichene Preis ist sichtbar",
+            "Die Beschreibung verwendet Wörter wie \"Luxus\" oder \"diamant-ähnlich\"",
+            "Sie raten die Ring- oder Armbandgröße",
+            "Das Rückgabefenster endet vor Weihnachten",
+            "Die Seite gibt nur eine Versandkalkulation an",
+            "Können Sie sich nicht vorstellen, es nach dem Ereignis zu tragen"
+          ],
           "rows": [
-            ["Sie wollten das genaue Stück bereits", "Sie kennen den früheren Verkaufspreis", "Materialien und Maße sind klar angegeben", "Die Größe ist bekannt", "Die Rückgabefrist deckt das Geschenkdatum ab", "Liefertermin ist bestätigt", "Das Design passt zu alltäglichem oder regelmäßigem Tragen"]
+            [
+              "Sie wollten das genaue Stück bereits",
+              "Sie kennen den früheren Verkaufspreis",
+              "Materialien und Maße sind klar angegeben",
+              "Die Größe ist bekannt",
+              "Die Rückgabefrist deckt das Geschenkdatum ab",
+              "Liefertermin ist bestätigt",
+              "Das Design passt zu alltäglichem oder regelmäßigem Tragen"
+            ]
           ]
         }
       ]
@@ -181,14 +198,35 @@
         },
         {
           "type": "table",
-          "headers": ["Beschreibung", "Was es bedeutet"],
+          "headers": [
+            "Beschreibung",
+            "Was es bedeutet"
+          ],
           "rows": [
-            ["Natürlicher Diamant", "Ein natürlich unter der Erde gebildeter Diamant"],
-            ["Lab-Diamant", "Ein unter kontrollierten Laborbedingungen gezüchteter Diamant"],
-            ["Moissanit", "Ein separater Edelstein, der einem Diamanten ähneln kann"],
-            ["Kubische Zirkonia oder CZ", "Ein hergestellter Diamantsimulator"],
-            ["Kristall oder Glas", "Dekoratives Material, das einen Edelstein imitieren kann"],
-            ["\"Diamant-ähnlich\"", "Marketing-Sprache, die die Identität des Steins nicht bestätigt"]
+            [
+              "Natürlicher Diamant",
+              "Ein natürlich unter der Erde gebildeter Diamant"
+            ],
+            [
+              "Lab-Diamant",
+              "Ein unter kontrollierten Laborbedingungen gezüchteter Diamant"
+            ],
+            [
+              "Moissanit",
+              "Ein separater Edelstein, der einem Diamanten ähneln kann"
+            ],
+            [
+              "Kubische Zirkonia oder CZ",
+              "Ein hergestellter Diamantsimulator"
+            ],
+            [
+              "Kristall oder Glas",
+              "Dekoratives Material, das einen Edelstein imitieren kann"
+            ],
+            [
+              "\"Diamant-ähnlich\"",
+              "Marketing-Sprache, die die Identität des Steins nicht bestätigt"
+            ]
           ]
         },
         {
@@ -486,6 +524,13 @@
         {
           "type": "paragraph",
           "text": "Wenn die Antwort auf die letzte Frage nein ist, kann der Rabatt den Wunsch schaffen, anstatt eine bestehende Entscheidung zu belohnen."
+        },
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog4/PIC3.png",
+          "alt": "Black Friday jewellery purchase comparison and cost per wear",
+          "width": 1200,
+          "height": 750
         }
       ]
     },
@@ -547,16 +592,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Schmuckkategorie", "Online-Kaufrisiko", "Was zu prüfen"],
+          "headers": [
+            "Schmuckkategorie",
+            "Online-Kaufrisiko",
+            "Was zu prüfen"
+          ],
           "rows": [
-            ["Ohrstecker", "Niedrig", "Durchmesser, Verschluss, ob als Paar verkauft und Hygiene-Rückgabebedingungen"],
-            ["Huggies und Creolen", "Niedrig bis mittel", "Innendurchmesser, Gewicht und Verschluss"],
-            ["Verstellbare Halsketten", "Niedrig", "Kettenlänge, Verlängerer und Anhänger-Abmessungen"],
-            ["Feste Länge Halsketten", "Niedrig bis mittel", "Exakte Länge und Position am Halsausschnitt"],
-            ["Verstellbare Armbänder", "Mittel", "Minimum und Maximum Umfang"],
-            ["Feste Armbänder und Armreife", "Mittel bis hoch", "Handgelenk-Messung und Innendurchmesser"],
-            ["Ringe", "Hoch", "Exakte Größe, Bandbreite, Vergrößerung und Rückgabeberechtigung"],
-            ["Personalisierter Schmuck", "Hoch", "Rechtschreibung, Produktionszeit und Rückgabeausschlüsse"]
+            [
+              "Ohrstecker",
+              "Niedrig",
+              "Durchmesser, Verschluss, ob als Paar verkauft und Hygiene-Rückgabebedingungen"
+            ],
+            [
+              "Huggies und Creolen",
+              "Niedrig bis mittel",
+              "Innendurchmesser, Gewicht und Verschluss"
+            ],
+            [
+              "Verstellbare Halsketten",
+              "Niedrig",
+              "Kettenlänge, Verlängerer und Anhänger-Abmessungen"
+            ],
+            [
+              "Feste Länge Halsketten",
+              "Niedrig bis mittel",
+              "Exakte Länge und Position am Halsausschnitt"
+            ],
+            [
+              "Verstellbare Armbänder",
+              "Mittel",
+              "Minimum und Maximum Umfang"
+            ],
+            [
+              "Feste Armbänder und Armreife",
+              "Mittel bis hoch",
+              "Handgelenk-Messung und Innendurchmesser"
+            ],
+            [
+              "Ringe",
+              "Hoch",
+              "Exakte Größe, Bandbreite, Vergrößerung und Rückgabeberechtigung"
+            ],
+            [
+              "Personalisierter Schmuck",
+              "Hoch",
+              "Rechtschreibung, Produktionszeit und Rückgabeausschlüsse"
+            ]
           ]
         },
         {

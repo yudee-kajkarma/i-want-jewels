@@ -44,16 +44,43 @@
         },
         {
           "type": "table",
-          "headers": ["Cosa sai", "Direzione più sicura"],
+          "headers": [
+            "Cosa sai",
+            "Direzione più sicura"
+          ],
           "rows": [
-            ["Ha i piercing alle orecchie e porta orecchini quotidianamente", "Orecchini o huggies"],
-            ["Porta orecchini visibili", "Piccoli o medi cerchi"],
-            ["Raramente porta orecchini", "Collana regolabile"],
-            ["Porta regolarmente braccialetti", "Braccialetto regolabile"],
-            ["Conosci il suo stile ma non la sua taglia", "Orecchini o collana regolabile"],
-            ["Conosci la sua taglia ma non il suo stile", "Una carta regalo può ancora essere più sicura"],
-            ["Non conosci né la sua taglia né il suo stile", "Carta regalo di gioielli"],
-            ["Vuoi darle un anello", "Trova prima la sua taglia esatta"]
+            [
+              "Ha i piercing alle orecchie e porta orecchini quotidianamente",
+              "Orecchini o huggies"
+            ],
+            [
+              "Porta orecchini visibili",
+              "Piccoli o medi cerchi"
+            ],
+            [
+              "Raramente porta orecchini",
+              "Collana regolabile"
+            ],
+            [
+              "Porta regolarmente braccialetti",
+              "Braccialetto regolabile"
+            ],
+            [
+              "Conosci il suo stile ma non la sua taglia",
+              "Orecchini o collana regolabile"
+            ],
+            [
+              "Conosci la sua taglia ma non il suo stile",
+              "Una carta regalo può ancora essere più sicura"
+            ],
+            [
+              "Non conosci né la sua taglia né il suo stile",
+              "Carta regalo di gioielli"
+            ],
+            [
+              "Vuoi darle un anello",
+              "Trova prima la sua taglia esatta"
+            ]
           ]
         }
       ]
@@ -67,18 +94,62 @@
         },
         {
           "type": "table",
-          "headers": ["Categoria di gioielli", "Rischio di taglia", "Cosa devi controllare"],
+          "headers": [
+            "Categoria di gioielli",
+            "Rischio di taglia",
+            "Cosa devi controllare"
+          ],
           "rows": [
-            ["Orecchini", "Basso", "Piercing alle orecchie, diametro e chiusura"],
-            ["Orecchini huggie", "Basso a medio", "Diametro interno e posizione del piercing"],
-            ["Piccoli cerchi", "Basso a medio", "Diametro, peso e chiusura"],
-            ["Collana regolabile", "Basso", "Lunghezza minima e massima"],
-            ["Collana di lunghezza fissa", "Medio", "Lunghezza esatta della catena"],
-            ["Braccialetto regolabile", "Medio", "Circonferenza minima e massima"],
-            ["Braccialetto fisso", "Medio ad alto", "Misurazione del polso"],
-            ["Braccialetto rigido", "Alto", "Diametro interno e larghezza della mano"],
-            ["Anello", "Alto", "Taglia esatta dell'anello e larghezza della banda"],
-            ["Carta regalo", "Molto basso", "Valore, scadenza e termini di riscatto"]
+            [
+              "Orecchini",
+              "Basso",
+              "Piercing alle orecchie, diametro e chiusura"
+            ],
+            [
+              "Orecchini huggie",
+              "Basso a medio",
+              "Diametro interno e posizione del piercing"
+            ],
+            [
+              "Piccoli cerchi",
+              "Basso a medio",
+              "Diametro, peso e chiusura"
+            ],
+            [
+              "Collana regolabile",
+              "Basso",
+              "Lunghezza minima e massima"
+            ],
+            [
+              "Collana di lunghezza fissa",
+              "Medio",
+              "Lunghezza esatta della catena"
+            ],
+            [
+              "Braccialetto regolabile",
+              "Medio",
+              "Circonferenza minima e massima"
+            ],
+            [
+              "Braccialetto fisso",
+              "Medio ad alto",
+              "Misurazione del polso"
+            ],
+            [
+              "Braccialetto rigido",
+              "Alto",
+              "Diametro interno e larghezza della mano"
+            ],
+            [
+              "Anello",
+              "Alto",
+              "Taglia esatta dell'anello e larghezza della banda"
+            ],
+            [
+              "Carta regalo",
+              "Molto basso",
+              "Valore, scadenza e termini di riscatto"
+            ]
           ]
         }
       ]
@@ -378,13 +449,6 @@
       "heading": "Come scoprire il suo stile di gioielli senza chiedere la sua taglia",
       "content": [
         {
-          "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog6/PIC2.png",
-          "alt": "Capire il suo stile di gioielli esistente",
-          "width": 1200,
-          "height": 750
-        },
-        {
           "type": "paragraph",
           "text": "Puoi imparare una quantità sorprendente osservando ciò che indossa già."
         }
@@ -444,15 +508,39 @@
         },
         {
           "type": "table",
-          "headers": ["Stile di vita", "Direzione di gioielli più sicura"],
+          "headers": [
+            "Stile di vita",
+            "Direzione di gioielli più sicura"
+          ],
           "rows": [
-            ["Luogo di lavoro conservatore", "Orecchini, huggies o collana delicata"],
-            ["Lavoro creativo o guidato dalla moda", "Cerchi moderni o orecchini scultorei"],
-            ["Viaggiatore frequente", "Orecchini sicuri, huggies o collana regolabile"],
-            ["Cene regolari ed eventi", "Cerchi medi o orecchini pendenti"],
-            ["Routine quotidiana attiva", "Gioielli piccoli, sicuri e leggeri"],
-            ["Guardaroba minimalista", "Orecchini, huggies fini o semplice ciondolo"],
-            ["Stile statement", "Cerchi visibili o orecchini scultorei"]
+            [
+              "Luogo di lavoro conservatore",
+              "Orecchini, huggies o collana delicata"
+            ],
+            [
+              "Lavoro creativo o guidato dalla moda",
+              "Cerchi moderni o orecchini scultorei"
+            ],
+            [
+              "Viaggiatore frequente",
+              "Orecchini sicuri, huggies o collana regolabile"
+            ],
+            [
+              "Cene regolari ed eventi",
+              "Cerchi medi o orecchini pendenti"
+            ],
+            [
+              "Routine quotidiana attiva",
+              "Gioielli piccoli, sicuri e leggeri"
+            ],
+            [
+              "Guardaroba minimalista",
+              "Orecchini, huggies fini o semplice ciondolo"
+            ],
+            [
+              "Stile statement",
+              "Cerchi visibili o orecchini scultorei"
+            ]
           ]
         }
       ]

@@ -377,16 +377,43 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Un achat Black Friday plus fort", "Un achat Black Friday risqué"],
+          "headers": [
+            "Un achat Black Friday plus fort",
+            "Un achat Black Friday risqué"
+          ],
           "rows": [
-            ["Comparaison de prix récente claire", "Grand pourcentage sans prix de référence fiable"],
-            ["Informations spécifiques sur le métal et le placage", "Descriptions vagues comme \"ton or\""],
-            ["Type de pierre et poids total divulgué", "\"Aspect diamant\" sans identification du matériau"],
-            ["Dimensions exactes et plusieurs photographies", "Seule photographie lifestyle en gros plan"],
-            ["Date de livraison et statut de stock confirmés", "Chronologie d'expédition ou de fabrication sur commande floue"],
-            ["Retours et exclusions affichés avant paiement", "Information \"vente finale\" révélée tard"],
-            ["Adapté au vrai style du destinataire", "Choisi principalement à cause de la remise"],
-            ["Coût complet compris", "Frais de livraison, de droits ou de retour inattendus"]
+            [
+              "Comparaison de prix récente claire",
+              "Grand pourcentage sans prix de référence fiable"
+            ],
+            [
+              "Informations spécifiques sur le métal et le placage",
+              "Descriptions vagues comme \"ton or\""
+            ],
+            [
+              "Type de pierre et poids total divulgué",
+              "\"Aspect diamant\" sans identification du matériau"
+            ],
+            [
+              "Dimensions exactes et plusieurs photographies",
+              "Seule photographie lifestyle en gros plan"
+            ],
+            [
+              "Date de livraison et statut de stock confirmés",
+              "Chronologie d'expédition ou de fabrication sur commande floue"
+            ],
+            [
+              "Retours et exclusions affichés avant paiement",
+              "Information \"vente finale\" révélée tard"
+            ],
+            [
+              "Adapté au vrai style du destinataire",
+              "Choisi principalement à cause de la remise"
+            ],
+            [
+              "Coût complet compris",
+              "Frais de livraison, de droits ou de retour inattendus"
+            ]
           ]
         }
       ]
@@ -414,37 +441,36 @@
       ]
     },
     {
-      "heading": "Questions fréquemment posées",
       "content": [
         {
           "type": "faq",
-          "question": "Les offres de bijoux Black Friday sont-elles authentiques?",
-          "answer": "Certaines le sont authentiques, mais le pourcentage de remise doit être vérifié contre l'historique des prix réel du produit. Comparez le prix de vente, les matériaux, les dimensions, la livraison et les retours avec des bijoux équivalents avant de décider."
-        },
-        {
-          "type": "faq",
-          "question": "Black Friday est-il un bon moment pour acheter des bijoux de Noël?",
-          "answer": "Il peut l'être, surtout lorsque le produit est en stock et que le style ou la taille du destinataire est connu. Black Friday 2026 laisse quatre semaines avant Noël, donc la chronologie complète d'expédition et de livraison doit être confirmée avant de commander."
-        },
-        {
-          "type": "faq",
-          "question": "Les bijoux en vente sont-ils de moindre qualité?",
-          "answer": "Pas nécessairement. Un détaillant peut réduire les produits existants pour des raisons saisonnières, d'inventaire ou promotionnelles. Cependant, certains produits peuvent être fabriqués spécifiquement pour les événements de vente. Lisez les détails sur le matériau, la pierre et la construction au lieu de supposer que l'article en vente est identique à une alternative au prix complet."
-        },
-        {
-          "type": "faq",
-          "question": "Les bijoux soldés peuvent-ils être retournés?",
-          "answer": "Cela dépend du détaillant, de l'article et de la loi sur la protection des consommateurs applicable. Les articles en vente qui sont défectueux ou non comme décrit conservent la protection statutaire au Royaume-Uni. Les retours de changement d'esprit peuvent être affectés par la personnalisation, les sceaux d'hygiène ou des conditions de liquidation clairement divulguées."
-        },
-        {
-          "type": "faq",
-          "question": "Les bijoux à diamants cultivés en laboratoire devraient-ils inclure un certificat?",
-          "answer": "Chaque pièce n'exige pas un rapport de classement individuel. Les rapports sont plus courants pour les diamants individuels éligibles, tandis que les petites pierres dans les designs pavé et à plusieurs pierres peuvent ne pas être certifiées individuellement. Le détaillant devrait toujours divulguer que les diamants sont cultivés en laboratoire et fournir des spécifications précises du produit."
-        },
-        {
-          "type": "faq",
-          "question": "Comment savoir si les bijoux en ligne auront la bonne taille?",
-          "answer": "Vérifiez les mesures en millimètres et comparez-les avec une pièce que vous possédez déjà. Ne jugez pas l'échelle uniquement sur la base de la photographie en gros plan. Portez une attention particulière aux dimensions du pendentif, au diamètre de la boucle d'oreille, à la longueur du pendentif et aux mesures de chaîne ajustables."
+          "title": "Questions fréquemment posées",
+          "items": [
+            {
+              "question": "Les offres de bijoux Black Friday sont-elles authentiques?",
+              "answer": "Certaines le sont authentiques, mais le pourcentage de remise doit être vérifié contre l'historique des prix réel du produit. Comparez le prix de vente, les matériaux, les dimensions, la livraison et les retours avec des bijoux équivalents avant de décider."
+            },
+            {
+              "question": "Black Friday est-il un bon moment pour acheter des bijoux de Noël?",
+              "answer": "Il peut l'être, surtout lorsque le produit est en stock et que le style ou la taille du destinataire est connu. Black Friday 2026 laisse quatre semaines avant Noël, donc la chronologie complète d'expédition et de livraison doit être confirmée avant de commander."
+            },
+            {
+              "question": "Les bijoux en vente sont-ils de moindre qualité?",
+              "answer": "Pas nécessairement. Un détaillant peut réduire les produits existants pour des raisons saisonnières, d'inventaire ou promotionnelles. Cependant, certains produits peuvent être fabriqués spécifiquement pour les événements de vente. Lisez les détails sur le matériau, la pierre et la construction au lieu de supposer que l'article en vente est identique à une alternative au prix complet."
+            },
+            {
+              "question": "Les bijoux soldés peuvent-ils être retournés?",
+              "answer": "Cela dépend du détaillant, de l'article et de la loi sur la protection des consommateurs applicable. Les articles en vente qui sont défectueux ou non comme décrit conservent la protection statutaire au Royaume-Uni. Les retours de changement d'esprit peuvent être affectés par la personnalisation, les sceaux d'hygiène ou des conditions de liquidation clairement divulguées."
+            },
+            {
+              "question": "Les bijoux à diamants cultivés en laboratoire devraient-ils inclure un certificat?",
+              "answer": "Chaque pièce n'exige pas un rapport de classement individuel. Les rapports sont plus courants pour les diamants individuels éligibles, tandis que les petites pierres dans les designs pavé et à plusieurs pierres peuvent ne pas être certifiées individuellement. Le détaillant devrait toujours divulguer que les diamants sont cultivés en laboratoire et fournir des spécifications précises du produit."
+            },
+            {
+              "question": "Comment savoir si les bijoux en ligne auront la bonne taille?",
+              "answer": "Vérifiez les mesures en millimètres et comparez-les avec une pièce que vous possédez déjà. Ne jugez pas l'échelle uniquement sur la base de la photographie en gros plan. Portez une attention particulière aux dimensions du pendentif, au diamètre de la boucle d'oreille, à la longueur du pendentif et aux mesures de chaîne ajustables."
+            }
+          ]
         }
       ]
     }

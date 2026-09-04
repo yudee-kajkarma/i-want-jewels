@@ -4,7 +4,7 @@
     "description": "Cerchi un regalo Black Friday per lei? Scopri idee di gioielli pensate, scelte di taglia più sicure e cosa controllare prima di comprare per Natale."
   },
   "h1": "Regali Black Friday per lei: cosa comprare presto e cosa evitare",
-  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC1.png",
   "sections": [
     {
       "content": [
@@ -63,18 +63,51 @@
         },
         {
           "type": "table",
-          "headers": ["Cosa sai di lei", "Direzione regalo più sicura"],
+          "headers": [
+            "Cosa sai di lei",
+            "Direzione regalo più sicura"
+          ],
           "rows": [
-            ["Indossa piccoli orecchini ogni giorno", "Diamanti o huggies"],
-            ["Le piacciono gioielli visibili ma indossabili", "Piccoli o medi cerchi"],
-            ["Indossa raramente orecchini", "Una collana o braccialetto regolabile"],
-            ["Indossa principalmente gioielli delicati", "Borchie minimaliste o un ciondolo fine"],
-            ["Le piacciono design romantici o simbolici", "Un motivo significativo o orecchini pendenti delicati"],
-            ["Le piace accessori statement", "Grandi cerchi o orecchini scultorei"],
-            ["Mixa diversi orecchini", "Una piccola borchia o huggie per la sua pila di orecchie"],
-            ["Conosci la sua esatta taglia di anello", "Un anello in uno stile simile a uno che possiede"],
-            ["Non conosci la sua taglia o il suo stile", "Una carta regalo gioielli"],
-            ["Il regalo è per Natale", "Scegli un pezzo facile da misurare e verifica consegna e resi"]
+            [
+              "Indossa piccoli orecchini ogni giorno",
+              "Diamanti o huggies"
+            ],
+            [
+              "Le piacciono gioielli visibili ma indossabili",
+              "Piccoli o medi cerchi"
+            ],
+            [
+              "Indossa raramente orecchini",
+              "Una collana o braccialetto regolabile"
+            ],
+            [
+              "Indossa principalmente gioielli delicati",
+              "Borchie minimaliste o un ciondolo fine"
+            ],
+            [
+              "Le piacciono design romantici o simbolici",
+              "Un motivo significativo o orecchini pendenti delicati"
+            ],
+            [
+              "Le piace accessori statement",
+              "Grandi cerchi o orecchini scultorei"
+            ],
+            [
+              "Mixa diversi orecchini",
+              "Una piccola borchia o huggie per la sua pila di orecchie"
+            ],
+            [
+              "Conosci la sua esatta taglia di anello",
+              "Un anello in uno stile simile a uno che possiede"
+            ],
+            [
+              "Non conosci la sua taglia o il suo stile",
+              "Una carta regalo gioielli"
+            ],
+            [
+              "Il regalo è per Natale",
+              "Scegli un pezzo facile da misurare e verifica consegna e resi"
+            ]
           ]
         }
       ]
@@ -169,6 +202,13 @@
     {
       "heading": "1. Orecchini diamante",
       "content": [
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "alt": "Diamond stud earrings Black Friday gift idea",
+          "width": 1200,
+          "height": 750
+        },
         {
           "type": "paragraph",
           "text": "Le borchie diamante sono uno dei regali di gioielli più sicuri perché funzionano con abbigliamento casual, outfit da ufficio, cene e occasioni formali."
@@ -341,23 +381,59 @@
         },
         {
           "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC3.png",
           "alt": "Regali di gioielli Black Friday per lei",
           "width": 1200,
           "height": 750
         },
         {
           "type": "table",
-          "headers": ["Destinatario", "Direzione gioielli più sicura", "Cosa fare attenzione"],
+          "headers": [
+            "Destinatario",
+            "Direzione gioielli più sicura",
+            "Cosa fare attenzione"
+          ],
           "rows": [
-            ["Moglie", "Orecchini diamante, collana significativa o braccialetto elegante", "Evita di scegliere solo per prezzo"],
-            ["Ragazza", "Huggies, borchie, collana delicata o piccoli cerchi", "Adatta il regalo allo stadio della relazione"],
-            ["Mamma", "Borchie classiche, huggies confortevoli o collana regolabile", "Prioritizza il comfort e la facilità di chiusura"],
-            ["Sorella", "Cerchi, huggies, orecchini contemporanei o braccialetto", "Considera il suo stile individuale piuttosto che il tuo"],
-            ["Figlia", "Piccole borchie, orecchini minimalisti o collana delicata", "Scegli una dimensione e un design appropriati"],
-            ["Migliore amica", "Orecchini quotidiani, braccialetto o motivo significativo", "Evita tutto ciò che sembra troppo romantico"],
-            ["Nuovo partner", "Borchie, huggies o una carta regalo", "Evita regali molto costosi o molto simbolici"],
-            ["Qualcuno il cui stile è sconosciuto", "Carta regalo", "Non indovinare la sua taglia di anello"]
+            [
+              "Moglie",
+              "Orecchini diamante, collana significativa o braccialetto elegante",
+              "Evita di scegliere solo per prezzo"
+            ],
+            [
+              "Ragazza",
+              "Huggies, borchie, collana delicata o piccoli cerchi",
+              "Adatta il regalo allo stadio della relazione"
+            ],
+            [
+              "Mamma",
+              "Borchie classiche, huggies confortevoli o collana regolabile",
+              "Prioritizza il comfort e la facilità di chiusura"
+            ],
+            [
+              "Sorella",
+              "Cerchi, huggies, orecchini contemporanei o braccialetto",
+              "Considera il suo stile individuale piuttosto che il tuo"
+            ],
+            [
+              "Figlia",
+              "Piccole borchie, orecchini minimalisti o collana delicata",
+              "Scegli una dimensione e un design appropriati"
+            ],
+            [
+              "Migliore amica",
+              "Orecchini quotidiani, braccialetto o motivo significativo",
+              "Evita tutto ciò che sembra troppo romantico"
+            ],
+            [
+              "Nuovo partner",
+              "Borchie, huggies o una carta regalo",
+              "Evita regali molto costosi o molto simbolici"
+            ],
+            [
+              "Qualcuno il cui stile è sconosciuto",
+              "Carta regalo",
+              "Non indovinare la sua taglia di anello"
+            ]
           ]
         }
       ]

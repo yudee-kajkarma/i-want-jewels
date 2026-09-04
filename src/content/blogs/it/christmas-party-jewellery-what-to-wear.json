@@ -27,18 +27,62 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Outfit o evento", "Migliore direzione gioielli", "Evitare"],
+          "headers": [
+            "Outfit o evento",
+            "Migliore direzione gioielli",
+            "Evitare"
+          ],
           "rows": [
-            ["Festa in ufficio", "Borchie, huggies o cerchi raffinati", "Orecchini molto grandi o distrattivi"],
-            ["Cocktail", "Orecchini a goccia, cerchi o un pezzo statement", "Più pezzi audaci insieme"],
-            ["Cena formale di Natale", "Gocce eleganti, borchie lucidate o una collana delicata", "Gioielli casual o novelty"],
-            ["Abito nero semplice", "Orecchini statement, cerchi brillanti o lunghe gocce", "Gioielli che scompaiono completamente"],
-            ["Abito paillettato", "Borchie, huggies o orecchini minimalisti", "Grandi orecchini più una collana audace"],
-            ["Abito velluto", "Gocce, cerchi o borchie classiche", "Troppi accessori pesanti"],
-            ["Abito seta", "Gocce o borchie di diamanti pulite", "Gioielli che si impigliano o tirano il tessuto"],
-            ["Abito collo alto", "Orecchini e un braccialetto; solitamente nessuna collana", "Una collana che compete con la scollatura"],
-            ["Abito senza spalline", "Orecchini con una collana delicata opzionale", "Sovraccaricare la scollatura aperta"],
-            ["Tuta", "Cerchi, orecchini geometrici o un braccialetto strutturato", "Pezzi troppo delicati che si perdono"]
+            [
+              "Festa in ufficio",
+              "Borchie, huggies o cerchi raffinati",
+              "Orecchini molto grandi o distrattivi"
+            ],
+            [
+              "Cocktail",
+              "Orecchini a goccia, cerchi o un pezzo statement",
+              "Più pezzi audaci insieme"
+            ],
+            [
+              "Cena formale di Natale",
+              "Gocce eleganti, borchie lucidate o una collana delicata",
+              "Gioielli casual o novelty"
+            ],
+            [
+              "Abito nero semplice",
+              "Orecchini statement, cerchi brillanti o lunghe gocce",
+              "Gioielli che scompaiono completamente"
+            ],
+            [
+              "Abito paillettato",
+              "Borchie, huggies o orecchini minimalisti",
+              "Grandi orecchini più una collana audace"
+            ],
+            [
+              "Abito velluto",
+              "Gocce, cerchi o borchie classiche",
+              "Troppi accessori pesanti"
+            ],
+            [
+              "Abito seta",
+              "Gocce o borchie di diamanti pulite",
+              "Gioielli che si impigliano o tirano il tessuto"
+            ],
+            [
+              "Abito collo alto",
+              "Orecchini e un braccialetto; solitamente nessuna collana",
+              "Una collana che compete con la scollatura"
+            ],
+            [
+              "Abito senza spalline",
+              "Orecchini con una collana delicata opzionale",
+              "Sovraccaricare la scollatura aperta"
+            ],
+            [
+              "Tuta",
+              "Cerchi, orecchini geometrici o un braccialetto strutturato",
+              "Pezzi troppo delicati che si perdono"
+            ]
           ]
         }
       ]
@@ -167,6 +211,13 @@
       "heading": "Quali gioielli indossare con la seta?",
       "content": [
         {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog3/img3.png",
+          "alt": "Jewellery for satin and silk dress styling",
+          "width": 1200,
+          "height": 750
+        },
+        {
           "type": "paragraph",
           "text": "La seta ha una superficie riflettente morbida, quindi i gioielli con linee pulite e brillantezza controllata sono generalmente più efficaci."
         },
@@ -254,12 +305,32 @@
         },
         {
           "type": "table",
-          "headers": ["Finitura", "Effetto globale", "Colori outfit forti"],
+          "headers": [
+            "Finitura",
+            "Effetto globale",
+            "Colori outfit forti"
+          ],
           "rows": [
-            ["Oro giallo", "Caldo, ricco e festivo", "Nero, rosso, verde, bordeaux, crema e champagne"],
-            ["Bianco o argentato", "Pulito, luminoso e moderno", "Nero, blu marino, argento, bianco, grigio e colori freschi"],
-            ["Oro rosa", "Morbido, romantico e femminile", "Blush, rosa, champagne e colori pastello"],
-            ["Metalli misti", "Contemporaneo e individuale", "Outfit semplici con competizione di colori minima"]
+            [
+              "Oro giallo",
+              "Caldo, ricco e festivo",
+              "Nero, rosso, verde, bordeaux, crema e champagne"
+            ],
+            [
+              "Bianco o argentato",
+              "Pulito, luminoso e moderno",
+              "Nero, blu marino, argento, bianco, grigio e colori freschi"
+            ],
+            [
+              "Oro rosa",
+              "Morbido, romantico e femminile",
+              "Blush, rosa, champagne e colori pastello"
+            ],
+            [
+              "Metalli misti",
+              "Contemporaneo e individuale",
+              "Outfit semplici con competizione di colori minima"
+            ]
           ]
         },
         {
@@ -309,16 +380,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Esigenza di styling", "Direzione gioielli", "Raccomandazione I Want Jewels"],
+          "headers": [
+            "Esigenza di styling",
+            "Direzione gioielli",
+            "Raccomandazione I Want Jewels"
+          ],
           "rows": [
-            ["Brillantezza party più sicura", "Borchie di diamanti", "Cadenza"],
-            ["Party ufficio moderno", "Huggies", "Amadea"],
-            ["Outfit serale elegante", "Orecchini a goccia", "Orsola"],
-            ["Forma party moderna", "Cerchi di diamanti", "Pave Hoops"],
-            ["Look statement abito semplice", "Orecchini statement", "Lusso"],
-            ["Outfit romantico morbido", "Orecchini a farfalla", "Farfalla"],
-            ["Abito dettagliato o paillettato", "Orecchini minimalisti", "Laluce"],
-            ["Linea serale formale", "Lunghe gocce", "Concetta Long"]
+            [
+              "Brillantezza party più sicura",
+              "Borchie di diamanti",
+              "Cadenza"
+            ],
+            [
+              "Party ufficio moderno",
+              "Huggies",
+              "Amadea"
+            ],
+            [
+              "Outfit serale elegante",
+              "Orecchini a goccia",
+              "Orsola"
+            ],
+            [
+              "Forma party moderna",
+              "Cerchi di diamanti",
+              "Pave Hoops"
+            ],
+            [
+              "Look statement abito semplice",
+              "Orecchini statement",
+              "Lusso"
+            ],
+            [
+              "Outfit romantico morbido",
+              "Orecchini a farfalla",
+              "Farfalla"
+            ],
+            [
+              "Abito dettagliato o paillettato",
+              "Orecchini minimalisti",
+              "Laluce"
+            ],
+            [
+              "Linea serale formale",
+              "Lunghe gocce",
+              "Concetta Long"
+            ]
           ]
         },
         {
