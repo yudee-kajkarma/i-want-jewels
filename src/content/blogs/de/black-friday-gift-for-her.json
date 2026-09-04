@@ -4,7 +4,7 @@
     "description": "Suchen Sie nach einem Black Friday-Geschenk für sie? Entdecken Sie durchdachte Schmuckideen, sicherere Größenentscheidungen und was Sie vor dem Kauf für Weihnachten prüfen sollten."
   },
   "h1": "Black Friday-Geschenke für sie: Was früh zu kaufen und was zu vermeiden",
-  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC1.png",
   "sections": [
     {
       "content": [
@@ -63,18 +63,51 @@
         },
         {
           "type": "table",
-          "headers": ["Was Sie über sie wissen", "Sicherste Geschenk-Richtung"],
+          "headers": [
+            "Was Sie über sie wissen",
+            "Sicherste Geschenk-Richtung"
+          ],
           "rows": [
-            ["Sie trägt jeden Tag kleine Ohrringe", "Diamant-Ohrstecker oder Huggies"],
-            ["Sie mag sichtbaren aber tragbaren Schmuck", "Kleine oder mittlere Creolen"],
-            ["Sie trägt selten Ohrringe", "Eine verstellbare Halskette oder ein Armband"],
-            ["Sie trägt meist feinen Schmuck", "Minimalistische Ohrstecker oder ein feines Anhänger"],
-            ["Sie mag romantische oder symbolische Designs", "Ein bedeutungsvolles Motiv oder feine Tropfenohrringe"],
-            ["Sie genießt Statement-Accessoires", "Größere Creolen oder skulpturale Ohrringe"],
-            ["Sie mischt mehrere Ohrringe", "Ein kleiner Ohrstecker oder Huggie für ihren Ohr-Stack"],
-            ["Sie kennen ihre exakte Ringgröße", "Ein Ring in einem Stil ähnlich einem, den sie besitzt"],
-            ["Sie kennen ihre Größe oder ihren Stil nicht", "Eine Schmuck-Geschenkkarte"],
-            ["Das Geschenk ist für Weihnachten", "Wählen Sie ein leicht zu messendes Stück und bestätigen Sie Lieferung und Rückgaben"]
+            [
+              "Sie trägt jeden Tag kleine Ohrringe",
+              "Diamant-Ohrstecker oder Huggies"
+            ],
+            [
+              "Sie mag sichtbaren aber tragbaren Schmuck",
+              "Kleine oder mittlere Creolen"
+            ],
+            [
+              "Sie trägt selten Ohrringe",
+              "Eine verstellbare Halskette oder ein Armband"
+            ],
+            [
+              "Sie trägt meist feinen Schmuck",
+              "Minimalistische Ohrstecker oder ein feines Anhänger"
+            ],
+            [
+              "Sie mag romantische oder symbolische Designs",
+              "Ein bedeutungsvolles Motiv oder feine Tropfenohrringe"
+            ],
+            [
+              "Sie genießt Statement-Accessoires",
+              "Größere Creolen oder skulpturale Ohrringe"
+            ],
+            [
+              "Sie mischt mehrere Ohrringe",
+              "Ein kleiner Ohrstecker oder Huggie für ihren Ohr-Stack"
+            ],
+            [
+              "Sie kennen ihre exakte Ringgröße",
+              "Ein Ring in einem Stil ähnlich einem, den sie besitzt"
+            ],
+            [
+              "Sie kennen ihre Größe oder ihren Stil nicht",
+              "Eine Schmuck-Geschenkkarte"
+            ],
+            [
+              "Das Geschenk ist für Weihnachten",
+              "Wählen Sie ein leicht zu messendes Stück und bestätigen Sie Lieferung und Rückgaben"
+            ]
           ]
         }
       ]
@@ -169,6 +202,13 @@
     {
       "heading": "1. Diamant-Ohrstecker",
       "content": [
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "alt": "Diamond stud earrings Black Friday gift idea",
+          "width": 1200,
+          "height": 750
+        },
         {
           "type": "paragraph",
           "text": "Diamant-Ohrstecker sind eines der sichersten Schmuckgeschenke, weil sie mit Freizeitkleidung, Büro-Outfits, Abendessen und formellen Anlässen funktionieren."
@@ -341,23 +381,59 @@
         },
         {
           "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC3.png",
           "alt": "Black Friday Schmuckgeschenke für sie",
           "width": 1200,
           "height": 750
         },
         {
           "type": "table",
-          "headers": ["Empfänger", "Sicherste Schmuck-Richtung", "Worauf Sie achten sollten"],
+          "headers": [
+            "Empfänger",
+            "Sicherste Schmuck-Richtung",
+            "Worauf Sie achten sollten"
+          ],
           "rows": [
-            ["Frau", "Diamant-Ohrringe, bedeutungsvolle Halskette oder elegantes Armband", "Vermeiden Sie die Wahl nur nach Preis"],
-            ["Freundin", "Huggies, Ohrstecker, feine Halskette oder kleine Creolen", "Passen Sie das Geschenk an das Stadium der Beziehung an"],
-            ["Mama", "Klassische Ohrstecker, bequeme Huggies oder verstellbare Halskette", "Priorisieren Sie Komfort und Leichtigkeit des Verschlusses"],
-            ["Schwester", "Creolen, Huggies, zeitgenössische Ohrringe oder Armband", "Berücksichtigen Sie ihren individuellen Stil statt Ihren eigenen"],
-            ["Tochter", "Kleine Ohrstecker, minimalistische Ohrringe oder feine Halskette", "Wählen Sie eine geeignete Größe und Design"],
-            ["Beste Freundin", "Alltags-Ohrringe, Armband oder bedeutungsvolles Motiv", "Vermeiden Sie alles, was zu romantisch wirkt"],
-            ["Neuer Partner", "Ohrstecker, Huggies oder eine Geschenkkarte", "Vermeiden Sie sehr teure oder stark symbolische Geschenke"],
-            ["Jemand mit unbekanntem Stil", "Geschenkkarte", "Raten Sie ihre Ringgröße nicht"]
+            [
+              "Frau",
+              "Diamant-Ohrringe, bedeutungsvolle Halskette oder elegantes Armband",
+              "Vermeiden Sie die Wahl nur nach Preis"
+            ],
+            [
+              "Freundin",
+              "Huggies, Ohrstecker, feine Halskette oder kleine Creolen",
+              "Passen Sie das Geschenk an das Stadium der Beziehung an"
+            ],
+            [
+              "Mama",
+              "Klassische Ohrstecker, bequeme Huggies oder verstellbare Halskette",
+              "Priorisieren Sie Komfort und Leichtigkeit des Verschlusses"
+            ],
+            [
+              "Schwester",
+              "Creolen, Huggies, zeitgenössische Ohrringe oder Armband",
+              "Berücksichtigen Sie ihren individuellen Stil statt Ihren eigenen"
+            ],
+            [
+              "Tochter",
+              "Kleine Ohrstecker, minimalistische Ohrringe oder feine Halskette",
+              "Wählen Sie eine geeignete Größe und Design"
+            ],
+            [
+              "Beste Freundin",
+              "Alltags-Ohrringe, Armband oder bedeutungsvolles Motiv",
+              "Vermeiden Sie alles, was zu romantisch wirkt"
+            ],
+            [
+              "Neuer Partner",
+              "Ohrstecker, Huggies oder eine Geschenkkarte",
+              "Vermeiden Sie sehr teure oder stark symbolische Geschenke"
+            ],
+            [
+              "Jemand mit unbekanntem Stil",
+              "Geschenkkarte",
+              "Raten Sie ihre Ringgröße nicht"
+            ]
           ]
         }
       ]

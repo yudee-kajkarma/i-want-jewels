@@ -27,18 +27,62 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Outfit of evenement", "Beste sieradenrichting", "Vermijd"],
+          "headers": [
+            "Outfit of evenement",
+            "Beste sieradenrichting",
+            "Vermijd"
+          ],
           "rows": [
-            ["Kantoor kerstfeest", "Oorknopjes, huggies of geraffineerde oorringen", "Zeer grote of afleidende oorbellen"],
-            ["Cocktailfeest", "Hangoorbellen, oorringen of één statement stuk", "Meerdere gedurfde stukken samen"],
-            ["Formeel kerstdiner", "Elegante hangoorbellen, gepolijste oorknopjes of een delicate halsketting", "Casual of novelty sieraden"],
-            ["Eenvoudige zwarte jurk", "Statement oorbellen, fonkelende oorringen of lange hangoorbellen", "Sieraden die volledig verdwijnen"],
-            ["Paillettenjurk", "Oorknopjes, huggies of minimalistische oorbellen", "Grote oorbellen plus een gedurfde halsketting"],
-            ["Velours jurk", "Hangoorbellen, oorringen of klassieke oorknopjes", "Te veel zware accessoires"],
-            ["Zijden jurk", "Hangoorbellen of schone diamant oorknopjes", "Sieraden die haken of trekken aan de stof"],
-            ["Jurk met hoge hals", "Oorbellen en een armband; meestal geen halsketting", "Een halsketting die concurreert met de halslijn"],
-            ["Bandloze jurk", "Oorbellen met een optionele delicate halsketting", "De open halslijn overvolgen"],
-            ["Jumpsuit", "Oorringen, geometrische oorbellen of een gestructureerd armbandje", "Overdelicate stukken die verloren gaan"]
+            [
+              "Kantoor kerstfeest",
+              "Oorknopjes, huggies of geraffineerde oorringen",
+              "Zeer grote of afleidende oorbellen"
+            ],
+            [
+              "Cocktailfeest",
+              "Hangoorbellen, oorringen of één statement stuk",
+              "Meerdere gedurfde stukken samen"
+            ],
+            [
+              "Formeel kerstdiner",
+              "Elegante hangoorbellen, gepolijste oorknopjes of een delicate halsketting",
+              "Casual of novelty sieraden"
+            ],
+            [
+              "Eenvoudige zwarte jurk",
+              "Statement oorbellen, fonkelende oorringen of lange hangoorbellen",
+              "Sieraden die volledig verdwijnen"
+            ],
+            [
+              "Paillettenjurk",
+              "Oorknopjes, huggies of minimalistische oorbellen",
+              "Grote oorbellen plus een gedurfde halsketting"
+            ],
+            [
+              "Velours jurk",
+              "Hangoorbellen, oorringen of klassieke oorknopjes",
+              "Te veel zware accessoires"
+            ],
+            [
+              "Zijden jurk",
+              "Hangoorbellen of schone diamant oorknopjes",
+              "Sieraden die haken of trekken aan de stof"
+            ],
+            [
+              "Jurk met hoge hals",
+              "Oorbellen en een armband; meestal geen halsketting",
+              "Een halsketting die concurreert met de halslijn"
+            ],
+            [
+              "Bandloze jurk",
+              "Oorbellen met een optionele delicate halsketting",
+              "De open halslijn overvolgen"
+            ],
+            [
+              "Jumpsuit",
+              "Oorringen, geometrische oorbellen of een gestructureerd armbandje",
+              "Overdelicate stukken die verloren gaan"
+            ]
           ]
         }
       ]
@@ -167,6 +211,13 @@
       "heading": "Welke sieraden draag je bij zijde?",
       "content": [
         {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog3/img3.png",
+          "alt": "Jewellery to wear with a satin dress",
+          "width": 1200,
+          "height": 750
+        },
+        {
           "type": "paragraph",
           "text": "Zijde heeft een zacht reflecterend oppervlak, dus sieraden met schone lijnen en gecontroleerde sprake zijn doorgaans het meest effectief."
         },
@@ -254,12 +305,32 @@
         },
         {
           "type": "table",
-          "headers": ["Afwerking", "Algemeen effect", "Sterke outfit kleuren"],
+          "headers": [
+            "Afwerking",
+            "Algemeen effect",
+            "Sterke outfit kleuren"
+          ],
           "rows": [
-            ["Geelgoud", "Warm, rijk en feestelijk", "Zwart, rood, groen, bordeauxrood, crème en champagne"],
-            ["Wit of zilverkleurig", "Schoon, helder en modern", "Zwart, marineblauw, zilver, wit, grijs en koele kleuren"],
-            ["Rosegoud", "Zacht, romantisch en vrouwelijk", "Blush, roze, champagne en pastelkleuren"],
-            ["Gemengde metalen", "Contemporain en individueel", "Eenvoudige outfits met minimale kleurencompetitie"]
+            [
+              "Geelgoud",
+              "Warm, rijk en feestelijk",
+              "Zwart, rood, groen, bordeauxrood, crème en champagne"
+            ],
+            [
+              "Wit of zilverkleurig",
+              "Schoon, helder en modern",
+              "Zwart, marineblauw, zilver, wit, grijs en koele kleuren"
+            ],
+            [
+              "Rosegoud",
+              "Zacht, romantisch en vrouwelijk",
+              "Blush, roze, champagne en pastelkleuren"
+            ],
+            [
+              "Gemengde metalen",
+              "Contemporain en individueel",
+              "Eenvoudige outfits met minimale kleurencompetitie"
+            ]
           ]
         },
         {
@@ -309,16 +380,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Styling behoefte", "Sieraden richting", "I Want Jewels aanbeveling"],
+          "headers": [
+            "Styling behoefte",
+            "Sieraden richting",
+            "I Want Jewels aanbeveling"
+          ],
           "rows": [
-            ["Veiligste party sprake", "Diamant oorknopjes", "Cadenza"],
-            ["Modern kantoorfeest", "Huggies", "Amadea"],
-            ["Elegante avond outfit", "Hangoorbellen", "Orsola"],
-            ["Moderne party vorm", "Diamant oorringen", "Pave Hoops"],
-            ["Gedurfd eenvoudige-jurk look", "Statement oorbellen", "Lusso"],
-            ["Zacht romantische outfit", "Vlinder oorbellen", "Farfalla"],
-            ["Gedetailleerde of paillettenjurk", "Minimalistische oorbellen", "Laluce"],
-            ["Formele avond lijn", "Lange hangoorbellen", "Concetta Long"]
+            [
+              "Veiligste party sprake",
+              "Diamant oorknopjes",
+              "Cadenza"
+            ],
+            [
+              "Modern kantoorfeest",
+              "Huggies",
+              "Amadea"
+            ],
+            [
+              "Elegante avond outfit",
+              "Hangoorbellen",
+              "Orsola"
+            ],
+            [
+              "Moderne party vorm",
+              "Diamant oorringen",
+              "Pave Hoops"
+            ],
+            [
+              "Gedurfd eenvoudige-jurk look",
+              "Statement oorbellen",
+              "Lusso"
+            ],
+            [
+              "Zacht romantische outfit",
+              "Vlinder oorbellen",
+              "Farfalla"
+            ],
+            [
+              "Gedetailleerde of paillettenjurk",
+              "Minimalistische oorbellen",
+              "Laluce"
+            ],
+            [
+              "Formele avond lijn",
+              "Lange hangoorbellen",
+              "Concetta Long"
+            ]
           ]
         },
         {

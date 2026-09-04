@@ -414,37 +414,36 @@
       ]
     },
     {
-      "heading": "Frequently asked questions",
       "content": [
         {
           "type": "faq",
-          "question": "Are Black Friday jewellery deals genuine?",
-          "answer": "Some are genuine, but the discount percentage should be checked against the product's actual price history. Compare the sale price, materials, dimensions, delivery and returns with equivalent jewellery before deciding."
-        },
-        {
-          "type": "faq",
-          "question": "Is Black Friday a good time to buy Christmas jewellery?",
-          "answer": "It can be, especially when the product is in stock and the recipient's style or size is known. Black Friday 2026 leaves four weeks before Christmas, so the complete dispatch and delivery timeline should be confirmed before ordering."
-        },
-        {
-          "type": "faq",
-          "question": "Is sale jewellery lower quality?",
-          "answer": "Not necessarily. A retailer may reduce existing products for seasonal, inventory or promotional reasons. However, some products may be manufactured specifically for sales events. Read the material, stone and construction details instead of assuming that the sale item is identical to a full-price alternative."
-        },
-        {
-          "type": "faq",
-          "question": "Can discounted jewellery be returned?",
-          "answer": "It depends on the retailer, item and applicable consumer law. Sale items that are faulty or not as described retain statutory protections in the UK. Change-of-mind returns may be affected by personalisation, hygiene seals or clearly disclosed final-sale conditions."
-        },
-        {
-          "type": "faq",
-          "question": "Should lab-grown diamond jewellery include a certificate?",
-          "answer": "Not every piece requires an individual grading report. Reports are more common for eligible individual diamonds, while small stones in pavé and multi-stone designs may not be individually certified. The retailer should still disclose that the diamonds are laboratory-grown and provide accurate product specifications."
-        },
-        {
-          "type": "faq",
-          "question": "How can I tell whether online jewellery will look the right size?",
-          "answer": "Check the measurements in millimetres and compare them with a piece you already own. Do not judge scale from close-up photography alone. Pay particular attention to pendant dimensions, earring diameter, drop length and adjustable chain measurements."
+          "title": "Frequently asked questions",
+          "items": [
+            {
+              "question": "Are Black Friday jewellery deals genuine?",
+              "answer": "Some are genuine, but the discount percentage should be checked against the product's actual price history. Compare the sale price, materials, dimensions, delivery and returns with equivalent jewellery before deciding."
+            },
+            {
+              "question": "Is Black Friday a good time to buy Christmas jewellery?",
+              "answer": "It can be, especially when the product is in stock and the recipient's style or size is known. Black Friday 2026 leaves four weeks before Christmas, so the complete dispatch and delivery timeline should be confirmed before ordering."
+            },
+            {
+              "question": "Is sale jewellery lower quality?",
+              "answer": "Not necessarily. A retailer may reduce existing products for seasonal, inventory or promotional reasons. However, some products may be manufactured specifically for sales events. Read the material, stone and construction details instead of assuming that the sale item is identical to a full-price alternative."
+            },
+            {
+              "question": "Can discounted jewellery be returned?",
+              "answer": "It depends on the retailer, item and applicable consumer law. Sale items that are faulty or not as described retain statutory protections in the UK. Change-of-mind returns may be affected by personalisation, hygiene seals or clearly disclosed final-sale conditions."
+            },
+            {
+              "question": "Should lab-grown diamond jewellery include a certificate?",
+              "answer": "Not every piece requires an individual grading report. Reports are more common for eligible individual diamonds, while small stones in pavé and multi-stone designs may not be individually certified. The retailer should still disclose that the diamonds are laboratory-grown and provide accurate product specifications."
+            },
+            {
+              "question": "How can I tell whether online jewellery will look the right size?",
+              "answer": "Check the measurements in millimetres and compare them with a piece you already own. Do not judge scale from close-up photography alone. Pay particular attention to pendant dimensions, earring diameter, drop length and adjustable chain measurements."
+            }
+          ]
         }
       ]
     }

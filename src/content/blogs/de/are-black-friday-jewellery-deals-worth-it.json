@@ -377,16 +377,43 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Ein stärkerer Black Friday-Kauf", "Ein riskanter Black Friday-Kauf"],
+          "headers": [
+            "Ein stärkerer Black Friday-Kauf",
+            "Ein riskanter Black Friday-Kauf"
+          ],
           "rows": [
-            ["Klare aktuelle Preisvergleich", "Großer Prozentsatz ohne zuverlässigen Referenzpreis"],
-            ["Spezifische Metall- und Platinginformationen", "Vage Beschreibungen wie \"Goldton\""],
-            ["Steintyp und Gesamtgewicht offengelegt", "\"Diamant-Look\" ohne Identifizierung des Materials"],
-            ["Exakte Maße und mehrere Fotos", "Nur Nahaufnahme-Lifestyle-Fotografie"],
-            ["Lieferdatum und Lagerbestand bestätigt", "Unklare Versand- oder maßgefertigte Zeitlinie"],
-            ["Rückgaben und Ausschlüsse vor Checkout gezeigt", "\"Liquidation\"-Informationen spät enthüllt"],
-            ["Geeignet für den echten Stil des Empfängers", "Hauptsächlich wegen des Rabatts gewählt"],
-            ["Vollständige Kosten verstanden", "Unerwartete Lieferung, Zölle oder Rückgabekosten"]
+            [
+              "Klare aktuelle Preisvergleich",
+              "Großer Prozentsatz ohne zuverlässigen Referenzpreis"
+            ],
+            [
+              "Spezifische Metall- und Platinginformationen",
+              "Vage Beschreibungen wie \"Goldton\""
+            ],
+            [
+              "Steintyp und Gesamtgewicht offengelegt",
+              "\"Diamant-Look\" ohne Identifizierung des Materials"
+            ],
+            [
+              "Exakte Maße und mehrere Fotos",
+              "Nur Nahaufnahme-Lifestyle-Fotografie"
+            ],
+            [
+              "Lieferdatum und Lagerbestand bestätigt",
+              "Unklare Versand- oder maßgefertigte Zeitlinie"
+            ],
+            [
+              "Rückgaben und Ausschlüsse vor Checkout gezeigt",
+              "\"Liquidation\"-Informationen spät enthüllt"
+            ],
+            [
+              "Geeignet für den echten Stil des Empfängers",
+              "Hauptsächlich wegen des Rabatts gewählt"
+            ],
+            [
+              "Vollständige Kosten verstanden",
+              "Unerwartete Lieferung, Zölle oder Rückgabekosten"
+            ]
           ]
         }
       ]
@@ -414,37 +441,36 @@
       ]
     },
     {
-      "heading": "Häufig gestellte Fragen",
       "content": [
         {
           "type": "faq",
-          "question": "Sind Black Friday-Schmuckangebote echt?",
-          "answer": "Einige sind echt, aber der Rabattprozentsatz sollte gegen die tatsächliche Preisgeschichte des Produkts überprüft werden. Vergleichen Sie den Verkaufspreis, die Materialien, Maße, Lieferung und Retouren mit äquivalentem Schmuck vor der Entscheidung."
-        },
-        {
-          "type": "faq",
-          "question": "Ist Black Friday ein guter Zeitpunkt, um Weihnachtsschmuck zu kaufen?",
-          "answer": "Es kann sein, besonders wenn das Produkt auf Lager ist und der Stil oder die Größe des Empfängers bekannt ist. Black Friday 2026 lässt vier Wochen vor Weihnachten, daher sollte der vollständige Versand- und Lieferzeitraum vor der Bestellung bestätigt werden."
-        },
-        {
-          "type": "faq",
-          "question": "Ist Liquidationsschmuck von geringerer Qualität?",
-          "answer": "Nicht unbedingt. Ein Händler kann vorhandene Produkte aus saisonalen, Lager- oder Promotionsgründen reduzieren. Einige Produkte können jedoch speziell für Liquidationsveranstaltungen hergestellt werden. Lesen Sie die Material-, Stein- und Konstruktionsdetails, statt davon auszugehen, dass das Liquidationsartikel identisch mit einer Vollpreis-Alternative ist."
-        },
-        {
-          "type": "faq",
-          "question": "Kann rabattierter Schmuck zurückgegeben werden?",
-          "answer": "Es hängt vom Händler, Artikel und geltenden Verbraucherschutzgesetz ab. Liquidationsartikel, die fehlerhaft oder nicht wie beschrieben sind, behalten den gesetzlichen Schutz in Großbritannien. Retouren aus Gedankenwechsel können durch Personalisierung, Hygienesiegel oder klar offengelegte Liquidationsbedingungen beeinflusst werden."
-        },
-        {
-          "type": "faq",
-          "question": "Sollten Labor-Diamant-Schmuck ein Zertifikat enthalten?",
-          "answer": "Nicht jedes Stück erfordert einen individuellen Bewertungsbericht. Berichte sind häufiger für in Frage kommende individuelle Diamanten, während kleine Steine in Pavé- und Mehrstein-Designs möglicherweise nicht individuell zertifiziert sind. Der Händler sollte trotzdem offenlegen, dass die Diamanten laborgezüchtet sind und genaue Produktspezifikationen bereitstellen."
-        },
-        {
-          "type": "faq",
-          "question": "Wie kann ich feststellen, ob Online-Schmuck die richtige Größe haben wird?",
-          "answer": "Prüfen Sie die Maße in Millimetern und vergleichen Sie sie mit einem Stück, das Sie bereits besitzen. Beurteilen Sie die Skala nicht allein auf Basis von Nahaufnahmen-Fotografie. Achten Sie besonders auf Anhängermaße, Ohrsteckerdurchmesser, Hänge-Länge und verstellbare Kettenmaße."
+          "title": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Sind Black Friday-Schmuckangebote echt?",
+              "answer": "Einige sind echt, aber der Rabattprozentsatz sollte gegen die tatsächliche Preisgeschichte des Produkts überprüft werden. Vergleichen Sie den Verkaufspreis, die Materialien, Maße, Lieferung und Retouren mit äquivalentem Schmuck vor der Entscheidung."
+            },
+            {
+              "question": "Ist Black Friday ein guter Zeitpunkt, um Weihnachtsschmuck zu kaufen?",
+              "answer": "Es kann sein, besonders wenn das Produkt auf Lager ist und der Stil oder die Größe des Empfängers bekannt ist. Black Friday 2026 lässt vier Wochen vor Weihnachten, daher sollte der vollständige Versand- und Lieferzeitraum vor der Bestellung bestätigt werden."
+            },
+            {
+              "question": "Ist Liquidationsschmuck von geringerer Qualität?",
+              "answer": "Nicht unbedingt. Ein Händler kann vorhandene Produkte aus saisonalen, Lager- oder Promotionsgründen reduzieren. Einige Produkte können jedoch speziell für Liquidationsveranstaltungen hergestellt werden. Lesen Sie die Material-, Stein- und Konstruktionsdetails, statt davon auszugehen, dass das Liquidationsartikel identisch mit einer Vollpreis-Alternative ist."
+            },
+            {
+              "question": "Kann rabattierter Schmuck zurückgegeben werden?",
+              "answer": "Es hängt vom Händler, Artikel und geltenden Verbraucherschutzgesetz ab. Liquidationsartikel, die fehlerhaft oder nicht wie beschrieben sind, behalten den gesetzlichen Schutz in Großbritannien. Retouren aus Gedankenwechsel können durch Personalisierung, Hygienesiegel oder klar offengelegte Liquidationsbedingungen beeinflusst werden."
+            },
+            {
+              "question": "Sollten Labor-Diamant-Schmuck ein Zertifikat enthalten?",
+              "answer": "Nicht jedes Stück erfordert einen individuellen Bewertungsbericht. Berichte sind häufiger für in Frage kommende individuelle Diamanten, während kleine Steine in Pavé- und Mehrstein-Designs möglicherweise nicht individuell zertifiziert sind. Der Händler sollte trotzdem offenlegen, dass die Diamanten laborgezüchtet sind und genaue Produktspezifikationen bereitstellen."
+            },
+            {
+              "question": "Wie kann ich feststellen, ob Online-Schmuck die richtige Größe haben wird?",
+              "answer": "Prüfen Sie die Maße in Millimetern und vergleichen Sie sie mit einem Stück, das Sie bereits besitzen. Beurteilen Sie die Skala nicht allein auf Basis von Nahaufnahmen-Fotografie. Achten Sie besonders auf Anhängermaße, Ohrsteckerdurchmesser, Hänge-Länge und verstellbare Kettenmaße."
+            }
+          ]
         }
       ]
     }

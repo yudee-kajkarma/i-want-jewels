@@ -27,18 +27,62 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Outfit oder Veranstaltung", "Beste Schmuckrichtung", "Vermeiden"],
+          "headers": [
+            "Outfit oder Veranstaltung",
+            "Beste Schmuckrichtung",
+            "Vermeiden"
+          ],
           "rows": [
-            ["Büro-Weihnachtsparty", "Ohrstecker, Huggies oder raffinierte Creolen", "Sehr große oder ablenkende Ohrringe"],
-            ["Cocktailparty", "Drop-Ohrringe, Creolen oder ein Statement-Stück", "Mehrere mutige Stücke zusammen"],
-            ["Formelles Weihnachtsdinner", "Elegante Drops, polierte Ohrstecker oder eine feine Halskette", "Casual oder Novelty-Schmuck"],
-            ["Einfaches schwarzes Kleid", "Statement-Ohrringe, funkelnde Creolen oder lange Drops", "Schmuck, der vollständig verschwindet"],
-            ["Paillettenkleid", "Ohrstecker, Huggies oder minimalistische Ohrringe", "Große Ohrringe plus eine mutige Halskette"],
-            ["Samtkleid", "Drops, Creolen oder klassische Ohrstecker", "Zu viele schwere Accessoires"],
-            ["Seidenkleid", "Drop-Ohrringe oder saubere Diamant-Ohrstecker", "Schmuck, der am Stoff hakt oder zieht"],
-            ["Kleid mit hohem Ausschnitt", "Ohrringe und ein Armband; meist keine Halskette", "Eine Halskette, die mit dem Ausschnitt konkurriert"],
-            ["Ausschnittsloses Kleid", "Ohrringe mit einer optionalen feinen Halskette", "Den offenen Ausschnitt überladen"],
-            ["Jumpsuit", "Creolen, geometrische Ohrringe oder ein strukturiertes Armband", "Zu feine Stücke, die verloren gehen"]
+            [
+              "Büro-Weihnachtsparty",
+              "Ohrstecker, Huggies oder raffinierte Creolen",
+              "Sehr große oder ablenkende Ohrringe"
+            ],
+            [
+              "Cocktailparty",
+              "Drop-Ohrringe, Creolen oder ein Statement-Stück",
+              "Mehrere mutige Stücke zusammen"
+            ],
+            [
+              "Formelles Weihnachtsdinner",
+              "Elegante Drops, polierte Ohrstecker oder eine feine Halskette",
+              "Casual oder Novelty-Schmuck"
+            ],
+            [
+              "Einfaches schwarzes Kleid",
+              "Statement-Ohrringe, funkelnde Creolen oder lange Drops",
+              "Schmuck, der vollständig verschwindet"
+            ],
+            [
+              "Paillettenkleid",
+              "Ohrstecker, Huggies oder minimalistische Ohrringe",
+              "Große Ohrringe plus eine mutige Halskette"
+            ],
+            [
+              "Samtkleid",
+              "Drops, Creolen oder klassische Ohrstecker",
+              "Zu viele schwere Accessoires"
+            ],
+            [
+              "Seidenkleid",
+              "Drop-Ohrringe oder saubere Diamant-Ohrstecker",
+              "Schmuck, der am Stoff hakt oder zieht"
+            ],
+            [
+              "Kleid mit hohem Ausschnitt",
+              "Ohrringe und ein Armband; meist keine Halskette",
+              "Eine Halskette, die mit dem Ausschnitt konkurriert"
+            ],
+            [
+              "Ausschnittsloses Kleid",
+              "Ohrringe mit einer optionalen feinen Halskette",
+              "Den offenen Ausschnitt überladen"
+            ],
+            [
+              "Jumpsuit",
+              "Creolen, geometrische Ohrringe oder ein strukturiertes Armband",
+              "Zu feine Stücke, die verloren gehen"
+            ]
           ]
         }
       ]
@@ -167,6 +211,13 @@
       "heading": "Welchen Schmuck tragen Sie zu Seide?",
       "content": [
         {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog3/img3.png",
+          "alt": "Jewellery for satin and silk dress styling",
+          "width": 1200,
+          "height": 750
+        },
+        {
           "type": "paragraph",
           "text": "Seide hat eine weiche reflektierende Oberfläche, daher ist Schmuck mit sauberen Linien und kontrolliertem Funkeln meist am effektivsten."
         },
@@ -254,12 +305,32 @@
         },
         {
           "type": "table",
-          "headers": ["Finish", "Gesamteffekt", "Starke Outfit-Farben"],
+          "headers": [
+            "Finish",
+            "Gesamteffekt",
+            "Starke Outfit-Farben"
+          ],
           "rows": [
-            ["Gelbgold", "Warm, reich und festlich", "Schwarz, Rot, Grün, Burgunderrot, Creme und Champagner"],
-            ["Weiß oder silberfarben", "Sauber, hell und modern", "Schwarz, Marineblau, Silber, Weiß, Grau und kühle Farben"],
-            ["Roségold", "Weich, sanft und feminin", "Blush, Rosa, Champagner und Pastellfarben"],
-            ["Gemischte Metalle", "Zeitgenössisch und individuell", "Einfache Outfits mit minimaler Farbkonkurrenz"]
+            [
+              "Gelbgold",
+              "Warm, reich und festlich",
+              "Schwarz, Rot, Grün, Burgunderrot, Creme und Champagner"
+            ],
+            [
+              "Weiß oder silberfarben",
+              "Sauber, hell und modern",
+              "Schwarz, Marineblau, Silber, Weiß, Grau und kühle Farben"
+            ],
+            [
+              "Roségold",
+              "Weich, sanft und feminin",
+              "Blush, Rosa, Champagner und Pastellfarben"
+            ],
+            [
+              "Gemischte Metalle",
+              "Zeitgenössisch und individuell",
+              "Einfache Outfits mit minimaler Farbkonkurrenz"
+            ]
           ]
         },
         {
@@ -309,16 +380,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Styling-Bedarf", "Schmuckrichtung", "I Want Jewels Empfehlung"],
+          "headers": [
+            "Styling-Bedarf",
+            "Schmuckrichtung",
+            "I Want Jewels Empfehlung"
+          ],
           "rows": [
-            ["Sicherstes Party-Funkeln", "Diamant-Ohrstecker", "Cadenza"],
-            ["Moderne Büroparty", "Huggies", "Amadea"],
-            ["Elegantes Abend-Outfit", "Drop-Ohrringe", "Orsola"],
-            ["Moderne Party-Form", "Diamant-Creolen", "Pave Hoops"],
-            ["Mutiger einfacher-Kleid-Look", "Statement-Ohrringe", "Lusso"],
-            ["Weiches romantisches Outfit", "Schmetterlings-Ohrringe", "Farfalla"],
-            ["Detailliertes oder Paillettenkleid", "Minimalistische Ohrringe", "Laluce"],
-            ["Formelle Abend-Linie", "Lange Drop-Ohrringe", "Concetta Long"]
+            [
+              "Sicherstes Party-Funkeln",
+              "Diamant-Ohrstecker",
+              "Cadenza"
+            ],
+            [
+              "Moderne Büroparty",
+              "Huggies",
+              "Amadea"
+            ],
+            [
+              "Elegantes Abend-Outfit",
+              "Drop-Ohrringe",
+              "Orsola"
+            ],
+            [
+              "Moderne Party-Form",
+              "Diamant-Creolen",
+              "Pave Hoops"
+            ],
+            [
+              "Mutiger einfacher-Kleid-Look",
+              "Statement-Ohrringe",
+              "Lusso"
+            ],
+            [
+              "Weiches romantisches Outfit",
+              "Schmetterlings-Ohrringe",
+              "Farfalla"
+            ],
+            [
+              "Detailliertes oder Paillettenkleid",
+              "Minimalistische Ohrringe",
+              "Laluce"
+            ],
+            [
+              "Formelle Abend-Linie",
+              "Lange Drop-Ohrringe",
+              "Concetta Long"
+            ]
           ]
         },
         {

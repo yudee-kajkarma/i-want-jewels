@@ -377,16 +377,43 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Una compra de Black Friday más fuerte", "Una compra de Black Friday riesgosa"],
+          "headers": [
+            "Una compra de Black Friday más fuerte",
+            "Una compra de Black Friday riesgosa"
+          ],
           "rows": [
-            ["Comparación de precios reciente clara", "Gran porcentaje sin precio de referencia confiable"],
-            ["Información específica sobre metal y chapado", "Descripciones vagas como \"tono dorado\""],
-            ["Tipo de piedra y peso total divulgado", "\"Aspecto diamante\" sin identificación del material"],
-            ["Dimensiones exactas y múltiples fotografías", "Solo fotografía de estilo en primer plano"],
-            ["Fecha de entrega y estado de stock confirmado", "Cronología de envío o fabricación a medida poco clara"],
-            ["Devoluciones y exclusiones mostradas antes del pago", "Información \"venta final\" revelada tarde"],
-            ["Adecuado para el estilo real del destinatario", "Elegido principalmente debido al descuento"],
-            ["Costo completo entendido", "Cargos de entrega, derechos o devolución inesperados"]
+            [
+              "Comparación de precios reciente clara",
+              "Gran porcentaje sin precio de referencia confiable"
+            ],
+            [
+              "Información específica sobre metal y chapado",
+              "Descripciones vagas como \"tono dorado\""
+            ],
+            [
+              "Tipo de piedra y peso total divulgado",
+              "\"Aspecto diamante\" sin identificación del material"
+            ],
+            [
+              "Dimensiones exactas y múltiples fotografías",
+              "Solo fotografía de estilo en primer plano"
+            ],
+            [
+              "Fecha de entrega y estado de stock confirmado",
+              "Cronología de envío o fabricación a medida poco clara"
+            ],
+            [
+              "Devoluciones y exclusiones mostradas antes del pago",
+              "Información \"venta final\" revelada tarde"
+            ],
+            [
+              "Adecuado para el estilo real del destinatario",
+              "Elegido principalmente debido al descuento"
+            ],
+            [
+              "Costo completo entendido",
+              "Cargos de entrega, derechos o devolución inesperados"
+            ]
           ]
         }
       ]
@@ -414,37 +441,36 @@
       ]
     },
     {
-      "heading": "Preguntas frecuentes",
       "content": [
         {
           "type": "faq",
-          "question": "¿Las ofertas de joyas Black Friday son genuinas?",
-          "answer": "Algunas son genuinas, pero el porcentaje de descuento debe verificarse contra el historial de precios real del producto. Compare el precio de venta, materiales, dimensiones, entrega y devoluciones con joyas equivalentes antes de decidir."
-        },
-        {
-          "type": "faq",
-          "question": "¿Black Friday es un buen momento para comprar joyas de Navidad?",
-          "answer": "Puede serlo, especialmente cuando el producto está en stock y el estilo o talla del destinatario es conocido. Black Friday 2026 deja cuatro semanas antes de Navidad, por lo que la cronología completa de envío y entrega debe confirmarse antes de ordenar."
-        },
-        {
-          "type": "faq",
-          "question": "¿Las joyas de venta son de menor calidad?",
-          "answer": "No necesariamente. Un minorista puede reducir productos existentes por razones estacionales, de inventario o promocionales. Sin embargo, algunos productos pueden fabricarse específicamente para eventos de venta. Lea los detalles sobre material, piedra y construcción en lugar de asumir que el artículo de venta es idéntico a una alternativa de precio completo."
-        },
-        {
-          "type": "faq",
-          "question": "¿Se pueden devolver las joyas rebajadas?",
-          "answer": "Depende del minorista, artículo y ley de protección del consumidor aplicable. Los artículos de venta que están defectuosos o no descritos mantienen la protección legal en el Reino Unido. Las devoluciones por cambio de opinión pueden verse afectadas por personalización, sellos higiénicos o condiciones de liquidación claramente divulgadas."
-        },
-        {
-          "type": "faq",
-          "question": "¿Deberían las joyas de diamantes cultivados en laboratorio incluir un certificado?",
-          "answer": "No cada pieza requiere un informe de clasificación individual. Los informes son más comunes para diamantes individuales elegibles, mientras que las piedras pequeñas en diseños pavé y de varias piedras pueden no estar certificadas individualmente. El minorista aún debe divulgar que los diamantes son cultivados en laboratorio y proporcionar especificaciones precisas del producto."
-        },
-        {
-          "type": "faq",
-          "question": "¿Cómo puedo decir si las joyas en línea tendrán la talla correcta?",
-          "answer": "Verifique las medidas en milímetros y compárelas con una pieza que ya posee. No juzgue la escala solo basándose en fotografía en primer plano. Preste atención particular a las dimensiones del colgante, diámetro de pendiente, longitud de colgante y medidas de cadena ajustables."
+          "title": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Las ofertas de joyas Black Friday son genuinas?",
+              "answer": "Algunas son genuinas, pero el porcentaje de descuento debe verificarse contra el historial de precios real del producto. Compare el precio de venta, materiales, dimensiones, entrega y devoluciones con joyas equivalentes antes de decidir."
+            },
+            {
+              "question": "¿Black Friday es un buen momento para comprar joyas de Navidad?",
+              "answer": "Puede serlo, especialmente cuando el producto está en stock y el estilo o talla del destinatario es conocido. Black Friday 2026 deja cuatro semanas antes de Navidad, por lo que la cronología completa de envío y entrega debe confirmarse antes de ordenar."
+            },
+            {
+              "question": "¿Las joyas de venta son de menor calidad?",
+              "answer": "No necesariamente. Un minorista puede reducir productos existentes por razones estacionales, de inventario o promocionales. Sin embargo, algunos productos pueden fabricarse específicamente para eventos de venta. Lea los detalles sobre material, piedra y construcción en lugar de asumir que el artículo de venta es idéntico a una alternativa de precio completo."
+            },
+            {
+              "question": "¿Se pueden devolver las joyas rebajadas?",
+              "answer": "Depende del minorista, artículo y ley de protección del consumidor aplicable. Los artículos de venta que están defectuosos o no descritos mantienen la protección legal en el Reino Unido. Las devoluciones por cambio de opinión pueden verse afectadas por personalización, sellos higiénicos o condiciones de liquidación claramente divulgadas."
+            },
+            {
+              "question": "¿Deberían las joyas de diamantes cultivados en laboratorio incluir un certificado?",
+              "answer": "No cada pieza requiere un informe de clasificación individual. Los informes son más comunes para diamantes individuales elegibles, mientras que las piedras pequeñas en diseños pavé y de varias piedras pueden no estar certificadas individualmente. El minorista aún debe divulgar que los diamantes son cultivados en laboratorio y proporcionar especificaciones precisas del producto."
+            },
+            {
+              "question": "¿Cómo puedo decir si las joyas en línea tendrán la talla correcta?",
+              "answer": "Verifique las medidas en milímetros y compárelas con una pieza que ya posee. No juzgue la escala solo basándose en fotografía en primer plano. Preste atención particular a las dimensiones del colgante, diámetro de pendiente, longitud de colgante y medidas de cadena ajustables."
+            }
+          ]
         }
       ]
     }

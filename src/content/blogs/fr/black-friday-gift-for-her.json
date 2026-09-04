@@ -4,7 +4,7 @@
     "description": "Cherchez un cadeau Black Friday pour elle? Découvrez des idées de bijoux réfléchies, des choix de taille plus sûrs et quoi vérifier avant d'acheter pour Noël."
   },
   "h1": "Cadeaux Black Friday pour elle: quoi acheter tôt et quoi éviter",
-  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC1.png",
   "sections": [
     {
       "content": [
@@ -63,18 +63,51 @@
         },
         {
           "type": "table",
-          "headers": ["Ce que vous savez d'elle", "Direction de cadeau la plus sûre"],
+          "headers": [
+            "Ce que vous savez d'elle",
+            "Direction de cadeau la plus sûre"
+          ],
           "rows": [
-            ["Elle porte de petits boucles d'oreilles chaque jour", "Diamants ou huggies"],
-            ["Elle aime les bijoux visibles mais portables", "Petits ou moyens anneaux"],
-            ["Elle porte rarement des boucles d'oreilles", "Un collier ou bracelet ajustable"],
-            ["Elle porte principalement des bijoux délicats", "Boucles minimalistes ou un pendentif fin"],
-            ["Elle aime les designs romantiques ou symboliques", "Un motif significatif ou boucles pendantes délicates"],
-            ["Elle aime les accessoires statement", "Grands anneaux ou boucles sculpturales"],
-            ["Elle mélange plusieurs boucles d'oreilles", "Un petit pendentif ou huggie pour son empilement d'oreilles"],
-            ["Vous connaissez sa taille exacte de bague", "Une bague dans un style similaire à une qu'elle possède"],
-            ["Vous ne connaissez pas sa taille ou son style", "Une carte cadeau bijoux"],
-            ["Le cadeau est pour Noël", "Choisissez une pièce facile à dimensionner et vérifiez la livraison et les retours"]
+            [
+              "Elle porte de petits boucles d'oreilles chaque jour",
+              "Diamants ou huggies"
+            ],
+            [
+              "Elle aime les bijoux visibles mais portables",
+              "Petits ou moyens anneaux"
+            ],
+            [
+              "Elle porte rarement des boucles d'oreilles",
+              "Un collier ou bracelet ajustable"
+            ],
+            [
+              "Elle porte principalement des bijoux délicats",
+              "Boucles minimalistes ou un pendentif fin"
+            ],
+            [
+              "Elle aime les designs romantiques ou symboliques",
+              "Un motif significatif ou boucles pendantes délicates"
+            ],
+            [
+              "Elle aime les accessoires statement",
+              "Grands anneaux ou boucles sculpturales"
+            ],
+            [
+              "Elle mélange plusieurs boucles d'oreilles",
+              "Un petit pendentif ou huggie pour son empilement d'oreilles"
+            ],
+            [
+              "Vous connaissez sa taille exacte de bague",
+              "Une bague dans un style similaire à une qu'elle possède"
+            ],
+            [
+              "Vous ne connaissez pas sa taille ou son style",
+              "Une carte cadeau bijoux"
+            ],
+            [
+              "Le cadeau est pour Noël",
+              "Choisissez une pièce facile à dimensionner et vérifiez la livraison et les retours"
+            ]
           ]
         }
       ]
@@ -169,6 +202,13 @@
     {
       "heading": "1. Boucles d'oreilles diamant",
       "content": [
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "alt": "Diamond stud earrings Black Friday gift idea",
+          "width": 1200,
+          "height": 750
+        },
         {
           "type": "paragraph",
           "text": "Les pendants diamant sont l'un des cadeaux de bijoux les plus sûrs car ils fonctionnent avec des vêtements décontractés, des tenues de bureau, des dîners et des occasions formelles."
@@ -348,16 +388,52 @@
         },
         {
           "type": "table",
-          "headers": ["Destinataire", "Direction de bijoux la plus sûre", "Ce à quoi faire attention"],
+          "headers": [
+            "Destinataire",
+            "Direction de bijoux la plus sûre",
+            "Ce à quoi faire attention"
+          ],
           "rows": [
-            ["Femme", "Boucles d'oreilles diamant, collier significatif ou bracelet élégant", "Évitez de choisir uniquement par prix"],
-            ["Petite amie", "Huggies, pendants, collier délicat ou petits anneaux", "Adaptez le cadeau au stade de la relation"],
-            ["Maman", "Pendants classiques, huggies confortables ou collier ajustable", "Priorisez le confort et la facilité de fermeture"],
-            ["Sœur", "Anneaux, huggies, boucles d'oreilles contemporaines ou bracelet", "Considérez son style individuel plutôt que le vôtre"],
-            ["Fille", "Petits pendants, boucles d'oreilles minimalistes ou collier délicat", "Choisissez une taille et un design appropriés"],
-            ["Meilleure amie", "Boucles d'oreilles quotidiennes, bracelet ou motif significatif", "Évitez tout ce qui semble trop romantique"],
-            ["Nouveau partenaire", "Pendants, huggies ou une carte cadeau", "Évitez les cadeaux très chers ou très symboliques"],
-            ["Quelqu'un dont le style est inconnu", "Carte cadeau", "Ne devinez pas sa taille de bague"]
+            [
+              "Femme",
+              "Boucles d'oreilles diamant, collier significatif ou bracelet élégant",
+              "Évitez de choisir uniquement par prix"
+            ],
+            [
+              "Petite amie",
+              "Huggies, pendants, collier délicat ou petits anneaux",
+              "Adaptez le cadeau au stade de la relation"
+            ],
+            [
+              "Maman",
+              "Pendants classiques, huggies confortables ou collier ajustable",
+              "Priorisez le confort et la facilité de fermeture"
+            ],
+            [
+              "Sœur",
+              "Anneaux, huggies, boucles d'oreilles contemporaines ou bracelet",
+              "Considérez son style individuel plutôt que le vôtre"
+            ],
+            [
+              "Fille",
+              "Petits pendants, boucles d'oreilles minimalistes ou collier délicat",
+              "Choisissez une taille et un design appropriés"
+            ],
+            [
+              "Meilleure amie",
+              "Boucles d'oreilles quotidiennes, bracelet ou motif significatif",
+              "Évitez tout ce qui semble trop romantique"
+            ],
+            [
+              "Nouveau partenaire",
+              "Pendants, huggies ou une carte cadeau",
+              "Évitez les cadeaux très chers ou très symboliques"
+            ],
+            [
+              "Quelqu'un dont le style est inconnu",
+              "Carte cadeau",
+              "Ne devinez pas sa taille de bague"
+            ]
           ]
         }
       ]

@@ -4,7 +4,7 @@
     "description": "Zoekt u een Black Friday cadeau voor haar? Ontdek attente sieradenideeën, veiligere maatkeuzes en wat te controleren voordat u koopt voor Kerst."
   },
   "h1": "Black Friday cadeaus voor haar: Wat vroeg te kopen en wat te vermijden",
-  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+  "coverImage": "/blog-images/new-blog-images/iwj-blog5/PIC1.png",
   "sections": [
     {
       "content": [
@@ -63,18 +63,51 @@
         },
         {
           "type": "table",
-          "headers": ["Wat u over haar weet", "Veiligste cadeau richting"],
+          "headers": [
+            "Wat u over haar weet",
+            "Veiligste cadeau richting"
+          ],
           "rows": [
-            ["Ze draagt dagelijks kleine oorbellen", "Diamanten studs of huggies"],
-            ["Ze houdt van zichtbare maar draagbare sieraden", "Kleine of middelgrote oorringen"],
-            ["Ze draagt zelden oorbellen", "Een verstelbare ketting of armband"],
-            ["Ze draagt voornamelijk delicate sieraden", "Minimalistische studs of een fijn hanger"],
-            ["Ze houdt van romantische of symbolische ontwerpen", "Een betekenisvol motief of delicate hangoorbellen"],
-            ["Ze geniet van statement accessoires", "Grote oorringen of sculpturale oorbellen"],
-            ["Ze combineert verschillende oorbellen", "Een kleine stud of huggie voor haar oorstapel"],
-            ["U kent haar exacte ringmaat", "Een ring in een stijl vergelijkbaar met een die ze al heeft"],
-            ["U kent haar maat of stijl niet", "Een sieraden cadeaubon"],
-            ["Het cadeau is voor Kerst", "Kies een gemakkelijk te meten stuk en bevestig levering en retouren"]
+            [
+              "Ze draagt dagelijks kleine oorbellen",
+              "Diamanten studs of huggies"
+            ],
+            [
+              "Ze houdt van zichtbare maar draagbare sieraden",
+              "Kleine of middelgrote oorringen"
+            ],
+            [
+              "Ze draagt zelden oorbellen",
+              "Een verstelbare ketting of armband"
+            ],
+            [
+              "Ze draagt voornamelijk delicate sieraden",
+              "Minimalistische studs of een fijn hanger"
+            ],
+            [
+              "Ze houdt van romantische of symbolische ontwerpen",
+              "Een betekenisvol motief of delicate hangoorbellen"
+            ],
+            [
+              "Ze geniet van statement accessoires",
+              "Grote oorringen of sculpturale oorbellen"
+            ],
+            [
+              "Ze combineert verschillende oorbellen",
+              "Een kleine stud of huggie voor haar oorstapel"
+            ],
+            [
+              "U kent haar exacte ringmaat",
+              "Een ring in een stijl vergelijkbaar met een die ze al heeft"
+            ],
+            [
+              "U kent haar maat of stijl niet",
+              "Een sieraden cadeaubon"
+            ],
+            [
+              "Het cadeau is voor Kerst",
+              "Kies een gemakkelijk te meten stuk en bevestig levering en retouren"
+            ]
           ]
         }
       ]
@@ -169,6 +202,13 @@
     {
       "heading": "1. Diamanten oorknopjes",
       "content": [
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog5/PIC2.png",
+          "alt": "Diamond stud earrings Black Friday gift idea",
+          "width": 1200,
+          "height": 750
+        },
         {
           "type": "paragraph",
           "text": "Diamanten studs zijn een van de veiligste sieradencadeaus omdat ze werken met casual kleding, kantooroutfits, diners en formele gelegenheden."
@@ -348,16 +388,52 @@
         },
         {
           "type": "table",
-          "headers": ["Ontvanger", "Veiligste sieraden richting", "Waar u voorzichtig mee moet zijn"],
+          "headers": [
+            "Ontvanger",
+            "Veiligste sieraden richting",
+            "Waar u voorzichtig mee moet zijn"
+          ],
           "rows": [
-            ["Vrouw", "Diamanten oorbellen, betekenisvolle ketting of elegante armband", "Vermijd uitsluitend op prijs kiezen"],
-            ["Vriendin", "Huggies, studs, delicate ketting of kleine oorringen", "Pas het cadeau aan bij het stadium van de relatie"],
-            ["Mama", "Klassieke studs, comfortabele huggies of verstelbare ketting", "Prioriteer comfort en gemak van sluiting"],
-            ["Zus", "Oorringen, huggies, hedendaagse oorbellen of armband", "Overweeg haar individuele stijl in plaats van uw eigen"],
-            ["Dochter", "Kleine studs, minimalistische oorbellen of delicate ketting", "Kies een geschikte grootte en ontwerp"],
-            ["Beste vriendin", "Dagelijkse oorbellen, armband of betekenisvol motief", "Vermijd alles dat te romantisch aanvoelt"],
-            ["Nieuwe partner", "Studs, huggies of een cadeaubon", "Vermijd zeer dure of zeer symbolische cadeaus"],
-            ["Iemand wiens stijl onbekend is", "Cadeaubon", "Raad haar ringmaat niet"]
+            [
+              "Vrouw",
+              "Diamanten oorbellen, betekenisvolle ketting of elegante armband",
+              "Vermijd uitsluitend op prijs kiezen"
+            ],
+            [
+              "Vriendin",
+              "Huggies, studs, delicate ketting of kleine oorringen",
+              "Pas het cadeau aan bij het stadium van de relatie"
+            ],
+            [
+              "Mama",
+              "Klassieke studs, comfortabele huggies of verstelbare ketting",
+              "Prioriteer comfort en gemak van sluiting"
+            ],
+            [
+              "Zus",
+              "Oorringen, huggies, hedendaagse oorbellen of armband",
+              "Overweeg haar individuele stijl in plaats van uw eigen"
+            ],
+            [
+              "Dochter",
+              "Kleine studs, minimalistische oorbellen of delicate ketting",
+              "Kies een geschikte grootte en ontwerp"
+            ],
+            [
+              "Beste vriendin",
+              "Dagelijkse oorbellen, armband of betekenisvol motief",
+              "Vermijd alles dat te romantisch aanvoelt"
+            ],
+            [
+              "Nieuwe partner",
+              "Studs, huggies of een cadeaubon",
+              "Vermijd zeer dure of zeer symbolische cadeaus"
+            ],
+            [
+              "Iemand wiens stijl onbekend is",
+              "Cadeaubon",
+              "Raad haar ringmaat niet"
+            ]
           ]
         }
       ]

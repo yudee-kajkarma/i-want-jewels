@@ -54,9 +54,26 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Deberías considerar esperar cuando…", "Lo notaste solo por el descuento", "Solo el precio tachado es visible", "La descripción usa palabras como 'lujo' o 'similar al diamante'", "Estás adivinando la talla del anillo o brazalete", "La ventana de devolución termina antes de Navidad", "La página indica solo una estimación de envío", "No puedes imaginar usarlo después del evento"],
+          "headers": [
+            "Deberías considerar esperar cuando…",
+            "Lo notaste solo por el descuento",
+            "Solo el precio tachado es visible",
+            "La descripción usa palabras como 'lujo' o 'similar al diamante'",
+            "Estás adivinando la talla del anillo o brazalete",
+            "La ventana de devolución termina antes de Navidad",
+            "La página indica solo una estimación de envío",
+            "No puedes imaginar usarlo después del evento"
+          ],
           "rows": [
-            ["Ya querías la pieza exacta", "Conoces el precio de venta anterior", "Materiales y dimensiones están claramente indicados", "La talla es conocida", "El período de devolución cubre la fecha del regalo", "El cronograma de entrega está confirmado", "El diseño se adapta al uso diario o regular"]
+            [
+              "Ya querías la pieza exacta",
+              "Conoces el precio de venta anterior",
+              "Materiales y dimensiones están claramente indicados",
+              "La talla es conocida",
+              "El período de devolución cubre la fecha del regalo",
+              "El cronograma de entrega está confirmado",
+              "El diseño se adapta al uso diario o regular"
+            ]
           ]
         }
       ]
@@ -181,14 +198,35 @@
         },
         {
           "type": "table",
-          "headers": ["Descripción", "Lo que significa"],
+          "headers": [
+            "Descripción",
+            "Lo que significa"
+          ],
           "rows": [
-            ["Diamante natural", "Un diamante formado naturalmente debajo de la tierra"],
-            ["Diamante cultivado en laboratorio", "Un diamante cultivado en condiciones de laboratorio controladas"],
-            ["Moissanite", "Una gema separada que puede parecerse a un diamante"],
-            ["Circonia cúbica o CZ", "Un simulante de diamante fabricado"],
-            ["Cristal o vidrio", "Material decorativo que puede imitar una gema"],
-            ["'Similar al diamante'", "Lenguaje de marketing que no confirma la identidad de la piedra"]
+            [
+              "Diamante natural",
+              "Un diamante formado naturalmente debajo de la tierra"
+            ],
+            [
+              "Diamante cultivado en laboratorio",
+              "Un diamante cultivado en condiciones de laboratorio controladas"
+            ],
+            [
+              "Moissanite",
+              "Una gema separada que puede parecerse a un diamante"
+            ],
+            [
+              "Circonia cúbica o CZ",
+              "Un simulante de diamante fabricado"
+            ],
+            [
+              "Cristal o vidrio",
+              "Material decorativo que puede imitar una gema"
+            ],
+            [
+              "'Similar al diamante'",
+              "Lenguaje de marketing que no confirma la identidad de la piedra"
+            ]
           ]
         },
         {
@@ -486,6 +524,13 @@
         {
           "type": "paragraph",
           "text": "Si la respuesta a la pregunta final es no, el descuento puede crear el deseo en lugar de recompensar una decisión existente."
+        },
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog4/PIC3.png",
+          "alt": "Black Friday jewellery purchase comparison and cost per wear",
+          "width": 1200,
+          "height": 750
         }
       ]
     },
@@ -547,16 +592,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Categoría de joyas", "Riesgo de compra en línea", "Qué verificar"],
+          "headers": [
+            "Categoría de joyas",
+            "Riesgo de compra en línea",
+            "Qué verificar"
+          ],
           "rows": [
-            ["Aretes", "Bajo", "Diámetro, cierre, si se vende como par y términos de devolución de higiene"],
-            ["Huggies y aros", "Bajo a medio", "Diámetro interno, peso y cierre"],
-            ["Collares ajustables", "Bajo", "Longitud de cadena, extensor y dimensiones de colgante"],
-            ["Collares de longitud fija", "Bajo a medio", "Longitud exacta y posición en el escote"],
-            ["Brazalete ajustables", "Medio", "Circunferencia mínima y máxima"],
-            ["Brazalete fijos y brazalete", "Medio a alto", "Medición de muñeca y diámetro interno"],
-            ["Anillos", "Alto", "Talla exacta, ancho de banda, cambio de talla y elegibilidad de devolución"],
-            ["Joyas personalizadas", "Alto", "Ortografía, tiempo de producción y exclusiones de devolución"]
+            [
+              "Aretes",
+              "Bajo",
+              "Diámetro, cierre, si se vende como par y términos de devolución de higiene"
+            ],
+            [
+              "Huggies y aros",
+              "Bajo a medio",
+              "Diámetro interno, peso y cierre"
+            ],
+            [
+              "Collares ajustables",
+              "Bajo",
+              "Longitud de cadena, extensor y dimensiones de colgante"
+            ],
+            [
+              "Collares de longitud fija",
+              "Bajo a medio",
+              "Longitud exacta y posición en el escote"
+            ],
+            [
+              "Brazalete ajustables",
+              "Medio",
+              "Circunferencia mínima y máxima"
+            ],
+            [
+              "Brazalete fijos y brazalete",
+              "Medio a alto",
+              "Medición de muñeca y diámetro interno"
+            ],
+            [
+              "Anillos",
+              "Alto",
+              "Talla exacta, ancho de banda, cambio de talla y elegibilidad de devolución"
+            ],
+            [
+              "Joyas personalizadas",
+              "Alto",
+              "Ortografía, tiempo de producción y exclusiones de devolución"
+            ]
           ]
         },
         {

@@ -44,16 +44,43 @@
         },
         {
           "type": "table",
-          "headers": ["Wat u weet", "Veiligste richting"],
+          "headers": [
+            "Wat u weet",
+            "Veiligste richting"
+          ],
           "rows": [
-            ["Ze heeft doorboorde oren en draagt dagelijks oorbellen", "Oorsteekjes of huggies"],
-            ["Ze draagt zichtbare oorbellen", "Kleine of middelgrote oorringen"],
-            ["Ze draagt zelden oorbellen", "Verstelbare ketting"],
-            ["Ze draagt regelmatig armbanden", "Verstelbaar armband"],
-            ["U kent haar stijl maar niet haar maat", "Oorbellen of verstelbare ketting"],
-            ["U kent haar maat maar niet haar stijl", "Cadeaubon kan nog steeds veiliger zijn"],
-            ["U kent noch haar maat noch haar stijl", "Sieradencadeaubon"],
-            ["U wilt haar een ring geven", "Vind eerst haar exacte maat"]
+            [
+              "Ze heeft doorboorde oren en draagt dagelijks oorbellen",
+              "Oorsteekjes of huggies"
+            ],
+            [
+              "Ze draagt zichtbare oorbellen",
+              "Kleine of middelgrote oorringen"
+            ],
+            [
+              "Ze draagt zelden oorbellen",
+              "Verstelbare ketting"
+            ],
+            [
+              "Ze draagt regelmatig armbanden",
+              "Verstelbaar armband"
+            ],
+            [
+              "U kent haar stijl maar niet haar maat",
+              "Oorbellen of verstelbare ketting"
+            ],
+            [
+              "U kent haar maat maar niet haar stijl",
+              "Cadeaubon kan nog steeds veiliger zijn"
+            ],
+            [
+              "U kent noch haar maat noch haar stijl",
+              "Sieradencadeaubon"
+            ],
+            [
+              "U wilt haar een ring geven",
+              "Vind eerst haar exacte maat"
+            ]
           ]
         }
       ]
@@ -67,18 +94,62 @@
         },
         {
           "type": "table",
-          "headers": ["Sieradencategorie", "Matenrisico", "Wat u moet controleren"],
+          "headers": [
+            "Sieradencategorie",
+            "Matenrisico",
+            "Wat u moet controleren"
+          ],
           "rows": [
-            ["Oorsteekjes", "Laag", "Doorboorde oren, diameter en sluiting"],
-            ["Huggie oorbellen", "Laag tot medium", "Interne diameter en piercing positie"],
-            ["Kleine oorringen", "Laag tot medium", "Diameter, gewicht en sluiting"],
-            ["Verstelbare ketting", "Laag", "Minimum en maximum lengte"],
-            ["Ketting van vaste lengte", "Medium", "Exacte kettinglengte"],
-            ["Verstelbaar armband", "Medium", "Minimum en maximum omtrek"],
-            ["Vast armband", "Medium tot hoog", "Polsmeting"],
-            ["Stijve armband", "Hoog", "Interne diameter en handbreedte"],
-            ["Ring", "Hoog", "Exacte ringmaat en bandbreedte"],
-            ["Cadeaubon", "Zeer laag", "Waarde, vervaldatum en inleveringsvoorwaarden"]
+            [
+              "Oorsteekjes",
+              "Laag",
+              "Doorboorde oren, diameter en sluiting"
+            ],
+            [
+              "Huggie oorbellen",
+              "Laag tot medium",
+              "Interne diameter en piercing positie"
+            ],
+            [
+              "Kleine oorringen",
+              "Laag tot medium",
+              "Diameter, gewicht en sluiting"
+            ],
+            [
+              "Verstelbare ketting",
+              "Laag",
+              "Minimum en maximum lengte"
+            ],
+            [
+              "Ketting van vaste lengte",
+              "Medium",
+              "Exacte kettinglengte"
+            ],
+            [
+              "Verstelbaar armband",
+              "Medium",
+              "Minimum en maximum omtrek"
+            ],
+            [
+              "Vast armband",
+              "Medium tot hoog",
+              "Polsmeting"
+            ],
+            [
+              "Stijve armband",
+              "Hoog",
+              "Interne diameter en handbreedte"
+            ],
+            [
+              "Ring",
+              "Hoog",
+              "Exacte ringmaat en bandbreedte"
+            ],
+            [
+              "Cadeaubon",
+              "Zeer laag",
+              "Waarde, vervaldatum en inleveringsvoorwaarden"
+            ]
           ]
         }
       ]
@@ -378,13 +449,6 @@
       "heading": "Hoe haar sieradenstijl ontdekken zonder haar maat te vragen",
       "content": [
         {
-          "type": "image",
-          "src": "/blog-images/new-blog-images/iwj-blog6/PIC2.png",
-          "alt": "Huidige sieradenstijl begrijpen",
-          "width": 1200,
-          "height": 750
-        },
-        {
           "type": "paragraph",
           "text": "U kunt een verrassend aantal leren door te observeren wat ze al draagt."
         }
@@ -444,15 +508,39 @@
         },
         {
           "type": "table",
-          "headers": ["Levensstijl", "Veiligere sieraden richting"],
+          "headers": [
+            "Levensstijl",
+            "Veiligere sieraden richting"
+          ],
           "rows": [
-            ["Conservatieve werkplek", "Oorsteekjes, huggies of delicate ketting"],
-            ["Creatief of mode-geleid werk", "Moderne oorringen of sculpturale oorbellen"],
-            ["Frequente reiziger", "Veilige oorsteekjes, huggies of verstelbare ketting"],
-            ["Reguliere diners en evenementen", "Middelgrote oorringen of hang oorbellen"],
-            ["Actieve dagelijkse routine", "Kleine, veilige en lichte sieraden"],
-            ["Minimalistische garderobe", "Oorsteekjes, fijne huggies of eenvoudige hanger"],
-            ["Statement kleedster", "Zichtbare oorringen of sculpturale oorbellen"]
+            [
+              "Conservatieve werkplek",
+              "Oorsteekjes, huggies of delicate ketting"
+            ],
+            [
+              "Creatief of mode-geleid werk",
+              "Moderne oorringen of sculpturale oorbellen"
+            ],
+            [
+              "Frequente reiziger",
+              "Veilige oorsteekjes, huggies of verstelbare ketting"
+            ],
+            [
+              "Reguliere diners en evenementen",
+              "Middelgrote oorringen of hang oorbellen"
+            ],
+            [
+              "Actieve dagelijkse routine",
+              "Kleine, veilige en lichte sieraden"
+            ],
+            [
+              "Minimalistische garderobe",
+              "Oorsteekjes, fijne huggies of eenvoudige hanger"
+            ],
+            [
+              "Statement kleedster",
+              "Zichtbare oorringen of sculpturale oorbellen"
+            ]
           ]
         }
       ]

@@ -54,9 +54,26 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Vous devriez attendre quand…", "Vous l'avez remarqué seulement à cause de la réduction", "Seul le prix barré est visible", "La description utilise des mots comme \"luxe\" ou \"similaire au diamant\"", "Vous devinez la taille de la bague ou du bracelet", "La fenêtre de retour se termine avant Noël", "La page indique seulement une estimation d'expédition", "Vous ne pouvez pas imaginer le porter après l'événement"],
+          "headers": [
+            "Vous devriez attendre quand…",
+            "Vous l'avez remarqué seulement à cause de la réduction",
+            "Seul le prix barré est visible",
+            "La description utilise des mots comme \"luxe\" ou \"similaire au diamant\"",
+            "Vous devinez la taille de la bague ou du bracelet",
+            "La fenêtre de retour se termine avant Noël",
+            "La page indique seulement une estimation d'expédition",
+            "Vous ne pouvez pas imaginer le porter après l'événement"
+          ],
           "rows": [
-            ["Vous vouliez déjà la pièce exacte", "Vous connaissez son prix de vente précédent", "Les matériaux et dimensions sont clairement énoncés", "La taille est connue", "La période de retour couvre la date de cadeau", "Le calendrier de livraison est confirmé", "Le design convient au port quotidien ou régulier"]
+            [
+              "Vous vouliez déjà la pièce exacte",
+              "Vous connaissez son prix de vente précédent",
+              "Les matériaux et dimensions sont clairement énoncés",
+              "La taille est connue",
+              "La période de retour couvre la date de cadeau",
+              "Le calendrier de livraison est confirmé",
+              "Le design convient au port quotidien ou régulier"
+            ]
           ]
         }
       ]
@@ -181,14 +198,35 @@
         },
         {
           "type": "table",
-          "headers": ["Description", "Ce que cela signifie"],
+          "headers": [
+            "Description",
+            "Ce que cela signifie"
+          ],
           "rows": [
-            ["Diamant naturel", "Un diamant formé naturellement sous la terre"],
-            ["Diamant cultivé en laboratoire", "Un diamant cultivé dans des conditions de laboratoire contrôlées"],
-            ["Moissanite", "Une pierre précieuse distincte qui peut ressembler à un diamant"],
-            ["Zirconie cubique ou CZ", "Un simulateur de diamant fabriqué"],
-            ["Cristal ou verre", "Matériau décoratif qui peut imiter une pierre précieuse"],
-            ["\"Similaire au diamant\"", "Langage marketing qui ne confirme pas l'identité de la pierre"]
+            [
+              "Diamant naturel",
+              "Un diamant formé naturellement sous la terre"
+            ],
+            [
+              "Diamant cultivé en laboratoire",
+              "Un diamant cultivé dans des conditions de laboratoire contrôlées"
+            ],
+            [
+              "Moissanite",
+              "Une pierre précieuse distincte qui peut ressembler à un diamant"
+            ],
+            [
+              "Zirconie cubique ou CZ",
+              "Un simulateur de diamant fabriqué"
+            ],
+            [
+              "Cristal ou verre",
+              "Matériau décoratif qui peut imiter une pierre précieuse"
+            ],
+            [
+              "\"Similaire au diamant\"",
+              "Langage marketing qui ne confirme pas l'identité de la pierre"
+            ]
           ]
         },
         {
@@ -486,6 +524,13 @@
         {
           "type": "paragraph",
           "text": "Si la réponse à la question finale est non, la réduction peut créer le désir plutôt que de récompenser une décision existante."
+        },
+        {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog4/PIC3.png",
+          "alt": "Black Friday jewellery purchase comparison and cost per wear",
+          "width": 1200,
+          "height": 750
         }
       ]
     },
@@ -547,16 +592,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Catégorie de bijoux", "Risque d'achat en ligne", "Ce à vérifier"],
+          "headers": [
+            "Catégorie de bijoux",
+            "Risque d'achat en ligne",
+            "Ce à vérifier"
+          ],
           "rows": [
-            ["Clous d'oreilles", "Faible", "Diamètre, fermeture, si vendu comme paire et conditions de retour d'hygiène"],
-            ["Huggies et cerceaux", "Faible à moyen", "Diamètre interne, poids et fermeture"],
-            ["Colliers ajustables", "Faible", "Longueur de chaîne, extenseur et dimensions du pendentif"],
-            ["Colliers à longueur fixe", "Faible à moyen", "Longueur exacte et position sur le décolleté"],
-            ["Bracelets ajustables", "Moyen", "Circonférence minimum et maximum"],
-            ["Bracelets fixes et bracelets", "Moyen à élevé", "Mesure du poignet et diamètre interne"],
-            ["Bagues", "Élevé", "Taille exacte, largeur de bande, redimensionnement et admissibilité de retour"],
-            ["Bijoux personnalisés", "Élevé", "Orthographe, temps de production et exclusions de retour"]
+            [
+              "Clous d'oreilles",
+              "Faible",
+              "Diamètre, fermeture, si vendu comme paire et conditions de retour d'hygiène"
+            ],
+            [
+              "Huggies et cerceaux",
+              "Faible à moyen",
+              "Diamètre interne, poids et fermeture"
+            ],
+            [
+              "Colliers ajustables",
+              "Faible",
+              "Longueur de chaîne, extenseur et dimensions du pendentif"
+            ],
+            [
+              "Colliers à longueur fixe",
+              "Faible à moyen",
+              "Longueur exacte et position sur le décolleté"
+            ],
+            [
+              "Bracelets ajustables",
+              "Moyen",
+              "Circonférence minimum et maximum"
+            ],
+            [
+              "Bracelets fixes et bracelets",
+              "Moyen à élevé",
+              "Mesure du poignet et diamètre interne"
+            ],
+            [
+              "Bagues",
+              "Élevé",
+              "Taille exacte, largeur de bande, redimensionnement et admissibilité de retour"
+            ],
+            [
+              "Bijoux personnalisés",
+              "Élevé",
+              "Orthographe, temps de production et exclusions de retour"
+            ]
           ]
         },
         {

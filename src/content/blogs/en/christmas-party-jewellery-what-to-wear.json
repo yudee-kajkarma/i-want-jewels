@@ -27,18 +27,62 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Outfit or event", "Best jewellery direction", "Avoid"],
+          "headers": [
+            "Outfit or event",
+            "Best jewellery direction",
+            "Avoid"
+          ],
           "rows": [
-            ["Office Christmas party", "Studs, huggies or refined hoops", "Very large or distracting earrings"],
-            ["Cocktail party", "Drop earrings, hoops or one statement piece", "Several bold pieces together"],
-            ["Formal Christmas dinner", "Elegant drops, polished studs or a delicate necklace", "Casual or novelty jewellery"],
-            ["Simple black dress", "Statement earrings, sparkling hoops or long drops", "Jewellery that disappears completely"],
-            ["Sequin dress", "Studs, huggies or minimalist earrings", "Large earrings plus a bold necklace"],
-            ["Velvet dress", "Drops, hoops or classic studs", "Too many heavy accessories"],
-            ["Satin dress", "Drop earrings or clean diamond studs", "Jewellery that catches or pulls the fabric"],
-            ["High-neck dress", "Earrings and a bracelet; usually no necklace", "A necklace competing with the neckline"],
-            ["Strapless dress", "Earrings with an optional delicate necklace", "Crowding the open neckline"],
-            ["Jumpsuit", "Hoops, geometric earrings or a structured bracelet", "Overly delicate pieces that get lost"]
+            [
+              "Office Christmas party",
+              "Studs, huggies or refined hoops",
+              "Very large or distracting earrings"
+            ],
+            [
+              "Cocktail party",
+              "Drop earrings, hoops or one statement piece",
+              "Several bold pieces together"
+            ],
+            [
+              "Formal Christmas dinner",
+              "Elegant drops, polished studs or a delicate necklace",
+              "Casual or novelty jewellery"
+            ],
+            [
+              "Simple black dress",
+              "Statement earrings, sparkling hoops or long drops",
+              "Jewellery that disappears completely"
+            ],
+            [
+              "Sequin dress",
+              "Studs, huggies or minimalist earrings",
+              "Large earrings plus a bold necklace"
+            ],
+            [
+              "Velvet dress",
+              "Drops, hoops or classic studs",
+              "Too many heavy accessories"
+            ],
+            [
+              "Satin dress",
+              "Drop earrings or clean diamond studs",
+              "Jewellery that catches or pulls the fabric"
+            ],
+            [
+              "High-neck dress",
+              "Earrings and a bracelet; usually no necklace",
+              "A necklace competing with the neckline"
+            ],
+            [
+              "Strapless dress",
+              "Earrings with an optional delicate necklace",
+              "Crowding the open neckline"
+            ],
+            [
+              "Jumpsuit",
+              "Hoops, geometric earrings or a structured bracelet",
+              "Overly delicate pieces that get lost"
+            ]
           ]
         }
       ]
@@ -167,6 +211,13 @@
       "heading": "What Jewellery Should You Wear With Satin?",
       "content": [
         {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog3/img3.png",
+          "alt": "Jewellery to wear with a satin dress",
+          "width": 1200,
+          "height": 750
+        },
+        {
           "type": "paragraph",
           "text": "Satin has a soft reflective surface, so jewellery with clean lines and controlled sparkle is usually most effective."
         },
@@ -254,12 +305,32 @@
         },
         {
           "type": "table",
-          "headers": ["Finish", "Overall effect", "Strong outfit colours"],
+          "headers": [
+            "Finish",
+            "Overall effect",
+            "Strong outfit colours"
+          ],
           "rows": [
-            ["Yellow gold", "Warm, rich and festive", "Black, red, green, burgundy, cream and champagne"],
-            ["White or silver tone", "Clean, bright and modern", "Black, navy, silver, white, grey and cool colours"],
-            ["Rose gold", "Soft, romantic and feminine", "Blush, pink, champagne and pastel colours"],
-            ["Mixed metals", "Contemporary and individual", "Simple outfits with minimal colour competition"]
+            [
+              "Yellow gold",
+              "Warm, rich and festive",
+              "Black, red, green, burgundy, cream and champagne"
+            ],
+            [
+              "White or silver tone",
+              "Clean, bright and modern",
+              "Black, navy, silver, white, grey and cool colours"
+            ],
+            [
+              "Rose gold",
+              "Soft, romantic and feminine",
+              "Blush, pink, champagne and pastel colours"
+            ],
+            [
+              "Mixed metals",
+              "Contemporary and individual",
+              "Simple outfits with minimal colour competition"
+            ]
           ]
         },
         {
@@ -309,16 +380,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Styling need", "Jewellery direction", "I Want Jewels recommendation"],
+          "headers": [
+            "Styling need",
+            "Jewellery direction",
+            "I Want Jewels recommendation"
+          ],
           "rows": [
-            ["Safest party sparkle", "Diamond studs", "Cadenza"],
-            ["Modern office party", "Huggies", "Amadea"],
-            ["Elegant evening outfit", "Drop earrings", "Orsola"],
-            ["Modern party shape", "Diamond hoops", "Pave Hoops"],
-            ["Bold simple-dress look", "Statement earrings", "Lusso"],
-            ["Soft romantic outfit", "Butterfly earrings", "Farfalla"],
-            ["Detailed or sequin dress", "Minimalist earrings", "Laluce"],
-            ["Formal evening line", "Long drop earrings", "Concetta Long"]
+            [
+              "Safest party sparkle",
+              "Diamond studs",
+              "Cadenza"
+            ],
+            [
+              "Modern office party",
+              "Huggies",
+              "Amadea"
+            ],
+            [
+              "Elegant evening outfit",
+              "Drop earrings",
+              "Orsola"
+            ],
+            [
+              "Modern party shape",
+              "Diamond hoops",
+              "Pave Hoops"
+            ],
+            [
+              "Bold simple-dress look",
+              "Statement earrings",
+              "Lusso"
+            ],
+            [
+              "Soft romantic outfit",
+              "Butterfly earrings",
+              "Farfalla"
+            ],
+            [
+              "Detailed or sequin dress",
+              "Minimalist earrings",
+              "Laluce"
+            ],
+            [
+              "Formal evening line",
+              "Long drop earrings",
+              "Concetta Long"
+            ]
           ]
         },
         {

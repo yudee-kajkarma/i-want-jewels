@@ -27,18 +27,62 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Tenue ou événement", "Meilleure direction de bijoux", "Éviter"],
+          "headers": [
+            "Tenue ou événement",
+            "Meilleure direction de bijoux",
+            "Éviter"
+          ],
           "rows": [
-            ["Fête de bureau", "Clous, huggies ou créoles raffinées", "Très grandes ou distrayantes boucles d'oreilles"],
-            ["Cocktail", "Boucles pendantes, créoles ou une pièce statement", "Plusieurs pièces audacieuses ensemble"],
-            ["Dîner formel de Noël", "Pendantes élégantes, clous polis ou un collier délicat", "Bijoux décontractés ou fantaisie"],
-            ["Robe noire simple", "Boucles d'oreilles statement, créoles scintillantes ou longues pendantes", "Bijoux qui disparaissent complètement"],
-            ["Robe pailletée", "Clous, huggies ou boucles minimalistes", "Grandes boucles plus un collier audacieux"],
-            ["Robe velours", "Pendantes, créoles ou clous classiques", "Trop d'accessoires lourds"],
-            ["Robe satin", "Pendantes ou clous de diamant propres", "Bijoux qui accrochent ou tirent le tissu"],
-            ["Robe col haut", "Boucles d'oreilles et un bracelet; généralement pas de collier", "Un collier qui concurrence le décolleté"],
-            ["Robe bretelles", "Boucles d'oreilles avec un collier délicat optionnel", "Surcharger le décolleté ouvert"],
-            ["Combinaison", "Créoles, boucles géométriques ou un bracelet structuré", "Pières trop délicates qui se perdent"]
+            [
+              "Fête de bureau",
+              "Clous, huggies ou créoles raffinées",
+              "Très grandes ou distrayantes boucles d'oreilles"
+            ],
+            [
+              "Cocktail",
+              "Boucles pendantes, créoles ou une pièce statement",
+              "Plusieurs pièces audacieuses ensemble"
+            ],
+            [
+              "Dîner formel de Noël",
+              "Pendantes élégantes, clous polis ou un collier délicat",
+              "Bijoux décontractés ou fantaisie"
+            ],
+            [
+              "Robe noire simple",
+              "Boucles d'oreilles statement, créoles scintillantes ou longues pendantes",
+              "Bijoux qui disparaissent complètement"
+            ],
+            [
+              "Robe pailletée",
+              "Clous, huggies ou boucles minimalistes",
+              "Grandes boucles plus un collier audacieux"
+            ],
+            [
+              "Robe velours",
+              "Pendantes, créoles ou clous classiques",
+              "Trop d'accessoires lourds"
+            ],
+            [
+              "Robe satin",
+              "Pendantes ou clous de diamant propres",
+              "Bijoux qui accrochent ou tirent le tissu"
+            ],
+            [
+              "Robe col haut",
+              "Boucles d'oreilles et un bracelet; généralement pas de collier",
+              "Un collier qui concurrence le décolleté"
+            ],
+            [
+              "Robe bretelles",
+              "Boucles d'oreilles avec un collier délicat optionnel",
+              "Surcharger le décolleté ouvert"
+            ],
+            [
+              "Combinaison",
+              "Créoles, boucles géométriques ou un bracelet structuré",
+              "Pières trop délicates qui se perdent"
+            ]
           ]
         }
       ]
@@ -167,6 +211,13 @@
       "heading": "Quels bijoux porter avec du satin ?",
       "content": [
         {
+          "type": "image",
+          "src": "/blog-images/new-blog-images/iwj-blog3/img3.png",
+          "alt": "Jewellery to wear with a satin dress",
+          "width": 1200,
+          "height": 750
+        },
+        {
           "type": "paragraph",
           "text": "Le satin a une surface réfléchissante douce, donc les bijoux avec des lignes propres et un éclat contrôlé sont généralement les plus efficaces."
         },
@@ -254,12 +305,32 @@
         },
         {
           "type": "table",
-          "headers": ["Finition", "Effet global", "Couleurs de tenue fortes"],
+          "headers": [
+            "Finition",
+            "Effet global",
+            "Couleurs de tenue fortes"
+          ],
           "rows": [
-            ["Or jaune", "Chaud, riche et festif", "Noir, rouge, vert, bordeaux, crème et champagne"],
-            ["Blanc ou argenté", "Propre, brillant et moderne", "Noir, marine, argent, blanc, gris et couleurs fraîches"],
-            ["Or rose", "Doux, romantique et féminin", "Blush, rose, champagne et couleurs pastel"],
-            ["Métaux mixtes", "Contemporain et individuel", "Tenues simples avec une compétition de couleurs minimale"]
+            [
+              "Or jaune",
+              "Chaud, riche et festif",
+              "Noir, rouge, vert, bordeaux, crème et champagne"
+            ],
+            [
+              "Blanc ou argenté",
+              "Propre, brillant et moderne",
+              "Noir, marine, argent, blanc, gris et couleurs fraîches"
+            ],
+            [
+              "Or rose",
+              "Doux, romantique et féminin",
+              "Blush, rose, champagne et couleurs pastel"
+            ],
+            [
+              "Métaux mixtes",
+              "Contemporain et individuel",
+              "Tenues simples avec une compétition de couleurs minimale"
+            ]
           ]
         },
         {
@@ -309,16 +380,52 @@
       "content": [
         {
           "type": "table",
-          "headers": ["Besoin de styling", "Direction de bijoux", "Recommandation I Want Jewels"],
+          "headers": [
+            "Besoin de styling",
+            "Direction de bijoux",
+            "Recommandation I Want Jewels"
+          ],
           "rows": [
-            ["Éclat de party le plus sûr", "Clous de diamant", "Cadenza"],
-            ["Party de bureau moderne", "Huggies", "Amadea"],
-            ["Tenue de soirée élégante", "Boucles pendantes", "Orsola"],
-            ["Forme de party moderne", "Créoles de diamant", "Pave Hoops"],
-            ["Look statement robe simple", "Boucles statement", "Lusso"],
-            ["Tenue romantique douce", "Boucles papillon", "Farfalla"],
-            ["Robe détaillée ou pailletée", "Boucles minimalistes", "Laluce"],
-            ["Ligne de soirée formelle", "Longues pendantes", "Concetta Long"]
+            [
+              "Éclat de party le plus sûr",
+              "Clous de diamant",
+              "Cadenza"
+            ],
+            [
+              "Party de bureau moderne",
+              "Huggies",
+              "Amadea"
+            ],
+            [
+              "Tenue de soirée élégante",
+              "Boucles pendantes",
+              "Orsola"
+            ],
+            [
+              "Forme de party moderne",
+              "Créoles de diamant",
+              "Pave Hoops"
+            ],
+            [
+              "Look statement robe simple",
+              "Boucles statement",
+              "Lusso"
+            ],
+            [
+              "Tenue romantique douce",
+              "Boucles papillon",
+              "Farfalla"
+            ],
+            [
+              "Robe détaillée ou pailletée",
+              "Boucles minimalistes",
+              "Laluce"
+            ],
+            [
+              "Ligne de soirée formelle",
+              "Longues pendantes",
+              "Concetta Long"
+            ]
           ]
         },
         {
