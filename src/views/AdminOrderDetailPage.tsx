@@ -535,6 +535,11 @@ export default function AdminOrderDetailPage() {
                                                     {item.size !== undefined ? ` · ${t('size', { size: `${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` })}` : ''}
                                                     {' · '}{t('qty', { count: item.quantity })}
                                                 </p>
+                                                {item.sku ? (
+                                                    <p className="mt-0.5 font-mono text-[11px] tracking-tight text-zinc-400">
+                                                        {item.sku}
+                                                    </p>
+                                                ) : null}
                                                 {item.isGiftCard ? (
                                                     <p className="mt-1 text-xs text-[#8f2a60]">
                                                         {item.giftCard?.recipientEmail ? t('giftCardTo', { email: item.giftCard.recipientEmail }) : t('giftCardDeliveredBuyer')}

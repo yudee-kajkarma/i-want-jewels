@@ -33,6 +33,8 @@ type OrderApiResponse = {
   orderNumber: string;
   userId?: string;
   customer?: Record<string, unknown>;
+  recipientCountryCode?: string;
+  recipientPhone?: string;
   items: OrderItemApiResponse[];
   shippingAddress?: Record<string, unknown>;
   paymentMethod: "COD" | "ONLINE";
@@ -426,6 +428,34 @@ function normalizeOrder(order: OrderApiResponse): Order {
       typeof order.returnAdminNote === "string" ? order.returnAdminNote : null,
     returnWindowDays:
       typeof order.returnWindowDays === "number" ? order.returnWindowDays : 7,
+    // Admin list only: who ordered and the number the shipment was booked with.
+    customer: normalizeOrderCustomer(order.customer),
+    recipientCountryCode:
+      typeof order.recipientCountryCode === "string"
+        ? order.recipientCountryCode
+        : undefined,
+    recipientPhone:
+      typeof order.recipientPhone === "string" ? order.recipientPhone : undefined,
+  };
+}
+
+/** Buyer summary attached to admin list rows; absent on a shopper's own orders. */
+function normalizeOrderCustomer(
+  value: unknown,
+): import("../types/order").AdminOrderCustomer | null {
+  if (!value || typeof value !== "object") {
+    return null;
+  }
+
+  const customer = value as Record<string, unknown>;
+
+  return {
+    userId: getStringValue(customer, "userId"),
+    username: getStringValue(customer, "username"),
+    email: getStringValue(customer, "email"),
+    firstName: getStringValue(customer, "firstName"),
+    lastName: getStringValue(customer, "lastName"),
+    phoneNumber: getStringValue(customer, "phoneNumber"),
   };
 }
 

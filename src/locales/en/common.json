@@ -1032,7 +1032,8 @@
         "itemsCount_other": "{{count}} items",
         "payment": "Payment:",
         "customerTotal": "Customer total:",
-        "qty": "Qty {{count}}"
+        "qty": "Qty {{count}}",
+        "address": "Address"
       },
       "table": {
         "order": "Order",
