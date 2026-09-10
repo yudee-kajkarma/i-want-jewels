@@ -35,6 +35,8 @@ export type ProductVariant = {
   sizeMeasurement?: string
   customsValueUsd?: number
   totalStock?: number
+  /** Units sold, including offline sales. Total stock = totalStock + soldCount. */
+  soldCount?: number
   videos?: { url: string; key: string }[]
 }
 

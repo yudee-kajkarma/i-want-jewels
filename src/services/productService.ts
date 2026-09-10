@@ -58,6 +58,7 @@ type ProductVariantApiResponse = {
   size_measurement?: string
   customsValueUSD?: number
   totalStock?: number
+  soldCount?: number
   videos?: { url: string; key: string }[]
 }
 
@@ -351,6 +352,7 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
     ...(variant.size_measurement ? { sizeMeasurement: variant.size_measurement } : {}),
     ...(typeof variant.customsValueUSD === 'number' ? { customsValueUsd: variant.customsValueUSD } : {}),
     ...(typeof variant.totalStock === 'number' ? { totalStock: variant.totalStock } : {}),
+    ...(typeof variant.soldCount === 'number' ? { soldCount: variant.soldCount } : {}),
     ...(Array.isArray(variant.videos) && variant.videos.length > 0
       ? { videos: variant.videos }
       : {}),

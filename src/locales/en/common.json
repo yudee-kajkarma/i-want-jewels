@@ -1675,12 +1675,13 @@
         "refresh": "Refresh",
         "headers": {
           "product": "Product",
-          "vendor": "Vendor",
           "category": "Category",
           "price": "Price",
-          "stock": "Stock",
           "status": "Status",
-          "actions": "Actions"
+          "actions": "Actions",
+          "totalStock": "Total Stock",
+          "soldOut": "Sold Out",
+          "availableStock": "Available Stock"
         },
         "availability": {
           "available": "Available",

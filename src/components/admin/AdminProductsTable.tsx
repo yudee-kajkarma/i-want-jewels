@@ -95,10 +95,11 @@ export default function AdminProductsTable({
           <thead className="bg-[#fff6fb] text-left text-xs font-bold uppercase tracking-[0.12em] text-[#8f4a73]">
             <tr>
               <th className="sticky top-0 z-10 bg-[#fff6fb] px-6 py-4">{t('headers.product')}</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.vendor')}</th>
               <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.category')}</th>
               <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.price')}</th>
-              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.stock')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.totalStock')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.soldOut')}</th>
+              <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.availableStock')}</th>
               <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4">{t('headers.status')}</th>
               <th className="sticky top-0 z-10 bg-[#fff6fb] px-4 py-4 text-center">{t('headers.actions')}</th>
             </tr>
@@ -168,17 +169,34 @@ export default function AdminProductsTable({
                       </div>
                     </div>
                   </td>
-                  <td className="px-4 py-4 text-zinc-700">{product.vendor || t('vendorNa')}</td>
                   <td className="px-4 py-4 text-zinc-700">{product.category || t('categoryNa')}</td>
                   <td className="px-4 py-4 font-medium text-[#6c2e53]">{formatPrice(product.minPrice, currency)}</td>
-                  <td className="px-4 py-4">
-                    {product.productType === 'GIFT_CARD' ? (
-                      <span className="text-xs text-zinc-400">—</span>
-                    ) : (() => {
-                      const total = product.variants.reduce((sum, v) => sum + (v.totalStock ?? v.stock ?? 0), 0)
-                      return <span className="text-sm font-semibold text-[#3f1933]">{total}</span>
-                    })()}
-                  </td>
+                  {product.productType === 'GIFT_CARD' ? (
+                    <>
+                      <td className="px-4 py-4 text-xs text-zinc-400">—</td>
+                      <td className="px-4 py-4 text-xs text-zinc-400">—</td>
+                      <td className="px-4 py-4 text-xs text-zinc-400">—</td>
+                    </>
+                  ) : (() => {
+                    // Available is what is on the shelf; total is that plus what
+                    // has already been sold, so the three always reconcile.
+                    const available = product.variants.reduce((sum, v) => sum + (v.totalStock ?? v.stock ?? 0), 0)
+                    const sold = product.variants.reduce((sum, v) => sum + (v.soldCount ?? 0), 0)
+
+                    return (
+                      <>
+                        <td className="px-4 py-4 text-sm font-semibold text-[#3f1933]">{available + sold}</td>
+                        <td className="px-4 py-4 text-sm text-zinc-600">{sold}</td>
+                        <td className="px-4 py-4">
+                          <span
+                            className={`text-sm font-semibold ${available === 0 ? 'text-rose-600' : 'text-[#3f1933]'}`}
+                          >
+                            {available}
+                          </span>
+                        </td>
+                      </>
+                    )
+                  })()}
                   <td className="px-4 py-4">
                     <span
                       className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${

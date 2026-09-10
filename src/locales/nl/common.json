@@ -1675,12 +1675,13 @@
         "refresh": "Vernieuwen",
         "headers": {
           "product": "Product",
-          "vendor": "Leveranier",
           "category": "Categorie",
           "price": "Prijs",
-          "stock": "Voorraad",
           "status": "Status",
-          "actions": "Acties"
+          "actions": "Acties",
+          "totalStock": "Totale voorraad",
+          "soldOut": "Verkocht",
+          "availableStock": "Beschikbare voorraad"
         },
         "availability": {
           "available": "Beschikbaar",

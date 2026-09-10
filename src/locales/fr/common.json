@@ -1705,12 +1705,13 @@
         "refresh": "Actualiser",
         "headers": {
           "product": "Produit",
-          "vendor": "Fournisseur",
           "category": "Catégorie",
           "price": "Prix",
-          "stock": "Action",
           "status": "Statut",
-          "actions": "Actes"
+          "actions": "Actes",
+          "totalStock": "Stock total",
+          "soldOut": "Vendu",
+          "availableStock": "Stock disponible"
         },
         "availability": {
           "available": "Disponible",
