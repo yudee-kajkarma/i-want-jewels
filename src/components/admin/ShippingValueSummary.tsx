@@ -29,7 +29,6 @@ export default function ShippingValueSummary({ order, carrier, pkg, items, decla
   const orderCurrencyIso = order.currency ?? 'EUR'
   const customerAmount = formatPrice(order.totalAmount, orderCurrency)
   const declarationCurrency = pkg.declarationCurrency ?? 'EUR'
-  const retailAmount = money(pkg.retailValue ?? pkg.retailValueEUR, declarationCurrency)
   const isOutsideEU = pkg.isOutsideEU ?? pkg.deliveryChargeEUR !== undefined
   const hasStoredUsdCustomsValue = isOutsideEU && items.some((item) => item.customsValueUSD != null)
 
@@ -38,16 +37,11 @@ export default function ShippingValueSummary({ order, carrier, pkg, items, decla
       <div className="border-b border-[#efcfe1] bg-[#fff8fd] px-4 py-2.5">
         <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('title')}</p>
       </div>
-      <div className="grid gap-2 px-4 py-3 sm:grid-cols-3">
+      <div className="grid gap-2 px-4 py-3 sm:grid-cols-2">
         <div className="border border-[#f0dbe8] bg-[#fffafd] px-3 py-2.5">
           <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">{t('customerTotal')}</p>
           <p className="mt-1 text-base font-bold text-[#3d1530]">{customerAmount}</p>
           <p className="text-[10px] text-zinc-400">{t('customerTotalHint', { currency: orderCurrencyIso })}</p>
-        </div>
-        <div className="border border-[#f0dbe8] bg-[#fffafd] px-3 py-2.5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">{t('retailReference')}</p>
-          <p className="mt-1 text-base font-bold text-[#3d1530]">{retailAmount}</p>
-          <p className="text-[10px] text-zinc-400">{t('retailReferenceHint')}</p>
         </div>
         <div className="border border-[#f0dbe8] bg-[#fffafd] px-3 py-2.5">
           <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">{t('declaredCustoms')}</p>
@@ -60,7 +54,7 @@ export default function ShippingValueSummary({ order, carrier, pkg, items, decla
         </div>
       </div>
       <div className="border-t border-[#f0dbe8] bg-[#fffafd] px-4 py-2.5 text-[10px] leading-4 text-[#694d5f]">
-        <p>{t('currencyExplanation', { customerAmount, retailAmount, currency: declarationCurrency })}</p>
+        <p>{t('currencyExplanation', { customerAmount, currency: declarationCurrency })}</p>
         {isOutsideEU ? (
           <p className="mt-1 font-medium text-[#8b5a75]">
             {hasStoredUsdCustomsValue

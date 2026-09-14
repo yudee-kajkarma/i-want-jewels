@@ -31,15 +31,19 @@ const EXPORT_REASON_VALUES = [
 const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
 
 // DHL global package type codes (Reference Data Guide §25). Blank = your own box.
+//
+// Each DHL packaging has a fixed size, and the rate is priced on the resulting
+// volumetric weight — so selecting one must set the dimensions too, otherwise
+// the quote is calculated against whatever was in the boxes before.
 const PACKAGE_TYPE_OPTIONS = [
-  { code: '', label: 'Your own packaging' },
-  { code: 'XPD', label: 'Express Envelope (32 x 24 x 1 cm)' },
-  { code: '1CE', label: 'Card Envelope (35 x 27.5 x 2 cm)' },
-  { code: '2BP', label: 'Box 2 Flat (34 x 33 x 6 cm)' },
-  { code: '2BX', label: 'Box 2 Shoe (34 x 18 x 8 cm)' },
-  { code: '3BX', label: 'Box 3 (34 x 32 x 9 cm)' },
-  { code: '4BX', label: 'Box 4 (34 x 32 x 18 cm)' },
-  { code: '5BX', label: 'Box 5 Jumbo Small (34 x 32 x 35 cm)' },
+  { code: '', label: 'Your own packaging', dims: null },
+  { code: 'XPD', label: 'Express Envelope (32 x 24 x 1 cm)', dims: { l: 32, w: 24, h: 1 } },
+  { code: '1CE', label: 'Card Envelope (35 x 27.5 x 2 cm)', dims: { l: 35, w: 27.5, h: 2 } },
+  { code: '2BP', label: 'Box 2 Flat (34 x 33 x 6 cm)', dims: { l: 34, w: 33, h: 6 } },
+  { code: '2BX', label: 'Box 2 Shoe (34 x 18 x 8 cm)', dims: { l: 34, w: 18, h: 8 } },
+  { code: '3BX', label: 'Box 3 (34 x 32 x 9 cm)', dims: { l: 34, w: 32, h: 9 } },
+  { code: '4BX', label: 'Box 4 (34 x 32 x 18 cm)', dims: { l: 34, w: 32, h: 18 } },
+  { code: '5BX', label: 'Box 5 Jumbo Small (34 x 32 x 35 cm)', dims: { l: 34, w: 32, h: 35 } },
 ] as const
 
 // Signature levels DHL offers. SERVICE_DEFAULT sends nothing and keeps
@@ -203,9 +207,12 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [incoterm, setIncoterm] = useState('DDP')
   const [shipmentType, setShipmentType] = useState<'commercial' | 'personal'>('commercial')
   const [exportReasonType, setExportReasonType] = useState('permanent')
-  const [dimL, setDimL] = useState('20')
-  const [dimW, setDimW] = useState('15')
-  const [dimH, setDimH] = useState('10')
+  // Fallback box used when no DHL packaging is selected.
+  const defaultDims = { l: 20, w: 15, h: 10 }
+  const [dimL, setDimL] = useState(String(defaultDims.l))
+  const [dimW, setDimW] = useState(String(defaultDims.w))
+  const [dimH, setDimH] = useState(String(defaultDims.h))
+
 
   const [insuranceEnabled, setInsuranceEnabled] = useState(false)
   const [insuranceValue, setInsuranceValue] = useState('')
@@ -216,6 +223,8 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
   const [shipperEori, setShipperEori] = useState('')
   const [extraReference, setExtraReference] = useState('')
   const [packageTypeCode, setPackageTypeCode] = useState('')
+  // A DHL box cannot be resized, so its dimensions are shown read-only.
+  const isDhlPackaging = Boolean(packageTypeCode)
   // We already hold the recipient number; SMS is just an on/off choice.
   const [notifyBySms, setNotifyBySms] = useState(false)
   // DHL bills a residential surcharge for private addresses; forwarding
@@ -683,7 +692,23 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
               <FieldHelp text={'A DHL packaging type uses its fixed size, which can be cheaper than your own box. Leave as your own packaging to use the dimensions below.'} />
             </label>
             <select id="dhl-packaging" value={packageTypeCode}
-              onChange={(e) => setPackageTypeCode(e.target.value)}
+              onChange={(e) => {
+                const code = e.target.value
+                setPackageTypeCode(code)
+
+                // DHL packaging has a fixed size, so the dimensions follow the
+                // choice. Switching back to your own box restores the order's.
+                const chosen = PACKAGE_TYPE_OPTIONS.find((o) => o.code === code)
+                if (chosen?.dims) {
+                  setDimL(String(chosen.dims.l))
+                  setDimW(String(chosen.dims.w))
+                  setDimH(String(chosen.dims.h))
+                } else {
+                  setDimL(String(defaultDims.l))
+                  setDimW(String(defaultDims.w))
+                  setDimH(String(defaultDims.h))
+                }
+              }}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]">
               {PACKAGE_TYPE_OPTIONS.map((o) => (
                 <option key={o.code || 'own'} value={o.code}>{o.label}</option>
@@ -709,13 +734,16 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
             </label>
             <div className="flex items-center gap-2">
               <input type="number" min="1" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder={t('dimensionL')}
-                className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+                readOnly={isDhlPackaging}
+                className={`w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90] ${isDhlPackaging ? 'bg-[#f9f0f6] text-[#694d5f]' : ''}`} />
               <span className="text-zinc-400">×</span>
               <input type="number" min="1" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder={t('dimensionW')}
-                className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+                readOnly={isDhlPackaging}
+                className={`w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90] ${isDhlPackaging ? 'bg-[#f9f0f6] text-[#694d5f]' : ''}`} />
               <span className="text-zinc-400">×</span>
               <input type="number" min="1" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder={t('dimensionH')}
-                className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+                readOnly={isDhlPackaging}
+                className={`w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90] ${isDhlPackaging ? 'bg-[#f9f0f6] text-[#694d5f]' : ''}`} />
               <span className="text-xs text-zinc-400">{tCommon('cm')}</span>
             </div>
           </div>
@@ -809,6 +837,19 @@ export default function DHLShipForm({ order, preview: previewQuote, onBack, onSh
                 <div className="flex justify-between text-zinc-400">
                   <span>{t('estimatedTransit')}</span>
                   <span>{tCommon('daysApprox', { count: selectedRate.deliveryDays })}</span>
+                </div>
+              ) : null}
+              {selectedRate.estimatedDelivery ? (
+                <div className="flex justify-between font-semibold text-[#4f2040]">
+                  <span>
+                    {t('estimatedDelivery', { defaultValue: 'Estimated delivery' })}
+                    <FieldHelp text={'The delivery date DHL commits to for this service and ship date. It moves if you change the ship date.'} />
+                  </span>
+                  <span>
+                    {new Date(selectedRate.estimatedDelivery).toLocaleDateString(undefined, {
+                      weekday: 'short', day: 'numeric', month: 'short',
+                    })}
+                  </span>
                 </div>
               ) : null}
             </div>

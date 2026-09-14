@@ -1937,14 +1937,12 @@
       "shippingValueSummary": {
         "title": "Bestel- en aangiftewaarden",
         "customerTotal": "Totaal klantbestelling",
-        "customerTotalHint": "Bedrag afgerekend in {{currency}}",
-        "retailReference": "Winkelwaarde voor vervoerder",
-        "retailReferenceHint": "Verkoopwaarde van fysieke artikelen op vervoersdocumenten",
+        "customerTotalHint": "Betaald in {{currency}}",
         "declaredCustoms": "Aangegeven douanewaarde",
         "declaredCustomsHint": "Bedrag naar {{carrier}} verzonden in de getoonde valuta",
         "notRequired": "Niet vereist",
         "withinEuHint": "Geen douaneaangifte binnen de EU",
-        "currencyExplanation": "{{customerAmount}} is het totaal van de klantbestelling. {{retailAmount}} is de verkoopwaarde van de fysieke artikelen die in {{currency}} wordt aangegeven. De verzendtarieven hieronder zijn afzonderlijke accountkosten van de vervoerder in EUR.",
+        "currencyExplanation": "{{customerAmount}} is het totaal van de klantbestelling. De verzendtarieven hieronder zijn afzonderlijke accountkosten van de vervoerder in EUR.",
         "customsFromUsdDirect": "Voor deze USD-zending worden de opgeslagen USD-douanekosten van het product direct gebruikt. De douanekosten zijn niet de verkoopprijs.",
         "customsFromUsd": "De aangegeven waarde komt uit de opgeslagen douanekosten van het product in USD en wordt omgerekend naar EUR. Dit is niet de verkoopprijs.",
         "customsFromRetail": "Er zijn geen afzonderlijke douanekosten opgeslagen; daarom wordt de winkelwaarde in EUR gebruikt voor de aangifte."
@@ -1964,8 +1962,8 @@
           "SERVICE_DEFAULT": "Servicestandaard (geen overschrijving)",
           "NO_SIGNATURE_REQUIRED": "Geen handtekening vereist",
           "INDIRECT": "Indirecte handtekening",
-          "DIRECT_SIGNATURE_REQUIRED": "Directe handtekening vereist",
-          "ADULT_SIGNATURE_REQUIRED": "Handtekening van volwassene vereist"
+          "DIRECT": "Directe handtekening vereist",
+          "ADULT": "Handtekening van volwassene vereist"
         },
         "dutiesPaymentOptions": {
           "SENDER": "Afzender (mijn FedEx-account)",
@@ -1989,7 +1987,7 @@
           "customsValueEur": "Aangegeven / regel ({{currency}})"
         },
         "totalCustomsValue": "Totale douanewaarde:",
-        "incoterm": "Incoterm:",
+        "incoterm": "Incoterm",
         "packageDetails": "Pakketdetails",
         "packagingType": "Verpakkingstype",
         "weightAuto": "Gewicht (automatisch berekend op basis van artikelen)",
@@ -2046,7 +2044,21 @@
         "toast": {
           "addressUpdated": "Adres van ontvanger bijgewerkt — tarieven vernieuwen…",
           "shipped": "Bestelling {{orderNumber}} verzonden via FedEx."
-        }
+        },
+        "shipDateLabel": "Verzenddatum (overdracht aan FedEx)",
+        "customerReference": "Uw referentie",
+        "referencePlaceholder": "Gedrukt op het label",
+        "electronicTradeDocuments": "Papierloze factuur (ETD)",
+        "receiverResidential": "Afleveradres is een woonadres",
+        "shipperResidential": "Ophaaladres is een woonadres",
+        "invoiceNumber": "Factuurnummer",
+        "invoiceNumberHint": "Standaard het bestelnummer.",
+        "dimensionsFromPackaging": "FedEx-verpakkingen hebben een vaste maat en kunnen niet worden gewijzigd.",
+        "iossNumber": "IOSS-nummer (EU)",
+        "iossPlaceholder": "Gebruikt de accountwaarde",
+        "iossHint": "Btw bij verkoop voldaan; de klant betaalt niets bij levering.",
+        "labelFormat": "Labelformaat",
+        "blockInsight": "Inhoud verbergen voor publieke tracking"
       },
       "dhlShipForm": {
         "incotermOptions": {
@@ -2154,7 +2166,8 @@
         "goGreen": "GoGreen klimaatneutraal (FD)",
         "servicesPriced": "Prijs inclusief {{services}}",
         "servicesNotPriced": "Prijs exclusief {{services}} — kosten verschijnen na verzending",
-        "adultSignature": "Handtekening volwassene (SD)"
+        "adultSignature": "Handtekening volwassene (SD)",
+        "estimatedDelivery": "Verwachte levering"
       }
     }
   }

@@ -19,12 +19,26 @@ const PACKAGING_VALUES = [
   'FEDEX_TUBE',
 ] as const
 
+// Outer dimensions of FedEx's own packaging, in cm. The rate is priced on the
+// resulting volumetric weight, so choosing one has to set these too.
+const PACKAGING_DIMENSIONS: Record<string, { l: number; w: number; h: number } | null> = {
+  YOUR_PACKAGING: null,
+  FEDEX_ENVELOPE: { l: 33, w: 24, h: 1 },
+  FEDEX_PAK: { l: 38, w: 30, h: 3 },
+  FEDEX_BOX: { l: 33, w: 28, h: 6 },
+  FEDEX_SMALL_BOX: { l: 32, w: 28, h: 6 },
+  FEDEX_MEDIUM_BOX: { l: 33, w: 28, h: 10 },
+  FEDEX_LARGE_BOX: { l: 33, w: 28, h: 26 },
+  FEDEX_TUBE: { l: 97, w: 15, h: 15 },
+}
+
+// Exactly the five values FedEx accepts for signatureOptionDetail.optionType.
 const SIGNATURE_VALUES = [
   'SERVICE_DEFAULT',
   'NO_SIGNATURE_REQUIRED',
   'INDIRECT',
-  'DIRECT_SIGNATURE_REQUIRED',
-  'ADULT_SIGNATURE_REQUIRED',
+  'DIRECT',
+  'ADULT',
 ] as const
 
 const DUTIES_PAYMENT_VALUES = ['SENDER', 'RECIPIENT', 'THIRD_PARTY'] as const
@@ -94,13 +108,22 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
   async function loadFedexRates() {
     setIsLoadingRates(true)
     setRatesError('')
-    setFedexRates([])
     setSelectedServiceCode('')
     try {
-      const q = await getAdminCarrierRatesForOrder(order.id, 'FEDEX')
+      const q = await getAdminCarrierRatesForOrder(
+        order.id, 'FEDEX', undefined, undefined,
+        receiverIsResidential, shipperIsResidential, shipDate, packagingType,
+        signatureOption, saturdayDelivery,
+      )
       const rates = q?.rates.FEDEX ?? []
       setFedexRates(rates)
-      if (rates[0]) setSelectedServiceCode(rates[0].serviceCode)
+      // Keep the admin's chosen service across a re-quote — options now change
+      // the price, so this runs often. Only fall back when it is no longer offered.
+      setSelectedServiceCode((current) =>
+        rates.some((r) => r.serviceCode === current)
+          ? current
+          : rates[0]?.serviceCode ?? '',
+      )
     } catch {
       setRatesError(t('ratesLoadError'))
     } finally {
@@ -108,10 +131,6 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
     }
   }
 
-  useEffect(() => {
-    void loadFedexRates()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [order.id])
 
   const [isEditingReceiver, setIsEditingReceiver] = useState(false)
   const [receiverDraft, setReceiverDraft] = useState<ReceiverDraft>({
@@ -152,9 +171,25 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
   )
 
   const [packagingType, setPackagingType] = useState('YOUR_PACKAGING')
+  // FedEx packaging cannot be resized, so its dimensions are shown read-only.
+  const isFedExPackaging = packagingType !== 'YOUR_PACKAGING'
   const [dimL, setDimL] = useState('')
   const [dimW, setDimW] = useState('')
   const [dimH, setDimH] = useState('')
+
+  // Parity with DHL: these all reach FedEx but had no control until now.
+  const [incoterm, setIncoterm] = useState('DDP')
+  const [electronicTradeDocuments, setElectronicTradeDocuments] = useState(true)
+  const [invoiceNumber, setInvoiceNumber] = useState('')
+  const [customerReference, setCustomerReference] = useState('')
+  const [receiverIsResidential, setReceiverIsResidential] = useState(true)
+  const [shipperIsResidential, setShipperIsResidential] = useState(false)
+  const [shipDate, setShipDate] = useState(() => new Date().toISOString().slice(0, 10))
+
+  // FedEx-specific options with no DHL equivalent.
+  const [iossNumber, setIossNumber] = useState('')
+  const [blockInsightVisibility, setBlockInsightVisibility] = useState(true)
+  const [labelStockType, setLabelStockType] = useState('PAPER_85X11_TOP_HALF_LABEL')
 
   const [signatureOption, setSignatureOption] = useState('SERVICE_DEFAULT')
   const [saturdayDelivery, setSaturdayDelivery] = useState(false)
@@ -162,6 +197,11 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
 
   const [dutiesPaymentType, setDutiesPaymentType] = useState('SENDER')
   const [dutiesAccountNumber, setDutiesAccountNumber] = useState('')
+
+  useEffect(() => {
+    void loadFedexRates()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [order.id, signatureOption, saturdayDelivery, packagingType, receiverIsResidential, shipperIsResidential, shipDate])
 
   const [notifyRecipient, setNotifyRecipient] = useState(true)
   const [notifyEmail, setNotifyEmail] = useState(preview?.receiver.email ?? '')
@@ -216,6 +256,17 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         dutiesPaymentType,
         dutiesAccountNumber: dutiesPaymentType === 'THIRD_PARTY' ? dutiesAccountNumber : undefined,
         notificationEmails: notifyRecipient && notifyEmail ? [notifyEmail] : undefined,
+        incoterm,
+        electronicTradeDocuments,
+        invoiceNumber: invoiceNumber.trim() || undefined,
+        customerReference: customerReference.trim() || undefined,
+        receiverIsResidential,
+        shipperIsResidential,
+        recipientTaxId: receiverDraft.taxId?.trim() || undefined,
+        iossNumber: iossNumber.trim() || undefined,
+        blockInsightVisibility,
+        labelStockType,
+        shipDate,
         commodityOverrides: commodities.map((c) => ({
           hsCode: c.hsCode,
           countryOfManufacture: c.countryOfManufacture,
@@ -444,7 +495,20 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('packagingType')}</label>
-            <select value={packagingType} onChange={(e) => setPackagingType(e.target.value)}
+            <select value={packagingType}
+              onChange={(e) => {
+                const next = e.target.value
+                setPackagingType(next)
+
+                // FedEx packaging has a fixed size; your own box keeps whatever
+                // the admin entered.
+                const dims = PACKAGING_DIMENSIONS[next]
+                if (dims) {
+                  setDimL(String(dims.l)); setDimW(String(dims.w)); setDimH(String(dims.h))
+                } else {
+                  setDimL(''); setDimW(''); setDimH('')
+                }
+              }}
               className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
               {packagingOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
@@ -461,23 +525,29 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
               {t('dimensionsCm')}
             </label>
-            {packagingType !== 'YOUR_PACKAGING' ? (
-              <p className="text-[10px] text-amber-600">
-                {t('dimensionsIgnored')}
-              </p>
-            ) : (
+            {(
               <div className="flex items-center gap-2">
                 <input type="number" min="0" value={dimL} onChange={(e) => setDimL(e.target.value)} placeholder={t('dimensionL')}
-                  className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+                  readOnly={isFedExPackaging}
+                  className={`w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90] ${isFedExPackaging ? 'bg-[#f9f0f6] text-[#694d5f]' : ''}`} />
                 <span className="text-zinc-400">×</span>
                 <input type="number" min="0" value={dimW} onChange={(e) => setDimW(e.target.value)} placeholder={t('dimensionW')}
-                  className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+                  readOnly={isFedExPackaging}
+                  className={`w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90] ${isFedExPackaging ? 'bg-[#f9f0f6] text-[#694d5f]' : ''}`} />
                 <span className="text-zinc-400">×</span>
                 <input type="number" min="0" value={dimH} onChange={(e) => setDimH(e.target.value)} placeholder={t('dimensionH')}
-                  className="w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90]" />
+                  readOnly={isFedExPackaging}
+                  className={`w-20 border border-[#e3bfd6] px-2 py-2 text-xs outline-none focus:border-[#d24a90] ${isFedExPackaging ? 'bg-[#f9f0f6] text-[#694d5f]' : ''}`} />
                 <span className="text-xs text-zinc-400">{tCommon('cm')}</span>
               </div>
             )}
+            {isFedExPackaging ? (
+              <p className="mt-1 text-[10px] text-zinc-400">
+                {t('dimensionsFromPackaging', {
+                  defaultValue: "FedEx's own packaging has a fixed size, so these cannot be changed.",
+                })}
+              </p>
+            ) : null}
           </div>
         </div>
       </section>
@@ -654,6 +724,84 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
               className="h-4 w-4 accent-[#d24a90]" />
             <label htmlFor="saturday" className="text-xs text-[#4f2040]">{t('saturdayDelivery')}</label>
           </div>
+
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-ship-date">
+              {t('shipDateLabel', { defaultValue: 'Ship date (handover to FedEx)' })}
+            </label>
+            <input id="fedex-ship-date" type="date" value={shipDate} min={new Date().toISOString().slice(0, 10)}
+              onChange={(e) => setShipDate(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+          </div>
+
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-reference">
+              {t('customerReference', { defaultValue: 'Your reference' })}
+            </label>
+            <input id="fedex-reference" value={customerReference} onChange={(e) => setCustomerReference(e.target.value)}
+              placeholder={t('referencePlaceholder', { defaultValue: 'Printed on the label' })}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+          </div>
+
+          <div className="flex items-center gap-2 pt-5">
+            <input type="checkbox" id="fedex-etd" checked={electronicTradeDocuments}
+              onChange={(e) => setElectronicTradeDocuments(e.target.checked)}
+              className="h-4 w-4 accent-[#d24a90]" />
+            <label htmlFor="fedex-etd" className="text-xs text-[#4f2040]">
+              {t('electronicTradeDocuments', { defaultValue: 'Paperless invoice (ETD)' })}
+            </label>
+          </div>
+
+          <div className="flex items-center gap-2 pt-5">
+            <input type="checkbox" id="fedex-recv-residential" checked={receiverIsResidential}
+              onChange={(e) => setReceiverIsResidential(e.target.checked)}
+              className="h-4 w-4 accent-[#d24a90]" />
+            <label htmlFor="fedex-recv-residential" className="text-xs text-[#4f2040]">
+              {t('receiverResidential', { defaultValue: 'Delivery address is a home' })}
+            </label>
+          </div>
+
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-ioss">
+              {t('iossNumber', { defaultValue: 'IOSS number (EU)' })}
+            </label>
+            <input id="fedex-ioss" value={iossNumber} onChange={(e) => setIossNumber(e.target.value)}
+              placeholder={t('iossPlaceholder', { defaultValue: 'Uses the account default' })}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+            <p className="mt-1 text-[10px] text-zinc-400">
+              {t('iossHint', { defaultValue: 'VAT settled at sale, so the customer pays nothing on delivery.' })}
+            </p>
+          </div>
+
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-label-stock">
+              {t('labelFormat', { defaultValue: 'Label format' })}
+            </label>
+            <select id="fedex-label-stock" value={labelStockType} onChange={(e) => setLabelStockType(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+              <option value="PAPER_85X11_TOP_HALF_LABEL">A4 sheet (top half)</option>
+              <option value="PAPER_4X6">4 × 6 label</option>
+              <option value="PAPER_LETTER">Letter sheet</option>
+            </select>
+          </div>
+
+          <div className="flex items-center gap-2 pt-5">
+            <input type="checkbox" id="fedex-block-insight" checked={blockInsightVisibility}
+              onChange={(e) => setBlockInsightVisibility(e.target.checked)}
+              className="h-4 w-4 accent-[#d24a90]" />
+            <label htmlFor="fedex-block-insight" className="text-xs text-[#4f2040]">
+              {t('blockInsight', { defaultValue: 'Hide contents from public tracking' })}
+            </label>
+          </div>
+
+          <div className="flex items-center gap-2 pt-5">
+            <input type="checkbox" id="fedex-ship-residential" checked={shipperIsResidential}
+              onChange={(e) => setShipperIsResidential(e.target.checked)}
+              className="h-4 w-4 accent-[#d24a90]" />
+            <label htmlFor="fedex-ship-residential" className="text-xs text-[#4f2040]">
+              {t('shipperResidential', { defaultValue: 'Pickup address is a home' })}
+            </label>
+          </div>
         </div>
       </section>
 
@@ -662,6 +810,28 @@ export default function FedExShipForm({ order, preview: previewQuote, onBack, on
           <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#8b5a75]">{t('billingDutiesPayment')}</p>
         </div>
         <div className="grid gap-4 px-4 py-3 sm:grid-cols-2">
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-incoterm">
+              {t('incoterm', { defaultValue: 'Incoterm' })}
+            </label>
+            <select id="fedex-incoterm" value={incoterm} onChange={(e) => setIncoterm(e.target.value)}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]">
+              {['DDP', 'DAP', 'DDU', 'CPT', 'CIP', 'EXW', 'FCA'].map((code) => (
+                <option key={code} value={code}>{code}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]" htmlFor="fedex-invoice">
+              {t('invoiceNumber', { defaultValue: 'Invoice number' })}
+            </label>
+            <input id="fedex-invoice" value={invoiceNumber} onChange={(e) => setInvoiceNumber(e.target.value)}
+              placeholder={order.orderNumber}
+              className="w-full border border-[#e3bfd6] px-2 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]" />
+            <p className="mt-1 text-[10px] text-zinc-400">
+              {t('invoiceNumberHint', { defaultValue: 'Defaults to the order number.' })}
+            </p>
+          </div>
           <div>
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('billDutiesTo')}</label>
             <select value={dutiesPaymentType} onChange={(e) => setDutiesPaymentType(e.target.value)}

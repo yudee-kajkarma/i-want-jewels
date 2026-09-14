@@ -1937,14 +1937,12 @@
       "shippingValueSummary": {
         "title": "Bestell- und Deklarationswerte",
         "customerTotal": "Gesamtsumme der Kundenbestellung",
-        "customerTotalHint": "Berechneter Betrag in {{currency}}",
-        "retailReference": "Verkaufswert für den Versanddienstleister",
-        "retailReferenceHint": "Verkaufswert der physischen Artikel in den Versandpapieren",
+        "customerTotalHint": "Bezahlt in {{currency}}",
         "declaredCustoms": "Deklarierter Zollwert",
         "declaredCustomsHint": "An {{carrier}} in der angezeigten Währung übermittelter Betrag",
         "notRequired": "Nicht erforderlich",
         "withinEuHint": "Keine Zollanmeldung innerhalb der EU",
-        "currencyExplanation": "{{customerAmount}} ist die Gesamtsumme der Kundenbestellung. {{retailAmount}} ist der in {{currency}} deklarierte Verkaufswert der physischen Artikel. Die Versandtarife unten sind separate Kontobelastungen in EUR.",
+        "currencyExplanation": "{{customerAmount}} ist die Gesamtsumme der Kundenbestellung. Die Versandtarife unten sind separate Kontobelastungen in EUR.",
         "customsFromUsdDirect": "Für diese USD-Sendung werden die gespeicherten USD-Zollkosten des Produkts direkt verwendet. Die Zollkosten sind nicht der Verkaufspreis.",
         "customsFromUsd": "Der deklarierte Wert stammt aus den gespeicherten USD-Zollkosten des Produkts und wird in EUR umgerechnet. Er ist nicht der Verkaufspreis.",
         "customsFromRetail": "Es sind keine separaten Zollkosten gespeichert; daher wird der EUR-Verkaufswert für die Deklaration verwendet."
@@ -1964,8 +1962,8 @@
           "SERVICE_DEFAULT": "Service-Standard (keine Überschreibung)",
           "NO_SIGNATURE_REQUIRED": "Keine Unterschrift erforderlich",
           "INDIRECT": "Indirekte Unterschrift",
-          "DIRECT_SIGNATURE_REQUIRED": "Direkte Unterschrift erforderlich",
-          "ADULT_SIGNATURE_REQUIRED": "Unterschrift eines Erwachsenen erforderlich"
+          "DIRECT": "Direkte Unterschrift erforderlich",
+          "ADULT": "Unterschrift eines Erwachsenen erforderlich"
         },
         "dutiesPaymentOptions": {
           "SENDER": "Absender (mein FedEx-Konto)",
@@ -1989,7 +1987,7 @@
           "customsValueEur": "Deklariert / Position ({{currency}})"
         },
         "totalCustomsValue": "Gesamtzollwert:",
-        "incoterm": "Incoterm:",
+        "incoterm": "Incoterm",
         "packageDetails": "Paketdetails",
         "packagingType": "Verpackungstyp",
         "weightAuto": "Gewicht (automatisch aus Artikeln berechnet)",
@@ -2046,7 +2044,21 @@
         "toast": {
           "addressUpdated": "Empfängeradresse aktualisiert — Tarife werden aktualisiert…",
           "shipped": "Bestellung {{orderNumber}} per FedEx versandt."
-        }
+        },
+        "shipDateLabel": "Versanddatum (Übergabe an FedEx)",
+        "customerReference": "Ihre Referenz",
+        "referencePlaceholder": "Wird auf dem Label gedruckt",
+        "electronicTradeDocuments": "Papierlose Rechnung (ETD)",
+        "receiverResidential": "Lieferadresse ist eine Wohnadresse",
+        "shipperResidential": "Abholadresse ist eine Wohnadresse",
+        "invoiceNumber": "Rechnungsnummer",
+        "invoiceNumberHint": "Standard ist die Bestellnummer.",
+        "dimensionsFromPackaging": "FedEx-Verpackungen haben eine feste Größe und können nicht geändert werden.",
+        "iossNumber": "IOSS-Nummer (EU)",
+        "iossPlaceholder": "Standard des Kontos",
+        "iossHint": "MwSt. beim Verkauf abgerechnet — der Kunde zahlt bei Zustellung nichts.",
+        "labelFormat": "Etikettenformat",
+        "blockInsight": "Inhalt im öffentlichen Tracking verbergen"
       },
       "dhlShipForm": {
         "incotermOptions": {
@@ -2154,7 +2166,8 @@
         "goGreen": "GoGreen klimaneutral (FD)",
         "servicesPriced": "Preis enthält {{services}}",
         "servicesNotPriced": "Preis ohne {{services}} — Kosten erscheinen nach dem Versand",
-        "adultSignature": "Unterschrift Erwachsener (SD)"
+        "adultSignature": "Unterschrift Erwachsener (SD)",
+        "estimatedDelivery": "Voraussichtliche Zustellung"
       }
     }
   }

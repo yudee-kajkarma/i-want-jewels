@@ -182,6 +182,7 @@ type AdminShippingQuoteRateArray =
       availableServices?: Array<{ code: string; name: string }>;
       valueAddedServicesPriced?: boolean;
       pickupCutoffLocal?: string;
+      estimatedDelivery?: string | null;
     }>
   | Record<string, unknown>;
 
@@ -242,6 +243,7 @@ function normalizeShippingRateOptions(
       availableServices: Array.isArray(rate.availableServices) ? rate.availableServices : undefined,
       valueAddedServicesPriced: rate.valueAddedServicesPriced === true,
       pickupCutoffLocal: typeof rate.pickupCutoffLocal === 'string' ? rate.pickupCutoffLocal : undefined,
+      estimatedDelivery: typeof rate.estimatedDelivery === 'string' ? rate.estimatedDelivery : null,
     }))
     .filter((rate) => rate.serviceCode);
 }
@@ -788,6 +790,10 @@ export async function getAdminCarrierRatesForOrder(
   shipDate?: string,
   /** DHL packaging type code — changes the price. */
   packageTypeCode?: string,
+  /** FedEx signature level — carries its own fee, so it must be quoted. */
+  signatureOption?: string,
+  /** FedEx Saturday delivery — also chargeable. */
+  saturdayDelivery?: boolean,
 ): Promise<AdminShippingQuote | null> {
   const params = new URLSearchParams({ carrier })
   if (serviceCode) params.set('serviceCode', serviceCode)
@@ -797,6 +803,10 @@ export async function getAdminCarrierRatesForOrder(
   if (receiverIsResidential !== undefined) {
     params.set('residential', String(receiverIsResidential))
   }
+  if (signatureOption && signatureOption !== 'SERVICE_DEFAULT') {
+    params.set('signature', signatureOption)
+  }
+  if (saturdayDelivery) params.set('saturday', 'true')
   if (shipperIsResidential !== undefined) {
     params.set('shipperResidential', String(shipperIsResidential))
   }
@@ -814,6 +824,19 @@ export async function getAdminCarrierRatesForOrder(
 
 export type FedExShipOptions = {
   packagingType?: string;
+  incoterm?: string;
+  electronicTradeDocuments?: boolean;
+  invoiceNumber?: string;
+  customerReference?: string;
+  receiverIsResidential?: boolean;
+  shipperIsResidential?: boolean;
+  recipientTaxId?: string;
+  iossNumber?: string;
+  blockInsightVisibility?: boolean;
+  transportPaymentType?: string;
+  transportAccountNumber?: string;
+  labelImageType?: string;
+  labelStockType?: string;
   dimensions?: { lengthCm: number; widthCm: number; heightCm: number };
   signatureOption?: string;
   saturdayDelivery?: boolean;

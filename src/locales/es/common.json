@@ -1968,14 +1968,12 @@
       "shippingValueSummary": {
         "title": "Valores del pedido y la declaración",
         "customerTotal": "Total del pedido del cliente",
-        "customerTotalHint": "Importe cobrado en {{currency}}",
-        "retailReference": "Referencia minorista del transportista",
-        "retailReferenceHint": "Valor de venta de los artículos físicos en los documentos del transportista",
+        "customerTotalHint": "Pagado en {{currency}}",
         "declaredCustoms": "Valor aduanero declarado",
         "declaredCustomsHint": "Importe enviado a {{carrier}} en la moneda mostrada",
         "notRequired": "No requerido",
         "withinEuHint": "Sin declaración aduanera dentro de la UE",
-        "currencyExplanation": "{{customerAmount}} es el total del pedido del cliente. {{retailAmount}} es el valor de venta de los artículos físicos declarado en {{currency}}. Las tarifas de envío inferiores son cargos separados de la cuenta del transportista en EUR.",
+        "currencyExplanation": "{{customerAmount}} es el total del pedido del cliente. Las tarifas de envío inferiores son cargos separados de la cuenta del transportista en EUR.",
         "customsFromUsdDirect": "Este envío en USD usa directamente el coste aduanero del producto guardado en USD. El coste aduanero no es el precio de venta.",
         "customsFromUsd": "El valor declarado procede del coste aduanero del producto guardado en USD y convertido a EUR. No es el precio de venta.",
         "customsFromRetail": "No hay un coste aduanero separado guardado, por lo que se usa el valor minorista en EUR para la declaración."
@@ -1995,8 +1993,8 @@
           "SERVICE_DEFAULT": "Predeterminado del Servicio (sin anulación)",
           "NO_SIGNATURE_REQUIRED": "No Se Requiere Firma",
           "INDIRECT": "Firma Indirecta",
-          "DIRECT_SIGNATURE_REQUIRED": "Se Requiere Firma Directa",
-          "ADULT_SIGNATURE_REQUIRED": "Se Requiere Firma de Adulto"
+          "DIRECT": "Se Requiere Firma Directa",
+          "ADULT": "Se Requiere Firma de Adulto"
         },
         "dutiesPaymentOptions": {
           "SENDER": "Remitente (mi cuenta FedEx)",
@@ -2020,7 +2018,7 @@
           "customsValueEur": "Declarado / línea ({{currency}})"
         },
         "totalCustomsValue": "Valor aduanero total:",
-        "incoterm": "Incoterm:",
+        "incoterm": "Incoterm",
         "packageDetails": "Detalles del Paquete",
         "packagingType": "Tipo de Empaque",
         "weightAuto": "Peso (calculado automáticamente a partir de los artículos)",
@@ -2077,7 +2075,21 @@
         "toast": {
           "addressUpdated": "Dirección del destinatario actualizada — actualizando tarifas…",
           "shipped": "Pedido {{orderNumber}} enviado vía FedEx."
-        }
+        },
+        "shipDateLabel": "Fecha de envío (entrega a FedEx)",
+        "customerReference": "Su referencia",
+        "referencePlaceholder": "Impreso en la etiqueta",
+        "electronicTradeDocuments": "Factura sin papel (ETD)",
+        "receiverResidential": "La dirección de entrega es un domicilio",
+        "shipperResidential": "La dirección de recogida es un domicilio",
+        "invoiceNumber": "Número de factura",
+        "invoiceNumberHint": "Por defecto, el número de pedido.",
+        "dimensionsFromPackaging": "El embalaje de FedEx tiene un tamaño fijo, por lo que no se puede cambiar.",
+        "iossNumber": "Número IOSS (UE)",
+        "iossPlaceholder": "Usa el valor de la cuenta",
+        "iossHint": "IVA liquidado en la venta; el cliente no paga nada en la entrega.",
+        "labelFormat": "Formato de etiqueta",
+        "blockInsight": "Ocultar contenido del seguimiento público"
       },
       "dhlShipForm": {
         "incotermOptions": {
@@ -2185,7 +2197,8 @@
         "goGreen": "GoGreen neutro en carbono (FD)",
         "servicesPriced": "El precio incluye {{services}}",
         "servicesNotPriced": "El precio excluye {{services}} — el coste aparece tras el envío",
-        "adultSignature": "Firma de adulto (SD)"
+        "adultSignature": "Firma de adulto (SD)",
+        "estimatedDelivery": "Entrega estimada"
       }
     }
   }

@@ -1968,14 +1968,12 @@
       "shippingValueSummary": {
         "title": "Valeurs de la commande et de la déclaration",
         "customerTotal": "Total de la commande client",
-        "customerTotalHint": "Montant facturé en {{currency}}",
-        "retailReference": "Référence de vente du transporteur",
-        "retailReferenceHint": "Valeur de vente des articles physiques sur les documents du transporteur",
+        "customerTotalHint": "Payé en {{currency}}",
         "declaredCustoms": "Valeur en douane déclarée",
         "declaredCustomsHint": "Montant envoyé à {{carrier}} dans la devise affichée",
         "notRequired": "Non requis",
         "withinEuHint": "Aucune déclaration en douane au sein de l'UE",
-        "currencyExplanation": "{{customerAmount}} est le total de la commande client. {{retailAmount}} est la valeur de vente des articles physiques déclarée en {{currency}}. Les tarifs d'expédition ci-dessous sont des frais de compte transporteur distincts en EUR.",
+        "currencyExplanation": "{{customerAmount}} est le total de la commande client. Les tarifs d'expédition ci-dessous sont des frais de compte transporteur distincts en EUR.",
         "customsFromUsdDirect": "Cet envoi en USD utilise directement le coût douanier du produit enregistré en USD. Le coût douanier n'est pas le prix de vente.",
         "customsFromUsd": "La valeur déclarée provient du coût douanier du produit enregistré en USD, converti en EUR. Ce n'est pas le prix de vente.",
         "customsFromRetail": "Aucun coût douanier distinct n'est enregistré ; la valeur de vente en EUR est donc utilisée pour la déclaration."
@@ -1995,8 +1993,8 @@
           "SERVICE_DEFAULT": "Service par défaut (pas de remplacement)",
           "NO_SIGNATURE_REQUIRED": "Aucune signature requise",
           "INDIRECT": "Signature indirecte",
-          "DIRECT_SIGNATURE_REQUIRED": "Signature directe requise",
-          "ADULT_SIGNATURE_REQUIRED": "Signature d'un adulte requise"
+          "DIRECT": "Signature directe requise",
+          "ADULT": "Signature d'un adulte requise"
         },
         "dutiesPaymentOptions": {
           "SENDER": "Expéditeur (mon compte FedEx)",
@@ -2020,7 +2018,7 @@
           "customsValueEur": "Déclaré / ligne ({{currency}})"
         },
         "totalCustomsValue": "Valeur totale en douane :",
-        "incoterm": "Incoterm :",
+        "incoterm": "Incoterm",
         "packageDetails": "Détails du colis",
         "packagingType": "Type d'emballage",
         "weightAuto": "Poids (calculé automatiquement à partir des articles)",
@@ -2077,7 +2075,21 @@
         "toast": {
           "addressUpdated": "Adresse du destinataire mise à jour — actualisation des tarifs…",
           "shipped": "Commande {{orderNumber}} expédiée via FedEx."
-        }
+        },
+        "shipDateLabel": "Date d'expédition (remise à FedEx)",
+        "customerReference": "Votre référence",
+        "referencePlaceholder": "Imprimé sur l'étiquette",
+        "electronicTradeDocuments": "Facture dématérialisée (ETD)",
+        "receiverResidential": "Adresse de livraison résidentielle",
+        "shipperResidential": "Adresse de ramassage résidentielle",
+        "invoiceNumber": "Numéro de facture",
+        "invoiceNumberHint": "Par défaut, le numéro de commande.",
+        "dimensionsFromPackaging": "L'emballage FedEx a une taille fixe et ne peut pas être modifié.",
+        "iossNumber": "Numéro IOSS (UE)",
+        "iossPlaceholder": "Valeur par défaut du compte",
+        "iossHint": "TVA réglée à la vente : le client ne paie rien à la livraison.",
+        "labelFormat": "Format d'étiquette",
+        "blockInsight": "Masquer le contenu du suivi public"
       },
       "dhlShipForm": {
         "incotermOptions": {
@@ -2185,7 +2197,8 @@
         "goGreen": "GoGreen neutre en carbone (FD)",
         "servicesPriced": "Le prix inclut {{services}}",
         "servicesNotPriced": "Prix hors {{services}} — le coût apparaît après l’expédition",
-        "adultSignature": "Signature adulte (SD)"
+        "adultSignature": "Signature adulte (SD)",
+        "estimatedDelivery": "Livraison estimée"
       }
     }
   }

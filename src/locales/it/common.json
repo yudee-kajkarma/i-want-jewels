@@ -1968,14 +1968,12 @@
       "shippingValueSummary": {
         "title": "Valori dell'ordine e della dichiarazione",
         "customerTotal": "Totale ordine cliente",
-        "customerTotalHint": "Importo addebitato in {{currency}}",
-        "retailReference": "Riferimento vendita per il corriere",
-        "retailReferenceHint": "Valore di vendita degli articoli fisici nei documenti del corriere",
+        "customerTotalHint": "Pagato in {{currency}}",
         "declaredCustoms": "Valore doganale dichiarato",
         "declaredCustomsHint": "Importo inviato a {{carrier}} nella valuta mostrata",
         "notRequired": "Non richiesto",
         "withinEuHint": "Nessuna dichiarazione doganale all'interno dell'UE",
-        "currencyExplanation": "{{customerAmount}} è il totale dell'ordine del cliente. {{retailAmount}} è il valore di vendita degli articoli fisici dichiarato in {{currency}}. Le tariffe di spedizione sotto sono addebiti separati del conto corriere in EUR.",
+        "currencyExplanation": "{{customerAmount}} è il totale dell'ordine del cliente. Le tariffe di spedizione sotto sono addebiti separati del conto corriere in EUR.",
         "customsFromUsdDirect": "Questa spedizione in USD usa direttamente il costo doganale del prodotto memorizzato in USD. Il costo doganale non è il prezzo di vendita.",
         "customsFromUsd": "Il valore dichiarato deriva dal costo doganale del prodotto memorizzato in USD e convertito in EUR. Non è il prezzo di vendita.",
         "customsFromRetail": "Non è memorizzato un costo doganale separato, quindi per la dichiarazione viene usato il valore di vendita in EUR."
@@ -1995,8 +1993,8 @@
           "SERVICE_DEFAULT": "Predefinito del Servizio (nessuna sostituzione)",
           "NO_SIGNATURE_REQUIRED": "Nessuna Firma Richiesta",
           "INDIRECT": "Firma Indiretta",
-          "DIRECT_SIGNATURE_REQUIRED": "Firma Diretta Richiesta",
-          "ADULT_SIGNATURE_REQUIRED": "Firma di un Adulto Richiesta"
+          "DIRECT": "Firma Diretta Richiesta",
+          "ADULT": "Firma di un Adulto Richiesta"
         },
         "dutiesPaymentOptions": {
           "SENDER": "Mittente (il mio account FedEx)",
@@ -2020,7 +2018,7 @@
           "customsValueEur": "Dichiarato / riga ({{currency}})"
         },
         "totalCustomsValue": "Valore doganale totale:",
-        "incoterm": "Incoterm:",
+        "incoterm": "Incoterm",
         "packageDetails": "Dettagli Pacco",
         "packagingType": "Tipo di Confezione",
         "weightAuto": "Peso (calcolato automaticamente dagli articoli)",
@@ -2077,7 +2075,21 @@
         "toast": {
           "addressUpdated": "Indirizzo del destinatario aggiornato — aggiornamento tariffe in corso…",
           "shipped": "Ordine {{orderNumber}} spedito tramite FedEx."
-        }
+        },
+        "shipDateLabel": "Data di spedizione (consegna a FedEx)",
+        "customerReference": "Il tuo riferimento",
+        "referencePlaceholder": "Stampato sull'etichetta",
+        "electronicTradeDocuments": "Fattura elettronica (ETD)",
+        "receiverResidential": "L'indirizzo di consegna è un'abitazione",
+        "shipperResidential": "L'indirizzo di ritiro è un'abitazione",
+        "invoiceNumber": "Numero fattura",
+        "invoiceNumberHint": "Predefinito: il numero d'ordine.",
+        "dimensionsFromPackaging": "Gli imballaggi FedEx hanno dimensioni fisse e non possono essere modificati.",
+        "iossNumber": "Numero IOSS (UE)",
+        "iossPlaceholder": "Usa l'impostazione dell'account",
+        "iossHint": "IVA saldata alla vendita: il cliente non paga nulla alla consegna.",
+        "labelFormat": "Formato etichetta",
+        "blockInsight": "Nascondi il contenuto dal tracking pubblico"
       },
       "dhlShipForm": {
         "incotermOptions": {
@@ -2185,7 +2197,8 @@
         "goGreen": "GoGreen a impatto climatico zero (FD)",
         "servicesPriced": "Il prezzo include {{services}}",
         "servicesNotPriced": "Prezzo esclude {{services}} — il costo compare dopo la spedizione",
-        "adultSignature": "Firma adulto (SD)"
+        "adultSignature": "Firma adulto (SD)",
+        "estimatedDelivery": "Consegna stimata"
       }
     }
   }

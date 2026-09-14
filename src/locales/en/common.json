@@ -1937,14 +1937,12 @@
       "shippingValueSummary": {
         "title": "Order & declaration values",
         "customerTotal": "Customer order total",
-        "customerTotalHint": "Amount charged in {{currency}}",
-        "retailReference": "Carrier retail reference",
-        "retailReferenceHint": "Physical-item sale value on carrier paperwork",
+        "customerTotalHint": "Paid in {{currency}}",
         "declaredCustoms": "Declared customs value",
         "declaredCustomsHint": "Amount sent to {{carrier}} in the currency shown",
         "notRequired": "Not required",
         "withinEuHint": "No customs declaration within the EU",
-        "currencyExplanation": "{{customerAmount}} is the customer order total. {{retailAmount}} is the physical-item sale value declared in {{currency}}. Shipping-rate prices below are separate carrier account charges in EUR.",
+        "currencyExplanation": "{{customerAmount}} is the customer order total. Shipping-rate prices below are separate carrier account charges in EUR.",
         "customsFromUsdDirect": "This USD shipment uses the product's stored USD customs cost directly. The customs cost is not the selling price.",
         "customsFromUsd": "The declared value comes from the product's stored USD customs cost, converted to EUR. It is not the selling price.",
         "customsFromRetail": "No separate product customs cost is stored, so the EUR retail value is used for the declaration."
@@ -1964,8 +1962,8 @@
           "SERVICE_DEFAULT": "Service Default (no override)",
           "NO_SIGNATURE_REQUIRED": "No Signature Required",
           "INDIRECT": "Indirect Signature",
-          "DIRECT_SIGNATURE_REQUIRED": "Direct Signature Required",
-          "ADULT_SIGNATURE_REQUIRED": "Adult Signature Required"
+          "DIRECT": "Direct Signature Required",
+          "ADULT": "Adult Signature Required"
         },
         "dutiesPaymentOptions": {
           "SENDER": "Sender (my FedEx account)",
@@ -1989,7 +1987,7 @@
           "customsValueEur": "Declared / line ({{currency}})"
         },
         "totalCustomsValue": "Total customs value:",
-        "incoterm": "Incoterm:",
+        "incoterm": "Incoterm",
         "packageDetails": "Package Details",
         "packagingType": "Packaging Type",
         "weightAuto": "Weight (auto-calculated from items)",
@@ -2046,7 +2044,21 @@
         "toast": {
           "addressUpdated": "Receiver address updated — refreshing rates…",
           "shipped": "Order {{orderNumber}} shipped via FedEx."
-        }
+        },
+        "shipDateLabel": "Ship date (handover to FedEx)",
+        "customerReference": "Your reference",
+        "referencePlaceholder": "Printed on the label",
+        "electronicTradeDocuments": "Paperless invoice (ETD)",
+        "receiverResidential": "Delivery address is a home",
+        "shipperResidential": "Pickup address is a home",
+        "invoiceNumber": "Invoice number",
+        "invoiceNumberHint": "Defaults to the order number.",
+        "dimensionsFromPackaging": "FedEx's own packaging has a fixed size, so these cannot be changed.",
+        "iossNumber": "IOSS number (EU)",
+        "iossPlaceholder": "Uses the account default",
+        "iossHint": "VAT settled at sale, so the customer pays nothing on delivery.",
+        "labelFormat": "Label format",
+        "blockInsight": "Hide contents from public tracking"
       },
       "dhlShipForm": {
         "incotermOptions": {
@@ -2154,7 +2166,8 @@
         "goGreen": "GoGreen Climate Neutral (FD)",
         "servicesPriced": "Price includes {{services}}",
         "servicesNotPriced": "Price excludes {{services}} — cost appears after shipping",
-        "adultSignature": "Adult Signature (SD)"
+        "adultSignature": "Adult Signature (SD)",
+        "estimatedDelivery": "Estimated delivery"
       }
     }
   }

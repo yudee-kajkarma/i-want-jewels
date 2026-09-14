@@ -297,6 +297,8 @@ export type AdminShippingRateOption = {
   valueAddedServicesPriced?: boolean
   /** DHL only: latest local time (HH:MM) DHL can still collect today. */
   pickupCutoffLocal?: string
+  /** Delivery date the carrier commits to for this service (YYYY-MM-DD). */
+  estimatedDelivery?: string | null
 }
 
 export type AdminShipmentPartyPreview = {
