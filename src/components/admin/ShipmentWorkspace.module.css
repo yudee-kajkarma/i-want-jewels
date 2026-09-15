@@ -1,0 +1,1374 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(31, 7, 24, 0.45);
+  backdrop-filter: blur(2px);
+}
+.dialog {
+  --accent: #d24a90;
+  --tint: #fff2fb;
+  width: min(1240px, 100%);
+  max-height: calc(100dvh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #efc5df;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: 0 26px 80px rgba(102, 14, 64, 0.25);
+  color: #3d1530;
+  outline: none;
+  font-size: 13px;
+  font-family: var(--font-poppins), sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 28px;
+  border-bottom: 1px solid #efcfe1;
+  background: #fff;
+  flex-shrink: 0;
+}
+.headerIcon {
+  display: grid;
+  place-items: center;
+  background: #fff2fb;
+  color: #d24a90;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #fff2fb;
+  border-radius: 0;
+}
+.headerText {
+  flex: 1;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #8b5a75;
+}
+.header h2 {
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: #3d1530;
+}
+.orderNumber {
+  font-family: monospace;
+  font-size: 11px;
+  color: #694d5f;
+  background: #fff8fd;
+  border: 1px solid #efcfe1;
+  border-radius: 0;
+  padding: 7px 10px;
+}
+.close {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 0;
+  color: #694d5f;
+  background: #fff8fd;
+}
+.close:hover {
+  background: #fff2fb;
+  color: #3d1530;
+}
+.logo {
+  display: inline-flex;
+  width: 112px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.logo img {
+  width: 96px;
+  height: 38px;
+  object-fit: contain;
+}
+.dhlLogo {
+  background: #ffcc00;
+  border-radius: 0;
+}
+.dhlLogo img {
+  width: 91px;
+  height: 30px;
+}
+.picker {
+  padding: 32px 36px 24px;
+  overflow: auto;
+  background: #fff;
+}
+.pickerIntro h3 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 8px 0;
+}
+.pickerIntro p {
+  color: #694d5f;
+  line-height: 1.7;
+}
+.picker .route {
+  margin: 24px 0;
+  border: 1px solid #efcfe1;
+  border-radius: 0;
+  background: #fff;
+}
+.route {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 20px 28px;
+  background: #fff8fd;
+  border-bottom: 1px solid #efcfe1;
+  flex-shrink: 0;
+}
+.route > div:first-child,
+.route > div:nth-child(3) {
+  flex: 1;
+  min-width: 0;
+}
+.routeLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  font-weight: 700;
+  color: #8b5a75;
+  margin-bottom: 7px;
+}
+.originDot {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #a77894;
+
+  border-radius: 50%;
+}
+.route strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #3d1530;
+  overflow-wrap: anywhere;
+}
+.route strong small {
+  font-size: 10px;
+  vertical-align: middle;
+  color: #8b5a75;
+  background: #fff8fd;
+  padding: 2px 5px;
+  margin-left: 8px;
+  border-radius: 0;
+}
+.route > div > span:last-child {
+  display: block;
+  color: #694d5f;
+  font-size: 11px;
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+.routeLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 140px;
+  color: #a77894;
+}
+.routeLine > span {
+  flex: 1;
+  border-top: 1px dashed #e3bfd6;
+}
+.routePackage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 25px;
+  border-left: 1px solid #e3bfd6;
+  color: #8b5a75;
+}
+.routePackage span {
+  display: block;
+  font-size: 11px;
+  color: #8b5a75;
+}
+.carrierGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.carrierCard {
+  text-align: left;
+  border: 1px solid #efcfe1;
+  border-radius: 0;
+  overflow: hidden;
+  background: white;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+}
+.carrierCard:hover {
+  box-shadow: 0 12px 30px #3d153010;
+}
+.fedexCard:hover {
+  border-color: #d24a90;
+}
+.dhlCard:hover {
+  border-color: #d24a90;
+}
+.carrierBrand {
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  background: #fff2fb;
+  border-bottom: 1px solid #f0d7e7;
+}
+.dhlCard .carrierBrand {
+  background: #fff2fb;
+  border-color: #f0d7e7;
+}
+.carrierArrow {
+  display: grid;
+  place-items: center;
+  border-radius: 0;
+  background: #ffffffc0;
+  width: 34px;
+  height: 34px;
+  color: #d24a90;
+}
+.dhlCard .carrierArrow {
+  color: #d24a90;
+}
+.carrierCardBody {
+  padding: 23px 24px 0;
+}
+.carrierCard h4 {
+  font-size: 23px;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  margin: 7px 0;
+}
+.carrierCard p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #694d5f;
+  max-width: 350px;
+  min-height: 46px;
+}
+.carrierFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 19px 0 23px;
+  color: #694d5f;
+  font-size: 12px;
+}
+.carrierFeatures span {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.carrierFeatures svg {
+  color: #a77894;
+}
+.carrierCta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 0;
+  border-top: 1px solid #f0dbe8;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d24a90;
+}
+.dhlCard .carrierCta {
+  color: #d24a90;
+}
+.pickerNote {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  margin-top: 23px;
+  font-size: 11px;
+  color: #8b5a75;
+}
+.workspace {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  --accent: #d24a90;
+  --tint: #fff2fb;
+}
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  min-height: 0;
+  overflow: auto;
+  background: #fff8fd;
+}
+.pane {
+  padding: 26px 28px;
+  overflow: auto;
+  min-width: 0;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #e3bfd6 transparent;
+}
+.sectionIntro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+.sectionIntro h3 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  margin: 5px 0 6px;
+}
+.sectionIntro p {
+  color: #8b5a75;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.sectionIcon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  color: #a77894;
+  border: 1px solid #efcfe1;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+.formContent {
+  font-size: 13px;
+  color: #4f2040;
+}
+.formContent > * + * {
+  margin-top: 18px;
+}
+.formContent section {
+  border-radius: 0;
+  border-color: #efcfe1;
+  min-width: 0;
+  background: #fff;
+}
+.formContent section > div:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.formContent section > div:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.formContent section > div:first-child:has(> p) {
+  padding: 13px 16px;
+}
+.formContent input:not([type='checkbox']):not([type='radio']),
+.formContent select {
+  border-radius: 0;
+  min-height: 36px;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 12px;
+  border-color: #e3bfd6;
+  background-color: #fff;
+  color: #4f2040;
+}
+.formContent input[readonly] {
+  background: #fff8fd !important;
+}
+.formContent input:focus,
+.formContent select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--tint);
+}
+.formContent button {
+  border-radius: 0;
+}
+.formContent input[type='checkbox'],
+.formContent input[type='radio'] {
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+.formContent table {
+  font-size: 11px;
+}
+.formContent th {
+  font-size: 10px;
+}
+.formContent label {
+  line-height: 1.5;
+}
+.formContent :global(.grid-cols-2) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.secondary,
+.next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #e3bfd6;
+  border-radius: 0;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #fff;
+  color: #694d5f;
+}
+.next {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 22%, white);
+  background: var(--tint);
+}
+.secondary:disabled {
+  opacity: 0.4;
+}
+.summary {
+  padding: 25px 22px;
+  background: #fff;
+  border-left: 1px solid #efcfe1;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.summaryTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+.summaryTitle h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+.summaryTitle > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: #8b5a75;
+}
+.summaryTitle > span > span {
+  width: 5px;
+  height: 5px;
+  background: #a77894;
+
+  border-radius: 50%;
+}
+.summaryCarrier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0dbe8;
+}
+.summaryCarrier > span:last-child {
+  font-size: 10px;
+  color: #8b5a75;
+}
+.summaryCarrier .logo {
+  width: 85px;
+  height: 32px;
+}
+.summaryCarrier .logo img {
+  width: 72px;
+  height: 30px;
+}
+.summaryService {
+  padding: 21px 0 18px;
+}
+.summaryService h4 {
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 600;
+  margin: 9px 0 12px;
+}
+.summaryPrice {
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  color: var(--accent);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.summaryPrice small {
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: #8b5a75;
+  font-weight: 500;
+}
+.summaryService p {
+  font-size: 10px;
+  line-height: 1.65;
+  color: #8b5a75;
+  margin-top: 10px;
+}
+.summaryDetails {
+  border-top: 1px dashed #e3bfd6;
+  padding-top: 18px;
+}
+.summaryDetails > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 11px;
+}
+.summaryDetails dt {
+  color: #8b5a75;
+}
+.summaryDetails dd {
+  font-weight: 600;
+  color: #4f2040;
+  text-align: right;
+}
+.summaryHint {
+  display: flex;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 13px 12px;
+  background: #fff8fd;
+  border-radius: 0;
+  color: #8b5a75;
+}
+.summaryHint svg {
+  flex-shrink: 0;
+}
+.summaryHint p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.footer {
+  flex-shrink: 0;
+  background: white;
+  padding: 16px 28px;
+  border-top: 1px solid #efcfe1;
+}
+.footer > div {
+  border: 0;
+  padding: 0;
+}
+.footer button {
+  border-radius: 0;
+  font-size: 12px;
+  min-height: 42px;
+}
+.footer button:first-child {
+  color: #694d5f;
+  border-color: #e3bfd6;
+}
+.footer button:last-child {
+  background: #d24a90;
+  border-color: #d24a90;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-shadow: none;
+}
+.footer button:last-child:hover {
+  background: #b83f7d;
+}
+.footer button:disabled {
+  opacity: 0.45;
+}
+.alerts {
+  flex-shrink: 0;
+  max-height: 110px;
+  overflow: auto;
+  font-size: 11px;
+}
+.alerts:empty {
+  display: none;
+}
+.alerts > div {
+  padding: 10px 28px;
+  border-width: 1px 0 0;
+}
+.rateState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 16px;
+  text-align: center;
+  color: #8b5a75;
+  font-size: 12px;
+}
+.rateState strong {
+  font-weight: 600;
+  color: #4f2040;
+}
+.rateState span {
+  font-size: 11px;
+}
+.rates {
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rateCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #efcfe1;
+  border-radius: 0;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.rateCard:hover {
+  border-color: #e3bfd6;
+}
+.rateCard.selectedRate {
+  border-color: var(--accent);
+  background: var(--tint);
+}
+.rateCard input {
+  width: 15px;
+  height: 15px;
+}
+.rateName {
+  flex: 1;
+  min-width: 0;
+}
+.rateName > strong {
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  line-height: 1.5;
+}
+.rateName > span {
+  display: block;
+  font-size: 10px;
+  color: #8b5a75;
+  margin-top: 5px;
+}
+.rateName > small {
+  display: inline-block;
+  font-size: 9px;
+  color: #287a60;
+  background: #eaf6f0;
+  border-radius: 0;
+  padding: 2px 6px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+.ratePrice {
+  text-align: right;
+}
+.ratePrice strong {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #4f2040;
+}
+.selectedRate .ratePrice strong {
+  color: var(--accent);
+}
+.ratePrice span {
+  display: block;
+  font-size: 9px;
+  color: #8b5a75;
+  margin-top: 3px;
+}
+.dialog button:focus-visible,
+.dialog input:focus-visible,
+.dialog select:focus-visible,
+.dialog a:focus-visible {
+  outline: 2px solid #d24a90;
+  outline-offset: 3px;
+}
+.dialog button:disabled {
+  cursor: not-allowed;
+}
+.spin {
+  animation: shipment-spin 1s linear infinite;
+}
+@keyframes shipment-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 1150px) {
+  .formContent :global(.grid-cols-2) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .overlay {
+    padding: 12px;
+  }
+  .dialog {
+    max-height: calc(100dvh - 24px);
+    border-radius: 0;
+  }
+  .header {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .header h2 {
+    font-size: 19px;
+  }
+  .orderNumber {
+    display: none;
+  }
+  .header > .logo {
+    width: 88px;
+  }
+  .header > .logo img {
+    width: 74px;
+  }
+  .body {
+    grid-template-columns: minmax(0, 1fr) 240px;
+  }
+  .pane {
+    padding: 20px 18px;
+  }
+  .summary {
+    padding: 20px 16px;
+  }
+  .route {
+    padding: 16px 18px;
+    gap: 15px;
+  }
+  .routeLine {
+    width: 60px;
+  }
+  .routePackage {
+    display: none;
+  }
+  .picker {
+    padding: 24px;
+  }
+  .carrierCardBody {
+    padding: 20px 18px 0;
+  }
+  .carrierBrand {
+    padding: 20px;
+  }
+  .carrierCard h4 {
+    font-size: 21px;
+  }
+  .footer {
+    padding: 14px 18px;
+  }
+}
+@media (max-width: 600px) {
+  .overlay {
+    padding: 0;
+  }
+  .dialog {
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+  .headerIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 0;
+  }
+  .header {
+    padding: 12px 16px;
+  }
+  .header .eyebrow {
+    font-size: 8px;
+  }
+  .header h2 {
+    font-size: 18px;
+  }
+  .header > .logo {
+    width: 72px;
+    height: 32px;
+  }
+  .header > .logo img {
+    width: 64px;
+    height: 28px;
+  }
+  .picker {
+    padding: 24px 18px;
+  }
+  .pickerIntro h3 {
+    font-size: 26px;
+  }
+  .carrierGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .carrierBrand {
+    height: 70px;
+    padding: 14px 20px;
+  }
+  .carrierCard h4 {
+    font-size: 20px;
+  }
+  .carrierCard p {
+    min-height: 0;
+  }
+  .carrierFeatures {
+    margin: 14px 0;
+  }
+  .pickerNote {
+    align-items: flex-start;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+  .pickerNote svg {
+    flex-shrink: 0;
+  }
+  .route {
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  .routeLine {
+    width: 35px;
+    gap: 3px;
+  }
+  .routeLine svg:last-child {
+    display: none;
+  }
+  .route strong {
+    font-size: 13px;
+  }
+  .route strong small {
+    font-size: 8px;
+    padding: 1px 3px;
+    margin-left: 4px;
+  }
+  .route > div > span:last-child {
+    font-size: 10px;
+  }
+  .body {
+    display: block;
+    overflow: auto;
+  }
+  .pane {
+    overflow: visible;
+    padding: 20px 16px;
+  }
+  .summary {
+    overflow: visible;
+    border-left: 0;
+    border-top: 1px solid #efcfe1;
+    margin: 0 16px 20px;
+    border-radius: 0;
+    padding: 20px;
+  }
+  .summaryService {
+    padding: 16px 0;
+  }
+  .summaryPrice {
+    font-size: 28px;
+  }
+  .summaryDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+  }
+  .summaryHint {
+    margin-top: 8px;
+  }
+  .summaryTitle {
+    margin-bottom: 14px;
+  }
+  .footer {
+    padding: 12px 16px;
+  }
+  .footer button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  .footer button:last-child {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .sectionIntro h3 {
+    font-size: 20px;
+  }
+  .sectionIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .formContent :global(.sm\:grid-cols-2) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .formContent table {
+    min-width: 560px;
+  }
+  .alerts > div {
+    padding: 8px 16px;
+  }
+  .summaryCarrier {
+    padding-bottom: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carrierCard,
+  .rateCard {
+    transition: none;
+  }
+  .carrierCard:hover {
+    transform: none;
+  }
+  .spin {
+    animation: none;
+  }
+}
+
+/* Match the uppercase action labels used by the surrounding Orders page. */
+.footer button,
+.secondary,
+.next,
+.carrierCta {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.ratesPending {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 18px 0;
+  color: #8b5a75;
+}
+.ratesPending p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.ratesPending button {
+  font-size: 10px;
+  text-align: left;
+}
+
+/* One continuous form, with the full review kept alongside it on desktop. */
+.formSection + .formSection {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #efcfe1;
+}
+.formSection {
+  scroll-margin-top: 24px;
+}
+.summary {
+  overscroll-behavior: contain;
+}
+.summaryGroup,
+.chargeBreakdown {
+  padding: 20px 0;
+  border-top: 1px solid #efcfe1;
+}
+.summaryGroup h4,
+.chargeBreakdown h4 {
+  margin-bottom: 14px;
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4f2040;
+}
+.summaryGroup dl,
+.chargeBreakdown dl {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.summaryGroup dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 12px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.summaryGroup dt,
+.chargeBreakdown dt {
+  color: #8b5a75;
+}
+.summaryGroup dd {
+  color: #4f2040;
+  font-weight: 500;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+.chargeBreakdown dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.chargeBreakdown dd {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.chargeBreakdown .discount,
+.chargeBreakdown .discount dt {
+  color: #047857;
+}
+.chargeBreakdown .chargeTotal {
+  border-top: 1px solid #efcfe1;
+  padding-top: 13px;
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.chargeBreakdown .chargeTotal dt {
+  color: #4f2040;
+}
+.chargeBreakdown .chargeTotal dd {
+  color: #d24a90;
+}
+.chargeBreakdown > p {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #8b5a75;
+  line-height: 1.7;
+}
+.pendingAddress {
+  margin: 16px 0;
+  padding: 10px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Inline date selection uses the same square, pink-bordered form surfaces. */
+.calendar {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  border: 1px solid #e3bfd6;
+  background: #fff;
+}
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.calendarHeader strong {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.calendarHeader button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #efcfe1;
+  color: #8b5a75;
+}
+.formContent .calendar table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+.calendar th {
+  padding: 5px 0;
+  color: #8b5a75;
+  font-weight: 500;
+  text-align: center;
+}
+.calendar td {
+  padding: 0;
+  text-align: center;
+}
+.calendar td button {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.calendar button:hover:not(:disabled) {
+  background: #fff2fb;
+  border-color: #e3bfd6;
+}
+.calendar td button[aria-current='date'] {
+  border-color: #d24a90;
+}
+.calendar td button[aria-pressed='true'],
+.calendar td button[aria-pressed='true']:hover {
+  color: #fff;
+  background: #d24a90;
+  border-color: #d24a90;
+  font-weight: 700;
+}
+.calendar button:disabled {
+  opacity: 0.3;
+}
+.calendarSelection {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #efcfe1;
+  color: #8b5a75;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.shipmentLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 330px;
+  padding: 40px 24px;
+  overflow: auto;
+  text-align: center;
+  color: #8b5a75;
+}
+.shipmentLoading > strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.loadingScene {
+  position: relative;
+  width: 240px;
+  height: 86px;
+  color: #d24a90;
+}
+.loadingTruck {
+  position: absolute;
+  left: 80px;
+  bottom: 7px;
+  animation: shipment-drive 1.2s ease-in-out infinite;
+}
+.loadingParcel {
+  position: absolute;
+  left: 14px;
+  bottom: 19px;
+  color: #a77894;
+  animation: shipment-parcel 2.4s ease-in-out infinite;
+}
+.loadingDestination {
+  position: absolute;
+  right: 9px;
+  bottom: 17px;
+  color: #a77894;
+}
+.loadingRoad {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(to right, #e3bfd6 0 10px, transparent 10px 18px);
+  animation: shipment-road 1.2s linear infinite;
+}
+.loadingCarriers {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.loadingCarriers .logo {
+  width: 88px;
+  height: 34px;
+}
+.loadingCarriers .logo img {
+  width: 75px;
+  height: 28px;
+}
+@keyframes shipment-drive {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes shipment-parcel {
+  0%,
+  15% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    transform: translateX(49px);
+    opacity: 0;
+  }
+}
+@keyframes shipment-road {
+  to {
+    background-position: -36px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loadingTruck,
+  .loadingParcel,
+  .loadingRoad {
+    animation: none;
+  }
+}
+
+/* Keep each quote and its full carrier breakdown together in the form. */
+.rateOption {
+  min-width: 0;
+  border: 1px solid #efcfe1;
+  background: #fff;
+}
+.rateOption:has(.selectedRate) {
+  border-color: #d24a90;
+}
+.rateOption .rateCard {
+  border: 0;
+}
+.rateDisclosure {
+  border-top: 1px solid #efcfe1;
+}
+.rateDisclosure > button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 16px;
+  list-style: none;
+  background: #fff8fd;
+  color: #a63f7f;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+.rateDisclosure > button:focus-visible {
+  outline: 2px solid #d24a90;
+  outline-offset: -3px;
+}
+.rateDisclosure > button[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+.rateDetailsBody {
+  padding: 16px;
+}
+/* The walk-in and account amounts share rows at every screen size. */
+.formContent .comparisonTable {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.comparisonLabelColumn {
+  width: 44%;
+}
+.comparisonTable th,
+.comparisonTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0dbe8;
+  line-height: 1.6;
+  vertical-align: middle;
+}
+.comparisonTable th {
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.comparisonTable thead th {
+  background: #fff2fb;
+  color: #8b5a75;
+  font-size: 10px;
+  font-weight: 700;
+}
+.comparisonTable tbody th {
+  font-size: 11px;
+  font-weight: 400;
+  color: #694d5f;
+}
+.comparisonTable thead th:not(:first-child),
+.comparisonTable td {
+  text-align: right;
+}
+.comparisonTable td {
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.comparisonTable thead th:last-child,
+.comparisonTable tfoot tr:first-child td:last-child {
+  color: #d24a90;
+}
+.comparisonTable td:last-child,
+.comparisonTable thead th:last-child {
+  border-left: 1px solid #efcfe1;
+}
+.comparisonTable .comparisonSubtotal {
+  background: #fff8fd;
+  font-weight: 600;
+}
+.comparisonTable .comparisonSubtotal th {
+  font-weight: 600;
+}
+.comparisonTable tfoot tr:first-child {
+  border-top: 2px solid #e3bfd6;
+  font-weight: 700;
+}
+.comparisonTable .discount,
+.comparisonTable .discount th,
+.comparisonTable .comparisonSavings {
+  color: #047857;
+}
+.comparisonSavings th,
+.comparisonSavings td {
+  padding-top: 13px;
+  font-weight: 600;
+  border-bottom: 0;
+}
+.comparisonTable .comparisonSavings td {
+  border-left: 0;
+}
+.rateDetailsNote {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #8b5a75;
+  margin-top: 12px;
+}
+@media (max-width: 800px) {
+  .rateDetailsBody {
+    padding: 12px;
+  }
+  .comparisonTable th,
+  .comparisonTable td {
+    padding: 9px 6px;
+  }
+}

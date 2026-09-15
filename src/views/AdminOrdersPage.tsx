@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useVariantLabel } from '../hooks/useVariantLabel'
 import { formatDateTime } from '../utils/formatDate'
@@ -11,13 +11,13 @@ import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import FedExShipForm from '../components/admin/FedExShipForm'
 import DHLShipForm from '../components/admin/DHLShipForm'
+import { CarrierSelection, ShipmentDialog, ShipmentHeader, ShipmentLoading } from '../components/admin/ShipmentWorkspace'
 import {
   cancelPickupForAdmin,
   cancelShipmentForAdmin,
   checkFedExPickupAvailabilityForAdmin,
   getAdminOrderLabelUrl,
   getAdminShippingPreviewForOrder,
-  getAdminCarrierRatesForOrder,
   getAllOrdersForAdminByStatus,
   getPickupByIdForAdmin,
   getPickupsForAdmin,
@@ -25,14 +25,11 @@ import {
   markPickupPickedUpForAdmin,
   scheduleDHLPickupForAdmin,
   scheduleFedExPickupForAdmin,
-  shipOrderForAdmin,
-  updateOrderShippingAddressForAdmin,
   updateOrderStatusForAdmin,
 } from '../services/orderService'
-import { useCurrency } from '../context/CurrencyContext'
-import type { AdminShippingQuote, AdminShippingRateOption, FedExPickupAvailability, Order, OrdersPagination, Pickup, PickupDetail, ShippingAddress, ShippingCarrier } from '../types/order'
+import type { AdminShippingQuote, FedExPickupAvailability, Order, OrdersPagination, Pickup, PickupDetail, ShippingAddress, ShippingCarrier } from '../types/order'
 import { formatPrice, isoToCurrencyCode } from '../utils/price'
-import { getCountryOptions, getStateName, getStateOptions, normalizeDialCode } from '../utils/location'
+import { getStateName, normalizeDialCode } from '../utils/location'
 
 type PendingActionType = 'confirm' | 'cancel' | 'ship' | 'cancelShipment' | 'reorder'
 
@@ -41,7 +38,6 @@ type PendingAction = {
   order: Order
 }
 
-const recordsPerPageDefault = 20
 
 function timeToMinutes(value: string): number {
   const [h = '0', m = '0'] = value.split(':')
@@ -143,7 +139,6 @@ export default function AdminOrdersPage() {
   const { t: tCommon } = useTranslation('common', { keyPrefix: 'admin.common' })
   const { t: tAddress } = useTranslation('common', { keyPrefix: 'admin.address' })
   const variantLabel = useVariantLabel()
-  const { currency } = useCurrency()
 
   function getActionLabel(type: PendingActionType) {
     if (type === 'confirm') return t('actionModal.confirmOrder')
@@ -170,12 +165,10 @@ export default function AdminOrdersPage() {
   const [error, setError] = useState('')
   const [pendingAction, setPendingAction] = useState<PendingAction | null>(null)
   const [isSubmittingAction, setIsSubmittingAction] = useState(false)
+  const shippingPreviewRequest = useRef(0)
   const [shippingQuote, setShippingQuote] = useState<AdminShippingQuote | null>(null)
   const [shippingQuoteError, setShippingQuoteError] = useState('')
   const [isLoadingShippingQuote, setIsLoadingShippingQuote] = useState(false)
-  const [isLoadingDhlRates, setIsLoadingDhlRates] = useState(false)
-  const [selectedCarrier, setSelectedCarrier] = useState<ShippingCarrier>('FEDEX')
-  const [selectedServiceCode, setSelectedServiceCode] = useState('')
   const [shipCarrierStep, setShipCarrierStep] = useState<'pick' | 'fedex' | 'dhl'>('pick')
   const [downloadingLabelOrderId, setDownloadingLabelOrderId] = useState('')
   const [selectedStatusFilter, setSelectedStatusFilter] = useState<Order['orderStatus'] | 'ALL'>('ALL')
@@ -227,14 +220,6 @@ export default function AdminOrdersPage() {
     remarks: '',
   })
 
-  // Receiver-address inline edit inside the Ship modal.
-  // Only the 5 fields supported by PATCH /admin/:id/shipping-address.
-  type ReceiverDraft = { street: string; city: string; state: string; postalCode: string; country: string }
-  const [isEditingReceiver, setIsEditingReceiver] = useState(false)
-  const [receiverDraft, setReceiverDraft] = useState<ReceiverDraft | null>(null)
-  const [isSavingReceiver, setIsSavingReceiver] = useState(false)
-  const [receiverSaveError, setReceiverSaveError] = useState('')
-
   useEffect(() => {
     void loadOrders(true, 1)
   }, [])
@@ -245,22 +230,21 @@ export default function AdminOrdersPage() {
     orderId: string,
     opts: { resetSelection?: boolean } = { resetSelection: true },
   ) {
+    const requestId = ++shippingPreviewRequest.current
     setIsLoadingShippingQuote(true)
     setShippingQuoteError('')
 
     if (opts.resetSelection) {
       setShippingQuote(null)
-      setSelectedCarrier('FEDEX')
-      setSelectedServiceCode('')
     }
 
     try {
       const quote = await getAdminShippingPreviewForOrder(orderId)
-      setShippingQuote(quote)
+      if (requestId === shippingPreviewRequest.current) setShippingQuote(quote)
     } catch {
-      setShippingQuoteError(t('errors.loadShipmentDetails'))
+      if (requestId === shippingPreviewRequest.current) setShippingQuoteError(t('errors.loadShipmentDetails'))
     } finally {
-      setIsLoadingShippingQuote(false)
+      if (requestId === shippingPreviewRequest.current) setIsLoadingShippingQuote(false)
     }
   }
 
@@ -329,6 +313,13 @@ export default function AdminOrdersPage() {
   }
 
   function openActionModal(type: PendingActionType, order: Order) {
+    if (type === 'ship') {
+      shippingPreviewRequest.current += 1
+      setShipCarrierStep('pick')
+      setShippingQuote(null)
+      setShippingQuoteError('')
+      setIsLoadingShippingQuote(true)
+    }
     setPendingAction({ type, order })
   }
 
@@ -337,67 +328,13 @@ export default function AdminOrdersPage() {
       return
     }
 
+    shippingPreviewRequest.current += 1
     setPendingAction(null)
     setShippingQuote(null)
     setShippingQuoteError('')
     setIsLoadingShippingQuote(false)
-    setIsLoadingDhlRates(false)
-    setSelectedCarrier('FEDEX')
-    setSelectedServiceCode('')
-    setIsEditingReceiver(false)
-    setReceiverDraft(null)
-    setIsSavingReceiver(false)
-    setReceiverSaveError('')
     setShipCarrierStep('pick')
   }
-
-  function startEditReceiver() {
-    const r = shippingQuote?.preview?.receiver
-    if (!r) return
-    setReceiverDraft({
-      street: r.street,
-      city: r.city,
-      state: r.state ?? '',
-      postalCode: r.postalCode,
-      country: r.country,
-    })
-    setReceiverSaveError('')
-    setIsEditingReceiver(true)
-  }
-
-  function cancelEditReceiver() {
-    setIsEditingReceiver(false)
-    setReceiverDraft(null)
-    setReceiverSaveError('')
-  }
-
-  async function saveReceiverDraft() {
-    if (!pendingAction || !receiverDraft) return
-    setIsSavingReceiver(true)
-    setReceiverSaveError('')
-    try {
-      await updateOrderShippingAddressForAdmin(pendingAction.order.id, receiverDraft)
-      // Refetch quote/preview without resetting the carrier/service the admin already chose.
-      await loadShippingQuote(pendingAction.order.id, { resetSelection: false })
-      setIsEditingReceiver(false)
-      setReceiverDraft(null)
-      toast.success(t('toast.receiverAddressUpdated'))
-    } catch (err: any) {
-      const msg = err?.response?.data?.message || t('errors.updateReceiverAddress')
-      setReceiverSaveError(msg)
-    } finally {
-      setIsSavingReceiver(false)
-    }
-  }
-
-  const selectedShippingRate = useMemo(() => {
-    if (!shippingQuote || !selectedServiceCode) {
-      return null
-    }
-
-    const ratesForCarrier = selectedCarrier === 'FEDEX' ? shippingQuote.rates.FEDEX : shippingQuote.rates.DHL
-    return ratesForCarrier.find((rate) => rate.serviceCode === selectedServiceCode) ?? null
-  }, [selectedCarrier, selectedServiceCode, shippingQuote])
 
   const selectedFedExOption = useMemo(
     () => fedExAvailability?.options.find(o => o.pickupDate === fedExForm.plannedPickupDate) ?? null,
@@ -444,19 +381,6 @@ export default function AdminOrdersPage() {
       if (pendingAction.type === 'cancel') {
         await updateOrderStatusForAdmin(pendingAction.order.id, 'CANCELLED')
         toast.success(t('toast.orderCancelled', { orderNumber: pendingAction.order.orderNumber }))
-      }
-
-      if (pendingAction.type === 'ship') {
-        if (!selectedServiceCode) {
-          toast.error(t('errors.selectShippingService'))
-          return
-        }
-
-        await shipOrderForAdmin(pendingAction.order.id, {
-          carrier: selectedCarrier,
-          serviceCode: selectedServiceCode,
-        })
-        toast.success(t('toast.orderShipped', { orderNumber: pendingAction.order.orderNumber }))
       }
 
       if (pendingAction.type === 'cancelShipment') {
@@ -860,56 +784,6 @@ export default function AdminOrdersPage() {
           <div className="mt-4 h-10 bg-[#f5ddea]" />
         </div>
       </article>
-    )
-  }
-
-  function renderShippingRateTable(carrier: ShippingCarrier, rates: AdminShippingRateOption[]) {
-    if (rates.length === 0) {
-      return (
-        <div className="border border-dashed border-[#f1d9e7] bg-white p-3 text-xs text-[#7f5d70]">
-          {t('table.noRates', { carrier })}
-        </div>
-      )
-    }
-
-    return (
-      <div className="overflow-x-auto border border-[#f1d9e7] bg-white">
-        <table className="w-full table-fixed text-left text-xs">
-          <thead className="bg-[#fff2fb] text-[#7a3a61]">
-            <tr>
-              <th className="px-3 py-2 font-semibold">{t('table.service')}</th>
-              <th className="hidden px-3 py-2 font-semibold md:table-cell">{t('table.code')}</th>
-              <th className="px-3 py-2 font-semibold">{t('table.price')}</th>
-              <th className="px-3 py-2 font-semibold">{t('table.days')}</th>
-              <th className="hidden px-3 py-2 font-semibold md:table-cell">{t('table.tag')}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rates.map((rate) => {
-              const isSelected = selectedCarrier === carrier && selectedServiceCode === rate.serviceCode
-
-              return (
-                <tr
-                  key={`${carrier}-${rate.serviceCode}`}
-                  onClick={() => {
-                    setSelectedCarrier(carrier)
-                    setSelectedServiceCode(rate.serviceCode)
-                  }}
-                  className={`cursor-pointer border-t border-[#f6e4ef] transition ${
-                    isSelected ? 'bg-[#ffe8f5]' : 'hover:bg-[#fff6fb]'
-                  }`}
-                >
-                  <td className="px-3 py-2 font-medium text-[#4f2040] break-words">{rate.serviceName}</td>
-                  <td className="hidden px-3 py-2 text-[#6e4d60] break-all md:table-cell">{rate.serviceCode}</td>
-                  <td className="px-3 py-2 text-[#6e4d60]">{formatPrice(rate.price, currency)}</td>
-                  <td className="px-3 py-2 text-[#6e4d60]">{rate.deliveryDays}</td>
-                  <td className="hidden px-3 py-2 text-[#6e4d60] md:table-cell">{rate.tag ?? '-'}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </div>
     )
   }
 
@@ -2114,405 +1988,52 @@ export default function AdminOrdersPage() {
         </div>
       </main>
 
-      {pendingAction ? (
-        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-[#1f0718]/45 px-4 py-4 sm:items-center sm:py-8" role="dialog" aria-modal="true">
-
-          {/* ── FedEx full-form step: takes over the entire modal ── */}
-          {pendingAction.type === 'ship' && shipCarrierStep === 'fedex' ? (
-            <div className="w-full max-w-6xl border border-[#efc5df] bg-white shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto">
-              <div className="flex items-center justify-between border-b border-[#f0d7e7] px-5 py-3">
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#a63f7f]">
-                  {t('actionModal.fedExShipmentTitle', { orderNumber: pendingAction.order.orderNumber })}
-                </p>
-                <button
-                  type="button"
-                  onClick={closeActionModal}
-                  disabled={isSubmittingAction}
-                  className="text-zinc-400 transition hover:text-zinc-600 disabled:opacity-50"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-              {shippingQuote ? (
-                <FedExShipForm
-                  order={pendingAction.order}
-                  preview={shippingQuote}
-                  onBack={() => setShipCarrierStep('pick')}
-                  onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }}
-                />
-              ) : isLoadingShippingQuote ? (
-                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">{t('actionModal.loadingShipmentDetails')}</div>
-              ) : (
-                <div className="space-y-3 px-6 py-12 text-center">
-                  <p className="text-sm text-rose-600">{shippingQuoteError || t('actionModal.unableLoadRates')}</p>
-                  <button
-                    type="button"
-                    onClick={() => void loadShippingQuote(pendingAction.order.id)}
-                    className="border border-[#d24a90] px-4 py-2 text-xs font-bold text-[#d24a90] transition hover:bg-[#fff2fb]"
-                  >
-                    {tCommon('retry')}
-                  </button>
-                </div>
-              )}
+      {pendingAction?.type === 'ship' ? (
+        <ShipmentDialog onClose={closeActionModal} busy={isSubmittingAction}>
+          <ShipmentHeader orderNumber={pendingAction.order.orderNumber}
+            carrier={shipCarrierStep === 'pick' ? undefined : shipCarrierStep === 'fedex' ? 'FEDEX' : 'DHL'}
+            onClose={closeActionModal} busy={isSubmittingAction} />
+          {isLoadingShippingQuote ? (
+            <ShipmentLoading />
+          ) : shippingQuoteError || !shippingQuote?.preview ? (
+            <div className="space-y-4 px-6 py-16 text-center" role="alert">
+              <p className="text-sm text-rose-600">{shippingQuoteError || t('actionModal.unableLoadRates')}</p>
+              <button type="button" onClick={() => void loadShippingQuote(pendingAction.order.id)}
+                className="rounded-lg border border-slate-200 px-5 py-2.5 text-sm text-slate-600">{tCommon('retry')}</button>
             </div>
-          ) : pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
-            <div className="w-full max-w-6xl border border-amber-200 bg-white shadow-[0_26px_80px_rgba(180,90,10,0.30)] max-h-[92vh] overflow-y-auto">
-              <div className="flex items-center justify-between border-b border-amber-200 px-5 py-3">
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-amber-700">
-                  {t('actionModal.dhlShipmentTitle', { orderNumber: pendingAction.order.orderNumber })}
-                </p>
-                <button
-                  type="button"
-                  onClick={closeActionModal}
-                  disabled={isSubmittingAction}
-                  className="text-zinc-400 transition hover:text-zinc-600 disabled:opacity-50"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-              {shippingQuote ? (
-                <div className="px-6 py-5">
-                  <DHLShipForm
-                    order={pendingAction.order}
-                    preview={shippingQuote}
-                    onBack={() => setShipCarrierStep('pick')}
-                    onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }}
-                  />
-                </div>
-              ) : isLoadingShippingQuote ? (
-                <div className="px-6 py-16 text-center text-sm text-[#694d5f]">{t('actionModal.loadingShipmentDetails')}</div>
-              ) : (
-                <div className="space-y-3 px-6 py-12 text-center">
-                  <p className="text-sm text-rose-600">{shippingQuoteError || t('actionModal.unableLoadRates')}</p>
-                  <button
-                    type="button"
-                    onClick={() => void loadShippingQuote(pendingAction.order.id)}
-                    className="border border-amber-600 px-4 py-2 text-xs font-bold text-amber-700 transition hover:bg-amber-50"
-                  >
-                    {tCommon('retry')}
-                  </button>
-                </div>
-              )}
-            </div>
+          ) : shipCarrierStep === 'pick' ? (
+            <CarrierSelection preview={shippingQuote.preview} onSelect={carrier => {
+              setShipCarrierStep(carrier === 'FEDEX' ? 'fedex' : 'dhl')
+            }} />
+          ) : shipCarrierStep === 'fedex' ? (
+            <FedExShipForm order={pendingAction.order} preview={shippingQuote}
+              onBack={() => { setShipCarrierStep('pick'); void loadShippingQuote(pendingAction.order.id) }}
+              onBusyChange={setIsSubmittingAction}
+              onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }} />
           ) : (
-          <div
-            className={`w-full border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto ${
-              pendingAction.type === 'ship' ? 'max-w-6xl' : 'max-w-md'
-            }`}
-          >
-            {/* Header — DHL step shows Back arrow instead of title/description */}
-            {pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  onClick={() => setShipCarrierStep('pick')}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:text-[#d24a90]"
-                >
-                  <ArrowLeft className="h-4 w-4" />
-                  {tCommon('back')}
-                </button>
-                <h3 className="text-xl font-bold text-[#3d1530]">{t('actionModal.dhlShipment')}</h3>
-              </div>
-            ) : (
-              <>
-                <h3 className="text-xl font-bold text-[#3d1530]">{getActionLabel(pendingAction.type)}</h3>
-                <p className="mt-3 text-sm leading-6 text-[#694d5f]">{getActionDescription(pendingAction.type)}</p>
-              </>
-            )}
-            <p className="mt-3 bg-[#fff2fb] px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-[#a63f7f]">
+            <DHLShipForm order={pendingAction.order} preview={shippingQuote}
+              onBack={() => { setShipCarrierStep('pick'); void loadShippingQuote(pendingAction.order.id) }}
+              onBusyChange={setIsSubmittingAction}
+              onShipped={() => { setPendingAction(null); void loadOrders(false, currentPage) }} />
+          )}
+        </ShipmentDialog>
+      ) : pendingAction ? (
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-[#1f0718]/45 px-4 py-4 sm:items-center sm:py-8" role="dialog" aria-modal="true">
+          <div className="w-full max-w-md border border-[#efc5df] bg-white p-6 shadow-[0_26px_80px_rgba(102,14,64,0.35)] max-h-[92vh] overflow-y-auto">
+            <h3 className="text-xl font-bold text-[#3d1530]">{getActionLabel(pendingAction.type)}</h3>
+            <p className="mt-3 text-sm leading-6 text-[#694d5f]">{getActionDescription(pendingAction.type)}</p>
+            <p className="mt-3 bg-[#fff2fb] px-3 py-2 text-xs font-semibold text-[#a63f7f]">
               {t('actionModal.orderLabel', { orderNumber: pendingAction.order.orderNumber })}
             </p>
-
-            {/* ── Ship: Carrier pick step ── */}
-            {pendingAction.type === 'ship' && shipCarrierStep === 'pick' ? (
-              <div className="mt-6 space-y-4">
-                {isLoadingShippingQuote ? (
-                  <div className="py-8 text-center text-sm text-[#694d5f]">{t('actionModal.loadingShippingRates')}</div>
-                ) : shippingQuoteError ? (
-                  <div className="space-y-3 py-4 text-center">
-                    <p className="text-sm text-rose-600">{shippingQuoteError}</p>
-                    <button
-                      type="button"
-                      onClick={() => void loadShippingQuote(pendingAction.order.id)}
-                      className="border border-[#d24a90] px-4 py-2 text-xs font-bold text-[#d24a90] transition hover:bg-[#fff2fb]"
-                    >
-                      {tCommon('retry')}
-                    </button>
-                  </div>
-                ) : shippingQuote ? (
-                  <>
-                    <p className="text-sm font-semibold text-[#4f2040]">{t('actionModal.selectCarrier')}</p>
-                    <div className="grid grid-cols-2 gap-4">
-                      {/* FedEx button — rates load inside FedExShipForm */}
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedCarrier('FEDEX')
-                          setShipCarrierStep('fedex')
-                        }}
-                        className="flex flex-col items-center gap-3 border-2 border-[#3f1933] bg-white px-6 py-10 text-center transition hover:bg-[#fdf4fa]"
-                      >
-                        <span className="text-3xl font-extrabold tracking-tight text-[#3f1933]">FedEx</span>
-                        <span className="text-xs text-[#7a4f6a]">{t('actionModal.internationalShipping')}</span>
-                      </button>
-                      {/* DHL button — rates load inside DHLShipForm */}
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedCarrier('DHL')
-                          setShipCarrierStep('dhl')
-                        }}
-                        className="flex flex-col items-center gap-3 border-2 border-amber-600 bg-white px-6 py-10 text-center transition hover:bg-amber-50"
-                      >
-                        <span className="text-3xl font-extrabold tracking-tight text-amber-700">DHL</span>
-                        <span className="text-xs text-amber-600">{t('actionModal.internationalShipping')}</span>
-                      </button>
-                    </div>
-                  </>
-                ) : null}
-              </div>
-            ) : null}
-
-            {/* ── Ship: DHL step ── */}
-            {pendingAction.type === 'ship' && shipCarrierStep === 'dhl' ? (
-              <div className="mt-4 space-y-2 border border-[#efcfe1] bg-[#fff8fd] px-3 py-2">
-                {isLoadingShippingQuote ? (
-                  <p className="text-sm text-[#694d5f]">{t('actionModal.loadingShippingCost')}</p>
-                ) : null}
-
-                {!isLoadingShippingQuote && shippingQuote ? (
-                  <>
-                    <p className="flex justify-center text-sm font-semibold text-[#4f2040]">{t('actionModal.dhlShippingRates')}</p>
-                    <div className="space-y-2">
-                      {renderShippingRateTable('DHL', shippingQuote.rates.DHL)}
-                    </div>
-
-                    {selectedShippingRate ? (
-                      <div className="border border-[#f1d9e7] bg-white px-3 py-2 text-xs text-[#694d5f]">
-                        {t('actionModal.selected')} <span className="font-semibold text-[#4f2040]">DHL</span> /{' '}
-                        <span className="font-semibold text-[#4f2040]">{selectedShippingRate.serviceCode}</span>
-                      </div>
-                    ) : null}
-
-                    {shippingQuote.preview ? (
-                      <div className="mt-4 grid gap-3 xl:grid-cols-2">
-                        {/* Shipper */}
-                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
-                          <div className="mb-1 flex items-center justify-between">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.shipper')}</p>
-                            <span className={`text-[10px] font-semibold ${shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? 'text-emerald-600' : 'text-rose-600'}`}>
-                              {shippingQuote.validation?.shipperPostalOk && shippingQuote.validation?.shipperPhoneOk ? t('actionModal.ready') : t('actionModal.checkFields')}
-                            </span>
-                          </div>
-                          <div className="space-y-0.5">
-                            <p className="font-semibold text-[#4f2040]">{shippingQuote.preview.shipper.name}</p>
-                            <p>{shippingQuote.preview.shipper.street}{shippingQuote.preview.shipper.houseNumber ? ' ' + shippingQuote.preview.shipper.houseNumber : ''}</p>
-                            <p>{shippingQuote.preview.shipper.city}{shippingQuote.preview.shipper.postalCode ? ', ' + shippingQuote.preview.shipper.postalCode : ''} · {shippingQuote.preview.shipper.country}</p>
-                            <p className={shippingQuote.validation?.shipperPhoneOk ? '' : 'text-rose-600'}>📞 {shippingQuote.preview.shipper.phone || '—'}</p>
-                            <p className="truncate">✉ {shippingQuote.preview.shipper.email || '—'}</p>
-                          </div>
-                        </div>
-
-                        {/* Receiver (editable) */}
-                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f]">
-                          <div className="mb-1 flex items-center justify-between">
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.receiver')}</p>
-                            <div className="flex items-center gap-2">
-                              <span className={`text-[10px] font-semibold ${shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? 'text-emerald-600' : 'text-rose-600'}`}>
-                                {shippingQuote.validation?.receiverPostalOk && shippingQuote.validation?.receiverPhoneOk && shippingQuote.validation?.receiverEmailOk ? t('actionModal.ready') : t('actionModal.checkFields')}
-                              </span>
-                              {!isEditingReceiver ? (
-                                <button type="button" onClick={startEditReceiver} className="border border-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-[#d24a90] transition hover:bg-[#fff2fb]">{tCommon('edit')}</button>
-                              ) : null}
-                            </div>
-                          </div>
-                          {!isEditingReceiver ? (
-                            <div className="space-y-0.5">
-                              <p className="font-semibold text-[#4f2040]">{shippingQuote.preview.receiver.name}</p>
-                              <p>{shippingQuote.preview.receiver.street}</p>
-                              <p>
-                                {shippingQuote.preview.receiver.city}
-                                {shippingQuote.preview.receiver.state ? ', ' + shippingQuote.preview.receiver.state : ''}
-                                {shippingQuote.preview.receiver.postalCode ? ' ' + shippingQuote.preview.receiver.postalCode : ''} · {shippingQuote.preview.receiver.country}
-                              </p>
-                              <p className={shippingQuote.validation?.receiverPhoneOk ? '' : 'text-rose-600'}>📞 {shippingQuote.preview.receiver.phone || '—'}</p>
-                              <p className={`truncate ${shippingQuote.validation?.receiverEmailOk ? '' : 'text-rose-600'}`}>✉ {shippingQuote.preview.receiver.email || '—'}</p>
-                            </div>
-                          ) : (
-                            <div className="space-y-1.5">
-                              {(['street', 'city', 'postalCode'] as const).map((field) => (
-                                <div key={field} className="flex items-center gap-2">
-                                    <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon(field)}</label>
-                                  <input
-                                    value={receiverDraft?.[field] ?? ''}
-                                    onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, [field]: e.target.value } : prev)}
-                                    className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                                  />
-                                </div>
-                              ))}
-                              <div className="flex items-center gap-2">
-                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('country')}</label>
-                                <select
-                                  value={receiverDraft?.country ?? ''}
-                                  onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, country: e.target.value, state: '' } : prev)}
-                                  className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                                >
-                                  <option value="">{tCommon('selectCountry')}</option>
-                                  {getCountryOptions().map((c) => (
-                                    <option key={c.code} value={c.code}>{c.name}</option>
-                                  ))}
-                                </select>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <label className="w-20 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{tCommon('state')}</label>
-                                <select
-                                  value={receiverDraft?.state ?? ''}
-                                  onChange={(e) => setReceiverDraft((prev) => prev ? { ...prev, state: e.target.value } : prev)}
-                                  className="flex-1 border border-[#e3bfd6] px-2 py-1 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                                >
-                                  <option value="">{tCommon('selectState')}</option>
-                                  {getStateOptions(receiverDraft?.country ?? '').map((s) => (
-                                    <option key={s.code} value={s.code}>{s.name}</option>
-                                  ))}
-                                </select>
-                              </div>
-                              {receiverSaveError ? <p className="text-[10px] text-rose-600">{receiverSaveError}</p> : null}
-                              <div className="flex justify-end gap-2 pt-1">
-                                <button type="button" onClick={cancelEditReceiver} disabled={isSavingReceiver} className="border border-[#e3bfd6] px-2 py-0.5 text-[10px] font-semibold text-[#6f4f65] hover:bg-[#fff7fb] disabled:opacity-60">{tCommon('cancel')}</button>
-                                <button type="button" onClick={() => void saveReceiverDraft()} disabled={isSavingReceiver} className="border border-[#d24a90] bg-[#d24a90] px-2 py-0.5 text-[10px] font-semibold text-white hover:bg-[#b83f7d] disabled:opacity-60">
-                                  {isSavingReceiver ? tCommon('saving') : tCommon('save')}
-                                </button>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Package */}
-                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
-                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.packageCustoms')}</p>
-                          <div className="grid gap-x-4 gap-y-0.5 sm:grid-cols-2">
-                            <p><span className="font-semibold text-[#4f2040]">{t('actionModal.weight')}</span> {shippingQuote.preview.package.totalWeightKg} {tCommon('kg')}</p>
-                            <p>
-                              <span className="font-semibold text-[#4f2040]">{t('actionModal.declared')}</span>{' '}
-                              {new Intl.NumberFormat(
-                                shippingQuote.preview.package.declarationCurrency === 'USD'
-                                  ? 'en-US'
-                                  : shippingQuote.preview.package.declarationCurrency === 'GBP' ? 'en-GB' : 'en-IE',
-                                {
-                                  style: 'currency',
-                                  currency: shippingQuote.preview.package.declarationCurrency ?? 'EUR',
-                                  minimumFractionDigits: 2,
-                                },
-                              ).format(shippingQuote.preview.package.declaredValue ?? shippingQuote.preview.package.declaredValueEUR)}
-                            </p>
-                            <p><span className="font-semibold text-[#4f2040]">{t('actionModal.incoterm')}</span> {shippingQuote.preview.package.incoterm}</p>
-                            <p>
-                              <span className="font-semibold text-[#4f2040]">{t('actionModal.customs')}</span>{' '}
-                              <span className={shippingQuote.preview.package.isCustomsDeclarable ? 'text-amber-700' : 'text-emerald-700'}>
-                                {shippingQuote.preview.package.isCustomsDeclarable ? t('actionModal.customsYes') : t('actionModal.customsNo')}
-                              </span>
-                            </p>
-                            <p className={`sm:col-span-2 ${shippingQuote.validation?.descriptionOk ? '' : 'text-rose-600'}`}>
-                              <span className="font-semibold text-[#4f2040]">{t('actionModal.description')}</span> {shippingQuote.preview.package.description}
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Items */}
-                        <div className="border border-[#efcfe1] bg-white px-3 py-2 text-xs text-[#694d5f] xl:col-span-2">
-                          <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">{t('actionModal.lineItems')}</p>
-                          <div className="overflow-x-auto">
-                            <table className="min-w-full text-[11px]">
-                              <thead>
-                                <tr className="text-left text-[#8b5a75]">
-                                  <th className="pr-2">{t('actionModal.lineItemsHeaders.number')}</th>
-                                  <th className="pr-2">{t('actionModal.lineItemsHeaders.title')}</th>
-                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.qty')}</th>
-                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitEur', { currency: shippingQuote.preview.package.declarationCurrency ?? 'EUR' })}</th>
-                                  <th className="pr-2 text-right">{t('actionModal.lineItemsHeaders.unitG')}</th>
-                                  <th className="pr-2">{t('actionModal.lineItemsHeaders.mfr')}</th>
-                                  <th>{t('actionModal.lineItemsHeaders.hsCode')}</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {shippingQuote.preview.items.map((it) => (
-                                  <tr key={it.number} className="border-t border-[#f6e3ee]">
-                                    <td className="pr-2 py-0.5">{it.number}</td>
-                                    <td className="pr-2 py-0.5">{it.title}</td>
-                                    <td className="pr-2 py-0.5 text-right">{it.qty}</td>
-                                    <td className="pr-2 py-0.5 text-right">
-                                      {new Intl.NumberFormat(
-                                        shippingQuote.preview?.package.declarationCurrency === 'USD'
-                                          ? 'en-US'
-                                          : shippingQuote.preview?.package.declarationCurrency === 'GBP' ? 'en-GB' : 'en-IE',
-                                        {
-                                          style: 'currency',
-                                          currency: shippingQuote.preview?.package.declarationCurrency ?? 'EUR',
-                                          minimumFractionDigits: 2,
-                                        },
-                                      ).format(it.unitPrice ?? it.unitPriceEUR)}
-                                    </td>
-                                    <td className="pr-2 py-0.5 text-right">{it.unitWeightG}</td>
-                                    <td className="pr-2 py-0.5">{it.mfrCountry}</td>
-                                    <td className="py-0.5 font-mono">{it.hsCode}</td>
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
-
-                    {shippingQuote.validation && shippingQuote.validation.issues.length > 0 ? (
-                      <div className="mt-3 border border-rose-200 bg-rose-50 px-3 py-2 text-xs text-rose-700">
-                        <p className="mb-1 font-semibold">{t('actionModal.cannotShipUntilFixed')}</p>
-                        <ul className="list-inside list-disc">
-                          {shippingQuote.validation.issues.map((issue) => (
-                            <li key={issue}>{issue}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : null}
-                  </>
-                ) : null}
-
-                {shippingQuoteError ? (
-                  <p className="text-xs text-rose-600">{shippingQuoteError}</p>
-                ) : null}
-              </div>
-            ) : null}
-
             <div className="mt-5 flex items-center justify-end gap-2">
-              <button
-                type="button"
-                onClick={closeActionModal}
-                disabled={isSubmittingAction}
-                className="border border-[#e3bfd6] px-4 py-2 text-sm font-semibold text-[#6f4f65] transition hover:bg-[#fff7fb] disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {tCommon('cancel')}
+              <button type="button" onClick={closeActionModal} disabled={isSubmittingAction}
+                className="border border-[#e3bfd6] px-4 py-2 text-sm font-semibold text-[#6f4f65] disabled:opacity-70">{tCommon('cancel')}</button>
+              <button type="button" onClick={() => void handleActionConfirm()} disabled={isSubmittingAction}
+                className="border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white disabled:opacity-70">
+                {isSubmittingAction ? tCommon('pleaseWait') : tCommon('confirm')}
               </button>
-              {!(pendingAction.type === 'ship' && shipCarrierStep === 'pick') ? (
-                <button
-                  type="button"
-                  onClick={() => void handleActionConfirm()}
-                  disabled={
-                    isSubmittingAction ||
-                    (pendingAction.type === 'ship' && (
-                      !selectedServiceCode ||
-                      Boolean(shippingQuoteError) ||
-                      isEditingReceiver ||
-                      (shippingQuote?.validation ? shippingQuote.validation.issues.length > 0 : false)
-                    ))
-                  }
-                  className="border border-[#d24a90] bg-[#d24a90] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b83f7d] disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  {isSubmittingAction ? tCommon('pleaseWait') : tCommon('confirm')}
-                </button>
-              ) : null}
             </div>
           </div>
-          )}
         </div>
       ) : null}
 

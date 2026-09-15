@@ -39,16 +39,22 @@ export default function ShippingValueSummary({ order, carrier, pkg, items, decla
       </div>
       <div className="grid gap-2 px-4 py-3 sm:grid-cols-2">
         <div className="border border-[#f0dbe8] bg-[#fffafd] px-3 py-2.5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">{t('customerTotal')}</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">
+            {t('customerTotal')}
+          </p>
           <p className="mt-1 text-base font-bold text-[#3d1530]">{customerAmount}</p>
-          <p className="text-[10px] text-zinc-400">{t('customerTotalHint', { currency: orderCurrencyIso })}</p>
+          <p className="text-[10px] text-slate-500">
+            {t('customerTotalHint', { currency: orderCurrencyIso })}
+          </p>
         </div>
         <div className="border border-[#f0dbe8] bg-[#fffafd] px-3 py-2.5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">{t('declaredCustoms')}</p>
-          <p className="mt-1 text-base font-bold text-[#d24a90]">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-[#8b5a75]">
+            {t('declaredCustoms')}
+          </p>
+          <p className="mt-1 text-base font-bold text-[#4f2040]">
             {isOutsideEU ? money(declaredValue, declarationCurrency) : t('notRequired')}
           </p>
-          <p className="text-[10px] text-zinc-400">
+          <p className="text-[10px] text-slate-500">
             {isOutsideEU ? t('declaredCustomsHint', { carrier }) : t('withinEuHint')}
           </p>
         </div>
@@ -58,7 +64,9 @@ export default function ShippingValueSummary({ order, carrier, pkg, items, decla
         {isOutsideEU ? (
           <p className="mt-1 font-medium text-[#8b5a75]">
             {hasStoredUsdCustomsValue
-              ? declarationCurrency === 'USD' ? t('customsFromUsdDirect') : t('customsFromUsd')
+              ? declarationCurrency === 'USD'
+                ? t('customsFromUsdDirect')
+                : t('customsFromUsd')
               : t('customsFromRetail')}
           </p>
         ) : null}

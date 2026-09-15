@@ -241,7 +241,7 @@ function normalizeShippingRateOptions(
       deliveryDays: typeof rate.deliveryDays === "number" ? rate.deliveryDays : 0,
       tag: rate.tag,
       availableServices: Array.isArray(rate.availableServices) ? rate.availableServices : undefined,
-      valueAddedServicesPriced: rate.valueAddedServicesPriced === true,
+      valueAddedServicesPriced: typeof rate.valueAddedServicesPriced === "boolean" ? rate.valueAddedServicesPriced : undefined,
       pickupCutoffLocal: typeof rate.pickupCutoffLocal === 'string' ? rate.pickupCutoffLocal : undefined,
       estimatedDelivery: typeof rate.estimatedDelivery === 'string' ? rate.estimatedDelivery : null,
     }))
