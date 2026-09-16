@@ -75,6 +75,8 @@ export type Order = {
   sessionId?: string
   shippingCarrier?: string | null
   pickupId?: string | null
+  trackingNumber?: string | null
+  trackingUrl?: string | null
   issuedGiftCards?: IssuedGiftCard[]
   deliveredAt?: string | null
   returnStatus?: ReturnStatus

@@ -5,7 +5,9 @@ import { useTranslation } from 'react-i18next'
 import { useVariantLabel } from '../hooks/useVariantLabel'
 import { formatDateTime } from '../utils/formatDate'
 import { toast } from 'react-hot-toast'
-import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown, Package, ChevronDown, ArrowLeft, X, CheckCircle2, AlertCircle, Search } from 'lucide-react'
+import { isAxiosError } from 'axios'
+import PickupWorkspace from '../components/admin/PickupWorkspace'
+import { Clock3, Truck, BadgeCheck, LayoutGrid, List, FileDown, Package, CheckCircle2, AlertCircle, Search } from 'lucide-react'
 import { Link } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
@@ -179,8 +181,6 @@ export default function AdminOrdersPage() {
   // Pickup view state
   const [viewTab, setViewTab] = useState<'orders' | 'pickups'>('orders')
   const [pickupSubView, setPickupSubView] = useState<'schedule' | 'list'>('schedule')
-  const [pickupStep, setPickupStep] = useState<'select' | 'form'>('select')
-  const [expandedPickupOrderId, setExpandedPickupOrderId] = useState('')
   const [pickupCarrier, setPickupCarrier] = useState<ShippingCarrier>('DHL')
   const [shippedOrdersForPickup, setShippedOrdersForPickup] = useState<Order[]>([])
   const [isLoadingShippedOrders, setIsLoadingShippedOrders] = useState(false)
@@ -201,6 +201,15 @@ export default function AdminOrdersPage() {
   const [pickupDetail, setPickupDetail] = useState<PickupDetail | null>(null)
   const [isLoadingPickupDetail, setIsLoadingPickupDetail] = useState(false)
   const [pickupDetailError, setPickupDetailError] = useState('')
+
+  const pickupOrdersRequest = useRef(0)
+  const pickupListRequest = useRef(0)
+  const pickupDetailRequest = useRef(0)
+  const pickupAvailabilityRequest = useRef(0)
+  const [pickupOrdersError, setPickupOrdersError] = useState('')
+  const [pickupListError, setPickupListError] = useState('')
+  const [pickupOrdersPagination, setPickupOrdersPagination] = useState<OrdersPagination | null>(null)
+  const [pickupPagination, setPickupPagination] = useState<OrdersPagination | null>(null)
 
   // DHL pickup form
   const [dhlForm, setDhlForm] = useState({
@@ -413,44 +422,58 @@ export default function AdminOrdersPage() {
   async function openPickupsTab() {
     setViewTab('pickups')
     setPickupSubView('schedule')
-    setPickupStep('select')
     void loadShippedOrdersForCarrier(pickupCarrier)
     void loadPickups()
   }
 
-  async function loadShippedOrdersForCarrier(carrier: ShippingCarrier, search: string = pickupAppliedSearch) {
+  async function loadShippedOrdersForCarrier(carrier: ShippingCarrier, search: string = pickupAppliedSearch, page = 1) {
+    const request = ++pickupOrdersRequest.current
     setIsLoadingShippedOrders(true)
-    setSelectedPickupOrderIds([])
-    setExpandedPickupOrderId('')
-    setPickupStep('select')
-    setFedExAvailability(null)
+    setPickupOrdersError('')
+    if (page === 1) {
+      setShippedOrdersForPickup([])
+      setPickupOrdersPagination(null)
+      setSelectedPickupOrderIds([])
+      setPickupFormError('')
+      setFedExAvailability(null)
+      pickupAvailabilityRequest.current += 1
+      setIsCheckingAvailability(false)
+      setFedExForm(f => ({...f, plannedPickupDate: ''}))
+    }
     try {
-      // Backend (?pick=CARRIER) already returns only SHIPPED orders for this
-      // carrier that aren't on any pickup — no client-side filtering needed.
-      const result = await getShippedOrdersForPickup(carrier, search)
-      setShippedOrdersForPickup(result.orders)
+      const result = await getShippedOrdersForPickup(carrier, search, page)
+      if (request !== pickupOrdersRequest.current) return
+      setShippedOrdersForPickup(current => page === 1 ? result.orders : [...current, ...result.orders.filter(order => !current.some(existing => existing.id === order.id))])
+      setPickupOrdersPagination(result.pagination)
     } catch {
-      toast.error(t('errors.loadShippedOrders'))
+      if (request === pickupOrdersRequest.current) setPickupOrdersError(t('errors.loadShippedOrders'))
     } finally {
-      setIsLoadingShippedOrders(false)
+      if (request === pickupOrdersRequest.current) setIsLoadingShippedOrders(false)
     }
   }
 
-  async function loadPickups(status: 'SCHEDULED' | 'PICKED_UP' | 'CANCELLED' = pickupStatusFilter) {
+  async function loadPickups(status: 'SCHEDULED' | 'PICKED_UP' | 'CANCELLED' = pickupStatusFilter, page = 1) {
+    const request = ++pickupListRequest.current
     setIsLoadingPickups(true)
+    setPickupListError('')
+    setExpandedPickupId('')
+    setPickupDetail(null)
+    pickupDetailRequest.current += 1
     try {
-      const result = await getPickupsForAdmin(1, 20, status)
+      const result = await getPickupsForAdmin(page, 20, status)
+      if (request !== pickupListRequest.current) return
       setPickups(result.data)
+      setPickupPagination(result.pagination)
     } catch {
-      toast.error(t('errors.loadPickups'))
+      if (request === pickupListRequest.current) setPickupListError(t('errors.loadPickups'))
     } finally {
-      setIsLoadingPickups(false)
+      if (request === pickupListRequest.current) setIsLoadingPickups(false)
     }
   }
 
-  async function togglePickupDetail(pickupId: string) {
-    // Collapse if the same pickup is tapped again.
-    if (expandedPickupId === pickupId) {
+  async function togglePickupDetail(pickupId: string, retry = false) {
+    const request = ++pickupDetailRequest.current
+    if (expandedPickupId === pickupId && !retry) {
       setExpandedPickupId('')
       setPickupDetail(null)
       setPickupDetailError('')
@@ -462,11 +485,11 @@ export default function AdminOrdersPage() {
     setIsLoadingPickupDetail(true)
     try {
       const detail = await getPickupByIdForAdmin(pickupId)
-      setPickupDetail(detail)
+      if (request === pickupDetailRequest.current) setPickupDetail(detail)
     } catch {
-      setPickupDetailError(t('errors.loadPickupDetail'))
+      if (request === pickupDetailRequest.current) setPickupDetailError(t('errors.loadPickupDetail'))
     } finally {
-      setIsLoadingPickupDetail(false)
+      if (request === pickupDetailRequest.current) setIsLoadingPickupDetail(false)
     }
   }
 
@@ -489,6 +512,7 @@ export default function AdminOrdersPage() {
   }
 
   async function handleCheckFedExAvailability() {
+    const request = ++pickupAvailabilityRequest.current
     setIsCheckingAvailability(true)
     setFedExAvailability(null)
     // Keep the admin-selected ready/close times; only the picked date resets.
@@ -501,14 +525,15 @@ export default function AdminOrdersPage() {
         customerCloseTime: fedExForm.customerCloseTime,
         weightKg: 1,
       })
+      if (request !== pickupAvailabilityRequest.current) return
       setFedExAvailability(result)
       if (!result.available || result.options.length === 0) {
         toast.error(t('toast.fedExNoDates'))
       }
-    } catch (err: any) {
-      toast.error(err?.response?.data?.message || t('errors.availabilityCheckFailed'))
+    } catch (err: unknown) {
+      if (request === pickupAvailabilityRequest.current) toast.error((isAxiosError(err) ? err.response?.data?.message : undefined) || t('errors.availabilityCheckFailed'))
     } finally {
-      setIsCheckingAvailability(false)
+      if (request === pickupAvailabilityRequest.current) setIsCheckingAvailability(false)
     }
   }
 
@@ -550,13 +575,12 @@ export default function AdminOrdersPage() {
         toast.success(t('toast.fedExPickupScheduled', { confirmationNumber: result.confirmationNumber, orderCount: result.orderCount }))
       }
       setSelectedPickupOrderIds([])
-      setPickupStep('select')
       void loadShippedOrdersForCarrier(pickupCarrier)
       setPickupStatusFilter('SCHEDULED')
       void loadPickups('SCHEDULED')
       setPickupSubView('list')
-    } catch (err: any) {
-      const msg = err?.response?.data?.message || t('errors.schedulePickupFailed')
+    } catch (err: unknown) {
+      const msg = (isAxiosError(err) ? err.response?.data?.message : undefined) || t('errors.schedulePickupFailed')
       setPickupFormError(msg)
     } finally {
       setIsSubmittingPickup(false)
@@ -570,8 +594,8 @@ export default function AdminOrdersPage() {
       toast.success(msg)
       void loadPickups()
       void loadShippedOrdersForCarrier(pickupCarrier)
-    } catch (err: any) {
-      toast.error(err?.response?.data?.message || t('errors.cancelPickupFailed'))
+    } catch (err: unknown) {
+      toast.error((isAxiosError(err) ? err.response?.data?.message : undefined) || t('errors.cancelPickupFailed'))
     } finally {
       setCancellingPickupId('')
     }
@@ -583,8 +607,8 @@ export default function AdminOrdersPage() {
       const msg = await markPickupPickedUpForAdmin(pickupId)
       toast.success(msg)
       void loadPickups()
-    } catch (err: any) {
-      toast.error(err?.response?.data?.message || t('errors.markPickupFailed'))
+    } catch (err: unknown) {
+      toast.error((isAxiosError(err) ? err.response?.data?.message : undefined) || t('errors.markPickupFailed'))
     } finally {
       setMarkingPickupId('')
     }
@@ -1231,760 +1255,359 @@ export default function AdminOrdersPage() {
             </p>
           ) : null}
 
-          {/* ── PICKUPS VIEW ──────────────────────────────────────────────── */}
-          {viewTab === 'pickups' ? (
-            <div className="mt-6">
-              {/* Sub-tab bar */}
-              <div className="flex border-b border-[#f0d7e7]">
-                <button
-                  type="button"
-                  onClick={() => { setPickupSubView('schedule'); void loadShippedOrdersForCarrier(pickupCarrier) }}
-                  className={`px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] transition border-b-2 -mb-px ${
-                    pickupSubView === 'schedule'
-                      ? 'border-[#d24a90] text-[#3f1933]'
-                      : 'border-transparent text-[#7a4f6a] hover:text-[#3f1933]'
-                  }`}
-                >
-                  {t('pickup.scheduleNew')}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => { setPickupSubView('list'); void loadPickups() }}
-                  className={`px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] transition border-b-2 -mb-px ${
-                    pickupSubView === 'list'
-                      ? 'border-[#d24a90] text-[#3f1933]'
-                      : 'border-transparent text-[#7a4f6a] hover:text-[#3f1933]'
-                  }`}
-                >
-                  {t('pickup.viewPickups')}
-                </button>
+          {viewTab === 'pickups' && <PickupWorkspace
+            view={pickupSubView}
+            onView={view => { setPickupSubView(view); if (view === 'schedule') void loadShippedOrdersForCarrier(pickupCarrier); else void loadPickups() }}
+            busy={isSubmittingPickup}
+            schedule={{
+              carrier: pickupCarrier,
+              onCarrier: carrier => { setPickupCarrier(carrier); void loadShippedOrdersForCarrier(carrier) },
+              orders: shippedOrdersForPickup, loading: isLoadingShippedOrders, error: pickupOrdersError,
+              onRetry: () => void loadShippedOrdersForCarrier(pickupCarrier),
+              search: pickupSearchInput, onSearchChange: setPickupSearchInput,
+              onSearch: handlePickupSearchSubmit, onClear: handlePickupSearchClear, appliedSearch: pickupAppliedSearch,
+              selectedIds: selectedPickupOrderIds, onToggle: togglePickupOrder,
+              onToggleAll: () => setSelectedPickupOrderIds(selectedPickupOrderIds.length === shippedOrdersForPickup.length ? [] : shippedOrdersForPickup.map(order => order.id)),
+              onDownload: order => void handleDownloadLabel(order), downloadingId: downloadingLabelOrderId,
+              hasMore: Boolean(pickupOrdersPagination?.hasNextPage),
+              onMore: () => void loadShippedOrdersForCarrier(pickupCarrier, pickupAppliedSearch, (pickupOrdersPagination?.currentPage ?? 1) + 1),
+            }}
+            history={{
+              pickups, loading: isLoadingPickups, error: pickupListError, status: pickupStatusFilter,
+              onStatus: handlePickupStatusFilter, pagination: pickupPagination,
+              onPage: page => void loadPickups(pickupStatusFilter, page),
+              expandedId: expandedPickupId, onExpand: id => void togglePickupDetail(id),
+              detail: pickupDetail, detailLoading: isLoadingPickupDetail, detailError: pickupDetailError,
+              onRetryDetail: id => void togglePickupDetail(id, true),
+              onCancel: id => void handleCancelPickup(id), onMark: id => void handleMarkPickup(id),
+              cancellingId: cancellingPickupId, markingId: markingPickupId,
+            }}
+          >
+            {/* ── DHL form ── */}
+            {pickupCarrier === 'DHL' ? (
+              <div className="border border-[#f0d7e7] bg-white">
+                <div className="border-b border-[#f0d7e7] px-4 py-2.5">
+                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">{t('pickup.dhlPickupDetails')}</p>
+                </div>
+                <div className="grid gap-4 p-4 sm:grid-cols-2">
+                  <div>
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.pickupDateTime')}
+                    </label>
+                    <input
+                      aria-label={t('pickup.pickupDateTime')}
+                      type="datetime-local"
+                      value={dhlForm.plannedPickupDateAndTime}
+                      onChange={e => setDhlForm(f => ({ ...f, plannedPickupDateAndTime: e.target.value }))}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.closeTime')}
+                    </label>
+                    <input
+                      aria-label={t('pickup.closeTime')}
+                      type="time"
+                      value={dhlForm.closeTime}
+                      onChange={e => setDhlForm(f => ({ ...f, closeTime: e.target.value }))}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.locationRoom')}
+                    </label>
+                    <input
+                      aria-label={t('pickup.locationRoom')}
+                      type="text"
+                      value={dhlForm.location}
+                      onChange={e => setDhlForm(f => ({ ...f, location: e.target.value }))}
+                      placeholder={t('pickup.locationPlaceholder')}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.locationType')}
+                    </label>
+                    <select
+                      aria-label={t('pickup.locationType')}
+                      value={dhlForm.locationType}
+                      onChange={e => setDhlForm(f => ({ ...f, locationType: e.target.value as 'business' | 'residence' }))}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    >
+                      <option value="business">{t('pickup.locationTypeBusiness')}</option>
+                      <option value="residence">{t('pickup.locationTypeResidence')}</option>
+                    </select>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.remarkOptional')}
+                    </label>
+                    <input
+                      aria-label={t('pickup.remarkOptional')}
+                      type="text"
+                      value={dhlForm.remark}
+                      onChange={e => setDhlForm(f => ({ ...f, remark: e.target.value }))}
+                      placeholder={t('pickup.remarkPlaceholder')}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    />
+                  </div>
+                </div>
               </div>
+            ) : null}
 
-              {/* ── Schedule new pickup ── */}
-              {pickupSubView === 'schedule' ? (
-                <div className="mt-5 space-y-5">
+            {/* ── FedEx form ── */}
+            {pickupCarrier === 'FEDEX' ? (
+              <div className="border border-[#f0d7e7] bg-white">
+                <div className="border-b border-[#f0d7e7] px-4 py-2.5">
+                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">{t('pickup.fedExPickupDetails')}</p>
+                </div>
 
-                  {pickupStep === 'select' ? (
-                  <>
-                  {/* Carrier selector */}
-                  <div className="flex gap-3">
-                    {(['DHL', 'FEDEX'] as ShippingCarrier[]).map(c => (
-                      <button
-                        key={c}
-                        type="button"
-                        onClick={() => { setPickupCarrier(c); void loadShippedOrdersForCarrier(c) }}
-                        className={`border-2 px-5 py-2 text-xs font-bold uppercase tracking-[0.1em] transition ${
-                          pickupCarrier === c
-                            ? 'border-[#3f1933] bg-[#3f1933] text-white'
-                            : 'border-[#cdb3c5] text-[#5c3a50] hover:border-[#3f1933]'
-                        }`}
-                      >
-                        {c}
-                      </button>
-                    ))}
+                {/* Read-only summary — all three auto-update from the picker below. */}
+                <div className="grid gap-4 p-4 sm:grid-cols-3">
+                  {([
+                    [t('pickup.pickupDate'), fedExForm.plannedPickupDate, false],
+                    [t('pickup.packageReadyTime'), fedExForm.packageReadyTime, true],
+                    [t('pickup.customerCloseTime'), fedExForm.customerCloseTime, true],
+                  ] as const).map(([label, value, isTime]) => (
+                    <div key={label}>
+                      <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                        {label}
+                      </label>
+                      <div className={`w-full border px-3 py-2 text-xs ${value ? 'border-[#d24a90] bg-[#fff0f9] font-semibold text-[#4f2040]' : 'border-[#e9d3e2] bg-[#faf1f6] text-[#b08aa0]'}`}>
+                        {value ? (isTime ? formatTime12h(value) : value) : t('pickup.selectBelow')}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Package location + remarks (editable) */}
+                <div className="grid gap-4 px-4 pb-4 sm:grid-cols-2">
+                  <div>
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.packageLocation')}
+                    </label>
+                    <select
+                      aria-label={t('pickup.packageLocation')}
+                      value={fedExForm.packageLocation}
+                      onChange={e => setFedExForm(f => ({ ...f, packageLocation: e.target.value }))}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    >
+                      <option value="FRONT">{t('pickup.packageLocationFront')}</option>
+                      <option value="REAR">{t('pickup.packageLocationRear')}</option>
+                      <option value="SIDE">{t('pickup.packageLocationSide')}</option>
+                      <option value="NONE">{t('pickup.packageLocationNone')}</option>
+                    </select>
                   </div>
+                  <div>
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                      {t('pickup.remarksOptional')}
+                    </label>
+                    <input
+                      aria-label={t('pickup.remarksOptional')}
+                      type="text"
+                      value={fedExForm.remarks}
+                      onChange={e => setFedExForm(f => ({ ...f, remarks: e.target.value }))}
+                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                    />
+                  </div>
+                </div>
 
-                  {/* Pickup search */}
-                  <form
-                    onSubmit={(e) => { e.preventDefault(); handlePickupSearchSubmit() }}
-                    className="flex flex-col gap-2 sm:flex-row sm:items-center"
+                {/* Selection area — everything is picked here; the three
+                    boxes above just mirror these choices. */}
+                <div className="space-y-3 border-t border-[#f0d7e7] px-4 py-3">
+                  {/* Before the check: choose any ready/close time to query FedEx */}
+                  {!(fedExAvailability && fedExAvailability.options.length > 0) ? (
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <div className="sm:col-span-2">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                          {t('pickup.chooseTimesThenCheck')}
+                        </p>
+                      </div>
+                      <div>
+                        <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                          {t('pickup.packageReadyTime').replace(' *', '')}
+                        </label>
+                        <input
+                      aria-label={t('pickup.packageReadyTime')}
+                          type="time"
+                          value={fedExForm.packageReadyTime.slice(0, 5)}
+                          onChange={e => setFedExForm(f => ({ ...f, packageReadyTime: e.target.value ? `${e.target.value}:00` : '', customerCloseTime: '' }))}
+                          className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
+                        />
+                      </div>
+                      <div>
+                        <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                          {t('pickup.customerCloseTime').replace(' *', '')}
+                        </label>
+                        <input
+                      aria-label={t('pickup.customerCloseTime')}
+                          type="time"
+                          value={fedExForm.customerCloseTime.slice(0, 5)}
+                          onChange={e => setFedExForm(f => ({ ...f, customerCloseTime: e.target.value ? `${e.target.value}:00` : '' }))}
+                          disabled={!fedExForm.packageReadyTime}
+                          className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90] disabled:cursor-not-allowed disabled:bg-[#faf1f6]"
+                        />
+                      </div>
+                    </div>
+                  ) : null}
+
+                  <button
+                    type="button"
+                    onClick={() => void handleCheckFedExAvailability()}
+                    disabled={isCheckingAvailability || !fedExForm.packageReadyTime || !fedExForm.customerCloseTime}
+                    className="border border-[#3f1933] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:bg-[#fdf4fa] disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    <div className="relative flex-1">
-                      <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#b07a98]" />
-                      <input
-                        type="text"
-                        value={pickupSearchInput}
-                        onChange={(e) => setPickupSearchInput(e.target.value)}
-                        placeholder={t('searchPlaceholder')}
-                        className="w-full border border-[#e3bfd6] bg-white py-2.5 pl-9 pr-3 text-sm text-[#4f2040] outline-none transition focus:border-[#d24a90]"
-                      />
-                    </div>
-                    <div className="flex gap-2">
-                      <button
-                        type="submit"
-                        className="border border-[#3f1933] bg-[#3f1933] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22]"
-                      >
-                        {tCommon('search')}
-                      </button>
-                      {pickupAppliedSearch ? (
-                        <button
-                          type="button"
-                          onClick={handlePickupSearchClear}
-                          className="border border-[#e3bfd6] px-5 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-[#6f4f65] transition hover:bg-[#fff7fb]"
-                        >
-                          {tCommon('clear')}
-                        </button>
-                      ) : null}
-                    </div>
-                  </form>
+                    {isCheckingAvailability
+                      ? t('pickup.checking')
+                      : (!fedExForm.packageReadyTime || !fedExForm.customerCloseTime)
+                        ? t('pickup.selectReadyCloseFirst')
+                        : (fedExAvailability && fedExAvailability.options.length > 0)
+                          ? t('pickup.recheckAvailability')
+                          : t('pickup.checkAvailability')}
+                  </button>
 
-                  {pickupAppliedSearch ? (
-                    <p className="-mt-2 text-xs text-[#7a4f6a]">
-                      {t('showingResultsFor')} <span className="font-semibold text-[#4f2040]">&ldquo;{pickupAppliedSearch}&rdquo;</span>
-                    </p>
-                  ) : null}
-
-                  {/* Order accordion list */}
-                  <div className="border border-[#f0d7e7] bg-white">
-                    <div className="flex items-center justify-between gap-2 border-b border-[#f0d7e7] px-4 py-2.5">
-                      <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">
-                        {t('pickup.selectShippedOrders', { carrier: pickupCarrier })}
-                      </p>
-                      {shippedOrdersForPickup.length > 0 ? (
-                        <button
-                          type="button"
-                          onClick={() => {
-                            if (selectedPickupOrderIds.length === shippedOrdersForPickup.length) {
-                              setSelectedPickupOrderIds([])
-                            } else {
-                              setSelectedPickupOrderIds(shippedOrdersForPickup.map(o => o.id))
-                            }
-                          }}
-                          className="text-[11px] font-semibold text-[#d24a90] hover:underline"
-                        >
-                          {selectedPickupOrderIds.length === shippedOrdersForPickup.length ? t('pickup.clearAll') : t('pickup.selectAll', { count: shippedOrdersForPickup.length })}
-                        </button>
-                      ) : null}
-                    </div>
-                    {isLoadingShippedOrders ? (
-                      <div className="px-4 py-6 text-center text-xs text-[#7a4f6a]">{t('pickup.loadingOrders')}</div>
-                    ) : shippedOrdersForPickup.length === 0 ? (
-                      <div className="px-4 py-6 text-center text-xs text-[#7a4f6a]">
-                        {t('pickup.noShippedOrders', { carrier: pickupCarrier })}
-                      </div>
-                    ) : (
-                      <div className="divide-y divide-[#f6e4ef]">
-                        {shippedOrdersForPickup.map(order => {
-                          const isExpanded = expandedPickupOrderId === order.id
-                          const isChecked = selectedPickupOrderIds.includes(order.id)
-                          const orderCurrency = isoToCurrencyCode(order.currency) ?? 'eur'
-                          return (
-                            <div key={order.id}>
-                              <div className="flex items-center gap-3 px-4 py-3">
-                                <input
-                                  type="checkbox"
-                                  checked={isChecked}
-                                  onChange={() => togglePickupOrder(order.id)}
-                                  className="h-4 w-4 shrink-0 accent-[#d24a90]"
-                                />
-                                <button
-                                  type="button"
-                                  onClick={() => setExpandedPickupOrderId(isExpanded ? '' : order.id)}
-                                  className="flex flex-1 items-center justify-between gap-2 text-left"
-                                >
-                                  <span className="text-xs font-semibold text-[#4f2040]">{order.orderNumber}</span>
-                                  <ChevronDown className={`h-4 w-4 shrink-0 text-[#8b5a75] transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-                                </button>
-                              </div>
-                              {isExpanded ? (
-                                <div className="space-y-3 px-4 pb-4">
-                                  <button
-                                    type="button"
-                                    onClick={() => void handleDownloadLabel(order)}
-                                    disabled={downloadingLabelOrderId === order.id}
-                                    className="inline-flex items-center gap-1 border border-[#b56a22] bg-[#fff6e7] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#8f5119] transition hover:bg-[#ffebc8] disabled:cursor-not-allowed disabled:opacity-60"
-                                  >
-                                    <FileDown className="h-3.5 w-3.5" />
-                                    {downloadingLabelOrderId === order.id ? t('actions.downloadingEllipsis') : t('actions.downloadShipmentLabel')}
-                                  </button>
-                                  <div className="flex gap-3 overflow-x-auto pb-2">
-                                    {order.items.map((item, idx) => {
-                                      const thumb = typeof item?.thumbnail === 'string' ? item.thumbnail.trim() : ''
-                                      const title = (typeof item?.title === 'string' && item.title.trim()) ? item.title : tCommon('item')
-                                      return (
-                                        <div
-                                          key={`${order.id}-${item?.productId ?? 'p'}-${idx}`}
-                                          className="group relative h-28 w-28 shrink-0 overflow-hidden border border-[#f0dbe8] bg-[linear-gradient(180deg,#ffe8f5_0%,#ffffff_100%)]"
-                                        >
-                                          {thumb ? (
-                                            <img src={thumb} alt={title} className="h-full w-full object-contain p-1" />
-                                          ) : (
-                                            <div className="flex h-full w-full items-center justify-center text-[10px] font-semibold uppercase text-[#8d5574]">
-                                              {tCommon('noImage')}
-                                            </div>
-                                          )}
-                                          <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-black/75 px-2 text-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                                            <p className="line-clamp-3 text-[11px] font-semibold text-white">{title}</p>
-                                            <p className="text-[11px] font-bold text-[#ffb3da]">{formatPrice(item.price, orderCurrency)}</p>
-                                            <p className="text-[10px] text-zinc-300">{t('grid.qty', { count: item?.quantity ?? 1 })}</p>
-                                          </div>
-                                        </div>
-                                      )
-                                    })}
-                                  </div>
-                                </div>
-                              ) : null}
-                            </div>
-                          )
-                        })}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Proceed */}
-                  <div className="flex items-center justify-end gap-3">
-                    <span className="text-xs text-[#7a4f6a]">
-                      {t('pickup.ordersSelected', { count: selectedPickupOrderIds.length })}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => { setPickupFormError(''); setPickupStep('form') }}
-                      disabled={selectedPickupOrderIds.length === 0}
-                      className="border border-[#3f1933] bg-[#3f1933] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22] disabled:cursor-not-allowed disabled:opacity-60"
-                    >
-                      {tCommon('proceed')}
-                    </button>
-                  </div>
-                  </>
-                  ) : (
-                  <>
-                  {/* Step 2 — summary + back */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 border border-[#efcfe1] bg-[#fff8fd] px-4 py-3">
-                    <button
-                      type="button"
-                      onClick={() => setPickupStep('select')}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:text-[#d24a90]"
-                    >
-                      <ArrowLeft className="h-4 w-4" />
-                      {t('pickup.backToOrderSelection')}
-                    </button>
-                    <span className="text-xs font-semibold text-[#5c3a50]">
-                      {t('pickup.ordersSelectedWithCarrier', { count: selectedPickupOrderIds.length, carrier: pickupCarrier })}
-                    </span>
-                  </div>
-
-                  {/* ── DHL form ── */}
-                  {pickupCarrier === 'DHL' ? (
-                    <div className="border border-[#f0d7e7] bg-white">
-                      <div className="border-b border-[#f0d7e7] px-4 py-2.5">
-                        <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">{t('pickup.dhlPickupDetails')}</p>
-                      </div>
-                      <div className="grid gap-4 p-4 sm:grid-cols-2">
-                        <div>
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.pickupDateTime')}
-                          </label>
-                          <input
-                            type="datetime-local"
-                            value={dhlForm.plannedPickupDateAndTime}
-                            onChange={e => setDhlForm(f => ({ ...f, plannedPickupDateAndTime: e.target.value }))}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          />
-                        </div>
-                        <div>
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.closeTime')}
-                          </label>
-                          <input
-                            type="time"
-                            value={dhlForm.closeTime}
-                            onChange={e => setDhlForm(f => ({ ...f, closeTime: e.target.value }))}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          />
-                        </div>
-                        <div>
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.locationRoom')}
-                          </label>
-                          <input
-                            type="text"
-                            value={dhlForm.location}
-                            onChange={e => setDhlForm(f => ({ ...f, location: e.target.value }))}
-                            placeholder={t('pickup.locationPlaceholder')}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          />
-                        </div>
-                        <div>
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.locationType')}
-                          </label>
-                          <select
-                            value={dhlForm.locationType}
-                            onChange={e => setDhlForm(f => ({ ...f, locationType: e.target.value as 'business' | 'residence' }))}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          >
-                            <option value="business">{t('pickup.locationTypeBusiness')}</option>
-                            <option value="residence">{t('pickup.locationTypeResidence')}</option>
-                          </select>
-                        </div>
-                        <div className="sm:col-span-2">
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.remarkOptional')}
-                          </label>
-                          <input
-                            type="text"
-                            value={dhlForm.remark}
-                            onChange={e => setDhlForm(f => ({ ...f, remark: e.target.value }))}
-                            placeholder={t('pickup.remarkPlaceholder')}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          />
-                        </div>
-                      </div>
+                  {fedExAvailability && fedExAvailability.options.length === 0 ? (
+                    <div className="flex items-center gap-2 text-xs font-semibold text-rose-700">
+                      <AlertCircle className="h-4 w-4" /> {t('pickup.fedExNoDates')}
                     </div>
                   ) : null}
 
-                  {/* ── FedEx form ── */}
-                  {pickupCarrier === 'FEDEX' ? (
-                    <div className="border border-[#f0d7e7] bg-white">
-                      <div className="border-b border-[#f0d7e7] px-4 py-2.5">
-                        <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#3f1933]">{t('pickup.fedExPickupDetails')}</p>
+                  {fedExAvailability && fedExAvailability.options.length > 0 ? (
+                    <div className="space-y-3 border border-[#efcfe1] bg-[#fff8fd] p-3">
+                      <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700">
+                        <CheckCircle2 className="h-4 w-4" /> {t('pickup.fedExAvailable')}
                       </div>
 
-                      {/* Read-only summary — all three auto-update from the picker below. */}
-                      <div className="grid gap-4 p-4 sm:grid-cols-3">
-                        {([
-                          [t('pickup.pickupDate'), fedExForm.plannedPickupDate, false],
-                          [t('pickup.packageReadyTime'), fedExForm.packageReadyTime, true],
-                          [t('pickup.customerCloseTime'), fedExForm.customerCloseTime, true],
-                        ] as const).map(([label, value, isTime]) => (
-                          <div key={label}>
-                            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                              {label}
-                            </label>
-                            <div className={`w-full border px-3 py-2 text-xs ${value ? 'border-[#d24a90] bg-[#fff0f9] font-semibold text-[#4f2040]' : 'border-[#e9d3e2] bg-[#faf1f6] text-[#b08aa0]'}`}>
-                              {value ? (isTime ? formatTime12h(value) : value) : t('pickup.selectBelow')}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Package location + remarks (editable) */}
-                      <div className="grid gap-4 px-4 pb-4 sm:grid-cols-2">
-                        <div>
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.packageLocation')}
-                          </label>
-                          <select
-                            value={fedExForm.packageLocation}
-                            onChange={e => setFedExForm(f => ({ ...f, packageLocation: e.target.value }))}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          >
-                            <option value="FRONT">{t('pickup.packageLocationFront')}</option>
-                            <option value="REAR">{t('pickup.packageLocationRear')}</option>
-                            <option value="SIDE">{t('pickup.packageLocationSide')}</option>
-                            <option value="NONE">{t('pickup.packageLocationNone')}</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                            {t('pickup.remarksOptional')}
-                          </label>
-                          <input
-                            type="text"
-                            value={fedExForm.remarks}
-                            onChange={e => setFedExForm(f => ({ ...f, remarks: e.target.value }))}
-                            className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                          />
+                      {/* Step A: pickup date */}
+                      <div>
+                        <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
+                          {t('pickup.stepPickupDate')}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {fedExDateChoices.map(date => {
+                            const isSel = fedExForm.plannedPickupDate === date
+                            const isAvailable = fedExAvailability.options.some(o => o.pickupDate === date)
+                            return (
+                              <button
+                                key={date}
+                                type="button"
+                                disabled={!isAvailable}
+                                onClick={() => {
+                                  const opt = fedExAvailability.options.find(o => o.pickupDate === date)
+                                  setFedExForm(f => {
+                                    // Drop pre-picked times FedEx doesn't allow for this date.
+                                    const readyOk = !!opt && opt.readyTimeOptions.includes(f.packageReadyTime)
+                                    const accessMins = opt ? opt.accessTime.hours * 60 + opt.accessTime.minutes : 0
+                                    const closeOk = readyOk && !!opt
+                                      && opt.latestTimeOptions.includes(f.customerCloseTime)
+                                      && timeToMinutes(f.customerCloseTime) >= timeToMinutes(f.packageReadyTime) + accessMins
+                                    return {
+                                      ...f,
+                                      plannedPickupDate: date,
+                                      packageReadyTime: readyOk ? f.packageReadyTime : '',
+                                      customerCloseTime: closeOk ? f.customerCloseTime : '',
+                                    }
+                                  })
+                                }}
+                                title={isAvailable ? undefined : t('pickup.fedExNotAvailableDate')}
+                                className={`border-2 px-4 py-2 text-xs font-bold transition ${
+                                  isSel
+                                    ? 'border-[#3f1933] bg-[#3f1933] text-white'
+                                    : isAvailable
+                                      ? 'border-[#cdb3c5] text-[#5c3a50] hover:border-[#3f1933]'
+                                      : 'cursor-not-allowed border-[#e9d3e2] bg-[#faf1f6] text-[#c4a7ba]'
+                                }`}
+                              >
+                                {date}
+                              </button>
+                            )
+                          })}
                         </div>
                       </div>
 
-                      {/* Selection area — everything is picked here; the three
-                          boxes above just mirror these choices. */}
-                      <div className="space-y-3 border-t border-[#f0d7e7] px-4 py-3">
-                        {/* Before the check: choose any ready/close time to query FedEx */}
-                        {!(fedExAvailability && fedExAvailability.options.length > 0) ? (
+                      {/* Step 2 & 3: ready/close — only FedEx's returned
+                          slots for the chosen date. */}
+                      {selectedFedExOption ? (
+                        <>
+                          <p className="text-[10px] text-[#8b5a75]">
+                            {t('pickup.fedExSlotsHint', {
+                              date: selectedFedExOption.pickupDate,
+                              hours: selectedFedExOption.accessTime.hours,
+                              minutes: selectedFedExOption.accessTime.minutes,
+                              cutOff: formatTime12h(selectedFedExOption.cutOffTime),
+                            })}
+                          </p>
                           <div className="grid gap-3 sm:grid-cols-2">
-                            <div className="sm:col-span-2">
-                              <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                {t('pickup.chooseTimesThenCheck')}
-                              </p>
-                            </div>
                             <div>
                               <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                {t('pickup.packageReadyTime').replace(' *', '')}
+                                {t('pickup.stepPackageReadyTime')}
                               </label>
-                              <input
-                                type="time"
-                                value={fedExForm.packageReadyTime.slice(0, 5)}
-                                onChange={e => setFedExForm(f => ({ ...f, packageReadyTime: e.target.value ? `${e.target.value}:00` : '', customerCloseTime: '' }))}
+                              <select
+                      aria-label={t('pickup.stepPackageReadyTime')}
+                                value={fedExForm.packageReadyTime}
+                                onChange={e => setFedExForm(f => ({ ...f, packageReadyTime: e.target.value, customerCloseTime: '' }))}
                                 className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                              />
+                              >
+                                <option value="">{t('pickup.selectReadyTime')}</option>
+                                {selectedFedExOption.readyTimeOptions.map(t => (
+                                  <option key={t} value={t}>{formatTime12h(t)}</option>
+                                ))}
+                              </select>
                             </div>
                             <div>
                               <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                {t('pickup.customerCloseTime').replace(' *', '')}
+                                {t('pickup.stepCustomerCloseTime')}
                               </label>
-                              <input
-                                type="time"
-                                value={fedExForm.customerCloseTime.slice(0, 5)}
-                                onChange={e => setFedExForm(f => ({ ...f, customerCloseTime: e.target.value ? `${e.target.value}:00` : '' }))}
+                              <select
+                      aria-label={t('pickup.stepCustomerCloseTime')}
+                                value={fedExForm.customerCloseTime}
+                                onChange={e => setFedExForm(f => ({ ...f, customerCloseTime: e.target.value }))}
                                 disabled={!fedExForm.packageReadyTime}
                                 className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90] disabled:cursor-not-allowed disabled:bg-[#faf1f6]"
-                              />
+                              >
+                                <option value="">
+                                  {fedExForm.packageReadyTime ? t('pickup.selectCloseTime') : t('pickup.pickReadyTimeFirst')}
+                                </option>
+                                {fedExCloseOptions.map(t => (
+                                  <option key={t} value={t}>{formatTime12h(t)}</option>
+                                ))}
+                              </select>
                             </div>
                           </div>
-                        ) : null}
-
-                        <button
-                          type="button"
-                          onClick={() => void handleCheckFedExAvailability()}
-                          disabled={isCheckingAvailability || !fedExForm.packageReadyTime || !fedExForm.customerCloseTime}
-                          className="border border-[#3f1933] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#3f1933] transition hover:bg-[#fdf4fa] disabled:cursor-not-allowed disabled:opacity-60"
-                        >
-                          {isCheckingAvailability
-                            ? t('pickup.checking')
-                            : (!fedExForm.packageReadyTime || !fedExForm.customerCloseTime)
-                              ? t('pickup.selectReadyCloseFirst')
-                              : (fedExAvailability && fedExAvailability.options.length > 0)
-                                ? t('pickup.recheckAvailability')
-                                : t('pickup.checkAvailability')}
-                        </button>
-
-                        {fedExAvailability && fedExAvailability.options.length === 0 ? (
-                          <div className="flex items-center gap-2 text-xs font-semibold text-rose-700">
-                            <AlertCircle className="h-4 w-4" /> {t('pickup.fedExNoDates')}
-                          </div>
-                        ) : null}
-
-                        {fedExAvailability && fedExAvailability.options.length > 0 ? (
-                          <div className="space-y-3 border border-[#efcfe1] bg-[#fff8fd] p-3">
-                            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700">
-                              <CheckCircle2 className="h-4 w-4" /> {t('pickup.fedExAvailable')}
-                            </div>
-
-                            {/* Step A: pickup date */}
-                            <div>
-                              <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                {t('pickup.stepPickupDate')}
-                              </p>
-                              <div className="flex flex-wrap gap-2">
-                                {fedExDateChoices.map(date => {
-                                  const isSel = fedExForm.plannedPickupDate === date
-                                  const isAvailable = fedExAvailability.options.some(o => o.pickupDate === date)
-                                  return (
-                                    <button
-                                      key={date}
-                                      type="button"
-                                      disabled={!isAvailable}
-                                      onClick={() => {
-                                        const opt = fedExAvailability.options.find(o => o.pickupDate === date)
-                                        setFedExForm(f => {
-                                          // Drop pre-picked times FedEx doesn't allow for this date.
-                                          const readyOk = !!opt && opt.readyTimeOptions.includes(f.packageReadyTime)
-                                          const accessMins = opt ? opt.accessTime.hours * 60 + opt.accessTime.minutes : 0
-                                          const closeOk = readyOk && !!opt
-                                            && opt.latestTimeOptions.includes(f.customerCloseTime)
-                                            && timeToMinutes(f.customerCloseTime) >= timeToMinutes(f.packageReadyTime) + accessMins
-                                          return {
-                                            ...f,
-                                            plannedPickupDate: date,
-                                            packageReadyTime: readyOk ? f.packageReadyTime : '',
-                                            customerCloseTime: closeOk ? f.customerCloseTime : '',
-                                          }
-                                        })
-                                      }}
-                                      title={isAvailable ? undefined : t('pickup.fedExNotAvailableDate')}
-                                      className={`border-2 px-4 py-2 text-xs font-bold transition ${
-                                        isSel
-                                          ? 'border-[#3f1933] bg-[#3f1933] text-white'
-                                          : isAvailable
-                                            ? 'border-[#cdb3c5] text-[#5c3a50] hover:border-[#3f1933]'
-                                            : 'cursor-not-allowed border-[#e9d3e2] bg-[#faf1f6] text-[#c4a7ba]'
-                                      }`}
-                                    >
-                                      {date}
-                                    </button>
-                                  )
-                                })}
-                              </div>
-                            </div>
-
-                            {/* Step 2 & 3: ready/close — only FedEx's returned
-                                slots for the chosen date. */}
-                            {selectedFedExOption ? (
-                              <>
-                                <p className="text-[10px] text-[#8b5a75]">
-                                  {t('pickup.fedExSlotsHint', {
-                                    date: selectedFedExOption.pickupDate,
-                                    hours: selectedFedExOption.accessTime.hours,
-                                    minutes: selectedFedExOption.accessTime.minutes,
-                                    cutOff: formatTime12h(selectedFedExOption.cutOffTime),
-                                  })}
-                                </p>
-                                <div className="grid gap-3 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                      {t('pickup.stepPackageReadyTime')}
-                                    </label>
-                                    <select
-                                      value={fedExForm.packageReadyTime}
-                                      onChange={e => setFedExForm(f => ({ ...f, packageReadyTime: e.target.value, customerCloseTime: '' }))}
-                                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90]"
-                                    >
-                                      <option value="">{t('pickup.selectReadyTime')}</option>
-                                      {selectedFedExOption.readyTimeOptions.map(t => (
-                                        <option key={t} value={t}>{formatTime12h(t)}</option>
-                                      ))}
-                                    </select>
-                                  </div>
-                                  <div>
-                                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.08em] text-[#8b5a75]">
-                                      {t('pickup.stepCustomerCloseTime')}
-                                    </label>
-                                    <select
-                                      value={fedExForm.customerCloseTime}
-                                      onChange={e => setFedExForm(f => ({ ...f, customerCloseTime: e.target.value }))}
-                                      disabled={!fedExForm.packageReadyTime}
-                                      className="w-full border border-[#e3bfd6] px-3 py-2 text-xs text-[#4f2040] outline-none focus:border-[#d24a90] disabled:cursor-not-allowed disabled:bg-[#faf1f6]"
-                                    >
-                                      <option value="">
-                                        {fedExForm.packageReadyTime ? t('pickup.selectCloseTime') : t('pickup.pickReadyTimeFirst')}
-                                      </option>
-                                      {fedExCloseOptions.map(t => (
-                                        <option key={t} value={t}>{formatTime12h(t)}</option>
-                                      ))}
-                                    </select>
-                                  </div>
-                                </div>
-                              </>
-                            ) : (
-                              <p className="text-[10px] text-[#8b5a75]">{t('pickup.pickDateForTimes')}</p>
-                            )}
-                          </div>
-                        ) : null}
-                      </div>
+                        </>
+                      ) : (
+                        <p className="text-[10px] text-[#8b5a75]">{t('pickup.pickDateForTimes')}</p>
+                      )}
                     </div>
                   ) : null}
-
-                  {pickupFormError ? (
-                    <div className="border border-rose-200 bg-rose-50 px-4 py-2.5 text-xs text-rose-700">
-                      {pickupFormError}
-                    </div>
-                  ) : null}
-
-                  <div className="flex justify-end">
-                    <button
-                      type="button"
-                      onClick={() => void handleSchedulePickup()}
-                      disabled={
-                        isSubmittingPickup ||
-                        selectedPickupOrderIds.length === 0 ||
-                        (pickupCarrier === 'FEDEX' && (!fedExForm.plannedPickupDate || !fedExForm.packageReadyTime || !fedExForm.customerCloseTime))
-                      }
-                      className="border border-[#3f1933] bg-[#3f1933] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22] disabled:cursor-not-allowed disabled:opacity-60"
-                    >
-                      {isSubmittingPickup ? t('pickup.scheduling') : t('pickup.schedulePickup', { carrier: pickupCarrier })}
-                    </button>
-                  </div>
-                  </>
-                  )}
                 </div>
-              ) : null}
+              </div>
+            ) : null}
 
-              {/* ── View pickups ── */}
-              {pickupSubView === 'list' ? (
-                <div className="mt-5">
-                  {/* Status sections: Scheduled · Picked up · Cancelled */}
-                  <div className="mb-5 inline-flex border border-[#f0d7e7] bg-white">
-                    {([
-                      { key: 'SCHEDULED', label: t('pickup.statusScheduled') },
-                      { key: 'PICKED_UP', label: t('pickup.statusPickedUp') },
-                      { key: 'CANCELLED', label: t('pickup.statusCancelled') },
-                    ] as const).map(tab => (
-                      <button
-                        key={tab.key}
-                        type="button"
-                        onClick={() => handlePickupStatusFilter(tab.key)}
-                        className={`px-5 py-2 text-xs font-bold uppercase tracking-[0.08em] transition ${
-                          pickupStatusFilter === tab.key
-                            ? 'bg-[#d24a90] text-white'
-                            : 'text-[#7a4f6a] hover:bg-[#fff6fb]'
-                        }`}
-                      >
-                        {tab.label}
-                      </button>
-                    ))}
-                  </div>
+            {pickupFormError ? (
+              <div className="border border-rose-200 bg-rose-50 px-4 py-2.5 text-xs text-rose-700">
+                {pickupFormError}
+              </div>
+            ) : null}
 
-                  {isLoadingPickups ? (
-                    <div className="py-8 text-center text-xs text-[#7a4f6a]">{t('pickup.loadingPickups')}</div>
-                  ) : pickups.length === 0 ? (
-                    <div className="border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-6 py-10 text-center text-sm text-[#7c5d72]">
-                      {pickupStatusFilter === 'SCHEDULED'
-                        ? t('pickup.emptyScheduled')
-                        : pickupStatusFilter === 'PICKED_UP'
-                          ? t('pickup.emptyPickedUp')
-                          : t('pickup.emptyCancelled')}
-                    </div>
-                  ) : (
-                    <div className="space-y-3">
-                      {pickups.map(pickup => (
-                        <div key={pickup.id} className={`border bg-white px-4 py-4 ${pickup.status === 'CANCELLED' ? 'border-zinc-200 opacity-60' : 'border-[#f0d7e7]'}`}>
-                          <div
-                            role="button"
-                            tabIndex={0}
-                            aria-expanded={expandedPickupId === pickup.id}
-                            onClick={() => void togglePickupDetail(pickup.id)}
-                            onKeyDown={e => {
-                              if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault()
-                                void togglePickupDetail(pickup.id)
-                              }
-                            }}
-                            className="flex cursor-pointer flex-col gap-3 rounded-sm transition hover:bg-[#fff6fb] sm:flex-row sm:items-start sm:justify-between"
-                          >
-                            <div className="space-y-1">
-                              <div className="flex items-center gap-2 flex-wrap">
-                                <span className={`inline-flex border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] ${
-                                  pickup.carrier === 'FEDEX' ? 'border-blue-200 bg-blue-50 text-blue-700' : 'border-amber-200 bg-amber-50 text-amber-700'
-                                }`}>
-                                  {pickup.carrier}
-                                </span>
-                                <span className={`inline-flex border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] ${
-                                  pickup.status === 'SCHEDULED'
-                                    ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
-                                    : pickup.status === 'PICKED_UP'
-                                      ? 'border-blue-200 bg-blue-50 text-blue-700'
-                                      : 'border-zinc-200 bg-zinc-50 text-zinc-500'
-                                }`}>
-                                  {pickup.status === 'PICKED_UP' ? t('pickup.pickedUpStatus') : pickup.status}
-                                </span>
-                              </div>
-                              <p className="text-xs font-semibold text-[#4f2040]">
-                                {t('pickup.confirmation')} <span className="font-mono">{pickup.confirmationNumber}</span>
-                              </p>
-                              <p className="text-xs text-zinc-500">
-                                {pickup.plannedPickupDateAndTime.split('T')[0]} {formatTime12h((pickup.plannedPickupDateAndTime.split('T')[1] ?? '').slice(0, 5))} · {t('pickup.closeAt', { time: formatTime12h(pickup.closeTime) })}
-                              </p>
-                              <p className="text-xs text-zinc-500">
-                                {t('pickup.packageCount', { count: pickup.packageCount, weight: pickup.totalWeightKg, orders: pickup.orderIds.length })}
-                              </p>
-                              <p className="text-xs text-zinc-400">
-                                {t('pickup.location', { location: pickup.location, type: pickup.locationType })}
-                              </p>
-                            </div>
-                            <div className="flex shrink-0 items-center gap-3 sm:flex-col sm:items-end">
-                              <ChevronDown
-                                className={`h-5 w-5 text-[#a63f7f] transition-transform ${expandedPickupId === pickup.id ? 'rotate-180' : ''}`}
-                                aria-hidden
-                              />
-                              {pickup.status === 'SCHEDULED' ? (
-                                <div className="flex items-center gap-2">
-                                  <button
-                                    type="button"
-                                    onClick={e => {
-                                      e.stopPropagation()
-                                      void handleMarkPickup(pickup.id)
-                                    }}
-                                    disabled={markingPickupId === pickup.id}
-                                    className="inline-flex items-center justify-center gap-1 border border-emerald-300 bg-emerald-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-emerald-700 transition hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-60"
-                                  >
-                                    <CheckCircle2 className="h-3.5 w-3.5" />
-                                    {markingPickupId === pickup.id ? tCommon('saving') : t('pickup.pickedUp')}
-                                  </button>
-                                  <button
-                                    type="button"
-                                    onClick={e => {
-                                      e.stopPropagation()
-                                      void handleCancelPickup(pickup.id)
-                                    }}
-                                    disabled={cancellingPickupId === pickup.id}
-                                    className="inline-flex items-center justify-center gap-1 border border-rose-300 bg-rose-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
-                                  >
-                                    <X className="h-3.5 w-3.5" />
-                                    {cancellingPickupId === pickup.id ? t('pickup.cancelling') : tCommon('cancel')}
-                                  </button>
-                                </div>
-                              ) : null}
-                            </div>
-                          </div>
-
-                          {expandedPickupId === pickup.id ? (
-                            <div className="mt-4 border-t border-dashed border-[#f0d7e7] pt-4">
-                              {isLoadingPickupDetail ? (
-                                <div className="py-6 text-center text-xs text-[#7a4f6a]">{t('pickup.loadingPickupOrders')}</div>
-                              ) : pickupDetailError ? (
-                                <div className="border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">{pickupDetailError}</div>
-                              ) : pickupDetail ? (
-                                <div className="space-y-3">
-                                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[#7c5d72]">
-                                    <span>
-                                      {t('pickup.status')}{' '}
-                                      <span className={`font-bold uppercase tracking-[0.06em] ${pickupDetail.pickup.status === 'SCHEDULED' ? 'text-emerald-700' : 'text-zinc-500'}`}>
-                                        {pickupDetail.pickup.status}
-                                      </span>
-                                    </span>
-                                    <span>{t('pickup.ordersInPickup', { count: pickupDetail.orderCount })}</span>
-                                    {pickupDetail.pickup.remark ? <span>{t('pickup.remark', { remark: pickupDetail.pickup.remark })}</span> : null}
-                                  </div>
-
-                                  {pickupDetail.orders.length === 0 ? (
-                                    <div className="border border-dashed border-[#e9bfd9] bg-[#fff6fb] px-4 py-6 text-center text-xs text-[#7c5d72]">
-                                      {t('pickup.noActiveOrders')}
-                                    </div>
-                                  ) : (
-                                    <div className="space-y-2">
-                                      {pickupDetail.orders.map(o => (
-                                        <div key={o.id} className="border border-[#f0d7e7] bg-[#fffafd] px-3 py-3">
-                                          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                                            <div className="space-y-1">
-                                              <div className="flex items-center gap-2 flex-wrap">
-                                                <span className="text-xs font-bold text-[#4f2040]">{o.orderNumber}</span>
-                                                <span className="inline-flex border border-[#e9bfd9] bg-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] text-[#a63f7f]">
-                                                  {o.orderStatus}
-                                                </span>
-                                                {o.shippingCarrier ? (
-                                                  <span className="inline-flex border border-zinc-200 bg-zinc-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] text-zinc-600">
-                                                    {o.shippingCarrier}
-                                                  </span>
-                                                ) : null}
-                                              </div>
-                                              {o.trackingNumber ? (
-                                                <p className="text-[11px] text-zinc-500">
-                                                  {t('pickup.tracking')}{' '}
-                                                  {o.trackingUrl ? (
-                                                    <a href={o.trackingUrl} target="_blank" rel="noopener noreferrer" className="font-mono text-[#a63f7f] underline">
-                                                      {o.trackingNumber}
-                                                    </a>
-                                                  ) : (
-                                                    <span className="font-mono">{o.trackingNumber}</span>
-                                                  )}
-                                                </p>
-                                              ) : null}
-                                              {o.shippingAddress ? (
-                                                <p className="text-[11px] text-zinc-400">
-                                                  {o.shippingAddress.street}, {o.shippingAddress.city}, {o.shippingAddress.state} {o.shippingAddress.postalCode}, {o.shippingAddress.country}
-                                                </p>
-                                              ) : null}
-                                            </div>
-                                            <div className="text-xs text-zinc-500 sm:text-right">
-                                              {t('grid.itemsCount', { count: o.totalItems })} · {formatPrice(o.totalAmount, isoToCurrencyCode(o.currency) ?? 'eur')}
-                                            </div>
-                                          </div>
-                                          {o.items.length > 0 ? (
-                                            <ul className="mt-2 space-y-1 border-t border-dashed border-[#f0d7e7] pt-2">
-                                              {o.items.map((it, idx) => (
-                                                <li key={`${o.id}-${it.sku}-${idx}`} className="flex items-center justify-between text-[11px] text-[#6e4d60]">
-                                                  <span>
-                                                    {it.title} <span className="text-zinc-400">({it.sku})</span> × {it.quantity}
-                                                  </span>
-                                                  <span className="font-semibold text-[#5c1f45]">{formatPrice(it.price, isoToCurrencyCode(o.currency) ?? 'eur')}</span>
-                                                </li>
-                                              ))}
-                                            </ul>
-                                          ) : null}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  )}
-
-                                  {pickupDetail.missingOrderIds.length > 0 ? (
-                                    <p className="text-[11px] text-amber-700">
-                                      {t('pickup.missingOrders', { count: pickupDetail.missingOrderIds.length })}
-                                    </p>
-                                  ) : null}
-                                </div>
-                              ) : null}
-                            </div>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : null}
+            <div className="flex justify-end">
+              <button
+                type="button"
+                onClick={() => void handleSchedulePickup()}
+                disabled={
+                  isSubmittingPickup ||
+                  selectedPickupOrderIds.length === 0 ||
+                  (pickupCarrier === 'FEDEX' && (!fedExForm.plannedPickupDate || !fedExForm.packageReadyTime || !fedExForm.customerCloseTime))
+                }
+                className="border border-[#3f1933] bg-[#3f1933] px-6 py-2.5 text-xs font-bold uppercase tracking-[0.1em] text-white transition hover:bg-[#2a0f22] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {isSubmittingPickup ? t('pickup.scheduling') : t('pickup.schedulePickup', { carrier: pickupCarrier })}
+              </button>
             </div>
-          ) : null}
+          </PickupWorkspace>}
         </div>
       </main>
 

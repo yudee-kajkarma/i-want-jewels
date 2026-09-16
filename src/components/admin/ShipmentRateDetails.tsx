@@ -8,6 +8,9 @@ import styles from './ShipmentWorkspace.module.css'
 const money = (value: number) =>
   new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' }).format(value)
 const amount = (value?: number) => (value === undefined ? '—' : money(value))
+// A zero aggregate is what a carrier sends when it itemized nothing, so it is
+// not evidence of a breakdown and there is no charge worth printing.
+const nonZero = (value?: number) => value !== undefined && value !== 0
 
 // Match the same carrier charge on both sides, without losing repeated or list-only lines.
 function matchCharges(walkIn: FedExRateSurcharge[] = [], account: FedExRateSurcharge[] = []) {
@@ -40,17 +43,20 @@ function ComparisonRow({
   account,
   emphasized = false,
   discount = false,
+  showWalkIn,
 }: {
   label: ReactNode
   walkIn?: ReactNode
   account?: ReactNode
   emphasized?: boolean
   discount?: boolean
+  /** False for carriers that quote one rate only — the column is dropped, not blanked. */
+  showWalkIn: boolean
 }) {
   return (
     <tr className={`${emphasized ? styles.comparisonSubtotal : ''} ${discount ? styles.discount : ''}`}>
       <th scope="row">{label}</th>
-      <td>{walkIn ?? '—'}</td>
+      {showWalkIn && <td>{walkIn ?? '—'}</td>}
       <td>{account ?? '—'}</td>
     </tr>
   )
@@ -70,6 +76,8 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
     rate.baseCharge !== undefined && freightDiscount !== undefined && freightDiscount > 0
       ? Math.round((rate.baseCharge - freightDiscount) * 100) / 100
       : undefined
+  // Only FedEx quotes a rack rate alongside the account rate. DHL returns a
+  // single price, so comparing it against an empty column reads as a fault.
   const hasWalkIn =
     [
       rate.listPrice,
@@ -79,27 +87,25 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
       rate.listFuelSurchargePercent,
     ].some((value) => value !== undefined) || Boolean(rate.listSurcharges?.length || rate.listTaxes?.length)
   const hasBreakdown =
-    [
-      rate.baseCharge,
-      rate.totalDiscount,
-      rate.totalSurcharges,
-      rate.totalTaxes,
-      rate.netFedExCharge,
-      rate.fuelSurchargePercent,
-    ].some((value) => value !== undefined) ||
+    rate.baseCharge !== undefined ||
+    rate.netFedExCharge !== undefined ||
+    rate.fuelSurchargePercent !== undefined ||
+    nonZero(rate.totalDiscount) ||
+    nonZero(rate.totalSurcharges) ||
+    nonZero(rate.totalTaxes) ||
     Boolean(rate.freightDiscounts?.length || rate.surcharges?.length || rate.taxes?.length)
   return (
     <div className={styles.rateDetailsBody}>
       <table className={styles.comparisonTable} aria-label={t('chargeBreakdown')}>
         <colgroup>
-          <col className={styles.comparisonLabelColumn} />
-          <col />
+          <col className={hasWalkIn ? styles.comparisonLabelColumn : styles.comparisonWideLabelColumn} />
+          {hasWalkIn && <col />}
           <col />
         </colgroup>
         <thead>
           <tr>
             <th scope="col">{t('chargeLine')}</th>
-            <th scope="col">{t('walkInRate')}</th>
+            {hasWalkIn && <th scope="col">{t('walkInRate')}</th>}
             <th scope="col">{t('accountQuote')}</th>
           </tr>
         </thead>
@@ -109,12 +115,14 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
               label={t('baseCharge')}
               walkIn={amount(rate.listBaseCharge)}
               account={amount(rate.baseCharge)}
+              showWalkIn={hasWalkIn}
             />
           )}
           {rate.freightDiscounts?.map((line, index) => (
             <ComparisonRow
               key={`discount-${index}`}
               discount
+              showWalkIn={hasWalkIn}
               label={
                 <>
                   {line.description || t('discounts')}
@@ -129,20 +137,26 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
               }
             />
           ))}
-          {rate.totalDiscount !== undefined && (
+          {nonZero(rate.totalDiscount) && (
             <ComparisonRow
               label={t('totalDiscounts')}
               discount
+              showWalkIn={hasWalkIn}
               account={
                 <>
-                  {rate.totalDiscount > 0 ? '−' : ''}
-                  {money(rate.totalDiscount)}
+                  {rate.totalDiscount! > 0 ? '−' : ''}
+                  {money(rate.totalDiscount!)}
                 </>
               }
             />
           )}
           {afterDiscount !== undefined && (
-            <ComparisonRow label={t('afterDiscount')} emphasized account={money(afterDiscount)} />
+            <ComparisonRow
+              label={t('afterDiscount')}
+              emphasized
+              showWalkIn={hasWalkIn}
+              account={money(afterDiscount)}
+            />
           )}
           {matchCharges(rate.listSurcharges, rate.surcharges).map((row, index) => (
             <ComparisonRow
@@ -150,6 +164,7 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
               label={row.account?.description || row.walkIn?.description || t('surcharges')}
               walkIn={amount(row.walkIn?.amount)}
               account={amount(row.account?.amount)}
+              showWalkIn={hasWalkIn}
             />
           ))}
           {(rate.fuelSurchargePercent !== undefined || rate.listFuelSurchargePercent !== undefined) && (
@@ -159,17 +174,23 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
                 rate.listFuelSurchargePercent !== undefined ? `${rate.listFuelSurchargePercent}%` : undefined
               }
               account={rate.fuelSurchargePercent !== undefined ? `${rate.fuelSurchargePercent}%` : undefined}
+              showWalkIn={hasWalkIn}
             />
           )}
-          {(rate.totalSurcharges !== undefined || rate.listTotalSurcharges !== undefined) && (
+          {(nonZero(rate.totalSurcharges) || rate.listTotalSurcharges !== undefined) && (
             <ComparisonRow
               label={t('totalSurcharges')}
               walkIn={amount(rate.listTotalSurcharges)}
               account={amount(rate.totalSurcharges)}
+              showWalkIn={hasWalkIn}
             />
           )}
           {rate.netFedExCharge !== undefined && (
-            <ComparisonRow label={t('beforeTaxes')} account={money(rate.netFedExCharge)} />
+            <ComparisonRow
+              label={t('beforeTaxes')}
+              account={money(rate.netFedExCharge)}
+              showWalkIn={hasWalkIn}
+            />
           )}
           {matchCharges(rate.listTaxes, rate.taxes).map((row, index) => (
             <ComparisonRow
@@ -177,13 +198,15 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
               label={row.account?.description || row.walkIn?.description || t('taxes')}
               walkIn={amount(row.walkIn?.amount)}
               account={amount(row.account?.amount)}
+              showWalkIn={hasWalkIn}
             />
           ))}
-          {(rate.totalTaxes !== undefined || rate.listTotalTaxes !== undefined) && (
+          {(nonZero(rate.totalTaxes) || rate.listTotalTaxes !== undefined) && (
             <ComparisonRow
               label={t('totalTaxes')}
               walkIn={amount(rate.listTotalTaxes)}
               account={amount(rate.totalTaxes)}
+              showWalkIn={hasWalkIn}
             />
           )}
         </tbody>
@@ -193,11 +216,12 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
             walkIn={amount(rate.listPrice)}
             account={money(rate.price)}
             emphasized
+            showWalkIn={hasWalkIn}
           />
           {savings !== undefined && (
             <tr className={styles.comparisonSavings}>
               <th scope="row">{t('savings')}</th>
-              <td colSpan={2}>{money(savings)}</td>
+              <td colSpan={hasWalkIn ? 2 : 1}>{money(savings)}</td>
             </tr>
           )}
         </tfoot>
@@ -207,7 +231,6 @@ export default function ShipmentRateDetails({ rate }: { rate: AdminShippingRateO
           {t('billingWeight')}: {rate.billingWeightKg} kg
         </p>
       )}
-      {!hasWalkIn && <p className={styles.rateDetailsNote}>{t('walkInUnavailable')}</p>}
       {!hasBreakdown && <p className={styles.rateDetailsNote}>{t('breakdownUnavailable')}</p>}
     </div>
   )

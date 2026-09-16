@@ -418,6 +418,8 @@ function normalizeOrder(order: OrderApiResponse): Order {
     shippingCarrier:
       typeof order.shippingCarrier === "string" ? order.shippingCarrier : null,
     pickupId: typeof order.pickupId === "string" ? order.pickupId : null,
+    trackingNumber: typeof order.trackingNumber === "string" ? order.trackingNumber : null,
+    trackingUrl: typeof order.trackingUrl === "string" ? order.trackingUrl : null,
     issuedGiftCards: Array.isArray(order.issuedGiftCards)
       ? order.issuedGiftCards.map(normalizeIssuedGiftCard)
       : [],

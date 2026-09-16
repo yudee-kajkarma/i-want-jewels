@@ -1294,6 +1294,10 @@
 .comparisonLabelColumn {
   width: 44%;
 }
+/* One amount column instead of two — give the labels the freed width. */
+.comparisonWideLabelColumn {
+  width: 62%;
+}
 .comparisonTable th,
 .comparisonTable td {
   padding: 10px 12px;
