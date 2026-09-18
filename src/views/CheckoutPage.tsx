@@ -1,5 +1,7 @@
 "use client";
 
+import { trackClarity, tagClarity, trackOrderPayment } from "../lib/clarity";
+import { useClarityView } from "../lib/useClarityView";
 import { useEffect, useMemo, useState } from "react";
 import {
   CreditCard,
@@ -175,6 +177,8 @@ export default function CheckoutPage() {
   );
   const isCartLoading =
     cartStatus === "loading" || cartMutationStatus === "loading";
+  useClarityView("checkout_started", !isCartLoading && items.length > 0, checkoutSource);
+  useEffect(() => { tagClarity("checkout_source", checkoutSource === "single" ? "buy_now" : "cart"); }, [checkoutSource]);
   const hasGiftCardItems = items.some((item) => item.isGiftCard);
 
   const [giftCodeInput, setGiftCodeInput] = useState("");
@@ -203,6 +207,8 @@ export default function CheckoutPage() {
     const code = giftCodeInput.trim();
     if (!code) return;
     if (hasGiftCardItems) {
+      tagClarity("gift_card_failure_reason", "not_allowed");
+      trackClarity("gift_card_failed");
       setGiftCheckMessage(t("checkout.giftCardNotAllowed"));
       return;
     }
@@ -211,12 +217,16 @@ export default function CheckoutPage() {
     try {
       const result = await validateGiftCard(code);
       setGiftValidation(result);
+      tagClarity("gift_card_failure_reason", result.valid ? "none" : "rejected");
+      trackClarity(result.valid ? "gift_card_applied" : "gift_card_failed");
       setGiftCheckMessage(
         result.valid
           ? t("checkout.giftCardApplied", { amount: formatPrice(result.redeemableAmount ?? 0, currency) })
           : result.reason || t("checkout.giftCardCannotApply"),
       );
     } catch {
+      tagClarity("gift_card_failure_reason", "request_failed");
+      trackClarity("gift_card_failed");
       setGiftValidation(null);
       setGiftCheckMessage(t("checkout.giftCardValidateError"));
     } finally {
@@ -225,6 +235,7 @@ export default function CheckoutPage() {
   }
 
   function handleRemoveGiftCard() {
+    if (giftValidation?.valid) trackClarity("gift_card_removed");
     setGiftValidation(null);
     setGiftCodeInput("");
     setGiftCheckMessage("");
@@ -383,9 +394,11 @@ export default function CheckoutPage() {
     try {
       if (editingAddressId) {
         await updateUserAddress(editingAddressId, trimmedPayload);
+        trackClarity("address_saved");
         await refreshAddresses(editingAddressId);
       } else {
         const createdAddress = await createUserAddress(trimmedPayload);
+        trackClarity("address_saved");
         await refreshAddresses(createdAddress.id);
       }
 
@@ -453,6 +466,8 @@ export default function CheckoutPage() {
     setIsSubmitting(true);
     setError("");
     clearPendingOrderStatus();
+    let orderRequested = false;
+    let orderCreated = false;
 
     try {
       if (checkoutSource === "single") {
@@ -475,6 +490,7 @@ export default function CheckoutPage() {
           ? "ONLINE"
           : paymentMethod;
 
+      orderRequested = true;
       const result = await createOrder({
         ...(isGuest
           ? {
@@ -508,6 +524,11 @@ export default function CheckoutPage() {
             : undefined,
       });
 
+      orderCreated = true;
+      tagClarity("payment_method", effectivePaymentMethod === "ONLINE" ? "online" : "cod");
+      trackClarity("order_created");
+      trackOrderPayment(result.order);
+
       // The cart behind this order is consumed server-side; drop the stale id
       // so the next visit starts a fresh basket.
       if (isGuest) {
@@ -525,6 +546,7 @@ export default function CheckoutPage() {
 
       if (effectivePaymentMethod === "ONLINE") {
         if (result.checkoutSession?.url) {
+          trackClarity("payment_started");
           window.location.assign(result.checkoutSession.url);
           return;
         }
@@ -536,6 +558,7 @@ export default function CheckoutPage() {
 
       navigate("/checkout/status?payment=success", { replace: true });
     } catch {
+      if (orderRequested && !orderCreated) trackClarity("checkout_failed");
       if (checkoutSource === "single") {
         await restoreSingleCheckoutSnapshot().catch(() => undefined);
         await dispatch(fetchCart())

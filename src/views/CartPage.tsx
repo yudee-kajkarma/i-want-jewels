@@ -1,5 +1,8 @@
 'use client'
 
+import { useAuth } from '../context/AuthContext'
+import { getGuestCartId } from '../utils/guestCart'
+import { useClarityView } from '../lib/useClarityView'
 import { Link, useNavigate } from '@/lib/router'
 import { Trash2 } from 'lucide-react'
 import Footer from '../components/layout/Footer'
@@ -19,9 +22,11 @@ export default function CartPage() {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const { currency } = useCurrency()
+  const { isAuthReady, isAuthenticated } = useAuth()
   const cart = useAppSelector((state) => state.cart.cart)
   const isLoading = useAppSelector((state) => state.cart.status === 'loading' || state.cart.mutationStatus === 'loading')
   const itemCount = useAppSelector((state) => state.cart.cart?.items.reduce((total, item) => total + item.quantity, 0) ?? 0)
+  useClarityView('cart_viewed', isAuthReady && !isLoading && (cart !== null || (!isAuthenticated && !getGuestCartId())))
   const subtotal =
     cart?.items.reduce((total, item) => total + getPriceAmount(item.price, currency) * item.quantity, 0) ?? 0
 
@@ -93,7 +98,7 @@ export default function CartPage() {
                         {item.size !== undefined ? ` · ${t('cart.size')} ${item.size}${item.sizeMeasurement ? ` (${item.sizeMeasurement})` : ''}` : ''}
                       </p>
                       {item.isGiftCard ? (
-                        <p className="mt-1 text-xs text-zinc-500">
+                        <p data-clarity-mask="true" className="mt-1 text-xs text-zinc-500">
                           {item.giftCard?.recipientEmail
                             ? t('cart.giftTo', { email: item.giftCard.recipientEmail })
                             : t('cart.giftSelf')}

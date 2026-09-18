@@ -891,6 +891,7 @@ export default function Header() {
                     {/* Right cluster */}
                     <div className="relative z-[45] flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-5">
                         <div
+                            data-clarity-mask="true"
                             ref={accountMenuRef}
                             className="relative hidden lg:block"
                         >
@@ -1399,7 +1400,7 @@ export default function Header() {
                         </p>
                         {isAuthenticated ? (
                             <>
-                                <p className="text-sm font-semibold text-zinc-900">
+                                <p data-clarity-mask="true" className="text-sm font-semibold text-zinc-900">
                                     {accountName}
                                 </p>
                                 <div className="grid gap-2">

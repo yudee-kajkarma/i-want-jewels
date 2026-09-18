@@ -1,5 +1,6 @@
 "use client";
 
+import { trackClarity } from '../lib/clarity';
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
@@ -235,6 +236,15 @@ export default function ProductsPage({
         setProductsData(initialProductsData);
     }, [defaultFilterState, initialFilterState]);
 
+    const lastTrackedSearch = useRef('');
+    useEffect(() => {
+        const term = initialFilterState?.search.trim() ?? '';
+        if (initialProductsData && term && lastTrackedSearch.current !== term) {
+            lastTrackedSearch.current = term;
+            trackClarity('product_searched');
+            if (!initialProductsData.products.length) trackClarity('search_no_results');
+        }
+    }, [initialProductsData, initialFilterState]);
     const previousCurrencyRef = useRef(currency);
 
     useEffect(() => {
@@ -339,6 +349,13 @@ export default function ProductsPage({
                 currency: getCurrencyIsoCode(currency),
             });
 
+            const term = nextFilters.search.trim();
+            if (!term) lastTrackedSearch.current = '';
+            if (term && mode === 'replace' && nextFilters.page === 1 && lastTrackedSearch.current !== term) {
+                lastTrackedSearch.current = term;
+                trackClarity('product_searched');
+                if (!response.products.length) trackClarity('search_no_results');
+            }
             const mergedAppliedFilters = Array.from(
                 new Set([
                     ...response.appliedFilters,

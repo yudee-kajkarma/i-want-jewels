@@ -1,5 +1,7 @@
 'use client'
 
+import { trackOrderPayment } from '../lib/clarity'
+import { useClarityView } from '../lib/useClarityView'
 import { useEffect, useState } from 'react'
 import { CheckCircle2, RotateCcw, ShoppingBag, XCircle } from 'lucide-react'
 import { Link, useSearchParams } from '@/lib/router'
@@ -38,6 +40,28 @@ export default function CheckoutStatusPage() {
 
   const [isSyncing, setIsSyncing] = useState(true)
   const [syncError, setSyncError] = useState('')
+  const [confirmedOrder, setConfirmedOrder] = useState<import('../types/order').Order | null>(null)
+  useClarityView('payment_cancelled', hasLoadedPendingOrder && !!pendingOrder && paymentResult === 'cancel')
+  useEffect(() => { if (confirmedOrder) trackOrderPayment(confirmedOrder) }, [confirmedOrder])
+  useEffect(() => {
+    const sessionId = confirmedOrder?.sessionId
+    if (!sessionId || confirmedOrder?.paymentStatus.toLowerCase() !== 'pending' || paymentResult !== 'success') return
+    let active = true
+    let attempts = 0
+    let timer: ReturnType<typeof setTimeout>
+    async function check() {
+      attempts += 1
+      try {
+        const updated = await verifyPaymentStatus(sessionId!)
+        if (!active) return
+        setConfirmedOrder(updated)
+        if (updated.paymentStatus.toLowerCase() !== 'pending') return
+      } catch { /* A verification error is not a confirmed payment failure. */ }
+      if (active && attempts < 5) timer = setTimeout(() => void check(), 2000)
+    }
+    timer = setTimeout(() => void check(), 2000)
+    return () => { active = false; clearTimeout(timer) }
+  }, [confirmedOrder?.id, confirmedOrder?.sessionId, confirmedOrder?.paymentStatus, paymentResult])
 
   useEffect(() => {
     if (!hasLoadedPendingOrder) {
@@ -48,13 +72,13 @@ export default function CheckoutStatusPage() {
 
     async function syncCartAfterCheckout() {
       try {
-        if (paymentResult === 'success' && pendingOrder?.paymentMethod === 'ONLINE' && pendingOrder?.orderId) {
+        if (pendingOrder?.paymentMethod === 'ONLINE' && pendingOrder?.orderId) {
           try {
             const order = await getOrderById(pendingOrder.orderId)
 
-            if (order.sessionId && order.paymentStatus?.toLowerCase() === 'pending') {
-              await verifyPaymentStatus(order.sessionId)
-            }
+            const confirmed = paymentResult === 'success' && order.sessionId && order.paymentStatus?.toLowerCase() === 'pending'
+              ? await verifyPaymentStatus(order.sessionId) : order
+            if (isMounted) setConfirmedOrder(confirmed)
           } catch {
             console.log('Payment verification sync in progress (webhook handling)')
           }
@@ -101,7 +125,7 @@ export default function CheckoutStatusPage() {
     }
     // i18n is a stable instance: adding it satisfies the linter without
     // re-running this effect, which would re-verify the payment.
-  }, [dispatch, paymentResult, pendingOrder?.source, hasLoadedPendingOrder, i18n])
+  }, [dispatch, paymentResult, pendingOrder?.source, pendingOrder?.orderId, pendingOrder?.paymentMethod, hasLoadedPendingOrder, i18n])
 
   return (
     <div className="min-h-screen bg-[#fffdfa] text-zinc-900 font-poppins">

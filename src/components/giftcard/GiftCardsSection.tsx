@@ -90,7 +90,7 @@ export default function GiftCardsSection({ id, hideHeading }: GiftCardsSectionPr
   }
 
   return (
-    <section id={id}>
+    <section id={id} data-clarity-mask="true">
       {!hideHeading ? (
         <>
           <h2 className="text-2xl font-bold text-[#17110d]">{t('title')}</h2>

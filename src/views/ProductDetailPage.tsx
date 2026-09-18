@@ -1,5 +1,6 @@
 "use client";
 
+import { useClarityView } from '../lib/useClarityView';
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
     ChevronDown,
@@ -758,6 +759,8 @@ export default function ProductDetailPage({
         selectedVariant?.sizes && selectedSizeIndex !== null
             ? selectedVariant.sizes[selectedSizeIndex]
             : undefined;
+    useClarityView('product_viewed', !!product && !isLoading && !!selectedVariant, product?.id ?? '');
+    useClarityView('out_of_stock', !!product && !isLoading && (chosenSizeEntry ? chosenSizeEntry.stock <= 0 : (selectedVariant?.available === false || (variantHasSizes ? (selectedVariant?.sizes?.every(size => size.stock <= 0) ?? false) : (selectedVariant?.stock ?? selectedVariant?.totalStock ?? 1) <= 0))), `${product?.id}:${selectedVariantId}:${selectedSizeIndex}`);
     const basePrice = chosenSizeEntry?.price ?? selectedVariant?.price;
     // Per-size spec overrides (Cadenza-style). When absent, product-level
     // values apply so legacy products render exactly as before.
@@ -1928,7 +1931,7 @@ export default function ProductDetailPage({
                                 </p>
                             ) : null}
 
-                            <div className="mt-8 space-y-6">
+                            <div data-clarity-mask="true" className="mt-8 space-y-6">
                                 {reviews.length === 0 ? (
                                     <div className="border border-dashed border-zinc-300 bg-white px-6 py-10 text-center">
                                         <h3 className="text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800">

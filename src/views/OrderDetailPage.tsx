@@ -1,5 +1,7 @@
 'use client'
 
+import { trackClarity } from '../lib/clarity'
+import { setPendingOrderStatus } from '../utils/checkoutStorage'
 import { useEffect, useState } from 'react'
 import { Ban, CreditCard, Gift, MapPinHouse, Package, Undo2 } from 'lucide-react'
 import { Link, useParams } from '@/lib/router'
@@ -187,6 +189,8 @@ export default function OrderDetailPage() {
         throw new Error('Missing checkout session URL.')
       }
 
+      setPendingOrderStatus({ orderId: order.id, orderNumber: order.orderNumber, paymentMethod: 'ONLINE', source: 'cart' })
+      trackClarity('payment_retry_started')
       window.location.assign(result.checkoutSession.url)
     } catch {
       setFeedback(t('account.orderDetails.paymentError'))

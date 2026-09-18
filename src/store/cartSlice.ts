@@ -1,3 +1,4 @@
+import { trackClarity } from '../lib/clarity'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { addCartItem, clearCartItems, deleteCartItem, getCart, updateCartItem } from '../services/cartService'
 import type { AddToCartPayload, Cart } from '../types/cart'
@@ -20,6 +21,7 @@ export const fetchCart = createAsyncThunk('cart/fetchCart', async () => getCart(
 
 export const addToCart = createAsyncThunk('cart/addToCart', async (payload: AddToCartPayload, thunkApi) => {
   await addCartItem(payload)
+  trackClarity('add_to_cart')
 
   return thunkApi.dispatch(fetchCart()).unwrap()
 })
@@ -28,6 +30,7 @@ export const changeCartItemQuantity = createAsyncThunk(
   'cart/changeQuantity',
   async (payload: { itemId: string; quantity: number }, thunkApi) => {
     await updateCartItem(payload.itemId, payload.quantity)
+    trackClarity(payload.quantity === 0 ? 'remove_from_cart' : 'cart_quantity_updated')
 
     return thunkApi.dispatch(fetchCart()).unwrap()
   },
@@ -37,6 +40,7 @@ export const removeCartItem = createAsyncThunk(
   'cart/removeItem',
   async (payload: { productId: string; variantId: string }, thunkApi) => {
     await deleteCartItem(payload.productId, payload.variantId)
+    trackClarity('remove_from_cart')
 
     return thunkApi.dispatch(fetchCart()).unwrap()
   },
@@ -44,6 +48,7 @@ export const removeCartItem = createAsyncThunk(
 
 export const clearCart = createAsyncThunk('cart/clearCart', async (_, thunkApi) => {
   await clearCartItems()
+  trackClarity('cart_cleared')
 
   return thunkApi.dispatch(fetchCart()).unwrap()
 })
