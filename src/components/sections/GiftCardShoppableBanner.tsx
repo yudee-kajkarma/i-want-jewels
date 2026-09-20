@@ -5,16 +5,13 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
 import { splitLines } from "@/i18n/splitLines";
-import { useCurrency } from "../../context/CurrencyContext";
-import { getProductBySlug } from "../../services/productService";
-import type { PriceInput } from "../../utils/price";
+import { buildHomepageShopHref, type HomepageShopTarget } from "../../utils/homepageShopLink";
 import bannerGiftcardImage from "../../assets/image/Gift-card.png";
 
 const GIFT_CARD_HREF = "/products?category=Gift%20card";
 
-type GiftCardHotspot = {
+type GiftCardHotspot = HomepageShopTarget & {
     key: string;
-    slug: string;
     /** Fallback label shown until the product title loads (or if it fails). */
     fallbackLabel: string;
     /** Position as a percentage of the banner — the model photo only shows on
@@ -30,7 +27,9 @@ type GiftCardHotspot = {
 const HOTSPOTS: GiftCardHotspot[] = [
     {
         key: "earring",
-        slug: "serafina-106557",
+        collection: "Serafina",
+        category: "Earring",
+        search: "Serafina",
         fallbackLabel: "Serafina Earrings",
         x: "78%",
         y: "32%",
@@ -39,7 +38,9 @@ const HOTSPOTS: GiftCardHotspot[] = [
     },
     {
         key: "choker",
-        slug: "serafina-lab-grown-diamond-necklace-feminine-design-14kt-gold-196669",
+        collection: "Serafina",
+        category: "Necklace",
+        search: "Serafina",
         fallbackLabel: "Serafina Necklace",
         x: "71%",
         y: "70%",
@@ -48,7 +49,9 @@ const HOTSPOTS: GiftCardHotspot[] = [
     },
     {
         key: "necklace",
-        slug: "marcella-high-carat-lab-grown-diamond-necklace-carat-crush-143613",
+        collection: "Serafina",
+        category: "Necklace",
+        search: "Marcella",
         fallbackLabel: "Marcella Necklace",
         x: "70%",
         y: "81%",
@@ -57,81 +60,11 @@ const HOTSPOTS: GiftCardHotspot[] = [
     },
 ];
 
-type HotspotProduct = {
-    title: string;
-    price: PriceInput | null;
-    category: string;
-    collectionName: string;
-};
-
-function buildCollectionLabel(
-    product: HotspotProduct | undefined,
-    fallbackLabel: string,
-): string {
-    if (!product) {
-        return fallbackLabel;
-    }
-
-    const collectionPart = product.collectionName?.trim();
-    const categoryPart = product.category?.trim();
-
-    if (!collectionPart && !categoryPart) {
-        return product.title || fallbackLabel;
-    }
-
-    const toTitle = (value: string) =>
-        value.charAt(0).toUpperCase() + value.slice(1);
-
-    return [collectionPart, categoryPart]
-        .filter(Boolean)
-        .map((part) => toTitle(part as string))
-        .join(" ");
-}
-
 export default function GiftCardShoppableBanner() {
     const { t } = useTranslation();
-    const { format } = useCurrency();
-    const [products, setProducts] = useState<Record<string, HotspotProduct>>(
-        {},
-    );
     const [activeKey, setActiveKey] = useState<string | null>(null);
     const [canHover, setCanHover] = useState(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
-
-    // Fetch each hotspot product by slug. A failed slug simply keeps its
-    // fallback label so the marker never breaks.
-    useEffect(() => {
-        let isMounted = true;
-
-        void Promise.allSettled(
-            HOTSPOTS.map((hotspot) => getProductBySlug(hotspot.slug)),
-        ).then((results) => {
-            if (!isMounted) {
-                return;
-            }
-
-            const next: Record<string, HotspotProduct> = {};
-
-            results.forEach((result, index) => {
-                const hotspot = HOTSPOTS[index];
-
-                if (result.status === "fulfilled") {
-                    next[hotspot.key] = {
-                        title: result.value.title || hotspot.fallbackLabel,
-                        price: result.value.minPrice,
-                        category: result.value.category ?? "",
-                        collectionName: result.value.collectionName ?? "",
-                    };
-                }
-            });
-
-            setProducts(next);
-        });
-
-        return () => {
-            isMounted = false;
-        };
-    }, []);
 
     // Detect hover capability once: desktop uses hover, touch uses tap.
     useEffect(() => {
@@ -211,11 +144,7 @@ export default function GiftCardShoppableBanner() {
                     clickable; only the markers themselves capture clicks. */}
                 <div className="pointer-events-none absolute inset-0 z-20 hidden lg:block">
                     {HOTSPOTS.map((hotspot) => {
-                        const product = products[hotspot.key];
-                        const label = buildCollectionLabel(
-                            product,
-                            hotspot.fallbackLabel,
-                        );
+                        const label = hotspot.fallbackLabel;
                         const isOpen = activeKey === hotspot.key;
                         const markerSize =
                             hotspot.size === "lg"
@@ -261,7 +190,7 @@ export default function GiftCardShoppableBanner() {
                                     }`}
                                 >
                                     <Link
-                                        to={`/products/${hotspot.slug}`}
+                                        to={buildHomepageShopHref(hotspot)}
                                         className={`block bg-white px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.18)] ${
                                             isOpen ? "pointer-events-auto" : ""
                                         }`}
@@ -271,9 +200,7 @@ export default function GiftCardShoppableBanner() {
                                         </p>
                                         <div className="mt-1.5 flex items-center justify-between gap-2">
                                             <span className="text-[13px] font-semibold text-zinc-900 xl:text-[15px]">
-                                                {product?.price != null
-                                                    ? format(product.price)
-                                                    : t("home.viewProduct")}
+                                                {t("home.viewProduct")}
                                             </span>
                                             <ArrowRight
                                                 className="h-4 w-4 text-zinc-500"

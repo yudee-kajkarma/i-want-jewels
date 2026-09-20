@@ -5,17 +5,14 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
 import { splitLines } from "@/i18n/splitLines";
-import { useCurrency } from "../../context/CurrencyContext";
-import { getProductBySlug } from "../../services/productService";
-import type { PriceInput } from "../../utils/price";
+import { buildHomepageShopHref, type HomepageShopTarget } from "../../utils/homepageShopLink";
 import alessiaCollageImage from "../../assets/shopping-banner/alessia-1.jpg";
 import alessiaModelImage from "../../assets/alessia-collection-4.png";
 
 const ALESSIA_COLLECTION_HREF = "/products?collection=Alessia";
 
-type HotspotConfig = {
+type HotspotConfig = HomepageShopTarget & {
     key: string;
-    slug: string;
     /** Fallback label shown until the product title loads (or if it fails). */
     fallbackLabel: string;
     /** Position as a percentage of the model image (responsive by design). */
@@ -33,7 +30,9 @@ type HotspotConfig = {
 const HOTSPOTS: HotspotConfig[] = [
     {
         key: "ring",
-        slug: "alessia-lab-grown-diamond-ring-delicate-14kt-gold-plating-088317",
+        collection: "Alessia",
+        category: "Rings",
+        search: "Alessia",
         fallbackLabel: "Diamond Ring",
         x: "15%",
         y: "63%",
@@ -42,7 +41,9 @@ const HOTSPOTS: HotspotConfig[] = [
     },
     {
         key: "necklace",
-        slug: "alessia-lab-grown-diamond-necklace-layering-pendant-14kt-gold-032829",
+        collection: "Alessia",
+        category: "Necklace",
+        search: "Alessia",
         fallbackLabel: "Layering Necklace",
         x: "62.5%",
         y: "65%",
@@ -51,7 +52,8 @@ const HOTSPOTS: HotspotConfig[] = [
     },
     {
         key: "necklace2",
-        slug: "vittoria-lab-grown-diamond-necklace-classic-pendant-14kt-gold-884797",
+        category: "Necklace",
+        search: "Vittoria",
         fallbackLabel: "Layering Necklace",
         x: "64%",
         y: "60%",
@@ -60,7 +62,9 @@ const HOTSPOTS: HotspotConfig[] = [
     },
     {
         key: "bracelet",
-        slug: "alessia-lab-grown-diamond-bracelet-carat-crush-14kt-gold-888893",
+        collection: "Alessia",
+        category: "Bracelet",
+        search: "Alessia",
         fallbackLabel: "Carat Crush Bracelet",
         x: "56%",
         y: "77%",
@@ -69,57 +73,11 @@ const HOTSPOTS: HotspotConfig[] = [
     },
 ];
 
-type HotspotProduct = {
-    title: string;
-    price: PriceInput | null;
-    category: string;
-    collectionName: string;
-};
-
 export default function ShopTheLookBanner() {
     const { t } = useTranslation();
-    const { format } = useCurrency();
-    const [products, setProducts] = useState<Record<string, HotspotProduct>>(
-        {},
-    );
     const [activeKey, setActiveKey] = useState<string | null>(null);
     const [canHover, setCanHover] = useState(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
-
-    // Fetch each hotspot product by slug. A failed slug simply keeps its
-    // fallback label so the marker never breaks.
-    useEffect(() => {
-        let isMounted = true;
-
-        void Promise.allSettled(
-            HOTSPOTS.map((hotspot) => getProductBySlug(hotspot.slug)),
-        ).then((results) => {
-            if (!isMounted) {
-                return;
-            }
-
-            const next: Record<string, HotspotProduct> = {};
-
-            results.forEach((result, index) => {
-                const hotspot = HOTSPOTS[index];
-
-                if (result.status === "fulfilled") {
-                    next[hotspot.key] = {
-                        title: result.value.title || hotspot.fallbackLabel,
-                        price: result.value.minPrice,
-                        category: result.value.category ?? "",
-                        collectionName: result.value.collectionName ?? "",
-                    };
-                }
-            });
-
-            setProducts(next);
-        });
-
-        return () => {
-            isMounted = false;
-        };
-    }, []);
 
     // Detect hover capability once: desktop uses hover, touch uses tap.
     useEffect(() => {
@@ -222,14 +180,7 @@ export default function ShopTheLookBanner() {
                     />
 
                     {HOTSPOTS.map((hotspot) => {
-                        const product = products[hotspot.key];
-                        const collectionPart =
-                            product?.collectionName?.trim().toLowerCase() ||
-                            "alessia";
-                        const categoryPart =
-                            product?.category?.trim().toLowerCase() ||
-                            hotspot.key;
-                        const label = `${collectionPart.charAt(0).toUpperCase() + collectionPart.slice(1)} ${categoryPart.charAt(0).toUpperCase() + categoryPart.slice(1)}`;
+                        const label = hotspot.fallbackLabel;
                         const isOpen = activeKey === hotspot.key;
                         const markerSize =
                             hotspot.size === "lg"
@@ -275,7 +226,7 @@ export default function ShopTheLookBanner() {
                                     }`}
                                 >
                                     <Link
-                                        to={`/products/${hotspot.slug}`}
+                                        to={buildHomepageShopHref(hotspot)}
                                         className={`block bg-white px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.18)] ${
                                             isOpen ? "pointer-events-auto" : ""
                                         }`}
@@ -285,9 +236,7 @@ export default function ShopTheLookBanner() {
                                         </p>
                                         <div className="mt-1.5 flex items-center justify-between gap-2">
                                             <span className="text-[13px] font-semibold text-zinc-900 sm:text-[15px]">
-                                                {product?.price != null
-                                                    ? format(product.price)
-                                                    : t("home.viewProduct")}
+                                                {t("home.viewProduct")}
                                             </span>
                                             <ArrowRight
                                                 className="h-4 w-4 text-zinc-500"

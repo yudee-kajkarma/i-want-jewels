@@ -5,9 +5,7 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/lib/router";
 import { splitLines } from "@/i18n/splitLines";
-import { useCurrency } from "../../context/CurrencyContext";
-import { getProductBySlug } from "../../services/productService";
-import type { PriceInput } from "../../utils/price";
+import { buildHomepageShopHref, type HomepageShopTarget } from "../../utils/homepageShopLink";
 import concettaDesktopBanner from "../../assets/image/D.Concetta-Collection1.jpeg";
 import concettaMobileBanner from "../../assets/concetaa-shopiing-banner/M.Concetta-Collection.png";
 
@@ -23,9 +21,8 @@ type HotspotPlacement = {
     open: "left" | "right";
 };
 
-type ConcettaHotspot = {
+type ConcettaHotspot = HomepageShopTarget & {
     key: string;
-    slug: string;
     /** Fallback label shown until the product title loads (or if it fails). */
     fallbackLabel: string;
     /** The desktop and mobile photos are framed differently, so each
@@ -38,116 +35,56 @@ type ConcettaHotspot = {
 const HOTSPOTS: ConcettaHotspot[] = [
     {
         key: "earrings",
-        slug: "concetta-long-lab-grown-diamond-earrings-14kt-gold-plating-663613",
+        collection: "Concetta",
+        category: "Earring",
+        search: "Concetta",
         fallbackLabel: "Concetta Earrings",
         desktop: { x: "55%", y: "21%", size: "sm", open: "right" },
         mobile: { x: "42%", y: "28%", size: "sm", open: "right" },
     },
     {
         key: "pendant",
-        slug: "aurora-spark-lab-grown-diamond-necklace-pendant-14kt-gold-639613",
+        collection: "Aurora",
+        category: "Necklace",
+        search: "Aurora Spark",
         fallbackLabel: "Aurora Pendant",
         desktop: { x: "66.5%", y: "71%", size: "sm", open: "left" },
         mobile: { x: "59%", y: "59%", size: "sm", open: "left" },
     },
     {
         key: "ring",
-        slug: "renata-lab-grown-diamond-ring-classic-setting-14kt-gold-579837",
+        collection: "Renata",
+        category: "Rings",
+        search: "Renata",
         fallbackLabel: "Renata Ring",
         desktop: { x: "75%", y: "50%", size: "sm", open: "left" },
         mobile: { x: "73%", y: "46%", size: "sm", open: "left" },
     },
     {
         key: "necklace",
-        slug: "aurora-y-836221",
+        collection: "Aurora",
+        category: "Necklace",
+        search: "Aurora Y",
         fallbackLabel: "Aurora Necklace",
         desktop: { x: "68%", y: "87%", size: "lg", open: "left" },
         mobile: { x: "61%", y: "66%", size: "lg", open: "left" },
     },
     {
         key: "bracelet",
-        slug: "concetta-lab-grown-diamond-bracelet-classic-chain-14kt-gold-347645",
+        collection: "Concetta",
+        category: "Bracelet",
+        search: "Concetta",
         fallbackLabel: "Concetta Bracelet",
         desktop: { x: "83.5%", y: "88%", size: "sm", open: "left" },
         mobile: { x: "83%", y: "73%", size: "sm", open: "left" },
     },
 ];
 
-type HotspotProduct = {
-    title: string;
-    price: PriceInput | null;
-    category: string;
-    collectionName: string;
-};
-
-function buildCollectionLabel(
-    product: HotspotProduct | undefined,
-    fallbackLabel: string,
-): string {
-    if (!product) {
-        return fallbackLabel;
-    }
-
-    const collectionPart = product.collectionName?.trim();
-    const categoryPart = product.category?.trim();
-
-    if (!collectionPart && !categoryPart) {
-        return product.title || fallbackLabel;
-    }
-
-    const toTitle = (value: string) =>
-        value.charAt(0).toUpperCase() + value.slice(1);
-
-    return [collectionPart, categoryPart]
-        .filter(Boolean)
-        .map((part) => toTitle(part as string))
-        .join(" ");
-}
-
 export default function ConcettaShoppableBanner() {
     const { t } = useTranslation();
-    const { format } = useCurrency();
-    const [products, setProducts] = useState<Record<string, HotspotProduct>>(
-        {},
-    );
     const [activeKey, setActiveKey] = useState<string | null>(null);
     const [canHover, setCanHover] = useState(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
-
-    // Fetch each hotspot product by slug. A failed slug simply keeps its
-    // fallback label so the marker never breaks.
-    useEffect(() => {
-        let isMounted = true;
-
-        void Promise.allSettled(
-            HOTSPOTS.map((hotspot) => getProductBySlug(hotspot.slug)),
-        ).then((results) => {
-            if (!isMounted) {
-                return;
-            }
-
-            const next: Record<string, HotspotProduct> = {};
-
-            results.forEach((result, index) => {
-                const hotspot = HOTSPOTS[index];
-
-                if (result.status === "fulfilled") {
-                    next[hotspot.key] = {
-                        title: result.value.title || hotspot.fallbackLabel,
-                        price: result.value.minPrice,
-                        category: result.value.category ?? "",
-                        collectionName: result.value.collectionName ?? "",
-                    };
-                }
-            });
-
-            setProducts(next);
-        });
-
-        return () => {
-            isMounted = false;
-        };
-    }, []);
 
     // Detect hover capability once: desktop uses hover, touch uses tap.
     useEffect(() => {
@@ -215,8 +152,7 @@ export default function ConcettaShoppableBanner() {
     function renderHotspots(breakpoint: "desktop" | "mobile") {
         return HOTSPOTS.map((hotspot) => {
             const placement = hotspot[breakpoint];
-            const product = products[hotspot.key];
-            const label = buildCollectionLabel(product, hotspot.fallbackLabel);
+            const label = hotspot.fallbackLabel;
             const isOpen = activeKey === hotspot.key;
             const markerSize =
                 placement.size === "lg"
@@ -258,7 +194,7 @@ export default function ConcettaShoppableBanner() {
                         }`}
                     >
                         <Link
-                            to={`/products/${hotspot.slug}`}
+                            to={buildHomepageShopHref(hotspot)}
                             className={`block bg-white px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.18)] ${
                                 isOpen ? "pointer-events-auto" : ""
                             }`}
@@ -268,9 +204,7 @@ export default function ConcettaShoppableBanner() {
                             </p>
                             <div className="mt-1.5 flex items-center justify-between gap-2">
                                 <span className="text-[13px] font-semibold text-zinc-900 sm:text-[15px]">
-                                    {product?.price != null
-                                        ? format(product.price)
-                                        : t("home.viewProduct")}
+                                    {t("home.viewProduct")}
                                 </span>
                                 <ArrowRight
                                     className="h-4 w-4 text-zinc-500"
