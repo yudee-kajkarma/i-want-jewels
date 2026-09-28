@@ -2,6 +2,7 @@
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import MobileStickyActions from '@/components/shared/MobileStickyActions';
 import BlogSidebar from '@/components/shared/BlogSidebar';
 import DynamicArticle, { type ArticleSection } from '@/components/shared/DynamicArticle';
 import { useLocalizedBlogTitle } from '@/hooks/useLocalizedContent';
@@ -43,6 +44,7 @@ export default function BlogArticlePage({
           currentHref={`/blogs/${slug}`}
         />
       </div>
+      <MobileStickyActions />
       <Footer />
     </div>
   );

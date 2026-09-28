@@ -2,6 +2,7 @@
 
 import { Link } from "@/lib/router";
 import Footer from "../components/layout/Footer";
+import MobileStickyActions from "@/components/shared/MobileStickyActions";
 import Header from "../components/layout/Header";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
 import { resourceCategories, getArticleCount } from "../data/resources";
@@ -242,6 +243,7 @@ export default function ResourceCategoryPage({
                 )}
             </main>
 
+            <MobileStickyActions />
             <Footer />
         </div>
     );

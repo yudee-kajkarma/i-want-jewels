@@ -4,6 +4,7 @@ import { Fragment, useState } from "react";
 import { Link } from "@/lib/router";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import MobileStickyActions from "@/components/shared/MobileStickyActions";
 import ExploreOurStore from "@/components/shared/ExploreOurStore";
 import shopPageBanner from "@/assets/banner/hero-banner-3.jpg";
 import type { ResourceArticle, ResourceCategory } from "../data/resources";
@@ -719,6 +720,7 @@ export default function ResourceArticleV2Page({
                 )}
             </main>
 
+            <MobileStickyActions />
             <Footer />
         </div>
     );

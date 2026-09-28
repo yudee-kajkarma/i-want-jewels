@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MobileStickyActions from "@/components/shared/MobileStickyActions";
 import { blogLinks } from "@/components/shared/blogList";
 import { useLocalizedBlogTitle } from "@/hooks/useLocalizedContent";
 
@@ -68,6 +69,7 @@ export default function BlogsIndexPage() {
                     ))}
                 </div>
             </div>
+            <MobileStickyActions />
             <Footer />
         </div>
     );

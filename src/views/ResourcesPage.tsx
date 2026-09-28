@@ -2,6 +2,7 @@
 
 import { Link } from "@/lib/router";
 import Footer from "../components/layout/Footer";
+import MobileStickyActions from "@/components/shared/MobileStickyActions";
 import Header from "../components/layout/Header";
 import { resourceCategories } from "../data/resources";
 import { blogLinks } from "@/components/shared/blogList";
@@ -183,6 +184,7 @@ export default function ResourcesPage() {
                 </section>
             </main>
 
+            <MobileStickyActions />
             <Footer />
         </div>
     );
