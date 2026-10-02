@@ -9,6 +9,7 @@ import { BadgeCheck, Clock3, MapPinHouse, Package, User, CreditCard, Gift, Undo2
 import { Link, useParams } from '@/lib/router'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import ShipmentCustomsPanel from '../components/admin/ShipmentCustomsPanel'
 import { useCurrency } from '../context/CurrencyContext'
 import { approveOrderReturn, getAdminOrderById, getAdminOrderInvoiceUrl, getAdminOrderLabelUrl, rejectOrderReturn, updateOrderShippingAddressForAdmin, updateOrderStatusForAdmin, verifyPaymentStatus } from '../services/orderService'
 import type { AdminOrderDetail } from '../types/order'
@@ -630,6 +631,11 @@ export default function AdminOrderDetailPage() {
                                     {isVerifyingPayment ? t('verifying') : t('verifyPayment')}
                                 </button>
                             ) : null}
+
+                            <ShipmentCustomsPanel
+                                order={order}
+                                onChange={(patch) => setOrder((current) => (current ? { ...current, ...patch } : current))}
+                            />
                         </aside>
                     </div>
                 ) : null}

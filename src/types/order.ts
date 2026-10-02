@@ -387,6 +387,53 @@ export type AdminOrderCustomer = {
   phoneNumber: string
 }
 
+/** Customs terms the carrier label was created with. */
+export type ShipmentDeclaration = {
+  carrier: 'FEDEX' | 'DHL'
+  serviceCode?: string
+  serviceType?: string
+  incoterm?: string
+  dutiesPaidBy: 'SENDER' | 'RECIPIENT' | 'THIRD_PARTY'
+  dutiesAccountNumber?: string
+  packagingType?: string
+  dimensions?: { lengthCm: number; widthCm: number; heightCm: number }
+  declarationCurrency: 'EUR' | 'USD' | 'GBP'
+  declaredValue: number
+  items: Array<{
+    sku?: string
+    title: string
+    quantity: number
+    hsCode: string
+    importHsCode?: string
+    countryOfManufacture: string
+    customsValue: number
+  }>
+  createdAt: string
+}
+
+/** Carrier estimate of import duties & taxes (FedEx EDT / DHL Landed Cost). */
+export type DutiesEstimate = {
+  source: 'FEDEX_EDT' | 'DHL_LANDED_COST'
+  basis: 'LABEL' | 'RECALCULATED'
+  usedSavedDeclaration: boolean
+  currency: string
+  dutiesAndTaxes: number
+  dutiesTaxesAndFees: number
+  available: boolean
+  message?: string
+  lines: Array<{ name: string; amount: number; detail?: string }>
+  requestedAt: string
+}
+
+/** Duties & taxes actually charged, entered from the carrier invoice. */
+export type ActualDutiesAndTaxes = {
+  amount: number
+  currency: string
+  invoiceNumber?: string
+  note?: string
+  recordedAt: string
+}
+
 export type AdminOrderDetail = Order & {
   userId: string
   customer: AdminOrderCustomer | null
@@ -397,5 +444,9 @@ export type AdminOrderDetail = Order & {
   trackingUrl: string | null
   /** Delivery date DHL committed to when the label was created. */
   estimatedDeliveryDate: string | null
+  /** Absent on labels created before declarations were saved. */
+  shipmentDeclaration: ShipmentDeclaration | null
+  dutiesEstimate: DutiesEstimate | null
+  actualDutiesAndTaxes: ActualDutiesAndTaxes | null
   isActive: boolean
 }

@@ -20,6 +20,9 @@ import type {
   PickupsResult,
   ShippingCarrier,
   ShippingAddress,
+  ShipmentDeclaration,
+  DutiesEstimate,
+  ActualDutiesAndTaxes,
 } from "../types/order";
 import { toPrice, type Price } from "../utils/price";
 import { adminApiClient, authApiClient } from "./apiClient";
@@ -52,6 +55,9 @@ type OrderApiResponse = {
   trackingNumber?: string | null;
   trackingUrl?: string | null;
   estimatedDeliveryDate?: string | null;
+  shipmentDeclaration?: ShipmentDeclaration | null;
+  dutiesEstimate?: DutiesEstimate | null;
+  actualDutiesAndTaxes?: ActualDutiesAndTaxes | null;
   isActive?: boolean;
   sessionId?: string;
   pickupId?: string | null;
@@ -505,6 +511,18 @@ function normalizeAdminOrderDetail(order: OrderApiResponse): AdminOrderDetail {
     estimatedDeliveryDate:
       typeof order.estimatedDeliveryDate === "string" ? order.estimatedDeliveryDate : null,
     customer: normalizeAdminOrderCustomer(order.customer),
+    shipmentDeclaration:
+      order.shipmentDeclaration && Array.isArray(order.shipmentDeclaration.items)
+        ? order.shipmentDeclaration
+        : null,
+    dutiesEstimate:
+      order.dutiesEstimate && typeof order.dutiesEstimate === "object"
+        ? { ...order.dutiesEstimate, lines: Array.isArray(order.dutiesEstimate.lines) ? order.dutiesEstimate.lines : [] }
+        : null,
+    actualDutiesAndTaxes:
+      order.actualDutiesAndTaxes && typeof order.actualDutiesAndTaxes.amount === "number"
+        ? order.actualDutiesAndTaxes
+        : null,
     refundStatus:
       typeof order.refundStatus === "string" ? order.refundStatus : "NONE",
     shippingCarrier:
@@ -935,6 +953,33 @@ export async function getAdminOrderById(
   );
 
   return normalizeAdminOrderDetail(response.data.data);
+}
+
+/**
+ * Ask the order's carrier (FedEx EDT / DHL Landed Cost) for a fresh duties &
+ * taxes estimate. Works on shipped and delivered orders.
+ */
+export async function estimateAdminOrderDuties(orderId: string): Promise<DutiesEstimate> {
+  const response = await adminApiClient.post<{ success: boolean; data: { dutiesEstimate: DutiesEstimate } }>(
+    `/orders/admin/${orderId}/duties-estimate`,
+  );
+  return response.data.data.dutiesEstimate;
+}
+
+/** Record the duties & taxes actually charged, from the carrier invoice. */
+export async function setAdminOrderActualDuties(
+  orderId: string,
+  input: { amount: number; currency: string; invoiceNumber?: string; note?: string },
+): Promise<ActualDutiesAndTaxes> {
+  const response = await adminApiClient.put<{ success: boolean; data: { actualDutiesAndTaxes: ActualDutiesAndTaxes } }>(
+    `/orders/admin/${orderId}/actual-duties`,
+    input,
+  );
+  return response.data.data.actualDutiesAndTaxes;
+}
+
+export async function clearAdminOrderActualDuties(orderId: string): Promise<void> {
+  await adminApiClient.delete(`/orders/admin/${orderId}/actual-duties`);
 }
 
 export async function getAdminOrderLabelUrl(
