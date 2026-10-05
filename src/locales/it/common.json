@@ -2379,5 +2379,101 @@
         "page": "Pagina {{current}} di {{total}}"
       }
     }
+  },
+  "chat": {
+    "title": "Assistente I Want Jewels",
+    "subtitle": "Risposte dalle nostre guide e FAQ",
+    "open": "Apri chat",
+    "close": "Chiudi chat",
+    "welcome": "Ciao! Chiedimi dei nostri gioielli, della cura, delle misure, della spedizione o dei resi, oppure tocca un'opzione qui sotto.",
+    "placeholder": "Scrivi la tua domanda…",
+    "send": "Invia",
+    "thinking": "Ci penso…",
+    "privacy": "Assistente IA · Non condividere i dati della carta.",
+    "botCheck": "Non siamo riusciti a confermare che non sei un robot. Riprova tra poco o contatta il nostro team.",
+    "unavailable": "Al momento non posso rispondere. Riprova più tardi o contatta il nostro team.",
+    "limitVisitor": "Hai raggiunto il limite di risposte IA di oggi. Accedi per averne di più, o scrivi al nostro team.",
+    "limitAccount": "Hai raggiunto il limite di risposte IA di oggi. Il nostro team è felice di aiutarti.",
+    "logIn": "Accedi",
+    "quick": {
+      "track": {
+        "label": "Traccia il mio ordine"
+      },
+      "shipping": {
+        "label": "Spedizione e resi",
+        "answer": "Tempi, costi di consegna e politica di reso sono nelle nostre FAQ.",
+        "link": "FAQ spedizione e resi"
+      },
+      "size": {
+        "label": "Misure",
+        "answer": "Le nostre guide spiegano misure e lunghezze degli orecchini e come scegliere bene.",
+        "link": "Guide a misure e stile"
+      },
+      "care": {
+        "label": "Cura dei gioielli",
+        "answer": "Ecco come pulire e conservare i tuoi gioielli perché restino brillanti.",
+        "link": "Guide alla cura"
+      },
+      "gifts": {
+        "label": "Carte regalo"
+      },
+      "person": {
+        "label": "Parla con una persona",
+        "link": "Contatta il nostro team"
+      }
+    },
+    "teaser": "Ciao! 👋 Sono il tuo assistente per i gioielli. Chiedimi di misure, cura, spedizione o idee regalo.",
+    "teaserCta": "Fai una domanda",
+    "newChat": "Nuova chat",
+    "quickOptions": "Opzioni rapide",
+    "tools": {
+      "from": "da {{price}}",
+      "previous": "Precedente",
+      "next": "Successivo",
+      "status": {
+        "PENDING": "In attesa di pagamento",
+        "CONFIRMED": "Confermato",
+        "SHIPPED": "Spedito",
+        "DELIVERED": "Consegnato",
+        "CANCELLED": "Annullato",
+        "RETURNED": "Reso"
+      },
+      "yourOrders": "Ecco i tuoi ultimi ordini. Toccane uno per vederne lo stato.",
+      "noOrders": "Non hai ancora ordini.",
+      "shopNow": "Scopri i gioielli",
+      "allOrders": "Tutti i miei ordini",
+      "ordersFailed": "Al momento non è possibile caricare i tuoi ordini.",
+      "orderNotYours": "Questo numero d'ordine non è nel tuo account. Ecco i tuoi ordini:",
+      "orderNotFound": "Ordine non trovato. Controlla il numero d'ordine e l'e-mail usata al pagamento.",
+      "lookupIntro": "Inserisci il numero d'ordine e l'e-mail usata al pagamento.",
+      "orderNumber": "Numero d'ordine (es. IWJ1011)",
+      "email": "E-mail",
+      "find": "Trova il mio ordine",
+      "orderedOn": "Ordinato il {{date}}",
+      "items_one": "{{count}} articolo",
+      "items_other": "{{count}} articoli",
+      "progress": "Avanzamento dell'ordine",
+      "carrier": "Spedito con {{carrier}}",
+      "trackParcel": "Traccia il pacco",
+      "expected": "Previsto il {{date}}",
+      "deliveredOn": "Consegnato il {{date}}",
+      "lastUpdate": "Ultimo aggiornamento",
+      "viewOrder": "Vedi l'ordine",
+      "notShippedYet": "Non ancora spedito. Riceverai un link di tracciamento via e-mail appena partirà.",
+      "personIntro": "Scrivi il tuo messaggio e il nostro team ti risponderà via e-mail.",
+      "personIntroAccount": "Scrivi il tuo messaggio e il nostro team ti risponderà in I miei ticket e via e-mail.",
+      "name": "Il tuo nome",
+      "message": "Il tuo messaggio",
+      "sendMessage": "Invia messaggio",
+      "sent": "Grazie! Il tuo messaggio è stato inviato. Ti risponderemo presto.",
+      "ticketSent": "Grazie! Abbiamo aperto il ticket {{id}}. Troverai la nostra risposta in I miei ticket.",
+      "myTickets": "I miei ticket",
+      "sendFailed": "Invio non riuscito. Riprova o usa la nostra pagina contatti.",
+      "giftCardsIntro": "Le nostre gift card vengono inviate via e-mail. Scegli un importo:",
+      "allGiftCards": "Tutte le gift card",
+      "myGiftCardsIntro": "Le tue gift card:",
+      "myGiftCard": "Carta {{code}} — saldo {{balance}}",
+      "myGiftCards": "Le mie gift card"
+    }
   }
 }

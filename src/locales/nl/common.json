@@ -2348,5 +2348,101 @@
         "page": "Pagina {{current}} van {{total}}"
       }
     }
+  },
+  "chat": {
+    "title": "I Want Jewels assistent",
+    "subtitle": "Antwoorden uit onze gidsen en FAQ",
+    "open": "Chat openen",
+    "close": "Chat sluiten",
+    "welcome": "Hoi! Vraag me alles over onze sieraden, onderhoud, maten, verzending of retouren, of tik hieronder op een optie.",
+    "placeholder": "Typ je vraag…",
+    "send": "Versturen",
+    "thinking": "Even denken…",
+    "privacy": "AI-assistent · Deel geen kaartgegevens.",
+    "botCheck": "We konden niet bevestigen dat je geen robot bent. Probeer het zo opnieuw of neem contact op met ons team.",
+    "unavailable": "Ik kan nu niet antwoorden. Probeer het later opnieuw of neem contact op met ons team.",
+    "limitVisitor": "Je hebt de limiet voor AI-antwoorden van vandaag bereikt. Log in voor meer, of stuur ons team een bericht.",
+    "limitAccount": "Je hebt de limiet voor AI-antwoorden van vandaag bereikt. Ons team helpt je graag verder.",
+    "logIn": "Inloggen",
+    "quick": {
+      "track": {
+        "label": "Bestelling volgen"
+      },
+      "shipping": {
+        "label": "Verzending & retour",
+        "answer": "Levertijden, kosten en ons retourbeleid staan in onze FAQ.",
+        "link": "FAQ verzending & retour"
+      },
+      "size": {
+        "label": "Maten",
+        "answer": "Onze gidsen leggen oorbelmaten, lengtes en de juiste pasvorm uit.",
+        "link": "Maat- en stijlgidsen"
+      },
+      "care": {
+        "label": "Sieradenonderhoud",
+        "answer": "Zo maak je je sieraden schoon en bewaar je ze zodat ze blijven glanzen.",
+        "link": "Onderhoudsgidsen"
+      },
+      "gifts": {
+        "label": "Cadeaubonnen"
+      },
+      "person": {
+        "label": "Met iemand praten",
+        "link": "Contact met ons team"
+      }
+    },
+    "teaser": "Hoi! 👋 Ik ben je sieradenassistent. Vraag me naar maten, onderhoud, verzending of cadeau-ideeën.",
+    "teaserCta": "Stel een vraag",
+    "newChat": "Nieuwe chat",
+    "quickOptions": "Snelle opties",
+    "tools": {
+      "from": "vanaf {{price}}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "status": {
+        "PENDING": "Wacht op betaling",
+        "CONFIRMED": "Bevestigd",
+        "SHIPPED": "Verzonden",
+        "DELIVERED": "Bezorgd",
+        "CANCELLED": "Geannuleerd",
+        "RETURNED": "Geretourneerd"
+      },
+      "yourOrders": "Hier zijn je laatste bestellingen. Tik op een bestelling om de status te zien.",
+      "noOrders": "Je hebt nog geen bestellingen.",
+      "shopNow": "Bekijk sieraden",
+      "allOrders": "Al mijn bestellingen",
+      "ordersFailed": "Je bestellingen kunnen nu niet worden geladen.",
+      "orderNotYours": "Dit bestelnummer staat niet in je account. Hier zijn je bestellingen:",
+      "orderNotFound": "Deze bestelling is niet gevonden. Controleer het bestelnummer en het e-mailadres dat je bij het afrekenen gebruikte.",
+      "lookupIntro": "Vul je bestelnummer in en het e-mailadres dat je bij het afrekenen gebruikte.",
+      "orderNumber": "Bestelnummer (bijv. IWJ1011)",
+      "email": "E-mail",
+      "find": "Vind mijn bestelling",
+      "orderedOn": "Besteld op {{date}}",
+      "items_one": "{{count}} artikel",
+      "items_other": "{{count}} artikelen",
+      "progress": "Voortgang bestelling",
+      "carrier": "Verzonden met {{carrier}}",
+      "trackParcel": "Volg pakket",
+      "expected": "Verwacht op {{date}}",
+      "deliveredOn": "Bezorgd op {{date}}",
+      "lastUpdate": "Laatste update",
+      "viewOrder": "Bekijk bestelling",
+      "notShippedYet": "Nog niet verzonden. Je krijgt een trackinglink per e-mail zodra hij onderweg is.",
+      "personIntro": "Schrijf je bericht en ons team antwoordt per e-mail.",
+      "personIntroAccount": "Schrijf je bericht en ons team antwoordt in Mijn tickets en per e-mail.",
+      "name": "Je naam",
+      "message": "Je bericht",
+      "sendMessage": "Bericht versturen",
+      "sent": "Bedankt! Je bericht is verstuurd. We nemen snel contact op.",
+      "ticketSent": "Bedankt! We hebben ticket {{id}} geopend. Ons antwoord vind je onder Mijn tickets.",
+      "myTickets": "Mijn tickets",
+      "sendFailed": "Versturen is niet gelukt. Probeer het opnieuw of gebruik onze contactpagina.",
+      "giftCardsIntro": "Onze cadeaukaarten worden per e-mail bezorgd. Kies een bedrag:",
+      "allGiftCards": "Alle cadeaukaarten",
+      "myGiftCardsIntro": "Jouw cadeaukaarten:",
+      "myGiftCard": "Kaart {{code}} — saldo {{balance}}",
+      "myGiftCards": "Mijn cadeaukaarten"
+    }
   }
 }

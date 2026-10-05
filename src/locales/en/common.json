@@ -2348,5 +2348,101 @@
         "page": "Page {{current}} of {{total}}"
       }
     }
+  },
+  "chat": {
+    "title": "I Want Jewels assistant",
+    "subtitle": "Answers from our guides and FAQ",
+    "open": "Open chat",
+    "close": "Close chat",
+    "welcome": "Hi! Ask me about our jewellery, care, sizing, shipping or returns, or tap a quick option below.",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "thinking": "Thinking…",
+    "privacy": "AI assistant · Please don't share card details.",
+    "botCheck": "We couldn't confirm you're not a robot. Please try again in a moment, or contact our team.",
+    "unavailable": "I can't answer right now. Please try again later, or contact our team.",
+    "limitVisitor": "You've reached today's limit for AI answers. Log in for more, or send our team a message.",
+    "limitAccount": "You've reached today's limit for AI answers. Our team is happy to help with anything else.",
+    "logIn": "Log in",
+    "quick": {
+      "track": {
+        "label": "Track my order"
+      },
+      "shipping": {
+        "label": "Shipping & returns",
+        "answer": "Delivery times, costs and our returns policy are all in our FAQ.",
+        "link": "Shipping & returns FAQ"
+      },
+      "size": {
+        "label": "Sizes",
+        "answer": "Our guides explain earring sizes, lengths and how to pick the right fit.",
+        "link": "Size and style guides"
+      },
+      "care": {
+        "label": "Jewellery care",
+        "answer": "Here's how to clean and store your jewellery so it keeps its shine.",
+        "link": "Jewellery care guides"
+      },
+      "gifts": {
+        "label": "Gift cards"
+      },
+      "person": {
+        "label": "Talk to a person",
+        "link": "Contact our team"
+      }
+    },
+    "teaser": "Hi! 👋 I'm your jewellery assistant. Ask me about sizes, care, shipping or gift ideas.",
+    "teaserCta": "Ask a question",
+    "newChat": "New chat",
+    "quickOptions": "Quick options",
+    "tools": {
+      "from": "from {{price}}",
+      "previous": "Previous",
+      "next": "Next",
+      "status": {
+        "PENDING": "Awaiting payment",
+        "CONFIRMED": "Confirmed",
+        "SHIPPED": "Shipped",
+        "DELIVERED": "Delivered",
+        "CANCELLED": "Cancelled",
+        "RETURNED": "Returned"
+      },
+      "yourOrders": "Here are your latest orders. Tap one to see its status.",
+      "noOrders": "You don't have any orders yet.",
+      "shopNow": "Shop jewellery",
+      "allOrders": "All my orders",
+      "ordersFailed": "Sorry, I couldn't load your orders right now.",
+      "orderNotYours": "I couldn't find that order number in your account. Here are your orders:",
+      "orderNotFound": "I couldn't find that order. Please check the order number and the email you used at checkout.",
+      "lookupIntro": "Enter your order number and the email you used at checkout.",
+      "orderNumber": "Order number (e.g. IWJ1011)",
+      "email": "Email",
+      "find": "Find my order",
+      "orderedOn": "Ordered {{date}}",
+      "items_one": "{{count}} item",
+      "items_other": "{{count}} items",
+      "progress": "Order progress",
+      "carrier": "Shipped with {{carrier}}",
+      "trackParcel": "Track parcel",
+      "expected": "Expected {{date}}",
+      "deliveredOn": "Delivered {{date}}",
+      "lastUpdate": "Latest update",
+      "viewOrder": "View order",
+      "notShippedYet": "Not shipped yet. You'll get a tracking link by email once it's on its way.",
+      "personIntro": "Write your message and our team will reply by email.",
+      "personIntroAccount": "Write your message and our team will reply in My tickets and by email.",
+      "name": "Your name",
+      "message": "Your message",
+      "sendMessage": "Send message",
+      "sent": "Thanks! Your message has been sent. We'll get back to you soon.",
+      "ticketSent": "Thanks! We've opened ticket {{id}}. You'll find our reply under My tickets.",
+      "myTickets": "My tickets",
+      "sendFailed": "Sorry, that didn't send. Please try again or use our contact page.",
+      "giftCardsIntro": "Our gift cards are delivered by email. Pick an amount:",
+      "allGiftCards": "All gift cards",
+      "myGiftCardsIntro": "Your gift cards:",
+      "myGiftCard": "Card {{code}} — balance {{balance}}",
+      "myGiftCards": "My gift cards"
+    }
   }
 }

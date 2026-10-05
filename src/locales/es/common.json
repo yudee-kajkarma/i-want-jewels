@@ -2379,5 +2379,101 @@
         "page": "Página {{current}} de {{total}}"
       }
     }
+  },
+  "chat": {
+    "title": "Asistente de I Want Jewels",
+    "subtitle": "Respuestas de nuestras guías y preguntas frecuentes",
+    "open": "Abrir chat",
+    "close": "Cerrar chat",
+    "welcome": "¡Hola! Pregúntame por nuestras joyas, su cuidado, tallas, envíos o devoluciones, o toca una opción de abajo.",
+    "placeholder": "Escribe tu pregunta…",
+    "send": "Enviar",
+    "thinking": "Pensando…",
+    "privacy": "Asistente de IA · No compartas datos de tu tarjeta.",
+    "botCheck": "No pudimos confirmar que no eres un robot. Inténtalo de nuevo en un momento o contacta con nuestro equipo.",
+    "unavailable": "Ahora mismo no puedo responder. Inténtalo más tarde o contacta con nuestro equipo.",
+    "limitVisitor": "Has alcanzado el límite de respuestas de IA de hoy. Inicia sesión para tener más, o escribe a nuestro equipo.",
+    "limitAccount": "Has alcanzado el límite de respuestas de IA de hoy. Nuestro equipo te ayudará encantado.",
+    "logIn": "Iniciar sesión",
+    "quick": {
+      "track": {
+        "label": "Seguir mi pedido"
+      },
+      "shipping": {
+        "label": "Envíos y devoluciones",
+        "answer": "Plazos, costes de envío y nuestra política de devoluciones están en las preguntas frecuentes.",
+        "link": "Preguntas sobre envíos y devoluciones"
+      },
+      "size": {
+        "label": "Tallas",
+        "answer": "Nuestras guías explican tamaños y largos de pendientes y cómo elegir bien.",
+        "link": "Guías de tallas y estilo"
+      },
+      "care": {
+        "label": "Cuidado de joyas",
+        "answer": "Así puedes limpiar y guardar tus joyas para que sigan brillando.",
+        "link": "Guías de cuidado"
+      },
+      "gifts": {
+        "label": "Tarjetas regalo"
+      },
+      "person": {
+        "label": "Hablar con una persona",
+        "link": "Contactar con nuestro equipo"
+      }
+    },
+    "teaser": "¡Hola! 👋 Soy tu asistente de joyería. Pregúntame por tallas, cuidado, envíos o ideas de regalo.",
+    "teaserCta": "Haz una pregunta",
+    "newChat": "Nuevo chat",
+    "quickOptions": "Opciones rápidas",
+    "tools": {
+      "from": "desde {{price}}",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": {
+        "PENDING": "Pendiente de pago",
+        "CONFIRMED": "Confirmado",
+        "SHIPPED": "Enviado",
+        "DELIVERED": "Entregado",
+        "CANCELLED": "Cancelado",
+        "RETURNED": "Devuelto"
+      },
+      "yourOrders": "Estos son tus últimos pedidos. Toca uno para ver su estado.",
+      "noOrders": "Todavía no tienes pedidos.",
+      "shopNow": "Ver joyas",
+      "allOrders": "Todos mis pedidos",
+      "ordersFailed": "Ahora mismo no se pueden cargar tus pedidos.",
+      "orderNotYours": "Ese número de pedido no está en tu cuenta. Estos son tus pedidos:",
+      "orderNotFound": "No encontramos ese pedido. Revisa el número de pedido y el correo que usaste al pagar.",
+      "lookupIntro": "Escribe tu número de pedido y el correo que usaste al pagar.",
+      "orderNumber": "Número de pedido (p. ej. IWJ1011)",
+      "email": "Correo electrónico",
+      "find": "Buscar mi pedido",
+      "orderedOn": "Pedido el {{date}}",
+      "items_one": "{{count}} artículo",
+      "items_other": "{{count}} artículos",
+      "progress": "Progreso del pedido",
+      "carrier": "Enviado con {{carrier}}",
+      "trackParcel": "Seguir paquete",
+      "expected": "Previsto el {{date}}",
+      "deliveredOn": "Entregado el {{date}}",
+      "lastUpdate": "Última actualización",
+      "viewOrder": "Ver pedido",
+      "notShippedYet": "Aún no se ha enviado. Recibirás un enlace de seguimiento por correo cuando esté en camino.",
+      "personIntro": "Escribe tu mensaje y nuestro equipo te responderá por correo.",
+      "personIntroAccount": "Escribe tu mensaje y nuestro equipo te responderá en Mis tickets y por correo.",
+      "name": "Tu nombre",
+      "message": "Tu mensaje",
+      "sendMessage": "Enviar mensaje",
+      "sent": "¡Gracias! Tu mensaje se ha enviado. Te responderemos pronto.",
+      "ticketSent": "¡Gracias! Hemos abierto el ticket {{id}}. Encontrarás nuestra respuesta en Mis tickets.",
+      "myTickets": "Mis tickets",
+      "sendFailed": "No se pudo enviar. Inténtalo de nuevo o usa nuestra página de contacto.",
+      "giftCardsIntro": "Nuestras tarjetas regalo se envían por correo. Elige un importe:",
+      "allGiftCards": "Todas las tarjetas regalo",
+      "myGiftCardsIntro": "Tus tarjetas regalo:",
+      "myGiftCard": "Tarjeta {{code}} — saldo {{balance}}",
+      "myGiftCards": "Mis tarjetas regalo"
+    }
   }
 }

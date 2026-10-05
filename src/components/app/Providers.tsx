@@ -10,6 +10,7 @@ import ClarityPrivacyBoundary from '../analytics/ClarityPrivacyBoundary'
 import ClarityAnalytics from '../analytics/ClarityAnalytics'
 import CartSync from '../cart/CartSync'
 import WishlistSync from '../wishlist/WishlistSync'
+import ChatWidget from '../chat/ChatWidget'
 
 export default function Providers({ children }: { children: ReactNode }) {
   const toastStyle = {
@@ -27,6 +28,7 @@ export default function Providers({ children }: { children: ReactNode }) {
           <CartSync />
           <WishlistSync />
           <ClarityPrivacyBoundary>{children}</ClarityPrivacyBoundary>
+          <ChatWidget />
         <Toaster
           position="bottom-right"
           toastOptions={{

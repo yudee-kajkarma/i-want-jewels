@@ -2379,5 +2379,101 @@
         "page": "Page {{current}} sur {{total}}"
       }
     }
+  },
+  "chat": {
+    "title": "Assistant I Want Jewels",
+    "subtitle": "Réponses tirées de nos guides et FAQ",
+    "open": "Ouvrir le chat",
+    "close": "Fermer le chat",
+    "welcome": "Bonjour ! Posez-moi vos questions sur nos bijoux, l'entretien, les tailles, la livraison ou les retours, ou choisissez une option ci-dessous.",
+    "placeholder": "Votre question…",
+    "send": "Envoyer",
+    "thinking": "Je réfléchis…",
+    "privacy": "Assistant IA · Ne partagez pas vos données de carte.",
+    "botCheck": "Nous n'avons pas pu vérifier que vous n'êtes pas un robot. Réessayez dans un instant ou contactez notre équipe.",
+    "unavailable": "Je ne peux pas répondre pour le moment. Réessayez plus tard ou contactez notre équipe.",
+    "limitVisitor": "Vous avez atteint la limite de réponses IA pour aujourd'hui. Connectez-vous pour en avoir plus, ou écrivez à notre équipe.",
+    "limitAccount": "Vous avez atteint la limite de réponses IA pour aujourd'hui. Notre équipe se fera un plaisir de vous aider.",
+    "logIn": "Se connecter",
+    "quick": {
+      "track": {
+        "label": "Suivre ma commande"
+      },
+      "shipping": {
+        "label": "Livraison & retours",
+        "answer": "Délais, frais de livraison et politique de retour sont dans notre FAQ.",
+        "link": "FAQ livraison & retours"
+      },
+      "size": {
+        "label": "Tailles",
+        "answer": "Nos guides expliquent les tailles et longueurs de boucles d'oreilles et comment bien choisir.",
+        "link": "Guides tailles et style"
+      },
+      "care": {
+        "label": "Entretien des bijoux",
+        "answer": "Voici comment nettoyer et ranger vos bijoux pour qu'ils gardent leur éclat.",
+        "link": "Guides d'entretien"
+      },
+      "gifts": {
+        "label": "Cartes cadeaux"
+      },
+      "person": {
+        "label": "Parler à quelqu'un",
+        "link": "Contacter notre équipe"
+      }
+    },
+    "teaser": "Bonjour ! 👋 Je suis votre assistant bijoux. Posez-moi vos questions sur les tailles, l'entretien, la livraison ou les idées cadeaux.",
+    "teaserCta": "Poser une question",
+    "newChat": "Nouvelle discussion",
+    "quickOptions": "Options rapides",
+    "tools": {
+      "from": "à partir de {{price}}",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "status": {
+        "PENDING": "Paiement en attente",
+        "CONFIRMED": "Confirmée",
+        "SHIPPED": "Expédiée",
+        "DELIVERED": "Livrée",
+        "CANCELLED": "Annulée",
+        "RETURNED": "Retournée"
+      },
+      "yourOrders": "Voici vos dernières commandes. Touchez-en une pour voir son statut.",
+      "noOrders": "Vous n'avez pas encore de commande.",
+      "shopNow": "Voir les bijoux",
+      "allOrders": "Toutes mes commandes",
+      "ordersFailed": "Impossible de charger vos commandes pour le moment.",
+      "orderNotYours": "Ce numéro de commande n'est pas dans votre compte. Voici vos commandes :",
+      "orderNotFound": "Commande introuvable. Vérifiez le numéro de commande et l'e-mail utilisé lors du paiement.",
+      "lookupIntro": "Saisissez votre numéro de commande et l'e-mail utilisé lors du paiement.",
+      "orderNumber": "Numéro de commande (ex. IWJ1011)",
+      "email": "E-mail",
+      "find": "Trouver ma commande",
+      "orderedOn": "Commandée le {{date}}",
+      "items_one": "{{count}} article",
+      "items_other": "{{count}} articles",
+      "progress": "Suivi de la commande",
+      "carrier": "Expédiée avec {{carrier}}",
+      "trackParcel": "Suivre le colis",
+      "expected": "Prévue le {{date}}",
+      "deliveredOn": "Livrée le {{date}}",
+      "lastUpdate": "Dernière mise à jour",
+      "viewOrder": "Voir la commande",
+      "notShippedYet": "Pas encore expédiée. Vous recevrez un lien de suivi par e-mail dès son envoi.",
+      "personIntro": "Écrivez votre message, notre équipe vous répondra par e-mail.",
+      "personIntroAccount": "Écrivez votre message, notre équipe vous répondra dans Mes tickets et par e-mail.",
+      "name": "Votre nom",
+      "message": "Votre message",
+      "sendMessage": "Envoyer",
+      "sent": "Merci ! Votre message a été envoyé. Nous vous répondrons bientôt.",
+      "ticketSent": "Merci ! Nous avons ouvert le ticket {{id}}. Vous trouverez notre réponse dans Mes tickets.",
+      "myTickets": "Mes tickets",
+      "sendFailed": "L'envoi a échoué. Réessayez ou utilisez notre page de contact.",
+      "giftCardsIntro": "Nos cartes cadeaux sont envoyées par e-mail. Choisissez un montant :",
+      "allGiftCards": "Toutes les cartes cadeaux",
+      "myGiftCardsIntro": "Vos cartes cadeaux :",
+      "myGiftCard": "Carte {{code}} — solde {{balance}}",
+      "myGiftCards": "Mes cartes cadeaux"
+    }
   }
 }
