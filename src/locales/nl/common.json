@@ -2443,6 +2443,27 @@
       "myGiftCardsIntro": "Jouw cadeaukaarten:",
       "myGiftCard": "Kaart {{code}} — saldo {{balance}}",
       "myGiftCards": "Mijn cadeaukaarten"
-    }
+    },
+    "home": {
+      "greeting": "Hallo 👋",
+      "greetingName": "Hallo {{name}} 👋",
+      "title": "Waarmee kunnen we helpen?",
+      "ask": "Stel een vraag",
+      "askSub": "Onze AI-assistent antwoordt binnen seconden",
+      "search": "Zoek hulp",
+      "recent": "Je laatste chat",
+      "continue": "Ga verder met het gesprek"
+    },
+    "tabs": {
+      "home": "Start",
+      "messages": "Berichten",
+      "help": "Hulp",
+      "label": "Chatonderdelen"
+    },
+    "help": {
+      "title": "Hulp",
+      "guides": "Gidsen"
+    },
+    "back": "Terug"
   }
 }

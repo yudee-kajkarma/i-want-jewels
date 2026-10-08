@@ -2474,6 +2474,27 @@
       "myGiftCardsIntro": "Vos cartes cadeaux :",
       "myGiftCard": "Carte {{code}} — solde {{balance}}",
       "myGiftCards": "Mes cartes cadeaux"
-    }
+    },
+    "home": {
+      "greeting": "Bonjour 👋",
+      "greetingName": "Bonjour {{name}} 👋",
+      "title": "Comment pouvons-nous vous aider ?",
+      "ask": "Poser une question",
+      "askSub": "Notre assistant IA répond en quelques secondes",
+      "search": "Rechercher de l'aide",
+      "recent": "Votre dernière conversation",
+      "continue": "Reprendre la conversation"
+    },
+    "tabs": {
+      "home": "Accueil",
+      "messages": "Messages",
+      "help": "Aide",
+      "label": "Sections du chat"
+    },
+    "help": {
+      "title": "Aide",
+      "guides": "Guides"
+    },
+    "back": "Retour"
   }
 }

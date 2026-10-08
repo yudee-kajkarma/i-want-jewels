@@ -2443,6 +2443,27 @@
       "myGiftCardsIntro": "Your gift cards:",
       "myGiftCard": "Card {{code}} — balance {{balance}}",
       "myGiftCards": "My gift cards"
-    }
+    },
+    "home": {
+      "greeting": "Hi there 👋",
+      "greetingName": "Hi {{name}} 👋",
+      "title": "How can we help?",
+      "ask": "Ask a question",
+      "askSub": "Our AI assistant answers in seconds",
+      "search": "Search for help",
+      "recent": "Your last chat",
+      "continue": "Continue the conversation"
+    },
+    "tabs": {
+      "home": "Home",
+      "messages": "Messages",
+      "help": "Help",
+      "label": "Chat sections"
+    },
+    "help": {
+      "title": "Help",
+      "guides": "Guides"
+    },
+    "back": "Back"
   }
 }

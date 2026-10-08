@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
-import { MessageCircle, RotateCcw, Send, X } from 'lucide-react'
+import { ChevronLeft, ChevronRight, CircleQuestionMark, Gem, Gift, House, MessageCircle, RotateCcw, Ruler, Search, Send, Sparkles, Truck, Undo2, UserRound, X, type LucideIcon } from 'lucide-react'
 import { Link } from '@/lib/router'
 import { useAuth } from '../../context/AuthContext'
 import { lookupGuestOrder, needsBotCheck, sendChatMessage, type ChatAction, type ChatLink, type ChatProduct, type ChatTurn } from '../../services/chatService'
@@ -80,6 +80,19 @@ function toView(o: Order): ChatOrderView {
 
 type QuickId = 'track' | 'shipping' | 'size' | 'care' | 'gifts' | 'person'
 const QUICK_IDS: QuickId[] = ['track', 'shipping', 'size', 'care', 'gifts', 'person']
+const QUICK_ICONS: Record<QuickId, LucideIcon> = { track: Truck, shipping: Undo2, size: Ruler, care: Sparkles, gifts: Gift, person: UserRound }
+/** The four topics on the home screen; the Help tab lists all of them. */
+const HOME_TOPICS: QuickId[] = ['track', 'shipping', 'gifts', 'person']
+/** Guides linked from the Help tab. */
+const GUIDES: Array<{ key: string; url: string }> = [
+  { key: 'quick.shipping.link', url: '/faq' },
+  { key: 'quick.size.link', url: '/resources' },
+  { key: 'quick.care.link', url: '/resources/jewellery-care-guides' },
+  { key: 'quick.person.link', url: '/contact' },
+]
+
+/** Home (welcome screen), the conversation, or the help topics. */
+type View = 'home' | 'chat' | 'help'
 
 /** The welcome greeting: small at the icon → grown in → shrinking back → gone. */
 type TeaserPhase = 'off' | 'mount' | 'in' | 'out'
@@ -124,9 +137,11 @@ function loadTurnstile(): Promise<void> {
 export default function ChatWidget() {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'chat' })
   const pathname = usePathname() ?? ''
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, session } = useAuth()
 
   const [open, setOpen] = useState(false)
+  const [view, setView] = useState<View>('home')
+  const [homeQuery, setHomeQuery] = useState('')
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
@@ -230,12 +245,12 @@ export default function ChatWidget() {
     box.style.height = 'auto'
     box.style.height = `${Math.min(box.scrollHeight + border, max)}px`
     box.style.overflowY = box.scrollHeight + border > max ? 'auto' : 'hidden'
-  }, [input, open])
+  }, [input, open, view])
 
   // Keep the newest message in view.
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' })
-  }, [messages, busy])
+  }, [messages, busy, view])
 
   // Prepare the invisible bot check when a visitor opens the chat.
   useEffect(() => {
@@ -456,16 +471,42 @@ export default function ChatWidget() {
     add({ from: 'bot', text: t(`quick.${id}.answer`), links: [{ title: t(`quick.${id}.link`), url: to[id] }] })
   }
 
+  /** A topic tapped on the home screen or Help tab: open the conversation and run it there. */
+  function openTopic(id: QuickId) {
+    setView('chat')
+    quick(id)
+  }
+
+  /** "Ask a question" on the home screen: open the conversation, ready to type. */
+  function startQuestion() {
+    setView('chat')
+    window.setTimeout(() => inputRef.current?.focus(), 50)
+  }
+
+  /** The home screen's search box sends its text as a question in the conversation. */
+  function askFromHome(event: FormEvent) {
+    event.preventDefault()
+    const text = homeQuery.trim()
+    if (!text || busy) return
+    setHomeQuery('')
+    setView('chat')
+    void ask(text)
+  }
+
   async function send(event?: FormEvent) {
     event?.preventDefault()
     const text = input.trim()
     if (!text || busy) return
+    setInput('')
+    await ask(text)
+  }
+
+  async function ask(text: string) {
 
     const history: ChatTurn[] = messages
       .filter((m) => m.id !== 1 && m.text) // the greeting and cards-only messages aren't part of the conversation
       .map((m) => ({ role: m.from === 'you' ? 'user' : 'assistant', content: m.text }))
 
-    setInput('')
     add({ from: 'you', text })
     setBusy(true)
     try {
@@ -510,6 +551,26 @@ export default function ChatWidget() {
   if (hidden) return null
 
   const showQuick = messages.length <= 1
+  const conversation = messages.filter((m) => m.id !== 1)
+  const lastBot = [...conversation].reverse().find((m) => m.from === 'bot')
+  const firstName = isAuthenticated ? session?.firstName?.trim() : ''
+
+  const tabs: Array<{ id: View; label: string; icon: LucideIcon }> = [
+    { id: 'home', label: t('tabs.home'), icon: House },
+    { id: 'chat', label: t('tabs.messages'), icon: MessageCircle },
+    { id: 'help', label: t('tabs.help'), icon: CircleQuestionMark },
+  ]
+  const closeButton = (
+    <button
+      type="button"
+      onClick={() => setOpen(false)}
+      aria-label={t('close')}
+      className="rounded-full p-1 text-white/80 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+    >
+      <X className="h-5 w-5" />
+    </button>
+  )
+  const tile = 'flex w-full items-center gap-2.5 rounded-[14px] bg-white px-3.5 py-3 text-left shadow-[0_2px_8px_rgba(31,22,17,0.06)] transition hover:shadow-[0_4px_14px_rgba(31,22,17,0.1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8f2a60]'
 
   return (
     <>
@@ -519,34 +580,159 @@ export default function ChatWidget() {
           aria-label={t('title')}
           className="fixed right-4 bottom-[152px] z-50 flex h-[min(680px,calc(100dvh-176px))] w-[calc(100vw-2rem)] max-w-[420px] flex-col md:h-[min(680px,calc(100dvh-128px))] overflow-hidden rounded-2xl border border-[#eadfd4] bg-white font-poppins shadow-[0_24px_60px_rgba(31,22,17,0.22)] md:bottom-24"
         >
-          <header className="flex items-start justify-between gap-3 bg-[#1f2732] px-4 py-3 text-white">
-            <div>
-              <p className="text-sm font-semibold">{t('title')}</p>
-              <p className="text-[11px] text-white/70">{t('subtitle')}</p>
+          {view === 'home' ? (
+            // Welcome screen: greeting, ask box, topics and the last conversation.
+            <div className="flex-1 overflow-y-auto bg-[#f5f2f4]">
+              <div className="bg-[linear-gradient(160deg,#8f2a60,#4b1430)] px-5 pb-[70px] pt-4 text-white">
+                <div className="flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-[15px] font-semibold tracking-wide">
+                    <Gem className="h-[18px] w-[18px]" />
+                    i want jewels
+                  </span>
+                  {closeButton}
+                </div>
+                <div aria-hidden className="mt-4 flex">
+                  <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full border-2 border-[#6c1f48] bg-[#c9a24b] text-[#3b2a0b]"><Sparkles className="h-4 w-4" /></span>
+                  <span className="-ml-2 flex h-[34px] w-[34px] items-center justify-center rounded-full border-2 border-[#6c1f48] bg-[#f0d9e5] text-[11px] font-semibold text-[#8f2a60]">IW</span>
+                  <span className="-ml-2 flex h-[34px] w-[34px] items-center justify-center rounded-full border-2 border-[#6c1f48] bg-[#f0d9e5] text-[11px] font-semibold text-[#8f2a60]">AI</span>
+                </div>
+                <h2 className="mt-3.5 text-[26px] font-bold leading-tight">
+                  <span className="block text-[22px] opacity-75">{firstName ? t('home.greetingName', { name: firstName }) : t('home.greeting')}</span>
+                  {t('home.title')}
+                </h2>
+              </div>
+
+              <div className="-mt-[54px] flex flex-col gap-2.5 px-3.5 pb-4">
+                <button type="button" onClick={startQuestion} className={tile}>
+                  <span className="min-w-0">
+                    <span className="block text-[13.5px] font-semibold text-[#1f2732]">{t('home.ask')}</span>
+                    <span className="block text-[12px] text-[#6b5f68]">{t('home.askSub')}</span>
+                  </span>
+                  <Send className="ml-auto h-[18px] w-[18px] shrink-0 text-[#8f2a60]" />
+                </button>
+
+                <form onSubmit={askFromHome} className={`${tile} focus-within:outline focus-within:outline-2 focus-within:outline-[#8f2a60]`}>
+                  <label htmlFor="iwj-chat-home-search" className="sr-only">{t('home.search')}</label>
+                  <input
+                    id="iwj-chat-home-search"
+                    value={homeQuery}
+                    onChange={(e) => setHomeQuery(e.target.value)}
+                    maxLength={300}
+                    placeholder={t('home.search')}
+                    className="min-w-0 flex-1 bg-transparent text-[13px] text-[#1f2732] outline-none placeholder:text-[#6b5f68]"
+                  />
+                  <button type="submit" aria-label={t('send')} className="shrink-0 text-[#8f2a60]">
+                    <Search className="h-[18px] w-[18px]" />
+                  </button>
+                </form>
+
+                <div className="grid grid-cols-2 gap-2">
+                  {HOME_TOPICS.map((id) => {
+                    const Icon = QUICK_ICONS[id]
+                    return (
+                      <button
+                        key={id}
+                        type="button"
+                        onClick={() => openTopic(id)}
+                        className="flex flex-col items-start gap-2.5 rounded-[14px] bg-white p-3 text-left text-[12.5px] font-semibold text-[#1f2732] shadow-[0_2px_8px_rgba(31,22,17,0.06)] transition hover:shadow-[0_4px_14px_rgba(31,22,17,0.1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8f2a60]"
+                      >
+                        <span className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-[#f6eff3] text-[#8f2a60]"><Icon className="h-[18px] w-[18px]" /></span>
+                        {t(`quick.${id}.label`)}
+                      </button>
+                    )
+                  })}
+                </div>
+
+                {conversation.some((m) => m.from === 'you') ? (
+                  <button type="button" onClick={() => setView('chat')} className={tile}>
+                    {lastBot?.products?.[0]?.image ? (
+                      <img src={lastBot.products[0].image} alt="" className="h-10 w-10 shrink-0 rounded-[10px] object-cover" />
+                    ) : (
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-[#f6eff3] text-[#8f2a60]"><MessageCircle className="h-[18px] w-[18px]" /></span>
+                    )}
+                    <span className="min-w-0">
+                      <span className="block text-[13.5px] font-semibold text-[#1f2732]">{t('home.recent')}</span>
+                      <span className="block truncate text-[12px] text-[#6b5f68]">{lastBot?.text || lastBot?.products?.[0]?.title || t('home.continue')}</span>
+                    </span>
+                    <ChevronRight className="ml-auto h-[18px] w-[18px] shrink-0 text-[#8f2a60]" />
+                  </button>
+                ) : null}
+              </div>
             </div>
-            <div className="flex items-center gap-1">
-              {messages.length > 1 ? (
+          ) : null}
+
+          {view === 'help' ? (
+            <div className="flex flex-1 flex-col overflow-hidden bg-[#f5f2f4]">
+              <header className="flex items-center justify-between bg-[linear-gradient(160deg,#8f2a60,#4b1430)] px-4 py-3.5 text-white">
+                <p className="text-[15px] font-semibold">{t('help.title')}</p>
+                {closeButton}
+              </header>
+              <div className="flex-1 space-y-3 overflow-y-auto p-3.5">
+                <div className="overflow-hidden rounded-[14px] bg-white shadow-[0_2px_8px_rgba(31,22,17,0.06)]">
+                  {QUICK_IDS.map((id) => {
+                    const Icon = QUICK_ICONS[id]
+                    return (
+                      <button
+                        key={id}
+                        type="button"
+                        onClick={() => openTopic(id)}
+                        className="flex w-full items-center gap-3 border-t border-[#f2edf0] px-3.5 py-3 text-left text-[13.5px] text-[#1f2732] first:border-t-0 hover:bg-[#faf7f9] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#8f2a60]"
+                      >
+                        <span className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-[#f6eff3] text-[#8f2a60]"><Icon className="h-4 w-4" /></span>
+                        {t(`quick.${id}.label`)}
+                        <ChevronRight className="ml-auto h-4 w-4 text-[#b6aab2]" />
+                      </button>
+                    )
+                  })}
+                </div>
+                <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#8a7f87]">{t('help.guides')}</p>
+                <div className="overflow-hidden rounded-[14px] bg-white shadow-[0_2px_8px_rgba(31,22,17,0.06)]">
+                  {GUIDES.map((guide) => (
+                    <Link
+                      key={guide.url}
+                      to={guide.url}
+                      className="flex items-center border-t border-[#f2edf0] px-3.5 py-3 text-[13.5px] text-[#1f2732] first:border-t-0 hover:bg-[#faf7f9]"
+                    >
+                      {t(guide.key)}
+                      <ChevronRight className="ml-auto h-4 w-4 text-[#b6aab2]" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : null}
+
+          {view === 'chat' ? (
+            <>
+              <header className="flex items-center gap-2 bg-[linear-gradient(160deg,#8f2a60,#4b1430)] px-2.5 py-2.5 text-white">
                 <button
                   type="button"
-                  onClick={newChat}
-                  disabled={busy}
-                  className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[12px] font-medium text-white/85 transition hover:bg-white/10 hover:text-white disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                  onClick={() => setView('home')}
+                  aria-label={t('back')}
+                  className="rounded-full p-1 text-white/85 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
                 >
-                  <RotateCcw className="h-3.5 w-3.5" />
-                  {t('newChat')}
+                  <ChevronLeft className="h-5 w-5" />
                 </button>
-              ) : null}
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label={t('close')}
-                className="rounded-full p-1 text-white/80 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-          </header>
-
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/15"><Gem className="h-4 w-4" /></span>
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-semibold">{t('title')}</p>
+                  <p className="truncate text-[11px] text-white/70">{t('subtitle')}</p>
+                </div>
+                <div className="ml-auto flex items-center gap-1">
+                  {messages.length > 1 ? (
+                    <button
+                      type="button"
+                      onClick={newChat}
+                      disabled={busy}
+                      className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-1 text-[12px] font-medium text-white/85 transition hover:bg-white/10 hover:text-white disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+                    >
+                      <RotateCcw className="h-3.5 w-3.5" />
+                      {t('newChat')}
+                    </button>
+                  ) : null}
+                  {closeButton}
+                </div>
+              </header>
           <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4" aria-live="polite">
             {messages.map((m) => (
               <div key={m.id} className={m.from === 'you' ? 'flex justify-end' : 'flex justify-start'}>
@@ -605,7 +791,6 @@ export default function ChatWidget() {
           </div>
 
           <form onSubmit={send} className="border-t border-[#eadfd4] px-3 pb-2 pt-2.5">
-            <div ref={botBoxRef} />
             {!showQuick ? (
               <div
                 role="group"
@@ -654,6 +839,28 @@ export default function ChatWidget() {
             </div>
             <p className="mt-1.5 text-[10.5px] text-[#8a7f87]">{t('privacy')}</p>
           </form>
+            </>
+          ) : null}
+
+          {/* The bot check stays mounted on every screen, so it is ready when a question is sent. */}
+          <div ref={botBoxRef} className="empty:hidden" />
+
+          {view !== 'chat' ? (
+            <nav aria-label={t('tabs.label')} className="flex border-t border-[#ece6ea] bg-white pb-3 pt-2">
+              {tabs.map(({ id, label, icon: Icon }) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => (id === 'chat' ? startQuestion() : setView(id))}
+                  aria-current={view === id ? 'page' : undefined}
+                  className={`flex flex-1 flex-col items-center gap-0.5 text-[11px] font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8f2a60] ${view === id ? 'text-[#8f2a60]' : 'text-[#9a8f98] hover:text-[#6b5f68]'}`}
+                >
+                  <Icon className="h-5 w-5" />
+                  {label}
+                </button>
+              ))}
+            </nav>
+          ) : null}
         </section>
       ) : null}
 
@@ -711,10 +918,15 @@ export default function ChatWidget() {
         aria-expanded={open}
         className="fixed right-4 bottom-[84px] z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#8f2a60] text-white shadow-[0_12px_30px_rgba(143,42,96,0.4)] transition hover:bg-[#74224f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8f2a60] md:bottom-6"
       >
-        {teaser === 'in' && !open ? (
-          <span aria-hidden className="absolute inset-0 rounded-full bg-[#8f2a60]/40 motion-safe:animate-ping" />
-        ) : null}
-        {open ? <X className="relative h-6 w-6" /> : <MessageCircle className="relative h-6 w-6" />}
+        {open ? (
+          <X className="relative h-6 w-6" />
+        ) : (
+          // While closed, the icon keeps flipping between a chat bubble and a diamond.
+          <span className="relative h-6 w-6 [transform-style:preserve-3d] motion-safe:animate-chat-flip">
+            <MessageCircle className="absolute inset-0 h-6 w-6 [backface-visibility:hidden]" />
+            <Gem className="absolute inset-0 h-6 w-6 [backface-visibility:hidden] [transform:rotateY(180deg)]" />
+          </span>
+        )}
       </button>
     </>
   )

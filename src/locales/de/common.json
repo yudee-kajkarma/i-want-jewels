@@ -2443,6 +2443,27 @@
       "myGiftCardsIntro": "Deine Geschenkkarten:",
       "myGiftCard": "Karte {{code}} — Guthaben {{balance}}",
       "myGiftCards": "Meine Geschenkkarten"
-    }
+    },
+    "home": {
+      "greeting": "Hallo 👋",
+      "greetingName": "Hallo {{name}} 👋",
+      "title": "Wie können wir helfen?",
+      "ask": "Stell eine Frage",
+      "askSub": "Unser KI-Assistent antwortet in Sekunden",
+      "search": "Hilfe suchen",
+      "recent": "Dein letzter Chat",
+      "continue": "Gespräch fortsetzen"
+    },
+    "tabs": {
+      "home": "Start",
+      "messages": "Nachrichten",
+      "help": "Hilfe",
+      "label": "Chat-Bereiche"
+    },
+    "help": {
+      "title": "Hilfe",
+      "guides": "Ratgeber"
+    },
+    "back": "Zurück"
   }
 }
