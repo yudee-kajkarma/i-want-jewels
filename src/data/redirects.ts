@@ -135,6 +135,63 @@ export const resourceRedirects: Redirect[] = [
   { id: 'R10', from: '/resources/jewellery-gift-guides/anniversary-jewellery-gifts', to: '/resources/jewellery-gift-guides/anniversary-jewellery-gifts-for-her' },
 ]
 
+/**
+ * Guides published under /resources on 2026-10-09 and moved to /blogs the same
+ * day (the site owner wants them as blog posts). Their six new categories were
+ * removed too, so those pages point to the blog list.
+ */
+export const movedToBlogRedirects: Redirect[] = [
+  { id: 'M1', from: '/resources/bridal-jewellery-guides/bridal-necklace-for-wedding-dress', to: '/blogs/bridal-necklace-for-wedding-dress' },
+  { id: 'M2', from: '/resources/earring-style-guides/jewellery-for-orange-or-rust-dress', to: '/blogs/jewellery-for-orange-or-rust-dress' },
+  { id: 'M3', from: '/resources/necklace-guides/necklace-clasp-types', to: '/blogs/necklace-clasp-types' },
+  { id: 'M4', from: '/resources/jewellery-gift-guides/diamond-jewellery-gifts-under-200-euros', to: '/blogs/diamond-jewellery-gifts-under-200-euros' },
+  { id: 'M5', from: '/resources/lab-grown-diamond-guides/lab-grown-diamond-necklace-buying-guide', to: '/blogs/lab-grown-diamond-necklace-buying-guide' },
+  { id: 'M6', from: '/resources/necklace-guides/necklace-length-guide-40-45-50cm', to: '/blogs/necklace-length-guide-40-45-50cm' },
+  { id: 'M7', from: '/resources/lab-grown-diamond-guides/diamond-pendant-size-guide', to: '/blogs/diamond-pendant-size-guide' },
+  { id: 'M8', from: '/resources/jewellery-gift-guides/necklace-or-bracelet-gift', to: '/blogs/necklace-or-bracelet-gift' },
+  { id: 'M9', from: '/resources/necklace-guides/types-of-necklace-chains', to: '/blogs/types-of-necklace-chains' },
+  { id: 'M10', from: '/resources/necklace-guides/necklace-chain-thickness-guide', to: '/blogs/necklace-chain-thickness-guide' },
+  { id: 'M11', from: '/resources/necklace-guides/how-to-use-a-necklace-extender', to: '/blogs/how-to-use-a-necklace-extender' },
+  { id: 'M12', from: '/resources/necklace-guides/pendant-necklace-styles', to: '/blogs/pendant-necklace-styles' },
+  { id: 'M13', from: '/resources/necklace-guides/pendant-and-chain-compatibility', to: '/blogs/pendant-and-chain-compatibility' },
+  { id: 'M14', from: '/resources/ring-guides/types-of-fashion-rings', to: '/blogs/types-of-fashion-rings' },
+  { id: 'M15', from: '/resources/ring-guides/ring-band-width-guide', to: '/blogs/ring-band-width-guide' },
+  { id: 'M16', from: '/resources/ring-guides/rings-for-short-fingers-and-small-hands', to: '/blogs/rings-for-short-fingers-and-small-hands' },
+  { id: 'M17', from: '/resources/ring-guides/which-finger-to-wear-a-fashion-ring', to: '/blogs/which-finger-to-wear-a-fashion-ring' },
+  { id: 'M18', from: '/resources/ring-guides/diamond-band-vs-solitaire-ring', to: '/blogs/diamond-band-vs-solitaire-ring' },
+  { id: 'M19', from: '/resources/earring-style-guides/earrings-for-face-shape', to: '/blogs/earrings-for-face-shape' },
+  { id: 'M20', from: '/resources/earring-style-guides/jewellery-for-pink-dress', to: '/blogs/jewellery-for-pink-dress' },
+  { id: 'M21', from: '/resources/earring-style-guides/jewellery-for-navy-blue-dress', to: '/blogs/jewellery-for-navy-blue-dress' },
+  { id: 'M22', from: '/resources/earring-style-guides/jewellery-for-cobalt-blue-dress', to: '/blogs/jewellery-for-cobalt-blue-dress' },
+  { id: 'M23', from: '/resources/demi-fine-jewellery-guides/gold-filled-vs-gold-plated-jewellery', to: '/blogs/gold-filled-vs-gold-plated-jewellery' },
+  { id: 'M24', from: '/resources/demi-fine-jewellery-guides/sterling-silver-vs-stainless-steel-jewellery', to: '/blogs/sterling-silver-vs-stainless-steel-jewellery' },
+  { id: 'M25', from: '/resources/jewellery-care-guides/rhodium-plated-sterling-silver', to: '/blogs/rhodium-plated-sterling-silver' },
+  { id: 'M26', from: '/resources/earring-style-guides/jewellery-for-purple-or-lilac-dress', to: '/blogs/jewellery-for-purple-or-lilac-dress' },
+  { id: 'M27', from: '/resources/earring-style-guides/jewellery-for-chocolate-brown-dress', to: '/blogs/jewellery-for-chocolate-brown-dress' },
+  { id: 'M28', from: '/resources/dress-colour-guides/jewellery-for-champagne-and-beige-dresses', to: '/blogs/jewellery-for-champagne-and-beige-dresses' },
+  { id: 'M29', from: '/resources/earring-style-guides/jewellery-for-a-gold-dress', to: '/blogs/jewellery-for-a-gold-dress' },
+  { id: 'M30', from: '/resources/necklace-style-guides/jewellery-for-a-square-neck-dress', to: '/blogs/jewellery-for-a-square-neck-dress' },
+  { id: 'M31', from: '/resources/earring-style-guides/jewellery-for-a-halter-neck-dress', to: '/blogs/jewellery-for-a-halter-neck-dress' },
+  { id: 'M32', from: '/resources/earring-style-guides/jewellery-for-a-boat-neck-dress', to: '/blogs/jewellery-for-a-boat-neck-dress' },
+  { id: 'M33', from: '/resources/earring-style-guides/jewellery-for-a-one-shoulder-dress', to: '/blogs/jewellery-for-a-one-shoulder-dress' },
+  { id: 'M34', from: '/resources/earring-style-guides/jewellery-for-a-jumpsuit', to: '/blogs/jewellery-for-a-jumpsuit' },
+  { id: 'M35', from: '/resources/earring-style-guides/jewellery-for-a-floral-dress', to: '/blogs/jewellery-for-a-floral-dress' },
+  { id: 'M36', from: '/resources/earring-style-guides/jewellery-for-a-denim-dress', to: '/blogs/jewellery-for-a-denim-dress' },
+  { id: 'M37', from: '/resources/earring-style-guides/jewellery-for-a-job-interview', to: '/blogs/jewellery-for-a-job-interview' },
+  { id: 'M38', from: '/resources/jewellery-care/how-to-untangle-a-fine-necklace', to: '/blogs/how-to-untangle-a-fine-necklace' },
+  { id: 'M39', from: '/resources/jewellery-care/why-does-your-pendant-keep-flipping', to: '/blogs/why-does-your-pendant-keep-flipping' },
+  { id: 'M40', from: '/resources/occasion-jewellery-guides/prom-jewellery', to: '/blogs/prom-jewellery' },
+  { id: 'M41', from: '/resources/occasion-jewellery-guides/engagement-party-jewellery', to: '/blogs/engagement-party-jewellery' },
+  { id: 'M42', from: '/resources/jewellery-care/why-does-necklace-clasp-move-to-front', to: '/blogs/why-does-necklace-clasp-move-to-front' },
+  { id: 'M43', from: '/resources/jewellery-care/why-does-your-ring-keep-spinning', to: '/blogs/why-does-your-ring-keep-spinning' },
+  { id: 'MC1', from: '/resources/necklace-guides', to: '/blogs' },
+  { id: 'MC2', from: '/resources/ring-guides', to: '/blogs' },
+  { id: 'MC3', from: '/resources/bridal-jewellery-guides', to: '/blogs' },
+  { id: 'MC4', from: '/resources/dress-colour-guides', to: '/blogs' },
+  { id: 'MC5', from: '/resources/necklace-style-guides', to: '/blogs' },
+  { id: 'MC6', from: '/resources/jewellery-care', to: '/blogs' },
+]
+
 export type NextRedirect = {
   source: string
   destination: string
@@ -169,6 +226,7 @@ export function buildRedirects(): NextRedirect[] {
 
   for (const r of blogRedirects) add(`/blogs/${r.from}`, r.to)
   for (const r of resourceRedirects) add(r.from, r.to)
+  for (const r of movedToBlogRedirects) add(r.from, r.to)
 
   return rules
 }

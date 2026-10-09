@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import FAQSection, { type FAQItem } from "@/components/shared/FAQSection";
 import ExploreOurStore from "@/components/shared/ExploreOurStore";
+import InlineText from "@/components/shared/InlineText";
 
 export type ContentBlock =
     | { type: "paragraph"; text: string }
@@ -56,7 +57,7 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                     <div className="space-y-4">
                         {section.content.map((block, bIdx) => {
                             if (block.type === "paragraph") {
-                                return <p key={bIdx}>{block.text}</p>;
+                                return <p key={bIdx}><InlineText text={block.text} /></p>;
                             }
                             if (block.type === "subheading") {
                                 return (
@@ -75,7 +76,7 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                         className="list-disc ml-6 mt-2 space-y-2"
                                     >
                                         {block.items.map((item, i) => (
-                                            <li key={i}>{item}</li>
+                                            <li key={i}><InlineText text={item} /></li>
                                         ))}
                                     </ul>
                                 );
@@ -87,7 +88,7 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                         className="list-decimal ml-6 mt-2 space-y-2"
                                     >
                                         {block.items.map((item, i) => (
-                                            <li key={i}>{item}</li>
+                                            <li key={i}><InlineText text={item} /></li>
                                         ))}
                                     </ol>
                                 );
@@ -128,7 +129,7 @@ const DynamicArticle: React.FC<DynamicArticleProps> = ({ sections }) => {
                                                                 key={c}
                                                                 className="border-t border-gray-100 px-4 py-3 align-top text-slate-700"
                                                             >
-                                                                {cell}
+                                                                <InlineText text={cell} />
                                                             </td>
                                                         ))}
                                                     </tr>
