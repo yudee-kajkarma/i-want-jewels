@@ -110,9 +110,9 @@ function ArticleCard({ article }: { article: ResourceArticle }) {
                 {/* Tags */}
                 {localized.tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-1.5">
-                        {localized.tags.slice(0, 3).map((tag) => (
+                        {localized.tags.slice(0, 3).map((tag, i) => (
                             <span
-                                key={tag}
+                                key={`${tag}-${i}`}
                                 className="border border-zinc-200 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-zinc-500"
                             >
                                 {tag}

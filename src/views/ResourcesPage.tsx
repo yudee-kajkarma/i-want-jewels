@@ -4,7 +4,7 @@ import { Link } from "@/lib/router";
 import Footer from "../components/layout/Footer";
 import MobileStickyActions from "@/components/shared/MobileStickyActions";
 import Header from "../components/layout/Header";
-import { resourceCategories } from "../data/resources";
+import { getArticleCount, resourceCategories } from "../data/resources";
 import { blogLinks } from "@/components/shared/blogList";
 import { useTranslation } from "react-i18next";
 import { useLocalizedCategory } from "@/hooks/useLocalizedContent";
@@ -67,6 +67,14 @@ function CategoryCard({ category, index }: { category: (typeof resourceCategorie
                     className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+                {/* Article count badge, same as the Blog card */}
+                <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-white px-3 py-1.5">
+                    <BookOpenIcon />
+                    <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-700">
+                        {t('resources.articlesCount', { count: getArticleCount(category.slug) })}
+                    </span>
+                </div>
             </div>
             <div className="p-6">
                 <h2 className="font-play text-[18px] font-semibold leading-snug text-zinc-900 sm:text-[20px]">

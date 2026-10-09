@@ -32,6 +32,15 @@ function walkDir(dir, out = []) {
  * `filter` is an optional substring match against the source path.
  */
 export function resolveScope(scope, filter) {
+  // `@list.txt`: a file listing repo-relative source paths, one per line
+  // (used by new-content.mjs to translate only what is missing).
+  if (scope.startsWith('@')) {
+    const listFile = path.resolve(ROOT, scope.slice(1));
+    let files = fs.readFileSync(listFile, 'utf8').split('\n').map((l) => l.trim()).filter(Boolean)
+      .map((rel) => path.join(ROOT, rel));
+    if (filter) files = files.filter((f) => f.includes(filter));
+    return files.map((f) => toItem(f, inferScopeDir(f)));
+  }
   const explicit = path.join(ROOT, scope);
   if (fs.existsSync(explicit) && fs.statSync(explicit).isFile()) {
     return [toItem(explicit, inferScopeDir(explicit))];

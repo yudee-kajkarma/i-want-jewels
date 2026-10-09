@@ -67,9 +67,9 @@ export default function BlogDetailPage({
                             <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-500">
                                 {t('blog.detail.tags')}
                             </span>
-                            {blogDetail.tags.map((tag) => (
+                            {blogDetail.tags.map((tag, i) => (
                                 <span
-                                    key={tag}
+                                    key={`${tag}-${i}`}
                                     className="border border-zinc-300 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-700"
                                 >
                                     {tag}

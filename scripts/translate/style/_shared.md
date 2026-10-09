@@ -11,6 +11,9 @@ in the target market, while preserving meaning, structure, and SEO intent.
 - **Preserve every `{{placeholder}}` exactly** — same spelling, same braces, same
   count. They are runtime interpolation slots; a changed placeholder is a crash.
 - **Preserve inline markup** (`<strong>`, `<a href="…">`, `&nbsp;`) byte-for-byte.
+- **Links are written as `[label](/path)`.** Translate the label inside `[ ]`;
+  copy the `(…)` part byte-for-byte and keep every link. Never translate,
+  shorten or reorder a link's path or URL.
 - **Return every key you were given, and no others.** Keys are structural paths,
   not content — never translate, reorder, or invent a key.
 - **A key whose value is a proper noun, a number, or a unit may come back

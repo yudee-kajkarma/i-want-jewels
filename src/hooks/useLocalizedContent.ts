@@ -1,6 +1,17 @@
 import { useTranslation } from 'react-i18next';
 import type { ResourceArticle, ResourceCategory } from '@/data/resources';
 
+/** Translations can turn two English tags into the same word; show each once. */
+function uniqueTags(tags: string[]): string[] {
+  const seen = new Set<string>();
+  return tags.filter((tag) => {
+    const key = tag.trim().toLowerCase();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export function useLocalizedCategory(category: ResourceCategory): ResourceCategory {
   const { t } = useTranslation('resources-meta');
 
@@ -28,7 +39,7 @@ export function useLocalizedArticle(article: ResourceArticle): ResourceArticle {
     title: meta.title ?? article.title,
     excerpt: meta.excerpt ?? article.excerpt,
     readTime: meta.readTime ?? article.readTime,
-    tags: Array.isArray(meta.tags) ? meta.tags : article.tags,
+    tags: uniqueTags(Array.isArray(meta.tags) ? meta.tags : article.tags),
   };
 }
 

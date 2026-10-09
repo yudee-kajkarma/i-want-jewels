@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "¿Por qué gira el anillo? Ajuste y diseño",
+    "description": "Descubra por qué gira un anillo. Revise el ajuste, el engaste y la forma del dedo, y sepa qué soluciones comentar con un joyero."
+  },
+  "heroIntro": {
+    "image": "/blog-images/resource-guides/why-does-your-ring-keep-spinning.jpg",
+    "title": "¿Por qué gira el anillo?",
+    "subtitle": "Revisión del ajuste y el diseño",
+    "paragraphs": [
+      "Descubra por qué gira un anillo. Revise el ajuste, el engaste y la forma del dedo, y sepa qué soluciones comentar con un joyero."
+    ],
+    "shopLabel": "Comprar anillos",
+    "shopHref": "/products?category=Rings"
+  },
+  "quickSummary": {
+    "items": [
+      "¿Por qué gira un anillo?",
+      "¿Qué puede hacer que el anillo gire?",
+      "Compruebe el ajuste sin repetir la tabla de tallas",
+      "Cuando el engaste pesa demasiado en la parte superior",
+      "¿Qué puede ayudar?",
+      "Qué no debe hacer"
+    ],
+    "image": "/blog-images/resource-guides/why-does-your-ring-keep-spinning.jpg"
+  },
+  "content": [
+    {
+      "heading": "¿Por qué gira un anillo?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un anillo puede girar porque queda holgado en el dedo, porque su engaste pesa demasiado en la parte superior o porque el dedo es más ancho en el nudillo que en el punto donde se coloca el anillo. La temperatura y los cambios normales en el tamaño del dedo también pueden afectar al ajuste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primero, compruebe cómo queda el anillo y después tenga en cuenta su diseño. Que un anillo gire no siempre se soluciona eligiendo una talla menor. Debe pasar cómodamente por el nudillo y quedar bien sujeto en el punto donde lo lleva. Utilice la Guía de tallas de la [página del producto del anillo](/category/rings) correspondiente y pida a un joyero que revise si el giro persiste o si el engaste pesa demasiado en la parte superior."
+        }
+      ]
+    },
+    {
+      "heading": "¿Qué puede hacer que el anillo gire?",
+      "content": [
+        {
+          "type": "table",
+          "headers": [
+            "Lo que observa",
+            "Posible causa que debe comprobar"
+          ],
+          "rows": [
+            [
+              "El anillo se mueve fácilmente alrededor del dedo",
+              "Puede quedar demasiado holgado en el punto donde se coloca."
+            ],
+            [
+              "El anillo pasa por el nudillo, pero queda holgado por debajo",
+              "Es posible que el nudillo y el dedo tengan anchuras diferentes."
+            ],
+            [
+              "La piedra o la parte superior decorativa se gira repetidamente hacia la palma",
+              "El engaste puede pesar demasiado en la parte superior o estar desequilibrado."
+            ],
+            [
+              "El anillo queda diferente en distintos momentos",
+              "El tamaño del dedo puede variar con la temperatura y otras condiciones normales."
+            ],
+            [
+              "El anillo gira más al realizar actividades",
+              "El movimiento de la mano o el contacto con la ropa y los objetos pueden moverlo."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estas son posibles explicaciones, no un diagnóstico. Un joyero puede comprobar el ajuste y la estructura del anillo."
+        }
+      ]
+    },
+    {
+      "heading": "Compruebe el ajuste sin repetir la tabla de tallas",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Utilice la Guía de tallas de la página del producto del anillo para consultar las instrucciones de medición. Este artículo explica por qué gira un anillo, no las conversiones de tallas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al valorar el ajuste, tenga en cuenta:"
+        },
+        {
+          "type": "bullet-list",
+          "items": [
+            "Si el anillo pasa cómodamente por el nudillo.",
+            "Si queda bien sujeto en el punto donde lo lleva.",
+            "Si se mueve libremente o solo gira cuando se desplaza el engaste.",
+            "Si queda diferente en otro momento del día o con otra temperatura."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "No elija una talla mucho más ajustada solo para evitar que el anillo gire. Debe pasar por el nudillo sin ejercer fuerza y resultar cómodo durante el uso normal."
+        }
+      ]
+    },
+    {
+      "heading": "Cuando el engaste pesa demasiado en la parte superior",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Un engaste grande o elevado puede alterar el equilibrio del anillo. Si la parte superior pesa más que el aro, la gravedad puede atraerla hacia la parte inferior del dedo. El aro puede quedar razonablemente bien y, aun así, el engaste puede girar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un joyero puede valorar si el engaste y el aro están equilibrados para ese anillo. Los posibles ajustes dependen del diseño, los materiales y la fabricación; no todos los anillos admiten la misma solución."
+        }
+      ]
+    },
+    {
+      "heading": "¿Qué puede ayudar?",
+      "content": [
+        {
+          "type": "subheading",
+          "text": "Si el anillo parece holgado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Utilice la Guía de tallas de la página del producto como punto de partida y valore después un ajuste profesional. Un joyero puede comprobar cómo queda sobre el nudillo y en la base del dedo antes de recomendar reducir la talla."
+        },
+        {
+          "type": "subheading",
+          "text": "Si el nudillo es más ancho que el dedo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reducir la talla de forma convencional puede no resolver la diferencia entre ambas zonas. Pregunte a un joyero si un recurso de ajuste, como unas bolitas de ajuste u otro inserto adecuado, es apropiado para su anillo."
+        },
+        {
+          "type": "subheading",
+          "text": "Si el engaste parece pesar demasiado en la parte superior"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pida a un joyero que examine conjuntamente el engaste y el aro. Podrá explicarle si el diseño se puede estabilizar sin afectar a la estructura ni a la comodidad del anillo."
+        },
+        {
+          "type": "subheading",
+          "text": "Si el giro es temporal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Observe si el anillo solo gira durante determinadas actividades o en ciertas condiciones. Si no queda bien sujeto, quíteselo y guárdelo en un lugar seguro hasta poder comprobar el ajuste."
+        }
+      ]
+    },
+    {
+      "heading": "Qué no debe hacer",
+      "content": [
+        {
+          "type": "bullet-list",
+          "items": [
+            "No fuerce el anillo sobre el nudillo ni lo lleve si queda incómodamente apretado.",
+            "No doble, corte ni dé una nueva forma al aro en casa.",
+            "No aplique pegamento, cinta ni ningún otro adhesivo en el interior del anillo.",
+            "No añada bolitas ni insertos por su cuenta.",
+            "No dé por hecho que todo anillo que gira necesita una talla menor."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un joyero debe revisar el anillo antes de realizar cualquier cambio permanente, especialmente si tiene piedras, un engaste detallado o un acabado chapado."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué gira mi anillo aunque me quede bien?",
+      "answer": "El engaste puede pesar demasiado en la parte superior o el nudillo puede ser más ancho que la zona donde se coloca el anillo. Un joyero puede comprobar si el movimiento se debe al ajuste, al diseño o a ambos."
+    },
+    {
+      "question": "¿Debería reducir la talla de mi anillo si sigue girando?",
+      "answer": "Es posible, pero primero haga revisar el ajuste. El anillo debe pasar cómodamente por el nudillo y quedar bien sujeto en el dedo. Si el engaste pesa demasiado en la parte superior o el nudillo es mucho más ancho que el dedo, reducir la talla por sí solo puede no resolver el problema."
+    },
+    {
+      "question": "¿Puede un joyero evitar que el anillo gire sin reducir la talla?",
+      "answer": "A veces. Según el anillo, un joyero puede hablarle de bolitas de ajuste, un inserto u otro ajuste específico del diseño. La opción adecuada depende del anillo y de la diferencia entre el nudillo y el dedo."
+    },
+    {
+      "question": "¿Es normal que los anillos queden diferentes a lo largo del día?",
+      "answer": "El ajuste puede variar porque los dedos cambian de tamaño. Si el anillo queda lo bastante holgado como para que pueda caerse, quíteselo y guárdelo de forma segura hasta comprobar el ajuste."
+    },
+    {
+      "question": "¿Se puede reparar un anillo cuyo engaste pesa demasiado en la parte superior?",
+      "answer": "Un joyero puede valorar si el diseño se puede estabilizar o modificar. No todos los engastes pueden cambiarse de la misma manera, por lo que conviene examinar el anillo antes de aprobar una reparación."
+    },
+    {
+      "question": "¿Dónde puedo comprobar mi talla de anillo?",
+      "answer": "Utilice la Guía de tallas de la página del producto del anillo correspondiente. Si el anillo gira continuamente, al comprobar la talla deben tenerse en cuenta tanto el nudillo como el punto donde se coloca."
+    }
+  ],
+  "cta": {
+    "heading": "Encuentre una pieza que le encantará llevar",
+    "body": "Descubra por qué gira un anillo. Revise el ajuste, el engaste y la forma del dedo, y sepa qué soluciones comentar con un joyero.",
+    "primaryLabel": "Comprar anillos",
+    "primaryHref": "/products?category=Rings",
+    "secondaryLabel": "Más guías",
+    "secondaryHref": "/resources/jewellery-care"
+  }
+}

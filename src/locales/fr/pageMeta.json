@@ -126,5 +126,53 @@
     "ogDescription": "Offrez la liberté de choisir. Les cartes cadeaux I Want Jewels arrivent instantanément par e-mail et sont valables sur tous nos bijoux.",
     "twitterTitle": "Cartes cadeaux bijoux | I Want Jewels",
     "twitterDescription": "Offrez la liberté de choisir. Les cartes cadeaux I Want Jewels arrivent instantanément par e-mail et sont valables sur tous nos bijoux."
+  },
+  "necklaceGuides": {
+    "title": "Guides colliers | Ressources I Want Jewels",
+    "description": "Longueurs de colliers, chaînes, fermoirs et pendentifs expliqués pour choisir un collier bien ajusté, qui tombe bien et vous ressemble.",
+    "ogTitle": "Guides colliers | Ressources I Want Jewels",
+    "ogDescription": "Longueurs de colliers, chaînes, fermoirs et pendentifs expliqués pour choisir un collier bien ajusté, qui tombe bien et vous ressemble.",
+    "twitterTitle": "Guides colliers | Ressources I Want Jewels",
+    "twitterDescription": "Longueurs de colliers, chaînes, fermoirs et pendentifs expliqués pour choisir un collier bien ajusté, qui tombe bien et vous ressemble."
+  },
+  "ringGuides": {
+    "title": "Guides bagues | Ressources I Want Jewels",
+    "description": "Styles de bagues fantaisie, largeurs d'anneau et conseils pour choisir une bague que vous aimerez porter.",
+    "ogTitle": "Guides bagues | Ressources I Want Jewels",
+    "ogDescription": "Styles de bagues fantaisie, largeurs d'anneau et conseils pour choisir une bague que vous aimerez porter.",
+    "twitterTitle": "Guides bagues | Ressources I Want Jewels",
+    "twitterDescription": "Styles de bagues fantaisie, largeurs d'anneau et conseils pour choisir une bague que vous aimerez porter."
+  },
+  "bridalJewelleryGuides": {
+    "title": "Guides bijoux de mariée | Ressources I Want Jewels",
+    "description": "Choisissez des bijoux de mariage adaptés à votre robe, votre décolleté et votre style personnel.",
+    "ogTitle": "Guides bijoux de mariée | Ressources I Want Jewels",
+    "ogDescription": "Choisissez des bijoux de mariage adaptés à votre robe, votre décolleté et votre style personnel.",
+    "twitterTitle": "Guides bijoux de mariée | Ressources I Want Jewels",
+    "twitterDescription": "Choisissez des bijoux de mariage adaptés à votre robe, votre décolleté et votre style personnel."
+  },
+  "dressColourGuides": {
+    "title": "Guides couleurs de robe | Ressources I Want Jewels",
+    "description": "Quels finis et bijoux s'accordent le mieux à chaque couleur de robe.",
+    "ogTitle": "Guides couleurs de robe | Ressources I Want Jewels",
+    "ogDescription": "Quels finis et bijoux s'accordent le mieux à chaque couleur de robe.",
+    "twitterTitle": "Guides couleurs de robe | Ressources I Want Jewels",
+    "twitterDescription": "Quels finis et bijoux s'accordent le mieux à chaque couleur de robe."
+  },
+  "necklaceStyleGuides": {
+    "title": "Guides style de collier | Ressources I Want Jewels",
+    "description": "Comment porter un collier avec différents décolletés et styles.",
+    "ogTitle": "Guides style de collier | Ressources I Want Jewels",
+    "ogDescription": "Comment porter un collier avec différents décolletés et styles.",
+    "twitterTitle": "Guides style de collier | Ressources I Want Jewels",
+    "twitterDescription": "Comment porter un collier avec différents décolletés et styles."
+  },
+  "jewelleryFixes": {
+    "title": "Solutions bijoux | Ressources I Want Jewels",
+    "description": "Des solutions simples aux problèmes courants de bijoux : chaînes emmêlées, pendentifs qui se retournent, fermoirs qui glissent et bagues qui tournent.",
+    "ogTitle": "Solutions bijoux | Ressources I Want Jewels",
+    "ogDescription": "Des solutions simples aux problèmes courants de bijoux : chaînes emmêlées, pendentifs qui se retournent, fermoirs qui glissent et bagues qui tournent.",
+    "twitterTitle": "Solutions bijoux | Ressources I Want Jewels",
+    "twitterDescription": "Des solutions simples aux problèmes courants de bijoux : chaînes emmêlées, pendentifs qui se retournent, fermoirs qui glissent et bagues qui tournent."
   }
 }
