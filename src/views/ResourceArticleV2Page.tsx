@@ -256,6 +256,40 @@ function FAQSection({ items }: { items: V2FAQItem[] }) {
     );
 }
 
+// ─── Inline links ─────────────────────────────────────────────────────────────
+
+const INLINE_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+/**
+ * Text with links written as [label](href): internal paths use the site's
+ * Link (keeps the visitor's language), external ones open in a new tab.
+ * Text without links is returned unchanged.
+ */
+function InlineText({ text }: { text: string }) {
+    if (!text.includes("](")) return <>{text}</>;
+    const parts: React.ReactNode[] = [];
+    let last = 0;
+    for (const match of text.matchAll(INLINE_LINK)) {
+        const [whole, label, href] = match;
+        const start = match.index ?? 0;
+        if (start > last) parts.push(text.slice(last, start));
+        parts.push(
+            href.startsWith("/") ? (
+                <Link key={start} to={href} className="font-medium text-pink-500 underline-offset-2 hover:underline">
+                    {label}
+                </Link>
+            ) : (
+                <a key={start} href={href} target="_blank" rel="noopener noreferrer" className="font-medium text-pink-500 underline-offset-2 hover:underline">
+                    {label}
+                </a>
+            ),
+        );
+        last = start + whole.length;
+    }
+    if (last < text.length) parts.push(text.slice(last));
+    return <>{parts}</>;
+}
+
 // ─── Block Renderer ───────────────────────────────────────────────────────────
 
 function RenderBlock({ block }: { block: V2ContentBlock }) {
@@ -264,7 +298,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
         case "paragraph":
             return (
                 <p className="font-poppins text-[15px] leading-[1.9] text-[#344256]">
-                    {block.text}
+                    <InlineText text={block.text} />
                 </p>
             );
 
@@ -292,7 +326,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
               before:absolute before:-left-4 before:top-[0.62em] before:h-[5px] before:w-[5px]
               before:rounded-full before:bg-pink-400 before:content-['']"
                         >
-                            {item}
+                            <InlineText text={item} />
                         </li>
                     ))}
                 </ul>
@@ -306,7 +340,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
                             key={i}
                             className="font-poppins text-[15px] leading-[1.8] text-[#344256] marker:font-semibold marker:text-[#bb923a]"
                         >
-                            {item}
+                            <InlineText text={item} />
                         </li>
                     ))}
                 </ol>
@@ -343,7 +377,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
                                             key={c}
                                             className="border-t border-zinc-100 px-5 py-3.5 align-top font-poppins text-[14px] text-[#344256]"
                                         >
-                                            {cell}
+                                            <InlineText text={cell} />
                                         </td>
                                     ))}
                                 </tr>

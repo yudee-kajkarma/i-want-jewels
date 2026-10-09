@@ -23,6 +23,30 @@
     "jewellery-gift-guides": {
       "title": "Gift Guides",
       "description": "Find the perfect jewellery gift for any occasion, budget, or personality — from first-time buyers to seasoned jewellery lovers."
+    },
+    "necklace-guides": {
+      "title": "Necklace Guides",
+      "description": "Necklace lengths, chains, clasps and pendants explained, so you can choose a necklace that fits, sits and suits you."
+    },
+    "ring-guides": {
+      "title": "Ring Guides",
+      "description": "Fashion ring styles, band widths and how to wear them: practical advice for choosing a ring you will love wearing."
+    },
+    "bridal-jewellery-guides": {
+      "title": "Bridal Jewellery Guides",
+      "description": "Choose wedding-day jewellery that suits your dress, neckline and personal style."
+    },
+    "dress-colour-guides": {
+      "title": "Dress Colour Guides",
+      "description": "Which jewellery finishes and pieces work best with each dress colour."
+    },
+    "necklace-style-guides": {
+      "title": "Necklace Styling Guides",
+      "description": "How to wear a necklace with different necklines and outfits."
+    },
+    "jewellery-care": {
+      "title": "Jewellery Fixes",
+      "description": "Simple fixes for everyday jewellery problems: tangled chains, flipping pendants, sliding clasps and spinning rings."
     }
   },
   "articles": {
@@ -1010,6 +1034,511 @@
         "workwear",
         "necklines",
         "metal colours"
+      ]
+    },
+    "bridal-jewellery-guides/bridal-necklace-for-wedding-dress": {
+      "title": "How to Choose a Bridal Necklace for Your Wedding Dress",
+      "excerpt": "Choose a bridal necklace by neckline, pendant shape and dress detail. Learn how to check chain placement and compare necklace styles with fitting photos.",
+      "readTime": "6 min read",
+      "tags": [
+        "bridal necklace guide",
+        "wedding necklace by neckline",
+        "necklace for wedding dress",
+        "bridal pendant necklace",
+        "wedding dress necklace length"
+      ]
+    },
+    "earring-style-guides/jewellery-for-orange-or-rust-dress": {
+      "title": "What Jewellery to Wear with an Orange or Rust Dress",
+      "excerpt": "Compare jewellery for bright orange and muted rust dresses. See how yellow-gold, white and rose-coloured finishes work for daytime, autumn and evening outfits.",
+      "readTime": "3 min read",
+      "tags": [
+        "jewellery for orange dress",
+        "jewellery for rust dress",
+        "earrings for orange dress",
+        "jewellery for burnt orange dress"
+      ]
+    },
+    "necklace-guides/necklace-clasp-types": {
+      "title": "Necklace Clasp Types: How They Work and What to Check Before Buying",
+      "excerpt": "Compare necklace clasp types, including lobster and spring ring clasps. See how they open and what to check for easy, secure fastening before you buy.",
+      "readTime": "8 min read",
+      "tags": [
+        "necklace clasp types",
+        "lobster clasp vs spring ring",
+        "types of necklace fasteners",
+        "necklace clasp guide",
+        "how to fasten a necklace clasp"
+      ]
+    },
+    "jewellery-gift-guides/diamond-jewellery-gifts-under-200-euros": {
+      "title": "Lab-Grown Diamond Jewellery Gifts Under €200",
+      "excerpt": "Find affordable lab-grown diamond jewellery gifts under €200. Compare earrings, necklaces, rings and bracelets by style, recipient and budget.",
+      "readTime": "8 min read",
+      "tags": [
+        "diamond jewellery gifts under €200",
+        "affordable diamond gifts",
+        "affordable lab-grown diamond jewellery",
+        "diamond earrings under €200",
+        "diamond necklaces under €200"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-necklace-buying-guide": {
+      "title": "How to Choose a Lab-Grown Diamond Necklace: Style, Length and Budget",
+      "excerpt": "Choose a lab-grown diamond necklace by style, chain length and budget. Compare solitaire, Y-shaped and symbolic pendants from I Want Jewels.",
+      "readTime": "8 min read",
+      "tags": [
+        "lab grown diamond necklace buying guide",
+        "how to choose a diamond necklace",
+        "lab-grown diamond necklace",
+        "diamond necklace styles",
+        "diamond necklace length"
+      ]
+    },
+    "necklace-guides/necklace-length-guide-40-45-50cm": {
+      "title": "Necklace Length Guide: What 40, 45 and 50 cm Look Like When Worn",
+      "excerpt": "See how 40, 45 and 50 cm necklace lengths sit, how to measure your fit, and what to check before choosing a lab-grown diamond necklace.",
+      "readTime": "9 min read",
+      "tags": [
+        "necklace length guide",
+        "40cm vs 45cm necklace",
+        "45cm vs 50cm necklace",
+        "what necklace length should i buy",
+        "18 inch necklace in cm"
+      ]
+    },
+    "lab-grown-diamond-guides/diamond-pendant-size-guide": {
+      "title": "How Big Will a Diamond Pendant Look? Millimetres vs Carat Weight",
+      "excerpt": "Learn how diamond carat weight differs from pendant size in millimetres. See what to check in product details and compare lab-grown diamond necklaces.",
+      "readTime": "7 min read",
+      "tags": [
+        "diamond pendant size guide",
+        "diamond necklace size",
+        "diamond pendant dimensions",
+        "millimetres vs carat weight",
+        "how big will a diamond pendant look"
+      ]
+    },
+    "jewellery-gift-guides/necklace-or-bracelet-gift": {
+      "title": "Necklace or Bracelet: Which Makes the Better Jewellery Gift?",
+      "excerpt": "Choosing a jewellery gift for your girlfriend? Compare necklaces and bracelets by fit, everyday style, visibility and budget, with lab-grown diamond gift ideas.",
+      "readTime": "5 min read",
+      "tags": [
+        "necklace or bracelet gift",
+        "jewellery gift for girlfriend",
+        "necklace vs bracelet as a gift",
+        "diamond necklace gift",
+        "diamond bracelet gift"
+      ]
+    },
+    "necklace-guides/types-of-necklace-chains": {
+      "title": "Types of Necklace Chains: A Visual Guide to Their Differences",
+      "excerpt": "Learn how cable, curb, box, rope, snake and other necklace chains look and differ. Explore chain styles and lab-grown diamond necklaces from I Want Jewels.",
+      "readTime": "8 min read",
+      "tags": [
+        "types of necklace chains",
+        "necklace chain styles",
+        "different types of chains for necklaces",
+        "necklace chain types and names",
+        "best chain style for a pendant"
+      ]
+    },
+    "necklace-guides/necklace-chain-thickness-guide": {
+      "title": "Necklace Chain Thickness: Comparing Fine and More Substantial Chains",
+      "excerpt": "Compare fine and more substantial necklace chains by width, pendant fit and visual balance. Learn how to read millimetre measurements before buying.",
+      "readTime": "5 min read",
+      "tags": [
+        "necklace chain thickness guide",
+        "necklace chain width",
+        "necklace chain thickness",
+        "fine chain vs thick chain",
+        "chain width in mm"
+      ]
+    },
+    "necklace-guides/how-to-use-a-necklace-extender": {
+      "title": "How to Choose and Attach a Necklace Extender",
+      "excerpt": "Learn how to choose a necklace extender, check clasp compatibility and calculate the new length. Follow simple steps to attach it securely.",
+      "readTime": "7 min read",
+      "tags": [
+        "necklace extender guide",
+        "how to extend a necklace",
+        "necklace chain extender",
+        "how to attach a necklace extender",
+        "necklace extender length"
+      ]
+    },
+    "necklace-guides/pendant-necklace-styles": {
+      "title": "Pendant Shapes Compared: Solitaire, Circle, Star, Floral and Geometric",
+      "excerpt": "Compare solitaire, circle, star, floral and geometric pendant necklace styles. See how each silhouette looks and find a shape that suits your style.",
+      "readTime": "6 min read",
+      "tags": [
+        "pendant necklace styles",
+        "types of pendants",
+        "pendant shapes",
+        "solitaire pendant necklace",
+        "floral pendant necklace"
+      ]
+    },
+    "necklace-guides/pendant-and-chain-compatibility": {
+      "title": "Will This Pendant Fit This Chain? A Compatibility Checklist",
+      "excerpt": "Check pendant bail size, chain width, clasp passage and whether the pendant is removable before pairing it with a chain. Use this checklist to confirm the fit.",
+      "readTime": "6 min read",
+      "tags": [
+        "choosing a chain for a pendant",
+        "pendant bail size",
+        "will this pendant fit this chain",
+        "pendant chain compatibility",
+        "chain width for pendant"
+      ]
+    },
+    "ring-guides/types-of-fashion-rings": {
+      "title": "Types of Fashion Rings: Diamond Bands, Open Rings, Motifs and Statement Designs",
+      "excerpt": "Compare fashion ring styles, from diamond bands and open rings to motif and statement designs. See how each profile looks and find a style that suits you.",
+      "readTime": "6 min read",
+      "tags": [
+        "types of rings for women",
+        "fashion ring styles",
+        "diamond band ring",
+        "open ring",
+        "statement ring"
+      ]
+    },
+    "ring-guides/ring-band-width-guide": {
+      "title": "Ring Band Width: How Slim and Wide Designs Look on the Hand",
+      "excerpt": "Compare slim and wide ring bands by their look, finger coverage and fit. Learn what to check in product photos before choosing a ring.",
+      "readTime": "6 min read",
+      "tags": [
+        "ring band width guide",
+        "thin vs thick rings",
+        "ring band width",
+        "slim ring bands",
+        "wide ring bands"
+      ]
+    },
+    "ring-guides/rings-for-short-fingers-and-small-hands": {
+      "title": "How to Choose Rings for Short Fingers and Small Hands",
+      "excerpt": "Explore ring styles for short fingers and small hands, from slim bands to open and statement designs. Compare profiles and choose what feels right to you.",
+      "readTime": "5 min read",
+      "tags": [
+        "rings for short fingers",
+        "rings for small hands",
+        "ring styles for short fingers",
+        "choosing rings for small hands"
+      ]
+    },
+    "ring-guides/which-finger-to-wear-a-fashion-ring": {
+      "title": "Which Finger Can You Wear a Fashion Ring On?",
+      "excerpt": "Learn how to style fashion rings on different fingers, with practical comfort tips and notes on cultural meanings. Choose the placement that feels right to you.",
+      "readTime": "6 min read",
+      "tags": [
+        "which finger to wear a ring",
+        "fashion ring finger",
+        "which finger to wear a fashion ring",
+        "how to style rings on different fingers"
+      ]
+    },
+    "ring-guides/diamond-band-vs-solitaire-ring": {
+      "title": "Diamond Band vs Solitaire Ring: Which Style Suits Everyday Wear?",
+      "excerpt": "Compare diamond bands and solitaire rings by shape, setting height, diamond placement and everyday style. See what to check before choosing.",
+      "readTime": "5 min read",
+      "tags": [
+        "diamond band vs solitaire ring",
+        "pavé ring vs solitaire",
+        "diamond band ring",
+        "solitaire ring",
+        "diamond ring for everyday wear"
+      ]
+    },
+    "earring-style-guides/earrings-for-face-shape": {
+      "title": "How to Choose Earrings for Your Face Shape",
+      "excerpt": "Compare studs, hoops and drop earrings by face shape, hairstyle and personal style. Use these ideas as options to try, not fixed rules.",
+      "readTime": "6 min read",
+      "tags": [
+        "earrings for face shape",
+        "earrings for round face",
+        "earrings for oval face",
+        "earrings for square face",
+        "earrings for heart-shaped face"
+      ]
+    },
+    "earring-style-guides/jewellery-for-pink-dress": {
+      "title": "Jewellery for a Pink Dress: Blush, Rose and Fuchsia Compared",
+      "excerpt": "Choose jewellery for blush, rose or fuchsia dresses. Compare yellow-gold, white and rose-coloured finishes with earring, necklace and bracelet ideas.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for pink dress",
+        "earrings for blush pink dress",
+        "jewellery for fuchsia dress",
+        "jewellery for rose dress",
+        "what jewellery to wear with pink"
+      ]
+    },
+    "earring-style-guides/jewellery-for-navy-blue-dress": {
+      "title": "What Jewellery to Wear with a Navy Blue Dress",
+      "excerpt": "Find jewellery for a navy blue dress, from understated daytime pieces to wedding-guest and evening looks. Compare yellow-gold, white and rose-coloured finishes.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for navy blue dress",
+        "earrings for navy dress",
+        "what jewellery to wear with a navy dress",
+        "gold or silver jewellery with navy"
+      ]
+    },
+    "earring-style-guides/jewellery-for-cobalt-blue-dress": {
+      "title": "What Jewellery to Wear with a Cobalt Blue Dress",
+      "excerpt": "Style jewellery with a cobalt blue dress. Compare yellow-gold, white and rose finishes, with earring, necklace and bracelet combinations.",
+      "readTime": "4 min read",
+      "tags": [
+        "jewellery for cobalt blue dress",
+        "earrings for cobalt blue dress",
+        "what jewellery to wear with a blue dress"
+      ]
+    },
+    "demi-fine-jewellery-guides/gold-filled-vs-gold-plated-jewellery": {
+      "title": "Gold-Filled vs Gold-Plated Jewellery: How to Read the Description",
+      "excerpt": "Learn how gold-filled and gold-plated jewellery differ, what each label means and how to check the base metal. See how I Want Jewels describes its plated pieces.",
+      "readTime": "5 min read",
+      "tags": [
+        "gold filled vs gold plated",
+        "gold filled jewellery meaning",
+        "gold-plated jewellery",
+        "gold-filled vs gold-plated",
+        "14kt gold-plated sterling silver"
+      ]
+    },
+    "demi-fine-jewellery-guides/sterling-silver-vs-stainless-steel-jewellery": {
+      "title": "Sterling Silver vs Stainless Steel Jewellery: Which Should You Choose?",
+      "excerpt": "Compare sterling silver and stainless steel jewellery by composition, finish, care and price. See why I Want Jewels uses 925 sterling silver for its lab-grown diamond range.",
+      "readTime": "6 min read",
+      "tags": [
+        "925 sterling silver vs stainless steel",
+        "silver or stainless steel jewellery",
+        "sterling silver jewellery care"
+      ]
+    },
+    "jewellery-care-guides/rhodium-plated-sterling-silver": {
+      "title": "What Is Rhodium-Plated Sterling Silver? Finish, Wear and Care Explained",
+      "excerpt": "Learn what rhodium-plated sterling silver is, how the finish wears and how to care for it. See what to check on a jewellery product page.",
+      "readTime": "4 min read",
+      "tags": [
+        "rhodium plated sterling silver",
+        "rhodium plated jewellery",
+        "rhodium plating on silver",
+        "rhodium finish jewellery",
+        "how to care for rhodium-plated silver"
+      ]
+    },
+    "earring-style-guides/jewellery-for-purple-or-lilac-dress": {
+      "title": "What Jewellery to Wear with a Purple or Lilac Dress",
+      "excerpt": "Choose jewellery for a lilac or deep purple dress. Compare yellow-gold, white and rose-coloured finishes, earring scale and neckline styling.",
+      "readTime": "4 min read",
+      "tags": [
+        "jewellery for purple dress",
+        "jewellery for lilac dress",
+        "earrings for lilac dress",
+        "what jewellery to wear with purple",
+        "jewellery for lavender dress"
+      ]
+    },
+    "earring-style-guides/jewellery-for-chocolate-brown-dress": {
+      "title": "What Jewellery to Wear with a Chocolate Brown Dress",
+      "excerpt": "Style jewellery with a chocolate brown dress. Compare warm yellow-gold, white and rose-coloured finishes for autumn, daytime and evening outfits.",
+      "readTime": "4 min read",
+      "tags": [
+        "jewellery for brown dress",
+        "earrings for chocolate brown dress",
+        "jewellery for chocolate brown dress",
+        "gold or silver jewellery with brown"
+      ]
+    },
+    "dress-colour-guides/jewellery-for-champagne-and-beige-dresses": {
+      "title": "Jewellery for Champagne and Beige Dresses: How to Add Definition",
+      "excerpt": "Find jewellery for champagne and beige dresses. Compare yellow, rose and white finishes, choose earrings and necklaces, and create contrast against pale fabrics.",
+      "readTime": "6 min read",
+      "tags": [
+        "jewellery for champagne dress",
+        "jewellery for beige dress",
+        "earrings for champagne dress",
+        "jewellery for beige outfit"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-gold-dress": {
+      "title": "Jewellery with a Metallic Gold Outfit: Matching Metals or Adding Contrast?",
+      "excerpt": "Choosing jewellery for a gold dress? Compare matching yellow-gold tones with rose and white finishes, then find earrings and necklaces to suit your outfit.",
+      "readTime": "6 min read",
+      "tags": [
+        "jewellery for gold dress",
+        "earrings for metallic gold dress",
+        "jewellery with a gold outfit",
+        "what jewellery to wear with a gold dress",
+        "earrings for a gold evening dress"
+      ]
+    },
+    "necklace-style-guides/jewellery-for-a-square-neck-dress": {
+      "title": "What Jewellery to Wear with a Square-Neck Dress",
+      "excerpt": "Find the right necklace for a square-neck dress. See where different pendant lengths sit, when to skip a necklace and which earrings complete the look.",
+      "readTime": "6 min read",
+      "tags": [
+        "jewellery for square neckline",
+        "necklace for square neck dress",
+        "earrings for square-neck dress",
+        "pendant for square neckline",
+        "jewellery for a square neckline"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-halter-neck-dress": {
+      "title": "What Jewellery to Wear with a Halter-Neck Dress",
+      "excerpt": "Find jewellery for a halter-neck dress. Compare open-centre and closed halters, choose earrings that clear the straps and decide whether a necklace will work.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for halter neck dress",
+        "earrings for halter dress",
+        "necklace for halter-neck dress",
+        "earrings for high halter dress",
+        "what jewellery goes with a halter dress"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-boat-neck-dress": {
+      "title": "What Jewellery to Wear with a Boat-Neck Dress",
+      "excerpt": "Find jewellery for a boat-neck dress. Compare studs, short earrings and drops, and learn where a necklace should sit against a wide horizontal neckline.",
+      "readTime": "6 min read",
+      "tags": [
+        "jewellery for boat neck dress",
+        "necklace for boat neckline",
+        "earrings for boat-neck dress",
+        "necklace for bateau neckline",
+        "short or drop earrings with a boat neck"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-one-shoulder-dress": {
+      "title": "What Jewellery to Wear with a One-Shoulder Dress",
+      "excerpt": "Find jewellery for a one-shoulder dress. Balance the asymmetric neckline, choose earrings that clear the bare shoulder and decide when to skip a necklace.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for one shoulder dress",
+        "earrings for asymmetric dress",
+        "necklace for one-shoulder dress",
+        "jewellery for asymmetrical neckline"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-jumpsuit": {
+      "title": "What Jewellery to Wear with a Jumpsuit",
+      "excerpt": "Find jewellery for a jumpsuit with outfit ideas for tailored, strapless and halter styles. Compare earrings, necklaces and bracelets by neckline.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for jumpsuit",
+        "earrings for jumpsuit",
+        "what jewellery to wear with a jumpsuit",
+        "necklace for a jumpsuit",
+        "jewellery for strapless jumpsuit"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-floral-dress": {
+      "title": "How to Choose Jewellery for a Floral Dress",
+      "excerpt": "Choose jewellery for a floral dress by print size, colour and neckline. Compare earrings, necklaces and simple outfit combinations without overloading the look.",
+      "readTime": "6 min read",
+      "tags": [
+        "jewellery for floral dress",
+        "earrings for floral dress",
+        "necklace for a floral dress",
+        "earrings for a floral print dress",
+        "jewellery for a large floral print"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-denim-dress": {
+      "title": "What Jewellery to Wear with a Denim Dress",
+      "excerpt": "Find jewellery for a denim dress, from casual daytime styling to evening outfits. Compare earrings, necklaces and metal finishes, including tips for shirt collars.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for denim dress",
+        "earrings for denim dress",
+        "necklace for denim shirt dress",
+        "gold or silver jewellery with denim",
+        "evening jewellery for a denim dress"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-job-interview": {
+      "title": "What Jewellery to Wear to a Job Interview",
+      "excerpt": "Choose interview jewellery that feels comfortable and suits the workplace. Compare earrings and pendants for different settings, including video interviews.",
+      "readTime": "5 min read",
+      "tags": [
+        "jewellery for job interview",
+        "interview earrings",
+        "what jewellery to wear to an interview",
+        "earrings for a job interview",
+        "necklace for interview outfit"
+      ]
+    },
+    "jewellery-care/how-to-untangle-a-fine-necklace": {
+      "title": "How to Untangle a Fine Necklace Without Damaging the Finish",
+      "excerpt": "Learn how to untangle a fine necklace gently. Follow safe steps for loose chains and knots, protect plated finishes and know when to stop.",
+      "readTime": "4 min read",
+      "tags": [
+        "how to untangle a necklace",
+        "tangled necklace chain",
+        "how to untangle a fine chain",
+        "untangle a knotted necklace",
+        "how to care for gold-plated necklace"
+      ]
+    },
+    "jewellery-care/why-does-your-pendant-keep-flipping": {
+      "title": "Why Does Your Pendant Keep Flipping Over?",
+      "excerpt": "Find out why a pendant turns over or hangs sideways. Check the chain, bail and pendant balance, and learn which fixes are safe to try.",
+      "readTime": "6 min read",
+      "tags": [
+        "pendant keeps flipping",
+        "necklace pendant turns over",
+        "why does my necklace pendant flip",
+        "pendant hangs backwards",
+        "stop pendant turning on chain"
+      ]
+    },
+    "occasion-jewellery-guides/prom-jewellery": {
+      "title": "Prom Jewellery: Choosing Earrings, Necklaces and Bracelets for Your Dress",
+      "excerpt": "Choose prom jewellery by neckline, dress detail and budget. Compare earrings, necklaces and bracelets, with measured product examples and outfit ideas.",
+      "readTime": "5 min read",
+      "tags": [
+        "prom jewellery",
+        "prom earrings",
+        "prom necklace",
+        "jewellery for prom dress",
+        "prom bracelet"
+      ]
+    },
+    "occasion-jewellery-guides/engagement-party-jewellery": {
+      "title": "What Jewellery to Wear to an Engagement Party",
+      "excerpt": "Find engagement party jewellery for the couple and their guests. Choose earrings, necklaces and bracelets to suit the outfit without competing with the engagement ring.",
+      "readTime": "6 min read",
+      "tags": [
+        "engagement party jewellery",
+        "engagement party earrings",
+        "jewellery for engagement party outfit",
+        "engagement party necklace",
+        "engagement party jewellery for guests"
+      ]
+    },
+    "jewellery-care/why-does-necklace-clasp-move-to-front": {
+      "title": "Why Does Your Necklace Clasp Keep Moving to the Front?",
+      "excerpt": "Find out why a necklace clasp slides to the front. Check chain weight, necklace fit and movement, and learn which adjustments are safe to try.",
+      "readTime": "5 min read",
+      "tags": [
+        "necklace clasp keeps moving to front",
+        "necklace clasp slides forward",
+        "clasp moves to front of neck",
+        "keep necklace clasp at the back",
+        "necklace chain keeps turning"
+      ]
+    },
+    "jewellery-care/why-does-your-ring-keep-spinning": {
+      "title": "Why Does Your Ring Keep Spinning? Fit and Design Checks",
+      "excerpt": "Find out why a ring spins on your finger. Check the fit, setting and finger shape, and learn which solutions to discuss with a jeweller.",
+      "readTime": "5 min read",
+      "tags": [
+        "ring keeps spinning",
+        "how to stop ring spinning",
+        "why does my ring turn around",
+        "ring spins on finger",
+        "top-heavy ring setting"
       ]
     }
   },

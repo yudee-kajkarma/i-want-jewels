@@ -23,6 +23,30 @@
     "jewellery-gift-guides": {
       "title": "Cadeaugidsen",
       "description": "Vind het perfecte sieradencadeau voor elke gelegenheid, budget of persoonlijkheid - van starters tot doorgewinterde sieradenliefhebbers."
+    },
+    "necklace-guides": {
+      "title": "Gidsen voor kettingen",
+      "description": "Alles over kettinglengtes, schakels, sluitingen en hangers, zodat u een ketting kiest die goed past, mooi valt en bij u past."
+    },
+    "ring-guides": {
+      "title": "Gidsen voor ringen",
+      "description": "Modieuze ringstijlen, bandbreedtes en hoe u ze draagt: praktisch advies voor het kiezen van een ring die u graag draagt."
+    },
+    "bridal-jewellery-guides": {
+      "title": "Gidsen voor bruidssieraden",
+      "description": "Kies sieraden voor uw trouwdag die passen bij uw jurk, halslijn en persoonlijke stijl."
+    },
+    "dress-colour-guides": {
+      "title": "Gidsen voor jurk­kleuren",
+      "description": "Welke sieradenafwerkingen en sieraden het beste passen bij elke jurkkleur."
+    },
+    "necklace-style-guides": {
+      "title": "Gidsen voor kettingen stylen",
+      "description": "Hoe u een ketting draagt bij verschillende halslijnen en outfits."
+    },
+    "jewellery-care": {
+      "title": "Sieradenproblemen oplossen",
+      "description": "Eenvoudige oplossingen voor alledaagse sieradenproblemen: verwarde kettingen, draaiende hangers, verschuivende sluitingen en ronddraaiende ringen."
     }
   },
   "articles": {
@@ -207,7 +231,6 @@
       "tags": [
         "geschenken",
         "verjaardag",
-        "verjaardag",
         "bruidsmeisje",
         "oorbellen",
         "in het laboratorium gekweekt"
@@ -365,7 +388,6 @@
       "tags": [
         "geschenken",
         "verjaardag",
-        "verjaardag",
         "bruidsmeisje",
         "oorbellen",
         "in het laboratorium gekweekt"
@@ -417,7 +439,6 @@
         "romantische cadeaus",
         "vlinder oorbellen",
         "verjaardag",
-        "verjaardag",
         "oorbellen",
         "in het laboratorium gekweekt"
       ]
@@ -428,7 +449,6 @@
       "readTime": "17 minuten lezen",
       "tags": [
         "huwelijksfeest",
-        "bruidsmeisje",
         "bruidsmeisje",
         "bruiloft",
         "oorbellen",
@@ -572,7 +592,6 @@
       "tags": [
         "sieraden geschenken",
         "oorbellen",
-        "verjaardag",
         "verjaardag",
         "romantisch",
         "in het laboratorium gekweekt"
@@ -918,7 +937,6 @@
       "tags": [
         "bruiloft bedankje",
         "bruidsmeisje",
-        "bruidsmeisje",
         "bruiloft",
         "oorbellen",
         "in het laboratorium gekweekt"
@@ -1008,6 +1026,508 @@
         "werkkleding",
         "halslijnen",
         "metaalkleuren"
+      ]
+    },
+    "bridal-jewellery-guides/bridal-necklace-for-wedding-dress": {
+      "title": "Zo kiest u een bruidsketting bij uw trouwjurk",
+      "excerpt": "Kies een bruidsketting op halslijn, hangervorm en jurkdetaillering. Leer de kettingpositie controleren en stijlen vergelijken met pasfoto’s.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "gids voor bruidskettingen",
+        "trouwketting per halslijn",
+        "ketting voor trouwjurk",
+        "bruidsketting met hanger",
+        "lengte ketting bij trouwjurk"
+      ]
+    },
+    "earring-style-guides/jewellery-for-orange-or-rust-dress": {
+      "title": "Welke sieraden bij een oranje of roestkleurige jurk?",
+      "excerpt": "Vergelijk sieraden voor feloranje en gedempt roestkleurige jurken. Ontdek hoe geelgouden, witte en rosékleurige afwerkingen werken voor overdag, in de herfst en ’s avonds.",
+      "readTime": "3 min. leestijd",
+      "tags": [
+        "sieraden bij oranje jurk",
+        "sieraden bij roestkleurige jurk",
+        "oorbellen bij oranje jurk",
+        "sieraden bij gebrandoranje jurk"
+      ]
+    },
+    "necklace-guides/necklace-clasp-types": {
+      "title": "Soorten kettingsluitingen: zo werken ze en hier let u op vóór aankoop",
+      "excerpt": "Vergelijk verschillende soorten kettingsluitingen, waaronder karabijnsluitingen en veerringsluitingen. Ontdek hoe ze opengaan en waarop u moet letten voor een eenvoudige, veilige sluiting voordat u koopt.",
+      "readTime": "8 min. leestijd",
+      "tags": [
+        "soorten kettingsluitingen",
+        "karabijnsluiting versus veerring",
+        "gids voor kettingsluitingen",
+        "hoe sluit u een kettingsluiting"
+      ]
+    },
+    "jewellery-gift-guides/diamond-jewellery-gifts-under-200-euros": {
+      "title": "Cadeaus met labgegroeide diamanten onder €200",
+      "excerpt": "Vind betaalbare cadeaus met labgegroeide diamanten onder €200. Vergelijk oorbellen, hangers, ringen en armbanden op stijl, ontvanger en budget.",
+      "readTime": "8 min. leestijd",
+      "tags": [
+        "diamanten sieradencadeaus onder €200",
+        "betaalbare diamanten cadeaus",
+        "betaalbare sieraden met labgegroeide diamant",
+        "diamanten oorbellen onder €200",
+        "diamanten kettingen onder €200"
+      ]
+    },
+    "lab-grown-diamond-guides/lab-grown-diamond-necklace-buying-guide": {
+      "title": "Een ketting met labgegroeide diamant kiezen: stijl, lengte en budget",
+      "excerpt": "Kies een ketting met een labgegroeide diamant op basis van stijl, kettinglengte en budget. Vergelijk solitair-, Y-vormige en symbolische hangers van I Want Jewels.",
+      "readTime": "8 min. leestijd",
+      "tags": [
+        "koopgids ketting met labgegroeide diamant",
+        "hoe kiest u een diamanten ketting",
+        "ketting met labgegroeide diamant",
+        "stijlen diamanten kettingen",
+        "lengte diamanten ketting"
+      ]
+    },
+    "necklace-guides/necklace-length-guide-40-45-50cm": {
+      "title": "Gids voor kettinglengtes: hoe 40, 45 en 50 cm eruitzien gedragen",
+      "excerpt": "Bekijk hoe kettingen van 40, 45 en 50 cm vallen, hoe u de juiste pasvorm meet en waar u op let voordat u een ketting met labgegroeide diamant kiest.",
+      "readTime": "9 min. leestijd",
+      "tags": [
+        "gids voor kettinglengtes",
+        "ketting van 40 cm versus 45 cm",
+        "ketting van 45 cm versus 50 cm",
+        "welke kettinglengte moet ik kiezen",
+        "18 inch ketting in cm"
+      ]
+    },
+    "lab-grown-diamond-guides/diamond-pendant-size-guide": {
+      "title": "Hoe groot oogt een diamanten hanger? Millimeters versus karaatgewicht",
+      "excerpt": "Ontdek het verschil tussen karaatgewicht en de afmetingen van een hanger in millimeters. Lees waarop u bij productdetails moet letten en vergelijk kettingen met labgegroeide diamanten.",
+      "readTime": "7 min. leestijd",
+      "tags": [
+        "maattabel diamanten hanger",
+        "maat diamanten ketting",
+        "afmetingen diamanten hanger",
+        "millimeters versus karaatgewicht",
+        "hoe groot oogt een diamanten hanger"
+      ]
+    },
+    "jewellery-gift-guides/necklace-or-bracelet-gift": {
+      "title": "Ketting of armband: wat is het beste sieradencadeau?",
+      "excerpt": "Een sieradencadeau voor uw vriendin kiezen? Vergelijk kettingen en armbanden op pasvorm, stijl, zichtbaarheid en budget, met cadeau-ideeën met labgegroeide diamanten.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "ketting of armband als cadeau",
+        "sieradencadeau voor vriendin",
+        "ketting versus armband als cadeau",
+        "diamanten ketting als cadeau",
+        "diamanten armband als cadeau"
+      ]
+    },
+    "necklace-guides/types-of-necklace-chains": {
+      "title": "Soorten kettingschakels: een visuele gids voor de verschillen",
+      "excerpt": "Ontdek kabel-, gourmette-, box-, koord- en slangenkettingen. Vergelijk kettingstijlen en halskettingen met labgegroeide diamant van I Want Jewels.",
+      "readTime": "8 min. leestijd",
+      "tags": [
+        "soorten kettingschakels",
+        "stijlen kettingschakels",
+        "verschillende soorten schakels voor kettingen",
+        "soorten en namen van kettingschakels",
+        "beste schakel voor een hanger"
+      ]
+    },
+    "necklace-guides/necklace-chain-thickness-guide": {
+      "title": "Dikte van kettingschakels: fijne en robuustere schakels vergeleken",
+      "excerpt": "Vergelijk fijne en stevigere halskettingen op breedte, hangerpasvorm en visuele balans. Leer millimetermaten lezen vóór u koopt.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "gids voor dikte van kettingschakels",
+        "breedte kettingschakel",
+        "dikte kettingschakel",
+        "fijne versus dikke ketting",
+        "kettingbreedte in mm"
+      ]
+    },
+    "necklace-guides/how-to-use-a-necklace-extender": {
+      "title": "Zo kiest en bevestigt u een kettingverlenger",
+      "excerpt": "Leer een kettingverlenger kiezen, de sluiting controleren en de nieuwe lengte berekenen. Bevestig hem veilig in enkele eenvoudige stappen.",
+      "readTime": "7 min. leestijd",
+      "tags": [
+        "gids voor kettingverlengers",
+        "hoe verlengt u een ketting",
+        "kettingverlenger",
+        "hoe bevestigt u een kettingverlenger",
+        "lengte kettingverlenger"
+      ]
+    },
+    "necklace-guides/pendant-necklace-styles": {
+      "title": "Hangervormen vergeleken: solitair, cirkel, ster, bloem en geometrisch",
+      "excerpt": "Vergelijk hangerkettingen met solitair-, cirkel-, ster-, bloem- en geometrische vormen. Ontdek welke vorm bij u past.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "stijlen kettingen met hanger",
+        "soorten hangers",
+        "hangervormen",
+        "ketting met solitair hanger",
+        "ketting met bloemenhanger"
+      ]
+    },
+    "necklace-guides/pendant-and-chain-compatibility": {
+      "title": "Past deze hanger aan deze ketting? Een compatibiliteitschecklist",
+      "excerpt": "Controleer de maat van het hangeroog, de breedte van de ketting, of de sluiting erdoorheen past en of de hanger afneembaar is voordat u deze met een ketting combineert. Gebruik deze checklist om de pasvorm te controleren.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "een ketting kiezen voor een hanger",
+        "maat van het hangoog",
+        "past deze hanger aan deze ketting",
+        "compatibiliteit van hanger en ketting",
+        "kettingbreedte voor hanger"
+      ]
+    },
+    "ring-guides/types-of-fashion-rings": {
+      "title": "Soorten modieuze ringen: diamanten banden, open ringen, motieven en statement designs",
+      "excerpt": "Vergelijk fashionringen: van diamanten banden en open ringen tot motief- en statementdesigns. Ontdek hoe elk profiel eruitziet en welke stijl bij u past.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "soorten ringen voor dames",
+        "modieuze ringstijlen",
+        "diamanten bandring",
+        "open ring",
+        "statement ring"
+      ]
+    },
+    "ring-guides/ring-band-width-guide": {
+      "title": "Ringbandbreedte: hoe smalle en brede ontwerpen eruitzien aan uw hand",
+      "excerpt": "Vergelijk smalle en brede ringbanden op uitstraling, vingerbedekking en pasvorm. Ontdek waarop u bij productfoto’s let voordat u een ring kiest.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "gids voor ringbandbreedte",
+        "dunne versus dikke ringen",
+        "ringbandbreedte",
+        "smalle ringbanden",
+        "brede ringbanden"
+      ]
+    },
+    "ring-guides/rings-for-short-fingers-and-small-hands": {
+      "title": "Zo kiest u ringen voor korte vingers en kleine handen",
+      "excerpt": "Ontdek ringen voor korte vingers en kleine handen, van smalle banden tot open en statement designs. Vergelijk profielen en kies wat bij u past.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "ringen voor korte vingers",
+        "ringen voor kleine handen",
+        "ringstijlen voor korte vingers",
+        "ringen kiezen voor kleine handen"
+      ]
+    },
+    "ring-guides/which-finger-to-wear-a-fashion-ring": {
+      "title": "Aan welke vinger kunt u een fashion ring dragen?",
+      "excerpt": "Leer hoe u fashion rings aan verschillende vingers stylet, met praktische comforttips en uitleg over culturele betekenissen. Kies de plek die goed voelt.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "aan welke vinger draagt u een ring",
+        "vinger voor modieuze ring",
+        "aan welke vinger draagt u een modieuze ring",
+        "ringen stylen aan verschillende vingers"
+      ]
+    },
+    "ring-guides/diamond-band-vs-solitaire-ring": {
+      "title": "Diamanten bandring versus solitairring: welke stijl past bij dagelijks dragen?",
+      "excerpt": "Vergelijk diamanten bandringen en solitaire ringen op vorm, zetting, diamantplaatsing en dagelijks draagcomfort. Ontdek waarop u let.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "diamanten bandring versus solitairring",
+        "pavé ring versus solitair",
+        "diamanten bandring",
+        "solitairring",
+        "diamanten ring voor dagelijks dragen"
+      ]
+    },
+    "earring-style-guides/earrings-for-face-shape": {
+      "title": "Oorbellen kiezen bij uw gezichtsvorm",
+      "excerpt": "Vergelijk oorstekers, creolen en oorhangers op gezichtsvorm, kapsel en stijl. Zie deze ideeën als opties, niet als vaste regels.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "oorbellen voor gezichtsvorm",
+        "oorbellen voor rond gezicht",
+        "oorbellen voor ovaal gezicht",
+        "oorbellen voor vierkant gezicht",
+        "oorbellen voor hartvormig gezicht"
+      ]
+    },
+    "earring-style-guides/jewellery-for-pink-dress": {
+      "title": "Sieraden bij een roze jurk: blush, roze en fuchsia vergeleken",
+      "excerpt": "Kies sieraden bij blush-, rosé- of fuchsiajurken. Vergelijk geelgouden, witte en rosékleurige sieraden met ideeën voor oorbellen, kettingen en armbanden.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden bij roze jurk",
+        "oorbellen bij blushroze jurk",
+        "sieraden bij fuchsia jurk",
+        "welke sieraden draagt u bij roze"
+      ]
+    },
+    "earring-style-guides/jewellery-for-navy-blue-dress": {
+      "title": "Welke sieraden bij een marineblauwe jurk?",
+      "excerpt": "Vind sieraden voor een marineblauwe jurk, van ingetogen overdag tot bruiloftsgast en avond. Vergelijk geelgoud, wit en rosé.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden bij marineblauwe jurk",
+        "oorbellen bij marineblauwe jurk",
+        "welke sieraden draagt u bij een marineblauwe jurk",
+        "gouden of zilveren sieraden bij marineblauw"
+      ]
+    },
+    "earring-style-guides/jewellery-for-cobalt-blue-dress": {
+      "title": "Welke sieraden bij een kobaltblauwe jurk?",
+      "excerpt": "Sieraden stylen bij een kobaltblauwe jurk. Vergelijk geelgouden, witte en roségouden afwerkingen met combinaties van oorbellen, kettingen en armbanden.",
+      "readTime": "4 min. leestijd",
+      "tags": [
+        "sieraden bij kobaltblauwe jurk",
+        "oorbellen bij kobaltblauwe jurk",
+        "welke sieraden draagt u bij een blauwe jurk"
+      ]
+    },
+    "demi-fine-jewellery-guides/gold-filled-vs-gold-plated-jewellery": {
+      "title": "Gold-filled versus vergulde sieraden: zo leest u de omschrijving",
+      "excerpt": "Ontdek het verschil tussen gold-filled en vergulde sieraden, wat elk label betekent en hoe u het basismetaal controleert. Lees hoe I Want Jewels vergulde sieraden omschrijft.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "gold-filled versus verguld",
+        "betekenis van gold-filled sieraden",
+        "vergulde sieraden",
+        "14 kt verguld 925 sterling zilver"
+      ]
+    },
+    "demi-fine-jewellery-guides/sterling-silver-vs-stainless-steel-jewellery": {
+      "title": "925 sterling zilver versus roestvrijstalen sieraden: wat kiest u?",
+      "excerpt": "Vergelijk 925 sterling zilver en roestvrijstalen sieraden op samenstelling, afwerking, onderhoud en prijs. Ontdek waarom I Want Jewels 925 sterling zilver gebruikt voor de collectie met labgegroeide diamanten.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "925 sterling zilver versus roestvrij staal",
+        "zilveren of roestvrijstalen sieraden",
+        "verzorging van sieraden van 925 sterling zilver"
+      ]
+    },
+    "jewellery-care-guides/rhodium-plated-sterling-silver": {
+      "title": "Wat is gerhodineerd 925 sterling zilver? Afwerking, slijtage en onderhoud uitgelegd",
+      "excerpt": "Ontdek wat met rhodium verguld 925 sterling zilver is, hoe de afwerking slijt en hoe u het verzorgt. Bekijk wat u op een productpagina controleert.",
+      "readTime": "4 min. leestijd",
+      "tags": [
+        "gerhodineerd 925 sterling zilver",
+        "gerhodineerde sieraden",
+        "rhodinering op zilver",
+        "sieraden met rhodiumafwerking",
+        "hoe verzorgt u gerhodineerd zilver"
+      ]
+    },
+    "earring-style-guides/jewellery-for-purple-or-lilac-dress": {
+      "title": "Welke sieraden bij een paarse of lila jurk?",
+      "excerpt": "Kies sieraden bij een lila of donkerpaarse jurk. Vergelijk geelgouden, witte en roségouden afwerkingen, het formaat van oorbellen en styling per halslijn.",
+      "readTime": "4 min. leestijd",
+      "tags": [
+        "sieraden bij paarse jurk",
+        "sieraden bij lila jurk",
+        "oorbellen bij lila jurk",
+        "welke sieraden draagt u bij paars",
+        "sieraden bij lavendelkleurige jurk"
+      ]
+    },
+    "earring-style-guides/jewellery-for-chocolate-brown-dress": {
+      "title": "Welke sieraden bij een chocoladebruine jurk?",
+      "excerpt": "Stijl sieraden bij een chocoladebruine jurk. Vergelijk warm geelgoud, wit en rosé voor herfst-, dag- en avondlooks.",
+      "readTime": "4 min. leestijd",
+      "tags": [
+        "sieraden bij bruine jurk",
+        "oorbellen bij chocoladebruine jurk",
+        "sieraden bij chocoladebruine jurk",
+        "gouden of zilveren sieraden bij bruin"
+      ]
+    },
+    "dress-colour-guides/jewellery-for-champagne-and-beige-dresses": {
+      "title": "Sieraden voor champagnekleurige en beige jurken: zo creëert u definitie",
+      "excerpt": "Vind sieraden voor champagnekleurige en beige jurken. Vergelijk geelgouden, roségouden en witte afwerkingen, kies oorstekers en kettingen en creëer contrast met lichte stoffen.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "sieraden bij champagnekleurige jurk",
+        "sieraden bij beige jurk",
+        "oorbellen bij champagnekleurige jurk",
+        "sieraden bij beige outfit"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-gold-dress": {
+      "title": "Sieraden bij een metallic gouden outfit: metalen combineren of contrast toevoegen?",
+      "excerpt": "Sieraden bij een gouden jurk? Vergelijk geelgoud met rosé- en witgouden afwerkingen en vind passende oorbellen en kettingen.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "sieraden bij gouden jurk",
+        "oorbellen bij metallic gouden jurk",
+        "sieraden bij gouden outfit",
+        "welke sieraden draagt u bij een gouden jurk",
+        "oorbellen bij een gouden avondjurk"
+      ]
+    },
+    "necklace-style-guides/jewellery-for-a-square-neck-dress": {
+      "title": "Welke sieraden bij een jurk met vierkante hals?",
+      "excerpt": "Kies de juiste ketting bij een jurk met vierkante hals. Ontdek hoe hangerlengtes vallen, wanneer u een ketting overslaat en welke oorbellen passen.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "sieraden bij vierkante halslijn",
+        "ketting bij jurk met vierkante halslijn",
+        "oorbellen bij jurk met vierkante halslijn",
+        "hanger bij vierkante halslijn",
+        "sieraden bij een vierkante halslijn"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-halter-neck-dress": {
+      "title": "Welke sieraden bij een halterjurk?",
+      "excerpt": "Vind sieraden voor een halterjurk. Vergelijk halters met open en gesloten midden, kies oorbellen die vrij blijven van de bandjes en bepaal of een ketting past.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden bij halterjurk",
+        "oorbellen bij halterjurk",
+        "ketting bij halterjurk",
+        "oorbellen bij halterjurk met hoge hals",
+        "welke sieraden passen bij een halterjurk"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-boat-neck-dress": {
+      "title": "Welke sieraden bij een boothalsjurk?",
+      "excerpt": "Ontdek sieraden voor een boothalsjurk. Vergelijk oorstekers, korte oorbellen en oorhangers. Lees waar een ketting bij een brede halslijn hoort te vallen.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "sieraden bij boothalsjurk",
+        "ketting bij boothals",
+        "oorbellen bij boothalsjurk",
+        "ketting bij bateauhalslijn",
+        "korte oorbellen of oorhangers bij een boothals"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-one-shoulder-dress": {
+      "title": "Welke sieraden bij een jurk met één blote schouder",
+      "excerpt": "Vind sieraden bij een jurk met één blote schouder. Breng de asymmetrische halslijn in balans, kies oorbellen die de blote schouder vrijlaten en bepaal wanneer u een ketting beter weglaat.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden bij one-shoulderjurk",
+        "oorbellen bij asymmetrische jurk",
+        "ketting bij one-shoulderjurk",
+        "sieraden bij asymmetrische halslijn"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-jumpsuit": {
+      "title": "Welke sieraden bij een jumpsuit?",
+      "excerpt": "Ontdek sieraden voor een jumpsuit: ideeën voor getailleerde, strapless en haltermodellen. Vergelijk oorbellen, kettingen en armbanden per halslijn.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden bij jumpsuit",
+        "oorbellen bij jumpsuit",
+        "welke sieraden draagt u bij een jumpsuit",
+        "ketting bij een jumpsuit",
+        "sieraden bij strapless jumpsuit"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-floral-dress": {
+      "title": "Sieraden kiezen bij een gebloemde jurk",
+      "excerpt": "Kies sieraden bij een gebloemde jurk op basis van printformaat, kleur en halslijn. Vergelijk oorbellen, kettingen en eenvoudige combinaties zonder de look te druk te maken.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "sieraden bij bloemenjurk",
+        "oorbellen bij bloemenjurk",
+        "ketting bij een bloemenjurk",
+        "oorbellen bij een jurk met bloemenprint",
+        "sieraden bij grote bloemenprint"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-denim-dress": {
+      "title": "Welke sieraden passen bij een spijkerjurk?",
+      "excerpt": "Vind sieraden voor een spijkerjurk, van casual overdag tot een avondlook. Vergelijk oorbellen, kettingen en metaalafwerkingen, met tips voor overhemdkragen.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden bij denim jurk",
+        "oorbellen bij denim jurk",
+        "ketting bij denim overhemdjurk",
+        "gouden of zilveren sieraden bij denim",
+        "avond­sieraden bij een denim jurk"
+      ]
+    },
+    "earring-style-guides/jewellery-for-a-job-interview": {
+      "title": "Welke sieraden draagt u naar een sollicitatiegesprek?",
+      "excerpt": "Kies sieraden voor uw sollicitatiegesprek die comfortabel zitten en passen bij de werkomgeving. Vergelijk oorbellen en hangers voor verschillende situaties, ook video-sollicitaties.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden voor sollicitatiegesprek",
+        "oorbellen voor sollicitatiegesprek",
+        "welke sieraden draagt u naar een sollicitatiegesprek",
+        "oorbellen voor een sollicitatiegesprek",
+        "ketting bij sollicitatie-outfit"
+      ]
+    },
+    "jewellery-care/how-to-untangle-a-fine-necklace": {
+      "title": "Een fijne ketting ontwarren zonder de afwerking te beschadigen",
+      "excerpt": "Leer hoe u een fijne ketting voorzichtig ontwart. Volg veilige stappen, bescherm vergulde afwerkingen en weet wanneer u moet stoppen.",
+      "readTime": "4 min. leestijd",
+      "tags": [
+        "hoe ontwart u een ketting",
+        "verwarde kettingschakel",
+        "hoe ontwart u een fijne ketting",
+        "ontwar een ketting met knopen",
+        "hoe verzorgt u een vergulde ketting"
+      ]
+    },
+    "jewellery-care/why-does-your-pendant-keep-flipping": {
+      "title": "Waarom draait uw hanger steeds om?",
+      "excerpt": "Ontdek waarom een hanger omdraait of scheef hangt. Controleer ketting, oogje en balans en ontdek welke oplossingen veilig zijn.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "hanger blijft draaien",
+        "hanger van ketting draait om",
+        "waarom draait mijn kettinghanger om",
+        "hanger hangt achterstevoren",
+        "voorkom dat hanger aan ketting draait"
+      ]
+    },
+    "occasion-jewellery-guides/prom-jewellery": {
+      "title": "Sieraden voor het gala: oorbellen, kettingen en armbanden kiezen bij uw jurk",
+      "excerpt": "Kies promsieraden op basis van halslijn, jur details en budget. Vergelijk oorbellen, kettingen en armbanden met voorbeelden en outfitideeën.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "sieraden voor gala",
+        "oorbellen voor gala",
+        "ketting voor gala",
+        "sieraden bij galajurk",
+        "armband voor gala"
+      ]
+    },
+    "occasion-jewellery-guides/engagement-party-jewellery": {
+      "title": "Welke sieraden draagt u naar een verlovingsfeest?",
+      "excerpt": "Ontdek sieraden voor het verlovingsfeest, voor het paar en de gasten. Kies oorbellen, kettingen en armbanden die bij uw outfit passen zonder de verlovingsring te overschaduwen.",
+      "readTime": "6 min. leestijd",
+      "tags": [
+        "sieraden voor verlovingsfeest",
+        "oorbellen voor verlovingsfeest",
+        "sieraden bij outfit voor verlovingsfeest",
+        "ketting voor verlovingsfeest",
+        "sieraden voor gasten op verlovingsfeest"
+      ]
+    },
+    "jewellery-care/why-does-necklace-clasp-move-to-front": {
+      "title": "Waarom schuift de sluiting van uw ketting naar voren?",
+      "excerpt": "Ontdek waarom de sluiting naar voren schuift. Controleer kettinggewicht, pasvorm en beweging, en lees welke aanpassingen veilig zijn.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "kettingsluiting schuift steeds naar voren",
+        "kettingsluiting schuift naar voren",
+        "sluiting komt vooraan in de hals",
+        "houd kettingsluiting aan de achterkant",
+        "ketting draait steeds"
+      ]
+    },
+    "jewellery-care/why-does-your-ring-keep-spinning": {
+      "title": "Waarom draait uw ring steeds? Pasvorm en ontwerp",
+      "excerpt": "Ontdek waarom uw ring draait. Controleer de pasvorm, zetting en vorm van uw vinger en bespreek oplossingen met een juwelier.",
+      "readTime": "5 min. leestijd",
+      "tags": [
+        "ring draait steeds rond",
+        "hoe voorkomt u dat een ring ronddraait",
+        "waarom draait mijn ring rond",
+        "ring draait om vinger",
+        "zware ringzetting aan de bovenkant"
       ]
     }
   },
