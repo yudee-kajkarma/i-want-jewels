@@ -8,16 +8,15 @@ module.exports = {
         play: ['var(--font-play)', 'system-ui', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
-      // Chat button: the icon flips between a chat bubble and a diamond.
       keyframes: {
-        'chat-flip': {
-          '0%, 40%': { transform: 'rotateY(0deg)' },
-          '50%, 90%': { transform: 'rotateY(180deg)' },
-          '100%': { transform: 'rotateY(360deg)' },
+        // Lumi: new messages, screens and cards fade in (kept short and quiet).
+        'lumi-fade': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
       animation: {
-        'chat-flip': 'chat-flip 4s ease-in-out infinite',
+        'lumi-fade': 'lumi-fade 200ms ease-out both',
       },
     },
   },
