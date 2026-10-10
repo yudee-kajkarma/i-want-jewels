@@ -34,6 +34,29 @@ node scripts/translate/validate.mjs locales --verbose
 `estimate.mjs` and `validate.mjs` have **no dependencies** — only the actual
 translation run needs the `openai` package.
 
+## Translate only what is new (`new-content.mjs`)
+
+After adding English guides or blogs, run this instead of a whole scope. Per
+language it finds the English articles that language does not have yet, plus
+titles/SEO entries in `resources-meta.json`, `blogs-meta.json` and
+`pageMeta.json` that are missing or still identical to English — and
+translates only those, through `translate.mjs`.
+
+```bash
+node scripts/translate/new-content.mjs --list                       # what is missing, per language
+node scripts/translate/new-content.mjs --estimate                   # cost, no API calls
+node scripts/translate/new-content.mjs --locales=de --dry-run       # see the request, writes nothing
+node --env-file=.env.translate scripts/translate/new-content.mjs --max-spend=3
+node --env-file=.env.translate scripts/translate/new-content.mjs --locales=de,nl --model=gpt-5-mini
+```
+
+- New guides need an English entry in `src/locales/en/resources-meta.json`
+  (title, excerpt, readTime, tags), otherwise their card titles stay English.
+- Links in content are written `[label](/path)`. The label is translated; the
+  path is checked after translation and put back if the model changed it.
+- `--model` / `--meta-model` must be a model listed in `lib/pricing.mjs`
+  (add yours there, with its per-million-token prices, to use another one).
+
 ## API key
 
 Keep the key out of `.env` — that file is loaded into the Next.js dev and build

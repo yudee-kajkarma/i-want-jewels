@@ -2,6 +2,7 @@
 
 import { Fragment, useState } from "react";
 import { Link } from "@/lib/router";
+import InlineText from "@/components/shared/InlineText";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import MobileStickyActions from "@/components/shared/MobileStickyActions";
@@ -264,7 +265,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
         case "paragraph":
             return (
                 <p className="font-poppins text-[15px] leading-[1.9] text-[#344256]">
-                    {block.text}
+                    <InlineText text={block.text} />
                 </p>
             );
 
@@ -292,7 +293,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
               before:absolute before:-left-4 before:top-[0.62em] before:h-[5px] before:w-[5px]
               before:rounded-full before:bg-pink-400 before:content-['']"
                         >
-                            {item}
+                            <InlineText text={item} />
                         </li>
                     ))}
                 </ul>
@@ -306,7 +307,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
                             key={i}
                             className="font-poppins text-[15px] leading-[1.8] text-[#344256] marker:font-semibold marker:text-[#bb923a]"
                         >
-                            {item}
+                            <InlineText text={item} />
                         </li>
                     ))}
                 </ol>
@@ -343,7 +344,7 @@ function RenderBlock({ block }: { block: V2ContentBlock }) {
                                             key={c}
                                             className="border-t border-zinc-100 px-5 py-3.5 align-top font-poppins text-[14px] text-[#344256]"
                                         >
-                                            {cell}
+                                            <InlineText text={cell} />
                                         </td>
                                     ))}
                                 </tr>

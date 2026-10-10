@@ -35,6 +35,7 @@
     "paymentHistory": "Historial de Pagos",
     "myTickets": "Mis Tickets",
     "adminAddress": "Dirección de Administrador",
+    "adminChatbot": "Claves del chatbot",
     "adminWishlist": "Lista de Deseos de Administrador",
     "adminCart": "Carrito de Administrador",
     "wishlist": "Lista de Deseos",
@@ -1278,6 +1279,107 @@
       "toastUpdateSuccess": "Cuenta y dirección de administrador actualizadas correctamente.",
       "toastUpdateError": "No se pudo actualizar la configuración de administrador."
     },
+    "chatbot": {
+      "breadcrumb": "Administración",
+      "title": "Chatbot (Lumi)",
+      "intro": "Las claves API se guardan cifradas y no se vuelven a mostrar. Añade solo los proveedores que uses.",
+      "lastUpdated": "Última actualización: {{date}}",
+      "lastUpdatedBy": "Última actualización: {{date}} por {{who}}",
+      "loading": "Cargando la configuración del chatbot…",
+      "errorLoad": "No se pudo cargar la configuración del chatbot en este momento.",
+      "retry": "Reintentar",
+      "providers": {
+        "title": "Proveedores de IA",
+        "hint": "Lumi necesita al menos un proveedor con clave. Si un modelo falla o se agota, Lumi pasa al siguiente."
+      },
+      "status": {
+        "saved": "Clave guardada que termina en ••••{{last4}}",
+        "savedNoHint": "Clave guardada",
+        "notSet": "Sin configurar",
+        "unreadable": "No se puede leer la clave guardada — introdúcela de nuevo"
+      },
+      "apiKey": "Clave API",
+      "apiKeyPlaceholderReplace": "Introduce una clave nueva para reemplazarla",
+      "apiKeyPlaceholderNew": "Pega tu clave API",
+      "showKey": "Mostrar clave",
+      "hideKey": "Ocultar clave",
+      "newKeyHint": "Esta clave se guarda al hacer clic en «Guardar cambios».",
+      "models": "Modelos",
+      "modelsHint": "Separados por comas, en el orden en que se prueban. Si uno falla, Lumi usa el siguiente.",
+      "modelsOrder": "Modelos en el orden en que se prueban",
+      "modelsMissing": "Añade al menos un modelo; si no, este proveedor no se usa.",
+      "endpoint": "Endpoint",
+      "endpointHint": "Debe ser una dirección de Alibaba Cloud (Model Studio, …aliyuncs.com).",
+      "test": "Probar",
+      "testing": "Probando…",
+      "testNeedsKey": "Añade una clave para probar este proveedor.",
+      "testOk": "Funciona",
+      "testFailed": "No funciona",
+      "testModel": "modelo {{model}}",
+      "removeKey": "Eliminar clave",
+      "removeConfirm": "¿Eliminar la clave guardada de {{provider}}? Lumi dejará de usar {{provider}} de inmediato.",
+      "removeYes": "Sí, eliminar",
+      "removing": "Eliminando…",
+      "cancel": "Cancelar",
+      "toastRemoved": "Clave de {{provider}} eliminada.",
+      "errorRemove": "No se pudo eliminar la clave en este momento.",
+      "errorTest": "No se pudo probar este proveedor en este momento.",
+      "order": {
+        "title": "Orden",
+        "hint": "Qué proveedor prueba Lumi primero, segundo y tercero. Solo se usan los proveedores con clave; los demás se omiten.",
+        "hasKey": "Tiene clave — se usa",
+        "newKey": "Clave nueva — se usa tras guardar",
+        "noKey": "Sin clave — se omite",
+        "moveUp": "Subir {{provider}}",
+        "moveDown": "Bajar {{provider}}",
+        "noneWarning": "Ningún proveedor tiene clave todavía, así que Lumi no puede escribir respuestas de IA."
+      },
+      "embedding": {
+        "title": "Búsqueda (embeddings)",
+        "hint": "El modelo que convierte los textos de la tienda y cada pregunta en números, para que Lumi encuentre los datos correctos.",
+        "provider": "Proveedor",
+        "anthropicNote": "Solo Alibaba Cloud u OpenAI — Anthropic no tiene modelo de embeddings.",
+        "model": "Modelo",
+        "dimensions": "Dimensiones",
+        "dimensionsHint": "Por defecto: 1024.",
+        "noKey": "No hay ninguna clave de {{provider}} guardada — la búsqueda la necesita.",
+        "warning": "Si cambias esto, hay que reconstruir el conocimiento del chatbot ({{command}}); si no, la búsqueda deja de funcionar."
+      },
+      "limits": {
+        "title": "Límites diarios",
+        "hint": "Se cuentan por día. Las respuestas guardadas y los botones rápidos no cuentan — solo las respuestas reales de IA.",
+        "guestQuestions": "Preguntas de invitados",
+        "guestQuestionsHint": "Preguntas que un visitante sin cuenta puede hacer antes de que Lumi le pida iniciar sesión.",
+        "guestAnswers": "Respuestas de IA para invitados",
+        "guestAnswersHint": "Respuestas de IA para un visitante sin cuenta.",
+        "loggedInAnswers": "Respuestas de IA con sesión iniciada",
+        "loggedInAnswersHint": "Respuestas de IA para un comprador que ha iniciado sesión.",
+        "customerAnswers": "Respuestas de IA para clientes",
+        "customerAnswersHint": "Respuestas de IA para un cliente que ha pagado un pedido.",
+        "shopAnswers": "Respuestas de IA de toda la tienda",
+        "shopAnswersHint": "Respuestas de IA para todos los visitantes juntos — esto limita el coste diario."
+      },
+      "unsaved": "Tienes cambios sin guardar.",
+      "noChanges": "No hay cambios sin guardar.",
+      "save": "Guardar cambios",
+      "saving": "Guardando…",
+      "toastSaved": "Configuración del chatbot guardada.",
+      "errorSave": "No se pudo guardar la configuración del chatbot en este momento. Inténtalo de nuevo.",
+      "errors": {
+        "modelsRequired": "Añade al menos un modelo para {{provider}}.",
+        "endpointInvalid": "El endpoint de Alibaba Cloud debe ser una dirección https:// en aliyuncs.com.",
+        "embeddingModelRequired": "Introduce el modelo de búsqueda (embeddings).",
+        "dimensionsInvalid": "Las dimensiones deben ser un número entero entre {{min}} y {{max}}.",
+        "limitInvalid": "{{label}}: introduce un número entero entre {{min}} y {{max}}.",
+        "keyInvalid": "La clave de {{provider}} no parece correcta — pega la clave completa, sin espacios.",
+        "modelInvalid": "«{{model}}» no es un nombre de modelo válido (solo letras, números y . _ : / @ -)."
+      },
+      "providerNames": {
+        "alibaba": "Alibaba Cloud (Qwen)",
+        "openai": "OpenAI",
+        "anthropic": "Anthropic (Claude)"
+      }
+    },
     "blogPreview": {
       "loading": "Cargando vista previa del blog...",
       "notFound": "Blog no encontrado.",
@@ -2378,6 +2480,362 @@
         "next": "Siguiente",
         "page": "Página {{current}} de {{total}}"
       }
+    }
+  },
+  "chat": {
+    "title": "Lumi",
+    "open": "Chatear con Lumi",
+    "close": "Cerrar Lumi",
+    "placeholder": "Escribe a Lumi…",
+    "send": "Enviar",
+    "privacy": "Asistente de IA · No compartas datos de tu tarjeta.",
+    "botCheck": "No pudimos confirmar que no eres un robot. Inténtalo de nuevo en un momento o contacta con nuestro equipo.",
+    "unavailable": "Ahora mismo no puedo responder. Inténtalo más tarde o contacta con nuestro equipo.",
+    "limitVisitor": "Para seguir chateando con Lumi, inicia sesión. Solo te llevará un momento y tus chats se guardarán en tu cuenta.",
+    "limitAccount": "Has alcanzado el límite de respuestas de IA de hoy. Nuestro equipo te ayudará encantado.",
+    "logIn": "Iniciar sesión",
+    "quick": {
+      "person": {
+        "link": "Contactar con nuestro equipo"
+      }
+    },
+    "teaser": "Hola, soy Lumi. Pregúntame por tallas, cuidados, regalos o tu pedido.",
+    "teaserCta": "Chatear con Lumi",
+    "tools": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": {
+        "PENDING": "Pendiente de pago",
+        "CONFIRMED": "Confirmado",
+        "SHIPPED": "Enviado",
+        "DELIVERED": "Entregado",
+        "CANCELLED": "Cancelado",
+        "RETURNED": "Devuelto"
+      },
+      "yourOrders": "Estos son tus últimos pedidos. Toca uno para ver su estado.",
+      "noOrders": "Todavía no tienes pedidos.",
+      "shopNow": "Ver joyas",
+      "allOrders": "Todos mis pedidos",
+      "ordersFailed": "Ahora mismo no se pueden cargar tus pedidos.",
+      "orderNotYours": "Ese número de pedido no está en tu cuenta. Estos son tus pedidos:",
+      "email": "Correo electrónico",
+      "orderedOn": "Pedido el {{date}}",
+      "items_one": "{{count}} artículo",
+      "items_other": "{{count}} artículos",
+      "progress": "Progreso del pedido",
+      "carrier": "Enviado con {{carrier}}",
+      "trackParcel": "Seguir paquete",
+      "expected": "Previsto el {{date}}",
+      "deliveredOn": "Entregado el {{date}}",
+      "lastUpdate": "Última actualización",
+      "viewOrder": "Ver pedido",
+      "notShippedYet": "Aún no se ha enviado. Recibirás un enlace de seguimiento por correo cuando esté en camino.",
+      "personIntro": "Escribe tu mensaje y nuestro equipo te responderá por correo.",
+      "personIntroAccount": "Escribe tu mensaje y nuestro equipo te responderá en Mis tickets y por correo.",
+      "name": "Tu nombre",
+      "message": "Tu mensaje",
+      "sendMessage": "Enviar mensaje",
+      "sent": "¡Gracias! Tu mensaje se ha enviado. Te responderemos pronto.",
+      "ticketSent": "¡Gracias! Hemos abierto el ticket {{id}}. Encontrarás nuestra respuesta en Mis tickets.",
+      "myTickets": "Mis tickets",
+      "sendFailed": "No se pudo enviar. Inténtalo de nuevo o usa nuestra página de contacto.",
+      "giftCardsIntro": "Nuestras tarjetas regalo se envían por correo. Elige un importe:",
+      "allGiftCards": "Todas las tarjetas regalo",
+      "myGiftCardsIntro": "Tus tarjetas regalo:",
+      "myGiftCard": "Tarjeta {{code}} — saldo {{balance}}",
+      "myGiftCards": "Mis tarjetas regalo"
+    },
+    "back": "Atrás",
+    "lumi": {
+      "name": "Lumi",
+      "avatarAlt": "Lumi, la asistente de I Want Jewels",
+      "dismiss": "Cerrar",
+      "loading": "Cargando…",
+      "home": {
+        "greeting": "Hola",
+        "greetingName": "Hola, {{name}}",
+        "askPlaceholder": "Pregúntale a Lumi lo que quieras…",
+        "quickActions": "Ayuda rápida",
+        "popular": "Preguntas frecuentes",
+        "continue": "Retoma tu último chat",
+        "exploreAll": "Ver todas las preguntas",
+        "help": "¿En qué puedo ayudarte?",
+        "giftFinder": "Buscador de regalos",
+        "bag": "Mi carrito",
+        "wishlist": "Lista de deseos"
+      },
+      "actions": {
+        "track": "Seguir mi pedido",
+        "gifts": "Tarjetas regalo",
+        "person": "Hablar con una persona",
+        "bag": "Muéstrame mi carrito",
+        "wishlist": "Muéstrame mi lista de deseos",
+        "giftFinder": "Ayúdame a encontrar un regalo"
+      },
+      "tabs": {
+        "label": "Secciones de Lumi",
+        "home": "Inicio",
+        "chats": "Chats",
+        "explore": "Explorar"
+      },
+      "chats": {
+        "title": "Mensajes",
+        "empty": "Aún no hay chats",
+        "emptySub": "Hazle una pregunta a Lumi y tu chat se guardará aquí.",
+        "device": "Chats guardados en este dispositivo",
+        "account": "Chats guardados en tu cuenta",
+        "loginHint": "Inicia sesión para tener tus chats en todos tus dispositivos.",
+        "delete": "Eliminar chat",
+        "deleteConfirm": "¿Eliminar este chat?",
+        "clearAll": "Eliminar todos los chats",
+        "clearConfirm": "¿Eliminar todos tus chats? No se puede deshacer.",
+        "confirm": "Eliminar",
+        "cancel": "Cancelar",
+        "today": "Hoy",
+        "yesterday": "Ayer",
+        "untitled": "Nuevo chat"
+      },
+      "explore": {
+        "title": "Explorar",
+        "subtitle": "Toca una pregunta y Lumi te responde al instante.",
+        "search": "Buscar preguntas",
+        "all": "Todos",
+        "noResults": "Ninguna pregunta coincide.",
+        "askInstead": "Pregúntale a Lumi: «{{q}}»",
+        "clear": "Borrar búsqueda",
+        "topics": "Temas"
+      },
+      "thread": {
+        "newChat": "Nuevo chat",
+        "menu": "Opciones del chat",
+        "intro": "Hola, soy Lumi. Pregúntame lo que quieras o elige una pregunta de abajo.",
+        "followUps": "También podrías preguntar",
+        "oldChat": "Este chat es del {{date}}. Desde entonces, los precios y el stock pueden haber cambiado.",
+        "counter": "{{count}}/{{max}}",
+        "scrollDown": "Ir al último mensaje",
+        "you": "Tú",
+        "delete": "Eliminar este chat"
+      },
+      "forms": {
+        "found": "Pedido encontrado",
+        "sent": "Mensaje enviado"
+      },
+      "product": {
+        "size": "Talla",
+        "material": "Material",
+        "inStock": "En stock",
+        "soldOut": "Agotado",
+        "view": "Ver producto",
+        "from": "desde {{price}}",
+        "oneSize": "Talla única",
+        "colour": "Color",
+        "labelled": "{{label}}:"
+      },
+      "colours": {
+        "yellow": "Oro amarillo",
+        "rose": "Oro rosa",
+        "white": "Oro blanco"
+      },
+      "context": {
+        "pairs": "¿Qué combina con {{title}}?",
+        "size": "¿Qué talla elijo para {{title}}?",
+        "stock": "¿Hay stock de {{title}}?",
+        "pairsThis": "¿Qué combina con esta joya?",
+        "sizeThis": "¿Qué talla elijo para esta joya?",
+        "stockThis": "¿Hay stock de esta joya?",
+        "viewing": "Estás viendo {{title}}",
+        "thisPiece": "esta joya",
+        "chips": {
+          "addToBag": "Añadir al carrito",
+          "pairs": "¿Con qué combina?",
+          "size": "¿Qué talla?",
+          "stock": "¿Hay stock?"
+        }
+      },
+      "shop": {
+        "material": "{{metal}} con {{finish}}",
+        "addFailed": "Lo siento, no he podido añadirlo a tu carrito. Inténtalo de nuevo.",
+        "chooseSize": "Elige primero una talla.",
+        "unknownProduct": "Lo siento, no he encontrado esa joya. Puede que ya no esté disponible.",
+        "loadFailed": "Lo siento, ahora mismo no puedo cargar esa joya. Inténtalo de nuevo.",
+        "whichProduct": "¿Qué joya quieres? Toca «Añadir» en un producto o pregúntame desde su página.",
+        "giftCardPage": "Nuestras tarjetas regalo se envían por correo. Elige el importe y el destinatario en la página de la tarjeta regalo.",
+        "bagFailed": "Ahora mismo no se puede cargar tu carrito.",
+        "openBag": "Abrir mi carrito",
+        "wishlistLogin": "Inicia sesión para guardar joyas en tu lista de deseos.",
+        "wishlistSaved": "Se ha guardado en tu lista de deseos.",
+        "wishlistRemoved": "Se ha quitado de tu lista de deseos.",
+        "wishlistAlready": "Esa joya ya está en tu lista de deseos.",
+        "wishlistFailed": "Lo siento, no he podido actualizar tu lista de deseos. Inténtalo de nuevo.",
+        "wishlistLoadFailed": "Ahora mismo no se puede cargar tu lista de deseos.",
+        "openWishlist": "Abrir mi lista de deseos",
+        "add": "Añadir",
+        "addLabel": "Añadir {{title}} a tu carrito",
+        "addToBag": "Añadir al carrito",
+        "adding": "Añadiendo…",
+        "added": "Añadido al carrito",
+        "buyNow": "Comprar ahora",
+        "wishlistAdd": "Guardar {{title}} en tu lista de deseos",
+        "wishlistRemove": "Quitar {{title}} de tu lista de deseos",
+        "addedToBag": "Añadido a tu carrito",
+        "viewBag": "Ver carrito",
+        "checkout": "Finalizar compra",
+        "bag": "Tu carrito",
+        "subtotal": "Subtotal",
+        "qty": "Cant. {{count}}",
+        "size": "Talla {{size}}",
+        "sizeCarat": "{{size}} ct",
+        "sizeInch": "{{size}} pulgadas",
+        "more": "+{{count}} más",
+        "emptyBag": "Tu carrito está vacío.",
+        "wishlist": "Tu lista de deseos",
+        "emptyWishlist": "Tu lista de deseos está vacía."
+      },
+      "gift": {
+        "summary": {
+          "text": "{{item}} {{budget}} {{occasion}}",
+          "item": {
+            "earrings": "Pendientes",
+            "necklaces": "Un collar",
+            "rings": "Un anillo",
+            "bracelets": "Una pulsera",
+            "any": "Un regalo"
+          },
+          "budget": {
+            "under100": "de menos de {{amount}}",
+            "from100to200": "de entre {{from}} y {{to}}",
+            "over200": "de más de {{amount}}"
+          },
+          "for": {
+            "partner": {
+              "birthday": "para el cumpleaños de mi pareja",
+              "anniversary": "para nuestro aniversario",
+              "wedding": "para nuestra boda",
+              "justBecause": "para mi pareja, porque sí"
+            },
+            "mum": {
+              "birthday": "para el cumpleaños de mi madre",
+              "anniversary": "para el aniversario de boda de mi madre",
+              "wedding": "para mi madre, para llevar a una boda",
+              "justBecause": "para mi madre, porque sí"
+            },
+            "friend": {
+              "birthday": "para el cumpleaños de una amiga",
+              "anniversary": "para el aniversario de boda de una amiga",
+              "wedding": "para la boda de una amiga",
+              "justBecause": "para una amiga, porque sí"
+            },
+            "myself": {
+              "birthday": "para mi cumpleaños",
+              "anniversary": "para mi aniversario",
+              "wedding": "para llevar a una boda",
+              "justBecause": "para mí, porque sí"
+            }
+          }
+        },
+        "title": "Buscador de regalos",
+        "step": "Paso {{step}} de {{total}}",
+        "back": "Atrás",
+        "again": "Empezar de nuevo",
+        "questions": {
+          "recipient": "¿Para quién es?",
+          "occasion": "¿Cuál es la ocasión?",
+          "budget": "¿Cuál es tu presupuesto?",
+          "piece": "¿Qué te gustaría regalar?"
+        },
+        "options": {
+          "recipient": {
+            "partner": "Para mi pareja",
+            "mum": "Para mi madre",
+            "friend": "Para una amiga",
+            "myself": "Para mí"
+          },
+          "occasion": {
+            "birthday": "Cumpleaños",
+            "anniversary": "Aniversario",
+            "wedding": "Boda",
+            "justBecause": "Porque sí"
+          },
+          "budget": {
+            "under100": "Menos de {{amount}}",
+            "from100to200": "{{from}}–{{to}}",
+            "over200": "Más de {{amount}}",
+            "any": "Sin límite"
+          },
+          "type": {
+            "earrings": "Pendientes",
+            "necklaces": "Un collar",
+            "rings": "Un anillo",
+            "bracelets": "Una pulsera",
+            "any": "Sorpréndeme"
+          }
+        }
+      },
+      "categories": {
+        "shop": "Tienda y precios",
+        "gifts": "Regalos",
+        "sizing": "Tallas y ajuste",
+        "materials": "Materiales y diamantes",
+        "care": "Cuidados",
+        "styling": "Consejos de estilo",
+        "delivery": "Envíos y devoluciones",
+        "orders": "Pedidos y ayuda"
+      },
+      "suggestions": {
+        "best-earrings": "Muéstrame los pendientes más vendidos",
+        "popular-necklaces": "¿Qué collares son los más populares?",
+        "rings-under-200": "Muéstrame anillos de menos de €200",
+        "most-affordable": "¿Cuáles son las joyas más económicas?",
+        "rose-gold": "Muéstrame joyas en oro rosa",
+        "bracelet-prices": "¿Cuánto cuestan las pulseras?",
+        "gifts-under-150": "Ideas de regalo por menos de €150",
+        "gift-cards": "¿Se pueden comprar tarjetas regalo?",
+        "anniversary-gift": "¿Qué le regalo por nuestro aniversario?",
+        "birthday-gift": "Ideas de regalo de cumpleaños para ella",
+        "ring-size": "¿Cómo encuentro mi talla de anillo?",
+        "necklace-length": "¿Qué largo de collar elijo?",
+        "face-shape": "¿Qué pendientes me favorecen según la forma de mi cara?",
+        "band-width": "Anillo fino o ancho: ¿cuál me queda mejor?",
+        "lab-grown-real": "¿Son reales los diamantes de laboratorio?",
+        "gold-plated-silver": "¿Qué es la plata de ley chapada en oro?",
+        "gold-filled-vs-plated": "Gold-filled o chapado en oro: ¿cuál es la diferencia?",
+        "rhodium-plated": "¿Qué es la plata con baño de rodio?",
+        "shower": "¿Puedo ducharme con mis joyas?",
+        "clean-gold-plated": "¿Cómo limpio las joyas chapadas en oro?",
+        "untangle-necklace": "¿Cómo desenredo un collar fino?",
+        "pendant-flipping": "¿Por qué mi colgante se da la vuelta constantemente?",
+        "navy-dress": "¿Qué joyas combinan con un vestido azul marino?",
+        "job-interview": "¿Qué joyas me pongo para una entrevista de trabajo?",
+        "wedding-guest": "¿Qué pendientes me pongo para ir a una boda?",
+        "square-neck": "¿Qué collar queda bien con un escote cuadrado?",
+        "delivery-time": "¿Cuánto tarda el envío?",
+        "returns": "¿Cuál es la política de devoluciones?",
+        "track-order": "Seguir mi pedido",
+        "talk-person": "Hablar con una persona"
+      },
+      "askLumi": "Pregúntale a Lumi",
+      "stylistOnline": "Estilista · en línea",
+      "expand": "Ampliar",
+      "meta": "Lumi · {{time}}",
+      "status": {
+        "sent": "Enviado",
+        "seen": "Visto"
+      },
+      "feedback": {
+        "label": "¿Te ha sido útil?",
+        "up": "Útil",
+        "down": "No útil",
+        "thanks": "¡Gracias!"
+      },
+      "chips": {
+        "label": "Accesos rápidos",
+        "giftIdeas": "Ideas de regalo",
+        "track": "Seguir pedido",
+        "ringSize": "Talla de anillo",
+        "bag": "Mi carrito",
+        "talk": "Escríbenos"
+      },
+      "ordersLogin": "Inicia sesión para ver tus pedidos y su estado."
     }
   }
 }

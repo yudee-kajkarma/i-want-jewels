@@ -569,4 +569,220 @@ export const blogLinks: BlogLink[] = [
         href: "/blogs/halloween-jewellery-for-work",
         coverImage: "/blog-images/new-blog-images/iwj-blog15/PIC1.png",
     },
+    // ─── Moved from /resources on 2026-10-09 ───
+    {
+        title: "How to Choose a Bridal Necklace for Your Wedding Dress",
+        href: "/blogs/bridal-necklace-for-wedding-dress",
+        coverImage: "/blog-images/resource-guides/bridal-necklace-for-wedding-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with an Orange or Rust Dress",
+        href: "/blogs/jewellery-for-orange-or-rust-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-orange-or-rust-dress.jpg",
+    },
+    {
+        title: "Necklace Clasp Types: How They Work and What to Check Before Buying",
+        href: "/blogs/necklace-clasp-types",
+        coverImage: "/blog-images/resource-guides/necklace-clasp-types.jpg",
+    },
+    {
+        title: "Lab-Grown Diamond Jewellery Gifts Under €200",
+        href: "/blogs/diamond-jewellery-gifts-under-200-euros",
+        coverImage: "/blog-images/resource-guides/diamond-jewellery-gifts-under-200-euros.jpg",
+    },
+    {
+        title: "How to Choose a Lab-Grown Diamond Necklace: Style, Length and Budget",
+        href: "/blogs/lab-grown-diamond-necklace-buying-guide",
+        coverImage: "/blog-images/resource-guides/lab-grown-diamond-necklace-buying-guide.jpg",
+    },
+    {
+        title: "Necklace Length Guide: What 40, 45 and 50 cm Look Like When Worn",
+        href: "/blogs/necklace-length-guide-40-45-50cm",
+        coverImage: "/blog-images/resource-guides/necklace-length-guide-40-45-50cm.jpg",
+    },
+    {
+        title: "How Big Will a Diamond Pendant Look? Millimetres vs Carat Weight",
+        href: "/blogs/diamond-pendant-size-guide",
+        coverImage: "/blog-images/resource-guides/diamond-pendant-size-guide.jpg",
+    },
+    {
+        title: "Necklace or Bracelet: Which Makes the Better Jewellery Gift?",
+        href: "/blogs/necklace-or-bracelet-gift",
+        coverImage: "/blog-images/resource-guides/necklace-or-bracelet-gift.jpg",
+    },
+    {
+        title: "Types of Necklace Chains: A Visual Guide to Their Differences",
+        href: "/blogs/types-of-necklace-chains",
+        coverImage: "/blog-images/resource-guides/types-of-necklace-chains.jpg",
+    },
+    {
+        title: "Necklace Chain Thickness: Comparing Fine and More Substantial Chains",
+        href: "/blogs/necklace-chain-thickness-guide",
+        coverImage: "/blog-images/resource-guides/necklace-chain-thickness-guide.jpg",
+    },
+    {
+        title: "How to Choose and Attach a Necklace Extender",
+        href: "/blogs/how-to-use-a-necklace-extender",
+        coverImage: "/blog-images/resource-guides/how-to-use-a-necklace-extender.jpg",
+    },
+    {
+        title: "Pendant Shapes Compared: Solitaire, Circle, Star, Floral and Geometric",
+        href: "/blogs/pendant-necklace-styles",
+        coverImage: "/blog-images/resource-guides/pendant-necklace-styles.jpg",
+    },
+    {
+        title: "Will This Pendant Fit This Chain? A Compatibility Checklist",
+        href: "/blogs/pendant-and-chain-compatibility",
+        coverImage: "/blog-images/resource-guides/pendant-and-chain-compatibility.jpg",
+    },
+    {
+        title: "Types of Fashion Rings: Diamond Bands, Open Rings, Motifs and Statement Designs",
+        href: "/blogs/types-of-fashion-rings",
+        coverImage: "/blog-images/resource-guides/types-of-fashion-rings.jpg",
+    },
+    {
+        title: "Ring Band Width: How Slim and Wide Designs Look on the Hand",
+        href: "/blogs/ring-band-width-guide",
+        coverImage: "/blog-images/resource-guides/ring-band-width-guide.jpg",
+    },
+    {
+        title: "How to Choose Rings for Short Fingers and Small Hands",
+        href: "/blogs/rings-for-short-fingers-and-small-hands",
+        coverImage: "/blog-images/resource-guides/rings-for-short-fingers-and-small-hands.jpg",
+    },
+    {
+        title: "Which Finger Can You Wear a Fashion Ring On?",
+        href: "/blogs/which-finger-to-wear-a-fashion-ring",
+        coverImage: "/blog-images/resource-guides/which-finger-to-wear-a-fashion-ring.jpg",
+    },
+    {
+        title: "Diamond Band vs Solitaire Ring: Which Style Suits Everyday Wear?",
+        href: "/blogs/diamond-band-vs-solitaire-ring",
+        coverImage: "/blog-images/resource-guides/diamond-band-vs-solitaire-ring.jpg",
+    },
+    {
+        title: "How to Choose Earrings for Your Face Shape",
+        href: "/blogs/earrings-for-face-shape",
+        coverImage: "/blog-images/resource-guides/earrings-for-face-shape.jpg",
+    },
+    {
+        title: "Jewellery for a Pink Dress: Blush, Rose and Fuchsia Compared",
+        href: "/blogs/jewellery-for-pink-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-pink-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Navy Blue Dress",
+        href: "/blogs/jewellery-for-navy-blue-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-navy-blue-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Cobalt Blue Dress",
+        href: "/blogs/jewellery-for-cobalt-blue-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-cobalt-blue-dress.jpg",
+    },
+    {
+        title: "Gold-Filled vs Gold-Plated Jewellery: How to Read the Description",
+        href: "/blogs/gold-filled-vs-gold-plated-jewellery",
+        coverImage: "/blog-images/resource-guides/gold-filled-vs-gold-plated-jewellery.jpg",
+    },
+    {
+        title: "Sterling Silver vs Stainless Steel Jewellery: Which Should You Choose?",
+        href: "/blogs/sterling-silver-vs-stainless-steel-jewellery",
+        coverImage: "/blog-images/resource-guides/sterling-silver-vs-stainless-steel-jewellery.jpg",
+    },
+    {
+        title: "What Is Rhodium-Plated Sterling Silver? Finish, Wear and Care Explained",
+        href: "/blogs/rhodium-plated-sterling-silver",
+        coverImage: "/blog-images/resource-guides/rhodium-plated-sterling-silver.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Purple or Lilac Dress",
+        href: "/blogs/jewellery-for-purple-or-lilac-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-purple-or-lilac-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Chocolate Brown Dress",
+        href: "/blogs/jewellery-for-chocolate-brown-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-chocolate-brown-dress.jpg",
+    },
+    {
+        title: "Jewellery for Champagne and Beige Dresses: How to Add Definition",
+        href: "/blogs/jewellery-for-champagne-and-beige-dresses",
+        coverImage: "/blog-images/resource-guides/jewellery-for-champagne-and-beige-dresses.jpg",
+    },
+    {
+        title: "Jewellery with a Metallic Gold Outfit: Matching Metals or Adding Contrast?",
+        href: "/blogs/jewellery-for-a-gold-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-gold-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Square-Neck Dress",
+        href: "/blogs/jewellery-for-a-square-neck-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-square-neck-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Halter-Neck Dress",
+        href: "/blogs/jewellery-for-a-halter-neck-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-halter-neck-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Boat-Neck Dress",
+        href: "/blogs/jewellery-for-a-boat-neck-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-boat-neck-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a One-Shoulder Dress",
+        href: "/blogs/jewellery-for-a-one-shoulder-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-one-shoulder-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Jumpsuit",
+        href: "/blogs/jewellery-for-a-jumpsuit",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-jumpsuit.jpg",
+    },
+    {
+        title: "How to Choose Jewellery for a Floral Dress",
+        href: "/blogs/jewellery-for-a-floral-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-floral-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear with a Denim Dress",
+        href: "/blogs/jewellery-for-a-denim-dress",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-denim-dress.jpg",
+    },
+    {
+        title: "What Jewellery to Wear to a Job Interview",
+        href: "/blogs/jewellery-for-a-job-interview",
+        coverImage: "/blog-images/resource-guides/jewellery-for-a-job-interview.jpg",
+    },
+    {
+        title: "How to Untangle a Fine Necklace Without Damaging the Finish",
+        href: "/blogs/how-to-untangle-a-fine-necklace",
+        coverImage: "/blog-images/resource-guides/how-to-untangle-a-fine-necklace.jpg",
+    },
+    {
+        title: "Why Does Your Pendant Keep Flipping Over?",
+        href: "/blogs/why-does-your-pendant-keep-flipping",
+        coverImage: "/blog-images/resource-guides/why-does-your-pendant-keep-flipping.jpg",
+    },
+    {
+        title: "Prom Jewellery: Choosing Earrings, Necklaces and Bracelets for Your Dress",
+        href: "/blogs/prom-jewellery",
+        coverImage: "/blog-images/resource-guides/prom-jewellery.jpg",
+    },
+    {
+        title: "What Jewellery to Wear to an Engagement Party",
+        href: "/blogs/engagement-party-jewellery",
+        coverImage: "/blog-images/resource-guides/engagement-party-jewellery.jpg",
+    },
+    {
+        title: "Why Does Your Necklace Clasp Keep Moving to the Front?",
+        href: "/blogs/why-does-necklace-clasp-move-to-front",
+        coverImage: "/blog-images/resource-guides/why-does-necklace-clasp-move-to-front.jpg",
+    },
+    {
+        title: "Why Does Your Ring Keep Spinning? Fit and Design Checks",
+        href: "/blogs/why-does-your-ring-keep-spinning",
+        coverImage: "/blog-images/resource-guides/why-does-your-ring-keep-spinning.jpg",
+    },
 ];

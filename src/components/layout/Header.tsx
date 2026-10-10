@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
+    Bot,
     CreditCard,
     LogIn,
     LogOut,
@@ -919,18 +920,32 @@ export default function Header() {
                                                 </p>
                                             </div>
                                             {isAdmin ? (
-                                                <Link
-                                                    to="/admin/address"
-                                                    onClick={() =>
-                                                        setIsAccountMenuOpen(
-                                                            false,
-                                                        )
-                                                    }
-                                                    className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
-                                                >
-                                                    <MapPinHouse className="h-4 w-4" />
-                                                    {t("adminAddress")}
-                                                </Link>
+                                                <>
+                                                    <Link
+                                                        to="/admin/address"
+                                                        onClick={() =>
+                                                            setIsAccountMenuOpen(
+                                                                false,
+                                                            )
+                                                        }
+                                                        className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                    >
+                                                        <MapPinHouse className="h-4 w-4" />
+                                                        {t("adminAddress")}
+                                                    </Link>
+                                                    <Link
+                                                        to="/admin/chatbot"
+                                                        onClick={() =>
+                                                            setIsAccountMenuOpen(
+                                                                false,
+                                                            )
+                                                        }
+                                                        className="mt-3 flex w-full items-center justify-center gap-2 border border-[#e5d7cc] px-4 py-3 text-sm font-bold tracking-[0.08em] !text-[#3c2b20] transition hover:bg-black hover:!text-white"
+                                                    >
+                                                        <Bot className="h-4 w-4" />
+                                                        {t("adminChatbot")}
+                                                    </Link>
+                                                </>
                                             ) : (
                                                 <>
                                                     <Link
@@ -1442,18 +1457,32 @@ export default function Header() {
                                         </>
                                     )}
                                     {isAdmin && (
-                                        <Link
-                                            to="/admin/address"
-                                            onClick={() =>
-                                                setIsDrawerOpen(false)
-                                            }
-                                            className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
-                                        >
-                                            <span className="inline-flex items-center gap-2">
-                                                <MapPinHouse className="h-4 w-4" />
-                                                {t("adminAddress")}
-                                            </span>
-                                        </Link>
+                                        <>
+                                            <Link
+                                                to="/admin/address"
+                                                onClick={() =>
+                                                    setIsDrawerOpen(false)
+                                                }
+                                                className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
+                                            >
+                                                <span className="inline-flex items-center gap-2">
+                                                    <MapPinHouse className="h-4 w-4" />
+                                                    {t("adminAddress")}
+                                                </span>
+                                            </Link>
+                                            <Link
+                                                to="/admin/chatbot"
+                                                onClick={() =>
+                                                    setIsDrawerOpen(false)
+                                                }
+                                                className="rounded-lg border border-zinc-200 px-3 py-2 text-center text-[13px] font-medium uppercase tracking-[0.12em] text-zinc-800 transition hover:bg-zinc-50"
+                                            >
+                                                <span className="inline-flex items-center gap-2">
+                                                    <Bot className="h-4 w-4" />
+                                                    {t("adminChatbot")}
+                                                </span>
+                                            </Link>
+                                        </>
                                     )}
                                     <button
                                         type="button"

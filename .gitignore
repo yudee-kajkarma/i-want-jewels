@@ -38,3 +38,6 @@ tsconfig.tsbuildinfo
 scripts/translate/.cache.json
 
 certificates
+# translate/new-content.mjs working files
+src/locales/*/_pending/
+scripts/translate/.pending-*.txt

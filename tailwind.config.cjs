@@ -8,6 +8,16 @@ module.exports = {
         play: ['var(--font-play)', 'system-ui', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
+      keyframes: {
+        // Lumi: new messages, screens and cards fade in (kept short and quiet).
+        'lumi-fade': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'lumi-fade': 'lumi-fade 200ms ease-out both',
+      },
     },
   },
   plugins: [],

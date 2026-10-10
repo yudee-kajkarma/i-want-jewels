@@ -35,6 +35,7 @@
     "paymentHistory": "Betalingsgeschiedenis",
     "myTickets": "Mijn tickets",
     "adminAddress": "Beheerdersadres:",
+    "adminChatbot": "Chatbot-sleutels",
     "adminWishlist": "Admin verlanglijst",
     "adminCart": "Beheerderswagentje",
     "wishlist": "Verlanglijst",
@@ -1251,6 +1252,107 @@
       "toastUpdateSuccess": "Beheerdersaccount en adres succesvol bijgewerkt.",
       "toastUpdateError": "Kan de beheerdersinstellingen momenteel niet bijwerken."
     },
+    "chatbot": {
+      "breadcrumb": "Beheerder",
+      "title": "Chatbot (Lumi)",
+      "intro": "API-sleutels worden versleuteld opgeslagen en nooit meer getoond. Voeg alleen de aanbieders toe die u gebruikt.",
+      "lastUpdated": "Laatst bijgewerkt op {{date}}",
+      "lastUpdatedBy": "Laatst bijgewerkt op {{date}} door {{who}}",
+      "loading": "Chatbotinstellingen laden…",
+      "errorLoad": "Kan de chatbotinstellingen momenteel niet laden.",
+      "retry": "Opnieuw proberen",
+      "providers": {
+        "title": "AI-aanbieders",
+        "hint": "Lumi heeft minstens één aanbieder met een sleutel nodig. Als een model faalt of op is, gaat Lumi door naar het volgende."
+      },
+      "status": {
+        "saved": "Opgeslagen sleutel eindigt op ••••{{last4}}",
+        "savedNoHint": "Sleutel opgeslagen",
+        "notSet": "Niet ingesteld",
+        "unreadable": "Opgeslagen sleutel kan niet worden gelezen — voer hem opnieuw in"
+      },
+      "apiKey": "API-sleutel",
+      "apiKeyPlaceholderReplace": "Voer een nieuwe sleutel in om hem te vervangen",
+      "apiKeyPlaceholderNew": "Plak uw API-sleutel",
+      "showKey": "Sleutel tonen",
+      "hideKey": "Sleutel verbergen",
+      "newKeyHint": "Deze sleutel wordt opgeslagen wanneer u op ‘Wijzigingen opslaan’ klikt.",
+      "models": "Modellen",
+      "modelsHint": "Gescheiden door komma's, in de volgorde waarin ze geprobeerd worden. Als er een faalt, gebruikt Lumi de volgende.",
+      "modelsOrder": "Modellen in de volgorde waarin ze geprobeerd worden",
+      "modelsMissing": "Voeg minstens één model toe, anders wordt deze aanbieder niet gebruikt.",
+      "endpoint": "Endpoint",
+      "endpointHint": "Moet een Alibaba Cloud-adres zijn (Model Studio, …aliyuncs.com).",
+      "test": "Testen",
+      "testing": "Bezig met testen…",
+      "testNeedsKey": "Voeg een sleutel toe om deze aanbieder te testen.",
+      "testOk": "Werkt",
+      "testFailed": "Werkt niet",
+      "testModel": "model {{model}}",
+      "removeKey": "Sleutel verwijderen",
+      "removeConfirm": "De opgeslagen sleutel van {{provider}} verwijderen? Lumi stopt meteen met het gebruik van {{provider}}.",
+      "removeYes": "Ja, verwijderen",
+      "removing": "Bezig met verwijderen…",
+      "cancel": "Annuleren",
+      "toastRemoved": "Sleutel van {{provider}} verwijderd.",
+      "errorRemove": "Kan de sleutel momenteel niet verwijderen.",
+      "errorTest": "Kan deze aanbieder momenteel niet testen.",
+      "order": {
+        "title": "Volgorde",
+        "hint": "Welke aanbieder Lumi als eerste, tweede en derde probeert. Alleen aanbieders met een sleutel worden gebruikt; de andere worden overgeslagen.",
+        "hasKey": "Heeft een sleutel — wordt gebruikt",
+        "newKey": "Nieuwe sleutel — wordt gebruikt na opslaan",
+        "noKey": "Geen sleutel — wordt overgeslagen",
+        "moveUp": "{{provider}} omhoog verplaatsen",
+        "moveDown": "{{provider}} omlaag verplaatsen",
+        "noneWarning": "Nog geen enkele aanbieder heeft een sleutel, dus Lumi kan geen AI-antwoorden schrijven."
+      },
+      "embedding": {
+        "title": "Zoeken (embeddings)",
+        "hint": "Het model dat de teksten van de winkel en elke vraag omzet in getallen, zodat Lumi de juiste feiten vindt.",
+        "provider": "Aanbieder",
+        "anthropicNote": "Alleen Alibaba Cloud of OpenAI — Anthropic heeft geen embeddingsmodel.",
+        "model": "Model",
+        "dimensions": "Dimensies",
+        "dimensionsHint": "Standaard 1024.",
+        "noKey": "Voor {{provider}} is geen sleutel opgeslagen — zoeken heeft die nodig.",
+        "warning": "Als u dit wijzigt, moet de chatbotkennis opnieuw worden opgebouwd ({{command}}), anders werkt zoeken niet meer."
+      },
+      "limits": {
+        "title": "Daglimieten",
+        "hint": "Per dag geteld. Opgeslagen antwoorden en snelknoppen tellen niet mee — alleen echte AI-antwoorden.",
+        "guestQuestions": "Vragen van gasten",
+        "guestQuestionsHint": "Vragen die een bezoeker zonder account kan stellen voordat Lumi vraagt om in te loggen.",
+        "guestAnswers": "AI-antwoorden voor gasten",
+        "guestAnswersHint": "AI-antwoorden voor een bezoeker zonder account.",
+        "loggedInAnswers": "AI-antwoorden voor ingelogde gebruikers",
+        "loggedInAnswersHint": "AI-antwoorden voor een ingelogde shopper.",
+        "customerAnswers": "AI-antwoorden voor klanten",
+        "customerAnswersHint": "AI-antwoorden voor een klant die een bestelling heeft betaald.",
+        "shopAnswers": "AI-antwoorden voor de hele winkel",
+        "shopAnswersHint": "AI-antwoorden voor alle bezoekers samen — dit begrenst de dagelijkse kosten."
+      },
+      "unsaved": "U hebt niet-opgeslagen wijzigingen.",
+      "noChanges": "Geen niet-opgeslagen wijzigingen.",
+      "save": "Wijzigingen opslaan",
+      "saving": "Bezig met opslaan…",
+      "toastSaved": "Chatbotinstellingen opgeslagen.",
+      "errorSave": "Kan de chatbotinstellingen momenteel niet opslaan. Probeer het opnieuw.",
+      "errors": {
+        "modelsRequired": "Voeg minstens één model toe voor {{provider}}.",
+        "endpointInvalid": "Het Alibaba Cloud-endpoint moet een https://-adres op aliyuncs.com zijn.",
+        "embeddingModelRequired": "Voer het model voor zoeken (embeddings) in.",
+        "dimensionsInvalid": "Dimensies moeten een geheel getal tussen {{min}} en {{max}} zijn.",
+        "limitInvalid": "{{label}}: voer een geheel getal tussen {{min}} en {{max}} in.",
+        "keyInvalid": "De sleutel van {{provider}} lijkt niet te kloppen — plak de hele sleutel, zonder spaties.",
+        "modelInvalid": "‘{{model}}’ is geen geldige modelnaam (alleen letters, cijfers en . _ : / @ -)."
+      },
+      "providerNames": {
+        "alibaba": "Alibaba Cloud (Qwen)",
+        "openai": "OpenAI",
+        "anthropic": "Anthropic (Claude)"
+      }
+    },
     "blogPreview": {
       "loading": "Blogvoorbeeld laden...",
       "notFound": "Blog niet gevonden.",
@@ -2347,6 +2449,362 @@
         "next": "Volgende",
         "page": "Pagina {{current}} van {{total}}"
       }
+    }
+  },
+  "chat": {
+    "title": "Lumi",
+    "open": "Chat met Lumi",
+    "close": "Lumi sluiten",
+    "placeholder": "Bericht aan Lumi…",
+    "send": "Versturen",
+    "privacy": "AI-assistent · Deel geen kaartgegevens.",
+    "botCheck": "We konden niet bevestigen dat je geen robot bent. Probeer het zo opnieuw of neem contact op met ons team.",
+    "unavailable": "Ik kan nu niet antwoorden. Probeer het later opnieuw of neem contact op met ons team.",
+    "limitVisitor": "Log in om verder te chatten met Lumi. Het duurt maar even, en je chats worden in je account bewaard.",
+    "limitAccount": "Je hebt de limiet voor AI-antwoorden van vandaag bereikt. Ons team helpt je graag verder.",
+    "logIn": "Inloggen",
+    "quick": {
+      "person": {
+        "link": "Contact met ons team"
+      }
+    },
+    "teaser": "Hoi, ik ben Lumi. Vraag me naar maten, onderhoud, cadeaus of je bestelling.",
+    "teaserCta": "Chat met Lumi",
+    "tools": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "status": {
+        "PENDING": "Wacht op betaling",
+        "CONFIRMED": "Bevestigd",
+        "SHIPPED": "Verzonden",
+        "DELIVERED": "Bezorgd",
+        "CANCELLED": "Geannuleerd",
+        "RETURNED": "Geretourneerd"
+      },
+      "yourOrders": "Hier zijn je laatste bestellingen. Tik op een bestelling om de status te zien.",
+      "noOrders": "Je hebt nog geen bestellingen.",
+      "shopNow": "Bekijk sieraden",
+      "allOrders": "Al mijn bestellingen",
+      "ordersFailed": "Je bestellingen kunnen nu niet worden geladen.",
+      "orderNotYours": "Dit bestelnummer staat niet in je account. Hier zijn je bestellingen:",
+      "email": "E-mail",
+      "orderedOn": "Besteld op {{date}}",
+      "items_one": "{{count}} artikel",
+      "items_other": "{{count}} artikelen",
+      "progress": "Voortgang bestelling",
+      "carrier": "Verzonden met {{carrier}}",
+      "trackParcel": "Volg pakket",
+      "expected": "Verwacht op {{date}}",
+      "deliveredOn": "Bezorgd op {{date}}",
+      "lastUpdate": "Laatste update",
+      "viewOrder": "Bekijk bestelling",
+      "notShippedYet": "Nog niet verzonden. Je krijgt een trackinglink per e-mail zodra hij onderweg is.",
+      "personIntro": "Schrijf je bericht en ons team antwoordt per e-mail.",
+      "personIntroAccount": "Schrijf je bericht en ons team antwoordt in Mijn tickets en per e-mail.",
+      "name": "Je naam",
+      "message": "Je bericht",
+      "sendMessage": "Bericht versturen",
+      "sent": "Bedankt! Je bericht is verstuurd. We nemen snel contact op.",
+      "ticketSent": "Bedankt! We hebben ticket {{id}} geopend. Ons antwoord vind je onder Mijn tickets.",
+      "myTickets": "Mijn tickets",
+      "sendFailed": "Versturen is niet gelukt. Probeer het opnieuw of gebruik onze contactpagina.",
+      "giftCardsIntro": "Onze cadeaukaarten worden per e-mail bezorgd. Kies een bedrag:",
+      "allGiftCards": "Alle cadeaukaarten",
+      "myGiftCardsIntro": "Jouw cadeaukaarten:",
+      "myGiftCard": "Kaart {{code}} — saldo {{balance}}",
+      "myGiftCards": "Mijn cadeaukaarten"
+    },
+    "back": "Terug",
+    "lumi": {
+      "name": "Lumi",
+      "avatarAlt": "Lumi, de assistent van I Want Jewels",
+      "dismiss": "Sluiten",
+      "loading": "Laden…",
+      "home": {
+        "greeting": "Hallo",
+        "greetingName": "Hallo {{name}}",
+        "askPlaceholder": "Vraag Lumi wat je maar wilt…",
+        "quickActions": "Snelle hulp",
+        "popular": "Populaire vragen",
+        "continue": "Ga verder met je laatste chat",
+        "exploreAll": "Bekijk alle vragen",
+        "help": "Hoe kan ik je helpen?",
+        "giftFinder": "Cadeauzoeker",
+        "bag": "Mijn winkelwagen",
+        "wishlist": "Verlanglijst"
+      },
+      "actions": {
+        "track": "Bestelling volgen",
+        "gifts": "Cadeaukaarten",
+        "person": "Met iemand praten",
+        "bag": "Laat mijn winkelwagen zien",
+        "wishlist": "Laat mijn verlanglijst zien",
+        "giftFinder": "Help me een cadeau te vinden"
+      },
+      "tabs": {
+        "label": "Lumi-onderdelen",
+        "home": "Start",
+        "chats": "Chats",
+        "explore": "Ontdekken"
+      },
+      "chats": {
+        "title": "Berichten",
+        "empty": "Nog geen chats",
+        "emptySub": "Stel Lumi een vraag, dan wordt je chat hier bewaard.",
+        "device": "Opgeslagen op dit apparaat",
+        "account": "Opgeslagen in je account",
+        "loginHint": "Log in om je chats op al je apparaten te zien.",
+        "delete": "Chat verwijderen",
+        "deleteConfirm": "Deze chat verwijderen?",
+        "clearAll": "Alle chats verwijderen",
+        "clearConfirm": "Al je chats verwijderen? Dit kan niet ongedaan worden gemaakt.",
+        "confirm": "Verwijderen",
+        "cancel": "Annuleren",
+        "today": "Vandaag",
+        "yesterday": "Gisteren",
+        "untitled": "Nieuwe chat"
+      },
+      "explore": {
+        "title": "Ontdekken",
+        "subtitle": "Tik op een vraag en Lumi antwoordt meteen.",
+        "search": "Vragen zoeken",
+        "all": "Alles",
+        "noResults": "Geen vragen gevonden.",
+        "askInstead": "Vraag Lumi: ‘{{q}}’",
+        "clear": "Zoekopdracht wissen",
+        "topics": "Onderwerpen"
+      },
+      "thread": {
+        "newChat": "Nieuwe chat",
+        "menu": "Chatopties",
+        "intro": "Hoi, ik ben Lumi. Vraag me wat je wilt, of kies hieronder een vraag.",
+        "followUps": "Je kunt ook vragen",
+        "oldChat": "Deze chat is van {{date}}. Prijzen en voorraad kunnen sindsdien zijn veranderd.",
+        "counter": "{{count}}/{{max}}",
+        "scrollDown": "Naar het nieuwste bericht",
+        "you": "Jij",
+        "delete": "Deze chat verwijderen"
+      },
+      "forms": {
+        "found": "Bestelling gevonden",
+        "sent": "Bericht verstuurd"
+      },
+      "product": {
+        "size": "Maat",
+        "material": "Materiaal",
+        "inStock": "Op voorraad",
+        "soldOut": "Uitverkocht",
+        "view": "Bekijk product",
+        "from": "vanaf {{price}}",
+        "oneSize": "Eén maat",
+        "colour": "Kleur",
+        "labelled": "{{label}}:"
+      },
+      "colours": {
+        "yellow": "Geelgoud",
+        "rose": "Roségoud",
+        "white": "Witgoud"
+      },
+      "context": {
+        "pairs": "Wat past er bij {{title}}?",
+        "size": "Welke maat moet ik kiezen voor {{title}}?",
+        "stock": "Is {{title}} op voorraad?",
+        "pairsThis": "Wat past er bij dit sieraad?",
+        "sizeThis": "Welke maat moet ik kiezen voor dit sieraad?",
+        "stockThis": "Is dit sieraad op voorraad?",
+        "viewing": "Je bekijkt {{title}}",
+        "thisPiece": "dit sieraad",
+        "chips": {
+          "addToBag": "In mijn winkelwagen",
+          "pairs": "Wat past erbij?",
+          "size": "Welke maat?",
+          "stock": "Op voorraad?"
+        }
+      },
+      "shop": {
+        "material": "{{metal}} met {{finish}}",
+        "addFailed": "Het toevoegen aan je winkelwagen is niet gelukt. Probeer het opnieuw.",
+        "chooseSize": "Kies eerst een maat.",
+        "unknownProduct": "Sorry, dat sieraad kan ik niet vinden. Misschien is het niet meer verkrijgbaar.",
+        "loadFailed": "Dit sieraad kan nu niet worden geladen. Probeer het opnieuw.",
+        "whichProduct": "Welk sieraad wil je? Tik bij een product op ‘Toevoegen’ of vraag het me op de productpagina.",
+        "giftCardPage": "Onze cadeaukaarten worden per e-mail verstuurd. Kies op de pagina van de cadeaukaart het bedrag en de ontvanger.",
+        "bagFailed": "Je winkelwagen kan nu niet worden geladen.",
+        "openBag": "Winkelwagen openen",
+        "wishlistLogin": "Log in om sieraden op je verlanglijst te zetten.",
+        "wishlistSaved": "Opgeslagen op je verlanglijst.",
+        "wishlistRemoved": "Verwijderd van je verlanglijst.",
+        "wishlistAlready": "Dit sieraad staat al op je verlanglijst.",
+        "wishlistFailed": "Je verlanglijst kon niet worden bijgewerkt. Probeer het opnieuw.",
+        "wishlistLoadFailed": "Je verlanglijst kan nu niet worden geladen.",
+        "openWishlist": "Verlanglijst openen",
+        "add": "Toevoegen",
+        "addLabel": "{{title}} aan je winkelwagen toevoegen",
+        "addToBag": "In winkelwagen",
+        "adding": "Wordt toegevoegd…",
+        "added": "Toegevoegd",
+        "buyNow": "Koop nu",
+        "wishlistAdd": "{{title}} op je verlanglijst zetten",
+        "wishlistRemove": "{{title}} van je verlanglijst verwijderen",
+        "addedToBag": "Toegevoegd aan je winkelwagen",
+        "viewBag": "Bekijk winkelwagen",
+        "checkout": "Afrekenen",
+        "bag": "Je winkelwagen",
+        "subtotal": "Subtotaal",
+        "qty": "Aantal {{count}}",
+        "size": "Maat {{size}}",
+        "sizeCarat": "{{size}} ct",
+        "sizeInch": "{{size}} inch",
+        "more": "+{{count}} meer",
+        "emptyBag": "Je winkelwagen is leeg.",
+        "wishlist": "Je verlanglijst",
+        "emptyWishlist": "Je verlanglijst is leeg."
+      },
+      "gift": {
+        "summary": {
+          "text": "{{item}} {{budget}} {{occasion}}",
+          "item": {
+            "earrings": "Oorbellen",
+            "necklaces": "Een ketting",
+            "rings": "Een ring",
+            "bracelets": "Een armband",
+            "any": "Een cadeau"
+          },
+          "budget": {
+            "under100": "onder de {{amount}}",
+            "from100to200": "tussen {{from}} en {{to}}",
+            "over200": "boven de {{amount}}"
+          },
+          "for": {
+            "partner": {
+              "birthday": "voor de verjaardag van mijn partner",
+              "anniversary": "voor ons jubileum",
+              "wedding": "voor onze bruiloft",
+              "justBecause": "voor mijn partner, zomaar"
+            },
+            "mum": {
+              "birthday": "voor de verjaardag van mijn moeder",
+              "anniversary": "voor de trouwdag van mijn moeder",
+              "wedding": "voor mijn moeder, voor een bruiloft",
+              "justBecause": "voor mijn moeder, zomaar"
+            },
+            "friend": {
+              "birthday": "voor de verjaardag van een vriendin",
+              "anniversary": "voor de trouwdag van een vriendin",
+              "wedding": "voor de bruiloft van een vriendin",
+              "justBecause": "voor een vriendin, zomaar"
+            },
+            "myself": {
+              "birthday": "voor mijn verjaardag",
+              "anniversary": "voor mijn jubileum",
+              "wedding": "om te dragen op een bruiloft",
+              "justBecause": "voor mezelf, zomaar"
+            }
+          }
+        },
+        "title": "Cadeauzoeker",
+        "step": "Stap {{step}} van {{total}}",
+        "back": "Terug",
+        "again": "Opnieuw beginnen",
+        "questions": {
+          "recipient": "Voor wie is het?",
+          "occasion": "Wat is de gelegenheid?",
+          "budget": "Wat is je budget?",
+          "piece": "Wat wil je cadeau geven?"
+        },
+        "options": {
+          "recipient": {
+            "partner": "Mijn partner",
+            "mum": "Mijn moeder",
+            "friend": "Een vriendin",
+            "myself": "Mezelf"
+          },
+          "occasion": {
+            "birthday": "Verjaardag",
+            "anniversary": "Jubileum",
+            "wedding": "Bruiloft",
+            "justBecause": "Zomaar"
+          },
+          "budget": {
+            "under100": "Onder de {{amount}}",
+            "from100to200": "{{from}}–{{to}}",
+            "over200": "Boven de {{amount}}",
+            "any": "Geen limiet"
+          },
+          "type": {
+            "earrings": "Oorbellen",
+            "necklaces": "Een ketting",
+            "rings": "Een ring",
+            "bracelets": "Een armband",
+            "any": "Verras me"
+          }
+        }
+      },
+      "categories": {
+        "shop": "Shop & prijzen",
+        "gifts": "Cadeaus",
+        "sizing": "Maten & pasvorm",
+        "materials": "Materialen & diamanten",
+        "care": "Onderhoud",
+        "styling": "Stylingtips",
+        "delivery": "Verzending & retour",
+        "orders": "Bestellingen & hulp"
+      },
+      "suggestions": {
+        "best-earrings": "Laat me jullie bestverkochte oorbellen zien",
+        "popular-necklaces": "Welke kettingen zijn het populairst?",
+        "rings-under-200": "Laat me ringen onder de € 200 zien",
+        "most-affordable": "Wat zijn jullie voordeligste sieraden?",
+        "rose-gold": "Laat me roségouden sieraden zien",
+        "bracelet-prices": "Wat kosten jullie armbanden?",
+        "gifts-under-150": "Cadeau-ideeën onder de € 150",
+        "gift-cards": "Verkopen jullie cadeaukaarten?",
+        "anniversary-gift": "Wat geef ik haar voor ons jubileum?",
+        "birthday-gift": "Cadeau-ideeën voor haar verjaardag",
+        "ring-size": "Hoe vind ik mijn ringmaat?",
+        "necklace-length": "Welke kettinglengte moet ik kiezen?",
+        "face-shape": "Welke oorbellen passen bij mijn gezichtsvorm?",
+        "band-width": "Smalle of brede ring: wat staat mij?",
+        "lab-grown-real": "Zijn labgegroeide diamanten echte diamanten?",
+        "gold-plated-silver": "Wat is verguld sterling zilver?",
+        "gold-filled-vs-plated": "Gold-filled of verguld: wat is het verschil?",
+        "rhodium-plated": "Wat is gerodineerd zilver?",
+        "shower": "Kan ik met mijn sieraden douchen?",
+        "clean-gold-plated": "Hoe maak ik vergulde sieraden schoon?",
+        "untangle-necklace": "Hoe krijg ik een fijne ketting uit de knoop?",
+        "pendant-flipping": "Waarom draait mijn hanger steeds om?",
+        "navy-dress": "Welke sieraden passen bij een marineblauwe jurk?",
+        "job-interview": "Welke sieraden draag ik naar een sollicitatiegesprek?",
+        "wedding-guest": "Welke oorbellen draag ik als bruiloftsgast?",
+        "square-neck": "Welke ketting past bij een vierkante halslijn?",
+        "delivery-time": "Hoe lang duurt de levering?",
+        "returns": "Wat is jullie retourbeleid?",
+        "track-order": "Bestelling volgen",
+        "talk-person": "Met iemand praten"
+      },
+      "askLumi": "Vraag Lumi",
+      "stylistOnline": "Stylist · online",
+      "expand": "Vergroten",
+      "meta": "Lumi · {{time}}",
+      "status": {
+        "sent": "Verzonden",
+        "seen": "Gezien"
+      },
+      "feedback": {
+        "label": "Was dit nuttig?",
+        "up": "Nuttig",
+        "down": "Niet nuttig",
+        "thanks": "Bedankt!"
+      },
+      "chips": {
+        "label": "Snelle opties",
+        "giftIdeas": "Cadeau-ideeën",
+        "track": "Bestelling volgen",
+        "ringSize": "Ringmaat",
+        "bag": "Mijn winkelwagen",
+        "talk": "Praat met ons"
+      },
+      "ordersLogin": "Log in om je bestellingen en hun status te bekijken."
     }
   }
 }
