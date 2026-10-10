@@ -49,7 +49,31 @@
     "currencyOptions": "Währungsoptionen",
     "currency": "Währung",
     "follow": "Folgen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "megaMenu": {
+      "shopByCategory": "Nach Kategorie",
+      "shopByOccasion": "Nach Anlass",
+      "shopAll": "Alles ansehen",
+      "earrings": "Ohrringe",
+      "necklaces": "Halsketten",
+      "rings": "Ringe",
+      "bracelets": "Armbänder",
+      "studEarrings": "Ohrstecker",
+      "hoopHuggieEarrings": "Creolen & Huggies",
+      "dropEarrings": "Hängeohrringe",
+      "everydayEarrings": "Ohrringe für jeden Tag",
+      "everydayPendants": "Anhänger für jeden Tag",
+      "layeringYNecklaces": "Layering- & Y-Ketten",
+      "everydayStackingRings": "Alltags- & Stapelringe",
+      "statementRings": "Statement-Ringe",
+      "chainBracelets": "Kettenarmbänder",
+      "alessiaBangle": "Alessia Diamant-Armreif",
+      "anniversaryGifts": "Geschenke zum Jahrestag",
+      "partyEvening": "Party & Abend",
+      "graduationGifts": "Geschenke zum Abschluss",
+      "birthdayGifts": "Geburtstagsgeschenke",
+      "christmasGifts": "Weihnachtsgeschenke"
+    }
   },
   "footer": {
     "information": "Informationen",
@@ -863,7 +887,8 @@
     "piece_other": "Stücke",
     "viewAllFilter": "Alle anzeigen & filtern",
     "emptyDesc": "Neue Stücke sind bald verfügbar. Entdecken Sie in der Zwischenzeit den Rest der Kollektion.",
-    "shopAll": "Gesamten Schmuck einkaufen"
+    "shopAll": "Gesamten Schmuck einkaufen",
+    "breadcrumbShop": "Shop"
   },
   "notFound": {
     "title": "Seite nicht gefunden",

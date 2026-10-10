@@ -49,7 +49,31 @@
     "currencyOptions": "Opciones de moneda",
     "currency": "Moneda",
     "follow": "Seguir",
-    "language": "Idioma"
+    "language": "Idioma",
+    "megaMenu": {
+      "shopByCategory": "Por categoría",
+      "shopByOccasion": "Por ocasión",
+      "shopAll": "Ver todo",
+      "earrings": "Pendientes",
+      "necklaces": "Collares",
+      "rings": "Anillos",
+      "bracelets": "Pulseras",
+      "studEarrings": "Pendientes de botón",
+      "hoopHuggieEarrings": "Aros & huggies",
+      "dropEarrings": "Pendientes largos",
+      "everydayEarrings": "Pendientes para cada día",
+      "everydayPendants": "Colgantes para cada día",
+      "layeringYNecklaces": "Collares para superponer & en Y",
+      "everydayStackingRings": "Anillos diarios & apilables",
+      "statementRings": "Anillos statement",
+      "chainBracelets": "Pulseras de cadena",
+      "alessiaBangle": "Brazalete de diamantes Alessia",
+      "anniversaryGifts": "Regalos de aniversario",
+      "partyEvening": "Fiesta & noche",
+      "graduationGifts": "Regalos de graduación",
+      "birthdayGifts": "Regalos de cumpleaños",
+      "christmasGifts": "Regalos de Navidad"
+    }
   },
   "footer": {
     "information": "Información",
@@ -878,7 +902,8 @@
     "piece_many": "piezas",
     "viewAllFilter": "Ver Todo y Filtrar",
     "emptyDesc": "Nuevas piezas están en camino. Explora el resto de la colección mientras tanto.",
-    "shopAll": "Comprar Toda la Joyería"
+    "shopAll": "Comprar Toda la Joyería",
+    "breadcrumbShop": "Tienda"
   },
   "notFound": {
     "title": "Página No Encontrada",

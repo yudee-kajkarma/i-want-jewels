@@ -371,11 +371,14 @@ const reviewRatingOptions = [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5];
 type ProductDetailPageProps = {
     initialProduct?: ProductDetail | null;
     initialReviewsData?: ProductReviewsResult | null;
+    /** SEO heading from the navbar plan (English only); else the product title. */
+    headingOverride?: string;
 };
 
 export default function ProductDetailPage({
     initialProduct = null,
     initialReviewsData = null,
+    headingOverride,
 }: ProductDetailPageProps) {
     const { t, i18n } = useTranslation();
     const navigate = useNavigate();
@@ -1207,7 +1210,7 @@ export default function ProductDetailPage({
                                 <div className="flex items-start justify-between gap-4">
                                     <div className="min-w-0">
                                         <h1 className="font-play text-[24px] font-bold leading-tight tracking-[-0.01em] text-zinc-900 sm:text-[28px] lg:text-[32px]">
-                                            {product.title}
+                                            {headingOverride ?? product.title}
                                         </h1>
                                         {product.h2 ? (
                                             <h2 className="mt-2 text-[12px] uppercase tracking-[0.14em] text-zinc-500">

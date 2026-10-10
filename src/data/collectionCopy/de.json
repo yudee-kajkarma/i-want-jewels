@@ -1,0 +1,149 @@
+{
+  "crumbs": {
+    "home": "Startseite",
+    "shop": "Shop"
+  },
+  "collections": {
+    "earrings": {
+      "metaTitle": "Lab-Grown Diamant-Ohrringe | I Want Jewels",
+      "metaDescription": "Shoppen Sie Lab-Grown Diamant-Ohrringe aus 925 Sterling Silber, von klassischen Ohrsteckern über Huggies bis zu eleganten Hängern. Ihr Paar bei I Want Jewels.",
+      "h1": "Lab-Grown Diamant-Ohrringe",
+      "intro": [
+        "Ohrstecker für jeden Tag, Huggies für den Ear Stack und Hängeohrringe für Abende, die nach mehr Funkeln verlangen. Jedes Paar ist aus 925 Sterling Silber mit Goldplattierung gefertigt und mit Lab-Grown Diamanten besetzt.",
+        "In Antwerpen entworfen und für angenehmen Tragekomfort den ganzen Tag gemacht – ob Sie Ihre ersten Diamant-Ohrstecker wählen oder ein Geschenk suchen."
+      ]
+    },
+    "rings": {
+      "metaTitle": "Lab-Grown Diamant-Ringe & Stapelringe | I Want Jewels",
+      "metaDescription": "Entdecken Sie Lab-Grown Diamant-Ringe aus 925 Sterling Silber, von Alltagsringen bis zu Statement-Designs. Ringe zum Solo-Tragen oder Stapeln bei I Want Jewels.",
+      "h1": "Lab-Grown Diamant-Ringe",
+      "intro": [
+        "Von schmalen Alltagsringen bis zu volleren Statement-Designs: Unsere Ringe sind aus 925 Sterling Silber mit Goldplattierung gefertigt und mit Lab-Grown Diamanten besetzt.",
+        "Tragen Sie einen Ring allein oder kombinieren Sie mehrere zu einem Stack: Renata, Ilaria und Laluce sind der einfachste Einstieg."
+      ],
+      "sections": {
+        "everyday-stacking-rings": {
+          "name": "Alltags- & Stapelringe",
+          "description": "Shoppen Sie Lab-Grown Diamant-Ringe für jeden Tag aus 925 Sterling Silber. Schmale Bandringe, offene Designs und Motivringe – solo oder als Ihr eigener Stack."
+        },
+        "statement-rings": {
+          "name": "Statement-Ringe",
+          "description": "Entdecken Sie Statement-Diamantringe mit kräftigerer Ringschiene und markantem Funkeln: die Lab-Grown Diamant-Designs Tiziana und Lucrezia bei I Want Jewels."
+        }
+      }
+    },
+    "necklaces": {
+      "metaTitle": "Lab-Grown Diamant-Halsketten & Anhänger | I Want Jewels",
+      "metaDescription": "Shoppen Sie Lab-Grown Diamant-Halsketten und Anhänger aus 925 Sterling Silber. Entdecken Sie Alltagsdesigns, Layering-Stücke und Y-Ketten bei I Want Jewels.",
+      "h1": "Lab-Grown Diamant-Halsketten & Anhänger",
+      "intro": [
+        "Anhänger an feinen Ketten, Stationsketten und Ketten mit zentralem Motiv aus 925 Sterling Silber mit Goldplattierung, besetzt mit Lab-Grown Diamanten.",
+        "Tragen Sie eine Kette solo im Alltag oder kombinieren Sie zwei bis drei im Layering für offene Ausschnitte und besondere Abende."
+      ],
+      "sections": {
+        "everyday-pendants": {
+          "name": "Anhänger für jeden Tag",
+          "description": "Entdecken Sie Lab-Grown Diamant-Anhänger für jeden Tag aus 925 Sterling Silber. Zarte Designs mit zentralem Motiv für Büro-Outfits, Wochenenden und Geschenke."
+        },
+        "layering-y-necklaces": {
+          "name": "Layering- & Y-Ketten",
+          "description": "Layern Sie Lab-Grown Diamant-Anhänger, Stationsketten und Aurora Y. Entdecken Sie Halsketten für offene Ausschnitte und Looks, die vom Tag in den Abend gehen."
+        }
+      }
+    },
+    "bracelets": {
+      "metaTitle": "Lab-Grown Diamant-Armbänder & Armreifen | I Want Jewels",
+      "metaDescription": "Entdecken Sie Lab-Grown Diamant-Armbänder aus 925 Sterling Silber, darunter zarte Kettendesigns und den Alessia Armreif. Ihr Lieblingsstück bei I Want Jewels.",
+      "h1": "Lab-Grown Diamant-Armbänder & Armreifen",
+      "intro": [
+        "Zarte Kettenarmbänder mit zentralem Motiv, Diamantreihen und Stationen sowie der offene Alessia Armreif. Alle aus 925 Sterling Silber mit Goldplattierung und mit Lab-Grown Diamanten besetzt."
+      ],
+      "sections": {
+        "chain-bracelets": {
+          "name": "Kettenarmbänder",
+          "description": "Shoppen Sie zarte Lab-Grown Diamant-Kettenarmbänder aus 925 Sterling Silber. Wählen Sie Designs mit Motiv, Diamantreihe oder Stationen – solo oder im Layering."
+        }
+      }
+    },
+    "stud-earrings": {
+      "metaTitle": "Lab-Grown Diamant-Ohrstecker | I Want Jewels",
+      "metaDescription": "Entdecken Sie Lab-Grown Diamant-Ohrstecker aus 925 Sterling Silber, von klassischen Diamant-Ohrsteckern bis zu geometrischen Designs. Bei I Want Jewels shoppen.",
+      "h1": "Lab-Grown Diamant-Ohrstecker",
+      "intro": [
+        "Ohrstecker mit Stift und Verschluss, die sauber am Ohrläppchen sitzen – von klassischen Diamant-Ohrsteckern bis zu Motiv- und geometrischen Designs. Gefertigt aus 925 Sterling Silber mit Goldplattierung und besetzt mit Lab-Grown Diamanten."
+      ]
+    },
+    "hoop-huggie-earrings": {
+      "metaTitle": "Diamant-Creolen & Huggie-Ohrringe | I Want Jewels",
+      "metaDescription": "Shoppen Sie Lab-Grown Diamant-Creolen und Huggie-Ohrringe aus 925 Sterling Silber. Eng anliegende Paare und Creolen mit Anhänger für Looks von Tag bis Abend.",
+      "h1": "Lab-Grown Diamant-Creolen & Huggie-Ohrringe",
+      "intro": [
+        "Eng anliegende Huggies und geschlossene Creolen, darunter Creolen mit einem hängenden Ornament. Gefertigt aus 925 Sterling Silber mit Goldplattierung und besetzt mit Lab-Grown Diamanten."
+      ]
+    },
+    "everyday-earrings": {
+      "metaTitle": "Diamant-Ohrringe für Alltag & Büro | I Want Jewels",
+      "metaDescription": "Finden Sie Lab-Grown Diamant-Ohrringe für Alltag und Büro: vielseitige Ohrstecker, kompakte Creolen und kurze Hänger aus 925 Sterling Silber bei I Want Jewels.",
+      "h1": "Lab-Grown Diamant-Ohrringe für jeden Tag",
+      "intro": [
+        "Eine ausgewählte Kollektion für Büro und Alltag: kompakte Ohrstecker, gut tragbare geometrische Formen, kleine Creolen und kurze Hängeohrringe. Gefertigt aus 925 Sterling Silber mit Goldplattierung und besetzt mit Lab-Grown Diamanten."
+      ]
+    },
+    "drop-earrings": {
+      "metaTitle": "Lab-Grown Diamant-Hängeohrringe | I Want Jewels",
+      "metaDescription": "Entdecken Sie Lab-Grown Diamant-Hängeohrringe, von kurzen Modellen bis zu längeren Kettendesigns. Paare aus 925 Sterling Silber für Dinner, Partys und Anlässe.",
+      "h1": "Lab-Grown Diamant-Hängeohrringe",
+      "intro": [
+        "Modelle, die unterhalb des Ohrläppchens fallen – von kurzen Hängern und Creolen mit Anhänger bis zu längeren Kettendesigns. Gefertigt aus 925 Sterling Silber mit Goldplattierung und besetzt mit Lab-Grown Diamanten."
+      ]
+    },
+    "anniversary-gifts": {
+      "metaTitle": "Schmuckgeschenke zum Jahrestag für sie | I Want Jewels",
+      "metaDescription": "Feiern Sie Ihren Jahrestag mit Lab-Grown Diamantschmuck für sie: Ohrringe, Halsketten, Ringe und Armbänder als Geschenk, das sie weit über den Tag hinaus trägt.",
+      "h1": "Schmuckgeschenke zum Jahrestag für sie",
+      "intro": [
+        "Klassische Ohrstecker, Anhänger, Ringe und Armbänder als Geschenk zum Jahrestag, das sie noch lange nach dem besonderen Tag tragen wird. Jedes Stück ist aus 925 Sterling Silber mit Goldplattierung gefertigt und mit Lab-Grown Diamanten besetzt."
+      ]
+    },
+    "party-evening-jewellery": {
+      "metaTitle": "Party- & Abendschmuck mit Diamanten | I Want Jewels",
+      "metaDescription": "Vollenden Sie Ihren Abendlook mit Lab-Grown Diamantschmuck. Entdecken Sie dekorative Ohrringe, Statement-Ringe und Halsketten für Partys, Dinner und Feste.",
+      "h1": "Party- & Abendschmuck",
+      "intro": [
+        "Dekorative Geometrie, Pavé-Creolen, ausdrucksstarke Hängeohrringe, markante Halsketten und vollere Ringe: Stücke, die bei Dinner, Partys und Feiern auffallen. Lab-Grown Diamanten in 925 Sterling Silber mit Goldplattierung."
+      ]
+    },
+    "graduation-gifts": {
+      "metaTitle": "Schmuckgeschenke zum Abschluss für sie | I Want Jewels",
+      "metaDescription": "Feiern Sie ihr nächstes Kapitel mit Lab-Grown Diamantschmuck. Geschenkideen zum Abschluss, von Ohrsteckern und Anhängern bis zu Ringen und Armbändern.",
+      "h1": "Schmuckgeschenke zum Abschluss für sie",
+      "intro": [
+        "Ein erster echter Diamant für ihr nächstes Kapitel. Vielseitige Ohrstecker, Anhänger, Ringe und Armbänder für jeden Tag stehen an erster Stelle, größere festliche Designs folgen weiter unten. Alles aus 925 Sterling Silber mit Lab-Grown Diamanten."
+      ]
+    },
+    "birthday-gifts": {
+      "metaTitle": "Schmuckgeschenke zum Geburtstag für sie | I Want Jewels",
+      "metaDescription": "Finden Sie ein Schmuckgeschenk zum Geburtstag, das sie gern trägt: Lab-Grown Diamant-Ohrringe, Halsketten, Ringe und Armbänder aus 925 Sterling Silber.",
+      "h1": "Schmuckgeschenke zum Geburtstag für sie",
+      "intro": [
+        "Ohrringe, Halsketten, Ringe und Armbänder, zu denen sie jeden Tag greifen wird – besetzt mit Lab-Grown Diamanten in 925 Sterling Silber mit Goldplattierung. Sie kennen ihre Größe oder ihren Stil nicht genau? Mit einer Geschenkkarte wählt sie selbst."
+      ]
+    },
+    "christmas-jewellery-gifts": {
+      "metaTitle": "Schmuckgeschenke zu Weihnachten für sie | I Want Jewels",
+      "metaDescription": "Schmuckgeschenke zu Weihnachten für sie: von Diamant-Ohrsteckern bis zu zarten Halsketten, Ringen und Armbändern mit Lab-Grown Diamanten bei I Want Jewels.",
+      "h1": "Schmuckgeschenke zu Weihnachten für sie",
+      "intro": [
+        "Zuerst zarte Halsketten und Armbänder, dann Diamant-Ohrstecker und Ringe: Geschenke mit Lab-Grown Diamanten aus 925 Sterling Silber mit Goldplattierung, bereit zum Verpacken."
+      ]
+    }
+  },
+  "products": {
+    "iwjbn0001": {
+      "metaTitle": "Alessia Lab-Grown Diamant-Armreif | I Want Jewels",
+      "metaDescription": "Entdecken Sie Alessia, einen offenen Lab-Grown Diamant-Armreif aus 925 Sterling Silber mit Goldplattierung. In Gelb-, Rosé- oder Weißton für Alltag und Anlässe.",
+      "h1": "Alessia Lab-Grown Diamant-Armreif",
+      "material": "925 Sterling Silber mit Goldplattierung"
+    }
+  }
+}

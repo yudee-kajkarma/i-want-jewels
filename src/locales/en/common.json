@@ -49,7 +49,31 @@
     "currencyOptions": "Currency options",
     "currency": "Currency",
     "follow": "Follow",
-    "language": "Language"
+    "language": "Language",
+    "megaMenu": {
+      "shopByCategory": "Shop by category",
+      "shopByOccasion": "Shop by occasion",
+      "shopAll": "Shop all",
+      "earrings": "Earrings",
+      "necklaces": "Necklaces",
+      "rings": "Rings",
+      "bracelets": "Bracelets",
+      "studEarrings": "Stud Earrings",
+      "hoopHuggieEarrings": "Hoop & Huggie Earrings",
+      "dropEarrings": "Drop Earrings",
+      "everydayEarrings": "Everyday Earrings",
+      "everydayPendants": "Everyday Pendants",
+      "layeringYNecklaces": "Layering & Y Necklaces",
+      "everydayStackingRings": "Everyday & Stacking Rings",
+      "statementRings": "Statement Rings",
+      "chainBracelets": "Chain Bracelets",
+      "alessiaBangle": "Alessia Diamond Bangle",
+      "anniversaryGifts": "Anniversary Gifts",
+      "partyEvening": "Party & Evening",
+      "graduationGifts": "Graduation Gifts",
+      "birthdayGifts": "Birthday Gifts",
+      "christmasGifts": "Christmas Gifts"
+    }
   },
   "footer": {
     "information": "Information",
@@ -863,7 +887,8 @@
     "piece_other": "pieces",
     "viewAllFilter": "View All & Filter",
     "emptyDesc": "New pieces are on their way. Explore the rest of the collection in the meantime.",
-    "shopAll": "Shop All Jewellery"
+    "shopAll": "Shop All Jewellery",
+    "breadcrumbShop": "Shop"
   },
   "notFound": {
     "title": "Page Not Found",
