@@ -1,7 +1,7 @@
 import { adminApiClient } from './apiClient'
 
 /**
- * Admin → Chatbot keys: the chat assistant's (Lumi's) AI providers, models,
+ * Admin → Chatbot keys: the chat assistant's (Jules's) AI providers, models,
  * embeddings and daily limits.
  *
  * API keys are secrets. They only ever travel browser → server, in a request

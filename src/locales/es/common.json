@@ -1306,7 +1306,7 @@
     },
     "chatbot": {
       "breadcrumb": "Administración",
-      "title": "Chatbot (Lumi)",
+      "title": "Chatbot (Jules)",
       "intro": "Las claves API se guardan cifradas y no se vuelven a mostrar. Añade solo los proveedores que uses.",
       "lastUpdated": "Última actualización: {{date}}",
       "lastUpdatedBy": "Última actualización: {{date}} por {{who}}",
@@ -1315,7 +1315,7 @@
       "retry": "Reintentar",
       "providers": {
         "title": "Proveedores de IA",
-        "hint": "Lumi necesita al menos un proveedor con clave. Si un modelo falla o se agota, Lumi pasa al siguiente."
+        "hint": "Jules necesita al menos un proveedor con clave. Si un modelo falla o se agota, Jules pasa al siguiente."
       },
       "status": {
         "saved": "Clave guardada que termina en ••••{{last4}}",
@@ -1330,7 +1330,7 @@
       "hideKey": "Ocultar clave",
       "newKeyHint": "Esta clave se guarda al hacer clic en «Guardar cambios».",
       "models": "Modelos",
-      "modelsHint": "Separados por comas, en el orden en que se prueban. Si uno falla, Lumi usa el siguiente.",
+      "modelsHint": "Separados por comas, en el orden en que se prueban. Si uno falla, Jules usa el siguiente.",
       "modelsOrder": "Modelos en el orden en que se prueban",
       "modelsMissing": "Añade al menos un modelo; si no, este proveedor no se usa.",
       "endpoint": "Endpoint",
@@ -1342,7 +1342,7 @@
       "testFailed": "No funciona",
       "testModel": "modelo {{model}}",
       "removeKey": "Eliminar clave",
-      "removeConfirm": "¿Eliminar la clave guardada de {{provider}}? Lumi dejará de usar {{provider}} de inmediato.",
+      "removeConfirm": "¿Eliminar la clave guardada de {{provider}}? Jules dejará de usar {{provider}} de inmediato.",
       "removeYes": "Sí, eliminar",
       "removing": "Eliminando…",
       "cancel": "Cancelar",
@@ -1351,17 +1351,17 @@
       "errorTest": "No se pudo probar este proveedor en este momento.",
       "order": {
         "title": "Orden",
-        "hint": "Qué proveedor prueba Lumi primero, segundo y tercero. Solo se usan los proveedores con clave; los demás se omiten.",
+        "hint": "Qué proveedor prueba Jules primero, segundo y tercero. Solo se usan los proveedores con clave; los demás se omiten.",
         "hasKey": "Tiene clave — se usa",
         "newKey": "Clave nueva — se usa tras guardar",
         "noKey": "Sin clave — se omite",
         "moveUp": "Subir {{provider}}",
         "moveDown": "Bajar {{provider}}",
-        "noneWarning": "Ningún proveedor tiene clave todavía, así que Lumi no puede escribir respuestas de IA."
+        "noneWarning": "Ningún proveedor tiene clave todavía, así que Jules no puede escribir respuestas de IA."
       },
       "embedding": {
         "title": "Búsqueda (embeddings)",
-        "hint": "El modelo que convierte los textos de la tienda y cada pregunta en números, para que Lumi encuentre los datos correctos.",
+        "hint": "El modelo que convierte los textos de la tienda y cada pregunta en números, para que Jules encuentre los datos correctos.",
         "provider": "Proveedor",
         "anthropicNote": "Solo Alibaba Cloud u OpenAI — Anthropic no tiene modelo de embeddings.",
         "model": "Modelo",
@@ -1374,7 +1374,7 @@
         "title": "Límites diarios",
         "hint": "Se cuentan por día. Las respuestas guardadas y los botones rápidos no cuentan — solo las respuestas reales de IA.",
         "guestQuestions": "Preguntas de invitados",
-        "guestQuestionsHint": "Preguntas que un visitante sin cuenta puede hacer antes de que Lumi le pida iniciar sesión.",
+        "guestQuestionsHint": "Preguntas que un visitante sin cuenta puede hacer antes de que Jules le pida iniciar sesión.",
         "guestAnswers": "Respuestas de IA para invitados",
         "guestAnswersHint": "Respuestas de IA para un visitante sin cuenta.",
         "loggedInAnswers": "Respuestas de IA con sesión iniciada",
@@ -2508,15 +2508,15 @@
     }
   },
   "chat": {
-    "title": "Lumi",
-    "open": "Chatear con Lumi",
-    "close": "Cerrar Lumi",
-    "placeholder": "Escribe a Lumi…",
+    "title": "Jules",
+    "open": "Chatear con Jules",
+    "close": "Cerrar Jules",
+    "placeholder": "Escribe a Jules…",
     "send": "Enviar",
     "privacy": "Asistente de IA · No compartas datos de tu tarjeta.",
     "botCheck": "No pudimos confirmar que no eres un robot. Inténtalo de nuevo en un momento o contacta con nuestro equipo.",
     "unavailable": "Ahora mismo no puedo responder. Inténtalo más tarde o contacta con nuestro equipo.",
-    "limitVisitor": "Para seguir chateando con Lumi, inicia sesión. Solo te llevará un momento y tus chats se guardarán en tu cuenta.",
+    "limitVisitor": "Para seguir chateando con Jules, inicia sesión. Solo te llevará un momento y tus chats se guardarán en tu cuenta.",
     "limitAccount": "Has alcanzado el límite de respuestas de IA de hoy. Nuestro equipo te ayudará encantado.",
     "logIn": "Iniciar sesión",
     "quick": {
@@ -2524,8 +2524,8 @@
         "link": "Contactar con nuestro equipo"
       }
     },
-    "teaser": "Hola, soy Lumi. Pregúntame por tallas, cuidados, regalos o tu pedido.",
-    "teaserCta": "Chatear con Lumi",
+    "teaser": "Hola, soy Jules. Pregúntame por tallas, cuidados, regalos o tu pedido.",
+    "teaserCta": "Chatear con Jules",
     "tools": {
       "previous": "Anterior",
       "next": "Siguiente",
@@ -2571,15 +2571,15 @@
       "myGiftCards": "Mis tarjetas regalo"
     },
     "back": "Atrás",
-    "lumi": {
-      "name": "Lumi",
-      "avatarAlt": "Lumi, la asistente de I Want Jewels",
+    "jules": {
+      "name": "Jules",
+      "avatarAlt": "Jules, el asesor de ventas de I Want Jewels",
       "dismiss": "Cerrar",
       "loading": "Cargando…",
       "home": {
         "greeting": "Hola",
         "greetingName": "Hola, {{name}}",
-        "askPlaceholder": "Pregúntale a Lumi lo que quieras…",
+        "askPlaceholder": "Pregúntale a Jules lo que quieras…",
         "quickActions": "Ayuda rápida",
         "popular": "Preguntas frecuentes",
         "continue": "Retoma tu último chat",
@@ -2598,7 +2598,7 @@
         "giftFinder": "Ayúdame a encontrar un regalo"
       },
       "tabs": {
-        "label": "Secciones de Lumi",
+        "label": "Secciones de Jules",
         "home": "Inicio",
         "chats": "Chats",
         "explore": "Explorar"
@@ -2606,7 +2606,7 @@
       "chats": {
         "title": "Mensajes",
         "empty": "Aún no hay chats",
-        "emptySub": "Hazle una pregunta a Lumi y tu chat se guardará aquí.",
+        "emptySub": "Hazle una pregunta a Jules y tu chat se guardará aquí.",
         "device": "Chats guardados en este dispositivo",
         "account": "Chats guardados en tu cuenta",
         "loginHint": "Inicia sesión para tener tus chats en todos tus dispositivos.",
@@ -2622,18 +2622,18 @@
       },
       "explore": {
         "title": "Explorar",
-        "subtitle": "Toca una pregunta y Lumi te responde al instante.",
+        "subtitle": "Toca una pregunta y Jules te responde al instante.",
         "search": "Buscar preguntas",
         "all": "Todos",
         "noResults": "Ninguna pregunta coincide.",
-        "askInstead": "Pregúntale a Lumi: «{{q}}»",
+        "askInstead": "Pregúntale a Jules: «{{q}}»",
         "clear": "Borrar búsqueda",
         "topics": "Temas"
       },
       "thread": {
         "newChat": "Nuevo chat",
         "menu": "Opciones del chat",
-        "intro": "Hola, soy Lumi. Pregúntame lo que quieras o elige una pregunta de abajo.",
+        "intro": "Hola, soy Jules. Pregúntame lo que quieras o elige una pregunta de abajo.",
         "followUps": "También podrías preguntar",
         "oldChat": "Este chat es del {{date}}. Desde entonces, los precios y el stock pueden haber cambiado.",
         "counter": "{{count}}/{{max}}",
@@ -2838,10 +2838,10 @@
         "track-order": "Seguir mi pedido",
         "talk-person": "Hablar con una persona"
       },
-      "askLumi": "Pregúntale a Lumi",
-      "stylistOnline": "Estilista · en línea",
+      "askJules": "Pregúntale a Jules",
+      "roleOnline": "Asesor de ventas · en línea",
       "expand": "Ampliar",
-      "meta": "Lumi · {{time}}",
+      "meta": "Jules · {{time}}",
       "status": {
         "sent": "Enviado",
         "seen": "Visto"

@@ -1,36 +1,36 @@
 import { authApiClient } from "./apiClient";
-import { findLumiSuggestion } from "../components/lumi/suggestions";
-import { LAST_GIFT_STEP, isProductSlug, mergeGiftAnswers, type LumiIntent } from "../components/lumi/shop";
+import { findJulesSuggestion } from "../components/jules/suggestions";
+import { LAST_GIFT_STEP, isProductSlug, mergeGiftAnswers, type JulesIntent } from "../components/jules/shop";
 import type {
   ChatOrderSummary,
   ChatOrderView,
-  LumiAction,
-  LumiActionType,
-  LumiBlock,
-  LumiClientBlock,
-  LumiColourKey,
-  LumiLink,
-  LumiLocale,
-  LumiMessage,
-  LumiProductCard,
-  LumiProductDetail,
-  LumiReply,
-  LumiServerBlock,
-  LumiShopBlock,
-  LumiSizeOption,
-  LumiSource,
-  LumiTool,
-  LumiVariant,
-} from "../components/lumi/contract";
+  JulesAction,
+  JulesActionType,
+  JulesBlock,
+  JulesClientBlock,
+  JulesColourKey,
+  JulesLink,
+  JulesLocale,
+  JulesMessage,
+  JulesProductCard,
+  JulesProductDetail,
+  JulesReply,
+  JulesServerBlock,
+  JulesShopBlock,
+  JulesSizeOption,
+  JulesSource,
+  JulesTool,
+  JulesVariant,
+} from "../components/jules/contract";
 import type { Price } from "../utils/price";
 
 /**
- * Lumi's line to the backend: questions go to POST /api/chat and come back as
- * one typed reply (components/lumi/contract.ts). Everything the server sends
+ * Jules's line to the backend: questions go to POST /api/chat and come back as
+ * one typed reply (components/jules/contract.ts). Everything the server sends
  * is checked here before the website draws it: a block that doesn't fit the
  * contract is dropped and a reply that doesn't fit is shown as "unavailable",
  * so a bad answer can never break the chat. Saved chats are read with the
- * same checks (lumiHistoryService).
+ * same checks (julesHistoryService).
  */
 
 /** One earlier message, as the backend reads the conversation. */
@@ -117,13 +117,13 @@ function dataOf(body: unknown): unknown {
  */
 export async function sendChatMessage(input: {
   message: string;
-  locale: LumiLocale;
+  locale: JulesLocale;
   history: ChatTurn[];
   suggestion?: string;
-  intent?: LumiIntent;
+  intent?: JulesIntent;
   context?: ChatPageContext;
   botToken?: string;
-}): Promise<LumiReply> {
+}): Promise<JulesReply> {
   const productSlug = input.context?.productSlug;
   try {
     const response = await authApiClient.post<unknown>(
@@ -143,7 +143,7 @@ export async function sendChatMessage(input: {
     );
     const data = dataOf(response.data);
     keepPass(data);
-    const reply = readLumiReply(data, input.locale);
+    const reply = readJulesReply(data, input.locale);
     if (reply.kind === "botCheck") forgetPass();
     return reply;
   } catch (error) {
@@ -157,7 +157,7 @@ export async function sendChatMessage(input: {
 
 
 /**
- * Tells the backend whether one of Lumi's answers helped (POST
+ * Tells the backend whether one of Jules's answers helped (POST
  * /api/chat/feedback), by the reply's id. The backend knows the visitor by
  * their login or address, so only who got the answer can rate it. Never
  * throws: true when it was saved.
@@ -177,14 +177,14 @@ export async function sendFeedback(replyId: string, helpful: boolean): Promise<b
  * plus the names of the products shown, so "the second one" can be understood.
  * Forms, orders and notices aren't part of the conversation.
  */
-export function toChatTurns(messages: LumiMessage[]): ChatTurn[] {
+export function toChatTurns(messages: JulesMessage[]): ChatTurn[] {
   return messages.flatMap((message): ChatTurn[] => {
     const content = message.blocks.flatMap(turnText).join("\n").trim();
     return content ? [{ role: message.from === "you" ? "user" : "assistant", content }] : [];
   });
 }
 
-function turnText(block: LumiBlock): string[] {
+function turnText(block: JulesBlock): string[] {
   switch (block.type) {
     case "text":
       return [block.text];
@@ -205,22 +205,22 @@ function turnText(block: LumiBlock): string[] {
 // ---------------------------------------------------------------------------
 
 type Json = Record<string, unknown>;
-type LimitTier = Extract<LumiReply, { kind: "limit" }>["tier"];
+type LimitTier = Extract<JulesReply, { kind: "limit" }>["tier"];
 
 // Every allowed value of the contract's enums. Typed as records, so adding a
 // value to the contract without adding it here is a type error.
-const TOOLS: Record<LumiTool, true> = {
+const TOOLS: Record<JulesTool, true> = {
   find_products: true, product_details: true, my_orders: true, order_status: true, gift_cards: true,
   talk_to_person: true, ask_question: true, greeting: true, off_topic: true, saved: true,
   pairs_with: true, add_to_bag: true, add_to_wishlist: true, show_bag: true, show_wishlist: true, gift_finder: true,
 };
-const SOURCES: Record<LumiSource, true> = { shortcut: true, suggestion: true, saved: true, tool: true, ai: true };
-const LOCALES: Record<LumiLocale, true> = { en: true, de: true, nl: true, fr: true, it: true, es: true };
-const ACTIONS: Record<LumiActionType, true> = {
+const SOURCES: Record<JulesSource, true> = { shortcut: true, suggestion: true, saved: true, tool: true, ai: true };
+const LOCALES: Record<JulesLocale, true> = { en: true, de: true, nl: true, fr: true, it: true, es: true };
+const ACTIONS: Record<JulesActionType, true> = {
   my_orders: true, order_status: true, talk_to_person: true, gift_cards: true,
   add_to_bag: true, add_to_wishlist: true, show_bag: true, show_wishlist: true, gift_finder: true,
 };
-const COLOURS: Record<LumiColourKey, true> = { yellow: true, rose: true, white: true };
+const COLOURS: Record<JulesColourKey, true> = { yellow: true, rose: true, white: true };
 const TIERS: Record<LimitTier, true> = { visitor: true, loggedIn: true, customer: true };
 
 function isObject(value: unknown): value is Json {
@@ -272,7 +272,7 @@ function readPrice(raw: unknown): Price | undefined {
   return { eur: raw.eur, dol: raw.dol, pou: raw.pou };
 }
 
-function readLink(raw: unknown): LumiLink | undefined {
+function readLink(raw: unknown): JulesLink | undefined {
   if (!isObject(raw)) return undefined;
   const title = filled(raw.title);
   const url = internalPath(raw.url);
@@ -290,7 +290,7 @@ function uniqueListOf<T>(value: unknown, read: (item: unknown) => T | undefined,
   });
 }
 
-function readCard(raw: unknown): LumiProductCard | undefined {
+function readCard(raw: unknown): JulesProductCard | undefined {
   if (!isObject(raw)) return undefined;
   // The bag and the wishlist need the product's id, so a card without one can't be used.
   const productId = filled(raw.productId);
@@ -302,7 +302,7 @@ function readCard(raw: unknown): LumiProductCard | undefined {
   return { productId, slug, title, ...optional("image", imageUrl(raw.image)), price, fixedPrice: raw.fixedPrice, url, inStock: raw.inStock };
 }
 
-function readSize(raw: unknown): LumiSizeOption | undefined {
+function readSize(raw: unknown): JulesSizeOption | undefined {
   if (!isObject(raw) || !isNumber(raw.size)) return undefined;
   const label = filled(raw.label);
   const price = readPrice(raw.price);
@@ -312,7 +312,7 @@ function readSize(raw: unknown): LumiSizeOption | undefined {
 const readSizes = (raw: unknown) => uniqueListOf(raw, readSize, (size) => size.size);
 
 /** One colour of a product with its own id, sizes, price and stock. */
-function readVariant(raw: unknown): LumiVariant | undefined {
+function readVariant(raw: unknown): JulesVariant | undefined {
   if (!isObject(raw) || !Array.isArray(raw.sizes)) return undefined;
   const id = filled(raw.id);
   const title = filled(raw.title);
@@ -329,7 +329,7 @@ function readVariant(raw: unknown): LumiVariant | undefined {
   };
 }
 
-function readDetail(raw: unknown): LumiProductDetail | undefined {
+function readDetail(raw: unknown): JulesProductDetail | undefined {
   const card = readCard(raw);
   if (!card || !isObject(raw) || !Array.isArray(raw.colours) || !Array.isArray(raw.sizes)) return undefined;
   const priceHigh = readPrice(raw.priceHigh);
@@ -346,7 +346,7 @@ function readDetail(raw: unknown): LumiProductDetail | undefined {
 }
 
 /** A block of a reply from the server; undefined when it isn't one the website can draw. */
-function readServerBlock(raw: unknown): LumiServerBlock | undefined {
+function readServerBlock(raw: unknown): JulesServerBlock | undefined {
   if (!isObject(raw)) return undefined;
   switch (raw.type) {
     case "text": {
@@ -435,7 +435,7 @@ export function readOrderView(raw: unknown): ChatOrderView | undefined {
 }
 
 /** What a "cartAdded" block shows about the piece that went into the bag. */
-function readBagItem(raw: unknown): Extract<LumiShopBlock, { type: "cartAdded" }>["item"] | undefined {
+function readBagItem(raw: unknown): Extract<JulesShopBlock, { type: "cartAdded" }>["item"] | undefined {
   if (!isObject(raw)) return undefined;
   const title = filled(raw.title);
   const price = readPrice(raw.price);
@@ -451,7 +451,7 @@ function readBagItem(raw: unknown): Extract<LumiShopBlock, { type: "cartAdded" }
 }
 
 /** A shopping block (bag, wishlist, gift finder), as kept in a saved chat. The bag and wishlist are drawn live, so they carry nothing. */
-function readShopBlock(raw: Json): LumiShopBlock | undefined {
+function readShopBlock(raw: Json): JulesShopBlock | undefined {
   switch (raw.type) {
     case "cartAdded": {
       const item = readBagItem(raw.item);
@@ -472,7 +472,7 @@ function readShopBlock(raw: Json): LumiShopBlock | undefined {
 }
 
 /** A block the website made itself (orders, forms, gift card balances), as kept in a saved chat. */
-function readClientBlock(raw: Json): LumiClientBlock | undefined {
+function readClientBlock(raw: Json): JulesClientBlock | undefined {
   switch (raw.type) {
     case "orders": {
       const orders = listOf(raw.orders, readOrderSummary);
@@ -499,17 +499,17 @@ function readClientBlock(raw: Json): LumiClientBlock | undefined {
 }
 
 /** Any block of a saved chat: the server's kinds and the website's own. */
-export function readBlock(raw: unknown): LumiBlock | undefined {
+export function readBlock(raw: unknown): JulesBlock | undefined {
   return readServerBlock(raw) ?? (isObject(raw) ? readClientBlock(raw) ?? readShopBlock(raw) : undefined);
 }
 
 /** Up to 3 follow-up questions; ids missing from the website's library have no text to show. */
 export function knownFollowUps(raw: unknown): string[] {
-  const ids = listOf(raw, (id) => (typeof id === "string" && findLumiSuggestion(id) ? id : undefined));
+  const ids = listOf(raw, (id) => (typeof id === "string" && findJulesSuggestion(id) ? id : undefined));
   return [...new Set(ids)].slice(0, 3);
 }
 
-function readAction(raw: unknown): LumiAction | undefined {
+function readAction(raw: unknown): JulesAction | undefined {
   if (!isObject(raw)) return undefined;
   const type = oneOf(ACTIONS, raw.type);
   const orderNumber = filled(raw.orderNumber)?.slice(0, 30);
@@ -521,7 +521,7 @@ function readAction(raw: unknown): LumiAction | undefined {
 }
 
 /** The fields every answer and action carries. They only describe the reply, so odd values get safe defaults. */
-function readCommon(raw: Json, locale: LumiLocale) {
+function readCommon(raw: Json, locale: JulesLocale) {
   return {
     id: typeof raw.id === "string" ? raw.id : "",
     tool: oneOf(TOOLS, raw.tool) ?? "ask_question",
@@ -536,7 +536,7 @@ function readCommon(raw: Json, locale: LumiLocale) {
  * kinds, actions the website can't open and answers with nothing left to
  * show become "unavailable".
  */
-export function readLumiReply(raw: unknown, locale: LumiLocale): LumiReply {
+export function readJulesReply(raw: unknown, locale: JulesLocale): JulesReply {
   if (!isObject(raw)) return { kind: "unavailable" };
   switch (raw.kind) {
     case "answer": {

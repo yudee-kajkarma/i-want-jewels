@@ -1279,7 +1279,7 @@
     },
     "chatbot": {
       "breadcrumb": "Beheerder",
-      "title": "Chatbot (Lumi)",
+      "title": "Chatbot (Jules)",
       "intro": "API-sleutels worden versleuteld opgeslagen en nooit meer getoond. Voeg alleen de aanbieders toe die u gebruikt.",
       "lastUpdated": "Laatst bijgewerkt op {{date}}",
       "lastUpdatedBy": "Laatst bijgewerkt op {{date}} door {{who}}",
@@ -1288,7 +1288,7 @@
       "retry": "Opnieuw proberen",
       "providers": {
         "title": "AI-aanbieders",
-        "hint": "Lumi heeft minstens één aanbieder met een sleutel nodig. Als een model faalt of op is, gaat Lumi door naar het volgende."
+        "hint": "Jules heeft minstens één aanbieder met een sleutel nodig. Als een model faalt of op is, gaat Jules door naar het volgende."
       },
       "status": {
         "saved": "Opgeslagen sleutel eindigt op ••••{{last4}}",
@@ -1303,7 +1303,7 @@
       "hideKey": "Sleutel verbergen",
       "newKeyHint": "Deze sleutel wordt opgeslagen wanneer u op ‘Wijzigingen opslaan’ klikt.",
       "models": "Modellen",
-      "modelsHint": "Gescheiden door komma's, in de volgorde waarin ze geprobeerd worden. Als er een faalt, gebruikt Lumi de volgende.",
+      "modelsHint": "Gescheiden door komma's, in de volgorde waarin ze geprobeerd worden. Als er een faalt, gebruikt Jules de volgende.",
       "modelsOrder": "Modellen in de volgorde waarin ze geprobeerd worden",
       "modelsMissing": "Voeg minstens één model toe, anders wordt deze aanbieder niet gebruikt.",
       "endpoint": "Endpoint",
@@ -1315,7 +1315,7 @@
       "testFailed": "Werkt niet",
       "testModel": "model {{model}}",
       "removeKey": "Sleutel verwijderen",
-      "removeConfirm": "De opgeslagen sleutel van {{provider}} verwijderen? Lumi stopt meteen met het gebruik van {{provider}}.",
+      "removeConfirm": "De opgeslagen sleutel van {{provider}} verwijderen? Jules stopt meteen met het gebruik van {{provider}}.",
       "removeYes": "Ja, verwijderen",
       "removing": "Bezig met verwijderen…",
       "cancel": "Annuleren",
@@ -1324,17 +1324,17 @@
       "errorTest": "Kan deze aanbieder momenteel niet testen.",
       "order": {
         "title": "Volgorde",
-        "hint": "Welke aanbieder Lumi als eerste, tweede en derde probeert. Alleen aanbieders met een sleutel worden gebruikt; de andere worden overgeslagen.",
+        "hint": "Welke aanbieder Jules als eerste, tweede en derde probeert. Alleen aanbieders met een sleutel worden gebruikt; de andere worden overgeslagen.",
         "hasKey": "Heeft een sleutel — wordt gebruikt",
         "newKey": "Nieuwe sleutel — wordt gebruikt na opslaan",
         "noKey": "Geen sleutel — wordt overgeslagen",
         "moveUp": "{{provider}} omhoog verplaatsen",
         "moveDown": "{{provider}} omlaag verplaatsen",
-        "noneWarning": "Nog geen enkele aanbieder heeft een sleutel, dus Lumi kan geen AI-antwoorden schrijven."
+        "noneWarning": "Nog geen enkele aanbieder heeft een sleutel, dus Jules kan geen AI-antwoorden schrijven."
       },
       "embedding": {
         "title": "Zoeken (embeddings)",
-        "hint": "Het model dat de teksten van de winkel en elke vraag omzet in getallen, zodat Lumi de juiste feiten vindt.",
+        "hint": "Het model dat de teksten van de winkel en elke vraag omzet in getallen, zodat Jules de juiste feiten vindt.",
         "provider": "Aanbieder",
         "anthropicNote": "Alleen Alibaba Cloud of OpenAI — Anthropic heeft geen embeddingsmodel.",
         "model": "Model",
@@ -1347,7 +1347,7 @@
         "title": "Daglimieten",
         "hint": "Per dag geteld. Opgeslagen antwoorden en snelknoppen tellen niet mee — alleen echte AI-antwoorden.",
         "guestQuestions": "Vragen van gasten",
-        "guestQuestionsHint": "Vragen die een bezoeker zonder account kan stellen voordat Lumi vraagt om in te loggen.",
+        "guestQuestionsHint": "Vragen die een bezoeker zonder account kan stellen voordat Jules vraagt om in te loggen.",
         "guestAnswers": "AI-antwoorden voor gasten",
         "guestAnswersHint": "AI-antwoorden voor een bezoeker zonder account.",
         "loggedInAnswers": "AI-antwoorden voor ingelogde gebruikers",
@@ -2477,15 +2477,15 @@
     }
   },
   "chat": {
-    "title": "Lumi",
-    "open": "Chat met Lumi",
-    "close": "Lumi sluiten",
-    "placeholder": "Bericht aan Lumi…",
+    "title": "Jules",
+    "open": "Chat met Jules",
+    "close": "Jules sluiten",
+    "placeholder": "Bericht aan Jules…",
     "send": "Versturen",
     "privacy": "AI-assistent · Deel geen kaartgegevens.",
     "botCheck": "We konden niet bevestigen dat je geen robot bent. Probeer het zo opnieuw of neem contact op met ons team.",
     "unavailable": "Ik kan nu niet antwoorden. Probeer het later opnieuw of neem contact op met ons team.",
-    "limitVisitor": "Log in om verder te chatten met Lumi. Het duurt maar even, en je chats worden in je account bewaard.",
+    "limitVisitor": "Log in om verder te chatten met Jules. Het duurt maar even, en je chats worden in je account bewaard.",
     "limitAccount": "Je hebt de limiet voor AI-antwoorden van vandaag bereikt. Ons team helpt je graag verder.",
     "logIn": "Inloggen",
     "quick": {
@@ -2493,8 +2493,8 @@
         "link": "Contact met ons team"
       }
     },
-    "teaser": "Hoi, ik ben Lumi. Vraag me naar maten, onderhoud, cadeaus of je bestelling.",
-    "teaserCta": "Chat met Lumi",
+    "teaser": "Hoi, ik ben Jules. Vraag me naar maten, onderhoud, cadeaus of je bestelling.",
+    "teaserCta": "Chat met Jules",
     "tools": {
       "previous": "Vorige",
       "next": "Volgende",
@@ -2540,15 +2540,15 @@
       "myGiftCards": "Mijn cadeaukaarten"
     },
     "back": "Terug",
-    "lumi": {
-      "name": "Lumi",
-      "avatarAlt": "Lumi, de assistent van I Want Jewels",
+    "jules": {
+      "name": "Jules",
+      "avatarAlt": "Jules, de verkoopadviseur van I Want Jewels",
       "dismiss": "Sluiten",
       "loading": "Laden…",
       "home": {
         "greeting": "Hallo",
         "greetingName": "Hallo {{name}}",
-        "askPlaceholder": "Vraag Lumi wat je maar wilt…",
+        "askPlaceholder": "Vraag Jules wat je maar wilt…",
         "quickActions": "Snelle hulp",
         "popular": "Populaire vragen",
         "continue": "Ga verder met je laatste chat",
@@ -2567,7 +2567,7 @@
         "giftFinder": "Help me een cadeau te vinden"
       },
       "tabs": {
-        "label": "Lumi-onderdelen",
+        "label": "Jules-onderdelen",
         "home": "Start",
         "chats": "Chats",
         "explore": "Ontdekken"
@@ -2575,7 +2575,7 @@
       "chats": {
         "title": "Berichten",
         "empty": "Nog geen chats",
-        "emptySub": "Stel Lumi een vraag, dan wordt je chat hier bewaard.",
+        "emptySub": "Stel Jules een vraag, dan wordt je chat hier bewaard.",
         "device": "Opgeslagen op dit apparaat",
         "account": "Opgeslagen in je account",
         "loginHint": "Log in om je chats op al je apparaten te zien.",
@@ -2591,18 +2591,18 @@
       },
       "explore": {
         "title": "Ontdekken",
-        "subtitle": "Tik op een vraag en Lumi antwoordt meteen.",
+        "subtitle": "Tik op een vraag en Jules antwoordt meteen.",
         "search": "Vragen zoeken",
         "all": "Alles",
         "noResults": "Geen vragen gevonden.",
-        "askInstead": "Vraag Lumi: ‘{{q}}’",
+        "askInstead": "Vraag Jules: ‘{{q}}’",
         "clear": "Zoekopdracht wissen",
         "topics": "Onderwerpen"
       },
       "thread": {
         "newChat": "Nieuwe chat",
         "menu": "Chatopties",
-        "intro": "Hoi, ik ben Lumi. Vraag me wat je wilt, of kies hieronder een vraag.",
+        "intro": "Hoi, ik ben Jules. Vraag me wat je wilt, of kies hieronder een vraag.",
         "followUps": "Je kunt ook vragen",
         "oldChat": "Deze chat is van {{date}}. Prijzen en voorraad kunnen sindsdien zijn veranderd.",
         "counter": "{{count}}/{{max}}",
@@ -2807,10 +2807,10 @@
         "track-order": "Bestelling volgen",
         "talk-person": "Met iemand praten"
       },
-      "askLumi": "Vraag Lumi",
-      "stylistOnline": "Stylist · online",
+      "askJules": "Vraag Jules",
+      "roleOnline": "Verkoopadviseur · online",
       "expand": "Vergroten",
-      "meta": "Lumi · {{time}}",
+      "meta": "Jules · {{time}}",
       "status": {
         "sent": "Verzonden",
         "seen": "Gezien"

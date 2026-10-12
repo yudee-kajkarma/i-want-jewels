@@ -1279,7 +1279,7 @@
     },
     "chatbot": {
       "breadcrumb": "Admin",
-      "title": "Chatbot (Lumi)",
+      "title": "Chatbot (Jules)",
       "intro": "API-Schlüssel werden verschlüsselt gespeichert und nie wieder angezeigt. Fügen Sie nur die Anbieter hinzu, die Sie nutzen.",
       "lastUpdated": "Zuletzt aktualisiert am {{date}}",
       "lastUpdatedBy": "Zuletzt aktualisiert am {{date}} von {{who}}",
@@ -1288,7 +1288,7 @@
       "retry": "Erneut versuchen",
       "providers": {
         "title": "KI-Anbieter",
-        "hint": "Lumi braucht mindestens einen Anbieter mit Schlüssel. Fällt ein Modell aus oder ist es aufgebraucht, nimmt Lumi das nächste."
+        "hint": "Jules braucht mindestens einen Anbieter mit Schlüssel. Fällt ein Modell aus oder ist es aufgebraucht, nimmt Jules das nächste."
       },
       "status": {
         "saved": "Gespeicherter Schlüssel endet auf ••••{{last4}}",
@@ -1303,7 +1303,7 @@
       "hideKey": "Schlüssel verbergen",
       "newKeyHint": "Dieser Schlüssel wird gespeichert, wenn Sie auf „Änderungen speichern“ klicken.",
       "models": "Modelle",
-      "modelsHint": "Durch Kommas getrennt, in der Reihenfolge, in der sie probiert werden. Fällt eines aus, nimmt Lumi das nächste.",
+      "modelsHint": "Durch Kommas getrennt, in der Reihenfolge, in der sie probiert werden. Fällt eines aus, nimmt Jules das nächste.",
       "modelsOrder": "Modelle in der Reihenfolge, in der sie probiert werden",
       "modelsMissing": "Fügen Sie mindestens ein Modell hinzu, sonst wird dieser Anbieter nicht genutzt.",
       "endpoint": "Endpunkt",
@@ -1315,7 +1315,7 @@
       "testFailed": "Funktioniert nicht",
       "testModel": "Modell {{model}}",
       "removeKey": "Schlüssel entfernen",
-      "removeConfirm": "Gespeicherten {{provider}}-Schlüssel entfernen? Lumi nutzt {{provider}} dann sofort nicht mehr.",
+      "removeConfirm": "Gespeicherten {{provider}}-Schlüssel entfernen? Jules nutzt {{provider}} dann sofort nicht mehr.",
       "removeYes": "Ja, entfernen",
       "removing": "Wird entfernt…",
       "cancel": "Abbrechen",
@@ -1324,17 +1324,17 @@
       "errorTest": "Dieser Anbieter kann derzeit nicht getestet werden.",
       "order": {
         "title": "Reihenfolge",
-        "hint": "Welchen Anbieter Lumi zuerst, als Zweites und als Drittes probiert. Nur Anbieter mit Schlüssel werden genutzt, die anderen werden übersprungen.",
+        "hint": "Welchen Anbieter Jules zuerst, als Zweites und als Drittes probiert. Nur Anbieter mit Schlüssel werden genutzt, die anderen werden übersprungen.",
         "hasKey": "Hat einen Schlüssel – wird genutzt",
         "newKey": "Neuer Schlüssel – wird nach dem Speichern genutzt",
         "noKey": "Kein Schlüssel – wird übersprungen",
         "moveUp": "{{provider}} nach oben verschieben",
         "moveDown": "{{provider}} nach unten verschieben",
-        "noneWarning": "Noch kein Anbieter hat einen Schlüssel, daher kann Lumi keine KI-Antworten schreiben."
+        "noneWarning": "Noch kein Anbieter hat einen Schlüssel, daher kann Jules keine KI-Antworten schreiben."
       },
       "embedding": {
         "title": "Suche (Embeddings)",
-        "hint": "Das Modell, das die Texte des Shops und jede Frage in Zahlen umwandelt, damit Lumi die passenden Fakten findet.",
+        "hint": "Das Modell, das die Texte des Shops und jede Frage in Zahlen umwandelt, damit Jules die passenden Fakten findet.",
         "provider": "Anbieter",
         "anthropicNote": "Nur Alibaba Cloud oder OpenAI – Anthropic hat kein Embeddings-Modell.",
         "model": "Modell",
@@ -1347,7 +1347,7 @@
         "title": "Tageslimits",
         "hint": "Pro Tag gezählt. Gespeicherte Antworten und Schnelltasten zählen nicht – nur echte KI-Antworten.",
         "guestQuestions": "Fragen von Gästen",
-        "guestQuestionsHint": "Fragen, die ein Besucher ohne Konto stellen kann, bevor Lumi ihn bittet, sich anzumelden.",
+        "guestQuestionsHint": "Fragen, die ein Besucher ohne Konto stellen kann, bevor Jules ihn bittet, sich anzumelden.",
         "guestAnswers": "KI-Antworten für Gäste",
         "guestAnswersHint": "KI-Antworten für einen Besucher ohne Konto.",
         "loggedInAnswers": "KI-Antworten für Angemeldete",
@@ -2477,15 +2477,15 @@
     }
   },
   "chat": {
-    "title": "Lumi",
-    "open": "Mit Lumi chatten",
-    "close": "Lumi schließen",
-    "placeholder": "Nachricht an Lumi…",
+    "title": "Jules",
+    "open": "Mit Jules chatten",
+    "close": "Jules schließen",
+    "placeholder": "Nachricht an Jules…",
     "send": "Senden",
     "privacy": "KI-Assistent · Bitte keine Kartendaten teilen.",
     "botCheck": "Wir konnten nicht bestätigen, dass du kein Roboter bist. Bitte versuche es gleich noch einmal oder kontaktiere unser Team.",
     "unavailable": "Ich kann gerade nicht antworten. Bitte versuche es später noch einmal oder kontaktiere unser Team.",
-    "limitVisitor": "Um weiter mit Lumi zu chatten, melde dich bitte an. Das dauert nur einen Moment, und deine Chats werden in deinem Konto gespeichert.",
+    "limitVisitor": "Um weiter mit Jules zu chatten, melde dich bitte an. Das dauert nur einen Moment, und deine Chats werden in deinem Konto gespeichert.",
     "limitAccount": "Du hast das heutige Limit für KI-Antworten erreicht. Unser Team hilft dir gerne weiter.",
     "logIn": "Anmelden",
     "quick": {
@@ -2493,8 +2493,8 @@
         "link": "Unser Team kontaktieren"
       }
     },
-    "teaser": "Hallo, ich bin Lumi. Frag mich nach Größen, Pflege, Geschenken oder deiner Bestellung.",
-    "teaserCta": "Mit Lumi chatten",
+    "teaser": "Hallo, ich bin Jules. Frag mich nach Größen, Pflege, Geschenken oder deiner Bestellung.",
+    "teaserCta": "Mit Jules chatten",
     "tools": {
       "previous": "Zurück",
       "next": "Weiter",
@@ -2540,15 +2540,15 @@
       "myGiftCards": "Meine Geschenkkarten"
     },
     "back": "Zurück",
-    "lumi": {
-      "name": "Lumi",
-      "avatarAlt": "Lumi, die Assistentin von I Want Jewels",
+    "jules": {
+      "name": "Jules",
+      "avatarAlt": "Jules, der Verkaufsberater von I Want Jewels",
       "dismiss": "Schließen",
       "loading": "Wird geladen…",
       "home": {
         "greeting": "Hallo",
         "greetingName": "Hallo {{name}}",
-        "askPlaceholder": "Frag Lumi, was du möchtest…",
+        "askPlaceholder": "Frag Jules, was du möchtest…",
         "quickActions": "Schnelle Hilfe",
         "popular": "Beliebte Fragen",
         "continue": "Letzten Chat fortsetzen",
@@ -2567,7 +2567,7 @@
         "giftFinder": "Hilf mir, ein Geschenk zu finden"
       },
       "tabs": {
-        "label": "Lumi-Bereiche",
+        "label": "Jules-Bereiche",
         "home": "Start",
         "chats": "Chats",
         "explore": "Entdecken"
@@ -2575,7 +2575,7 @@
       "chats": {
         "title": "Nachrichten",
         "empty": "Noch keine Chats",
-        "emptySub": "Stell Lumi eine Frage, dann wird dein Chat hier gespeichert.",
+        "emptySub": "Stell Jules eine Frage, dann wird dein Chat hier gespeichert.",
         "device": "Auf diesem Gerät gespeichert",
         "account": "In deinem Konto gespeichert",
         "loginHint": "Melde dich an, um deine Chats auf all deinen Geräten zu sehen.",
@@ -2591,18 +2591,18 @@
       },
       "explore": {
         "title": "Entdecken",
-        "subtitle": "Tippe auf eine Frage und Lumi antwortet sofort.",
+        "subtitle": "Tippe auf eine Frage und Jules antwortet sofort.",
         "search": "Fragen durchsuchen",
         "all": "Alle",
         "noResults": "Keine passenden Fragen.",
-        "askInstead": "Frag Lumi: „{{q}}“",
+        "askInstead": "Frag Jules: „{{q}}“",
         "clear": "Suche löschen",
         "topics": "Themen"
       },
       "thread": {
         "newChat": "Neuer Chat",
         "menu": "Chat-Optionen",
-        "intro": "Hallo, ich bin Lumi. Frag mich, was du möchtest, oder wähle unten eine Frage.",
+        "intro": "Hallo, ich bin Jules. Frag mich, was du möchtest, oder wähle unten eine Frage.",
         "followUps": "Du könntest auch fragen",
         "oldChat": "Dieser Chat ist vom {{date}}. Preise und Verfügbarkeit können sich seitdem geändert haben.",
         "counter": "{{count}}/{{max}}",
@@ -2807,10 +2807,10 @@
         "track-order": "Bestellung verfolgen",
         "talk-person": "Mit einer Person sprechen"
       },
-      "askLumi": "Frag Lumi",
-      "stylistOnline": "Stylistin · online",
+      "askJules": "Frag Jules",
+      "roleOnline": "Verkaufsberater · online",
       "expand": "Vergrößern",
-      "meta": "Lumi · {{time}}",
+      "meta": "Jules · {{time}}",
       "status": {
         "sent": "Gesendet",
         "seen": "Gesehen"
