@@ -17,6 +17,7 @@ import { useCurrency } from "../../context/CurrencyContext";
 import { formatPrice, type CurrencyCode } from "../../utils/price";
 import { getCategories } from "../../services/categoryService";
 import { getProducts } from "../../services/productService";
+import { ShopMegaMenu, ShopMenuAccordion } from "./ShopMenu";
 import { useAppSelector } from "../../store/hooks";
 import type { Product } from "../../types/product";
 import brandLogo from "../../assets/logo.svg";
@@ -532,21 +533,10 @@ export default function Header() {
         [shopCategories],
     );
 
-    // Storefront drawer: the "Products" dropdown holds All Products → Rings.
-    // Gift cards are kept outside the dropdown, and Home is removed entirely.
+    // Storefront drawer: categories live under SHOP (the mega menu); the
+    // drawer keeps gift cards, resources and help. Home is removed entirely.
     const isGiftCardCategory = (category: string) =>
         /gift\s*card/i.test(category);
-
-    const productsMenuLinks = useMemo(() => {
-        const categoryLinks = visibleShopCategories
-            .filter((category) => !isGiftCardCategory(category))
-            .map((category) => ({
-                label: normalizeCategoryLabel(category),
-                to: buildCategoryHref(category),
-            }));
-
-        return [{ label: t("allProducts"), to: "/products" }, ...categoryLinks];
-    }, [t, visibleShopCategories]);
 
     const secondaryDrawerLinks = useMemo(() => {
         const giftCategory = visibleShopCategories.find(isGiftCardCategory);
@@ -853,7 +843,7 @@ export default function Header() {
             <div ref={desktopSearchRef} className="relative overflow-visible">
                 <div className="mx-auto flex h-[68px] max-w-[1480px] items-center justify-between gap-4 overflow-visible px-4 lg:h-[76px] lg:px-10">
                     {/* Left cluster */}
-                    <div className="flex flex-1 items-center justify-start gap-3 sm:gap-5 lg:gap-8">
+                    <div className="flex flex-1 items-center justify-start gap-3 self-stretch sm:gap-5 lg:gap-8">
                         <HeaderIconButton
                             label={
                                 isDrawerOpen ? t("closeMenu") : t("openMenu")
@@ -863,10 +853,14 @@ export default function Header() {
                         >
                             <MenuIcon />
                         </HeaderIconButton>
-                        <nav className="hidden items-center gap-9 lg:flex">
-                            <Link to="/products" className={topNavLinkClass}>
-                                {t("shop")}
-                            </Link>
+                        <nav className="hidden items-center gap-9 self-stretch lg:flex">
+                            <ShopMegaMenu
+                                linkClassName={(open) =>
+                                    open
+                                        ? `${topNavLinkClass} !text-zinc-950 after:!scale-x-100 after:!bg-pink-500`
+                                        : topNavLinkClass
+                                }
+                            />
                             <Link to="/about" className={topNavLinkClass}>
                                 {t("about")}
                             </Link>
@@ -1293,16 +1287,28 @@ export default function Header() {
                 <div className="flex-1 overflow-y-auto px-6 pb-8 pt-6">
                     {!isAdmin ? (
                         <nav className="mb-2 flex flex-col lg:hidden">
-                            <Link
-                                to="/products"
-                                onClick={() => setIsDrawerOpen(false)}
-                                className="iwj-hamburger-link border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
+                            <button
+                                type="button"
+                                aria-expanded={isProductsMenuOpen}
+                                onClick={() =>
+                                    setIsProductsMenuOpen((current) => !current)
+                                }
+                                className="iwj-hamburger-link flex w-full items-center justify-between border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
                                 style={{
                                     transitionDelay: `${isDrawerOpen ? 60 : 0}ms`,
                                 }}
                             >
-                                {t("shop")}
-                            </Link>
+                                <span>{t("shop")}</span>
+                                <ChevronIcon
+                                    className={`h-3.5 w-3.5 transition-transform duration-300 ${
+                                        isProductsMenuOpen ? "rotate-180" : ""
+                                    }`}
+                                />
+                            </button>
+                            <ShopMenuAccordion
+                                isOpen={isProductsMenuOpen}
+                                onNavigate={() => setIsDrawerOpen(false)}
+                            />
                             <Link
                                 to="/about"
                                 onClick={() => setIsDrawerOpen(false)}
@@ -1343,55 +1349,6 @@ export default function Header() {
                             ))
                         ) : (
                             <>
-                                {/* Products dropdown — opens on click, chevron rotates */}
-                                <div>
-                                    <button
-                                        type="button"
-                                        aria-expanded={isProductsMenuOpen}
-                                        onClick={() =>
-                                            setIsProductsMenuOpen(
-                                                (current) => !current,
-                                            )
-                                        }
-                                        className="iwj-hamburger-link flex w-full items-center justify-between border-b border-zinc-100 py-4 text-[14px] font-medium uppercase tracking-[0.18em] text-zinc-800 transition hover:text-pink-500"
-                                        style={{
-                                            transitionDelay: `${isDrawerOpen ? 80 : 0}ms`,
-                                        }}
-                                    >
-                                        <span>{t("products")}</span>
-                                        <ChevronIcon
-                                            className={`h-3.5 w-3.5 transition-transform duration-300 ${
-                                                isProductsMenuOpen
-                                                    ? "rotate-180"
-                                                    : ""
-                                            }`}
-                                        />
-                                    </button>
-
-                                    <div
-                                        className={`grid overflow-hidden transition-all duration-300 ease-out ${
-                                            isProductsMenuOpen
-                                                ? "grid-rows-[1fr] opacity-100"
-                                                : "grid-rows-[0fr] opacity-0"
-                                        }`}
-                                    >
-                                        <div className="min-h-0">
-                                            {productsMenuLinks.map((link) => (
-                                                <Link
-                                                    key={`${link.label}-${link.to}`}
-                                                    to={link.to}
-                                                    onClick={() =>
-                                                        setIsDrawerOpen(false)
-                                                    }
-                                                    className="iwj-hamburger-link block border-b border-zinc-100 py-3 pl-4 text-[13px] font-medium uppercase tracking-[0.16em] text-zinc-600 transition hover:text-pink-500"
-                                                >
-                                                    {link.label}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-
                                 {secondaryDrawerLinks.map((link, index) => (
                                     <Link
                                         key={`${link.label}-${link.to}`}

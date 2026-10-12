@@ -3,6 +3,7 @@ import { blogLinks } from "@/components/shared/blogList";
 import { resourceArticles, resourceCategories } from "@/data/resources";
 import { getAllProducts, getProductCategories } from "@/services/productService";
 import { categorySlug } from "@/utils/categorySlug";
+import { curatedCollectionSlugs } from "@/data/collections";
 import { languages, fallbackLng } from "@/i18n/settings";
 import { getAbsoluteLocalizedUrl, getSitemapAlternateLanguages } from "@/i18n/metadata";
 
@@ -80,6 +81,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error("sitemap: failed to load categories", error);
     }
 
+    // Navbar collections (stud earrings, gifts, …): fixed pages, no backend category.
+    const collectionEntries = curatedCollectionSlugs.flatMap((slug) =>
+        generateLocalizedEntries(`/category/${slug}`, lastModified, "weekly", 0.8),
+    );
+
     let productEntries: MetadataRoute.Sitemap = [];
     try {
         const products = await getAllProducts();
@@ -100,6 +106,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
         ...staticEntries,
         ...categoryEntries,
+        ...collectionEntries,
         ...blogEntries,
         ...resourceCategoryEntries,
         ...resourceArticleEntries,

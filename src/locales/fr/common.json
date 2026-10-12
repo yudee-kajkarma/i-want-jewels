@@ -50,7 +50,31 @@
     "currencyOptions": "Options de devise",
     "currency": "Devise",
     "follow": "Suivre",
-    "language": "Langue"
+    "language": "Langue",
+    "megaMenu": {
+      "shopByCategory": "Par catégorie",
+      "shopByOccasion": "Par occasion",
+      "shopAll": "Tout voir",
+      "earrings": "Boucles d'oreilles",
+      "necklaces": "Colliers",
+      "rings": "Bagues",
+      "bracelets": "Bracelets",
+      "studEarrings": "Puces d'oreilles",
+      "hoopHuggieEarrings": "Créoles & huggies",
+      "dropEarrings": "Boucles d'oreilles pendantes",
+      "everydayEarrings": "Boucles d'oreilles du quotidien",
+      "everydayPendants": "Pendentifs du quotidien",
+      "layeringYNecklaces": "Colliers à superposer & en Y",
+      "everydayStackingRings": "Bagues du quotidien & empilables",
+      "statementRings": "Bagues statement",
+      "chainBracelets": "Bracelets chaîne",
+      "alessiaBangle": "Jonc diamant Alessia",
+      "anniversaryGifts": "Cadeaux d'anniversaire de couple",
+      "partyEvening": "Soirée & fête",
+      "graduationGifts": "Cadeaux de remise de diplôme",
+      "birthdayGifts": "Cadeaux d'anniversaire",
+      "christmasGifts": "Cadeaux de Noël"
+    }
   },
   "footer": {
     "information": "Informations",
@@ -879,7 +903,8 @@
     "piece_many": "pièces",
     "viewAllFilter": "Voir tout et filtrer",
     "emptyDesc": "De nouvelles pièces arrivent bientôt. Explorez le reste de la collection en attendant.",
-    "shopAll": "Achetez tous les bijoux"
+    "shopAll": "Achetez tous les bijoux",
+    "breadcrumbShop": "Boutique"
   },
   "notFound": {
     "title": "Page non trouvée",

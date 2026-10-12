@@ -165,3 +165,100 @@ export function faqPageSchema(
     mainEntity,
   };
 }
+
+type ListedProduct = { title: string; url: string };
+
+export type CollectionGraphInput = {
+  url: string;
+  name: string;
+  description: string;
+  locale: string;
+  breadcrumbs: Array<{ name: string; url: string }>;
+  /** The product cards rendered in the page's main grid, in order. */
+  products: ListedProduct[];
+  /** In-page sections (parent pages), each with the cards it renders. */
+  sections?: Array<{
+    anchor: string;
+    name: string;
+    description: string;
+    products: ListedProduct[];
+  }>;
+};
+
+function productList(id: string, name: string, products: ListedProduct[]) {
+  return {
+    "@type": "ItemList",
+    "@id": id,
+    name,
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.title,
+      url: product.url,
+    })),
+  };
+}
+
+/**
+ * Category and collection pages: CollectionPage + BreadcrumbList + ItemList,
+ * and a WebPageElement + ItemList per in-page section. Built from the same
+ * product arrays the page renders, so counts and order always match the grid.
+ */
+export function collectionPageSchema(page: CollectionGraphInput) {
+  const sections = page.sections ?? [];
+  const pageNode: Record<string, unknown> = {
+    "@type": "CollectionPage",
+    "@id": `${page.url}#webpage`,
+    url: page.url,
+    name: page.name,
+    description: page.description,
+    inLanguage: page.locale,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    breadcrumb: { "@id": `${page.url}#breadcrumb` },
+    mainEntity: { "@id": `${page.url}#product-list` },
+  };
+  if (sections.length) {
+    pageNode.hasPart = sections.map((section) => ({
+      "@id": `${page.url}#${section.anchor}`,
+    }));
+  }
+
+  const graph: unknown[] = [
+    pageNode,
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${page.url}#breadcrumb`,
+      itemListElement: page.breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.url,
+      })),
+    },
+    productList(`${page.url}#product-list`, page.name, page.products),
+  ];
+
+  for (const section of sections) {
+    const id = `${page.url}#${section.anchor}`;
+    graph.push(
+      {
+        "@type": "WebPageElement",
+        "@id": id,
+        url: id,
+        name: section.name,
+        description: section.description,
+        isPartOf: { "@id": `${page.url}#webpage` },
+        mainEntity: { "@id": `${id}-products` },
+      },
+      productList(`${id}-products`, section.name, section.products),
+    );
+  }
+
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
+/** JSON for a server-rendered ld+json script tag (no `</script>` break-out). */
+export function serializeJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
