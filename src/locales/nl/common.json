@@ -50,7 +50,31 @@
     "currencyOptions": "Valuta-opties",
     "currency": "Valuta",
     "follow": "Volgen",
-    "language": "Taal"
+    "language": "Taal",
+    "megaMenu": {
+      "shopByCategory": "Shop per categorie",
+      "shopByOccasion": "Shop per gelegenheid",
+      "shopAll": "Bekijk alles",
+      "earrings": "Oorbellen",
+      "necklaces": "Kettingen",
+      "rings": "Ringen",
+      "bracelets": "Armbanden",
+      "studEarrings": "Oorknopjes",
+      "hoopHuggieEarrings": "Creolen & huggies",
+      "dropEarrings": "Hangoorbellen",
+      "everydayEarrings": "Oorbellen voor elke dag",
+      "everydayPendants": "Hangers voor elke dag",
+      "layeringYNecklaces": "Layering- & Y-kettingen",
+      "everydayStackingRings": "Dagelijkse & stapelringen",
+      "statementRings": "Statementringen",
+      "chainBracelets": "Schakelarmbanden",
+      "alessiaBangle": "Alessia diamanten bangle",
+      "anniversaryGifts": "Jubileumcadeaus",
+      "partyEvening": "Feest & avond",
+      "graduationGifts": "Afstudeercadeaus",
+      "birthdayGifts": "Verjaardagscadeaus",
+      "christmasGifts": "Kerstcadeaus"
+    }
   },
   "footer": {
     "information": "Informatie",
@@ -864,7 +888,8 @@
     "piece_other": "stukken",
     "viewAllFilter": "Bekijk alles en filter",
     "emptyDesc": "Er zijn nieuwe stukken onderweg. Ontdek ondertussen de rest van de collectie.",
-    "shopAll": "Shop alle sieraden"
+    "shopAll": "Shop alle sieraden",
+    "breadcrumbShop": "Shop"
   },
   "notFound": {
     "title": "Pagina niet gevonden",

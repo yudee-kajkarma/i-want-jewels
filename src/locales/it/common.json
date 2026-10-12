@@ -50,7 +50,31 @@
     "currencyOptions": "Opzioni valuta",
     "currency": "Valuta",
     "follow": "Segui",
-    "language": "Lingua"
+    "language": "Lingua",
+    "megaMenu": {
+      "shopByCategory": "Per categoria",
+      "shopByOccasion": "Per occasione",
+      "shopAll": "Vedi tutto",
+      "earrings": "Orecchini",
+      "necklaces": "Collane",
+      "rings": "Anelli",
+      "bracelets": "Bracciali",
+      "studEarrings": "Orecchini a lobo",
+      "hoopHuggieEarrings": "Cerchi & huggie",
+      "dropEarrings": "Orecchini pendenti",
+      "everydayEarrings": "Orecchini per tutti i giorni",
+      "everydayPendants": "Pendenti per tutti i giorni",
+      "layeringYNecklaces": "Collane layering & a Y",
+      "everydayStackingRings": "Anelli quotidiani & impilabili",
+      "statementRings": "Anelli statement",
+      "chainBracelets": "Bracciali a catena",
+      "alessiaBangle": "Bangle con diamanti Alessia",
+      "anniversaryGifts": "Regali per anniversario",
+      "partyEvening": "Festa & sera",
+      "graduationGifts": "Regali di laurea",
+      "birthdayGifts": "Regali di compleanno",
+      "christmasGifts": "Regali di Natale"
+    }
   },
   "footer": {
     "information": "Informazioni",
@@ -879,7 +903,8 @@
     "piece_many": "pezzi",
     "viewAllFilter": "Vedi Tutto e Filtra",
     "emptyDesc": "Nuovi pezzi stanno arrivando. Esplora nel frattempo il resto della collezione.",
-    "shopAll": "Acquista Tutta la Gioielleria"
+    "shopAll": "Acquista Tutta la Gioielleria",
+    "breadcrumbShop": "Shop"
   },
   "notFound": {
     "title": "Pagina Non Trovata",
