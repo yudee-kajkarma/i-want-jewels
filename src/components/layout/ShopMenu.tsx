@@ -11,6 +11,10 @@ import necklacesImage from "../../assets/categories/Necklace.jpg";
  * accordion in the mobile drawer. Destinations follow the navbar SEO plan —
  * collection pages, sections on the parent pages (#anchors) and the Alessia
  * bangle — so every link here is a real, crawlable URL.
+ *
+ * The links don't preload (prefetch={false}): the closed panel stays in the
+ * page, and preloading its ~14 collection pages on every page view made the
+ * whole site slow. They load when clicked.
  */
 
 type MenuLink = { key: string; to: string };
@@ -152,13 +156,13 @@ export function ShopMegaMenu({ linkClassName }: { linkClassName: (open: boolean)
                         <div className="mt-7 grid grid-cols-2 gap-x-10 gap-y-10">
                             {shopCategoryGroups.map((group) => (
                                 <div key={group.key}>
-                                    <Link to={group.to} onClick={close} className={groupTitleClass}>
+                                    <Link prefetch={false} to={group.to} onClick={close} className={groupTitleClass}>
                                         {t(group.key)}
                                     </Link>
                                     <ul className="mt-3 space-y-2.5">
                                         {group.links.map((link) => (
                                             <li key={link.key}>
-                                                <Link to={link.to} onClick={close} className={menuLinkClass}>
+                                                <Link prefetch={false} to={link.to} onClick={close} className={menuLinkClass}>
                                                     {t(link.key)}
                                                 </Link>
                                             </li>
@@ -167,7 +171,7 @@ export function ShopMegaMenu({ linkClassName }: { linkClassName: (open: boolean)
                                 </div>
                             ))}
                             <div className="col-start-2">
-                                <Link
+                                <Link prefetch={false}
                                     to="/products"
                                     onClick={close}
                                     className="inline-flex items-center gap-4 text-[14px] font-medium uppercase tracking-[0.12em] text-zinc-900 transition hover:text-pink-500"
@@ -185,7 +189,7 @@ export function ShopMegaMenu({ linkClassName }: { linkClassName: (open: boolean)
                         <ul className="mt-7 space-y-3">
                             {shopOccasionLinks.map((link) => (
                                 <li key={link.key}>
-                                    <Link to={link.to} onClick={close} className={menuLinkClass}>
+                                    <Link prefetch={false} to={link.to} onClick={close} className={menuLinkClass}>
                                         {t(link.key)}
                                     </Link>
                                 </li>
@@ -196,7 +200,7 @@ export function ShopMegaMenu({ linkClassName }: { linkClassName: (open: boolean)
                     {/* Image tiles */}
                     <div className="grid grid-cols-2 gap-8">
                         {featureTiles.map((tile) => (
-                            <Link key={tile.key} to={tile.to} onClick={close} className="group block">
+                            <Link prefetch={false} key={tile.key} to={tile.to} onClick={close} className="group block">
                                 <span className="block aspect-[3/4] max-h-[360px] overflow-hidden bg-zinc-100">
                                     {hasOpened ? (
                                         <img
@@ -239,7 +243,7 @@ export function ShopMenuAccordion({
                 <div className="space-y-5 border-b border-zinc-100 py-4 pl-4">
                     {shopCategoryGroups.map((group) => (
                         <div key={group.key}>
-                            <Link
+                            <Link prefetch={false}
                                 to={group.to}
                                 onClick={onNavigate}
                                 className="text-[13px] font-medium uppercase tracking-[0.16em] text-zinc-900 transition hover:text-pink-500"
@@ -248,7 +252,7 @@ export function ShopMenuAccordion({
                             </Link>
                             <div className="mt-2 flex flex-col gap-2">
                                 {group.links.map((link) => (
-                                    <Link
+                                    <Link prefetch={false}
                                         key={link.key}
                                         to={link.to}
                                         onClick={onNavigate}
@@ -266,7 +270,7 @@ export function ShopMenuAccordion({
                         </p>
                         <div className="mt-2 flex flex-col gap-2">
                             {shopOccasionLinks.map((link) => (
-                                <Link
+                                <Link prefetch={false}
                                     key={link.key}
                                     to={link.to}
                                     onClick={onNavigate}
@@ -277,7 +281,7 @@ export function ShopMenuAccordion({
                             ))}
                         </div>
                     </div>
-                    <Link
+                    <Link prefetch={false}
                         to="/products"
                         onClick={onNavigate}
                         className="inline-flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.16em] text-zinc-900 transition hover:text-pink-500"

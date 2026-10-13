@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
 import { getAbsoluteLocalizedUrl, localizedAlternates } from '@/i18n/metadata'
 import { getProductCategories, getProducts } from '../../../../services/productService'
 import { categoryDisplayName, categorySlug, resolveCategoryFromSlug } from '../../../../utils/categorySlug'
@@ -27,12 +28,17 @@ const resolveCategory = cache(async (slug: string) => {
   return resolveCategoryFromSlug(slug, categories)
 })
 
-// The whole catalogue (60 designs) fits in one page; curated collections and
-// the parent pages' sections pick their products from it by code.
-const getCatalogue = cache(async () => {
-  const { products } = await getProducts({ page: 1, limit: 100 })
-  return products
-})
+// Product lists for these pages, shared across visitors for 5 minutes, so
+// views and crawlers don't each ask the backend for the whole catalogue.
+// No category = the whole catalogue (60 designs): curated collections and the
+// parent pages' sections pick their products from it by code.
+const listProducts = unstable_cache(
+  async (category?: string) => (await getProducts({ category, page: 1, limit: 100 })).products,
+  ['category-page-products'],
+  { revalidate: 300 },
+)
+
+const getCatalogue = cache(() => listProducts())
 
 function pickByCodes(catalogue: Product[], codes: string[]): Product[] {
   return codes
@@ -114,7 +120,7 @@ export default async function Page({ params }: CategoryPageProps) {
   const { collection } = page
   const products = collection?.codes
     ? pickByCodes(await getCatalogue(), collection.codes)
-    : (await getProducts({ category: page.categoryName, page: 1, limit: 100 })).products
+    : await listProducts(page.categoryName)
 
   const catalogue = collection?.sections?.length ? await getCatalogue() : []
   // A section is only rendered (and described in JSON-LD) when it has products.

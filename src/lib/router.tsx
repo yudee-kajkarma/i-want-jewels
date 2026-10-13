@@ -26,6 +26,8 @@ type LocationLike = {
 type LinkComponentProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & {
   to: string
   children: ReactNode
+  /** Next.js background preloading; false = load only when clicked. */
+  prefetch?: boolean
 }
 
 const navigationStatePrefix = 'iwj-navigation-state:'
