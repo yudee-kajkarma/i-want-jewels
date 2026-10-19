@@ -545,3 +545,10 @@
 .iwj-range-dual::-moz-range-thumb {
   pointer-events: auto;
 }
+
+/* While the ring size guide is open, printing shows only the guide. */
+@media print {
+  body:has(> .size-guide-print) > :not(.size-guide-print) {
+    display: none !important;
+  }
+}

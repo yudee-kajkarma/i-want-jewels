@@ -10,9 +10,11 @@ import {
     Heart,
     PencilLine,
     Play,
+    Printer,
     Trash2,
     X,
 } from "lucide-react";
+import { createPortal } from "react-dom";
 import { Link, useLocation, useNavigate, useParams } from "@/lib/router";
 import { useTranslation } from "react-i18next";
 import { formatDate } from "../utils/formatDate";
@@ -2099,9 +2101,9 @@ export default function ProductDetailPage({
                     </div>
                 ) : null}
             </main>
-            {isSizeGuideOpen ? (
+            {isSizeGuideOpen ? createPortal(
                 <div
-                    className="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 p-2 sm:p-4"
+                    className="size-guide-print fixed inset-0 z-[80] flex items-center justify-center bg-black/80 p-2 sm:p-4 print:static print:block print:bg-white print:p-0"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="size-guide-title"
@@ -2116,14 +2118,29 @@ export default function ProductDetailPage({
                             alt="Ring size guide"
                             width={755}
                             height={1068}
-                            className="block h-auto max-h-[92vh] w-[755px] max-w-[96vw] object-contain"
+                            className="block h-auto max-h-[92vh] w-[755px] max-w-[96vw] object-contain print:mx-auto print:max-h-[95vh] print:w-auto print:max-w-full"
                             style={{ aspectRatio: "755 / 1068" }}
                         />
 
                         <button
                             type="button"
+                            onClick={() => window.print()}
+                            className="absolute right-12 top-2 z-20 flex h-9 w-9 items-center justify-center gap-2 bg-white text-[12px] font-medium uppercase tracking-[0.18em] text-zinc-900 shadow-lg transition hover:scale-105 sm:right-[60px] sm:top-3 sm:h-10 sm:w-auto sm:px-3 print:hidden"
+                            aria-label={t("productDetail.printSizeGuide")}
+                        >
+                            <Printer
+                                className="h-4 w-4 sm:h-5 sm:w-5"
+                                strokeWidth={2.2}
+                            />
+                            <span className="hidden sm:inline">
+                                {t("productDetail.printSizeGuide")}
+                            </span>
+                        </button>
+
+                        <button
+                            type="button"
                             onClick={() => setIsSizeGuideOpen(false)}
-                            className="absolute right-2 top-2 z-20 flex h-9 w-9 items-center justify-center bg-white text-zinc-900 shadow-lg transition hover:scale-105 sm:right-3 sm:top-3 sm:h-10 sm:w-10"
+                            className="absolute right-2 top-2 z-20 flex h-9 w-9 items-center justify-center bg-white text-zinc-900 shadow-lg transition hover:scale-105 sm:right-3 sm:top-3 sm:h-10 sm:w-10 print:hidden"
                             aria-label={t("productDetail.closeSizeGuide")}
                         >
                             <X
@@ -2132,7 +2149,8 @@ export default function ProductDetailPage({
                             />
                         </button>
                     </div>
-                </div>
+                </div>,
+                document.body,
             ) : null}
             <Footer />
         </div>
