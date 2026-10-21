@@ -89,7 +89,8 @@
     "bracelets": "Bracelets",
     "blog": "Blog",
     "jewelleryGuides": "Jewellery Guides",
-    "allRightsReserved": "©{{year}} I Want Jewels. All Rights Reserved."
+    "allRightsReserved": "©{{year}} I Want Jewels. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy"
   },
   "common": {
     "shopNow": "Shop Now",

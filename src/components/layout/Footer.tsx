@@ -91,6 +91,7 @@ export default function Footer() {
     { label: t("footer.myAccount"), to: "/profile" },
     { label: t("footer.orderReturns"), to: "/orders" },
     { label: t("footer.faqs"), to: "/faq" },
+    { label: t("footer.privacyPolicy"), to: "/privacy-policy" },
   ];
 
   const quickShopLinks = [
@@ -237,6 +238,10 @@ export default function Footer() {
         <div className="mt-12 border-t border-zinc-200 pt-6">
           <p className="text-center text-[12px] tracking-[0.06em] text-zinc-500 sm:text-[13px]">
             {t("footer.allRightsReserved", { year: new Date().getFullYear() })}
+            <span aria-hidden="true"> · </span>
+            <Link to="/privacy-policy" className="underline-offset-2 hover:text-zinc-900 hover:underline">
+              {t("footer.privacyPolicy")}
+            </Link>
           </p>
         </div>
       </div>

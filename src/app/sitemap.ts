@@ -20,6 +20,7 @@ const STATIC_ROUTES: Array<{
     { path: "/about", changeFrequency: "monthly", priority: 0.5 },
     { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
     { path: "/faq", changeFrequency: "monthly", priority: 0.5 },
+    { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/help", changeFrequency: "monthly", priority: 0.4 },
     { path: "/gift-cards", changeFrequency: "monthly", priority: 0.6 },
     { path: "/resources", changeFrequency: "weekly", priority: 0.8 },

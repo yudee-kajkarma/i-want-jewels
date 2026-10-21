@@ -89,7 +89,8 @@
     "bracelets": "Armbanden",
     "blog": "Blog",
     "jewelleryGuides": "Sieradengidsen",
-    "allRightsReserved": "©{{year}} I Want Jewels. Alle rechten voorbehouden."
+    "allRightsReserved": "©{{year}} I Want Jewels. Alle rechten voorbehouden.",
+    "privacyPolicy": "Privacybeleid"
   },
   "common": {
     "shopNow": "Shop nu",
