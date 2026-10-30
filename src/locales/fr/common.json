@@ -90,7 +90,8 @@
     "bracelets": "Bracelets",
     "blog": "Blogue",
     "jewelleryGuides": "Guides de bijoux",
-    "allRightsReserved": "©{{year}} I Want Jewels. Tous droits réservés."
+    "allRightsReserved": "©{{year}} I Want Jewels. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité"
   },
   "common": {
     "shopNow": "Achetez maintenant",
@@ -282,6 +283,7 @@
     "scrollProductsLeft": "Faire défiler les produits vers la gauche",
     "scrollProductsRight": "Faire défiler les produits vers la droite",
     "closeSizeGuide": "Fermer le guide des tailles",
+    "printSizeGuide": "Imprimer",
     "paymentCard": "Carte",
     "loadError": "Impossible de charger ce produit pour le moment.",
     "customerReview": "Avis client",

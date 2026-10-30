@@ -90,7 +90,8 @@
     "bracelets": "Armbänder",
     "blog": "Blog",
     "jewelleryGuides": "Schmuckratgeber",
-    "allRightsReserved": "©{{year}} I Want Jewels. Alle Rechte vorbehalten."
+    "allRightsReserved": "©{{year}} I Want Jewels. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzerklärung"
   },
   "common": {
     "shopNow": "Jetzt einkaufen",
@@ -277,6 +278,7 @@
     "scrollProductsLeft": "Produkte nach links scrollen",
     "scrollProductsRight": "Produkte nach rechts scrollen",
     "closeSizeGuide": "Größentabelle schließen",
+    "printSizeGuide": "Drucken",
     "paymentCard": "Karte",
     "loadError": "Dieses Produkt kann derzeit nicht geladen werden.",
     "customerReview": "Kundenbewertung",
