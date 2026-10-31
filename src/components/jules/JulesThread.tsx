@@ -14,7 +14,7 @@ import { InlineConfirm } from './InlineConfirm'
 import { JulesAvatar } from './JulesAvatar'
 import { findJulesSuggestion, JULES_TOP_SUGGESTIONS } from './suggestions'
 import { ThreadMenu } from './ThreadMenu'
-import { CHIP, FOCUS_RING, ICON_BUTTON, SCROLL_FADE, WORDMARK } from './ui'
+import { CHIP, FOCUS_RING, ICON_BUTTON, NO_SCROLLBAR, SCROLL_FADE, WORDMARK } from './ui'
 
 /** Starter questions offered in a new, empty chat. */
 const STARTERS = JULES_TOP_SUGGESTIONS.slice(0, 4)
@@ -174,7 +174,7 @@ export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadPr
       ) : null}
 
       <div className="relative min-h-0 flex-1">
-        <div ref={listRef} onScroll={onScroll} role="log" className={cn('h-full overflow-y-auto overscroll-contain px-4 pb-4 pt-4', SCROLL_FADE)}>
+        <div ref={listRef} onScroll={onScroll} role="log" className={cn('h-full overflow-y-auto overscroll-contain px-4 pb-4 pt-4', NO_SCROLLBAR, SCROLL_FADE)}>
           {old && conversation ? (
             <p className="mx-auto mb-4 flex max-w-[94%] items-start gap-2 rounded-xl border border-white/[0.08] bg-[#1e1a19] px-3 py-2 text-[12px] leading-snug text-[#a69d98]">
               <Clock aria-hidden className="mt-px h-3.5 w-3.5 shrink-0" />

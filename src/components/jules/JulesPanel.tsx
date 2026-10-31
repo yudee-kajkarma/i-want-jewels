@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, type Dispatch, type MouseEvent, type SetStateAction } from 'react'
+import { useEffect, useRef, useState, type Dispatch, type MouseEvent, type RefObject, type SetStateAction } from 'react'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import type { JulesChatApi } from './contract'
@@ -21,7 +21,12 @@ type JulesPanelProps = {
   chat: JulesChatApi
   view: JulesView
   onView: Dispatch<SetStateAction<JulesView>>
+  /** Closes with the folding motion (the close button, the dimmed page, Escape). */
   onClose: () => void
+  /** Closes at once: the sheet was pulled down and has already slid away. */
+  onCloseNow: () => void
+  /** The panel itself, which JulesWidget opens and closes with motion.ts. */
+  panelRef: RefObject<HTMLElement | null>
   /** The signed-in customer's first name, for the hello. */
   firstName?: string
 }
@@ -36,9 +41,8 @@ type JulesPanelProps = {
  * It stays mounted once opened (hidden while closed), so the chat on screen,
  * its draft and the bot check survive closing and reopening.
  */
-export function JulesPanel({ open, chat, view, onView, onClose, firstName }: JulesPanelProps) {
+export function JulesPanel({ open, chat, view, onView, onClose, onCloseNow, panelRef, firstName }: JulesPanelProps) {
   const { t } = useTranslation('common', { keyPrefix: 'chat' })
-  const panelRef = useRef<HTMLElement>(null)
   const [draft, setDraft] = useState('')
   const [expanded, setExpanded] = useState(false)
   /** Bumped to put the cursor in the question box, or focus on the panel itself. */
@@ -47,7 +51,7 @@ export function JulesPanel({ open, chat, view, onView, onClose, firstName }: Jul
   const { history, busy, botBoxRef } = chat
   /** The history as of the last render, to check after waiting for a chat to open. */
   const latestHistory = useRef(history)
-  const sheetDrag = useSheetDrag(panelRef, open, onClose)
+  const sheetDrag = useSheetDrag(panelRef, open, onCloseNow)
 
   useEffect(() => {
     latestHistory.current = history
@@ -56,11 +60,11 @@ export function JulesPanel({ open, chat, view, onView, onClose, firstName }: Jul
   // Focus moves into the panel when it opens (and back to the button when it closes: JulesWidget).
   useEffect(() => {
     if (open) panelRef.current?.focus({ preventScroll: true })
-  }, [open])
+  }, [open, panelRef])
 
   useEffect(() => {
     if (panelFocus) panelRef.current?.focus({ preventScroll: true })
-  }, [panelFocus])
+  }, [panelFocus, panelRef])
 
   /** Moves focus to the panel; an old request for the question box must not fire when it is drawn again. */
   function focusPanel() {
@@ -161,11 +165,9 @@ export function JulesPanel({ open, chat, view, onView, onClose, firstName }: Jul
           'md:bottom-24 md:right-6 md:h-[min(720px,calc(100dvh-120px))]',
           // Larger: wider, and as tall as fits under the site's header (never shorter than before).
           expanded && 'md:h-[calc(100dvh-180px)] md:min-h-[min(720px,calc(100dvh-120px))] md:w-[min(720px,calc(100vw-48px))]',
-          'origin-bottom duration-[180ms] ease-out motion-reduce:transition-none sm:origin-bottom-right',
-          // Visible at once when opening (so focus can move in), hidden only after the fade when closing.
-          open
-            ? 'visible translate-y-0 opacity-100 transition-[opacity,transform,width,height] sm:scale-100'
-            : 'invisible translate-y-8 opacity-0 transition-[opacity,transform,visibility,width,height] sm:translate-y-2 sm:scale-[0.97]',
+          // Opening and closing move with motion.ts (out of the send button, back into it); only "bigger" eases here.
+          'transition-[width,height] duration-[180ms] ease-out motion-reduce:transition-none',
+          open ? 'visible opacity-100' : 'invisible opacity-0',
         )}
       >
         {/* The sheet's handle (phones): pull it, or a header, down to close. */}

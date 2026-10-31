@@ -110,7 +110,7 @@ export function JulesExplore({ nav, controls }: { nav: JulesNav; controls: React
         </div>
       </div>
 
-      <div className={cn('min-h-0 flex-1 overflow-y-auto overscroll-contain pb-6', SCROLL_FADE)}>
+      <div data-jules-stagger className={cn('min-h-0 flex-1 overflow-y-auto overscroll-contain pb-6', NO_SCROLLBAR, SCROLL_FADE)}>
         <div className="px-4 pt-4">
           {groups.length ? (
             groups.map((group) => (

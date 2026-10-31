@@ -13,7 +13,7 @@ import { InlineConfirm } from './InlineConfirm'
 import { JulesAvatar } from './JulesAvatar'
 import type { JulesNav } from './julesView'
 import { TabHeader } from './PanelHeader'
-import { FOCUS_RING, ICON_BUTTON, PRIMARY_BUTTON, SCROLL_FADE_TOP, SECTION_LABEL } from './ui'
+import { FOCUS_RING, ICON_BUTTON, NO_SCROLLBAR, PRIMARY_BUTTON, SCROLL_FADE_TOP, SECTION_LABEL } from './ui'
 
 type DayGroup = { key: string; title: string; chats: JulesConversationSummary[] }
 
@@ -91,7 +91,7 @@ export function JulesChats({ history, nav, controls }: JulesChatsProps) {
     <div className="relative flex min-h-0 flex-1 flex-col">
       <TabHeader title={t('jules.chats.title')} controls={controls} />
 
-      <div className={cn('min-h-0 flex-1 overflow-y-auto overscroll-contain pb-28', SCROLL_FADE_TOP)}>
+      <div data-jules-stagger className={cn('min-h-0 flex-1 overflow-y-auto overscroll-contain pb-28', NO_SCROLLBAR, SCROLL_FADE_TOP)}>
         <div className="px-5 pb-1 pt-3 text-[12px] leading-snug text-[#a69d98]">
           <p className="flex items-center gap-1.5">
             <StoreIcon aria-hidden className="h-3.5 w-3.5 shrink-0" />

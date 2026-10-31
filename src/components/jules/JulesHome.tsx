@@ -19,7 +19,7 @@ import { JulesAvatar } from './JulesAvatar'
 import type { JulesNav, JulesStart } from './julesView'
 import { ListFooterButton, SuggestionList } from './SuggestionRow'
 import { JULES_TOP_SUGGESTIONS } from './suggestions'
-import { AS_TYPED, CARD, CARD_BUTTON, CARD_FOCUS_RING, FOCUS_RING, QUICK_CHIP, SCROLL_FADE, SECTION_LABEL, SEND_BUTTON } from './ui'
+import { AS_TYPED, CARD, CARD_BUTTON, CARD_FOCUS_RING, FOCUS_RING, NO_SCROLLBAR, QUICK_CHIP, SCROLL_FADE, SECTION_LABEL, SEND_BUTTON } from './ui'
 
 /** The quick help on Home, two to a row, with their labels (texts under chat.). */
 const QUICK: Array<{ label: string; icon: LucideIcon; start: JulesStart }> = [
@@ -75,7 +75,7 @@ export function JulesHome({ chat, nav, firstName, controls }: JulesHomeProps) {
         {controls}
       </header>
 
-      <div className={cn('relative min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-6', SCROLL_FADE)}>
+      <div data-jules-stagger className={cn('relative min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-6', NO_SCROLLBAR, SCROLL_FADE)}>
         <h2 className="px-1 pb-7 pt-6 text-[26px] font-semibold leading-[1.22] tracking-[-0.01em] text-white">
           <span className="block break-words">
             {firstName ? t('jules.home.greetingName', { name: firstName, ...AS_TYPED }) : t('jules.home.greeting')}
@@ -104,6 +104,7 @@ export function JulesHome({ chat, nav, firstName, controls }: JulesHomeProps) {
             />
             <button
               type="submit"
+              data-jules-send
               disabled={chat.busy}
               aria-disabled={!question.trim() || undefined}
               aria-label={t('send')}
