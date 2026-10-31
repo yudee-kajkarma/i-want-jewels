@@ -12,7 +12,7 @@ import { PHONE_QUERY } from './hooks'
 import { JulesLauncher } from './JulesLauncher'
 import { JulesPanel } from './JulesPanel'
 import { JulesTeaser } from './JulesTeaser'
-import { faceOf, flyClose, flyOpen } from './motion'
+import { closePanelMotion, openPanelMotion, resetPanelMotion } from './motion'
 import type { JulesView } from './julesView'
 import { useJulesChat } from './useJulesChat'
 import { useJulesTexts } from './useJulesTexts'
@@ -30,9 +30,9 @@ const WITHOUT_JULES = /^\/(admin|checkout)(\/|$)/
 /**
  * Jules on every page except the admin and the checkout: the "Ask Jules"
  * button, the once-per-visit hello, and the panel (Home, Chats, Explore and
- * the conversation), a sheet from the bottom on phones. The pill glides into
- * the panel's send button and the panel opens out of it; closing folds it back
- * (motion.ts). Escape closes the panel and focus returns to the button. Nothing shows while Jules is switched
+ * the conversation), a sheet from the bottom on phones. The panel grows out of
+ * the button's corner on a soft spring and draws back into it (motion.ts).
+ * Escape closes the panel and focus returns to the button. Nothing shows while Jules is switched
  * off in Admin → Chatbot (nor while that is being checked, so nothing flashes).
  */
 export default function JulesWidget() {
@@ -55,11 +55,7 @@ export default function JulesWidget() {
   const [mounted, setMounted] = useState(false)
   const [view, setView] = useState<JulesView>({ tab: 'home', thread: false })
   const launcherRef = useRef<HTMLButtonElement>(null)
-  /** The launcher's visible part (the pill, or the round close button). */
-  const faceRef = useRef<HTMLSpanElement>(null)
   const panelRef = useRef<HTMLElement>(null)
-  /** The launcher waits, invisible, while its copy flies to or from the panel. */
-  const [away, setAway] = useState(false)
   /** One opening or closing at a time; `open` as of now, for the motion's callbacks. */
   const moving = useRef(false)
   const openNow = useRef(open)
@@ -75,24 +71,17 @@ export default function JulesWidget() {
     setOpen(false)
   }, [])
 
-  /** Folds the panel back into its send button, which glides home into the pill. */
+  /** The panel draws back into the button's corner, then hides, and the pill is back. */
   const closePanel = useCallback(async () => {
     if (moving.current || !openNow.current) return
     const panel = panelRef.current
     if (!panel) return closeNow()
     moving.current = true
     try {
-      await flyClose({
-        panel,
-        hide: () =>
-          flushSync(() => {
-            setOpen(false)
-            setAway(true)
-          }),
-        home: () => faceRef.current,
-      })
+      await closePanelMotion(panel, launcherRef.current)
+      flushSync(() => setOpen(false))
+      resetPanelMotion(panel)
     } finally {
-      flushSync(() => setAway(false))
       moving.current = false
       launcherRef.current?.focus({ preventScroll: true })
     }
@@ -110,25 +99,16 @@ export default function JulesWidget() {
     if (hidden) setOpen(false)
   }
 
-  /** The pill glides to the panel's send button and the panel opens out of it. */
+  /** The panel shows and grows out of the button's corner on a soft spring. */
   const openPanel = useCallback(async () => {
     if (moving.current || openNow.current) return
     moving.current = true
-    // Measured before the launcher changes: the copy leaves as the pill.
-    const from = faceRef.current ? faceOf(faceRef.current) : null
-    // The panel is laid out, still hidden, so its send button can be found and measured.
-    flushSync(() => {
-      setMounted(true)
-      setAway(true)
-    })
-    const show = () =>
-      flushSync(() => {
-        setOpen(true)
-        setAway(false)
-      })
     try {
-      if (panelRef.current) await flyOpen({ from, panel: panelRef.current, show })
-      else show()
+      flushSync(() => {
+        setMounted(true)
+        setOpen(true)
+      })
+      if (panelRef.current) await openPanelMotion(panelRef.current, launcherRef.current)
     } finally {
       moving.current = false
     }
@@ -177,14 +157,11 @@ export default function JulesWidget() {
           firstName={firstName}
         />
       ) : null}
-      {/* The hello goes as soon as the pill sets off. */}
-      {!open && !away ? <JulesTeaser onOpen={() => void openPanel()} onDismiss={() => launcherRef.current?.focus({ preventScroll: true })} /> : null}
+      {!open ? <JulesTeaser onOpen={() => void openPanel()} onDismiss={() => launcherRef.current?.focus({ preventScroll: true })} /> : null}
       <JulesLauncher
         open={open}
         onToggle={() => void (open ? closePanel() : openPanel())}
         buttonRef={launcherRef}
-        faceRef={faceRef}
-        away={away}
       />
     </>
   )

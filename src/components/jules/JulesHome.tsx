@@ -104,7 +104,6 @@ export function JulesHome({ chat, nav, firstName, controls }: JulesHomeProps) {
             />
             <button
               type="submit"
-              data-jules-send
               disabled={chat.busy}
               aria-disabled={!question.trim() || undefined}
               aria-label={t('send')}

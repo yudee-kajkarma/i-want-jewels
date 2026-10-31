@@ -82,7 +82,6 @@ export function JulesComposer({ value, onChange, onSend, busy, focusRequest }: J
         />
         <button
           type="submit"
-          data-jules-send
           disabled={busy}
           aria-disabled={!question || undefined}
           aria-label={t('send')}
