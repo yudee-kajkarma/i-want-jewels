@@ -123,6 +123,8 @@ export async function sendChatMessage(input: {
   intent?: JulesIntent;
   context?: ChatPageContext;
   botToken?: string;
+  /** This chat's id, so the admin's Conversations page can show it as one conversation. */
+  conversationId?: string;
 }): Promise<JulesReply> {
   const productSlug = input.context?.productSlug;
   try {
@@ -138,6 +140,7 @@ export async function sendChatMessage(input: {
         context: isProductSlug(productSlug) ? { productSlug } : {},
         chatPass: readPass(),
         botToken: input.botToken,
+        conversationId: input.conversationId,
       },
       { timeout: CHAT_TIMEOUT_MS },
     );
@@ -155,6 +158,24 @@ export async function sendChatMessage(input: {
   }
 }
 
+
+let statusRequest: Promise<boolean> | undefined;
+
+/**
+ * Whether Jules is switched on in the admin (GET /api/chat/status), asked once
+ * per page load. A backend without the switch (404) counts as on; any other
+ * failure as off, as the chat couldn't answer anyway.
+ */
+export function chatEnabled(): Promise<boolean> {
+  statusRequest ??= authApiClient
+    .get<unknown>("/chat/status", { timeout: 8000 })
+    .then((response) => {
+      const data = dataOf(response.data);
+      return isObject(data) && data.enabled === true;
+    })
+    .catch((error) => httpStatus(error) === 404);
+  return statusRequest;
+}
 
 /**
  * Tells the backend whether one of Jules's answers helped (POST

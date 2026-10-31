@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
 import {
@@ -11,6 +11,7 @@ import {
   Eye,
   EyeOff,
   Gauge,
+  Globe,
   KeyRound,
   ListOrdered,
   LoaderCircle,
@@ -40,9 +41,15 @@ import {
   type ProviderUpdate,
 } from '../services/aiSettingsService'
 import { formatDateTime } from '../utils/formatDate'
+import ChatbotKnowledgePanel from '../components/admin/chatbot/ChatbotKnowledgePanel'
+import ChatbotConversationsPanel from '../components/admin/chatbot/ChatbotConversationsPanel'
 
 /*
- * Admin → Chatbot keys. API keys are secrets: they are only ever held in this
+ * Admin → Chatbot: three tabs. Settings (switches, keys, models, limits),
+ * Knowledge (what Jules answers from, "Update knowledge", "Test a question")
+ * and Conversations (what customers asked, read only).
+ *
+ * API keys are secrets: they are only ever held in this
  * component's state while the admin types them, sent once in a request body,
  * and cleared after saving, when the page is left and when it is hidden. They
  * are never written to storage, logs or URLs, and the server never sends a
@@ -59,7 +66,12 @@ type Draft = {
   order: ProviderId[]
   embedding: { provider: EmbeddingProviderId; model: string; dimensions: string }
   limits: Record<LimitKey, string>
+  enabled: boolean
+  nightlyKnowledge: boolean
 }
+
+export const CHATBOT_TABS = ['settings', 'knowledge', 'conversations'] as const
+export type ChatbotTab = (typeof CHATBOT_TABS)[number]
 
 type KeyInputs = Record<ProviderId, string>
 
@@ -87,7 +99,6 @@ const EMBEDDING_MODEL_PLACEHOLDERS: Record<EmbeddingProviderId, string> = {
 }
 
 const ALIBABA_ENDPOINT_EXAMPLE = 'https://dashscope-intl.aliyuncs.com/compatible-mode/v1'
-const BUILD_KNOWLEDGE_COMMAND = 'npm run chat:build-knowledge'
 
 /** Values from the server (key endings, names, dates) shown as typed; React escapes them already. */
 const AS_TYPED = { interpolation: { escapeValue: false } } as const
@@ -197,6 +208,8 @@ function draftFromView(view: AiSettingsView): Draft {
       dimensions: String(view.embedding.dimensions),
     },
     limits: limitsToDraft(view.limits),
+    enabled: view.enabled,
+    nightlyKnowledge: view.nightlyKnowledge,
   }
 }
 
@@ -262,6 +275,9 @@ function collectChanges(view: AiSettingsView, draft: Draft, keys: KeyInputs): Ai
   if (Object.keys(limits).length > 0) {
     update.limits = limits
   }
+
+  if (draft.enabled !== view.enabled) update.enabled = draft.enabled
+  if (draft.nightlyKnowledge !== view.nightlyKnowledge) update.nightlyKnowledge = draft.nightlyKnowledge
 
   return update
 }
@@ -338,6 +354,22 @@ export default function AdminChatbotPage() {
   const [reloadCount, setReloadCount] = useState(0)
   const [isSaving, setIsSaving] = useState(false)
   const [error, setError] = useState('')
+  const [tab, setTab] = useState<ChatbotTab>('settings')
+
+  useEffect(() => {
+    // Read here rather than with useSearchParams, which would need a Suspense boundary.
+    const asked = new URLSearchParams(window.location.search).get('tab')
+    if ((CHATBOT_TABS as readonly string[]).includes(asked ?? '')) setTab(asked as ChatbotTab)
+  }, [])
+
+  function openTab(next: ChatbotTab) {
+    setTab(next)
+    // Kept in the address, so reloading or sharing the link opens the same tab.
+    const url = new URL(window.location.href)
+    if (next === 'settings') url.searchParams.delete('tab')
+    else url.searchParams.set('tab', next)
+    window.history.replaceState(window.history.state, '', url)
+  }
 
   useEffect(() => {
     let mounted = true
@@ -849,7 +881,34 @@ export default function AdminChatbotPage() {
 
         <div className={`mt-4 flex items-start gap-2 border px-3 py-2.5 text-xs ${changes.embedding ? 'border-amber-300 bg-amber-100 font-semibold text-amber-900' : 'border-amber-200 bg-amber-50 text-amber-800'}`}>
           <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0" />
-          <p>{t('embedding.warning', { command: BUILD_KNOWLEDGE_COMMAND, ...AS_TYPED })}</p>
+          <p>{t('embedding.warning')}</p>
+        </div>
+      </section>
+    )
+  }
+
+  function renderWebsite() {
+    if (!draft) return null
+
+    return (
+      <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
+        <div className="flex items-center gap-2">
+          <Globe className="h-4 w-4 text-[#8f2a60]" />
+          <h2 className="text-lg font-bold text-[#17110d]">{t('website.title')}</h2>
+        </div>
+        <div className="mt-5 grid gap-4 md:grid-cols-2">
+          <SwitchRow
+            label={t('website.enabled')}
+            hint={draft.enabled ? t('website.enabledOnHint') : t('website.enabledOffHint')}
+            checked={draft.enabled}
+            onChange={(enabled) => setDraft((current) => current && { ...current, enabled })}
+          />
+          <SwitchRow
+            label={t('website.nightly')}
+            hint={t('website.nightlyHint')}
+            checked={draft.nightlyKnowledge}
+            onChange={(nightlyKnowledge) => setDraft((current) => current && { ...current, nightlyKnowledge })}
+          />
         </div>
       </section>
     )
@@ -915,7 +974,26 @@ export default function AdminChatbotPage() {
             </p>
           ) : null}
         </div>
-        <p className="mt-3 max-w-3xl text-sm text-zinc-600">{t('intro')}</p>
+        <nav aria-label={t('tabs.label')} className="mt-6 flex gap-1 overflow-x-auto border-b border-[#eadfd4]">
+          {CHATBOT_TABS.map((id) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => openTab(id)}
+              aria-current={tab === id ? 'page' : undefined}
+              className={`-mb-px shrink-0 border-b-2 px-4 py-3 text-sm font-bold transition ${tab === id ? 'border-[#8f2a60] text-[#17110d]' : 'border-transparent text-zinc-500 hover:text-[#17110d]'}`}
+            >
+              {t(`tabs.${id}`)}
+            </button>
+          ))}
+        </nav>
+
+        {tab === 'knowledge' ? <ChatbotKnowledgePanel embeddingConfigured={view ? view.providers[view.embedding.provider].configured : undefined} /> : null}
+        {tab === 'conversations' ? <ChatbotConversationsPanel /> : null}
+
+        {tab === 'settings' ? (
+        <>
+        <p className="mt-6 max-w-3xl text-sm text-zinc-600">{t('intro')}</p>
 
         {isLoading && !view ? (
           <section className="mt-8 border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
@@ -935,6 +1013,8 @@ export default function AdminChatbotPage() {
 
         {view && draft ? (
           <div className="mt-8 space-y-6">
+            {renderWebsite()}
+
             <section className="border border-[#eadfd4] bg-white p-6 shadow-[0_20px_60px_rgba(55,31,10,0.06)] sm:p-8">
               <div className="flex items-center gap-2">
                 <KeyRound className="h-4 w-4 text-[#8f2a60]" />
@@ -974,8 +1054,27 @@ export default function AdminChatbotPage() {
             </div>
           </div>
         ) : null}
+        </>
+        ) : null}
       </main>
       <Footer />
     </div>
+  )
+}
+
+/** An on/off switch with its label and a line explaining what it does. */
+function SwitchRow({ label, hint, checked, onChange }: { label: string; hint: ReactNode; checked: boolean; onChange: (checked: boolean) => void }) {
+  return (
+    <label className="flex cursor-pointer items-start justify-between gap-4 border border-[#eadfd4] bg-[#fffdfa] p-4">
+      <span className="min-w-0">
+        <span className="block text-sm font-semibold text-[#17110d]">{label}</span>
+        <span className="mt-1 block text-xs text-zinc-500">{hint}</span>
+      </span>
+      <span className="relative mt-0.5 inline-flex shrink-0">
+        <input type="checkbox" role="switch" checked={checked} onChange={(event) => onChange(event.target.checked)} className="peer sr-only" />
+        <span className="h-6 w-11 rounded-full bg-zinc-300 transition peer-checked:bg-[#8f2a60] peer-focus-visible:ring-2 peer-focus-visible:ring-[#8f2a60] peer-focus-visible:ring-offset-2" />
+        <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition peer-checked:translate-x-5" />
+      </span>
+    </label>
   )
 }

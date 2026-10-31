@@ -43,6 +43,10 @@ export type AiSettingsView = {
   order: ProviderId[]
   embedding: AiEmbeddingSettings
   limits: AiLimits
+  /** Jules is shown on the website. */
+  enabled: boolean
+  /** The knowledge re-reads changed shop texts every night. */
+  nightlyKnowledge: boolean
   updatedAt?: string
   updatedBy?: string
 }
@@ -60,6 +64,8 @@ export type AiSettingsUpdate = {
   order?: ProviderId[]
   embedding?: AiEmbeddingSettings
   limits?: Partial<AiLimits>
+  enabled?: boolean
+  nightlyKnowledge?: boolean
 }
 
 export type AiProviderTestRequest = {
@@ -160,6 +166,9 @@ export function normalizeAiSettings(value: unknown): AiSettingsView {
       customerAnswers: toCount(limits.customerAnswers, DEFAULT_LIMITS.customerAnswers),
       shopAnswers: toCount(limits.shopAnswers, DEFAULT_LIMITS.shopAnswers),
     },
+    // Both default to on, as on the server.
+    enabled: record.enabled !== false,
+    nightlyKnowledge: record.nightlyKnowledge !== false,
     updatedAt: typeof record.updatedAt === 'string' ? record.updatedAt : undefined,
     updatedBy: typeof record.updatedBy === 'string' ? record.updatedBy : undefined,
   }

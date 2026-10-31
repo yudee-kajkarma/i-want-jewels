@@ -35,7 +35,7 @@
     "paymentHistory": "Payment History",
     "myTickets": "My Tickets",
     "adminAddress": "Admin Address",
-    "adminChatbot": "Chatbot keys",
+    "adminChatbot": "Chatbot",
     "adminWishlist": "Admin Wishlist",
     "adminCart": "Admin Cart",
     "wishlist": "Wishlist",
@@ -1343,7 +1343,7 @@
         "dimensions": "Dimensions",
         "dimensionsHint": "Default 1024.",
         "noKey": "{{provider}} has no key saved — search needs it.",
-        "warning": "Changing this needs the chatbot knowledge to be rebuilt ({{command}}), otherwise search stops working."
+        "warning": "Changing this needs the knowledge to be updated (Knowledge → Update knowledge), otherwise search stops working."
       },
       "limits": {
         "title": "Daily limits",
@@ -1378,6 +1378,170 @@
         "alibaba": "Alibaba Cloud (Qwen)",
         "openai": "OpenAI",
         "anthropic": "Anthropic (Claude)"
+      },
+      "tabs": {
+        "label": "Chatbot sections",
+        "settings": "Settings",
+        "knowledge": "Knowledge",
+        "conversations": "Conversations"
+      },
+      "website": {
+        "title": "Website",
+        "enabled": "Show Jules on the website",
+        "enabledOnHint": "Customers can chat with Jules on every page.",
+        "enabledOffHint": "Jules is hidden for everyone until you switch it back on.",
+        "nightly": "Update knowledge every night",
+        "nightlyHint": "At 04:00 (Brussels time), new and changed products and texts are added. Starts after the first update."
+      },
+      "knowledge": {
+        "title": "Knowledge",
+        "hint": "The products, articles, guides and FAQ Jules answers from. Updating reads them again and adds only what is new or changed.",
+        "loading": "Loading the knowledge…",
+        "errorLoad": "Unable to load the knowledge right now.",
+        "retry": "Retry",
+        "state": {
+          "running": "Updating",
+          "noKey": "No embeddings key",
+          "empty": "Not built yet",
+          "ready": "Ready"
+        },
+        "index": "Search index: {{state}}",
+        "indexStates": {
+          "READY": "ready",
+          "BUILDING": "building",
+          "PENDING": "pending",
+          "MISSING": "missing",
+          "FAILED": "failed",
+          "DOES_NOT_EXIST": "missing",
+          "DELETING": "deleting",
+          "STALE": "out of date",
+          "UNKNOWN": "unknown"
+        },
+        "table": {
+          "source": "Source",
+          "items": "Items",
+          "pieces": "Pieces",
+          "updated": "Last changed"
+        },
+        "sources": {
+          "product": "Products",
+          "blog": "Articles",
+          "guide": "Guides",
+          "faq": "FAQ"
+        },
+        "model": "Embeddings: {{provider}} · {{model}} · {{dimensions}} dimensions",
+        "update": "Update knowledge",
+        "estimating": "Checking what changed…",
+        "updateHint": "You will see what changes and the rough cost before anything starts.",
+        "noKeyHint": "Add a key for the embeddings provider in Settings first.",
+        "estimate": {
+          "title": "This update will:",
+          "nothing": "Everything is up to date. Nothing to update.",
+          "toEmbed_one": "add or refresh {{count}} piece",
+          "toEmbed_other": "add or refresh {{count}} pieces",
+          "toRemove_one": "remove {{count}} piece that no longer exists",
+          "toRemove_other": "remove {{count}} pieces that no longer exist",
+          "tokens": "use about {{tokens}} tokens of {{model}}",
+          "from": "Texts read from: {{from}}",
+          "confirm": "Start update",
+          "cancel": "Cancel",
+          "close": "Close"
+        },
+        "phase": {
+          "reading": "Reading products and texts…",
+          "embedding": "Adding pieces…",
+          "cleaning": "Removing old pieces…"
+        },
+        "progress": "{{done}} of {{total}}",
+        "runningHint": "You can leave this page: the update carries on.",
+        "toastDone": "Knowledge updated",
+        "errorEstimate": "Unable to check what changed.",
+        "errorStart": "Unable to start the update.",
+        "last": {
+          "done": "Last update finished {{date}}",
+          "failed": "Last update failed {{date}}",
+          "interrupted": "Last update stopped before it finished ({{date}}). Start it again to finish.",
+          "summary": "{{done}} pieces added or refreshed, {{removed}} removed, {{tokens}} tokens used.",
+          "by": "Started by {{who}}",
+          "byNightly": "Nightly update"
+        },
+        "test": {
+          "title": "Test a question",
+          "hint": "See what Jules would find for a question, best match first. No answer is written and nothing is saved.",
+          "question": "Question",
+          "placeholder": "e.g. How do I clean a silver ring?",
+          "language": "Language",
+          "search": "Search",
+          "error": "Unable to search the knowledge.",
+          "searchedAs": "Searched in English as: “{{text}}”",
+          "none": "Nothing found. Is the knowledge built and the search index ready?",
+          "score": "match {{score}}",
+          "used": "Used for the answer",
+          "notUsed": "Not used",
+          "linked": "Linked"
+        }
+      },
+      "conversations": {
+        "title": "Conversations",
+        "hint": "What customers asked Jules, newest first. Guests are shown with a short code, never their IP address. Kept for 90 days.",
+        "search": "Search conversations",
+        "searchPlaceholder": "Search questions, answers, names or emails",
+        "filterLabel": "Show",
+        "filters": {
+          "all": "All",
+          "up": "Helpful",
+          "down": "Not helpful",
+          "person": "Asked for a person"
+        },
+        "loading": "Loading conversations…",
+        "errorLoad": "Unable to load the conversations right now.",
+        "none": "No conversations yet.",
+        "noneFound": "No conversations match.",
+        "questions_one": "{{count}} question",
+        "questions_other": "{{count}} questions",
+        "person": "Person",
+        "page": "Page {{page}} of {{pages}} · {{total}} conversations",
+        "previous": "Previous page",
+        "next": "Next page"
+      },
+      "conversation": {
+        "back": "All conversations",
+        "loading": "Loading the conversation…",
+        "errorLoad": "Unable to load this conversation.",
+        "guest": "Guest (not signed in)",
+        "tiers": {
+          "visitor": "Visitor",
+          "loggedIn": "Signed in",
+          "customer": "Customer"
+        },
+        "messages_one": "{{count}} question",
+        "messages_other": "{{count}} questions",
+        "askedForPerson": "Asked to talk to a person.",
+        "openTickets": "Open tickets",
+        "noAnswer": "No written answer",
+        "outcomes": {
+          "limit": "Reached the daily question limit",
+          "unavailable": "Jules was unavailable",
+          "intent": "Opened a page on the website",
+          "shortcut": "Answered with a quick reply"
+        },
+        "actions": {
+          "my_orders": "Opened their orders",
+          "order_status": "Opened order status",
+          "talk_to_person": "Asked to talk to a person",
+          "gift_cards": "Opened gift cards",
+          "add_to_bag": "Added to bag",
+          "add_to_wishlist": "Added to wishlist",
+          "show_bag": "Opened the bag",
+          "show_wishlist": "Opened the wishlist",
+          "gift_finder": "Opened the gift finder"
+        },
+        "showedProducts_one": "Showed {{count}} product",
+        "showedProducts_other": "Showed {{count}} products",
+        "showedLinks": "Links",
+        "onProduct": "Asked on product page: {{slug}}",
+        "helpful": "Helpful",
+        "notHelpful": "Not helpful"
       }
     },
     "blogPreview": {
@@ -2610,7 +2774,8 @@
         "counter": "{{count}}/{{max}}",
         "scrollDown": "Go to the latest message",
         "you": "You",
-        "delete": "Delete this chat"
+        "delete": "Delete this chat",
+        "typing": "Jules is typing…"
       },
       "forms": {
         "found": "Order found",

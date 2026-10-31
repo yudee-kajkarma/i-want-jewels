@@ -35,7 +35,7 @@
     "paymentHistory": "Historial de Pagos",
     "myTickets": "Mis Tickets",
     "adminAddress": "Dirección de Administrador",
-    "adminChatbot": "Claves del chatbot",
+    "adminChatbot": "Chatbot",
     "adminWishlist": "Lista de Deseos de Administrador",
     "adminCart": "Carrito de Administrador",
     "wishlist": "Lista de Deseos",
@@ -1370,7 +1370,7 @@
         "dimensions": "Dimensiones",
         "dimensionsHint": "Por defecto: 1024.",
         "noKey": "No hay ninguna clave de {{provider}} guardada — la búsqueda la necesita.",
-        "warning": "Si cambias esto, hay que reconstruir el conocimiento del chatbot ({{command}}); si no, la búsqueda deja de funcionar."
+        "warning": "Si cambias esto, hay que actualizar el conocimiento (Conocimiento → Actualizar conocimiento); si no, la búsqueda deja de funcionar."
       },
       "limits": {
         "title": "Límites diarios",
@@ -1405,6 +1405,170 @@
         "alibaba": "Alibaba Cloud (Qwen)",
         "openai": "OpenAI",
         "anthropic": "Anthropic (Claude)"
+      },
+      "tabs": {
+        "label": "Secciones del chatbot",
+        "settings": "Ajustes",
+        "knowledge": "Conocimiento",
+        "conversations": "Conversaciones"
+      },
+      "website": {
+        "title": "Sitio web",
+        "enabled": "Mostrar a Jules en el sitio",
+        "enabledOnHint": "Los clientes pueden chatear con Jules en todas las páginas.",
+        "enabledOffHint": "Jules está oculto para todos hasta que lo vuelvas a activar.",
+        "nightly": "Actualizar el conocimiento cada noche",
+        "nightlyHint": "A las 04:00 (hora de Bruselas) se añaden los productos y textos nuevos o modificados. Empieza después de la primera actualización."
+      },
+      "knowledge": {
+        "title": "Conocimiento",
+        "hint": "Los productos, artículos, guías y preguntas frecuentes con los que responde Jules. Al actualizar se vuelven a leer y solo se añade lo nuevo o modificado.",
+        "loading": "Cargando el conocimiento…",
+        "errorLoad": "No se puede cargar el conocimiento ahora mismo.",
+        "retry": "Reintentar",
+        "state": {
+          "running": "Actualizando",
+          "noKey": "Sin clave de embeddings",
+          "empty": "Aún no creado",
+          "ready": "Listo"
+        },
+        "index": "Índice de búsqueda: {{state}}",
+        "indexStates": {
+          "READY": "listo",
+          "BUILDING": "creándose",
+          "PENDING": "pendiente",
+          "MISSING": "no existe",
+          "FAILED": "con error",
+          "DOES_NOT_EXIST": "no existe",
+          "DELETING": "eliminándose",
+          "STALE": "desactualizado",
+          "UNKNOWN": "desconocido"
+        },
+        "table": {
+          "source": "Fuente",
+          "items": "Elementos",
+          "pieces": "Fragmentos",
+          "updated": "Último cambio"
+        },
+        "sources": {
+          "product": "Productos",
+          "blog": "Artículos",
+          "guide": "Guías",
+          "faq": "Preguntas frecuentes"
+        },
+        "model": "Embeddings: {{provider}} · {{model}} · {{dimensions}} dimensiones",
+        "update": "Actualizar conocimiento",
+        "estimating": "Comprobando qué ha cambiado…",
+        "updateHint": "Antes de empezar verás qué cambia y el coste aproximado.",
+        "noKeyHint": "Primero añade una clave para el proveedor de embeddings en Ajustes.",
+        "estimate": {
+          "title": "Esta actualización va a:",
+          "nothing": "Todo está al día. No hay nada que actualizar.",
+          "toEmbed_one": "añadir o renovar {{count}} fragmento",
+          "toEmbed_other": "añadir o renovar {{count}} fragmentos",
+          "toRemove_one": "eliminar {{count}} fragmento que ya no existe",
+          "toRemove_other": "eliminar {{count}} fragmentos que ya no existen",
+          "tokens": "usar unos {{tokens}} tokens de {{model}}",
+          "from": "Textos leídos de: {{from}}",
+          "confirm": "Iniciar actualización",
+          "cancel": "Cancelar",
+          "close": "Cerrar"
+        },
+        "phase": {
+          "reading": "Leyendo productos y textos…",
+          "embedding": "Añadiendo fragmentos…",
+          "cleaning": "Eliminando fragmentos antiguos…"
+        },
+        "progress": "{{done}} de {{total}}",
+        "runningHint": "Puedes salir de esta página: la actualización continúa.",
+        "toastDone": "Conocimiento actualizado",
+        "errorEstimate": "No se pudo comprobar qué ha cambiado.",
+        "errorStart": "No se pudo iniciar la actualización.",
+        "last": {
+          "done": "Última actualización terminada {{date}}",
+          "failed": "Última actualización fallida {{date}}",
+          "interrupted": "La última actualización se detuvo antes de terminar ({{date}}). Iníciala de nuevo para completarla.",
+          "summary": "{{done}} fragmentos añadidos o renovados, {{removed}} eliminados, {{tokens}} tokens usados.",
+          "by": "Iniciada por {{who}}",
+          "byNightly": "Actualización nocturna"
+        },
+        "test": {
+          "title": "Probar una pregunta",
+          "hint": "Mira qué encontraría Jules para una pregunta, de mejor a peor coincidencia. No se escribe ninguna respuesta ni se guarda nada.",
+          "question": "Pregunta",
+          "placeholder": "p. ej. ¿Cómo limpio un anillo de plata?",
+          "language": "Idioma",
+          "search": "Buscar",
+          "error": "No se pudo buscar en el conocimiento.",
+          "searchedAs": "Buscado en inglés como: «{{text}}»",
+          "none": "No se encontró nada. ¿Está creado el conocimiento y listo el índice de búsqueda?",
+          "score": "coincidencia {{score}}",
+          "used": "Usado para la respuesta",
+          "notUsed": "No usado",
+          "linked": "Enlazado"
+        }
+      },
+      "conversations": {
+        "title": "Conversaciones",
+        "hint": "Lo que los clientes preguntaron a Jules, las más recientes primero. Los invitados se muestran con un código corto, nunca con su dirección IP. Se guardan 90 días.",
+        "search": "Buscar conversaciones",
+        "searchPlaceholder": "Buscar preguntas, respuestas, nombres o correos",
+        "filterLabel": "Mostrar",
+        "filters": {
+          "all": "Todas",
+          "up": "Útiles",
+          "down": "No útiles",
+          "person": "Pidió una persona"
+        },
+        "loading": "Cargando conversaciones…",
+        "errorLoad": "No se pueden cargar las conversaciones ahora mismo.",
+        "none": "Todavía no hay conversaciones.",
+        "noneFound": "Ninguna conversación coincide.",
+        "questions_one": "{{count}} pregunta",
+        "questions_other": "{{count}} preguntas",
+        "person": "Persona",
+        "page": "Página {{page}} de {{pages}} · {{total}} conversaciones",
+        "previous": "Página anterior",
+        "next": "Página siguiente"
+      },
+      "conversation": {
+        "back": "Todas las conversaciones",
+        "loading": "Cargando la conversación…",
+        "errorLoad": "No se puede cargar esta conversación.",
+        "guest": "Invitado (sin iniciar sesión)",
+        "tiers": {
+          "visitor": "Visitante",
+          "loggedIn": "Con sesión",
+          "customer": "Cliente"
+        },
+        "messages_one": "{{count}} pregunta",
+        "messages_other": "{{count}} preguntas",
+        "askedForPerson": "Pidió hablar con una persona.",
+        "openTickets": "Abrir tickets",
+        "noAnswer": "Sin respuesta escrita",
+        "outcomes": {
+          "limit": "Alcanzó el límite diario de preguntas",
+          "unavailable": "Jules no estaba disponible",
+          "intent": "Abrió una página del sitio",
+          "shortcut": "Respondido con una respuesta rápida"
+        },
+        "actions": {
+          "my_orders": "Abrió sus pedidos",
+          "order_status": "Abrió el estado del pedido",
+          "talk_to_person": "Pidió hablar con una persona",
+          "gift_cards": "Abrió las tarjetas regalo",
+          "add_to_bag": "Añadido a la bolsa",
+          "add_to_wishlist": "Añadido a la lista de deseos",
+          "show_bag": "Abrió la bolsa",
+          "show_wishlist": "Abrió la lista de deseos",
+          "gift_finder": "Abrió el buscador de regalos"
+        },
+        "showedProducts_one": "Mostró {{count}} producto",
+        "showedProducts_other": "Mostró {{count}} productos",
+        "showedLinks": "Enlaces",
+        "onProduct": "Preguntado en la página del producto: {{slug}}",
+        "helpful": "Útil",
+        "notHelpful": "No útil"
       }
     },
     "blogPreview": {
@@ -2641,7 +2805,8 @@
         "counter": "{{count}}/{{max}}",
         "scrollDown": "Ir al último mensaje",
         "you": "Tú",
-        "delete": "Eliminar este chat"
+        "delete": "Eliminar este chat",
+        "typing": "Jules está escribiendo…"
       },
       "forms": {
         "found": "Pedido encontrado",

@@ -35,7 +35,7 @@
     "paymentHistory": "Betalingsgeschiedenis",
     "myTickets": "Mijn tickets",
     "adminAddress": "Beheerdersadres:",
-    "adminChatbot": "Chatbot-sleutels",
+    "adminChatbot": "Chatbot",
     "adminWishlist": "Admin verlanglijst",
     "adminCart": "Beheerderswagentje",
     "wishlist": "Verlanglijst",
@@ -1343,7 +1343,7 @@
         "dimensions": "Dimensies",
         "dimensionsHint": "Standaard 1024.",
         "noKey": "Voor {{provider}} is geen sleutel opgeslagen — zoeken heeft die nodig.",
-        "warning": "Als u dit wijzigt, moet de chatbotkennis opnieuw worden opgebouwd ({{command}}), anders werkt zoeken niet meer."
+        "warning": "Als u dit wijzigt, moet de kennis worden bijgewerkt (Kennis → Kennis bijwerken), anders werkt zoeken niet meer."
       },
       "limits": {
         "title": "Daglimieten",
@@ -1378,6 +1378,170 @@
         "alibaba": "Alibaba Cloud (Qwen)",
         "openai": "OpenAI",
         "anthropic": "Anthropic (Claude)"
+      },
+      "tabs": {
+        "label": "Chatbot-onderdelen",
+        "settings": "Instellingen",
+        "knowledge": "Kennis",
+        "conversations": "Gesprekken"
+      },
+      "website": {
+        "title": "Website",
+        "enabled": "Jules tonen op de website",
+        "enabledOnHint": "Klanten kunnen op elke pagina met Jules chatten.",
+        "enabledOffHint": "Jules is voor iedereen verborgen tot u hem weer aanzet.",
+        "nightly": "Kennis elke nacht bijwerken",
+        "nightlyHint": "Om 04:00 (Brusselse tijd) worden nieuwe en gewijzigde producten en teksten toegevoegd. Start na de eerste update."
+      },
+      "knowledge": {
+        "title": "Kennis",
+        "hint": "De producten, artikelen, gidsen en FAQ waaruit Jules antwoordt. Bijwerken leest ze opnieuw en voegt alleen nieuwe of gewijzigde delen toe.",
+        "loading": "Kennis laden…",
+        "errorLoad": "De kennis kan nu niet worden geladen.",
+        "retry": "Opnieuw proberen",
+        "state": {
+          "running": "Wordt bijgewerkt",
+          "noKey": "Geen embeddings-sleutel",
+          "empty": "Nog niet opgebouwd",
+          "ready": "Klaar"
+        },
+        "index": "Zoekindex: {{state}}",
+        "indexStates": {
+          "READY": "klaar",
+          "BUILDING": "wordt opgebouwd",
+          "PENDING": "in afwachting",
+          "MISSING": "ontbreekt",
+          "FAILED": "mislukt",
+          "DOES_NOT_EXIST": "ontbreekt",
+          "DELETING": "wordt verwijderd",
+          "STALE": "verouderd",
+          "UNKNOWN": "onbekend"
+        },
+        "table": {
+          "source": "Bron",
+          "items": "Items",
+          "pieces": "Delen",
+          "updated": "Laatst gewijzigd"
+        },
+        "sources": {
+          "product": "Producten",
+          "blog": "Artikelen",
+          "guide": "Gidsen",
+          "faq": "FAQ"
+        },
+        "model": "Embeddings: {{provider}} · {{model}} · {{dimensions}} dimensies",
+        "update": "Kennis bijwerken",
+        "estimating": "Wijzigingen controleren…",
+        "updateHint": "U ziet eerst wat er verandert en wat het ongeveer kost.",
+        "noKeyHint": "Voeg eerst bij Instellingen een sleutel toe voor de embeddings-aanbieder.",
+        "estimate": {
+          "title": "Deze update zal:",
+          "nothing": "Alles is actueel. Er is niets bij te werken.",
+          "toEmbed_one": "{{count}} deel toevoegen of vernieuwen",
+          "toEmbed_other": "{{count}} delen toevoegen of vernieuwen",
+          "toRemove_one": "{{count}} deel verwijderen dat niet meer bestaat",
+          "toRemove_other": "{{count}} delen verwijderen die niet meer bestaan",
+          "tokens": "ongeveer {{tokens}} tokens van {{model}} gebruiken",
+          "from": "Teksten gelezen uit: {{from}}",
+          "confirm": "Update starten",
+          "cancel": "Annuleren",
+          "close": "Sluiten"
+        },
+        "phase": {
+          "reading": "Producten en teksten lezen…",
+          "embedding": "Delen toevoegen…",
+          "cleaning": "Oude delen verwijderen…"
+        },
+        "progress": "{{done}} van {{total}}",
+        "runningHint": "U kunt deze pagina verlaten: de update gaat door.",
+        "toastDone": "Kennis bijgewerkt",
+        "errorEstimate": "De wijzigingen konden niet worden gecontroleerd.",
+        "errorStart": "De update kon niet worden gestart.",
+        "last": {
+          "done": "Laatste update voltooid {{date}}",
+          "failed": "Laatste update mislukt {{date}}",
+          "interrupted": "De laatste update stopte voordat hij klaar was ({{date}}). Start hem opnieuw om af te ronden.",
+          "summary": "{{done}} delen toegevoegd of vernieuwd, {{removed}} verwijderd, {{tokens}} tokens gebruikt.",
+          "by": "Gestart door {{who}}",
+          "byNightly": "Nachtelijke update"
+        },
+        "test": {
+          "title": "Vraag testen",
+          "hint": "Zie wat Jules voor een vraag zou vinden, beste match eerst. Er wordt geen antwoord geschreven en niets opgeslagen.",
+          "question": "Vraag",
+          "placeholder": "bijv. Hoe maak ik een zilveren ring schoon?",
+          "language": "Taal",
+          "search": "Zoeken",
+          "error": "De kennis kon niet worden doorzocht.",
+          "searchedAs": "In het Engels gezocht als: “{{text}}”",
+          "none": "Niets gevonden. Is de kennis opgebouwd en de zoekindex klaar?",
+          "score": "match {{score}}",
+          "used": "Gebruikt voor het antwoord",
+          "notUsed": "Niet gebruikt",
+          "linked": "Gelinkt"
+        }
+      },
+      "conversations": {
+        "title": "Gesprekken",
+        "hint": "Wat klanten Jules vroegen, nieuwste eerst. Gasten worden getoond met een korte code, nooit met hun IP-adres. 90 dagen bewaard.",
+        "search": "Gesprekken doorzoeken",
+        "searchPlaceholder": "Zoek in vragen, antwoorden, namen of e-mails",
+        "filterLabel": "Tonen",
+        "filters": {
+          "all": "Alle",
+          "up": "Nuttig",
+          "down": "Niet nuttig",
+          "person": "Vroeg om een persoon"
+        },
+        "loading": "Gesprekken laden…",
+        "errorLoad": "De gesprekken kunnen nu niet worden geladen.",
+        "none": "Nog geen gesprekken.",
+        "noneFound": "Geen gesprekken gevonden.",
+        "questions_one": "{{count}} vraag",
+        "questions_other": "{{count}} vragen",
+        "person": "Persoon",
+        "page": "Pagina {{page}} van {{pages}} · {{total}} gesprekken",
+        "previous": "Vorige pagina",
+        "next": "Volgende pagina"
+      },
+      "conversation": {
+        "back": "Alle gesprekken",
+        "loading": "Gesprek laden…",
+        "errorLoad": "Dit gesprek kan niet worden geladen.",
+        "guest": "Gast (niet ingelogd)",
+        "tiers": {
+          "visitor": "Bezoeker",
+          "loggedIn": "Ingelogd",
+          "customer": "Klant"
+        },
+        "messages_one": "{{count}} vraag",
+        "messages_other": "{{count}} vragen",
+        "askedForPerson": "Vroeg om met een persoon te praten.",
+        "openTickets": "Tickets openen",
+        "noAnswer": "Geen geschreven antwoord",
+        "outcomes": {
+          "limit": "Daglimiet voor vragen bereikt",
+          "unavailable": "Jules was niet beschikbaar",
+          "intent": "Een pagina op de website geopend",
+          "shortcut": "Beantwoord met een snel antwoord"
+        },
+        "actions": {
+          "my_orders": "Bestellingen geopend",
+          "order_status": "Bestelstatus geopend",
+          "talk_to_person": "Vroeg om een persoon",
+          "gift_cards": "Cadeaubonnen geopend",
+          "add_to_bag": "Aan winkeltas toegevoegd",
+          "add_to_wishlist": "Aan verlanglijst toegevoegd",
+          "show_bag": "Winkeltas geopend",
+          "show_wishlist": "Verlanglijst geopend",
+          "gift_finder": "Cadeauzoeker geopend"
+        },
+        "showedProducts_one": "{{count}} product getoond",
+        "showedProducts_other": "{{count}} producten getoond",
+        "showedLinks": "Links",
+        "onProduct": "Gevraagd op productpagina: {{slug}}",
+        "helpful": "Nuttig",
+        "notHelpful": "Niet nuttig"
       }
     },
     "blogPreview": {
@@ -2610,7 +2774,8 @@
         "counter": "{{count}}/{{max}}",
         "scrollDown": "Naar het nieuwste bericht",
         "you": "Jij",
-        "delete": "Deze chat verwijderen"
+        "delete": "Deze chat verwijderen",
+        "typing": "Jules is aan het typen…"
       },
       "forms": {
         "found": "Bestelling gevonden",

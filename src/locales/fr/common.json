@@ -35,7 +35,7 @@
     "paymentHistory": "Historique des paiements",
     "myTickets": "Mes tickets",
     "adminAddress": "Adresse administrateur",
-    "adminChatbot": "Clés du chatbot",
+    "adminChatbot": "Chatbot",
     "adminWishlist": "Liste de souhaits admin",
     "adminCart": "Panier admin",
     "wishlist": "Liste de souhaits",
@@ -1370,7 +1370,7 @@
         "dimensions": "Dimensions",
         "dimensionsHint": "Par défaut : 1024.",
         "noKey": "Aucune clé {{provider}} n'est enregistrée — la recherche en a besoin.",
-        "warning": "Modifier ceci nécessite de reconstruire les connaissances du chatbot ({{command}}), sinon la recherche cesse de fonctionner."
+        "warning": "Modifier ceci nécessite de mettre à jour les connaissances (Connaissances → Mettre à jour), sinon la recherche ne fonctionne plus."
       },
       "limits": {
         "title": "Limites quotidiennes",
@@ -1405,6 +1405,170 @@
         "alibaba": "Alibaba Cloud (Qwen)",
         "openai": "OpenAI",
         "anthropic": "Anthropic (Claude)"
+      },
+      "tabs": {
+        "label": "Sections du chatbot",
+        "settings": "Réglages",
+        "knowledge": "Connaissances",
+        "conversations": "Conversations"
+      },
+      "website": {
+        "title": "Site web",
+        "enabled": "Afficher Jules sur le site",
+        "enabledOnHint": "Les clients peuvent discuter avec Jules sur chaque page.",
+        "enabledOffHint": "Jules est masqué pour tout le monde jusqu’à ce que vous le réactiviez.",
+        "nightly": "Mettre à jour les connaissances chaque nuit",
+        "nightlyHint": "À 04:00 (heure de Bruxelles), les produits et textes nouveaux ou modifiés sont ajoutés. Commence après la première mise à jour."
+      },
+      "knowledge": {
+        "title": "Connaissances",
+        "hint": "Les produits, articles, guides et FAQ à partir desquels Jules répond. La mise à jour les relit et n’ajoute que ce qui est nouveau ou modifié.",
+        "loading": "Chargement des connaissances…",
+        "errorLoad": "Impossible de charger les connaissances pour le moment.",
+        "retry": "Réessayer",
+        "state": {
+          "running": "Mise à jour en cours",
+          "noKey": "Aucune clé d’embeddings",
+          "empty": "Pas encore construites",
+          "ready": "Prêtes"
+        },
+        "index": "Index de recherche : {{state}}",
+        "indexStates": {
+          "READY": "prêt",
+          "BUILDING": "en construction",
+          "PENDING": "en attente",
+          "MISSING": "absent",
+          "FAILED": "en échec",
+          "DOES_NOT_EXIST": "absent",
+          "DELETING": "suppression",
+          "STALE": "obsolète",
+          "UNKNOWN": "inconnu"
+        },
+        "table": {
+          "source": "Source",
+          "items": "Éléments",
+          "pieces": "Morceaux",
+          "updated": "Dernière modification"
+        },
+        "sources": {
+          "product": "Produits",
+          "blog": "Articles",
+          "guide": "Guides",
+          "faq": "FAQ"
+        },
+        "model": "Embeddings : {{provider}} · {{model}} · {{dimensions}} dimensions",
+        "update": "Mettre à jour les connaissances",
+        "estimating": "Vérification des changements…",
+        "updateHint": "Vous verrez ce qui change et le coût approximatif avant tout démarrage.",
+        "noKeyHint": "Ajoutez d’abord une clé pour le fournisseur d’embeddings dans Réglages.",
+        "estimate": {
+          "title": "Cette mise à jour va :",
+          "nothing": "Tout est à jour. Rien à mettre à jour.",
+          "toEmbed_one": "ajouter ou actualiser {{count}} morceau",
+          "toEmbed_other": "ajouter ou actualiser {{count}} morceaux",
+          "toRemove_one": "supprimer {{count}} morceau qui n’existe plus",
+          "toRemove_other": "supprimer {{count}} morceaux qui n’existent plus",
+          "tokens": "utiliser environ {{tokens}} tokens de {{model}}",
+          "from": "Textes lus depuis : {{from}}",
+          "confirm": "Lancer la mise à jour",
+          "cancel": "Annuler",
+          "close": "Fermer"
+        },
+        "phase": {
+          "reading": "Lecture des produits et des textes…",
+          "embedding": "Ajout des morceaux…",
+          "cleaning": "Suppression des anciens morceaux…"
+        },
+        "progress": "{{done}} sur {{total}}",
+        "runningHint": "Vous pouvez quitter cette page : la mise à jour continue.",
+        "toastDone": "Connaissances mises à jour",
+        "errorEstimate": "Impossible de vérifier les changements.",
+        "errorStart": "Impossible de lancer la mise à jour.",
+        "last": {
+          "done": "Dernière mise à jour terminée {{date}}",
+          "failed": "Dernière mise à jour échouée {{date}}",
+          "interrupted": "La dernière mise à jour s’est arrêtée avant la fin ({{date}}). Relancez-la pour la terminer.",
+          "summary": "{{done}} morceaux ajoutés ou actualisés, {{removed}} supprimés, {{tokens}} tokens utilisés.",
+          "by": "Lancée par {{who}}",
+          "byNightly": "Mise à jour nocturne"
+        },
+        "test": {
+          "title": "Tester une question",
+          "hint": "Voyez ce que Jules trouverait pour une question, meilleure correspondance en premier. Aucune réponse n’est rédigée et rien n’est enregistré.",
+          "question": "Question",
+          "placeholder": "ex. Comment nettoyer une bague en argent ?",
+          "language": "Langue",
+          "search": "Rechercher",
+          "error": "Impossible de rechercher dans les connaissances.",
+          "searchedAs": "Recherché en anglais : « {{text}} »",
+          "none": "Rien trouvé. Les connaissances sont-elles construites et l’index de recherche prêt ?",
+          "score": "correspondance {{score}}",
+          "used": "Utilisé pour la réponse",
+          "notUsed": "Non utilisé",
+          "linked": "Lien proposé"
+        }
+      },
+      "conversations": {
+        "title": "Conversations",
+        "hint": "Ce que les clients ont demandé à Jules, les plus récentes d’abord. Les invités sont affichés avec un code court, jamais leur adresse IP. Conservées 90 jours.",
+        "search": "Rechercher des conversations",
+        "searchPlaceholder": "Rechercher questions, réponses, noms ou e-mails",
+        "filterLabel": "Afficher",
+        "filters": {
+          "all": "Toutes",
+          "up": "Utiles",
+          "down": "Pas utiles",
+          "person": "A demandé une personne"
+        },
+        "loading": "Chargement des conversations…",
+        "errorLoad": "Impossible de charger les conversations pour le moment.",
+        "none": "Aucune conversation pour l’instant.",
+        "noneFound": "Aucune conversation ne correspond.",
+        "questions_one": "{{count}} question",
+        "questions_other": "{{count}} questions",
+        "person": "Personne",
+        "page": "Page {{page}} sur {{pages}} · {{total}} conversations",
+        "previous": "Page précédente",
+        "next": "Page suivante"
+      },
+      "conversation": {
+        "back": "Toutes les conversations",
+        "loading": "Chargement de la conversation…",
+        "errorLoad": "Impossible de charger cette conversation.",
+        "guest": "Invité (non connecté)",
+        "tiers": {
+          "visitor": "Visiteur",
+          "loggedIn": "Connecté",
+          "customer": "Client"
+        },
+        "messages_one": "{{count}} question",
+        "messages_other": "{{count}} questions",
+        "askedForPerson": "A demandé à parler à une personne.",
+        "openTickets": "Ouvrir les tickets",
+        "noAnswer": "Pas de réponse écrite",
+        "outcomes": {
+          "limit": "Limite quotidienne de questions atteinte",
+          "unavailable": "Jules était indisponible",
+          "intent": "A ouvert une page du site",
+          "shortcut": "Réponse rapide"
+        },
+        "actions": {
+          "my_orders": "A ouvert ses commandes",
+          "order_status": "A ouvert le suivi de commande",
+          "talk_to_person": "A demandé à parler à une personne",
+          "gift_cards": "A ouvert les cartes cadeaux",
+          "add_to_bag": "Ajouté au panier",
+          "add_to_wishlist": "Ajouté à la liste d’envies",
+          "show_bag": "A ouvert le panier",
+          "show_wishlist": "A ouvert la liste d’envies",
+          "gift_finder": "A ouvert le guide cadeaux"
+        },
+        "showedProducts_one": "{{count}} produit montré",
+        "showedProducts_other": "{{count}} produits montrés",
+        "showedLinks": "Liens",
+        "onProduct": "Demandé sur la page produit : {{slug}}",
+        "helpful": "Utile",
+        "notHelpful": "Pas utile"
       }
     },
     "blogPreview": {
@@ -2641,7 +2805,8 @@
         "counter": "{{count}}/{{max}}",
         "scrollDown": "Aller au dernier message",
         "you": "Vous",
-        "delete": "Supprimer cette conversation"
+        "delete": "Supprimer cette conversation",
+        "typing": "Jules écrit…"
       },
       "forms": {
         "found": "Commande trouvée",

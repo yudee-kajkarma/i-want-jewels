@@ -535,7 +535,7 @@ export function useJulesChat({ open, locale, onClose }: { open: boolean; locale:
     await answering(chatId, async () => {
       const check = await botCheck()
       const reply: JulesReply = check.ok
-        ? await sendChatMessage({ message: text, locale, history: turns, suggestion, intent, context: pageContext(), botToken: check.token })
+        ? await sendChatMessage({ message: text, locale, history: turns, suggestion, intent, context: pageContext(), botToken: check.token, conversationId: chatId })
         : { kind: 'botCheck' }
       spendBotToken(check.token)
       await answer(chatId, reply, suggestion ? SUGGESTION_ACTIONS[suggestion] : undefined)

@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../context/AuthContext'
 import { parseLocalePathname } from '../../i18n/routing'
+import { chatEnabled } from '../../services/chatService'
 import type { JulesLocale } from './contract'
 import { PHONE_QUERY } from './hooks'
 import { JulesLauncher } from './JulesLauncher'
@@ -28,7 +29,8 @@ const WITHOUT_JULES = /^\/(admin|checkout)(\/|$)/
  * Jules on every page except the admin and the checkout: the "Ask Jules"
  * button, the once-per-visit hello, and the panel (Home, Chats, Explore and
  * the conversation), a sheet from the bottom on phones. Escape closes the
- * panel and focus returns to the button.
+ * panel and focus returns to the button. Nothing shows while Jules is switched
+ * off in Admin → Chatbot (nor while that is being checked, so nothing flashes).
  */
 export default function JulesWidget() {
   const { i18n } = useTranslation()
@@ -36,6 +38,14 @@ export default function JulesWidget() {
   const { isAuthenticated, session } = useAuth()
   const textsReady = useJulesTexts()
   const hidden = WITHOUT_JULES.test(parseLocalePathname(pathname || '/').pathnameWithoutLocale)
+  const [switchedOn, setSwitchedOn] = useState(false)
+  useEffect(() => {
+    let active = true
+    void chatEnabled().then((on) => active && setSwitchedOn(on))
+    return () => {
+      active = false
+    }
+  }, [])
 
   const [open, setOpen] = useState(false)
   /** The panel is drawn from its first opening on, then only hidden while closed. */
@@ -99,7 +109,7 @@ export default function JulesWidget() {
   }, [open, hidden])
 
   // Not on the admin or checkout pages; elsewhere only once every text can be shown (never a key).
-  if (hidden || !textsReady) return null
+  if (hidden || !textsReady || !switchedOn) return null
 
   return (
     <>
