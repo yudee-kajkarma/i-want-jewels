@@ -14,9 +14,15 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        // Jules is writing: three dots rise and fall in turn.
+        'jules-dot': {
+          '0%, 60%, 100%': { transform: 'translateY(0)', opacity: '0.45' },
+          '30%': { transform: 'translateY(-4px)', opacity: '1' },
+        },
       },
       animation: {
         'jules-fade': 'jules-fade 200ms ease-out both',
+        'jules-dot': 'jules-dot 1.2s ease-in-out infinite',
       },
     },
   },

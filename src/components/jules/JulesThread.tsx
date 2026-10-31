@@ -35,8 +35,10 @@ type JulesThreadProps = {
  * One conversation, as in the owner's mock: Jules's messages on the left in
  * dark bubbles with "Jules · 2m" under each run, the visitor's on the right in
  * light bubbles with "Sent" under the last one until Jules answers ("Seen").
- * There is no typing indicator. Follow-up questions sit under Jules's last
- * answer, and answers from the backend can be marked helpful or not.
+ * While Jules works on an answer, three dots show in its bubble (as in a
+ * messaging app); the answer then appears from start to end, a few words at a
+ * time. Follow-up questions sit under Jules's last answer, once it is all
+ * shown, and answers from the backend can be marked helpful or not.
  * The shortcuts and the question box are drawn by the panel, under this.
  */
 export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadProps) {
@@ -50,6 +52,12 @@ export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadPr
   const jumped = useRef(false)
   const [nearEnd, setNearEnd] = useState(true)
   const [deleting, setDeleting] = useState(false)
+  /**
+   * Whether each message appears word by word: only an answer that arrives while
+   * the chat is open, after a message already on screen. Opening a chat, or
+   * one loaded all at once, shows everything as it is. Decided once per message.
+   */
+  const [reveals, setReveals] = useState<Map<string, boolean>>(() => new Map(chat.messages.map((m) => [m.id, false])))
 
   const { busy, history } = chat
   const messages = chat.messages.filter((m) => m.from === 'you' || m.blocks.some(isKnownBlock))
@@ -57,7 +65,22 @@ export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadPr
   const lastYours = messages.findLastIndex((m) => m.from === 'you')
   const conversation = history.current
   const old = conversation ? olderThan(conversation.createdAt, now, JULES_OLD_CHAT_MS) : false
-  const followUps = last?.from === 'jules' && !busy ? (last.followUps ?? []).filter((id) => findJulesSuggestion(id)) : []
+
+  // New messages are decided as they arrive (React redraws at once, before anything shows).
+  const arrived = new Set(messages.filter((m) => !reveals.has(m.id)).map((m) => m.id))
+  if (arrived.size) {
+    const next = new Map(reveals)
+    messages.forEach((m, i) => {
+      if (!arrived.has(m.id)) return
+      const before = messages[i - 1]
+      next.set(m.id, m.from === 'jules' && !reducedMotion && Boolean(before) && !arrived.has(before.id))
+    })
+    setReveals(next)
+  }
+  const isRevealing = (m: JulesMessage | undefined) => Boolean(m && reveals.get(m.id))
+  const typing = busy && last?.from === 'you'
+
+  const followUps = last?.from === 'jules' && !busy && !isRevealing(last) ? (last.followUps ?? []).filter((id) => findJulesSuggestion(id)) : []
 
   // Keep the newest message in view: the end of the chat, or the top of a long answer.
   const lastId = last?.id
@@ -77,6 +100,21 @@ export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadPr
   function onScroll() {
     const list = listRef.current
     if (list) setNearEnd(list.scrollHeight - list.scrollTop - list.clientHeight < NEAR_END_PX)
+  }
+
+  /** As a new answer grows, keep its end in view, until its start would scroll away. Not if the visitor scrolled up. */
+  function followAnswer() {
+    const list = listRef.current
+    const answer = lastRef.current
+    if (!list || !answer) return
+    const fromEnd = list.scrollHeight - list.scrollTop - list.clientHeight
+    if (fromEnd > NEAR_END_PX) return
+    const target = Math.min(list.scrollHeight - list.clientHeight, answer.offsetTop - 12)
+    if (target > list.scrollTop) list.scrollTop = target
+  }
+
+  function revealed(id: string) {
+    setReveals((current) => new Map(current).set(id, false))
   }
 
   function goToEnd() {
@@ -159,11 +197,22 @@ export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadPr
                 {message.from === 'you' ? (
                   <YourMessage message={message} receipt={i === lastYours ? receiptFor(message, i) : undefined} />
                 ) : (
-                  <JulesMessageRow message={message} firstOfRun={firstOfRun} lastOfRun={lastOfRun} chat={chat} now={now} />
+                  <JulesMessageRow
+                    message={message}
+                    firstOfRun={firstOfRun}
+                    lastOfRun={lastOfRun}
+                    chat={chat}
+                    now={now}
+                    reveal={isRevealing(message)}
+                    onRevealStep={followAnswer}
+                    onRevealed={() => revealed(message.id)}
+                  />
                 )}
               </div>
             )
           })}
+
+          {typing ? <Typing label={t('jules.thread.typing')} /> : null}
 
           {followUps.length ? (
             <div role="group" aria-label={t('jules.thread.followUps')} className="ml-9 mt-3 flex flex-wrap gap-2 motion-safe:animate-jules-fade">
@@ -214,16 +263,39 @@ function YourMessage({ message, receipt }: { message: JulesMessage; receipt?: Re
   )
 }
 
+/** Jules is writing: three dots in its bubble, as in a messaging app. */
+function Typing({ label }: { label: string }) {
+  return (
+    <div className="mt-5 flex items-start gap-2 motion-safe:animate-jules-fade" role="status">
+      <JulesAvatar size={28} />
+      <span className="sr-only">{label}</span>
+      <span aria-hidden className="inline-flex h-[42px] items-center gap-1.5 rounded-[20px] rounded-tl-[6px] bg-[#231e1d] px-4">
+        {[0, 160, 320].map((delay) => (
+          <span
+            key={delay}
+            style={{ animationDelay: `${delay}ms` }}
+            className="h-2 w-2 rounded-full bg-[#a69d98] motion-safe:animate-jules-dot motion-reduce:opacity-70"
+          />
+        ))}
+      </span>
+    </div>
+  )
+}
+
 type JulesMessageRowProps = {
   message: JulesMessage
   firstOfRun: boolean
   lastOfRun: boolean
   chat: JulesChatApi
   now: number
+  /** A new answer, appearing word by word. Its time and thumbs show once it is all there. */
+  reveal: boolean
+  onRevealStep: () => void
+  onRevealed: () => void
 }
 
 /** One of Jules's messages: the small avatar on the first of a run, "Jules · 2m" under the last, thumbs under answers. */
-function JulesMessageRow({ message, firstOfRun, lastOfRun, chat, now }: JulesMessageRowProps) {
+function JulesMessageRow({ message, firstOfRun, lastOfRun, chat, now, reveal, onRevealStep, onRevealed }: JulesMessageRowProps) {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'chat' })
   const rateable = Boolean(message.replyId)
   return (
@@ -231,8 +303,16 @@ function JulesMessageRow({ message, firstOfRun, lastOfRun, chat, now }: JulesMes
       <span className="w-7 shrink-0">{firstOfRun ? <JulesAvatar size={28} /> : null}</span>
       <div className="min-w-0 flex-1">
         <span className="sr-only">{t('jules.name')}: </span>
-        <BlockList messageId={message.id} blocks={message.blocks} actions={chat} first={firstOfRun} />
-        {lastOfRun || rateable ? (
+        <BlockList
+          messageId={message.id}
+          blocks={message.blocks}
+          actions={chat}
+          first={firstOfRun}
+          reveal={reveal}
+          onRevealStep={onRevealStep}
+          onRevealed={onRevealed}
+        />
+        {!reveal && (lastOfRun || rateable) ? (
           <div className="mt-1 flex min-h-[28px] flex-wrap items-center gap-x-2 pl-1 text-[12px] text-[#a69d98]">
             {lastOfRun ? <span>{t('jules.meta', { time: shortAgo(message.at, i18n.language, now) })}</span> : null}
             {rateable ? <Feedback message={message} onRate={chat.sendFeedback} /> : null}

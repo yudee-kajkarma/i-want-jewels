@@ -15,6 +15,7 @@ import { OrdersBlock } from './OrdersBlock'
 import { PointsBlock } from './PointsBlock'
 import { ProductBlock } from './ProductBlock'
 import { ProductsBlock } from './ProductsBlock'
+import { shareWords, useRevealedWords, wordCount } from './reveal'
 import { TextBlock } from './TextBlock'
 import { WishlistBlock } from './WishlistBlock'
 
@@ -69,38 +70,65 @@ type BlockListProps = {
   actions: JulesBlockActions
   /** The first message of Jules's run: its bubble gets the small corner next to the avatar. */
   first?: boolean
+  /** A new answer: its words appear from start to end, then its cards and forms. */
+  reveal?: boolean
+  /** While revealing: after each step (to keep the answer in view) and once it is all shown. */
+  onRevealStep?: () => void
+  onRevealed?: () => void
 }
 
+/** The words a block adds to the answer as it appears. */
+const wordsIn = (block: JulesBlock) =>
+  block.type === 'text' ? wordCount(block.text) : block.type === 'points' ? block.items.reduce((sum, item) => sum + wordCount(item), 0) : 0
+
 /** Draws one of Jules's messages: its blocks in order, each by its own component. Unknown types are skipped. */
-export function BlockList({ messageId, blocks, actions, first = false }: BlockListProps) {
+export function BlockList({ messageId, blocks, actions, first = false, reveal = false, onRevealStep, onRevealed }: BlockListProps) {
+  const groups = groupBlocks(blocks)
+  const counts = groups.map((group) => group.blocks.map(wordsIn))
+  const total = counts.flat().reduce((sum, n) => sum + n, 0)
+  const shown = useRevealedWords(total, reveal, onRevealStep, onRevealed)
+  const revealing = shown < total
+  /** The words each block shows while the answer appears, in order. */
+  const shares = shareWords(counts.flat(), revealing ? shown : undefined)
+  const firstIndex = counts.map((_, i) => counts.slice(0, i).flat().length)
+
   return (
-    <div className="flex min-w-0 flex-col items-start gap-2">
-      {groupBlocks(blocks).map((group, i) =>
-        group.bubble ? (
+    <div className="flex min-w-0 flex-col items-start gap-2" aria-busy={revealing || undefined}>
+      {groups.map((group, i) => {
+        if (!group.bubble) {
+          // Cards and forms wait until the words before them have appeared.
+          if (revealing) return null
+          return (
+            <div key={i} className={cn('w-full min-w-0', !ROW_TYPES.has(group.blocks[0].type) && 'max-w-[460px]', reveal && 'motion-safe:animate-jules-fade')}>
+              <Block block={group.blocks[0]} messageId={messageId} actions={actions} />
+            </div>
+          )
+        }
+        const groupShares = shares.slice(firstIndex[i], firstIndex[i] + group.blocks.length)
+        if (revealing && groupShares.every((share) => share === 0)) return null
+        return (
           <div
             key={i}
             className={cn('max-w-full space-y-2 rounded-[20px] bg-[#231e1d] px-3.5 py-2.5 md:max-w-[560px]', first && i === 0 && 'rounded-tl-[6px]')}
           >
-            {group.blocks.map((block, j) => (
-              <Block key={j} block={block} messageId={messageId} actions={actions} />
-            ))}
+            {group.blocks.map((block, j) =>
+              groupShares[j] === 0 ? null : <Block key={j} block={block} messageId={messageId} actions={actions} words={groupShares[j]} />,
+            )}
           </div>
-        ) : (
-          <div key={i} className={cn('w-full min-w-0', !ROW_TYPES.has(group.blocks[0].type) && 'max-w-[460px]')}>
-            <Block block={group.blocks[0]} messageId={messageId} actions={actions} />
-          </div>
-        ),
-      )}
+        )
+      })}
     </div>
   )
 }
 
-function Block({ block, messageId, actions }: { block: JulesBlock; messageId: string; actions: JulesBlockActions }) {
+type BlockProps = { block: JulesBlock; messageId: string; actions: JulesBlockActions; words?: number }
+
+function Block({ block, messageId, actions, words }: BlockProps) {
   switch (block.type) {
     case 'text':
-      return <TextBlock text={block.text} />
+      return <TextBlock text={block.text} words={words} />
     case 'points':
-      return <PointsBlock items={block.items} />
+      return <PointsBlock items={block.items} words={words} />
     case 'products':
       return <ProductsBlock products={block.products} actions={actions} />
     case 'product':
