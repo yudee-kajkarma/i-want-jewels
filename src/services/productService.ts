@@ -48,6 +48,9 @@ type ProductVariantApiResponse = {
   sku?: string
   stock?: number
   price: Price | number
+  /** The struck "was" price of a price-range discount (Admin → Discounts), when one applies. Display only. */
+  compareAtPrice?: Price
+  discountPercent?: number
   available?: boolean
   position: number
   thumbnail: string
@@ -230,6 +233,8 @@ export type GetProductsParams = {
   availability?: string | boolean
   productType?: 'PHYSICAL' | 'GIFT_CARD'
   currency?: string
+  /** The admin's view: each product's stored price, without any sale (never sent to the API). */
+  storedPrices?: boolean
 }
 
 export type AdminProductsResult = {
@@ -308,14 +313,29 @@ function normalizeNumber(value: unknown): number {
   return 0
 }
 
-function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
+/**
+ * A price as the shop shows it: always our own price, the one charged. In a
+ * price-range discount (Admin → Discounts) the struck "was" price comes along,
+ * high enough that its percentage off comes back to our price. `stored`: the
+ * admin's view, with no "was" price.
+ */
+function pricing(entry: { price?: Price | number; compareAtPrice?: Price; discountPercent?: number }, stored: boolean) {
+  if (stored || !entry.compareAtPrice) return { price: toPrice(entry.price) }
+  return {
+    price: toPrice(entry.price),
+    compareAtPrice: toPrice(entry.compareAtPrice),
+    ...(typeof entry.discountPercent === 'number' ? { discountPercent: entry.discountPercent } : {}),
+  }
+}
+
+function normalizeVariant(variant: ProductVariantApiResponse, stored = false): ProductVariant {
   return {
     id: variant.id ?? variant._id ?? '',
     variantName: variant.variant_name,
     title: variant.title,
     sku: variant.sku,
     stock: variant.stock,
-    price: toPrice(variant.price),
+    ...pricing(variant, stored),
     available: variant.available ?? true,
     position: variant.position,
     thumbnail: variant.thumbnail,
@@ -338,7 +358,7 @@ function normalizeVariant(variant: ProductVariantApiResponse): ProductVariant {
               ? { sku: entry.sku.trim() }
               : {}),
             ...(entry?.price !== undefined && entry.price !== null
-              ? { price: toPrice(entry.price) }
+              ? pricing(entry, stored)
               : {}),
             ...(typeof entry?.totalDiamondWeight === 'number'
               ? { totalDiamondWeight: entry.totalDiamondWeight }
@@ -383,8 +403,17 @@ function getMetals(variants: ProductVariant[]): string[] {
   return Array.from(new Set(metals))
 }
 
-function normalizeProduct(product: ProductApiResponse): Product {
-  const variants = product.variants.map(normalizeVariant)
+/** The lowest price, and (when that price is on sale) its price before the sale and the percentage. */
+function fromPrice(variants: ProductVariant[]): Pick<Product, 'minPrice' | 'minCompareAtPrice' | 'discountPercent'> {
+  const minPrice = minPriceOf(variants.map((variant) => variant.price))
+  const cheapest = variants.find((variant) => variant.price.eur === minPrice.eur && variant.compareAtPrice)
+  return cheapest?.compareAtPrice
+    ? { minPrice, minCompareAtPrice: cheapest.compareAtPrice, discountPercent: cheapest.discountPercent }
+    : { minPrice }
+}
+
+function normalizeProduct(product: ProductApiResponse, stored = false): Product {
+  const variants = product.variants.map((variant) => normalizeVariant(variant, stored))
   const primaryVariant = variants.find((variant) => variant.available) ?? variants[0]
 
   return {
@@ -399,7 +428,7 @@ function normalizeProduct(product: ProductApiResponse): Product {
     availability: product.availability,
     collectionName: product.collectionName,
     variants,
-    minPrice: minPriceOf(variants.map((variant) => variant.price)),
+    ...fromPrice(variants),
     options: product.options,
     category: getCategory(product.tags, product.category),
     metals: getMetals(variants),
@@ -463,10 +492,10 @@ function normalizeSeoExtended(
 function normalizeProductDetail(
   product: ProductDetailApiResponse,
   recommendedProducts: ProductApiResponse[] = [],
+  stored = false,
 ): ProductDetail {
-  const variants = product.variants.map(normalizeVariant)
+  const variants = product.variants.map((variant) => normalizeVariant(variant, stored))
   const primaryVariant = variants.find((variant) => variant.available) ?? variants[0]
-  const minPrice = minPriceOf(variants.map((variant) => variant.price))
 
   return {
     id: product.id,
@@ -503,7 +532,7 @@ function normalizeProductDetail(
     tags: product.tags,
     availability: product.availability,
     variants,
-    minPrice,
+    ...fromPrice(variants),
     options: product.options,
     category: product.category || getCategory(product.tags),
     metals: getMetals(variants),
@@ -521,7 +550,7 @@ function normalizeProductDetail(
     details: product.details.trim(),
     certificateUrls: product.certificateUrls,
     diamondPcs: product.diamondPcs,
-    recommendedProducts: recommendedProducts.map(normalizeProduct),
+    recommendedProducts: recommendedProducts.map((item) => normalizeProduct(item, stored)),
     seoExtended: normalizeSeoExtended(product.seoextended),
   }
 }
@@ -631,7 +660,7 @@ export async function getProducts(params: GetProductsParams = {}): Promise<Produ
   })
 
   return {
-    products: response.data.data.map(normalizeProduct),
+    products: response.data.data.map((product) => normalizeProduct(product, params.storedPrices)),
     pagination: response.data.pagination,
     appliedFilters: response.data.filters.applied,
   }
@@ -648,7 +677,7 @@ export async function getRandomProducts(count = 4): Promise<Product[]> {
     const response = await apiClient.get<{ data: ProductApiResponse[] }>('/products/random', {
       params: { count },
     })
-    return (response.data.data ?? []).map(normalizeProduct)
+    return (response.data.data ?? []).map((product) => normalizeProduct(product))
   } catch {
     return []
   }
@@ -664,13 +693,14 @@ function localeParams(locale?: string): { params?: { lng: string } } {
   return { params: { lng: locale } }
 }
 
-export async function getProductById(productId: string, locale?: string): Promise<ProductDetail> {
+/** `storedPrices`: the admin's editor, which must load (and save back) each product's own price, never a sale price. */
+export async function getProductById(productId: string, locale?: string, options: { storedPrices?: boolean } = {}): Promise<ProductDetail> {
   const response = await apiClient.get<ProductDetailResponse>(
     `/products/${productId}`,
     localeParams(locale),
   )
 
-  return normalizeProductDetail(response.data.data, response.data.recommendedProducts)
+  return normalizeProductDetail(response.data.data, response.data.recommendedProducts, options.storedPrices)
 }
 
 export function isProductNotFoundError(error: unknown): boolean {
@@ -741,6 +771,7 @@ export async function getAllProductFilters(): Promise<ProductAllFilters> {
 export async function getAllProductsForAdmin(params: GetProductsParams = {}): Promise<AdminProductsResult> {
   const response = await getProducts({
     ...params,
+    storedPrices: true,
     page: params.page ?? 1,
     limit: params.limit ?? 10,
   })

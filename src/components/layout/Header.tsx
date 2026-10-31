@@ -503,6 +503,7 @@ export default function Header() {
             { label: t("orders"), to: "/admin/orders" },
             { label: t("customers", { defaultValue: "Customers" }), to: "/admin/customers" },
             { label: t("giftCards"), to: "/admin/gift-cards" },
+            { label: t("discounts"), to: "/admin/discounts" },
             { label: t("carts"), to: "/admin/cart" },
             { label: t("wishlists"), to: "/admin/wishlist" },
             { label: t("tickets"), to: "/admin/tickets" },

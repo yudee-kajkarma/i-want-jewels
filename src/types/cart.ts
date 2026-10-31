@@ -15,6 +15,9 @@ export type CartItem = {
   variantTitle: string
   thumbnail: string
   price: Price
+  /** In a discount range (Admin → Discounts): the struck "was" price beside `price`, which is what's charged. */
+  compareAtPrice?: Price
+  discountPercent?: number
   quantity: number
   isGiftCard?: boolean
   giftCard?: GiftCardDetails

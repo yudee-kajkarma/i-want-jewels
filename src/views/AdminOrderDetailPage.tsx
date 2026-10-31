@@ -586,6 +586,21 @@ export default function AdminOrderDetailPage() {
                                     <span>{t('orderTotal')}</span>
                                     <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span>
                                 </div>
+                                {order.couponDiscount ? (
+                                    <div className="flex items-center justify-between gap-3 text-[#1f7a4d]">
+                                        <span>
+                                            {t('discountCode')}
+                                            {order.appliedCouponCode ? <span className="ml-2 font-mono text-[#17110d]">{order.appliedCouponCode}</span> : null}
+                                        </span>
+                                        <span className="font-semibold">-{formatPrice(order.couponDiscount, orderCurrency)}</span>
+                                    </div>
+                                ) : null}
+                                {order.couponDiscount && !(order.giftCardDiscount && order.giftCardDiscount > 0) ? (
+                                    <div className="flex items-center justify-between">
+                                        <span>{t('payable')}</span>
+                                        <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span>
+                                    </div>
+                                ) : null}
                                 {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
                                     <>
                                         <div className="flex items-center justify-between text-[#1f7a4d]">

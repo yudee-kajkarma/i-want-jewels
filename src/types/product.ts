@@ -10,6 +10,9 @@ export type VariantSize = {
   // invariant that variant.price === min(size.price) whenever any size uses
   // per-size pricing, so listing surfaces (cards, minPrice) still work.
   price?: Price
+  /** In a discount range (Admin → Discounts): the struck "was" price beside `price`, which is what's charged. */
+  compareAtPrice?: Price
+  discountPercent?: number
   // Optional per-size spec overrides. When absent, product-level values apply.
   totalDiamondWeight?: number
   measurement?: string
@@ -22,6 +25,9 @@ export type ProductVariant = {
   sku?: string
   stock?: number
   price: Price
+  /** In a discount range (Admin → Discounts): the struck "was" price beside `price`, which is what's charged. */
+  compareAtPrice?: Price
+  discountPercent?: number
   available: boolean
   position: number
   thumbnail: string
@@ -91,6 +97,9 @@ export type Product = {
   collectionName?: string
   variants: ProductVariant[]
   minPrice: Price
+  /** The struck "was" price beside the "from" price, when it is in a discount range, and the percentage. */
+  minCompareAtPrice?: Price
+  discountPercent?: number
   options: ProductOption[]
   category: string
   metals: string[]

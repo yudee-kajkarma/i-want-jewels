@@ -39,6 +39,7 @@ import {
     updateProductReview,
 } from "../services/productService";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import ThankYouNote from "../components/shared/ThankYouNote";
 import { addToCart } from "../store/cartSlice";
 import { addToWishlist, removeWishlistItem } from "../store/wishlistSlice";
 import type {
@@ -767,6 +768,10 @@ export default function ProductDetailPage({
     useClarityView('product_viewed', !!product && !isLoading && !!selectedVariant, product?.id ?? '');
     useClarityView('out_of_stock', !!product && !isLoading && (chosenSizeEntry ? chosenSizeEntry.stock <= 0 : (selectedVariant?.available === false || (variantHasSizes ? (selectedVariant?.sizes?.every(size => size.stock <= 0) ?? false) : (selectedVariant?.stock ?? selectedVariant?.totalStock ?? 1) <= 0))), `${product?.id}:${selectedVariantId}:${selectedSizeIndex}`);
     const basePrice = chosenSizeEntry?.price ?? selectedVariant?.price;
+    // In a discount range (Admin → Discounts): the struck "was" price and the percentage, beside our price.
+    const pricedEntry = chosenSizeEntry?.price ? chosenSizeEntry : selectedVariant;
+    const comparePrice = pricedEntry?.compareAtPrice;
+    const discountPercent = pricedEntry?.discountPercent ?? 0;
     // Per-size spec overrides (Cadenza-style). When absent, product-level
     // values apply so legacy products render exactly as before.
     const displayedDiamondWeight =
@@ -1220,9 +1225,24 @@ export default function ProductDetailPage({
                                             </h2>
                                         ) : null}
                                     </div>
-                                    <p className="font-play shrink-0 whitespace-nowrap text-[20px] font-medium text-zinc-900 sm:text-[24px]">
-                                        {formatPrice(basePrice, currency)}
-                                    </p>
+                                    <div className="shrink-0 text-right">
+                                        <p className="font-play whitespace-nowrap text-[20px] font-medium text-zinc-900 sm:text-[24px]">
+                                            {formatPrice(basePrice, currency)}
+                                        </p>
+                                        {comparePrice ? (
+                                            <p className="mt-1 flex items-center justify-end gap-2 whitespace-nowrap">
+                                                <span className="text-[14px] text-zinc-400 line-through sm:text-[15px]">
+                                                    <span className="sr-only">{t("common.wasPrice")} </span>
+                                                    {formatPrice(comparePrice, currency)}
+                                                </span>
+                                                {discountPercent > 0 ? (
+                                                    <span className="inline-flex rounded-full bg-[#f23ea9] px-2 py-1 text-[11px] font-bold leading-none text-white">
+                                                        -{discountPercent}%
+                                                    </span>
+                                                ) : null}
+                                            </p>
+                                        ) : null}
+                                    </div>
                                 </div>
 
                                 {!isGiftCardProduct ? (
@@ -1481,6 +1501,8 @@ export default function ProductDetailPage({
                                             </button>
                                         </div>
                                     </div>
+
+                                    <ThankYouNote className="mt-5" />
 
                                     <div
                                         className={`mt-5 grid gap-3 ${

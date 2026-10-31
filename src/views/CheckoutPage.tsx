@@ -21,6 +21,7 @@ import {
   validateGiftCard,
   type GiftCardValidation,
 } from "../services/giftCardService";
+import { couponDiscountOf, validateCoupon, type CouponCheck } from "../services/couponService";
 import { addCartItem, clearCartItems } from "../services/cartService";
 import {
   createUserAddress,
@@ -187,11 +188,25 @@ export default function CheckoutPage() {
   const [giftCheckMessage, setGiftCheckMessage] = useState("");
   const [isCheckingGift, setIsCheckingGift] = useState(false);
 
+  // A discount code (the thank-you code): its percentage of the items, gift cards excluded, taken off before a gift card.
+  const [couponInput, setCouponInput] = useState("");
+  const [coupon, setCoupon] = useState<Extract<CouponCheck, { valid: true }> | null>(null);
+  const [couponMessage, setCouponMessage] = useState("");
+  const [isCheckingCoupon, setIsCheckingCoupon] = useState(false);
+  const discountableTotal = items.reduce(
+    (total, item) =>
+      item.isGiftCard ? total : total + getPriceAmount(item.price, currency) * item.quantity,
+    0,
+  );
+  const appliedCouponDiscount = coupon
+    ? Math.min(couponDiscountOf(discountableTotal, coupon.percent), subtotal)
+    : 0;
+
   const appliedGiftDiscount =
     giftValidation?.valid && !hasGiftCardItems
-      ? Math.min(giftValidation.redeemableAmount ?? 0, subtotal)
+      ? Math.min(giftValidation.redeemableAmount ?? 0, subtotal - appliedCouponDiscount)
       : 0;
-  const payableTotal = Math.max(0, subtotal - appliedGiftDiscount);
+  const payableTotal = Math.max(0, subtotal - appliedCouponDiscount - appliedGiftDiscount);
 
   useEffect(() => {
     // Gift card purchases/redemptions are online-only.
@@ -239,6 +254,42 @@ export default function CheckoutPage() {
     setGiftValidation(null);
     setGiftCodeInput("");
     setGiftCheckMessage("");
+  }
+
+  async function handleApplyCoupon() {
+    const code = couponInput.trim();
+    if (!code) return;
+    // A guest's code is checked against the email they check out with.
+    const email = session ? undefined : guest.email.trim();
+    if (!session && !email) {
+      setCouponMessage(t("checkout.discountCodeNeedsEmail"));
+      return;
+    }
+    setIsCheckingCoupon(true);
+    setCouponMessage("");
+    try {
+      const result = await validateCoupon(code, email);
+      if (result.valid) {
+        setCoupon(result);
+        setCouponMessage(t("checkout.discountCodeApplied", { percent: result.percent }));
+        trackClarity("discount_code_applied");
+      } else {
+        setCoupon(null);
+        setCouponMessage(result.reason || t("checkout.discountCodeCannotApply"));
+        trackClarity("discount_code_failed");
+      }
+    } catch {
+      setCoupon(null);
+      setCouponMessage(t("checkout.discountCodeValidateError"));
+    } finally {
+      setIsCheckingCoupon(false);
+    }
+  }
+
+  function handleRemoveCoupon() {
+    setCoupon(null);
+    setCouponInput("");
+    setCouponMessage("");
   }
 
   useEffect(() => {
@@ -522,6 +573,7 @@ export default function CheckoutPage() {
           giftValidation?.valid && !hasGiftCardItems
             ? (giftValidation.code ?? giftCodeInput.trim())
             : undefined,
+        couponCode: coupon && appliedCouponDiscount > 0 ? coupon.code : undefined,
       });
 
       orderCreated = true;
@@ -667,13 +719,25 @@ export default function CheckoutPage() {
                             })}
                           </p>
                         </div>
-                        <p className="text-lg font-bold text-[#17110d]">
-                          {formatPrice(
-                            getPriceAmount(item.price, currency) *
-                              item.quantity,
-                            currency,
-                          )}
-                        </p>
+                        <div className="text-right">
+                          <p className="text-lg font-bold text-[#17110d]">
+                            {formatPrice(
+                              getPriceAmount(item.price, currency) *
+                                item.quantity,
+                              currency,
+                            )}
+                          </p>
+                          {item.compareAtPrice ? (
+                            <p className="text-sm text-zinc-400 line-through">
+                              <span className="sr-only">{t("common.wasPrice")} </span>
+                              {formatPrice(
+                                getPriceAmount(item.compareAtPrice, currency) *
+                                  item.quantity,
+                                currency,
+                              )}
+                            </p>
+                          ) : null}
+                        </div>
                       </article>
                     ))}
                   </div>
@@ -1119,6 +1183,14 @@ export default function CheckoutPage() {
                   {t("checkout.free")}
                 </span>
               </div>
+              {appliedCouponDiscount > 0 && coupon ? (
+                <div className="flex items-center justify-between text-[#1f7a4d]">
+                  <span>{t("checkout.discountCodeLine", { percent: coupon.percent })}</span>
+                  <span className="font-semibold">
+                    −{formatPrice(appliedCouponDiscount, currency)}
+                  </span>
+                </div>
+              ) : null}
               {appliedGiftDiscount > 0 ? (
                 <div className="flex items-center justify-between text-[#1f7a4d]">
                   <span>{t("checkout.giftCard")}</span>
@@ -1126,6 +1198,55 @@ export default function CheckoutPage() {
                     −{formatPrice(appliedGiftDiscount, currency)}
                   </span>
                 </div>
+              ) : null}
+            </div>
+
+            <div className="mt-6 border-t border-[#efe1d5] pt-6">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-zinc-400">
+                {t("checkout.discountCode")}
+              </p>
+              {coupon ? (
+                <div className="mt-3 flex items-center justify-between gap-3 text-sm">
+                  <span className="font-semibold text-[#17110d]">{coupon.code}</span>
+                  <button
+                    type="button"
+                    onClick={handleRemoveCoupon}
+                    className="text-xs font-semibold uppercase tracking-[0.16em] text-[#a53b79] hover:underline"
+                  >
+                    {t("checkout.remove")}
+                  </button>
+                </div>
+              ) : (
+                <div className="mt-3 flex gap-2">
+                  <input
+                    type="text"
+                    value={couponInput}
+                    onChange={(event) => setCouponInput(event.target.value)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") {
+                        event.preventDefault();
+                        void handleApplyCoupon();
+                      }
+                    }}
+                    placeholder={t("checkout.enterDiscountCode")}
+                    autoCapitalize="characters"
+                    autoComplete="off"
+                    className="h-11 min-w-0 flex-1 border border-[#e7d3c2] px-3 text-sm uppercase outline-none placeholder:normal-case focus:border-[#17110d]"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => void handleApplyCoupon()}
+                    disabled={isCheckingCoupon || !couponInput.trim()}
+                    className="h-11 border border-[#17110d] bg-[#17110d] px-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:opacity-90 disabled:opacity-50"
+                  >
+                    {isCheckingCoupon ? "..." : t("checkout.apply")}
+                  </button>
+                </div>
+              )}
+              {couponMessage ? (
+                <p className={`mt-2 text-xs ${coupon ? "text-[#1f7a4d]" : "text-[#b3261e]"}`}>
+                  {couponMessage}
+                </p>
               ) : null}
             </div>
 

@@ -74,7 +74,8 @@
       "graduationGifts": "Graduation Gifts",
       "birthdayGifts": "Birthday Gifts",
       "christmasGifts": "Christmas Gifts"
-    }
+    },
+    "discounts": "Discounts"
   },
   "footer": {
     "information": "Information",
@@ -126,7 +127,8 @@
     "save": "Save",
     "edit": "Edit",
     "delete": "Delete",
-    "submit": "Submit"
+    "submit": "Submit",
+    "wasPrice": "Was"
   },
   "hero": {
     "heading": "Everyday Lab-Grown Diamond Jewellery",
@@ -409,7 +411,14 @@
     "addressIncomplete": "Please complete all address fields before saving.",
     "postalCodeInvalid": "Please enter a valid postal code.",
     "addressSaveError": "Unable to save this address right now. Please try again.",
-    "syncError": "Order status was updated, but cart synchronization needs another refresh."
+    "syncError": "Order status was updated, but cart synchronization needs another refresh.",
+    "discountCode": "Discount code",
+    "enterDiscountCode": "Enter a discount code",
+    "discountCodeApplied": "{{percent}}% off your items.",
+    "discountCodeCannotApply": "This code cannot be used.",
+    "discountCodeValidateError": "We could not check this code. Please try again.",
+    "discountCodeNeedsEmail": "Enter your email address first: the code works with the email it was sent to.",
+    "discountCodeLine": "Discount code ({{percent}}%)"
   },
   "auth": {
     "loginTitle": "Login",
@@ -603,7 +612,8 @@
       "noteFromUs": "Note from us:",
       "daysLeft_one": "{{count}} day left to request a return.",
       "daysLeft_other": "{{count}} days left to request a return.",
-      "windowClosed": "The return window for this order has closed."
+      "windowClosed": "The return window for this order has closed.",
+      "discountCodeLabel": "Discount code:"
     },
     "paymentHistory": {
       "breadcrumb": "Payments",
@@ -1648,7 +1658,8 @@
         "returnApproved": "Return approved and refund initiated",
         "returnRejected": "Return rejected",
         "markedReturned": "Order marked as RETURNED"
-      }
+      },
+      "discountCode": "Discount code"
     },
     "cart": {
       "breadcrumb": "Admin Cart",
@@ -2640,6 +2651,126 @@
         "next": "Next",
         "page": "Page {{current}} of {{total}}"
       }
+    },
+    "discounts": {
+      "breadcrumb": "Admin",
+      "title": "Discounts",
+      "intro": "Struck-through \"was\" prices by price range (customers always pay our normal price), and the thank-you code each customer gets after an order.",
+      "loading": "Loading the discounts…",
+      "errorLoad": "Unable to load the discounts right now.",
+      "retry": "Retry",
+      "lastUpdated": "Last changed {{date}} by {{who}}",
+      "ranges": {
+        "title": "Price-range discounts",
+        "hint": "Every product whose price falls in a range shows a struck-through \"was\" price with the discount badge, like Uniglo: the \"was\" price is set so that the percentage off it comes back to our price. Customers always pay our normal price; it never changes. Gift cards never get one.",
+        "none": "No discounts yet. Add a range, for example €400 to €1,000 at 10% off.",
+        "range": "Range {{n}}",
+        "from": "From (€)",
+        "to": "To (€)",
+        "percent": "% off",
+        "starts": "Starts (optional)",
+        "ends": "Ends (optional)",
+        "active": "On",
+        "remove": "Remove range {{n}}",
+        "unsaved": "Not saved",
+        "states": {
+          "active": "Showing",
+          "scheduled": "Scheduled",
+          "ended": "Ended",
+          "off": "Off"
+        },
+        "example": "Products from €{{from}} to €{{to}}: €{{from}} shown as €{{was}} struck through, {{percent}}% OFF",
+        "add": "Add a range",
+        "save": "Save discounts",
+        "saved": "Discounts saved",
+        "note": "Shown in the shop within a minute. Prices charged don’t change.",
+        "errors": {
+          "prices": "Range {{n}}: enter both prices.",
+          "order": "Range {{n}}: \"To\" must be at least \"From\".",
+          "percent": "Range {{n}}: the discount must be a whole number from 1 to 90.",
+          "dates": "Range {{n}}: the end date must come after the start.",
+          "overlap": "{{a}} and {{b}} overlap: a price can only be in one range.",
+          "save": "Unable to save the discounts."
+        },
+        "percentOff": "{{percent}}% OFF",
+        "period": {
+          "always": "Always",
+          "between": "{{from}} – {{to}}",
+          "from": "From {{from}}",
+          "until": "Until {{to}}"
+        }
+      },
+      "thankYou": {
+        "title": "Thank-you code",
+        "hint": "After every paid order, the customer is emailed a personal code for their next order. It works once, only with their email address, until it expires.",
+        "switch": "Send a thank-you code after every order",
+        "on": "On",
+        "off": "Off",
+        "percent": "% off",
+        "validDays": "Valid for (days)",
+        "rules": "An order paid with a code doesn’t earn another one, so a customer can’t keep a discount on every order.",
+        "save": "Save",
+        "saved": "Thank-you code settings saved",
+        "errors": {
+          "percent": "The discount must be a whole number from 1 to 90.",
+          "days": "Enter a number of days from 1 to 3650.",
+          "save": "Unable to save the thank-you code settings."
+        }
+      },
+      "codes": {
+        "title": "Discount codes",
+        "hint": "Every code sent so far: thank-you codes, and codes made here for a customer.",
+        "search": "Search codes",
+        "searchPlaceholder": "Search by code, email or order number",
+        "filterLabel": "Show",
+        "filters": {
+          "all": "All",
+          "active": "Active",
+          "used": "Used",
+          "expired": "Expired",
+          "revoked": "Revoked"
+        },
+        "loading": "Loading codes…",
+        "errorLoad": "Unable to load the discount codes right now.",
+        "none": "No codes yet. They appear here once the thank-you code is on and orders are paid.",
+        "noneFound": "No codes match.",
+        "percentOff": "{{percent}}% off",
+        "earned": "Earned with order {{order}} on {{date}}",
+        "made": "Made by the shop on {{date}}",
+        "usedOn": "Used on order {{order}}, {{date}}",
+        "expires": "Expires {{date}}",
+        "resend": "Send again",
+        "resent": "Sent again to {{email}}",
+        "emailFailed": "The email could not be sent. Check the shop’s email settings.",
+        "errorResend": "Unable to send the code.",
+        "revoke": "Revoke",
+        "revokeConfirm": "Stop this code working?",
+        "revokeYes": "Revoke",
+        "revoked": "{{code}} no longer works",
+        "errorRevoke": "Unable to revoke the code.",
+        "cancel": "Cancel",
+        "page": "Page {{page}} of {{pages}} · {{total}} codes",
+        "previous": "Previous page",
+        "next": "Next page",
+        "make": {
+          "open": "Make a code",
+          "title": "Make a code for a customer",
+          "email": "Customer email",
+          "percent": "% off",
+          "validDays": "Valid for (days)",
+          "note": "Note (optional)",
+          "submit": "Make and email it",
+          "cancel": "Cancel",
+          "sent": "{{code}} sent to {{email}}",
+          "madeNotSent": "{{code}} was made, but the email could not be sent.",
+          "errors": {
+            "email": "Enter a valid email address.",
+            "percent": "The discount must be a whole number from 1 to 90.",
+            "days": "Enter a number of days from 1 to 3650.",
+            "save": "Unable to make the code."
+          }
+        }
+      }
     }
   },
   "chat": {
@@ -2998,5 +3129,7 @@
       },
       "ordersLogin": "Please log in to see your orders and their status."
     }
-  }
+  },
+  "thankYouNote_one": "Order today and get a <strong>{{percent}}% discount code</strong> for your next order, valid for {{count}} day.",
+  "thankYouNote_other": "Order today and get a <strong>{{percent}}% discount code</strong> for your next order, valid for {{count}} days."
 }

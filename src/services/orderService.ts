@@ -48,6 +48,8 @@ type OrderApiResponse = {
   currency?: string;
   giftCardDiscount?: number;
   appliedGiftCardCode?: string;
+  couponDiscount?: number;
+  appliedCouponCode?: string;
   totalItems: number;
   refundStatus?: string;
   shippingCarrier?: string | null;
@@ -418,6 +420,10 @@ function normalizeOrder(order: OrderApiResponse): Order {
       typeof order.giftCardDiscount === "number" ? order.giftCardDiscount : undefined,
     appliedGiftCardCode:
       typeof order.appliedGiftCardCode === "string" ? order.appliedGiftCardCode : undefined,
+    couponDiscount:
+      typeof order.couponDiscount === "number" && order.couponDiscount > 0 ? order.couponDiscount : undefined,
+    appliedCouponCode:
+      typeof order.appliedCouponCode === "string" ? order.appliedCouponCode : undefined,
     totalItems: order.totalItems,
     sessionId:
       typeof order.sessionId === "string" ? order.sessionId : undefined,

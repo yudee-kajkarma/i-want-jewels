@@ -16,6 +16,8 @@ export type ClarityEvent =
   | "checkout_started"
   | "address_saved"
   | "gift_card_applied"
+  | "discount_code_applied"
+  | "discount_code_failed"
   | "gift_card_failed"
   | "gift_card_removed"
   | "order_created"

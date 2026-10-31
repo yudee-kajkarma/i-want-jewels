@@ -74,7 +74,8 @@ export default function AdminProductFormPage({ mode }: AdminProductFormPageProps
     async function loadEditingProduct(productId: string) {
       setIsLoading(true)
       try {
-        const product = await getProductById(productId)
+        // The stored prices, never a sale price: this form saves them back.
+        const product = await getProductById(productId, undefined, { storedPrices: true })
         if (!isMounted) return
         const editableForm = buildForm(product)
         setForm(editableForm)

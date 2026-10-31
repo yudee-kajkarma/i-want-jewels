@@ -503,7 +503,8 @@ export default function HomeBody() {
           <h2 className="text-[14px] font-medium uppercase tracking-[0.22em] text-zinc-600 sm:text-xl">
             {t("home.shopByCollection")}
           </h2>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
+          {/* Every collection: one row to swipe on phones, wrapping on larger screens. */}
+          <div className="-mx-6 mt-5 flex items-center gap-3 overflow-x-auto px-6 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
             {collectionGroups.map(({ label }) => {
               const isActive = activeCollection === label;
 
@@ -511,8 +512,12 @@ export default function HomeBody() {
                 <button
                   key={label}
                   type="button"
-                  onClick={() => setActiveCollection(label)}
-                  className={`px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] transition sm:px-6 sm:py-3 sm:text-[13px] ${
+                  aria-pressed={isActive}
+                  onClick={(event) => {
+                    setActiveCollection(label);
+                    event.currentTarget.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+                  }}
+                  className={`shrink-0 whitespace-nowrap px-5 py-2.5 text-[12px] font-medium uppercase tracking-[0.18em] transition sm:px-6 sm:py-3 sm:text-[13px] ${
                     isActive
                       ? "bg-pink-500 text-white"
                       : "border border-zinc-800 bg-white text-zinc-800 hover:bg-zinc-50"

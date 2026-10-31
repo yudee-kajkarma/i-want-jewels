@@ -74,7 +74,8 @@
       "graduationGifts": "Cadeaux de remise de diplôme",
       "birthdayGifts": "Cadeaux d'anniversaire",
       "christmasGifts": "Cadeaux de Noël"
-    }
+    },
+    "discounts": "Remises"
   },
   "footer": {
     "information": "Informations",
@@ -127,7 +128,8 @@
     "save": "Enregistrer",
     "edit": "Modifier",
     "delete": "Supprimer",
-    "submit": "Envoyer"
+    "submit": "Envoyer",
+    "wasPrice": "Avant"
   },
   "hero": {
     "heading": "Bijoux en Diamants de Laboratoire pour le Quotidien",
@@ -414,7 +416,14 @@
     "addressIncomplete": "Veuillez remplir tous les champs d'adresse avant d'enregistrer.",
     "postalCodeInvalid": "Veuillez saisir un code postal valide.",
     "addressSaveError": "Impossible d'enregistrer cette adresse pour le moment. Veuillez réessayer.",
-    "syncError": "Le statut de la commande a été mis à jour, mais le panier doit être actualisé à nouveau."
+    "syncError": "Le statut de la commande a été mis à jour, mais le panier doit être actualisé à nouveau.",
+    "discountCode": "Code de réduction",
+    "enterDiscountCode": "Entrez un code de réduction",
+    "discountCodeApplied": "{{percent}} % de réduction sur vos articles.",
+    "discountCodeCannotApply": "Ce code ne peut pas être utilisé.",
+    "discountCodeValidateError": "Nous n’avons pas pu vérifier ce code. Veuillez réessayer.",
+    "discountCodeNeedsEmail": "Saisissez d’abord votre adresse e-mail : le code fonctionne avec l’e-mail auquel il a été envoyé.",
+    "discountCodeLine": "Code de réduction ({{percent}} %)"
   },
   "auth": {
     "loginTitle": "Connexion",
@@ -611,7 +620,8 @@
       "daysLeft_one": "Il reste {{count}} jour pour demander un retour.",
       "daysLeft_other": "Il reste {{count}} jours pour demander un retour.",
       "daysLeft_many": "Il reste {{count}} jours pour demander un retour.",
-      "windowClosed": "Le délai de retour pour cette commande est écoulé."
+      "windowClosed": "Le délai de retour pour cette commande est écoulé.",
+      "discountCodeLabel": "Code de réduction :"
     },
     "paymentHistory": {
       "breadcrumb": "Paiements",
@@ -1675,7 +1685,8 @@
         "returnApproved": "Retour approuvé et remboursement initié",
         "returnRejected": "Retour refusé",
         "markedReturned": "Commande marquée comme RETOURNÉE"
-      }
+      },
+      "discountCode": "Code de réduction"
     },
     "cart": {
       "breadcrumb": "Panier admin",
@@ -2671,6 +2682,126 @@
         "next": "Suivant",
         "page": "Page {{current}} sur {{total}}"
       }
+    },
+    "discounts": {
+      "breadcrumb": "Admin",
+      "title": "Remises",
+      "intro": "Des prix « avant » barrés par tranche de prix (les clients paient toujours notre prix normal), et le code de remerciement que chaque client reçoit après une commande.",
+      "loading": "Chargement des remises…",
+      "errorLoad": "Impossible de charger les remises pour le moment.",
+      "retry": "Réessayer",
+      "lastUpdated": "Dernière modification le {{date}} par {{who}}",
+      "ranges": {
+        "title": "Remises par tranche de prix",
+        "hint": "Chaque produit dont le prix se situe dans une tranche affiche un prix « avant » barré avec un badge de réduction, comme chez Uniglo : le prix « avant » est calculé pour que le pourcentage retombe exactement sur notre prix. Les clients paient toujours notre prix normal ; il ne change jamais. Les cartes cadeaux n’en ont jamais.",
+        "none": "Aucune remise pour le moment. Ajoutez une tranche, par exemple de 400 € à 1 000 € avec 10 % de réduction.",
+        "range": "Tranche {{n}}",
+        "from": "De (€)",
+        "to": "À (€)",
+        "percent": "% de réduction",
+        "starts": "Début (facultatif)",
+        "ends": "Fin (facultatif)",
+        "active": "Active",
+        "remove": "Supprimer la tranche {{n}}",
+        "unsaved": "Non enregistrée",
+        "states": {
+          "active": "Affichée",
+          "scheduled": "Programmée",
+          "ended": "Terminée",
+          "off": "Désactivée"
+        },
+        "example": "Produits de {{from}} € à {{to}} € : {{from}} € affiché avec {{was}} € barré, -{{percent}} %",
+        "add": "Ajouter une tranche",
+        "save": "Enregistrer les remises",
+        "saved": "Remises enregistrées",
+        "note": "Visible en boutique en moins d’une minute. Les prix facturés ne changent pas.",
+        "errors": {
+          "prices": "Tranche {{n}} : saisissez les deux prix.",
+          "order": "Tranche {{n}} : « À » doit être au moins égal à « De ».",
+          "percent": "Tranche {{n}} : la réduction doit être un nombre entier de 1 à 90.",
+          "dates": "Tranche {{n}} : la date de fin doit être après le début.",
+          "overlap": "{{a}} et {{b}} se chevauchent : un prix ne peut être que dans une seule tranche.",
+          "save": "Impossible d’enregistrer les remises."
+        },
+        "percentOff": "-{{percent}} %",
+        "period": {
+          "always": "Toujours",
+          "between": "{{from}} – {{to}}",
+          "from": "À partir du {{from}}",
+          "until": "Jusqu’au {{to}}"
+        }
+      },
+      "thankYou": {
+        "title": "Code de remerciement",
+        "hint": "Après chaque commande payée, le client reçoit par e-mail un code personnel pour sa prochaine commande. Il fonctionne une fois, uniquement avec son adresse e-mail, jusqu’à son expiration.",
+        "switch": "Envoyer un code de remerciement après chaque commande",
+        "on": "Activé",
+        "off": "Désactivé",
+        "percent": "% de réduction",
+        "validDays": "Valable (jours)",
+        "rules": "Une commande payée avec un code n’en rapporte pas un nouveau : un client ne garde pas une réduction sur chaque commande.",
+        "save": "Enregistrer",
+        "saved": "Réglages du code de remerciement enregistrés",
+        "errors": {
+          "percent": "La réduction doit être un nombre entier de 1 à 90.",
+          "days": "Saisissez un nombre de jours de 1 à 3650.",
+          "save": "Impossible d’enregistrer les réglages."
+        }
+      },
+      "codes": {
+        "title": "Codes de réduction",
+        "hint": "Tous les codes envoyés jusqu’ici : codes de remerciement et codes créés ici pour un client.",
+        "search": "Rechercher des codes",
+        "searchPlaceholder": "Rechercher par code, e-mail ou numéro de commande",
+        "filterLabel": "Afficher",
+        "filters": {
+          "all": "Tous",
+          "active": "Actifs",
+          "used": "Utilisés",
+          "expired": "Expirés",
+          "revoked": "Révoqués"
+        },
+        "loading": "Chargement des codes…",
+        "errorLoad": "Impossible de charger les codes pour le moment.",
+        "none": "Aucun code pour le moment. Ils apparaissent ici dès que le code de remerciement est activé et que des commandes sont payées.",
+        "noneFound": "Aucun code ne correspond.",
+        "percentOff": "{{percent}} % de réduction",
+        "earned": "Obtenu avec la commande {{order}} le {{date}}",
+        "made": "Créé par la boutique le {{date}}",
+        "usedOn": "Utilisé sur la commande {{order}}, {{date}}",
+        "expires": "Expire le {{date}}",
+        "resend": "Renvoyer",
+        "resent": "Renvoyé à {{email}}",
+        "emailFailed": "L’e-mail n’a pas pu être envoyé. Vérifiez les réglages e-mail de la boutique.",
+        "errorResend": "Impossible d’envoyer le code.",
+        "revoke": "Révoquer",
+        "revokeConfirm": "Désactiver ce code ?",
+        "revokeYes": "Révoquer",
+        "revoked": "{{code}} ne fonctionne plus",
+        "errorRevoke": "Impossible de révoquer le code.",
+        "cancel": "Annuler",
+        "page": "Page {{page}} sur {{pages}} · {{total}} codes",
+        "previous": "Page précédente",
+        "next": "Page suivante",
+        "make": {
+          "open": "Créer un code",
+          "title": "Créer un code pour un client",
+          "email": "E-mail du client",
+          "percent": "% de réduction",
+          "validDays": "Valable (jours)",
+          "note": "Note (facultatif)",
+          "submit": "Créer et envoyer",
+          "cancel": "Annuler",
+          "sent": "{{code}} envoyé à {{email}}",
+          "madeNotSent": "{{code}} a été créé, mais l’e-mail n’a pas pu être envoyé.",
+          "errors": {
+            "email": "Saisissez une adresse e-mail valide.",
+            "percent": "La réduction doit être un nombre entier de 1 à 90.",
+            "days": "Saisissez un nombre de jours de 1 à 3650.",
+            "save": "Impossible de créer le code."
+          }
+        }
+      }
     }
   },
   "chat": {
@@ -3029,5 +3160,7 @@
       },
       "ordersLogin": "Veuillez vous connecter pour voir vos commandes et leur statut."
     }
-  }
+  },
+  "thankYouNote_one": "Commandez aujourd’hui et recevez un <strong>code de réduction de {{percent}} %</strong> pour votre prochaine commande, valable {{count}} jour.",
+  "thankYouNote_other": "Commandez aujourd’hui et recevez un <strong>code de réduction de {{percent}} %</strong> pour votre prochaine commande, valable {{count}} jours."
 }

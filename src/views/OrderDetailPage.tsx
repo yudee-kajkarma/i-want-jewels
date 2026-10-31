@@ -441,12 +441,21 @@ export default function OrderDetailPage() {
                     <p>{t('account.orderDetails.method')} <span className="font-semibold text-[#17110d]">{order.paymentMethod}</span></p>
                     <p>{t('account.orderDetails.status')} <span className="font-semibold text-[#17110d]">{order.paymentStatus}</span></p>
                     <p>{t('account.orderDetails.totalAmount')} <span className="font-semibold text-[#17110d]">{formatPrice(order.totalAmount, orderCurrency)}</span></p>
+                    {order.couponDiscount ? (
+                      <p>
+                        {t('account.orderDetails.discountCodeLabel')}{' '}
+                        <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.couponDiscount, orderCurrency)}</span>
+                        {order.appliedCouponCode ? <span className="ml-2 font-mono text-[#17110d]">{order.appliedCouponCode}</span> : null}
+                      </p>
+                    ) : null}
                     {order.giftCardDiscount && order.giftCardDiscount > 0 ? (
                       <>
                         <p>{t('account.orderDetails.giftCardLabel')} <span className="font-semibold text-[#1f7a4d]">-{formatPrice(order.giftCardDiscount, orderCurrency)}</span></p>
                         {order.appliedGiftCardCode ? <p>{t('account.orderDetails.code')} <span className="font-mono font-semibold text-[#17110d]">{order.appliedGiftCardCode}</span></p> : null}
-                        <p>{t('account.orderDetails.paid')} <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span></p>
                       </>
+                    ) : null}
+                    {order.couponDiscount || (order.giftCardDiscount && order.giftCardDiscount > 0) ? (
+                      <p>{t('account.orderDetails.paid')} <span className="font-semibold text-[#17110d]">{formatPrice(order.payableAmount ?? order.totalAmount, orderCurrency)}</span></p>
                     ) : null}
                   </div>
                 </div>

@@ -71,6 +71,9 @@ export type Order = {
   currency?: 'EUR' | 'USD' | 'GBP'
   giftCardDiscount?: number
   appliedGiftCardCode?: string
+  /** A personal discount code used on the order, and what it took off. */
+  couponDiscount?: number
+  appliedCouponCode?: string
   totalItems: number
   sessionId?: string
   shippingCarrier?: string | null
@@ -227,6 +230,8 @@ export type CreateOrderPayload = {
   successUrl?: string
   cancelUrl?: string
   giftCardCode?: string
+  /** A personal discount code (the thank-you code, or one from the shop). */
+  couponCode?: string
 } & Partial<GuestCheckoutDetails>
 
 export type CreateOrderResult = {

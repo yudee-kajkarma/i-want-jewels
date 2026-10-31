@@ -74,7 +74,8 @@
       "graduationGifts": "Geschenke zum Abschluss",
       "birthdayGifts": "Geburtstagsgeschenke",
       "christmasGifts": "Weihnachtsgeschenke"
-    }
+    },
+    "discounts": "Rabatte"
   },
   "footer": {
     "information": "Informationen",
@@ -126,7 +127,8 @@
     "save": "Speichern",
     "edit": "Bearbeiten",
     "delete": "Löschen",
-    "submit": "Absenden"
+    "submit": "Absenden",
+    "wasPrice": "Vorher"
   },
   "hero": {
     "heading": "Lab-Grown Diamantschmuck für jeden Tag",
@@ -409,7 +411,14 @@
     "addressIncomplete": "Bitte füllen Sie alle Adressfelder aus, bevor Sie speichern.",
     "postalCodeInvalid": "Bitte geben Sie eine gültige Postleitzahl ein.",
     "addressSaveError": "Diese Adresse kann derzeit nicht gespeichert werden. Bitte versuchen Sie es erneut.",
-    "syncError": "Der Bestellstatus wurde aktualisiert, aber der Warenkorb muss noch einmal aktualisiert werden."
+    "syncError": "Der Bestellstatus wurde aktualisiert, aber der Warenkorb muss noch einmal aktualisiert werden.",
+    "discountCode": "Rabattcode",
+    "enterDiscountCode": "Rabattcode eingeben",
+    "discountCodeApplied": "{{percent}} % Rabatt auf deine Artikel.",
+    "discountCodeCannotApply": "Dieser Code kann nicht verwendet werden.",
+    "discountCodeValidateError": "Wir konnten den Code nicht prüfen. Bitte versuche es erneut.",
+    "discountCodeNeedsEmail": "Gib zuerst deine E-Mail-Adresse ein: Der Code gilt für die E-Mail, an die er gesendet wurde.",
+    "discountCodeLine": "Rabattcode ({{percent}} %)"
   },
   "auth": {
     "loginTitle": "Anmelden",
@@ -603,7 +612,8 @@
       "noteFromUs": "Hinweis von uns:",
       "daysLeft_one": "Noch {{count}} Tag, um eine Rücksendung zu beantragen.",
       "daysLeft_other": "Noch {{count}} Tage, um eine Rücksendung zu beantragen.",
-      "windowClosed": "Die Rückgabefrist für diese Bestellung ist abgelaufen."
+      "windowClosed": "Die Rückgabefrist für diese Bestellung ist abgelaufen.",
+      "discountCodeLabel": "Rabattcode:"
     },
     "paymentHistory": {
       "breadcrumb": "Zahlungen",
@@ -1648,7 +1658,8 @@
         "returnApproved": "Rücksendung genehmigt und Rückerstattung eingeleitet",
         "returnRejected": "Rücksendung abgelehnt",
         "markedReturned": "Bestellung als ZURÜCKGEGEBEN markiert"
-      }
+      },
+      "discountCode": "Rabattcode"
     },
     "cart": {
       "breadcrumb": "Admin-Warenkorb",
@@ -2640,6 +2651,126 @@
         "next": "Weiter",
         "page": "Seite {{current}} von {{total}}"
       }
+    },
+    "discounts": {
+      "breadcrumb": "Admin",
+      "title": "Rabatte",
+      "intro": "Durchgestrichene „Vorher“-Preise nach Preisbereich (Kunden zahlen immer unseren normalen Preis) und der Dankeschön-Code, den jede Kundin und jeder Kunde nach einer Bestellung erhält.",
+      "loading": "Rabatte werden geladen…",
+      "errorLoad": "Die Rabatte können gerade nicht geladen werden.",
+      "retry": "Erneut versuchen",
+      "lastUpdated": "Zuletzt geändert {{date}} von {{who}}",
+      "ranges": {
+        "title": "Rabatte nach Preisbereich",
+        "hint": "Jedes Produkt, dessen Preis in einem Bereich liegt, zeigt einen durchgestrichenen „Vorher“-Preis mit Rabatt-Badge, wie bei Uniglo: Der „Vorher“-Preis ist so gewählt, dass der Prozentsatz davon genau unseren Preis ergibt. Kunden zahlen immer unseren normalen Preis; er ändert sich nie. Geschenkkarten erhalten keinen.",
+        "none": "Noch keine Rabatte. Füge einen Bereich hinzu, zum Beispiel 400 € bis 1.000 € mit 10 % Rabatt.",
+        "range": "Bereich {{n}}",
+        "from": "Von (€)",
+        "to": "Bis (€)",
+        "percent": "% Rabatt",
+        "starts": "Beginn (optional)",
+        "ends": "Ende (optional)",
+        "active": "Aktiv",
+        "remove": "Bereich {{n}} entfernen",
+        "unsaved": "Nicht gespeichert",
+        "states": {
+          "active": "Wird angezeigt",
+          "scheduled": "Geplant",
+          "ended": "Beendet",
+          "off": "Aus"
+        },
+        "example": "Produkte von {{from}} € bis {{to}} €: {{from}} € angezeigt mit {{was}} € durchgestrichen, {{percent}} % RABATT",
+        "add": "Bereich hinzufügen",
+        "save": "Rabatte speichern",
+        "saved": "Rabatte gespeichert",
+        "note": "Innerhalb einer Minute im Shop sichtbar. Die berechneten Preise ändern sich nicht.",
+        "errors": {
+          "prices": "Bereich {{n}}: Gib beide Preise ein.",
+          "order": "Bereich {{n}}: „Bis“ muss mindestens „Von“ sein.",
+          "percent": "Bereich {{n}}: Der Rabatt muss eine ganze Zahl von 1 bis 90 sein.",
+          "dates": "Bereich {{n}}: Das Enddatum muss nach dem Beginn liegen.",
+          "overlap": "{{a}} und {{b}} überschneiden sich: Ein Preis kann nur in einem Bereich liegen.",
+          "save": "Die Rabatte konnten nicht gespeichert werden."
+        },
+        "percentOff": "{{percent}} % RABATT",
+        "period": {
+          "always": "Immer",
+          "between": "{{from}} – {{to}}",
+          "from": "Ab {{from}}",
+          "until": "Bis {{to}}"
+        }
+      },
+      "thankYou": {
+        "title": "Dankeschön-Code",
+        "hint": "Nach jeder bezahlten Bestellung erhält die Kundin oder der Kunde per E-Mail einen persönlichen Code für die nächste Bestellung. Er gilt einmal, nur mit dieser E-Mail-Adresse, bis er abläuft.",
+        "switch": "Nach jeder Bestellung einen Dankeschön-Code senden",
+        "on": "An",
+        "off": "Aus",
+        "percent": "% Rabatt",
+        "validDays": "Gültig für (Tage)",
+        "rules": "Eine mit einem Code bezahlte Bestellung bringt keinen neuen Code, so gibt es nicht bei jeder Bestellung Rabatt.",
+        "save": "Speichern",
+        "saved": "Einstellungen für den Dankeschön-Code gespeichert",
+        "errors": {
+          "percent": "Der Rabatt muss eine ganze Zahl von 1 bis 90 sein.",
+          "days": "Gib eine Anzahl Tage von 1 bis 3650 ein.",
+          "save": "Die Einstellungen konnten nicht gespeichert werden."
+        }
+      },
+      "codes": {
+        "title": "Rabattcodes",
+        "hint": "Alle bisher gesendeten Codes: Dankeschön-Codes und hier für Kunden erstellte Codes.",
+        "search": "Codes durchsuchen",
+        "searchPlaceholder": "Nach Code, E-Mail oder Bestellnummer suchen",
+        "filterLabel": "Anzeigen",
+        "filters": {
+          "all": "Alle",
+          "active": "Aktiv",
+          "used": "Verwendet",
+          "expired": "Abgelaufen",
+          "revoked": "Widerrufen"
+        },
+        "loading": "Codes werden geladen…",
+        "errorLoad": "Die Rabattcodes können gerade nicht geladen werden.",
+        "none": "Noch keine Codes. Sie erscheinen hier, sobald der Dankeschön-Code aktiv ist und Bestellungen bezahlt werden.",
+        "noneFound": "Keine passenden Codes.",
+        "percentOff": "{{percent}} % Rabatt",
+        "earned": "Erhalten mit Bestellung {{order}} am {{date}}",
+        "made": "Vom Shop erstellt am {{date}}",
+        "usedOn": "Verwendet bei Bestellung {{order}}, {{date}}",
+        "expires": "Läuft ab am {{date}}",
+        "resend": "Erneut senden",
+        "resent": "Erneut gesendet an {{email}}",
+        "emailFailed": "Die E-Mail konnte nicht gesendet werden. Prüfe die E-Mail-Einstellungen des Shops.",
+        "errorResend": "Der Code konnte nicht gesendet werden.",
+        "revoke": "Widerrufen",
+        "revokeConfirm": "Diesen Code ungültig machen?",
+        "revokeYes": "Widerrufen",
+        "revoked": "{{code}} ist nicht mehr gültig",
+        "errorRevoke": "Der Code konnte nicht widerrufen werden.",
+        "cancel": "Abbrechen",
+        "page": "Seite {{page}} von {{pages}} · {{total}} Codes",
+        "previous": "Vorherige Seite",
+        "next": "Nächste Seite",
+        "make": {
+          "open": "Code erstellen",
+          "title": "Einen Code für eine Kundin oder einen Kunden erstellen",
+          "email": "E-Mail der Kundin / des Kunden",
+          "percent": "% Rabatt",
+          "validDays": "Gültig für (Tage)",
+          "note": "Notiz (optional)",
+          "submit": "Erstellen und senden",
+          "cancel": "Abbrechen",
+          "sent": "{{code}} an {{email}} gesendet",
+          "madeNotSent": "{{code}} wurde erstellt, aber die E-Mail konnte nicht gesendet werden.",
+          "errors": {
+            "email": "Gib eine gültige E-Mail-Adresse ein.",
+            "percent": "Der Rabatt muss eine ganze Zahl von 1 bis 90 sein.",
+            "days": "Gib eine Anzahl Tage von 1 bis 3650 ein.",
+            "save": "Der Code konnte nicht erstellt werden."
+          }
+        }
+      }
     }
   },
   "chat": {
@@ -2998,5 +3129,7 @@
       },
       "ordersLogin": "Bitte melde dich an, um deine Bestellungen und ihren Status zu sehen."
     }
-  }
+  },
+  "thankYouNote_one": "Bestelle heute und erhalte einen <strong>{{percent}} % Rabattcode</strong> für deine nächste Bestellung, gültig für {{count}} Tag.",
+  "thankYouNote_other": "Bestelle heute und erhalte einen <strong>{{percent}} % Rabattcode</strong> für deine nächste Bestellung, gültig für {{count}} Tage."
 }

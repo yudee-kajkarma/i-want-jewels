@@ -74,7 +74,8 @@
       "graduationGifts": "Regali di laurea",
       "birthdayGifts": "Regali di compleanno",
       "christmasGifts": "Regali di Natale"
-    }
+    },
+    "discounts": "Sconti"
   },
   "footer": {
     "information": "Informazioni",
@@ -127,7 +128,8 @@
     "save": "Salva",
     "edit": "Modifica",
     "delete": "Elimina",
-    "submit": "Invia"
+    "submit": "Invia",
+    "wasPrice": "Prima"
   },
   "hero": {
     "heading": "Gioielli in Diamanti da Laboratorio per Ogni Giorno",
@@ -414,7 +416,14 @@
     "addressIncomplete": "Compila tutti i campi dell'indirizzo prima di salvare.",
     "postalCodeInvalid": "Inserisci un codice postale valido.",
     "addressSaveError": "Impossibile salvare questo indirizzo in questo momento. Riprova.",
-    "syncError": "Lo stato dell'ordine è stato aggiornato, ma il carrello richiede un altro aggiornamento."
+    "syncError": "Lo stato dell'ordine è stato aggiornato, ma il carrello richiede un altro aggiornamento.",
+    "discountCode": "Codice sconto",
+    "enterDiscountCode": "Inserisci un codice sconto",
+    "discountCodeApplied": "{{percent}}% di sconto sui tuoi articoli.",
+    "discountCodeCannotApply": "Questo codice non può essere usato.",
+    "discountCodeValidateError": "Non siamo riusciti a verificare il codice. Riprova.",
+    "discountCodeNeedsEmail": "Inserisci prima il tuo indirizzo email: il codice funziona con l’email a cui è stato inviato.",
+    "discountCodeLine": "Codice sconto ({{percent}}%)"
   },
   "auth": {
     "loginTitle": "Accedi",
@@ -611,7 +620,8 @@
       "daysLeft_one": "Manca {{count}} giorno per richiedere un reso.",
       "daysLeft_other": "Mancano {{count}} giorni per richiedere un reso.",
       "daysLeft_many": "Mancano {{count}} giorni per richiedere un reso.",
-      "windowClosed": "Il periodo per il reso di questo ordine è scaduto."
+      "windowClosed": "Il periodo per il reso di questo ordine è scaduto.",
+      "discountCodeLabel": "Codice sconto:"
     },
     "paymentHistory": {
       "breadcrumb": "Pagamenti",
@@ -1675,7 +1685,8 @@
         "returnApproved": "Reso approvato e rimborso avviato",
         "returnRejected": "Reso rifiutato",
         "markedReturned": "Ordine contrassegnato come RESTITUITO"
-      }
+      },
+      "discountCode": "Codice sconto"
     },
     "cart": {
       "breadcrumb": "Carrello Admin",
@@ -2671,6 +2682,126 @@
         "next": "Successivo",
         "page": "Pagina {{current}} di {{total}}"
       }
+    },
+    "discounts": {
+      "breadcrumb": "Admin",
+      "title": "Sconti",
+      "intro": "Prezzi \"prima\" barrati per fascia di prezzo (i clienti pagano sempre il nostro prezzo normale), e il codice di ringraziamento che ogni cliente riceve dopo un ordine.",
+      "loading": "Caricamento degli sconti…",
+      "errorLoad": "Impossibile caricare gli sconti in questo momento.",
+      "retry": "Riprova",
+      "lastUpdated": "Ultima modifica {{date}} da {{who}}",
+      "ranges": {
+        "title": "Sconti per fascia di prezzo",
+        "hint": "Ogni prodotto il cui prezzo rientra in una fascia mostra un prezzo \"prima\" barrato con il badge di sconto, come Uniglo: il prezzo \"prima\" è calcolato in modo che la percentuale riporti esattamente al nostro prezzo. I clienti pagano sempre il nostro prezzo normale; non cambia mai. Le carte regalo non ne hanno mai.",
+        "none": "Ancora nessuno sconto. Aggiungi una fascia, per esempio da 400 € a 1.000 € con il 10% di sconto.",
+        "range": "Fascia {{n}}",
+        "from": "Da (€)",
+        "to": "A (€)",
+        "percent": "% di sconto",
+        "starts": "Inizio (facoltativo)",
+        "ends": "Fine (facoltativa)",
+        "active": "Attiva",
+        "remove": "Rimuovi la fascia {{n}}",
+        "unsaved": "Non salvata",
+        "states": {
+          "active": "Visibile",
+          "scheduled": "Programmata",
+          "ended": "Terminata",
+          "off": "Disattivata"
+        },
+        "example": "Prodotti da {{from}} € a {{to}} €: {{from}} € mostrato con {{was}} € barrato, -{{percent}}%",
+        "add": "Aggiungi una fascia",
+        "save": "Salva gli sconti",
+        "saved": "Sconti salvati",
+        "note": "Visibile nel negozio entro un minuto. I prezzi addebitati non cambiano.",
+        "errors": {
+          "prices": "Fascia {{n}}: inserisci entrambi i prezzi.",
+          "order": "Fascia {{n}}: \"A\" deve essere almeno \"Da\".",
+          "percent": "Fascia {{n}}: lo sconto deve essere un numero intero da 1 a 90.",
+          "dates": "Fascia {{n}}: la data di fine deve essere dopo l’inizio.",
+          "overlap": "{{a}} e {{b}} si sovrappongono: un prezzo può stare in una sola fascia.",
+          "save": "Impossibile salvare gli sconti."
+        },
+        "percentOff": "-{{percent}}%",
+        "period": {
+          "always": "Sempre",
+          "between": "{{from}} – {{to}}",
+          "from": "Dal {{from}}",
+          "until": "Fino al {{to}}"
+        }
+      },
+      "thankYou": {
+        "title": "Codice di ringraziamento",
+        "hint": "Dopo ogni ordine pagato, il cliente riceve via email un codice personale per il prossimo ordine. Funziona una volta, solo con il suo indirizzo email, fino alla scadenza.",
+        "switch": "Invia un codice di ringraziamento dopo ogni ordine",
+        "on": "Attivo",
+        "off": "Disattivato",
+        "percent": "% di sconto",
+        "validDays": "Valido per (giorni)",
+        "rules": "Un ordine pagato con un codice non ne fa guadagnare un altro, così un cliente non mantiene uno sconto su ogni ordine.",
+        "save": "Salva",
+        "saved": "Impostazioni del codice di ringraziamento salvate",
+        "errors": {
+          "percent": "Lo sconto deve essere un numero intero da 1 a 90.",
+          "days": "Inserisci un numero di giorni da 1 a 3650.",
+          "save": "Impossibile salvare le impostazioni."
+        }
+      },
+      "codes": {
+        "title": "Codici sconto",
+        "hint": "Tutti i codici inviati finora: codici di ringraziamento e codici creati qui per un cliente.",
+        "search": "Cerca codici",
+        "searchPlaceholder": "Cerca per codice, email o numero d’ordine",
+        "filterLabel": "Mostra",
+        "filters": {
+          "all": "Tutti",
+          "active": "Attivi",
+          "used": "Usati",
+          "expired": "Scaduti",
+          "revoked": "Revocati"
+        },
+        "loading": "Caricamento dei codici…",
+        "errorLoad": "Impossibile caricare i codici sconto in questo momento.",
+        "none": "Ancora nessun codice. Appaiono qui quando il codice di ringraziamento è attivo e gli ordini vengono pagati.",
+        "noneFound": "Nessun codice corrispondente.",
+        "percentOff": "{{percent}}% di sconto",
+        "earned": "Ottenuto con l’ordine {{order}} il {{date}}",
+        "made": "Creato dal negozio il {{date}}",
+        "usedOn": "Usato sull’ordine {{order}}, {{date}}",
+        "expires": "Scade il {{date}}",
+        "resend": "Invia di nuovo",
+        "resent": "Inviato di nuovo a {{email}}",
+        "emailFailed": "Non è stato possibile inviare l’email. Controlla le impostazioni email del negozio.",
+        "errorResend": "Impossibile inviare il codice.",
+        "revoke": "Revoca",
+        "revokeConfirm": "Disattivare questo codice?",
+        "revokeYes": "Revoca",
+        "revoked": "{{code}} non funziona più",
+        "errorRevoke": "Impossibile revocare il codice.",
+        "cancel": "Annulla",
+        "page": "Pagina {{page}} di {{pages}} · {{total}} codici",
+        "previous": "Pagina precedente",
+        "next": "Pagina successiva",
+        "make": {
+          "open": "Crea un codice",
+          "title": "Crea un codice per un cliente",
+          "email": "Email del cliente",
+          "percent": "% di sconto",
+          "validDays": "Valido per (giorni)",
+          "note": "Nota (facoltativa)",
+          "submit": "Crea e invia",
+          "cancel": "Annulla",
+          "sent": "{{code}} inviato a {{email}}",
+          "madeNotSent": "{{code}} è stato creato, ma non è stato possibile inviare l’email.",
+          "errors": {
+            "email": "Inserisci un indirizzo email valido.",
+            "percent": "Lo sconto deve essere un numero intero da 1 a 90.",
+            "days": "Inserisci un numero di giorni da 1 a 3650.",
+            "save": "Impossibile creare il codice."
+          }
+        }
+      }
     }
   },
   "chat": {
@@ -3029,5 +3160,7 @@
       },
       "ordersLogin": "Accedi per vedere i tuoi ordini e il loro stato."
     }
-  }
+  },
+  "thankYouNote_one": "Ordina oggi e ricevi un <strong>codice sconto del {{percent}}%</strong> per il tuo prossimo ordine, valido {{count}} giorno.",
+  "thankYouNote_other": "Ordina oggi e ricevi un <strong>codice sconto del {{percent}}%</strong> per il tuo prossimo ordine, valido {{count}} giorni."
 }

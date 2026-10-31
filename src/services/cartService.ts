@@ -169,6 +169,9 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
     toPrice(0)
   const isGiftCard = item.isGiftCard === true
   const giftCardRaw = getObjectValue(item, 'giftCard')
+  // A price-range discount (display only): the struck "was" price beside the unit price.
+  const compareAtPrice = getPriceValue(item, 'compareAtUnitPrice')
+  const discountPercent = getNumberValue(item, 'discountPercent')
 
   const sizeRaw = (item as Record<string, unknown>).size
   const size = typeof sizeRaw === 'number' ? sizeRaw : undefined
@@ -182,6 +185,8 @@ function normalizeCartItem(item: CartItemApiResponse): CartItem {
     variantTitle,
     thumbnail,
     price,
+    ...(compareAtPrice ? { compareAtPrice } : {}),
+    ...(discountPercent > 0 ? { discountPercent } : {}),
     quantity,
     isGiftCard,
     ...(giftCardRaw

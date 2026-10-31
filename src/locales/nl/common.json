@@ -74,7 +74,8 @@
       "graduationGifts": "Afstudeercadeaus",
       "birthdayGifts": "Verjaardagscadeaus",
       "christmasGifts": "Kerstcadeaus"
-    }
+    },
+    "discounts": "Kortingen"
   },
   "footer": {
     "information": "Informatie",
@@ -126,7 +127,8 @@
     "save": "Opslaan",
     "edit": "Bewerken",
     "delete": "Verwijderen",
-    "submit": "Indienen"
+    "submit": "Indienen",
+    "wasPrice": "Was"
   },
   "hero": {
     "heading": "Lab-Grown Diamanten Sieraden voor Elke Dag",
@@ -409,7 +411,14 @@
     "addressIncomplete": "Vul alle adresvelden in voordat u opslaat.",
     "postalCodeInvalid": "Voer een geldige postcode in.",
     "addressSaveError": "Kan dit adres momenteel niet opslaan. Probeer het opnieuw.",
-    "syncError": "De bestelstatus is bijgewerkt, maar de winkelwagen moet nog een keer worden vernieuwd."
+    "syncError": "De bestelstatus is bijgewerkt, maar de winkelwagen moet nog een keer worden vernieuwd.",
+    "discountCode": "Kortingscode",
+    "enterDiscountCode": "Kortingscode invoeren",
+    "discountCodeApplied": "{{percent}}% korting op je artikelen.",
+    "discountCodeCannotApply": "Deze code kan niet worden gebruikt.",
+    "discountCodeValidateError": "We konden deze code niet controleren. Probeer het opnieuw.",
+    "discountCodeNeedsEmail": "Vul eerst je e-mailadres in: de code werkt met het e-mailadres waarnaar hij is gestuurd.",
+    "discountCodeLine": "Kortingscode ({{percent}}%)"
   },
   "auth": {
     "loginTitle": "Inloggen",
@@ -603,7 +612,8 @@
       "noteFromUs": "Bericht van ons:",
       "daysLeft_one": "Nog {{count}} dag om een retour aan te vragen.",
       "daysLeft_other": "Nog {{count}} dagen om een retour aan te vragen.",
-      "windowClosed": "De retourtermijn voor deze bestelling is verstreken."
+      "windowClosed": "De retourtermijn voor deze bestelling is verstreken.",
+      "discountCodeLabel": "Kortingscode:"
     },
     "paymentHistory": {
       "breadcrumb": "Betalingen",
@@ -1648,7 +1658,8 @@
         "returnApproved": "Retourzending goedgekeurd en terugbetaling gestart",
         "returnRejected": "Retour afgewezen",
         "markedReturned": "Bestelling gemarkeerd als RETOUR"
-      }
+      },
+      "discountCode": "Kortingscode"
     },
     "cart": {
       "breadcrumb": "Beheerderswagentje",
@@ -2640,6 +2651,126 @@
         "next": "Volgende",
         "page": "Pagina {{current}} van {{total}}"
       }
+    },
+    "discounts": {
+      "breadcrumb": "Admin",
+      "title": "Kortingen",
+      "intro": "Doorgestreepte \"was\"-prijzen per prijsklasse (klanten betalen altijd onze normale prijs), en de bedankcode die elke klant na een bestelling krijgt.",
+      "loading": "Kortingen laden…",
+      "errorLoad": "De kortingen kunnen nu niet worden geladen.",
+      "retry": "Opnieuw proberen",
+      "lastUpdated": "Laatst gewijzigd {{date}} door {{who}}",
+      "ranges": {
+        "title": "Kortingen per prijsklasse",
+        "hint": "Elk product waarvan de prijs in een klasse valt, toont een doorgestreepte \"was\"-prijs met een kortingslabel, zoals bij Uniglo: de \"was\"-prijs is zo gekozen dat het percentage ervan precies onze prijs oplevert. Klanten betalen altijd onze normale prijs; die verandert nooit. Cadeaubonnen krijgen er geen.",
+        "none": "Nog geen kortingen. Voeg een klasse toe, bijvoorbeeld €400 tot €1.000 met 10% korting.",
+        "range": "Klasse {{n}}",
+        "from": "Van (€)",
+        "to": "Tot (€)",
+        "percent": "% korting",
+        "starts": "Begint (optioneel)",
+        "ends": "Eindigt (optioneel)",
+        "active": "Aan",
+        "remove": "Klasse {{n}} verwijderen",
+        "unsaved": "Niet opgeslagen",
+        "states": {
+          "active": "Wordt getoond",
+          "scheduled": "Gepland",
+          "ended": "Afgelopen",
+          "off": "Uit"
+        },
+        "example": "Producten van €{{from}} tot €{{to}}: €{{from}} getoond met €{{was}} doorgestreept, {{percent}}% KORTING",
+        "add": "Klasse toevoegen",
+        "save": "Kortingen opslaan",
+        "saved": "Kortingen opgeslagen",
+        "note": "Binnen een minuut zichtbaar in de winkel. De betaalde prijzen veranderen niet.",
+        "errors": {
+          "prices": "Klasse {{n}}: vul beide prijzen in.",
+          "order": "Klasse {{n}}: \"Tot\" moet minstens \"Van\" zijn.",
+          "percent": "Klasse {{n}}: de korting moet een heel getal van 1 tot 90 zijn.",
+          "dates": "Klasse {{n}}: de einddatum moet na de begindatum liggen.",
+          "overlap": "{{a}} en {{b}} overlappen: een prijs kan maar in één klasse vallen.",
+          "save": "De kortingen konden niet worden opgeslagen."
+        },
+        "percentOff": "{{percent}}% KORTING",
+        "period": {
+          "always": "Altijd",
+          "between": "{{from}} – {{to}}",
+          "from": "Vanaf {{from}}",
+          "until": "Tot {{to}}"
+        }
+      },
+      "thankYou": {
+        "title": "Bedankcode",
+        "hint": "Na elke betaalde bestelling krijgt de klant per e-mail een persoonlijke code voor de volgende bestelling. Die werkt één keer, alleen met hun e-mailadres, tot hij verloopt.",
+        "switch": "Na elke bestelling een bedankcode sturen",
+        "on": "Aan",
+        "off": "Uit",
+        "percent": "% korting",
+        "validDays": "Geldig voor (dagen)",
+        "rules": "Een bestelling die met een code is betaald, levert geen nieuwe op, zodat een klant niet bij elke bestelling korting houdt.",
+        "save": "Opslaan",
+        "saved": "Instellingen voor de bedankcode opgeslagen",
+        "errors": {
+          "percent": "De korting moet een heel getal van 1 tot 90 zijn.",
+          "days": "Vul een aantal dagen van 1 tot 3650 in.",
+          "save": "De instellingen konden niet worden opgeslagen."
+        }
+      },
+      "codes": {
+        "title": "Kortingscodes",
+        "hint": "Alle codes die tot nu toe zijn verstuurd: bedankcodes en codes die hier voor een klant zijn gemaakt.",
+        "search": "Codes zoeken",
+        "searchPlaceholder": "Zoek op code, e-mail of bestelnummer",
+        "filterLabel": "Tonen",
+        "filters": {
+          "all": "Alle",
+          "active": "Actief",
+          "used": "Gebruikt",
+          "expired": "Verlopen",
+          "revoked": "Ingetrokken"
+        },
+        "loading": "Codes laden…",
+        "errorLoad": "De kortingscodes kunnen nu niet worden geladen.",
+        "none": "Nog geen codes. Ze verschijnen hier zodra de bedankcode aan staat en bestellingen worden betaald.",
+        "noneFound": "Geen codes gevonden.",
+        "percentOff": "{{percent}}% korting",
+        "earned": "Verdiend met bestelling {{order}} op {{date}}",
+        "made": "Gemaakt door de winkel op {{date}}",
+        "usedOn": "Gebruikt bij bestelling {{order}}, {{date}}",
+        "expires": "Verloopt op {{date}}",
+        "resend": "Opnieuw sturen",
+        "resent": "Opnieuw gestuurd naar {{email}}",
+        "emailFailed": "De e-mail kon niet worden verstuurd. Controleer de e-mailinstellingen van de winkel.",
+        "errorResend": "De code kon niet worden verstuurd.",
+        "revoke": "Intrekken",
+        "revokeConfirm": "Deze code laten stoppen?",
+        "revokeYes": "Intrekken",
+        "revoked": "{{code}} werkt niet meer",
+        "errorRevoke": "De code kon niet worden ingetrokken.",
+        "cancel": "Annuleren",
+        "page": "Pagina {{page}} van {{pages}} · {{total}} codes",
+        "previous": "Vorige pagina",
+        "next": "Volgende pagina",
+        "make": {
+          "open": "Code maken",
+          "title": "Een code maken voor een klant",
+          "email": "E-mail van de klant",
+          "percent": "% korting",
+          "validDays": "Geldig voor (dagen)",
+          "note": "Notitie (optioneel)",
+          "submit": "Maken en mailen",
+          "cancel": "Annuleren",
+          "sent": "{{code}} gestuurd naar {{email}}",
+          "madeNotSent": "{{code}} is gemaakt, maar de e-mail kon niet worden verstuurd.",
+          "errors": {
+            "email": "Vul een geldig e-mailadres in.",
+            "percent": "De korting moet een heel getal van 1 tot 90 zijn.",
+            "days": "Vul een aantal dagen van 1 tot 3650 in.",
+            "save": "De code kon niet worden gemaakt."
+          }
+        }
+      }
     }
   },
   "chat": {
@@ -2998,5 +3129,7 @@
       },
       "ordersLogin": "Log in om je bestellingen en hun status te bekijken."
     }
-  }
+  },
+  "thankYouNote_one": "Bestel vandaag en ontvang een <strong>kortingscode van {{percent}}%</strong> voor je volgende bestelling, {{count}} dag geldig.",
+  "thankYouNote_other": "Bestel vandaag en ontvang een <strong>kortingscode van {{percent}}%</strong> voor je volgende bestelling, {{count}} dagen geldig."
 }

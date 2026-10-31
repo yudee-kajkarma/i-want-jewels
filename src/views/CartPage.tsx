@@ -5,6 +5,7 @@ import { getGuestCartId } from '../utils/guestCart'
 import { useClarityView } from '../lib/useClarityView'
 import { Link, useNavigate } from '@/lib/router'
 import { Trash2 } from 'lucide-react'
+import ThankYouNote from '../components/shared/ThankYouNote'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import { useCurrency } from '../context/CurrencyContext'
@@ -106,7 +107,18 @@ export default function CartPage() {
                           {` · ${t('cart.giftOnlineOnly')}`}
                         </p>
                       ) : null}
-                      <p className="mt-3 text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</p>
+                      <p className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                        <span className="text-lg font-bold text-[#17110d]">{formatPrice(getPriceAmount(item.price, currency) * item.quantity, currency)}</span>
+                        {item.compareAtPrice ? (
+                          <span className="text-sm text-zinc-400 line-through">
+                            <span className="sr-only">{t('common.wasPrice')} </span>
+                            {formatPrice(getPriceAmount(item.compareAtPrice, currency) * item.quantity, currency)}
+                          </span>
+                        ) : null}
+                        {item.discountPercent ? (
+                          <span className="inline-flex rounded-full bg-[#f23ea9] px-2 py-1 text-[11px] font-bold leading-none text-white">-{item.discountPercent}%</span>
+                        ) : null}
+                      </p>
                     </div>
 
                     <div className="flex flex-col items-start gap-4 sm:items-end">
@@ -191,6 +203,7 @@ export default function CartPage() {
                 <span>{t('cart.total')}</span>
                 <span>{formatPrice(subtotal, currency)}</span>
               </div>
+              <ThankYouNote className="mt-5" />
               <button
                 type="button"
                 onClick={() => {

@@ -97,19 +97,20 @@ export default function ProductCard({
             .find((image) => image.src && image.src !== primaryImage)?.src ??
         null;
     const basePrice = selectedVariant?.price ?? item.minPrice;
-    const basePriceAmount = getPriceAmount(basePrice, currency);
-    const comparePriceAmount = Math.round(basePriceAmount / 0.8);
-    const hasDiscount = comparePriceAmount > basePriceAmount;
-    const discountPercent = hasDiscount
-        ? Math.round(
-              ((comparePriceAmount - basePriceAmount) / comparePriceAmount) *
-                  100,
-          )
-        : 0;
+    // In a discount range (Admin → Discounts): the struck "was" price and the percentage, beside our price.
+    const comparePrice = selectedVariant
+        ? selectedVariant.compareAtPrice
+        : item.minCompareAtPrice;
+    const hasDiscount =
+        !!comparePrice &&
+        getPriceAmount(comparePrice, currency) >
+            getPriceAmount(basePrice, currency);
+    const discountPercent =
+        (selectedVariant ? selectedVariant.discountPercent : item.discountPercent) ?? 0;
     const productDetailUrl = `/products/${item.slug || item.id}`;
-    const isNewArrival =
-        item.tags.some((tag) => tag.toLowerCase().includes("new")) ||
-        hasDiscount;
+    const isNewArrival = item.tags.some((tag) =>
+        tag.toLowerCase().includes("new"),
+    );
     const listSummary = buildListSummary(item);
 
     useEffect(() => {
@@ -459,16 +460,17 @@ export default function ProductCard({
                         <p className="text-[1.9rem] font-semibold leading-none tracking-[-0.04em]">
                             {formatPrice(basePrice, currency)}
                         </p>
-                        {/* {hasDiscount ? (
+                        {hasDiscount && comparePrice ? (
                             <p className="text-lg text-zinc-400 line-through">
-                                {formatPrice(comparePriceAmount, currency)}
+                                <span className="sr-only">{t("common.wasPrice")} </span>
+                                {formatPrice(comparePrice, currency)}
                             </p>
                         ) : null}
-                        {hasDiscount ? (
+                        {hasDiscount && discountPercent > 0 ? (
                             <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
                                 -{discountPercent}%
                             </span>
-                        ) : null} */}
+                        ) : null}
                     </div>
 
                     <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-500">
@@ -742,12 +744,17 @@ export default function ProductCard({
                     <p className="text-sm md:text-[1.2rem] font-semibold leading-none tracking-[-0.04em]">
                         {formatPrice(basePrice, currency)}
                     </p>
-                    {/* {hasDiscount ? <p className="text-sm text-zinc-400 line-through">{formatPrice(comparePriceAmount, currency)}</p> : null}
-          {hasDiscount ? (
-            <span className="inline-flex rounded-full bg-[#f23ea9] px-3 py-1 text-[12px] font-bold leading-none text-white">
-              -{discountPercent}%
-            </span>
-          ) : null} */}
+                    {hasDiscount && comparePrice ? (
+                        <p className="text-xs md:text-sm leading-none text-zinc-400 line-through">
+                            <span className="sr-only">{t("common.wasPrice")} </span>
+                            {formatPrice(comparePrice, currency)}
+                        </p>
+                    ) : null}
+                    {hasDiscount && discountPercent > 0 ? (
+                        <span className="inline-flex rounded-full bg-[#f23ea9] px-2 py-1 text-[11px] font-bold leading-none text-white">
+                            -{discountPercent}%
+                        </span>
+                    ) : null}
                 </div>
             </div>
             {sizePickerDrawer}
