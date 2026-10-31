@@ -15,7 +15,7 @@ import { OrdersBlock } from './OrdersBlock'
 import { PointsBlock } from './PointsBlock'
 import { ProductBlock } from './ProductBlock'
 import { ProductsBlock } from './ProductsBlock'
-import { shareWords, useRevealedWords, wordCount } from './reveal'
+import { shareLetters, useRevealedLetters, visibleLength } from './reveal'
 import { TextBlock } from './TextBlock'
 import { WishlistBlock } from './WishlistBlock'
 
@@ -70,26 +70,26 @@ type BlockListProps = {
   actions: JulesBlockActions
   /** The first message of Jules's run: its bubble gets the small corner next to the avatar. */
   first?: boolean
-  /** A new answer: its words appear from start to end, then its cards and forms. */
+  /** A new answer: it flows in letter by letter, then its cards and forms fade in. */
   reveal?: boolean
   /** While revealing: after each step (to keep the answer in view) and once it is all shown. */
   onRevealStep?: () => void
   onRevealed?: () => void
 }
 
-/** The words a block adds to the answer as it appears. */
-const wordsIn = (block: JulesBlock) =>
-  block.type === 'text' ? wordCount(block.text) : block.type === 'points' ? block.items.reduce((sum, item) => sum + wordCount(item), 0) : 0
+/** The letters a block adds to the answer as it appears. */
+const lettersIn = (block: JulesBlock) =>
+  block.type === 'text' ? visibleLength(block.text) : block.type === 'points' ? block.items.reduce((sum, item) => sum + visibleLength(item), 0) : 0
 
 /** Draws one of Jules's messages: its blocks in order, each by its own component. Unknown types are skipped. */
 export function BlockList({ messageId, blocks, actions, first = false, reveal = false, onRevealStep, onRevealed }: BlockListProps) {
   const groups = groupBlocks(blocks)
-  const counts = groups.map((group) => group.blocks.map(wordsIn))
+  const counts = groups.map((group) => group.blocks.map(lettersIn))
   const total = counts.flat().reduce((sum, n) => sum + n, 0)
-  const shown = useRevealedWords(total, reveal, onRevealStep, onRevealed)
-  const revealing = shown < total
-  /** The words each block shows while the answer appears, in order. */
-  const shares = shareWords(counts.flat(), revealing ? shown : undefined)
+  const shown = useRevealedLetters(total, reveal, onRevealStep, onRevealed)
+  const revealing = shown !== undefined
+  /** How far into each block the answer has flowed, in order. */
+  const shares = shareLetters(counts.flat(), shown)
   const firstIndex = counts.map((_, i) => counts.slice(0, i).flat().length)
 
   return (
@@ -105,15 +105,16 @@ export function BlockList({ messageId, blocks, actions, first = false, reveal = 
           )
         }
         const groupShares = shares.slice(firstIndex[i], firstIndex[i] + group.blocks.length)
-        if (revealing && groupShares.every((share) => share === 0)) return null
+        if (revealing && groupShares.every((share) => share !== undefined && share <= 0)) return null
         return (
           <div
             key={i}
             className={cn('max-w-full space-y-2 rounded-[20px] bg-[#231e1d] px-3.5 py-2.5 md:max-w-[560px]', first && i === 0 && 'rounded-tl-[6px]')}
           >
-            {group.blocks.map((block, j) =>
-              groupShares[j] === 0 ? null : <Block key={j} block={block} messageId={messageId} actions={actions} words={groupShares[j]} />,
-            )}
+            {group.blocks.map((block, j) => {
+              const share = groupShares[j]
+              return share !== undefined && share <= 0 ? null : <Block key={j} block={block} messageId={messageId} actions={actions} shown={share} />
+            })}
           </div>
         )
       })}
@@ -121,14 +122,14 @@ export function BlockList({ messageId, blocks, actions, first = false, reveal = 
   )
 }
 
-type BlockProps = { block: JulesBlock; messageId: string; actions: JulesBlockActions; words?: number }
+type BlockProps = { block: JulesBlock; messageId: string; actions: JulesBlockActions; shown?: number }
 
-function Block({ block, messageId, actions, words }: BlockProps) {
+function Block({ block, messageId, actions, shown }: BlockProps) {
   switch (block.type) {
     case 'text':
-      return <TextBlock text={block.text} words={words} />
+      return <TextBlock text={block.text} shown={shown} />
     case 'points':
-      return <PointsBlock items={block.items} words={words} />
+      return <PointsBlock items={block.items} shown={shown} />
     case 'products':
       return <ProductsBlock products={block.products} actions={actions} />
     case 'product':

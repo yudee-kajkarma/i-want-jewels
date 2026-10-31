@@ -36,8 +36,8 @@ type JulesThreadProps = {
  * dark bubbles with "Jules · 2m" under each run, the visitor's on the right in
  * light bubbles with "Sent" under the last one until Jules answers ("Seen").
  * While Jules works on an answer, three dots show in its bubble (as in a
- * messaging app); the answer then appears from start to end, a few words at a
- * time. Follow-up questions sit under Jules's last answer, once it is all
+ * messaging app); the answer then flows in letter by letter, the newest
+ * letters fading in. Follow-up questions sit under Jules's last answer, once it is all
  * shown, and answers from the backend can be marked helpful or not.
  * The shortcuts and the question box are drawn by the panel, under this.
  */
@@ -53,7 +53,7 @@ export function JulesThread({ chat, onBack, onNewChat, controls }: JulesThreadPr
   const [nearEnd, setNearEnd] = useState(true)
   const [deleting, setDeleting] = useState(false)
   /**
-   * Whether each message appears word by word: only an answer that arrives while
+   * Whether each message flows in letter by letter: only an answer that arrives while
    * the chat is open, after a message already on screen. Opening a chat, or
    * one loaded all at once, shows everything as it is. Decided once per message.
    */
@@ -288,7 +288,7 @@ type JulesMessageRowProps = {
   lastOfRun: boolean
   chat: JulesChatApi
   now: number
-  /** A new answer, appearing word by word. Its time and thumbs show once it is all there. */
+  /** A new answer, flowing in letter by letter. Its time and thumbs show once it is all there. */
   reveal: boolean
   onRevealStep: () => void
   onRevealed: () => void
